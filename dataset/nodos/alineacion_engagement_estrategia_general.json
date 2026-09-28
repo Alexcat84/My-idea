@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Alinear el compromiso de tu equipo con tu estrategia de sostenibilidad",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las personas que trabajan contigo notaran rapidamente cualquier desconexion entre lo que propones para involucrarlas y tu estrategia de sostenibilidad. Esta practica reune diez recomendaciones clave: ser urgentemente paciente, hacerlo personal, conectar con los objetivos del negocio, demostrar tu propio apoyo con hechos, elegir a las personas correctas para liderar, hacer la agenda clara y realista, crear herramientas de apoyo, dar flexibilidad, usar un toque personal y dar seguimiento visible.",
+  "resumen_teorico": "Las personas que trabajan contigo notaran rápidamente cualquier desconexion entre lo que propones para involucrarlas y tu estrategia de sostenibilidad. Esta practica reúne diez recomendaciones clave: ser urgentemente paciente, hacerlo personal, conectar con los objetivos del negocio, demostrar tu propio apoyo con hechos, elegir a las personas correctas para liderar, hacer la agenda clara y realista, crear herramientas de apoyo, dar flexibilidad, usar un toque personal y dar seguimiento visible.",
   "pasos_accionables": [
     "Verificar que lo que propones para involucrar a tu equipo refleje tu visión y misión de sostenibilidad",
     "Mostrar con hechos, no solo con palabras, que tú mismo sigues lo que pides",
@@ -80,6 +80,20 @@
         "evidencia": "O027-022.entregable: verificación, está (Solo añade las tildes que faltaban en verificación y en el verbo está.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-alineacion_engagement_estrategia_general-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las personas que trabajan contigo notaran rapidamente cualquier desconexion entre lo que propones para involucrarlas y tu estrategia de sostenibilidad. Esta practica reune diez recomendaciones clave: ser urgentemente paciente, hacerlo personal, conectar con los objetivos del negocio, demostrar tu propio apoyo con hechos, elegir a las personas correctas para liderar, hacer la agenda clara y realista, crear herramientas de apoyo, dar flexibilidad, usar un toque personal y dar seguimiento visible.",
+      "texto_nuevo": "Las personas que trabajan contigo notaran rápidamente cualquier desconexion entre lo que propones para involucrarlas y tu estrategia de sostenibilidad. Esta practica reúne diez recomendaciones clave: ser urgentemente paciente, hacerlo personal, conectar con los objetivos del negocio, demostrar tu propio apoyo con hechos, elegir a las personas correctas para liderar, hacer la agenda clara y realista, crear herramientas de apoyo, dar flexibilidad, usar un toque personal y dar seguimiento visible.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: rapidamente, reune"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

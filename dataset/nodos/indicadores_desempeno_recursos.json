@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Indicadores de Desempeño de Recursos (ROR y P2NP)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Metricas que evaluan la productividad de los recursos criticos de tu negocio (energia, agua, materias primas) para sostener con números una propuesta de eco eficiencia. El Return on Resources (ROR) mide el resultado (ganancia, ingreso o producto) por unidad de recurso usado, con la misma logica positiva que un indicador financiero. El Productive to Non Productive Ratio (P2NP) compara el output util con el desperdicio o contaminacion que no se vende, y muestra que tan ineficiente es un proceso.",
+  "resumen_teorico": "Métricas que evalúan la productividad de los recursos críticos de tu negocio (energía, agua, materias primas) para sostener con números una propuesta de eco eficiencia. El Return on Resources (ROR) mide el resultado (ganancia, ingreso o producto) por unidad de recurso usado, con la misma lógica positiva que un indicador financiero. El Productive to Non Productive Ratio (P2NP) compara el output útil con el desperdicio o contaminación que no se vende, y muestra que tan ineficiente es un proceso.",
   "pasos_accionables": [
     "Identificar los recursos críticos de tu operación (energía, agua, materiales).",
     "Calcular el ROR como el resultado deseado dividido entre el recurso utilizado.",
@@ -22,7 +22,7 @@
   ],
   "condiciones_activacion": [
     "Cuando necesitas cuantificar el desperdicio o la ineficiencia de un proceso.",
-    "Si buscas reforzar con metricas objetivas la logica de negocio de una propuesta de eco eficiencia."
+    "Si buscas reforzar con métricas objetivas la lógica de negocio de una propuesta de eco eficiencia."
   ],
   "etiqueta_arbol": "Mide tu Eficiencia de Recursos",
   "fuentes_internas": [
@@ -69,6 +69,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-indicadores_desempeno_recursos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Metricas que evaluan la productividad de los recursos criticos de tu negocio (energia, agua, materias primas) para sostener con números una propuesta de eco eficiencia. El Return on Resources (ROR) mide el resultado (ganancia, ingreso o producto) por unidad de recurso usado, con la misma logica positiva que un indicador financiero. El Productive to Non Productive Ratio (P2NP) compara el output util con el desperdicio o contaminacion que no se vende, y muestra que tan ineficiente es un proceso.",
+      "texto_nuevo": "Métricas que evalúan la productividad de los recursos críticos de tu negocio (energía, agua, materias primas) para sostener con números una propuesta de eco eficiencia. El Return on Resources (ROR) mide el resultado (ganancia, ingreso o producto) por unidad de recurso usado, con la misma lógica positiva que un indicador financiero. El Productive to Non Productive Ratio (P2NP) compara el output útil con el desperdicio o contaminación que no se vende, y muestra que tan ineficiente es un proceso.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Metricas, contaminacion, criticos, energia, evaluan, logica, util"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-indicadores_desempeno_recursos-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si buscas reforzar con metricas objetivas la logica de negocio de una propuesta de eco eficiencia.",
+      "texto_nuevo": "Si buscas reforzar con métricas objetivas la lógica de negocio de una propuesta de eco eficiencia.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: logica, metricas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

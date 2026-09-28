@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "La falacia de 'mi negocio es diferente'",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Es comun pensar que tus problemas particulares de calidad son unicos y que por eso no puedes aprovechar principios generales de mejora. Aunque los detalles cambien de un caso a otro, los principios de fondo para mejorar la calidad son universales y aplican a cualquier tipo de negocio.",
+  "resumen_teorico": "Es común pensar que tus problemas particulares de calidad son únicos y que por eso no puedes aprovechar principios generales de mejora. Aunque los detalles cambien de un caso a otro, los principios de fondo para mejorar la calidad son universales y aplican a cualquier tipo de negocio.",
   "pasos_accionables": [
     "Antes de descartar un principio por creer que tu caso es distinto, identifica cuáles son los principios universales de calidad",
     "En lugar de buscar casos de éxito de otros rubros, estudia los principios universales de calidad y entiende la teoría de lo que quieres hacer, porque copiar ejemplos es un peligro",
@@ -93,6 +93,20 @@
         "evidencia": "O066-033.entregable: qué (Solo se añade la tilde que falta en el interrogativo indirecto qué.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-falacia_problemas_diferentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es comun pensar que tus problemas particulares de calidad son unicos y que por eso no puedes aprovechar principios generales de mejora. Aunque los detalles cambien de un caso a otro, los principios de fondo para mejorar la calidad son universales y aplican a cualquier tipo de negocio.",
+      "texto_nuevo": "Es común pensar que tus problemas particulares de calidad son únicos y que por eso no puedes aprovechar principios generales de mejora. Aunque los detalles cambien de un caso a otro, los principios de fondo para mejorar la calidad son universales y aplican a cualquier tipo de negocio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comun, unicos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

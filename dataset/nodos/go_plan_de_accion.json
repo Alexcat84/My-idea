@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Go: Creación e Implementación del Plan de Acción de Privacidad",
   "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
-  "resumen_teorico": "La fase final del modelo 'Ready, Set, Go' consiste en comparar el estado actual de tu manejo de privacidad contra las recomendaciones del framework, priorizar los resultados que quieres lograr, crear un plan de accion concreto, hablarlo con quienes trabajan contigo, y destinar los recursos y el talento necesarios para ejecutarlo. Es el paso que convierte el análisis y la planificacion en accion real hacia la generacion de confianza y el cumplimiento normativo.",
+  "resumen_teorico": "La fase final del modelo 'Ready, Set, Go' consiste en comparar el estado actual de tu manejo de privacidad contra las recomendaciones del framework, priorizar los resultados que quieres lograr, crear un plan de acción concreto, hablarlo con quienes trabajan contigo, y destinar los recursos y el talento necesarios para ejecutarlo. Es el paso que convierte el análisis y la planificación en acción real hacia la generación de confianza y el cumplimiento normativo.",
   "pasos_accionables": [
     "Compara el estado actual de tu manejo de privacidad contra las recomendaciones del framework",
     "Prioriza los resultados que quieres lograr",
@@ -20,7 +20,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando has completado el diagnostico de las cinco funciones de privacidad y necesitas pasar a la implementacion"
+    "Cuando has completado el diagnostico de las cinco funciones de privacidad y necesitas pasar a la implementación"
   ],
   "etiqueta_arbol": "Crea tu Plan de Acción",
   "fuentes_internas": [
@@ -67,6 +67,35 @@
         "evidencia": "O035-019.entregable: acción, ejecución (Faltan las tildes de acción y ejecución.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-go_plan_de_accion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La fase final del modelo 'Ready, Set, Go' consiste en comparar el estado actual de tu manejo de privacidad contra las recomendaciones del framework, priorizar los resultados que quieres lograr, crear un plan de accion concreto, hablarlo con quienes trabajan contigo, y destinar los recursos y el talento necesarios para ejecutarlo. Es el paso que convierte el análisis y la planificacion en accion real hacia la generacion de confianza y el cumplimiento normativo.",
+      "texto_nuevo": "La fase final del modelo 'Ready, Set, Go' consiste en comparar el estado actual de tu manejo de privacidad contra las recomendaciones del framework, priorizar los resultados que quieres lograr, crear un plan de acción concreto, hablarlo con quienes trabajan contigo, y destinar los recursos y el talento necesarios para ejecutarlo. Es el paso que convierte el análisis y la planificación en acción real hacia la generación de confianza y el cumplimiento normativo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: accion, generacion, planificacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-go_plan_de_accion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando has completado el diagnostico de las cinco funciones de privacidad y necesitas pasar a la implementacion",
+      "texto_nuevo": "Cuando has completado el diagnostico de las cinco funciones de privacidad y necesitas pasar a la implementación",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: implementacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

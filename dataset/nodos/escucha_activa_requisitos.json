@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Escucha activamente para captar los requisitos reales",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Cuando alguien te pide algo, ya sea un cliente, un proveedor o quien te encarga una compra, es facil escuchar a medias mientras piensas tu respuesta. La escucha activa consiste en concentrarte por completo en lo que dice la otra persona, dejar de lado otras distracciones, y luego repetirle con tus propias palabras lo que entendiste, incluyendo el tono o la urgencia con que lo dijo. Si tu resumen no coincide con lo que la persona quiso decir, ella misma lo corrige ahi, antes de que el malentendido se convierta en un pedido mal hecho o una compra equivocada. Esta practica simple evita que compres algo que no se necesitaba o que un proveedor entienda otra cosa de lo que le pediste.",
+  "resumen_teorico": "Cuando alguien te pide algo, ya sea un cliente, un proveedor o quien te encarga una compra, es fácil escuchar a medias mientras piensas tu respuesta. La escucha activa consiste en concentrarte por completo en lo que dice la otra persona, dejar de lado otras distracciones, y luego repetirle con tus propias palabras lo que entendiste, incluyendo el tono o la urgencia con que lo dijo. Si tu resumen no coincide con lo que la persona quiso decir, ella misma lo corrige ahí, antes de que el malentendido se convierta en un pedido mal hecho o una compra equivocada. Esta practica simple evita que compres algo que no se necesitaba o que un proveedor entienda otra cosa de lo que le pediste.",
   "pasos_accionables": [
     "Cuando alguien te pida algo, deja de pensar en tu respuesta y concéntrate solo en escuchar.",
     "Repite con tus propias palabras lo que entendiste antes de actuar.",
@@ -20,8 +20,8 @@
   ],
   "condiciones_activacion": [
     "Un cliente o socio te pide algo y no estas seguro de haber entendido bien el encargo.",
-    "Un proveedor te entrego algo distinto de lo que creias haber pedido.",
-    "Sales de una reunion con dudas sobre lo que realmente se acordo."
+    "Un proveedor te entrego algo distinto de lo que creías haber pedido.",
+    "Sales de una reunion con dudas sobre lo que realmente se acordó."
   ],
   "etiqueta_arbol": "Escucha y confirma antes de actuar",
   "fuentes_internas": [
@@ -68,6 +68,50 @@
         "evidencia": "O071-017.entregable: hábito ('hábito' es esdrújula y lleva tilde.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-escucha_activa_requisitos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando alguien te pide algo, ya sea un cliente, un proveedor o quien te encarga una compra, es facil escuchar a medias mientras piensas tu respuesta. La escucha activa consiste en concentrarte por completo en lo que dice la otra persona, dejar de lado otras distracciones, y luego repetirle con tus propias palabras lo que entendiste, incluyendo el tono o la urgencia con que lo dijo. Si tu resumen no coincide con lo que la persona quiso decir, ella misma lo corrige ahi, antes de que el malentendido se convierta en un pedido mal hecho o una compra equivocada. Esta practica simple evita que compres algo que no se necesitaba o que un proveedor entienda otra cosa de lo que le pediste.",
+      "texto_nuevo": "Cuando alguien te pide algo, ya sea un cliente, un proveedor o quien te encarga una compra, es fácil escuchar a medias mientras piensas tu respuesta. La escucha activa consiste en concentrarte por completo en lo que dice la otra persona, dejar de lado otras distracciones, y luego repetirle con tus propias palabras lo que entendiste, incluyendo el tono o la urgencia con que lo dijo. Si tu resumen no coincide con lo que la persona quiso decir, ella misma lo corrige ahí, antes de que el malentendido se convierta en un pedido mal hecho o una compra equivocada. Esta practica simple evita que compres algo que no se necesitaba o que un proveedor entienda otra cosa de lo que le pediste.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ahi, facil"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-escucha_activa_requisitos-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un proveedor te entrego algo distinto de lo que creias haber pedido.",
+      "texto_nuevo": "Un proveedor te entrego algo distinto de lo que creías haber pedido.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: creias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-escucha_activa_requisitos-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sales de una reunion con dudas sobre lo que realmente se acordo.",
+      "texto_nuevo": "Sales de una reunion con dudas sobre lo que realmente se acordó.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: acordo"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

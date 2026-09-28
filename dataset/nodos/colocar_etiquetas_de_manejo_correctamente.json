@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Colocar y usar etiquetas de manejo correctamente",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rapido. La regla comun es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automatico en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientacion durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posicion preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+  "resumen_teorico": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rápido. La regla común es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
   "pasos_accionables": [
     "Pega la etiqueta de envío en la cara más grande y plana de la caja.",
     "Deja la etiqueta completamente visible, sin cinta ni papeles encima.",
@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Reutilizas cajas viejas para ahorrar y no sabes que hacer con las etiquetas anteriores.",
-    "Envias algo fragil y quieres avisar al courier sin depender solo de eso.",
+    "Envías algo frágil y quieres avisar al courier sin depender solo de eso.",
     "Has tenido paquetes retrasados porque la etiqueta quedo tapada o mal puesta."
   ],
   "etiqueta_arbol": "Pon la etiqueta donde se vea",
@@ -102,6 +102,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-tildes-colocar_etiquetas_de_manejo_correctamente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rapido. La regla comun es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automatico en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientacion durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posicion preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+      "texto_nuevo": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rápido. La regla común es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: automatico, comun, orientacion, posicion, rapido"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-colocar_etiquetas_de_manejo_correctamente-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envias algo fragil y quieres avisar al courier sin depender solo de eso.",
+      "texto_nuevo": "Envías algo frágil y quieres avisar al courier sin depender solo de eso.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Envias, fragil"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

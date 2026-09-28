@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Construir una versión básica para probar tu idea (MVP de baja fidelidad)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una accion concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.",
+  "resumen_teorico": "Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una acción concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.",
   "pasos_accionables": [
     "Crea una página simple con tu propuesta de valor y sus beneficios",
     "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden",
@@ -75,6 +75,20 @@
         "evidencia": "O058-030.entregable: página, interés (Faltaban las tildes de página e interés, y no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-construir_mvp_baja_fidelidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una accion concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.",
+      "texto_nuevo": "Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una acción concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: accion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

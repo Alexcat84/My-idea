@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "La Mejora del Sistema es Tu Responsabilidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Las personas que trabajan contigo actuan dentro de un sistema que ellas no controlan: los materiales, los equipos, las politicas que tu defines. Cuando un proceso esta bajo control estadistico pero sigue generando defectos, la única manera de mejorarlo es que tu actues sobre el sistema: mejores materiales, mejor mantenimiento, mejor diseno de equipos o procesos. Ejemplos: cambiar un hilo de mala calidad, instalar una placa niveladora en vagones de carga, ajustar los insumos y el mantenimiento en la producción de ruedas.",
+  "resumen_teorico": "Las personas que trabajan contigo actúan dentro de un sistema que ellas no controlan: los materiales, los equipos, las políticas que tu defines. Cuando un proceso esta bajo control estadístico pero sigue generando defectos, la única manera de mejorarlo es que tu actúes sobre el sistema: mejores materiales, mejor mantenimiento, mejor diseno de equipos o procesos. Ejemplos: cambiar un hilo de mala calidad, instalar una placa niveladora en vagones de carga, ajustar los insumos y el mantenimiento en la producción de ruedas.",
   "pasos_accionables": [
     "Verificar que el proceso esté en control estadístico (sin causas especiales)",
     "Si persisten defectos con el proceso en control, identificar elementos del sistema (materiales, equipo, entorno) como causa raíz",
@@ -22,7 +22,7 @@
     "causas_comunes_vs_especiales"
   ],
   "condiciones_activacion": [
-    "Cuando un proceso esta en control estadistico pero la tasa de defectos sigue siendo inaceptable",
+    "Cuando un proceso esta en control estadístico pero la tasa de defectos sigue siendo inaceptable",
     "Cuando varias personas o maquinas presentan el mismo problema"
   ],
   "etiqueta_arbol": "Mejora el Sistema desde Gerencia",
@@ -98,6 +98,35 @@
         "evidencia": "O060-010.entregable: raíz (Falta la tilde de raíz; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-mejora_del_sistema_responsabilidad_gerencial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las personas que trabajan contigo actuan dentro de un sistema que ellas no controlan: los materiales, los equipos, las politicas que tu defines. Cuando un proceso esta bajo control estadistico pero sigue generando defectos, la única manera de mejorarlo es que tu actues sobre el sistema: mejores materiales, mejor mantenimiento, mejor diseno de equipos o procesos. Ejemplos: cambiar un hilo de mala calidad, instalar una placa niveladora en vagones de carga, ajustar los insumos y el mantenimiento en la producción de ruedas.",
+      "texto_nuevo": "Las personas que trabajan contigo actúan dentro de un sistema que ellas no controlan: los materiales, los equipos, las políticas que tu defines. Cuando un proceso esta bajo control estadístico pero sigue generando defectos, la única manera de mejorarlo es que tu actúes sobre el sistema: mejores materiales, mejor mantenimiento, mejor diseno de equipos o procesos. Ejemplos: cambiar un hilo de mala calidad, instalar una placa niveladora en vagones de carga, ajustar los insumos y el mantenimiento en la producción de ruedas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: actuan, actues, estadistico, politicas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-mejora_del_sistema_responsabilidad_gerencial-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un proceso esta en control estadistico pero la tasa de defectos sigue siendo inaceptable",
+      "texto_nuevo": "Cuando un proceso esta en control estadístico pero la tasa de defectos sigue siendo inaceptable",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: estadistico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

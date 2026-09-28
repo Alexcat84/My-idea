@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Investigación de Clientes Potenciales en el Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu pais e internet. Esto te permite validar si el comprador o socio potencial es confiable, y te ahorra tiempo y dinero.",
+  "resumen_teorico": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y te ahorra tiempo y dinero.",
   "pasos_accionables": [
     "Consultar publicaciones y directorios del sector privado sobre empresas internacionales",
     "Contactar bancos internacionales para obtener información sobre la empresa extranjera",
@@ -22,7 +22,7 @@
   ],
   "condiciones_activacion": [
     "Si recibiste una consulta u orden de un comprador desconocido en el extranjero",
-    "Si necesitas validar la solvencia o reputacion de un socio potencial antes de firmar un contrato"
+    "Si necesitas validar la solvencia o reputación de un socio potencial antes de firmar un contrato"
   ],
   "etiqueta_arbol": "Conoce a tu Cliente Extranjero",
   "fuentes_internas": [
@@ -82,6 +82,35 @@
         "evidencia": "O052-001.entregable: investigación, verificación, reputación, transacción (Solo añade las tildes que faltaban en investigación, verificación, reputación y transacción.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-investigacion_empresa_extranjera-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu pais e internet. Esto te permite validar si el comprador o socio potencial es confiable, y te ahorra tiempo y dinero.",
+      "texto_nuevo": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y te ahorra tiempo y dinero.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: pais"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-investigacion_empresa_extranjera-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si necesitas validar la solvencia o reputacion de un socio potencial antes de firmar un contrato",
+      "texto_nuevo": "Si necesitas validar la solvencia o reputación de un socio potencial antes de firmar un contrato",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: reputacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

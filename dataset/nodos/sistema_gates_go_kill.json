@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Sistema de Gates (Puntos de Decisión Go/Kill)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "En lugar de dejar que todos tus proyectos avancen sin filtro como en un tunel, construye un embudo con puntos de decision (gates) a lo largo del proceso. En cada gate evaluas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorizacion, por ejemplo NPV), y que plan de accion y recursos necesita la siguiente fase. Usar criterios explicitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas debiles. Los gates te permiten matar proyectos a tiempo y concentrar tus recursos limitados en lo que realmente vale la pena.",
+  "resumen_teorico": "En lugar de dejar que todos tus proyectos avancen sin filtro como en un túnel, construye un embudo con puntos de decisión (gates) a lo largo del proceso. En cada gate evalúas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorización, por ejemplo NPV), y que plan de acción y recursos necesita la siguiente fase. Usar criterios explícitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas débiles. Los gates te permiten matar proyectos a tiempo y concentrar tus recursos limitados en lo que realmente vale la pena.",
   "pasos_accionables": [
     "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validación inicial, antes de desarrollar, antes de lanzar)",
     "Establece criterios claros y visibles para cada gate: si el proyecto está listo, si el negocio justifica seguir, y qué recursos necesita la siguiente etapa",
@@ -63,7 +63,7 @@
   ],
   "condiciones_activacion": [
     "Cuando tienes demasiados proyectos o ideas activas y recursos insuficientes para todos",
-    "Cuando no eliminas a tiempo los proyectos debiles y siguen consumiendo tu tiempo y dinero",
+    "Cuando no eliminas a tiempo los proyectos débiles y siguen consumiendo tu tiempo y dinero",
     "Cuando tus decisiones de continuar o parar un proyecto son inconsistentes o las tomas sin criterio claro",
     "Cuando estás diseñando o rediseñando tu propio sistema de etapas y decisiones (Stage-Gate).",
     "Si tus proyectos avanzan sin puntos de control claros",
@@ -190,6 +190,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 5
+    },
+    {
+      "id": "final-tildes-sistema_gates_go_kill-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En lugar de dejar que todos tus proyectos avancen sin filtro como en un tunel, construye un embudo con puntos de decision (gates) a lo largo del proceso. En cada gate evaluas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorizacion, por ejemplo NPV), y que plan de accion y recursos necesita la siguiente fase. Usar criterios explicitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas debiles. Los gates te permiten matar proyectos a tiempo y concentrar tus recursos limitados en lo que realmente vale la pena.",
+      "texto_nuevo": "En lugar de dejar que todos tus proyectos avancen sin filtro como en un túnel, construye un embudo con puntos de decisión (gates) a lo largo del proceso. En cada gate evalúas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorización, por ejemplo NPV), y que plan de acción y recursos necesita la siguiente fase. Usar criterios explícitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas débiles. Los gates te permiten matar proyectos a tiempo y concentrar tus recursos limitados en lo que realmente vale la pena.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: accion, debiles, decision, evaluas, explicitos, priorizacion, tunel"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-sistema_gates_go_kill-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando no eliminas a tiempo los proyectos debiles y siguen consumiendo tu tiempo y dinero",
+      "texto_nuevo": "Cuando no eliminas a tiempo los proyectos débiles y siguen consumiendo tu tiempo y dinero",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: debiles"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

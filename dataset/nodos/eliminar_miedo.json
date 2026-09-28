@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminar el Miedo (Punto 8)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Nadie puede dar su mejor versión si no se siente seguro. El miedo, en cualquiera de sus formas, genera perdidas por desempeno deteriorado y cifras manipuladas. El miedo impide hacer preguntas, expresar ideas, admitir errores y aportar conocimiento nuevo por temor a exponer fallas propias o ajenas.",
+  "resumen_teorico": "Nadie puede dar su mejor versión si no se siente seguro. El miedo, en cualquiera de sus formas, genera perdidas por desempeño deteriorado y cifras manipuladas. El miedo impide hacer preguntas, expresar ideas, admitir errores y aportar conocimiento nuevo por temor a exponer fallas propias o ajenas.",
   "pasos_accionables": [
     "Identificar las expresiones de miedo en las personas que trabajan contigo (temor a perder su lugar, a admitir errores, a hacer preguntas)",
     "Crear canales seguros para que cualquiera exprese problemas sin temor a represalias",
@@ -80,6 +80,20 @@
         "evidencia": "O079-024.entregable: Diagnóstico (Falta la tilde real en 'Diagnóstico'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-eliminar_miedo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Nadie puede dar su mejor versión si no se siente seguro. El miedo, en cualquiera de sus formas, genera perdidas por desempeno deteriorado y cifras manipuladas. El miedo impide hacer preguntas, expresar ideas, admitir errores y aportar conocimiento nuevo por temor a exponer fallas propias o ajenas.",
+      "texto_nuevo": "Nadie puede dar su mejor versión si no se siente seguro. El miedo, en cualquiera de sus formas, genera perdidas por desempeño deteriorado y cifras manipuladas. El miedo impide hacer preguntas, expresar ideas, admitir errores y aportar conocimiento nuevo por temor a exponer fallas propias o ajenas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desempeno"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

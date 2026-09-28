@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Organización de Equipos para la Calidad en Servicios",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Tus acciones pesan mas que tus palabras: quienes te acompañan observan lo que haces, no solo lo que dices sobre la calidad. Conviene crear un espacio fijo de revisión, aunque sea contigo y una o dos personas mas, que se reuna con regularidad. Los equipos, sean puntuales, permanentes o autodirigidos, son un mecanismo comun para impulsar la mejora, como muestran los casos de American Express, Ritz-Carlton y Kaiser Permanente con sus equipos de calidad en el trabajo diario.",
+  "resumen_teorico": "Tus acciones pesan mas que tus palabras: quienes te acompañan observan lo que haces, no solo lo que dices sobre la calidad. Conviene crear un espacio fijo de revisión, aunque sea contigo y una o dos personas mas, que se reúna con regularidad. Los equipos, sean puntuales, permanentes o autodirigidos, son un mecanismo común para impulsar la mejora, como muestran los casos de American Express, Ritz-Carlton y Kaiser Permanente con sus equipos de calidad en el trabajo diario.",
   "pasos_accionables": [
     "Crear un espacio fijo de revisión de la calidad, aunque sea solo contigo y quienes te acompañan, y reunirte con regularidad, por ejemplo cada tres meses",
     "Organizar el trabajo alrededor de los puntos de contacto con el cliente",
@@ -68,6 +68,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-organizacion_equipos_calidad_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tus acciones pesan mas que tus palabras: quienes te acompañan observan lo que haces, no solo lo que dices sobre la calidad. Conviene crear un espacio fijo de revisión, aunque sea contigo y una o dos personas mas, que se reuna con regularidad. Los equipos, sean puntuales, permanentes o autodirigidos, son un mecanismo comun para impulsar la mejora, como muestran los casos de American Express, Ritz-Carlton y Kaiser Permanente con sus equipos de calidad en el trabajo diario.",
+      "texto_nuevo": "Tus acciones pesan mas que tus palabras: quienes te acompañan observan lo que haces, no solo lo que dices sobre la calidad. Conviene crear un espacio fijo de revisión, aunque sea contigo y una o dos personas mas, que se reúna con regularidad. Los equipos, sean puntuales, permanentes o autodirigidos, son un mecanismo común para impulsar la mejora, como muestran los casos de American Express, Ritz-Carlton y Kaiser Permanente con sus equipos de calidad en el trabajo diario.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comun, reuna"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

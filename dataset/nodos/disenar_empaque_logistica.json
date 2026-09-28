@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Diseñar el empaque para la logística, no solo para el producto",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "El empaque no es solo la presentacion del producto para venderlo, tambien es lo que tu logistica mueve, guarda y transporta. Por eso conviene disenarlo pensando en dos funciones: proteger el contenido y facilitar su manejo. Un buen empaque es facil de cargar, se identifica rapido, se puede asegurar y aprovecha el espacio de guardado, lo cual casi siempre significa una forma cubica en vez de una cilindrica o irregular. Hay tensiones inevitables entre estas caracteristicas: lo mas protector no siempre es lo mas facil de apilar, y lo mas vistoso no siempre resiste el trayecto. Decidir estos balances con intencion, en vez de dejarlos al azar, reduce roturas, ahorra espacio de almacenamiento y baja el costo total de mover tu producto.",
+  "resumen_teorico": "El empaque no es solo la presentación del producto para venderlo, también es lo que tu logística mueve, guarda y transporta. Por eso conviene disenarlo pensando en dos funciones: proteger el contenido y facilitar su manejo. Un buen empaque es fácil de cargar, se identifica rápido, se puede asegurar y aprovecha el espacio de guardado, lo cual casi siempre significa una forma cubica en vez de una cilíndrica o irregular. Hay tensiones inevitables entre estas caracteristicas: lo mas protector no siempre es lo mas fácil de apilar, y lo mas vistoso no siempre resiste el trayecto. Decidir estos balances con intención, en vez de dejarlos al azar, reduce roturas, ahorra espacio de almacenamiento y baja el costo total de mover tu producto.",
   "pasos_accionables": [
     "Revisa si tu empaque actual protege el producto en el manejo y no solo en el estante.",
     "Prueba una forma cúbica en vez de cilíndrica para aprovechar mejor el espacio de guardado y envío.",
@@ -22,11 +22,11 @@
     "revisar_necesidades_de_empaque"
   ],
   "condiciones_activacion": [
-    "Notas que tus productos llegan danados o el empaque se rompe en el camino",
+    "Notas que tus productos llegan dañados o el empaque se rompe en el camino",
     "Tu bodega o closet se llena de cajas con formas que no se apilan bien",
-    "Estas redisenando el empaque y no sabes si priorizar la venta o el envio"
+    "Estas rediseñando el empaque y no sabes si priorizar la venta o el envio"
   ],
-  "etiqueta_arbol": "Disena el empaque para envio",
+  "etiqueta_arbol": "Diseña el empaque para envio",
   "correcciones": [
     {
       "id": "fidelidad-t9-060",
@@ -86,6 +86,64 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-tildes-disenar_empaque_logistica-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El empaque no es solo la presentacion del producto para venderlo, tambien es lo que tu logistica mueve, guarda y transporta. Por eso conviene disenarlo pensando en dos funciones: proteger el contenido y facilitar su manejo. Un buen empaque es facil de cargar, se identifica rapido, se puede asegurar y aprovecha el espacio de guardado, lo cual casi siempre significa una forma cubica en vez de una cilindrica o irregular. Hay tensiones inevitables entre estas caracteristicas: lo mas protector no siempre es lo mas facil de apilar, y lo mas vistoso no siempre resiste el trayecto. Decidir estos balances con intencion, en vez de dejarlos al azar, reduce roturas, ahorra espacio de almacenamiento y baja el costo total de mover tu producto.",
+      "texto_nuevo": "El empaque no es solo la presentación del producto para venderlo, también es lo que tu logística mueve, guarda y transporta. Por eso conviene disenarlo pensando en dos funciones: proteger el contenido y facilitar su manejo. Un buen empaque es fácil de cargar, se identifica rápido, se puede asegurar y aprovecha el espacio de guardado, lo cual casi siempre significa una forma cubica en vez de una cilíndrica o irregular. Hay tensiones inevitables entre estas caracteristicas: lo mas protector no siempre es lo mas fácil de apilar, y lo mas vistoso no siempre resiste el trayecto. Decidir estos balances con intención, en vez de dejarlos al azar, reduce roturas, ahorra espacio de almacenamiento y baja el costo total de mover tu producto.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: cilindrica, facil, intencion, logistica, presentacion, rapido, tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-disenar_empaque_logistica-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Notas que tus productos llegan danados o el empaque se rompe en el camino",
+      "texto_nuevo": "Notas que tus productos llegan dañados o el empaque se rompe en el camino",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: danados"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-disenar_empaque_logistica-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estas redisenando el empaque y no sabes si priorizar la venta o el envio",
+      "texto_nuevo": "Estas rediseñando el empaque y no sabes si priorizar la venta o el envio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: redisenando"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-disenar_empaque_logistica-etiqueta_arbol",
+      "fecha": "2026-09-28",
+      "campo": "etiqueta_arbol",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disena el empaque para envio",
+      "texto_nuevo": "Diseña el empaque para envio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Disena"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

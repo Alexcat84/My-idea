@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema de Gestión de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es el sistema con el que diriges y controlas tu negocio en todo lo relacionado con la calidad. Como la calidad afecta a todo tu negocio y no solo a la parte de producción u operaciones, este sistema también es amplio: puede estar controlado desde distintas partes de tu negocio, no solo desde un area dedicada a calidad.",
+  "resumen_teorico": "Es el sistema con el que diriges y controlas tu negocio en todo lo relacionado con la calidad. Como la calidad afecta a todo tu negocio y no solo a la parte de producción u operaciones, este sistema también es amplio: puede estar controlado desde distintas partes de tu negocio, no solo desde un área dedicada a calidad.",
   "pasos_accionables": [
     "Mapea todos los procesos de tu negocio que afectan la calidad, más allá de producción u operaciones",
     "Identifica quién controla hoy cada parte de ese sistema, ya seas tú o la persona que te ayuda",
@@ -45,6 +45,20 @@
         "motivo": "La gestión del cambio es un componente del sistema de calidad; una vez mapeado ese sistema, sumar un flujo ágil para aprobar cambios es un paso natural."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-tildes-sistema_gestion_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es el sistema con el que diriges y controlas tu negocio en todo lo relacionado con la calidad. Como la calidad afecta a todo tu negocio y no solo a la parte de producción u operaciones, este sistema también es amplio: puede estar controlado desde distintas partes de tu negocio, no solo desde un area dedicada a calidad.",
+      "texto_nuevo": "Es el sistema con el que diriges y controlas tu negocio en todo lo relacionado con la calidad. Como la calidad afecta a todo tu negocio y no solo a la parte de producción u operaciones, este sistema también es amplio: puede estar controlado desde distintas partes de tu negocio, no solo desde un área dedicada a calidad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Búsqueda Internacional de Socios (International Partner Search)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El International Partner Search del U.S. Commercial Service usa equipos de expertos en mas de 75 paises para identificar socios estrategicos calificados. Tu entregas materiales de marketing y el perfil de tu negocio, y en 15 días recibes una lista de hasta cinco empresas prescreened interesadas en comprar o vender tus productos, con tamano, ventas, anos en el negocio y contactos clave. Si necesitas reuniones ya agendadas, puedes solicitar el servicio Gold Key, que anade orientacion, investigacion de mercado, citas prearregladas, apoyo de interprete y asistencia para cerrar el trato, enviar mercancia y cobrar. Para verificar la fiabilidad de un socio antes de firmar, puedes pedir un informe de antecedentes (ICP) con reputacion, referencias financieras y comerciales, util en mercados donde faltan proveedores privados de información crediticia.",
+  "resumen_teorico": "El International Partner Search del U.S. Commercial Service usa equipos de expertos en mas de 75 países para identificar socios estratégicos calificados. Tu entregas materiales de marketing y el perfil de tu negocio, y en 15 días recibes una lista de hasta cinco empresas prescreened interesadas en comprar o vender tus productos, con tamaño, ventas, anos en el negocio y contactos clave. Si necesitas reuniones ya agendadas, puedes solicitar el servicio Gold Key, que añade orientación, investigación de mercado, citas prearregladas, apoyo de interprete y asistencia para cerrar el trato, enviar mercancía y cobrar. Para verificar la fiabilidad de un socio antes de firmar, puedes pedir un informe de antecedentes (ICP) con reputación, referencias financieras y comerciales, útil en mercados donde faltan proveedores privados de información crediticia.",
   "pasos_accionables": [
     "Prepara tus materiales de marketing y el perfil de tu negocio",
     "Solicita el International Partner Search en la oficina local del U.S. Commercial Service, indicando el mercado objetivo y el perfil de socio que buscas",
@@ -115,6 +115,20 @@
         "evidencia": "O067-026.entregable: interes (Solo añade la tilde que faltaba en interés; los términos en inglés y las siglas quedan igual.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-international_partner_search-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El International Partner Search del U.S. Commercial Service usa equipos de expertos en mas de 75 paises para identificar socios estrategicos calificados. Tu entregas materiales de marketing y el perfil de tu negocio, y en 15 días recibes una lista de hasta cinco empresas prescreened interesadas en comprar o vender tus productos, con tamano, ventas, anos en el negocio y contactos clave. Si necesitas reuniones ya agendadas, puedes solicitar el servicio Gold Key, que anade orientacion, investigacion de mercado, citas prearregladas, apoyo de interprete y asistencia para cerrar el trato, enviar mercancia y cobrar. Para verificar la fiabilidad de un socio antes de firmar, puedes pedir un informe de antecedentes (ICP) con reputacion, referencias financieras y comerciales, util en mercados donde faltan proveedores privados de información crediticia.",
+      "texto_nuevo": "El International Partner Search del U.S. Commercial Service usa equipos de expertos en mas de 75 países para identificar socios estratégicos calificados. Tu entregas materiales de marketing y el perfil de tu negocio, y en 15 días recibes una lista de hasta cinco empresas prescreened interesadas en comprar o vender tus productos, con tamaño, ventas, anos en el negocio y contactos clave. Si necesitas reuniones ya agendadas, puedes solicitar el servicio Gold Key, que añade orientación, investigación de mercado, citas prearregladas, apoyo de interprete y asistencia para cerrar el trato, enviar mercancía y cobrar. Para verificar la fiabilidad de un socio antes de firmar, puedes pedir un informe de antecedentes (ICP) con reputación, referencias financieras y comerciales, útil en mercados donde faltan proveedores privados de información crediticia.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: anade, estrategicos, investigacion, mercancia, orientacion, paises, reputacion, tamano, util"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

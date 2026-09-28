@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Centro de Apoyo para Licitaciones (Advocacy Center)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Advocacy Center del Servicio Comercial de Estados Unidos coordina a 20 agencias del gobierno de EE. UU. para apoyarte cuando tu negocio compite en una licitacion de un gobierno extranjero, sobre todo si el proceso no es transparente o favorece a la competencia extranjera. El apoyo puede incluir visitas de funcionarios, cartas a quienes toman la decision y una accion coordinada entre agencias.",
+  "resumen_teorico": "El Advocacy Center del Servicio Comercial de Estados Unidos coordina a 20 agencias del gobierno de EE. UU. para apoyarte cuando tu negocio compite en una licitación de un gobierno extranjero, sobre todo si el proceso no es transparente o favorece a la competencia extranjera. El apoyo puede incluir visitas de funcionarios, cartas a quienes toman la decisión y una acción coordinada entre agencias.",
   "pasos_accionables": [
     "Identifica si estás participando en una licitación de un gobierno extranjero",
     "Evalúa si el proceso parece sesgado o poco transparente",
@@ -19,8 +19,8 @@
     "cumplimiento_acuerdos_comerciales_tanc"
   ],
   "condiciones_activacion": [
-    "Cuando tu negocio opera en Estados Unidos y licita en un contrato de adquisicion de un gobierno extranjero",
-    "Cuando sospechas trato desleal en el proceso de licitacion"
+    "Cuando tu negocio opera en Estados Unidos y licita en un contrato de adquisición de un gobierno extranjero",
+    "Cuando sospechas trato desleal en el proceso de licitación"
   ],
   "etiqueta_arbol": "Busca Apoyo en Licitaciones",
   "fuentes_internas": [
@@ -81,6 +81,50 @@
         "evidencia": "O014-026.entregable: licitación, específica (Faltas reales: 'licitación' y 'específica' llevan tilde; el nombre propio en inglés queda intacto.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-centro_asesoria_advocacy_center-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El Advocacy Center del Servicio Comercial de Estados Unidos coordina a 20 agencias del gobierno de EE. UU. para apoyarte cuando tu negocio compite en una licitacion de un gobierno extranjero, sobre todo si el proceso no es transparente o favorece a la competencia extranjera. El apoyo puede incluir visitas de funcionarios, cartas a quienes toman la decision y una accion coordinada entre agencias.",
+      "texto_nuevo": "El Advocacy Center del Servicio Comercial de Estados Unidos coordina a 20 agencias del gobierno de EE. UU. para apoyarte cuando tu negocio compite en una licitación de un gobierno extranjero, sobre todo si el proceso no es transparente o favorece a la competencia extranjera. El apoyo puede incluir visitas de funcionarios, cartas a quienes toman la decisión y una acción coordinada entre agencias.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: accion, decision, licitacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-centro_asesoria_advocacy_center-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu negocio opera en Estados Unidos y licita en un contrato de adquisicion de un gobierno extranjero",
+      "texto_nuevo": "Cuando tu negocio opera en Estados Unidos y licita en un contrato de adquisición de un gobierno extranjero",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: adquisicion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-centro_asesoria_advocacy_center-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando sospechas trato desleal en el proceso de licitacion",
+      "texto_nuevo": "Cuando sospechas trato desleal en el proceso de licitación",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: licitacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

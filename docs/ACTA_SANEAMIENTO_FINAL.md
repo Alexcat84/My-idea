@@ -495,3 +495,16 @@ cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de conta
 | 4 | Calcos | Un detector con la tabla del glosario y los calcos confirmados en la medida 1 y en la etapa 1, y después lectura en lotes de 30 con 1 trampa por lote | Muestra de 200, semilla 20261004: ≤ 0,2 por nodo |
 
 **El certificado:** al acabar, una medida 2 de todos los criterios, con el diseño de la sección 3 y semilla 20261010.
+
+### 9.6 Resultados del remedio (se añaden a medida que avanza)
+
+**Tildes mecánicas (9.3), 28 sep 2026:**
+- **La lista:** `docs/saneamiento/ortografia/tildes_mecanicas.json`, 451 palabras revisadas a mano sobre 707
+  candidatas. Salieron las que tienen otra lectura sin tilde (formas verbales como "negocio" o "llegara", adjetivos
+  como "seria" o "continua", "periodo", que admite las dos) y las que llevan tilde en más de un sitio ("diseno", "dano",
+  "envio", "guia").
+- **La tanda:** `final-tildes`, 450 correcciones ORTOGRAFIA declaradas en 247 nodos: 222 en condiciones, 206 en
+  resúmenes, 16 en títulos, 3 en etiquetas, 2 en entregables y 1 en pasos. Los nombres en inglés ("Decision Log",
+  "Cash Conversion Cycle", "Discovery/Decision Day") se quedan.
+- **La guarda:** `engine/test_tildes_mecanicas.py` hace que ningún nodo vivo vuelva a traer una palabra de la lista.
+  Gate 0 y las dos suites pasan.

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diferenciación entre Garantía y Contrato de Servicio",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de proteccion adicional que tu cliente compra por separado del producto, a diferencia de la garantia, que ya viene incluida en el precio de venta. La ley te exige escribir los terminos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si ofreces un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantias implicitas de ese producto.",
+  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los terminos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si ofreces un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto.",
   "pasos_accionables": [
     "Distingue con claridad en tu oferta la garantía incluida y el contrato de servicio opcional que se paga aparte.",
     "Escribe los términos del contrato de servicio en lenguaje simple y visible, sin que se confunda con una garantía.",
@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
-    "Cuando ofreces planes de proteccion extendida o servicios postventa pagados además de la garantia."
+    "Cuando ofreces planes de protección extendida o servicios postventa pagados además de la garantía."
   ],
   "etiqueta_arbol": "Distingue Garantía de Contrato",
   "fuentes_internas": [
@@ -95,6 +95,35 @@
         "evidencia": "O068-039.entregable: garantía, términos (Tildes que faltaban de verdad en garantía y términos; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-diferenciacion_garantia_contrato_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de proteccion adicional que tu cliente compra por separado del producto, a diferencia de la garantia, que ya viene incluida en el precio de venta. La ley te exige escribir los terminos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si ofreces un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantias implicitas de ese producto.",
+      "texto_nuevo": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los terminos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si ofreces un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: garantia, garantias, implicitas, proteccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-diferenciacion_garantia_contrato_servicio-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ofreces planes de proteccion extendida o servicios postventa pagados además de la garantia.",
+      "texto_nuevo": "Cuando ofreces planes de protección extendida o servicios postventa pagados además de la garantía.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: garantia, proteccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

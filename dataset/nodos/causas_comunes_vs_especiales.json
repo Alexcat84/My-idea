@@ -69,7 +69,7 @@
     "Cuando se evalúa el desempeño individual de un trabajador",
     "Cuando el nivel de defectos se mantenga igual a pesar de tus esfuerzos continuos de corrección puntual",
     "Si existe conflicto interno o baja moral por atribución de culpas ante errores recurrentes.",
-    "Cuando hay alta rotación o desmotivación por politicas de error que se sienten injustas",
+    "Cuando hay alta rotación o desmotivación por políticas de error que se sienten injustas",
     "Cuando usas el promedio del grupo como criterio para intervenir con una persona en particular",
     "Cuando cambia cada semana quien es la persona 'señalada' sin que haya mejora real",
     "Cuando necesitas determinar si las diferencias de desempeño entre las personas que trabajan contigo son reales o producto del azar del sistema"
@@ -217,6 +217,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 14
+    },
+    {
+      "id": "final-tildes-causas_comunes_vs_especiales-condiciones_activacion-6",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando hay alta rotación o desmotivación por politicas de error que se sienten injustas",
+      "texto_nuevo": "Cuando hay alta rotación o desmotivación por políticas de error que se sienten injustas",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: politicas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Definir qué cuenta como daño antes de probar el empaque",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipacion que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecera grave o insignificante segun el animo del dia, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. Tambien conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+  "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecerá grave o insignificante según el animo del día, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
   "pasos_accionables": [
     "Decide antes de la prueba qué tipo de daño en el producto es inaceptable.",
     "Decide qué nivel de daño superficial en la caja sí toleras sin considerarlo falla.",
@@ -110,6 +110,20 @@
         "evidencia": "O035-036.entregable: qué, qué (Faltan las dos tildes de qué, que son interrogativos indirectos.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-definir_que_cuenta_como_dano_antes_de_probar_empaque-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipacion que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecera grave o insignificante segun el animo del dia, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. Tambien conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+      "texto_nuevo": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecerá grave o insignificante según el animo del día, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Tambien, anticipacion, dia, parecera, segun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

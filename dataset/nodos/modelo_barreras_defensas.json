@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Modelo de Barreras y Defensas (Swiss Cheese)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Este modelo explica que los sistemas criticos se protegen con capas de defensa, unas duras (muros, barreras fisicas) y otras blandas (procedimientos, revisiones). Los accidentes ocurren cuando un error en el momento de ejecutar una tarea se combina con condiciones que ya existian de antes en tu negocio, como un diseno inadecuado, falta de entrenamiento o mantenimiento postergado, y esas condiciones alinean agujeros en las capas de defensa dejando que el riesgo se propague. Surgio en industrias que manejan energia peligrosa (nuclear, petroleo, procesos quimicos) y se populariza tras accidentes como el de Bhopal en 1984. Aunque dirige la atencion hacia los factores de fondo, el modelo todavia deja un lugar al error puntual como causa final, lo que puede terminar culpando a la persona que ejecuto la tarea si no investigas con cuidado el trasfondo completo.",
+  "resumen_teorico": "Este modelo explica que los sistemas críticos se protegen con capas de defensa, unas duras (muros, barreras físicas) y otras blandas (procedimientos, revisiones). Los accidentes ocurren cuando un error en el momento de ejecutar una tarea se combina con condiciones que ya existían de antes en tu negocio, como un diseno inadecuado, falta de entrenamiento o mantenimiento postergado, y esas condiciones alinean agujeros en las capas de defensa dejando que el riesgo se propague. Surgió en industrias que manejan energía peligrosa (nuclear, petróleo, procesos químicos) y se populariza tras accidentes como el de Bhopal en 1984. Aunque dirige la atención hacia los factores de fondo, el modelo todavía deja un lugar al error puntual como causa final, lo que puede terminar culpando a la persona que ejecuto la tarea si no investigas con cuidado el trasfondo completo.",
   "pasos_accionables": [
     "Identifica las defensas duras y blandas que existen en tu sistema o negocio",
     "Mapea posibles condiciones latentes en tu negocio como diseño, mantenimiento o capacitación deficientes",
@@ -26,9 +26,9 @@
     "confusion_de_modos_automatizacion"
   ],
   "condiciones_activacion": [
-    "Cuando investigas un accidente o incidente en un sistema que contiene riesgo o energia peligrosa",
+    "Cuando investigas un accidente o incidente en un sistema que contiene riesgo o energía peligrosa",
     "Cuando necesitas entender como se combinaron fallas humanas y de fondo en un incidente",
-    "Al disenar defensas en profundidad para procesos riesgosos de tu negocio"
+    "Al diseñar defensas en profundidad para procesos riesgosos de tu negocio"
   ],
   "etiqueta_arbol": "Refuerza tus Defensas Contra Errores",
   "ids_alias": [
@@ -127,6 +127,50 @@
         "evidencia": "O001-011.entregable: identificación, únicamente, ejecutó (Faltan las tildes de identificación, únicamente y ejecutó; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-modelo_barreras_defensas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Este modelo explica que los sistemas criticos se protegen con capas de defensa, unas duras (muros, barreras fisicas) y otras blandas (procedimientos, revisiones). Los accidentes ocurren cuando un error en el momento de ejecutar una tarea se combina con condiciones que ya existian de antes en tu negocio, como un diseno inadecuado, falta de entrenamiento o mantenimiento postergado, y esas condiciones alinean agujeros en las capas de defensa dejando que el riesgo se propague. Surgio en industrias que manejan energia peligrosa (nuclear, petroleo, procesos quimicos) y se populariza tras accidentes como el de Bhopal en 1984. Aunque dirige la atencion hacia los factores de fondo, el modelo todavia deja un lugar al error puntual como causa final, lo que puede terminar culpando a la persona que ejecuto la tarea si no investigas con cuidado el trasfondo completo.",
+      "texto_nuevo": "Este modelo explica que los sistemas críticos se protegen con capas de defensa, unas duras (muros, barreras físicas) y otras blandas (procedimientos, revisiones). Los accidentes ocurren cuando un error en el momento de ejecutar una tarea se combina con condiciones que ya existían de antes en tu negocio, como un diseno inadecuado, falta de entrenamiento o mantenimiento postergado, y esas condiciones alinean agujeros en las capas de defensa dejando que el riesgo se propague. Surgió en industrias que manejan energía peligrosa (nuclear, petróleo, procesos químicos) y se populariza tras accidentes como el de Bhopal en 1984. Aunque dirige la atención hacia los factores de fondo, el modelo todavía deja un lugar al error puntual como causa final, lo que puede terminar culpando a la persona que ejecuto la tarea si no investigas con cuidado el trasfondo completo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Surgio, atencion, criticos, energia, existian, fisicas, petroleo, quimicos, todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-modelo_barreras_defensas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando investigas un accidente o incidente en un sistema que contiene riesgo o energia peligrosa",
+      "texto_nuevo": "Cuando investigas un accidente o incidente en un sistema que contiene riesgo o energía peligrosa",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: energia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-modelo_barreras_defensas-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al disenar defensas en profundidad para procesos riesgosos de tu negocio",
+      "texto_nuevo": "Al diseñar defensas en profundidad para procesos riesgosos de tu negocio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: disenar"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

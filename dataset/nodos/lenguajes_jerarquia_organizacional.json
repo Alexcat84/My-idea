@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Los dos lenguajes de tu negocio: dinero y cosas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "En tu negocio existen dos formas de hablar de un problema: el lenguaje de las cosas (porcentaje de errores, horas de retrabajo) y el lenguaje del dinero (costo, ganancia, retorno). Tu decides con el lenguaje del dinero, pero tu día a día ocurre en el lenguaje de las cosas. Por eso necesitas volverte bilingue: traducir lo que pasa en tu operación a lo que eso significa en plata para poder priorizar bien.",
+  "resumen_teorico": "En tu negocio existen dos formas de hablar de un problema: el lenguaje de las cosas (porcentaje de errores, horas de retrabajo) y el lenguaje del dinero (costo, ganancia, retorno). Tu decides con el lenguaje del dinero, pero tu día a día ocurre en el lenguaje de las cosas. Por eso necesitas volverte bilingüe: traducir lo que pasa en tu operación a lo que eso significa en plata para poder priorizar bien.",
   "pasos_accionables": [
     "Identificar en qué lenguaje estás describiendo el problema en este momento",
-    "Traducir tus metricas operativas (defectos, horas de retrabajo) a terminos de dinero (costo, ganancia)",
+    "Traducir tus métricas operativas (defectos, horas de retrabajo) a terminos de dinero (costo, ganancia)",
     "Practicar hasta que puedas moverte entre ambos lenguajes sin perder claridad"
   ],
   "entregable_esperado": "Una nota que traduce tus indicadores de calidad en su impacto en dinero, ya cuantificado",
@@ -39,6 +39,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-tildes-lenguajes_jerarquia_organizacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En tu negocio existen dos formas de hablar de un problema: el lenguaje de las cosas (porcentaje de errores, horas de retrabajo) y el lenguaje del dinero (costo, ganancia, retorno). Tu decides con el lenguaje del dinero, pero tu día a día ocurre en el lenguaje de las cosas. Por eso necesitas volverte bilingue: traducir lo que pasa en tu operación a lo que eso significa en plata para poder priorizar bien.",
+      "texto_nuevo": "En tu negocio existen dos formas de hablar de un problema: el lenguaje de las cosas (porcentaje de errores, horas de retrabajo) y el lenguaje del dinero (costo, ganancia, retorno). Tu decides con el lenguaje del dinero, pero tu día a día ocurre en el lenguaje de las cosas. Por eso necesitas volverte bilingüe: traducir lo que pasa en tu operación a lo que eso significa en plata para poder priorizar bien.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: bilingue"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-lenguajes_jerarquia_organizacional-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Traducir tus metricas operativas (defectos, horas de retrabajo) a terminos de dinero (costo, ganancia)",
+      "texto_nuevo": "Traducir tus métricas operativas (defectos, horas de retrabajo) a terminos de dinero (costo, ganancia)",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: metricas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

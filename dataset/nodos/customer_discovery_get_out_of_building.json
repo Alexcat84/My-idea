@@ -38,7 +38,7 @@
   ],
   "condiciones_activacion": [
     "Cuando tienes un plan de negocio basado solo en tus propias suposiciones, sin validar",
-    "Si todavia no has hablado con clientes reales"
+    "Si todavía no has hablado con clientes reales"
   ],
   "etiqueta_arbol": "Sal del Edificio a Validar",
   "ids_alias": [
@@ -59,5 +59,22 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-tildes-customer_discovery_get_out_of_building-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si todavia no has hablado con clientes reales",
+      "texto_nuevo": "Si todavía no has hablado con clientes reales",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    }
   ]
 }

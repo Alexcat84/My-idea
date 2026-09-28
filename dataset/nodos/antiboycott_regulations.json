@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cumplimiento de las Regulaciones Antiboicot",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Estados Unidos se opone a los boicots comerciales que paises extranjeros imponen contra naciones amigas. Las regulaciones antiboicot te prohiben, si tienes un negocio en Estados Unidos, participar en boicots extranjeros o apoyarlos: negarte a hacer negocios con empresas en listas negras, discriminar por raza, religion, genero u origen nacional para cumplir un boicot, o dar información sobre tus relaciones comerciales con paises boicoteados. También te exigen reportar al organismo correspondiente cualquier solicitud de cumplimiento de boicot que recibas y hacer publico si la cumpliste o no. Esto refleja la normativa y los acuerdos vigentes en Estados Unidos al momento de esta fuente; confirma el acuerdo y la regulacion vigente en tu jurisdiccion antes de actuar.",
+  "resumen_teorico": "Estados Unidos se opone a los boicots comerciales que países extranjeros imponen contra naciones amigas. Las regulaciones antiboicot te prohíben, si tienes un negocio en Estados Unidos, participar en boicots extranjeros o apoyarlos: negarte a hacer negocios con empresas en listas negras, discriminar por raza, religion, genero u origen nacional para cumplir un boicot, o dar información sobre tus relaciones comerciales con países boicoteados. También te exigen reportar al organismo correspondiente cualquier solicitud de cumplimiento de boicot que recibas y hacer publico si la cumpliste o no. Esto refleja la normativa y los acuerdos vigentes en Estados Unidos al momento de esta fuente; confirma el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Revisar los contratos y solicitudes comerciales de socios o clientes extranjeros para detectar lenguaje de boicot",
     "Rechazar participar en boicots contra países amigos de Estados Unidos, incluyendo negarte a hacer negocios con empresas en listas negras",
@@ -22,8 +22,8 @@
     "foreign_corrupt_practices_act"
   ],
   "condiciones_activacion": [
-    "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros paises",
-    "Si tu negocio opera en Estados Unidos y hace negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos"
+    "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros países",
+    "Si tu negocio opera en Estados Unidos y hace negocios con países involucrados en boicots contra naciones amigas de Estados Unidos"
   ],
   "etiqueta_arbol": "Cumple las Reglas Antiboicot",
   "ids_alias": [
@@ -136,6 +136,50 @@
         "evidencia": "O022-038.entregable: revisión, cláusulas (Solo añade las tildes que faltaban en revisión y cláusulas.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-antiboycott_regulations-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estados Unidos se opone a los boicots comerciales que paises extranjeros imponen contra naciones amigas. Las regulaciones antiboicot te prohiben, si tienes un negocio en Estados Unidos, participar en boicots extranjeros o apoyarlos: negarte a hacer negocios con empresas en listas negras, discriminar por raza, religion, genero u origen nacional para cumplir un boicot, o dar información sobre tus relaciones comerciales con paises boicoteados. También te exigen reportar al organismo correspondiente cualquier solicitud de cumplimiento de boicot que recibas y hacer publico si la cumpliste o no. Esto refleja la normativa y los acuerdos vigentes en Estados Unidos al momento de esta fuente; confirma el acuerdo y la regulacion vigente en tu jurisdiccion antes de actuar.",
+      "texto_nuevo": "Estados Unidos se opone a los boicots comerciales que países extranjeros imponen contra naciones amigas. Las regulaciones antiboicot te prohíben, si tienes un negocio en Estados Unidos, participar en boicots extranjeros o apoyarlos: negarte a hacer negocios con empresas en listas negras, discriminar por raza, religion, genero u origen nacional para cumplir un boicot, o dar información sobre tus relaciones comerciales con países boicoteados. También te exigen reportar al organismo correspondiente cualquier solicitud de cumplimiento de boicot que recibas y hacer publico si la cumpliste o no. Esto refleja la normativa y los acuerdos vigentes en Estados Unidos al momento de esta fuente; confirma el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: jurisdiccion, paises, prohiben, regulacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-antiboycott_regulations-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros paises",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros países",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: paises"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-antiboycott_regulations-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu negocio opera en Estados Unidos y hace negocios con paises involucrados en boicots contra naciones amigas de Estados Unidos",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y hace negocios con países involucrados en boicots contra naciones amigas de Estados Unidos",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: paises"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

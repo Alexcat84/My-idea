@@ -2,9 +2,9 @@
   "node_id": "silla_vacia_del_cliente_en_decisiones",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "La Silla Vacia del Cliente en las Reuniones de Decision",
+  "titulo_concepto": "La Silla Vacía del Cliente en las Reuniones de Decisión",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+  "resumen_teorico": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversación se inclina sola hacia lo que le conviene a la operación. El remedio es físico y barato: instalar un símbolo permanente que represente al cliente en esa mesa, como la silla vacía que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoración: el símbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decisión.",
   "pasos_accionables": [
     "Incorporar un símbolo o recordatorio del cliente en las reuniones internas de decisión",
     "Colocar una silla vacía representando al cliente en cada reunión interna como recordatorio simbólico"
@@ -49,6 +49,34 @@
         "evidencia": "O031-006.entregable: símbolo, decisión, quién, qué, reunión (Tildes reales (símbolo, decisión, reunión e interrogativos indirectos quién y qué); nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-silla_vacia_del_cliente_en_decisiones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+      "texto_nuevo": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversación se inclina sola hacia lo que le conviene a la operación. El remedio es físico y barato: instalar un símbolo permanente que represente al cliente en esa mesa, como la silla vacía que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoración: el símbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decisión.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: conversacion, decision, decoracion, fisico, operacion, simbolo, vacia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-silla_vacia_del_cliente_en_decisiones-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La Silla Vacia del Cliente en las Reuniones de Decision",
+      "texto_nuevo": "La Silla Vacía del Cliente en las Reuniones de Decisión",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Decision, Vacia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

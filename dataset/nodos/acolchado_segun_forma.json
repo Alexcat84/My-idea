@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Acolchado según la forma de la pieza",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilindrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de proteccion quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, ademas, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el metodo de acolchado segun la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
+  "resumen_teorico": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilíndrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de protección quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, además, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el método de acolchado según la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
   "pasos_accionables": [
     "Identifica si tu pieza es plana, cilíndrica o de forma irregular antes de elegir el material de relleno.",
     "En piezas planas o con bordes filosos, cubre esquinas y bordes con espuma o cartón corrugado.",
@@ -19,7 +19,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Envias piezas con bordes filosos, curvas o formas que no encajan en una caja simple",
+    "Envías piezas con bordes filosos, curvas o formas que no encajan en una caja simple",
     "Te han llegado quejas de piezas rayadas o rotas por el tipo de relleno usado",
     "Vendes productos de formas muy distintas y usas el mismo empaque para todos"
   ],
@@ -126,6 +126,35 @@
         "evidencia": "O057-023.entregable: método, específico, según, envías (Tildes reales en 'método', 'específico', 'según' y 'envías'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-acolchado_segun_forma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilindrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de proteccion quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, ademas, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el metodo de acolchado segun la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
+      "texto_nuevo": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilíndrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de protección quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, además, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el método de acolchado según la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ademas, cilindrica, metodo, proteccion, segun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-acolchado_segun_forma-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envias piezas con bordes filosos, curvas o formas que no encajan en una caja simple",
+      "texto_nuevo": "Envías piezas con bordes filosos, curvas o formas que no encajan en una caja simple",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Envias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

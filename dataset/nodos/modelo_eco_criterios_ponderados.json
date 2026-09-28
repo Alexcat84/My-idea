@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Sistema de puntos para pesar tus proyectos ambientales (Eco-Model)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Es una manera de reunir distintas miradas de tu negocio (retener a tu gente, conseguir clientes, mantenerlos contentos, cuidar tu reputacion, cumplir tus compromisos de responsabilidad social) para armar un sistema de puntos que pese tus iniciativas ambientales. Te sirve cuando tienes que comparar proyectos con un retorno financiero parecido, usando criterios que los números solos no capturan, y respalda tu decisión porque nace de varias miradas expertas.",
+  "resumen_teorico": "Es una manera de reunir distintas miradas de tu negocio (retener a tu gente, conseguir clientes, mantenerlos contentos, cuidar tu reputación, cumplir tus compromisos de responsabilidad social) para armar un sistema de puntos que pese tus iniciativas ambientales. Te sirve cuando tienes que comparar proyectos con un retorno financiero parecido, usando criterios que los números solos no capturan, y respalda tu decisión porque nace de varias miradas expertas.",
   "pasos_accionables": [
     "Reúne a un grupo variado de personas que conozcan distintas partes de tu negocio (ventas, marketing, personas, proveedores).",
     "Comparte con ellas una lista inicial de costos y beneficios relacionados con lo ambiental.",
@@ -21,8 +21,8 @@
     "voces_externas_credibles"
   ],
   "condiciones_activacion": [
-    "Cuando tienes varios proyectos con un retorno financiero parecido compitiendo por tu inversion.",
-    "Cuando necesitas argumentos solidos para justificar una inversion sostenible."
+    "Cuando tienes varios proyectos con un retorno financiero parecido compitiendo por tu inversión.",
+    "Cuando necesitas argumentos sólidos para justificar una inversión sostenible."
   ],
   "etiqueta_arbol": "Pondera tus Iniciativas Ambientales",
   "fuentes_internas": [
@@ -110,6 +110,50 @@
         "evidencia": "O054-031.entregable: sí ('sí' es pronombre reflexivo y lleva tilde; 'eco model' queda sin tocar.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-modelo_eco_criterios_ponderados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es una manera de reunir distintas miradas de tu negocio (retener a tu gente, conseguir clientes, mantenerlos contentos, cuidar tu reputacion, cumplir tus compromisos de responsabilidad social) para armar un sistema de puntos que pese tus iniciativas ambientales. Te sirve cuando tienes que comparar proyectos con un retorno financiero parecido, usando criterios que los números solos no capturan, y respalda tu decisión porque nace de varias miradas expertas.",
+      "texto_nuevo": "Es una manera de reunir distintas miradas de tu negocio (retener a tu gente, conseguir clientes, mantenerlos contentos, cuidar tu reputación, cumplir tus compromisos de responsabilidad social) para armar un sistema de puntos que pese tus iniciativas ambientales. Te sirve cuando tienes que comparar proyectos con un retorno financiero parecido, usando criterios que los números solos no capturan, y respalda tu decisión porque nace de varias miradas expertas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: reputacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-modelo_eco_criterios_ponderados-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes varios proyectos con un retorno financiero parecido compitiendo por tu inversion.",
+      "texto_nuevo": "Cuando tienes varios proyectos con un retorno financiero parecido compitiendo por tu inversión.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: inversion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-modelo_eco_criterios_ponderados-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas argumentos solidos para justificar una inversion sostenible.",
+      "texto_nuevo": "Cuando necesitas argumentos sólidos para justificar una inversión sostenible.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: inversion, solidos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

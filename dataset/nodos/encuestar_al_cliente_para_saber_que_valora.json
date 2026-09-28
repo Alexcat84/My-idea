@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Encuestar al cliente para saber qué valora del servicio",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "No todos los clientes valoran lo mismo de una entrega: unos priorizan la velocidad, otros la condicion del producto, otros la facilidad para devolver. Adivinar cual pesa mas es un error comun, porque termina imponiendo estandares de servicio inventados en lugar de reales. La forma de saberlo es preguntando de forma directa, con un metodo simple de encuesta o entrevista, y agrupando las respuestas por tipo de cliente si tienes varios perfiles distintos. El resultado de este ejercicio no es solo informacion: es la base para decidir despues que vas a medir y monitorear en tu logistica, en lugar de perseguir metricas que a nadie le importan.",
+  "resumen_teorico": "No todos los clientes valoran lo mismo de una entrega: unos priorizan la velocidad, otros la condición del producto, otros la facilidad para devolver. Adivinar cual pesa mas es un error común, porque termina imponiendo estándares de servicio inventados en lugar de reales. La forma de saberlo es preguntando de forma directa, con un método simple de encuesta o entrevista, y agrupando las respuestas por tipo de cliente si tienes varios perfiles distintos. El resultado de este ejercicio no es solo información: es la base para decidir después que vas a medir y monitorear en tu logística, en lugar de perseguir métricas que a nadie le importan.",
   "pasos_accionables": [
     "Identifica quién decide realmente la compra entre tus clientes.",
     "Elige un método simple de encuesta según tu alcance: mensaje, correo o llamada corta.",
@@ -87,6 +87,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-encuestar_al_cliente_para_saber_que_valora-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No todos los clientes valoran lo mismo de una entrega: unos priorizan la velocidad, otros la condicion del producto, otros la facilidad para devolver. Adivinar cual pesa mas es un error comun, porque termina imponiendo estandares de servicio inventados en lugar de reales. La forma de saberlo es preguntando de forma directa, con un metodo simple de encuesta o entrevista, y agrupando las respuestas por tipo de cliente si tienes varios perfiles distintos. El resultado de este ejercicio no es solo informacion: es la base para decidir despues que vas a medir y monitorear en tu logistica, en lugar de perseguir metricas que a nadie le importan.",
+      "texto_nuevo": "No todos los clientes valoran lo mismo de una entrega: unos priorizan la velocidad, otros la condición del producto, otros la facilidad para devolver. Adivinar cual pesa mas es un error común, porque termina imponiendo estándares de servicio inventados en lugar de reales. La forma de saberlo es preguntando de forma directa, con un método simple de encuesta o entrevista, y agrupando las respuestas por tipo de cliente si tienes varios perfiles distintos. El resultado de este ejercicio no es solo información: es la base para decidir después que vas a medir y monitorear en tu logística, en lugar de perseguir métricas que a nadie le importan.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comun, condicion, despues, estandares, informacion, logistica, metodo, metricas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

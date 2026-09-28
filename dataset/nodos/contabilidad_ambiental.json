@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Contabilidad Ambiental (Environmental Accounting)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La contabilidad ambiental es un conjunto de herramientas que te permite tomar mejores decisiones al incorporar costos y beneficios ambientales reales que la contabilidad tradicional suele ignorar. Incluye conceptos como costeo total, costeo integral, costeo real y contabilidad de ciclo de vida, que buscan capturar costos externos e internos relacionados con el impacto ambiental de tu operacion.",
+  "resumen_teorico": "La contabilidad ambiental es un conjunto de herramientas que te permite tomar mejores decisiones al incorporar costos y beneficios ambientales reales que la contabilidad tradicional suele ignorar. Incluye conceptos como costeo total, costeo integral, costeo real y contabilidad de ciclo de vida, que buscan capturar costos externos e internos relacionados con el impacto ambiental de tu operación.",
   "pasos_accionables": [
     "Identificar los costos ambientales ocultos en tu forma actual de llevar las cuentas",
     "Definir qué costos internos y externos vas a incluir en el análisis",
@@ -24,7 +24,7 @@
     "valoracion_costos_externos"
   ],
   "condiciones_activacion": [
-    "Si tomas decisiones de inversion sin considerar costos ambientales ocultos",
+    "Si tomas decisiones de inversión sin considerar costos ambientales ocultos",
     "Si descartas iniciativas sostenibles por parecer demasiado caras bajo la contabilidad tradicional",
     "Si se requiere reportar sostenibilidad a inversionistas o reguladores"
   ],
@@ -70,6 +70,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-contabilidad_ambiental-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La contabilidad ambiental es un conjunto de herramientas que te permite tomar mejores decisiones al incorporar costos y beneficios ambientales reales que la contabilidad tradicional suele ignorar. Incluye conceptos como costeo total, costeo integral, costeo real y contabilidad de ciclo de vida, que buscan capturar costos externos e internos relacionados con el impacto ambiental de tu operacion.",
+      "texto_nuevo": "La contabilidad ambiental es un conjunto de herramientas que te permite tomar mejores decisiones al incorporar costos y beneficios ambientales reales que la contabilidad tradicional suele ignorar. Incluye conceptos como costeo total, costeo integral, costeo real y contabilidad de ciclo de vida, que buscan capturar costos externos e internos relacionados con el impacto ambiental de tu operación.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: operacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-contabilidad_ambiental-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tomas decisiones de inversion sin considerar costos ambientales ocultos",
+      "texto_nuevo": "Si tomas decisiones de inversión sin considerar costos ambientales ocultos",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: inversion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

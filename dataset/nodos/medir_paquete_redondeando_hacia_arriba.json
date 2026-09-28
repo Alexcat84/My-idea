@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Medir el paquete redondeando hacia arriba",
   "fuente": "Guia visual de empaque",
-  "resumen_teorico": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumetrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumetrico y peso minimo facturable. La formula y el divisor exactos varian segun el courier y el pais, asi que hay que confirmarlos directamente con quien te va a hacer el envio.",
+  "resumen_teorico": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La formula y el divisor exactos varían según el courier y el país, así que hay que confirmarlos directamente con quien te va a hacer el envio.",
   "pasos_accionables": [
     "Mide largo, ancho y alto de la caja ya cerrada y empacada, no del producto solo.",
     "Define el lado más largo como el largo del paquete.",
@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Te ha llegado una factura de envio mas alta de lo que cotizaste.",
-    "Vendes productos livianos pero voluminosos, como ropa o articulos inflables.",
+    "Vendes productos livianos pero voluminosos, como ropa o artículos inflables.",
     "Vas a comparar tarifas entre varios couriers y necesitas medir igual con todos."
   ],
   "etiqueta_arbol": "Mide y redondea hacia arriba",
@@ -70,6 +70,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-medir_paquete_redondeando_hacia_arriba-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumetrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumetrico y peso minimo facturable. La formula y el divisor exactos varian segun el courier y el pais, asi que hay que confirmarlos directamente con quien te va a hacer el envio.",
+      "texto_nuevo": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La formula y el divisor exactos varían según el courier y el país, así que hay que confirmarlos directamente con quien te va a hacer el envio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: asi, minimo, pais, segun, varian, volumetrico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-medir_paquete_redondeando_hacia_arriba-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vendes productos livianos pero voluminosos, como ropa o articulos inflables.",
+      "texto_nuevo": "Vendes productos livianos pero voluminosos, como ropa o artículos inflables.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: articulos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

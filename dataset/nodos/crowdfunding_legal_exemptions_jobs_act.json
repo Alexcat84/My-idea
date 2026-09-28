@@ -21,7 +21,7 @@
     "venture_debt_introduccion"
   ],
   "condiciones_activacion": [
-    "Si tu empresa opera en Estados Unidos o vas a ofrecer participaciones a inversionistas alli y estas considerando recaudar capital mediante crowdfunding o plataformas online",
+    "Si tu empresa opera en Estados Unidos o vas a ofrecer participaciones a inversionistas allí y estas considerando recaudar capital mediante crowdfunding o plataformas online",
     "Si tienes dudas sobre si necesitas registrar tu oferta ante la SEC."
   ],
   "etiqueta_arbol": "Conoce las Reglas del Crowdfunding",
@@ -42,6 +42,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-tildes-crowdfunding_legal_exemptions_jobs_act-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu empresa opera en Estados Unidos o vas a ofrecer participaciones a inversionistas alli y estas considerando recaudar capital mediante crowdfunding o plataformas online",
+      "texto_nuevo": "Si tu empresa opera en Estados Unidos o vas a ofrecer participaciones a inversionistas allí y estas considerando recaudar capital mediante crowdfunding o plataformas online",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: alli"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ruptura Cultural (Breakthrough in Culture)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Transformación de los estandares de comportamiento, valores y normas de tu negocio para alinearlos con tus objetivos de desempeno y calidad. Es el tipo de cambio mas dificil y lento de lograr, porque exige modificar creencias arraigadas, y solo se sostiene si tu mantienes consistencia y persistencia al reforzar las nuevas normas.",
+  "resumen_teorico": "Transformación de los estándares de comportamiento, valores y normas de tu negocio para alinearlos con tus objetivos de desempeño y calidad. Es el tipo de cambio mas difícil y lento de lograr, porque exige modificar creencias arraigadas, y solo se sostiene si tu mantienes consistencia y persistencia al reforzar las nuevas normas.",
   "pasos_accionables": [
     "Revisar la visión, misión y valores de tu negocio",
     "Alinear cómo eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir",
@@ -71,6 +71,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-breakthrough_cultural-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Transformación de los estandares de comportamiento, valores y normas de tu negocio para alinearlos con tus objetivos de desempeno y calidad. Es el tipo de cambio mas dificil y lento de lograr, porque exige modificar creencias arraigadas, y solo se sostiene si tu mantienes consistencia y persistencia al reforzar las nuevas normas.",
+      "texto_nuevo": "Transformación de los estándares de comportamiento, valores y normas de tu negocio para alinearlos con tus objetivos de desempeño y calidad. Es el tipo de cambio mas difícil y lento de lograr, porque exige modificar creencias arraigadas, y solo se sostiene si tu mantienes consistencia y persistencia al reforzar las nuevas normas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desempeno, dificil, estandares"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

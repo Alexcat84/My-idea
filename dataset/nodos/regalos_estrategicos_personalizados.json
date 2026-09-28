@@ -31,7 +31,7 @@
   "condiciones_activacion": [
     "Cuando se dispone de presupuesto para inversión en relación con pocos clientes de alto valor",
     "Si se busca reforzar la lealtad de clientes clave con un gesto exclusivo y privado, sin fines publicitarios",
-    "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relacion a largo plazo en lugar de solo buscar clientes nuevos",
+    "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relación a largo plazo en lugar de solo buscar clientes nuevos",
     "Cuando se busca diferenciarse de la competencia en la retención de clientes clave"
   ],
   "etiqueta_arbol": "Regala Algo Único a tus Clientes",
@@ -103,6 +103,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-regalos_estrategicos_personalizados-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relacion a largo plazo en lugar de solo buscar clientes nuevos",
+      "texto_nuevo": "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relación a largo plazo en lugar de solo buscar clientes nuevos",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: relacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Simular los riesgos del tránsito antes de enviar",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Cuando disenas o cambias tu empaque, no necesitas un laboratorio certificado para saber si aguantara el viaje: existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia logica y tu puedes copiar esa logica de forma casera. Primero se somete el paquete a caidas desde distintas alturas segun su peso, despues a vibracion simulando el traqueteo del transporte, luego a caidas sobre una esquina o borde para probar puntos debiles, y finalmente, si el contenido es liquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos los golpes que tu paquete recibira entre tu mesa de trabajo y la puerta del cliente.",
+  "resumen_teorico": "Cuando diseñas o cambias tu empaque, no necesitas un laboratorio certificado para saber si aguantara el viaje: existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia lógica y tu puedes copiar esa lógica de forma casera. Primero se somete el paquete a caídas desde distintas alturas según su peso, después a vibración simulando el traqueteo del transporte, luego a caídas sobre una esquina o borde para probar puntos débiles, y finalmente, si el contenido es liquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos los golpes que tu paquete recibirá entre tu mesa de trabajo y la puerta del cliente.",
   "pasos_accionables": [
     "Suelta tu paquete cerrado diez veces sobre una superficie dura, desde una altura que depende de su peso.",
     "Sugerencia de My Idea: agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
@@ -22,8 +22,8 @@
   ],
   "condiciones_activacion": [
     "Cambiaste el diseno de tu caja o el material de relleno y no sabes si sigue protegiendo igual.",
-    "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se dana.",
-    "Vas a lanzar un producto nuevo por primera vez y no tienes historial de danos para guiarte."
+    "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se daña.",
+    "Vas a lanzar un producto nuevo por primera vez y no tienes historial de daños para guiarte."
   ],
   "etiqueta_arbol": "Simula golpes de transporte en casa",
   "correcciones": [
@@ -129,6 +129,50 @@
         "evidencia": "O032-027.entregable: qué, resistió (Las tildes de qué (interrogativo indirecto) y resistió son reales y no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-simular_riesgos_transito_antes_de_enviar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando disenas o cambias tu empaque, no necesitas un laboratorio certificado para saber si aguantara el viaje: existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia logica y tu puedes copiar esa logica de forma casera. Primero se somete el paquete a caidas desde distintas alturas segun su peso, despues a vibracion simulando el traqueteo del transporte, luego a caidas sobre una esquina o borde para probar puntos debiles, y finalmente, si el contenido es liquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos los golpes que tu paquete recibira entre tu mesa de trabajo y la puerta del cliente.",
+      "texto_nuevo": "Cuando diseñas o cambias tu empaque, no necesitas un laboratorio certificado para saber si aguantara el viaje: existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia lógica y tu puedes copiar esa lógica de forma casera. Primero se somete el paquete a caídas desde distintas alturas según su peso, después a vibración simulando el traqueteo del transporte, luego a caídas sobre una esquina o borde para probar puntos débiles, y finalmente, si el contenido es liquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos los golpes que tu paquete recibirá entre tu mesa de trabajo y la puerta del cliente.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: caidas, debiles, despues, disenas, logica, recibira, segun, vibracion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-simular_riesgos_transito_antes_de_enviar-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se dana.",
+      "texto_nuevo": "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se daña.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: dana"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-simular_riesgos_transito_antes_de_enviar-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vas a lanzar un producto nuevo por primera vez y no tienes historial de danos para guiarte.",
+      "texto_nuevo": "Vas a lanzar un producto nuevo por primera vez y no tienes historial de daños para guiarte.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: danos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

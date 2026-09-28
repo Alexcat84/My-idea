@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Safety I versus Safety II",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Distincion de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoria del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahi vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingenieria de resiliencia para anticiparte al exito operacional, no solo reaccionar al fallo.",
+  "resumen_teorico": "Distinción de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahí vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingeniería de resiliencia para anticiparte al éxito operacional, no solo reaccionar al fallo.",
   "pasos_accionables": [
     "Evalúa si tu forma de gestionar la seguridad se centra solo en incidentes (Safety I) o también en el trabajo normal (Safety II)",
     "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por qué haces las cosas como las haces, no para corregirte de inmediato",
@@ -28,9 +28,9 @@
     "diseno_departamento_seguridad_efectivo"
   ],
   "condiciones_activacion": [
-    "Cuando tu gestion de seguridad se basa unicamente en analizar incidentes después de que ocurren",
+    "Cuando tu gestion de seguridad se basa únicamente en analizar incidentes después de que ocurren",
     "Cuando buscas desarrollar capacidad de resiliencia ante condiciones inesperadas",
-    "Cuando quieres entender el riesgo latente mas alla de cumplir la norma"
+    "Cuando quieres entender el riesgo latente mas allá de cumplir la norma"
   ],
   "etiqueta_arbol": "Compara dos Visiones de Seguridad",
   "ids_alias": [
@@ -121,6 +121,50 @@
         "evidencia": "O033-040.entregable: gestión, observación, adaptación (Tildes que faltaban en 'gestión', 'observación' y 'adaptación'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-safety_i_safety_ii-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Distincion de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoria del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahi vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingenieria de resiliencia para anticiparte al exito operacional, no solo reaccionar al fallo.",
+      "texto_nuevo": "Distinción de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahí vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingeniería de resiliencia para anticiparte al éxito operacional, no solo reaccionar al fallo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Distincion, ahi, exito, ingenieria, mayoria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-safety_i_safety_ii-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu gestion de seguridad se basa unicamente en analizar incidentes después de que ocurren",
+      "texto_nuevo": "Cuando tu gestion de seguridad se basa únicamente en analizar incidentes después de que ocurren",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: unicamente"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-safety_i_safety_ii-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres entender el riesgo latente mas alla de cumplir la norma",
+      "texto_nuevo": "Cuando quieres entender el riesgo latente mas allá de cumplir la norma",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: alla"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

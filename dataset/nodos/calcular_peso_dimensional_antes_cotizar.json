@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Calcular el peso dimensional antes de cotizar",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Cuando un courier cotiza tu envio, no siempre cobra por el peso real de la bascula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un numero fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese calculo puede darte un peso mayor al real, y el courier siempre te cobra por el mas alto de los dos. El divisor cambia entre couriers y entre paises, y tambien puede cambiar de un ano a otro, asi que no sirve memorizar un numero: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este calculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas mas ajustadas al tamano real de tu producto.",
+  "resumen_teorico": "Cuando un courier cotiza tu envio, no siempre cobra por el peso real de la bascula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un numero fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese calculo puede darte un peso mayor al real, y el courier siempre te cobra por el mas alto de los dos. El divisor cambia entre couriers y entre países, y también puede cambiar de un ano a otro, así que no sirve memorizar un numero: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este calculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas mas ajustadas al tamaño real de tu producto.",
   "pasos_accionables": [
     "Mide el largo, ancho y alto de tu caja en las unidades que use tu courier.",
     "Pregunta a tu courier cuál es su divisor de peso dimensional actual.",
@@ -21,8 +21,8 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Te sorprendio una factura de envio mas alta de lo que esperabas segun el peso de tu producto.",
-    "Estas eligiendo el tamano de caja para un producto liviano pero voluminoso.",
+    "Te sorprendió una factura de envio mas alta de lo que esperabas según el peso de tu producto.",
+    "Estas eligiendo el tamaño de caja para un producto liviano pero voluminoso.",
     "Vas a cotizar un envio nuevo y no sabes si te cobraran por peso real o por volumen."
   ],
   "etiqueta_arbol": "Calcula el peso dimensional",
@@ -71,6 +71,50 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-calcular_peso_dimensional_antes_cotizar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un courier cotiza tu envio, no siempre cobra por el peso real de la bascula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un numero fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese calculo puede darte un peso mayor al real, y el courier siempre te cobra por el mas alto de los dos. El divisor cambia entre couriers y entre paises, y tambien puede cambiar de un ano a otro, asi que no sirve memorizar un numero: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este calculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas mas ajustadas al tamano real de tu producto.",
+      "texto_nuevo": "Cuando un courier cotiza tu envio, no siempre cobra por el peso real de la bascula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un numero fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese calculo puede darte un peso mayor al real, y el courier siempre te cobra por el mas alto de los dos. El divisor cambia entre couriers y entre países, y también puede cambiar de un ano a otro, así que no sirve memorizar un numero: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este calculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas mas ajustadas al tamaño real de tu producto.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: asi, paises, tamano, tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-calcular_peso_dimensional_antes_cotizar-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Te sorprendio una factura de envio mas alta de lo que esperabas segun el peso de tu producto.",
+      "texto_nuevo": "Te sorprendió una factura de envio mas alta de lo que esperabas según el peso de tu producto.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: segun, sorprendio"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-calcular_peso_dimensional_antes_cotizar-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estas eligiendo el tamano de caja para un producto liviano pero voluminoso.",
+      "texto_nuevo": "Estas eligiendo el tamaño de caja para un producto liviano pero voluminoso.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: tamano"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

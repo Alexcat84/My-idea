@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Transformar tu negocio como proceso de largo plazo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Adoptar de verdad una cultura de calidad no es un evento sino un proceso de transformación que puede tomar entre 10 y 30 anos, según cuanto compromiso sostengas. Requiere resolver barreras como la presión por resultados de corto plazo, la resistencia a cambiar como compras, y que las personas que te asesoran en temas economicos o regulatorios entiendan este enfoque. Solo los negocios con constancia de proposito sostenida sobreviven en el largo plazo.",
+  "resumen_teorico": "Adoptar de verdad una cultura de calidad no es un evento sino un proceso de transformación que puede tomar entre 10 y 30 anos, según cuanto compromiso sostengas. Requiere resolver barreras como la presión por resultados de corto plazo, la resistencia a cambiar como compras, y que las personas que te asesoran en temas económicos o regulatorios entiendan este enfoque. Solo los negocios con constancia de proposito sostenida sobreviven en el largo plazo.",
   "pasos_accionables": [
     "Establece expectativas realistas de tiempo (al menos 5 a 10 años) para cambios estructurales como comprar basándote en calidad",
     "Protege tu compromiso de largo plazo de la presión por resultados de corto plazo",
@@ -98,6 +98,20 @@
         "evidencia": "O054-037.entregable: años, más ('anos' por 'años' es una errata de eñe y faltaba la tilde de 'más'; el resto queda igual.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-transformacion_gerencial_para_la_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Adoptar de verdad una cultura de calidad no es un evento sino un proceso de transformación que puede tomar entre 10 y 30 anos, según cuanto compromiso sostengas. Requiere resolver barreras como la presión por resultados de corto plazo, la resistencia a cambiar como compras, y que las personas que te asesoran en temas economicos o regulatorios entiendan este enfoque. Solo los negocios con constancia de proposito sostenida sobreviven en el largo plazo.",
+      "texto_nuevo": "Adoptar de verdad una cultura de calidad no es un evento sino un proceso de transformación que puede tomar entre 10 y 30 anos, según cuanto compromiso sostengas. Requiere resolver barreras como la presión por resultados de corto plazo, la resistencia a cambiar como compras, y que las personas que te asesoran en temas económicos o regulatorios entiendan este enfoque. Solo los negocios con constancia de proposito sostenida sobreviven en el largo plazo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: economicos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

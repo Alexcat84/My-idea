@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Remover Barreras al Orgullo por el Trabajo Bien Hecho",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El Punto 12 de Deming dice que tu, como responsable de tu negocio, debes eliminar las barreras que impiden a las personas que trabajan contigo sentir orgullo por lo que hacen. Estas barreras incluyen evaluaciones injustas, materiales o herramientas defectuosas, falta de mantenimiento, instrucciones poco claras, presion por cumplir cuotas en vez de cuidar la calidad, y no escuchar las sugerencias de quienes hacen el trabajo. Cuando estas barreras se mantienen, aparecen la desmotivacion, el ausentismo y la desconfianza hacia ti, y eso golpea directamente la calidad y la productividad.",
+  "resumen_teorico": "El Punto 12 de Deming dice que tu, como responsable de tu negocio, debes eliminar las barreras que impiden a las personas que trabajan contigo sentir orgullo por lo que hacen. Estas barreras incluyen evaluaciones injustas, materiales o herramientas defectuosas, falta de mantenimiento, instrucciones poco claras, presión por cumplir cuotas en vez de cuidar la calidad, y no escuchar las sugerencias de quienes hacen el trabajo. Cuando estas barreras se mantienen, aparecen la desmotivación, el ausentismo y la desconfianza hacia ti, y eso golpea directamente la calidad y la productividad.",
   "pasos_accionables": [
     "Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras específicas a su desempeño",
     "Clasificar las barreras identificadas según su origen: materiales, equipos, supervisión, comunicación",
@@ -24,7 +24,7 @@
     "eliminar_slogans_y_exhortaciones"
   ],
   "condiciones_activacion": [
-    "Cuando notas niveles altos de desmotivacion, ausentismo o rotacion entre las personas que trabajan contigo",
+    "Cuando notas niveles altos de desmotivación, ausentismo o rotación entre las personas que trabajan contigo",
     "Cuando las personas que trabajan contigo dicen que no pueden controlar la calidad de su trabajo por factores que no dependen de ellas"
   ],
   "etiqueta_arbol": "Elimina Barreras al Orgullo Laboral",
@@ -110,6 +110,35 @@
         "evidencia": "O071-024.entregable: acción, quién ('acción' lleva tilde con toda seguridad; 'quién' es un interrogativo indirecto elíptico, coherente con 'definir quién se encarga' del paso 2.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-remover_barreras_orgullo_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El Punto 12 de Deming dice que tu, como responsable de tu negocio, debes eliminar las barreras que impiden a las personas que trabajan contigo sentir orgullo por lo que hacen. Estas barreras incluyen evaluaciones injustas, materiales o herramientas defectuosas, falta de mantenimiento, instrucciones poco claras, presion por cumplir cuotas en vez de cuidar la calidad, y no escuchar las sugerencias de quienes hacen el trabajo. Cuando estas barreras se mantienen, aparecen la desmotivacion, el ausentismo y la desconfianza hacia ti, y eso golpea directamente la calidad y la productividad.",
+      "texto_nuevo": "El Punto 12 de Deming dice que tu, como responsable de tu negocio, debes eliminar las barreras que impiden a las personas que trabajan contigo sentir orgullo por lo que hacen. Estas barreras incluyen evaluaciones injustas, materiales o herramientas defectuosas, falta de mantenimiento, instrucciones poco claras, presión por cumplir cuotas en vez de cuidar la calidad, y no escuchar las sugerencias de quienes hacen el trabajo. Cuando estas barreras se mantienen, aparecen la desmotivación, el ausentismo y la desconfianza hacia ti, y eso golpea directamente la calidad y la productividad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desmotivacion, presion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-remover_barreras_orgullo_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando notas niveles altos de desmotivacion, ausentismo o rotacion entre las personas que trabajan contigo",
+      "texto_nuevo": "Cuando notas niveles altos de desmotivación, ausentismo o rotación entre las personas que trabajan contigo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desmotivacion, rotacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

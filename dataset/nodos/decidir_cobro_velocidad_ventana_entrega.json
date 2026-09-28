@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Decidir cuánto cobrar por velocidad y ventana de entrega",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Ofrecer entrega el mismo dia o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precision en el horario incrementa el costo de operar tu logistica, porque exige mas viajes, mas coordinacion y menos margen de error. Antes de prometer un servicio rapido, calcula cuanto te cuesta realmente sostenerlo: cuantas entregas puedes agrupar por ruta, cuanto cobra tu courier por el servicio express y si tus clientes estan dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estandar, entrega rapida y ventana angosta, y dejan que el cliente elija segun lo que valore y este dispuesto a pagar, en vez de subsidiar un servicio caro para todos. Decidir bien cuanto cobrar por cada nivel evita que la promesa de velocidad se convierta en una perdida silenciosa en cada venta.",
+  "resumen_teorico": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige mas viajes, mas coordinación y menos margen de error. Antes de prometer un servicio rápido, calcula cuanto te cuesta realmente sostenerlo: cuantas entregas puedes agrupar por ruta, cuanto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y este dispuesto a pagar, en vez de subsidiar un servicio caro para todos. Decidir bien cuanto cobrar por cada nivel evita que la promesa de velocidad se convierta en una perdida silenciosa en cada venta.",
   "pasos_accionables": [
     "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
     "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
@@ -22,9 +22,9 @@
     "calcular_peso_dimensional_antes_cotizar"
   ],
   "condiciones_activacion": [
-    "Estas pensando en ofrecer entrega el mismo dia pero no sabes si te conviene el costo.",
+    "Estas pensando en ofrecer entrega el mismo día pero no sabes si te conviene el costo.",
     "Un cliente te pide una ventana de entrega muy angosta y no sabes cuanto cobrarle.",
-    "Notas que estas perdiendo margen en los envios rapidos sin haberlo decidido a proposito."
+    "Notas que estas perdiendo margen en los envíos rápidos sin haberlo decidido a proposito."
   ],
   "etiqueta_arbol": "Cobra bien la entrega rápida",
   "correcciones": [
@@ -127,6 +127,50 @@
         "evidencia": "O020-035.entregable: cuánto (Es una interrogativa indirecta y cuánto lleva tilde.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-decidir_cobro_velocidad_ventana_entrega-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ofrecer entrega el mismo dia o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precision en el horario incrementa el costo de operar tu logistica, porque exige mas viajes, mas coordinacion y menos margen de error. Antes de prometer un servicio rapido, calcula cuanto te cuesta realmente sostenerlo: cuantas entregas puedes agrupar por ruta, cuanto cobra tu courier por el servicio express y si tus clientes estan dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estandar, entrega rapida y ventana angosta, y dejan que el cliente elija segun lo que valore y este dispuesto a pagar, en vez de subsidiar un servicio caro para todos. Decidir bien cuanto cobrar por cada nivel evita que la promesa de velocidad se convierta en una perdida silenciosa en cada venta.",
+      "texto_nuevo": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige mas viajes, mas coordinación y menos margen de error. Antes de prometer un servicio rápido, calcula cuanto te cuesta realmente sostenerlo: cuantas entregas puedes agrupar por ruta, cuanto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y este dispuesto a pagar, en vez de subsidiar un servicio caro para todos. Decidir bien cuanto cobrar por cada nivel evita que la promesa de velocidad se convierta en una perdida silenciosa en cada venta.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: coordinacion, dia, estan, estandar, logistica, precision, rapida, rapido, segun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-decidir_cobro_velocidad_ventana_entrega-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estas pensando en ofrecer entrega el mismo dia pero no sabes si te conviene el costo.",
+      "texto_nuevo": "Estas pensando en ofrecer entrega el mismo día pero no sabes si te conviene el costo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: dia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-decidir_cobro_velocidad_ventana_entrega-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Notas que estas perdiendo margen en los envios rapidos sin haberlo decidido a proposito.",
+      "texto_nuevo": "Notas que estas perdiendo margen en los envíos rápidos sin haberlo decidido a proposito.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: envios, rapidos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

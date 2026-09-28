@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Programa de Cero Defectos (Zero Defects) como Prevención",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Cero Defectos es una manera de pensar y de trabajar que busca eliminar la idea de que los errores son inevitables, apostando por prevenir en lugar de detectar y corregir después. Se basa en que si identificas y controlas las causas raiz de los defectos (mirando datos y tendencias), puedes reducir drasticamente o eliminar los defectos, evitando que se encadenen con otros problemas como ausentismo, sobrecostos y retrasos.",
+  "resumen_teorico": "Cero Defectos es una manera de pensar y de trabajar que busca eliminar la idea de que los errores son inevitables, apostando por prevenir en lugar de detectar y corregir después. Se basa en que si identificas y controlas las causas raíz de los defectos (mirando datos y tendencias), puedes reducir drásticamente o eliminar los defectos, evitando que se encadenen con otros problemas como ausentismo, sobrecostos y retrasos.",
   "pasos_accionables": [
     "Tener claro, y transmitirlo a quien trabaje contigo, que los defectos no son algo que simplemente hay que aceptar.",
     "Usar datos de tendencias para detectar señales tempranas de que los defectos están subiendo.",
@@ -72,6 +72,20 @@
         "motivo": "Quien persigue cero defectos cae justo en la condición del destino (eliminar el riesgo sin mirar el costo) y el destino le da el contrapeso del costo beneficio y la detección."
       },
       "decision": "Auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-tildes-programa_cero_defectos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cero Defectos es una manera de pensar y de trabajar que busca eliminar la idea de que los errores son inevitables, apostando por prevenir en lugar de detectar y corregir después. Se basa en que si identificas y controlas las causas raiz de los defectos (mirando datos y tendencias), puedes reducir drasticamente o eliminar los defectos, evitando que se encadenen con otros problemas como ausentismo, sobrecostos y retrasos.",
+      "texto_nuevo": "Cero Defectos es una manera de pensar y de trabajar que busca eliminar la idea de que los errores son inevitables, apostando por prevenir en lugar de detectar y corregir después. Se basa en que si identificas y controlas las causas raíz de los defectos (mirando datos y tendencias), puedes reducir drásticamente o eliminar los defectos, evitando que se encadenen con otros problemas como ausentismo, sobrecostos y retrasos.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: drasticamente, raiz"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

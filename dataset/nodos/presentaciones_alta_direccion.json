@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Presentaciones Efectivas para Conseguir Aprobación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando necesitas que alguien apruebe tu proyecto, la presentación debe conectar con lo que a esa persona le importa, no con lo que a ti te entusiasma. Conviene resumir el costo total de la mala calidad, mostrar donde se concentra, describir los proyectos principales, estimar las ganancias posibles y validar las cifras con quien lleva las finanzas. Evita inflar costos o prometer que el problema llegara a cero, y no fuerces tus primeros proyectos justo en las areas donde sientes mas resistencia.",
+  "resumen_teorico": "Cuando necesitas que alguien apruebe tu proyecto, la presentación debe conectar con lo que a esa persona le importa, no con lo que a ti te entusiasma. Conviene resumir el costo total de la mala calidad, mostrar donde se concentra, describir los proyectos principales, estimar las ganancias posibles y validar las cifras con quien lleva las finanzas. Evita inflar costos o prometer que el problema llegara a cero, y no fuerces tus primeros proyectos justo en las áreas donde sientes mas resistencia.",
   "pasos_accionables": [
     "Resume el costo total estimado de la mala calidad de forma que capte la atención de quien decide",
     "Muestra dónde se concentran esos costos usando tablas o gráficos simples",
@@ -72,6 +72,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 5
+    },
+    {
+      "id": "final-tildes-presentaciones_alta_direccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas que alguien apruebe tu proyecto, la presentación debe conectar con lo que a esa persona le importa, no con lo que a ti te entusiasma. Conviene resumir el costo total de la mala calidad, mostrar donde se concentra, describir los proyectos principales, estimar las ganancias posibles y validar las cifras con quien lleva las finanzas. Evita inflar costos o prometer que el problema llegara a cero, y no fuerces tus primeros proyectos justo en las areas donde sientes mas resistencia.",
+      "texto_nuevo": "Cuando necesitas que alguien apruebe tu proyecto, la presentación debe conectar con lo que a esa persona le importa, no con lo que a ti te entusiasma. Conviene resumir el costo total de la mala calidad, mostrar donde se concentra, describir los proyectos principales, estimar las ganancias posibles y validar las cifras con quien lleva las finanzas. Evita inflar costos o prometer que el problema llegara a cero, y no fuerces tus primeros proyectos justo en las áreas donde sientes mas resistencia.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

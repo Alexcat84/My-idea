@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "El retrato de tu cliente (arquetipo de cliente)",
   "fuente": "The Startup Owner's Manual - Blank, Steve | The Lean Startup - Eric Ries",
-  "resumen_teorico": "Es un documento breve que le da rostro a tu cliente: quien es, que problemas tiene, en que contexto vive y que lo mueve, a partir de las conversaciones que ya tuviste con clientes reales. Tratalo como una hipótesis provisional, no como un hecho: se revisa a medida que aprendes cosas nuevas y las validas. Si el que usa tu producto y el que decide comprarlo son personas distintas (algo comun cuando vendes a otros negocios), crea un retrato para cada uno: como es su entorno, su perfil (edad, estilo de vida, nivel económico, situacion familiar) y que lo llevaria a comprar. Estos retratos te sirven de guia para las decisiones diarias sobre tu producto y para conectar a tu cliente con el resto de tu negocio: como llegas a el, como te relacionas y como le cobras.",
+  "resumen_teorico": "Es un documento breve que le da rostro a tu cliente: quien es, que problemas tiene, en que contexto vive y que lo mueve, a partir de las conversaciones que ya tuviste con clientes reales. Trátalo como una hipótesis provisional, no como un hecho: se revisa a medida que aprendes cosas nuevas y las validas. Si el que usa tu producto y el que decide comprarlo son personas distintas (algo común cuando vendes a otros negocios), crea un retrato para cada uno: como es su entorno, su perfil (edad, estilo de vida, nivel económico, situación familiar) y que lo llevaría a comprar. Estos retratos te sirven de guia para las decisiones diarias sobre tu producto y para conectar a tu cliente con el resto de tu negocio: como llegas a el, como te relacionas y como le cobras.",
   "pasos_accionables": [
     "Ten conversaciones exploratorias con clientes potenciales sobre sus problemas, necesidades y frustraciones",
     "Busca los patrones que se repiten en esas conversaciones",
@@ -16,7 +16,7 @@
   ],
   "entregable_esperado": "Un documento o fichas con al menos un retrato de tu cliente (quien lo usa y, si aplica, quien decide la compra), con su perfil, problemas, contexto y motivaciones, conectado con el resto de tu negocio",
   "condiciones_activacion": [
-    "Cuando ya explorastes a tus clientes pero todavia no tienes claro el perfil al que apuntas",
+    "Cuando ya explorastes a tus clientes pero todavía no tienes claro el perfil al que apuntas",
     "Si necesitas ordenar las prioridades de lo que vas a construir",
     "Cuando necesitas visualizar con claridad a tu cliente para alinear tu estrategia de producto",
     "Antes de diseñar mensajes de marketing"
@@ -119,6 +119,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 6
+    },
+    {
+      "id": "final-tildes-arquetipos_de_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es un documento breve que le da rostro a tu cliente: quien es, que problemas tiene, en que contexto vive y que lo mueve, a partir de las conversaciones que ya tuviste con clientes reales. Tratalo como una hipótesis provisional, no como un hecho: se revisa a medida que aprendes cosas nuevas y las validas. Si el que usa tu producto y el que decide comprarlo son personas distintas (algo comun cuando vendes a otros negocios), crea un retrato para cada uno: como es su entorno, su perfil (edad, estilo de vida, nivel económico, situacion familiar) y que lo llevaria a comprar. Estos retratos te sirven de guia para las decisiones diarias sobre tu producto y para conectar a tu cliente con el resto de tu negocio: como llegas a el, como te relacionas y como le cobras.",
+      "texto_nuevo": "Es un documento breve que le da rostro a tu cliente: quien es, que problemas tiene, en que contexto vive y que lo mueve, a partir de las conversaciones que ya tuviste con clientes reales. Trátalo como una hipótesis provisional, no como un hecho: se revisa a medida que aprendes cosas nuevas y las validas. Si el que usa tu producto y el que decide comprarlo son personas distintas (algo común cuando vendes a otros negocios), crea un retrato para cada uno: como es su entorno, su perfil (edad, estilo de vida, nivel económico, situación familiar) y que lo llevaría a comprar. Estos retratos te sirven de guia para las decisiones diarias sobre tu producto y para conectar a tu cliente con el resto de tu negocio: como llegas a el, como te relacionas y como le cobras.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Tratalo, comun, llevaria, situacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-arquetipos_de_cliente-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya explorastes a tus clientes pero todavia no tienes claro el perfil al que apuntas",
+      "texto_nuevo": "Cuando ya explorastes a tus clientes pero todavía no tienes claro el perfil al que apuntas",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Buscar los Puntos Brillantes Antes de Pivotar",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Antes de cambiar de rumbo hay una busqueda que casi nadie hace: mirar si en medio de los malos numeros hay clientes de verdad comprometidos, aunque sean poquisimos. Si los hay, la pregunta siguiente no es cuantos son sino que tienen en comun, porque de ese parecido sale la unica pista util. Y ahi hay una bifurcacion que decide el destino del negocio: esos pocos pueden ser adoptadores tempranos de un mercado grande que todavia no llego, o pueden ser valores atipicos que no representan a nadie. La misma duda tiene una tercera cara, que es el momento: a veces el producto esta bien y lo que fallo fue llegar temprano. Solo cuando la busqueda no encuentra un solo punto brillante, el pivote deja de ser una salida y pasa a ser la decision.",
+  "resumen_teorico": "Antes de cambiar de rumbo hay una búsqueda que casi nadie hace: mirar si en medio de los malos números hay clientes de verdad comprometidos, aunque sean poquisimos. Si los hay, la pregunta siguiente no es cuantos son sino que tienen en común, porque de ese parecido sale la única pista útil. Y ahí hay una bifurcacion que decide el destino del negocio: esos pocos pueden ser adoptadores tempranos de un mercado grande que todavía no llego, o pueden ser valores atípicos que no representan a nadie. La misma duda tiene una tercera cara, que es el momento: a veces el producto esta bien y lo que fallo fue llegar temprano. Solo cuando la búsqueda no encuentra un solo punto brillante, el pivote deja de ser una salida y pasa a ser la decisión.",
   "pasos_accionables": [
     "Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos",
     "Analiza qué característica común tienen esos clientes leales",
@@ -18,7 +18,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando las metricas no acompanan y el pivote esta sobre la mesa, antes de decidirlo",
+    "Cuando las métricas no acompañan y el pivote esta sobre la mesa, antes de decidirlo",
     "Cuando tienes unos pocos clientes muy fieles y no sabes si son la punta de un mercado o una casualidad"
   ],
   "etiqueta_arbol": "Busca tus Puntos Brillantes",
@@ -38,6 +38,35 @@
         "evidencia": "O049-026.entregable: análisis, más, común, atípicos, decisión, él (Faltan las tildes de análisis, más, común, atípicos y decisión, y la de él como pronombre.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-puntos_brillantes_antes_del_pivote-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de cambiar de rumbo hay una busqueda que casi nadie hace: mirar si en medio de los malos numeros hay clientes de verdad comprometidos, aunque sean poquisimos. Si los hay, la pregunta siguiente no es cuantos son sino que tienen en comun, porque de ese parecido sale la unica pista util. Y ahi hay una bifurcacion que decide el destino del negocio: esos pocos pueden ser adoptadores tempranos de un mercado grande que todavia no llego, o pueden ser valores atipicos que no representan a nadie. La misma duda tiene una tercera cara, que es el momento: a veces el producto esta bien y lo que fallo fue llegar temprano. Solo cuando la busqueda no encuentra un solo punto brillante, el pivote deja de ser una salida y pasa a ser la decision.",
+      "texto_nuevo": "Antes de cambiar de rumbo hay una búsqueda que casi nadie hace: mirar si en medio de los malos números hay clientes de verdad comprometidos, aunque sean poquisimos. Si los hay, la pregunta siguiente no es cuantos son sino que tienen en común, porque de ese parecido sale la única pista útil. Y ahí hay una bifurcacion que decide el destino del negocio: esos pocos pueden ser adoptadores tempranos de un mercado grande que todavía no llego, o pueden ser valores atípicos que no representan a nadie. La misma duda tiene una tercera cara, que es el momento: a veces el producto esta bien y lo que fallo fue llegar temprano. Solo cuando la búsqueda no encuentra un solo punto brillante, el pivote deja de ser una salida y pasa a ser la decisión.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ahi, atipicos, busqueda, comun, decision, numeros, todavia, unica, util"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-puntos_brillantes_antes_del_pivote-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando las metricas no acompanan y el pivote esta sobre la mesa, antes de decidirlo",
+      "texto_nuevo": "Cuando las métricas no acompañan y el pivote esta sobre la mesa, antes de decidirlo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: acompanan, metricas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

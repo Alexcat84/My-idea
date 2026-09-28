@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Criterio 'Bazooka o Peashooter' para Elegir a tu Abogado y tu Consultor",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Al contratar a tu consultor y al abogado que te asesore, tienes que decidir entre pagar mas por el mejor profesional disponible ('bazooka') o optar por una opcion mas económica pero capaz ('peashooter'). Conviene elegir al mejor profesional posible, ya que el valor generado por una venta adicional de franquicia, una mejora en la tasa de regalias, o la prevencion de una demanda, puede representar cientos de miles o millones de dolares a lo largo de la vida del sistema, superando ampliamente la diferencia de honorarios.",
+  "resumen_teorico": "Al contratar a tu consultor y al abogado que te asesore, tienes que decidir entre pagar mas por el mejor profesional disponible ('bazooka') o optar por una opción mas económica pero capaz ('peashooter'). Conviene elegir al mejor profesional posible, ya que el valor generado por una venta adicional de franquicia, una mejora en la tasa de regalías, o la prevención de una demanda, puede representar cientos de miles o millones de dolares a lo largo de la vida del sistema, superando ampliamente la diferencia de honorarios.",
   "pasos_accionables": [
     "Calcula el valor presente estimado de una franquicia adicional vendida gracias a mejor asesoría",
     "Compara el costo incremental de contratar al mejor consultor o abogado frente a una opción más económica",
@@ -20,7 +20,7 @@
     "estimacion_inversion_inicial_franquiciador"
   ],
   "condiciones_activacion": [
-    "Si dudas entre pagar mas por un mejor profesional o ahorrar con una opcion económica"
+    "Si dudas entre pagar mas por un mejor profesional o ahorrar con una opción económica"
   ],
   "etiqueta_arbol": "Elige lo Mejor o Económico",
   "fuentes_internas": [
@@ -95,6 +95,35 @@
         "evidencia": "O014-014.entregable: justificación, inversión (Faltas reales: 'justificación' e 'inversión' llevan tilde.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-criterio_bazooka_peashooter-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al contratar a tu consultor y al abogado que te asesore, tienes que decidir entre pagar mas por el mejor profesional disponible ('bazooka') o optar por una opcion mas económica pero capaz ('peashooter'). Conviene elegir al mejor profesional posible, ya que el valor generado por una venta adicional de franquicia, una mejora en la tasa de regalias, o la prevencion de una demanda, puede representar cientos de miles o millones de dolares a lo largo de la vida del sistema, superando ampliamente la diferencia de honorarios.",
+      "texto_nuevo": "Al contratar a tu consultor y al abogado que te asesore, tienes que decidir entre pagar mas por el mejor profesional disponible ('bazooka') o optar por una opción mas económica pero capaz ('peashooter'). Conviene elegir al mejor profesional posible, ya que el valor generado por una venta adicional de franquicia, una mejora en la tasa de regalías, o la prevención de una demanda, puede representar cientos de miles o millones de dolares a lo largo de la vida del sistema, superando ampliamente la diferencia de honorarios.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: opcion, prevencion, regalias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-criterio_bazooka_peashooter-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si dudas entre pagar mas por un mejor profesional o ahorrar con una opcion económica",
+      "texto_nuevo": "Si dudas entre pagar mas por un mejor profesional o ahorrar con una opción económica",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: opcion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -22,7 +22,7 @@
   "condiciones_activacion": [
     "Cuando se investiga una falla de infraestructura antigua",
     "Cuando se evalúan riesgos de sistemas con largo historial operativo",
-    "Cuando se planifica una auditoria de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original."
+    "Cuando se planifica una auditoría de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original."
   ],
   "etiqueta_arbol": "Vigila Riesgos Dormidos Años",
   "ids_alias": [
@@ -65,6 +65,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-condiciones_latentes_largo_plazo-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando se planifica una auditoria de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original.",
+      "texto_nuevo": "Cuando se planifica una auditoría de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: auditoria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

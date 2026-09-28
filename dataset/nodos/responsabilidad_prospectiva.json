@@ -28,7 +28,7 @@
   "condiciones_activacion": [
     "Cuando decides cómo vas a manejar los errores en tu negocio",
     "Cuando quieres que las personas te cuenten los problemas sin miedo a ser señaladas",
-    "Después de que ocurrio un incidente y quieres que sirva para aprender de verdad",
+    "Después de que ocurrió un incidente y quieres que sirva para aprender de verdad",
     "Cuando quieres dejar el castigo y pasar a mejorar de forma continua"
   ],
   "etiqueta_arbol": "Fomenta el Reporte Sin Culpa",
@@ -73,6 +73,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 5
+    },
+    {
+      "id": "final-tildes-responsabilidad_prospectiva-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Después de que ocurrio un incidente y quieres que sirva para aprender de verdad",
+      "texto_nuevo": "Después de que ocurrió un incidente y quieres que sirva para aprender de verdad",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ocurrio"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Descubrimiento del cliente (Customer Discovery)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión minima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+  "resumen_teorico": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
   "pasos_accionables": [
     "Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea",
     "Prueba cómo percibe el cliente el problema antes de mostrarle nada del producto",
@@ -67,7 +67,7 @@
   ],
   "condiciones_activacion": [
     "Si tu negocio se basa solo en tu visión, sin hechos reales del mercado",
-    "Si todavia no has probado el problema y la solución con clientes reales",
+    "Si todavía no has probado el problema y la solución con clientes reales",
     "Cuando necesitas ordenar de forma metódica todo el proceso de descubrir a tu cliente",
     "Cuando arrancas el proceso formal de descubrir a tu cliente en un proyecto nuevo",
     "Quieres evitar construir un producto completo sin validar antes el problema"
@@ -133,6 +133,35 @@
         "evidencia": "O073-014.entregable: más (Aquí más es adverbio de adición y lleva tilde; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-customer_discovery-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión minima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+      "texto_nuevo": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: minima"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-customer_discovery-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si todavia no has probado el problema y la solución con clientes reales",
+      "texto_nuevo": "Si todavía no has probado el problema y la solución con clientes reales",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "node_id": "vision_estrategia_producto_pivote",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Vision, Estrategia y Producto: Conducir en lugar de Lanzar un Cohete",
+  "titulo_concepto": "Visión, Estrategia y Producto: Conducir en lugar de Lanzar un Cohete",
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Los planes de negocio tradicionales se diseñan como el lanzamiento de un cohete: instrucciones precisas donde un pequeño error inicial puede causar un fracaso catastrófico. El método Lean Startup propone en cambio 'conducir' el negocio usando un volante llamado el ciclo Construir-Medir-Aprender, que permite ajustes constantes. Toda startup tiene una visión (el destino, un negocio próspero y transformador) que rara vez cambia; una estrategia (modelo de negocio, hoja de ruta de producto, visión de competencia y clientes) que puede cambiar mediante un 'pivote'; y un producto, resultado de esa estrategia, que cambia constantemente mediante la 'sintonización del motor' (optimización continua).",
   "pasos_accionables": [
@@ -48,6 +48,20 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro dice que la vision rara vez cambia, no que nunca cambie. Lo refuerzan otros pasajes: la vision puede resultar equivocada (L1849), y Wealthfront aprendio algo esencial sobre su vision y la afino al pivotar (L1914). Busque en todo el libro 'unchang', 'immutable', 'never change' y variantes, y ningun pasaje respalda una vision inalterable. Pasar de rara vez a nunca cambia la frecuencia que da el libro e invierte su matiz, asi que no es una concrecion en la misma direccion.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C103-096"
+    },
+    {
+      "id": "final-tildes-vision_estrategia_producto_pivote-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vision, Estrategia y Producto: Conducir en lugar de Lanzar un Cohete",
+      "texto_nuevo": "Visión, Estrategia y Producto: Conducir en lugar de Lanzar un Cohete",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Vision"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

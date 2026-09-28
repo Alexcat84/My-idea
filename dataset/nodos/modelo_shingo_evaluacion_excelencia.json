@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Modelo Shingo de Evaluación de Excelencia Operacional",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El Modelo Shingo evalua tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos tipicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.",
+  "resumen_teorico": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.",
   "pasos_accionables": [
     "Define las cuatro dimensiones que vas a evaluar: cultura, procesos, alineación y resultados",
     "Aplica la evaluación Shingo diferenciando roles como liderazgo senior, gerentes y asociados",
@@ -70,6 +70,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 5
+    },
+    {
+      "id": "final-tildes-modelo_shingo_evaluacion_excelencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El Modelo Shingo evalua tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos tipicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.",
+      "texto_nuevo": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: evalua, tipicos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

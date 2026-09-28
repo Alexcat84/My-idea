@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Convertir tus datos en unidades de CO2 equivalente (CO2e)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Una vez que reuniste los datos crudos (litros de gasolina, kilowatts hora), tienes que convertirlos a unidades estándar de CO2 equivalente usando factores de conversión ya establecidos. Puedes apoyarte en calculadoras en línea, hojas de calculo o programas especializados para hacer esto mas facil. Si después encuentras un error importante en tus números, se transparente y recalcula.",
+  "resumen_teorico": "Una vez que reuniste los datos crudos (litros de gasolina, kilowatts hora), tienes que convertirlos a unidades estándar de CO2 equivalente usando factores de conversión ya establecidos. Puedes apoyarte en calculadoras en línea, hojas de calculo o programas especializados para hacer esto mas fácil. Si después encuentras un error importante en tus números, se transparente y recalcula.",
   "pasos_accionables": [
     "Elige una herramienta o calculadora que use factores de conversión estándar",
     "Convierte cada tipo de dato crudo a toneladas o kilogramos de CO2e",
@@ -21,7 +21,7 @@
     "compra_offsets_carbono"
   ],
   "condiciones_activacion": [
-    "Cuando ya tienes los datos crudos de energia y combustible listos para procesar"
+    "Cuando ya tienes los datos crudos de energía y combustible listos para procesar"
   ],
   "etiqueta_arbol": "Convierte tus Datos a CO2e",
   "fuentes_internas": [
@@ -54,6 +54,35 @@
         "evidencia": "O047-016.entregable: emisión (Solo añade la tilde que faltaba en emisión; CO2e queda igual.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-conversion_datos_co2e-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una vez que reuniste los datos crudos (litros de gasolina, kilowatts hora), tienes que convertirlos a unidades estándar de CO2 equivalente usando factores de conversión ya establecidos. Puedes apoyarte en calculadoras en línea, hojas de calculo o programas especializados para hacer esto mas facil. Si después encuentras un error importante en tus números, se transparente y recalcula.",
+      "texto_nuevo": "Una vez que reuniste los datos crudos (litros de gasolina, kilowatts hora), tienes que convertirlos a unidades estándar de CO2 equivalente usando factores de conversión ya establecidos. Puedes apoyarte en calculadoras en línea, hojas de calculo o programas especializados para hacer esto mas fácil. Si después encuentras un error importante en tus números, se transparente y recalcula.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: facil"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-conversion_datos_co2e-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya tienes los datos crudos de energia y combustible listos para procesar",
+      "texto_nuevo": "Cuando ya tienes los datos crudos de energía y combustible listos para procesar",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: energia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

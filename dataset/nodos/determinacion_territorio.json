@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Decidir el Tamaño de los Territorios Exclusivos",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Decidir si le das a cada franquiciado un territorio exclusivo es una decisión clave: si el territorio es muy pequeño, la persona fracasa; si es muy grande, pierdes saturacion de mercado y dejas de ganar en regalias a futuro, con perdidas que se cuentan en millones a largo plazo. Para definirlo tienes que mirar variables como la demografia, los canales alternativos de distribucion y los requisitos de desempeño que mantendran la exclusividad.",
+  "resumen_teorico": "Decidir si le das a cada franquiciado un territorio exclusivo es una decisión clave: si el territorio es muy pequeño, la persona fracasa; si es muy grande, pierdes saturación de mercado y dejas de ganar en regalías a futuro, con perdidas que se cuentan en millones a largo plazo. Para definirlo tienes que mirar variables como la demografía, los canales alternativos de distribución y los requisitos de desempeño que mantendran la exclusividad.",
   "pasos_accionables": [
     "Decide si vas a ofrecer territorio exclusivo como parte de tu propuesta de valor",
     "Elige cómo lo vas a delimitar: por radio o por mapa demográfico",
@@ -21,7 +21,7 @@
     "otros_terminos_contractuales"
   ],
   "condiciones_activacion": [
-    "Cuando tu modelo de franquicia necesita asignar zonas geograficas exclusivas"
+    "Cuando tu modelo de franquicia necesita asignar zonas geográficas exclusivas"
   ],
   "etiqueta_arbol": "Define tus Territorios Exclusivos",
   "fuentes_internas": [
@@ -68,6 +68,35 @@
         "evidencia": "O033-009.entregable: métricas, límites (Tildes que faltaban en 'métricas' y 'límites'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-determinacion_territorio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decidir si le das a cada franquiciado un territorio exclusivo es una decisión clave: si el territorio es muy pequeño, la persona fracasa; si es muy grande, pierdes saturacion de mercado y dejas de ganar en regalias a futuro, con perdidas que se cuentan en millones a largo plazo. Para definirlo tienes que mirar variables como la demografia, los canales alternativos de distribucion y los requisitos de desempeño que mantendran la exclusividad.",
+      "texto_nuevo": "Decidir si le das a cada franquiciado un territorio exclusivo es una decisión clave: si el territorio es muy pequeño, la persona fracasa; si es muy grande, pierdes saturación de mercado y dejas de ganar en regalías a futuro, con perdidas que se cuentan en millones a largo plazo. Para definirlo tienes que mirar variables como la demografía, los canales alternativos de distribución y los requisitos de desempeño que mantendran la exclusividad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: demografia, distribucion, regalias, saturacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-determinacion_territorio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu modelo de franquicia necesita asignar zonas geograficas exclusivas",
+      "texto_nuevo": "Cuando tu modelo de franquicia necesita asignar zonas geográficas exclusivas",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: geograficas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

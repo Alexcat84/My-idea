@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La desconexion entre vender y cumplir lo prometido después",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "En muchos negocios, quien cierra la venta no es quien después entrega la experiencia al cliente. Si vendes pensando solo en cerrar cuentas nuevas, no tienes ningun incentivo para cuidar que el traspaso hacia quien atiende o entrega sea fluido. Así, la información que el cliente te compartio (sus necesidades, sus expectativas, el porque de su compra) se pierde en el camino, y el cliente se frustra cuando la persona que lo atiende después no sabe lo que le prometiste.",
+  "resumen_teorico": "En muchos negocios, quien cierra la venta no es quien después entrega la experiencia al cliente. Si vendes pensando solo en cerrar cuentas nuevas, no tienes ningún incentivo para cuidar que el traspaso hacia quien atiende o entrega sea fluido. Así, la información que el cliente te compartió (sus necesidades, sus expectativas, el porque de su compra) se pierde en el camino, y el cliente se frustra cuando la persona que lo atiende después no sabe lo que le prometiste.",
   "pasos_accionables": [
     "Traza el camino que sigue un cliente entre la venta y la entrega, y anota qué información se pierde en ese traspaso",
     "Revisa cómo te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
@@ -22,7 +22,7 @@
     "handoff_transicion_ventas_cuentas"
   ],
   "condiciones_activacion": [
-    "Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplio lo que se les prometio",
+    "Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplió lo que se les prometió",
     "Si quien vende y quien atiende o entrega funcionan como mundos separados",
     "Cuando notas que muchos clientes se van en los primeros meses después de comprar",
     "En ventas de alto valor o contratos largos (seguros, software, servicios)"
@@ -136,6 +136,35 @@
         "evidencia": "O078-003.entregable: retención (Falta la tilde en retención.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-desconexion_ventas_experiencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En muchos negocios, quien cierra la venta no es quien después entrega la experiencia al cliente. Si vendes pensando solo en cerrar cuentas nuevas, no tienes ningun incentivo para cuidar que el traspaso hacia quien atiende o entrega sea fluido. Así, la información que el cliente te compartio (sus necesidades, sus expectativas, el porque de su compra) se pierde en el camino, y el cliente se frustra cuando la persona que lo atiende después no sabe lo que le prometiste.",
+      "texto_nuevo": "En muchos negocios, quien cierra la venta no es quien después entrega la experiencia al cliente. Si vendes pensando solo en cerrar cuentas nuevas, no tienes ningún incentivo para cuidar que el traspaso hacia quien atiende o entrega sea fluido. Así, la información que el cliente te compartió (sus necesidades, sus expectativas, el porque de su compra) se pierde en el camino, y el cliente se frustra cuando la persona que lo atiende después no sabe lo que le prometiste.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: compartio, ningun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-desconexion_ventas_experiencia-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplio lo que se les prometio",
+      "texto_nuevo": "Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplió lo que se les prometió",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: cumplio, prometio"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

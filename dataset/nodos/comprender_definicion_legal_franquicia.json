@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Entiende la definición legal de franquicia (regla federal FTC 436)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
   "pasos_accionables": [
     "Revisa si tu modelo de negocio hará que los operadores usen una marca o nombre en común",
     "Identifica si vas a ejercer control significativo (sitio, horarios, técnicas de producción, contabilidad, etc.) o si vas a dar asistencia significativa (entrenamiento, manual de operaciones, marketing)",
@@ -21,8 +21,8 @@
   ],
   "condiciones_activacion": [
     "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
-    "Cuando estas diseñando un modelo de expansion que involucra a terceros operando bajo tu marca",
-    "Cuando tienes dudas sobre si el acuerdo de licencia o distribucion que estas armando podria clasificar legalmente como franquicia"
+    "Cuando estas diseñando un modelo de expansión que involucra a terceros operando bajo tu marca",
+    "Cuando tienes dudas sobre si el acuerdo de licencia o distribución que estas armando podría clasificar legalmente como franquicia"
   ],
   "etiqueta_arbol": "Entiende la Definición Legal de Franquicia",
   "correcciones": [
@@ -123,6 +123,50 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-comprender_definicion_legal_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+      "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comun, distribucion, regulacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-comprender_definicion_legal_franquicia-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas diseñando un modelo de expansion que involucra a terceros operando bajo tu marca",
+      "texto_nuevo": "Cuando estas diseñando un modelo de expansión que involucra a terceros operando bajo tu marca",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: expansion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-comprender_definicion_legal_franquicia-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes dudas sobre si el acuerdo de licencia o distribucion que estas armando podria clasificar legalmente como franquicia",
+      "texto_nuevo": "Cuando tienes dudas sobre si el acuerdo de licencia o distribución que estas armando podría clasificar legalmente como franquicia",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: distribucion, podria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

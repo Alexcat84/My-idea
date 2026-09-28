@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Empacar flores y plantas sin agua",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La tecnica central es simple: nunca cargar agua en el envio. Vacia floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de carton para que no se desplace en transito. Cuando envies varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparacion reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
+  "resumen_teorico": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La técnica central es simple: nunca cargar agua en el envio. Vacía floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en transito. Cuando envíes varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
   "pasos_accionables": [
     "Vacía toda el agua de floreros o recipientes antes de cerrar la caja.",
     "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo.",
@@ -21,9 +21,9 @@
     "colocar_etiquetas_de_manejo_correctamente"
   ],
   "condiciones_activacion": [
-    "Vendes arreglos florales o plantas en maceta por internet y los envias por courier.",
+    "Vendes arreglos florales o plantas en maceta por internet y los envías por courier.",
     "Te preocupa que la tierra o el agua se derrame durante el transporte.",
-    "Empacas orquideas u otras flores delicadas que se dañan facil al rozarse."
+    "Empacas orquideas u otras flores delicadas que se dañan fácil al rozarse."
   ],
   "etiqueta_arbol": "Empaca flores sin agua",
   "fuentes_internas": [
@@ -99,6 +99,50 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-empacar_flores_plantas_sin_agua-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La tecnica central es simple: nunca cargar agua en el envio. Vacia floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de carton para que no se desplace en transito. Cuando envies varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparacion reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
+      "texto_nuevo": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La técnica central es simple: nunca cargar agua en el envio. Vacía floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en transito. Cuando envíes varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Vacia, carton, envies, preparacion, tecnica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-empacar_flores_plantas_sin_agua-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vendes arreglos florales o plantas en maceta por internet y los envias por courier.",
+      "texto_nuevo": "Vendes arreglos florales o plantas en maceta por internet y los envías por courier.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: envias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-empacar_flores_plantas_sin_agua-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empacas orquideas u otras flores delicadas que se dañan facil al rozarse.",
+      "texto_nuevo": "Empacas orquideas u otras flores delicadas que se dañan fácil al rozarse.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: facil"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

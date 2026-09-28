@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La Regla del 50 Por Ciento",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Dedica la mitad de tu tiempo a construir el producto y la otra mitad a conseguir que la gente lo use y lo compre (traccion), desde el principio y en paralelo, no primero uno y después el otro. Así evitas el error comun de armar un gran producto sin saber como llegar a la gente, y detectas a tiempo si el negocio no funciona, si el mercado es muy chico, si conseguir clientes te cuesta demasiado o si hay demasiada competencia.",
+  "resumen_teorico": "Dedica la mitad de tu tiempo a construir el producto y la otra mitad a conseguir que la gente lo use y lo compre (tracción), desde el principio y en paralelo, no primero uno y después el otro. Así evitas el error común de armar un gran producto sin saber como llegar a la gente, y detectas a tiempo si el negocio no funciona, si el mercado es muy chico, si conseguir clientes te cuesta demasiado o si hay demasiada competencia.",
   "pasos_accionables": [
     "Divide tu semana en partes iguales entre trabajar en el producto y probar formas de conseguir clientes.",
     "Empieza a probar canales para conseguir clientes incluso antes de lanzar el producto, por ejemplo un blog, mejorar tu posicionamiento en buscadores o armar una lista de espera.",
@@ -54,6 +54,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-regla_50_por_ciento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dedica la mitad de tu tiempo a construir el producto y la otra mitad a conseguir que la gente lo use y lo compre (traccion), desde el principio y en paralelo, no primero uno y después el otro. Así evitas el error comun de armar un gran producto sin saber como llegar a la gente, y detectas a tiempo si el negocio no funciona, si el mercado es muy chico, si conseguir clientes te cuesta demasiado o si hay demasiada competencia.",
+      "texto_nuevo": "Dedica la mitad de tu tiempo a construir el producto y la otra mitad a conseguir que la gente lo use y lo compre (tracción), desde el principio y en paralelo, no primero uno y después el otro. Así evitas el error común de armar un gran producto sin saber como llegar a la gente, y detectas a tiempo si el negocio no funciona, si el mercado es muy chico, si conseguir clientes te cuesta demasiado o si hay demasiada competencia.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comun, traccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

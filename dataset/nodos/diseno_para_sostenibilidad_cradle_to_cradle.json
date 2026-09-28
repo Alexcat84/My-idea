@@ -19,7 +19,7 @@
     "diseno_de_comportamiento_sostenible"
   ],
   "condiciones_activacion": [
-    "Cuando quieres reducir el impacto ambiental de un producto fisico",
+    "Cuando quieres reducir el impacto ambiental de un producto físico",
     "Si tu negocio tiene valores centrales de sostenibilidad que quieres hacer crecer sin traicionarlos"
   ],
   "etiqueta_arbol": "Diseña de Cuna a Cuna",
@@ -68,6 +68,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-tildes-diseno_para_sostenibilidad_cradle_to_cradle-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres reducir el impacto ambiental de un producto fisico",
+      "texto_nuevo": "Cuando quieres reducir el impacto ambiental de un producto físico",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: fisico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

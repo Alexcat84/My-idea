@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Transferencia de Actividades de Calidad a Quien Ejecuta el Trabajo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un area aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, dandoles la capacitación necesaria para asumir esa responsabilidad.",
+  "resumen_teorico": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un área aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, dándoles la capacitación necesaria para asumir esa responsabilidad.",
   "pasos_accionables": [
     "Identificar qué tareas de calidad están hoy centralizadas y podrían pasar a quien hace el trabajo",
     "Capacitar a esas personas en las nuevas responsabilidades",
@@ -19,7 +19,7 @@
     "rol_de_mandos_medios_y_supervisores"
   ],
   "condiciones_activacion": [
-    "Cuando una sola area concentra demasiadas tareas de calidad que podrian resolverse donde se hace el trabajo",
+    "Cuando una sola área concentra demasiadas tareas de calidad que podrían resolverse donde se hace el trabajo",
     "Cuando buscas que cada quien controle la calidad de lo suyo en vez de depender de otra parte del negocio"
   ],
   "etiqueta_arbol": "Lleva Calidad a cada Área",
@@ -54,6 +54,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-tildes-transferencia_de_actividades_a_departamentos_de_linea-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un area aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, dandoles la capacitación necesaria para asumir esa responsabilidad.",
+      "texto_nuevo": "La mejor forma de aplicar la calidad en tu negocio es que la practiquen quienes hacen el trabajo día a día, en vez de dejarla encerrada en un área aparte dedicada solo a eso. Esto significa pasar tareas como la inspección, la revisión de confiabilidad y el control de proveedores a las personas que ya ejecutan el trabajo, dándoles la capacitación necesaria para asumir esa responsabilidad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area, dandoles"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-transferencia_de_actividades_a_departamentos_de_linea-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando una sola area concentra demasiadas tareas de calidad que podrian resolverse donde se hace el trabajo",
+      "texto_nuevo": "Cuando una sola área concentra demasiadas tareas de calidad que podrían resolverse donde se hace el trabajo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area, podrian"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

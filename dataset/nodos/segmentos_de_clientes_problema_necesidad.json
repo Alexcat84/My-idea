@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Segmentos de Clientes: Problema, Necesidad o Pasión",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de vender, tienes que entender a fondo quien es tu cliente y que problema, necesidad o pasion tiene. Usa una escala de reconocimiento del problema (latente, pasivo, activo o urgente, o con una solución casera ya armada) para calibrar cuanto le duele. También identifica los distintos tipos de cliente que intervienen en la decisión: quien usa el producto, quien influye y quien lo recomienda, porque casi nunca es una sola persona la que decide.",
+  "resumen_teorico": "Antes de vender, tienes que entender a fondo quien es tu cliente y que problema, necesidad o pasión tiene. Usa una escala de reconocimiento del problema (latente, pasivo, activo o urgente, o con una solución casera ya armada) para calibrar cuanto le duele. También identifica los distintos tipos de cliente que intervienen en la decisión: quien usa el producto, quien influye y quien lo recomienda, porque casi nunca es una sola persona la que decide.",
   "pasos_accionables": [
     "Sal del edificio (get out of the building) a observar cómo tus clientes viven el problema",
     "Clasifica el problema en la escala: latente (no sabe que lo tiene), pasivo, activo (o urgente) o visión (ya tiene una idea para resolverlo, incluso una solución casera, y pagaría por una mejor)",
@@ -126,6 +126,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-tildes-segmentos_de_clientes_problema_necesidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de vender, tienes que entender a fondo quien es tu cliente y que problema, necesidad o pasion tiene. Usa una escala de reconocimiento del problema (latente, pasivo, activo o urgente, o con una solución casera ya armada) para calibrar cuanto le duele. También identifica los distintos tipos de cliente que intervienen en la decisión: quien usa el producto, quien influye y quien lo recomienda, porque casi nunca es una sola persona la que decide.",
+      "texto_nuevo": "Antes de vender, tienes que entender a fondo quien es tu cliente y que problema, necesidad o pasión tiene. Usa una escala de reconocimiento del problema (latente, pasivo, activo o urgente, o con una solución casera ya armada) para calibrar cuanto le duele. También identifica los distintos tipos de cliente que intervienen en la decisión: quien usa el producto, quien influye y quien lo recomienda, porque casi nunca es una sola persona la que decide.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: pasion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

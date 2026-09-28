@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Enfoque de Mejora Continua en Operaciones",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "En tu negocio vas a encontrar dos tipos de problemas de calidad: los esporadicos, que necesitas resolver de inmediato, y los cronicos, que requieren mejorar el proceso y replanificar. Existen tres tipos de acción: controlar, mejorar y planificar. Para que esto no quede en un esfuerzo puntual, necesitas diagnosticar y construir una cultura de calidad positiva, apoyandote en quien te ayuda con temas de calidad como socio que te da soporte tecnico y capacitación. Cuando un problema tiene causas que vienen de otra parte del negocio, conviene juntar a las personas involucradas de esas areas para atacar la raiz, en lugar de intentar resolverlo solo desde operaciones.",
+  "resumen_teorico": "En tu negocio vas a encontrar dos tipos de problemas de calidad: los esporádicos, que necesitas resolver de inmediato, y los crónicos, que requieren mejorar el proceso y replanificar. Existen tres tipos de acción: controlar, mejorar y planificar. Para que esto no quede en un esfuerzo puntual, necesitas diagnosticar y construir una cultura de calidad positiva, apoyándote en quien te ayuda con temas de calidad como socio que te da soporte técnico y capacitación. Cuando un problema tiene causas que vienen de otra parte del negocio, conviene juntar a las personas involucradas de esas áreas para atacar la raíz, en lugar de intentar resolverlo solo desde operaciones.",
   "pasos_accionables": [
     "Diagnostica la cultura de calidad actual de tu operación",
     "Clasifica cada problema como esporádico o crónico antes de actuar",
@@ -23,8 +23,8 @@
     "error_proofing_six_sigma_lean"
   ],
   "condiciones_activacion": [
-    "Cuando persisten problemas cronicos de calidad que las correcciones puntuales no resuelven",
-    "Cuando necesitas sostener la mejora de calidad mas alla de un proyecto puntual",
+    "Cuando persisten problemas crónicos de calidad que las correcciones puntuales no resuelven",
+    "Cuando necesitas sostener la mejora de calidad mas allá de un proyecto puntual",
     "Cuando un problema de calidad tiene causas que vienen de otra parte de tu negocio"
   ],
   "etiqueta_arbol": "Mejora Continua en tus Operaciones",
@@ -124,6 +124,50 @@
         "evidencia": "O001-006.entregable: esporádicos, crónicos (Faltan las tildes de esporádicos y crónicos; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-mejora_continua_operaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En tu negocio vas a encontrar dos tipos de problemas de calidad: los esporadicos, que necesitas resolver de inmediato, y los cronicos, que requieren mejorar el proceso y replanificar. Existen tres tipos de acción: controlar, mejorar y planificar. Para que esto no quede en un esfuerzo puntual, necesitas diagnosticar y construir una cultura de calidad positiva, apoyandote en quien te ayuda con temas de calidad como socio que te da soporte tecnico y capacitación. Cuando un problema tiene causas que vienen de otra parte del negocio, conviene juntar a las personas involucradas de esas areas para atacar la raiz, en lugar de intentar resolverlo solo desde operaciones.",
+      "texto_nuevo": "En tu negocio vas a encontrar dos tipos de problemas de calidad: los esporádicos, que necesitas resolver de inmediato, y los crónicos, que requieren mejorar el proceso y replanificar. Existen tres tipos de acción: controlar, mejorar y planificar. Para que esto no quede en un esfuerzo puntual, necesitas diagnosticar y construir una cultura de calidad positiva, apoyándote en quien te ayuda con temas de calidad como socio que te da soporte técnico y capacitación. Cuando un problema tiene causas que vienen de otra parte del negocio, conviene juntar a las personas involucradas de esas áreas para atacar la raíz, en lugar de intentar resolverlo solo desde operaciones.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: apoyandote, areas, cronicos, esporadicos, raiz, tecnico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-mejora_continua_operaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando persisten problemas cronicos de calidad que las correcciones puntuales no resuelven",
+      "texto_nuevo": "Cuando persisten problemas crónicos de calidad que las correcciones puntuales no resuelven",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: cronicos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-mejora_continua_operaciones-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas sostener la mejora de calidad mas alla de un proyecto puntual",
+      "texto_nuevo": "Cuando necesitas sostener la mejora de calidad mas allá de un proyecto puntual",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: alla"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

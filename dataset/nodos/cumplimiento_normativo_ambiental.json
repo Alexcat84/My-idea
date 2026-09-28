@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Cumplimiento de Regulaciones Ambientales",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Antes de avanzar hacia estrategias mas ambiciosas de sostenibilidad que también den dinero (green to gold), tienes que asegurarte de cumplir estrictamente las leyes ambientales vigentes. El caso de BP demuestra que hacer marketing verde sin tener resuelto el cumplimiento normativo básico puede resultar catastrofico para tu reputacion y el valor de tu negocio.",
+  "resumen_teorico": "Antes de avanzar hacia estrategias mas ambiciosas de sostenibilidad que también den dinero (green to gold), tienes que asegurarte de cumplir estrictamente las leyes ambientales vigentes. El caso de BP demuestra que hacer marketing verde sin tener resuelto el cumplimiento normativo básico puede resultar catastrófico para tu reputación y el valor de tu negocio.",
   "pasos_accionables": [
     "Identifica todas las leyes ambientales que te aplican, sean nacionales, regionales o locales",
     "Consigue a alguien, sea un equipo propio o una consultoría, que sepa de cumplimiento ambiental",
@@ -66,6 +66,20 @@
         "evidencia": "O078-033.entregable: auditoría, críticas (Faltan las tildes en auditoría y críticas.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-cumplimiento_normativo_ambiental-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de avanzar hacia estrategias mas ambiciosas de sostenibilidad que también den dinero (green to gold), tienes que asegurarte de cumplir estrictamente las leyes ambientales vigentes. El caso de BP demuestra que hacer marketing verde sin tener resuelto el cumplimiento normativo básico puede resultar catastrofico para tu reputacion y el valor de tu negocio.",
+      "texto_nuevo": "Antes de avanzar hacia estrategias mas ambiciosas de sostenibilidad que también den dinero (green to gold), tienes que asegurarte de cumplir estrictamente las leyes ambientales vigentes. El caso de BP demuestra que hacer marketing verde sin tener resuelto el cumplimiento normativo básico puede resultar catastrófico para tu reputación y el valor de tu negocio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: catastrofico, reputacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ten disciplina rigurosa en tu proceso de ventas",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Un pronostico de ventas (forecast) optimista basado en supuestos sin verificar, como pensar que la persona que te apoya adentro (champion) ya te aseguro todo, es peligroso. Antes de dar por segura una oportunidad, habla directamente con todas las personas que deciden, no solo con tu contacto principal, incluyendo sus pares y jefes. Revisa cada negociacion en voz alta frente a tu equipo de ventas para mantener el estándar alto y evitar la comodidad.",
+  "resumen_teorico": "Un pronostico de ventas (forecast) optimista basado en supuestos sin verificar, como pensar que la persona que te apoya adentro (champion) ya te aseguro todo, es peligroso. Antes de dar por segura una oportunidad, habla directamente con todas las personas que deciden, no solo con tu contacto principal, incluyendo sus pares y jefes. Revisa cada negociación en voz alta frente a tu equipo de ventas para mantener el estándar alto y evitar la comodidad.",
   "pasos_accionables": [
     "Arma una llamada semanal de pronóstico donde revisas cada negociación en detalle junto a todo tu equipo de ventas",
     "Exige haber hablado directamente con todas las personas que deciden, no solo con quien te apoya adentro",
@@ -20,7 +20,7 @@
     "pregunta_que_no_estamos_haciendo"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas crecer rápido y quieres evitar pronosticos poco confiables",
+    "Cuando necesitas crecer rápido y quieres evitar pronósticos poco confiables",
     "Cuando notas que no estas verificando todos los niveles de decisión de tus clientes"
   ],
   "etiqueta_arbol": "Verifica tu Proceso de Venta",
@@ -54,6 +54,35 @@
         "evidencia": "O011-006.entregable: negociación (Solo se añade la tilde que falta en 'negociación'; 'checklist' se queda igual.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-disciplina_rigurosa_proceso_ventas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un pronostico de ventas (forecast) optimista basado en supuestos sin verificar, como pensar que la persona que te apoya adentro (champion) ya te aseguro todo, es peligroso. Antes de dar por segura una oportunidad, habla directamente con todas las personas que deciden, no solo con tu contacto principal, incluyendo sus pares y jefes. Revisa cada negociacion en voz alta frente a tu equipo de ventas para mantener el estándar alto y evitar la comodidad.",
+      "texto_nuevo": "Un pronostico de ventas (forecast) optimista basado en supuestos sin verificar, como pensar que la persona que te apoya adentro (champion) ya te aseguro todo, es peligroso. Antes de dar por segura una oportunidad, habla directamente con todas las personas que deciden, no solo con tu contacto principal, incluyendo sus pares y jefes. Revisa cada negociación en voz alta frente a tu equipo de ventas para mantener el estándar alto y evitar la comodidad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: negociacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-disciplina_rigurosa_proceso_ventas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas crecer rápido y quieres evitar pronosticos poco confiables",
+      "texto_nuevo": "Cuando necesitas crecer rápido y quieres evitar pronósticos poco confiables",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: pronosticos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

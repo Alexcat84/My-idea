@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Experimento de las Cuentas Rojas (Red Beads)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Experimento didactico de Deming que demuestra que la variación en el desempeno de las personas que trabajan contigo, dentro de un proceso estable, viene del sistema mismo (los materiales, el proceso), no de la voluntad o la habilidad de cada quien. Alguien que un día parece rendir bien y otro día mal puede invertir su resultado al siguiente, mostrando que culpar a una persona por fallas del sistema es un error de quien dirige el negocio.",
+  "resumen_teorico": "Experimento didactico de Deming que demuestra que la variación en el desempeño de las personas que trabajan contigo, dentro de un proceso estable, viene del sistema mismo (los materiales, el proceso), no de la voluntad o la habilidad de cada quien. Alguien que un día parece rendir bien y otro día mal puede invertir su resultado al siguiente, mostrando que culpar a una persona por fallas del sistema es un error de quien dirige el negocio.",
   "pasos_accionables": [
     "Simula el experimento con un grupo de personas que trabajen contigo, usando material homogéneo con un porcentaje fijo de 'defectos' (cuentas rojas)",
     "Registra el desempeño de cada persona en varias rondas",
@@ -95,6 +95,20 @@
         "evidencia": "O038-034.entregable: práctica, gráfico, desempeño (Faltan las tildes en práctica y gráfico y la eñe en desempeño.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-experimento_cuentas_rojas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Experimento didactico de Deming que demuestra que la variación en el desempeno de las personas que trabajan contigo, dentro de un proceso estable, viene del sistema mismo (los materiales, el proceso), no de la voluntad o la habilidad de cada quien. Alguien que un día parece rendir bien y otro día mal puede invertir su resultado al siguiente, mostrando que culpar a una persona por fallas del sistema es un error de quien dirige el negocio.",
+      "texto_nuevo": "Experimento didactico de Deming que demuestra que la variación en el desempeño de las personas que trabajan contigo, dentro de un proceso estable, viene del sistema mismo (los materiales, el proceso), no de la voluntad o la habilidad de cada quien. Alguien que un día parece rendir bien y otro día mal puede invertir su resultado al siguiente, mostrando que culpar a una persona por fallas del sistema es un error de quien dirige el negocio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desempeno"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

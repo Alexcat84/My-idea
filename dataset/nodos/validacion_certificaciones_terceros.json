@@ -20,7 +20,7 @@
     "partnerships_estrategicos_verdes"
   ],
   "condiciones_activacion": [
-    "Cuando comunicas atributos ambientales de tu producto y el consumidor necesita un respaldo creible de terceros para decidir su compra",
+    "Cuando comunicas atributos ambientales de tu producto y el consumidor necesita un respaldo creíble de terceros para decidir su compra",
     "Si existe riesgo de percepción de greenwashing"
   ],
   "etiqueta_arbol": "Respáldate con Sellos de Terceros",
@@ -54,6 +54,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-tildes-validacion_certificaciones_terceros-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando comunicas atributos ambientales de tu producto y el consumidor necesita un respaldo creible de terceros para decidir su compra",
+      "texto_nuevo": "Cuando comunicas atributos ambientales de tu producto y el consumidor necesita un respaldo creíble de terceros para decidir su compra",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: creible"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

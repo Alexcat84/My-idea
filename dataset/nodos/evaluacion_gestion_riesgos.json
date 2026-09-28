@@ -28,7 +28,7 @@
   "condiciones_activacion": [
     "Cuando el proyecto o proceso implica incertidumbre significativa",
     "Cuando se necesita priorizar recursos limitados entre múltiples plantas o áreas de riesgo",
-    "Cuando ya evaluaste y priorizaste tus riesgos pero todavia no tienes acciones concretas definidas."
+    "Cuando ya evaluaste y priorizaste tus riesgos pero todavía no tienes acciones concretas definidas."
   ],
   "etiqueta_arbol": "Gestiona tus Riesgos a Tiempo",
   "ids_alias": [
@@ -96,6 +96,21 @@
         "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-tildes-evaluacion_gestion_riesgos-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya evaluaste y priorizaste tus riesgos pero todavia no tienes acciones concretas definidas.",
+      "texto_nuevo": "Cuando ya evaluaste y priorizaste tus riesgos pero todavía no tienes acciones concretas definidas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

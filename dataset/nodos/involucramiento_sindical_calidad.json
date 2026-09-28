@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Involucramiento del Sindicato en Programas de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Si tu negocio tiene personal sindicalizado, cualquier programa de mejora de calidad necesita la colaboración de los representantes del sindicato desde el principio, no como un permiso automatico sino como participación activa y personal de cada uno. Así evitas que el programa se vea como una imposición o como acelerar el trabajo, le das legitimidad ante los trabajadores y te ayuda a identificar a las personas clave para tu equipo de mejora. Invita a los lideres sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, y manten una comunicación abierta y honesta que reduzca la resistencia al cambio. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
+  "resumen_teorico": "Si tu negocio tiene personal sindicalizado, cualquier programa de mejora de calidad necesita la colaboración de los representantes del sindicato desde el principio, no como un permiso automático sino como participación activa y personal de cada uno. Así evitas que el programa se vea como una imposición o como acelerar el trabajo, le das legitimidad ante los trabajadores y te ayuda a identificar a las personas clave para tu equipo de mejora. Invita a los líderes sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, y mantén una comunicación abierta y honesta que reduzca la resistencia al cambio. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
   "pasos_accionables": [
     "Programa una reunión temprana con los representantes sindicales para explicar el propósito del programa de calidad",
     "Aclara que buscas participación individual y consultiva, no una aprobación automática",
@@ -83,6 +83,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-involucramiento_sindical_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu negocio tiene personal sindicalizado, cualquier programa de mejora de calidad necesita la colaboración de los representantes del sindicato desde el principio, no como un permiso automatico sino como participación activa y personal de cada uno. Así evitas que el programa se vea como una imposición o como acelerar el trabajo, le das legitimidad ante los trabajadores y te ayuda a identificar a las personas clave para tu equipo de mejora. Invita a los lideres sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, y manten una comunicación abierta y honesta que reduzca la resistencia al cambio. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
+      "texto_nuevo": "Si tu negocio tiene personal sindicalizado, cualquier programa de mejora de calidad necesita la colaboración de los representantes del sindicato desde el principio, no como un permiso automático sino como participación activa y personal de cada uno. Así evitas que el programa se vea como una imposición o como acelerar el trabajo, le das legitimidad ante los trabajadores y te ayuda a identificar a las personas clave para tu equipo de mejora. Invita a los líderes sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, y mantén una comunicación abierta y honesta que reduzca la resistencia al cambio. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: automatico, lideres, manten"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

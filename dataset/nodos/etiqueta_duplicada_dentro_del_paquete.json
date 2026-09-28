@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Poner una etiqueta duplicada dentro del paquete",
   "fuente": "Guia visual de empaque",
-  "resumen_teorico": "La etiqueta pegada por fuera de la caja es la unica guia del paquete durante el viaje, pero se puede rasgar, mojar o despegar con el manejo. Por eso conviene imprimir la etiqueta de envio dos veces: una para la parte exterior de la caja, en su cara mas grande y visible, y otra copia identica que se coloca dentro, encima del contenido, antes de sellar. Esa copia interna incluye la direccion completa del remitente y del destinatario, para que si la etiqueta externa se pierde o se daña, quien abra la caja pueda identificar de donde viene y a donde va. Es una practica de bajo costo que evita que un envio se convierta en paquete perdido dentro de la bodega del courier.",
+  "resumen_teorico": "La etiqueta pegada por fuera de la caja es la única guia del paquete durante el viaje, pero se puede rasgar, mojar o despegar con el manejo. Por eso conviene imprimir la etiqueta de envio dos veces: una para la parte exterior de la caja, en su cara mas grande y visible, y otra copia idéntica que se coloca dentro, encima del contenido, antes de sellar. Esa copia interna incluye la dirección completa del remitente y del destinatario, para que si la etiqueta externa se pierde o se daña, quien abra la caja pueda identificar de donde viene y a donde va. Es una practica de bajo costo que evita que un envio se convierta en paquete perdido dentro de la bodega del courier.",
   "pasos_accionables": [
     "Imprime la etiqueta de envío por duplicado antes de cerrar la caja.",
     "Pega la primera copia en la cara más grande y plana de la caja, sin arrugas.",
@@ -20,7 +20,7 @@
     "sellar_cajas_metodo_cinta_en_h"
   ],
   "condiciones_activacion": [
-    "Envias pedidos a diario y te ha pasado que un paquete llega sin etiqueta legible.",
+    "Envías pedidos a diario y te ha pasado que un paquete llega sin etiqueta legible.",
     "Trabajas con couriers donde el manejo agresivo puede desprender etiquetas.",
     "Quieres reducir reclamos por paquetes que el courier no pudo identificar."
   ],
@@ -84,6 +84,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-etiqueta_duplicada_dentro_del_paquete-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La etiqueta pegada por fuera de la caja es la unica guia del paquete durante el viaje, pero se puede rasgar, mojar o despegar con el manejo. Por eso conviene imprimir la etiqueta de envio dos veces: una para la parte exterior de la caja, en su cara mas grande y visible, y otra copia identica que se coloca dentro, encima del contenido, antes de sellar. Esa copia interna incluye la direccion completa del remitente y del destinatario, para que si la etiqueta externa se pierde o se daña, quien abra la caja pueda identificar de donde viene y a donde va. Es una practica de bajo costo que evita que un envio se convierta en paquete perdido dentro de la bodega del courier.",
+      "texto_nuevo": "La etiqueta pegada por fuera de la caja es la única guia del paquete durante el viaje, pero se puede rasgar, mojar o despegar con el manejo. Por eso conviene imprimir la etiqueta de envio dos veces: una para la parte exterior de la caja, en su cara mas grande y visible, y otra copia idéntica que se coloca dentro, encima del contenido, antes de sellar. Esa copia interna incluye la dirección completa del remitente y del destinatario, para que si la etiqueta externa se pierde o se daña, quien abra la caja pueda identificar de donde viene y a donde va. Es una practica de bajo costo que evita que un envio se convierta en paquete perdido dentro de la bodega del courier.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: direccion, identica, unica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-etiqueta_duplicada_dentro_del_paquete-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envias pedidos a diario y te ha pasado que un paquete llega sin etiqueta legible.",
+      "texto_nuevo": "Envías pedidos a diario y te ha pasado que un paquete llega sin etiqueta legible.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Envias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

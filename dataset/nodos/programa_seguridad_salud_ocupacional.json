@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Seguridad y Salud Ocupacional (Marco de 7 Elementos)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Marco flexible y proactivo para gestionar la seguridad y salud en tu negocio, aplicable sin importar si es pequeno, mediano o grande, fijo o movil. Se compone de siete elementos centrales relacionados entre si: tu liderazgo, la participacion de quienes trabajan contigo, la identificacion y evaluacion de peligros, la prevencion y el control de esos peligros, la educacion y la capacitacion, la evaluacion y mejora del programa, y la comunicacion y coordinacion con contratistas o personal temporal. Busca prevenir lesiones, enfermedades y muertes en el trabajo, reduciendo costos como primas de seguros, gastos medicos, legales y perdida de productividad, mientras mejora el cumplimiento normativo y la moral del equipo. Enfatiza la mejora continua sobre el enfoque reactivo tradicional de actuar solo después de un incidente.",
+  "resumen_teorico": "Marco flexible y proactivo para gestionar la seguridad y salud en tu negocio, aplicable sin importar si es pequeño, mediano o grande, fijo o movil. Se compone de siete elementos centrales relacionados entre si: tu liderazgo, la participación de quienes trabajan contigo, la identificación y evaluación de peligros, la prevención y el control de esos peligros, la educación y la capacitación, la evaluación y mejora del programa, y la comunicación y coordinación con contratistas o personal temporal. Busca prevenir lesiones, enfermedades y muertes en el trabajo, reduciendo costos como primas de seguros, gastos médicos, legales y perdida de productividad, mientras mejora el cumplimiento normativo y la moral del equipo. Enfatiza la mejora continua sobre el enfoque reactivo tradicional de actuar solo después de un incidente.",
   "pasos_accionables": [
     "Diagnosticar el estado actual de la seguridad y salud en tu lugar de trabajo",
     "Definir metas modestas e iniciales para comenzar el programa",
@@ -32,7 +32,7 @@
   "condiciones_activacion": [
     "Cuando no cuentas con un programa formal de seguridad y salud",
     "Cuando buscas pasar de un enfoque reactivo a uno proactivo en gestion de riesgos laborales",
-    "Cuando buscas reducir costos por accidentes o mejorar el cumplimiento de la normativa de seguridad laboral de tu pais"
+    "Cuando buscas reducir costos por accidentes o mejorar el cumplimiento de la normativa de seguridad laboral de tu país"
   ],
   "etiqueta_arbol": "Construye tu Programa de Seguridad",
   "ids_alias": [
@@ -144,6 +144,35 @@
         "evidencia": "O079-040.entregable: implementación (Falta la tilde real en 'implementación'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-programa_seguridad_salud_ocupacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Marco flexible y proactivo para gestionar la seguridad y salud en tu negocio, aplicable sin importar si es pequeno, mediano o grande, fijo o movil. Se compone de siete elementos centrales relacionados entre si: tu liderazgo, la participacion de quienes trabajan contigo, la identificacion y evaluacion de peligros, la prevencion y el control de esos peligros, la educacion y la capacitacion, la evaluacion y mejora del programa, y la comunicacion y coordinacion con contratistas o personal temporal. Busca prevenir lesiones, enfermedades y muertes en el trabajo, reduciendo costos como primas de seguros, gastos medicos, legales y perdida de productividad, mientras mejora el cumplimiento normativo y la moral del equipo. Enfatiza la mejora continua sobre el enfoque reactivo tradicional de actuar solo después de un incidente.",
+      "texto_nuevo": "Marco flexible y proactivo para gestionar la seguridad y salud en tu negocio, aplicable sin importar si es pequeño, mediano o grande, fijo o movil. Se compone de siete elementos centrales relacionados entre si: tu liderazgo, la participación de quienes trabajan contigo, la identificación y evaluación de peligros, la prevención y el control de esos peligros, la educación y la capacitación, la evaluación y mejora del programa, y la comunicación y coordinación con contratistas o personal temporal. Busca prevenir lesiones, enfermedades y muertes en el trabajo, reduciendo costos como primas de seguros, gastos médicos, legales y perdida de productividad, mientras mejora el cumplimiento normativo y la moral del equipo. Enfatiza la mejora continua sobre el enfoque reactivo tradicional de actuar solo después de un incidente.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: capacitacion, comunicacion, coordinacion, educacion, evaluacion, identificacion, medicos, participacion, pequeno, prevencion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-programa_seguridad_salud_ocupacional-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando buscas reducir costos por accidentes o mejorar el cumplimiento de la normativa de seguridad laboral de tu pais",
+      "texto_nuevo": "Cuando buscas reducir costos por accidentes o mejorar el cumplimiento de la normativa de seguridad laboral de tu país",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: pais"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

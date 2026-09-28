@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Identificar si tu producto necesita protección especial",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de decidir como vas a empacar y probar tus envios, necesitas saber a que categoria pertenece tu producto. Si se rompe facilmente con un golpe (vidrio, ceramica, electronica) se considera fragil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorias exigen mas cuidado que un producto solido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Ademas, la forma fisica del producto (si es plano, alargado o de forma estandar) determina que tipo de prueba de caida le corresponde, asi que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+  "resumen_teorico": "Antes de decidir como vas a empacar y probar tus envíos, necesitas saber a que categoría pertenece tu producto. Si se rompe fácilmente con un golpe (vidrio, cerámica, electrónica) se considera frágil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorías exigen mas cuidado que un producto sólido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado o de forma estándar) determina que tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
   "pasos_accionables": [
     "Revisa si tu producto se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
     "Revisa si tu producto es líquido o puede volverse líquido con el calor y derramarse.",
@@ -26,7 +26,7 @@
   "condiciones_activacion": [
     "Vas a empezar a enviar un producto nuevo y no sabes si es delicado.",
     "Has tenido quejas de producto roto o derramado en el camino.",
-    "Quieres decidir cuantas pruebas de caida hacerle a tu empaque antes de vender mas."
+    "Quieres decidir cuantas pruebas de caída hacerle a tu empaque antes de vender mas."
   ],
   "etiqueta_arbol": "Detecta si tu producto es frágil",
   "correcciones": [
@@ -129,6 +129,35 @@
         "evidencia": "O035-026.entregable: frágil, líquido, cuántas (Faltan las tildes de frágil, líquido y cuántas.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-identificar_si_tu_producto_necesita_proteccion_especial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de decidir como vas a empacar y probar tus envios, necesitas saber a que categoria pertenece tu producto. Si se rompe facilmente con un golpe (vidrio, ceramica, electronica) se considera fragil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorias exigen mas cuidado que un producto solido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Ademas, la forma fisica del producto (si es plano, alargado o de forma estandar) determina que tipo de prueba de caida le corresponde, asi que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+      "texto_nuevo": "Antes de decidir como vas a empacar y probar tus envíos, necesitas saber a que categoría pertenece tu producto. Si se rompe fácilmente con un golpe (vidrio, cerámica, electrónica) se considera frágil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorías exigen mas cuidado que un producto sólido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado o de forma estándar) determina que tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Ademas, asi, caida, categoria, categorias, ceramica, electronica, envios, estandar, facilmente, fisica, fragil, solido"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-identificar_si_tu_producto_necesita_proteccion_especial-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Quieres decidir cuantas pruebas de caida hacerle a tu empaque antes de vender mas.",
+      "texto_nuevo": "Quieres decidir cuantas pruebas de caída hacerle a tu empaque antes de vender mas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: caida"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

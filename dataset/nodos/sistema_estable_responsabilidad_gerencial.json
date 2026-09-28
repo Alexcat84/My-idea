@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Un sistema estable es evidencia de que la mejora depende de ti, no de tu equipo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando un grafico de control muestra que un proceso (por ejemplo, el tiempo de preparacion de habitaciones de un hotel o la atencion en un area de tu negocio) esta en un estado estable, esto indica que las causas de los problemas son comunes al sistema y no atribuibles a una persona en particular. En consecuencia, la responsabilidad de mejorar el desempeno recae completamente en ti, que disenas y controlas el sistema, no en quienes trabajan dentro de sus limites.",
+  "resumen_teorico": "Cuando un grafico de control muestra que un proceso (por ejemplo, el tiempo de preparación de habitaciones de un hotel o la atención en un área de tu negocio) esta en un estado estable, esto indica que las causas de los problemas son comunes al sistema y no atribuibles a una persona en particular. En consecuencia, la responsabilidad de mejorar el desempeño recae completamente en ti, que diseñas y controlas el sistema, no en quienes trabajan dentro de sus limites.",
   "pasos_accionables": [
     "Recolectar datos del desempeño del proceso mediante observación planificada (conteos puntuales, muestreos periódicos).",
     "Construir un gráfico de control para verificar si el sistema es estable.",
@@ -20,7 +20,7 @@
     "causas_comunes_vs_especiales"
   ],
   "condiciones_activacion": [
-    "Si existe la tentacion de culpar a una persona por problemas que vienen del sistema.",
+    "Si existe la tentación de culpar a una persona por problemas que vienen del sistema.",
     "Si necesitas tener claro por que vale la pena invertir en rediseñar procesos o instalaciones antes de decidir."
   ],
   "etiqueta_arbol": "Detecta Problemas del Sistema",
@@ -95,6 +95,35 @@
         "evidencia": "O004-027.entregable: gráfico (A gráfico le falta de verdad la tilde, y el 'que' de 'decidir que' es conjunción, así que queda sin tilde.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-sistema_estable_responsabilidad_gerencial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un grafico de control muestra que un proceso (por ejemplo, el tiempo de preparacion de habitaciones de un hotel o la atencion en un area de tu negocio) esta en un estado estable, esto indica que las causas de los problemas son comunes al sistema y no atribuibles a una persona en particular. En consecuencia, la responsabilidad de mejorar el desempeno recae completamente en ti, que disenas y controlas el sistema, no en quienes trabajan dentro de sus limites.",
+      "texto_nuevo": "Cuando un grafico de control muestra que un proceso (por ejemplo, el tiempo de preparación de habitaciones de un hotel o la atención en un área de tu negocio) esta en un estado estable, esto indica que las causas de los problemas son comunes al sistema y no atribuibles a una persona en particular. En consecuencia, la responsabilidad de mejorar el desempeño recae completamente en ti, que diseñas y controlas el sistema, no en quienes trabajan dentro de sus limites.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area, atencion, desempeno, disenas, preparacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-sistema_estable_responsabilidad_gerencial-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si existe la tentacion de culpar a una persona por problemas que vienen del sistema.",
+      "texto_nuevo": "Si existe la tentación de culpar a una persona por problemas que vienen del sistema.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: tentacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

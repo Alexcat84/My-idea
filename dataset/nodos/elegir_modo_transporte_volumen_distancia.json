@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir el modo de transporte según volumen y distancia",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "Como primera aproximacion, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relacion es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rapido o mas puntual, incluso si el criterio de costo puro sugeriria otra cosa. Los umbrales exactos de tamaño y distancia varian segun el pais y el proveedor, asi que sirven como metodo de razonamiento, no como tabla fija.",
+  "resumen_teorico": "Como primera aproximación, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rápido o mas puntual, incluso si el criterio de costo puro sugeriría otra cosa. Los umbrales exactos de tamaño y distancia varían según el país y el proveedor, así que sirven como método de razonamiento, no como tabla fija.",
   "pasos_accionables": [
     "Ubica el tamaño típico de tus envíos (paquete individual, pallet, carga grande) y la distancia que recorren.",
     "Pregunta a tus posibles transportistas qué modo usan normalmente para ese tamaño y esa distancia.",
@@ -126,6 +126,20 @@
         "motivo": "Tras elegir el modo según tamaño de envío, lo siguiente es decidir si cada carga va directa o se consolida en milk run según la capacidad del modo."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-tildes-elegir_modo_transporte_volumen_distancia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Como primera aproximacion, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relacion es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rapido o mas puntual, incluso si el criterio de costo puro sugeriria otra cosa. Los umbrales exactos de tamaño y distancia varian segun el pais y el proveedor, asi que sirven como metodo de razonamiento, no como tabla fija.",
+      "texto_nuevo": "Como primera aproximación, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rápido o mas puntual, incluso si el criterio de costo puro sugeriría otra cosa. Los umbrales exactos de tamaño y distancia varían según el país y el proveedor, así que sirven como método de razonamiento, no como tabla fija.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: aproximacion, asi, metodo, pais, rapido, relacion, segun, sugeriria, varian"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

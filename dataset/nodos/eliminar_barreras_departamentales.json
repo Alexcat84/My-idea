@@ -2,7 +2,7 @@
   "node_id": "eliminar_barreras_departamentales",
   "fase_proyecto": "ejecucion",
   "dominio": "quality",
-  "titulo_concepto": "Romper las barreras entre las areas de tu negocio",
+  "titulo_concepto": "Romper las barreras entre las áreas de tu negocio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Quien se encarga de investigación, diseno, compras, ventas y producción en tu negocio debe conocer los problemas que enfrentan las otras partes con los materiales y las especificaciones. Si cada parte trabaja aislada, sin mirar el conjunto, tu negocio entero puede fracasar aunque cada quien crea que esta haciendo un trabajo excelente por su cuenta.",
   "pasos_accionables": [
@@ -69,6 +69,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-eliminar_barreras_departamentales-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Romper las barreras entre las areas de tu negocio",
+      "texto_nuevo": "Romper las barreras entre las áreas de tu negocio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

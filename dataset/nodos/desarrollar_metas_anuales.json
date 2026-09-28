@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Desarrollar Metas Anuales Medibles",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las metas anuales son objetivos especificos, medibles y con plazo definido que guian tus esfuerzos hacia el logro de cada estrategia. Hay siete areas minimas donde conviene fijar metas: desempeño del producto, desempeño frente a la competencia, mejora del negocio, costo de la mala calidad, desempeño de tus procesos, satisfaccion del cliente y lealtad o retencion del cliente.",
+  "resumen_teorico": "Las metas anuales son objetivos específicos, medibles y con plazo definido que guían tus esfuerzos hacia el logro de cada estrategia. Hay siete áreas mínimas donde conviene fijar metas: desempeño del producto, desempeño frente a la competencia, mejora del negocio, costo de la mala calidad, desempeño de tus procesos, satisfacción del cliente y lealtad o retención del cliente.",
   "pasos_accionables": [
     "Revisa las siete áreas clave de metas: producto, competitividad, mejora, costo de mala calidad, procesos, satisfacción y lealtad del cliente",
     "Reúne propuestas de metas de todas las personas que trabajan contigo, no solo las tuyas",
@@ -110,6 +110,20 @@
         "evidencia": "O039-007.entregable: específicas (Solo añade la tilde que faltaba en específicas.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-desarrollar_metas_anuales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las metas anuales son objetivos especificos, medibles y con plazo definido que guian tus esfuerzos hacia el logro de cada estrategia. Hay siete areas minimas donde conviene fijar metas: desempeño del producto, desempeño frente a la competencia, mejora del negocio, costo de la mala calidad, desempeño de tus procesos, satisfaccion del cliente y lealtad o retencion del cliente.",
+      "texto_nuevo": "Las metas anuales son objetivos específicos, medibles y con plazo definido que guían tus esfuerzos hacia el logro de cada estrategia. Hay siete áreas mínimas donde conviene fijar metas: desempeño del producto, desempeño frente a la competencia, mejora del negocio, costo de la mala calidad, desempeño de tus procesos, satisfacción del cliente y lealtad o retención del cliente.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas, especificos, guian, minimas, retencion, satisfaccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

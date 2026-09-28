@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Preguntas de Beneficio (Need-Payoff)",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Las preguntas de beneficio son preguntas centradas en la solucion que buscan que el propio cliente exprese el valor de resolver su problema. A diferencia de las preguntas de implicacion, que pueden agravar la incomodidad, estas generan un ambiente positivo y reducen la resistencia a objeciones porque es el cliente quien articula el beneficio, no tu. Los vendedores mas efectivos usan este tipo de pregunta muchas mas veces que el promedio. Es clave no usarlas al inicio de la llamada ni sobre necesidades que no puedes resolver, porque eso solo fortalece una necesidad que no vas a poder satisfacer. El momento optimo es cuando el cliente ya reconoce un problema serio pero todavia no valora la solucion.",
+  "resumen_teorico": "Las preguntas de beneficio son preguntas centradas en la solución que buscan que el propio cliente exprese el valor de resolver su problema. A diferencia de las preguntas de implicación, que pueden agravar la incomodidad, estas generan un ambiente positivo y reducen la resistencia a objeciones porque es el cliente quien articula el beneficio, no tu. Los vendedores mas efectivos usan este tipo de pregunta muchas mas veces que el promedio. Es clave no usarlas al inicio de la llamada ni sobre necesidades que no puedes resolver, porque eso solo fortalece una necesidad que no vas a poder satisfacer. El momento optimo es cuando el cliente ya reconoce un problema serio pero todavía no valora la solución.",
   "pasos_accionables": [
     "Espera a que el cliente reconozca un problema serio o exprese una necesidad explícita que tu solución pueda resolver",
     "Pregunta directamente si resolver eso sería valioso o importante para él, por ejemplo 'sería útil para usted resolver esto'",
@@ -32,10 +32,10 @@
     "diagnostico_sintoma_vs_causa_ventas"
   ],
   "condiciones_activacion": [
-    "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solucion",
-    "Cuando has desarrollado el problema con preguntas de implicacion y buscas transicionar hacia el cierre de forma positiva",
-    "Cuando el cliente parece incomodo tras varias preguntas de implicacion y necesitas reequilibrar la conversacion",
-    "Cuando buscas que el cliente valide internamente la solucion antes de presentarla formalmente"
+    "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solución",
+    "Cuando has desarrollado el problema con preguntas de implicación y buscas transicionar hacia el cierre de forma positiva",
+    "Cuando el cliente parece incomodo tras varias preguntas de implicación y necesitas reequilibrar la conversación",
+    "Cuando buscas que el cliente valide internamente la solución antes de presentarla formalmente"
   ],
   "etiqueta_arbol": "Haz Preguntas de Need-Payoff",
   "ids_alias": [
@@ -159,6 +159,80 @@
         "evidencia": "O074-034.entregable: explícitas (Solo añade la tilde que faltaba en explícitas.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-preguntas_need_payoff-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las preguntas de beneficio son preguntas centradas en la solucion que buscan que el propio cliente exprese el valor de resolver su problema. A diferencia de las preguntas de implicacion, que pueden agravar la incomodidad, estas generan un ambiente positivo y reducen la resistencia a objeciones porque es el cliente quien articula el beneficio, no tu. Los vendedores mas efectivos usan este tipo de pregunta muchas mas veces que el promedio. Es clave no usarlas al inicio de la llamada ni sobre necesidades que no puedes resolver, porque eso solo fortalece una necesidad que no vas a poder satisfacer. El momento optimo es cuando el cliente ya reconoce un problema serio pero todavia no valora la solucion.",
+      "texto_nuevo": "Las preguntas de beneficio son preguntas centradas en la solución que buscan que el propio cliente exprese el valor de resolver su problema. A diferencia de las preguntas de implicación, que pueden agravar la incomodidad, estas generan un ambiente positivo y reducen la resistencia a objeciones porque es el cliente quien articula el beneficio, no tu. Los vendedores mas efectivos usan este tipo de pregunta muchas mas veces que el promedio. Es clave no usarlas al inicio de la llamada ni sobre necesidades que no puedes resolver, porque eso solo fortalece una necesidad que no vas a poder satisfacer. El momento optimo es cuando el cliente ya reconoce un problema serio pero todavía no valora la solución.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: implicacion, solucion, todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-preguntas_need_payoff-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solucion",
+      "texto_nuevo": "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solución",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: solucion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-preguntas_need_payoff-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando has desarrollado el problema con preguntas de implicacion y buscas transicionar hacia el cierre de forma positiva",
+      "texto_nuevo": "Cuando has desarrollado el problema con preguntas de implicación y buscas transicionar hacia el cierre de forma positiva",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: implicacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-preguntas_need_payoff-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el cliente parece incomodo tras varias preguntas de implicacion y necesitas reequilibrar la conversacion",
+      "texto_nuevo": "Cuando el cliente parece incomodo tras varias preguntas de implicación y necesitas reequilibrar la conversación",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: conversacion, implicacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-preguntas_need_payoff-condiciones_activacion-3",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando buscas que el cliente valide internamente la solucion antes de presentarla formalmente",
+      "texto_nuevo": "Cuando buscas que el cliente valide internamente la solución antes de presentarla formalmente",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: solucion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

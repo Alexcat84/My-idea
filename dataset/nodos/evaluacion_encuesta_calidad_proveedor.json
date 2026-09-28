@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Antes de decidirte formalmente por un proveedor",
-    "Cuando necesitas confirmar si el proveedor puede realmente cumplir lo que promete, mas alla de lo que dice en el contrato"
+    "Cuando necesitas confirmar si el proveedor puede realmente cumplir lo que promete, mas allá de lo que dice en el contrato"
   ],
   "etiqueta_arbol": "Evalúa la Calidad de tu Proveedor",
   "fuentes_internas": [
@@ -70,6 +70,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-evaluacion_encuesta_calidad_proveedor-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas confirmar si el proveedor puede realmente cumplir lo que promete, mas alla de lo que dice en el contrato",
+      "texto_nuevo": "Cuando necesitas confirmar si el proveedor puede realmente cumplir lo que promete, mas allá de lo que dice en el contrato",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: alla"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Designar un responsable de sostenibilidad",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Llevar adelante la sostenibilidad requiere que alguien tenga esa responsabilidad con claridad. En negocios grandes se le llama director de sostenibilidad; en un negocio pequeno puede ser algo que tu mismo asumas, o que le encargues a alguien junto con otras tareas. Lo clave es sumar personas de distintas areas trabajando juntas (como el equipo tecnico de comunidad de General Mills) para que la sostenibilidad este presente en cada parte del negocio.",
+  "resumen_teorico": "Llevar adelante la sostenibilidad requiere que alguien tenga esa responsabilidad con claridad. En negocios grandes se le llama director de sostenibilidad; en un negocio pequeño puede ser algo que tu mismo asumas, o que le encargues a alguien junto con otras tareas. Lo clave es sumar personas de distintas áreas trabajando juntas (como el equipo técnico de comunidad de General Mills) para que la sostenibilidad este presente en cada parte del negocio.",
   "pasos_accionables": [
     "Definir con claridad quién es responsable de la agenda de sostenibilidad en tu negocio",
     "Sumar personas de distintas áreas o funciones para que colaboren en el tema",
@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Si no tienes a nadie responsable claro de la sostenibilidad",
-    "Si las iniciativas verdes estan dispersas sin coordinacion"
+    "Si las iniciativas verdes están dispersas sin coordinación"
   ],
   "etiqueta_arbol": "Nombra un Líder de Sostenibilidad",
   "fuentes_internas": [
@@ -82,6 +82,35 @@
         "evidencia": "O066-005.entregable: áreas (Solo se añade la tilde que falta en áreas.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-chief_sustainability_officer-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Llevar adelante la sostenibilidad requiere que alguien tenga esa responsabilidad con claridad. En negocios grandes se le llama director de sostenibilidad; en un negocio pequeno puede ser algo que tu mismo asumas, o que le encargues a alguien junto con otras tareas. Lo clave es sumar personas de distintas areas trabajando juntas (como el equipo tecnico de comunidad de General Mills) para que la sostenibilidad este presente en cada parte del negocio.",
+      "texto_nuevo": "Llevar adelante la sostenibilidad requiere que alguien tenga esa responsabilidad con claridad. En negocios grandes se le llama director de sostenibilidad; en un negocio pequeño puede ser algo que tu mismo asumas, o que le encargues a alguien junto con otras tareas. Lo clave es sumar personas de distintas áreas trabajando juntas (como el equipo técnico de comunidad de General Mills) para que la sostenibilidad este presente en cada parte del negocio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas, pequeno, tecnico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-chief_sustainability_officer-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si las iniciativas verdes estan dispersas sin coordinacion",
+      "texto_nuevo": "Si las iniciativas verdes están dispersas sin coordinación",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: coordinacion, estan"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

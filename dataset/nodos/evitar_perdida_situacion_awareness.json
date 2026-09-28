@@ -23,7 +23,7 @@
   "condiciones_activacion": [
     "Cuando un informe de accidente atribuye la causa a 'pérdida de situation awareness'",
     "Si se está considerando responsabilidad legal o disciplinaria basada en este concepto",
-    "Cuando se redacta o revisa una investigacion de incidente y hay que explicar por que la actuacion del operador tenia sentido en ese momento"
+    "Cuando se redacta o revisa una investigación de incidente y hay que explicar por que la actuación del operador tenia sentido en ese momento"
   ],
   "etiqueta_arbol": "No Uses Esa Etiqueta Fácil",
   "ids_alias": [
@@ -66,6 +66,21 @@
         "evidencia": "Q075-013: Razon para B: ambos aciertan en que la fase es ejecucion (investigar accidentes ya ocurridos es control de una operacion en marcha), pero la condicion de disenar un programa de entrenamiento no sale de los pasos ni del entregable, que son todos de investigacion e informe. (arbitro)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-tildes-evitar_perdida_situacion_awareness-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando se redacta o revisa una investigacion de incidente y hay que explicar por que la actuacion del operador tenia sentido en ese momento",
+      "texto_nuevo": "Cuando se redacta o revisa una investigación de incidente y hay que explicar por que la actuación del operador tenia sentido en ese momento",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: actuacion, investigacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Separa la visita de evaluación de la decisión de compra",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Antes de visitar a un proveedor o probar un producto, decide de antemano que esa visita es solo para evaluar, no para comprar. Dilo en voz alta o anotalo si negocias acompañado, porque la presion del vendedor en el momento, como poca disponibilidad o una oferta de hoy, esta diseñada justamente para que rompas ese plan. Si vas con la decision tomada de que hoy no firmas nada, es mas facil resistir la urgencia artificial que te presenten. Cuando alguien del equipo o de tu familia olvida ese acuerdo y empieza a negociar en el momento, el vendedor recupera el control de la conversacion. Mantener esa separacion entre ver y decidir te da tiempo para comparar con calma otras opciones antes de comprometer tu dinero.",
+  "resumen_teorico": "Antes de visitar a un proveedor o probar un producto, decide de antemano que esa visita es solo para evaluar, no para comprar. Dilo en voz alta o anótalo si negocias acompañado, porque la presión del vendedor en el momento, como poca disponibilidad o una oferta de hoy, esta diseñada justamente para que rompas ese plan. Si vas con la decisión tomada de que hoy no firmas nada, es mas fácil resistir la urgencia artificial que te presenten. Cuando alguien del equipo o de tu familia olvida ese acuerdo y empieza a negociar en el momento, el vendedor recupera el control de la conversación. Mantener esa separación entre ver y decidir te da tiempo para comparar con calma otras opciones antes de comprometer tu dinero.",
   "pasos_accionables": [
     "Antes de la visita, decide y anota que el propósito es solo evaluar, no comprar ese día.",
     "Si vas acompañado, avisa a la otra persona cuál es el plan para que no lo rompa bajo presión.",
@@ -21,9 +21,9 @@
     "prepara_posicion_agenda_antes_negociar"
   ],
   "condiciones_activacion": [
-    "Vas a visitar a un proveedor o probar un producto y sabes que te van a presionar para decidir ahi mismo.",
+    "Vas a visitar a un proveedor o probar un producto y sabes que te van a presionar para decidir ahí mismo.",
     "Te has dado cuenta de que sueles ceder cuando el vendedor dice que la oferta es solo por hoy.",
-    "Vas acompañado a una negociacion y temes que alguien del grupo cambie de opinion bajo presion."
+    "Vas acompañado a una negociación y temes que alguien del grupo cambie de opinion bajo presión."
   ],
   "etiqueta_arbol": "No compres en la primera visita",
   "fuentes_internas": [
@@ -137,6 +137,50 @@
         "evidencia": "O072-028.entregable: decisión, presión (Faltan las tildes en 'decision' y 'presion'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-separa_la_visita_de_evaluacion_de_la_decision_de_compra-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de visitar a un proveedor o probar un producto, decide de antemano que esa visita es solo para evaluar, no para comprar. Dilo en voz alta o anotalo si negocias acompañado, porque la presion del vendedor en el momento, como poca disponibilidad o una oferta de hoy, esta diseñada justamente para que rompas ese plan. Si vas con la decision tomada de que hoy no firmas nada, es mas facil resistir la urgencia artificial que te presenten. Cuando alguien del equipo o de tu familia olvida ese acuerdo y empieza a negociar en el momento, el vendedor recupera el control de la conversacion. Mantener esa separacion entre ver y decidir te da tiempo para comparar con calma otras opciones antes de comprometer tu dinero.",
+      "texto_nuevo": "Antes de visitar a un proveedor o probar un producto, decide de antemano que esa visita es solo para evaluar, no para comprar. Dilo en voz alta o anótalo si negocias acompañado, porque la presión del vendedor en el momento, como poca disponibilidad o una oferta de hoy, esta diseñada justamente para que rompas ese plan. Si vas con la decisión tomada de que hoy no firmas nada, es mas fácil resistir la urgencia artificial que te presenten. Cuando alguien del equipo o de tu familia olvida ese acuerdo y empieza a negociar en el momento, el vendedor recupera el control de la conversación. Mantener esa separación entre ver y decidir te da tiempo para comparar con calma otras opciones antes de comprometer tu dinero.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: anotalo, conversacion, decision, facil, presion, separacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-separa_la_visita_de_evaluacion_de_la_decision_de_compra-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vas a visitar a un proveedor o probar un producto y sabes que te van a presionar para decidir ahi mismo.",
+      "texto_nuevo": "Vas a visitar a un proveedor o probar un producto y sabes que te van a presionar para decidir ahí mismo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ahi"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-separa_la_visita_de_evaluacion_de_la_decision_de_compra-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vas acompañado a una negociacion y temes que alguien del grupo cambie de opinion bajo presion.",
+      "texto_nuevo": "Vas acompañado a una negociación y temes que alguien del grupo cambie de opinion bajo presión.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: negociacion, presion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

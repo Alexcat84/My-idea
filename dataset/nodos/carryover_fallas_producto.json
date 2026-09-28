@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación del Carryover de Características Propensas a Fallas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: siempre es mas atractivo sumar algo nuevo que corregir algo viejo. Resolverlo exige que tu, como responsable del negocio, lo pongas como prioridad explicita.",
+  "resumen_teorico": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: siempre es mas atractivo sumar algo nuevo que corregir algo viejo. Resolverlo exige que tu, como responsable del negocio, lo pongas como prioridad explícita.",
   "pasos_accionables": [
     "Haz un listado histórico de las fallas que se repiten en cada versión de tu producto o servicio",
     "Revisa si esas fallas se han colado como un costo más dentro de tu presupuesto habitual, sin que nadie las cuestione",
@@ -65,6 +65,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-carryover_fallas_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: siempre es mas atractivo sumar algo nuevo que corregir algo viejo. Resolverlo exige que tu, como responsable del negocio, lo pongas como prioridad explicita.",
+      "texto_nuevo": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: siempre es mas atractivo sumar algo nuevo que corregir algo viejo. Resolverlo exige que tu, como responsable del negocio, lo pongas como prioridad explícita.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: explicita"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

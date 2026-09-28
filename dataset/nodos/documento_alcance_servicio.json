@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Redacta un documento detallado de lo que esperas del servicio",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Cuando contratas un servicio recurrente, como limpieza, mantenimiento o cualquier trabajo que se repite cada semana o cada mes, no basta con nombrar el servicio: hay que describir por escrito exactamente que se hara, con que frecuencia, con que estandar de calidad, y quien es responsable de cada tarea. Este documento tambien deja claro que queda fuera del servicio, para evitar disputas mas adelante. Sirve tanto para pedir cotizaciones comparables como para medir despues si el proveedor cumplio lo acordado. Sin este detalle, cualquier desacuerdo sobre calidad o alcance termina siendo una discusion de opiniones en lugar de una comparacion con algo escrito que ambas partes aceptaron desde el inicio de la relacion.",
+  "resumen_teorico": "Cuando contratas un servicio recurrente, como limpieza, mantenimiento o cualquier trabajo que se repite cada semana o cada mes, no basta con nombrar el servicio: hay que describir por escrito exactamente que se hará, con que frecuencia, con que estándar de calidad, y quien es responsable de cada tarea. Este documento también deja claro que queda fuera del servicio, para evitar disputas mas adelante. Sirve tanto para pedir cotizaciones comparables como para medir después si el proveedor cumplió lo acordado. Sin este detalle, cualquier desacuerdo sobre calidad o alcance termina siendo una discusión de opiniones en lugar de una comparación con algo escrito que ambas partes aceptaron desde el inicio de la relación.",
   "pasos_accionables": [
     "Lista cada tarea del servicio por separado, sin agruparla en frases generales.",
     "Anota la frecuencia exacta de cada tarea: diaria, semanal o mensual.",
@@ -67,6 +67,20 @@
         "evidencia": "O038-017.entregable: después (Falta la tilde en después.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-documento_alcance_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando contratas un servicio recurrente, como limpieza, mantenimiento o cualquier trabajo que se repite cada semana o cada mes, no basta con nombrar el servicio: hay que describir por escrito exactamente que se hara, con que frecuencia, con que estandar de calidad, y quien es responsable de cada tarea. Este documento tambien deja claro que queda fuera del servicio, para evitar disputas mas adelante. Sirve tanto para pedir cotizaciones comparables como para medir despues si el proveedor cumplio lo acordado. Sin este detalle, cualquier desacuerdo sobre calidad o alcance termina siendo una discusion de opiniones en lugar de una comparacion con algo escrito que ambas partes aceptaron desde el inicio de la relacion.",
+      "texto_nuevo": "Cuando contratas un servicio recurrente, como limpieza, mantenimiento o cualquier trabajo que se repite cada semana o cada mes, no basta con nombrar el servicio: hay que describir por escrito exactamente que se hará, con que frecuencia, con que estándar de calidad, y quien es responsable de cada tarea. Este documento también deja claro que queda fuera del servicio, para evitar disputas mas adelante. Sirve tanto para pedir cotizaciones comparables como para medir después si el proveedor cumplió lo acordado. Sin este detalle, cualquier desacuerdo sobre calidad o alcance termina siendo una discusión de opiniones en lugar de una comparación con algo escrito que ambas partes aceptaron desde el inicio de la relación.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comparacion, cumplio, despues, discusion, estandar, hara, relacion, tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

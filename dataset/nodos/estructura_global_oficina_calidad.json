@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Estructura Organizacional Global de la Oficina de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando tu negocio opera en varios paises o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. El modelo tipico ubica a un responsable maximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en areas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
+  "resumen_teorico": "Cuando tu negocio opera en varios países o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. El modelo típico ubica a un responsable máximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en áreas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
   "pasos_accionables": [
     "Definir el nivel jerárquico de quien lidera calidad (Chief Quality Officer) y a quién le reporta directamente",
     "Establecer si la estructura será centralizada, descentralizada o matricial",
@@ -23,7 +23,7 @@
     "responsabilidades_desarrollo_talento_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando tu negocio opera en varios paises o divisiones y necesitas coordinar la función de calidad a nivel global"
+    "Cuando tu negocio opera en varios países o divisiones y necesitas coordinar la función de calidad a nivel global"
   ],
   "etiqueta_arbol": "Organiza tu Calidad Global",
   "fuentes_internas": [
@@ -71,6 +71,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-estructura_global_oficina_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu negocio opera en varios paises o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. El modelo tipico ubica a un responsable maximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en areas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
+      "texto_nuevo": "Cuando tu negocio opera en varios países o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. El modelo típico ubica a un responsable máximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en áreas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas, maximo, paises, tipico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-estructura_global_oficina_calidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu negocio opera en varios paises o divisiones y necesitas coordinar la función de calidad a nivel global",
+      "texto_nuevo": "Cuando tu negocio opera en varios países o divisiones y necesitas coordinar la función de calidad a nivel global",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: paises"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

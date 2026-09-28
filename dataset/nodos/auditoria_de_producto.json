@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Revisión independiente de tu producto terminado (auditoría de producto)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificacion del 98%) mientras en la calle el producto sigue fallando.",
+  "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
   "pasos_accionables": [
     "Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita",
     "Elige en qué momento revisas: fábrica, distribuidor, servicio o ya en campo, según qué tan complejo sea tu producto",
@@ -29,7 +29,7 @@
   ],
   "condiciones_activacion": [
     "Cuando sospechas que tus números internos de calidad no reflejan lo que realmente vive el cliente",
-    "Cuando necesitas confirmar que tu inspeccion habitual esta funcionando",
+    "Cuando necesitas confirmar que tu inspección habitual esta funcionando",
     "Cuando tu producto es delicado y quieres una segunda capa de control"
   ],
   "etiqueta_arbol": "Compara tu Producto contra la Realidad",
@@ -143,6 +143,35 @@
         "evidencia": "O075-036.entregable: índice, comparación (Faltaban tildes en índice y comparación.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-auditoria_de_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificacion del 98%) mientras en la calle el producto sigue fallando.",
+      "texto_nuevo": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: calificacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-auditoria_de_producto-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas confirmar que tu inspeccion habitual esta funcionando",
+      "texto_nuevo": "Cuando necesitas confirmar que tu inspección habitual esta funcionando",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: inspeccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

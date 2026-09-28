@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Retroalimentación del Cliente y del Empleado para Mejorar el Sistema",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El caso de Reimer Express Lines muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erroneamente a que esa persona rinde mal.",
+  "resumen_teorico": "El caso de Reimer Express Lines muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erróneamente a que esa persona rinde mal.",
   "pasos_accionables": [
     "Pregúntale de forma simple y abierta a quien te ayuda en el negocio cómo entiende el servicio o el trabajo que hace",
     "Acompaña en persona a quien hace la tarea operativa para ver con tus propios ojos los problemas reales",
@@ -67,6 +67,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "final-tildes-retroalimentacion_cliente_mejora_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El caso de Reimer Express Lines muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erroneamente a que esa persona rinde mal.",
+      "texto_nuevo": "El caso de Reimer Express Lines muestra como preguntar directamente a la persona que hace el trabajo de campo (por ejemplo un chofer) sobre como entiende el negocio revela desconexiones entre lo que tu crees que pasa y lo que realmente ocurre en la operación. Escuchar las frustraciones de quien esta en el terreno, como un problema tan simple como una radio que no funciona, te permite encontrar la causa real de una baja productividad que de otro modo achacarias erróneamente a que esa persona rinde mal.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: erroneamente"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

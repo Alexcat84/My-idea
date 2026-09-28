@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Ir a Ferias de Franquicia y de Industria",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Las ferias comerciales se dividen en dos tipos: las de franquicia, dirigidas a compradores activos que buscan invertir y con audiencia normalmente local, y las de industria, dirigidas a un sector específico, con audiencia nacional o internacional, donde solo una parte de los asistentes busca franquiciarse. Para elegir la feria correcta necesitas tener claro que perfil de inversor buscas. Revisa las estadisticas de asistentes de ediciones anteriores, porque participar tiene costos que no siempre se ven a primera vista (viaje, materiales, personal) y pueden superar el monto que imaginas al principio (pregunta el precio en tu mercado). El objetivo de ir a una feria es conseguir contactos interesados, no cerrar ventas ahi mismo, así que tienes que entrenar a quien te acompañe para identificar rápido a los prospectos con potencial real.",
+  "resumen_teorico": "Las ferias comerciales se dividen en dos tipos: las de franquicia, dirigidas a compradores activos que buscan invertir y con audiencia normalmente local, y las de industria, dirigidas a un sector específico, con audiencia nacional o internacional, donde solo una parte de los asistentes busca franquiciarse. Para elegir la feria correcta necesitas tener claro que perfil de inversor buscas. Revisa las estadísticas de asistentes de ediciones anteriores, porque participar tiene costos que no siempre se ven a primera vista (viaje, materiales, personal) y pueden superar el monto que imaginas al principio (pregunta el precio en tu mercado). El objetivo de ir a una feria es conseguir contactos interesados, no cerrar ventas ahí mismo, así que tienes que entrenar a quien te acompañe para identificar rápido a los prospectos con potencial real.",
   "pasos_accionables": [
     "Define el perfil de inversor que buscas (capital, experiencia, sector), y con la región donde quieres crecer",
     "Pide las estadísticas de asistentes de ferias pasadas y contacta a quienes participaron antes como referencia",
@@ -71,6 +71,20 @@
         "evidencia": "O015-002.entregable: participación (Solo añade la tilde que faltaba en participación.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-ferias_comerciales_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las ferias comerciales se dividen en dos tipos: las de franquicia, dirigidas a compradores activos que buscan invertir y con audiencia normalmente local, y las de industria, dirigidas a un sector específico, con audiencia nacional o internacional, donde solo una parte de los asistentes busca franquiciarse. Para elegir la feria correcta necesitas tener claro que perfil de inversor buscas. Revisa las estadisticas de asistentes de ediciones anteriores, porque participar tiene costos que no siempre se ven a primera vista (viaje, materiales, personal) y pueden superar el monto que imaginas al principio (pregunta el precio en tu mercado). El objetivo de ir a una feria es conseguir contactos interesados, no cerrar ventas ahi mismo, así que tienes que entrenar a quien te acompañe para identificar rápido a los prospectos con potencial real.",
+      "texto_nuevo": "Las ferias comerciales se dividen en dos tipos: las de franquicia, dirigidas a compradores activos que buscan invertir y con audiencia normalmente local, y las de industria, dirigidas a un sector específico, con audiencia nacional o internacional, donde solo una parte de los asistentes busca franquiciarse. Para elegir la feria correcta necesitas tener claro que perfil de inversor buscas. Revisa las estadísticas de asistentes de ediciones anteriores, porque participar tiene costos que no siempre se ven a primera vista (viaje, materiales, personal) y pueden superar el monto que imaginas al principio (pregunta el precio en tu mercado). El objetivo de ir a una feria es conseguir contactos interesados, no cerrar ventas ahí mismo, así que tienes que entrenar a quien te acompañe para identificar rápido a los prospectos con potencial real.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ahi, estadisticas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

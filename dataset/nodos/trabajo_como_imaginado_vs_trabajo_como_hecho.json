@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Brecha entre Trabajo-Como-Imaginado y Trabajo-Como-Hecho",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Es un indicador clave de que tan resiliente es tu negocio: mide la distancia entre como tu imaginas que se hacen las cosas en la operacion diaria y como realmente se hacen. Si esa distancia es grande, significa que estas mal calibrado respecto a los riesgos reales que enfrenta tu negocio, y que puede que no estes reconociendo como las personas que hacen el trabajo realmente logran que las cosas salgan bien cada día.",
+  "resumen_teorico": "Es un indicador clave de que tan resiliente es tu negocio: mide la distancia entre como tu imaginas que se hacen las cosas en la operación diaria y como realmente se hacen. Si esa distancia es grande, significa que estas mal calibrado respecto a los riesgos reales que enfrenta tu negocio, y que puede que no estés reconociendo como las personas que hacen el trabajo realmente logran que las cosas salgan bien cada día.",
   "pasos_accionables": [
     "Observar directamente el trabajo en el terreno, no solo revisar los procedimientos escritos",
     "Conversar con las personas que hacen el trabajo sobre cómo realmente resuelven los problemas cotidianos",
@@ -20,7 +20,7 @@
     "preguntas_clave_armadura_organizacional"
   ],
   "condiciones_activacion": [
-    "Cuando sospechas que los procedimientos escritos no reflejan la realidad de la operacion",
+    "Cuando sospechas que los procedimientos escritos no reflejan la realidad de la operación",
     "Cuando buscas entender fuentes de riesgo que no se han reportado formalmente"
   ],
   "etiqueta_arbol": "Compara lo Imaginado con lo Real",
@@ -68,6 +68,35 @@
         "evidencia": "O005-004.entregable: prácticas (Falta la tilde en 'prácticas', palabra esdrújula; lo demás no cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-trabajo_como_imaginado_vs_trabajo_como_hecho-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es un indicador clave de que tan resiliente es tu negocio: mide la distancia entre como tu imaginas que se hacen las cosas en la operacion diaria y como realmente se hacen. Si esa distancia es grande, significa que estas mal calibrado respecto a los riesgos reales que enfrenta tu negocio, y que puede que no estes reconociendo como las personas que hacen el trabajo realmente logran que las cosas salgan bien cada día.",
+      "texto_nuevo": "Es un indicador clave de que tan resiliente es tu negocio: mide la distancia entre como tu imaginas que se hacen las cosas en la operación diaria y como realmente se hacen. Si esa distancia es grande, significa que estas mal calibrado respecto a los riesgos reales que enfrenta tu negocio, y que puede que no estés reconociendo como las personas que hacen el trabajo realmente logran que las cosas salgan bien cada día.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: estes, operacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-trabajo_como_imaginado_vs_trabajo_como_hecho-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando sospechas que los procedimientos escritos no reflejan la realidad de la operacion",
+      "texto_nuevo": "Cuando sospechas que los procedimientos escritos no reflejan la realidad de la operación",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: operacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

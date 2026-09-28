@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Decidir si vendes solo online o también en tienda física",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Un negocio puede vender solo por internet, sin local, o combinar tienda fisica y venta online. Cada opcion trae combinaciones distintas de comportamiento del comprador: alguien puede mirar en tu local y comprar en linea despues, o comprar en linea y recoger el en tu local, o reservar y pasar a retirar. Cada combinacion exige una logistica distinta de entrega y de devolucion, y afecta cuanto viaje hace el paquete y cuanto viaje hace el cliente. Decidir esto temprano evita construir una operacion de entrega pensada para un solo canal cuando en realidad terminaras atendiendo varios, cada uno con su propia forma de recibir y devolver mercancia.",
+  "resumen_teorico": "Un negocio puede vender solo por internet, sin local, o combinar tienda física y venta online. Cada opción trae combinaciones distintas de comportamiento del comprador: alguien puede mirar en tu local y comprar en linea después, o comprar en linea y recoger el en tu local, o reservar y pasar a retirar. Cada combinación exige una logística distinta de entrega y de devolución, y afecta cuanto viaje hace el paquete y cuanto viaje hace el cliente. Decidir esto temprano evita construir una operación de entrega pensada para un solo canal cuando en realidad terminaras atendiendo varios, cada uno con su propia forma de recibir y devolver mercancía.",
   "pasos_accionables": [
     "Define si vas a operar sin local (solo online) o combinar tienda física y venta digital.",
     "Si tienes local, decide si vas a ofrecer recoger en tienda además de entrega a domicilio.",
@@ -21,7 +21,7 @@
     "ofrecer_puntos_recogida"
   ],
   "condiciones_activacion": [
-    "Tienes un local fisico y te preguntas si abrir tambien venta por internet.",
+    "Tienes un local físico y te preguntas si abrir también venta por internet.",
     "Ya vendes online y consideras abrir un punto de recogida.",
     "No sabes si tus clientes prefieren recibir en casa o recoger ellos mismos."
   ],
@@ -84,6 +84,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-decidir_vender_solo_online_o_tambien_tienda_fisica-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un negocio puede vender solo por internet, sin local, o combinar tienda fisica y venta online. Cada opcion trae combinaciones distintas de comportamiento del comprador: alguien puede mirar en tu local y comprar en linea despues, o comprar en linea y recoger el en tu local, o reservar y pasar a retirar. Cada combinacion exige una logistica distinta de entrega y de devolucion, y afecta cuanto viaje hace el paquete y cuanto viaje hace el cliente. Decidir esto temprano evita construir una operacion de entrega pensada para un solo canal cuando en realidad terminaras atendiendo varios, cada uno con su propia forma de recibir y devolver mercancia.",
+      "texto_nuevo": "Un negocio puede vender solo por internet, sin local, o combinar tienda física y venta online. Cada opción trae combinaciones distintas de comportamiento del comprador: alguien puede mirar en tu local y comprar en linea después, o comprar en linea y recoger el en tu local, o reservar y pasar a retirar. Cada combinación exige una logística distinta de entrega y de devolución, y afecta cuanto viaje hace el paquete y cuanto viaje hace el cliente. Decidir esto temprano evita construir una operación de entrega pensada para un solo canal cuando en realidad terminaras atendiendo varios, cada uno con su propia forma de recibir y devolver mercancía.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: combinacion, despues, devolucion, fisica, logistica, mercancia, opcion, operacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-decidir_vender_solo_online_o_tambien_tienda_fisica-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tienes un local fisico y te preguntas si abrir tambien venta por internet.",
+      "texto_nuevo": "Tienes un local físico y te preguntas si abrir también venta por internet.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: fisico, tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Clasifica tu inventario y define qué meta persigues",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercaderia lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operacion diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorias sin distincion hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes segun su funcion real y define una meta concreta para ti mismo: cuantos dias de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decision de compra es a ciegas.",
+  "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorías sin distinción hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuantos días de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decisión de compra es a ciegas.",
   "pasos_accionables": [
     "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas o consumibles de operación.",
     "Identifica cuánto de ese stock es reserva de seguridad y cuánto es exceso sin propósito claro.",
@@ -22,7 +22,7 @@
   "condiciones_activacion": [
     "Tienes bodega o estante lleno y no sabes cuanto de eso es realmente necesario.",
     "Compras sin saber si estas por encima o por debajo de lo que tu negocio necesita.",
-    "Quieres liberar capital atrapado en mercaderia sin arriesgarte a quedarte sin stock."
+    "Quieres liberar capital atrapado en mercadería sin arriesgarte a quedarte sin stock."
   ],
   "etiqueta_arbol": "Clasifica tu inventario y su meta",
   "correcciones": [
@@ -123,6 +123,35 @@
         "motivo": "Después de ver en dinero lo que cuesta el stock muerto, clasificar el inventario y fijarle una meta es el paso lógico para liberar capital sin repetir el problema."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-tildes-clasifica_tu_inventario-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No todo lo que tienes guardado sirve para lo mismo. Hay mercaderia lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operacion diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorias sin distincion hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes segun su funcion real y define una meta concreta para ti mismo: cuantos dias de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decision de compra es a ciegas.",
+      "texto_nuevo": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorías sin distinción hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuantos días de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decisión de compra es a ciegas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: categorias, decision, dias, distincion, funcion, mercaderia, operacion, segun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-clasifica_tu_inventario-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Quieres liberar capital atrapado en mercaderia sin arriesgarte a quedarte sin stock.",
+      "texto_nuevo": "Quieres liberar capital atrapado en mercadería sin arriesgarte a quedarte sin stock.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: mercaderia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

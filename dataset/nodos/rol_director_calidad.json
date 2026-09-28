@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Quien se encarga de la calidad en tu negocio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Quien lleva la calidad en tu negocio cumple dos papeles: organizar el trabajo diario de calidad y ayudarte a ti a tomar las decisiones estrategicas sobre calidad. Una tendencia clave es que las tareas de calidad que antes se concentraban en una sola persona o area pasen a repartirse entre quienes ejecutan el trabajo en cada area, y que estas personas reciban la formación necesaria para asumirlas.",
+  "resumen_teorico": "Quien lleva la calidad en tu negocio cumple dos papeles: organizar el trabajo diario de calidad y ayudarte a ti a tomar las decisiones estratégicas sobre calidad. Una tendencia clave es que las tareas de calidad que antes se concentraban en una sola persona o área pasen a repartirse entre quienes ejecutan el trabajo en cada área, y que estas personas reciban la formación necesaria para asumirlas.",
   "pasos_accionables": [
     "Definir qué tareas de calidad son del día a día y cuáles son nuevas responsabilidades estratégicas",
     "Identificar qué actividades de calidad pueden pasar a quienes ejecutan el trabajo en cada área",
@@ -21,7 +21,7 @@
     "enfoques_gurus_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando una sola persona o area concentra demasiadas responsabilidades operativas de calidad",
+    "Cuando una sola persona o área concentra demasiadas responsabilidades operativas de calidad",
     "Cuando buscas que la calidad sea responsabilidad de todos, no de una sola persona"
   ],
   "etiqueta_arbol": "Define tu Director de Calidad",
@@ -83,6 +83,35 @@
         "evidencia": "O021-034.entregable: área (Solo añade la tilde de área.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-rol_director_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Quien lleva la calidad en tu negocio cumple dos papeles: organizar el trabajo diario de calidad y ayudarte a ti a tomar las decisiones estrategicas sobre calidad. Una tendencia clave es que las tareas de calidad que antes se concentraban en una sola persona o area pasen a repartirse entre quienes ejecutan el trabajo en cada area, y que estas personas reciban la formación necesaria para asumirlas.",
+      "texto_nuevo": "Quien lleva la calidad en tu negocio cumple dos papeles: organizar el trabajo diario de calidad y ayudarte a ti a tomar las decisiones estratégicas sobre calidad. Una tendencia clave es que las tareas de calidad que antes se concentraban en una sola persona o área pasen a repartirse entre quienes ejecutan el trabajo en cada área, y que estas personas reciban la formación necesaria para asumirlas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area, estrategicas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-rol_director_calidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando una sola persona o area concentra demasiadas responsabilidades operativas de calidad",
+      "texto_nuevo": "Cuando una sola persona o área concentra demasiadas responsabilidades operativas de calidad",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

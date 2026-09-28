@@ -2,9 +2,9 @@
   "node_id": "regla_disponibilidad_previa_venta",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Disponibilidad de la Garantia Antes de la Venta (Pre-Sale Availability Rule)",
+  "titulo_concepto": "Disponibilidad de la Garantía Antes de la Venta (Pre-Sale Availability Rule)",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse.",
+  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantía escrita a clientes en ese país, la norma exige que el texto completo de la garantía este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantía antes de decidirse.",
   "pasos_accionables": [
     "Revisa por qué canal vendes (tienda física, en línea, puerta a puerta) y define cómo vas a mostrar la garantía antes de que la persona compre en ese canal.",
     "Coloca el texto de la garantía visible junto al producto si vendes en persona, o en la misma página del producto si vendes en línea.",
@@ -22,7 +22,7 @@
   ],
   "condiciones_activacion": [
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
-    "Cuando ofreces una garantia escrita sobre lo que vendes, sin importar el canal."
+    "Cuando ofreces una garantía escrita sobre lo que vendes, sin importar el canal."
   ],
   "ids_alias": [
     "regla_disponibilidad_previa_venta_2"
@@ -112,6 +112,49 @@
         "evidencia": "O075-035.entregable: garantía (Faltaba la tilde en garantía.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-regla_disponibilidad_previa_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse.",
+      "texto_nuevo": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantía escrita a clientes en ese país, la norma exige que el texto completo de la garantía este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantía antes de decidirse.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: garantia, pais"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-regla_disponibilidad_previa_venta-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ofreces una garantia escrita sobre lo que vendes, sin importar el canal.",
+      "texto_nuevo": "Cuando ofreces una garantía escrita sobre lo que vendes, sin importar el canal.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: garantia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-regla_disponibilidad_previa_venta-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disponibilidad de la Garantia Antes de la Venta (Pre-Sale Availability Rule)",
+      "texto_nuevo": "Disponibilidad de la Garantía Antes de la Venta (Pre-Sale Availability Rule)",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Garantia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

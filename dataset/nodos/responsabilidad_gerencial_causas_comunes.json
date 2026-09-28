@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Tu responsabilidad sobre las causas comunes del sistema",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La mayoria de los problemas de producción vienen de causas comunes, es decir, del propio sistema, y solo quien dirige el negocio puede eliminarlas. No vienen de fallas individuales de las personas que te ayudan. Culpar a alguien por un problema que en realidad es del sistema es un error frecuente y contraproducente. Tu tarea es usar herramientas estadisticas simples para distinguir causas comunes de causas especiales, y asumir de forma continua, no puntual, la mejora del sistema, reemplazando frases motivacionales vacias por métodos reales de mejora.",
+  "resumen_teorico": "La mayoría de los problemas de producción vienen de causas comunes, es decir, del propio sistema, y solo quien dirige el negocio puede eliminarlas. No vienen de fallas individuales de las personas que te ayudan. Culpar a alguien por un problema que en realidad es del sistema es un error frecuente y contraproducente. Tu tarea es usar herramientas estadísticas simples para distinguir causas comunes de causas especiales, y asumir de forma continua, no puntual, la mejora del sistema, reemplazando frases motivacionales vacías por métodos reales de mejora.",
   "pasos_accionables": [
     "Aprende a distinguir entre causas comunes (del sistema) y causas especiales (puntuales)",
     "Usa gráficos de control para calcular qué porcentaje de los defectos viene de causas comunes y cuál de causas especiales",
@@ -21,7 +21,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando culpas de forma sistematica a las personas que te ayudan por problemas de calidad",
+    "Cuando culpas de forma sistemática a las personas que te ayudan por problemas de calidad",
     "Cuando usas frases o campañas motivacionales sin un método real que las respalde"
   ],
   "etiqueta_arbol": "Ataca las Causas del Sistema",
@@ -109,6 +109,35 @@
         "evidencia": "O048-030.entregable: métricas (Añade la tilde que faltaba en métricas; no hay otros cambios.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-responsabilidad_gerencial_causas_comunes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La mayoria de los problemas de producción vienen de causas comunes, es decir, del propio sistema, y solo quien dirige el negocio puede eliminarlas. No vienen de fallas individuales de las personas que te ayudan. Culpar a alguien por un problema que en realidad es del sistema es un error frecuente y contraproducente. Tu tarea es usar herramientas estadisticas simples para distinguir causas comunes de causas especiales, y asumir de forma continua, no puntual, la mejora del sistema, reemplazando frases motivacionales vacias por métodos reales de mejora.",
+      "texto_nuevo": "La mayoría de los problemas de producción vienen de causas comunes, es decir, del propio sistema, y solo quien dirige el negocio puede eliminarlas. No vienen de fallas individuales de las personas que te ayudan. Culpar a alguien por un problema que en realidad es del sistema es un error frecuente y contraproducente. Tu tarea es usar herramientas estadísticas simples para distinguir causas comunes de causas especiales, y asumir de forma continua, no puntual, la mejora del sistema, reemplazando frases motivacionales vacías por métodos reales de mejora.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: estadisticas, mayoria, vacias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-responsabilidad_gerencial_causas_comunes-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando culpas de forma sistematica a las personas que te ayudan por problemas de calidad",
+      "texto_nuevo": "Cuando culpas de forma sistemática a las personas que te ayudan por problemas de calidad",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: sistematica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

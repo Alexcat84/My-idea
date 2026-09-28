@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Decidir si empacas tú mismo o subcontratas el envío",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrias usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar segun el courier que usa, asi que el operador que elijas se vuelve parte de tu reputacion. No es una decision de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
+  "resumen_teorico": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrías usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar según el courier que usa, así que el operador que elijas se vuelve parte de tu reputación. No es una decisión de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
   "pasos_accionables": [
     "Calcula cuánto tiempo y espacio te toma empacar cada pedido tú mismo en una semana normal.",
     "Compara ese costo contra las tarifas de un operador logístico local.",
@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Tus pedidos crecieron y ya no alcanzas a empacar todo a tiempo.",
-    "No sabes si te conviene pagar a un tercero o seguir haciendolo con tus manos.",
+    "No sabes si te conviene pagar a un tercero o seguir haciéndolo con tus manos.",
     "Quieres cuidar tu marca en cada contacto con el cliente pero el tiempo no te alcanza."
   ],
   "etiqueta_arbol": "Decide quién empaca tus envíos",
@@ -123,6 +123,35 @@
         "evidencia": "O071-013.entregable: decisión, opción ('decisión' y 'opción' son agudas terminadas en n y llevan tilde; el término 'fulfilment' se deja intacto.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-decidir_empacar_tu_mismo_o_subcontratar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrias usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar segun el courier que usa, asi que el operador que elijas se vuelve parte de tu reputacion. No es una decision de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
+      "texto_nuevo": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrías usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar según el courier que usa, así que el operador que elijas se vuelve parte de tu reputación. No es una decisión de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: asi, decision, podrias, reputacion, segun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-decidir_empacar_tu_mismo_o_subcontratar-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No sabes si te conviene pagar a un tercero o seguir haciendolo con tus manos.",
+      "texto_nuevo": "No sabes si te conviene pagar a un tercero o seguir haciéndolo con tus manos.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: haciendolo"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

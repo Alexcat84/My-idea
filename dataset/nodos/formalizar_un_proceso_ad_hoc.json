@@ -2,9 +2,9 @@
   "node_id": "formalizar_un_proceso_ad_hoc",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Formalizar un Proceso Ad Hoc que Cruza la Organizacion",
+  "titulo_concepto": "Formalizar un Proceso Ad Hoc que Cruza la Organización",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Los procesos que mas dano hacen cuando fallan son los que nadie escribio: los que cruzan fronteras entre areas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo tipico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben como funcionan de verdad. Y el orden importa: primero se define QUE tiene que producir el proceso, el resultado final concreto, y solo despues se disenan las etapas que llevan hasta ahi. Cada etapa lleva su metrica propia, que es lo que permite ver en cual se rompe en vez de saber solo que el resultado fallo, y cada paso lleva un responsable con nombre. Lo ultimo, y es lo que sostiene todo lo anterior, es hacer visible el desempeno de cada responsable.",
+  "resumen_teorico": "Los procesos que mas dano hacen cuando fallan son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben como funcionan de verdad. Y el orden importa: primero se define QUE tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, que es lo que permite ver en cual se rompe en vez de saber solo que el resultado fallo, y cada paso lleva un responsable con nombre. Lo ultimo, y es lo que sostiene todo lo anterior, es hacer visible el desempeño de cada responsable.",
   "pasos_accionables": [
     "Identificar los procesos ad hoc que cruzan fronteras organizacionales y son críticos (ej. contratación)",
     "Pedir a las personas que ya ejecutan el proceso informalmente que lo formalicen",
@@ -23,8 +23,8 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando un proceso critico cruza varias areas y funciona solo porque alguien lo sostiene de memoria",
-    "Cuando el resultado de un proceso falla y no se puede saber en que etapa se rompio porque ninguna tiene metrica propia"
+    "Cuando un proceso critico cruza varias áreas y funciona solo porque alguien lo sostiene de memoria",
+    "Cuando el resultado de un proceso falla y no se puede saber en que etapa se rompió porque ninguna tiene métrica propia"
   ],
   "etiqueta_arbol": "Escribe tu Proceso Informal",
   "fuentes_internas": [
@@ -43,6 +43,64 @@
         "evidencia": "O039-022.entregable: métrica (Solo añade la tilde que faltaba en métrica.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-formalizar_un_proceso_ad_hoc-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los procesos que mas dano hacen cuando fallan son los que nadie escribio: los que cruzan fronteras entre areas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo tipico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben como funcionan de verdad. Y el orden importa: primero se define QUE tiene que producir el proceso, el resultado final concreto, y solo despues se disenan las etapas que llevan hasta ahi. Cada etapa lleva su metrica propia, que es lo que permite ver en cual se rompe en vez de saber solo que el resultado fallo, y cada paso lleva un responsable con nombre. Lo ultimo, y es lo que sostiene todo lo anterior, es hacer visible el desempeno de cada responsable.",
+      "texto_nuevo": "Los procesos que mas dano hacen cuando fallan son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben como funcionan de verdad. Y el orden importa: primero se define QUE tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, que es lo que permite ver en cual se rompe en vez de saber solo que el resultado fallo, y cada paso lleva un responsable con nombre. Lo ultimo, y es lo que sostiene todo lo anterior, es hacer visible el desempeño de cada responsable.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ahi, areas, desempeno, despues, disenan, escribio, metrica, tipico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-formalizar_un_proceso_ad_hoc-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un proceso critico cruza varias areas y funciona solo porque alguien lo sostiene de memoria",
+      "texto_nuevo": "Cuando un proceso critico cruza varias áreas y funciona solo porque alguien lo sostiene de memoria",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-formalizar_un_proceso_ad_hoc-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el resultado de un proceso falla y no se puede saber en que etapa se rompio porque ninguna tiene metrica propia",
+      "texto_nuevo": "Cuando el resultado de un proceso falla y no se puede saber en que etapa se rompió porque ninguna tiene métrica propia",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: metrica, rompio"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-formalizar_un_proceso_ad_hoc-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Formalizar un Proceso Ad Hoc que Cruza la Organizacion",
+      "texto_nuevo": "Formalizar un Proceso Ad Hoc que Cruza la Organización",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Organizacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

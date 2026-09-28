@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Tablero de Control (Scorecard) para tu Negocio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El scorecard es un paquete de informes disenado para que tu conozcas el estado de la calidad en tu negocio. Debe incluir indicadores clave, reportes cuantitativos basados en datos, reportes narrativos sobre amenazas y oportunidades, y auditorias realizadas. Debe presentarse en formato facil de leer, mostrando metas, desempeno real y variaciones.",
+  "resumen_teorico": "El scorecard es un paquete de informes diseñado para que tu conozcas el estado de la calidad en tu negocio. Debe incluir indicadores clave, reportes cuantitativos basados en datos, reportes narrativos sobre amenazas y oportunidades, y auditorías realizadas. Debe presentarse en formato fácil de leer, mostrando metas, desempeño real y variaciones.",
   "pasos_accionables": [
     "Definir los indicadores clave que quieres seguir de cerca",
     "Diseñar reportes cuantitativos que muestren metas, desempeño real y variaciones",
@@ -21,8 +21,8 @@
     "auditoria_negocio"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas una visión consolidada del desempeno de calidad de tu negocio",
-    "Cuando quieres comunicar avances de forma visual y periodica"
+    "Cuando necesitas una visión consolidada del desempeño de calidad de tu negocio",
+    "Cuando quieres comunicar avances de forma visual y periódica"
   ],
   "etiqueta_arbol": "Informa a tu Alta Dirección",
   "fuentes_internas": [
@@ -83,6 +83,50 @@
         "evidencia": "O057-039.entregable: periódico, gráficas (Tildes reales en 'periódico' y 'gráficas'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-tablero_control_scorecard-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El scorecard es un paquete de informes disenado para que tu conozcas el estado de la calidad en tu negocio. Debe incluir indicadores clave, reportes cuantitativos basados en datos, reportes narrativos sobre amenazas y oportunidades, y auditorias realizadas. Debe presentarse en formato facil de leer, mostrando metas, desempeno real y variaciones.",
+      "texto_nuevo": "El scorecard es un paquete de informes diseñado para que tu conozcas el estado de la calidad en tu negocio. Debe incluir indicadores clave, reportes cuantitativos basados en datos, reportes narrativos sobre amenazas y oportunidades, y auditorías realizadas. Debe presentarse en formato fácil de leer, mostrando metas, desempeño real y variaciones.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: auditorias, desempeno, disenado, facil"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-tablero_control_scorecard-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas una visión consolidada del desempeno de calidad de tu negocio",
+      "texto_nuevo": "Cuando necesitas una visión consolidada del desempeño de calidad de tu negocio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desempeno"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-tablero_control_scorecard-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres comunicar avances de forma visual y periodica",
+      "texto_nuevo": "Cuando quieres comunicar avances de forma visual y periódica",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: periodica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

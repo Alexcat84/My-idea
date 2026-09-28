@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Detectar señales de un empaque poco rígido",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque tiene fallas evidentes de rigidez. Los protocolos de prueba profesionales describen ciertas senales que anuncian un empaque debil: caras muy grandes sin soporte interno, uso de envoltura plastica estirable como unica proteccion, carton de calibre delgado o simple papel envolviendo el producto, y el peor de todos, que la pared de la caja toque directamente el producto sin ningun relleno de por medio. Cualquiera de estas senales significa que el paquete probablemente fallara ante un golpe o una caida normal durante el transporte. Revisar tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar te ahorra dinero y evita que descubras el problema cuando ya tienes producto danado en manos de tus clientes.",
+  "resumen_teorico": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque tiene fallas evidentes de rigidez. Los protocolos de prueba profesionales describen ciertas señales que anuncian un empaque débil: caras muy grandes sin soporte interno, uso de envoltura plástica estirable como única protección, cartón de calibre delgado o simple papel envolviendo el producto, y el peor de todos, que la pared de la caja toque directamente el producto sin ningún relleno de por medio. Cualquiera de estas señales significa que el paquete probablemente fallara ante un golpe o una caída normal durante el transporte. Revisar tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar te ahorra dinero y evita que descubras el problema cuando ya tienes producto dañado en manos de tus clientes.",
   "pasos_accionables": [
     "Revisa si alguna cara de tu caja es grande y no tiene refuerzo ni soporte interno.",
     "Verifica que el producto nunca toque directamente la pared de la caja.",
@@ -98,6 +98,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-detectar_empaque_poco_rigido-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque tiene fallas evidentes de rigidez. Los protocolos de prueba profesionales describen ciertas senales que anuncian un empaque debil: caras muy grandes sin soporte interno, uso de envoltura plastica estirable como unica proteccion, carton de calibre delgado o simple papel envolviendo el producto, y el peor de todos, que la pared de la caja toque directamente el producto sin ningun relleno de por medio. Cualquiera de estas senales significa que el paquete probablemente fallara ante un golpe o una caida normal durante el transporte. Revisar tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar te ahorra dinero y evita que descubras el problema cuando ya tienes producto danado en manos de tus clientes.",
+      "texto_nuevo": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque tiene fallas evidentes de rigidez. Los protocolos de prueba profesionales describen ciertas señales que anuncian un empaque débil: caras muy grandes sin soporte interno, uso de envoltura plástica estirable como única protección, cartón de calibre delgado o simple papel envolviendo el producto, y el peor de todos, que la pared de la caja toque directamente el producto sin ningún relleno de por medio. Cualquiera de estas señales significa que el paquete probablemente fallara ante un golpe o una caída normal durante el transporte. Revisar tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar te ahorra dinero y evita que descubras el problema cuando ya tienes producto dañado en manos de tus clientes.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: caida, carton, danado, debil, ningun, plastica, proteccion, senales, unica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

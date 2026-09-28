@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Ten un checklist de cláusulas que todo contrato necesita",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantias, quien es responsable de que, requisitos de seguro si aplica, como se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y que pasa si alguna parte incumple. No todos los contratos necesitan cada clausula, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrio. Tener esta lista escrita te permite negociar y firmar sin depender de un abogado en cada paso, y usarla como base para pedir ayuda puntual cuando el monto o el riesgo lo justifiquen.",
+  "resumen_teorico": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantías, quien es responsable de que, requisitos de seguro si aplica, como se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y que pasa si alguna parte incumple. No todos los contratos necesitan cada cláusula, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrió. Tener esta lista escrita te permite negociar y firmar sin depender de un abogado en cada paso, y usarla como base para pedir ayuda puntual cuando el monto o el riesgo lo justifiquen.",
   "pasos_accionables": [
     "Escribe tu propia lista de cláusulas básicas: precio, pago, fechas, garantías, seguro, terminación e incumplimiento.",
     "Antes de firmar cualquier contrato, revisa uno por uno los puntos de tu lista contra el borrador.",
@@ -25,7 +25,7 @@
     "Ya te ha pasado que un contrato se quedo corto porque olvidaste incluir algo importante.",
     "No tienes acceso a un abogado para cada contrato que firmas y necesitas una guia propia."
   ],
-  "etiqueta_arbol": "Checklist de clausulas del contrato",
+  "etiqueta_arbol": "Checklist de cláusulas del contrato",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
   ],
@@ -70,6 +70,34 @@
         "evidencia": "O053-034.entregable: cláusulas, mínimas (Las tildes de cláusulas y mínimas son faltas reales.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-ten_un_checklist_de_clausulas_de_contrato-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantias, quien es responsable de que, requisitos de seguro si aplica, como se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y que pasa si alguna parte incumple. No todos los contratos necesitan cada clausula, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrio. Tener esta lista escrita te permite negociar y firmar sin depender de un abogado en cada paso, y usarla como base para pedir ayuda puntual cuando el monto o el riesgo lo justifiquen.",
+      "texto_nuevo": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantías, quien es responsable de que, requisitos de seguro si aplica, como se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y que pasa si alguna parte incumple. No todos los contratos necesitan cada cláusula, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrió. Tener esta lista escrita te permite negociar y firmar sin depender de un abogado en cada paso, y usarla como base para pedir ayuda puntual cuando el monto o el riesgo lo justifiquen.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: clausula, garantias, ocurrio"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-ten_un_checklist_de_clausulas_de_contrato-etiqueta_arbol",
+      "fecha": "2026-09-28",
+      "campo": "etiqueta_arbol",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Checklist de clausulas del contrato",
+      "texto_nuevo": "Checklist de cláusulas del contrato",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: clausulas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

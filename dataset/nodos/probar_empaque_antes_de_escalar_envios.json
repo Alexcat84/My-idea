@@ -2,9 +2,9 @@
   "node_id": "probar_empaque_antes_de_escalar_envios",
   "fase_proyecto": "ejecucion",
   "dominio": "entrega",
-  "titulo_concepto": "Prueba tu empaque antes de escalar envios",
+  "titulo_concepto": "Prueba tu empaque antes de escalar envíos",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presion de altitud y manejo brusco pueden danar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos dias, sin costo. Esto te evita descubrir una falla de diseno despues de haber comprado cien cajas iguales o de haber perdido mercancia en transito. La prueba tambien sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por danos y rechazos en bodega. Pregunta a tu proveedor de envios si ofrece este servicio y en que consiste antes de escalar volumen.",
+  "resumen_teorico": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos días, sin costo. Esto te evita descubrir una falla de diseno después de haber comprado cien cajas iguales o de haber perdido mercancía en transito. La prueba también sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por daños y rechazos en bodega. Pregunta a tu proveedor de envíos si ofrece este servicio y en que consiste antes de escalar volumen.",
   "pasos_accionables": [
     "Arma una muestra de tu empaque exactamente como la enviarías a un cliente real.",
     "Pregúntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Estas por firmar un acuerdo de volumen con un courier y quieres asegurar que tu caja no falle.",
-    "Ya tuviste productos danados en transito y no sabes si el problema es el empaque o el manejo.",
+    "Ya tuviste productos dañados en transito y no sabes si el problema es el empaque o el manejo.",
     "Vas a cambiar de proveedor de cajas o de material de relleno y no sabes si sigue funcionando igual."
   ],
   "etiqueta_arbol": "Prueba tu empaque antes de escalar",
@@ -126,6 +126,49 @@
         "evidencia": "O030-034.entregable: qué (Falta la tilde de qué (interrogativo indirecto); no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-probar_empaque_antes_de_escalar_envios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presion de altitud y manejo brusco pueden danar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos dias, sin costo. Esto te evita descubrir una falla de diseno despues de haber comprado cien cajas iguales o de haber perdido mercancia en transito. La prueba tambien sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por danos y rechazos en bodega. Pregunta a tu proveedor de envios si ofrece este servicio y en que consiste antes de escalar volumen.",
+      "texto_nuevo": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos días, sin costo. Esto te evita descubrir una falla de diseno después de haber comprado cien cajas iguales o de haber perdido mercancía en transito. La prueba también sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por daños y rechazos en bodega. Pregunta a tu proveedor de envíos si ofrece este servicio y en que consiste antes de escalar volumen.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: danar, danos, despues, dias, envios, mercancia, presion, tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-probar_empaque_antes_de_escalar_envios-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ya tuviste productos danados en transito y no sabes si el problema es el empaque o el manejo.",
+      "texto_nuevo": "Ya tuviste productos dañados en transito y no sabes si el problema es el empaque o el manejo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: danados"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-probar_empaque_antes_de_escalar_envios-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prueba tu empaque antes de escalar envios",
+      "texto_nuevo": "Prueba tu empaque antes de escalar envíos",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: envios"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

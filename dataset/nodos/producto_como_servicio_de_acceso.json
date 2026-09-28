@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Del Producto Vendido al Servicio de Acceso",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podria entregarse como acceso a un servicio. No se contesta con una opinion. Se evalua si el producto se puede reformular asi y se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta). Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribucion y la recoleccion que la venta de propiedad no tenia.",
+  "resumen_teorico": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podría entregarse como acceso a un servicio. No se contesta con una opinion. Se evalúa si el producto se puede reformular así y se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta). Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribución y la recolección que la venta de propiedad no tenia.",
   "pasos_accionables": [
     "Evaluar si tu producto podría transformarse en un modelo de acceso/servicio en lugar de venta de propiedad",
     "Identificar barreras de adopción específicas (confianza, disponibilidad, conveniencia, costo)",
@@ -21,10 +21,10 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando te preguntas si tu producto se vende mejor como acceso o suscripcion que como propiedad",
-    "Antes de comprometer la cadena de suministro a un modelo de acceso, porque el mantenimiento, la redistribucion y la recoleccion no estaban en el de venta"
+    "Cuando te preguntas si tu producto se vende mejor como acceso o suscripción que como propiedad",
+    "Antes de comprometer la cadena de suministro a un modelo de acceso, porque el mantenimiento, la redistribución y la recolección no estaban en el de venta"
   ],
-  "etiqueta_arbol": "Evalua Vender Acceso",
+  "etiqueta_arbol": "Evalúa Vender Acceso",
   "correcciones": [
     {
       "id": "fidelidad-t8-030",
@@ -71,6 +71,64 @@
         "evidencia": "O051-037.entregable: evaluación, adopción, diseñado, métricas, retención (Corrige tildes y la eñe de diseñado; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-producto_como_servicio_de_acceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podria entregarse como acceso a un servicio. No se contesta con una opinion. Se evalua si el producto se puede reformular asi y se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta). Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribucion y la recoleccion que la venta de propiedad no tenia.",
+      "texto_nuevo": "Hay una pregunta que no es de diseno de experiencia sino de modelo: si lo que hoy vendes como bien podría entregarse como acceso a un servicio. No se contesta con una opinion. Se evalúa si el producto se puede reformular así y se identifican las barreras concretas que el cliente pone (confianza, disponibilidad, conveniencia y costo, y sobre todo la de propiedad contra renta). Y hay una cuenta que solo aparece cuando el modelo cambia: pasar a acceso mueve la cadena de suministro entera, porque aparecen el mantenimiento, la redistribución y la recolección que la venta de propiedad no tenia.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: asi, evalua, podria, recoleccion, redistribucion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-producto_como_servicio_de_acceso-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te preguntas si tu producto se vende mejor como acceso o suscripcion que como propiedad",
+      "texto_nuevo": "Cuando te preguntas si tu producto se vende mejor como acceso o suscripción que como propiedad",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: suscripcion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-producto_como_servicio_de_acceso-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de comprometer la cadena de suministro a un modelo de acceso, porque el mantenimiento, la redistribucion y la recoleccion no estaban en el de venta",
+      "texto_nuevo": "Antes de comprometer la cadena de suministro a un modelo de acceso, porque el mantenimiento, la redistribución y la recolección no estaban en el de venta",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: recoleccion, redistribucion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-producto_como_servicio_de_acceso-etiqueta_arbol",
+      "fecha": "2026-09-28",
+      "campo": "etiqueta_arbol",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua Vender Acceso",
+      "texto_nuevo": "Evalúa Vender Acceso",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Evalua"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

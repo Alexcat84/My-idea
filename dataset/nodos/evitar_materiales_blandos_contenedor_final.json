@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Evitar materiales blandos como contenedor final",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "No todo lo que envuelve un producto sirve como contenedor final de envio. Bolsas plasticas, sobres de papel y cajas de carton delgado no soportan la manipulacion, la humedad ni los cambios de presion de un trayecto de courier, y por eso los transportistas los rechazan como empaque exterior, sin importar cuan bien este acolchado el contenido por dentro. Esto aplica sobre todo a envios regulados, como muestras clinicas o mercancias que necesitan trato especial, donde la norma exige un contenedor rigido de carton corrugado, madera, metal o plastico resistente. La leccion practica es simple: lo blando puede ir adentro como proteccion, pero lo que toca el exterior del envio y da la forma final tiene que ser rigido, o el paquete se puede quedar sin recoger.",
+  "resumen_teorico": "No todo lo que envuelve un producto sirve como contenedor final de envio. Bolsas plásticas, sobres de papel y cajas de cartón delgado no soportan la manipulación, la humedad ni los cambios de presión de un trayecto de courier, y por eso los transportistas los rechazan como empaque exterior, sin importar cuan bien este acolchado el contenido por dentro. Esto aplica sobre todo a envíos regulados, como muestras clinicas o mercancías que necesitan trato especial, donde la norma exige un contenedor rígido de cartón corrugado, madera, metal o plástico resistente. La lección practica es simple: lo blando puede ir adentro como protección, pero lo que toca el exterior del envio y da la forma final tiene que ser rígido, o el paquete se puede quedar sin recoger.",
   "pasos_accionables": [
     "Revisa si tu contenedor final es rígido antes de despachar, no solo si el producto está protegido por dentro.",
     "Descarta bolsas plásticas, sobres de papel o cartón delgado como empaque exterior.",
@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Piensas ahorrar usando un sobre o una bolsa en vez de caja.",
-    "Envias muestras, liquidos o mercancia que podria necesitar empaque especial.",
+    "Envías muestras, líquidos o mercancía que podría necesitar empaque especial.",
     "Te han rechazado o retenido un paquete por el tipo de empaque exterior."
   ],
   "etiqueta_arbol": "No uses bolsas como contenedor final",
@@ -111,6 +111,35 @@
         "evidencia": "O040-023.entregable: envío, rígido (Solo añade las tildes de envío y rígido.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-evitar_materiales_blandos_contenedor_final-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No todo lo que envuelve un producto sirve como contenedor final de envio. Bolsas plasticas, sobres de papel y cajas de carton delgado no soportan la manipulacion, la humedad ni los cambios de presion de un trayecto de courier, y por eso los transportistas los rechazan como empaque exterior, sin importar cuan bien este acolchado el contenido por dentro. Esto aplica sobre todo a envios regulados, como muestras clinicas o mercancias que necesitan trato especial, donde la norma exige un contenedor rigido de carton corrugado, madera, metal o plastico resistente. La leccion practica es simple: lo blando puede ir adentro como proteccion, pero lo que toca el exterior del envio y da la forma final tiene que ser rigido, o el paquete se puede quedar sin recoger.",
+      "texto_nuevo": "No todo lo que envuelve un producto sirve como contenedor final de envio. Bolsas plásticas, sobres de papel y cajas de cartón delgado no soportan la manipulación, la humedad ni los cambios de presión de un trayecto de courier, y por eso los transportistas los rechazan como empaque exterior, sin importar cuan bien este acolchado el contenido por dentro. Esto aplica sobre todo a envíos regulados, como muestras clinicas o mercancías que necesitan trato especial, donde la norma exige un contenedor rígido de cartón corrugado, madera, metal o plástico resistente. La lección practica es simple: lo blando puede ir adentro como protección, pero lo que toca el exterior del envio y da la forma final tiene que ser rígido, o el paquete se puede quedar sin recoger.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: carton, envios, leccion, manipulacion, mercancias, plasticas, plastico, presion, proteccion, rigido"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-evitar_materiales_blandos_contenedor_final-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envias muestras, liquidos o mercancia que podria necesitar empaque especial.",
+      "texto_nuevo": "Envías muestras, líquidos o mercancía que podría necesitar empaque especial.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Envias, liquidos, mercancia, podria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Construcción del Ecosistema Global de Emprendimiento (GEE)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Ecosistema Global de Emprendimiento (GEE) es la red de contactos y recursos, publicos y privados, que puede ayudarte a exportar con exito. Incluye la oficina de comercio exterior de tu gobierno, bancos con experiencia internacional, camaras de comercio, centros de desarrollo de pequeños negocios, universidades con programas de negocios internacionales, agentes de aduana y transporte internacional, y redes sociales profesionales. Construir este ecosistema de apoyo reduce drasticamente el costo y el riesgo que sientes al exportar, porque gran parte de esa ayuda es gratuita o de muy bajo costo.",
+  "resumen_teorico": "El Ecosistema Global de Emprendimiento (GEE) es la red de contactos y recursos, públicos y privados, que puede ayudarte a exportar con éxito. Incluye la oficina de comercio exterior de tu gobierno, bancos con experiencia internacional, cámaras de comercio, centros de desarrollo de pequeños negocios, universidades con programas de negocios internacionales, agentes de aduana y transporte internacional, y redes sociales profesionales. Construir este ecosistema de apoyo reduce drásticamente el costo y el riesgo que sientes al exportar, porque gran parte de esa ayuda es gratuita o de muy bajo costo.",
   "pasos_accionables": [
     "Identificar la oficina de comercio exterior de tu gobierno más cercana (pregunta en tu mercado cuál es el equivalente local)",
     "Contactar la cámara de comercio local y el centro de comercio internacional de tu región",
@@ -140,6 +140,20 @@
         "evidencia": "O058-011.entregable: verificación (Faltaba la tilde de verificación, no cambia nada más y la sigla GEE queda intacta.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-ecosistema_global_emprendimiento_gee-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El Ecosistema Global de Emprendimiento (GEE) es la red de contactos y recursos, publicos y privados, que puede ayudarte a exportar con exito. Incluye la oficina de comercio exterior de tu gobierno, bancos con experiencia internacional, camaras de comercio, centros de desarrollo de pequeños negocios, universidades con programas de negocios internacionales, agentes de aduana y transporte internacional, y redes sociales profesionales. Construir este ecosistema de apoyo reduce drasticamente el costo y el riesgo que sientes al exportar, porque gran parte de esa ayuda es gratuita o de muy bajo costo.",
+      "texto_nuevo": "El Ecosistema Global de Emprendimiento (GEE) es la red de contactos y recursos, públicos y privados, que puede ayudarte a exportar con éxito. Incluye la oficina de comercio exterior de tu gobierno, bancos con experiencia internacional, cámaras de comercio, centros de desarrollo de pequeños negocios, universidades con programas de negocios internacionales, agentes de aduana y transporte internacional, y redes sociales profesionales. Construir este ecosistema de apoyo reduce drásticamente el costo y el riesgo que sientes al exportar, porque gran parte de esa ayuda es gratuita o de muy bajo costo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: camaras, drasticamente, exito, publicos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

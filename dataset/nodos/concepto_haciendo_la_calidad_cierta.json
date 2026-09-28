@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Haciendo la Calidad Cierta (Making Quality Certain)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Concepto que consiste en 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberian estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
+  "resumen_teorico": "Concepto que consiste en 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberían estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
   "pasos_accionables": [
     "Definir de forma simple y sin tecnicismos qué significa calidad para tu negocio.",
     "Asumir un rol activo en la calidad, no solo de apoyo pasivo.",
@@ -20,7 +20,7 @@
     "concepto_cuatro_pilares_programa_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando consideras que la calidad es responsabilidad exclusiva de otra persona o area.",
+    "Cuando consideras que la calidad es responsabilidad exclusiva de otra persona o área.",
     "Cuando existe confusión sobre que significa realmente 'calidad' en tu negocio."
   ],
   "etiqueta_arbol": "Asegura la Calidad Siempre",
@@ -94,6 +94,35 @@
         "evidencia": "O014-002.entregable: tú (Falta real: 'tú' es pronombre personal y lleva tilde.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-concepto_haciendo_la_calidad_cierta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Concepto que consiste en 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberian estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
+      "texto_nuevo": "Concepto que consiste en 'lograr que las personas hagan mejor todas las cosas valiosas que de todos modos deberían estar haciendo'. Implica que la responsabilidad de la calidad es de todos, incluido tu, y que tu rol es explicar la calidad de forma clara y sin jerga técnica para lograr un compromiso genuino con la prevención de defectos, en lugar de la detección y corrección posterior.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: deberian"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-concepto_haciendo_la_calidad_cierta-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando consideras que la calidad es responsabilidad exclusiva de otra persona o area.",
+      "texto_nuevo": "Cuando consideras que la calidad es responsabilidad exclusiva de otra persona o área.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

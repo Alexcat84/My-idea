@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Los Ocho Desperdicios de Lean (Ohno)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Taiichi Ohno identifico siete tipos de desperdicio en procesos productivos, a los que se ha añadido un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Identificar estos desperdicios es el primer paso para aplicar Lean tanto en manufactura como en servicios. Debes enfocarte en reducir o eliminar estos desperdicios, tipicamente mediante eventos de mejora rápida tipo Kaizen, cuantificando su impacto para saber donde concentrar tu esfuerzo antes de rediseñar cualquier paso del proceso.",
+  "resumen_teorico": "Taiichi Ohno identifico siete tipos de desperdicio en procesos productivos, a los que se ha añadido un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Identificar estos desperdicios es el primer paso para aplicar Lean tanto en manufactura como en servicios. Debes enfocarte en reducir o eliminar estos desperdicios, típicamente mediante eventos de mejora rápida tipo Kaizen, cuantificando su impacto para saber donde concentrar tu esfuerzo antes de rediseñar cualquier paso del proceso.",
   "pasos_accionables": [
     "Mapea el proceso actual identificando cada uno de los ocho tipos de desperdicio",
     "Cuantifica el impacto de cada desperdicio detectado",
@@ -69,6 +69,20 @@
         "evidencia": "O020-025.entregable: categoría, métricas (Faltan las tildes de categoría y métricas, y no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-ocho_desperdicios_lean-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Taiichi Ohno identifico siete tipos de desperdicio en procesos productivos, a los que se ha añadido un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Identificar estos desperdicios es el primer paso para aplicar Lean tanto en manufactura como en servicios. Debes enfocarte en reducir o eliminar estos desperdicios, tipicamente mediante eventos de mejora rápida tipo Kaizen, cuantificando su impacto para saber donde concentrar tu esfuerzo antes de rediseñar cualquier paso del proceso.",
+      "texto_nuevo": "Taiichi Ohno identifico siete tipos de desperdicio en procesos productivos, a los que se ha añadido un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Identificar estos desperdicios es el primer paso para aplicar Lean tanto en manufactura como en servicios. Debes enfocarte en reducir o eliminar estos desperdicios, típicamente mediante eventos de mejora rápida tipo Kaizen, cuantificando su impacto para saber donde concentrar tu esfuerzo antes de rediseñar cualquier paso del proceso.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: tipicamente"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

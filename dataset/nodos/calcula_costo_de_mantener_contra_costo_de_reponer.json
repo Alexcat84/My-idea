@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Calcula cuánto te cuesta guardar stock contra cuánto te cuesta reponerlo",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "Cada producto guardado te cuesta dinero solo por estar ahi: espacio, seguro, deterioro y el efectivo que tienes inmovilizado en el. A esto se le llama costo de mantener. Cada pedido que haces tambien te cuesta tiempo y esfuerzo en armarlo, negociarlo y recibirlo: es el costo de reponer. Si compras poco y muy seguido, el costo de reponer se dispara. Si compras mucho de una vez, el costo de mantener se dispara. El punto optimo esta en el equilibrio entre ambos: ni tanto stock que se te muera en la bodega, ni tan poco que compres todos los dias. Calcula cuanto te cuesta cada peso de inventario guardado por año y usa ese numero para decidir cuanto pedir cada vez que reabastezcas.",
+  "resumen_teorico": "Cada producto guardado te cuesta dinero solo por estar ahí: espacio, seguro, deterioro y el efectivo que tienes inmovilizado en el. A esto se le llama costo de mantener. Cada pedido que haces también te cuesta tiempo y esfuerzo en armarlo, negociarlo y recibirlo: es el costo de reponer. Si compras poco y muy seguido, el costo de reponer se dispara. Si compras mucho de una vez, el costo de mantener se dispara. El punto optimo esta en el equilibrio entre ambos: ni tanto stock que se te muera en la bodega, ni tan poco que compres todos los días. Calcula cuanto te cuesta cada peso de inventario guardado por año y usa ese numero para decidir cuanto pedir cada vez que reabastezcas.",
   "pasos_accionables": [
     "Suma cuánto gastas al año en espacio, seguro, deterioro y dinero inmovilizado por tener inventario guardado.",
     "Divide ese total entre el valor de tu inventario promedio para sacar tu porcentaje de costo de mantener por año.",
@@ -84,6 +84,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-calcula_costo_de_mantener_contra_costo_de_reponer-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada producto guardado te cuesta dinero solo por estar ahi: espacio, seguro, deterioro y el efectivo que tienes inmovilizado en el. A esto se le llama costo de mantener. Cada pedido que haces tambien te cuesta tiempo y esfuerzo en armarlo, negociarlo y recibirlo: es el costo de reponer. Si compras poco y muy seguido, el costo de reponer se dispara. Si compras mucho de una vez, el costo de mantener se dispara. El punto optimo esta en el equilibrio entre ambos: ni tanto stock que se te muera en la bodega, ni tan poco que compres todos los dias. Calcula cuanto te cuesta cada peso de inventario guardado por año y usa ese numero para decidir cuanto pedir cada vez que reabastezcas.",
+      "texto_nuevo": "Cada producto guardado te cuesta dinero solo por estar ahí: espacio, seguro, deterioro y el efectivo que tienes inmovilizado en el. A esto se le llama costo de mantener. Cada pedido que haces también te cuesta tiempo y esfuerzo en armarlo, negociarlo y recibirlo: es el costo de reponer. Si compras poco y muy seguido, el costo de reponer se dispara. Si compras mucho de una vez, el costo de mantener se dispara. El punto optimo esta en el equilibrio entre ambos: ni tanto stock que se te muera en la bodega, ni tan poco que compres todos los días. Calcula cuanto te cuesta cada peso de inventario guardado por año y usa ese numero para decidir cuanto pedir cada vez que reabastezcas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ahi, dias, tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tácticas de Retención de Clientes (Keep)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+  "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas fácil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retención dependen del monitoreo cercano de señales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes según antigüedad. Es clave mapear el customer life cycle completo y organizar las métricas de retención por cohortes de clientes para identificar cuando aparecen las señales de deserción. Las tácticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
   "pasos_accionables": [
     "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y señales de abandono",
     "Diseña e-mails de bienvenida y guías de uso para los primeros días de cada cliente nuevo",
@@ -33,7 +33,7 @@
   "condiciones_activacion": [
     "Cuando ya tienes una base activa de clientes y necesitas reducir el churn",
     "Cuando detectas alta tasa de abandono entre tus clientes al seguirlos por cohortes",
-    "Si tu modelo de negocio depende de suscripciones o repeticion de compra"
+    "Si tu modelo de negocio depende de suscripciones o repetición de compra"
   ],
   "etiqueta_arbol": "Aplica Tácticas para Retener Clientes",
   "ids_alias": [
@@ -247,6 +247,35 @@
         "evidencia": "O019-011.entregable: retención, tácticas, específicas, físico, validación (Solo corrige las tildes que faltaban; el resto del texto no cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-customer_retention_tactics-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+      "texto_nuevo": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas fácil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retención dependen del monitoreo cercano de señales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes según antigüedad. Es clave mapear el customer life cycle completo y organizar las métricas de retención por cohortes de clientes para identificar cuando aparecen las señales de deserción. Las tácticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: antiguedad, desercion, facil, metricas, retencion, segun, senales, tacticas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-customer_retention_tactics-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu modelo de negocio depende de suscripciones o repeticion de compra",
+      "texto_nuevo": "Si tu modelo de negocio depende de suscripciones o repetición de compra",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: repeticion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

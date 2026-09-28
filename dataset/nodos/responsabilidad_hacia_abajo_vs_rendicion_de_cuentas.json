@@ -2,9 +2,9 @@
   "node_id": "responsabilidad_hacia_abajo_vs_rendicion_de_cuentas",
   "fase_proyecto": "planificacion",
   "dominio": "health_safety",
-  "titulo_concepto": "Seguridad como Responsabilidad Hacia Quienes Trabajan, No Rendicion de Cuentas Hacia Arriba",
+  "titulo_concepto": "Seguridad como Responsabilidad Hacia Quienes Trabajan, No Rendición de Cuentas Hacia Arriba",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando gestionas la seguridad para mostrar buenos números a quien esta por encima de ti, tu sistema de seguridad puede convertirse en un sistema para cubrirte legalmente. Esto incentiva manipular las cifras (como reclasificar lesiones para no romper 'rachas de días sin accidentes') en lugar de asumir una responsabilidad real y etica hacia las personas que hacen el trabajo peligroso.",
+  "resumen_teorico": "Cuando gestionas la seguridad para mostrar buenos números a quien esta por encima de ti, tu sistema de seguridad puede convertirse en un sistema para cubrirte legalmente. Esto incentiva manipular las cifras (como reclasificar lesiones para no romper 'rachas de días sin accidentes') en lugar de asumir una responsabilidad real y ética hacia las personas que hacen el trabajo peligroso.",
   "pasos_accionables": [
     "Revisar si existen 'rachas' o señales públicas de días sin incidentes que puedan incentivar el ocultamiento",
     "Auditar la clasificación de lesiones según su gravedad para detectar manipulación de categorías",
@@ -19,8 +19,8 @@
     "nueva_vision_organizacion_linea_seguridad"
   ],
   "condiciones_activacion": [
-    "Cuando existen metricas o senalizacion publica de 'días sin accidentes'",
-    "Cuando se sospecha reclasificacion de incidentes para mejorar estadisticas"
+    "Cuando existen métricas o señalización publica de 'días sin accidentes'",
+    "Cuando se sospecha reclasificación de incidentes para mejorar estadísticas"
   ],
   "etiqueta_arbol": "Prioriza Personas, No Números",
   "fuentes_internas": [
@@ -81,6 +81,64 @@
         "evidencia": "O072-022.entregable: Política, gestión (Faltan las tildes en 'Politica' y 'gestion'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-responsabilidad_hacia_abajo_vs_rendicion_de_cuentas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando gestionas la seguridad para mostrar buenos números a quien esta por encima de ti, tu sistema de seguridad puede convertirse en un sistema para cubrirte legalmente. Esto incentiva manipular las cifras (como reclasificar lesiones para no romper 'rachas de días sin accidentes') en lugar de asumir una responsabilidad real y etica hacia las personas que hacen el trabajo peligroso.",
+      "texto_nuevo": "Cuando gestionas la seguridad para mostrar buenos números a quien esta por encima de ti, tu sistema de seguridad puede convertirse en un sistema para cubrirte legalmente. Esto incentiva manipular las cifras (como reclasificar lesiones para no romper 'rachas de días sin accidentes') en lugar de asumir una responsabilidad real y ética hacia las personas que hacen el trabajo peligroso.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: etica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-responsabilidad_hacia_abajo_vs_rendicion_de_cuentas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando existen metricas o senalizacion publica de 'días sin accidentes'",
+      "texto_nuevo": "Cuando existen métricas o señalización publica de 'días sin accidentes'",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: metricas, senalizacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-responsabilidad_hacia_abajo_vs_rendicion_de_cuentas-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando se sospecha reclasificacion de incidentes para mejorar estadisticas",
+      "texto_nuevo": "Cuando se sospecha reclasificación de incidentes para mejorar estadísticas",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: estadisticas, reclasificacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-responsabilidad_hacia_abajo_vs_rendicion_de_cuentas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Seguridad como Responsabilidad Hacia Quienes Trabajan, No Rendicion de Cuentas Hacia Arriba",
+      "texto_nuevo": "Seguridad como Responsabilidad Hacia Quienes Trabajan, No Rendición de Cuentas Hacia Arriba",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Rendicion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

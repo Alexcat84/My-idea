@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Ownership y Accountability en Sostenibilidad",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Que una estrategia de sostenibilidad funcione depende de que las personas que te ayudan a implementarla la sientan propia, no solo de quien lidera el tema o de un pequeno grupo cercano. El modelo de co creacion fortalece el plan porque suma miradas distintas. Tu compromiso visible como quien lleva el negocio es clave para darle seriedad, integrando la sostenibilidad en los indicadores de desempeno, en los incentivos y en un sistema de gestion ambiental.",
+  "resumen_teorico": "Que una estrategia de sostenibilidad funcione depende de que las personas que te ayudan a implementarla la sientan propia, no solo de quien lidera el tema o de un pequeño grupo cercano. El modelo de co creación fortalece el plan porque suma miradas distintas. Tu compromiso visible como quien lleva el negocio es clave para darle seriedad, integrando la sostenibilidad en los indicadores de desempeño, en los incentivos y en un sistema de gestion ambiental.",
   "pasos_accionables": [
     "Involucrar a las personas que trabajan contigo en distintas áreas al desarrollar el plan de sostenibilidad (cocreación)",
     "Mostrar tu respaldo explícito y visible como quien lidera el negocio",
@@ -98,6 +98,20 @@
         "evidencia": "O009-032.entregable: gestión (Falta la tilde en 'gestión'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-ownership_accountability_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Que una estrategia de sostenibilidad funcione depende de que las personas que te ayudan a implementarla la sientan propia, no solo de quien lidera el tema o de un pequeno grupo cercano. El modelo de co creacion fortalece el plan porque suma miradas distintas. Tu compromiso visible como quien lleva el negocio es clave para darle seriedad, integrando la sostenibilidad en los indicadores de desempeno, en los incentivos y en un sistema de gestion ambiental.",
+      "texto_nuevo": "Que una estrategia de sostenibilidad funcione depende de que las personas que te ayudan a implementarla la sientan propia, no solo de quien lidera el tema o de un pequeño grupo cercano. El modelo de co creación fortalece el plan porque suma miradas distintas. Tu compromiso visible como quien lleva el negocio es clave para darle seriedad, integrando la sostenibilidad en los indicadores de desempeño, en los incentivos y en un sistema de gestion ambiental.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: creacion, desempeno, pequeno"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Equipos Multifuncionales para el Diseño Sostenible",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por telefono, perspectivas de distintas areas: tecnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revision critica y honesta, contigo mismo o con colaboradores externos, que te permita detectar problemas de diseno antes de lanzarlo al mercado, evitando errores costosos y perdida de valor percibida por el cliente en calidad, servicio o precio. Ademas, busca sumar a tu proyecto personas con actitud pragmatica y resiliente ante la adversidad, y evita tomar decisiones de rediseno sin consultar otras miradas.",
+  "resumen_teorico": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por teléfono, perspectivas de distintas áreas: técnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revisión critica y honesta, contigo mismo o con colaboradores externos, que te permita detectar problemas de diseno antes de lanzarlo al mercado, evitando errores costosos y perdida de valor percibida por el cliente en calidad, servicio o precio. Además, busca sumar a tu proyecto personas con actitud pragmática y resiliente ante la adversidad, y evita tomar decisiones de rediseno sin consultar otras miradas.",
   "pasos_accionables": [
     "Contacta o incorpora al proyecto a personas con perspectiva técnica, creativa, de marketing y de cadena de suministro.",
     "Establece un proceso propio de revisión crítica y honesta antes de lanzar el rediseño.",
@@ -125,6 +125,20 @@
         "evidencia": "O012-032.entregable: revisión, diseño, rediseño (Solo se añaden la tilde y las eñes que faltaban (revisión, diseño, rediseño).)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-equipos_multifuncionales_dfe-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por telefono, perspectivas de distintas areas: tecnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revision critica y honesta, contigo mismo o con colaboradores externos, que te permita detectar problemas de diseno antes de lanzarlo al mercado, evitando errores costosos y perdida de valor percibida por el cliente en calidad, servicio o precio. Ademas, busca sumar a tu proyecto personas con actitud pragmatica y resiliente ante la adversidad, y evita tomar decisiones de rediseno sin consultar otras miradas.",
+      "texto_nuevo": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por teléfono, perspectivas de distintas áreas: técnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revisión critica y honesta, contigo mismo o con colaboradores externos, que te permita detectar problemas de diseno antes de lanzarlo al mercado, evitando errores costosos y perdida de valor percibida por el cliente en calidad, servicio o precio. Además, busca sumar a tu proyecto personas con actitud pragmática y resiliente ante la adversidad, y evita tomar decisiones de rediseno sin consultar otras miradas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Ademas, areas, pragmatica, revision, tecnica, telefono"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

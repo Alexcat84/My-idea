@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Decide si lo compras o lo haces tu",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Antes de firmar con un proveedor, calcula que te cuesta hacerlo tu mismo: tu tiempo, materiales, herramientas y gastos fijos que ya pagas. Compara esa cifra con la cotizacion del proveedor, incluyendo entrega, calidad y riesgo. La decision no es solo el precio final, sino el valor total: a veces contratar afuera libera tu tiempo para vender mas, y a veces hacerlo tu mismo te ahorra dinero real. Este ejercicio evita que elijas comprar por comodidad o hacerlo tu por orgullo, sin numeros que respalden la eleccion. Escribe ambos costos en una hoja simple antes de decidir.",
+  "resumen_teorico": "Antes de firmar con un proveedor, calcula que te cuesta hacerlo tu mismo: tu tiempo, materiales, herramientas y gastos fijos que ya pagas. Compara esa cifra con la cotización del proveedor, incluyendo entrega, calidad y riesgo. La decisión no es solo el precio final, sino el valor total: a veces contratar afuera libera tu tiempo para vender mas, y a veces hacerlo tu mismo te ahorra dinero real. Este ejercicio evita que elijas comprar por comodidad o hacerlo tu por orgullo, sin números que respalden la elección. Escribe ambos costos en una hoja simple antes de decidir.",
   "pasos_accionables": [
     "Anota cuánto tiempo tuyo, en horas, toma hacerlo y multiplícalo por lo que vale tu hora.",
     "Suma materiales, herramientas y gastos fijos que ya pagas y que usarías para hacerlo.",
@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Estas por primera vez decidiendo si contratar a alguien para una tarea que hoy haces tu mismo.",
-    "Un proveedor te ofrece un precio y no sabes si es mejor que seguir haciendolo tu.",
+    "Un proveedor te ofrece un precio y no sabes si es mejor que seguir haciéndolo tu.",
     "Tu negocio esta creciendo y ya no tienes tiempo para hacerlo todo tu mismo."
   ],
   "etiqueta_arbol": "Compra o hazlo tu mismo",
@@ -139,6 +139,35 @@
         "evidencia": "O046-039.entregable: comparación, decisión (Solo corrige las tildes que faltaban en 'comparación' y 'decisión'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-decide_si_lo_compras_o_lo_haces_tu-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de firmar con un proveedor, calcula que te cuesta hacerlo tu mismo: tu tiempo, materiales, herramientas y gastos fijos que ya pagas. Compara esa cifra con la cotizacion del proveedor, incluyendo entrega, calidad y riesgo. La decision no es solo el precio final, sino el valor total: a veces contratar afuera libera tu tiempo para vender mas, y a veces hacerlo tu mismo te ahorra dinero real. Este ejercicio evita que elijas comprar por comodidad o hacerlo tu por orgullo, sin numeros que respalden la eleccion. Escribe ambos costos en una hoja simple antes de decidir.",
+      "texto_nuevo": "Antes de firmar con un proveedor, calcula que te cuesta hacerlo tu mismo: tu tiempo, materiales, herramientas y gastos fijos que ya pagas. Compara esa cifra con la cotización del proveedor, incluyendo entrega, calidad y riesgo. La decisión no es solo el precio final, sino el valor total: a veces contratar afuera libera tu tiempo para vender mas, y a veces hacerlo tu mismo te ahorra dinero real. Este ejercicio evita que elijas comprar por comodidad o hacerlo tu por orgullo, sin números que respalden la elección. Escribe ambos costos en una hoja simple antes de decidir.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: cotizacion, decision, eleccion, numeros"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-decide_si_lo_compras_o_lo_haces_tu-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un proveedor te ofrece un precio y no sabes si es mejor que seguir haciendolo tu.",
+      "texto_nuevo": "Un proveedor te ofrece un precio y no sabes si es mejor que seguir haciéndolo tu.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: haciendolo"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

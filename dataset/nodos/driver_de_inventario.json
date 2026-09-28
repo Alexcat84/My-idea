@@ -2,9 +2,9 @@
   "node_id": "driver_de_inventario",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Driver de Inventario: Ciclico, de Seguridad y Estacional",
+  "titulo_concepto": "Driver de Inventario: Cíclico, de Seguridad y Estacional",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario ciclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacen. El inventario de seguridad no depende del promedio de la demanda sino de su variabilidad y de lo que te cuesta quedarte sin stock. Y el estacional obliga a una eleccion de fondo: acumular antes del pico o invertir en flexibilidad de produccion para no acumular. Las tres se sostienen sobre los puntos de reorden, y esos se ajustan con datos reales de demanda, no con los del plan original.",
+  "resumen_teorico": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario cíclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacén. El inventario de seguridad no depende del promedio de la demanda sino de su variabilidad y de lo que te cuesta quedarte sin stock. Y el estacional obliga a una elección de fondo: acumular antes del pico o invertir en flexibilidad de producción para no acumular. Las tres se sostienen sobre los puntos de reorden, y esos se ajustan con datos reales de demanda, no con los del plan original.",
   "pasos_accionables": [
     "Calcular el inventario cíclico óptimo balanceando costos de ordenar vs. costos de mantener.",
     "Definir niveles de inventario de seguridad según la variabilidad de la demanda y el costo de quiebre de stock.",
@@ -17,8 +17,8 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando ya sabes cuanto inventario tienes y hay que decidir cuanto DEBERIAS tener",
-    "Cuando la demanda varia o tiene estacionalidad y el nivel unico de stock deja de servir"
+    "Cuando ya sabes cuanto inventario tienes y hay que decidir cuanto DEBERÍAS tener",
+    "Cuando la demanda varia o tiene estacionalidad y el nivel único de stock deja de servir"
   ],
   "etiqueta_arbol": "Dimensiona tu Inventario",
   "fuentes_internas": [
@@ -37,6 +37,64 @@
         "evidencia": "O002-007.entregable: cíclico (Solo se añade la tilde que faltaba en 'cíclico'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-driver_de_inventario-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario ciclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacen. El inventario de seguridad no depende del promedio de la demanda sino de su variabilidad y de lo que te cuesta quedarte sin stock. Y el estacional obliga a una eleccion de fondo: acumular antes del pico o invertir en flexibilidad de produccion para no acumular. Las tres se sostienen sobre los puntos de reorden, y esos se ajustan con datos reales de demanda, no con los del plan original.",
+      "texto_nuevo": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario cíclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacén. El inventario de seguridad no depende del promedio de la demanda sino de su variabilidad y de lo que te cuesta quedarte sin stock. Y el estacional obliga a una elección de fondo: acumular antes del pico o invertir en flexibilidad de producción para no acumular. Las tres se sostienen sobre los puntos de reorden, y esos se ajustan con datos reales de demanda, no con los del plan original.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: almacen, ciclico, eleccion, produccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-driver_de_inventario-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya sabes cuanto inventario tienes y hay que decidir cuanto DEBERIAS tener",
+      "texto_nuevo": "Cuando ya sabes cuanto inventario tienes y hay que decidir cuanto DEBERÍAS tener",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: DEBERIAS"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-driver_de_inventario-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la demanda varia o tiene estacionalidad y el nivel unico de stock deja de servir",
+      "texto_nuevo": "Cuando la demanda varia o tiene estacionalidad y el nivel único de stock deja de servir",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: unico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-driver_de_inventario-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Driver de Inventario: Ciclico, de Seguridad y Estacional",
+      "texto_nuevo": "Driver de Inventario: Cíclico, de Seguridad y Estacional",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Ciclico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

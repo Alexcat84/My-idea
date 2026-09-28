@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Orgullo por el Trabajo (Pride of Workmanship)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeno injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeno mejora drasticamente.",
+  "resumen_teorico": "La posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeño injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeño mejora drásticamente.",
   "pasos_accionables": [
     "Hablar directamente con las personas que hacen el trabajo día a día para identificar qué barreras concretas les impiden hacerlo bien",
     "Crear una forma simple para que quien trabaja contigo pueda reportar fallas de herramientas o materiales, y asegurarte de darle seguimiento real",
@@ -25,9 +25,9 @@
   ],
   "condiciones_activacion": [
     "Cuando existe alto ausentismo o rotación entre las personas que trabajan contigo",
-    "Cuando te reportan los mismos problemas repetidamente sin que actues",
-    "Si notas que los espacios de participación o grupos de mejora se estan frustrando sin resultados",
-    "Cuando todavia pagas por pieza o evaluas a las personas de forma individual y punitiva"
+    "Cuando te reportan los mismos problemas repetidamente sin que actúes",
+    "Si notas que los espacios de participación o grupos de mejora se están frustrando sin resultados",
+    "Cuando todavía pagas por pieza o evalúas a las personas de forma individual y punitiva"
   ],
   "etiqueta_arbol": "Fomenta el Orgullo por el Trabajo",
   "ids_alias": [
@@ -142,6 +142,65 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-orgullo_por_el_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeno injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeno mejora drasticamente.",
+      "texto_nuevo": "La posibilidad de sentir orgullo por el trabajo bien hecho es mas importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeño injustas, son de las mayores causas de baja productividad, alto ausentismo y rotación. Cuando tu eliminas esas barreras y escuchas de verdad los problemas que te reportan, el desempeño mejora drásticamente.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desempeno, drasticamente"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-orgullo_por_el_trabajo-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te reportan los mismos problemas repetidamente sin que actues",
+      "texto_nuevo": "Cuando te reportan los mismos problemas repetidamente sin que actúes",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: actues"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-orgullo_por_el_trabajo-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si notas que los espacios de participación o grupos de mejora se estan frustrando sin resultados",
+      "texto_nuevo": "Si notas que los espacios de participación o grupos de mejora se están frustrando sin resultados",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: estan"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-orgullo_por_el_trabajo-condiciones_activacion-3",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando todavia pagas por pieza o evaluas a las personas de forma individual y punitiva",
+      "texto_nuevo": "Cuando todavía pagas por pieza o evalúas a las personas de forma individual y punitiva",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: evaluas, todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

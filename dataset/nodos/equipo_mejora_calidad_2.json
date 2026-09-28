@@ -28,7 +28,7 @@
     "medicion_calidad"
   ],
   "condiciones_activacion": [
-    "Si ya tienes varias personas trabajando contigo en distintas areas y quieres que todas participen en mejorar la calidad de tu negocio.",
+    "Si ya tienes varias personas trabajando contigo en distintas áreas y quieres que todas participen en mejorar la calidad de tu negocio.",
     "Cuando decides lanzar formalmente un programa de mejora de calidad en tu negocio.",
     "Cuando necesitas coordinar distintas áreas de tu negocio para resolver problemas de calidad que las atraviesan a todas."
   ],
@@ -88,6 +88,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-equipo_mejora_calidad_2-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si ya tienes varias personas trabajando contigo en distintas areas y quieres que todas participen en mejorar la calidad de tu negocio.",
+      "texto_nuevo": "Si ya tienes varias personas trabajando contigo en distintas áreas y quieres que todas participen en mejorar la calidad de tu negocio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

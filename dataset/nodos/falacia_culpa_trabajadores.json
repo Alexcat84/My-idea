@@ -19,7 +19,7 @@
     "circulos_calidad_qc"
   ],
   "condiciones_activacion": [
-    "Si tiendes a atribuir la mayoria de los problemas de calidad al desempeno de quien hace el trabajo operativo"
+    "Si tiendes a atribuir la mayoría de los problemas de calidad al desempeño de quien hace el trabajo operativo"
   ],
   "etiqueta_arbol": "No Culpes Solo al Equipo",
   "correcciones": [
@@ -106,6 +106,21 @@
         "evidencia": "O015-005.entregable: diagnóstico, raíz (Solo añade las tildes de diagnóstico y raíz.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-falacia_culpa_trabajadores-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tiendes a atribuir la mayoria de los problemas de calidad al desempeno de quien hace el trabajo operativo",
+      "texto_nuevo": "Si tiendes a atribuir la mayoría de los problemas de calidad al desempeño de quien hace el trabajo operativo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: desempeno, mayoria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

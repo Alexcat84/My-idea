@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Introducción al Programa de Mejora de Calidad de 14 Pasos",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El caso de la empresa HPA es un ejemplo práctico del programa de 14 pasos para instalar una actitud de prevención de defectos en todo tu negocio. El caso muestra cómo una empresa atrapada en un ciclo de apagar incendios (resolver problemas que ya ocurrieron) puede pasar a la prevención mediante un compromiso genuino tuyo como responsable del negocio, empezando por reconocer con claridad que estás corrigiendo en lugar de prevenir, y que hace falta un cambio de actitud que lideres tú junto con la persona que te ayuda con la calidad.",
+  "resumen_teorico": "El caso de la empresa HPA es un ejemplo práctico del programa de 14 pasos para instalar una actitud de prevención de defectos en todo tu negocio. El caso muestra cómo una empresa atrapada en un ciclo de apagar incendios (resolver problemas que ya ocurrieron) puede pasar a la prevención mediante un compromiso genuino tuyo como responsable del negocio, empezando por reconocer con claridad que estás corrigiendo en lugar de prevenir, y que hace falta un cambio de actitud que líderes tú junto con la persona que te ayuda con la calidad.",
   "pasos_accionables": [
     "Reconocer con claridad si estás en modo reactivo (corrigiendo) en lugar de preventivo",
     "Tener una conversación directa con la persona que te ayuda con la calidad sobre el cambio de actitud necesario",
@@ -55,6 +55,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-tildes-crosby_programa_14_pasos_introduccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El caso de la empresa HPA es un ejemplo práctico del programa de 14 pasos para instalar una actitud de prevención de defectos en todo tu negocio. El caso muestra cómo una empresa atrapada en un ciclo de apagar incendios (resolver problemas que ya ocurrieron) puede pasar a la prevención mediante un compromiso genuino tuyo como responsable del negocio, empezando por reconocer con claridad que estás corrigiendo en lugar de prevenir, y que hace falta un cambio de actitud que lideres tú junto con la persona que te ayuda con la calidad.",
+      "texto_nuevo": "El caso de la empresa HPA es un ejemplo práctico del programa de 14 pasos para instalar una actitud de prevención de defectos en todo tu negocio. El caso muestra cómo una empresa atrapada en un ciclo de apagar incendios (resolver problemas que ya ocurrieron) puede pasar a la prevención mediante un compromiso genuino tuyo como responsable del negocio, empezando por reconocer con claridad que estás corrigiendo en lugar de prevenir, y que hace falta un cambio de actitud que líderes tú junto con la persona que te ayuda con la calidad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: lideres"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

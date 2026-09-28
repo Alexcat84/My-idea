@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Mapear el servicio antes, durante y después de la entrega",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir como el cliente hace su pedido y que politicas conoce; durante el envio, el plazo, la confirmacion y el seguimiento; y despues de la entrega, las devoluciones, la garantia y los reclamos. Muchos negocios pequenos solo piensan en el momento del envio y descuidan los otros dos, lo cual genera confusion cuando algo sale mal. Mapear estos tres momentos, aunque sea de forma simple, te permite ver donde tienes un proceso claro y donde estas improvisando cada vez que surge un problema, y asi decidir por donde empezar a mejorar.",
+  "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir como el cliente hace su pedido y que políticas conoce; durante el envio, el plazo, la confirmación y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. Muchos negocios pequeños solo piensan en el momento del envio y descuidan los otros dos, lo cual genera confusión cuando algo sale mal. Mapear estos tres momentos, aunque sea de forma simple, te permite ver donde tienes un proceso claro y donde estas improvisando cada vez que surge un problema, y así decidir por donde empezar a mejorar.",
   "pasos_accionables": [
     "Escribe qué pasa antes de que el cliente compre: cómo pide, qué le respondes, qué política ve.",
     "Escribe qué pasa durante el envío: plazo, confirmación, seguimiento del pedido.",
@@ -21,7 +21,7 @@
   "condiciones_activacion": [
     "Resuelves las devoluciones a criterio propio cada vez porque no tienes un proceso",
     "No sabes que decirle al cliente cuando pregunta por su pedido en camino",
-    "Te das cuenta que solo piensas en el envio y olvidas que pasa despues de entregar"
+    "Te das cuenta que solo piensas en el envio y olvidas que pasa después de entregar"
   ],
   "etiqueta_arbol": "Cubre todo el ciclo de servicio",
   "fuentes_internas": [
@@ -83,6 +83,35 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-tildes-mapear_servicio_antes_durante_despues-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir como el cliente hace su pedido y que politicas conoce; durante el envio, el plazo, la confirmacion y el seguimiento; y despues de la entrega, las devoluciones, la garantia y los reclamos. Muchos negocios pequenos solo piensan en el momento del envio y descuidan los otros dos, lo cual genera confusion cuando algo sale mal. Mapear estos tres momentos, aunque sea de forma simple, te permite ver donde tienes un proceso claro y donde estas improvisando cada vez que surge un problema, y asi decidir por donde empezar a mejorar.",
+      "texto_nuevo": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir como el cliente hace su pedido y que políticas conoce; durante el envio, el plazo, la confirmación y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. Muchos negocios pequeños solo piensan en el momento del envio y descuidan los otros dos, lo cual genera confusión cuando algo sale mal. Mapear estos tres momentos, aunque sea de forma simple, te permite ver donde tienes un proceso claro y donde estas improvisando cada vez que surge un problema, y así decidir por donde empezar a mejorar.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: asi, confirmacion, confusion, despues, garantia, pequenos, politicas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-mapear_servicio_antes_durante_despues-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Te das cuenta que solo piensas en el envio y olvidas que pasa despues de entregar",
+      "texto_nuevo": "Te das cuenta que solo piensas en el envio y olvidas que pasa después de entregar",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: despues"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

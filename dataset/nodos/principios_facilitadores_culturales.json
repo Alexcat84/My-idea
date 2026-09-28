@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Principios de Facilitadores Culturales (Shingo)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Estos principios afirman que el conocimiento y las buenas ideas pueden estar en cualquier parte de tu negocio, no solo en quien manda. Se apoyan en dos ideas centrales: liderar con humildad, es decir, buscar y valorar las ideas de otros y estar dispuesto a cambiar de opinion, y respetar a cada persona, reconociendo que cada una aporta con sus manos, su mente y su corazon cuando se siente respetada. Estos principios son la base para construir relaciones de largo plazo, dar mas autonomia a quienes te ayudan y desarrollar su potencial en un entorno seguro.",
+  "resumen_teorico": "Estos principios afirman que el conocimiento y las buenas ideas pueden estar en cualquier parte de tu negocio, no solo en quien manda. Se apoyan en dos ideas centrales: liderar con humildad, es decir, buscar y valorar las ideas de otros y estar dispuesto a cambiar de opinion, y respetar a cada persona, reconociendo que cada una aporta con sus manos, su mente y su corazón cuando se siente respetada. Estos principios son la base para construir relaciones de largo plazo, dar mas autonomía a quienes te ayudan y desarrollar su potencial en un entorno seguro.",
   "pasos_accionables": [
     "Practicar un liderazgo humilde y escuchar de verdad a las personas que te ayudan",
     "Crear formas concretas de reconocer y mostrar respeto hacia quienes trabajan contigo",
@@ -67,6 +67,20 @@
         "evidencia": "O003-003.entregable: más, autonomía (Solo añade las tildes que faltaban en más y autonomía.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-principios_facilitadores_culturales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estos principios afirman que el conocimiento y las buenas ideas pueden estar en cualquier parte de tu negocio, no solo en quien manda. Se apoyan en dos ideas centrales: liderar con humildad, es decir, buscar y valorar las ideas de otros y estar dispuesto a cambiar de opinion, y respetar a cada persona, reconociendo que cada una aporta con sus manos, su mente y su corazon cuando se siente respetada. Estos principios son la base para construir relaciones de largo plazo, dar mas autonomia a quienes te ayudan y desarrollar su potencial en un entorno seguro.",
+      "texto_nuevo": "Estos principios afirman que el conocimiento y las buenas ideas pueden estar en cualquier parte de tu negocio, no solo en quien manda. Se apoyan en dos ideas centrales: liderar con humildad, es decir, buscar y valorar las ideas de otros y estar dispuesto a cambiar de opinion, y respetar a cada persona, reconociendo que cada una aporta con sus manos, su mente y su corazón cuando se siente respetada. Estos principios son la base para construir relaciones de largo plazo, dar mas autonomía a quienes te ayudan y desarrollar su potencial en un entorno seguro.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: autonomia, corazon"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

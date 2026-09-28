@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Adaptaciones Sectoriales de ISO 9000 (cGMP y ISO/TS 16949)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Si tu negocio opera en una industria regulada, no te basta con ISO 9001 general: existen extensiones especificas que debes cumplir. En dispositivos medicos y farmaceuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos especificos para diseno, producción e instalacion de productos automotrices, y reemplazo al antiguo estándar QS-9000.",
+  "resumen_teorico": "Si tu negocio opera en una industria regulada, no te basta con ISO 9001 general: existen extensiones especificas que debes cumplir. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseno, producción e instalación de productos automotrices, y reemplazo al antiguo estándar QS-9000.",
   "pasos_accionables": [
     "Identifica la norma sectorial específica que te aplica (cGMP, ISO/TS 16949 u otra según tu mercado)",
     "Mapea los requisitos sectoriales adicionales sobre la base de ISO 9001",
@@ -18,7 +18,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando tu negocio pertenece a un sector altamente regulado como farmaceutico, dispositivos medicos o automotriz",
+    "Cuando tu negocio pertenece a un sector altamente regulado como farmacéutico, dispositivos médicos o automotriz",
     "Cuando se requiere cumplimiento regulatorio adicional más allá del estándar genérico ISO 9000"
   ],
   "etiqueta_arbol": "Cumple Normas de tu Sector",
@@ -122,6 +122,35 @@
         "evidencia": "O013-003.entregable: inspección (Tilde real en 'inspección'; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-adaptaciones_sectoriales_iso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu negocio opera en una industria regulada, no te basta con ISO 9001 general: existen extensiones especificas que debes cumplir. En dispositivos medicos y farmaceuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos especificos para diseno, producción e instalacion de productos automotrices, y reemplazo al antiguo estándar QS-9000.",
+      "texto_nuevo": "Si tu negocio opera en una industria regulada, no te basta con ISO 9001 general: existen extensiones especificas que debes cumplir. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseno, producción e instalación de productos automotrices, y reemplazo al antiguo estándar QS-9000.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: especificos, farmaceuticos, instalacion, medicos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-adaptaciones_sectoriales_iso-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu negocio pertenece a un sector altamente regulado como farmaceutico, dispositivos medicos o automotriz",
+      "texto_nuevo": "Cuando tu negocio pertenece a un sector altamente regulado como farmacéutico, dispositivos médicos o automotriz",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: farmaceutico, medicos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Los Tres Motores de la Seguridad: Compromiso, Competencia y Conocimiento",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Tres ingredientes impulsan el motor de seguridad de tu negocio, y dependen de ti como quien decide: Compromiso (motivacion mas recursos de calidad, no solo cumplir minimos exigidos), Competencia (un sistema de información de seguridad que recolecta, difunde y actua sobre datos relevantes) y Cognicion (conciencia real de los peligros, evitando la paradoja posicional, cuando culpas al personal de línea en vez de mirar el sistema completo, y el fenomeno del tic, cuando tratas la seguridad como un checklist de equipo en vez de un proceso continuo).",
+  "resumen_teorico": "Tres ingredientes impulsan el motor de seguridad de tu negocio, y dependen de ti como quien decide: Compromiso (motivación mas recursos de calidad, no solo cumplir mínimos exigidos), Competencia (un sistema de información de seguridad que recolecta, difunde y actúa sobre datos relevantes) y Cognición (conciencia real de los peligros, evitando la paradoja posicional, cuando culpas al personal de línea en vez de mirar el sistema completo, y el fenómeno del tic, cuando tratas la seguridad como un checklist de equipo en vez de un proceso continuo).",
   "pasos_accionables": [
     "Evaluar tu nivel de compromiso real con la seguridad: ¿buscas ser modelo o solo cumplir mínimos exigidos?",
     "Revisar la calidad de tu sistema de información de seguridad: cómo recolectas, difundes y actúas sobre los datos",
@@ -97,6 +97,20 @@
         "evidencia": "O054-021.entregable: diagnóstico, cognición, acción (Faltaban las tildes de 'diagnóstico', 'cognición' y 'acción'; el resto queda igual.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-motores_de_seguridad_3cs-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tres ingredientes impulsan el motor de seguridad de tu negocio, y dependen de ti como quien decide: Compromiso (motivacion mas recursos de calidad, no solo cumplir minimos exigidos), Competencia (un sistema de información de seguridad que recolecta, difunde y actua sobre datos relevantes) y Cognicion (conciencia real de los peligros, evitando la paradoja posicional, cuando culpas al personal de línea en vez de mirar el sistema completo, y el fenomeno del tic, cuando tratas la seguridad como un checklist de equipo en vez de un proceso continuo).",
+      "texto_nuevo": "Tres ingredientes impulsan el motor de seguridad de tu negocio, y dependen de ti como quien decide: Compromiso (motivación mas recursos de calidad, no solo cumplir mínimos exigidos), Competencia (un sistema de información de seguridad que recolecta, difunde y actúa sobre datos relevantes) y Cognición (conciencia real de los peligros, evitando la paradoja posicional, cuando culpas al personal de línea en vez de mirar el sistema completo, y el fenómeno del tic, cuando tratas la seguridad como un checklist de equipo en vez de un proceso continuo).",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Cognicion, actua, fenomeno, minimos, motivacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

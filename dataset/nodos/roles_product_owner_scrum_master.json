@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Quién manda en el contenido y quién manda en el proceso (product owner vs scrum master)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Cuando trabajas con método agil aparecen nombres nuevos para tareas que ya conocias, pero conviene separar dos funciones distintas: una persona lleva el contenido y la visión de lo que estas construyendo, y otra persona lleva el proceso, es decir que el equipo avance y se destraben los obstaculos. Si tu proyecto es pequeño, tu mismo puedes cubrir ambas funciones.",
+  "resumen_teorico": "Cuando trabajas con método ágil aparecen nombres nuevos para tareas que ya conocías, pero conviene separar dos funciones distintas: una persona lleva el contenido y la visión de lo que estas construyendo, y otra persona lleva el proceso, es decir que el equipo avance y se destraben los obstáculos. Si tu proyecto es pequeño, tu mismo puedes cubrir ambas funciones.",
   "pasos_accionables": [
     "Decide quién va a llevar el contenido y la visión de lo que construyes",
     "Decide quién va a llevar el proceso y destrabar obstáculos en el día a día",
@@ -22,7 +22,7 @@
     "gestion_visual_del_pipeline_de_desarrollo"
   ],
   "condiciones_activacion": [
-    "Cuando empiezas a trabajar con método agil y no tienes claro quien hace que",
+    "Cuando empiezas a trabajar con método ágil y no tienes claro quien hace que",
     "Cuando vienes de una forma mas tradicional de manejar proyectos y te cuesta ubicar los roles nuevos"
   ],
   "etiqueta_arbol": "Separa Producto y Proceso",
@@ -98,6 +98,35 @@
         "evidencia": "O024-001.entregable: quién, quién (Falta la tilde en los dos 'quién' interrogativos indirectos; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-roles_product_owner_scrum_master-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando trabajas con método agil aparecen nombres nuevos para tareas que ya conocias, pero conviene separar dos funciones distintas: una persona lleva el contenido y la visión de lo que estas construyendo, y otra persona lleva el proceso, es decir que el equipo avance y se destraben los obstaculos. Si tu proyecto es pequeño, tu mismo puedes cubrir ambas funciones.",
+      "texto_nuevo": "Cuando trabajas con método ágil aparecen nombres nuevos para tareas que ya conocías, pero conviene separar dos funciones distintas: una persona lleva el contenido y la visión de lo que estas construyendo, y otra persona lleva el proceso, es decir que el equipo avance y se destraben los obstáculos. Si tu proyecto es pequeño, tu mismo puedes cubrir ambas funciones.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: agil, conocias, obstaculos"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-roles_product_owner_scrum_master-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando empiezas a trabajar con método agil y no tienes claro quien hace que",
+      "texto_nuevo": "Cuando empiezas a trabajar con método ágil y no tienes claro quien hace que",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: agil"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

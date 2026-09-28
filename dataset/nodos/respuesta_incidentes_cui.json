@@ -24,7 +24,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se implementan los requisitos de la familia Incident Response de SP 800-171",
-    "Si la organizacion tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad"
+    "Si la organización tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad"
   ],
   "etiqueta_arbol": "Prepárate para Responder Incidentes",
   "ids_alias": [
@@ -54,6 +54,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-tildes-respuesta_incidentes_cui-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si la organizacion tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad",
+      "texto_nuevo": "Si la organización tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: organizacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

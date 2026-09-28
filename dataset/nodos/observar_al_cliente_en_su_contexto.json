@@ -2,9 +2,9 @@
   "node_id": "observar_al_cliente_en_su_contexto",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Observar a tu cliente en su contexto (segundo paso del metodo IOPS)",
+  "titulo_concepto": "Observar a tu cliente en su contexto (segundo paso del método IOPS)",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Es el segundo paso del metodo IOPS (investigar, observar, personalizar, sorprender), y el que casi siempre se salta. Investigar te da datos que tu cliente te conto; observar te da lo que hace cuando nadie le pregunta. Se practica yendo a verlo usar tu producto en su contexto real con una cadencia fija, y poniendote tu mismo en su lugar para recorrer tu producto desde cero como si fueras el, que es cuando aparecen las asperezas que dejaste de ver por costumbre. Lo que vale casi nunca es la respuesta a una pregunta: son los detalles pequenos y los comentarios casuales, las pepitas de oro que ninguna encuesta captura. Por eso se anota en caliente y se relee uno o dos dias despues, cuando ya se puede buscar el patron en vez del episodio.",
+  "resumen_teorico": "Es el segundo paso del método IOPS (investigar, observar, personalizar, sorprender), y el que casi siempre se salta. Investigar te da datos que tu cliente te contó; observar te da lo que hace cuando nadie le pregunta. Se practica yendo a verlo usar tu producto en su contexto real con una cadencia fija, y poniéndote tu mismo en su lugar para recorrer tu producto desde cero como si fueras el, que es cuando aparecen las asperezas que dejaste de ver por costumbre. Lo que vale casi nunca es la respuesta a una pregunta: son los detalles pequeños y los comentarios casuales, las pepitas de oro que ninguna encuesta captura. Por eso se anota en caliente y se relee uno o dos días después, cuando ya se puede buscar el patrón en vez del episodio.",
   "pasos_accionables": [
     "Observa a un cliente usando tu producto o servicio en su contexto real al menos una vez al mes",
     "Ponte en el lugar de tu cliente y experimenta tu producto desde cero, como si fueras él",
@@ -58,6 +58,34 @@
       "decision": "auditoria final, frontera OPERATIVO/INVENCION (decision del fundador, 28 sep 2026; docs/REGLAS_DE_LA_CASA.md C29): la campania de fidelidad lo dio por OPERATIVO con dos lecturas; con la frontera escrita es INVENCION, porque 'valen mas que cualquier encuesta' anade un QUE (una comparacion de valor) que el libro no hace. Sale la comparacion y queda lo que el libro dice de las pepitas de oro.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.1"
+    },
+    {
+      "id": "final-tildes-observar_al_cliente_en_su_contexto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es el segundo paso del metodo IOPS (investigar, observar, personalizar, sorprender), y el que casi siempre se salta. Investigar te da datos que tu cliente te conto; observar te da lo que hace cuando nadie le pregunta. Se practica yendo a verlo usar tu producto en su contexto real con una cadencia fija, y poniendote tu mismo en su lugar para recorrer tu producto desde cero como si fueras el, que es cuando aparecen las asperezas que dejaste de ver por costumbre. Lo que vale casi nunca es la respuesta a una pregunta: son los detalles pequenos y los comentarios casuales, las pepitas de oro que ninguna encuesta captura. Por eso se anota en caliente y se relee uno o dos dias despues, cuando ya se puede buscar el patron en vez del episodio.",
+      "texto_nuevo": "Es el segundo paso del método IOPS (investigar, observar, personalizar, sorprender), y el que casi siempre se salta. Investigar te da datos que tu cliente te contó; observar te da lo que hace cuando nadie le pregunta. Se practica yendo a verlo usar tu producto en su contexto real con una cadencia fija, y poniéndote tu mismo en su lugar para recorrer tu producto desde cero como si fueras el, que es cuando aparecen las asperezas que dejaste de ver por costumbre. Lo que vale casi nunca es la respuesta a una pregunta: son los detalles pequeños y los comentarios casuales, las pepitas de oro que ninguna encuesta captura. Por eso se anota en caliente y se relee uno o dos días después, cuando ya se puede buscar el patrón en vez del episodio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: conto, despues, dias, metodo, patron, pequenos, poniendote"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-observar_al_cliente_en_su_contexto-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Observar a tu cliente en su contexto (segundo paso del metodo IOPS)",
+      "texto_nuevo": "Observar a tu cliente en su contexto (segundo paso del método IOPS)",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: metodo"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

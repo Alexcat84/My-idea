@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Liderar la calidad sin ser quien manda",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Quien ejecuta la calidad en el día a día no siempre es quien decide la estrategia: es la persona que detecta un problema de calidad, la que lidera un pequeno equipo o la que lleva la calidad en su propia area. Liderar un equipo que cruza distintas areas exige habilidades distintas a la autoridad jerarquica tradicional, como la tolerancia a la ambiguedad y la flexibilidad para adaptarse sobre la marcha.",
+  "resumen_teorico": "Quien ejecuta la calidad en el día a día no siempre es quien decide la estrategia: es la persona que detecta un problema de calidad, la que lidera un pequeño equipo o la que lleva la calidad en su propia área. Liderar un equipo que cruza distintas áreas exige habilidades distintas a la autoridad jerárquica tradicional, como la tolerancia a la ambigüedad y la flexibilidad para adaptarse sobre la marcha.",
   "pasos_accionables": [
     "Desarrollar habilidades de liderazgo para coordinar equipos que no responden directamente a ti",
     "Definir con claridad quién detecta y nombra los problemas de calidad",
@@ -20,7 +20,7 @@
     "rol_de_la_fuerza_laboral_en_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando alguien necesita liderar un proyecto de mejora de calidad sin tener autoridad jerarquica directa sobre las personas involucradas"
+    "Cuando alguien necesita liderar un proyecto de mejora de calidad sin tener autoridad jerárquica directa sobre las personas involucradas"
   ],
   "etiqueta_arbol": "Empodera a tus Mandos Medios",
   "fuentes_internas": [
@@ -67,6 +67,35 @@
         "evidencia": "O017-033.entregable: guía, jerárquica (Solo se añaden las tildes que faltaban en guía y jerárquica.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-rol_de_mandos_medios_y_supervisores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Quien ejecuta la calidad en el día a día no siempre es quien decide la estrategia: es la persona que detecta un problema de calidad, la que lidera un pequeno equipo o la que lleva la calidad en su propia area. Liderar un equipo que cruza distintas areas exige habilidades distintas a la autoridad jerarquica tradicional, como la tolerancia a la ambiguedad y la flexibilidad para adaptarse sobre la marcha.",
+      "texto_nuevo": "Quien ejecuta la calidad en el día a día no siempre es quien decide la estrategia: es la persona que detecta un problema de calidad, la que lidera un pequeño equipo o la que lleva la calidad en su propia área. Liderar un equipo que cruza distintas áreas exige habilidades distintas a la autoridad jerárquica tradicional, como la tolerancia a la ambigüedad y la flexibilidad para adaptarse sobre la marcha.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ambiguedad, area, areas, jerarquica, pequeno"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-rol_de_mandos_medios_y_supervisores-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando alguien necesita liderar un proyecto de mejora de calidad sin tener autoridad jerarquica directa sobre las personas involucradas",
+      "texto_nuevo": "Cuando alguien necesita liderar un proyecto de mejora de calidad sin tener autoridad jerárquica directa sobre las personas involucradas",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: jerarquica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

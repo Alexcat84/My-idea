@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Versión intermedia entre idea y prototipo (protocept)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Un 'protocept' es una versión intermedia de tu producto, entre la idea (dibujos y palabras) y un prototipo listo para probar. Puede ser un dibujo en 3D hecho por computadora, un prototipo virtual, un modelo rudimentario o algo impreso en 3D. Te sirve para validar con el cliente si tu hipótesis de mercado tiene sentido, buscar la primera prueba de que la idea funciona tecnicamente, y conseguir el respaldo que necesitas para seguir adelante, sin tener que construir todavia un producto completamente funcional.",
+  "resumen_teorico": "Un 'protocept' es una versión intermedia de tu producto, entre la idea (dibujos y palabras) y un prototipo listo para probar. Puede ser un dibujo en 3D hecho por computadora, un prototipo virtual, un modelo rudimentario o algo impreso en 3D. Te sirve para validar con el cliente si tu hipótesis de mercado tiene sentido, buscar la primera prueba de que la idea funciona técnicamente, y conseguir el respaldo que necesitas para seguir adelante, sin tener que construir todavía un producto completamente funcional.",
   "pasos_accionables": [
     "En cada vuelta de trabajo, crea una representación tangible de tu producto: un dibujo en 3D, un modelo impreso, un prototipo virtual",
     "Muestra ese protocept al cliente y recoge lo que piensa sobre tu hipótesis de mercado",
@@ -95,6 +95,20 @@
         "evidencia": "O009-030.entregable: técnicos (Falta la tilde en 'técnicos'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-protocepto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un 'protocept' es una versión intermedia de tu producto, entre la idea (dibujos y palabras) y un prototipo listo para probar. Puede ser un dibujo en 3D hecho por computadora, un prototipo virtual, un modelo rudimentario o algo impreso en 3D. Te sirve para validar con el cliente si tu hipótesis de mercado tiene sentido, buscar la primera prueba de que la idea funciona tecnicamente, y conseguir el respaldo que necesitas para seguir adelante, sin tener que construir todavia un producto completamente funcional.",
+      "texto_nuevo": "Un 'protocept' es una versión intermedia de tu producto, entre la idea (dibujos y palabras) y un prototipo listo para probar. Puede ser un dibujo en 3D hecho por computadora, un prototipo virtual, un modelo rudimentario o algo impreso en 3D. Te sirve para validar con el cliente si tu hipótesis de mercado tiene sentido, buscar la primera prueba de que la idea funciona técnicamente, y conseguir el respaldo que necesitas para seguir adelante, sin tener que construir todavía un producto completamente funcional.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: tecnicamente, todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

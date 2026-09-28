@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Licenciamiento de Tecnología (Technology Licensing)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Es un acuerdo contractual donde permites a un licenciatario extranjero usar tus patentes, marcas, derechos de autor, secretos comerciales u otra propiedad intelectual a cambio de una compensación negociada. Te deja entrar a un mercado extranjero rapido, con menor riesgo financiero y legal que instalar una planta propia o participar en una joint venture. A cambio, pierdes parte del control sobre tu tecnologia y suele generar menores ganancias que la exportacion directa, asi que conviene compararlo antes de decidir. Requiere registrar tu propiedad intelectual en cada pais objetivo (herramientas como PCT o el Protocolo de Madrid facilitan proteccion multiple) y contar con asesoria legal especializada tanto en tu pais como en el del licenciatario antes de firmar.",
+  "resumen_teorico": "Es un acuerdo contractual donde permites a un licenciatario extranjero usar tus patentes, marcas, derechos de autor, secretos comerciales u otra propiedad intelectual a cambio de una compensación negociada. Te deja entrar a un mercado extranjero rápido, con menor riesgo financiero y legal que instalar una planta propia o participar en una joint venture. A cambio, pierdes parte del control sobre tu tecnología y suele generar menores ganancias que la exportación directa, así que conviene compararlo antes de decidir. Requiere registrar tu propiedad intelectual en cada país objetivo (herramientas como PCT o el Protocolo de Madrid facilitan protección múltiple) y contar con asesoría legal especializada tanto en tu país como en el del licenciatario antes de firmar.",
   "pasos_accionables": [
     "Identifica qué activos de propiedad intelectual son licenciables: patentes, marcas, tecnología, procesos",
     "Evalúa si el licenciamiento te conviene más que exportar directamente o instalar operaciones propias",
@@ -23,9 +23,9 @@
     "joint_ventures_internacionales"
   ],
   "condiciones_activacion": [
-    "Si tienes tecnologia o marca valiosa pero no cuentas con capital para operar directamente en el mercado extranjero",
-    "Si existen barreras arancelarias o regulatorias que dificultan la exportacion directa",
-    "Si buscas entrar rapido a un mercado extranjero asumiendo menos riesgo financiero y legal"
+    "Si tienes tecnología o marca valiosa pero no cuentas con capital para operar directamente en el mercado extranjero",
+    "Si existen barreras arancelarias o regulatorias que dificultan la exportación directa",
+    "Si buscas entrar rápido a un mercado extranjero asumiendo menos riesgo financiero y legal"
   ],
   "etiqueta_arbol": "Otorga Licencia de tu Marca",
   "ids_alias": [
@@ -138,6 +138,65 @@
         "evidencia": "O055-025.entregable: tecnología, términos, compensación, duración, país (Tildes reales en tecnología, términos, compensación, duración y país; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-licenciamiento_tecnologico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es un acuerdo contractual donde permites a un licenciatario extranjero usar tus patentes, marcas, derechos de autor, secretos comerciales u otra propiedad intelectual a cambio de una compensación negociada. Te deja entrar a un mercado extranjero rapido, con menor riesgo financiero y legal que instalar una planta propia o participar en una joint venture. A cambio, pierdes parte del control sobre tu tecnologia y suele generar menores ganancias que la exportacion directa, asi que conviene compararlo antes de decidir. Requiere registrar tu propiedad intelectual en cada pais objetivo (herramientas como PCT o el Protocolo de Madrid facilitan proteccion multiple) y contar con asesoria legal especializada tanto en tu pais como en el del licenciatario antes de firmar.",
+      "texto_nuevo": "Es un acuerdo contractual donde permites a un licenciatario extranjero usar tus patentes, marcas, derechos de autor, secretos comerciales u otra propiedad intelectual a cambio de una compensación negociada. Te deja entrar a un mercado extranjero rápido, con menor riesgo financiero y legal que instalar una planta propia o participar en una joint venture. A cambio, pierdes parte del control sobre tu tecnología y suele generar menores ganancias que la exportación directa, así que conviene compararlo antes de decidir. Requiere registrar tu propiedad intelectual en cada país objetivo (herramientas como PCT o el Protocolo de Madrid facilitan protección múltiple) y contar con asesoría legal especializada tanto en tu país como en el del licenciatario antes de firmar.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: asesoria, asi, exportacion, multiple, pais, proteccion, rapido, tecnologia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-licenciamiento_tecnologico-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes tecnologia o marca valiosa pero no cuentas con capital para operar directamente en el mercado extranjero",
+      "texto_nuevo": "Si tienes tecnología o marca valiosa pero no cuentas con capital para operar directamente en el mercado extranjero",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: tecnologia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-licenciamiento_tecnologico-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si existen barreras arancelarias o regulatorias que dificultan la exportacion directa",
+      "texto_nuevo": "Si existen barreras arancelarias o regulatorias que dificultan la exportación directa",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: exportacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-licenciamiento_tecnologico-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si buscas entrar rapido a un mercado extranjero asumiendo menos riesgo financiero y legal",
+      "texto_nuevo": "Si buscas entrar rápido a un mercado extranjero asumiendo menos riesgo financiero y legal",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: rapido"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

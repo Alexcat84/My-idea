@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Organización para la Mejora de la Calidad: Liderazgo de Metodología Estadística",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente ayudandote en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
+  "resumen_teorico": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente ayudándote en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
   "pasos_accionables": [
     "Define quién en tu negocio, tú mismo o alguien que contrates, será responsable del método estadístico, con autoridad para revisar cualquier área que lo necesite",
     "Exige que esa persona tenga dominio real: formación seria, experiencia práctica, trabajo demostrable y capacidad de explicarlo con claridad",
@@ -111,6 +111,20 @@
         "evidencia": "O025-006.entregable: quién, cómo (Faltan las tildes de quién y cómo, que aquí son interrogativos indirectos; el resto no cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-organizacion_liderazgo_estadistico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente ayudandote en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
+      "texto_nuevo": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente ayudándote en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ayudandote"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

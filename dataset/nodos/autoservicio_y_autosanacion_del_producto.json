@@ -2,9 +2,9 @@
   "node_id": "autoservicio_y_autosanacion_del_producto",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Autoservicio y Autosanacion del Producto",
+  "titulo_concepto": "Autoservicio y Autosanación del Producto",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Cada llamada de soporte es un sintoma: en algun punto tu producto le pidio a tu cliente algo que no supo resolver solo. La cura no empieza por reforzar el soporte sino por mirar que puntos de friccion generan esas llamadas, y despues por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalia y le avisa el primero, con lo que ya esta haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanacion, para que el problema se resuelva sin que nadie tenga que intervenir. Y todo esto se mide con una sola cifra honesta: que porcentaje de los problemas se resuelve sin intervencion humana.",
+  "resumen_teorico": "Cada llamada de soporte es un síntoma: en algún punto tu producto le pidió a tu cliente algo que no supo resolver solo. La cura no empieza por reforzar el soporte sino por mirar que puntos de fricción generan esas llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya esta haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que el problema se resuelva sin que nadie tenga que intervenir. Y todo esto se mide con una sola cifra honesta: que porcentaje de los problemas se resuelve sin intervención humana.",
   "pasos_accionables": [
     "Revisar los puntos de fricción del producto que generan llamadas de soporte",
     "Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente",
@@ -37,6 +37,34 @@
         "evidencia": "O021-012.entregable: detección, automático, intervención (Solo se añaden las tildes que faltaban en detección, automático e intervención.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-autoservicio_y_autosanacion_del_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada llamada de soporte es un sintoma: en algun punto tu producto le pidio a tu cliente algo que no supo resolver solo. La cura no empieza por reforzar el soporte sino por mirar que puntos de friccion generan esas llamadas, y despues por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalia y le avisa el primero, con lo que ya esta haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanacion, para que el problema se resuelva sin que nadie tenga que intervenir. Y todo esto se mide con una sola cifra honesta: que porcentaje de los problemas se resuelve sin intervencion humana.",
+      "texto_nuevo": "Cada llamada de soporte es un síntoma: en algún punto tu producto le pidió a tu cliente algo que no supo resolver solo. La cura no empieza por reforzar el soporte sino por mirar que puntos de fricción generan esas llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya esta haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que el problema se resuelva sin que nadie tenga que intervenir. Y todo esto se mide con una sola cifra honesta: que porcentaje de los problemas se resuelve sin intervención humana.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: algun, anomalia, autosanacion, despues, friccion, intervencion, pidio, sintoma"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-autoservicio_y_autosanacion_del_producto-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Autoservicio y Autosanacion del Producto",
+      "texto_nuevo": "Autoservicio y Autosanación del Producto",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Autosanacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

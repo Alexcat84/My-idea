@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Familia de Normas ISO 9000",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "ISO 9000 es una familia de normas internacionales de gestion de calidad, creada por el Comite Tecnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamano o sector. Son normas no prescriptivas: definen que debe existir en el sistema de gestion, no como implementarlo, y combinan estandares de producto (especificaciones tecnicas) con estandares de sistema de gestion. La version ISO 9001:2015 incorporo un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestion de relaciones mas alla del cliente tradicional.",
+  "resumen_teorico": "ISO 9000 es una familia de normas internacionales de gestion de calidad, creada por el Comité Técnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamaño o sector. Son normas no prescriptivas: definen que debe existir en el sistema de gestion, no como implementarlo, y combinan estándares de producto (especificaciones técnicas) con estándares de sistema de gestion. La versión ISO 9001:2015 incorporo un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestion de relaciones mas allá del cliente tradicional.",
   "pasos_accionables": [
     "Identificar si el requisito que enfrentas aplica a especificaciones técnicas del producto o al sistema de gestión",
     "Analizar el contexto de tu negocio y las necesidades de las partes interesadas según las cláusulas 4.1 y 4.2",
@@ -25,9 +25,9 @@
     "iso_ts_16949_automotriz"
   ],
   "condiciones_activacion": [
-    "Cuando buscas operar o comerciar internacionalmente y necesitas cumplir estandares reconocidos globalmente",
-    "Si tus clientes exigen contractualmente la certificacion ISO 9001",
-    "Cuando necesitas una estructura formal de gestion de calidad para diseno, produccion, entrega y soporte de tu producto o servicio"
+    "Cuando buscas operar o comerciar internacionalmente y necesitas cumplir estándares reconocidos globalmente",
+    "Si tus clientes exigen contractualmente la certificación ISO 9001",
+    "Cuando necesitas una estructura formal de gestion de calidad para diseno, producción, entrega y soporte de tu producto o servicio"
   ],
   "etiqueta_arbol": "Conoce las Normas ISO 9000",
   "ids_alias": [
@@ -153,6 +153,65 @@
         "motivo": "El gobierno de la empresa familiar no conduce a la familia de normas ISO 9000."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-tildes-familia_normas_iso_9000-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "ISO 9000 es una familia de normas internacionales de gestion de calidad, creada por el Comite Tecnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamano o sector. Son normas no prescriptivas: definen que debe existir en el sistema de gestion, no como implementarlo, y combinan estandares de producto (especificaciones tecnicas) con estandares de sistema de gestion. La version ISO 9001:2015 incorporo un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestion de relaciones mas alla del cliente tradicional.",
+      "texto_nuevo": "ISO 9000 es una familia de normas internacionales de gestion de calidad, creada por el Comité Técnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamaño o sector. Son normas no prescriptivas: definen que debe existir en el sistema de gestion, no como implementarlo, y combinan estándares de producto (especificaciones técnicas) con estándares de sistema de gestion. La versión ISO 9001:2015 incorporo un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestion de relaciones mas allá del cliente tradicional.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Comite, Tecnico, alla, estandares, tamano, tecnicas, version"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-familia_normas_iso_9000-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando buscas operar o comerciar internacionalmente y necesitas cumplir estandares reconocidos globalmente",
+      "texto_nuevo": "Cuando buscas operar o comerciar internacionalmente y necesitas cumplir estándares reconocidos globalmente",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: estandares"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-familia_normas_iso_9000-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tus clientes exigen contractualmente la certificacion ISO 9001",
+      "texto_nuevo": "Si tus clientes exigen contractualmente la certificación ISO 9001",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: certificacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-familia_normas_iso_9000-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas una estructura formal de gestion de calidad para diseno, produccion, entrega y soporte de tu producto o servicio",
+      "texto_nuevo": "Cuando necesitas una estructura formal de gestion de calidad para diseno, producción, entrega y soporte de tu producto o servicio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: produccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

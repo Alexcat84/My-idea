@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.",
+  "resumen_teorico": "Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evalúas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.",
   "pasos_accionables": [
     "Reúne a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente",
     "Capacítense en el método de mejora de calidad que van a usar",
@@ -109,6 +109,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-consejo_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.",
+      "texto_nuevo": "Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evalúas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: evaluas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

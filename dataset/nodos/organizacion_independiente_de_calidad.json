@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Calidad independiente y objetiva",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Para que la calidad funcione de verdad, tiene que actuar de forma objetiva e imparcial, sin depender de las areas que revisa: ingenieria, producción, marketing, administración. Quien se encarga de calidad debe estar al mismo nivel que esas areas y tener acceso directo a quienes toman las decisiones en tu negocio. Así evitas conflictos de interes y logras que la calidad prevenga problemas, en lugar de solo detectarlos después de que ya ocurrieron.",
+  "resumen_teorico": "Para que la calidad funcione de verdad, tiene que actuar de forma objetiva e imparcial, sin depender de las áreas que revisa: ingeniería, producción, marketing, administración. Quien se encarga de calidad debe estar al mismo nivel que esas áreas y tener acceso directo a quienes toman las decisiones en tu negocio. Así evitas conflictos de interés y logras que la calidad prevenga problemas, en lugar de solo detectarlos después de que ya ocurrieron.",
   "pasos_accionables": [
     "Ubica a quien se encarga de calidad al mismo nivel que ingeniería, producción y marketing en tu organigrama.",
     "Asegúrate de que esa persona te reporte directamente a ti, no a las áreas operativas.",
@@ -21,7 +21,7 @@
     "logistica_inversa_retornos"
   ],
   "condiciones_activacion": [
-    "Cuando quien maneja calidad reporta a producción o a otra area operativa, generando conflicto de interes.",
+    "Cuando quien maneja calidad reporta a producción o a otra área operativa, generando conflicto de interés.",
     "Cuando quieres pasar de una calidad que solo audita a una que previene problemas."
   ],
   "etiqueta_arbol": "Mantén la Calidad Independiente",
@@ -82,6 +82,35 @@
         "evidencia": "O018-035.entregable: área, áreas (Tildes de 'área' y 'áreas'; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-organizacion_independiente_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Para que la calidad funcione de verdad, tiene que actuar de forma objetiva e imparcial, sin depender de las areas que revisa: ingenieria, producción, marketing, administración. Quien se encarga de calidad debe estar al mismo nivel que esas areas y tener acceso directo a quienes toman las decisiones en tu negocio. Así evitas conflictos de interes y logras que la calidad prevenga problemas, en lugar de solo detectarlos después de que ya ocurrieron.",
+      "texto_nuevo": "Para que la calidad funcione de verdad, tiene que actuar de forma objetiva e imparcial, sin depender de las áreas que revisa: ingeniería, producción, marketing, administración. Quien se encarga de calidad debe estar al mismo nivel que esas áreas y tener acceso directo a quienes toman las decisiones en tu negocio. Así evitas conflictos de interés y logras que la calidad prevenga problemas, en lugar de solo detectarlos después de que ya ocurrieron.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas, ingenieria, interes"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-organizacion_independiente_de_calidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quien maneja calidad reporta a producción o a otra area operativa, generando conflicto de interes.",
+      "texto_nuevo": "Cuando quien maneja calidad reporta a producción o a otra área operativa, generando conflicto de interés.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area, interes"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Riesgos de Enfocar la Seguridad Solo en el 'Error Humano'",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Centrar la seguridad de tu negocio en el 'error humano' te lleva a hacer casi todo mal: conviertes a las personas en el blanco de la intervencion sin eliminar las condiciones de fondo que generan el problema. El enfoque se autoalimenta con nuevas etiquetas (perdida de conciencia situacional, actos inseguros, falta de atencion) que en el fondo siguen culpando al individuo. Además requiere un estándar que solo aparece en retrospectiva, reduce fenomenos complejos a estadisticas simplistas ('el 85% de los incidentes son por error humano') e ignora que, la mayoria de las veces, las personas contribuyen a que las cosas salgan bien a pesar de recursos limitados y objetivos que se contradicen entre si.",
+  "resumen_teorico": "Centrar la seguridad de tu negocio en el 'error humano' te lleva a hacer casi todo mal: conviertes a las personas en el blanco de la intervención sin eliminar las condiciones de fondo que generan el problema. El enfoque se autoalimenta con nuevas etiquetas (perdida de conciencia situacional, actos inseguros, falta de atención) que en el fondo siguen culpando al individuo. Además requiere un estándar que solo aparece en retrospectiva, reduce fenómenos complejos a estadísticas simplistas ('el 85% de los incidentes son por error humano') e ignora que, la mayoría de las veces, las personas contribuyen a que las cosas salgan bien a pesar de recursos limitados y objetivos que se contradicen entre si.",
   "pasos_accionables": [
     "Revisa el lenguaje que usas en tus reportes de incidentes para detectar eufemismos de 'error humano' como falta de atención, no priorizar la seguridad o actos inseguros.",
     "Cuestiona cualquier estadística del tipo 'X% de los incidentes son por error humano' y pide que te expliquen qué condiciones de fondo la explican.",
@@ -81,6 +81,20 @@
         "evidencia": "O076-014.entregable: senales, como, como, quien (Se corrigen la eñe de 'señales' y las tildes de los interrogativos indirectos 'cómo' y 'quién'; 'checklist' no se toca.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-riesgos_del_enfoque_en_error_humano-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Centrar la seguridad de tu negocio en el 'error humano' te lleva a hacer casi todo mal: conviertes a las personas en el blanco de la intervencion sin eliminar las condiciones de fondo que generan el problema. El enfoque se autoalimenta con nuevas etiquetas (perdida de conciencia situacional, actos inseguros, falta de atencion) que en el fondo siguen culpando al individuo. Además requiere un estándar que solo aparece en retrospectiva, reduce fenomenos complejos a estadisticas simplistas ('el 85% de los incidentes son por error humano') e ignora que, la mayoria de las veces, las personas contribuyen a que las cosas salgan bien a pesar de recursos limitados y objetivos que se contradicen entre si.",
+      "texto_nuevo": "Centrar la seguridad de tu negocio en el 'error humano' te lleva a hacer casi todo mal: conviertes a las personas en el blanco de la intervención sin eliminar las condiciones de fondo que generan el problema. El enfoque se autoalimenta con nuevas etiquetas (perdida de conciencia situacional, actos inseguros, falta de atención) que en el fondo siguen culpando al individuo. Además requiere un estándar que solo aparece en retrospectiva, reduce fenómenos complejos a estadísticas simplistas ('el 85% de los incidentes son por error humano') e ignora que, la mayoría de las veces, las personas contribuyen a que las cosas salgan bien a pesar de recursos limitados y objetivos que se contradicen entre si.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: atencion, estadisticas, fenomenos, intervencion, mayoria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

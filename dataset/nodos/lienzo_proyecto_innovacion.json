@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Lienzo del Proyecto de Innovación (Innovation Project Canvas)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de accion, en lugar de seguir una lista estandar de actividades. Se usan post its para volcar hipotesis en cada area: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposicion, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una version mas estructurada del lienzo en blanco que usan los mas expertos, util para aumentar tu propio compromiso con el plan.",
+  "resumen_teorico": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de acción, en lugar de seguir una lista estándar de actividades. Se usan post its para volcar hipótesis en cada área: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposición, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una versión mas estructurada del lienzo en blanco que usan los mas expertos, útil para aumentar tu propio compromiso con el plan.",
   "pasos_accionables": [
     "Completa el canvas con post its en una sesión dedicada",
     "Define los segmentos de clientes objetivo y sus necesidades no resueltas",
@@ -27,8 +27,8 @@
   ],
   "condiciones_activacion": [
     "Cuando tienes poca experiencia y necesitas mas guia estructural que un lienzo completamente en blanco",
-    "Cuando tu proyecto es altamente innovador y un modelo estandar de actividades no aplica bien",
-    "Si buscas aumentar tu compromiso con tu propio plan de accion antes de ejecutarlo"
+    "Cuando tu proyecto es altamente innovador y un modelo estándar de actividades no aplica bien",
+    "Si buscas aumentar tu compromiso con tu propio plan de acción antes de ejecutarlo"
   ],
   "etiqueta_arbol": "Mapea tu Proyecto de Innovación",
   "ids_alias": [
@@ -125,6 +125,50 @@
         "evidencia": "O034-004.entregable: innovación, hipótesis, próximos (Innovación, hipótesis y próximos son faltas reales; también se corrige área, que la propuesta dejó sin tilde.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-lienzo_proyecto_innovacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de accion, en lugar de seguir una lista estandar de actividades. Se usan post its para volcar hipotesis en cada area: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposicion, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una version mas estructurada del lienzo en blanco que usan los mas expertos, util para aumentar tu propio compromiso con el plan.",
+      "texto_nuevo": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de acción, en lugar de seguir una lista estándar de actividades. Se usan post its para volcar hipótesis en cada área: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposición, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una versión mas estructurada del lienzo en blanco que usan los mas expertos, útil para aumentar tu propio compromiso con el plan.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: accion, area, estandar, hipotesis, suposicion, util, version"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-lienzo_proyecto_innovacion-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu proyecto es altamente innovador y un modelo estandar de actividades no aplica bien",
+      "texto_nuevo": "Cuando tu proyecto es altamente innovador y un modelo estándar de actividades no aplica bien",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: estandar"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-lienzo_proyecto_innovacion-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si buscas aumentar tu compromiso con tu propio plan de accion antes de ejecutarlo",
+      "texto_nuevo": "Si buscas aumentar tu compromiso con tu propio plan de acción antes de ejecutarlo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: accion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

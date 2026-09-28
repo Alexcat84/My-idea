@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Paso 13: Consejos de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Decimo tercer paso del método de catorce pasos. Consiste en buscar espacios regulares de encuentro con otras personas que, como tu, evaluan la calidad de su propio trabajo, para compartir problemas, sentimientos y experiencias. Quien evalua trabajo suele sentirse solo, rodeado de la urgencia diaria, y necesita ese espacio para mantener un criterio y un proposito consistentes.",
+  "resumen_teorico": "Decimo tercer paso del método de catorce pasos. Consiste en buscar espacios regulares de encuentro con otras personas que, como tu, evalúan la calidad de su propio trabajo, para compartir problemas, sentimientos y experiencias. Quien evalúa trabajo suele sentirse solo, rodeado de la urgencia diaria, y necesita ese espacio para mantener un criterio y un proposito consistentes.",
   "pasos_accionables": [
     "Buscar o crear un espacio de encuentro regular con otras personas que evalúan calidad en su propio trabajo o negocio",
     "Dejar que ese espacio defina su propia agenda y sus propios horarios, sin imponerlos",
@@ -22,8 +22,8 @@
     "reinicio_programa_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando sientes que evaluas la calidad de tu trabajo en soledad, sin con quien contrastarlo",
-    "Si necesitas mantener un criterio consistente en distintas areas o partes de tu negocio",
+    "Cuando sientes que evalúas la calidad de tu trabajo en soledad, sin con quien contrastarlo",
+    "Si necesitas mantener un criterio consistente en distintas áreas o partes de tu negocio",
     "Si manejas varias sucursales o negocios y falta intercambio de experiencias entre ellos"
   ],
   "etiqueta_arbol": "Reúne a tus Equipos de Calidad",
@@ -85,6 +85,50 @@
         "evidencia": "O051-039.entregable: periódicos (Solo añade la tilde de periódicos.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-consejos_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decimo tercer paso del método de catorce pasos. Consiste en buscar espacios regulares de encuentro con otras personas que, como tu, evaluan la calidad de su propio trabajo, para compartir problemas, sentimientos y experiencias. Quien evalua trabajo suele sentirse solo, rodeado de la urgencia diaria, y necesita ese espacio para mantener un criterio y un proposito consistentes.",
+      "texto_nuevo": "Decimo tercer paso del método de catorce pasos. Consiste en buscar espacios regulares de encuentro con otras personas que, como tu, evalúan la calidad de su propio trabajo, para compartir problemas, sentimientos y experiencias. Quien evalúa trabajo suele sentirse solo, rodeado de la urgencia diaria, y necesita ese espacio para mantener un criterio y un proposito consistentes.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: evalua, evaluan"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-consejos_de_calidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando sientes que evaluas la calidad de tu trabajo en soledad, sin con quien contrastarlo",
+      "texto_nuevo": "Cuando sientes que evalúas la calidad de tu trabajo en soledad, sin con quien contrastarlo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: evaluas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-consejos_de_calidad-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si necesitas mantener un criterio consistente en distintas areas o partes de tu negocio",
+      "texto_nuevo": "Si necesitas mantener un criterio consistente en distintas áreas o partes de tu negocio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: areas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

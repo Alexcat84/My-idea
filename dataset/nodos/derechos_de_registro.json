@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Derecho a registrar tus acciones para venderlas (Registration Rights)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Este derecho te permite exigir que el negocio registre tus acciones ante la oficina que regula los valores en tu pais, para que puedas venderlas publicamente. Solo importa de verdad si el negocio piensa salir a bolsa algun día. Incluye tres formas: pedir tu propio registro (un número limitado de veces), sumarte a un registro que ya esta en marcha, o pedir uno independiente. Cada una tiene limites de tiempo, un monto minimo de oferta y un porcentaje minimo garantizado si hay reduccion proporcional, normalmente no menos del 30%. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, seran los bancos de inversion quienes decidan como se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu pais.",
+  "resumen_teorico": "Este derecho te permite exigir que el negocio registre tus acciones ante la oficina que regula los valores en tu país, para que puedas venderlas públicamente. Solo importa de verdad si el negocio piensa salir a bolsa algún día. Incluye tres formas: pedir tu propio registro (un número limitado de veces), sumarte a un registro que ya esta en marcha, o pedir uno independiente. Cada una tiene limites de tiempo, un monto mínimo de oferta y un porcentaje mínimo garantizado si hay reducción proporcional, normalmente no menos del 30%. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, serán los bancos de inversión quienes decidan como se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu país.",
   "pasos_accionables": [
     "Define cuántas veces puedes exigir un registro (por ejemplo, dos) y el monto mínimo de oferta pública que necesitas para poder ejercerlo",
     "Negocia tu derecho a sumarte a un registro ya en marcha y cómo se reduciría tu parte según las condiciones de mercado",
@@ -14,7 +14,7 @@
   "entregable_esperado": "Cláusula de derecho a registrar tus acciones incluida en el acuerdo con los inversionistas, con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
   "condiciones_activacion": [
     "Si planeas una eventual salida a bolsa",
-    "Si necesitas garantias de poder vender tus acciones en el futuro",
+    "Si necesitas garantías de poder vender tus acciones en el futuro",
     "Cuando negocias una ronda institucional pensando en una futura salida a bolsa",
     "Cuando estas negociando los terminos con un inversionista de capital de riesgo"
   ],
@@ -118,6 +118,35 @@
         "evidencia": "O035-037.entregable: Cláusula, límites, reducción (Faltan las tildes de Cláusula, límites y reducción.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-derechos_de_registro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Este derecho te permite exigir que el negocio registre tus acciones ante la oficina que regula los valores en tu pais, para que puedas venderlas publicamente. Solo importa de verdad si el negocio piensa salir a bolsa algun día. Incluye tres formas: pedir tu propio registro (un número limitado de veces), sumarte a un registro que ya esta en marcha, o pedir uno independiente. Cada una tiene limites de tiempo, un monto minimo de oferta y un porcentaje minimo garantizado si hay reduccion proporcional, normalmente no menos del 30%. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, seran los bancos de inversion quienes decidan como se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu pais.",
+      "texto_nuevo": "Este derecho te permite exigir que el negocio registre tus acciones ante la oficina que regula los valores en tu país, para que puedas venderlas públicamente. Solo importa de verdad si el negocio piensa salir a bolsa algún día. Incluye tres formas: pedir tu propio registro (un número limitado de veces), sumarte a un registro que ya esta en marcha, o pedir uno independiente. Cada una tiene limites de tiempo, un monto mínimo de oferta y un porcentaje mínimo garantizado si hay reducción proporcional, normalmente no menos del 30%. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, serán los bancos de inversión quienes decidan como se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu país.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: algun, inversion, minimo, pais, publicamente, reduccion, seran"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-derechos_de_registro-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si necesitas garantias de poder vender tus acciones en el futuro",
+      "texto_nuevo": "Si necesitas garantías de poder vender tus acciones en el futuro",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: garantias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

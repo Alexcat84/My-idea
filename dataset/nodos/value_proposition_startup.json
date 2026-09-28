@@ -59,7 +59,7 @@
     "value_map"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas dejar claro por que tu cliente te compraria a ti"
+    "Cuando necesitas dejar claro por que tu cliente te compraría a ti"
   ],
   "etiqueta_arbol": "Resuelve el Trabajo del Cliente",
   "fuentes_internas": [
@@ -105,6 +105,21 @@
         "evidencia": "O019-019.entregable: específico (Solo corrige la tilde de específico.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-value_proposition_startup-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas dejar claro por que tu cliente te compraria a ti",
+      "texto_nuevo": "Cuando necesitas dejar claro por que tu cliente te compraría a ti",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: compraria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

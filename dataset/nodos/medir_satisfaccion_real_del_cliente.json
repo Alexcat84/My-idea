@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Medir la satisfacción real del cliente, no la que crees dar",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "La calidad de un servicio no la define lo que tu entregaste, sino lo que el cliente cree haber recibido comparado con lo que esperaba antes de comprar. Aunque tu proceso de entrega funcione perfecto por dentro, si el cliente esperaba algo distinto, existira una brecha de servicio que solo se detecta preguntando, no suponiendo. Esta brecha es el punto central para saber si tu logistica de salida esta funcionando de verdad. Medir esto exige comparar dos cosas por separado: la expectativa antes de la entrega y la percepcion despues de recibirla, en lugar de asumir que coinciden porque tu cumpliste el plazo que tenias planeado.",
+  "resumen_teorico": "La calidad de un servicio no la define lo que tu entregaste, sino lo que el cliente cree haber recibido comparado con lo que esperaba antes de comprar. Aunque tu proceso de entrega funcione perfecto por dentro, si el cliente esperaba algo distinto, existira una brecha de servicio que solo se detecta preguntando, no suponiendo. Esta brecha es el punto central para saber si tu logística de salida esta funcionando de verdad. Medir esto exige comparar dos cosas por separado: la expectativa antes de la entrega y la percepción después de recibirla, en lugar de asumir que coinciden porque tu cumpliste el plazo que tenias planeado.",
   "pasos_accionables": [
     "Pregunta directamente a tus clientes qué esperaban antes de que llegara su pedido.",
     "Pregunta después de la entrega qué recibieron en realidad y cómo se sintieron con eso.",
@@ -20,7 +20,7 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Crees que tu servicio es bueno pero las quejas no bajan.",
-    "No tienes forma de saber si el cliente recibio lo que esperaba.",
+    "No tienes forma de saber si el cliente recibió lo que esperaba.",
     "Quieres mejorar tu entrega pero no sabes por donde empezar a medir."
   ],
   "etiqueta_arbol": "Mide lo que el cliente percibe",
@@ -109,6 +109,35 @@
         "evidencia": "O042-032.entregable: comparacion, percibio, ultimos (Faltan las tildes de comparación, percibió y últimos.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-medir_satisfaccion_real_del_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La calidad de un servicio no la define lo que tu entregaste, sino lo que el cliente cree haber recibido comparado con lo que esperaba antes de comprar. Aunque tu proceso de entrega funcione perfecto por dentro, si el cliente esperaba algo distinto, existira una brecha de servicio que solo se detecta preguntando, no suponiendo. Esta brecha es el punto central para saber si tu logistica de salida esta funcionando de verdad. Medir esto exige comparar dos cosas por separado: la expectativa antes de la entrega y la percepcion despues de recibirla, en lugar de asumir que coinciden porque tu cumpliste el plazo que tenias planeado.",
+      "texto_nuevo": "La calidad de un servicio no la define lo que tu entregaste, sino lo que el cliente cree haber recibido comparado con lo que esperaba antes de comprar. Aunque tu proceso de entrega funcione perfecto por dentro, si el cliente esperaba algo distinto, existira una brecha de servicio que solo se detecta preguntando, no suponiendo. Esta brecha es el punto central para saber si tu logística de salida esta funcionando de verdad. Medir esto exige comparar dos cosas por separado: la expectativa antes de la entrega y la percepción después de recibirla, en lugar de asumir que coinciden porque tu cumpliste el plazo que tenias planeado.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: despues, logistica, percepcion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-medir_satisfaccion_real_del_cliente-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No tienes forma de saber si el cliente recibio lo que esperaba.",
+      "texto_nuevo": "No tienes forma de saber si el cliente recibió lo que esperaba.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: recibio"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

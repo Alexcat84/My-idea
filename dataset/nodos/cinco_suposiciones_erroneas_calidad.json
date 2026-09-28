@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Las Cinco Suposiciones Erróneas sobre la Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Existen cinco creencias erróneas que dificultan gestionar bien la calidad en tu negocio: (1) pensar que calidad significa lujo o algo bueno en abstracto; (2) creer que la calidad es intangible y no se puede medir; (3) suponer que existe una economia de la calidad que limita cuanta calidad puedes costear; (4) creer que los problemas de calidad nacen en quienes producen o fabrican; y (5) creer que la calidad es responsabilidad exclusiva de quien la revisa o controla. Superar estas suposiciones es el primer paso para que un programa de calidad funcione de verdad.",
+  "resumen_teorico": "Existen cinco creencias erróneas que dificultan gestionar bien la calidad en tu negocio: (1) pensar que calidad significa lujo o algo bueno en abstracto; (2) creer que la calidad es intangible y no se puede medir; (3) suponer que existe una economía de la calidad que limita cuanta calidad puedes costear; (4) creer que los problemas de calidad nacen en quienes producen o fabrican; y (5) creer que la calidad es responsabilidad exclusiva de quien la revisa o controla. Superar estas suposiciones es el primer paso para que un programa de calidad funcione de verdad.",
   "pasos_accionables": [
     "Sugerencia de My Idea: revisa cuáles de estas suposiciones erróneas están presentes en cómo piensas y manejas tu negocio, con entrevistas o encuestas a gerentes",
     "Aprende la definición correcta de calidad y cómo medirla a través de sus costos, y también que el error no es inevitable, la gente sí se preocupa",
@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando culpas siempre a quienes producen o fabrican por los defectos",
-    "Cuando dejas toda la responsabilidad de la calidad en una sola persona o area",
+    "Cuando dejas toda la responsabilidad de la calidad en una sola persona o área",
     "Al empezar a poner en marcha un programa de calidad en tu negocio",
     "Cuando existe resistencia cultural o escepticismo directivo hacia los programas de calidad."
   ],
@@ -122,6 +122,35 @@
         "evidencia": "O020-034.entregable: diagnóstico, qué, erróneas, están (Faltan tildes, entre ellas la de qué, que es interrogativa indirecta, y no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-cinco_suposiciones_erroneas_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Existen cinco creencias erróneas que dificultan gestionar bien la calidad en tu negocio: (1) pensar que calidad significa lujo o algo bueno en abstracto; (2) creer que la calidad es intangible y no se puede medir; (3) suponer que existe una economia de la calidad que limita cuanta calidad puedes costear; (4) creer que los problemas de calidad nacen en quienes producen o fabrican; y (5) creer que la calidad es responsabilidad exclusiva de quien la revisa o controla. Superar estas suposiciones es el primer paso para que un programa de calidad funcione de verdad.",
+      "texto_nuevo": "Existen cinco creencias erróneas que dificultan gestionar bien la calidad en tu negocio: (1) pensar que calidad significa lujo o algo bueno en abstracto; (2) creer que la calidad es intangible y no se puede medir; (3) suponer que existe una economía de la calidad que limita cuanta calidad puedes costear; (4) creer que los problemas de calidad nacen en quienes producen o fabrican; y (5) creer que la calidad es responsabilidad exclusiva de quien la revisa o controla. Superar estas suposiciones es el primer paso para que un programa de calidad funcione de verdad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: economia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-cinco_suposiciones_erroneas_calidad-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando dejas toda la responsabilidad de la calidad en una sola persona o area",
+      "texto_nuevo": "Cuando dejas toda la responsabilidad de la calidad en una sola persona o área",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: area"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

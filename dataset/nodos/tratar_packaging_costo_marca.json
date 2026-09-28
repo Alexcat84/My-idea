@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Trata el empaque como una variable de costo y de marca",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "La cantidad de empaque que usas no es un detalle menor: cada capa de carton, plastico o relleno agrega peso, y el peso agregado se traduce en mas costo de envio. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho mas del necesario para proteger el contenido, puede generar una impresion negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envios y pregunta directamente a tus clientes que perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuanto relleno es demasiado.",
+  "resumen_teorico": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y el peso agregado se traduce en mas costo de envio. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho mas del necesario para proteger el contenido, puede generar una impresión negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes que perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuanto relleno es demasiado.",
   "pasos_accionables": [
     "Pesa tu paquete actual y calcula cuánto peso agrega solo el empaque.",
     "Reduce relleno excesivo sin sacrificar la protección mínima necesaria.",
@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Tus costos de envio suben porque el paquete pesa mas de lo necesario por el relleno",
-    "Recibes comentarios de clientes sobre demasiado plastico o carton en el pedido",
+    "Recibes comentarios de clientes sobre demasiado plástico o cartón en el pedido",
     "Quieres diferenciar tu marca con un empaque mas responsable sin subir el costo"
   ],
   "etiqueta_arbol": "Ajusta el peso de tu empaque",
@@ -123,6 +123,35 @@
         "evidencia": "O065-006.entregable: retroalimentación (Falta la tilde de 'retroalimentación'; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-tratar_packaging_costo_marca-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La cantidad de empaque que usas no es un detalle menor: cada capa de carton, plastico o relleno agrega peso, y el peso agregado se traduce en mas costo de envio. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho mas del necesario para proteger el contenido, puede generar una impresion negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envios y pregunta directamente a tus clientes que perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuanto relleno es demasiado.",
+      "texto_nuevo": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y el peso agregado se traduce en mas costo de envio. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho mas del necesario para proteger el contenido, puede generar una impresión negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes que perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuanto relleno es demasiado.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: carton, envios, impresion, plastico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-tratar_packaging_costo_marca-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recibes comentarios de clientes sobre demasiado plastico o carton en el pedido",
+      "texto_nuevo": "Recibes comentarios de clientes sobre demasiado plástico o cartón en el pedido",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: carton, plastico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

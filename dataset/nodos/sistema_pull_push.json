@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistemas Pull versus Push en Producción",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basandose en pronosticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza segun su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operacion. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la produccion segun consumo real, no segun pronostico.",
+  "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en pronósticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según consumo real, no según pronostico.",
   "pasos_accionables": [
     "Evaluar si tu operación actual funciona bajo un esquema push o pull",
     "Identificar los cuellos de botella que el sistema push está ignorando en tu proceso",
@@ -28,7 +28,7 @@
   ],
   "condiciones_activacion": [
     "Cuando tienes exceso de inventario en proceso (WIP)",
-    "Cuando tu flujo de produccion esta desbalanceado",
+    "Cuando tu flujo de producción esta desbalanceado",
     "Cuando enfrentas fluctuaciones de demanda que generan desbalance de capacidad"
   ],
   "etiqueta_arbol": "Elige entre Empujar o Jalar Producción",
@@ -134,6 +134,35 @@
         "evidencia": "O044-036.entregable: producción, lógica, métricas (Solo se añaden las tildes que faltaban en producción, lógica y métricas.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-sistema_pull_push-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basandose en pronosticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza segun su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operacion. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la produccion segun consumo real, no segun pronostico.",
+      "texto_nuevo": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en pronósticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según consumo real, no según pronostico.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: basandose, operacion, produccion, pronosticos, segun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-sistema_pull_push-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu flujo de produccion esta desbalanceado",
+      "texto_nuevo": "Cuando tu flujo de producción esta desbalanceado",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: produccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Involucramiento de Empleados en Iniciativas Verdes",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las iniciativas ecologicas no funcionan si dependen de una sola persona: necesitan que quienes te acompanan se sumen de verdad. Eso empieza por dar tu mismo el ejemplo, hacer que las practicas sean visibles y faciles de seguir, ofrecer incentivos y reconocimiento, y crear una sana competencia entre equipos (como la competencia energetica que hizo Yale) para mantener el compromiso en el tiempo.",
+  "resumen_teorico": "Las iniciativas ecológicas no funcionan si dependen de una sola persona: necesitan que quienes te acompañan se sumen de verdad. Eso empieza por dar tu mismo el ejemplo, hacer que las practicas sean visibles y fáciles de seguir, ofrecer incentivos y reconocimiento, y crear una sana competencia entre equipos (como la competencia energética que hizo Yale) para mantener el compromiso en el tiempo.",
   "pasos_accionables": [
     "Da tú el ejemplo adoptando prácticas verdes de forma visible",
     "Diseña incentivos y reconocimientos para quienes se suman (bonos verdes, menciones, premios)",
@@ -20,7 +20,7 @@
     "involucrar_empleados_ahorro_energetico"
   ],
   "condiciones_activacion": [
-    "Si notas resistencia o poca adopcion de practicas sostenibles entre quienes trabajan contigo",
+    "Si notas resistencia o poca adopción de practicas sostenibles entre quienes trabajan contigo",
     "Cuando quieres llevar una prueba piloto a todo tu negocio"
   ],
   "etiqueta_arbol": "Suma a tu Equipo Verde",
@@ -96,6 +96,35 @@
         "evidencia": "O061-003.entregable: comunicación, participación (Tildes que faltaban en comunicación y participación; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-involucramiento_empleados_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las iniciativas ecologicas no funcionan si dependen de una sola persona: necesitan que quienes te acompanan se sumen de verdad. Eso empieza por dar tu mismo el ejemplo, hacer que las practicas sean visibles y faciles de seguir, ofrecer incentivos y reconocimiento, y crear una sana competencia entre equipos (como la competencia energetica que hizo Yale) para mantener el compromiso en el tiempo.",
+      "texto_nuevo": "Las iniciativas ecológicas no funcionan si dependen de una sola persona: necesitan que quienes te acompañan se sumen de verdad. Eso empieza por dar tu mismo el ejemplo, hacer que las practicas sean visibles y fáciles de seguir, ofrecer incentivos y reconocimiento, y crear una sana competencia entre equipos (como la competencia energética que hizo Yale) para mantener el compromiso en el tiempo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: acompanan, ecologicas, energetica, faciles"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-involucramiento_empleados_sostenibilidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si notas resistencia o poca adopcion de practicas sostenibles entre quienes trabajan contigo",
+      "texto_nuevo": "Si notas resistencia o poca adopción de practicas sostenibles entre quienes trabajan contigo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: adopcion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

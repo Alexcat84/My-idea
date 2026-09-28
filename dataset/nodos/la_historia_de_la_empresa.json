@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La Historia de la Empresa, y no es el Eslogan",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "La historia de la empresa no es una frase pegadiza: es el texto completo que contesta por que existe, por que importa, por que alguien deberia unirse, por que alguien deberia comprar y por que alguien deberia invertir. Escribirla entera es incomodo justamente porque obliga a contestar las cinco, y las cartas fundacionales que se citan como referencia son largas por eso. La prueba de que la historia esta bien no es que suene bien: es que las personas clave, empleados, inversionistas, prensa y clientes, puedan contarla con SUS propias palabras sin perder el sentido. Y hay una senal barata de que no esta clara, que casi siempre se lee mal: cuando adentro se repite que nadie los entiende o que hace falta mejor marketing, el problema no suele ser el marketing, es que la historia o la estrategia no estan claras.",
+  "resumen_teorico": "La historia de la empresa no es una frase pegadiza: es el texto completo que contesta por que existe, por que importa, por que alguien debería unirse, por que alguien debería comprar y por que alguien debería invertir. Escribirla entera es incomodo justamente porque obliga a contestar las cinco, y las cartas fundacionales que se citan como referencia son largas por eso. La prueba de que la historia esta bien no es que suene bien: es que las personas clave, empleados, inversionistas, prensa y clientes, puedan contarla con SUS propias palabras sin perder el sentido. Y hay una señal barata de que no esta clara, que casi siempre se lee mal: cuando adentro se repite que nadie los entiende o que hace falta mejor marketing, el problema no suele ser el marketing, es que la historia o la estrategia no están claras.",
   "pasos_accionables": [
     "Redacta la historia completa de tu empresa (no un eslogan) respondiendo: por qué existe, por qué importa, por qué unirse, por qué comprar, por qué invertir.",
     "Usa como referencia cartas fundacionales como la de Jeff Bezos a los accionistas de Amazon en 1997.",
@@ -37,6 +37,20 @@
         "evidencia": "O020-008.entregable: qué (x5), comprobación (Los cinco por qué son interrogativas indirectas y llevan tilde, y a comprobación le falta la suya.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-la_historia_de_la_empresa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La historia de la empresa no es una frase pegadiza: es el texto completo que contesta por que existe, por que importa, por que alguien deberia unirse, por que alguien deberia comprar y por que alguien deberia invertir. Escribirla entera es incomodo justamente porque obliga a contestar las cinco, y las cartas fundacionales que se citan como referencia son largas por eso. La prueba de que la historia esta bien no es que suene bien: es que las personas clave, empleados, inversionistas, prensa y clientes, puedan contarla con SUS propias palabras sin perder el sentido. Y hay una senal barata de que no esta clara, que casi siempre se lee mal: cuando adentro se repite que nadie los entiende o que hace falta mejor marketing, el problema no suele ser el marketing, es que la historia o la estrategia no estan claras.",
+      "texto_nuevo": "La historia de la empresa no es una frase pegadiza: es el texto completo que contesta por que existe, por que importa, por que alguien debería unirse, por que alguien debería comprar y por que alguien debería invertir. Escribirla entera es incomodo justamente porque obliga a contestar las cinco, y las cartas fundacionales que se citan como referencia son largas por eso. La prueba de que la historia esta bien no es que suene bien: es que las personas clave, empleados, inversionistas, prensa y clientes, puedan contarla con SUS propias palabras sin perder el sentido. Y hay una señal barata de que no esta clara, que casi siempre se lee mal: cuando adentro se repite que nadie los entiende o que hace falta mejor marketing, el problema no suele ser el marketing, es que la historia o la estrategia no están claras.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: deberia, estan, senal"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

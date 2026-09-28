@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+  "resumen_teorico": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfacción, reputación) son extremadamente difíciles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
   "pasos_accionables": [
     "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precisión razonable",
     "Si no puedes ponerle número al beneficio, usa un análisis de rangos o de opciones en lugar de forzar una cifra monetaria",
@@ -17,8 +17,8 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando quieras justificar una inversion en calidad usando un análisis costo/beneficio",
-    "Cuando la decision de diseño involucre riesgo de seguridad"
+    "Cuando quieras justificar una inversión en calidad usando un análisis costo/beneficio",
+    "Cuando la decisión de diseño involucre riesgo de seguridad"
   ],
   "etiqueta_arbol": "Cuestiona el Costo Beneficio en Calidad",
   "correcciones": [
@@ -105,6 +105,50 @@
         "evidencia": "O030-005.entregable: límites, estés (Faltan las tildes de límites y estés; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-limitaciones_analisis_costo_beneficio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "texto_nuevo": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfacción, reputación) son extremadamente difíciles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: dificiles, reputacion, satisfaccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-limitaciones_analisis_costo_beneficio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieras justificar una inversion en calidad usando un análisis costo/beneficio",
+      "texto_nuevo": "Cuando quieras justificar una inversión en calidad usando un análisis costo/beneficio",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: inversion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-limitaciones_analisis_costo_beneficio-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la decision de diseño involucre riesgo de seguridad",
+      "texto_nuevo": "Cuando la decisión de diseño involucre riesgo de seguridad",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: decision"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

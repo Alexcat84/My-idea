@@ -24,7 +24,7 @@
     "reglas_origen_sectoriales"
   ],
   "condiciones_activacion": [
-    "Si exportas desde Estados Unidos a un pais con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
+    "Si exportas desde Estados Unidos a un país con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
     "Si el producto contiene insumos o componentes de múltiples países"
   ],
   "merged_originals": [
@@ -103,6 +103,21 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-tildes-reglas_de_origen_fta_2-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si exportas desde Estados Unidos a un pais con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
+      "texto_nuevo": "Si exportas desde Estados Unidos a un país con el que EE.UU. tiene un Tratado de Libre Comercio vigente",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: pais"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

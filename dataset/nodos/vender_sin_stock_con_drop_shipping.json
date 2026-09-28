@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Vender sin stock con drop-shipping",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tu pasas ese pedido al fabricante o mayorista y es el quien empaca y envia directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo util con articulos pesados o voluminosos donde evitas manipular la carga dos veces. El riesgo es que pierdes control sobre lo que el cliente realmente recibe: la calidad del empaque, el tiempo de entrega y el trato quedan en manos de un tercero que no eliges pedido por pedido. Existen proveedores que no cumplen lo prometido, asi que la relacion con quien surte tu mercancia debe evaluarse antes de escalar volumen, no despues de las primeras quejas.",
+  "resumen_teorico": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tu pasas ese pedido al fabricante o mayorista y es el quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados o voluminosos donde evitas manipular la carga dos veces. El riesgo es que pierdes control sobre lo que el cliente realmente recibe: la calidad del empaque, el tiempo de entrega y el trato quedan en manos de un tercero que no eliges pedido por pedido. Existen proveedores que no cumplen lo prometido, así que la relación con quien surte tu mercancía debe evaluarse antes de escalar volumen, no después de las primeras quejas.",
   "pasos_accionables": [
     "Contacta fabricantes o mayoristas de tu categoría y pregunta si envían directo al cliente final.",
     "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
@@ -21,8 +21,8 @@
   ],
   "condiciones_activacion": [
     "Quieres vender varios productos sin pagar bodega ni comprar inventario por adelantado.",
-    "Te preocupa quedarte con mercancia pesada o de poca rotacion.",
-    "Ya tienes contacto con proveedores que podrian despachar directo al comprador."
+    "Te preocupa quedarte con mercancía pesada o de poca rotación.",
+    "Ya tienes contacto con proveedores que podrían despachar directo al comprador."
   ],
   "etiqueta_arbol": "Vende sin guardar inventario",
   "correcciones": [
@@ -110,6 +110,50 @@
         "evidencia": "O041-020.entregable: más (Solo añade la tilde que falta en 'más', que aquí tiene valor de suma.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-vender_sin_stock_con_drop_shipping-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tu pasas ese pedido al fabricante o mayorista y es el quien empaca y envia directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo util con articulos pesados o voluminosos donde evitas manipular la carga dos veces. El riesgo es que pierdes control sobre lo que el cliente realmente recibe: la calidad del empaque, el tiempo de entrega y el trato quedan en manos de un tercero que no eliges pedido por pedido. Existen proveedores que no cumplen lo prometido, asi que la relacion con quien surte tu mercancia debe evaluarse antes de escalar volumen, no despues de las primeras quejas.",
+      "texto_nuevo": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tu pasas ese pedido al fabricante o mayorista y es el quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados o voluminosos donde evitas manipular la carga dos veces. El riesgo es que pierdes control sobre lo que el cliente realmente recibe: la calidad del empaque, el tiempo de entrega y el trato quedan en manos de un tercero que no eliges pedido por pedido. Existen proveedores que no cumplen lo prometido, así que la relación con quien surte tu mercancía debe evaluarse antes de escalar volumen, no después de las primeras quejas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: articulos, asi, despues, envia, mercancia, relacion, util"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-vender_sin_stock_con_drop_shipping-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Te preocupa quedarte con mercancia pesada o de poca rotacion.",
+      "texto_nuevo": "Te preocupa quedarte con mercancía pesada o de poca rotación.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: mercancia, rotacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-vender_sin_stock_con_drop_shipping-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ya tienes contacto con proveedores que podrian despachar directo al comprador.",
+      "texto_nuevo": "Ya tienes contacto con proveedores que podrían despachar directo al comprador.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: podrian"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

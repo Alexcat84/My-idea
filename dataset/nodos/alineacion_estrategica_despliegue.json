@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Alineación entre tu estrategia y tus metas de calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un paso crucial en cualquier revisión de tu negocio es verificar que tu misión, visión, valores y politicas esten alineados y se comuniquen con claridad hasta llegar al cliente final. A partir de estos elementos se desarrollan estrategias de largo plazo y metas anuales de corto plazo, que se despliegan mediante politicas e iniciativas. La falta de alineación entre tu plan estrategico y las actividades diarias puede provocar proyectos de baja importancia y desperdicio de recursos.",
+  "resumen_teorico": "Un paso crucial en cualquier revisión de tu negocio es verificar que tu misión, visión, valores y políticas estén alineados y se comuniquen con claridad hasta llegar al cliente final. A partir de estos elementos se desarrollan estrategias de largo plazo y metas anuales de corto plazo, que se despliegan mediante políticas e iniciativas. La falta de alineación entre tu plan estratégico y las actividades diarias puede provocar proyectos de baja importancia y desperdicio de recursos.",
   "pasos_accionables": [
     "Identificar la misión, visión, valores y políticas actuales de tu negocio",
     "Verificar la coherencia entre tus metas de largo plazo (estrategias) y tus metas anuales de corto plazo",
@@ -110,6 +110,20 @@
         "evidencia": "O043-039.entregable: cómo (cómo es interrogativo indirecto y lleva tilde.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-alineacion_estrategica_despliegue-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un paso crucial en cualquier revisión de tu negocio es verificar que tu misión, visión, valores y politicas esten alineados y se comuniquen con claridad hasta llegar al cliente final. A partir de estos elementos se desarrollan estrategias de largo plazo y metas anuales de corto plazo, que se despliegan mediante politicas e iniciativas. La falta de alineación entre tu plan estrategico y las actividades diarias puede provocar proyectos de baja importancia y desperdicio de recursos.",
+      "texto_nuevo": "Un paso crucial en cualquier revisión de tu negocio es verificar que tu misión, visión, valores y políticas estén alineados y se comuniquen con claridad hasta llegar al cliente final. A partir de estos elementos se desarrollan estrategias de largo plazo y metas anuales de corto plazo, que se despliegan mediante políticas e iniciativas. La falta de alineación entre tu plan estratégico y las actividades diarias puede provocar proyectos de baja importancia y desperdicio de recursos.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: esten, estrategico, politicas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

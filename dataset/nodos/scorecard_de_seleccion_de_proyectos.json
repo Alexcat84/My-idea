@@ -35,7 +35,7 @@
     "technology_platform_evaluation"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas comparar tus proyectos con criterios explicitos de estrategia, ventaja competitiva, mercado, capacidades, viabilidad tecnica y riesgo contra retorno",
+    "Cuando necesitas comparar tus proyectos con criterios explícitos de estrategia, ventaja competitiva, mercado, capacidades, viabilidad técnica y riesgo contra retorno",
     "Cuando tienes varios proyectos compitiendo por el mismo tiempo o dinero",
     "Cuando decides en qué invertir por intuición o por presión de otros, sin criterios claros",
     "Cuando los datos financieros todavía no son confiables porque el proyecto está en una etapa temprana",
@@ -70,6 +70,21 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-tildes-scorecard_de_seleccion_de_proyectos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando necesitas comparar tus proyectos con criterios explicitos de estrategia, ventaja competitiva, mercado, capacidades, viabilidad tecnica y riesgo contra retorno",
+      "texto_nuevo": "Cuando necesitas comparar tus proyectos con criterios explícitos de estrategia, ventaja competitiva, mercado, capacidades, viabilidad técnica y riesgo contra retorno",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: explicitos, tecnica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

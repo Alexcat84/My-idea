@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Pide una revisión externa antes de firmar cualquier contrato",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Antes de firmar, pide que alguien mas lea el contrato completo: un colega con mas experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o clausulas faltantes que tu, por estar metido en la negociacion, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta informacion por escrito, no que algo este mal. Esta revision cuesta poco tiempo y evita que despues tengas que corregir el contrato con el proveedor, lo cual siempre es mas incomodo que corregirlo antes de firmar.",
+  "resumen_teorico": "Antes de firmar, pide que alguien mas lea el contrato completo: un colega con mas experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o cláusulas faltantes que tu, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo este mal. Esta revisión cuesta poco tiempo y evita que después tengas que corregir el contrato con el proveedor, lo cual siempre es mas incomodo que corregirlo antes de firmar.",
   "pasos_accionables": [
     "Termina el borrador del contrato con todos los términos que negociaste incluidos.",
     "Envíalo a al menos una persona de confianza con más experiencia en contratos o en tu tipo de negocio.",
@@ -111,6 +111,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-pide_una_revision_externa_antes_de_firmar_cualquier_contrato-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de firmar, pide que alguien mas lea el contrato completo: un colega con mas experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o clausulas faltantes que tu, por estar metido en la negociacion, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta informacion por escrito, no que algo este mal. Esta revision cuesta poco tiempo y evita que despues tengas que corregir el contrato con el proveedor, lo cual siempre es mas incomodo que corregirlo antes de firmar.",
+      "texto_nuevo": "Antes de firmar, pide que alguien mas lea el contrato completo: un colega con mas experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o cláusulas faltantes que tu, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo este mal. Esta revisión cuesta poco tiempo y evita que después tengas que corregir el contrato con el proveedor, lo cual siempre es mas incomodo que corregirlo antes de firmar.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: clausulas, despues, informacion, negociacion, revision"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

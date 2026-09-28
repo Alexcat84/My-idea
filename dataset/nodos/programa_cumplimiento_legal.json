@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Un sistema para reducir el riesgo de demandas al vender franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "La mayoria de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educacion, cuidado y un método claro de cumplimiento. Esto incluye capacitar cada ano a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periodicas para revisar como se vende, y aplicar mano dura sin excepciones ante cualquier infraccion.",
+  "resumen_teorico": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado y un método claro de cumplimiento. Esto incluye capacitar cada ano a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periódicas para revisar como se vende, y aplicar mano dura sin excepciones ante cualquier infraccion.",
   "pasos_accionables": [
     "Capacita cada año a quien vende tus franquicias en la ley de franquicias de tu mercado, con una evaluación que quede registrada",
     "Designa a una persona (puede ser tú mismo) como punto de contacto para dudas legales sobre las ventas",
@@ -97,6 +97,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 5
+    },
+    {
+      "id": "final-tildes-programa_cumplimiento_legal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La mayoria de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educacion, cuidado y un método claro de cumplimiento. Esto incluye capacitar cada ano a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periodicas para revisar como se vende, y aplicar mano dura sin excepciones ante cualquier infraccion.",
+      "texto_nuevo": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado y un método claro de cumplimiento. Esto incluye capacitar cada ano a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periódicas para revisar como se vende, y aplicar mano dura sin excepciones ante cualquier infraccion.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: educacion, mayoria, periodicas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

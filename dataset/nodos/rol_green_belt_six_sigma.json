@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Tu papel con entrenamiento básico en Six Sigma (Green Belt)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Con unos 8 días de capacitación en métodos y herramientas de Six Sigma, puedes colaborar en proyectos liderados por alguien con más experiencia (Black Belt) o liderar tú mismo proyectos de menor alcance. Espera que cada proyecto que lideres genere un retorno importante: pregunta cuál es el rango esperado en tu mercado.",
+  "resumen_teorico": "Con unos 8 días de capacitación en métodos y herramientas de Six Sigma, puedes colaborar en proyectos liderados por alguien con más experiencia (Black Belt) o liderar tú mismo proyectos de menor alcance. Espera que cada proyecto que líderes genere un retorno importante: pregunta cuál es el rango esperado en tu mercado.",
   "pasos_accionables": [
     "Capacítate, o capacita a quien trabaja contigo, durante unos 8 días en las herramientas de Six Sigma",
     "Toma proyectos pequeños o apoya proyectos liderados por alguien con más experiencia (Black Belt)",
@@ -39,6 +39,20 @@
         "evidencia": "Q072-006: Capacitarse como Green Belt y liderar o apoyar proyectos de mejora midiendo su ahorro es mejorar procesos de un negocio en marcha, fase ejecucion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-tildes-rol_green_belt_six_sigma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con unos 8 días de capacitación en métodos y herramientas de Six Sigma, puedes colaborar en proyectos liderados por alguien con más experiencia (Black Belt) o liderar tú mismo proyectos de menor alcance. Espera que cada proyecto que lideres genere un retorno importante: pregunta cuál es el rango esperado en tu mercado.",
+      "texto_nuevo": "Con unos 8 días de capacitación en métodos y herramientas de Six Sigma, puedes colaborar en proyectos liderados por alguien con más experiencia (Black Belt) o liderar tú mismo proyectos de menor alcance. Espera que cada proyecto que líderes genere un retorno importante: pregunta cuál es el rango esperado en tu mercado.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: lideres"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

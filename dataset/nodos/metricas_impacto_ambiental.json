@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Cómo medir el impacto ambiental de tu negocio",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Tienes varias formas de medir el impacto ambiental de tu negocio: datos absolutos (toneladas, metros cúbicos, kilovatios hora), datos de tendencia (cómo cambian año a año) y datos normalizados o de intensidad (por ejemplo, emisiones de CO2 por unidad de producto). Qué metricas elijas depende de tu sector, de tus propios objetivos y de lo que esperan de ti quienes te rodean: clientes, inversionistas, tu comunidad.",
+  "resumen_teorico": "Tienes varias formas de medir el impacto ambiental de tu negocio: datos absolutos (toneladas, metros cúbicos, kilovatios hora), datos de tendencia (cómo cambian año a año) y datos normalizados o de intensidad (por ejemplo, emisiones de CO2 por unidad de producto). Qué métricas elijas depende de tu sector, de tus propios objetivos y de lo que esperan de ti quienes te rodean: clientes, inversionistas, tu comunidad.",
   "pasos_accionables": [
     "Familiarízate con las métricas que ya existen y, si te sirve, apóyate en marcos de referencia reconocidos que existan en tu mercado para orientarte",
     "Elige métricas absolutas que tengan sentido para tu negocio: agua, energía, residuos, CO2",
@@ -101,6 +101,20 @@
         "evidencia": "O031-019.entregable: métricas (Tilde real en métricas; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-metricas_impacto_ambiental-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tienes varias formas de medir el impacto ambiental de tu negocio: datos absolutos (toneladas, metros cúbicos, kilovatios hora), datos de tendencia (cómo cambian año a año) y datos normalizados o de intensidad (por ejemplo, emisiones de CO2 por unidad de producto). Qué metricas elijas depende de tu sector, de tus propios objetivos y de lo que esperan de ti quienes te rodean: clientes, inversionistas, tu comunidad.",
+      "texto_nuevo": "Tienes varias formas de medir el impacto ambiental de tu negocio: datos absolutos (toneladas, metros cúbicos, kilovatios hora), datos de tendencia (cómo cambian año a año) y datos normalizados o de intensidad (por ejemplo, emisiones de CO2 por unidad de producto). Qué métricas elijas depende de tu sector, de tus propios objetivos y de lo que esperan de ti quienes te rodean: clientes, inversionistas, tu comunidad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: metricas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

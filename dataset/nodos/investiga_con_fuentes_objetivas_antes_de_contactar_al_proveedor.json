@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Investiga con fuentes objetivas antes de contactar al proveedor",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Antes de hablar con un proveedor, investiga por tu cuenta en fuentes que no dependan de el: reportes independientes, opiniones de otros compradores, comparativos de precio y calidad. Esta tarea te da una base propia de comparacion que el vendedor no puede manipular. Cuando ya sabes que existe en el mercado, que rango de precio es razonable y que otras opciones hay, entras a la conversacion sabiendo que preguntar y que exigir. Sin esta tarea previa, dependes solo de lo que el vendedor te cuenta, y eso deja toda la ventaja de informacion del lado de quien te quiere vender. Investigar primero tambien te ayuda a notar contradicciones entre lo que dice un proveedor y lo que dicen fuentes independientes.",
+  "resumen_teorico": "Antes de hablar con un proveedor, investiga por tu cuenta en fuentes que no dependan de el: reportes independientes, opiniones de otros compradores, comparativos de precio y calidad. Esta tarea te da una base propia de comparación que el vendedor no puede manipular. Cuando ya sabes que existe en el mercado, que rango de precio es razonable y que otras opciones hay, entras a la conversación sabiendo que preguntar y que exigir. Sin esta tarea previa, dependes solo de lo que el vendedor te cuenta, y eso deja toda la ventaja de información del lado de quien te quiere vender. Investigar primero también te ayuda a notar contradicciones entre lo que dice un proveedor y lo que dicen fuentes independientes.",
   "pasos_accionables": [
     "Busca fuentes independientes y de confianza, como reseñas o comparadores, sobre lo que necesitas.",
     "Anota el rango de precios que encuentras para tener un punto de referencia propio.",
@@ -109,6 +109,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-tildes-investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de hablar con un proveedor, investiga por tu cuenta en fuentes que no dependan de el: reportes independientes, opiniones de otros compradores, comparativos de precio y calidad. Esta tarea te da una base propia de comparacion que el vendedor no puede manipular. Cuando ya sabes que existe en el mercado, que rango de precio es razonable y que otras opciones hay, entras a la conversacion sabiendo que preguntar y que exigir. Sin esta tarea previa, dependes solo de lo que el vendedor te cuenta, y eso deja toda la ventaja de informacion del lado de quien te quiere vender. Investigar primero tambien te ayuda a notar contradicciones entre lo que dice un proveedor y lo que dicen fuentes independientes.",
+      "texto_nuevo": "Antes de hablar con un proveedor, investiga por tu cuenta en fuentes que no dependan de el: reportes independientes, opiniones de otros compradores, comparativos de precio y calidad. Esta tarea te da una base propia de comparación que el vendedor no puede manipular. Cuando ya sabes que existe en el mercado, que rango de precio es razonable y que otras opciones hay, entras a la conversación sabiendo que preguntar y que exigir. Sin esta tarea previa, dependes solo de lo que el vendedor te cuenta, y eso deja toda la ventaja de información del lado de quien te quiere vender. Investigar primero también te ayuda a notar contradicciones entre lo que dice un proveedor y lo que dicen fuentes independientes.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comparacion, conversacion, informacion, tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Mapeo de Stakeholders (Stakeholder Wheel)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Herramienta para identificar y mapear a los actores que, junto con tu negocio, definen las prioridades de sostenibilidad de tu industria: empleados, inversores, bancos, comunidades, gobiernos, ONG, medios, reguladores, competidores y academia. No eliges tus prioridades de forma aislada, la sociedad y estos actores externos también las moldean. La herramienta te ayuda a identificar quien lidera el debate en cada categoria, y a mirar a cada actor según cuanto te puede influir y cuanto le importa cada tema, para decidir si conviene cultivar la relacion, involucrarlo de cerca, mantenerlo informado o simplemente monitorearlo. Cruzando esto con tu propia mirada sobre lo que es material para tu negocio, ajustas tu lista final de prioridades incorporando temas que estos actores consideran criticos aunque a ti te parezcan menores.",
+  "resumen_teorico": "Herramienta para identificar y mapear a los actores que, junto con tu negocio, definen las prioridades de sostenibilidad de tu industria: empleados, inversores, bancos, comunidades, gobiernos, ONG, medios, reguladores, competidores y academia. No eliges tus prioridades de forma aislada, la sociedad y estos actores externos también las moldean. La herramienta te ayuda a identificar quien lidera el debate en cada categoría, y a mirar a cada actor según cuanto te puede influir y cuanto le importa cada tema, para decidir si conviene cultivar la relación, involucrarlo de cerca, mantenerlo informado o simplemente monitorearlo. Cruzando esto con tu propia mirada sobre lo que es material para tu negocio, ajustas tu lista final de prioridades incorporando temas que estos actores consideran críticos aunque a ti te parezcan menores.",
   "pasos_accionables": [
     "Identificar todos los actores relevantes para tu industria: empleados, inversores, bancos, comunidades, gobiernos, ONG, medios, reguladores, competidores y academia",
     "Determinar qué personas o grupos lideran el debate en cada categoría",
@@ -26,8 +26,8 @@
   ],
   "condiciones_activacion": [
     "Cuando no tienes claro que grupos externos pueden afectar tu estrategia de sostenibilidad",
-    "Si enfrentas conflictos o presion de ONG, comunidades o reguladores sin una estrategia clara de respuesta",
-    "Cuando tu propia mirada sobre lo material no considera las presiones externas de mercado, regulacion o sociedad",
+    "Si enfrentas conflictos o presión de ONG, comunidades o reguladores sin una estrategia clara de respuesta",
+    "Cuando tu propia mirada sobre lo material no considera las presiones externas de mercado, regulación o sociedad",
     "Si necesitas validar tus prioridades de sostenibilidad frente a lo que esperan de afuera"
   ],
   "etiqueta_arbol": "Mapea a tus Grupos Clave",
@@ -126,6 +126,50 @@
         "motivo": "arista entre dos mundos (environmental -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-tildes-stakeholder_mapping_wheel-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Herramienta para identificar y mapear a los actores que, junto con tu negocio, definen las prioridades de sostenibilidad de tu industria: empleados, inversores, bancos, comunidades, gobiernos, ONG, medios, reguladores, competidores y academia. No eliges tus prioridades de forma aislada, la sociedad y estos actores externos también las moldean. La herramienta te ayuda a identificar quien lidera el debate en cada categoria, y a mirar a cada actor según cuanto te puede influir y cuanto le importa cada tema, para decidir si conviene cultivar la relacion, involucrarlo de cerca, mantenerlo informado o simplemente monitorearlo. Cruzando esto con tu propia mirada sobre lo que es material para tu negocio, ajustas tu lista final de prioridades incorporando temas que estos actores consideran criticos aunque a ti te parezcan menores.",
+      "texto_nuevo": "Herramienta para identificar y mapear a los actores que, junto con tu negocio, definen las prioridades de sostenibilidad de tu industria: empleados, inversores, bancos, comunidades, gobiernos, ONG, medios, reguladores, competidores y academia. No eliges tus prioridades de forma aislada, la sociedad y estos actores externos también las moldean. La herramienta te ayuda a identificar quien lidera el debate en cada categoría, y a mirar a cada actor según cuanto te puede influir y cuanto le importa cada tema, para decidir si conviene cultivar la relación, involucrarlo de cerca, mantenerlo informado o simplemente monitorearlo. Cruzando esto con tu propia mirada sobre lo que es material para tu negocio, ajustas tu lista final de prioridades incorporando temas que estos actores consideran críticos aunque a ti te parezcan menores.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: categoria, criticos, relacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-stakeholder_mapping_wheel-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si enfrentas conflictos o presion de ONG, comunidades o reguladores sin una estrategia clara de respuesta",
+      "texto_nuevo": "Si enfrentas conflictos o presión de ONG, comunidades o reguladores sin una estrategia clara de respuesta",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: presion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-stakeholder_mapping_wheel-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu propia mirada sobre lo material no considera las presiones externas de mercado, regulacion o sociedad",
+      "texto_nuevo": "Cuando tu propia mirada sobre lo material no considera las presiones externas de mercado, regulación o sociedad",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: regulacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

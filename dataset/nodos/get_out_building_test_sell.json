@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Vender de verdad para probar tu modelo de negocio (test selling)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Sal a vender el producto a tus primeros clientes convencidos (earlyvangelists) a un precio cercano al completo, para comprobar de forma clara si tus hipótesis de negocio funcionan o no. A diferencia de regalar o descontar el producto, cobrar precio completo te dice si realmente hay intención de compra. Maneja con cuidado el riesgo de que te pidan personalizaciones y el riesgo de comprometerte con clausulas de exclusividad.",
+  "resumen_teorico": "Sal a vender el producto a tus primeros clientes convencidos (earlyvangelists) a un precio cercano al completo, para comprobar de forma clara si tus hipótesis de negocio funcionan o no. A diferencia de regalar o descontar el producto, cobrar precio completo te dice si realmente hay intención de compra. Maneja con cuidado el riesgo de que te pidan personalizaciones y el riesgo de comprometerte con cláusulas de exclusividad.",
   "pasos_accionables": [
     "Define pruebas claras de si funciona o no basadas en tus hipótesis de negocio (por ejemplo, cuántas ventas cierras)",
     "Vende a tus primeros clientes convencidos (earlyvangelists) a un precio cercano al completo, evitando descuentos excesivos",
@@ -28,7 +28,7 @@
   ],
   "condiciones_activacion": [
     "Cuando ya terminaste de hablar con clientes para entender el problema y ya identificaste a tus primeros clientes convencidos",
-    "Si necesitas validar, todavia no escalar, tu modelo de negocio con pruebas reales de venta"
+    "Si necesitas validar, todavía no escalar, tu modelo de negocio con pruebas reales de venta"
   ],
   "etiqueta_arbol": "Valida Vendiendo de Verdad",
   "fuentes_internas": [
@@ -103,6 +103,35 @@
         "evidencia": "O003-027.entregable: pronóstico (Solo añade la tilde que faltaba en pronóstico.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-get_out_building_test_sell-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sal a vender el producto a tus primeros clientes convencidos (earlyvangelists) a un precio cercano al completo, para comprobar de forma clara si tus hipótesis de negocio funcionan o no. A diferencia de regalar o descontar el producto, cobrar precio completo te dice si realmente hay intención de compra. Maneja con cuidado el riesgo de que te pidan personalizaciones y el riesgo de comprometerte con clausulas de exclusividad.",
+      "texto_nuevo": "Sal a vender el producto a tus primeros clientes convencidos (earlyvangelists) a un precio cercano al completo, para comprobar de forma clara si tus hipótesis de negocio funcionan o no. A diferencia de regalar o descontar el producto, cobrar precio completo te dice si realmente hay intención de compra. Maneja con cuidado el riesgo de que te pidan personalizaciones y el riesgo de comprometerte con cláusulas de exclusividad.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: clausulas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-get_out_building_test_sell-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si necesitas validar, todavia no escalar, tu modelo de negocio con pruebas reales de venta",
+      "texto_nuevo": "Si necesitas validar, todavía no escalar, tu modelo de negocio con pruebas reales de venta",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: todavia"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

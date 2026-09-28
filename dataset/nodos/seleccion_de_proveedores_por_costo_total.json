@@ -2,9 +2,9 @@
   "node_id": "seleccion_de_proveedores_por_costo_total",
   "fase_proyecto": "planificacion",
   "dominio": "core",
-  "titulo_concepto": "Seleccion de Proveedores por Costo Total Ponderado",
+  "titulo_concepto": "Selección de Proveedores por Costo Total Ponderado",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Elegir proveedor por el precio unitario mas bajo es decidir con la mitad de la informacion. Lo que de verdad cuesta trabajar con un proveedor incluye la calidad que entrega, su cumplimiento y el control que tiene sobre sus procesos, y esos criterios no pesan igual en todos los negocios. El acto propio es armar la comparacion antes de firmar: definir que criterios cualitativos importan, repartir el peso entre el costo monetario y esos criterios, calcular el costo total ponderado de cada proveedor y compararlos con esa cifra en vez de con el precio de lista. Y hay una decision que va con la misma logica: concentrar el volumen en menos proveedores da poder de negociacion, asi que la lista de preferidos se arma a proposito y no por acumulacion.",
+  "resumen_teorico": "Elegir proveedor por el precio unitario mas bajo es decidir con la mitad de la información. Lo que de verdad cuesta trabajar con un proveedor incluye la calidad que entrega, su cumplimiento y el control que tiene sobre sus procesos, y esos criterios no pesan igual en todos los negocios. El acto propio es armar la comparación antes de firmar: definir que criterios cualitativos importan, repartir el peso entre el costo monetario y esos criterios, calcular el costo total ponderado de cada proveedor y compararlos con esa cifra en vez de con el precio de lista. Y hay una decisión que va con la misma lógica: concentrar el volumen en menos proveedores da poder de negociación, así que la lista de preferidos se arma a proposito y no por acumulación.",
   "pasos_accionables": [
     "Definir criterios cualitativos relevantes (calidad, cumplimiento, control de procesos)",
     "Asignar pesos relativos entre costo monetario y criterios cualitativos (ej. 75/25)",
@@ -27,7 +27,7 @@
   ],
   "condiciones_activacion": [
     "Cuando tienes varias propuestas de proveedor sobre la mesa y el precio unitario no alcanza para decidir",
-    "Cuando quieres reducir el numero de proveedores para concentrar volumen de compra y ganar poder de negociacion"
+    "Cuando quieres reducir el numero de proveedores para concentrar volumen de compra y ganar poder de negociación"
   ],
   "etiqueta_arbol": "Elige por Costo Total",
   "fuentes_internas": [
@@ -72,6 +72,49 @@
         "motivo": "Tras gestionar y elegir proveedores directos se llega a extender los requisitos a los niveles 2 y 3."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "final-tildes-seleccion_de_proveedores_por_costo_total-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir proveedor por el precio unitario mas bajo es decidir con la mitad de la informacion. Lo que de verdad cuesta trabajar con un proveedor incluye la calidad que entrega, su cumplimiento y el control que tiene sobre sus procesos, y esos criterios no pesan igual en todos los negocios. El acto propio es armar la comparacion antes de firmar: definir que criterios cualitativos importan, repartir el peso entre el costo monetario y esos criterios, calcular el costo total ponderado de cada proveedor y compararlos con esa cifra en vez de con el precio de lista. Y hay una decision que va con la misma logica: concentrar el volumen en menos proveedores da poder de negociacion, asi que la lista de preferidos se arma a proposito y no por acumulacion.",
+      "texto_nuevo": "Elegir proveedor por el precio unitario mas bajo es decidir con la mitad de la información. Lo que de verdad cuesta trabajar con un proveedor incluye la calidad que entrega, su cumplimiento y el control que tiene sobre sus procesos, y esos criterios no pesan igual en todos los negocios. El acto propio es armar la comparación antes de firmar: definir que criterios cualitativos importan, repartir el peso entre el costo monetario y esos criterios, calcular el costo total ponderado de cada proveedor y compararlos con esa cifra en vez de con el precio de lista. Y hay una decisión que va con la misma lógica: concentrar el volumen en menos proveedores da poder de negociación, así que la lista de preferidos se arma a proposito y no por acumulación.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: acumulacion, asi, comparacion, decision, informacion, logica, negociacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-seleccion_de_proveedores_por_costo_total-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres reducir el numero de proveedores para concentrar volumen de compra y ganar poder de negociacion",
+      "texto_nuevo": "Cuando quieres reducir el numero de proveedores para concentrar volumen de compra y ganar poder de negociación",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: negociacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-seleccion_de_proveedores_por_costo_total-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Seleccion de Proveedores por Costo Total Ponderado",
+      "texto_nuevo": "Selección de Proveedores por Costo Total Ponderado",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Seleccion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

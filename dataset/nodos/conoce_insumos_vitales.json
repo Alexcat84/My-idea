@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Conoce tus insumos vitales",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen facilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rapido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo barato y facil de reponer, mientras un insumo critico y economico se queda sin control hasta que un dia falta y detiene tu operacion. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atencion, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo barato y fácil de reponer, mientras un insumo critico y económico se queda sin control hasta que un día falta y detiene tu operación. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
   "pasos_accionables": [
     "Haz una lista de los insumos que compras regularmente.",
     "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
@@ -21,7 +21,7 @@
     "gestion_procurement_consumo"
   ],
   "condiciones_activacion": [
-    "Te quedaste sin un insumo barato y eso detuvo tu negocio por dias.",
+    "Te quedaste sin un insumo barato y eso detuvo tu negocio por días.",
     "Tienes mucho capital invertido en stock pero no sabes cual de esos insumos realmente importa vigilar de cerca.",
     "Quieres decidir a que proveedores conviene tener respaldo y a cuales no."
   ],
@@ -125,6 +125,35 @@
         "motivo": "Tras marcar los insumos por valor y criticidad, lo natural es medir cuánto consumes realmente de cada categoría y vigilar sus desviaciones."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-tildes-conoce_insumos_vitales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen facilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rapido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo barato y facil de reponer, mientras un insumo critico y economico se queda sin control hasta que un dia falta y detiene tu operacion. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atencion, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+      "texto_nuevo": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo barato y fácil de reponer, mientras un insumo critico y económico se queda sin control hasta que un día falta y detiene tu operación. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: atencion, dia, economico, facil, facilmente, operacion, rapido"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-conoce_insumos_vitales-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Te quedaste sin un insumo barato y eso detuvo tu negocio por dias.",
+      "texto_nuevo": "Te quedaste sin un insumo barato y eso detuvo tu negocio por días.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: dias"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

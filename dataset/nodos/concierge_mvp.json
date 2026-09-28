@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "MVP Conserje (Concierge MVP)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnologia. Es ineficiente a proposito, pero maximiza lo que aprendes por cada esfuerzo que haces. Además de recoger opiniones, mide comportamientos reales como finalizacion, repeticion y recomendacion, que dicen mas que preguntar. Es especialmente util cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
+  "resumen_teorico": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnología. Es ineficiente a proposito, pero maximiza lo que aprendes por cada esfuerzo que haces. Además de recoger opiniones, mide comportamientos reales como finalización, repetición y recomendación, que dicen mas que preguntar. Es especialmente útil cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
   "pasos_accionables": [
     "Consigue un primer cliente real (o un grupo muy pequeño) dispuesto a pagar por el servicio, aunque sea manual.",
     "Entrega el servicio de forma completamente manual y personalizada, sin usar sistemas automatizados.",
@@ -112,6 +112,20 @@
         "evidencia": "O051-006.entregable: finalización, repetición, recomendación (Solo añade tildes que faltaban; el resto queda igual.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-concierge_mvp-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnologia. Es ineficiente a proposito, pero maximiza lo que aprendes por cada esfuerzo que haces. Además de recoger opiniones, mide comportamientos reales como finalizacion, repeticion y recomendacion, que dicen mas que preguntar. Es especialmente util cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
+      "texto_nuevo": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnología. Es ineficiente a proposito, pero maximiza lo que aprendes por cada esfuerzo que haces. Además de recoger opiniones, mide comportamientos reales como finalización, repetición y recomendación, que dicen mas que preguntar. Es especialmente útil cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: finalizacion, recomendacion, repeticion, tecnologia, util"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

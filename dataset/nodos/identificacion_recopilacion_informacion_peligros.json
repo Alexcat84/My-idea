@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Recopilación y Revisión de Información sobre Peligros",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Antes de controlar los riesgos, reune y organiza toda la información disponible sobre peligros en tu negocio, tanto interna como externa. Esto incluye manuales de equipos, hojas de datos de seguridad, reportes de autoinspección, registros de lesiones, resultados de monitoreo de exposición, programas de seguridad existentes y análisis de riesgos por tarea. Complementa esto con los aportes directos de tu equipo, ya sea mediante encuestas o conversaciones directas, para saber quien esta expuesto a que. También consulta fuentes externas como los organismos de salud y seguridad laboral de tu país, asociaciones gremiales, sindicatos y consultores de seguridad. El objetivo es tener un panorama completo antes de decidir como actuar frente a los riesgos identificados.",
+  "resumen_teorico": "Antes de controlar los riesgos, reúne y organiza toda la información disponible sobre peligros en tu negocio, tanto interna como externa. Esto incluye manuales de equipos, hojas de datos de seguridad, reportes de autoinspección, registros de lesiones, resultados de monitoreo de exposición, programas de seguridad existentes y análisis de riesgos por tarea. Complementa esto con los aportes directos de tu equipo, ya sea mediante encuestas o conversaciones directas, para saber quien esta expuesto a que. También consulta fuentes externas como los organismos de salud y seguridad laboral de tu país, asociaciones gremiales, sindicatos y consultores de seguridad. El objetivo es tener un panorama completo antes de decidir como actuar frente a los riesgos identificados.",
   "pasos_accionables": [
     "Reúne documentación interna: manuales de equipos, hojas de datos de seguridad, reportes de inspección, registros de incidentes y análisis de riesgos por tarea",
     "Revisa tus registros de lesiones y enfermedades laborales y los resultados de monitoreo de exposición",
@@ -53,6 +53,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-tildes-identificacion_recopilacion_informacion_peligros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de controlar los riesgos, reune y organiza toda la información disponible sobre peligros en tu negocio, tanto interna como externa. Esto incluye manuales de equipos, hojas de datos de seguridad, reportes de autoinspección, registros de lesiones, resultados de monitoreo de exposición, programas de seguridad existentes y análisis de riesgos por tarea. Complementa esto con los aportes directos de tu equipo, ya sea mediante encuestas o conversaciones directas, para saber quien esta expuesto a que. También consulta fuentes externas como los organismos de salud y seguridad laboral de tu país, asociaciones gremiales, sindicatos y consultores de seguridad. El objetivo es tener un panorama completo antes de decidir como actuar frente a los riesgos identificados.",
+      "texto_nuevo": "Antes de controlar los riesgos, reúne y organiza toda la información disponible sobre peligros en tu negocio, tanto interna como externa. Esto incluye manuales de equipos, hojas de datos de seguridad, reportes de autoinspección, registros de lesiones, resultados de monitoreo de exposición, programas de seguridad existentes y análisis de riesgos por tarea. Complementa esto con los aportes directos de tu equipo, ya sea mediante encuestas o conversaciones directas, para saber quien esta expuesto a que. También consulta fuentes externas como los organismos de salud y seguridad laboral de tu país, asociaciones gremiales, sindicatos y consultores de seguridad. El objetivo es tener un panorama completo antes de decidir como actuar frente a los riesgos identificados.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: reune"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

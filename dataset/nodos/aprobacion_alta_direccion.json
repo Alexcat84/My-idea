@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Tu Compromiso Personal con el Cambio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Tu implicación directa y no delegable es indispensable para lograr avances importantes cada año. Respondes mejor cuando ves una amenaza competitiva concreta, como perder clientes, o una oportunidad de ahorro cuantificada a traves del costo de la mala calidad, y necesitas asumir tareas activas en vez de delegarlo todo.",
+  "resumen_teorico": "Tu implicación directa y no delegable es indispensable para lograr avances importantes cada año. Respondes mejor cuando ves una amenaza competitiva concreta, como perder clientes, o una oportunidad de ahorro cuantificada a través del costo de la mala calidad, y necesitas asumir tareas activas en vez de delegarlo todo.",
   "pasos_accionables": [
     "Reunir evidencia de amenazas competitivas concretas, como contratos o clientes perdidos",
     "Cuantificar las oportunidades de mejora calculando el costo de la mala calidad en tu negocio",
@@ -72,6 +72,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-tildes-aprobacion_alta_direccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu implicación directa y no delegable es indispensable para lograr avances importantes cada año. Respondes mejor cuando ves una amenaza competitiva concreta, como perder clientes, o una oportunidad de ahorro cuantificada a traves del costo de la mala calidad, y necesitas asumir tareas activas en vez de delegarlo todo.",
+      "texto_nuevo": "Tu implicación directa y no delegable es indispensable para lograr avances importantes cada año. Respondes mejor cuando ves una amenaza competitiva concreta, como perder clientes, o una oportunidad de ahorro cuantificada a través del costo de la mala calidad, y necesitas asumir tareas activas en vez de delegarlo todo.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: traves"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

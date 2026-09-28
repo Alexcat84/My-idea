@@ -2,9 +2,9 @@
   "node_id": "personalizacion_guiada_por_el_cliente",
   "fase_proyecto": "ejecucion",
   "dominio": "core",
-  "titulo_concepto": "Personalizacion Guiada y el Simbolo de la Decision del Cliente",
+  "titulo_concepto": "Personalización Guiada y el Símbolo de la Decisión del Cliente",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Dejar que tu cliente decida sobre tu producto no es lo mismo que dejarlo solo delante de un catalogo de opciones. Primero eliges en que partes de tu producto o servicio la decision es suya de verdad, y despues disenas el camino para que tomarla sea facil en vez de abrumador: demasiadas opciones sin guia paralizan y el cliente abandona a mitad. La segunda mitad es la que casi nadie hace: cuando tu cliente ya decidio, devuelvele esa decision convertida en algo que pueda tocar o ensenar. Un objeto tangible o simbolico que represente lo que eligio, y cuando tenga sentido, mostrarlo de forma visible, convierte una eleccion privada en un compromiso que el cliente reconoce como propio.",
+  "resumen_teorico": "Dejar que tu cliente decida sobre tu producto no es lo mismo que dejarlo solo delante de un catalogo de opciones. Primero eliges en que partes de tu producto o servicio la decisión es suya de verdad, y después diseñas el camino para que tomarla sea fácil en vez de abrumador: demasiadas opciones sin guia paralizan y el cliente abandona a mitad. La segunda mitad es la que casi nadie hace: cuando tu cliente ya decidió, devuélvele esa decisión convertida en algo que pueda tocar o enseñar. Un objeto tangible o simbólico que represente lo que eligió, y cuando tenga sentido, mostrarlo de forma visible, convierte una elección privada en un compromiso que el cliente reconoce como propio.",
   "pasos_accionables": [
     "Identifica en qué partes de tu producto o servicio tu cliente puede tomar decisiones de personalización",
     "Diseña un proceso guiado y sencillo para que co-crear no lo abrume",
@@ -17,7 +17,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando tu producto admite decisiones de personalizacion y no sabes cuales dejar en manos de tu cliente sin abrumarlo",
+    "Cuando tu producto admite decisiones de personalización y no sabes cuales dejar en manos de tu cliente sin abrumarlo",
     "Cuando tu cliente elige algo importante y no recibe nada tangible que se lo recuerde"
   ],
   "etiqueta_arbol": "Deja Decidir a tu Cliente",
@@ -37,6 +37,49 @@
         "evidencia": "O009-034.entregable: personalización, fáciles, simbólico, decisión (Faltan las tildes en 'personalización', 'fáciles', 'simbólico' y 'decisión'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-personalizacion_guiada_por_el_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dejar que tu cliente decida sobre tu producto no es lo mismo que dejarlo solo delante de un catalogo de opciones. Primero eliges en que partes de tu producto o servicio la decision es suya de verdad, y despues disenas el camino para que tomarla sea facil en vez de abrumador: demasiadas opciones sin guia paralizan y el cliente abandona a mitad. La segunda mitad es la que casi nadie hace: cuando tu cliente ya decidio, devuelvele esa decision convertida en algo que pueda tocar o ensenar. Un objeto tangible o simbolico que represente lo que eligio, y cuando tenga sentido, mostrarlo de forma visible, convierte una eleccion privada en un compromiso que el cliente reconoce como propio.",
+      "texto_nuevo": "Dejar que tu cliente decida sobre tu producto no es lo mismo que dejarlo solo delante de un catalogo de opciones. Primero eliges en que partes de tu producto o servicio la decisión es suya de verdad, y después diseñas el camino para que tomarla sea fácil en vez de abrumador: demasiadas opciones sin guia paralizan y el cliente abandona a mitad. La segunda mitad es la que casi nadie hace: cuando tu cliente ya decidió, devuélvele esa decisión convertida en algo que pueda tocar o enseñar. Un objeto tangible o simbólico que represente lo que eligió, y cuando tenga sentido, mostrarlo de forma visible, convierte una elección privada en un compromiso que el cliente reconoce como propio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: decidio, decision, despues, devuelvele, disenas, eleccion, eligio, ensenar, facil, simbolico"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-personalizacion_guiada_por_el_cliente-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu producto admite decisiones de personalizacion y no sabes cuales dejar en manos de tu cliente sin abrumarlo",
+      "texto_nuevo": "Cuando tu producto admite decisiones de personalización y no sabes cuales dejar en manos de tu cliente sin abrumarlo",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: personalizacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-personalizacion_guiada_por_el_cliente-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Personalizacion Guiada y el Simbolo de la Decision del Cliente",
+      "texto_nuevo": "Personalización Guiada y el Símbolo de la Decisión del Cliente",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: Decision, Personalizacion, Simbolo"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

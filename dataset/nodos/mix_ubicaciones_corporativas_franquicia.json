@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Estrategia de Mezcla entre Ubicaciones Corporativas y de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicacion: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones suboptimas y cede las mejores a franquiciados para mejorar la validacion del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validacion ante futuros franquiciados y velocidad de crecimiento, por lo que la eleccion depende de tu capital disponible y tu plan de salida.",
+  "resumen_teorico": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicación: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones subóptimas y cede las mejores a franquiciados para mejorar la validación del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validación ante futuros franquiciados y velocidad de crecimiento, por lo que la elección depende de tu capital disponible y tu plan de salida.",
   "pasos_accionables": [
     "Decide si continuarás abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
     "Analiza tu capital disponible y tu plan de salida para orientar la elección de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
@@ -26,8 +26,8 @@
     "mix_medios_marketing_franquicia"
   ],
   "condiciones_activacion": [
-    "Cuando ya decidiste franquiciar tu negocio y tambien planeas mantener o abrir locales propios",
-    "Cuando existe conflicto potencial entre tu expansion corporativa y el territorio de tus franquiciados",
+    "Cuando ya decidiste franquiciar tu negocio y también planeas mantener o abrir locales propios",
+    "Cuando existe conflicto potencial entre tu expansión corporativa y el territorio de tus franquiciados",
     "Cuando necesitas definir como distribuir mercados entre ubicaciones corporativas y franquiciadas antes de escalar",
     "Si se busca maximizar el valor de la empresa combinando ambos canales de crecimiento"
   ],
@@ -186,6 +186,50 @@
         "evidencia": "O066-009.entregable: ubicación, asignación (Solo se añaden las tildes que faltan en ubicación y asignación.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-mix_ubicaciones_corporativas_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicacion: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones suboptimas y cede las mejores a franquiciados para mejorar la validacion del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validacion ante futuros franquiciados y velocidad de crecimiento, por lo que la eleccion depende de tu capital disponible y tu plan de salida.",
+      "texto_nuevo": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicación: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones subóptimas y cede las mejores a franquiciados para mejorar la validación del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validación ante futuros franquiciados y velocidad de crecimiento, por lo que la elección depende de tu capital disponible y tu plan de salida.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: eleccion, suboptimas, ubicacion, validacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-mix_ubicaciones_corporativas_franquicia-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya decidiste franquiciar tu negocio y tambien planeas mantener o abrir locales propios",
+      "texto_nuevo": "Cuando ya decidiste franquiciar tu negocio y también planeas mantener o abrir locales propios",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: tambien"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-mix_ubicaciones_corporativas_franquicia-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando existe conflicto potencial entre tu expansion corporativa y el territorio de tus franquiciados",
+      "texto_nuevo": "Cuando existe conflicto potencial entre tu expansión corporativa y el territorio de tus franquiciados",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: expansion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

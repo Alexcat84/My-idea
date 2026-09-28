@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "No Existe una 'Verdad Absoluta' en la Investigación",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando analizas algo que salió mal, no tienes acceso a una verdad objetiva contra la cual medir lo que entendia la persona que tomo la decision en ese momento. Toda mirada es subjetiva y depende de donde estas parado. Tu, analizando después y ya sabiendo como termino todo, crees tener una vision objetiva, pero es tan limitada como la de quien actuo sin saber el desenlace. No existe una mirada neutral desde ningun lugar.",
+  "resumen_teorico": "Cuando analizas algo que salió mal, no tienes acceso a una verdad objetiva contra la cual medir lo que entendía la persona que tomo la decisión en ese momento. Toda mirada es subjetiva y depende de donde estas parado. Tu, analizando después y ya sabiendo como termino todo, crees tener una visión objetiva, pero es tan limitada como la de quien actuo sin saber el desenlace. No existe una mirada neutral desde ningún lugar.",
   "pasos_accionables": [
     "Reconoce que tu mirada al analizar lo ocurrido es subjetiva y está influida porque ya sabes cómo terminó (conocimiento retrospectivo)",
     "Evita comparar lo que sabes ahora con lo que sabía la persona que decidió en ese momento",
@@ -20,9 +20,9 @@
     "evitar_uso_complacencia"
   ],
   "condiciones_activacion": [
-    "Cuando empiezas a analizar un problema o error que ya ocurrio",
-    "Cuando evaluas en retrospectiva una decision tomada por ti o por alguien mas",
-    "Si crees tener una vision objetiva de los hechos al analizarlos"
+    "Cuando empiezas a analizar un problema o error que ya ocurrió",
+    "Cuando evalúas en retrospectiva una decisión tomada por ti o por alguien mas",
+    "Si crees tener una visión objetiva de los hechos al analizarlos"
   ],
   "etiqueta_arbol": "Duda de la Verdad Absoluta",
   "fuentes_internas": [
@@ -110,6 +110,65 @@
         "evidencia": "O068-007.entregable: explícitamente, comparación (Tildes que faltaban de verdad en explícitamente y comparación; no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-critica_ground_truth_investigacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando analizas algo que salió mal, no tienes acceso a una verdad objetiva contra la cual medir lo que entendia la persona que tomo la decision en ese momento. Toda mirada es subjetiva y depende de donde estas parado. Tu, analizando después y ya sabiendo como termino todo, crees tener una vision objetiva, pero es tan limitada como la de quien actuo sin saber el desenlace. No existe una mirada neutral desde ningun lugar.",
+      "texto_nuevo": "Cuando analizas algo que salió mal, no tienes acceso a una verdad objetiva contra la cual medir lo que entendía la persona que tomo la decisión en ese momento. Toda mirada es subjetiva y depende de donde estas parado. Tu, analizando después y ya sabiendo como termino todo, crees tener una visión objetiva, pero es tan limitada como la de quien actuo sin saber el desenlace. No existe una mirada neutral desde ningún lugar.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: decision, entendia, ningun, vision"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-critica_ground_truth_investigacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando empiezas a analizar un problema o error que ya ocurrio",
+      "texto_nuevo": "Cuando empiezas a analizar un problema o error que ya ocurrió",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ocurrio"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-critica_ground_truth_investigacion-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando evaluas en retrospectiva una decision tomada por ti o por alguien mas",
+      "texto_nuevo": "Cuando evalúas en retrospectiva una decisión tomada por ti o por alguien mas",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: decision, evaluas"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-critica_ground_truth_investigacion-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si crees tener una vision objetiva de los hechos al analizarlos",
+      "texto_nuevo": "Si crees tener una visión objetiva de los hechos al analizarlos",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: vision"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

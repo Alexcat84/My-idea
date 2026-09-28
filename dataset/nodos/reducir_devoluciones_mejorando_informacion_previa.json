@@ -2,9 +2,9 @@
   "node_id": "reducir_devoluciones_mejorando_informacion_previa",
   "fase_proyecto": "ejecucion",
   "dominio": "entrega",
-  "titulo_concepto": "Reducir devoluciones mejorando la informacion previa",
+  "titulo_concepto": "Reducir devoluciones mejorando la información previa",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Casi la mitad de quienes devuelven una compra en linea culpan a la descripcion del producto: la realidad no coincidio con lo que vieron antes de comprar. Esto pesa mucho porque una devolucion no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo, ademas del costo del envio de vuelta. La forma mas barata de bajar la tasa de devoluciones no es mejorar la logistica de retorno, sino atacar la causa antes de que ocurra: dar informacion honesta y completa antes de que la persona compre. Esto es especialmente critico en categorias como ropa, donde es comun que la gente compre varias tallas o colores a proposito sabiendo que va a devolver lo que no le sirva.",
+  "resumen_teorico": "Casi la mitad de quienes devuelven una compra en linea culpan a la descripción del producto: la realidad no coincidio con lo que vieron antes de comprar. Esto pesa mucho porque una devolución no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo, además del costo del envio de vuelta. La forma mas barata de bajar la tasa de devoluciones no es mejorar la logística de retorno, sino atacar la causa antes de que ocurra: dar información honesta y completa antes de que la persona compre. Esto es especialmente critico en categorías como ropa, donde es común que la gente compre varias tallas o colores a proposito sabiendo que va a devolver lo que no le sirva.",
   "pasos_accionables": [
     "Revisa la descripción de tu producto y agrega medidas, materiales o detalles que hoy falten.",
     "Suma fotos desde varios ángulos y, si aplica, una tabla de tallas o guía de uso.",
@@ -19,8 +19,8 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Te llegan devoluciones seguido con el motivo 'no era lo que esperaba'.",
-    "Vendes ropa u otra categoria donde la gente compra varias opciones para probar y devolver.",
-    "Quieres bajar el costo de devoluciones sin mejorar toda la logistica de retorno."
+    "Vendes ropa u otra categoría donde la gente compra varias opciones para probar y devolver.",
+    "Quieres bajar el costo de devoluciones sin mejorar toda la logística de retorno."
   ],
   "etiqueta_arbol": "Describe mejor para devolver menos",
   "fuentes_internas": [
@@ -109,6 +109,64 @@
         "evidencia": "O072-015.entregable: más, devolución (Faltan las tildes en 'mas' y 'devolucion' y también en 'comun', que la propuesta pasó por alto y se añade aquí.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-reducir_devoluciones_mejorando_informacion_previa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Casi la mitad de quienes devuelven una compra en linea culpan a la descripcion del producto: la realidad no coincidio con lo que vieron antes de comprar. Esto pesa mucho porque una devolucion no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo, ademas del costo del envio de vuelta. La forma mas barata de bajar la tasa de devoluciones no es mejorar la logistica de retorno, sino atacar la causa antes de que ocurra: dar informacion honesta y completa antes de que la persona compre. Esto es especialmente critico en categorias como ropa, donde es comun que la gente compre varias tallas o colores a proposito sabiendo que va a devolver lo que no le sirva.",
+      "texto_nuevo": "Casi la mitad de quienes devuelven una compra en linea culpan a la descripción del producto: la realidad no coincidio con lo que vieron antes de comprar. Esto pesa mucho porque una devolución no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo, además del costo del envio de vuelta. La forma mas barata de bajar la tasa de devoluciones no es mejorar la logística de retorno, sino atacar la causa antes de que ocurra: dar información honesta y completa antes de que la persona compre. Esto es especialmente critico en categorías como ropa, donde es común que la gente compre varias tallas o colores a proposito sabiendo que va a devolver lo que no le sirva.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: ademas, categorias, comun, descripcion, devolucion, informacion, logistica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-reducir_devoluciones_mejorando_informacion_previa-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vendes ropa u otra categoria donde la gente compra varias opciones para probar y devolver.",
+      "texto_nuevo": "Vendes ropa u otra categoría donde la gente compra varias opciones para probar y devolver.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: categoria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-reducir_devoluciones_mejorando_informacion_previa-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Quieres bajar el costo de devoluciones sin mejorar toda la logistica de retorno.",
+      "texto_nuevo": "Quieres bajar el costo de devoluciones sin mejorar toda la logística de retorno.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: logistica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-reducir_devoluciones_mejorando_informacion_previa-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reducir devoluciones mejorando la informacion previa",
+      "texto_nuevo": "Reducir devoluciones mejorando la información previa",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: informacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

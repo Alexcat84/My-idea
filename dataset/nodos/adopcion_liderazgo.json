@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Adoptar e Instituir el Liderazgo (Punto 7)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar solo por números (metas, cuotas, cero errores). Un error comun es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
+  "resumen_teorico": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar solo por números (metas, cuotas, cero errores). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
   "pasos_accionables": [
     "Dejar de evaluar el trabajo, propio o de quien te ayuda, solo con metas numéricas, cuotas o cifras frías",
     "Aprender a fondo el trabajo real antes de dirigirlo o delegarlo",
@@ -25,7 +25,7 @@
     "proceso_contratacion_ejecutivos_sin_experiencia"
   ],
   "condiciones_activacion": [
-    "Cuando gestionas o te evaluas solo por cuotas y numeros",
+    "Cuando gestionas o te evalúas solo por cuotas y números",
     "Cuando castigas resultados bajo el promedio sin analizar los datos con cuidado"
   ],
   "etiqueta_arbol": "Ejerce Liderazgo, No Supervises",
@@ -99,6 +99,35 @@
         "evidencia": "O028-002.entregable: atrás, métricas, numéricas, desempeño (Tildes y eñe que faltaban en atrás, métricas, numéricas y desempeño; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-adopcion_liderazgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar solo por números (metas, cuotas, cero errores). Un error comun es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
+      "texto_nuevo": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar solo por números (metas, cuotas, cero errores). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: comun"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-adopcion_liderazgo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando gestionas o te evaluas solo por cuotas y numeros",
+      "texto_nuevo": "Cuando gestionas o te evalúas solo por cuotas y números",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: evaluas, numeros"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

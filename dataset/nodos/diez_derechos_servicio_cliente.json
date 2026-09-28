@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Los diez derechos del servicio al cliente",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "Este marco resume en diez puntos lo que una entrega bien hecha debe garantizar: la cantidad correcta, el costo correcto, el producto correcto, al cliente correcto, con la calidad correcta, en el tiempo correcto, en el lugar correcto, en la condicion correcta, con el cumplimiento correcto de reglas y normas, y con un origen etico y ambiental correcto. No es una lista decorativa: cada punto suele representar solo una fraccion pequeña del costo total de vender, pero pesa mucho en si el cliente vuelve a comprarte o no. Usarla como checklist te permite revisar tu propia operacion punto por punto, en lugar de confiar solo en la sensacion de que 'todo va bien'.",
+  "resumen_teorico": "Este marco resume en diez puntos lo que una entrega bien hecha debe garantizar: la cantidad correcta, el costo correcto, el producto correcto, al cliente correcto, con la calidad correcta, en el tiempo correcto, en el lugar correcto, en la condición correcta, con el cumplimiento correcto de reglas y normas, y con un origen ético y ambiental correcto. No es una lista decorativa: cada punto suele representar solo una fracción pequeña del costo total de vender, pero pesa mucho en si el cliente vuelve a comprarte o no. Usarla como checklist te permite revisar tu propia operación punto por punto, en lugar de confiar solo en la sensación de que 'todo va bien'.",
   "pasos_accionables": [
     "Escribe en una hoja los diez elementos: cantidad, costo, producto, cliente correcto, calidad, tiempo, lugar, condición, cumplimiento y origen ético.",
     "Revisa tu último mes de entregas y marca en cuáles de esos diez fallaste al menos una vez.",
@@ -20,8 +20,8 @@
   ],
   "condiciones_activacion": [
     "Sabes que el servicio al cliente importa pero no tienes una lista concreta de que revisar.",
-    "Quieres auditar tu propia operacion de entrega sin depender solo de la intuicion.",
-    "Estas armando por primera vez una politica de servicio para tu negocio."
+    "Quieres auditar tu propia operación de entrega sin depender solo de la intuición.",
+    "Estas armando por primera vez una política de servicio para tu negocio."
   ],
   "etiqueta_arbol": "Los diez derechos de tu entrega",
   "fuentes_internas": [
@@ -69,6 +69,50 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-tildes-diez_derechos_servicio_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Este marco resume en diez puntos lo que una entrega bien hecha debe garantizar: la cantidad correcta, el costo correcto, el producto correcto, al cliente correcto, con la calidad correcta, en el tiempo correcto, en el lugar correcto, en la condicion correcta, con el cumplimiento correcto de reglas y normas, y con un origen etico y ambiental correcto. No es una lista decorativa: cada punto suele representar solo una fraccion pequeña del costo total de vender, pero pesa mucho en si el cliente vuelve a comprarte o no. Usarla como checklist te permite revisar tu propia operacion punto por punto, en lugar de confiar solo en la sensacion de que 'todo va bien'.",
+      "texto_nuevo": "Este marco resume en diez puntos lo que una entrega bien hecha debe garantizar: la cantidad correcta, el costo correcto, el producto correcto, al cliente correcto, con la calidad correcta, en el tiempo correcto, en el lugar correcto, en la condición correcta, con el cumplimiento correcto de reglas y normas, y con un origen ético y ambiental correcto. No es una lista decorativa: cada punto suele representar solo una fracción pequeña del costo total de vender, pero pesa mucho en si el cliente vuelve a comprarte o no. Usarla como checklist te permite revisar tu propia operación punto por punto, en lugar de confiar solo en la sensación de que 'todo va bien'.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: condicion, etico, fraccion, operacion, sensacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-diez_derechos_servicio_cliente-condiciones_activacion-1",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Quieres auditar tu propia operacion de entrega sin depender solo de la intuicion.",
+      "texto_nuevo": "Quieres auditar tu propia operación de entrega sin depender solo de la intuición.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: intuicion, operacion"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-tildes-diez_derechos_servicio_cliente-condiciones_activacion-2",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estas armando por primera vez una politica de servicio para tu negocio.",
+      "texto_nuevo": "Estas armando por primera vez una política de servicio para tu negocio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: politica"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

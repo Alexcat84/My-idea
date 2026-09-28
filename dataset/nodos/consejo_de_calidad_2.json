@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Consejo de Calidad (Red Autogestionada de Profesionales, Crosby)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evaluan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+  "resumen_teorico": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
   "pasos_accionables": [
     "Formar el consejo de calidad con las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango.",
     "Permitir que el consejo elija su propia dirección, independiente de la jerarquía formal.",
@@ -112,6 +112,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-tildes-consejo_de_calidad_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evaluan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+      "texto_nuevo": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: autonomia, evaluan"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

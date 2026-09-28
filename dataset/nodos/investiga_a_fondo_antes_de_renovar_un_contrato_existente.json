@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Investiga a fondo antes de renovar un contrato existente",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Cuando te toca renovar un contrato que ya tienes con un proveedor, no firmes por inercia. Revisa el contrato completo, incluyendo anexos y notas de la negociacion anterior, para entender que se acordo y por que. Habla con quien usa el producto o servicio dia a dia para saber si funciona bien o si hay quejas. Conversa tambien con la persona del proveedor que maneja tu cuenta para escuchar su version de lo que ha ido bien y lo que no. Esta informacion te da argumentos reales para pedir mejores condiciones en la renovacion, en lugar de aceptar lo mismo de siempre solo porque ya es costumbre trabajar con ese proveedor. Sin este repaso, renuevas a ciegas y pierdes la oportunidad de corregir problemas o negociar un mejor precio.",
+  "resumen_teorico": "Cuando te toca renovar un contrato que ya tienes con un proveedor, no firmes por inercia. Revisa el contrato completo, incluyendo anexos y notas de la negociación anterior, para entender que se acordó y por que. Habla con quien usa el producto o servicio día a día para saber si funciona bien o si hay quejas. Conversa también con la persona del proveedor que maneja tu cuenta para escuchar su versión de lo que ha ido bien y lo que no. Esta información te da argumentos reales para pedir mejores condiciones en la renovación, en lugar de aceptar lo mismo de siempre solo porque ya es costumbre trabajar con ese proveedor. Sin este repaso, renuevas a ciegas y pierdes la oportunidad de corregir problemas o negociar un mejor precio.",
   "pasos_accionables": [
     "Lee de nuevo el contrato completo, incluyendo anexos y cualquier nota de la negociación original.",
     "Pregunta a quien usa el producto o servicio si está funcionando bien y qué mejoraría.",
@@ -111,6 +111,20 @@
         "evidencia": "O015-030.entregable: reunión, renovación (Solo añade las tildes de reunión y renovación.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-investiga_a_fondo_antes_de_renovar_un_contrato_existente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te toca renovar un contrato que ya tienes con un proveedor, no firmes por inercia. Revisa el contrato completo, incluyendo anexos y notas de la negociacion anterior, para entender que se acordo y por que. Habla con quien usa el producto o servicio dia a dia para saber si funciona bien o si hay quejas. Conversa tambien con la persona del proveedor que maneja tu cuenta para escuchar su version de lo que ha ido bien y lo que no. Esta informacion te da argumentos reales para pedir mejores condiciones en la renovacion, en lugar de aceptar lo mismo de siempre solo porque ya es costumbre trabajar con ese proveedor. Sin este repaso, renuevas a ciegas y pierdes la oportunidad de corregir problemas o negociar un mejor precio.",
+      "texto_nuevo": "Cuando te toca renovar un contrato que ya tienes con un proveedor, no firmes por inercia. Revisa el contrato completo, incluyendo anexos y notas de la negociación anterior, para entender que se acordó y por que. Habla con quien usa el producto o servicio día a día para saber si funciona bien o si hay quejas. Conversa también con la persona del proveedor que maneja tu cuenta para escuchar su versión de lo que ha ido bien y lo que no. Esta información te da argumentos reales para pedir mejores condiciones en la renovación, en lugar de aceptar lo mismo de siempre solo porque ya es costumbre trabajar con ese proveedor. Sin este repaso, renuevas a ciegas y pierdes la oportunidad de corregir problemas o negociar un mejor precio.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: acordo, dia, informacion, negociacion, renovacion, tambien, version"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ]
 }

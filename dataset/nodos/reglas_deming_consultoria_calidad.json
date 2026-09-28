@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Reglas de Compromiso para Consultoría en Transformación de Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir una manera adecuada de medir con datos, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tu puedes ayudar a negocios que compiten entre si sin conflicto de interes, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+  "resumen_teorico": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir una manera adecuada de medir con datos, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tu puedes ayudar a negocios que compiten entre si sin conflicto de interés, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
   "pasos_accionables": [
     "Verifica que quien te pide ayuda sea realmente quien dirige el negocio, no un mando intermedio",
     "Pide que todo el equipo que toma decisiones dedique tiempo a estudiar los 14 puntos y las enfermedades mortales",
@@ -40,6 +40,20 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-031 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-tildes-reglas_deming_consultoria_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir una manera adecuada de medir con datos, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tu puedes ayudar a negocios que compiten entre si sin conflicto de interes, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+      "texto_nuevo": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir una manera adecuada de medir con datos, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tu puedes ayudar a negocios que compiten entre si sin conflicto de interés, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: interes"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [

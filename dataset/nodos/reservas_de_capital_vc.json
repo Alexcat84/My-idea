@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Las reservas que tu inversionista guarda para rondas futuras (VC)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Las reservas son el dinero que tu inversionista aparta, en teoria, para futuras rondas de tu empresa. Es un concepto clave que casi nadie te explica: si tu inversionista calculo mal esas reservas y le faltan, puede resistirse a que consigas nuevo financiamiento, limitar cuanto entra, o presionarte para vender la empresa aunque no sea lo mejor para tu negocio. Entender como funcionan las reservas te ayuda a anticipar como se va a comportar tu inversionista en las proximas rondas y a elegir socios con capacidad real de seguir apoyandote.",
+  "resumen_teorico": "Las reservas son el dinero que tu inversionista aparta, en teoría, para futuras rondas de tu empresa. Es un concepto clave que casi nadie te explica: si tu inversionista calculo mal esas reservas y le faltan, puede resistirse a que consigas nuevo financiamiento, limitar cuanto entra, o presionarte para vender la empresa aunque no sea lo mejor para tu negocio. Entender como funcionan las reservas te ayuda a anticipar como se va a comportar tu inversionista en las próximas rondas y a elegir socios con capacidad real de seguir apoyándote.",
   "pasos_accionables": [
     "Pregúntale directamente a tu inversionista qué expectativa tiene sobre el capital que tu empresa va a necesitar más adelante",
     "Investiga cuántas otras empresas tiene en su cartera y cuánta capacidad real de reservas le queda",
@@ -96,6 +96,20 @@
         "evidencia": "O035-003.entregable: disposición, acompañarte (Falta la tilde de disposición y la eñe de acompañarte.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-tildes-reservas_de_capital_vc-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las reservas son el dinero que tu inversionista aparta, en teoria, para futuras rondas de tu empresa. Es un concepto clave que casi nadie te explica: si tu inversionista calculo mal esas reservas y le faltan, puede resistirse a que consigas nuevo financiamiento, limitar cuanto entra, o presionarte para vender la empresa aunque no sea lo mejor para tu negocio. Entender como funcionan las reservas te ayuda a anticipar como se va a comportar tu inversionista en las proximas rondas y a elegir socios con capacidad real de seguir apoyandote.",
+      "texto_nuevo": "Las reservas son el dinero que tu inversionista aparta, en teoría, para futuras rondas de tu empresa. Es un concepto clave que casi nadie te explica: si tu inversionista calculo mal esas reservas y le faltan, puede resistirse a que consigas nuevo financiamiento, limitar cuanto entra, o presionarte para vender la empresa aunque no sea lo mejor para tu negocio. Entender como funcionan las reservas te ayuda a anticipar como se va a comportar tu inversionista en las próximas rondas y a elegir socios con capacidad real de seguir apoyándote.",
+      "cita": {
+        "instrumento": "scripts/saneamiento/tildes_mecanicas.py con la lista curada docs/saneamiento/ortografia/tildes_mecanicas.json",
+        "evidencia": "palabras sin tilde que no existen en español: apoyandote, proximas, teoria"
+      },
+      "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
     }
   ],
   "fuentes_internas": [
