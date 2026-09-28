@@ -100,8 +100,11 @@ con la misma vara que el catálogo.
 | M18 | Las migraciones las aplica el fundador; aplicada, va a main sola (solo SQL) con su verificador | Fundador | sep 2026 | `supabase/migrations/my_idea_check_migraciones.sql` |
 
 **Choques y huecos que este índice deja a la vista, sin resolver aquí:**
-- **El BANCO contradice C1:** varias secciones siguen diciendo que el plan cita libro y capítulo (§3, §5, §6, §7.1),
-  y eso choca con C1 y AGENTS.md. Hay que actualizar el BANCO.
+- ~~**El BANCO contradice C1:** varias secciones siguen diciendo que el plan cita libro y capítulo (§3, §5, §6, §7.1),
+  y eso choca con C1 y AGENTS.md. Hay que actualizar el BANCO.~~ **Resuelto el 28 sep 2026** (decisión del fundador):
+  los seis pasajes del BANCO quedan tachados con su corrección declarada y el claim "cada plan cita su fuente" pasa a
+  PROHIBIDO en §6. Se comprobó que ningún prompt pide citar libro, capítulo ni autor (`prompts.json`: `SYSTEM_PLAN`
+  dice "sin autores" y prohíbe "fuentes nuevas que no esten en el material").
 - **Reglas sin guarda automática:** C18, C19, C21, C23, P2, P8, P22, M2, M4, M5, M9 a M11 y M16 se cumplen solo por
   lectura.
 - **Reglas que la auditoría final mide y no cumplen hoy:** C7 (ortografía) y C14 (fidelidad) en los 10 espacios que no

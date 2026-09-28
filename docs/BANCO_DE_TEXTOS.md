@@ -86,7 +86,11 @@ lo pendiente se nombra como testigo, jamás como deuda.
   ir a su ritmo no se le habla de calendario: no se juzga contra fechas que
   decidió no tener.
 - **La etiqueta enamora, el título respalda**: en navegación se muestra la
-  etiqueta humana; el título del libro vive en el detalle, con su fuente.
+  etiqueta humana; ~~el título del libro vive en el detalle, con su fuente.~~
+  > **CORRECCIÓN DECLARADA, 28 sep 2026** (decisión del fundador sobre la auditoría final; regla de `AGENTS.md`
+  > "Ningún libro ni autor llega al cliente", del 26 sep 2026): no hay detalle con fuente.
+  > El nodo se nombra siempre por su `etiqueta_arbol`; el `titulo_concepto` y la `fuente` son material interno y no
+  > se pintan en ninguna parte.
 - **El azul piensa, el verde ejecuta.** (Regla de color del fundador.)
 - **Vocabulario de los estados de tarea**: sin empezar · apenas empezada · **en
   proceso** (nunca "a medias") · hecha · **no aplica** (la tarea retirada). El
@@ -144,10 +148,14 @@ además argumento de venta:
 - **Sin suscripción.** Créditos consumibles: el usuario controla su gasto y
   nada se cobra solo.
 - **La procedencia es auditable INTERNAMENTE**: la caja de vidrio registra qué
-  conceptos alimentaron cada plan (forense y digest); de cara al usuario, el
+  conceptos alimentaron cada plan (forense y digest); de cara al usuario, ~~el
   plan cita sus fuentes en el detalle de cada concepto (libro y capítulo), sin
-  exponer conteos ni mecánica del grafo (decisión de confidencialidad, jul
-  2026).
+  exponer~~ el plan no expone conteos ni mecánica del grafo (decisión de
+  confidencialidad, jul 2026).
+  > **CORRECCIÓN DECLARADA, 28 sep 2026** (decisión del fundador sobre la auditoría final; regla de `AGENTS.md`
+  > "Ningún libro ni autor llega al cliente", del 26 sep 2026): el plan no cita libros,
+  > capítulos ni autores. Las fuentes viven solo en los metadatos internos (`fuente`, `fuentes_internas`,
+  > `correcciones`, `fuentes_canonicas.json`); el producto habla por sí mismo.
 - **Los nombres internos de los conceptos tampoco se muestran**: el usuario ve
   su equivalente en lenguaje natural (`etiqueta_arbol`), nunca el título
   técnico del libro (`titulo_concepto`) ni jerga de manual. Dos idiomas:
@@ -163,7 +171,7 @@ Antes de que una frase entre a marketing, términos o una demo, se verifica aqu�
 | "3,742 conceptos curados de 20+ libros" | Verificable | Grafo compilado, Gate 0 verde, censo reproducible. Actualizar la cifra si cambia. |
 | "Los números los calcula código, no la IA" | Verificable | Calculadora determinística, paridad probada Python/TS. |
 | "El árbol muestra lo que el motor hizo de verdad" | Verificable | El vuelo compara los eventos mostrados contra la ruta persistida 1:1. |
-| "Cada plan cita su fuente" | Verificable | El respaldo es el **detalle del concepto** (título + fuente: libro y capítulo), visible en el plan. **Ya NO** el pie con conteos de procedencia: ese pie se retiró de la salida al usuario (confidencialidad, jul 2026) y la auditoría de procedencia vive internamente (caja de vidrio: forense y digest). |
+| ~~"Cada plan cita su fuente"~~ | **PROHIBIDO desde el 26 sep 2026** | **Corrección declarada, 28 sep 2026:** el plan no cita libros, capítulos ni autores (regla de `AGENTS.md` "Ningún libro ni autor llega al cliente"), así que este claim es falso y no se usa; la procedencia se audita solo hacia adentro (`fuente` y `fuentes_internas` de cada nodo, forense y digest). Texto anterior: ~~El respaldo es el **detalle del concepto** (título + fuente: libro y capítulo), visible en el plan.~~ **Ya NO** el pie con conteos de procedencia: ese pie se retiró de la salida al usuario (confidencialidad, jul 2026) y la auditoría de procedencia vive internamente (caja de vidrio: forense y digest). |
 | "Sin suscripciones ni cargos recurrentes" | Verificable | Modelo de créditos consumibles. |
 | "Tu plan está listo en minutos" | Verificable con matiz | Depende de la longitud de la entrevista; no prometer tiempo exacto. |
 | Cifras de mercado (tamaño, población, número de profesionales) | **PROHIBIDO** | El sistema jamás las inventa y el marketing tampoco las afirma sin fuente citada. |
@@ -330,13 +338,17 @@ desconocer la razón.
   ver conteos, nodos, grafo ni pista alguna del sistema que usamos.
   **Por qué:** la mecánica interna (el grafo de conocimiento, cómo se
   cosecha el vecindario, cuántos conceptos alimentan un plan) es **ventaja
-  competitiva**, y exponerla no le aporta nada a quien lee su plan. El valor
+  competitiva**, y exponerla no le aporta nada a quien lee su plan. ~~El valor
   para el usuario está en **las fuentes** (qué libro y qué capítulo respaldan
-  cada concepto), no en los conteos.
+  cada concepto), no en los conteos.~~
   **Qué NO cambia:** el dato sigue existiendo y siendo auditable **hacia
   adentro** (caja de vidrio: evento `cobertura_conceptos`, forense y digest),
-  que es donde sirve para el análisis de la beta. Ver §5 y el claim "cada plan
-  cita su fuente" en §6.
+  que es donde sirve para el análisis de la beta. Ver §5 ~~y el claim "cada plan
+  cita su fuente" en §6~~.
+  > **CORRECCIÓN DECLARADA, 28 sep 2026** (decisión del fundador sobre la auditoría final; regla de `AGENTS.md`
+  > "Ningún libro ni autor llega al cliente", del 26 sep 2026): el valor para el usuario
+  > está en su plan, no en las fuentes. Las fuentes, como los conteos, son metadato interno; el claim "cada plan cita
+  > su fuente" queda prohibido en §6.
 
 - **Etiquetas de cara (jul 2026).** El usuario **jamás ve títulos técnicos ni
   jerga**. Toda superficie de navegación (el riel del árbol, el cintillo de la
@@ -352,7 +364,9 @@ desconocer la razón.
   aprender el vocabulario del sistema es cobrarle un peaje que no pidió.
   **Qué NO cambia:** `titulo_concepto`, `resumen_teorico` y `fuente` quedan
   **íntegros**: ahí viven la propiedad intelectual y la paridad con los libros,
-  y son lo que sostiene el claim "cada plan cita su fuente" (§6). Tampoco se
+  ~~y son lo que sostiene el claim "cada plan cita su fuente" (§6)~~ como
+  material interno que no llega al cliente (corrección declarada del 28 sep
+  2026 por la regla de `AGENTS.md` del 26 sep 2026; el claim quedó prohibido en §6). Tampoco se
   regeneran las etiquetas que ya estaban bien: se curó una lista de 68, no el
   corpus entero.
   **Cómo se sostiene:** el diccionario de la casa (abajo) y un detector
