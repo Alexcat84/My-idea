@@ -9,7 +9,7 @@
     "Identificar todas las fuentes posibles de datos: debriefings, grabaciones de voz, registros de eventos, lecturas de máquina",
     "Reconocer las limitaciones de la memoria humana antes de entrevistar participantes",
     "Cruzar y verificar datos entre distintas fuentes para reconstruir el contexto",
-    "Distinguir explícitamente entre dato factual y dato inferido/analizado"
+    "Distinguir entre dato factual y dato inferido o analizado; un dato inferido puede presentarse como factual si puedes mostrar qué hiciste y por qué concluiste lo que concluiste"
   ],
   "entregable_esperado": "Un inventario de fuentes de datos disponibles y un plan de recolección que combine debriefings y registros",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Recoge Datos de Factores Humanos",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-043-obtencion_datos_factores_humanos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distinguir explícitamente entre dato factual y dato inferido/analizado",
+      "texto_nuevo": "Distinguir entre dato factual y dato inferido o analizado; un dato inferido puede presentarse como factual si puedes mostrar qué hiciste y por qué concluiste lo que concluiste",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1120",
+        "frase": "if you can show what you did and why you concluded what you concluded"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro matiza que un dato bien derivado puede presentarse como factual si muestras cómo llegaste a él.; Misma salvedad perdida: la frontera entre dato y análisis depende de poder mostrar la estructura de la inferencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

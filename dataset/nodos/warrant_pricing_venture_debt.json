@@ -11,7 +11,7 @@
     "Negocia sobre qué tipo de acción se va a ejercer el warrant, preferente o común, y revisa las protecciones contra dilución.",
     "Negocia el precio de ejercicio (strike price) tratando de anclarlo a la valuación de tu próxima ronda si esperas que suba bastante.",
     "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto aplica más en rondas posteriores, no en las primeras.",
-    "Fija el plazo para ejercer los warrants (entre 5 y 10 años) y qué pasa con ellos si tu negocio se fusiona con otro.",
+    "Fija el plazo para ejercer los warrants (en la deuda de riesgo suelen pedir entre 7 y 10 años; más corto te conviene a ti) y procura que venzan si tu negocio se fusiona con otro, salvo que se ejerzan justo antes.",
     "Pide que el pago de los warrants quede separado del resto, para evitar problemas contables (Original Issue Discount, OID)."
   ],
   "entregable_esperado": "Una tabla donde compares los términos del warrant entre los distintos prestamistas: cobertura, valor económico, tipo de acción y precio de ejercicio.",
@@ -45,5 +45,24 @@
   ],
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-warrant_pricing_venture_debt-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fija el plazo para ejercer los warrants (entre 5 y 10 años) y qué pasa con ellos si tu negocio se fusiona con otro.",
+      "texto_nuevo": "Fija el plazo para ejercer los warrants (en la deuda de riesgo suelen pedir entre 7 y 10 años; más corto te conviene a ti) y procura que venzan si tu negocio se fusiona con otro, salvo que se ejerzan justo antes.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2870",
+        "frase": "Most venture debt term sheets seek warrants expiring between 7 and 10 years"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Mismo matiz perdido que la marca 0.; Para la deuda de riesgo el libro da 7 a 10 años; el rango 5 a 10 es el de los warrants de la deuda convertible.; Se pierde el consejo del libro: un plazo más corto te conviene y los warrants deben vencer en una fusión salvo que se ejerzan justo antes.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "La condición necesaria para un accidente organizacional es la rara alineación de huecos en capas sucesivas de defensa, permitiendo que los peligros entren en contacto dañino con personas y activos. Estas 'ventanas de oportunidad' son raras debido a la multiplicidad de defensas y la movilidad de los huecos. Los fallos activos pueden crear huecos deliberadamente (deshabilitar defensas por objetivos operativos locales, como en Chernóbil) o involuntariamente (diagnóstico erróneo, como en Three Mile Island).",
   "pasos_accionables": [
     "Reconstruir la secuencia completa del accidente identificando cada capa de defensa que fue penetrada.",
-    "Determinar si los huecos fueron creados deliberadamente (violación) o involuntariamente (error).",
+    "Determinar si cada hueco lo creó una condición latente o un fallo activo y, en este caso, si fue deliberado (violación) o involuntario (error).",
     "Documentar lecciones aprendidas para reforzar las capas de defensa específicas que fallaron."
   ],
   "entregable_esperado": "Un informe de investigación de accidente con diagrama de trayectoria mostrando las capas de defensa penetradas y el tipo de fallo en cada una.",
@@ -23,5 +23,24 @@
   "etiqueta_arbol": "Detecta la Cadena del Accidente",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-042-trayectoria_del_accidente-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si los huecos fueron creados deliberadamente (violación) o involuntariamente (error).",
+      "texto_nuevo": "Determinar si cada hueco lo creó una condición latente o un fallo activo y, en este caso, si fue deliberado (violación) o involuntario (error).",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "219",
+        "frase": "The holes can be created by active and latent failures."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que los huecos los crean fallos activos y condiciones latentes; el paso solo contempla los activos.; Misma omisión de las condiciones latentes.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

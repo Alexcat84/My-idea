@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Prácticas japonesas de manufactura ajustada (Just-in-Time y minimización de desperdicio)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un estudio sobre estampado automotriz japonés muestra prácticas como la entrega justo a tiempo (Kanban), cambios rápidos de matriz, alto uso del equipo, orden y limpieza extrema, y alta participación de las personas que trabajan contigo (círculos de calidad). Juntas, reducen el desperdicio de personas, recursos físicos, dinero y tiempo.",
+  "resumen_teorico": "Un estudio sobre estampado automotriz japonés muestra prácticas como la entrega justo a tiempo (Kanban), cambios rápidos de matriz, alto uso del equipo, orden y limpieza extrema, y alta participación de las personas que trabajan contigo (círculos de calidad). En esas empresas, una dedicación común de arriba abajo lleva a minimizar el desperdicio de personas, recursos físicos, dinero y tiempo.",
   "pasos_accionables": [
     "Implementa un sistema de entrega justo a tiempo con proveedores confiables de largo plazo",
     "Reduce los tiempos de cambio de herramienta o matriz estandarizando el proceso",
@@ -40,6 +40,22 @@
         "evidencia": "O058-027.entregable: área (Faltaba la tilde de área y no cambia nada más.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-e1-042-practicas_manufactura_justo_a_tiempo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un estudio sobre estampado automotriz japonés muestra prácticas como la entrega justo a tiempo (Kanban), cambios rápidos de matriz, alto uso del equipo, orden y limpieza extrema, y alta participación de las personas que trabajan contigo (círculos de calidad). Juntas, reducen el desperdicio de personas, recursos físicos, dinero y tiempo.",
+      "texto_nuevo": "Un estudio sobre estampado automotriz japonés muestra prácticas como la entrega justo a tiempo (Kanban), cambios rápidos de matriz, alto uso del equipo, orden y limpieza extrema, y alta participación de las personas que trabajan contigo (círculos de calidad). En esas empresas, una dedicación común de arriba abajo lleva a minimizar el desperdicio de personas, recursos físicos, dinero y tiempo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1069-1071",
+        "frase": "Thus they are driven to minimize waste in every form"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que las prácticas juntas reduzcan el desperdicio; lo atribuye a una dedicación común de arriba abajo.; Misma causa añadida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

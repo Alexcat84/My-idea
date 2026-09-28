@@ -3,15 +3,15 @@
   "dominio": "core",
   "titulo_concepto": "Derecho a registrar tus acciones para venderlas (Registration Rights)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Este derecho te permite exigir que el negocio registre tus acciones ante la oficina que regula los valores en tu país, para que puedas venderlas públicamente. Solo importa de verdad si el negocio piensa salir a bolsa algún día. Incluye tres formas: pedir tu propio registro (un número limitado de veces), sumarte a un registro que ya esta en marcha, o pedir uno independiente. Cada una tiene limites de tiempo, un monto mínimo de oferta y un porcentaje mínimo garantizado si hay reducción proporcional, normalmente no menos del 30%. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, serán los bancos de inversión quienes decidan como se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu país.",
+  "resumen_teorico": "Este derecho permite a los inversionistas exigir que el negocio registre sus acciones ante la oficina que regula los valores en tu país, para que puedan venderlas públicamente; casi siempre el negocio tendrá que ofrecerlo. Solo importa de verdad si el negocio piensa salir a bolsa algún día. Incluye tres formas: pedir su propio registro (un número limitado de veces y con límites de tiempo), sumarse a un registro que ya está en marcha, o pedir uno independiente (con un monto mínimo de oferta). Al sumarse, si hay reducción proporcional, tienen garantizado normalmente no menos del 30%, salvo en la primera salida a bolsa. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, los bancos de inversión tendrán mucho peso en cómo se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu país.",
   "pasos_accionables": [
-    "Define cuántas veces puedes exigir un registro (por ejemplo, dos) y el monto mínimo de oferta pública que necesitas para poder ejercerlo",
-    "Negocia tu derecho a sumarte a un registro ya en marcha y cómo se reduciría tu parte según las condiciones de mercado",
-    "Revisa qué porcentaje mínimo tienes garantizado si hay reducción proporcional (normalmente no menos del 30%)",
-    "Acuerda quién paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocación) y el tope de honorarios legales si vendes acciones",
+    "Define cuántas veces pueden los inversionistas exigir un registro (por ejemplo, dos) y el monto mínimo de oferta pública necesario para ejercerlo",
+    "Negocia el derecho de los inversionistas a sumarse a un registro ya en marcha y cómo se reduciría su parte según las condiciones de mercado",
+    "Revisa qué porcentaje mínimo tienen garantizado los inversionistas si hay reducción proporcional (normalmente no menos del 30%, salvo en la primera salida a bolsa)",
+    "Acuerda quién paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocación) y el tope de honorarios del abogado de los inversionistas que venden",
     "No le dediques demasiado tiempo legal a esta cláusula: su impacto práctico es limitado frente al control que tendrán los bancos de inversión cuando llegue el momento de salir a bolsa"
   ],
-  "entregable_esperado": "Cláusula de derecho a registrar tus acciones incluida en el acuerdo con los inversionistas, con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
+  "entregable_esperado": "Cláusula de derechos de registro de los inversionistas incluida en el acuerdo con ellos, con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
   "condiciones_activacion": [
     "Si planeas una eventual salida a bolsa",
     "Si necesitas garantías de poder vender tus acciones en el futuro",
@@ -147,6 +147,106 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-043-derechos_de_registro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Este derecho te permite exigir que el negocio registre tus acciones ante la oficina que regula los valores en tu país, para que puedas venderlas públicamente. Solo importa de verdad si el negocio piensa salir a bolsa algún día. Incluye tres formas: pedir tu propio registro (un número limitado de veces), sumarte a un registro que ya esta en marcha, o pedir uno independiente. Cada una tiene limites de tiempo, un monto mínimo de oferta y un porcentaje mínimo garantizado si hay reducción proporcional, normalmente no menos del 30%. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, serán los bancos de inversión quienes decidan como se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu país.",
+      "texto_nuevo": "Este derecho permite a los inversionistas exigir que el negocio registre sus acciones ante la oficina que regula los valores en tu país, para que puedan venderlas públicamente; casi siempre el negocio tendrá que ofrecerlo. Solo importa de verdad si el negocio piensa salir a bolsa algún día. Incluye tres formas: pedir su propio registro (un número limitado de veces y con límites de tiempo), sumarse a un registro que ya está en marcha, o pedir uno independiente (con un monto mínimo de oferta). Al sumarse, si hay reducción proporcional, tienen garantizado normalmente no menos del 30%, salvo en la primera salida a bolsa. Se negocia mucho, pero su peso real es limitado: cuando llegue el momento, los bancos de inversión tendrán mucho peso en cómo se estructura la oferta. Revisa los detalles legales y fiscales con alguien que conozca las reglas de tu país.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1805-1855",
+        "frase": "Registration rights are something the company will almost always have to offer to investors."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion, matiz; doble lectura ciega y arbitro): El derecho es de los inversionistas y el negocio casi siempre tiene que concederlo; el nodo se lo atribuye a quien emprende.; El libro dice que los bancos tendrán mucho peso en la decisión, no que la tomen ellos.; El libro exceptúa del piso del 30% la primera salida a bolsa.; Los límites no aplican a las tres formas por igual: tope de veces y plazos al propio, monto mínimo al independiente, el 30% al sumarse.; Misma excepción perdida de la primera salida a bolsa.; Mismo defecto: el derecho es de los inversionistas, no de quien emprende.; Mismo endurecimiento del 'major hand in deciding'.; Mismo reparto indebido de límites: el porcentaje garantizado solo aplica al sumarse a un registro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-derechos_de_registro-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Revisa qué porcentaje mínimo tienes garantizado si hay reducción proporcional (normalmente no menos del 30%)",
+      "texto_nuevo": "Revisa qué porcentaje mínimo tienen garantizado los inversionistas si hay reducción proporcional (normalmente no menos del 30%, salvo en la primera salida a bolsa)",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1819",
+        "frase": "Unless the registration is with respect to the Company’s initial public offering"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, matiz; doble lectura ciega y arbitro): El piso del 30% no rige en la primera salida a bolsa.; El porcentaje mínimo garantizado protege a los inversionistas que se suman al registro, no a quien emprende.; Misma excepción perdida de la primera salida a bolsa.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-derechos_de_registro-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Define cuántas veces puedes exigir un registro (por ejemplo, dos) y el monto mínimo de oferta pública que necesitas para poder ejercerlo",
+      "texto_nuevo": "Define cuántas veces pueden los inversionistas exigir un registro (por ejemplo, dos) y el monto mínimo de oferta pública necesario para ejercerlo",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1807-1813",
+        "frase": "The Company shall not be obligated to effect more than two (2) registrations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Quienes exigen el registro son los inversionistas, no quien emprende.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-derechos_de_registro-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Negocia tu derecho a sumarte a un registro ya en marcha y cómo se reduciría tu parte según las condiciones de mercado",
+      "texto_nuevo": "Negocia el derecho de los inversionistas a sumarse a un registro ya en marcha y cómo se reduciría su parte según las condiciones de mercado",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1819",
+        "frase": "The Investors shall be entitled to “piggyback” registration rights on all registrations of the Company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El derecho a sumarse a un registro es de los inversionistas, no de quien emprende.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-derechos_de_registro-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Acuerda quién paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocación) y el tope de honorarios legales si vendes acciones",
+      "texto_nuevo": "Acuerda quién paga los gastos de registro (usualmente el negocio, sin contar comisiones de colocación) y el tope de honorarios del abogado de los inversionistas que venden",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1831",
+        "frase": "including the expense of one special counsel of the selling shareholders not to exceed $25,000"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El tope cubre al abogado de los accionistas que venden en el registro, los inversionistas, no a quien emprende.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-derechos_de_registro-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cláusula de derecho a registrar tus acciones incluida en el acuerdo con los inversionistas, con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
+      "texto_nuevo": "Cláusula de derechos de registro de los inversionistas incluida en el acuerdo con ellos, con límites de tiempo, gastos y porcentajes de reducción claramente definidos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1805",
+        "frase": "Registration rights define the rights that investors have for registering their shares"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): La cláusula da el derecho a los inversionistas sobre sus acciones, no a quien emprende sobre las suyas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

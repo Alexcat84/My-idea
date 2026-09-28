@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Verificar que el proceso esté en control estadístico (sin causas especiales)",
     "Si persisten defectos con el proceso en control, identificar elementos del sistema (materiales, equipo, entorno) como causa raíz",
-    "Realizar pruebas simples para aislar la variable común a todas las personas o máquinas involucradas",
+    "Realizar pruebas para aislar la variable común a todas las personas o máquinas involucradas; si puede haber dos o más factores en juego, probarlos a la vez con un diseño estadístico adecuado, no de uno en uno",
     "Implementar el cambio estructural (mejor insumo, rediseño de equipo, mejor mantenimiento)",
     "Verificar la reducción o eliminación de defectos tras el cambio"
   ],
@@ -127,6 +127,23 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-042-mejora_del_sistema_responsabilidad_gerencial-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar pruebas simples para aislar la variable común a todas las personas o máquinas involucradas",
+      "texto_nuevo": "Realizar pruebas para aislar la variable común a todas las personas o máquinas involucradas; si puede haber dos o más factores en juego, probarlos a la vez con un diseño estadístico adecuado, no de uno en uno",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8525",
+        "frase": "Improvement may require simultaneous tests of two or more factors, by appropriate statistical design"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la mejora puede requerir probar dos o más factores a la vez con diseño estadístico, porque de uno en uno se pierden interacciones.; Misma advertencia perdida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

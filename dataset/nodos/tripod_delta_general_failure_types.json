@@ -10,7 +10,7 @@
     "Generar indicadores observables (sí/no) para cada uno de los 11 GFTs relevantes a la operación",
     "Aplicar checklist de 220 ítems (20 por GFT) de forma periódica (trimestral sugerido)",
     "Generar el Failure State Profile (perfil de fallas) mediante software",
-    "Identificar los 2-3 GFTs más críticos y planificar acciones remediales",
+    "Identificar los 2-3 GFTs más críticos, planificar y ejecutar acciones remediales y mantener informado de su avance al personal que evalúa",
     "Repetir la medición y comparar tendencias en el tiempo"
   ],
   "entregable_esperado": "Failure State Profile (gráfico de barras) con los GFTs priorizados y un plan de acción remedial para los 2-3 más críticos",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Detecta tus Fallas Generales a Tiempo",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-042-tripod_delta_general_failure_types-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar los 2-3 GFTs más críticos y planificar acciones remediales",
+      "texto_nuevo": "Identificar los 2-3 GFTs más críticos, planificar y ejecutar acciones remediales y mantener informado de su avance al personal que evalúa",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3384",
+        "frase": "The management needs to keep the workforce informed of remedial progress at all times"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el éxito depende de que quienes evalúan vean actuar a la dirección y se les informe del avance; el paso lo pierde.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

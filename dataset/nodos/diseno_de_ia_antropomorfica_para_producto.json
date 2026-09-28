@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Diseño de IA Antropomórfica como Producto o Servicio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Casos como Replika muestran que los usuarios tienden a atribuir personalidad, emociones e incluso relaciones afectivas a sistemas de IA conversacional, incluso sabiendo que no son sentientes. Esta tendencia humana a antropomorfizar puede convertirse en una ventaja competitiva (mayor engagement, retención, lealtad) si se diseña deliberadamente, pero también conlleva riesgos éticos y de reputación si se manipula el engagement de forma similar a las redes sociales, o si se retiran funcionalidades a las que los usuarios se han apegado emocionalmente (como ocurrió con Replika y el rechazo de usuarios al remover el modo erótico).",
+  "resumen_teorico": "Casos como Replika muestran que los usuarios tienden a atribuir personalidad, emociones e incluso relaciones afectivas a sistemas de IA conversacional, incluso sabiendo que no son sentientes. Esta tendencia humana a antropomorfizar puede convertirse en una ventaja competitiva (mayor engagement y retención) si se diseña deliberadamente, pero también conlleva riesgos éticos y de reputación si se manipula el engagement de forma similar a las redes sociales, o si se retiran funcionalidades a las que los usuarios se han apegado emocionalmente (como ocurrió con Replika y el rechazo de usuarios al remover el modo erótico, una función que no estaba en su diseño original y surgió del propio modelo).",
   "pasos_accionables": [
     "Si el producto incluye IA conversacional, definir de forma consciente el nivel de personalidad y calidez que se le dará, alineado con la marca y las expectativas del usuario.",
     "Evaluar el riesgo reputacional y ético de optimizar la IA para 'engagement' emocional sin transparencia hacia el usuario.",
-    "Anticipar y comunicar cambios de personalidad o funcionalidad de la IA para evitar el rechazo de usuarios que hayan desarrollado apego (lección de Replika).",
+    "Sugerencia de My Idea: anticipar y comunicar cambios de personalidad o funcionalidad de la IA a usuarios que hayan desarrollado apego (en Replika, retirar una función provocó una rebelión de usuarios).",
     "Establecer límites éticos claros sobre qué tipo de vínculos emocionales el producto fomentará con los usuarios."
   ],
   "entregable_esperado": "Un documento de lineamientos de 'personalidad de marca de IA' que defina tono, límites éticos y política de cambios de funcionalidad.",
@@ -39,6 +39,39 @@
         "evidencia": "F04-005: Definir la personalidad, los limites eticos y la politica de cambios de la IA del producto es disenar el producto, no descubrir el problema. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-040-diseno_de_ia_antropomorfica_para_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Casos como Replika muestran que los usuarios tienden a atribuir personalidad, emociones e incluso relaciones afectivas a sistemas de IA conversacional, incluso sabiendo que no son sentientes. Esta tendencia humana a antropomorfizar puede convertirse en una ventaja competitiva (mayor engagement, retención, lealtad) si se diseña deliberadamente, pero también conlleva riesgos éticos y de reputación si se manipula el engagement de forma similar a las redes sociales, o si se retiran funcionalidades a las que los usuarios se han apegado emocionalmente (como ocurrió con Replika y el rechazo de usuarios al remover el modo erótico).",
+      "texto_nuevo": "Casos como Replika muestran que los usuarios tienden a atribuir personalidad, emociones e incluso relaciones afectivas a sistemas de IA conversacional, incluso sabiendo que no son sentientes. Esta tendencia humana a antropomorfizar puede convertirse en una ventaja competitiva (mayor engagement y retención) si se diseña deliberadamente, pero también conlleva riesgos éticos y de reputación si se manipula el engagement de forma similar a las redes sociales, o si se retiran funcionalidades a las que los usuarios se han apegado emocionalmente (como ocurrió con Replika y el rechazo de usuarios al remover el modo erótico, una función que no estaba en su diseño original y surgió del propio modelo).",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "677",
+        "frase": "Replika’s erotic features were not part of the original design of the app"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro respalda más interacción y más retención, no lealtad.; Misma invención que la marca 0.; Mismo matiz que la marca 1: esas conductas no se diseñaron, surgieron del modelo.; Se cae que la función erótica de Replika no estaba en el diseño original y surgió del modelo, lo que limita lo que se controla diseñando.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-040-diseno_de_ia_antropomorfica_para_producto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipar y comunicar cambios de personalidad o funcionalidad de la IA para evitar el rechazo de usuarios que hayan desarrollado apego (lección de Replika).",
+      "texto_nuevo": "Sugerencia de My Idea: anticipar y comunicar cambios de personalidad o funcionalidad de la IA a usuarios que hayan desarrollado apego (en Replika, retirar una función provocó una rebelión de usuarios).",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "679",
+        "frase": "many people on the app revolted"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro narra la rebelión de los usuarios de Replika, pero no afirma que anticipar y comunicar los cambios la evite; queda como sugerencia.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

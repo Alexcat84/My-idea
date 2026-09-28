@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Señales de Alerta Ignoradas (Warning Signs)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "En el colapso de Barings, existieron múltiples indicadores previos (falta de segregación de funciones, altos requerimientos de financiamiento, ganancias desproporcionadas al riesgo percibido, comunicaciones de la bolsa sobre cuentas sospechosas) que individualmente parecían poco significativos, pero que en conjunto debían haber activado una alarma organizacional. La falta de un mecanismo que integre estas señales dispersas es en sí misma una condición latente.",
+  "resumen_teorico": "En el colapso de Barings, existieron múltiples indicadores previos (falta de segregación de funciones, altos requerimientos de financiamiento, ganancias desproporcionadas al riesgo percibido, comunicaciones de la bolsa sobre cuentas sospechosas) que individualmente parecían poco significativos, pero que en conjunto debían haber activado una alarma organizacional.",
   "pasos_accionables": [
     "Establecer un registro centralizado de anomalías o señales de alerta reportadas por distintas áreas.",
     "Definir umbrales o combinaciones de señales que disparen automáticamente una revisión de riesgo.",
@@ -49,6 +49,22 @@
         "motivo": "arista entre dos mundos (risk_management -> health_safety): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-042-senales_alerta_no_atendidas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En el colapso de Barings, existieron múltiples indicadores previos (falta de segregación de funciones, altos requerimientos de financiamiento, ganancias desproporcionadas al riesgo percibido, comunicaciones de la bolsa sobre cuentas sospechosas) que individualmente parecían poco significativos, pero que en conjunto debían haber activado una alarma organizacional. La falta de un mecanismo que integre estas señales dispersas es en sí misma una condición latente.",
+      "texto_nuevo": "En el colapso de Barings, existieron múltiples indicadores previos (falta de segregación de funciones, altos requerimientos de financiamiento, ganancias desproporcionadas al riesgo percibido, comunicaciones de la bolsa sobre cuentas sospechosas) que individualmente parecían poco significativos, pero que en conjunto debían haber activado una alarma organizacional.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "522",
+        "frase": "no single one of these indicators would have served as a sufficient warning"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro enumera las señales y dice que juntas debieron dar la alarma; no afirma que la falta de un integrador sea una condición latente.; Misma tesis añadida, sin respaldo en el pasaje.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

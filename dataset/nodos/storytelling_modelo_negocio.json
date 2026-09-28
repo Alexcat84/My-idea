@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Storytelling para Comunicar el Modelo de Negocio",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "El storytelling es una técnica infrautilizada en los negocios para hacer tangibles modelos de negocio nuevos o innovadores, que por naturaleza son difíciles de entender y generan resistencia. Contar una historia con un protagonista (empleado o cliente) ayuda a introducir la idea, ganar la atención de inversionistas y gerentes, clarificar cómo el modelo resuelve un problema del cliente, y comprometer a los empleados en una transición de modelo. Las historias también sirven para hacer tangible el futuro, ya sea para provocar ideas desafiando el status quo o para justificar un cambio de modelo.",
+  "resumen_teorico": "El storytelling es una técnica infrautilizada en los negocios para hacer tangibles modelos de negocio nuevos o innovadores, que por naturaleza pueden ser difíciles de entender y es probable que generen resistencia. Contar una historia con un protagonista (empleado o cliente) ayuda a introducir la idea, ganar la atención de inversionistas y gerentes, clarificar cómo el modelo resuelve un problema del cliente, y comprometer a los empleados en una transición de modelo. Las historias también sirven para hacer tangible el futuro, ya sea para provocar ideas desafiando el status quo o para justificar un cambio de modelo.",
   "pasos_accionables": [
     "Elige un protagonista único: un empleado que observa el problema o un cliente que vive el 'job to be done'.",
     "Describe los desafíos que enfrenta el protagonista y cómo el nuevo modelo de negocio le resuelve el problema.",
-    "Añade drama y emoción, mostrando qué recibe el protagonista y qué está dispuesto a pagar.",
+    "Añade drama y emoción, mostrando qué recibe el protagonista y qué está dispuesto a pagar, y cuida que la historia siga siendo auténtica, sin un tono fácil ni condescendiente.",
     "Selecciona una técnica de presentación adecuada a la audiencia: charla con imagen, video, role play, texto con imagen o cómic.",
     "Practica contar la historia desde distintos puntos de partida del Business Model Canvas (clientes, propuesta de valor, recursos clave, etc.)."
   ],
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Cuenta tu Modelo de Negocio",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-039-storytelling_modelo_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El storytelling es una técnica infrautilizada en los negocios para hacer tangibles modelos de negocio nuevos o innovadores, que por naturaleza son difíciles de entender y generan resistencia. Contar una historia con un protagonista (empleado o cliente) ayuda a introducir la idea, ganar la atención de inversionistas y gerentes, clarificar cómo el modelo resuelve un problema del cliente, y comprometer a los empleados en una transición de modelo. Las historias también sirven para hacer tangible el futuro, ya sea para provocar ideas desafiando el status quo o para justificar un cambio de modelo.",
+      "texto_nuevo": "El storytelling es una técnica infrautilizada en los negocios para hacer tangibles modelos de negocio nuevos o innovadores, que por naturaleza pueden ser difíciles de entender y es probable que generen resistencia. Contar una historia con un protagonista (empleado o cliente) ayuda a introducir la idea, ganar la atención de inversionistas y gerentes, clarificar cómo el modelo resuelve un problema del cliente, y comprometer a los empleados en una transición de modelo. Las historias también sirven para hacer tangible el futuro, ya sea para provocar ideas desafiando el status quo o para justificar un cambio de modelo.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2601",
+        "frase": "Resistance is one likely reaction to an unfamiliar model."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la resistencia es una reacción probable; el nodo la da como segura.; El libro dice que pueden ser difíciles de entender y que la resistencia es probable; el nodo lo endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-039-storytelling_modelo_negocio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Añade drama y emoción, mostrando qué recibe el protagonista y qué está dispuesto a pagar.",
+      "texto_nuevo": "Añade drama y emoción, mostrando qué recibe el protagonista y qué está dispuesto a pagar, y cuida que la historia siga siendo auténtica, sin un tono fácil ni condescendiente.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2653",
+        "frase": "keeping them authentic and avoiding a facile or patronizing tone"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta el mayor desafío que el libro señala para estas historias.; Se cae la advertencia del libro junto al drama: mantener la historia auténtica y sin tono fácil o condescendiente.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

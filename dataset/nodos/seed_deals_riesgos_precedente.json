@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Riesgos de Precedente en Rondas Semilla",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Las rondas semilla suelen tener los costos legales más bajos y negociaciones menos conflictivas, pero son las que más riesgo de precedente generan a largo plazo, porque los términos que aceptas hoy condicionan las rondas futuras. Conseguir una valoración muy alta o términos demasiado favorables sin respaldo real de desempeño puede volverse un problema serio: si no logras justificar una valoración mayor después, se produce dilución conflictiva y los inversionistas originales pueden bloquear el nuevo financiamiento. Por eso conviene priorizar una estructura sana, con un inversionista líder comprometido en vez de una ronda de fiesta con muchos inversionistas sin compromiso, y ser honesto con inversionistas semilla poco sofisticados sobre el riesgo de rondas a la baja.",
+  "resumen_teorico": "Las rondas semilla suelen tener los costos legales más bajos y negociaciones menos conflictivas, pero a menudo son las que más riesgo de precedente generan a largo plazo, porque los términos que aceptas hoy condicionan las rondas futuras. Conseguir una valoración muy alta o términos demasiado favorables sin respaldo real de desempeño puede volverse un problema serio: si no logras justificar una valoración mayor después, diluyes a tus inversionistas originales y tendrás que compensarlos o, peor, pueden bloquear el nuevo financiamiento, sobre todo si son inversionistas semilla poco sofisticados que esperaban que la siguiente ronda tuviera un precio mayor. Por eso conviene priorizar una estructura sana, con un inversionista líder comprometido en vez de una ronda de fiesta con muchos inversionistas sin compromiso.",
   "pasos_accionables": [
     "Evaluar si la valoración obtenida en tu ronda semilla es sostenible con el desempeño real de tu negocio",
     "Anticipar el crecimiento necesario y cómo los términos actuales impactarán la negociación de tus rondas futuras",
     "Preferir una estructura con un inversionista líder claro en vez de una ronda de fiesta con múltiples inversionistas sin compromiso",
-    "Comunicar expectativas realistas a tus inversionistas semilla no sofisticados sobre el riesgo de rondas a la baja",
+    "Sugerencia de My Idea: comunica expectativas realistas a tus inversionistas semilla no sofisticados sobre el riesgo de rondas a la baja",
     "Evitar comprometerte con valoraciones infladas que generen presión de dilución futura"
   ],
   "entregable_esperado": "Estructura de ronda semilla con inversionista líder identificado y análisis de sostenibilidad de la valoración frente a proyecciones de crecimiento.",
@@ -39,5 +39,40 @@
   ],
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-seed_deals_riesgos_precedente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las rondas semilla suelen tener los costos legales más bajos y negociaciones menos conflictivas, pero son las que más riesgo de precedente generan a largo plazo, porque los términos que aceptas hoy condicionan las rondas futuras. Conseguir una valoración muy alta o términos demasiado favorables sin respaldo real de desempeño puede volverse un problema serio: si no logras justificar una valoración mayor después, se produce dilución conflictiva y los inversionistas originales pueden bloquear el nuevo financiamiento. Por eso conviene priorizar una estructura sana, con un inversionista líder comprometido en vez de una ronda de fiesta con muchos inversionistas sin compromiso, y ser honesto con inversionistas semilla poco sofisticados sobre el riesgo de rondas a la baja.",
+      "texto_nuevo": "Las rondas semilla suelen tener los costos legales más bajos y negociaciones menos conflictivas, pero a menudo son las que más riesgo de precedente generan a largo plazo, porque los términos que aceptas hoy condicionan las rondas futuras. Conseguir una valoración muy alta o términos demasiado favorables sin respaldo real de desempeño puede volverse un problema serio: si no logras justificar una valoración mayor después, diluyes a tus inversionistas originales y tendrás que compensarlos o, peor, pueden bloquear el nuevo financiamiento, sobre todo si son inversionistas semilla poco sofisticados que esperaban que la siguiente ronda tuviera un precio mayor. Por eso conviene priorizar una estructura sana, con un inversionista líder comprometido en vez de una ronda de fiesta con muchos inversionistas sin compromiso.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3898",
+        "frase": "Either you’ll have to make them whole or, worse, they’ll vote to block"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da dos salidas: compensar a los originales o, peor, que bloqueen la ronda; se cae la primera.; El libro dice que a menudo ('often') permiten más errores; el nodo lo vuelve absoluto.; El libro no aconseja hablar con los inversionistas poco sofisticados; solo dice que con ellos el problema se agrava.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-seed_deals_riesgos_precedente-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar expectativas realistas a tus inversionistas semilla no sofisticados sobre el riesgo de rondas a la baja",
+      "texto_nuevo": "Sugerencia de My Idea: comunica expectativas realistas a tus inversionistas semilla no sofisticados sobre el riesgo de rondas a la baja",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3898",
+        "frase": "especially true in cases with unsophisticated seed investors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da este consejo; solo dice que el problema se agrava con inversionistas poco sofisticados. Queda como sugerencia práctica.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

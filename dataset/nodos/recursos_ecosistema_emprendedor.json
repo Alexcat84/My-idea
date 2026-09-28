@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Mapa de los recursos que existen para financiar y hacer crecer tu negocio",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Existe un ecosistema amplio de recursos que puedes usar para financiar tu negocio y hacerlo crecer: aceleradoras (como Techstars o Y Combinator), plataformas de financiamiento a cambio de participación (equity crowdfunding, como AngelList o Gust), financiamiento colectivo de producto (crowdfunding, como Kickstarter o Indiegogo), bases de datos de inversionistas (como Crunchbase o Pitchbook), y recursos educativos. Si conoces y usas bien estos recursos, aceleras tu acceso a capital y a mentoría.",
+  "resumen_teorico": "Existe un ecosistema amplio de recursos que puedes usar para financiar tu negocio y hacerlo crecer: aceleradoras (como Techstars o Y Combinator), plataformas de financiamiento a cambio de participación (equity crowdfunding, como AngelList o Gust), financiamiento colectivo de producto (crowdfunding, como Kickstarter o Indiegogo), bases de datos de inversionistas (como Crunchbase o Pitchbook), y recursos educativos.",
   "pasos_accionables": [
     "Evalúa si tu negocio puede entrar a una aceleradora; suelen dar capital inicial y acompañamiento a cambio de un porcentaje de tu empresa, así que pregunta las condiciones típicas en tu mercado",
     "Explora plataformas de financiamiento a cambio de participación (equity crowdfunding) si buscas capital semilla",
     "Considera el financiamiento colectivo de producto (crowdfunding) para validar la demanda y vender por adelantado",
-    "Usa bases de datos como Crunchbase o Pitchbook para identificar inversionistas que encajen con tu negocio",
+    "Usa bases de datos como Crunchbase o Pitchbook para identificar inversionistas que encajen con tu negocio, teniendo en cuenta que la exactitud de sus datos varía mucho",
     "Consulta recursos educativos y blogs especializados para mantenerte actualizado"
   ],
   "entregable_esperado": "Tu lista priorizada de recursos y plataformas que vas a usar según la etapa de financiamiento en la que estás",
@@ -41,6 +41,39 @@
         "motivo": "Despues de mapear los recursos del ecosistema emprendedor, lo natural es preguntarse por que esos ecosistemas se concentran en ciertas geografias y como se forma una comunidad asi."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-044-recursos_ecosistema_emprendedor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existe un ecosistema amplio de recursos que puedes usar para financiar tu negocio y hacerlo crecer: aceleradoras (como Techstars o Y Combinator), plataformas de financiamiento a cambio de participación (equity crowdfunding, como AngelList o Gust), financiamiento colectivo de producto (crowdfunding, como Kickstarter o Indiegogo), bases de datos de inversionistas (como Crunchbase o Pitchbook), y recursos educativos. Si conoces y usas bien estos recursos, aceleras tu acceso a capital y a mentoría.",
+      "texto_nuevo": "Existe un ecosistema amplio de recursos que puedes usar para financiar tu negocio y hacerlo crecer: aceleradoras (como Techstars o Y Combinator), plataformas de financiamiento a cambio de participación (equity crowdfunding, como AngelList o Gust), financiamiento colectivo de producto (crowdfunding, como Kickstarter o Indiegogo), bases de datos de inversionistas (como Crunchbase o Pitchbook), y recursos educativos.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "5474",
+        "frase": "there has been a Cambrian explosion of entrepreneurial resources, including many around financing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje solo enumera y describe los recursos; el resultado prometido de acelerar el acceso a capital y mentoría no está.; Mismo defecto: promesa de resultado general que el libro no hace.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-recursos_ecosistema_emprendedor-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa bases de datos como Crunchbase o Pitchbook para identificar inversionistas que encajen con tu negocio",
+      "texto_nuevo": "Usa bases de datos como Crunchbase o Pitchbook para identificar inversionistas que encajen con tu negocio, teniendo en cuenta que la exactitud de sus datos varía mucho",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "5484",
+        "frase": "with all private company data, accuracy varies a lot"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la exactitud de los datos de empresas privadas varía mucho; se cae ese límite.; Mismo matiz perdido sobre la exactitud variable de los datos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

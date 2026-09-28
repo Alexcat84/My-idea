@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "El mito de que la calidad se resuelve delegandola por completo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Muchas veces delegas toda la responsabilidad de la calidad en quien te ayuda con eso, y te alejas de tu propio rol en decidir y actuar. Quien se encarga de calidad suele limitarse a darte reportes de lo que ya paso, en lugar de decirte si tu proceso esta estable o si hay algo puntual que necesita tu decisión. La calidad no se instala de una vez: es un aprendizaje continuo que tienes que liderar tu.",
+  "resumen_teorico": "Muchas veces delegas toda la responsabilidad de la calidad en quien te ayuda con eso, y te alejas de tu propio rol en decidir y actuar. Quien se encarga de calidad suele limitarse a darte reportes de lo que ya pasó, en lugar de decirte si tu proceso ya está estable (y entonces mejorarlo depende sobre todo de ti) o si todavía tiene causas puntuales que atender. La calidad no se instala de una vez: es un aprendizaje continuo que tienes que liderar tú.",
   "pasos_accionables": [
     "Redefine el rol de quien te ayuda con calidad: es tu asesor, no el único responsable",
     "Involúcrate activamente en las decisiones de calidad, junto con quien compra y quien produce",
@@ -94,6 +94,22 @@
         "evidencia": "O033-028.entregable: quién, qué (Tildes que faltaban en 'quién' y 'qué' (interrogativa indirecta).)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-e1-042-mito_departamento_control_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas veces delegas toda la responsabilidad de la calidad en quien te ayuda con eso, y te alejas de tu propio rol en decidir y actuar. Quien se encarga de calidad suele limitarse a darte reportes de lo que ya paso, en lugar de decirte si tu proceso esta estable o si hay algo puntual que necesita tu decisión. La calidad no se instala de una vez: es un aprendizaje continuo que tienes que liderar tu.",
+      "texto_nuevo": "Muchas veces delegas toda la responsabilidad de la calidad en quien te ayuda con eso, y te alejas de tu propio rol en decidir y actuar. Quien se encarga de calidad suele limitarse a darte reportes de lo que ya pasó, en lugar de decirte si tu proceso ya está estable (y entonces mejorarlo depende sobre todo de ti) o si todavía tiene causas puntuales que atender. La calidad no se instala de una vez: es un aprendizaje continuo que tienes que liderar tú.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2892",
+        "frase": "in which case management must take on the chief role for improvement"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que si el sistema ya es estable la mejora pasa a depender sobre todo de la dirección; el nodo pierde esa consecuencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

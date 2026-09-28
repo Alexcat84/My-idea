@@ -7,7 +7,7 @@
   "resumen_teorico": "Sistema para categorizar leads de franquicia en tres tipos: 'A' (3-5%, totalmente comprometidos y responsivos), 'B' (12-15%, parcialmente comprometidos, requieren más guía) y 'C' (80-85%, no calificados o no comprometidos, deben archivarse). Permite priorizar el tiempo del equipo de ventas en los prospectos con mayor probabilidad de cierre.",
   "pasos_accionables": [
     "Clasificar cada prospecto como A, B o C en la primera llamada",
-    "Enfocar el tiempo de ventas en mover prospectos B hacia A",
+    "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A",
     "Archivar prospectos C en un archivo de contacto a 6 meses sin perseguirlos activamente",
     "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas como benchmark"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Clasifica tus Prospectos por Nivel",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-041-clasificacion_abc_prospectos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfocar el tiempo de ventas en mover prospectos B hacia A",
+      "texto_nuevo": "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4444",
+        "frase": "moving an “A” to a close and moving a “B” to an “A.”"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reparte el tiempo entre llevar a los A al cierre y mover los B hacia A; el paso omite a los A.; Mismo defecto: falta llevar a los A al cierre.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

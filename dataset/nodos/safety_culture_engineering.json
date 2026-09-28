@@ -7,7 +7,7 @@
   "resumen_teorico": "Plantea que una cultura de seguridad efectiva no surge de una transformación mística sino que puede ser 'diseñada socialmente' identificando y ensamblando sus componentes esenciales mediante prácticas compartidas persistentes. A diferencia de las culturas nacionales (basadas en valores compartidos), las culturas organizacionales se forman principalmente por prácticas compartidas, que son más manejables de cambiar que los valores. La cultura de seguridad se define como el producto de valores, actitudes, competencias y patrones de comportamiento individuales y grupales que determinan el compromiso con los programas de salud y seguridad.",
   "pasos_accionables": [
     "Identificar las prácticas compartidas actuales relacionadas con seguridad en la organización",
-    "Diseñar e introducir nuevas prácticas y sistemas de gestión enfocados en seguridad",
+    "Diseñar e introducir nuevas prácticas y sistemas de gestión enfocados en seguridad, incluido un sistema de información de seguridad eficaz",
     "Evitar depender de transformaciones dramáticas post-accidente que suelen ser efímeras",
     "Medir el compromiso mediante comunicación basada en confianza mutua y percepción compartida de importancia de la seguridad",
     "Iterar y sostener las prácticas como un proceso de aprendizaje colectivo continuo"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Diseña tu Cultura de Seguridad",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-042-safety_culture_engineering-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar e introducir nuevas prácticas y sistemas de gestión enfocados en seguridad",
+      "texto_nuevo": "Diseñar e introducir nuevas prácticas y sistemas de gestión enfocados en seguridad, incluido un sistema de información de seguridad eficaz",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4734",
+        "frase": "the critical importance of an effective safety information system"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El capítulo pone un sistema de información de seguridad eficaz como base principal de la cultura; el paso lo omite.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

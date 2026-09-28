@@ -4,10 +4,10 @@
   "dominio": "franquicias",
   "titulo_concepto": "Contratación del Abogado de Franquicias Adecuado",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Elegir un abogado especializado en franquicias es una decisión de largo plazo crítica, ya que este profesional actualizará documentos legales, gestionará registros estatales anuales y representará al franquiciador en negociaciones y cierres. Es fundamental evitar 'empaquetadores' legales (legal document preparation firms) que practican derecho sin licencia adecuada, ya que esto genera conflictos de interés, pérdida de privilegio abogado-cliente, y falta de cobertura de seguro por mala praxis.",
+  "resumen_teorico": "Elegir un abogado especializado en franquicias es una decisión de largo plazo crítica, ya que este profesional actualizará documentos legales, gestionará registros estatales anuales y representará al franquiciador en negociaciones y cierres. En general conviene contratarlo después de confirmar que franquiciar es viable. Es fundamental evitar 'empaquetadores' legales (legal document preparation firms) que practican derecho sin licencia adecuada, ya que esto genera conflictos de interés, pérdida de privilegio abogado-cliente, y falta de cobertura de seguro por mala praxis.",
   "pasos_accionables": [
     "Buscar referencias de fuentes confiables (consultoras de franquicia, otros franquiciadores) para identificar abogados especializados",
-    "Evaluar candidatos según experiencia en franquicias, enfoque en franquiciadores (no franquiciados), tamaño de firma y estructura de honorarios",
+    "Evaluar candidatos según la experiencia en franquicias del abogado que te atenderá (no la de la firma), enfoque en franquiciadores (no franquiciados), enfoque transaccional, conocimiento de tu industria (vital si está muy regulada), tamaño de firma y estructura de honorarios",
     "Verificar que el abogado tenga seguro de responsabilidad profesional (malpractice insurance)",
     "Evitar 'legal document preparation firms' o consultoras que ofrezcan redactar documentos legales sin ser firma de abogados",
     "Establecer una relación continua para actualización anual de documentos y registros"
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Contrata al Abogado Correcto",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-041-contratar_abogado_franquicias-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar candidatos según experiencia en franquicias, enfoque en franquiciadores (no franquiciados), tamaño de firma y estructura de honorarios",
+      "texto_nuevo": "Evaluar candidatos según la experiencia en franquicias del abogado que te atenderá (no la de la firma), enfoque en franquiciadores (no franquiciados), enfoque transaccional, conocimiento de tu industria (vital si está muy regulada), tamaño de firma y estructura de honorarios",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5452-5464",
+        "frase": "it is the experience of the individual franchise attorneys you need to be concerned with"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como factor principal la experiencia del abogado individual (no la firma) y pesa el enfoque transaccional y el conocimiento de la industria, vital si está regulada.; Faltan el enfoque transaccional y el conocimiento de la industria, que el libro lista y pondera.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-041-contratar_abogado_franquicias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir un abogado especializado en franquicias es una decisión de largo plazo crítica, ya que este profesional actualizará documentos legales, gestionará registros estatales anuales y representará al franquiciador en negociaciones y cierres. Es fundamental evitar 'empaquetadores' legales (legal document preparation firms) que practican derecho sin licencia adecuada, ya que esto genera conflictos de interés, pérdida de privilegio abogado-cliente, y falta de cobertura de seguro por mala praxis.",
+      "texto_nuevo": "Elegir un abogado especializado en franquicias es una decisión de largo plazo crítica, ya que este profesional actualizará documentos legales, gestionará registros estatales anuales y representará al franquiciador en negociaciones y cierres. En general conviene contratarlo después de confirmar que franquiciar es viable. Es fundamental evitar 'empaquetadores' legales (legal document preparation firms) que practican derecho sin licencia adecuada, ya que esto genera conflictos de interés, pérdida de privilegio abogado-cliente, y falta de cobertura de seguro por mala praxis.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5476",
+        "frase": "generally best to wait on the decision to hire a franchise attorney until after"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja en general contratar al abogado después de confirmar la viabilidad de franquiciar, para no pagar asesoría de un programa que no funcionará.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,9 +4,9 @@
   "dominio": "franquicias",
   "titulo_concepto": "Menor Contribución por Unidad (Desventaja de Franquiciar)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Como franquiciante, no se recibe el 100% de las utilidades de cada unidad, sino una fracción vía regalías, venta de productos, rebates y otras cuotas. Puede requerirse vender 4-5 franquicias para igualar la ganancia financiera de una sola unidad corporativa rentable, aunque el ROI relativo sea mucho más alto en el modelo de franquicia.",
+  "resumen_teorico": "Como franquiciante, no se recibe el 100% de las utilidades de cada unidad, sino una fracción vía regalías, venta de productos, rebates y otras cuotas. Puede requerirse vender 4-5 franquicias o más para igualar la ganancia de una sola unidad corporativa rentable. El ROI es mucho más alto franquiciando, pero con unidades propias el retorno total puede ser mayor si saturas el mercado sin agotar recursos.",
   "pasos_accionables": [
-    "Calcular el ingreso neto proyectado por unidad franquiciada (regalías + otras cuotas)",
+    "Calcular el ingreso neto proyectado por unidad franquiciada (regalías, venta de productos, rebates y otras cuotas)",
     "Comparar contra el ingreso neto de una unidad 100% corporativa",
     "Determinar cuántas unidades franquiciadas se necesitan para igualar el retorno de una unidad propia",
     "Evaluar si conviene un modelo híbrido (unidades propias + franquicias)"
@@ -36,6 +36,39 @@
         "evidencia": "F04-029: Comparar el retorno de una unidad propia con el de una franquiciada para elegir el modelo es disenar el modelo de negocio. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-041-contribucion_por_unidad_desventaja-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Como franquiciante, no se recibe el 100% de las utilidades de cada unidad, sino una fracción vía regalías, venta de productos, rebates y otras cuotas. Puede requerirse vender 4-5 franquicias para igualar la ganancia financiera de una sola unidad corporativa rentable, aunque el ROI relativo sea mucho más alto en el modelo de franquicia.",
+      "texto_nuevo": "Como franquiciante, no se recibe el 100% de las utilidades de cada unidad, sino una fracción vía regalías, venta de productos, rebates y otras cuotas. Puede requerirse vender 4-5 franquicias o más para igualar la ganancia de una sola unidad corporativa rentable. El ROI es mucho más alto franquiciando, pero con unidades propias el retorno total puede ser mayor si saturas el mercado sin agotar recursos.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "402",
+        "frase": "you might need to sell four to five franchises or more"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice cuatro a cinco franquicias o más; el nodo la deja como techo.; Se pierde la contrapartida del libro: con unidades propias el retorno total puede ser mayor si saturas el mercado sin agotar recursos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-041-contribucion_por_unidad_desventaja-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el ingreso neto proyectado por unidad franquiciada (regalías + otras cuotas)",
+      "texto_nuevo": "Calcular el ingreso neto proyectado por unidad franquiciada (regalías, venta de productos, rebates y otras cuotas)",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "400",
+        "frase": "some combination of royalties, product sales, rebates, advertising assessments, and other fees"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta la venta de productos y los rebates entre los ingresos del franquiciante; el cálculo los omite.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

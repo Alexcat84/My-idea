@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Alineación de Provisiones Protectoras entre Series",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Las provisiones protectoras (derechos de veto de los accionistas preferentes) deben combinarse para que todos los inversionistas preferentes, sin importar la serie, voten juntos. Si desde la segunda ronda existen votos separados por clase de acción, la empresa queda atrapada en una estructura donde cada serie tiene derechos de bloqueo independientes, complicando enormemente la gestión futura, especialmente si se esperan más de tres rondas de financiamiento.",
+  "resumen_teorico": "Conviene intentar combinar las provisiones protectoras (derechos de veto de los accionistas preferentes) para que todos los inversionistas preferentes, sin importar la serie, voten juntos. Si desde la segunda ronda existen votos separados por clase de acción, lo más probable es que la empresa quede atrapada en una estructura donde cada serie tiene derechos de bloqueo independientes, complicando enormemente la gestión futura, especialmente si se esperan más de tres rondas de financiamiento.",
   "pasos_accionables": [
     "Negociar desde la primera ronda VC que las provisiones protectoras se voten en conjunto entre todas las series",
     "Evaluar cuántas rondas de financiamiento se esperan realistamente antes de decidir el nivel de sincronización necesario",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Alinea los Vetos entre Series",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-protective_provisions_alineacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las provisiones protectoras (derechos de veto de los accionistas preferentes) deben combinarse para que todos los inversionistas preferentes, sin importar la serie, voten juntos. Si desde la segunda ronda existen votos separados por clase de acción, la empresa queda atrapada en una estructura donde cada serie tiene derechos de bloqueo independientes, complicando enormemente la gestión futura, especialmente si se esperan más de tres rondas de financiamiento.",
+      "texto_nuevo": "Conviene intentar combinar las provisiones protectoras (derechos de veto de los accionistas preferentes) para que todos los inversionistas preferentes, sin importar la serie, voten juntos. Si desde la segunda ronda existen votos separados por clase de acción, lo más probable es que la empresa quede atrapada en una estructura donde cada serie tiene derechos de bloqueo independientes, complicando enormemente la gestión futura, especialmente si se esperan más de tres rondas de financiamiento.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3913",
+        "frase": "You will want to try to combine the protective provisions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice 'most likely stuck', no que quede atrapada con certeza.; Endurece: el libro dice que conviene intentar combinarlas, no que deban.; Mismo endurecimiento de 'deben combinarse'.; Mismo endurecimiento de 'queda atrapada'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

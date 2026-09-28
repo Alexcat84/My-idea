@@ -4,15 +4,15 @@
   "dominio": "core",
   "titulo_concepto": "Fine-Tuning de IA para el Caso de Uso del Negocio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Los modelos de lenguaje (LLM) pasan por una fase de preentrenamiento general y luego por un fine-tuning que los adapta a tareas específicas. Las empresas pueden alimentar al modelo con ejemplos propios (como transcripciones de soporte al cliente con buenas respuestas) o con retroalimentación de usuarios (thumbs-up/thumbs-down) para que el modelo produzca respuestas más alineadas con su caso de uso particular. Esto convierte a un modelo genérico en una herramienta especializada para el negocio.",
+  "resumen_teorico": "Los modelos de lenguaje (LLM) pasan por una fase de preentrenamiento general y luego, muchos, por un fine-tuning en el que personas califican sus respuestas para reforzar las buenas y reducir las malas. Después pueden ajustarse más: las empresas pueden alimentar al modelo con ejemplos propios (como transcripciones de soporte al cliente con buenas respuestas) o con retroalimentación de usuarios (thumbs-up/thumbs-down). Este ajuste adicional puede hacer que las respuestas del modelo se adapten más a una necesidad concreta del negocio.",
   "pasos_accionables": [
     "Identificar el caso de uso específico donde se aplicará la IA (soporte, ventas, contenido, etc.)",
     "Recopilar ejemplos reales de interacciones deseadas (preguntas y respuestas ideales)",
     "Entrenar o ajustar el modelo con esos ejemplos específicos del negocio",
     "Implementar un sistema de retroalimentación (thumbs up/down) para mejora continua",
-    "Medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso"
+    "Sugerencia de My Idea: medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso"
   ],
-  "entregable_esperado": "Un modelo de IA fine-tuned o prompt-engineered con ejemplos específicos del negocio, documentado y validado con métricas de desempeño.",
+  "entregable_esperado": "Un modelo de IA ajustado (fine-tuned) con ejemplos específicos del negocio o con la retroalimentación de sus usuarios, documentado.",
   "nodos_previos": [
     "seleccion_modelo_ia_adecuado",
     "comprension_capacidades_limitaciones_ia"
@@ -26,5 +26,56 @@
   "etiqueta_arbol": "Entrena tu IA a Medida",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-040-fine_tuning_ia_para_caso_de_uso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los modelos de lenguaje (LLM) pasan por una fase de preentrenamiento general y luego por un fine-tuning que los adapta a tareas específicas. Las empresas pueden alimentar al modelo con ejemplos propios (como transcripciones de soporte al cliente con buenas respuestas) o con retroalimentación de usuarios (thumbs-up/thumbs-down) para que el modelo produzca respuestas más alineadas con su caso de uso particular. Esto convierte a un modelo genérico en una herramienta especializada para el negocio.",
+      "texto_nuevo": "Los modelos de lenguaje (LLM) pasan por una fase de preentrenamiento general y luego, muchos, por un fine-tuning en el que personas califican sus respuestas para reforzar las buenas y reducir las malas. Después pueden ajustarse más: las empresas pueden alimentar al modelo con ejemplos propios (como transcripciones de soporte al cliente con buenas respuestas) o con retroalimentación de usuarios (thumbs-up/thumbs-down). Este ajuste adicional puede hacer que las respuestas del modelo se adapten más a una necesidad concreta del negocio.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "110-114",
+        "frase": "can make the responses of the model more specific to a particular need"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el ajuste adicional puede hacer las respuestas más específicas a una necesidad; el nodo lo endurece a una transformación segura.; El libro separa un primer ajuste con personas que califican respuestas (reforzar las buenas, reducir las malas) de un ajuste posterior al caso de uso; el nodo los funde en uno.; Mismo endurecimiento que la marca 0: de 'puede hacer más específicas las respuestas' a 'convierte en herramienta especializada'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-040-fine_tuning_ia_para_caso_de_uso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso",
+      "texto_nuevo": "Sugerencia de My Idea: medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "114",
+        "frase": "This type of fine-tuning is usually done by providing more specific examples"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone medir el modelo ajustado contra el genérico ni condicionar el escalado; queda como sugerencia práctica.; Misma invención que la marca 0.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-040-fine_tuning_ia_para_caso_de_uso-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un modelo de IA fine-tuned o prompt-engineered con ejemplos específicos del negocio, documentado y validado con métricas de desempeño.",
+      "texto_nuevo": "Un modelo de IA ajustado (fine-tuned) con ejemplos específicos del negocio o con la retroalimentación de sus usuarios, documentado.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "114",
+        "frase": "providing more specific examples to create a new tweaked model"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje solo habla de ajustar con ejemplos o con la retroalimentación de usuarios; la alternativa de prompts y la validación con métricas no están.; Misma invención que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

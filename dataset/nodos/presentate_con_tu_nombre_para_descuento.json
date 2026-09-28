@@ -4,13 +4,13 @@
   "dominio": "compras",
   "titulo_concepto": "Preséntate por tu nombre para abrir la puerta a un descuento informal",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Presentarte por tu nombre propio antes de pedir algo cambia el tono de cualquier transacción, porque convierte una operación anónima en una interacción entre dos personas. Preguntar de forma amistosa si existe algún descuento asociado a tu nombre suena a broma, pero abre una puerta real: la persona que te atiende puede reírse, consultar con un superior, o simplemente ofrecerte una rebaja que no está en la política oficial pero que sí está en su margen de decisión. Esta técnica funciona mejor en comercios pequeños o con representantes que tienen algo de autonomía, y depende de que la pidas con calidez genuina, no como un truco mecánico repetido sin sinceridad.",
+  "resumen_teorico": "Presentarte por tu nombre propio antes de pedir algo puede cambiar el tono de una transacción, porque convierte una operación anónima en una interacción entre dos personas. Preguntar de forma amistosa si existe algún descuento asociado a tu nombre suena a broma, pero abre una puerta real: la persona que te atiende puede reírse, consultar con un superior, o simplemente ofrecerte una rebaja que no está en la política oficial pero que sí está en su margen de decisión. Esta técnica depende de que la pidas con calidez genuina, no como un truco mecánico repetido sin sinceridad.",
   "pasos_accionables": [
     "Cuando compres en persona o por teléfono, di tu nombre de forma amistosa antes de pedir algo.",
     "Pregunta directamente si existe algún descuento con tu nombre, en tono de broma pero genuino.",
-    "Observa si la persona se ríe o duda: es señal de que puede consultar con alguien más arriba.",
+    "Deja que la persona disfrute también de la interacción y espera su respuesta: puede reírse o consultar con alguien más arriba.",
     "Si te dicen que deben preguntar a un superior, espera con paciencia y agradece el intento.",
-    "Repite esta práctica en distintos comercios o proveedores pequeños donde el trato es más personal."
+    "Repite esta práctica en distintos comercios o con distintos proveedores."
   ],
   "entregable_esperado": "Una interacción personalizada que abre la posibilidad de un descuento no listado en la política oficial.",
   "nodos_previos": [
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Usa tu nombre para pedir descuento",
   "fuentes_internas": [
     "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-039-presentate_con_tu_nombre_para_descuento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentarte por tu nombre propio antes de pedir algo cambia el tono de cualquier transacción, porque convierte una operación anónima en una interacción entre dos personas. Preguntar de forma amistosa si existe algún descuento asociado a tu nombre suena a broma, pero abre una puerta real: la persona que te atiende puede reírse, consultar con un superior, o simplemente ofrecerte una rebaja que no está en la política oficial pero que sí está en su margen de decisión. Esta técnica funciona mejor en comercios pequeños o con representantes que tienen algo de autonomía, y depende de que la pidas con calidez genuina, no como un truco mecánico repetido sin sinceridad.",
+      "texto_nuevo": "Presentarte por tu nombre propio antes de pedir algo puede cambiar el tono de una transacción, porque convierte una operación anónima en una interacción entre dos personas. Preguntar de forma amistosa si existe algún descuento asociado a tu nombre suena a broma, pero abre una puerta real: la persona que te atiende puede reírse, consultar con un superior, o simplemente ofrecerte una rebaja que no está en la política oficial pero que sí está en su margen de decisión. Esta técnica depende de que la pidas con calidez genuina, no como un truco mecánico repetido sin sinceridad.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3688, 3706-3722",
+        "frase": "emplear tu propio nombre también puede generar una dinámica de «empatía forzosa»"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que usar tu nombre puede generar empatía; el nodo lo vuelve un efecto seguro en cualquier transacción.; El libro no dice en qué tipo de comercio funciona mejor; el ejemplo es una tienda de un centro comercial.; Misma condición de eficacia inventada que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-039-presentate_con_tu_nombre_para_descuento-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Observa si la persona se ríe o duda: es señal de que puede consultar con alguien más arriba.",
+      "texto_nuevo": "Deja que la persona disfrute también de la interacción y espera su respuesta: puede reírse o consultar con alguien más arriba.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3714-3722",
+        "frase": "Deja que la otra persona disfrute también de la interacción."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no presenta la risa o la duda como señal de escalada; solo es lo que ocurrió en el ejemplo.; Mismo defecto: convierte el relato en una señal diagnóstica.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-039-presentate_con_tu_nombre_para_descuento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repite esta práctica en distintos comercios o proveedores pequeños donde el trato es más personal.",
+      "texto_nuevo": "Repite esta práctica en distintos comercios o con distintos proveedores.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3706",
+        "frase": "estaba en una tienda de un centro comercial y elegí varias camisas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo defecto: condición que el libro no pone.; Restringe la práctica a comercios pequeños con trato más personal, cosa que el libro no dice.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

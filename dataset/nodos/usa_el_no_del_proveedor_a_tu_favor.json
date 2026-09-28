@@ -4,11 +4,11 @@
   "dominio": "compras",
   "titulo_concepto": "Usa el 'no' del proveedor a tu favor",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Un 'no' no cierra la conversación, la abre: le da al proveedor la sensación de control y seguridad que necesita para seguir hablando contigo con honestidad. Si desde el principio le das permiso explícito para decir que no, reduces su necesidad de defenderse y aumentas las probabilidades de llegar a un acuerdo real. También puedes provocar un 'no' con preguntas como si sería mala idea hacer tal cosa, porque esa palabra resulta cómoda de pronunciar y abre espacio para seguir negociando. Dar una razón simple, aunque no sea perfecta, cuando pides algo también aumenta la probabilidad de que el proveedor acceda. Nunca confundas un 'sí' apresurado con un compromiso real: casi siempre es solo una forma de que te dejen en paz.",
+  "resumen_teorico": "Un 'no' no cierra la conversación, la abre: le da al proveedor la sensación de control y seguridad que necesita para seguir hablando contigo con honestidad. Si desde el principio le das permiso explícito para decir que no, reduces su necesidad de defenderse y aumentas las probabilidades de llegar a un acuerdo real. También puedes provocar un 'no' con preguntas como si sería mala idea hacer tal cosa, porque esa palabra resulta cómoda de pronunciar y abre espacio para seguir negociando. Dar una razón simple, aunque no sea perfecta, cuando pides algo también aumenta la probabilidad de que el proveedor acceda. Nunca confundas un 'sí' apresurado con un compromiso real: a menudo es solo una forma de que te dejen en paz.",
   "pasos_accionables": [
     "Cuando pidas algo al proveedor, dale explícitamente permiso para decir que no.",
     "Formula preguntas que inviten a un no, como preguntar si sería mala idea aceptar tal condición.",
-    "Da siempre una razón breve, aunque simple, cuando pidas un cambio o un descuento.",
+    "Da siempre una razón breve cuando pidas un cambio o un descuento: en lo sencillo basta una razón simple; en lo más complicado, busca una que apele a lo que el proveedor valora.",
     "Si el proveedor dice no, pregúntale qué necesitaría para que la respuesta cambiara.",
     "Evita presionar por un sí rápido, porque suele ser falso y no se cumple después."
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Convierte el no en avance",
   "fuentes_internas": [
     "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-039-usa_el_no_del_proveedor_a_tu_favor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un 'no' no cierra la conversación, la abre: le da al proveedor la sensación de control y seguridad que necesita para seguir hablando contigo con honestidad. Si desde el principio le das permiso explícito para decir que no, reduces su necesidad de defenderse y aumentas las probabilidades de llegar a un acuerdo real. También puedes provocar un 'no' con preguntas como si sería mala idea hacer tal cosa, porque esa palabra resulta cómoda de pronunciar y abre espacio para seguir negociando. Dar una razón simple, aunque no sea perfecta, cuando pides algo también aumenta la probabilidad de que el proveedor acceda. Nunca confundas un 'sí' apresurado con un compromiso real: casi siempre es solo una forma de que te dejen en paz.",
+      "texto_nuevo": "Un 'no' no cierra la conversación, la abre: le da al proveedor la sensación de control y seguridad que necesita para seguir hablando contigo con honestidad. Si desde el principio le das permiso explícito para decir que no, reduces su necesidad de defenderse y aumentas las probabilidades de llegar a un acuerdo real. También puedes provocar un 'no' con preguntas como si sería mala idea hacer tal cosa, porque esa palabra resulta cómoda de pronunciar y abre espacio para seguir negociando. Dar una razón simple, aunque no sea perfecta, cuando pides algo también aumenta la probabilidad de que el proveedor acceda. Nunca confundas un 'sí' apresurado con un compromiso real: a menudo es solo una forma de que te dejen en paz.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "1717",
+        "frase": "Un «sí» temprano es, a menudo, un truco y una falsificación barata."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que un sí temprano es a menudo un truco; el nodo lo sube a casi siempre.; Mismo endurecimiento de 'a menudo' a 'casi siempre'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-039-usa_el_no_del_proveedor_a_tu_favor-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Da siempre una razón breve, aunque simple, cuando pidas un cambio o un descuento.",
+      "texto_nuevo": "Da siempre una razón breve cuando pidas un cambio o un descuento: en lo sencillo basta una razón simple; en lo más complicado, busca una que apele a lo que el proveedor valora.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4833-4837",
+        "frase": "con asuntos más complicados puedes aumentar tu eficacia ofreciendo razones"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el límite del libro: la razón simple funciona en lo sencillo; en lo complicado conviene una que apele a lo que el otro valora.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

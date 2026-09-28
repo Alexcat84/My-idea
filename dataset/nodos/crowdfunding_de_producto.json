@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Diseñar contenido (video, imágenes, descripción) que muestre claramente el producto propuesto",
     "Definir niveles de recompensa por monto de contribución, incluyendo elementos experienciales",
-    "Establecer una meta de financiamiento y plazo (típicamente 30 días)",
-    "Lanzar la campaña en Kickstarter, Indiegogo, o mediante una campaña de preventa propia",
+    "Establecer una meta de financiamiento y plazo (típicamente 30 días), sabiendo que si no alcanzas la meta la campaña fracasa y no recibes el dinero",
+    "Lanzar la campaña en Kickstarter, Indiegogo, o mediante una campaña de preventa propia si tienes un producto convincente y sabes comercializarlo y promoverlo",
     "Usar el resultado (éxito o fracaso) como validación de mercado antes de invertir más recursos en producción",
     "Planificar la capacidad de cumplir con los pedidos si la campaña tiene éxito"
   ],
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Financia tu Producto sin Ceder Equity",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-043-crowdfunding_de_producto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lanzar la campaña en Kickstarter, Indiegogo, o mediante una campaña de preventa propia",
+      "texto_nuevo": "Lanzar la campaña en Kickstarter, Indiegogo, o mediante una campaña de preventa propia si tienes un producto convincente y sabes comercializarlo y promoverlo",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2647",
+        "frase": "if you have a compelling product and are sophisticated around marketing and promoting your product"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la preventa propia a tener un producto convincente y saber comercializarlo y promoverlo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-crowdfunding_de_producto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer una meta de financiamiento y plazo (típicamente 30 días)",
+      "texto_nuevo": "Establecer una meta de financiamiento y plazo (típicamente 30 días), sabiendo que si no alcanzas la meta la campaña fracasa y no recibes el dinero",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2643",
+        "frase": "if not achieved, results in the campaign failing and funding not occurring"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición del libro: si no se alcanza la meta, la campaña fracasa y no hay financiamiento.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

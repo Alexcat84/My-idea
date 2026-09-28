@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Aviso fiscal para pagar impuestos por adelantado sobre tus acciones (elección 83(b))",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+  "resumen_teorico": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos sobre la diferencia entre lo que pagaste y el valor que esas acciones ganen con el tiempo. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
   "pasos_accionables": [
     "Identifica a todos los que reciben acciones con vesting, incluido tú mismo y tus primeros empleados",
     "Consulta con un asesor fiscal si te conviene hacer la elección 83(b)",
@@ -102,6 +102,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-043-eleccion_83b-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos mucho más altos en el futuro, cuando el valor de esas acciones haya crecido. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+      "texto_nuevo": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos sobre la diferencia entre lo que pagaste y el valor que esas acciones ganen con el tiempo. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4713",
+        "frase": "do not need to pay taxes on the difference between the price paid"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que evita pagar impuestos sobre la diferencia entre el precio pagado y el valor con el tiempo; 'mucho más altos' es una magnitud que no da.; Misma magnitud añadida; se corrige al beneficio que el libro sí describe.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

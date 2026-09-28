@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Métodos de Rastreo de Procesos (Process-Tracing)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Los métodos de process-tracing son una familia de técnicas de análisis de tareas cognitivas que buscan reconstruir cómo evolucionó la comprensión de los practicantes en paralelo con la situación que se desarrollaba durante un episodio de resolución de problemas (por ejemplo, un incidente o accidente). Construyen dos relatos paralelos: uno en el lenguaje específico del dominio (contexto) y otro en términos conceptuales (dependientes de conceptos), que permiten reconocer patrones y regularidades de desempeño humano —incluso comparables entre distintos dominios— en lugar de ver solo una masa de datos sin sentido. Son indispensables para investigar por qué tuvo sentido para los practicantes actuar como lo hicieron, dado lo que sabían en ese momento.",
+  "resumen_teorico": "Los métodos de process-tracing son una familia de técnicas de análisis de tareas cognitivas que buscan reconstruir cómo evolucionó la comprensión de los practicantes en paralelo con la situación que se desarrollaba durante un episodio de resolución de problemas (por ejemplo, un incidente o accidente). Normalmente construyen dos relatos paralelos: uno en el lenguaje específico del dominio (contexto) y otro en términos conceptuales (dependientes de conceptos), que permiten reconocer patrones y regularidades de desempeño humano, incluso comparables entre distintos dominios, en lugar de ver solo una masa de datos sin sentido. Son sumamente útiles, si no indispensables, para investigar por qué tuvo sentido para los practicantes actuar como lo hicieron, dado lo que sabían en ese momento.",
   "pasos_accionables": [
     "Recolectar datos crudos del episodio (registros, transcripciones, testimonios, datos de sistemas)",
     "Construir el relato específico del dominio en el lenguaje técnico de los practicantes",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Reconstruye el Proceso de Pensamiento",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-043-process_tracing_methods-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los métodos de process-tracing son una familia de técnicas de análisis de tareas cognitivas que buscan reconstruir cómo evolucionó la comprensión de los practicantes en paralelo con la situación que se desarrollaba durante un episodio de resolución de problemas (por ejemplo, un incidente o accidente). Construyen dos relatos paralelos: uno en el lenguaje específico del dominio (contexto) y otro en términos conceptuales (dependientes de conceptos), que permiten reconocer patrones y regularidades de desempeño humano —incluso comparables entre distintos dominios— en lugar de ver solo una masa de datos sin sentido. Son indispensables para investigar por qué tuvo sentido para los practicantes actuar como lo hicieron, dado lo que sabían en ese momento.",
+      "texto_nuevo": "Los métodos de process-tracing son una familia de técnicas de análisis de tareas cognitivas que buscan reconstruir cómo evolucionó la comprensión de los practicantes en paralelo con la situación que se desarrollaba durante un episodio de resolución de problemas (por ejemplo, un incidente o accidente). Normalmente construyen dos relatos paralelos: uno en el lenguaje específico del dominio (contexto) y otro en términos conceptuales (dependientes de conceptos), que permiten reconocer patrones y regularidades de desempeño humano, incluso comparables entre distintos dominios, en lugar de ver solo una masa de datos sin sentido. Son sumamente útiles, si no indispensables, para investigar por qué tuvo sentido para los practicantes actuar como lo hicieron, dado lo que sabían en ese momento.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "4408",
+        "frase": "Process-tracing methods are extremely useful, if not indispensable, in the investigation of incidents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'Typically' construyen dos relatos; el nodo lo vuelve rasgo invariable.; El libro dice 'extremely useful, if not indispensable'; el nodo quita la cautela.; Mismo endurecimiento del grado del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

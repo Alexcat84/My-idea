@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "¿Predecir o generar? Elige el tipo de IA correcto (IA predictiva vs IA generativa)",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Existen dos grandes tipos de inteligencia artificial y cada uno resuelve problemas distintos en tu negocio. La IA predictiva (aprende de datos ya etiquetados) te sirve para prever la demanda, optimizar el inventario y mejorar la logística; es el caso de Amazon, que usa IA para manejar toda su cadena de suministro, desde el pronóstico hasta los robots Kiva en sus almacenes. La IA generativa (los LLMs) te sirve para crear contenido, analizar texto y simular conversaciones. Antes de elegir una herramienta, identifica qué tipo de problema tienes: ¿necesitas predecir un número o generar contenido y lenguaje?",
+  "resumen_teorico": "Existen dos grandes tipos de inteligencia artificial y cada uno resuelve problemas distintos en tu negocio. La IA predictiva (aprende de datos ya etiquetados y ha sido terreno de organizaciones con muchos datos) te sirve para prever la demanda, optimizar el inventario y mejorar la logística, aunque le cuesta lo imprevisto y los datos que nunca vio; es el caso de Amazon, que usa IA para manejar toda su cadena de suministro, desde el pronóstico hasta los robots Kiva en sus almacenes. La IA generativa (los LLMs) te sirve para crear contenido, analizar texto y simular conversaciones. Antes de elegir una herramienta, identifica qué tipo de problema tienes: ¿necesitas predecir un número o generar contenido y lenguaje?",
   "pasos_accionables": [
     "Clasifica los problemas de tu negocio en 'predecir datos numéricos' o 'generar contenido y lenguaje'",
     "Si tu problema es de predicción (demanda, inventario, precios), evalúa herramientas de IA predictiva usando tus propios datos históricos",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Elige la IA Correcta",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-040-evaluar_ia_predictiva_vs_generativa_para_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos grandes tipos de inteligencia artificial y cada uno resuelve problemas distintos en tu negocio. La IA predictiva (aprende de datos ya etiquetados) te sirve para prever la demanda, optimizar el inventario y mejorar la logística; es el caso de Amazon, que usa IA para manejar toda su cadena de suministro, desde el pronóstico hasta los robots Kiva en sus almacenes. La IA generativa (los LLMs) te sirve para crear contenido, analizar texto y simular conversaciones. Antes de elegir una herramienta, identifica qué tipo de problema tienes: ¿necesitas predecir un número o generar contenido y lenguaje?",
+      "texto_nuevo": "Existen dos grandes tipos de inteligencia artificial y cada uno resuelve problemas distintos en tu negocio. La IA predictiva (aprende de datos ya etiquetados y ha sido terreno de organizaciones con muchos datos) te sirve para prever la demanda, optimizar el inventario y mejorar la logística, aunque le cuesta lo imprevisto y los datos que nunca vio; es el caso de Amazon, que usa IA para manejar toda su cadena de suministro, desde el pronóstico hasta los robots Kiva en sus almacenes. La IA generativa (los LLMs) te sirve para crear contenido, analizar texto y simular conversaciones. Antes de elegir una herramienta, identifica qué tipo de problema tienes: ¿necesitas predecir un número o generar contenido y lenguaje?",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "82",
+        "frase": "the domain of larger organizations that had vast amounts of data"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo límite que la marca 0.; Se cae que esta IA fue terreno de organizaciones con enormes volúmenes de datos, límite que cambia el consejo para quien emprende.; Se caen los límites del libro: le cuesta anticipar lo imprevisto y los datos que no vio al entrenarse.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

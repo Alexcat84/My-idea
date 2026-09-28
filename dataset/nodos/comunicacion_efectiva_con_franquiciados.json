@@ -6,8 +6,8 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "La relación franquiciador-franquiciado se sostiene sobre comunicación frecuente, honesta y humana, no solo digital. El franquiciador debe demostrar compromiso genuino con el éxito de sus franquiciados, usando múltiples canales de diálogo (llamadas, convenciones, reuniones regionales) y evitando que el email sustituya el contacto humano. La confianza se construye con transparencia; una sola verdad a medias puede destruirla permanentemente.",
   "pasos_accionables": [
-    "Atender llamadas de franquiciados directamente en vez de derivarlas a buzón de voz",
-    "Establecer una línea de soporte dedicada atendida por personas reales",
+    "Siempre que sea posible, atender llamadas de franquiciados directamente en vez de derivarlas a buzón de voz",
+    "Si es posible, una vez que tengas personal, establecer una línea de soporte dedicada atendida por personas reales",
     "Responder mensajes el mismo día hábil, priorizando llamadas sobre emails",
     "Llamar proactivamente cada día a al menos un franquiciado sin contacto reciente",
     "Prohibir comentarios negativos sobre franquiciados frente a empleados",
@@ -60,6 +60,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 6
+    },
+    {
+      "id": "final-e1-041-comunicacion_efectiva_con_franquiciados-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer una línea de soporte dedicada atendida por personas reales",
+      "texto_nuevo": "Si es posible, una vez que tengas personal, establecer una línea de soporte dedicada atendida por personas reales",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5032",
+        "frase": "If possible (once you have created a staff organization), have a dedicated franchise support line"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la línea dedicada a que sea posible y a que ya exista personal.; Mismo defecto: se pierde la condición.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-041-comunicacion_efectiva_con_franquiciados-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Atender llamadas de franquiciados directamente en vez de derivarlas a buzón de voz",
+      "texto_nuevo": "Siempre que sea posible, atender llamadas de franquiciados directamente en vez de derivarlas a buzón de voz",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5030",
+        "frase": "Whenever possible, take calls from franchisees rather than letting the calls go to voice mail."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo recomienda 'siempre que sea posible'; el paso lo endurece a regla sin reserva.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

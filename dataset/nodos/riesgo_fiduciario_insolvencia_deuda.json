@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Riesgo Fiduciario por Insolvencia Técnica en Deuda Convertible",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso de la empresa.",
+  "resumen_teorico": "Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso; en muchos estados, los acreedores pueden demandarlos personalmente.",
   "pasos_accionables": [
     "Consultar con un abogado corporativo sobre las leyes estatales de responsabilidad fiduciaria hacia acreedores",
     "Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity",
-    "Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
-    "Considerar seguros D&O (directors and officers) que cubran este período de riesgo"
+    "Sugerencia de My Idea: mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
+    "Sugerencia de My Idea: pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo"
   ],
   "entregable_esperado": "Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada",
   "nodos_previos": [
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Cuida tu Deuda Convertible",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-riesgo_fiduciario_insolvencia_deuda-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso de la empresa.",
+      "texto_nuevo": "Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso; en muchos estados, los acreedores pueden demandarlos personalmente.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2393",
+        "frase": "many states impose personal liability on directors for things that occur"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae lo que el libro llama la peor parte: en muchos estados los directores responden personalmente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-riesgo_fiduciario_insolvencia_deuda-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar seguros D&O (directors and officers) que cubran este período de riesgo",
+      "texto_nuevo": "Sugerencia de My Idea: pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2393",
+        "frase": "some states will allow creditors to sue directors personally"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro recomienda el seguro D&O en general, pero no dice que cubra este período de insolvencia; queda como sugerencia sin afirmar cobertura.; Mismo defecto: el libro no liga el D&O a este riesgo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-riesgo_fiduciario_insolvencia_deuda-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
+      "texto_nuevo": "Sugerencia de My Idea: mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2389",
+        "frase": "then try to show that the actions of the board were bad during that time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no aconseja llevar registros; solo dice que los abogados juzgarán los actos de la junta durante la insolvencia. Queda como sugerencia.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

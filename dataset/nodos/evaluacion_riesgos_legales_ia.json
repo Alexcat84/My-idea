@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Riesgos legales y éticos de usar inteligencia artificial generativa en tu negocio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Los modelos de inteligencia artificial generativa se entrenan con grandes cantidades de datos que muchas veces incluyen material con derechos de autor, usado sin permiso explícito de quienes lo crearon. Qué tan legal es esto depende del país donde operes: en la Unión Europea las reglas son más estrictas, en Estados Unidos más flexibles, y en Japón está permitido de forma explícita. Antes de construir un producto o servicio basado en IA generativa, tienes que entender los riesgos legales y éticos que esto implica, sobre todo si lo que genera la IA podría reproducir contenido protegido o traerte responsabilidad legal.",
+  "resumen_teorico": "Los modelos de inteligencia artificial generativa se entrenan con grandes cantidades de datos que muchas veces incluyen material con derechos de autor, usado sin permiso explícito de quienes lo crearon. No está claro si esto es legal, y el enfoque cambia según el país donde operes: en la Unión Europea las reglas son más estrictas, en Estados Unidos más flexibles aunque con posibilidad de demandas por mal uso, y en Japón está permitido de forma explícita. Antes de construir un producto o servicio basado en IA generativa, tienes que entender los riesgos legales y éticos que esto implica, sobre todo si lo que genera la IA podría reproducir contenido protegido o traerte responsabilidad legal.",
   "pasos_accionables": [
     "Investiga qué dice la ley de tu país sobre los datos usados para entrenar la IA",
-    "Revisa los acuerdos del proveedor de IA y decide cuánto confías en ellos, sabiendo que hoy no está claro si lo que genera la IA está protegido por derechos de autor",
+    "Revisa los acuerdos de privacidad del proveedor de IA, porque los datos que le das podrían usarse en entrenamientos futuros, y decide cuánto confías en ellos, sabiendo que hoy no está claro si lo que genera la IA está protegido por derechos de autor",
     "Evalúa si usar ese contenido podría infringir derechos de autor de terceros",
     "Antes de vender productos basados en contenido generado por IA, ten en cuenta que todavía no está claro si ese contenido está protegido por derechos de autor",
     "Define tus propias reglas internas sobre el uso ético de la IA en tu negocio"
@@ -70,6 +70,39 @@
         "evidencia": "F07-009: Evaluar riesgos legales y eticos y fijar reglas internas antes de construir es diseno del plan y del marco, no una prueba con clientes o mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-040-evaluacion_riesgos_legales_ia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los modelos de inteligencia artificial generativa se entrenan con grandes cantidades de datos que muchas veces incluyen material con derechos de autor, usado sin permiso explícito de quienes lo crearon. Qué tan legal es esto depende del país donde operes: en la Unión Europea las reglas son más estrictas, en Estados Unidos más flexibles, y en Japón está permitido de forma explícita. Antes de construir un producto o servicio basado en IA generativa, tienes que entender los riesgos legales y éticos que esto implica, sobre todo si lo que genera la IA podría reproducir contenido protegido o traerte responsabilidad legal.",
+      "texto_nuevo": "Los modelos de inteligencia artificial generativa se entrenan con grandes cantidades de datos que muchas veces incluyen material con derechos de autor, usado sin permiso explícito de quienes lo crearon. No está claro si esto es legal, y el enfoque cambia según el país donde operes: en la Unión Europea las reglas son más estrictas, en Estados Unidos más flexibles aunque con posibilidad de demandas por mal uso, y en Japón está permitido de forma explícita. Antes de construir un producto o servicio basado en IA generativa, tienes que entender los riesgos legales y éticos que esto implica, sobre todo si lo que genera la IA podría reproducir contenido protegido o traerte responsabilidad legal.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "303",
+        "frase": "It is not clear whether training an AI on this material is legal."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz que la marca 0.; Se cae que en Estados Unidos, con pocas restricciones, existe la posibilidad de demandas por mal uso.; Se cae que no está claro si entrenar con ese material es legal; el nodo lo reduce a una cuestión de país.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-040-evaluacion_riesgos_legales_ia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa los acuerdos del proveedor de IA y decide cuánto confías en ellos, sabiendo que hoy no está claro si lo que genera la IA está protegido por derechos de autor",
+      "texto_nuevo": "Revisa los acuerdos de privacidad del proveedor de IA, porque los datos que le das podrían usarse en entrenamientos futuros, y decide cuánto confías en ellos, sabiendo que hoy no está claro si lo que genera la IA está protegido por derechos de autor",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "401",
+        "frase": "offering private modes that promise to protect your information"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro los acuerdos en los que decidir cuánto confiar son los modos privados que protegen los datos que subes, que podrían usarse en entrenamientos futuros; el paso pierde de qué protegen.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Plan de Acción para la Transformación (Punto 14)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El Punto 14 describe los pasos concretos que debes seguir, como quien lidera el negocio, para llevar adelante la transformación: acordar qué significan los 14 puntos y las enfermedades mortales, tener el coraje de romper con la tradición, explicarle el cambio a un grupo suficiente de personas mediante charlas o sesiones, y construir poco a poco una forma de trabajar orientada a la mejora continua de la calidad, guiada por el ciclo de Shewhart.",
+  "resumen_teorico": "El Punto 14 describe los pasos concretos que debes seguir, como quien lidera el negocio, para llevar adelante la transformación: acordar qué significan los 14 puntos y las enfermedades mortales, tener el coraje de romper con la tradición, explicarle el cambio a un grupo suficiente de personas mediante charlas o sesiones, y empezar cuanto antes a construir una forma de trabajar orientada a la mejora continua de la calidad, guiada por el ciclo de Shewhart.",
   "pasos_accionables": [
     "Reunir a quienes toman las decisiones clave en tu negocio para acordar el significado y la dirección de los 14 puntos, las enfermedades y los obstáculos",
-    "Explicarle a un grupo suficiente de personas de tu negocio, mediante charlas o sesiones, por qué el cambio es necesario",
+    "Explicarle a un grupo suficiente de personas de tu negocio, mediante charlas o sesiones, por qué el cambio es necesario y que involucrará a todos",
     "Dividir cada proceso de tu negocio en un diagrama de flujo por etapas, cada una con su cliente interno",
     "Formar grupos de trabajo variados para mejorar lo que entra y lo que sale de cada etapa del proceso",
-    "Empezar a construir una forma de trabajar dedicada a guiar la mejora continua de la calidad"
+    "Empezar cuanto antes a construir una forma de trabajar dedicada a guiar la mejora continua de la calidad, con la participación de personas que conozcan bien la estadística"
   ],
   "entregable_esperado": "Un documento de compromiso firmado por ti, o por quienes lideran contigo el negocio, junto con un cronograma de charlas de sensibilización y un diagrama de flujo inicial de los procesos clave",
   "nodos_previos": [
@@ -28,5 +28,57 @@
   "etiqueta_arbol": "Ejecuta la Transformación Organizacional",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-042-plan_de_accion_transformacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Punto 14 describe los pasos concretos que debes seguir, como quien lidera el negocio, para llevar adelante la transformación: acordar qué significan los 14 puntos y las enfermedades mortales, tener el coraje de romper con la tradición, explicarle el cambio a un grupo suficiente de personas mediante charlas o sesiones, y construir poco a poco una forma de trabajar orientada a la mejora continua de la calidad, guiada por el ciclo de Shewhart.",
+      "texto_nuevo": "El Punto 14 describe los pasos concretos que debes seguir, como quien lidera el negocio, para llevar adelante la transformación: acordar qué significan los 14 puntos y las enfermedades mortales, tener el coraje de romper con la tradición, explicarle el cambio a un grupo suficiente de personas mediante charlas o sesiones, y empezar cuanto antes a construir una forma de trabajar orientada a la mejora continua de la calidad, guiada por el ciclo de Shewhart.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1867",
+        "frase": "Start as soon as possible to construct with deliberate speed an organization"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide empezar cuanto antes; 'poco a poco' pierde la urgencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-042-plan_de_accion_transformacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Empezar a construir una forma de trabajar dedicada a guiar la mejora continua de la calidad",
+      "texto_nuevo": "Empezar cuanto antes a construir una forma de trabajar dedicada a guiar la mejora continua de la calidad, con la participación de personas que conozcan bien la estadística",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1867, 1897",
+        "frase": "This step will require participation of knowledgeable statisticians."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide empezar cuanto antes y dice que esa organización requiere estadísticos competentes.; Mismas dos condiciones perdidas.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-042-plan_de_accion_transformacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explicarle a un grupo suficiente de personas de tu negocio, mediante charlas o sesiones, por qué el cambio es necesario",
+      "texto_nuevo": "Explicarle a un grupo suficiente de personas de tu negocio, mediante charlas o sesiones, por qué el cambio es necesario y que involucrará a todos",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1825",
+        "frase": "why change is necessary, and that the change will involve everybody"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide explicar también que el cambio involucrará a todos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Patrón Outside-In (Innovación de Afuera hacia Adentro)",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Patrón de modelo de negocio donde una organización incorpora ideas, tecnología o propiedad intelectual externa a sus procesos de desarrollo y comercialización, acelerando el tiempo al mercado y aumentando la productividad de I+D interna. Ejemplo: Procter & Gamble's Connect & Develop.",
+  "resumen_teorico": "Patrón de modelo de negocio donde una organización incorpora ideas, tecnología o propiedad intelectual externa a sus procesos de desarrollo y comercialización. Eso cuesta dinero, pero puede acortar el tiempo al mercado y aumentar la productividad de I+D interna. Ejemplo: Procter & Gamble's Connect & Develop.",
   "pasos_accionables": [
     "Mapear organizaciones externas (incluso de otras industrias) que puedan ofrecer insights o tecnología valiosa",
     "Establecer actividades clave dedicadas a conectar entidades externas con procesos internos de I+D",
@@ -37,6 +37,22 @@
         "evidencia": "F05-011: Diseña actividades, recursos y canales de un patrón de modelo de negocio para una empresa establecida y entrega una estrategia formal. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-039-patron_outside_in-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Patrón de modelo de negocio donde una organización incorpora ideas, tecnología o propiedad intelectual externa a sus procesos de desarrollo y comercialización, acelerando el tiempo al mercado y aumentando la productividad de I+D interna. Ejemplo: Procter & Gamble's Connect & Develop.",
+      "texto_nuevo": "Patrón de modelo de negocio donde una organización incorpora ideas, tecnología o propiedad intelectual externa a sus procesos de desarrollo y comercialización. Eso cuesta dinero, pero puede acortar el tiempo al mercado y aumentar la productividad de I+D interna. Ejemplo: Procter & Gamble's Connect & Develop.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "1663",
+        "frase": "a company can shorten time-to-market and increase its internal R&D productivity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la empresa puede acortar el tiempo al mercado; el nodo lo da como efecto seguro.; Mismo defecto: falta el costo de adquirir innovación externa.; Mismo endurecimiento del 'can' del libro a un efecto seguro.; Se cae que adquirir innovación de fuera cuesta dinero, la otra cara que el libro pone en el mismo bloque.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

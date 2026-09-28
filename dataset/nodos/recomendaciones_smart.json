@@ -4,9 +4,9 @@
   "dominio": "health_safety",
   "titulo_concepto": "Recomendaciones SMART para Investigaciones de Seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Las recomendaciones derivadas de una investigación de 'error humano' deben cumplir el criterio SMART (Specific, Measurable, Agreed, Realistic, Time-bound) para lograr tracción organizacional. El caso de los camiones mineros muestra que los factores explicativos (presión de tiempo, falta de EPP) no siempre coinciden con el factor de cambio real (mantenimiento preventivo en carretera), por lo que las recomendaciones deben apuntar a cambios sistémicos verificables, no solo a exhortar a las personas a 'tener más cuidado'.",
+  "resumen_teorico": "Si quieres que las recomendaciones derivadas de una investigación de 'error humano' logren tracción organizacional, conviene pasarlas por el criterio SMART (Specific, Measurable, Agreed, Realistic, Time-bound). El caso de los camiones mineros muestra que los factores explicativos (presión de tiempo, falta de EPP) no siempre coinciden con el factor de cambio real (las lesiones ocurrían en reparaciones no programadas en los caminos, y la palanca fue el mantenimiento preventivo), por lo que las recomendaciones deben apuntar a cambios sistémicos verificables, no solo a exhortar a las personas a 'tener más cuidado'.",
   "pasos_accionables": [
-    "Identificar el factor de cambio real, distinto de los factores explicativos superficiales",
+    "Identificar el factor de cambio real, que no tiene por qué coincidir con los factores explicativos",
     "Redactar la recomendación especificando qué parte de la organización debe hacer qué y cuándo",
     "Definir criterios medibles de éxito",
     "Validar la recomendación con los responsables de implementación considerando restricciones de producción/eficiencia",
@@ -40,5 +40,40 @@
   "etiqueta_arbol": "Haz Recomendaciones Claras y Medibles",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-043-recomendaciones_smart-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Las recomendaciones derivadas de una investigación de 'error humano' deben cumplir el criterio SMART (Specific, Measurable, Agreed, Realistic, Time-bound) para lograr tracción organizacional. El caso de los camiones mineros muestra que los factores explicativos (presión de tiempo, falta de EPP) no siempre coinciden con el factor de cambio real (mantenimiento preventivo en carretera), por lo que las recomendaciones deben apuntar a cambios sistémicos verificables, no solo a exhortar a las personas a 'tener más cuidado'.",
+      "texto_nuevo": "Si quieres que las recomendaciones derivadas de una investigación de 'error humano' logren tracción organizacional, conviene pasarlas por el criterio SMART (Specific, Measurable, Agreed, Realistic, Time-bound). El caso de los camiones mineros muestra que los factores explicativos (presión de tiempo, falta de EPP) no siempre coinciden con el factor de cambio real (las lesiones ocurrían en reparaciones no programadas en los caminos, y la palanca fue el mantenimiento preventivo), por lo que las recomendaciones deben apuntar a cambios sistémicos verificables, no solo a exhortar a las personas a 'tener más cuidado'.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2029-2034",
+        "frase": "more than 80 percent of the injuries occurred during unscheduled maintenance along the dusty roads"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro propone considerar los criterios SMART si quieres tracción; el nodo los vuelve obligatorios.; Las lesiones ocurrían en reparaciones no programadas en los caminos; el remedio fue el preventivo para que no hubiera averías en ruta.; Mismo caso invertido: el preventivo evita las averías en el camino, no se hace en el camino.; Mismo endurecimiento del 'you may want to consider' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-recomendaciones_smart-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar el factor de cambio real, distinto de los factores explicativos superficiales",
+      "texto_nuevo": "Identificar el factor de cambio real, que no tiene por qué coincidir con los factores explicativos",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2021-2025",
+        "frase": "explains a particular instance of failure does not need to be the same thing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el factor de cambio no tiene por qué ser el mismo que el explicativo, no que siempre sea distinto ni que los explicativos sean superficiales.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

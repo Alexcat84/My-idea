@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Mejora Continua del Proceso (Never-Ending Improvement)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La mejora nunca termina; cada trabajo, producto o servicio debe ser mejor que el anterior. Esto implica trabajar sobre los procesos, equipos, materiales y procedimientos de prueba, no solo medir el desperdicio al final. La mejora incluye la reducción a un solo proveedor confiable, mejor asignación del esfuerzo humano, selección y capacitación del personal, y eliminación de barreras al orgullo por el trabajo bien hecho.",
+  "resumen_teorico": "La mejora nunca termina; cada trabajo, producto o servicio debe ser mejor que el anterior. Esto implica trabajar sobre los procesos, equipos, materiales y procedimientos de prueba, no solo medir el desperdicio al final. La mejora incluye la reducción a un solo proveedor confiable por cada artículo, mejor asignación del esfuerzo humano, selección y capacitación del personal, y eliminación de barreras al orgullo por el trabajo bien hecho.",
   "pasos_accionables": [
     "Preguntar diariamente qué se hizo para mejorar el conocimiento y habilidad en el puesto de trabajo",
     "Evaluar si cada nuevo producto o servicio es mejor que el anterior",
@@ -37,5 +37,23 @@
   "etiqueta_arbol": "Mejora tus Procesos sin Parar",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-042-mejora_continua_del_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mejora nunca termina; cada trabajo, producto o servicio debe ser mejor que el anterior. Esto implica trabajar sobre los procesos, equipos, materiales y procedimientos de prueba, no solo medir el desperdicio al final. La mejora incluye la reducción a un solo proveedor confiable, mejor asignación del esfuerzo humano, selección y capacitación del personal, y eliminación de barreras al orgullo por el trabajo bien hecho.",
+      "texto_nuevo": "La mejora nunca termina; cada trabajo, producto o servicio debe ser mejor que el anterior. Esto implica trabajar sobre los procesos, equipos, materiales y procedimientos de prueba, no solo medir el desperdicio al final. La mejora incluye la reducción a un solo proveedor confiable por cada artículo, mejor asignación del esfuerzo humano, selección y capacitación del personal, y eliminación de barreras al orgullo por el trabajo bien hecho.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1116",
+        "frase": "eventual reduction to one vendor and one shipping point for any one item"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro habla de un proveedor por cada artículo, no de un solo proveedor en general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Organización para la Mejora de la Calidad: Liderazgo de Metodología Estadística",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente ayudándote en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
+  "resumen_teorico": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente que hace trabajo estadístico en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
   "pasos_accionables": [
     "Define quién en tu negocio, tú mismo o alguien que contrates, será responsable del método estadístico, con autoridad para revisar cualquier área que lo necesite",
     "Exige que esa persona tenga dominio real: formación seria, experiencia práctica, trabajo demostrable y capacidad de explicarlo con claridad",
-    "Si tienes colaboradores en distintas áreas, que cada uno responda por su trabajo diario ante quien lleva esa área, pero en método y desarrollo profesional responda ante la persona experta en estadística",
-    "Asegúrate de que esa persona esté presente cuando se toman decisiones importantes del negocio, incluidas las decisiones de diseño, compras y control de calidad",
+    "Si tienes colaboradores que hacen trabajo estadístico en distintas áreas, que cada uno responda por su trabajo diario ante quien lleva esa área, pero en método y desarrollo profesional responda ante la persona experta en estadística",
+    "Asegúrate de que esa persona esté presente cuando se toman decisiones importantes del negocio",
     "No dejes que las decisiones basadas en datos se evalúen solo con el criterio de quien lleva el día a día de esa área",
     "Establecer programas de capacitación en pensamiento estadístico para todo el personal"
   ],
@@ -125,6 +125,56 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-042-organizacion_liderazgo_estadistico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente ayudándote en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
+      "texto_nuevo": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente que hace trabajo estadístico en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10555",
+        "frase": "the statistician in a division is responsible to two people"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La doble dependencia es solo para quien hace el trabajo estadístico en cada área, no para cualquier colaborador.; Misma condición perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-042-organizacion_liderazgo_estadistico-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tienes colaboradores en distintas áreas, que cada uno responda por su trabajo diario ante quien lleva esa área, pero en método y desarrollo profesional responda ante la persona experta en estadística",
+      "texto_nuevo": "Si tienes colaboradores que hacen trabajo estadístico en distintas áreas, que cada uno responda por su trabajo diario ante quien lleva esa área, pero en método y desarrollo profesional responda ante la persona experta en estadística",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10555",
+        "frase": "the statistician in a division is responsible to two people"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La doble dependencia es para el estadístico de cada división, no para todo colaborador.; Misma condición perdida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-042-organizacion_liderazgo_estadistico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asegúrate de que esa persona esté presente cuando se toman decisiones importantes del negocio, incluidas las decisiones de diseño, compras y control de calidad",
+      "texto_nuevo": "Asegúrate de que esa persona esté presente cuando se toman decisiones importantes del negocio",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10501",
+        "frase": "He will be a regular participant in any major meeting of the president and staff"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide su presencia en toda reunión importante de la dirección; la lista de diseño, compras y control de calidad es añadida.; Misma lista añadida.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

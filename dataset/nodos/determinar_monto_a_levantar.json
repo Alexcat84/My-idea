@@ -6,9 +6,9 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "En vez de armar modelos financieros complicados que de todas formas van a fallar, enfócate en el tiempo que necesitas para llegar a tu próximo hito importante, calcula cuánto gastas al mes para llegar ahí, y súmale un colchón de tiempo. Pide una cifra específica, no un rango, y evita pedir mucho más de lo que necesitas, porque eso te deja mal parado si no completas la ronda.",
   "pasos_accionables": [
-    "Define cuál es tu próximo hito importante (por ejemplo, lanzar el producto o llegar a cierto número de usuarios)",
-    "Calcula cuánto gastas al mes para llegar a ese hito",
-    "Súmale un colchón de tiempo (hasta un año)",
+    "Define cuál es tu próximo hito importante (por ejemplo, lanzar el producto o llegar a cierto número de usuarios), sin sobreespecificarlo, para que no termine como meta obligatoria en tus documentos de financiamiento",
+    "Calcula cuánto gastas al mes para llegar a ese hito, suponiendo que tus ingresos no crecen",
+    "Súmale un colchón de tiempo (por ejemplo, un año)",
     "Define una cifra específica para levantar, no un rango",
     "Evita pedir un monto mucho mayor al que realmente necesitas"
   ],
@@ -53,6 +53,57 @@
         "motivo": "Cuando se decide buscar inversores, la pregunta siguiente es cuánto pedir en la ronda."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-043-determinar_monto_a_levantar-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Súmale un colchón de tiempo (hasta un año)",
+      "texto_nuevo": "Súmale un colchón de tiempo (por ejemplo, un año)",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "400",
+        "frase": "Give yourself some time cushion (say, a year)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da un año como ejemplo ('say, a year'), no como tope.; Mismo ejemplo convertido en límite.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-determinar_monto_a_levantar-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define cuál es tu próximo hito importante (por ejemplo, lanzar el producto o llegar a cierto número de usuarios)",
+      "texto_nuevo": "Define cuál es tu próximo hito importante (por ejemplo, lanzar el producto o llegar a cierto número de usuarios), sin sobreespecificarlo, para que no termine como meta obligatoria en tus documentos de financiamiento",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "402",
+        "frase": "being careful not to overspecify the milestones that you are going to achieve"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte no sobreespecificar los hitos para que no acaben como metas obligatorias en los documentos de financiamiento.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-determinar_monto_a_levantar-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto gastas al mes para llegar a ese hito",
+      "texto_nuevo": "Calcula cuánto gastas al mes para llegar a ese hito, suponiendo que tus ingresos no crecen",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "400",
+        "frase": "Then, assuming no revenue growth, what is the monthly spend"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro estima el gasto mensual suponiendo que los ingresos no crecen.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

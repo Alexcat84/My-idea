@@ -7,11 +7,11 @@
   "resumen_teorico": "Tripod-Beta es una herramienta computarizada creada por Shell para realizar análisis de incidentes en paralelo con la investigación del evento. Trabaja retrocediendo desde la pérdida hasta identificar las defensas fallidas, los fallos activos y latentes, y las condiciones previas (preconditions) asociadas a Tipos Generales de Fallo (GFTs). Es compatible con Tripod-Delta y el Hazard and Effects Management Process (HEMP) de Shell.",
   "pasos_accionables": [
     "Definir el evento de pérdida (target dañado) como punto de partida del análisis",
-    "Retroceder para identificar la defensa que falló",
+    "Retroceder para identificar la defensa que falló y el peligro que alcanzó al objetivo",
     "Determinar si el fallo de la defensa fue activo o latente",
     "Identificar las precondiciones en el lugar de trabajo asociadas al fallo activo",
     "Vincular las precondiciones con los Tipos Generales de Fallo (GFTs) latentes correspondientes",
-    "Generar el árbol de incidente y el reporte de accidente para edición final"
+    "Generar el árbol de incidente, comprobar que su lógica se ajuste a la teoría Tripod y a HEMP, resolver las anomalías y luego generar el reporte de accidente para edición final"
   ],
   "entregable_esperado": "Árbol de incidente (incident tree) completo con causas activas y latentes identificadas, y reporte de accidente generado",
   "nodos_previos": [
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Analiza tus Incidentes hacia Atrás",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-042-tripod_beta_analisis_incidentes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Retroceder para identificar la defensa que falló",
+      "texto_nuevo": "Retroceder para identificar la defensa que falló y el peligro que alcanzó al objetivo",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3784",
+        "frase": "works backwards to determine the nature of the failed defence(s) and the hazard"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide determinar al retroceder la defensa fallida y también el peligro; el paso deja fuera el peligro.; Misma omisión: el peligro que alcanzó al objetivo se cae del paso.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-042-tripod_beta_analisis_incidentes-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Generar el árbol de incidente y el reporte de accidente para edición final",
+      "texto_nuevo": "Generar el árbol de incidente, comprobar que su lógica se ajuste a la teoría Tripod y a HEMP, resolver las anomalías y luego generar el reporte de accidente para edición final",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3794",
+        "frase": "Once anomalies have been resolved, a draft accident report is automatically generated"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma omisión del paso intermedio del procedimiento.; Se cae la comprobación de la lógica del árbol contra Tripod y HEMP y la resolución de anomalías antes del borrador.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

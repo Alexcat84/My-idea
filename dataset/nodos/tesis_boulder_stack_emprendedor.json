@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Activa toda tu red de apoyo emprendedor (no solo el círculo social)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Si estás construyendo una comunidad o red alrededor de tu negocio, no te quedes en eventos sociales o de reconocimiento: no generan compromiso real. Organiza actividades continuas y concretas (encuentros de trabajo intensivo, fines de semana de arranque, programas de aceleración, meetups) donde participen de verdad todos los que importan: fundadores nuevos y con experiencia, inversionistas, mentores, gente que podría sumarse a tu equipo y quienes te dan servicios. Algunas iniciativas no van a funcionar. Acéptalo y prueba otra.",
+  "resumen_teorico": "Si estás construyendo una comunidad o red alrededor de tu negocio, no te quedes en eventos sociales o de reconocimiento: no generan compromiso real. Organiza actividades continuas y concretas (encuentros de trabajo intensivo, fines de semana de arranque, programas de aceleración, meetups) donde participen de verdad todos: fundadores nuevos, con experiencia y aspirantes, inversionistas, mentores, gente que podría sumarse a tu equipo, quienes te dan servicios y cualquiera que quiera involucrarse. Algunas iniciativas no van a funcionar. Acéptalo y prueba otra.",
   "pasos_accionables": [
     "Diseña actividades prácticas (encuentros de trabajo intensivo, fines de semana de arranque) en lugar de solo juntadas para conocer gente",
     "Asegúrate de que en esas actividades participen de verdad todos los roles: fundadores, inversionistas, mentores, posibles integrantes de tu equipo",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Activa Todo tu Ecosistema",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-tesis_boulder_stack_emprendedor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si estás construyendo una comunidad o red alrededor de tu negocio, no te quedes en eventos sociales o de reconocimiento: no generan compromiso real. Organiza actividades continuas y concretas (encuentros de trabajo intensivo, fines de semana de arranque, programas de aceleración, meetups) donde participen de verdad todos los que importan: fundadores nuevos y con experiencia, inversionistas, mentores, gente que podría sumarse a tu equipo y quienes te dan servicios. Algunas iniciativas no van a funcionar. Acéptalo y prueba otra.",
+      "texto_nuevo": "Si estás construyendo una comunidad o red alrededor de tu negocio, no te quedes en eventos sociales o de reconocimiento: no generan compromiso real. Organiza actividades continuas y concretas (encuentros de trabajo intensivo, fines de semana de arranque, programas de aceleración, meetups) donde participen de verdad todos: fundadores nuevos, con experiencia y aspirantes, inversionistas, mentores, gente que podría sumarse a tu equipo, quienes te dan servicios y cualquiera que quiera involucrarse. Algunas iniciativas no van a funcionar. Acéptalo y prueba otra.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "5605",
+        "frase": "aspiring entrepreneurs, investors, mentors, employees of startups, service providers to startups, and anyone else"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye también a emprendedores aspirantes y a cualquiera que quiera involucrarse; 'los que importan' la restringe.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

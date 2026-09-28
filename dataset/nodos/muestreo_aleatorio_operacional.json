@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Definición Operacional de Selección Aleatoria",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado (tabla de números aleatorios o generador validado) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+  "resumen_teorico": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado (tabla estándar de números aleatorios, o números generados bajo la guía de alguien que conozca las trampas de esa generación) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
   "pasos_accionables": [
     "Numerar todas las unidades del marco muestral de 1 a N.",
-    "Definir por escrito el procedimiento de generación de números aleatorios a usar.",
+    "Definir por escrito, antes de seleccionar, el procedimiento de generación de números aleatorios a usar.",
     "Seleccionar n números aleatorios sin duplicar del rango 1 a N.",
     "Usar los números seleccionados para identificar las unidades de la muestra.",
     "Documentar el procedimiento para que pueda auditarse o repetirse."
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Define bien tu Muestreo Aleatorio",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-042-muestreo_aleatorio_operacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado (tabla de números aleatorios o generador validado) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+      "texto_nuevo": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado (tabla estándar de números aleatorios, o números generados bajo la guía de alguien que conozca las trampas de esa generación) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6842",
+        "frase": "under the guidance of a mathematician who knows the possible fallacies"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite generar números aleatorios solo bajo la guía de alguien que conozca sus trampas; 'validado' pierde esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-042-muestreo_aleatorio_operacional-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir por escrito el procedimiento de generación de números aleatorios a usar.",
+      "texto_nuevo": "Definir por escrito, antes de seleccionar, el procedimiento de generación de números aleatorios a usar.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6836",
+        "frase": "Read out by an acceptable procedure, to be written out in advance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que el procedimiento se escriba de antemano; el paso pierde el cuándo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

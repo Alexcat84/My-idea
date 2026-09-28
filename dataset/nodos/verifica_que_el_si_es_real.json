@@ -4,12 +4,12 @@
   "dominio": "compras",
   "titulo_concepto": "Verifica que el 'sí' del proveedor es real antes de cerrar",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "No todo 'sí' de un proveedor significa que el trato está cerrado. Existen respuestas de compromiso real, respuestas de simple confirmación sin acción, y respuestas de cortesía que en realidad esconden un no. Para saber cuál obtuviste, pide que la otra persona explique con sus propias palabras cómo va a cumplir lo acordado y qué hará si algo se complica. Resume su respuesta hasta escuchar un 'así es', y repite esta confirmación sobre el mismo punto al menos tres veces en la misma conversación. Frases como 'tienes razón' o 'lo voy a intentar' suelen anunciar que el compromiso no es firme. Esta verificación evita sorpresas después de cerrar la compra con alguien a quien seguirás comprando.",
+  "resumen_teorico": "No todo 'sí' de un proveedor significa que el trato está cerrado. Existen respuestas de compromiso real, respuestas de simple confirmación sin acción, y respuestas de cortesía que en realidad esconden un no. Para saber cuál obtuviste, pide que la otra persona explique con sus propias palabras cómo va a cumplir lo acordado y qué hará si algo se complica. Resume su respuesta hasta escuchar un 'así es', y logra que confirme el mismo punto tres veces en la misma conversación, combinando tácticas distintas (su primer sí, tu resumen y una pregunta de cómo o qué) para no sonar repetitivo. Frases como 'tienes razón' o 'lo voy a intentar' suelen anunciar que el compromiso no es firme. Esta verificación evita sorpresas después de cerrar la compra con alguien a quien seguirás comprando.",
   "pasos_accionables": [
     "Después de un acuerdo verbal, pregunta cómo se implementará el paso siguiente en la práctica.",
     "Pide que la otra persona explique qué hará si algo no funciona como esperan.",
     "Resume lo que te dijo y espera un 'así es' para confirmar que estás en lo correcto.",
-    "Repite esta confirmación al menos tres veces sobre el mismo punto durante la conversación.",
+    "Consigue que confirme el mismo punto tres veces durante la conversación, combinando tácticas distintas: su primer sí, tu resumen hasta el 'así es' y una pregunta de cómo o qué sobre la ejecución.",
     "Presta atención a frases de alerta como 'tienes razón' o 'lo voy a intentar', que suelen esconder un no real."
   ],
   "entregable_esperado": "Un acuerdo confirmado tres veces con el plan concreto de ejecución en palabras del proveedor.",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Confirma que el sí es real",
   "fuentes_internas": [
     "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-039-verifica_que_el_si_es_real-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todo 'sí' de un proveedor significa que el trato está cerrado. Existen respuestas de compromiso real, respuestas de simple confirmación sin acción, y respuestas de cortesía que en realidad esconden un no. Para saber cuál obtuviste, pide que la otra persona explique con sus propias palabras cómo va a cumplir lo acordado y qué hará si algo se complica. Resume su respuesta hasta escuchar un 'así es', y repite esta confirmación sobre el mismo punto al menos tres veces en la misma conversación. Frases como 'tienes razón' o 'lo voy a intentar' suelen anunciar que el compromiso no es firme. Esta verificación evita sorpresas después de cerrar la compra con alguien a quien seguirás comprando.",
+      "texto_nuevo": "No todo 'sí' de un proveedor significa que el trato está cerrado. Existen respuestas de compromiso real, respuestas de simple confirmación sin acción, y respuestas de cortesía que en realidad esconden un no. Para saber cuál obtuviste, pide que la otra persona explique con sus propias palabras cómo va a cumplir lo acordado y qué hará si algo se complica. Resume su respuesta hasta escuchar un 'así es', y logra que confirme el mismo punto tres veces en la misma conversación, combinando tácticas distintas (su primer sí, tu resumen y una pregunta de cómo o qué) para no sonar repetitivo. Frases como 'tienes razón' o 'lo voy a intentar' suelen anunciar que el compromiso no es firme. Esta verificación evita sorpresas después de cerrar la compra con alguien a quien seguirás comprando.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3631-3641",
+        "frase": "La solución a eso, aprendí también, es combinar tácticas distintas."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta combinar tácticas para no sonar repetitivo.; Se pierde que las tres confirmaciones se logran combinando tácticas distintas, no repitiendo la misma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-039-verifica_que_el_si_es_real-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repite esta confirmación al menos tres veces sobre el mismo punto durante la conversación.",
+      "texto_nuevo": "Consigue que confirme el mismo punto tres veces durante la conversación, combinando tácticas distintas: su primer sí, tu resumen hasta el 'así es' y una pregunta de cómo o qué sobre la ejecución.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3631-3641",
+        "frase": "La solución a eso, aprendí también, es combinar tácticas distintas."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide combinar tácticas distintas para las tres confirmaciones, no repetir la misma.; Mismo defecto: se pierde la combinación de tácticas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

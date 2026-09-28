@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Drag-Along Agreement",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cláusula del term sheet que obliga a un fundador que sale de la compañía a votar sus acciones en la misma proporción que el resto de los accionistas en caso de una venta o adquisición. Su objetivo es evitar que un accionista minoritario bloquee una transacción beneficiosa para la mayoría. La forma más favorable para el fundador es que el drag-along se aplique a la mayoría del common stock, no del preferred.",
+  "resumen_teorico": "Cláusula del term sheet con dos variantes: en una, si la mayoría de los preferentes aprueba una venta, todos los demás, fundadores incluidos, deben aceptarla; en otra, un fundador que se va debe votar sus acciones en la misma proporción que el resto en cualquier votación. Su objetivo es evitar que un accionista minoritario bloquee una transacción beneficiosa para la mayoría. Ante la primera, el compromiso más común es que se aplique a la mayoría del common stock, no del preferred.",
   "pasos_accionables": [
     "Evaluar tu posición de propiedad (% de acciones) para determinar cuánto te afecta esta cláusula.",
     "Negociar que el drag-along siga a la mayoría de accionistas comunes, no a los preferentes.",
     "Verificar que tu abogado represente los intereses de la compañía y no solo los tuyos como fundador individual.",
-    "No gastar energía negociando este término si tu participación accionaria es muy pequeña."
+    "No gastar energía negociando este término si tu participación accionaria es muy pequeña, salvo que haya muchos accionistas pequeños en tu misma situación."
   ],
   "entregable_esperado": "Cláusula de drag-along revisada y negociada en el term sheet, con claridad sobre bajo qué mayoría se activa.",
   "nodos_previos": [
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Obliga a Vender en Conjunto",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-043-drag_along_agreement-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cláusula del term sheet que obliga a un fundador que sale de la compañía a votar sus acciones en la misma proporción que el resto de los accionistas en caso de una venta o adquisición. Su objetivo es evitar que un accionista minoritario bloquee una transacción beneficiosa para la mayoría. La forma más favorable para el fundador es que el drag-along se aplique a la mayoría del common stock, no del preferred.",
+      "texto_nuevo": "Cláusula del term sheet con dos variantes: en una, si la mayoría de los preferentes aprueba una venta, todos los demás, fundadores incluidos, deben aceptarla; en otra, un fundador que se va debe votar sus acciones en la misma proporción que el resto en cualquier votación. Su objetivo es evitar que un accionista minoritario bloquee una transacción beneficiosa para la mayoría. Ante la primera, el compromiso más común es que se aplique a la mayoría del common stock, no del preferred.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1527-1553",
+        "frase": "There are two general flavors of drag-along agreements."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El fundador que sale vota en proporción en cualquier votación, no solo en una venta.; El libro distingue dos variantes y el nodo omite aquella en que los preferentes obligan a todos a aceptar una venta, a la que se refiere su propio consejo final.; El libro lo presenta como el compromiso más común ante la variante de los preferentes, no como la forma más favorable.; Misma variante omitida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-drag_along_agreement-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No gastar energía negociando este término si tu participación accionaria es muy pequeña.",
+      "texto_nuevo": "No gastar energía negociando este término si tu participación accionaria es muy pequeña, salvo que haya muchos accionistas pequeños en tu misma situación.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1551",
+        "frase": "it doesn’t matter much unless there are 30 of you who each own 1%"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa el caso de muchos accionistas pequeños en la misma situación.; Misma excepción perdida.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

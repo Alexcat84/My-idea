@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diseño de Prompts para Simulaciones y Tareas Complejas",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Un prompt bien diseñado puede lograr que un LLM realice tareas complejas que normalmente requerirían meses de desarrollo, como se demostró cuando un solo párrafo de instrucciones generó una simulación de negociación que replicó el 80% de una herramienta educativa desarrollada durante meses por un equipo. La clave está en especificar claramente el rol de la IA, el formato de interacción esperado, el proceso de retroalimentación y los criterios de éxito, permitiendo que la IA actúe como tutor, simulador o asistente experto adaptado a las necesidades del emprendedor.",
+  "resumen_teorico": "Un prompt bien diseñado puede lograr que un LLM realice tareas complejas que normalmente requerirían meses de desarrollo, como se demostró cuando un solo párrafo de instrucciones generó una simulación de negociación que replicó el 80% de una herramienta educativa desarrollada durante meses por un equipo. La clave está en especificar claramente el rol de la IA, el formato de interacción esperado, el proceso de retroalimentación y los criterios de éxito, permitiendo que la IA actúe como tutor, simulador o asistente experto adaptado a las necesidades del emprendedor. Aun así, es más arte que ciencia, y pierde peso a medida que la IA entiende mejor lo que quieres.",
   "pasos_accionables": [
     "Definir claramente el rol que debe asumir la IA (profesor, cliente simulado, inversionista, experto en una industria)",
     "Especificar el formato de interacción: turnos, retroalimentación, nivel de dificultad adaptativo",
@@ -41,6 +41,22 @@
         "motivo": "Disenar prompts para simulaciones con IA no lleva de forma natural a la prueba de hipotesis estadistica; son temas distintos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-040-disenar_prompts_efectivos_para_ia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un prompt bien diseñado puede lograr que un LLM realice tareas complejas que normalmente requerirían meses de desarrollo, como se demostró cuando un solo párrafo de instrucciones generó una simulación de negociación que replicó el 80% de una herramienta educativa desarrollada durante meses por un equipo. La clave está en especificar claramente el rol de la IA, el formato de interacción esperado, el proceso de retroalimentación y los criterios de éxito, permitiendo que la IA actúe como tutor, simulador o asistente experto adaptado a las necesidades del emprendedor.",
+      "texto_nuevo": "Un prompt bien diseñado puede lograr que un LLM realice tareas complejas que normalmente requerirían meses de desarrollo, como se demostró cuando un solo párrafo de instrucciones generó una simulación de negociación que replicó el 80% de una herramienta educativa desarrollada durante meses por un equipo. La clave está en especificar claramente el rol de la IA, el formato de interacción esperado, el proceso de retroalimentación y los criterios de éxito, permitiendo que la IA actúe como tutor, simulador o asistente experto adaptado a las necesidades del emprendedor. Aun así, es más arte que ciencia, y pierde peso a medida que la IA entiende mejor lo que quieres.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1241-1243",
+        "frase": "all of this remains much less a science than an art"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que el libro presenta el prompting como más arte que ciencia y como una destreza que pierde peso porque la IA entiende cada vez mejor la intención.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

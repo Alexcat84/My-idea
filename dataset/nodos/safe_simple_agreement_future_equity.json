@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "SAFE (Simple Agreement for Future Equity)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El SAFE, creado por Y Combinator, es un instrumento sintético que combina características de equity y deuda sin ser técnicamente deuda: el inversionista compra efectivamente un warrant no valorado. Elimina problemas legales de insolvencia asociados a la deuda y features como intereses o fecha de vencimiento. Puede incluir cap, descuento y cláusula MFN (most favored nation), pero típicamente carece de derechos pro rata explícitos y de fecha de maduración, lo que elimina un punto de apalancamiento para los inversionistas en negociaciones futuras.",
+  "resumen_teorico": "El SAFE, creado por Y Combinator, es un instrumento sintético que combina características de equity y deuda sin ser técnicamente deuda: el inversionista compra efectivamente un warrant no valorado. Elimina problemas legales de insolvencia asociados a la deuda y features como intereses o fecha de vencimiento. Puede incluir cap, descuento y cláusula MFN (most favored nation), pero típicamente carece de derechos pro rata explícitos y de fecha de maduración. Esto último te quita el riesgo del vencimiento, pero si la empresa pasa apuros y no se comunica, le quita al inversionista un punto de apalancamiento para conversar.",
   "pasos_accionables": [
     "Evaluar si el SAFE es preferible a la deuda convertible para evitar riesgos de insolvencia técnica",
     "Decidir si se incluye cap de valuación, descuento, o ambos (no ambos con warrants)",
     "Determinar si se necesita añadir una cláusula MFN para proteger a inversionistas tempranos",
-    "Considerar agregar derechos pro rata explícitos si los inversionistas lo requieren",
+    "Considerar agregar derechos pro rata explícitos si los inversionistas lo requieren, sabiendo que eso le resta simplicidad al documento estándar",
     "Involucrar a un abogado calificado para adaptar el documento estándar a las necesidades específicas"
   ],
   "entregable_esperado": "Documento SAFE firmado con términos claros de cap/descuento y cláusulas adicionales negociadas",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Usa un Acuerdo de Capital Futuro",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-safe_simple_agreement_future_equity-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El SAFE, creado por Y Combinator, es un instrumento sintético que combina características de equity y deuda sin ser técnicamente deuda: el inversionista compra efectivamente un warrant no valorado. Elimina problemas legales de insolvencia asociados a la deuda y features como intereses o fecha de vencimiento. Puede incluir cap, descuento y cláusula MFN (most favored nation), pero típicamente carece de derechos pro rata explícitos y de fecha de maduración, lo que elimina un punto de apalancamiento para los inversionistas en negociaciones futuras.",
+      "texto_nuevo": "El SAFE, creado por Y Combinator, es un instrumento sintético que combina características de equity y deuda sin ser técnicamente deuda: el inversionista compra efectivamente un warrant no valorado. Elimina problemas legales de insolvencia asociados a la deuda y features como intereses o fecha de vencimiento. Puede incluir cap, descuento y cláusula MFN (most favored nation), pero típicamente carece de derechos pro rata explícitos y de fecha de maduración. Esto último te quita el riesgo del vencimiento, pero si la empresa pasa apuros y no se comunica, le quita al inversionista un punto de apalancamiento para conversar.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2412",
+        "frase": "The lack of maturity date is both an advantage and a disadvantage."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro liga la pérdida de apalancamiento solo a la falta de vencimiento, en algunos casos (empresa en apuros que no se comunica), y dice que para quien emprende también es ventaja.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-safe_simple_agreement_future_equity-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar agregar derechos pro rata explícitos si los inversionistas lo requieren",
+      "texto_nuevo": "Considerar agregar derechos pro rata explícitos si los inversionistas lo requieren, sabiendo que eso le resta simplicidad al documento estándar",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2410",
+        "frase": "at some level this undermines the idea of a simple, standard document"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que agregar el pro rata resta a la idea de un documento simple y estándar; se cae ese costo.; Mismo costo perdido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

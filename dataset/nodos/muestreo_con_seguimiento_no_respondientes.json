@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo estratificado con seguimiento a no respondientes en encuestas de clientes",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
   "pasos_accionables": [
     "Definir una muestra representativa reducida de la población de clientes (ej. 1000 de miles).",
     "Enviar el cuestionario únicamente a esa muestra.",
@@ -81,6 +81,22 @@
         "motivo": "Quien diseña estudios con clientes en lugar de encuestas de satisfacción sigue naturalmente con cómo tomar la muestra y cómo seguir a quienes no responden, para que el estudio no quede sesgado."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-042-muestreo_con_seguimiento_no_respondientes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "texto_nuevo": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "5007",
+        "frase": "the perils of drawing conclusions from incomplete returns, even if 90 percent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte el peligro de concluir con respuestas incompletas aunque vuelva el 90 %; el nodo lo ata a una tasa baja.; Mismo límite perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

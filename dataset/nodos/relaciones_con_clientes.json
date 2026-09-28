@@ -7,7 +7,7 @@
   "resumen_teorico": "Describe el tipo de relación que una empresa establece con cada Segmento de Clientes, motivada por adquisición, retención o venta adicional (upselling). Categorías: asistencia personal, asistencia personal dedicada, autoservicio, servicios automatizados, comunidades y co-creación.",
   "pasos_accionables": [
     "Definir la motivación principal por segmento: ¿adquisición, retención o upselling?",
-    "Seleccionar el tipo de relación adecuado (personal, dedicada, autoservicio, automatizada, comunidad, co-creación)",
+    "Seleccionar el tipo o los tipos de relación adecuados, que pueden convivir en un mismo segmento (personal, dedicada, autoservicio, automatizada, comunidad, co-creación)",
     "Evaluar el costo de mantener cada tipo de relación",
     "Diseñar mecanismos de co-creación o comunidad si aplica al modelo (ej. reviews, foros)"
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Define tu Relación con Clientes",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-039-relaciones_con_clientes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar el tipo de relación adecuado (personal, dedicada, autoservicio, automatizada, comunidad, co-creación)",
+      "texto_nuevo": "Seleccionar el tipo o los tipos de relación adecuados, que pueden convivir en un mismo segmento (personal, dedicada, autoservicio, automatizada, comunidad, co-creación)",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "539",
+        "frase": "which may co-exist in a company’s relationship with a particular Customer Segment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que varias categorías de relación pueden coexistir con un mismo segmento.; Mismo defecto: el paso lleva a elegir una sola relación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

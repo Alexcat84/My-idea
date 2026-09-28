@@ -7,9 +7,9 @@
   "resumen_teorico": "Las 'reps and warranties' son declaraciones y garantías que el vendedor (y a veces el comprador) hacen sobre la empresa. Determinan quién asume responsabilidad legal si algo resulta falso o no divulgado. La indemnización protege al comprador ante incumplimientos de estas declaraciones. Es crucial definir en el LOI quién hace las representaciones (la empresa vs. los accionistas) para evitar negociaciones prolongadas y costosas con abogados más adelante.",
   "pasos_accionables": [
     "Clarificar en el LOI si las reps las hace la compañía o también los accionistas individuales.",
-    "Solicitar que las reps estén calificadas por 'a mi mejor conocimiento' cuando sea razonable.",
+    "Sugerencia de My Idea: solicitar que las reps estén calificadas por 'a mi mejor conocimiento' cuando sea razonable.",
     "Negociar términos de indemnización antes de que los abogados tomen el control del proceso.",
-    "Si se recibe stock privado como pago, exigir reciprocidad en las reps del comprador."
+    "Si se recibe stock privado como pago, proponer como punto de partida que todas las reps y garantías sean recíprocas."
   ],
   "entregable_esperado": "Sección de reps, warranties e indemnización claramente definida en el LOI antes de pasar a documentos definitivos.",
   "nodos_previos": [
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Define Garantías e Indemnización",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-reps_warranties_indemnizacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si se recibe stock privado como pago, exigir reciprocidad en las reps del comprador.",
+      "texto_nuevo": "Si se recibe stock privado como pago, proponer como punto de partida que todas las reps y garantías sean recíprocas.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4199",
+        "frase": "a completely logical starting point is to make all the reps and warranties reciprocal"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro plantea la reciprocidad de todas las reps como punto de partida lógico, no como exigencia.; Mismo endurecimiento.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-reps_warranties_indemnizacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar que las reps estén calificadas por 'a mi mejor conocimiento' cuando sea razonable.",
+      "texto_nuevo": "Sugerencia de My Idea: solicitar que las reps estén calificadas por 'a mi mejor conocimiento' cuando sea razonable.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4177",
+        "frase": "The reps and warranties are the facts and assurances about the business"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona calificar las reps por conocimiento; queda como sugerencia práctica.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Valuation Cap en Deuda Convertible",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El valuation cap establece un techo máximo sobre el precio de conversión de la deuda convertible, protegiendo a los inversionistas tempranos de que su descuento no sea suficiente si la empresa alcanza una valuación muy alta en la siguiente ronda. Sin embargo, puede fijar un techo indeseado para negociaciones futuras con nuevos inversionistas (VCs), ya que estos suelen anclar su oferta de precio al cap existente.",
+  "resumen_teorico": "El valuation cap establece un techo máximo sobre el precio de conversión de la deuda convertible, protegiendo a los inversionistas tempranos de que su descuento no sea suficiente si la empresa alcanza una valuación muy alta en la siguiente ronda. Sin embargo, puede fijar un techo indeseado para negociaciones futuras con nuevos inversionistas (VCs), ya que algunos de ellos ven el cap existente como el techo de precio de la siguiente ronda.",
   "pasos_accionables": [
-    "Negociar un cap que refleje razonablemente el valor esperado de la empresa en el corto/mediano plazo.",
+    "Negociar el cap con cuidado, según la etapa en que está la empresa.",
     "Evitar revelar el cap a nuevos inversionistas VC hasta haber acordado un precio, si es posible.",
     "Analizar el efecto combinado del cap y el descuento para saber cuál aplica en la conversión real.",
     "Considerar los riesgos de que el cap se convierta en un techo de precio para la ronda Serie A."
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Pon un Techo a tu Valuación",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-valuation_cap_deuda_convertible-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El valuation cap establece un techo máximo sobre el precio de conversión de la deuda convertible, protegiendo a los inversionistas tempranos de que su descuento no sea suficiente si la empresa alcanza una valuación muy alta en la siguiente ronda. Sin embargo, puede fijar un techo indeseado para negociaciones futuras con nuevos inversionistas (VCs), ya que estos suelen anclar su oferta de precio al cap existente.",
+      "texto_nuevo": "El valuation cap establece un techo máximo sobre el precio de conversión de la deuda convertible, protegiendo a los inversionistas tempranos de que su descuento no sea suficiente si la empresa alcanza una valuación muy alta en la siguiente ronda. Sin embargo, puede fijar un techo indeseado para negociaciones futuras con nuevos inversionistas (VCs), ya que algunos de ellos ven el cap existente como el techo de precio de la siguiente ronda.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2220",
+        "frase": "Some VCs will look at the cap and view it as a price ceiling"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que algunos VCs, en algunos casos, ven el cap como techo, no que suelan hacerlo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-valuation_cap_deuda_convertible-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar un cap que refleje razonablemente el valor esperado de la empresa en el corto/mediano plazo.",
+      "texto_nuevo": "Negociar el cap con cuidado, según la etapa en que está la empresa.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2222",
+        "frase": "the price cap is thoughtfully negotiated based on the stage of the company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Cambia el criterio del libro (negociar el cap con cuidado según la etapa) por uno que no da (valor esperado a corto o mediano plazo).; Mismo criterio inventado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

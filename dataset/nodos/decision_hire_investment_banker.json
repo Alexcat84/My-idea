@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Confirmar que la decisión de vender ya fue tomada por el consejo, CEO y fundadores",
     "Evaluar si existe una oferta preemptiva atractiva que no requiera optimización externa",
-    "Determinar si la venta es de bajo valor/liquidación, donde un banquero puede no ser rentable",
+    "Determinar si la venta es de bajo valor/liquidación, donde un banquero puede no ser rentable, o si el CEO tiene experiencia previa en ventas de empresas y buena relación con los compradores lógicos",
     "Estimar el valor esperado de salida para justificar el costo del banquero",
     "Considerar contratar un banquero para acceder a un universo amplio de compradores (50+) y reducir conflictos de interés"
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Evalúa Contratar un Banquero",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-043-decision_hire_investment_banker-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si la venta es de bajo valor/liquidación, donde un banquero puede no ser rentable",
+      "texto_nuevo": "Determinar si la venta es de bajo valor/liquidación, donde un banquero puede no ser rentable, o si el CEO tiene experiencia previa en ventas de empresas y buena relación con los compradores lógicos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4401",
+        "frase": "an M&A-savvy CEO who has extensive prior experience in managing a sale process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da un tercer caso en que el banquero difícilmente suma: un CEO con experiencia en ventas y bien conectado con los compradores lógicos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

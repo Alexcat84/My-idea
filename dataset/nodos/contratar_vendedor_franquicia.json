@@ -4,9 +4,9 @@
   "dominio": "franquicias",
   "titulo_concepto": "Contratación de un Profesional de Ventas de Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Contratar un vendedor profesional con experiencia puede aumentar la productividad de ventas respecto al DIY, y desarrolla una competencia interna controlable directamente. Sin embargo, profesionales exitosos pueden dudar en unirse a franquiciadores nuevos con bajo volumen de ventas proyectado, y existen costos de reclutamiento, beneficios y riesgo de rotación.",
+  "resumen_teorico": "Contratar un vendedor profesional con experiencia puede aumentar la productividad de ventas respecto al DIY, y desarrolla una competencia interna controlable directamente; sus comisiones suelen ser menores que las de un vendedor tercerizado. Sin embargo, profesionales exitosos pueden dudar en unirse a franquiciadores nuevos con bajo volumen de ventas proyectado, y existen costos de reclutamiento, beneficios y riesgo de rotación.",
   "pasos_accionables": [
-    "Evaluar si el volumen de ventas proyectado (ideal 20+ franquicias/año) justifica la contratación",
+    "Evaluar si el volumen de ventas proyectado atrae a un profesional con experiencia: con menos de 20 franquicias al año puede no querer unirse",
     "Buscar candidatos con experiencia en franquiciadores pequeños, no solo grandes marcas",
     "Presupuestar costos de reclutamiento, beneficios (30%+ del salario) y equipo de soporte",
     "Tener plan de contingencia si el vendedor falla o renuncia"
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Contrata un Vendedor Profesional",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-041-contratar_vendedor_franquicia-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si el volumen de ventas proyectado (ideal 20+ franquicias/año) justifica la contratación",
+      "texto_nuevo": "Evaluar si el volumen de ventas proyectado atrae a un profesional con experiencia: con menos de 20 franquicias al año puede no querer unirse",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4822",
+        "frase": "particularly if the company plans to sell fewer than 20 franchises each year"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija 20 al año como volumen ideal que justifica contratar; dice que con menos de 20 un profesional puede no querer unirse.; Mismo defecto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-041-contratar_vendedor_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contratar un vendedor profesional con experiencia puede aumentar la productividad de ventas respecto al DIY, y desarrolla una competencia interna controlable directamente. Sin embargo, profesionales exitosos pueden dudar en unirse a franquiciadores nuevos con bajo volumen de ventas proyectado, y existen costos de reclutamiento, beneficios y riesgo de rotación.",
+      "texto_nuevo": "Contratar un vendedor profesional con experiencia puede aumentar la productividad de ventas respecto al DIY, y desarrolla una competencia interna controlable directamente; sus comisiones suelen ser menores que las de un vendedor tercerizado. Sin embargo, profesionales exitosos pueden dudar en unirse a franquiciadores nuevos con bajo volumen de ventas proyectado, y existen costos de reclutamiento, beneficios y riesgo de rotación.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4818",
+        "frase": "Typically, commissions paid to salaried salespeople are lower than commissions to outsourced sales professionals."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la tercera ventaja del libro: comisiones menores que las de un vendedor tercerizado, más económico a mayor productividad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

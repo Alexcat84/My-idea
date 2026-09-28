@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Warrants en Financiamientos de Etapas Posteriores",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Un warrant es el derecho a comprar un número determinado de acciones a un precio predefinido durante un plazo de años, similar a una opción de compra. Los inversionistas los usan para reducir efectivamente la valoración de la empresa sin que ese descuento aparezca explícitamente en el precio negociado -son, en la práctica, un mecanismo de valoración encubierta-. Son comunes en préstamos puente (bridge loans) y en financiamientos de etapas posteriores, típicamente ofreciendo un descuento de hasta 20% sobre el precio de la siguiente ronda, y suelen generar complejidad contable innecesaria.",
+  "resumen_teorico": "Un warrant es el derecho a comprar un número determinado de acciones a un precio predefinido durante un plazo de años, similar a una opción de compra. Los inversionistas los usan para reducir efectivamente la valoración de la empresa sin que ese descuento aparezca explícitamente en el precio negociado -son, en la práctica, un mecanismo de valoración encubierta-. Son comunes en financiamientos de etapas posteriores y en préstamos puente (bridge loans), donde suelen dar un descuento de hasta 20% sobre el precio de la siguiente ronda, y suelen generar complejidad contable innecesaria.",
   "pasos_accionables": [
     "Identificar si el term sheet incluye warrants y cuál es su impacto real en la valuación efectiva de la empresa",
     "Si se propone un warrant simplemente por un tema de precio, negociar una valoración pre-money más baja en su lugar, para eliminar la complejidad adicional",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Usa Opciones para Bajar la Valoración",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-warrants_financiamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un warrant es el derecho a comprar un número determinado de acciones a un precio predefinido durante un plazo de años, similar a una opción de compra. Los inversionistas los usan para reducir efectivamente la valoración de la empresa sin que ese descuento aparezca explícitamente en el precio negociado -son, en la práctica, un mecanismo de valoración encubierta-. Son comunes en préstamos puente (bridge loans) y en financiamientos de etapas posteriores, típicamente ofreciendo un descuento de hasta 20% sobre el precio de la siguiente ronda, y suelen generar complejidad contable innecesaria.",
+      "texto_nuevo": "Un warrant es el derecho a comprar un número determinado de acciones a un precio predefinido durante un plazo de años, similar a una opción de compra. Los inversionistas los usan para reducir efectivamente la valoración de la empresa sin que ese descuento aparezca explícitamente en el precio negociado -son, en la práctica, un mecanismo de valoración encubierta-. Son comunes en financiamientos de etapas posteriores y en préstamos puente (bridge loans), donde suelen dar un descuento de hasta 20% sobre el precio de la siguiente ronda, y suelen generar complejidad contable innecesaria.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "867",
+        "frase": "warrants that effectively grant a discount (again, usually up to 20%"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El descuento de hasta 20% el libro lo da solo para los préstamos puente, no para las etapas posteriores.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

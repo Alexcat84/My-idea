@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Segregación de Funciones como Defensa Organizacional",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten indefinidamente.",
+  "resumen_teorico": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
   "pasos_accionables": [
     "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separados.",
     "Prohibir que una misma persona pueda autorizar y aprobar su propio trabajo.",
@@ -64,6 +64,22 @@
         "motivo": "Tras nombrar a un responsable por cada riesgo, cuidar que quien ejecuta no sea quien verifica es la continuación natural del reparto de responsabilidades."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-042-segregacion_funciones_trading_settlement-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten indefinidamente.",
+      "texto_nuevo": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "496",
+        "frase": "this still left him with the powers necessary for his deceptions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que el ocultamiento pueda durar indefinidamente; las pérdidas terminaron descubriéndose.; Mismo cuánto añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Las condiciones de precio en un préstamo de deuda de riesgo (venture debt)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, y entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que podrás ejercer esas acciones (precio de ejercicio o strike price) es lo que más se negocia: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
+  "resumen_teorico": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, a veces un pago final al terminar el préstamo que también suma al precio total, y entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que podrás ejercer esas acciones (precio de ejercicio o strike price) es un punto clave de la negociación: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
   "pasos_accionables": [
     "Revisa la tasa de interés que te proponen y el índice de referencia (como la Prime Rate) más el margen que le suman.",
     "Fíjate cómo y cuándo te cobran las comisiones del préstamo.",
@@ -12,7 +12,7 @@
     "Negocia el precio al que podrás ejercer esos warrants, buscando anclarlo a la valoración de tu próxima ronda si esperas crecer.",
     "Compara ofertas entre bancos, que suelen pedir menos warrants pero imponen más restricciones (covenants), y fondos de deuda, que piden más warrants pero imponen menos restricciones."
   ],
-  "entregable_esperado": "Una tabla donde compares las ofertas de préstamo de deuda de riesgo que recibas, con la tasa, las comisiones, el porcentaje de warrants y el precio de ejercicio de cada una, para elegir la mejor.",
+  "entregable_esperado": "Una tabla donde compares las ofertas de préstamo de deuda de riesgo que recibas, con la tasa, las comisiones, el pago final si lo hay, el porcentaje de warrants y el precio de ejercicio de cada una, para elegir la mejor.",
   "nodos_previos": [
     "venture_debt_introduccion"
   ],
@@ -27,5 +27,39 @@
   "etiqueta_arbol": "Negocia tus Términos de Deuda",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-044-venture_debt_terminos_economicos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, y entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que podrás ejercer esas acciones (precio de ejercicio o strike price) es lo que más se negocia: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
+      "texto_nuevo": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, a veces un pago final al terminar el préstamo que también suma al precio total, y entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que podrás ejercer esas acciones (precio de ejercicio o strike price) es un punto clave de la negociación: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2872",
+        "frase": "the cash value of the payment should be aggregated into the loan’s total price calculation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que el precio de ejercicio es un punto clave de la negociación, no el que más se negocia.; La lista de ingredientes del precio omite el pago final, que el libro pide sumar al precio total.; Mismo matiz del pago final omitido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-044-venture_debt_terminos_economicos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una tabla donde compares las ofertas de préstamo de deuda de riesgo que recibas, con la tasa, las comisiones, el porcentaje de warrants y el precio de ejercicio de cada una, para elegir la mejor.",
+      "texto_nuevo": "Una tabla donde compares las ofertas de préstamo de deuda de riesgo que recibas, con la tasa, las comisiones, el pago final si lo hay, el porcentaje de warrants y el precio de ejercicio de cada una, para elegir la mejor.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2872",
+        "frase": "Final payments are another common pricing mechanism in the venture debt market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La tabla omite el pago final, que el libro pide sumar al precio total.; Mismo matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

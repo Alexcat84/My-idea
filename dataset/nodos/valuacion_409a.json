@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Valoración oficial de las opciones sobre acciones (409A)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor) que te protege de sanciones de la autoridad fiscal (IRS). Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Esta práctica hizo que las acciones comunes se valoren ahora entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Esto solo aplica si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí).",
+  "resumen_teorico": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor): la valuación se da por correcta salvo que la autoridad fiscal (IRS) demuestre lo contrario. Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Con esta práctica, en empresas en etapa temprana a menudo las acciones comunes se valoran entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Esto solo aplica si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí).",
   "pasos_accionables": [
     "Sugerencia de My Idea: contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
     "Consigue la valoración antes de otorgar nuevas opciones sobre acciones a tus empleados",
@@ -138,6 +138,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-044-valuacion_409a-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor) que te protege de sanciones de la autoridad fiscal (IRS). Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Esta práctica hizo que las acciones comunes se valoren ahora entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Esto solo aplica si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí).",
+      "texto_nuevo": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor): la valuación se da por correcta salvo que la autoridad fiscal (IRS) demuestre lo contrario. Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Con esta práctica, en empresas en etapa temprana a menudo las acciones comunes se valoran entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Esto solo aplica si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí).",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4685",
+        "frase": "the valuation would be assumed to be correct unless the IRS could prove otherwise"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece el safe harbor: el libro dice que la valuación se presume correcta salvo que el IRS pruebe lo contrario, no que proteja de sanciones.; Endurece: el libro dice que a menudo se ve ese rango en empresas en etapa temprana.; Mismo endurecimiento del rango 20% a 30%.; Mismo endurecimiento del safe harbor.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

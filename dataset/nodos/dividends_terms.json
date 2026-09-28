@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Dividendos en la hoja de términos (term sheet) de tu ronda",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Es una cláusula que da a los inversionistas con acciones preferentes el derecho a cobrar dividendos (acumulados o no) antes que tú y los demás accionistas comunes, normalmente entre 5% y 15% anual sobre el precio original de compra. En rondas tempranas casi nunca cambian mucho tu retorno, pero pueden pesar si las cosas van mal o si la inversión es muy grande (más de 50 millones de dólares), como suele pasar en private equity.",
+  "resumen_teorico": "Es una cláusula que da a los inversionistas con acciones preferentes el derecho a cobrar dividendos (acumulados o no) antes que tú y los demás accionistas comunes, normalmente entre 5% y 15% anual sobre el precio original de compra. En rondas tempranas casi nunca cambian mucho el retorno de quien invierte, pero pueden pesar si las cosas van mal (uno acumulativo automático puede acercarte sin notarlo a la insolvencia) o si la inversión es muy grande (más de 50 millones de dólares), como en private equity.",
   "pasos_accionables": [
     "Revisa si el dividendo es acumulativo o no acumulativo y cuál es su porcentaje.",
     "Calcula qué tanto te afecta ese dividendo tanto si el negocio va muy bien como si va mal.",
-    "Pide que cualquier decisión de repartir dividendos necesite el visto bueno de una mayoría amplia del consejo (board).",
+    "Pide que cualquier decisión de repartir dividendos necesite el visto bueno de la mayoría, o incluso de una mayoría amplia, del consejo (board).",
     "Fíjate si el dividendo se paga en efectivo o en más acciones, porque esto último te diluye todavía más."
   ],
   "entregable_esperado": "Una cláusula de dividendos negociada, con protección del consejo (board) y claridad sobre cómo se paga.",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Negocia los Dividendos Preferentes",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-043-dividends_terms-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una cláusula que da a los inversionistas con acciones preferentes el derecho a cobrar dividendos (acumulados o no) antes que tú y los demás accionistas comunes, normalmente entre 5% y 15% anual sobre el precio original de compra. En rondas tempranas casi nunca cambian mucho tu retorno, pero pueden pesar si las cosas van mal o si la inversión es muy grande (más de 50 millones de dólares), como suele pasar en private equity.",
+      "texto_nuevo": "Es una cláusula que da a los inversionistas con acciones preferentes el derecho a cobrar dividendos (acumulados o no) antes que tú y los demás accionistas comunes, normalmente entre 5% y 15% anual sobre el precio original de compra. En rondas tempranas casi nunca cambian mucho el retorno de quien invierte, pero pueden pesar si las cosas van mal (uno acumulativo automático puede acercarte sin notarlo a la insolvencia) o si la inversión es muy grande (más de 50 millones de dólares), como en private equity.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1652-1664",
+        "frase": "an automatic cumulative dividend can put you unknowingly into the zone of insolvency"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): No invierte el sentido, pero el libro habla del retorno del inversionista y el nodo le atribuye el efecto a quien emprende.; Se cae la advertencia de que un dividendo acumulativo automático puede llevarte sin notarlo a la zona de insolvencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-dividends_terms-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pide que cualquier decisión de repartir dividendos necesite el visto bueno de una mayoría amplia del consejo (board).",
+      "texto_nuevo": "Pide que cualquier decisión de repartir dividendos necesite el visto bueno de la mayoría, o incluso de una mayoría amplia, del consejo (board).",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1675",
+        "frase": "ensuring that dividends have to be approved by a majority—or even a supermajority—of your board"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide la aprobación de la mayoría del consejo, o incluso de una mayoría amplia; el nodo solo deja la opción más dura.; Mismo endurecimiento.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

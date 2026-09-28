@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Crítica de tu Plan con IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Casi todo el uso de la IA en el negocio va en una dirección: tú le pides y la revisas. Aquí la dirección se invierte y se usa a la IA como crítico del plan propio, que es donde más rinde y donde menos duele equivocarse. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas de fallar, una versión alternativa del éxito, y la voz de personas conocidas que dirían lo que nadie del equipo se atreve a decir.",
+  "resumen_teorico": "Aquí se usa a la IA como crítico del plan propio, porque cualquier plan se beneficia de la crítica, aunque solo sea porque da permiso para hablar de lo que podría salir mal. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas en que podría fallar, una visión de cómo sería el éxito, y la voz de tres personas conocidas que lo critiquen a su manera.",
   "pasos_accionables": [
     "Describir el plan o modelo de negocio a la IA con suficiente detalle",
     "Pedir 10 formas específicas en que el plan podría fallar",
-    "Solicitar una visión de éxito alternativa",
+    "Solicitar una visión de cómo sería el éxito del plan",
     "Invocar a tres personajes conocidos (emprendedores, líderes, artistas o filósofos) para que critiquen el plan en su propia voz",
     "Sugerencia de My Idea: sintetizar los hallazgos en un documento de riesgos y mitigaciones"
   ],
@@ -84,6 +84,39 @@
         "evidencia": "F13-016: Parte de un plan ya escrito y lo somete a critica para producir un documento de riesgos y mitigaciones; es revisar el plan. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-040-critica_del_plan_con_ia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Casi todo el uso de la IA en el negocio va en una dirección: tú le pides y la revisas. Aquí la dirección se invierte y se usa a la IA como crítico del plan propio, que es donde más rinde y donde menos duele equivocarse. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas de fallar, una versión alternativa del éxito, y la voz de personas conocidas que dirían lo que nadie del equipo se atreve a decir.",
+      "texto_nuevo": "Aquí se usa a la IA como crítico del plan propio, porque cualquier plan se beneficia de la crítica, aunque solo sea porque da permiso para hablar de lo que podría salir mal. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas en que podría fallar, una visión de cómo sería el éxito, y la voz de tres personas conocidas que lo critiquen a su manera.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1216",
+        "frase": "Any plan benefits from feedback, even if it just gives you permission"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Afirma un hecho sobre cómo se usa la IA en los negocios que el libro no dice.; Añade un por qué comparativo; el libro solo dice que cualquier plan se beneficia de la crítica, aunque sea por dar permiso para hablar de lo que puede fallar.; Añade un por qué sobre el equipo; el libro solo pide que tres figuras conocidas critiquen el plan en su voz.; El libro pide una visión de éxito del proyecto, no una versión alternativa.; Misma invención que la marca 1.; Misma invención que la marca 2.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-040-critica_del_plan_con_ia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar una visión de éxito alternativa",
+      "texto_nuevo": "Solicitar una visión de cómo sería el éxito del plan",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1216",
+        "frase": "give you 10 ways your project could fail and a vision of success"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide una visión de éxito del proyecto, no una alternativa.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

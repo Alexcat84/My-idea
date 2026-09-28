@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Preguntas Clave para Fortalecer Zonas Sin Agujeros Visibles",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Conjunto de preguntas diagnósticas para identificar dónde poner 'blindaje' organizacional en zonas donde no se ven agujeros (riesgos no reportados). Incluye: monitoreo del monitoreo de seguridad, no asumir que el éxito pasado garantiza seguridad futura, resistir el distanciamiento por diferenciación, resistir la resolución fragmentada de problemas, conocer la brecha trabajo-imaginado/trabajo-hecho, mantener viva la discusión sobre riesgo incluso cuando todo parece seguro, y tener función de 'whistleblower' con autoridad real.",
+  "resumen_teorico": "Conjunto de preguntas diagnósticas para identificar dónde poner 'blindaje' organizacional en zonas donde no se ven agujeros (riesgos no reportados). Incluye: monitoreo del monitoreo de seguridad, no asumir que el éxito pasado garantiza seguridad futura, resistir el distanciamiento por diferenciación, resistir la resolución fragmentada de problemas, conocer la brecha trabajo-imaginado/trabajo-hecho, mantener viva la discusión sobre riesgo incluso cuando todo parece seguro, tener función de 'whistleblower' con autoridad real e incorporar perspectivas frescas y diversas.",
   "pasos_accionables": [
     "Evaluar si la organización monitorea sus propios modelos de monitoreo de riesgo (meta-monitoreo)",
     "Verificar si el éxito operacional continuo se interpreta erróneamente como garantía de seguridad futura",
     "Revisar si se descartan eventos de otras organizaciones por parecer 'diferentes' sin analizar patrones subyacentes",
-    "Evaluar la fragmentación en la resolución de problemas entre departamentos o subcontratistas",
+    "Evaluar la fragmentación en la resolución de problemas entre departamentos o subcontratistas, y conocer la distancia entre el trabajo como lo imagina la dirección y el trabajo como se hace realmente",
     "Establecer espacios regulares de discusión sobre riesgo incluso cuando todo parece ir bien (ej. briefings previos)",
     "Crear o fortalecer funciones con autoridad real para cuestionar interpretaciones comunes sobre seguridad",
     "Incorporar perspectivas frescas y diversas en la resolución de problemas de seguridad"
@@ -43,6 +43,39 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R006-034 (CONTRARIO, lector y verificador de acuerdo): Cambia la cifra de preguntas que da el libro (ocho, no siete). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R006-034"
+    },
+    {
+      "id": "final-e1-043-preguntas_clave_armadura_organizacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conjunto de preguntas diagnósticas para identificar dónde poner 'blindaje' organizacional en zonas donde no se ven agujeros (riesgos no reportados). Incluye: monitoreo del monitoreo de seguridad, no asumir que el éxito pasado garantiza seguridad futura, resistir el distanciamiento por diferenciación, resistir la resolución fragmentada de problemas, conocer la brecha trabajo-imaginado/trabajo-hecho, mantener viva la discusión sobre riesgo incluso cuando todo parece seguro, y tener función de 'whistleblower' con autoridad real.",
+      "texto_nuevo": "Conjunto de preguntas diagnósticas para identificar dónde poner 'blindaje' organizacional en zonas donde no se ven agujeros (riesgos no reportados). Incluye: monitoreo del monitoreo de seguridad, no asumir que el éxito pasado garantiza seguridad futura, resistir el distanciamiento por diferenciación, resistir la resolución fragmentada de problemas, conocer la brecha trabajo-imaginado/trabajo-hecho, mantener viva la discusión sobre riesgo incluso cuando todo parece seguro, tener función de 'whistleblower' con autoridad real e incorporar perspectivas frescas y diversas.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3869",
+        "frase": "The ability and extent of bringing in fresh perspectives."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera ocho preguntas y el resumen omite la de traer perspectivas frescas y diversas.; Misma omisión de la octava pregunta de la lista.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-043-preguntas_clave_armadura_organizacional-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar la fragmentación en la resolución de problemas entre departamentos o subcontratistas",
+      "texto_nuevo": "Evaluar la fragmentación en la resolución de problemas entre departamentos o subcontratistas, y conocer la distancia entre el trabajo como lo imagina la dirección y el trabajo como se hace realmente",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3863",
+        "frase": "Knowing the gap between work-as-imagined and work-as-done."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Los pasos omiten la pregunta sobre la distancia entre el trabajo imaginado y el trabajo hecho.; Misma omisión de una de las ocho preguntas del libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [
