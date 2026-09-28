@@ -14,7 +14,6 @@
   ],
   "entregable_esperado": "Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro",
   "nodos_previos": [
-    "planificacion_cadena_suministro",
     "estrategia_circular_y_mecanismo_de_retorno"
   ],
   "nodos_siguientes": [
@@ -82,6 +81,19 @@
         "evidencia": "D-17: Simular cadenas circulares con centro de gravedad y reportes de P&L por escenario es diseño logístico de especialista, no algo que todo emprendedor recorra. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-muralla-015",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "planificacion_cadena_suministro -> modelo_simulacion_cadena_suministro_circular",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

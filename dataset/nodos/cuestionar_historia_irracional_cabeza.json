@@ -20,7 +20,9 @@
   "nodos_previos": [
     "identificar_disparadores_propios_reaccion"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "celebrar_pequenias_victorias"
+  ],
   "condiciones_activacion": [
     "Cuando una historia negativa se ha apoderado de ti a partir de unos pocos datos sueltos, y estás en el Pozo, que es cuando esa historia tiende a ser la del peor caso."
   ],
@@ -395,6 +397,19 @@
       "motivos": [
         "voz"
       ]
+    },
+    {
+      "id": "final-arista-10",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "cuestionar_historia_irracional_cabeza -> celebrar_pequenias_victorias",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'celebrar_pequenias_victorias' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Los dos atienden a quien está en el Pozo: después de desarmar la historia del peor caso, contarte otra historia a partir de tus pequeñas victorias es el paso siguiente natural."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "Cuestiona tu Peor Historia",

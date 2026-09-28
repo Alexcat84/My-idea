@@ -13,7 +13,6 @@
   ],
   "entregable_esperado": "Catálogo de productos con códigos EPC/GPC asignados y conexión activa a la red GDSN",
   "nodos_previos": [
-    "seleccion_fuente_unica_multiple",
     "ciclo_virtuoso_datos_electronicos"
   ],
   "nodos_siguientes": [
@@ -53,6 +52,19 @@
         "evidencia": "D-28: Conectarse al GDSN y clasificar con UNSPSC o GPC es estandarización de datos de producto entre socios comerciales, propia de quien distribuye a fondo. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-muralla-020",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "seleccion_fuente_unica_multiple -> estandarizacion_codigos_producto_epc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

@@ -16,7 +16,8 @@
   ],
   "entregable_esperado": "El doble impuesto retirado: la dificultad sigue, pero ya no pagas además la culpa por tenerla, y el malestar está declarado en vez de rumiado.",
   "nodos_previos": [
-    "manejo_psicologia_ceo"
+    "manejo_psicologia_ceo",
+    "definir_receta_propia_mantenerse_centrado"
   ],
   "nodos_siguientes": [
     "visualizar_recuperar_confianza",
@@ -270,6 +271,19 @@
       "motivos": [
         "matiz"
       ]
+    },
+    {
+      "id": "final-arista-08",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "definir_receta_propia_mantenerse_centrado -> evitar_doble_impuesto_malestar",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'evitar_doble_impuesto_malestar' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Con la receta para los tiempos duros ya hecha, el paso natural cuando llega la dificultad es no sumarle la culpa de estar pasándolo mal."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "No Pagues Doble el Malestar",

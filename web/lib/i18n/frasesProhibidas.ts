@@ -228,7 +228,7 @@ export const REGLAS_VOZ: readonly ReglaVoz[] = [
         palabra("vist[oa]s? anteriormente"),
         palabra("los libros (?:llaman|dicen|nombran)"),
         palabra("se presenta (?:de forma lineal|como el mecanismo)"),
-        palabra("(?:a|en) la fecha de la fuente"),
+        palabra("(?:a|en) la fecha de la fuente|(?:al|en el) momento de la fuente"),
         palabra("se contrasta (?:el|la|los|las)"),
         palabra("se resume en la frase"),
         palabra("se analizan (?:dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez) (?:palancas|factores|elementos|dimensiones|tipos)"),

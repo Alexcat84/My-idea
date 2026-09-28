@@ -18,7 +18,8 @@
   ],
   "nodos_siguientes": [
     "revisa_tus_riesgos_con_un_ritmo",
-    "manten_viva_tu_lista_de_riesgos"
+    "manten_viva_tu_lista_de_riesgos",
+    "segregacion_funciones_trading_settlement"
   ],
   "condiciones_activacion": [
     "cuando un riesgo crece porque nadie en concreto lo estaba mirando",
@@ -55,6 +56,19 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por capacidad_de_respuesta_responsable."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-arista-17",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "un_dueno_para_cada_riesgo -> segregacion_funciones_trading_settlement",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'segregacion_funciones_trading_settlement' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Tras nombrar a un responsable por cada riesgo, cuidar que quien ejecuta no sea quien verifica es la continuación natural del reparto de responsabilidades."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

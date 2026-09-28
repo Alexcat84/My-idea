@@ -968,8 +968,7 @@
       ],
       "entregable_esperado": "Un análisis de costo beneficio que te diga qué tasa de falla puedes aceptar, y una forma activa de detectar fallas.",
       "nodos_previos": [
-        "equipo_de_gestion_de_crisis",
-        "evaluacion_gestion_riesgos"
+        "programa_cero_defectos"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -2727,7 +2726,6 @@
       ],
       "nodos_siguientes": [
         "optimizacion_tecnologia_cadena_suministro",
-        "negociacion_contratos_proveedores",
         "identificacion_proveedores_criticos"
       ],
       "condiciones_activacion": [
@@ -10263,7 +10261,8 @@
       ],
       "nodos_siguientes": [
         "tecnicas_para_sacar_riesgos_a_la_luz",
-        "revisa_tus_riesgos_con_un_ritmo"
+        "revisa_tus_riesgos_con_un_ritmo",
+        "identificacion_de_riesgos"
       ],
       "condiciones_activacion": [
         "cuando solo piensas en los riesgos al arrancar y nunca más",
@@ -13890,7 +13889,8 @@
       ],
       "entregable_esperado": "Un registro escrito y diario de cosas que hiciste y de las que estás orgulloso, por pequeñas que sean, con el foco puesto en lo que va bien y no en lo que falta.",
       "nodos_previos": [
-        "la_lucha_resiliencia_ceo"
+        "la_lucha_resiliencia_ceo",
+        "cuestionar_historia_irracional_cabeza"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -16007,7 +16007,8 @@
       ],
       "entregable_esperado": "Una lista de tu inventario dividido por tipo, con una meta numérica escrita para cada categoría relevante.",
       "nodos_previos": [
-        "gestion_inventario"
+        "gestion_inventario",
+        "traduce_stock_muerto_numeros"
       ],
       "nodos_siguientes": [
         "conoce_insumos_vitales"
@@ -17201,11 +17202,9 @@
       "entregable_esperado": "Acuerdo de colaboración de transporte (CTM) con socios definidos, modelo de red optimizado y métricas de ahorro esperado",
       "nodos_previos": [
         "programacion_entregas_delivery_scheduling",
-        "collaboration_roadblocks",
-        "stakeholder_mapping_wheel"
+        "collaboration_roadblocks"
       ],
       "nodos_siguientes": [
-        "collaboration_enablers",
         "scorecard_desempeno_cadena_suministro"
       ],
       "condiciones_activacion": [
@@ -17234,12 +17233,10 @@
       ],
       "entregable_esperado": "Checklist de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
       "nodos_previos": [
-        "colaboracion_transporte_ctm",
         "coordinacion_colaboracion_cadena_suministro"
       ],
       "nodos_siguientes": [
-        "collaboration_roadblocks",
-        "scorecard_desempeno_cadena_suministro"
+        "collaboration_roadblocks"
       ],
       "condiciones_activacion": [
         "Antes de iniciar una relación de colaboración formal con socios de la cadena de suministro"
@@ -17579,7 +17576,6 @@
         "escepticismo_sano_ante_el_riesgo",
         "cuanto_sabes_y_cuanto_solo_crees",
         "la_matriz_de_colores_te_engana",
-        "enfoque_situacional_vs_personal",
         "aprendizaje_validado"
       ],
       "nodos_siguientes": [
@@ -20624,7 +20620,8 @@
         "clasifica_tu_inventario"
       ],
       "nodos_siguientes": [
-        "traduce_stock_muerto_numeros"
+        "traduce_stock_muerto_numeros",
+        "gestion_procurement_consumo"
       ],
       "condiciones_activacion": [
         "Te quedaste sin un insumo barato y eso detuvo tu negocio por dias.",
@@ -24741,7 +24738,8 @@
       ],
       "entregable_esperado": "Dicho y sostenido que la vara de colaboración no se negocia por talento, con los asuntos de esa persona abordados y con una cultura de equipo que deja claro que eso no se tolera.",
       "nodos_previos": [
-        "gestion_empleados_brillantes_problematicos"
+        "gestion_empleados_brillantes_problematicos",
+        "resolver_desencaje_valores_persona_equipo"
       ],
       "nodos_siguientes": [
         "resolver_desencaje_valores_persona_equipo"
@@ -26327,7 +26325,8 @@
         "definir_resultados_tarjeta_puntuacion",
         "identificar_competencias_tarjeta_puntuacion",
         "redactar_mision_tarjeta_puntuacion",
-        "respetar_cautelas_legales_contratacion"
+        "respetar_cautelas_legales_contratacion",
+        "evaluar_cultura_empresa_adjetivos"
       ],
       "condiciones_activacion": [
         "Cuando vas a contratar a alguien para un puesto y todavía no está definido con claridad qué quieres que esa persona logre. Es el primer punto de fallo de la contratación: no tener meridianamente claro qué quieres que consiga la persona que contratas, mientras es probable que los demás del equipo tengan sus propias nociones vagas, que seguramente no coinciden con la tuya."
@@ -27745,7 +27744,6 @@
       "entregable_esperado": "Una decisión clave dividida entre lo que sabes con datos y lo que solo crees, con un dato externo que la contraste.",
       "nodos_previos": [
         "calibra_tu_propio_ojo",
-        "sesgo_retrospectivo_hindsight_2",
         "sesgo_optimismo_fundador"
       ],
       "nodos_siguientes": [
@@ -28060,7 +28058,9 @@
       "nodos_previos": [
         "identificar_disparadores_propios_reaccion"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "celebrar_pequenias_victorias"
+      ],
       "condiciones_activacion": [
         "Cuando una historia negativa se ha apoderado de ti a partir de unos pocos datos sueltos, y estás en el Pozo, que es cuando esa historia tiende a ser la del peor caso."
       ],
@@ -32817,8 +32817,7 @@
         "confusion_de_modos_automatizacion",
         "documentacion_mantenimiento_linea_base",
         "erosion_de_defensas_por_ausencia_de_accidentes",
-        "fallas_activas_condiciones_latentes",
-        "senales_alerta_no_atendidas"
+        "fallas_activas_condiciones_latentes"
       ],
       "nodos_siguientes": [
         "gestion_falsas_alarmas",
@@ -34172,7 +34171,8 @@
         "integrar_trabajo_vida_mejor_version"
       ],
       "nodos_siguientes": [
-        "agendar_cuidados_propios_cumplirlos"
+        "agendar_cuidados_propios_cumplirlos",
+        "evitar_doble_impuesto_malestar"
       ],
       "condiciones_activacion": [
         "Cuando quieres saber qué tienes que hacer tú para mantenerte centrado, y sobre todo cuando llegan los tiempos duros."
@@ -42036,7 +42036,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Documentación de Exportación",
-      "resumen_teorico": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede causarte retrasos, impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes al momento de la fuente; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "resumen_teorico": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede causarte retrasos, impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
       "pasos_accionables": [
         "Determina qué documentos necesitas según el destino y el tipo de producto",
         "Prepara la factura pro forma para cotizar al comprador antes del envío",
@@ -43605,10 +43605,7 @@
       "nodos_previos": [
         "gestion_procurement_consumo"
       ],
-      "nodos_siguientes": [
-        "sistema_visibilidad_cadena_suministro_low_cost",
-        "gestion_riesgo_cadena_suministro"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando ves que tu inventario sube y baja sin explicación clara a lo largo de tu cadena",
         "Antes de decidir si invertir en sistemas para compartir datos o coordinarte con proveedores"
@@ -44787,7 +44784,8 @@
         "driver_transporte"
       ],
       "nodos_siguientes": [
-        "pagar_mas_por_velocidad"
+        "pagar_mas_por_velocidad",
+        "programacion_entregas_delivery_scheduling"
       ],
       "condiciones_activacion": [
         "Estas empezando a enviar a clientes lejanos y no sabes si conviene tierra, aire o mar.",
@@ -45917,7 +45915,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Cómo embalar tu producto para exportarlo (packing)",
-      "resumen_teorico": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes al momento de la fuente; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
+      "resumen_teorico": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
       "pasos_accionables": [
         "Revisa si el comprador te dio especificaciones de empaque y sigue esas primero",
         "Empaca en contenedores fuertes, bien sellados y bien llenos",
@@ -46356,7 +46354,8 @@
       ],
       "entregable_esperado": "El arranque hecho en su orden: la idea explicada, la crítica pedida antes que dada, el elogio dado antes que la crítica, y la frontera peligrosa entendida antes de empezar a criticar.",
       "nodos_previos": [
-        "feedback_efectivo_liderazgo"
+        "feedback_efectivo_liderazgo",
+        "pedir_critica_equipo_premiarla"
       ],
       "nodos_siguientes": [
         "criticar_trabajo_evitar_desanimo",
@@ -47461,9 +47460,7 @@
         "errores_como_consecuencia"
       ],
       "nodos_siguientes": [
-        "tripod_delta_general_failure_types",
-        "como_sabes_que_tu_metodo_sirve",
-        "gestionar_el_riesgo_es_de_adultos"
+        "tripod_delta_general_failure_types"
       ],
       "condiciones_activacion": [
         "Al decidir cómo responder a un error humano detectado",
@@ -48544,7 +48541,6 @@
         "evaluacion_gestion_riesgos"
       ],
       "nodos_siguientes": [
-        "aceptacion_de_fallas_como_inevitables",
         "nobody_cares_just_run_company"
       ],
       "condiciones_activacion": [
@@ -51240,7 +51236,6 @@
       ],
       "entregable_esperado": "Catálogo de productos con códigos EPC/GPC asignados y conexión activa a la red GDSN",
       "nodos_previos": [
-        "seleccion_fuente_unica_multiple",
         "ciclo_virtuoso_datos_electronicos"
       ],
       "nodos_siguientes": [
@@ -54289,8 +54284,7 @@
       ],
       "entregable_esperado": "Una lista de tus riesgos, ordenada del más urgente al menos urgente, con una nota breve de por qué cada uno quedó en ese lugar.",
       "nodos_previos": [
-        "identificacion_de_riesgos",
-        "prevencion_de_groupthink_en_evaluacion_de_riesgos"
+        "identificacion_de_riesgos"
       ],
       "nodos_siguientes": [
         "matriz_riesgo_conocido_desconocido",
@@ -54533,10 +54527,8 @@
         "matriz_riesgo_conocido_desconocido"
       ],
       "nodos_siguientes": [
-        "gestion_del_cambio",
         "comunicacion_del_riesgo",
         "evitacion_del_riesgo",
-        "aceptacion_de_fallas_como_inevitables",
         "equipo_de_gestion_de_crisis",
         "plan_b_antes_de_necesitarlo"
       ],
@@ -55340,7 +55332,8 @@
       ],
       "entregable_esperado": "Los adjetivos que describen la cultura de tu empresa, escritos y a la vista, y traducidos en una serie de competencias que importan para todos los puestos.",
       "nodos_previos": [
-        "evaluacion_fit_cultural"
+        "evaluacion_fit_cultural",
+        "crear_tarjeta_puntuacion_puesto"
       ],
       "nodos_siguientes": [
         "identificar_competencias_tarjeta_puntuacion",
@@ -55826,7 +55819,8 @@
       ],
       "entregable_esperado": "El doble impuesto retirado: la dificultad sigue, pero ya no pagas además la culpa por tenerla, y el malestar está declarado en vez de rumiado.",
       "nodos_previos": [
-        "manejo_psicologia_ceo"
+        "manejo_psicologia_ceo",
+        "definir_receta_propia_mantenerse_centrado"
       ],
       "nodos_siguientes": [
         "visualizar_recuperar_confianza",
@@ -56406,7 +56400,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Definición de Exclusividad Territorial para Representantes",
-      "resumen_teorico": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Define también con claridad el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes al momento de la fuente; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "resumen_teorico": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Define también con claridad el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
       "pasos_accionables": [
         "Evalúa el desempeño del representante antes de otorgarle exclusividad",
         "Limita la exclusividad a un periodo definido, con opción de renovación",
@@ -63605,7 +63599,7 @@
       ],
       "entregable_esperado": "Sistema documentado de gestión de cambios con flujo de aprobación claro y ágil",
       "nodos_previos": [
-        "evaluacion_gestion_riesgos"
+        "sistema_gestion_calidad"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -64497,7 +64491,8 @@
       ],
       "entregable_esperado": "Un reporte de tu consumo por categoría de producto y lugar de operación, con el análisis de las desviaciones.",
       "nodos_previos": [
-        "definicion_alineacion_cadena_suministro"
+        "definicion_alineacion_cadena_suministro",
+        "conoce_insumos_vitales"
       ],
       "nodos_siguientes": [
         "negociacion_carta_compromiso_banquero",
@@ -64633,7 +64628,7 @@
       "entregable_esperado": "Un plan de contingencia escrito con los niveles de stock de seguridad que necesitas, los proveedores duplicados donde haga falta, y un mapa de riesgo por instalación o país.",
       "nodos_previos": [
         "definicion_alineacion_cadena_suministro",
-        "efecto_bullwhip"
+        "plan_b_antes_de_necesitarlo"
       ],
       "nodos_siguientes": [
         "trade_off_responsividad_eficiencia"
@@ -65007,7 +65002,6 @@
       "nodos_previos": [
         "deja_de_ignorar_el_riesgo",
         "cultura_que_habla_del_riesgo_sin_miedo",
-        "enfoque_situacional_vs_personal",
         "decision_consciente_de_crecimiento"
       ],
       "nodos_siguientes": [
@@ -68515,7 +68509,7 @@
       ],
       "entregable_esperado": "Lista documentada de riesgos potenciales identificados por proceso, sistema o actividad, lista para su evaluación.",
       "nodos_previos": [
-        "prevencion_de_groupthink_en_evaluacion_de_riesgos"
+        "busca_el_riesgo_antes_de_que_te_busque"
       ],
       "nodos_siguientes": [
         "evaluacion_de_factores_de_riesgo",
@@ -69734,7 +69728,6 @@
       ],
       "nodos_siguientes": [
         "seguimiento_efectividad_controles",
-        "segregacion_funciones_trading_settlement",
         "autonomia_dependencia_regulatoria"
       ],
       "condiciones_activacion": [
@@ -72675,7 +72668,8 @@
       ],
       "entregable_esperado": "Una idea calibrada de cómo es el candidato ideal para ese puesto, sacada de hablar con gente que conoce el oficio y con tu propio equipo, antes de decidir.",
       "nodos_previos": [
-        "proceso_contratacion_ejecutivos_sin_experiencia"
+        "proceso_contratacion_ejecutivos_sin_experiencia",
+        "repartir_responsabilidad_contratar_equipo"
       ],
       "nodos_siguientes": [
         "describir_candidato_ideal_precision",
@@ -72996,7 +72990,6 @@
       ],
       "entregable_esperado": "Infraestructura de captura de datos IoT integrada con un repositorio central listo para análisis",
       "nodos_previos": [
-        "optimizacion_tecnologia_cadena_suministro",
         "information_driver_supply_chain"
       ],
       "nodos_siguientes": [
@@ -73568,7 +73561,7 @@
       ],
       "entregable_esperado": "Sistema de inventario reducido documentado, con acuerdos de reabastecimiento ágil con proveedores y métricas de reducción de desperdicio.",
       "nodos_previos": [
-        "manufactura_celular"
+        "manufactura_verde"
       ],
       "nodos_siguientes": [
         "green_kaizen_events"
@@ -75948,7 +75941,9 @@
         "muestra_puntos_en_comun_antes_de_negociar",
         "gestion_contratos_desempeno"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "procurement_audit"
+      ],
       "condiciones_activacion": [
         "Tienes más de un proveedor para lo mismo y no sabes a cuál priorizar.",
         "Un proveedor te ha fallado antes y no recuerdas con precisión cuántas veces ni en qué.",
@@ -76999,7 +76994,6 @@
         "green_six_sigma"
       ],
       "nodos_siguientes": [
-        "manufactura_celular",
         "green_kaizen_events"
       ],
       "condiciones_activacion": [
@@ -77157,11 +77151,9 @@
       ],
       "entregable_esperado": "Una línea de producción rediseñada bajo el modelo celular con reducción medible de sobreproducción y tiempos de espera",
       "nodos_previos": [
-        "mantenimiento_productivo_total_verde"
+        "smed_setup_reduction"
       ],
-      "nodos_siguientes": [
-        "just_in_time_manufacturing"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando la empresa enfrenta problemas de sobreproducción o largos tiempos de cambio de producto",
         "Si se busca mayor flexibilidad de producción en respuesta a demanda variable del cliente"
@@ -77190,7 +77182,8 @@
       "nodos_siguientes": [
         "involucrar_empleados_ahorro_energetico",
         "auditoria_energetica_sistematica",
-        "gestion_logistica_verde"
+        "gestion_logistica_verde",
+        "just_in_time_manufacturing"
       ],
       "condiciones_activacion": [
         "Cuando la empresa busca reducir costos operativos mediante sostenibilidad",
@@ -82471,7 +82464,6 @@
       ],
       "entregable_esperado": "Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro",
       "nodos_previos": [
-        "planificacion_cadena_suministro",
         "estrategia_circular_y_mecanismo_de_retorno"
       ],
       "nodos_siguientes": [
@@ -84471,8 +84463,8 @@
       ],
       "entregable_esperado": "Contrato firmado con proveedor especificando precios, términos de servicio, penalizaciones y condiciones de pago",
       "nodos_previos": [
-        "alcance_profundo_cadena_suministro",
-        "seleccion_de_proveedores_por_costo_total"
+        "seleccion_de_proveedores_por_costo_total",
+        "prepara_posicion_agenda_antes_negociar"
       ],
       "nodos_siguientes": [
         "gestion_contratos_desempeno",
@@ -86598,8 +86590,7 @@
         "supply_chain_management_systems"
       ],
       "nodos_siguientes": [
-        "alianzas_cross_industry",
-        "iot_big_data_supply_chain"
+        "alianzas_cross_industry"
       ],
       "condiciones_activacion": [
         "Cuando la empresa necesita escalar su programa de sostenibilidad a múltiples proveedores",
@@ -88184,7 +88175,8 @@
         "empezar_cultura_franqueza_radical"
       ],
       "nodos_siguientes": [
-        "invitar_desafio_reciproco_equipo"
+        "invitar_desafio_reciproco_equipo",
+        "empezar_cultura_franqueza_radical"
       ],
       "condiciones_activacion": [
         "Cuando vas a empezar a construir una cultura de franqueza radical y toca la primera fase, que es que te critiquen a ti, y también cada vez que te reúnas con un equipo que no te dice nada."
@@ -90052,7 +90044,8 @@
       ],
       "nodos_siguientes": [
         "cuando_el_riesgo_se_vuelve_realidad",
-        "anota_por_que_decidiste_asi"
+        "anota_por_que_decidiste_asi",
+        "gestion_riesgo_cadena_suministro"
       ],
       "condiciones_activacion": [
         "cuando ante un problema te congelas porque no tenías plan",
@@ -90980,7 +90973,6 @@
         "planificacion_economica_conjunta",
         "control_del_proceso_del_proveedor",
         "gestion_instalaciones",
-        "modelo_simulacion_cadena_suministro_circular",
         "vehiculos_autonomos_drones_supply_chain"
       ],
       "condiciones_activacion": [
@@ -93563,7 +93555,8 @@
         "domina_lo_que_compras"
       ],
       "nodos_siguientes": [
-        "ten_un_checklist_de_clausulas_de_contrato"
+        "ten_un_checklist_de_clausulas_de_contrato",
+        "negociacion_contratos_proveedores"
       ],
       "condiciones_activacion": [
         "Tienes una reunion agendada con un proveedor para negociar precio o condiciones y no sabes por donde empezar.",
@@ -94532,10 +94525,7 @@
       "nodos_previos": [
         "sistema_de_alarma_de_defectos"
       ],
-      "nodos_siguientes": [
-        "identificacion_de_riesgos",
-        "evaluacion_de_factores_de_riesgo"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando un equipo muestra consenso rápido y unánime sobre una decisión importante.",
         "Antes de aprobar un proceso, producto o sistema nuevo sin haber cuestionado sus fallos potenciales."
@@ -96417,7 +96407,7 @@
       "nodos_previos": [
         "plan_gestion_adquisiciones",
         "contractor_status_report",
-        "risk_audit"
+        "lleva_scorecard_desempeno_proveedor"
       ],
       "nodos_siguientes": [
         "contract_close_out",
@@ -97120,7 +97110,8 @@
       ],
       "nodos_siguientes": [
         "costo_de_calidad",
-        "entrenamiento_supervisores_calidad"
+        "entrenamiento_supervisores_calidad",
+        "aceptacion_de_fallas_como_inevitables"
       ],
       "condiciones_activacion": [
         "Cuando tu negocio tiene una tasa alta de defectos que genera problemas en cadena (ausentismo, retrasos, faltantes).",
@@ -97789,7 +97780,8 @@
       "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas",
       "nodos_previos": [
         "gestion_pedidos_order_management",
-        "gestion_inventario"
+        "gestion_inventario",
+        "elegir_modo_transporte_volumen_distancia"
       ],
       "nodos_siguientes": [
         "colaboracion_transporte_ctm",
@@ -100217,7 +100209,6 @@
       ],
       "entregable_esperado": "Informe de auditoría de calidad con hallazgos y acciones correctivas asignadas",
       "nodos_previos": [
-        "risk_audit",
         "plan_gestion_calidad"
       ],
       "nodos_siguientes": [
@@ -104641,7 +104632,8 @@
         "pasar_direccion_directa_indirecta"
       ],
       "nodos_siguientes": [
-        "formar_equipo_practicas_metodo"
+        "formar_equipo_practicas_metodo",
+        "investigar_antes_contratar_lideres"
       ],
       "condiciones_activacion": [
         "Cuando tu equipo crece hasta necesitar más directivos y ya no es sostenible que estés en cada entrevista ni que seas el voto decisivo en cada puesta en común."
@@ -105588,7 +105580,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Resolución de Problemas de Pago en Comercio Internacional",
-      "resumen_teorico": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en el momento de la fuente, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+      "resumen_teorico": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
       "pasos_accionables": [
         "Contactar y negociar directamente con el comprador si no te paga",
         "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona",
@@ -105655,7 +105647,8 @@
         "actuar_conducta_contraria_valores"
       ],
       "nodos_siguientes": [
-        "elegir_recolocar_despedir_persona"
+        "elegir_recolocar_despedir_persona",
+        "cortar_efecto_divisor_persona_brillante"
       ],
       "condiciones_activacion": [
         "Cuando dos personas bienintencionadas de tu entorno no logran trabajar juntas, o cuando alguien de tu equipo choca a menudo con lo que el equipo valora, y te notas empeñado en arreglarlo."
@@ -108455,9 +108448,7 @@
         "vuelve_a_medir_despues_del_susto"
       ],
       "nodos_siguientes": [
-        "lessons_learned",
-        "procurement_audit",
-        "quality_audit"
+        "lessons_learned"
       ],
       "condiciones_activacion": [
         "Cuando se requiere evaluar la eficacia del proceso de gestión de riesgos durante la ejecución del proyecto"
@@ -110043,7 +110034,6 @@
       "entregable_esperado": "Scorecard funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente",
       "nodos_previos": [
         "ciclo_virtuoso_datos_electronicos",
-        "collaboration_enablers",
         "colaboracion_transporte_ctm",
         "sistema_visibilidad_cadena_suministro_low_cost"
       ],
@@ -110590,7 +110580,7 @@
       ],
       "entregable_esperado": "Matriz de segregación de funciones (SoD) para los procesos críticos de la organización.",
       "nodos_previos": [
-        "implementacion_controles"
+        "un_dueno_para_cada_riesgo"
       ],
       "nodos_siguientes": [
         "senales_alerta_no_atendidas"
@@ -111818,8 +111808,7 @@
       ],
       "nodos_siguientes": [
         "evaluacion_encuesta_calidad_proveedor",
-        "planificacion_cadena_suministro",
-        "estandarizacion_codigos_producto_epc"
+        "planificacion_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Cuando se define la estrategia de abastecimiento para una categoría de compra"
@@ -112441,9 +112430,7 @@
       "nodos_previos": [
         "segregacion_funciones_trading_settlement"
       ],
-      "nodos_siguientes": [
-        "defensas_en_profundidad_3"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando existen múltiples reportes de anomalías que no han sido consolidados ni escalados",
         "En auditorías de riesgo donde se identifican indicadores dispersos sin seguimiento"
@@ -113015,7 +113002,6 @@
       "nodos_siguientes": [
         "analisis_factores_distales_proximales",
         "fijacion_cognitiva",
-        "cuanto_sabes_y_cuanto_solo_crees",
         "cultura_generativa_westrum",
         "revision_de_aprendizaje"
       ],
@@ -113969,7 +113955,8 @@
         "oficina_calidad_y_excelencia",
         "auditorias_primera_segunda_tercera_parte",
         "iso_31000_gestion_riesgo",
-        "principios_gestion_calidad_iso9000"
+        "principios_gestion_calidad_iso9000",
+        "gestion_del_cambio"
       ],
       "condiciones_activacion": [
         "Cuando necesitas claridad sobre el alcance de tu sistema de calidad",
@@ -114484,8 +114471,7 @@
       ],
       "entregable_esperado": "Sistema funcional de bajo costo (construido en semanas, no meses) que ofrece visibilidad end-to-end de inventario y demanda entre múltiples actores de la cadena de suministro",
       "nodos_previos": [
-        "definicion_alineacion_cadena_suministro",
-        "efecto_bullwhip"
+        "definicion_alineacion_cadena_suministro"
       ],
       "nodos_siguientes": [
         "ciclo_virtuoso_datos_electronicos",
@@ -114916,7 +114902,8 @@
         "constraint_management"
       ],
       "nodos_siguientes": [
-        "tpm_maintenance"
+        "tpm_maintenance",
+        "manufactura_celular"
       ],
       "condiciones_activacion": [
         "Cuando los tiempos de cambio de producto son largos y generan inventario excesivo",
@@ -115779,7 +115766,6 @@
       ],
       "nodos_siguientes": [
         "marco_avances_continuaciones",
-        "colaboracion_transporte_ctm",
         "plataforma_colaboracion_masiva",
         "seguimiento_tendencias_sostenibilidad",
         "priorizacion_issues"
@@ -119569,7 +119555,9 @@
       "nodos_previos": [
         "conoce_insumos_vitales"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "clasifica_tu_inventario"
+      ],
       "condiciones_activacion": [
         "Tienes mercancía guardada hace meses que no se ha vendido y no sabes si liquidarla.",
         "Alguien te dice que no vendas con pérdida porque ya está pagado.",
@@ -120944,7 +120932,8 @@
       ],
       "nodos_siguientes": [
         "revisa_tus_riesgos_con_un_ritmo",
-        "manten_viva_tu_lista_de_riesgos"
+        "manten_viva_tu_lista_de_riesgos",
+        "segregacion_funciones_trading_settlement"
       ],
       "condiciones_activacion": [
         "cuando un riesgo crece porque nadie en concreto lo estaba mirando",
@@ -124319,7 +124308,8 @@
         "vivir_valores_propios_evitar_listarlos"
       ],
       "nodos_siguientes": [
-        "revisar_incentivos_trampas_equipo"
+        "revisar_incentivos_trampas_equipo",
+        "vivir_valores_propios_evitar_listarlos"
       ],
       "condiciones_activacion": [
         "Cuando has declarado un valor a tu equipo y quieres que le importe al resto, o cuando vas a declarar uno nuevo."
@@ -124346,7 +124336,8 @@
       ],
       "entregable_esperado": "Tus valores en contacto contigo y demostrados en cómo diriges a tu equipo, y ningún ejercicio que obligue a nadie a enseñar los suyos en público.",
       "nodos_previos": [
-        "entrenamiento_gerencial"
+        "entrenamiento_gerencial",
+        "vivir_primero_valor_declarado"
       ],
       "nodos_siguientes": [
         "vivir_primero_valor_declarado"

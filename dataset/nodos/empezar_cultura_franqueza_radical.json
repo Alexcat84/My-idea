@@ -16,7 +16,8 @@
   ],
   "entregable_esperado": "El arranque hecho en su orden: la idea explicada, la crítica pedida antes que dada, el elogio dado antes que la crítica, y la frontera peligrosa entendida antes de empezar a criticar.",
   "nodos_previos": [
-    "feedback_efectivo_liderazgo"
+    "feedback_efectivo_liderazgo",
+    "pedir_critica_equipo_premiarla"
   ],
   "nodos_siguientes": [
     "criticar_trabajo_evitar_desanimo",
@@ -219,6 +220,19 @@
       "motivos": [
         "voz"
       ]
+    },
+    {
+      "id": "final-arista-07",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "pedir_critica_equipo_premiarla -> empezar_cultura_franqueza_radical",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'empezar_cultura_franqueza_radical' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Pedir crítica es la primera fase del arranque, y el destino ordena lo que sigue (elogio antes que crítica, la frontera entendida), así que resuelve qué hacer después de haberla pedido."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "Empieza Pidiendo Franqueza Primero",

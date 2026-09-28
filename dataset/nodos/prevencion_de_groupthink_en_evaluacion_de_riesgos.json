@@ -15,10 +15,7 @@
   "nodos_previos": [
     "sistema_de_alarma_de_defectos"
   ],
-  "nodos_siguientes": [
-    "identificacion_de_riesgos",
-    "evaluacion_de_factores_de_riesgo"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando un equipo muestra consenso rápido y unánime sobre una decisión importante.",
     "Antes de aprobar un proceso, producto o sistema nuevo sin haber cuestionado sus fallos potenciales."
@@ -40,6 +37,32 @@
         "evidencia": "F21-018: Es la evaluacion critica de riesgos antes de aprobar un plan o proceso, parte del diseno del plan. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-muralla-016",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prevencion_de_groupthink_en_evaluacion_de_riesgos -> evaluacion_de_factores_de_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-muralla-017",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prevencion_de_groupthink_en_evaluacion_de_riesgos -> identificacion_de_riesgos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

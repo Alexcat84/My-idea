@@ -13,7 +13,7 @@
   ],
   "entregable_esperado": "Sistema de inventario reducido documentado, con acuerdos de reabastecimiento ágil con proveedores y métricas de reducción de desperdicio.",
   "nodos_previos": [
-    "manufactura_celular"
+    "manufactura_verde"
   ],
   "nodos_siguientes": [
     "green_kaizen_events"
@@ -25,5 +25,33 @@
   "etiqueta_arbol": "Entrega Justo cuando se Necesita",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-muralla-013",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "manufactura_celular -> just_in_time_manufacturing",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> environmental): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-arista-06",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "manufactura_verde -> just_in_time_manufacturing",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de environmental: 'just_in_time_manufacturing' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "JIT con enfoque verde es una práctica concreta para aplicar la estrategia de manufactura verde de hacer más con menos."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    }
   ]
 }

@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Un reporte de tu consumo por categoría de producto y lugar de operación, con el análisis de las desviaciones.",
   "nodos_previos": [
-    "definicion_alineacion_cadena_suministro"
+    "definicion_alineacion_cadena_suministro",
+    "conoce_insumos_vitales"
   ],
   "nodos_siguientes": [
     "negociacion_carta_compromiso_banquero",
@@ -67,6 +68,19 @@
         "motivo": "Diagnostico_efecto_latigo es casi un duplicado del nodo, asi que elijo el seguimiento de consumo esperado contra consumo real: quien ya detecta desviaciones en lo que compra pasa de forma natural a medir cuanto se amplifican sus pedidos y cuanto le cuesta eso."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    },
+    {
+      "id": "final-arista-01",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "conoce_insumos_vitales -> gestion_procurement_consumo",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de compras: 'gestion_procurement_consumo' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Tras marcar los insumos por valor y criticidad, lo natural es medir cuánto consumes realmente de cada categoría y vigilar sus desviaciones."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

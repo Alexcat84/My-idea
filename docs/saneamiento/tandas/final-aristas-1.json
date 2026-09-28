@@ -1,0 +1,182 @@
+[
+ {
+  "id": "final-arista-01",
+  "operacion": "TEJER",
+  "desde": "conoce_insumos_vitales",
+  "hacia": "gestion_procurement_consumo",
+  "motivo": "Tras marcar los insumos por valor y criticidad, lo natural es medir cuánto consumes realmente de cada categoría y vigilar sus desviaciones.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de compras: 'gestion_procurement_consumo' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-02",
+  "operacion": "TEJER",
+  "desde": "prepara_posicion_agenda_antes_negociar",
+  "hacia": "negociacion_contratos_proveedores",
+  "motivo": "Con objetivos priorizados y agenda lista, el paso natural es la negociación misma que termina en el contrato firmado.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de compras: 'negociacion_contratos_proveedores' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-03",
+  "operacion": "TEJER",
+  "desde": "lleva_scorecard_desempeno_proveedor",
+  "hacia": "procurement_audit",
+  "motivo": "El historial de cumplimiento del proveedor es la materia prima para evaluar su desempeño en la auditoría al cerrar el contrato, así que la auditoría lo continúa de forma natural.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de compras: 'procurement_audit' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-04",
+  "operacion": "TEJER",
+  "desde": "traduce_stock_muerto_numeros",
+  "hacia": "clasifica_tu_inventario",
+  "motivo": "Después de ver en dinero lo que cuesta el stock muerto, clasificar el inventario y fijarle una meta es el paso lógico para liberar capital sin repetir el problema.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de compras: 'clasifica_tu_inventario' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-05",
+  "operacion": "TEJER",
+  "desde": "elegir_modo_transporte_volumen_distancia",
+  "hacia": "programacion_entregas_delivery_scheduling",
+  "motivo": "Tras elegir el modo según tamaño de envío, lo siguiente es decidir si cada carga va directa o se consolida en milk run según la capacidad del modo.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de entrega: 'programacion_entregas_delivery_scheduling' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-06",
+  "operacion": "TEJER",
+  "desde": "manufactura_verde",
+  "hacia": "just_in_time_manufacturing",
+  "motivo": "JIT con enfoque verde es una práctica concreta para aplicar la estrategia de manufactura verde de hacer más con menos.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de environmental: 'just_in_time_manufacturing' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-07",
+  "operacion": "TEJER",
+  "desde": "pedir_critica_equipo_premiarla",
+  "hacia": "empezar_cultura_franqueza_radical",
+  "motivo": "Pedir crítica es la primera fase del arranque, y el destino ordena lo que sigue (elogio antes que crítica, la frontera entendida), así que resuelve qué hacer después de haberla pedido.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'empezar_cultura_franqueza_radical' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-08",
+  "operacion": "TEJER",
+  "desde": "definir_receta_propia_mantenerse_centrado",
+  "hacia": "evitar_doble_impuesto_malestar",
+  "motivo": "Con la receta para los tiempos duros ya hecha, el paso natural cuando llega la dificultad es no sumarle la culpa de estar pasándolo mal.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'evitar_doble_impuesto_malestar' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-09",
+  "operacion": "TEJER",
+  "desde": "crear_tarjeta_puntuacion_puesto",
+  "hacia": "evaluar_cultura_empresa_adjetivos",
+  "motivo": "La tarjeta pide competencias de cultura y el destino resuelve justo cuáles son, tal como dice su condición de activación.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'evaluar_cultura_empresa_adjetivos' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-10",
+  "operacion": "TEJER",
+  "desde": "cuestionar_historia_irracional_cabeza",
+  "hacia": "celebrar_pequenias_victorias",
+  "motivo": "Los dos atienden a quien está en el Pozo: después de desarmar la historia del peor caso, contarte otra historia a partir de tus pequeñas victorias es el paso siguiente natural.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'celebrar_pequenias_victorias' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-11",
+  "operacion": "TEJER",
+  "desde": "resolver_desencaje_valores_persona_equipo",
+  "hacia": "cortar_efecto_divisor_persona_brillante",
+  "motivo": "La persona brillante que rebaja a los demás es un caso concreto de choque de valores con el equipo, y el destino lo profundiza con la regla de no negociar valores por talento.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'cortar_efecto_divisor_persona_brillante' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-12",
+  "operacion": "TEJER",
+  "desde": "repartir_responsabilidad_contratar_equipo",
+  "hacia": "investigar_antes_contratar_lideres",
+  "motivo": "Cuando el equipo necesita más directivos, contratarlos bien exige investigar antes cómo es el líder ideal; la vuelta de fase tiene razón clara.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'investigar_antes_contratar_lideres' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-13",
+  "operacion": "TEJER",
+  "desde": "vivir_primero_valor_declarado",
+  "hacia": "vivir_valores_propios_evitar_listarlos",
+  "motivo": "Tras aprender a vivir primero lo que declaras, demostrar tus valores al dirigir en vez de forzar ejercicios de listarlos es la continuación directa.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'vivir_valores_propios_evitar_listarlos' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-14",
+  "operacion": "TEJER",
+  "desde": "sistema_gestion_calidad",
+  "hacia": "gestion_del_cambio",
+  "motivo": "La gestión del cambio es un componente del sistema de calidad; una vez mapeado ese sistema, sumar un flujo ágil para aprobar cambios es un paso natural.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de quality: 'gestion_del_cambio' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-15",
+  "operacion": "TEJER",
+  "desde": "smed_setup_reduction",
+  "hacia": "manufactura_celular",
+  "motivo": "El SMED es una de las piezas de la manufactura celular; con los cambios ya reducidos, organizar la línea en células es el paso siguiente.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de quality: 'manufactura_celular' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-16",
+  "operacion": "TEJER",
+  "desde": "busca_el_riesgo_antes_de_que_te_busque",
+  "hacia": "identificacion_de_riesgos",
+  "motivo": "Si identificar riesgos se repite en cada etapa, al entrar en ejecución toca hacer la identificación sistemática de esa etapa.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'identificacion_de_riesgos' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-17",
+  "operacion": "TEJER",
+  "desde": "un_dueno_para_cada_riesgo",
+  "hacia": "segregacion_funciones_trading_settlement",
+  "motivo": "Tras nombrar a un responsable por cada riesgo, cuidar que quien ejecuta no sea quien verifica es la continuación natural del reparto de responsabilidades.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'segregacion_funciones_trading_settlement' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-arista-18",
+  "operacion": "TEJER",
+  "desde": "plan_b_antes_de_necesitarlo",
+  "hacia": "gestion_riesgo_cadena_suministro",
+  "motivo": "El plan B general se concreta en la cadena de suministro con stock de seguridad y proveedores duplicados, y además la candidata ya se activa cuando dependes de algo sin reemplazo.",
+  "evidencia": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'gestion_riesgo_cadena_suministro' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada.",
+  "fecha": "2026-09-28"
+ }
+]

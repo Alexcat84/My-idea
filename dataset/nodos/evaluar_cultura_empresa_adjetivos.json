@@ -16,7 +16,8 @@
   ],
   "entregable_esperado": "Los adjetivos que describen la cultura de tu empresa, escritos y a la vista, y traducidos en una serie de competencias que importan para todos los puestos.",
   "nodos_previos": [
-    "evaluacion_fit_cultural"
+    "evaluacion_fit_cultural",
+    "crear_tarjeta_puntuacion_puesto"
   ],
   "nodos_siguientes": [
     "identificar_competencias_tarjeta_puntuacion",
@@ -161,6 +162,19 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "final-arista-09",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "crear_tarjeta_puntuacion_puesto -> evaluar_cultura_empresa_adjetivos",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'evaluar_cultura_empresa_adjetivos' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "La tarjeta pide competencias de cultura y el destino resuelve justo cuáles son, tal como dice su condición de activación."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "Evalúa tu Cultura con Adjetivos",

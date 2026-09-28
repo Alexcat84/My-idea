@@ -18,7 +18,9 @@
     "muestra_puntos_en_comun_antes_de_negociar",
     "gestion_contratos_desempeno"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "procurement_audit"
+  ],
   "condiciones_activacion": [
     "Tienes más de un proveedor para lo mismo y no sabes a cuál priorizar.",
     "Un proveedor te ha fallado antes y no recuerdas con precisión cuántas veces ni en qué.",
@@ -54,6 +56,19 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por gestion_contratos_desempeno."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-arista-03",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "lleva_scorecard_desempeno_proveedor -> procurement_audit",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de compras: 'procurement_audit' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "El historial de cumplimiento del proveedor es la materia prima para evaluar su desempeño en la auditoría al cerrar el contrato, así que la auditoría lo continúa de forma natural."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

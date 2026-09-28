@@ -18,7 +18,8 @@
     "driver_transporte"
   ],
   "nodos_siguientes": [
-    "pagar_mas_por_velocidad"
+    "pagar_mas_por_velocidad",
+    "programacion_entregas_delivery_scheduling"
   ],
   "condiciones_activacion": [
     "Estas empezando a enviar a clientes lejanos y no sabes si conviene tierra, aire o mar.",
@@ -112,6 +113,19 @@
         "evidencia": "O079-013.entregable: qué, según, envío (Faltan tildes reales en 'qué' (interrogativa indirecta), 'según' y 'envío'.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-arista-05",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "elegir_modo_transporte_volumen_distancia -> programacion_entregas_delivery_scheduling",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de entrega: 'programacion_entregas_delivery_scheduling' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Tras elegir el modo según tamaño de envío, lo siguiente es decidir si cada carga va directa o se consolida en milk run según la capacidad del modo."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

@@ -15,7 +15,7 @@
   ],
   "entregable_esperado": "Lista documentada de riesgos potenciales identificados por proceso, sistema o actividad, lista para su evaluación.",
   "nodos_previos": [
-    "prevencion_de_groupthink_en_evaluacion_de_riesgos"
+    "busca_el_riesgo_antes_de_que_te_busque"
   ],
   "nodos_siguientes": [
     "evaluacion_de_factores_de_riesgo",
@@ -160,6 +160,32 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-muralla-017",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prevencion_de_groupthink_en_evaluacion_de_riesgos -> identificacion_de_riesgos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-arista-16",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "busca_el_riesgo_antes_de_que_te_busque -> identificacion_de_riesgos",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'identificacion_de_riesgos' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Si identificar riesgos se repite en cada etapa, al entrar en ejecución toca hacer la identificación sistemática de esa etapa."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "fuentes_internas": [

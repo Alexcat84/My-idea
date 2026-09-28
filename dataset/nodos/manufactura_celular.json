@@ -13,11 +13,9 @@
   ],
   "entregable_esperado": "Una línea de producción rediseñada bajo el modelo celular con reducción medible de sobreproducción y tiempos de espera",
   "nodos_previos": [
-    "mantenimiento_productivo_total_verde"
+    "smed_setup_reduction"
   ],
-  "nodos_siguientes": [
-    "just_in_time_manufacturing"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la empresa enfrenta problemas de sobreproducción o largos tiempos de cambio de producto",
     "Si se busca mayor flexibilidad de producción en respuesta a demanda variable del cliente"
@@ -49,6 +47,45 @@
         "evidencia": "Razon para B, y A coincide en el fondo (el mismo A admite que su titulo_ok false fue un error). El titulo nombra bien la manufactura celular y el equipo de tamano adecuado. Todo el contenido es manufactura esbelta: celulas, SMED, autonomacion, sobreproduccion y tiempos de cambio. No hay ningun angulo ambiental. Encaja en quality (calidad y operaciones). Fase ejecucion, correcta. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 9: corregir los casos de dominio hallados."
+    },
+    {
+      "id": "final-muralla-012",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mantenimiento_productivo_total_verde -> manufactura_celular",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (environmental -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-muralla-013",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "manufactura_celular -> just_in_time_manufacturing",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> environmental): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-arista-15",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "smed_setup_reduction -> manufactura_celular",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de quality: 'manufactura_celular' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "El SMED es una de las piezas de la manufactura celular; con los cambios ya reducidos, organizar la línea en células es el paso siguiente."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

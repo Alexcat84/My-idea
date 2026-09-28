@@ -14,9 +14,7 @@
   "nodos_previos": [
     "segregacion_funciones_trading_settlement"
   ],
-  "nodos_siguientes": [
-    "defensas_en_profundidad_3"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando existen múltiples reportes de anomalías que no han sido consolidados ni escalados",
     "En auditorías de riesgo donde se identifican indicadores dispersos sin seguimiento"
@@ -38,6 +36,19 @@
         "evidencia": "Q063-011: Tiene razon el lector B: el nodo trata del colapso financiero de Barings, un registro de senales de alerta y umbrales que disparan una revision de riesgo en auditorias de riesgo, y nada de su contenido toca la seguridad y salud en el trabajo; el marco de accidentes organizacionales del libro no basta para que encaje en health_safety, asi que el dominio que le toca es risk_management. Las condiciones y la fase de ejecucion estan bien, en eso coinciden los dos. (arbitro)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "final-muralla-021",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "senales_alerta_no_atendidas -> defensas_en_profundidad_3",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (risk_management -> health_safety): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

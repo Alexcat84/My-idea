@@ -1,0 +1,232 @@
+[
+ {
+  "id": "final-muralla-001",
+  "operacion": "QUITAR",
+  "desde": "alcance_profundo_cadena_suministro",
+  "hacia": "negociacion_contratos_proveedores",
+  "motivo": "arista entre dos mundos (environmental -> compras): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-002",
+  "operacion": "QUITAR",
+  "desde": "colaboracion_transporte_ctm",
+  "hacia": "collaboration_enablers",
+  "motivo": "arista entre dos mundos (entrega -> compras): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-003",
+  "operacion": "QUITAR",
+  "desde": "collaboration_enablers",
+  "hacia": "scorecard_desempeno_cadena_suministro",
+  "motivo": "arista entre dos mundos (compras -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-004",
+  "operacion": "QUITAR",
+  "desde": "efecto_bullwhip",
+  "hacia": "gestion_riesgo_cadena_suministro",
+  "motivo": "arista entre dos mundos (compras -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-005",
+  "operacion": "QUITAR",
+  "desde": "efecto_bullwhip",
+  "hacia": "sistema_visibilidad_cadena_suministro_low_cost",
+  "motivo": "arista entre dos mundos (compras -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-006",
+  "operacion": "QUITAR",
+  "desde": "enfoque_situacional_vs_personal",
+  "hacia": "como_sabes_que_tu_metodo_sirve",
+  "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-007",
+  "operacion": "QUITAR",
+  "desde": "enfoque_situacional_vs_personal",
+  "hacia": "gestionar_el_riesgo_es_de_adultos",
+  "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-008",
+  "operacion": "QUITAR",
+  "desde": "equipo_de_gestion_de_crisis",
+  "hacia": "aceptacion_de_fallas_como_inevitables",
+  "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-009",
+  "operacion": "QUITAR",
+  "desde": "evaluacion_gestion_riesgos",
+  "hacia": "aceptacion_de_fallas_como_inevitables",
+  "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-010",
+  "operacion": "QUITAR",
+  "desde": "evaluacion_gestion_riesgos",
+  "hacia": "gestion_del_cambio",
+  "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-011",
+  "operacion": "QUITAR",
+  "desde": "implementacion_controles",
+  "hacia": "segregacion_funciones_trading_settlement",
+  "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-012",
+  "operacion": "QUITAR",
+  "desde": "mantenimiento_productivo_total_verde",
+  "hacia": "manufactura_celular",
+  "motivo": "arista entre dos mundos (environmental -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-013",
+  "operacion": "QUITAR",
+  "desde": "manufactura_celular",
+  "hacia": "just_in_time_manufacturing",
+  "motivo": "arista entre dos mundos (quality -> environmental): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-014",
+  "operacion": "QUITAR",
+  "desde": "optimizacion_tecnologia_cadena_suministro",
+  "hacia": "iot_big_data_supply_chain",
+  "motivo": "arista entre dos mundos (environmental -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-015",
+  "operacion": "QUITAR",
+  "desde": "planificacion_cadena_suministro",
+  "hacia": "modelo_simulacion_cadena_suministro_circular",
+  "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-016",
+  "operacion": "QUITAR",
+  "desde": "prevencion_de_groupthink_en_evaluacion_de_riesgos",
+  "hacia": "evaluacion_de_factores_de_riesgo",
+  "motivo": "arista entre dos mundos (quality -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-017",
+  "operacion": "QUITAR",
+  "desde": "prevencion_de_groupthink_en_evaluacion_de_riesgos",
+  "hacia": "identificacion_de_riesgos",
+  "motivo": "arista entre dos mundos (quality -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-018",
+  "operacion": "QUITAR",
+  "desde": "risk_audit",
+  "hacia": "procurement_audit",
+  "motivo": "arista entre dos mundos (risk_management -> compras): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-019",
+  "operacion": "QUITAR",
+  "desde": "risk_audit",
+  "hacia": "quality_audit",
+  "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-020",
+  "operacion": "QUITAR",
+  "desde": "seleccion_fuente_unica_multiple",
+  "hacia": "estandarizacion_codigos_producto_epc",
+  "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-021",
+  "operacion": "QUITAR",
+  "desde": "senales_alerta_no_atendidas",
+  "hacia": "defensas_en_profundidad_3",
+  "motivo": "arista entre dos mundos (risk_management -> health_safety): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-022",
+  "operacion": "QUITAR",
+  "desde": "sesgo_retrospectivo_hindsight_2",
+  "hacia": "cuanto_sabes_y_cuanto_solo_crees",
+  "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ },
+ {
+  "id": "final-muralla-023",
+  "operacion": "QUITAR",
+  "desde": "stakeholder_mapping_wheel",
+  "hacia": "colaboracion_transporte_ctm",
+  "motivo": "arista entre dos mundos (environmental -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)",
+  "evidencia": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+  "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas.",
+  "fecha": "2026-09-28"
+ }
+]

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cómo embalar tu producto para exportarlo (packing)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes al momento de la fuente; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
+  "resumen_teorico": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
   "pasos_accionables": [
     "Revisa si el comprador te dio especificaciones de empaque y sigue esas primero",
     "Empaca en contenedores fuertes, bien sellados y bien llenos",
@@ -41,6 +41,22 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por programacion_entregas_delivery_scheduling."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-voz-3-02",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes al momento de la fuente; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
+      "texto_nuevo": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
+      "cita": {
+        "regla": "voz de libro fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6); variante 'al momento de la fuente' cazada al leer un nodo trampa y anadida a la guarda (web/lib/i18n/frasesProhibidas.ts)",
+        "fragmentos": [
+          "al momento de la fuente"
+        ]
+      },
+      "decision": "'al momento de la fuente' es voz de libro: pasa a 'en su momento'; el aviso de verificar la norma vigente se conserva",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guarda G6"
     }
   ]
 }

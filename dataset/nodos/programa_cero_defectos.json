@@ -21,7 +21,8 @@
   ],
   "nodos_siguientes": [
     "costo_de_calidad",
-    "entrenamiento_supervisores_calidad"
+    "entrenamiento_supervisores_calidad",
+    "aceptacion_de_fallas_como_inevitables"
   ],
   "condiciones_activacion": [
     "Cuando tu negocio tiene una tasa alta de defectos que genera problemas en cadena (ausentismo, retrasos, faltantes).",
@@ -58,6 +59,19 @@
         "evidencia": "O006-003.entregable: tú ('tú' es pronombre personal y lleva tilde diacrítica; no hay más cambios.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-arista-r2-01",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "programa_cero_defectos -> aceptacion_de_fallas_como_inevitables",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de quality; segunda ronda de verificacion ciega con trampa sin marca (cazada), veredicto 'sostiene'",
+        "motivo": "Quien persigue cero defectos cae justo en la condición del destino (eliminar el riesgo sin mirar el costo) y el destino le da el contrapeso del costo beneficio y la detección."
+      },
+      "decision": "Auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

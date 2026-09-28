@@ -17,7 +17,8 @@
     "clasifica_tu_inventario"
   ],
   "nodos_siguientes": [
-    "traduce_stock_muerto_numeros"
+    "traduce_stock_muerto_numeros",
+    "gestion_procurement_consumo"
   ],
   "condiciones_activacion": [
     "Te quedaste sin un insumo barato y eso detuvo tu negocio por dias.",
@@ -111,6 +112,19 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-arista-01",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "conoce_insumos_vitales -> gestion_procurement_consumo",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de compras: 'gestion_procurement_consumo' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Tras marcar los insumos por valor y criticidad, lo natural es medir cuánto consumes realmente de cada categoría y vigilar sus desviaciones."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "fuentes_internas": [

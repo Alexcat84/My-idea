@@ -18,7 +18,8 @@
     "constraint_management"
   ],
   "nodos_siguientes": [
-    "tpm_maintenance"
+    "tpm_maintenance",
+    "manufactura_celular"
   ],
   "condiciones_activacion": [
     "Cuando los tiempos de cambio de producto son largos y generan inventario excesivo",
@@ -41,6 +42,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-030 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-arista-15",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "smed_setup_reduction -> manufactura_celular",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de quality: 'manufactura_celular' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "El SMED es una de las piezas de la manufactura celular; con los cambios ya reducidos, organizar la línea en células es el paso siguiente."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "fuentes_internas": [

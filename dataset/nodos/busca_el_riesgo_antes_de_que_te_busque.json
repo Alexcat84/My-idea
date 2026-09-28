@@ -17,7 +17,8 @@
   ],
   "nodos_siguientes": [
     "tecnicas_para_sacar_riesgos_a_la_luz",
-    "revisa_tus_riesgos_con_un_ritmo"
+    "revisa_tus_riesgos_con_un_ritmo",
+    "identificacion_de_riesgos"
   ],
   "condiciones_activacion": [
     "cuando solo piensas en los riesgos al arrancar y nunca más",
@@ -41,6 +42,19 @@
         "evidencia": "F25-021: Fijar un ritmo de identificacion de riesgos por etapa del proyecto es planificacion de la gestion de riesgos, no prueba con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-arista-16",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "busca_el_riesgo_antes_de_que_te_busque -> identificacion_de_riesgos",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'identificacion_de_riesgos' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Si identificar riesgos se repite en cada etapa, al entrar en ejecución toca hacer la identificación sistemática de esa etapa."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

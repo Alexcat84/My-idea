@@ -1,0 +1,112 @@
+[
+ {
+  "umbral": "U1",
+  "criterio": "contrario",
+  "valor": 4,
+  "tope": 0,
+  "pasa": false
+ },
+ {
+  "umbral": "U2",
+  "criterio": "invencion",
+  "valor": 25,
+  "tope": 0,
+  "pasa": false
+ },
+ {
+  "umbral": "U3",
+  "criterio": "fase",
+  "nodos": 10,
+  "tasa": 0.05,
+  "ic95": [
+   0.027382645473457017,
+   0.08957814852860962
+  ],
+  "tope": 0.03,
+  "pasa": false
+ },
+ {
+  "umbral": "U4",
+  "criterio": "dominio",
+  "nodos": 3,
+  "tasa": 0.015,
+  "ic95": [
+   0.005114237753504752,
+   0.043165729115389295
+  ],
+  "tope": 0.02,
+  "pasa": true
+ },
+ {
+  "umbral": "U5",
+  "criterio": "condicion",
+  "nodos": 6,
+  "tasa": 0.03,
+  "ic95": [
+   0.013820314259191425,
+   0.06389429280963374
+  ],
+  "tope": 0.02,
+  "pasa": false
+ },
+ {
+  "umbral": "U6",
+  "criterio": "etiqueta",
+  "nodos": 12,
+  "tasa": 0.06,
+  "ic95": [
+   0.034652194106514544,
+   0.10193169336217284
+  ],
+  "tope": 0.02,
+  "pasa": false
+ },
+ {
+  "umbral": "U7",
+  "criterio": "ortografia",
+  "nodos": 39,
+  "tasa": 0.195,
+  "ic95": [
+   0.1460552050050192,
+   0.2554404442630482
+  ],
+  "tope": 0.01,
+  "pasa": false
+ },
+ {
+  "umbral": "U8",
+  "criterio": "matiz",
+  "defectos": 99,
+  "tasa": 0.495,
+  "ic95": [
+   0.4023115742709769,
+   0.6026447387657773
+  ],
+  "tope": 0.2,
+  "pasa": false
+ },
+ {
+  "umbral": "U9",
+  "criterio": "calco",
+  "defectos": 144,
+  "tasa": 0.72,
+  "ic95": [
+   0.6072071059893273,
+   0.8476675647377054
+  ],
+  "tope": 0.2,
+  "pasa": false
+ },
+ {
+  "umbral": "U10",
+  "criterio": "regionalismo",
+  "defectos": 5,
+  "tasa": 0.025,
+  "ic95": [
+   0.008117431950592103,
+   0.05834166039661335
+  ],
+  "tope": 0.2,
+  "pasa": true
+ }
+]

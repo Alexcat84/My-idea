@@ -13,7 +13,6 @@
   ],
   "entregable_esperado": "Infraestructura de captura de datos IoT integrada con un repositorio central listo para análisis",
   "nodos_previos": [
-    "optimizacion_tecnologia_cadena_suministro",
     "information_driver_supply_chain"
   ],
   "nodos_siguientes": [
@@ -54,6 +53,19 @@
         "evidencia": "D-33: Montar infraestructura IoT, RFID y big data para trazar mercancías es tecnología logística de especialista que una tienda pequeña o un servicio no necesitan. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-muralla-014",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "optimizacion_tecnologia_cadena_suministro -> iot_big_data_supply_chain",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (environmental -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

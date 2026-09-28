@@ -21,7 +21,8 @@
     "vivir_valores_propios_evitar_listarlos"
   ],
   "nodos_siguientes": [
-    "revisar_incentivos_trampas_equipo"
+    "revisar_incentivos_trampas_equipo",
+    "vivir_valores_propios_evitar_listarlos"
   ],
   "condiciones_activacion": [
     "Cuando has declarado un valor a tu equipo y quieres que le importe al resto, o cuando vas a declarar uno nuevo."
@@ -284,6 +285,19 @@
         "voz",
         "coherencia"
       ]
+    },
+    {
+      "id": "final-arista-13",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "vivir_primero_valor_declarado -> vivir_valores_propios_evitar_listarlos",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'vivir_valores_propios_evitar_listarlos' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Tras aprender a vivir primero lo que declaras, demostrar tus valores al dirigir en vez de forzar ejercicios de listarlos es la continuación directa."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "Vive Primero lo que Declaras",

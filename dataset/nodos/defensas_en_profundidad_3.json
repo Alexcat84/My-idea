@@ -21,8 +21,7 @@
     "confusion_de_modos_automatizacion",
     "documentacion_mantenimiento_linea_base",
     "erosion_de_defensas_por_ausencia_de_accidentes",
-    "fallas_activas_condiciones_latentes",
-    "senales_alerta_no_atendidas"
+    "fallas_activas_condiciones_latentes"
   ],
   "nodos_siguientes": [
     "gestion_falsas_alarmas",
@@ -69,6 +68,19 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En la sección 'Defences-in-Depth: Protection or Dangerous Concealment?' (L1041-L1076), Reason, con Rasmussen y Perrow, presenta la redundancia añadida como origen de la 'falacia de las defensas en profundidad'. Según el libro, aumenta la complejidad interactiva y los fallos de modo común (L1068), vuelve el sistema más opaco para que se acumulen fallas latentes (L1072) y da una falsa sensación de seguridad (L1076). El resumento y los pasos 0 a 5 del nodo son fieles a eso. El paso 6 recetaba sumar redundancia como remedio, lo contrario del libro. El paso nuevo ya no receta redundancia: pide eval",
       "indice": 6,
       "auditoria": "SANEAMIENTO pasada K, ficha C13 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "final-muralla-021",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "senales_alerta_no_atendidas -> defensas_en_profundidad_3",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (risk_management -> health_safety): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ],
   "fuentes_internas": [

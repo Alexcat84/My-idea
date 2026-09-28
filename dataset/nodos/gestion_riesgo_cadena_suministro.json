@@ -18,7 +18,7 @@
   "entregable_esperado": "Un plan de contingencia escrito con los niveles de stock de seguridad que necesitas, los proveedores duplicados donde haga falta, y un mapa de riesgo por instalación o país.",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro",
-    "efecto_bullwhip"
+    "plan_b_antes_de_necesitarlo"
   ],
   "nodos_siguientes": [
     "trade_off_responsividad_eficiencia"
@@ -71,6 +71,32 @@
         "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en definicion_alineacion_cadena_suministro."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "final-muralla-004",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "efecto_bullwhip -> gestion_riesgo_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (compras -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-arista-18",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_b_antes_de_necesitarlo -> gestion_riesgo_cadena_suministro",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'gestion_riesgo_cadena_suministro' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "El plan B general se concreta en la cadena de suministro con stock de seguridad y proveedores duplicados, y además la candidata ya se activa cuando dependes de algo sin reemplazo."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

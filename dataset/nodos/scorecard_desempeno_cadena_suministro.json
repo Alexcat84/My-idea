@@ -15,7 +15,6 @@
   "entregable_esperado": "Scorecard funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente",
   "nodos_previos": [
     "ciclo_virtuoso_datos_electronicos",
-    "collaboration_enablers",
     "colaboracion_transporte_ctm",
     "sistema_visibilidad_cadena_suministro_low_cost"
   ],
@@ -55,6 +54,19 @@
         "evidencia": "D-11: Un scorecard compartido en tiempo real entre todas las empresas de la cadena solo tiene sentido para quien gestiona una cadena de suministro multiempresa. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-muralla-003",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "collaboration_enablers -> scorecard_desempeno_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (compras -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

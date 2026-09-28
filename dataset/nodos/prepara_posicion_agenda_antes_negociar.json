@@ -19,7 +19,8 @@
     "domina_lo_que_compras"
   ],
   "nodos_siguientes": [
-    "ten_un_checklist_de_clausulas_de_contrato"
+    "ten_un_checklist_de_clausulas_de_contrato",
+    "negociacion_contratos_proveedores"
   ],
   "condiciones_activacion": [
     "Tienes una reunion agendada con un proveedor para negociar precio o condiciones y no sabes por donde empezar.",
@@ -140,6 +141,19 @@
         "evidencia": "O043-005.entregable: negociación (Falta la tilde en negociación.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "final-arista-02",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "prepara_posicion_agenda_antes_negociar -> negociacion_contratos_proveedores",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de compras: 'negociacion_contratos_proveedores' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Con objetivos priorizados y agenda lista, el paso natural es la negociación misma que termina en el contrato firmado."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "fuentes_internas": [

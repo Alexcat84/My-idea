@@ -22,7 +22,8 @@
   ],
   "nodos_siguientes": [
     "cuando_el_riesgo_se_vuelve_realidad",
-    "anota_por_que_decidiste_asi"
+    "anota_por_que_decidiste_asi",
+    "gestion_riesgo_cadena_suministro"
   ],
   "condiciones_activacion": [
     "cuando ante un problema te congelas porque no tenías plan",
@@ -46,6 +47,19 @@
         "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "final-arista-18",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_b_antes_de_necesitarlo -> gestion_riesgo_cadena_suministro",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de risk_management: 'gestion_riesgo_cadena_suministro' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "El plan B general se concreta en la cadena de suministro con stock de seguridad y proveedores duplicados, y además la candidata ya se activa cuando dependes de algo sin reemplazo."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

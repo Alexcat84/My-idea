@@ -15,7 +15,6 @@
   "nodos_previos": [
     "deja_de_ignorar_el_riesgo",
     "cultura_que_habla_del_riesgo_sin_miedo",
-    "enfoque_situacional_vs_personal",
     "decision_consciente_de_crecimiento"
   ],
   "nodos_siguientes": [
@@ -57,6 +56,19 @@
         "evidencia": "Q104-011: El nodo consiste en revisar el plan para que contemple lo que puede salir mal, y su entregable es el plan revisado: es planificacion, no operacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-muralla-007",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "enfoque_situacional_vs_personal -> gestionar_el_riesgo_es_de_adultos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

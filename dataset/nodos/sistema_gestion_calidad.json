@@ -21,7 +21,8 @@
     "oficina_calidad_y_excelencia",
     "auditorias_primera_segunda_tercera_parte",
     "iso_31000_gestion_riesgo",
-    "principios_gestion_calidad_iso9000"
+    "principios_gestion_calidad_iso9000",
+    "gestion_del_cambio"
   ],
   "condiciones_activacion": [
     "Cuando necesitas claridad sobre el alcance de tu sistema de calidad",
@@ -30,5 +31,20 @@
   "etiqueta_arbol": "Dirige la Calidad de tu Empresa",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-arista-14",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "sistema_gestion_calidad -> gestion_del_cambio",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de quality: 'gestion_del_cambio' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "La gestión del cambio es un componente del sistema de calidad; una vez mapeado ese sistema, sumar un flujo ágil para aprobar cambios es un paso natural."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    }
   ]
 }

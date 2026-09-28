@@ -22,7 +22,8 @@
     "actuar_conducta_contraria_valores"
   ],
   "nodos_siguientes": [
-    "elegir_recolocar_despedir_persona"
+    "elegir_recolocar_despedir_persona",
+    "cortar_efecto_divisor_persona_brillante"
   ],
   "condiciones_activacion": [
     "Cuando dos personas bienintencionadas de tu entorno no logran trabajar juntas, o cuando alguien de tu equipo choca a menudo con lo que el equipo valora, y te notas empeñado en arreglarlo."
@@ -332,6 +333,19 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "final-arista-11",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "resolver_desencaje_valores_persona_equipo -> cortar_efecto_divisor_persona_brillante",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'cortar_efecto_divisor_persona_brillante' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "La persona brillante que rebaja a los demás es un caso concreto de choque de valores con el equipo, y el destino lo profundiza con la regla de no negociar valores por talento."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "Resuelve el Choque de Valores",

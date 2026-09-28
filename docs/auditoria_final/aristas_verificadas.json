@@ -1,0 +1,1310 @@
+[
+ {
+  "caso": 1,
+  "mundo": "compras",
+  "destino": "compartir_datos_cadena_suministro",
+  "candidatas": [
+   "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos",
+   "punto_unico_contacto_proveedores",
+   "conoce_insumos_vitales"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos": 0.618,
+   "punto_unico_contacto_proveedores": 0.616,
+   "conoce_insumos_vitales": 0.596
+  },
+  "juicios": [
+   {
+    "desde": "conoce_insumos_vitales",
+    "veredicto": "debil",
+    "razon": "Ambos buscan evitar desabastos, pero clasificar insumos críticos no lleva de forma directa a un acuerdo de intercambio de datos con la cadena."
+   },
+   {
+    "desde": "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos",
+    "veredicto": "no_se_sostiene",
+    "razon": "Cómo avisar a los proveedores descartados en una cotización no tiene que ver con compartir datos de demanda con los socios de la cadena."
+   },
+   {
+    "desde": "punto_unico_contacto_proveedores",
+    "veredicto": "debil",
+    "razon": "Ordenar quién habla con el proveedor y qué información sale es un antecedente de compartir datos de forma deliberada, pero su enfoque es proteger información, no intercambiarla."
+   }
+  ]
+ },
+ {
+  "caso": 2,
+  "mundo": "compras",
+  "destino": "gestion_procurement_consumo",
+  "candidatas": [
+   "decide_criterio_eleccion_proveedor",
+   "domina_lo_que_compras",
+   "conoce_insumos_vitales"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "decide_criterio_eleccion_proveedor": 0.832,
+   "domina_lo_que_compras": 0.809,
+   "conoce_insumos_vitales": 0.8
+  },
+  "juicios": [
+   {
+    "desde": "domina_lo_que_compras",
+    "veredicto": "debil",
+    "razon": "Ambas preparan la negociación, pero una estudia el mercado de un insumo concreto y la otra el consumo total del negocio; el vínculo es indirecto."
+   },
+   {
+    "desde": "decide_criterio_eleccion_proveedor",
+    "veredicto": "debil",
+    "razon": "Fijar criterios de elección de proveedor no deja abierta la medición del consumo por categoría; se relacionan solo por ser del mundo de compras."
+   },
+   {
+    "desde": "conoce_insumos_vitales",
+    "veredicto": "sostiene",
+    "razon": "Tras marcar los insumos por valor y criticidad, lo natural es medir cuánto consumes realmente de cada categoría y vigilar sus desviaciones."
+   }
+  ]
+ },
+ {
+  "caso": 3,
+  "mundo": "compras",
+  "destino": "negociacion_contratos_proveedores",
+  "candidatas": [
+   "prepara_posicion_agenda_antes_negociar",
+   "domina_lo_que_compras",
+   "negocia_por_intereses_no_posiciones"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "prepara_posicion_agenda_antes_negociar": 0.813,
+   "domina_lo_que_compras": 0.772,
+   "negocia_por_intereses_no_posiciones": 0.763
+  },
+  "juicios": [
+   {
+    "desde": "domina_lo_que_compras",
+    "veredicto": "sostiene",
+    "razon": "Tras conocer el mercado y los precios de referencia, lo natural es sentarse a negociar y firmar el contrato con el proveedor."
+   },
+   {
+    "desde": "negocia_por_intereses_no_posiciones",
+    "veredicto": "sostiene",
+    "razon": "Una vez resueltos los intereses de fondo, el paso siguiente es plasmarlos en un contrato con precios, penalizaciones y formas de pago."
+   },
+   {
+    "desde": "prepara_posicion_agenda_antes_negociar",
+    "veredicto": "sostiene",
+    "razon": "Con objetivos priorizados y agenda lista, el paso natural es la negociación misma que termina en el contrato firmado."
+   }
+  ]
+ },
+ {
+  "caso": 4,
+  "mundo": "compras",
+  "destino": "procurement_audit",
+  "candidatas": [
+   "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+   "decide_criterio_eleccion_proveedor",
+   "lleva_scorecard_desempeno_proveedor"
+  ],
+  "trampa": "presentate_con_tu_nombre_para_descuento",
+  "similitudes": {
+   "investiga_a_fondo_antes_de_renovar_un_contrato_existente": 0.66,
+   "decide_criterio_eleccion_proveedor": 0.659,
+   "lleva_scorecard_desempeno_proveedor": 0.646,
+   "presentate_con_tu_nombre_para_descuento": 0.379
+  },
+  "juicios": [
+   {
+    "desde": "decide_criterio_eleccion_proveedor",
+    "veredicto": "debil",
+    "razon": "Los criterios de elección pueden servir luego como vara de la auditoría, pero hay todo el ciclo del contrato entre ambos y no es el paso siguiente."
+   },
+   {
+    "desde": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+    "veredicto": "debil",
+    "razon": "Revisar el contrato antes de renovarlo se parece a una auditoría, pero la auditoría formal va al cierre y lógicamente alimenta la renovación, así que el orden queda invertido."
+   },
+   {
+    "desde": "presentate_con_tu_nombre_para_descuento",
+    "veredicto": "no_se_sostiene",
+    "razon": "Una táctica informal para pedir descuento en una compra puntual no lleva a auditar contratos ni procesos de adquisición."
+   },
+   {
+    "desde": "lleva_scorecard_desempeno_proveedor",
+    "veredicto": "sostiene",
+    "razon": "El historial de cumplimiento del proveedor es la materia prima para evaluar su desempeño en la auditoría al cerrar el contrato, así que la auditoría lo continúa de forma natural."
+   }
+  ]
+ },
+ {
+  "caso": 5,
+  "mundo": "compras",
+  "destino": "clasifica_tu_inventario",
+  "candidatas": [
+   "calcula_costo_de_mantener_contra_costo_de_reponer",
+   "define_punto_maximo_de_stock",
+   "traduce_stock_muerto_numeros"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "calcula_costo_de_mantener_contra_costo_de_reponer": 0.878,
+   "define_punto_maximo_de_stock": 0.856,
+   "traduce_stock_muerto_numeros": 0.822
+  },
+  "juicios": [
+   {
+    "desde": "calcula_costo_de_mantener_contra_costo_de_reponer",
+    "veredicto": "debil",
+    "razon": "El destino se plantea como paso previo a decidir cuánto pedir, así que el orden va al revés; la relación existe pero no es el paso natural."
+   },
+   {
+    "desde": "traduce_stock_muerto_numeros",
+    "veredicto": "sostiene",
+    "razon": "Después de ver en dinero lo que cuesta el stock muerto, clasificar el inventario y fijarle una meta es el paso lógico para liberar capital sin repetir el problema."
+   },
+   {
+    "desde": "define_punto_maximo_de_stock",
+    "veredicto": "debil",
+    "razon": "El punto de reorden debería apoyarse en la meta que fija el destino, así que el destino va antes; el vínculo es de orden invertido."
+   }
+  ]
+ },
+ {
+  "caso": 6,
+  "mundo": "compras",
+  "destino": "colaboracion_cadena_suministro",
+  "candidatas": [
+   "define_punto_maximo_de_stock",
+   "calcula_costo_de_mantener_contra_costo_de_reponer",
+   "decide_criterio_eleccion_proveedor"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "define_punto_maximo_de_stock": 0.667,
+   "calcula_costo_de_mantener_contra_costo_de_reponer": 0.652,
+   "decide_criterio_eleccion_proveedor": 0.647
+  },
+  "juicios": [
+   {
+    "desde": "decide_criterio_eleccion_proveedor",
+    "veredicto": "debil",
+    "razon": "Elegir proveedor precede a cualquier relación, pero medir el efecto látigo y compartir datos no es la continuación natural de fijar criterios de compra."
+   },
+   {
+    "desde": "calcula_costo_de_mantener_contra_costo_de_reponer",
+    "veredicto": "debil",
+    "razon": "El tamaño de pedido influye en la variabilidad de pedidos, pero el cálculo de cantidad óptima no deja abierta de forma directa la colaboración con socios."
+   },
+   {
+    "desde": "define_punto_maximo_de_stock",
+    "veredicto": "debil",
+    "razon": "Las políticas de reorden se relacionan con la variabilidad de pedidos a proveedores, pero pasar a medir el efecto látigo y compartir datos es un salto indirecto."
+   }
+  ]
+ },
+ {
+  "caso": 7,
+  "mundo": "compras",
+  "destino": "collaboration_enablers",
+  "candidatas": [
+   "prepara_posicion_agenda_antes_negociar",
+   "punto_unico_contacto_proveedores",
+   "negocia_por_intereses_no_posiciones"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "prepara_posicion_agenda_antes_negociar": 0.643,
+   "punto_unico_contacto_proveedores": 0.625,
+   "negocia_por_intereses_no_posiciones": 0.619
+  },
+  "juicios": [
+   {
+    "desde": "punto_unico_contacto_proveedores",
+    "veredicto": "debil",
+    "razon": "Tener un canal ordenado con el proveedor ayuda a la colaboración, pero el nodo trata de controlar la negociación y las filtraciones, no de construir una colaboración formal."
+   },
+   {
+    "desde": "prepara_posicion_agenda_antes_negociar",
+    "veredicto": "debil",
+    "razon": "Preparar una negociación puntual y construir las bases de una colaboración de cadena son cosas distintas; solo comparten el interés en cuidar la relación a futuro."
+   },
+   {
+    "desde": "negocia_por_intereses_no_posiciones",
+    "veredicto": "debil",
+    "razon": "Descubrir los intereses comunes se acerca a habilitadores como el interés común y la confianza, pero una negociación que se destraba no conduce por sí sola a una colaboración formal de cadena."
+   }
+  ]
+ },
+ {
+  "caso": 8,
+  "mundo": "entrega",
+  "destino": "iot_big_data_supply_chain",
+  "candidatas": [
+   "vender_sin_stock_con_drop_shipping",
+   "descomponer_tiempo_ciclo_pedido",
+   "adaptar_empaque_segun_tipo_de_articulo"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "vender_sin_stock_con_drop_shipping": 0.537,
+   "descomponer_tiempo_ciclo_pedido": 0.506,
+   "adaptar_empaque_segun_tipo_de_articulo": 0.49
+  },
+  "juicios": [
+   {
+    "desde": "adaptar_empaque_segun_tipo_de_articulo",
+    "veredicto": "no_se_sostiene",
+    "razon": "Empacar según el tipo de artículo no lleva a una infraestructura IoT de trazabilidad; son temas distintos."
+   },
+   {
+    "desde": "descomponer_tiempo_ciclo_pedido",
+    "veredicto": "debil",
+    "razon": "Medir a mano las etapas del pedido abre la necesidad de visibilidad, pero saltar a IoT y big data es un paso grande e indirecto."
+   },
+   {
+    "desde": "vender_sin_stock_con_drop_shipping",
+    "veredicto": "no_se_sostiene",
+    "razon": "En el drop-shipping el tercero maneja la mercancía, así que instrumentar productos con IoT no es la continuación natural."
+   }
+  ]
+ },
+ {
+  "caso": 9,
+  "mundo": "entrega",
+  "destino": "programacion_entregas_delivery_scheduling",
+  "candidatas": [
+   "elegir_modo_transporte_volumen_distancia",
+   "pagar_mas_por_velocidad",
+   "ofrecer_puntos_recogida"
+  ],
+  "trampa": "sellar_cajas_metodo_cinta_en_h",
+  "similitudes": {
+   "elegir_modo_transporte_volumen_distancia": 0.744,
+   "pagar_mas_por_velocidad": 0.697,
+   "ofrecer_puntos_recogida": 0.695,
+   "sellar_cajas_metodo_cinta_en_h": 0.433
+  },
+  "juicios": [
+   {
+    "desde": "ofrecer_puntos_recogida",
+    "veredicto": "debil",
+    "razon": "Ambas buscan bajar costos de entrega, pero una trata de la última milla al cliente final y la otra de rutas directas o milk run entre ubicaciones."
+   },
+   {
+    "desde": "sellar_cajas_metodo_cinta_en_h",
+    "veredicto": "no_se_sostiene",
+    "razon": "Sellar cajas es una tarea de empaque sin relación con elegir el método de programación de entregas."
+   },
+   {
+    "desde": "pagar_mas_por_velocidad",
+    "veredicto": "debil",
+    "razon": "Comparte la lógica de costo de transporte, pero decidir cuándo pagar por rapidez no conduce directamente a elegir entre entrega directa y milk run."
+   },
+   {
+    "desde": "elegir_modo_transporte_volumen_distancia",
+    "veredicto": "sostiene",
+    "razon": "Tras elegir el modo según tamaño de envío, lo siguiente es decidir si cada carga va directa o se consolida en milk run según la capacidad del modo."
+   }
+  ]
+ },
+ {
+  "caso": 10,
+  "mundo": "entrega",
+  "destino": "gestion_rationing_shortage_gaming",
+  "candidatas": [
+   "vender_sin_stock_con_drop_shipping",
+   "descomponer_tiempo_ciclo_pedido",
+   "pagar_mas_por_velocidad"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "vender_sin_stock_con_drop_shipping": 0.61,
+   "descomponer_tiempo_ciclo_pedido": 0.566,
+   "pagar_mas_por_velocidad": 0.557
+  },
+  "juicios": [
+   {
+    "desde": "vender_sin_stock_con_drop_shipping",
+    "veredicto": "no_se_sostiene",
+    "razon": "El drop-shipping es un modelo de venta sin inventario y no desemboca en diseñar una política de racionamiento para cuando la demanda supera a la oferta."
+   },
+   {
+    "desde": "descomponer_tiempo_ciclo_pedido",
+    "veredicto": "no_se_sostiene",
+    "razon": "Medir las etapas del ciclo de un pedido es un tema de tiempos internos y no tiene que ver con la escasez ni con los pedidos inflados."
+   },
+   {
+    "desde": "pagar_mas_por_velocidad",
+    "veredicto": "no_se_sostiene",
+    "razon": "Elegir entre flete rápido y flete barato es una decisión de transporte, sin relación natural con racionar producto escaso entre clientes."
+   }
+  ]
+ },
+ {
+  "caso": 11,
+  "mundo": "entrega",
+  "destino": "sistema_visibilidad_cadena_suministro_low_cost",
+  "candidatas": [
+   "vender_sin_stock_con_drop_shipping",
+   "descomponer_tiempo_ciclo_pedido",
+   "decidir_vender_solo_online_o_tambien_tienda_fisica"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "vender_sin_stock_con_drop_shipping": 0.551,
+   "descomponer_tiempo_ciclo_pedido": 0.539,
+   "decidir_vender_solo_online_o_tambien_tienda_fisica": 0.519
+  },
+  "juicios": [
+   {
+    "desde": "decidir_vender_solo_online_o_tambien_tienda_fisica",
+    "veredicto": "no_se_sostiene",
+    "razon": "Elegir canales de venta y entrega no deja abierta la coordinación de inventario y demanda entre los actores de la cadena."
+   },
+   {
+    "desde": "vender_sin_stock_con_drop_shipping",
+    "veredicto": "debil",
+    "razon": "Depender del stock de un proveedor crea una necesidad real de ver su inventario, pero el destino apunta a una cadena de varios actores con picos de temporada."
+   },
+   {
+    "desde": "descomponer_tiempo_ciclo_pedido",
+    "veredicto": "debil",
+    "razon": "Ambas buscan visibilidad con medios simples, pero una mide las etapas del pedido propio y la otra el inventario y la demanda de toda la cadena."
+   }
+  ]
+ },
+ {
+  "caso": 12,
+  "mundo": "entrega",
+  "destino": "estandarizacion_codigos_producto_epc",
+  "candidatas": [
+   "reducir_devoluciones_mejorando_informacion_previa",
+   "adaptar_empaque_segun_tipo_de_articulo",
+   "acolchado_segun_forma"
+  ],
+  "trampa": "decidir_cobro_velocidad_ventana_entrega",
+  "similitudes": {
+   "reducir_devoluciones_mejorando_informacion_previa": 0.552,
+   "adaptar_empaque_segun_tipo_de_articulo": 0.538,
+   "acolchado_segun_forma": 0.533,
+   "decidir_cobro_velocidad_ventana_entrega": 0.384
+  },
+  "juicios": [
+   {
+    "desde": "adaptar_empaque_segun_tipo_de_articulo",
+    "veredicto": "no_se_sostiene",
+    "razon": "Empacar según el tipo de artículo no tiene relación con estandarizar códigos de producto entre socios comerciales."
+   },
+   {
+    "desde": "decidir_cobro_velocidad_ventana_entrega",
+    "veredicto": "no_se_sostiene",
+    "razon": "Fijar precios por velocidad de entrega es un tema distinto de unificar identificadores de producto."
+   },
+   {
+    "desde": "reducir_devoluciones_mejorando_informacion_previa",
+    "veredicto": "no_se_sostiene",
+    "razon": "Mejorar la ficha para el comprador final no deja abierto el problema de códigos distintos entre empresas y sistemas ERP."
+   },
+   {
+    "desde": "acolchado_segun_forma",
+    "veredicto": "no_se_sostiene",
+    "razon": "Acolchar según la forma de la pieza es empaque físico, sin paso natural hacia datos de producto estandarizados."
+   }
+  ]
+ },
+ {
+  "caso": 13,
+  "mundo": "entrega",
+  "destino": "modelo_simulacion_cadena_suministro_circular",
+  "candidatas": [
+   "probar_empaque_antes_de_escalar_envios",
+   "ofrecer_puntos_recogida",
+   "tratar_packaging_costo_marca"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "probar_empaque_antes_de_escalar_envios": 0.585,
+   "ofrecer_puntos_recogida": 0.57,
+   "tratar_packaging_costo_marca": 0.565
+  },
+  "juicios": [
+   {
+    "desde": "probar_empaque_antes_de_escalar_envios",
+    "veredicto": "no_se_sostiene",
+    "razon": "Probar la resistencia del empaque es un detalle operativo de envío, no el diseño ni la simulación de una cadena circular; además va de ejecución a planificación sin razón."
+   },
+   {
+    "desde": "ofrecer_puntos_recogida",
+    "veredicto": "no_se_sostiene",
+    "razon": "Los puntos de recogida de última milla solo se parecen en la mención ambiental; no llevan a modelar instalaciones, rutas y vehículos de una cadena de recolección."
+   },
+   {
+    "desde": "tratar_packaging_costo_marca",
+    "veredicto": "no_se_sostiene",
+    "razon": "Ajustar el peso del empaque comparte solo el tema de sostenibilidad y no conduce a simular escenarios de una cadena circular."
+   }
+  ]
+ },
+ {
+  "caso": 14,
+  "mundo": "entrega",
+  "destino": "warehouse_management_system",
+  "candidatas": [
+   "vender_sin_stock_con_drop_shipping",
+   "disenar_empaque_logistica",
+   "flujo_decision_devoluciones"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "vender_sin_stock_con_drop_shipping": 0.631,
+   "disenar_empaque_logistica": 0.585,
+   "flujo_decision_devoluciones": 0.554
+  },
+  "juicios": [
+   {
+    "desde": "vender_sin_stock_con_drop_shipping",
+    "veredicto": "no_se_sostiene",
+    "razon": "El drop-shipping existe justo para no tener almacén, así que pasar a implantar un WMS contradice la candidata."
+   },
+   {
+    "desde": "flujo_decision_devoluciones",
+    "veredicto": "debil",
+    "razon": "Las devoluciones tocan el almacén, pero clasificarlas no lleva de forma natural a implantar un sistema de gestión de almacén."
+   },
+   {
+    "desde": "disenar_empaque_logistica",
+    "veredicto": "debil",
+    "razon": "Un empaque que aprovecha el almacenamiento se relaciona con el almacén, pero no plantea la gestión de inventario, ubicaciones y picking."
+   }
+  ]
+ },
+ {
+  "caso": 15,
+  "mundo": "environmental",
+  "destino": "just_in_time_manufacturing",
+  "candidatas": [
+   "manufactura_verde",
+   "gestion_logistica_verde",
+   "optimizacion_almacenes_distribucion"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "manufactura_verde": 0.757,
+   "gestion_logistica_verde": 0.739,
+   "optimizacion_almacenes_distribucion": 0.7
+  },
+  "juicios": [
+   {
+    "desde": "optimizacion_almacenes_distribucion",
+    "veredicto": "debil",
+    "razon": "Reducir espacio de almacén conecta con JIT, pero optimizar la operación interna del almacén no lleva de forma directa a rediseñar el abastecimiento justo a tiempo."
+   },
+   {
+    "desde": "manufactura_verde",
+    "veredicto": "sostiene",
+    "razon": "JIT con enfoque verde es una práctica concreta para aplicar la estrategia de manufactura verde de hacer más con menos."
+   },
+   {
+    "desde": "gestion_logistica_verde",
+    "veredicto": "debil",
+    "razon": "El diagnóstico de logística verde incluye inventario, pero JIT es un sistema de producción y reabastecimiento que pide condiciones propias, no el paso obvio tras el diagnóstico."
+   }
+  ]
+ },
+ {
+  "caso": 16,
+  "mundo": "primer_equipo",
+  "destino": "empezar_cultura_franqueza_radical",
+  "candidatas": [
+   "pedir_critica_equipo_premiarla",
+   "practicar_franqueza_radical_jefe_propio",
+   "invitar_desafio_reciproco_equipo"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "pedir_critica_equipo_premiarla": 0.803,
+   "practicar_franqueza_radical_jefe_propio": 0.772,
+   "invitar_desafio_reciproco_equipo": 0.767
+  },
+  "juicios": [
+   {
+    "desde": "pedir_critica_equipo_premiarla",
+    "veredicto": "sostiene",
+    "razon": "Pedir crítica es la primera fase del arranque, y el destino ordena lo que sigue (elogio antes que crítica, la frontera entendida), así que resuelve qué hacer después de haberla pedido."
+   },
+   {
+    "desde": "invitar_desafio_reciproco_equipo",
+    "veredicto": "debil",
+    "razon": "El desafío recíproco pertenece a la misma cultura de franqueza, pero se centra en la confianza con una persona concreta y no lleva directamente a ordenar el arranque del equipo."
+   },
+   {
+    "desde": "practicar_franqueza_radical_jefe_propio",
+    "veredicto": "debil",
+    "razon": "Ser franco con tu propio jefe sigue otra dirección de la relación; llevarlo después a tu equipo se entiende, pero no es el paso natural."
+   }
+  ]
+ },
+ {
+  "caso": 17,
+  "mundo": "primer_equipo",
+  "destino": "evitar_doble_impuesto_malestar",
+  "candidatas": [
+   "definir_receta_propia_mantenerse_centrado",
+   "cuestionar_historia_irracional_cabeza",
+   "dominar_reacciones_emociones_ajenas"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "definir_receta_propia_mantenerse_centrado": 0.712,
+   "cuestionar_historia_irracional_cabeza": 0.706,
+   "dominar_reacciones_emociones_ajenas": 0.683
+  },
+  "juicios": [
+   {
+    "desde": "cuestionar_historia_irracional_cabeza",
+    "veredicto": "sostiene",
+    "razon": "Las dos tratan cómo gestionarte a ti misma en el Pozo; tras desmontar la historia del peor caso, dejar de culparte por el malestar es el paso siguiente."
+   },
+   {
+    "desde": "definir_receta_propia_mantenerse_centrado",
+    "veredicto": "sostiene",
+    "razon": "Con la receta para los tiempos duros ya hecha, el paso natural cuando llega la dificultad es no sumarle la culpa de estar pasándolo mal."
+   },
+   {
+    "desde": "dominar_reacciones_emociones_ajenas",
+    "veredicto": "debil",
+    "razon": "Una trata las emociones de los demás y la otra tu propio malestar; solo las une el terreno emocional."
+   }
+  ]
+ },
+ {
+  "caso": 18,
+  "mundo": "primer_equipo",
+  "destino": "evaluar_cultura_empresa_adjetivos",
+  "candidatas": [
+   "crear_tarjeta_puntuacion_puesto",
+   "montar_proceso_contratacion_reducir_sesgo",
+   "examinar_trabajo_pasado_candidato"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "crear_tarjeta_puntuacion_puesto": 0.795,
+   "montar_proceso_contratacion_reducir_sesgo": 0.774,
+   "examinar_trabajo_pasado_candidato": 0.769
+  },
+  "juicios": [
+   {
+    "desde": "crear_tarjeta_puntuacion_puesto",
+    "veredicto": "sostiene",
+    "razon": "La tarjeta pide competencias de cultura y el destino resuelve justo cuáles son, tal como dice su condición de activación."
+   },
+   {
+    "desde": "examinar_trabajo_pasado_candidato",
+    "veredicto": "no_se_sostiene",
+    "razon": "Revisar el trabajo de un candidato ocurre en la evaluación, mientras que conocer la propia cultura debe hacerse antes; el orden no tiene sentido."
+   },
+   {
+    "desde": "montar_proceso_contratacion_reducir_sesgo",
+    "veredicto": "sostiene",
+    "razon": "El proceso exige definir el encaje con el equipo por escrito, y conocer la cultura con los adjetivos es lo que permite definirlo."
+   }
+  ]
+ },
+ {
+  "caso": 19,
+  "mundo": "primer_equipo",
+  "destino": "celebrar_pequenias_victorias",
+  "candidatas": [
+   "disenar_entorno_rendir_mejor",
+   "cuestionar_historia_irracional_cabeza",
+   "ayudar_personas_jugar_fortalezas"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "disenar_entorno_rendir_mejor": 0.709,
+   "cuestionar_historia_irracional_cabeza": 0.674,
+   "ayudar_personas_jugar_fortalezas": 0.664
+  },
+  "juicios": [
+   {
+    "desde": "disenar_entorno_rendir_mejor",
+    "veredicto": "debil",
+    "razon": "Ambos cuidan el ánimo y el rendimiento propios, pero diseñar el día a día no responde a estar en el Pozo repasando tus fracasos."
+   },
+   {
+    "desde": "cuestionar_historia_irracional_cabeza",
+    "veredicto": "sostiene",
+    "razon": "Los dos atienden a quien está en el Pozo: después de desarmar la historia del peor caso, contarte otra historia a partir de tus pequeñas victorias es el paso siguiente natural."
+   },
+   {
+    "desde": "ayudar_personas_jugar_fortalezas",
+    "veredicto": "debil",
+    "razon": "La idea de mirar lo bueno y no lo malo se parece, pero la candidata se ocupa del equipo y el destino del propio desánimo."
+   }
+  ]
+ },
+ {
+  "caso": 20,
+  "mundo": "primer_equipo",
+  "destino": "cortar_efecto_divisor_persona_brillante",
+  "candidatas": [
+   "revisar_cinco_causas_mal_desempenio",
+   "resolver_desencaje_valores_persona_equipo",
+   "mover_rapido_persona_papel_equivocado"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "revisar_cinco_causas_mal_desempenio": 0.791,
+   "resolver_desencaje_valores_persona_equipo": 0.766,
+   "mover_rapido_persona_papel_equivocado": 0.766
+  },
+  "juicios": [
+   {
+    "desde": "mover_rapido_persona_papel_equivocado",
+    "veredicto": "debil",
+    "razon": "Comparten el no alargar decisiones sobre una persona, pero la candidata trata a quien rinde poco y el destino a quien rinde mucho y rebaja a los demás."
+   },
+   {
+    "desde": "resolver_desencaje_valores_persona_equipo",
+    "veredicto": "sostiene",
+    "razon": "La persona brillante que rebaja a los demás es un caso concreto de choque de valores con el equipo, y el destino lo profundiza con la regla de no negociar valores por talento."
+   },
+   {
+    "desde": "revisar_cinco_causas_mal_desempenio",
+    "veredicto": "debil",
+    "razon": "El choque de cultura es una de las cinco causas, pero la persona del destino no rinde mal, así que el vínculo es indirecto."
+   }
+  ]
+ },
+ {
+  "caso": 21,
+  "mundo": "primer_equipo",
+  "destino": "investigar_antes_contratar_lideres",
+  "candidatas": [
+   "repartir_responsabilidad_contratar_equipo",
+   "repartir_papeles_directivo_reclutador",
+   "montar_proceso_contratacion_reducir_sesgo"
+  ],
+  "trampa": "medir_sistema_venta_trece_indicadores_benchmark",
+  "similitudes": {
+   "repartir_responsabilidad_contratar_equipo": 0.825,
+   "repartir_papeles_directivo_reclutador": 0.821,
+   "montar_proceso_contratacion_reducir_sesgo": 0.809,
+   "medir_sistema_venta_trece_indicadores_benchmark": 0.37
+  },
+  "juicios": [
+   {
+    "desde": "repartir_papeles_directivo_reclutador",
+    "veredicto": "sostiene",
+    "razon": "Si al fundador le toca saber cómo es el candidato ideal, investigar qué buscar en un líder es el paso que concreta su parte."
+   },
+   {
+    "desde": "medir_sistema_venta_trece_indicadores_benchmark",
+    "veredicto": "no_se_sostiene",
+    "razon": "Medir el sistema de venta es un tema distinto de contratar líderes, sin paso natural entre ambos."
+   },
+   {
+    "desde": "montar_proceso_contratacion_reducir_sesgo",
+    "veredicto": "sostiene",
+    "razon": "Con el proceso general montado, la contratación de un líder pide además calibrar antes qué buscar, lo que profundiza el mismo tema."
+   },
+   {
+    "desde": "repartir_responsabilidad_contratar_equipo",
+    "veredicto": "sostiene",
+    "razon": "Cuando el equipo necesita más directivos, contratarlos bien exige investigar antes cómo es el líder ideal; la vuelta de fase tiene razón clara."
+   }
+  ]
+ },
+ {
+  "caso": 22,
+  "mundo": "primer_equipo",
+  "destino": "repartir_supervision_puesto_funcional_mision",
+  "candidatas": [
+   "dimensionar_numero_subordinados_medio_dia_semanal",
+   "fijar_frecuencia_reunion_individual_madurez_tarea",
+   "gestionar_personas_equipo"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "dimensionar_numero_subordinados_medio_dia_semanal": 0.658,
+   "fijar_frecuencia_reunion_individual_madurez_tarea": 0.657,
+   "gestionar_personas_equipo": 0.653
+  },
+  "juicios": [
+   {
+    "desde": "fijar_frecuencia_reunion_individual_madurez_tarea",
+    "veredicto": "no_se_sostiene",
+    "razon": "Decidir cada cuánto te reúnes con cada subordinado no lleva a repartir la supervisión de un puesto entre dos jefes en una organización híbrida."
+   },
+   {
+    "desde": "gestionar_personas_equipo",
+    "veredicto": "debil",
+    "razon": "Decidir quién hace qué toca la supervisión de forma general, pero la doble dependencia funcional y de misión es un problema de estructura bastante más específico."
+   },
+   {
+    "desde": "dimensionar_numero_subordinados_medio_dia_semanal",
+    "veredicto": "debil",
+    "razon": "Los dos son de diseño organizativo y de líneas de mando, pero dimensionar cuántos subordinados llevas no abre por sí mismo la cuestión de la doble dependencia."
+   }
+  ]
+ },
+ {
+  "caso": 23,
+  "mundo": "primer_equipo",
+  "destino": "vivir_valores_propios_evitar_listarlos",
+  "candidatas": [
+   "vivir_primero_valor_declarado",
+   "revisar_incentivos_trampas_equipo",
+   "recorrer_rueda_conscientemente_cultura_equipo"
+  ],
+  "trampa": "medir_sistema_venta_trece_indicadores_benchmark",
+  "similitudes": {
+   "vivir_primero_valor_declarado": 0.844,
+   "revisar_incentivos_trampas_equipo": 0.799,
+   "recorrer_rueda_conscientemente_cultura_equipo": 0.741,
+   "medir_sistema_venta_trece_indicadores_benchmark": 0.225
+  },
+  "juicios": [
+   {
+    "desde": "revisar_incentivos_trampas_equipo",
+    "veredicto": "debil",
+    "razon": "La candidata supone que ya vives tus valores y revisa los incentivos, así que el destino iría antes; la relación existe pero el orden es flojo."
+   },
+   {
+    "desde": "vivir_primero_valor_declarado",
+    "veredicto": "sostiene",
+    "razon": "Tras aprender a vivir primero lo que declaras, demostrar tus valores al dirigir en vez de forzar ejercicios de listarlos es la continuación directa."
+   },
+   {
+    "desde": "recorrer_rueda_conscientemente_cultura_equipo",
+    "veredicto": "debil",
+    "razon": "Las dos ponen la conducta por delante del discurso, pero la candidata trata la cultura en general y el destino el caso del ejercicio de valores."
+   },
+   {
+    "desde": "medir_sistema_venta_trece_indicadores_benchmark",
+    "veredicto": "no_se_sostiene",
+    "razon": "Medir el sistema de venta con indicadores no tiene relación con vivir los valores al dirigir."
+   }
+  ]
+ },
+ {
+  "caso": 24,
+  "mundo": "quality",
+  "destino": "aceptacion_de_fallas_como_inevitables",
+  "candidatas": [
+   "abolir_inspeccion_masiva",
+   "mejora_del_sistema_responsabilidad_gerencial",
+   "cinco_suposiciones_erroneas_calidad"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "abolir_inspeccion_masiva": 0.794,
+   "mejora_del_sistema_responsabilidad_gerencial": 0.793,
+   "cinco_suposiciones_erroneas_calidad": 0.774
+  },
+  "juicios": [
+   {
+    "desde": "abolir_inspeccion_masiva",
+    "veredicto": "debil",
+    "razon": "Ambas renuncian a la perfección por inspección, pero una apunta a prevenir defectos en el proceso y la otra a aceptar una tasa de falla; la relación es indirecta."
+   },
+   {
+    "desde": "cinco_suposiciones_erroneas_calidad",
+    "veredicto": "no_se_sostiene",
+    "razon": "La candidata tacha de error creer que la calidad tiene un límite costeable, y el destino afirma que la perfección no se puede costear; pasar de una a otra se contradice."
+   },
+   {
+    "desde": "mejora_del_sistema_responsabilidad_gerencial",
+    "veredicto": "debil",
+    "razon": "Tras actuar sobre el sistema queda la pregunta de qué tasa de falla aceptar, pero el vínculo es lateral, no el paso siguiente del mismo tema."
+   }
+  ]
+ },
+ {
+  "caso": 25,
+  "mundo": "quality",
+  "destino": "gestion_del_cambio",
+  "candidatas": [
+   "gestion_resistencia_cultural_cambio",
+   "sistema_gestion_calidad",
+   "resistencia_al_cambio"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "gestion_resistencia_cultural_cambio": 0.702,
+   "sistema_gestion_calidad": 0.687,
+   "resistencia_al_cambio": 0.685
+  },
+  "juicios": [
+   {
+    "desde": "sistema_gestion_calidad",
+    "veredicto": "sostiene",
+    "razon": "La gestión del cambio es un componente del sistema de calidad; una vez mapeado ese sistema, sumar un flujo ágil para aprobar cambios es un paso natural."
+   },
+   {
+    "desde": "resistencia_al_cambio",
+    "veredicto": "sostiene",
+    "razon": "Su entregable ya es un plan de gestión del cambio, y el destino lo formaliza como un sistema que la gente use de forma natural y no evite."
+   },
+   {
+    "desde": "gestion_resistencia_cultural_cambio",
+    "veredicto": "debil",
+    "razon": "Manejar el lado humano de la resistencia se relaciona con el destino, pero este es un sistema de control y aprobación de cambios de producto y de proceso, no un plan cultural."
+   }
+  ]
+ },
+ {
+  "caso": 26,
+  "mundo": "quality",
+  "destino": "manufactura_celular",
+  "candidatas": [
+   "smed_setup_reduction",
+   "lean_manufacturing",
+   "practicas_manufactura_justo_a_tiempo"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "smed_setup_reduction": 0.783,
+   "lean_manufacturing": 0.711,
+   "practicas_manufactura_justo_a_tiempo": 0.691
+  },
+  "juicios": [
+   {
+    "desde": "smed_setup_reduction",
+    "veredicto": "sostiene",
+    "razon": "El SMED es una de las piezas de la manufactura celular; con los cambios ya reducidos, organizar la línea en células es el paso siguiente."
+   },
+   {
+    "desde": "practicas_manufactura_justo_a_tiempo",
+    "veredicto": "sostiene",
+    "razon": "Después de un piloto justo a tiempo, rediseñar la producción en células que procesan pieza a pieza continúa el mismo camino."
+   },
+   {
+    "desde": "lean_manufacturing",
+    "veredicto": "sostiene",
+    "razon": "El mapa de flujo de valor y el plan contra el desperdicio llevan de forma natural a rediseñar la línea en células."
+   }
+  ]
+ },
+ {
+  "caso": 27,
+  "mundo": "risk_management",
+  "destino": "identificacion_de_riesgos",
+  "candidatas": [
+   "haz_tu_lista_de_lo_que_puede_fallar",
+   "busca_el_riesgo_antes_de_que_te_busque",
+   "tecnicas_para_sacar_riesgos_a_la_luz"
+  ],
+  "trampa": "calibra_tu_propio_ojo",
+  "similitudes": {
+   "haz_tu_lista_de_lo_que_puede_fallar": 0.805,
+   "busca_el_riesgo_antes_de_que_te_busque": 0.797,
+   "tecnicas_para_sacar_riesgos_a_la_luz": 0.784,
+   "calibra_tu_propio_ojo": 0.478
+  },
+  "juicios": [
+   {
+    "desde": "calibra_tu_propio_ojo",
+    "veredicto": "no_se_sostiene",
+    "razon": "Calibrar el juicio sirve para estimar probabilidades, lo que va después de identificar los riesgos; el orden queda invertido."
+   },
+   {
+    "desde": "haz_tu_lista_de_lo_que_puede_fallar",
+    "veredicto": "debil",
+    "razon": "El censo ya nombra y clasifica los riesgos, así que volver a identificarlos por proceso se solapa y sería más bien un paso anterior o paralelo."
+   },
+   {
+    "desde": "tecnicas_para_sacar_riesgos_a_la_luz",
+    "veredicto": "sostiene",
+    "razon": "Con las técnicas aprendidas, examinar cada proceso y revisar fallas pasadas completa y documenta la identificación de forma sistemática."
+   },
+   {
+    "desde": "busca_el_riesgo_antes_de_que_te_busque",
+    "veredicto": "sostiene",
+    "razon": "Si identificar riesgos se repite en cada etapa, al entrar en ejecución toca hacer la identificación sistemática de esa etapa."
+   }
+  ]
+ },
+ {
+  "caso": 28,
+  "mundo": "risk_management",
+  "destino": "segregacion_funciones_trading_settlement",
+  "candidatas": [
+   "un_dueno_para_cada_riesgo",
+   "risk_audit",
+   "los_controles_que_ya_tienes"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "un_dueno_para_cada_riesgo": 0.652,
+   "risk_audit": 0.561,
+   "los_controles_que_ya_tienes": 0.559
+  },
+  "juicios": [
+   {
+    "desde": "un_dueno_para_cada_riesgo",
+    "veredicto": "sostiene",
+    "razon": "Tras nombrar a un responsable por cada riesgo, cuidar que quien ejecuta no sea quien verifica es la continuación natural del reparto de responsabilidades."
+   },
+   {
+    "desde": "risk_audit",
+    "veredicto": "debil",
+    "razon": "Una auditoría puede descubrir que falta separar funciones, pero es un camino indirecto y va de una revisión en ejecución a un diseño de controles en planificación."
+   },
+   {
+    "desde": "los_controles_que_ya_tienes",
+    "veredicto": "sostiene",
+    "razon": "El inventario de controles marca los huecos, y separar quién ejecuta de quién verifica es un control básico para cubrirlos: es el paso siguiente del mismo tema."
+   }
+  ]
+ },
+ {
+  "caso": 29,
+  "mundo": "risk_management",
+  "destino": "gestion_riesgo_cadena_suministro",
+  "candidatas": [
+   "plan_b_antes_de_necesitarlo",
+   "riesgo_del_negocio_o_del_proyecto",
+   "sigue_operando_pese_al_golpe"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "plan_b_antes_de_necesitarlo": 0.714,
+   "riesgo_del_negocio_o_del_proyecto": 0.701,
+   "sigue_operando_pese_al_golpe": 0.697
+  },
+  "juicios": [
+   {
+    "desde": "plan_b_antes_de_necesitarlo",
+    "veredicto": "sostiene",
+    "razon": "El plan B general se concreta en la cadena de suministro con stock de seguridad y proveedores duplicados, y además la candidata ya se activa cuando dependes de algo sin reemplazo."
+   },
+   {
+    "desde": "riesgo_del_negocio_o_del_proyecto",
+    "veredicto": "sostiene",
+    "razon": "Tras separar los riesgos naturales de los humanos, evaluar ambos en cada ubicación de la cadena de suministro es la aplicación directa."
+   },
+   {
+    "desde": "sigue_operando_pese_al_golpe",
+    "veredicto": "debil",
+    "razon": "La redundancia en la cadena apoya la continuidad, pero volver de ejecución a planificación sin una razón clara hace que el vínculo sea indirecto."
+   }
+  ]
+ },
+ {
+  "caso": 30,
+  "mundo": "seguridad_digital",
+  "destino": "gestion_riesgo_seguridad_ia",
+  "candidatas": [
+   "getting_started_system_information_integrity",
+   "getting_started_risk_assessment",
+   "monitoreo_continuo"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "getting_started_system_information_integrity": 0.621,
+   "getting_started_risk_assessment": 0.602,
+   "monitoreo_continuo": 0.583
+  },
+  "juicios": [
+   {
+    "desde": "monitoreo_continuo",
+    "veredicto": "debil",
+    "razon": "La vigilancia general de seguridad podría detectar riesgos nuevos como los de la IA, pero no conduce de forma directa a un plan contra prompt injection."
+   },
+   {
+    "desde": "getting_started_risk_assessment",
+    "veredicto": "debil",
+    "razon": "Es una evaluación de riesgos general y ligada a contratistas federales con CUI; los riesgos propios de la IA solo se tocan de forma indirecta."
+   },
+   {
+    "desde": "getting_started_system_information_integrity",
+    "veredicto": "debil",
+    "razon": "La protección contra código malicioso se parece a defenderse de manipulaciones, pero su foco en CUI y fallas de sistema no lleva de forma natural a la seguridad de la IA."
+   }
+  ]
+ },
+ {
+  "caso": 101,
+  "mundo": "primer_equipo",
+  "destino": "repartir_supervision_puesto_funcional_mision",
+  "candidatas": [
+   "equilibrar_microdireccion_ausencia",
+   "mantener_manos_trabajo_real_equipo",
+   "pasar_direccion_directa_indirecta",
+   "fijar_proceso_trabajo_equipo",
+   "eliminar_seguimiento_descendente_responsabilizar_dueno",
+   "elegir_estilo_direccion_madurez_relevante_tarea"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "equilibrar_microdireccion_ausencia": 0.647,
+   "mantener_manos_trabajo_real_equipo": 0.642,
+   "pasar_direccion_directa_indirecta": 0.64,
+   "fijar_proceso_trabajo_equipo": 0.639,
+   "eliminar_seguimiento_descendente_responsabilizar_dueno": 0.637,
+   "elegir_estilo_direccion_madurez_relevante_tarea": 0.637
+  },
+  "juicios": [
+   {
+    "desde": "mantener_manos_trabajo_real_equipo",
+    "veredicto": "no_se_sostiene",
+    "razon": "Seguir ejecutando el trabajo propio no deja abierta ninguna pregunta sobre la doble dependencia de un puesto entre grupo funcional y unidad de misión."
+   },
+   {
+    "desde": "elegir_estilo_direccion_madurez_relevante_tarea",
+    "veredicto": "no_se_sostiene",
+    "razon": "Elegir el estilo de dirección de una persona es un tema de liderazgo individual, no de diseño de quién supervisa qué en una organización híbrida."
+   },
+   {
+    "desde": "fijar_proceso_trabajo_equipo",
+    "veredicto": "debil",
+    "razon": "Fijar quién hace qué roza la asignación de responsabilidades, pero dentro de un equipo, no el reparto de la supervisión de un puesto entre dos jefes."
+   },
+   {
+    "desde": "pasar_direccion_directa_indirecta",
+    "veredicto": "debil",
+    "razon": "Al crecer y poner directivos debajo pueden surgir estructuras con doble dependencia, pero el paso a la organización híbrida no se sigue directamente."
+   },
+   {
+    "desde": "eliminar_seguimiento_descendente_responsabilizar_dueno",
+    "veredicto": "no_se_sostiene",
+    "razon": "Quitar el seguimiento central y responsabilizar a cada dueño es otro tema que no lleva a repartir la supervisión entre un jefe funcional y uno de misión."
+   },
+   {
+    "desde": "equilibrar_microdireccion_ausencia",
+    "veredicto": "no_se_sostiene",
+    "razon": "El equilibrio al delegar es una conducta personal del mando y no plantea la estructura de doble dependencia del destino."
+   }
+  ]
+ },
+ {
+  "caso": 102,
+  "mundo": "quality",
+  "destino": "aceptacion_de_fallas_como_inevitables",
+  "candidatas": [
+   "programa_cero_defectos",
+   "falacia_problemas_diferentes",
+   "critica_acceptable_quality_level",
+   "prevencion_gestion_calidad",
+   "prevencion_versus_control_de_calidad",
+   "accion_correctiva_2"
+  ],
+  "trampa": "tipos_escalas_medicion",
+  "similitudes": {
+   "programa_cero_defectos": 0.773,
+   "falacia_problemas_diferentes": 0.772,
+   "critica_acceptable_quality_level": 0.771,
+   "prevencion_gestion_calidad": 0.77,
+   "prevencion_versus_control_de_calidad": 0.768,
+   "accion_correctiva_2": 0.767,
+   "tipos_escalas_medicion": 0.327
+  },
+  "juicios": [
+   {
+    "desde": "tipos_escalas_medicion",
+    "veredicto": "no_se_sostiene",
+    "razon": "Clasificar variables por escala de medición es técnica estadística previa y no lleva a aceptar la falla como inevitable."
+   },
+   {
+    "desde": "programa_cero_defectos",
+    "veredicto": "sostiene",
+    "razon": "Quien persigue cero defectos cae justo en la condición del destino (eliminar el riesgo sin mirar el costo) y el destino le da el contrapeso del costo beneficio y la detección."
+   },
+   {
+    "desde": "falacia_problemas_diferentes",
+    "veredicto": "no_se_sostiene",
+    "razon": "Reconocer que los principios de calidad son universales no tiene relación directa con aceptar una tasa de falla."
+   },
+   {
+    "desde": "critica_acceptable_quality_level",
+    "veredicto": "debil",
+    "razon": "Comparten el tema de la tasa de falla tolerable, pero la candidata rechaza aceptar fallas de antemano y el destino lo propone, así que el paso es más un contrapunto que una continuación."
+   },
+   {
+    "desde": "prevencion_gestion_calidad",
+    "veredicto": "debil",
+    "razon": "La prevención deja abierto qué hacer con la falla que igual ocurre, pero el vínculo es general y no un paso natural claro."
+   },
+   {
+    "desde": "accion_correctiva_2",
+    "veredicto": "debil",
+    "razon": "Ambas tratan de gestionar fallas, pero la acción correctiva supone ya detectarlas; aceptar y detectar activamente iría más bien antes."
+   },
+   {
+    "desde": "prevencion_versus_control_de_calidad",
+    "veredicto": "debil",
+    "razon": "Enfocar la calidad en prevenir se relaciona con asumir que la falla existe, pero la conexión es indirecta."
+   }
+  ]
+ },
+ {
+  "caso": 103,
+  "mundo": "seguridad_digital",
+  "destino": "gestion_riesgo_seguridad_ia",
+  "candidatas": [
+   "csf_funcion_detect",
+   "identify_mapeo_datos",
+   "funcion_protect_politica_seguridad",
+   "csf_funcion_identify",
+   "funcion_respond_plan_incidentes",
+   "funcion_detect_monitoreo_red"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "csf_funcion_detect": 0.582,
+   "identify_mapeo_datos": 0.579,
+   "funcion_protect_politica_seguridad": 0.577,
+   "csf_funcion_identify": 0.574,
+   "funcion_respond_plan_incidentes": 0.571,
+   "funcion_detect_monitoreo_red": 0.559
+  },
+  "juicios": [
+   {
+    "desde": "funcion_protect_politica_seguridad",
+    "veredicto": "debil",
+    "razon": "Una política y controles generales de ciberseguridad pueden extenderse a los riesgos propios de la IA, pero no lleva naturalmente a prompt injection."
+   },
+   {
+    "desde": "funcion_detect_monitoreo_red",
+    "veredicto": "no_se_sostiene",
+    "razon": "Monitorear la red y los dispositivos es un tema distinto a mitigar la manipulación de un sistema de IA."
+   },
+   {
+    "desde": "csf_funcion_detect",
+    "veredicto": "no_se_sostiene",
+    "razon": "Detectar ataques con antivirus y monitoreo no deja abierto el riesgo específico de los modelos de IA generativa."
+   },
+   {
+    "desde": "identify_mapeo_datos",
+    "veredicto": "debil",
+    "razon": "Mapear datos y riesgos de privacidad toca el acceso de la IA a datos, pero el paso a prompt injection y jailbreaking es indirecto."
+   },
+   {
+    "desde": "csf_funcion_identify",
+    "veredicto": "debil",
+    "razon": "El registro de riesgos puede incluir el sistema de IA como activo, pero solo aplica si el negocio integra IA y no es el paso natural general."
+   },
+   {
+    "desde": "funcion_respond_plan_incidentes",
+    "veredicto": "no_se_sostiene",
+    "razon": "El plan de respuesta a incidentes llega después del ataque; el destino es de planificación previa y trata otro tipo de riesgo."
+   }
+  ]
+ },
+ {
+  "caso": 201,
+  "mundo": "primer_equipo",
+  "destino": "repartir_supervision_puesto_funcional_mision",
+  "candidatas": [
+   "reemplazarse_trabajo_propio",
+   "ceder_control_reforzar_competencia_claridad",
+   "transmitir_objetivos_prioridades_preferencias",
+   "minimizar_impuesto_colaboracion_equipo",
+   "alinear_prioridades_reporte_directivo",
+   "decidir_directivo_no_encaja_papel"
+  ],
+  "trampa": "visualizar_recuperar_confianza",
+  "similitudes": {
+   "reemplazarse_trabajo_propio": 0.636,
+   "ceder_control_reforzar_competencia_claridad": 0.635,
+   "transmitir_objetivos_prioridades_preferencias": 0.635,
+   "minimizar_impuesto_colaboracion_equipo": 0.628,
+   "alinear_prioridades_reporte_directivo": 0.627,
+   "decidir_directivo_no_encaja_papel": 0.626,
+   "visualizar_recuperar_confianza": 0.25
+  },
+  "juicios": [
+   {
+    "desde": "reemplazarse_trabajo_propio",
+    "veredicto": "no_se_sostiene",
+    "razon": "Delegar el trabajo propio para ganar capacidad es un hábito personal del jefe y no lleva a diseñar la doble dependencia de un puesto entre grupo funcional y unidad de misión."
+   },
+   {
+    "desde": "ceder_control_reforzar_competencia_claridad",
+    "veredicto": "debil",
+    "razon": "Comparte la idea de repartir el control y cuidar la competencia técnica, pero trata un cambio de modelo de liderazgo, no el reparto de la supervisión en una estructura híbrida, y además vuelve de ejecución a planificación."
+   },
+   {
+    "desde": "minimizar_impuesto_colaboracion_equipo",
+    "veredicto": "no_se_sostiene",
+    "razon": "Cargar con el impuesto de colaboración para liberar tiempo del equipo es gestión del tiempo del jefe, un tema distinto al de a quién responde un puesto y qué supervisa cada jefe."
+   },
+   {
+    "desde": "visualizar_recuperar_confianza",
+    "veredicto": "no_se_sostiene",
+    "razon": "Recuperar la confianza con visualización es un recurso personal de ánimo sin relación con el diseño de la supervisión de un puesto."
+   },
+   {
+    "desde": "transmitir_objetivos_prioridades_preferencias",
+    "veredicto": "debil",
+    "razon": "Transmitir prioridades a los subordinados roza lo que hace el jefe de misión, pero no deja abierta la pregunta de la doble dependencia, y el destino es de una fase anterior."
+   },
+   {
+    "desde": "alinear_prioridades_reporte_directivo",
+    "veredicto": "debil",
+    "razon": "Alinear prioridades con cada persona a cargo se parece a una de las funciones del jefe de misión, pero es una práctica de reuniones individuales y no conduce de forma natural a diseñar el reparto entre dos jefes."
+   },
+   {
+    "desde": "decidir_directivo_no_encaja_papel",
+    "veredicto": "no_se_sostiene",
+    "razon": "Decidir si un directivo que falla sigue en su papel no abre el tema de repartir la supervisión de un puesto entre su grupo funcional y su división."
+   }
+  ]
+ },
+ {
+  "caso": 202,
+  "mundo": "seguridad_digital",
+  "destino": "gestion_riesgo_seguridad_ia",
+  "candidatas": [
+   "nist_privacy_framework_introduccion",
+   "estrategia_gestion_riesgo_tolerancia",
+   "csf_funcion_recover",
+   "csf_funcion_protect",
+   "getting_started_supply_chain_risk_management",
+   "respuesta_incidentes_cui"
+  ],
+  "trampa": null,
+  "similitudes": {
+   "nist_privacy_framework_introduccion": 0.556,
+   "estrategia_gestion_riesgo_tolerancia": 0.556,
+   "csf_funcion_recover": 0.553,
+   "csf_funcion_protect": 0.55,
+   "getting_started_supply_chain_risk_management": 0.547,
+   "respuesta_incidentes_cui": 0.544
+  },
+  "juicios": [
+   {
+    "desde": "getting_started_supply_chain_risk_management",
+    "veredicto": "debil",
+    "razon": "Un modelo de IA de terceros puede verse como un componente suministrado, pero el SCRM se centra en proveedores de contratistas federales y no conduce de forma natural a la inyección de instrucciones ni al jailbreaking."
+   },
+   {
+    "desde": "respuesta_incidentes_cui",
+    "veredicto": "no_se_sostiene",
+    "razon": "El plan de respuesta a incidentes para CUI es reactivo y específico de contratos federales; la mitigación preventiva de riesgos de IA tendría que ir antes y es otro tema."
+   },
+   {
+    "desde": "estrategia_gestion_riesgo_tolerancia",
+    "veredicto": "debil",
+    "razon": "Definir la tolerancia al riesgo prepara cualquier plan de mitigación, pero es un marco general y pasar de ahí a la seguridad de la IA en concreto solo tiene sentido si el negocio usa IA."
+   },
+   {
+    "desde": "csf_funcion_recover",
+    "veredicto": "no_se_sostiene",
+    "razon": "La recuperación tras un ataque es el final del ciclo del incidente; el plan preventivo de riesgos de IA antes del lanzamiento va antes y es otro tema."
+   },
+   {
+    "desde": "nist_privacy_framework_introduccion",
+    "veredicto": "no_se_sostiene",
+    "razon": "Entender el marco de privacidad para datos personales no lleva de forma natural a la manipulación de sistemas de IA mediante inyección de instrucciones o jailbreaking."
+   },
+   {
+    "desde": "csf_funcion_protect",
+    "veredicto": "debil",
+    "razon": "Ambas tratan salvaguardas preventivas, pero Protect cubre controles genéricos como MFA y respaldos, no ataques propios de la IA, y la arista vuelve de ejecución a planificación."
+   }
+  ]
+ }
+]

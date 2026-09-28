@@ -25,7 +25,6 @@
     "planificacion_economica_conjunta",
     "control_del_proceso_del_proveedor",
     "gestion_instalaciones",
-    "modelo_simulacion_cadena_suministro_circular",
     "vehiculos_autonomos_drones_supply_chain"
   ],
   "condiciones_activacion": [
@@ -61,6 +60,19 @@
         "motivo": "La gestion de pedidos hacia el cliente y la planificacion del abastecimiento con proveedores son procesos distintos; solo comparten la etiqueta de cadena de suministro."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-muralla-015",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "planificacion_cadena_suministro -> modelo_simulacion_cadena_suministro_circular",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

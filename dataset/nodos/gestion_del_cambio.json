@@ -13,7 +13,7 @@
   ],
   "entregable_esperado": "Sistema documentado de gestión de cambios con flujo de aprobación claro y ágil",
   "nodos_previos": [
-    "evaluacion_gestion_riesgos"
+    "sistema_gestion_calidad"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -37,6 +37,32 @@
         "motivo": "El uso humano y responsable de la IA en el equipo no se continua en un sistema para gestionar cambios de producto, proveedor o regulacion; solo coinciden en la palabra cambio."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-muralla-010",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "evaluacion_gestion_riesgos -> gestion_del_cambio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-arista-14",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "sistema_gestion_calidad -> gestion_del_cambio",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de quality: 'gestion_del_cambio' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "La gestión del cambio es un componente del sistema de calidad; una vez mapeado ese sistema, sumar un flujo ágil para aprobar cambios es un paso natural."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

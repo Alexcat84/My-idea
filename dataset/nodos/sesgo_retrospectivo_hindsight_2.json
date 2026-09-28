@@ -19,7 +19,6 @@
   "nodos_siguientes": [
     "analisis_factores_distales_proximales",
     "fijacion_cognitiva",
-    "cuanto_sabes_y_cuanto_solo_crees",
     "cultura_generativa_westrum",
     "revision_de_aprendizaje"
   ],
@@ -69,6 +68,19 @@
         "evidencia": "F12-018: Investigar incidentes y errores ya ocurridos para aprender de ellos es gestion operativa, no validacion con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-muralla-022",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "sesgo_retrospectivo_hindsight_2 -> cuanto_sabes_y_cuanto_solo_crees",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ],
   "fuentes_internas": [

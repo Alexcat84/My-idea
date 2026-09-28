@@ -20,10 +20,8 @@
     "matriz_riesgo_conocido_desconocido"
   ],
   "nodos_siguientes": [
-    "gestion_del_cambio",
     "comunicacion_del_riesgo",
     "evitacion_del_riesgo",
-    "aceptacion_de_fallas_como_inevitables",
     "equipo_de_gestion_de_crisis",
     "plan_b_antes_de_necesitarlo"
   ],
@@ -72,6 +70,32 @@
         "evidencia": "Juran's Quality Handbook, lineas 12478; 12691: \"Use the list of concerns and options tempered by consideration of the consequences, the cost/benefit and future impact to develop a list of real actions and projects that we can and will do. [...] We identify the action or project, the name of the person who is responsible and the date it is due.\". Los pasos y la condicion 3 cubren la etapa de gestion que el libro pone DESPUES de puntuar (seccion Managing Risk, linea 12478; paso 6 del procedimiento, linea 12691). El score severidad x probabilidad es el paso 4 del libro (linea 12683), un insumo previo que ningun paso del nodo calcula. Se corrige el entregable para que la priorizacion sea entrada y el producto sea la lista de acciones con responsable y fecha, que el libro llama 'the real purpose of doing a risk assessment'. Se toma la redaccion del lector A (mas corta) con la cita doble del lector B."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro."
+    },
+    {
+      "id": "final-muralla-009",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "evaluacion_gestion_riesgos -> aceptacion_de_fallas_como_inevitables",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-muralla-010",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "evaluacion_gestion_riesgos -> gestion_del_cambio",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

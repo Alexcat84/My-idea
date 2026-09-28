@@ -17,7 +17,8 @@
   "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas",
   "nodos_previos": [
     "gestion_pedidos_order_management",
-    "gestion_inventario"
+    "gestion_inventario",
+    "elegir_modo_transporte_volumen_distancia"
   ],
   "nodos_siguientes": [
     "colaboracion_transporte_ctm",
@@ -82,6 +83,19 @@
         "evidencia": "D-08: Diseñar rutas milk run con EOQ y matriz de ahorros es ruteo de transporte avanzado que solo necesita quien opera distribución a fondo. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-arista-05",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "elegir_modo_transporte_volumen_distancia -> programacion_entregas_delivery_scheduling",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de entrega: 'programacion_entregas_delivery_scheduling' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Tras elegir el modo según tamaño de envío, lo siguiente es decidir si cada carga va directa o se consolida en milk run según la capacidad del modo."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

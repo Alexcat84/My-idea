@@ -17,8 +17,7 @@
   ],
   "nodos_siguientes": [
     "evaluacion_encuesta_calidad_proveedor",
-    "planificacion_cadena_suministro",
-    "estandarizacion_codigos_producto_epc"
+    "planificacion_cadena_suministro"
   ],
   "condiciones_activacion": [
     "Cuando se define la estrategia de abastecimiento para una categoría de compra"
@@ -26,5 +25,20 @@
   "etiqueta_arbol": "Elige Uno o Varios Proveedores",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-muralla-020",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "seleccion_fuente_unica_multiple -> estandarizacion_codigos_producto_epc",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    }
   ]
 }

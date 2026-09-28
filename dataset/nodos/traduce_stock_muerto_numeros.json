@@ -16,7 +16,9 @@
   "nodos_previos": [
     "conoce_insumos_vitales"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "clasifica_tu_inventario"
+  ],
   "condiciones_activacion": [
     "Tienes mercancía guardada hace meses que no se ha vendido y no sabes si liquidarla.",
     "Alguien te dice que no vendas con pérdida porque ya está pagado.",
@@ -25,5 +27,20 @@
   "etiqueta_arbol": "Calcula el costo del stock muerto",
   "fuentes_internas": [
     "Max Muller, Essentials of Inventory Management"
+  ],
+  "correcciones": [
+    {
+      "id": "final-arista-04",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "traduce_stock_muerto_numeros -> clasifica_tu_inventario",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de compras: 'clasifica_tu_inventario' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Después de ver en dinero lo que cuesta el stock muerto, clasificar el inventario y fijarle una meta es el paso lógico para liberar capital sin repetir el problema."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    }
   ]
 }

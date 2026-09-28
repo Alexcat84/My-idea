@@ -14,8 +14,8 @@
   ],
   "entregable_esperado": "Contrato firmado con proveedor especificando precios, términos de servicio, penalizaciones y condiciones de pago",
   "nodos_previos": [
-    "alcance_profundo_cadena_suministro",
-    "seleccion_de_proveedores_por_costo_total"
+    "seleccion_de_proveedores_por_costo_total",
+    "prepara_posicion_agenda_antes_negociar"
   ],
   "nodos_siguientes": [
     "gestion_contratos_desempeno",
@@ -82,6 +82,32 @@
         "evidencia": "D-35: Tenia razon el lector B: el bloque no trata de elegir o tratar con un proveedor en general, sino de negociar contratos formales que comparan el precio unitario con servicios de valor agregado (conexiones electronicas, entregas frecuentes), fijan metas de desempeno con penalizaciones y cuidan la etiqueta intercultural; quien abre una app, un servicio o una tienda pequena saca adelante su negocio sin ese nivel contractual de especialista, que es justo lo que profundiza el mundo de compras. (arbitro)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-muralla-001",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "alcance_profundo_cadena_suministro -> negociacion_contratos_proveedores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (environmental -> compras): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-arista-02",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "prepara_posicion_agenda_antes_negociar -> negociacion_contratos_proveedores",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de compras: 'negociacion_contratos_proveedores' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Con objetivos priorizados y agenda lista, el paso natural es la negociación misma que termina en el contrato firmado."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ]
 }

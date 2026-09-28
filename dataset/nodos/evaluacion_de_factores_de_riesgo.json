@@ -13,8 +13,7 @@
   ],
   "entregable_esperado": "Una lista de tus riesgos, ordenada del más urgente al menos urgente, con una nota breve de por qué cada uno quedó en ese lugar.",
   "nodos_previos": [
-    "identificacion_de_riesgos",
-    "prevencion_de_groupthink_en_evaluacion_de_riesgos"
+    "identificacion_de_riesgos"
   ],
   "nodos_siguientes": [
     "matriz_riesgo_conocido_desconocido",
@@ -54,6 +53,19 @@
         "evidencia": "Q078-021: Evaluar severidad, probabilidad y urgencia de riesgos para priorizarlos es gestion de riesgos, no gestion de la calidad. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "final-muralla-016",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prevencion_de_groupthink_en_evaluacion_de_riesgos -> evaluacion_de_factores_de_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (quality -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

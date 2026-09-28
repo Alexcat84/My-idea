@@ -19,7 +19,6 @@
   ],
   "nodos_siguientes": [
     "optimizacion_tecnologia_cadena_suministro",
-    "negociacion_contratos_proveedores",
     "identificacion_proveedores_criticos"
   ],
   "condiciones_activacion": [
@@ -80,6 +79,19 @@
         "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en seleccion_de_proveedores_por_costo_total."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "final-muralla-001",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "alcance_profundo_cadena_suministro -> negociacion_contratos_proveedores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (environmental -> compras): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

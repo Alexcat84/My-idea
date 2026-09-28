@@ -20,7 +20,8 @@
   ],
   "entregable_esperado": "Una idea calibrada de cómo es el candidato ideal para ese puesto, sacada de hablar con gente que conoce el oficio y con tu propio equipo, antes de decidir.",
   "nodos_previos": [
-    "proceso_contratacion_ejecutivos_sin_experiencia"
+    "proceso_contratacion_ejecutivos_sin_experiencia",
+    "repartir_responsabilidad_contratar_equipo"
   ],
   "nodos_siguientes": [
     "describir_candidato_ideal_precision",
@@ -374,6 +375,19 @@
       "motivos": [
         "regionalismo"
       ]
+    },
+    {
+      "id": "final-arista-12",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "repartir_responsabilidad_contratar_equipo -> investigar_antes_contratar_lideres",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'investigar_antes_contratar_lideres' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Cuando el equipo necesita más directivos, contratarlos bien exige investigar antes cómo es el líder ideal; la vuelta de fase tiene razón clara."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "Investiga Antes de Contratar Líderes",

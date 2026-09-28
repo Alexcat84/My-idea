@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Resolución de Problemas de Pago en Comercio Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en el momento de la fuente, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+  "resumen_teorico": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
   "pasos_accionables": [
     "Contactar y negociar directamente con el comprador si no te paga",
     "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Resuelve Problemas de Pago",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-voz-3-04",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en el momento de la fuente, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+      "texto_nuevo": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+      "cita": {
+        "regla": "voz de libro fuera de lo que ve la persona (decisiones del fundador, 26 y 28 sep 2026; auditoria final, G6); variante 'al momento de la fuente' cazada al leer un nodo trampa y anadida a la guarda (web/lib/i18n/frasesProhibidas.ts)",
+        "fragmentos": [
+          "en el momento de la fuente"
+        ]
+      },
+      "decision": "'al momento de la fuente' es voz de libro: pasa a 'en su momento'; el aviso de verificar la norma vigente se conserva",
+      "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guarda G6"
+    }
   ]
 }

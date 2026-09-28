@@ -18,9 +18,7 @@
     "errores_como_consecuencia"
   ],
   "nodos_siguientes": [
-    "tripod_delta_general_failure_types",
-    "como_sabes_que_tu_metodo_sirve",
-    "gestionar_el_riesgo_es_de_adultos"
+    "tripod_delta_general_failure_types"
   ],
   "condiciones_activacion": [
     "Al decidir cómo responder a un error humano detectado",
@@ -54,6 +52,32 @@
         "motivo": "Los dos lectores de la pasada P juzgaron debil este puente: los conflictos entre cofundadores no llevan al enfoque situacional de la seguridad."
       },
       "decision": "Decisiones del fundador del 27 sep 2026, punto 2: se rechaza el puente."
+    },
+    {
+      "id": "final-muralla-006",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "enfoque_situacional_vs_personal -> como_sabes_que_tu_metodo_sirve",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-muralla-007",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "enfoque_situacional_vs_personal -> gestionar_el_riesgo_es_de_adultos",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "auditoria final, navegacion sin IA: scripts/auditoria_final/navegacion.py, murallas de dominio (docs/ACTA_SANEAMIENTO_FINAL.md, seccion 4)",
+        "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
     }
   ]
 }

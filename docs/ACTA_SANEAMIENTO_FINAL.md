@@ -143,6 +143,79 @@ patrones, con su prueba en rojo primero.
   todo nodo vivo tiene vector, con la dimensión del índice, y los vectores nuevos son los de los nodos corregidos.
 - **Certificación:** solo con todo en PASA, esta acta abre con "DATASET CERTIFICADO" y la fecha.
 
-## 6. Resultados
+## 6. Resultados (medida 1, 28 sep 2026)
 
-_Pendiente: se rellenan al medir._
+### 6.1 Guardas y navegación (100 % del catálogo)
+
+| # | Guarda | Primera medida | Corrección por la doctrina | Estado |
+|---|---|---|---|---|
+| G1 | Gate 0 | OK | tras retirar las murallas: 3 componentes y OP-C-05 con 3 pares mutuos sin cita; tras las aristas y el registro de los 3 pares (clase C, LD-FINAL-001 a 003): OK | **PASA** |
+| G2 | Alcanzabilidad | núcleo 1.410 de 1.410; mundos: 65 nodos de 7 mundos sin alcanzar desde sus puertas | 19 aristas verificadas a ciegas, en 3 rondas y con 8 de 8 trampas cazadas (tandas `final-aristas-1` y `final-aristas-2`). Quedan 2: `repartir_supervision_puesto_funcional_mision` (mundo 11) y `gestion_riesgo_seguridad_ia` (seguridad digital); ninguna de sus 18 candidatas se sostuvo | **NO PASA** (2 nodos) |
+| G3 | Ley del ancla | 0 anclas con más de 2 puentes del mismo mundo | — | **PASA** |
+| G4 | Aristas a deprecados | 0 | — | **PASA** |
+| — | Murallas de dominio | 23 aristas entre dos mundos | retiradas (tanda `final-murallas`, 37 nodos): el acoplamiento mundo a mundo está prohibido (AUD-08) y ninguna sesión las recorre (AUD-09 M16) | **PASA** |
+| G5 | Títulos y autores | en verde | — | **PASA** |
+| G6 y G7 | Voz de libro y marcas | la guarda no cazaba la voz de exposición ni la etiqueta interna del aviso jurisdiccional; extendida con prueba en rojo, cazó 65 nodos | 3 tandas VOZ: `final-voz` (53 vivos), `final-voz-deprecados` (8) y `final-voz-3` (4, "al momento de la fuente") | **PASA** |
+| G8 | Jurisdicción sin clase | 0 | — | **PASA** (U11) |
+| G9 | Vigencia de traducciones | en verde (`web/lib/i18n/etiquetasVigencia.test.ts`); ninguna etiqueta cambió | — | **PASA** |
+| G10 | Nada interno en el navegador | en verde | — | **PASA** |
+| G11 | Puentes tejidos | en verde | — | **PASA** |
+| G12 | Suites, tsc e índice | en verde; todo nodo vivo tiene vector | los 65 nodos corregidos esperan su vector nuevo de Voyage | **PASA** con el re-embebido pendiente |
+
+**Sobre los 11 nodos antiguos con voz de libro del encargo:** el barrido previo, con el criterio escrito en la sección 2,
+encontró 15 que hablan de su fuente o se exponen como libro. El resto de apariciones de "el texto", "el material" o
+"capítulo" eran usos legítimos: el texto de una garantía, un material físico, el capítulo de un tratado. La lista está en
+la tanda `final-voz` y en el commit 059422b8.
+
+### 6.2 Muestra (200 nodos, 20 lotes)
+
+- **Lectura:** los 220 nodos (200 de la muestra y 20 trampas) se cotejaron contra su libro; ninguno quedó sin pasaje.
+- **Árbitro:** de 465 defectos marcados en nodos de la muestra, confirmó 406, reclasificó 5 y rechazó 54.
+- **Trampas:** los lectores cazaron 19 de 20.
+  - La de matiz del lote 20 (`funcion_identify_inventario_activos`: "una lista completa de todo el equipo, software y
+    datos" pasa a "una lista del equipo y el software") no la cazaron ni el primer lector ni el segundo, que por la
+    regla fijada antes releyó el lote entero.
+  - **FALLO DE MÉTODO DECLARADO en el criterio matiz:** los lectores dejan pasar parte de los matices, así que la tasa
+    de matiz es un mínimo.
+- Evidencia en `docs/auditoria_final/`: defectos arbitrados, clave de trampas, aristas verificadas e instrucciones.
+
+| # | Criterio | Confirmado en la muestra | Tasa | IC 95 % | Umbral | Veredicto |
+|---|---|---|---|---|---|---|
+| U1 | Contrarios | 4 | | | 0 | **NO PASA** |
+| U2 | Invenciones | 25 | | | 0 | **NO PASA** |
+| U3 | Fase | 10 nodos | 5,0 % | 2,7 a 9,0 % | ≤ 3 % | **NO PASA** |
+| U4 | Dominio | 3 nodos | 1,5 % | 0,5 a 4,3 % | ≤ 2 % | **PASA** |
+| U5 | Condiciones | 6 nodos | 3,0 % | 1,4 a 6,4 % | ≤ 2 % | **NO PASA** |
+| U6 | Etiquetas | 12 nodos | 6,0 % | 3,5 a 10,2 % | ≤ 2 % | **NO PASA** |
+| U7 | Ortografía | 39 nodos | 19,5 % | 14,6 a 25,5 % | ≤ 1 % | **NO PASA** |
+| U8 | Matices perdidos | 99 | 0,50 por nodo | 0,40 a 0,60 | ≤ 0,2 | **NO PASA** (y es un mínimo) |
+| U9 | Calcos | 144 | 0,72 por nodo | 0,61 a 0,85 | ≤ 0,2 | **NO PASA** |
+| U10 | Regionalismos o glosario | 5 | 0,025 por nodo | 0,008 a 0,058 | ≤ 0,2 | **PASA** |
+
+**Por espacio**, defectos confirmados. Solo el mundo 11, el único que pasó la certificación de contenido completa
+(`docs/INTEGRACION_MUNDO_11.md`, sección 2), sale limpio.
+
+| Espacio | Nodos | Contr. | Inv. | Matiz | Calco | Ortog. | Fase | Cond. | Etiq. |
+|---|---|---|---|---|---|---|---|---|---|
+| core | 45 | 1 | 8 | 23 | 53 | 21 | 2 | 5 | 6 |
+| quality | 27 | 0 | 4 | 9 | 10 | 19 | 0 | 0 | 1 |
+| primer_equipo (mundo 11) | 22 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1 |
+| environmental | 17 | 2 | 2 | 5 | 14 | 11 | 1 | 0 | 0 |
+| health_safety | 16 | 0 | 0 | 7 | 10 | 0 | 0 | 0 | 3 |
+| franquicias | 14 | 0 | 0 | 13 | 14 | 3 | 2 | 2 | 0 |
+| exportacion | 13 | 0 | 1 | 12 | 9 | 10 | 1 | 0 | 0 |
+| entrega | 12 | 1 | 7 | 7 | 5 | 13 | 1 | 0 | 0 |
+| risk_management | 12 | 0 | 1 | 7 | 0 | 0 | 1 | 0 | 0 |
+| compras | 11 | 0 | 1 | 7 | 5 | 20 | 2 | 0 | 1 |
+| seguridad_digital | 11 | 0 | 1 | 9 | 23 | 5 | 0 | 0 | 0 |
+
+### 6.3 Veredicto de la medida 1
+
+**NO CERTIFICADO.**
+- **No pasan en la muestra:** U1, U2, U3, U5, U6, U7, U8 y U9.
+- **No pasa en la navegación:** G2, con 2 nodos.
+
+Lo demás pasa. Los defectos de contenido no son de unos pocos nodos: se reparten por los 10 espacios que no pasaron la
+certificación del mundo 11. Por la doctrina, corregir solo los 200 nodos de la muestra no bastaría, porque la próxima
+muestra, con semilla nueva, volvería a caer. El remedio es el método que certificó el mundo 11, aplicado a los 3.169
+nodos vivos restantes. Su alcance y su coste los decide el fundador antes de empezar.

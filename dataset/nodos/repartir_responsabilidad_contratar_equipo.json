@@ -22,7 +22,8 @@
     "pasar_direccion_directa_indirecta"
   ],
   "nodos_siguientes": [
-    "formar_equipo_practicas_metodo"
+    "formar_equipo_practicas_metodo",
+    "investigar_antes_contratar_lideres"
   ],
   "condiciones_activacion": [
     "Cuando tu equipo crece hasta necesitar más directivos y ya no es sostenible que estés en cada entrevista ni que seas el voto decisivo en cada puesta en común."
@@ -284,6 +285,19 @@
       "motivos": [
         "longitud"
       ]
+    },
+    {
+      "id": "final-arista-12",
+      "fecha": "2026-09-28",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "repartir_responsabilidad_contratar_equipo -> investigar_antes_contratar_lideres",
+      "cita": {
+        "instrumento": "auditoria final, alcanzabilidad desde las puertas de primer_equipo: 'investigar_antes_contratar_lideres' no se alcanzaba; verificacion ciega de aristas con trampas sin marca (6 de 6 cazadas), veredicto 'sostiene'; candidatas por parecido en el indice semantico existente",
+        "motivo": "Cuando el equipo necesita más directivos, contratarlos bien exige investigar antes cómo es el líder ideal; la vuelta de fase tiene razón clara."
+      },
+      "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
     }
   ],
   "etiqueta_arbol": "Reparte la Responsabilidad de Contratar",
