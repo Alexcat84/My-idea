@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Comunicación Proactiva en Puntos de Estrés del Cliente",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Identificar los momentos específicos donde el cliente puede sentir ansiedad, incertidumbre o frustración durante su interacción con la empresa, y comunicarse proactivamente para resolver esa preocupación antes de que el cliente tenga que preguntar. Esto convierte un momento de estrés en una experiencia memorable y de confianza.",
+  "resumen_teorico": "Identificar los momentos específicos donde el cliente puede sentir ansiedad, incertidumbre o frustración durante su interacción con la empresa, y comunicarse proactivamente para resolver esa preocupación antes de que el cliente tenga que preguntar. Esto puede convertir un momento de estrés en una experiencia memorable y de confianza.",
   "pasos_accionables": [
     "Mapear el recorrido del cliente e identificar momentos de alta incertidumbre o ansiedad.",
     "Diseñar mensajes automáticos o manuales que confirmen que todo va según lo planeado en esos momentos críticos.",
@@ -12,7 +12,7 @@
     "Medir el impacto de estas comunicaciones en la satisfacción del cliente.",
     "Documenta el proceso actual de atención postventa, paso a paso, desde el primer contacto hasta el seguimiento final",
     "Identifica los momentos de mayor ansiedad o incertidumbre de tu cliente y diseña acciones proactivas para esos momentos",
-    "Establece seguimientos programados (por ejemplo a las 2 horas, a las 24 horas, a los 7 días) sin esperar a que tu cliente se queje"
+    "Establece seguimientos programados en los momentos de estrés de tu cliente, sin esperar a que se queje"
   ],
   "entregable_esperado": "Lista de puntos de estrés identificados y sistema de notificaciones proactivas implementado para cada uno.",
   "nodos_previos": [
@@ -39,6 +39,39 @@
         "motivo": "El orden esta invertido: comunicar de forma proactiva en los puntos de estres del cliente supone ya conocer el segmento, asi que no lo prepara."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-045-comunicacion_proactiva_puntos_estres-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar los momentos específicos donde el cliente puede sentir ansiedad, incertidumbre o frustración durante su interacción con la empresa, y comunicarse proactivamente para resolver esa preocupación antes de que el cliente tenga que preguntar. Esto convierte un momento de estrés en una experiencia memorable y de confianza.",
+      "texto_nuevo": "Identificar los momentos específicos donde el cliente puede sentir ansiedad, incertidumbre o frustración durante su interacción con la empresa, y comunicarse proactivamente para resolver esa preocupación antes de que el cliente tenga que preguntar. Esto puede convertir un momento de estrés en una experiencia memorable y de confianza.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "3618",
+        "frase": "it can turn a moment of strife and despair into a moment of surprise"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede convertir el estrés en sorpresa y agrado; el nodo lo da como seguro.; Mismo endurecimiento del 'can' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-045-comunicacion_proactiva_puntos_estres-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece seguimientos programados (por ejemplo a las 2 horas, a las 24 horas, a los 7 días) sin esperar a que tu cliente se queje",
+      "texto_nuevo": "Establece seguimientos programados en los momentos de estrés de tu cliente, sin esperar a que se queje",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "3618-3622",
+        "frase": "address them before the customer even has a chance to ask you for help"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Los plazos de 2 horas, 24 horas y 7 días no están; el libro pide actuar en los puntos de estrés antes de que el cliente pida ayuda.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

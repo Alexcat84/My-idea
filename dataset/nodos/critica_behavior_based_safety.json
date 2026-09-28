@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Crítica a los Programas de Seguridad Basados en Comportamiento",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Los programas de seguridad basados en el comportamiento asumen que la mayoría de los incidentes son causados por actos inseguros de los trabajadores, colocando la responsabilidad en el individuo y no en las condiciones estructurales del trabajo. Preguntan quién es responsable en lugar de qué genera el riesgo. Suelen apoyarse en incentivos como premios o bonos, o en castigos como pérdida de beneficios y pruebas de drogas obligatorias, lo que desincentiva el reporte honesto de incidentes. Esto genera un clima de miedo, erosiona la solidaridad entre trabajadores y puede llevar a prácticas que estigmatizan a quienes se lesionan, como identificarlos visiblemente frente al resto del equipo.",
+  "resumen_teorico": "Los programas de seguridad basados en el comportamiento asumen que la mayoría de los incidentes son causados por actos inseguros de los trabajadores, colocando la responsabilidad en el individuo y no en las condiciones estructurales del trabajo. Preguntan quién es responsable en lugar de qué genera el riesgo. Algunas empresas los acompañan con incentivos como premios o bonos, o con castigos como pérdida de beneficios y pruebas de drogas obligatorias, lo que desincentiva el reporte honesto de incidentes. A veces esto viene con un clima de miedo, puede erosionar la solidaridad entre trabajadores y llevar a prácticas que estigmatizan a quienes se lesionan, como identificarlos visiblemente frente al resto del equipo.",
   "pasos_accionables": [
     "Audita los programas de incentivos de seguridad existentes para identificar si penalizan el reporte de lesiones, incluyendo premios grupales o pérdida de bonos",
     "Elimina premios grupales condicionados a la ausencia de reportes de incidentes",
@@ -83,6 +83,22 @@
         "evidencia": "Q066-023: Razon para B: el dominio ya es health_safety, asi que A se equivoco al marcarlo mal; la fase es ejecucion porque los pasos y las condiciones parten de un programa de incentivos que ya existe y lo auditan, eliminan practicas y sustituyen metricas, es decir mejoran la gestion operativa de un negocio en marcha. (arbitro)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-051-critica_behavior_based_safety-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los programas de seguridad basados en el comportamiento asumen que la mayoría de los incidentes son causados por actos inseguros de los trabajadores, colocando la responsabilidad en el individuo y no en las condiciones estructurales del trabajo. Preguntan quién es responsable en lugar de qué genera el riesgo. Suelen apoyarse en incentivos como premios o bonos, o en castigos como pérdida de beneficios y pruebas de drogas obligatorias, lo que desincentiva el reporte honesto de incidentes. Esto genera un clima de miedo, erosiona la solidaridad entre trabajadores y puede llevar a prácticas que estigmatizan a quienes se lesionan, como identificarlos visiblemente frente al resto del equipo.",
+      "texto_nuevo": "Los programas de seguridad basados en el comportamiento asumen que la mayoría de los incidentes son causados por actos inseguros de los trabajadores, colocando la responsabilidad en el individuo y no en las condiciones estructurales del trabajo. Preguntan quién es responsable en lugar de qué genera el riesgo. Algunas empresas los acompañan con incentivos como premios o bonos, o con castigos como pérdida de beneficios y pruebas de drogas obligatorias, lo que desincentiva el reporte honesto de incidentes. A veces esto viene con un clima de miedo, puede erosionar la solidaridad entre trabajadores y llevar a prácticas que estigmatizan a quienes se lesionan, como identificarlos visiblemente frente al resto del equipo.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3533-3546",
+        "frase": "A climate of fear and intimidation sometimes accompanies the implementation of behavior-based safety programs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el clima de miedo a veces acompaña a estos programas y pueden dañar la solidaridad.; Endurece: el libro dice que algunas empresas usan premios o bonos y otras castigos.; Misma marca: 'suelen' convierte ejemplos en norma.; Misma marca: efecto posible afirmado como seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

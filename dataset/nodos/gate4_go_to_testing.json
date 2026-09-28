@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gate 4: Go to Testing",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Es una revisión posterior al desarrollo que verifica que el trabajo técnico se completó con calidad, que el producto funciona (integridad técnica) y satisface los requerimientos del cliente. También revisa el análisis financiero actualizado y aprueba el plan de Testing/Validación para la siguiente etapa.",
+  "resumen_teorico": "Es una revisión posterior al desarrollo que verifica que el trabajo técnico se completó con calidad, que el producto funciona (integridad técnica) y satisface los requerimientos del cliente. También revisa el análisis financiero actualizado, aprueba el plan de Testing/Validación para la siguiente etapa y revisa los planes detallados de marketing y operaciones.",
   "pasos_accionables": [
     "Verificar que el producto cumple con integridad técnica basada en pruebas alfa",
     "Confirmar retroalimentación positiva del cliente sobre el prototipo",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Verifica Calidad Antes de Probar",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-056-gate4_go_to_testing-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una revisión posterior al desarrollo que verifica que el trabajo técnico se completó con calidad, que el producto funciona (integridad técnica) y satisface los requerimientos del cliente. También revisa el análisis financiero actualizado y aprueba el plan de Testing/Validación para la siguiente etapa.",
+      "texto_nuevo": "Es una revisión posterior al desarrollo que verifica que el trabajo técnico se completó con calidad, que el producto funciona (integridad técnica) y satisface los requerimientos del cliente. También revisa el análisis financiero actualizado, aprueba el plan de Testing/Validación para la siguiente etapa y revisa los planes detallados de marketing y operaciones.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3194",
+        "frase": "the detailed Marketing and Operations Plans are reviewed for probable future execution"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La puerta también revisa los planes detallados de marketing y operaciones para su ejecución futura; el resumen omite esa parte de la lista.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Validar que el problema identificado sea doloroso para un segmento amplio de clientes",
     "Probar si la solución propuesta resuelve el problema de forma convincente",
-    "Verificar alineación entre modelo de ingresos, precio y necesidades del cliente",
-    "Considerar mercados multi-sided donde puede haber múltiples propuestas de valor"
+    "Verificar alineación entre modelo de ingresos, precio, esfuerzos de adquisición de clientes y necesidades del cliente",
+    "Considerar mercados multi-sided donde puede haber múltiples propuestas de valor y múltiples segmentos de clientes"
   ],
   "entregable_esperado": "Evidencia documentada de que el problema y la solución encajan con el segmento objetivo",
   "nodos_previos": [
@@ -31,5 +31,41 @@
   "etiqueta_arbol": "Valida tu Ajuste Problema-Solución",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-problem_solution_fit-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar alineación entre modelo de ingresos, precio y necesidades del cliente",
+      "texto_nuevo": "Verificar alineación entre modelo de ingresos, precio, esfuerzos de adquisición de clientes y necesidades del cliente",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1546",
+        "frase": "only achieved when the revenue model, pricing, and customer acquisition efforts all match up"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro incluye los esfuerzos de adquisición de clientes y el paso la omite.; Mismo defecto: falta el tercer elemento de la enumeración, los esfuerzos de adquisición.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-problem_solution_fit-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar mercados multi-sided donde puede haber múltiples propuestas de valor",
+      "texto_nuevo": "Considerar mercados multi-sided donde puede haber múltiples propuestas de valor y múltiples segmentos de clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1546",
+        "frase": "in multi-sided markets, there may be multiple value propositions and multiple customer segments"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en mercados multi-sided puede haber múltiples propuestas de valor y múltiples segmentos; el paso pierde los segmentos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

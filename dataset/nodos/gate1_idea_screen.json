@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Primer filtro de la idea (Idea Screen)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Es la primera vez que decides comprometer recursos a un proyecto. Es un filtro suave: revisas tu idea contra unos requisitos obligatorios y otros deseables, relacionados con si encaja con tu rumbo, si es viable, qué tan grande es la oportunidad y qué ventaja tiene tu producto. Los criterios financieros normalmente no aplican aquí porque todavía sabes muy poco.",
+  "resumen_teorico": "Es la primera vez que decides comprometer recursos a un proyecto. Es un filtro suave: revisas tu idea contra unos requisitos obligatorios y otros deseables, relacionados con si encaja con tu rumbo, si es viable, qué tan grande es la oportunidad, qué ventaja tiene tu producto, si aprovecha tus recursos y si encaja con tus políticas. Los criterios financieros normalmente no aplican aquí porque todavía sabes muy poco.",
   "pasos_accionables": [
     "Escribe tu idea en una página, de forma simple y clara",
-    "Revisa tu idea contra una lista de requisitos obligatorios, respondiendo sí o no a cada uno",
+    "Revisa tu idea contra una lista de requisitos obligatorios, respondiendo sí o no a cada uno: todos deben ser sí, y un solo no basta para descartarla",
     "Revisa también, con tus propias palabras, qué tan atractivo es el mercado, qué ventaja tiene tu producto y qué tanto encaja con tu rumbo",
     "Decide junto con la persona que te ayuda, tanto en lo técnico como en lo comercial, si sigues adelante o no"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Filtra tu Idea Inicial",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-056-gate1_idea_screen-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es la primera vez que decides comprometer recursos a un proyecto. Es un filtro suave: revisas tu idea contra unos requisitos obligatorios y otros deseables, relacionados con si encaja con tu rumbo, si es viable, qué tan grande es la oportunidad y qué ventaja tiene tu producto. Los criterios financieros normalmente no aplican aquí porque todavía sabes muy poco.",
+      "texto_nuevo": "Es la primera vez que decides comprometer recursos a un proyecto. Es un filtro suave: revisas tu idea contra unos requisitos obligatorios y otros deseables, relacionados con si encaja con tu rumbo, si es viable, qué tan grande es la oportunidad, qué ventaja tiene tu producto, si aprovecha tus recursos y si encaja con tus políticas. Los criterios financieros normalmente no aplican aquí porque todavía sabes muy poco.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3020",
+        "frase": "ability to leverage the firm’s resources, and fit with company policies"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae seis temas; faltan aprovechar los recursos propios y el encaje con las políticas.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-056-gate1_idea_screen-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa tu idea contra una lista de requisitos obligatorios, respondiendo sí o no a cada uno",
+      "texto_nuevo": "Revisa tu idea contra una lista de requisitos obligatorios, respondiendo sí o no a cada uno: todos deben ser sí, y un solo no basta para descartarla",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3036",
+        "frase": "the answers to all questions must be “yes”; a single “no” kills the project"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se pierde la regla de los requisitos obligatorios: todas las respuestas deben ser sí y un solo no descarta la idea.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

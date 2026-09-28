@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Prueba de la Solución con el Cliente",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Con entrevistas estructuradas puedes medir si quien te compra cree que tu producto resuelve un problema importante. Pregunta por el presupuesto (preguntas de 'muéstrame el dinero'), pregunta por el precio, pregunta por el canal de venta, y pregunta cómo es el proceso de compra, quién lo aprueba y quién lo mantiene y hace crecer (preguntas de 'conseguir, mantener y crecer'). El objetivo no es vender todavía, es construir un mapa aproximado de tu futura cartera de ventas (pipeline).",
+  "resumen_teorico": "Con entrevistas estructuradas puedes medir si quien te compra cree que tu producto resuelve un problema importante. Pregunta por el presupuesto (preguntas de 'muéstrame el dinero'), pregunta por el precio, pregunta por el canal de venta, y pregunta cómo es el proceso de compra, quién lo aprueba y quién participa (preguntas de 'conseguir, mantener y crecer'). El objetivo no es vender todavía, es construir un mapa aproximado de tu futura cartera de ventas (pipeline).",
   "pasos_accionables": [
-    "Amplía tu lista de contactos a por lo menos 10 clientes potenciales (más si es consumo)",
+    "Presenta tu solución a cada cliente calificado que escuchó tu presentación del problema y amplía tu lista con por lo menos 10 clientes potenciales nuevos si tu producto es complejo (más si es consumo)",
     "Usa preguntas de presupuesto: pregúntale '¿lo usarías si fuera gratis?' y '¿quién tiene el presupuesto?'",
-    "Explora los límites de precio proponiendo una cifra muy alta, toma la primera cifra que te dé el cliente como su presupuesto y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+    "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
     "Pregunta qué canal de distribución prefiere: tienda física, en línea, directo o a través de un distribuidor",
     "Pregunta cómo es el proceso interno de aprobación de compra de quien te compra",
     "Anota cada entrevista en una ficha (report card) con el mismo formato para poder comparar"
@@ -49,6 +49,56 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro coincide con el paso en proponer una cifra muy alta (\"Would you pay $1 million for our software?\"), pero no es el fundador quien baja la cifra: es el cliente quien responde con su primera cifra, que el libro toma como su presupuesto inmediato (L20852). Despues el libro manda empujar hacia arriba: servicios profesionales, gasto recurrente cada anio, el doble, el triple (L20862). El paso cambia la secuencia y pide ir bajando paso a paso hasta dar con lo que pagaria. Busque con Grep en todo el libro pasajes que apoyen bajar el precio de forma progresiva (lower the price, price down, work down, would you pay, how much would you pay) y no hay ninguno: el unico pasaje sobre los limites de precio es este, y va hacia arriba. El LECTOR A se quedo con la primera frase y no leyo la continuacion en L20862.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-013"
+    },
+    {
+      "id": "final-e1-049-prueba_solucion_con_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Con entrevistas estructuradas puedes medir si quien te compra cree que tu producto resuelve un problema importante. Pregunta por el presupuesto (preguntas de 'muéstrame el dinero'), pregunta por el precio, pregunta por el canal de venta, y pregunta cómo es el proceso de compra, quién lo aprueba y quién lo mantiene y hace crecer (preguntas de 'conseguir, mantener y crecer'). El objetivo no es vender todavía, es construir un mapa aproximado de tu futura cartera de ventas (pipeline).",
+      "texto_nuevo": "Con entrevistas estructuradas puedes medir si quien te compra cree que tu producto resuelve un problema importante. Pregunta por el presupuesto (preguntas de 'muéstrame el dinero'), pregunta por el precio, pregunta por el canal de venta, y pregunta cómo es el proceso de compra, quién lo aprueba y quién participa (preguntas de 'conseguir, mantener y crecer'). El objetivo no es vender todavía, es construir un mapa aproximado de tu futura cartera de ventas (pipeline).",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20894",
+        "frase": "Walk me through the approval cycle. Who is involved?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Esas preguntas del libro indagan el proceso de compra, el ciclo de aprobación y quién participa; quién lo mantiene y hace crecer es añadido.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-prueba_solucion_con_cliente-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Amplía tu lista de contactos a por lo menos 10 clientes potenciales (más si es consumo)",
+      "texto_nuevo": "Presenta tu solución a cada cliente calificado que escuchó tu presentación del problema y amplía tu lista con por lo menos 10 clientes potenciales nuevos si tu producto es complejo (más si es consumo)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20817",
+        "frase": "Try to deliver this solution presentation to every qualified prospect who heard the problem presentation."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide presentar la solución a cada prospecto calificado de la ronda del problema y sumar al menos 10 contactos nuevos en productos complejos; el paso lo reduce a una lista de 10.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-prueba_solucion_con_cliente-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explora los límites de precio proponiendo una cifra muy alta, toma la primera cifra que te dé el cliente como su presupuesto y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+      "texto_nuevo": "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20852",
+        "frase": "first number out of their mouths was usually what they had in their immediate budget"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la primera cifra suele ser el presupuesto inmediato o el precio de compra inicial.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

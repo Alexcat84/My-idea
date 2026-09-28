@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Sostenibilidad Local y Uso de Materiales Autóctonos",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Toda sostenibilidad es local. Esto implica conectar los procesos de diseño con los flujos de materiales, costumbres y energía específicos de una región. Utilizar materiales locales no solo evita el bioinvasión (transporte de especies invasoras) y reduce la huella de transporte, sino que también genera actividad económica local y refuerza la conexión cultural de la comunidad con su entorno construido.",
+  "resumen_teorico": "Toda sostenibilidad es local. Esto implica conectar los procesos de diseño con los flujos de materiales, costumbres y energía específicos de una región. Utilizar materiales locales no solo evita la bioinvasión (transporte de especies invasoras), sino que también genera actividad económica local y refuerza la conexión cultural de la comunidad con su entorno construido.",
   "pasos_accionables": [
     "Priorizar la búsqueda de proveedores y materiales (arcilla, fibras, madera) dentro de un radio geográfico cercano.",
     "Investigar técnicas de construcción tradicionales (vernáculas) de la región para adaptarlas al diseño actual.",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Piensa en Local, Usa lo Propio",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-sostenibilidad_local_y_materiales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Toda sostenibilidad es local. Esto implica conectar los procesos de diseño con los flujos de materiales, costumbres y energía específicos de una región. Utilizar materiales locales no solo evita el bioinvasión (transporte de especies invasoras) y reduce la huella de transporte, sino que también genera actividad económica local y refuerza la conexión cultural de la comunidad con su entorno construido.",
+      "texto_nuevo": "Toda sostenibilidad es local. Esto implica conectar los procesos de diseño con los flujos de materiales, costumbres y energía específicos de una región. Utilizar materiales locales no solo evita la bioinvasión (transporte de especies invasoras), sino que también genera actividad económica local y refuerza la conexión cultural de la comunidad con su entorno construido.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "739",
+        "frase": "Using local materials opens the doors to profitable local enterprise. It also avoids"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje sobre materiales locales da como beneficios la empresa local y evitar la bioinvasión; la huella de transporte no aparece.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

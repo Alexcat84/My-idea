@@ -6,11 +6,11 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Es una manera de reunir distintas miradas de tu negocio (retener a tu gente, conseguir clientes, mantenerlos contentos, cuidar tu reputación, cumplir tus compromisos de responsabilidad social) para armar un sistema de puntos que pese tus iniciativas ambientales. Te sirve cuando tienes que comparar proyectos con un retorno financiero parecido, usando criterios que los números solos no capturan, y respalda tu decisión porque nace de varias miradas expertas.",
   "pasos_accionables": [
-    "Reúne a un grupo variado de personas que conozcan distintas partes de tu negocio (ventas, marketing, personas, proveedores).",
+    "Reúne a un grupo variado de personas con influencia y credibilidad en tu negocio, que conozcan distintas partes de él (ventas, marketing, personas, proveedores).",
     "Comparte con ellas una lista inicial de costos y beneficios relacionados con lo ambiental.",
     "Ajusta esa lista junto con ellas y decidan qué peso darle a cada punto según qué tan importante es para tu negocio.",
     "Aplica ese sistema de puntos a los proyectos que compiten por tu inversión.",
-    "Usa el puntaje ambiental para desempatar o para revisar con más cuidado un proyecto."
+    "Usa el puntaje ambiental para desempatar entre proyectos con retorno parecido, y revisa con más cuidado cualquier proyecto que saque cero puntos."
   ],
   "entregable_esperado": "Un sistema de puntos ponderados (eco model) que armas junto con distintas personas de tu negocio, listo para comparar proyectos entre sí.",
   "nodos_previos": [
@@ -154,6 +154,40 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-052-modelo_eco_criterios_ponderados-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reúne a un grupo variado de personas que conozcan distintas partes de tu negocio (ventas, marketing, personas, proveedores).",
+      "texto_nuevo": "Reúne a un grupo variado de personas con influencia y credibilidad en tu negocio, que conozcan distintas partes de él (ventas, marketing, personas, proveedores).",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "712-718",
+        "frase": "The model got traction quickly because of the credibility and diversity of the individuals"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro invita a un grupo influyente y atribuye la tracción del modelo a la credibilidad y diversidad de quienes lo crearon; el paso solo conserva la variedad.; Misma pérdida: el grupo del libro es influyente y creíble, no solo variado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-052-modelo_eco_criterios_ponderados-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa el puntaje ambiental para desempatar o para revisar con más cuidado un proyecto.",
+      "texto_nuevo": "Usa el puntaje ambiental para desempatar entre proyectos con retorno parecido, y revisa con más cuidado cualquier proyecto que saque cero puntos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "716",
+        "frase": "any proposed investment that scores zero eco-points gets subjected to added scrutiny"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro el escrutinio adicional se reserva a la inversión que saca cero puntos ecológicos, y el desempate es entre proyectos de retorno parecido; el paso deja ambos sin condición.; Misma condición perdida: más escrutinio solo para el proyecto con cero puntos.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

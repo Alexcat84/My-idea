@@ -4,9 +4,9 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cuenta Abierta (Open Account)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que dificulta el cobro legal en caso de impago. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo puede mitigarse mediante seguro de crédito a la exportación, factoring o financiamiento de capital de trabajo para exportación.",
+  "resumen_teorico": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que puede dificultar el cobro legal en caso de impago. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo de impago puede mitigarse mediante seguro de crédito a la exportación o factoring, y el financiamiento de capital de trabajo para exportación te da acceso a fondos mientras esperas el pago.",
   "pasos_accionables": [
-    "Evaluar exhaustivamente la solvencia y el historial de pago del comprador antes de ofrecer cuenta abierta",
+    "Evaluar exhaustivamente la solvencia y el historial de pago del comprador, y los riesgos políticos y económicos del país, antes de ofrecer cuenta abierta",
     "Definir términos de pago claros (plazo, moneda) en el contrato",
     "Considerar contratar seguro de crédito a la exportación o factoring para mitigar riesgo de impago",
     "Monitorear continuamente los patrones de pago del comprador"
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Vende Fiando al Comprador",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-053-open_account-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que dificulta el cobro legal en caso de impago. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo puede mitigarse mediante seguro de crédito a la exportación, factoring o financiamiento de capital de trabajo para exportación.",
+      "texto_nuevo": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que puede dificultar el cobro legal en caso de impago. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo de impago puede mitigarse mediante seguro de crédito a la exportación o factoring, y el financiamiento de capital de trabajo para exportación te da acceso a fondos mientras esperas el pago.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4125",
+        "frase": "export working capital financing to ensure that they have access to financing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la falta de documentos y canales bancarios 'might make it difficult'; el nodo lo afirma sin cautela.; El libro mitiga el impago con seguro de crédito y factoring; el financiamiento de capital de trabajo da acceso a fondos mientras se espera el pago, no reduce el riesgo.; Mismo defecto que las marcas 0 y 1 sobre el capital de trabajo.; Mismo efecto mitigador atribuido al capital de trabajo que el libro no le da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-open_account-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar exhaustivamente la solvencia y el historial de pago del comprador antes de ofrecer cuenta abierta",
+      "texto_nuevo": "Evaluar exhaustivamente la solvencia y el historial de pago del comprador, y los riesgos políticos y económicos del país, antes de ofrecer cuenta abierta",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4127",
+        "frase": "should thoroughly examine the political, economic, and commercial risks entailed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide examinar los riesgos políticos, económicos y comerciales; el paso deja solo el del comprador.; Mismo defecto: falta el riesgo político y económico.; Mismo defecto: la evaluación se reduce al comprador.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

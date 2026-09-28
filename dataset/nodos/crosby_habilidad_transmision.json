@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Habilidad de Transmisión (Comunicación Gerencial)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "La 'transmisión' es una habilidad gerencial esencial que va más allá de hablar bien: incluye escritura, discurso preparado y conversación cotidiana, además de señales no verbales (vestimenta, comportamiento físico). El principio fundamental es que 'hay que tener algo que decir' antes de preocuparse por la forma. La escritura es la más difícil de las artes de comunicación porque no hay retroalimentación inmediata; el discurso preparado requiere preparación seria (nunca improvisar ante una audiencia sofisticada); y la conversación cotidiana revela mucho sobre el gerente a través de detalles como el contacto visual y el silencio oportuno.",
+  "resumen_teorico": "La 'transmisión' es una habilidad gerencial esencial que va más allá de hablar bien: incluye escritura, discurso preparado y conversación cotidiana, además de señales no verbales (vestimenta, comportamiento físico). El principio fundamental es que 'hay que tener algo que decir' antes de preocuparse por la forma. La escritura es la más difícil de las artes de comunicación porque no hay retroalimentación inmediata; el discurso preparado requiere preparación seria (nunca improvisar un discurso, sea cual sea la audiencia); y la conversación cotidiana revela mucho sobre el gerente a través de detalles como el contacto visual y el silencio oportuno.",
   "pasos_accionables": [
     "Antes de comunicar, clarificar qué mensaje de fondo se quiere transmitir (contenido antes que forma)",
-    "Preparar formalmente cualquier discurso o presentación importante, nunca improvisar frente a una audiencia",
+    "Preparar formalmente cualquier discurso o presentación, nunca improvisar frente a una audiencia",
     "Practicar la escucha activa en conversaciones: contacto visual, silencios oportunos, evitar ironía innecesaria",
     "Sugerencia de My Idea: revisa que la comunicación escrita sea clara y directa, y pide a otra persona que la lea antes de difundirla para comprobar que se entiende",
-    "Buscar entrenamiento formal (ej. Toastmasters) para ganar confianza en la comunicación oral"
+    "Buscar ayuda profesional para aprender a construir un discurso, y un grupo de práctica (ej. Toastmasters) para ganar confianza en la comunicación oral"
   ],
   "entregable_esperado": "Un plan de comunicación personal/gerencial que incluya mensajes clave a transmitir en reuniones, documentos y conversaciones relacionadas con la iniciativa de calidad",
   "nodos_previos": [
@@ -59,6 +59,56 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-011 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-046-crosby_habilidad_transmision-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La 'transmisión' es una habilidad gerencial esencial que va más allá de hablar bien: incluye escritura, discurso preparado y conversación cotidiana, además de señales no verbales (vestimenta, comportamiento físico). El principio fundamental es que 'hay que tener algo que decir' antes de preocuparse por la forma. La escritura es la más difícil de las artes de comunicación porque no hay retroalimentación inmediata; el discurso preparado requiere preparación seria (nunca improvisar ante una audiencia sofisticada); y la conversación cotidiana revela mucho sobre el gerente a través de detalles como el contacto visual y el silencio oportuno.",
+      "texto_nuevo": "La 'transmisión' es una habilidad gerencial esencial que va más allá de hablar bien: incluye escritura, discurso preparado y conversación cotidiana, además de señales no verbales (vestimenta, comportamiento físico). El principio fundamental es que 'hay que tener algo que decir' antes de preocuparse por la forma. La escritura es la más difícil de las artes de comunicación porque no hay retroalimentación inmediata; el discurso preparado requiere preparación seria (nunca improvisar un discurso, sea cual sea la audiencia); y la conversación cotidiana revela mucho sobre el gerente a través de detalles como el contacto visual y el silencio oportuno.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1761",
+        "frase": "Not preparing formally for any speech is the biggest ego trip of all."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige preparación formal para cualquier discurso; limitarlo a audiencias sofisticadas estrecha el consejo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-crosby_habilidad_transmision-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar formalmente cualquier discurso o presentación importante, nunca improvisar frente a una audiencia",
+      "texto_nuevo": "Preparar formalmente cualquier discurso o presentación, nunca improvisar frente a una audiencia",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1761",
+        "frase": "Not preparing formally for any speech is the biggest ego trip of all."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige preparación formal para cualquier discurso; 'importante' relaja el consejo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-crosby_habilidad_transmision-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar entrenamiento formal (ej. Toastmasters) para ganar confianza en la comunicación oral",
+      "texto_nuevo": "Buscar ayuda profesional para aprender a construir un discurso, y un grupo de práctica (ej. Toastmasters) para ganar confianza en la comunicación oral",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1765",
+        "frase": "Professional help is advised for learning how to construct a speech"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja ayuda profesional para construir el discurso y deja Toastmasters para la confianza; se pierde lo primero.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

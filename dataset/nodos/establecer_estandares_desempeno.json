@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Establecimiento de Estándares de Desempeño (Metas de Producto y Proceso)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para cada sujeto de control debe establecerse un estándar de desempeño (meta u objetivo). Las metas deben ser legítimas, medibles, alcanzables y equitativas. Se derivan de análisis tecnológico para producto/proceso y de benchmarking externo para funciones y personas.",
+  "resumen_teorico": "Para cada sujeto de control debe establecerse un estándar de desempeño. Idealmente, las metas son legítimas, medibles, alcanzables y equitativas. Se derivan de análisis tecnológico para producto/proceso y, para funciones y personas, de la necesidad del negocio y del benchmarking externo, no del historial.",
   "pasos_accionables": [
     "Definir metas medibles para cada sujeto de control seleccionado",
     "Validar que las metas sean alcanzables mediante benchmarking",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Define tus Metas de Desempeño",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-establecer_estandares_desempeno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para cada sujeto de control debe establecerse un estándar de desempeño (meta u objetivo). Las metas deben ser legítimas, medibles, alcanzables y equitativas. Se derivan de análisis tecnológico para producto/proceso y de benchmarking externo para funciones y personas.",
+      "texto_nuevo": "Para cada sujeto de control debe establecerse un estándar de desempeño. Idealmente, las metas son legítimas, medibles, alcanzables y equitativas. Se derivan de análisis tecnológico para producto/proceso y, para funciones y personas, de la necesidad del negocio y del benchmarking externo, no del historial.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7539-7553",
+        "frase": "Goals for functions, departments, and people should be based on the need of the business"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro presenta esos criterios como lo ideal ('Ideally'); el nodo los vuelve obligatorios.; Misma marca: criterios ideales para metas de funciones o personas convertidos en obligación general.; Misma pérdida de la necesidad del negocio y del rechazo al desempeño histórico como base.; Se cae que las metas de funciones y personas se basan también en la necesidad del negocio y no en el desempeño histórico.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

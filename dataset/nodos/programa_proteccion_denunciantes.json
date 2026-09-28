@@ -4,11 +4,11 @@
   "dominio": "health_safety",
   "titulo_concepto": "Protección a quien denuncia irregularidades de seguridad",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro, presenta una queja o participa en una inspección de seguridad. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
+  "resumen_teorico": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro o una lesión o enfermedad laboral, presenta una queja, pide una inspección de seguridad o participa en ella. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
   "pasos_accionables": [
     "Define una política interna que prohíba represalias contra quien denuncia un problema de seguridad",
     "Cuéntale a las personas que trabajan contigo cuál es este derecho y cómo usarlo",
-    "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)), y hasta 180 días según otras leyes federales; verifica el plazo vigente en tu país",
+    "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)); verifica el plazo vigente en tu país",
     "No tomes ninguna acción adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento"
   ],
   "entregable_esperado": "Política escrita de no represalias y un canal simple para que cualquiera pueda reportar sin miedo",
@@ -75,6 +75,39 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El nodo no da cifra ni jurisdiccion, asi que el plazo queda a medias. La fuente oficial fija 30 dias para la seccion 11(c) de la ley OSH, que es la que encaja con el mundo health_safety. whistleblowers.gov (OSHA) lista plazos de 30, 60, 90 y 180 dias segun la ley y dice literalmente: \"The time frame",
       "indice": 2,
       "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "final-e1-047-programa_proteccion_denunciantes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)), y hasta 180 días según otras leyes federales; verifica el plazo vigente en tu país",
+      "texto_nuevo": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)); verifica el plazo vigente en tu país",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1861",
+        "frase": "must file a retaliation complaint with OSHA within 30 calendar days"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo da el plazo de 30 días de la sección 11(c); los 180 días no aparecen.; Mismo defecto: el plazo de 180 días no está en el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-programa_proteccion_denunciantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro, presenta una queja o participa en una inspección de seguridad. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
+      "texto_nuevo": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro o una lesión o enfermedad laboral, presenta una queja, pide una inspección de seguridad o participa en ella. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1855",
+        "frase": "reporting a work-related injury or illness, filing a complaint with OSHA, seeking an OSHA inspection"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro protege también a quien reporta una lesión o enfermedad laboral y a quien pide una inspección.; Mismo defecto: falta reportar una lesión o enfermedad laboral entre los derechos protegidos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

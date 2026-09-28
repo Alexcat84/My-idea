@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Construcción de Tribu de Marca",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Cuando una marca representa un estilo de vida o identidad (no solo un producto), los clientes más leales buscan formas de auto-identificarse públicamente como miembros de una comunidad o 'tribu'. El ejemplo extremo es Harley-Davidson, cuyos clientes se tatúan el logo porque este representa rebeldía y estilo de vida, no solo una motocicleta. Esto genera pertenencia y reconocimiento mutuo entre clientes.",
+  "resumen_teorico": "Cuando una marca representa un estilo de vida o identidad (no solo un producto), los clientes más leales pueden llegar a buscar formas de auto-identificarse públicamente como miembros de una comunidad o 'tribu'. El ejemplo extremo es Harley-Davidson, cuyos clientes se tatúan el logo porque este representa rebeldía y estilo de vida, no solo una motocicleta. Esto genera pertenencia y reconocimiento mutuo entre clientes.",
   "pasos_accionables": [
     "Define el ethos y backstory de tu marca más allá del producto funcional",
     "Identifica qué transformación de identidad experimenta el cliente al usar tu producto",
@@ -12,7 +12,7 @@
     "Facilita espacios donde los miembros de la tribu puedan reconocerse entre sí, ya sean físicos o digitales",
     "Identificar rituales o símbolos que representen los valores centrales de la marca/comunidad",
     "Celebrar y amplificar las historias de los clientes más comprometidos",
-    "Escuchar su feedback y darles voz visible dentro de la comunidad",
+    "Sugerencia de My Idea: escuchar su feedback y darles voz visible dentro de la comunidad",
     "Monitorear el efecto de reconocimiento de marca generado"
   ],
   "entregable_esperado": "Un statement de ethos de marca y al menos un artefacto simbólico de pertenencia para clientes leales",
@@ -49,5 +49,40 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-045-construccion_tribu_de_marca-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando una marca representa un estilo de vida o identidad (no solo un producto), los clientes más leales buscan formas de auto-identificarse públicamente como miembros de una comunidad o 'tribu'. El ejemplo extremo es Harley-Davidson, cuyos clientes se tatúan el logo porque este representa rebeldía y estilo de vida, no solo una motocicleta. Esto genera pertenencia y reconocimiento mutuo entre clientes.",
+      "texto_nuevo": "Cuando una marca representa un estilo de vida o identidad (no solo un producto), los clientes más leales pueden llegar a buscar formas de auto-identificarse públicamente como miembros de una comunidad o 'tribu'. El ejemplo extremo es Harley-Davidson, cuyos clientes se tatúan el logo porque este representa rebeldía y estilo de vida, no solo una motocicleta. Esto genera pertenencia y reconocimiento mutuo entre clientes.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4676",
+        "frase": "customers may become so loyal that they seek outward displays of their brand affiliation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los clientes pueden llegar a ser tan leales que busquen mostrar su afiliación; el nodo lo da como hecho.; Mismo endurecimiento del 'may' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-045-construccion_tribu_de_marca-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escuchar su feedback y darles voz visible dentro de la comunidad",
+      "texto_nuevo": "Sugerencia de My Idea: escuchar su feedback y darles voz visible dentro de la comunidad",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4676",
+        "frase": "By honoring loyal customers and giving them a way to self-identify"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje de la tribu no habla de recoger feedback ni de dar voz; queda como sugerencia porque no afirma un hecho.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

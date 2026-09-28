@@ -6,10 +6,10 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Evaluación formal de cierre de Customer Discovery que responde tres preguntas críticas: si existe encaje producto/mercado (problema urgente + producto que lo resuelve a un precio aceptable + suficientes clientes), quiénes son los clientes y cómo alcanzarlos costo-efectivamente, y si el negocio puede escalar y ser rentable. Es la puerta de entrada a Customer Validation.",
   "pasos_accionables": [
-    "Evaluar si el problema/necesidad es urgente y vital para muchos clientes (definir número pass/fail)",
+    "Evaluar si el problema/necesidad es urgente o vital para muchos clientes (definir número pass/fail)",
     "Evaluar si el producto resuelve el problema a un precio que los clientes pagarían con gusto",
     "Evaluar si existen suficientes clientes para un negocio de tamaño significativo",
-    "Confirmar comprensión de la demografía y arquetipos de los clientes objetivo",
+    "Confirmar comprensión de la demografía y arquetipos de los clientes objetivo, y de su comportamiento lo bastante para saber cómo alcanzarlos de forma costo-efectiva",
     "Evaluar si el negocio puede crecer de forma predecible y escalable",
     "Decidir formalmente con equipo e inversores si se avanza a Customer Validation"
   ],
@@ -34,5 +34,41 @@
   "etiqueta_arbol": "Confirma tu Ajuste al Mercado",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-product_market_fit-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si el problema/necesidad es urgente y vital para muchos clientes (definir número pass/fail)",
+      "texto_nuevo": "Evaluar si el problema/necesidad es urgente o vital para muchos clientes (definir número pass/fail)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9356",
+        "frase": "Is the problem or need that's addressed urgent or vital to lots of customers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece la condición: el libro pide que el problema sea urgente o vital, no ambas cosas.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-product_market_fit-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar comprensión de la demografía y arquetipos de los clientes objetivo",
+      "texto_nuevo": "Confirmar comprensión de la demografía y arquetipos de los clientes objetivo, y de su comportamiento lo bastante para saber cómo alcanzarlos de forma costo-efectiva",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9325",
+        "frase": "enough about their behavior to know how to find them cost-effectively"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La pregunta del libro incluye conocer su comportamiento lo bastante para saber cómo encontrarlos de forma costo-efectiva, y ningún paso lo recoge.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "El 'desperdicio' en cualquier forma (sólido, líquido, gaseoso, peligroso o no) representa ganancia perdida. Medir residuos revela ineficiencias y sienta las bases para reducción de costos. El primer paso es una auditoría de residuos para identificar tipo, cantidad y origen, usando métodos como registros de transportistas de basura, auditorías físicas, revisión de registros de compra, encuestas a empleados y recorridos por instalaciones.",
   "pasos_accionables": [
-    "Solicitar registros a la empresa recolectora de residuos (tipo, cantidad, origen)",
+    "Solicitar registros a la empresa recolectora de residuos (tipo, cantidad, origen); si no puede darlos, considerar contratar una que sí pueda, o estimar multiplicando la capacidad del contenedor por la frecuencia con que se vacía",
     "Realizar una auditoría física: recolectar, clasificar y pesar los residuos",
     "Revisar registros de compra para identificar qué termina como desperdicio",
     "Encuestar a empleados sobre fuentes de desperdicio",
@@ -41,6 +41,23 @@
         "evidencia": "F28-027: La auditoría de residuos mide y controla la operación de una empresa en marcha para bajar costos. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-052-medir_residuos_empresa-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar registros a la empresa recolectora de residuos (tipo, cantidad, origen)",
+      "texto_nuevo": "Solicitar registros a la empresa recolectora de residuos (tipo, cantidad, origen); si no puede darlos, considerar contratar una que sí pueda, o estimar multiplicando la capacidad del contenedor por la frecuencia con que se vacía",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1739",
+        "frase": "Ask your hauler if they are equipped to provide records, and if not"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro prevé qué hacer si el recolector no lleva registros: contratar a uno que sí, o estimar con capacidad del contenedor por frecuencia de vaciado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

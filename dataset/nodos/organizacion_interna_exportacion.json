@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Organización Interna para la Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "A medida que las ventas internacionales crecen, la empresa puede necesitar separar la gestión de exportación de la gestión doméstica, creando un departamento de exportación o incluso una división internacional que reporte directamente a la presidencia. Esta separación centraliza habilidades especializadas y mejora el enfoque de marketing internacional, aunque puede reducir la eficiencia en el uso de recursos si se hace prematuramente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "A medida que las ventas internacionales crecen, la empresa puede necesitar separar la gestión de exportación de la gestión doméstica, creando un departamento de exportación o incluso una división internacional que reporte directamente a la presidencia. Esta separación centraliza habilidades especializadas y mejora el enfoque de marketing internacional, aunque a veces reduce la eficiencia en el uso de recursos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Evaluar el volumen actual de ventas internacionales frente a las domésticas",
     "Determinar si se requiere un gerente de exportación de tiempo parcial o completo",
     "Definir la estructura de reporte del área de exportación",
-    "Planificar la eventual creación de una división internacional autónoma"
+    "Evaluar si, en una etapa posterior, conviene dar más autonomía al área de exportación hasta crear una división internacional que reporte a la presidencia"
   ],
   "entregable_esperado": "Organigrama actualizado que refleje la estructura de gestión de exportación (departamento o división) y sus líneas de reporte.",
   "nodos_previos": [
@@ -43,6 +43,39 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-053-organizacion_interna_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que las ventas internacionales crecen, la empresa puede necesitar separar la gestión de exportación de la gestión doméstica, creando un departamento de exportación o incluso una división internacional que reporte directamente a la presidencia. Esta separación centraliza habilidades especializadas y mejora el enfoque de marketing internacional, aunque puede reducir la eficiencia en el uso de recursos si se hace prematuramente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "A medida que las ventas internacionales crecen, la empresa puede necesitar separar la gestión de exportación de la gestión doméstica, creando un departamento de exportación o incluso una división internacional que reporte directamente a la presidencia. Esta separación centraliza habilidades especializadas y mejora el enfoque de marketing internacional, aunque a veces reduce la eficiencia en el uso de recursos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1897",
+        "frase": "However, segmentation is sometimes a less efficient use of company resources."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la separación a veces usa los recursos con menos eficiencia, sin atarlo a hacerla antes de tiempo.; Misma causa añadida (hacerlo prematuramente) que el libro no da.; Misma causa añadida que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-organizacion_interna_exportacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planificar la eventual creación de una división internacional autónoma",
+      "texto_nuevo": "Evaluar si, en una etapa posterior, conviene dar más autonomía al área de exportación hasta crear una división internacional que reporte a la presidencia",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1899",
+        "frase": "At a later stage, your company may choose to increase the autonomy"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la división internacional como una opción que la empresa puede elegir más adelante; el paso la convierte en algo que planificar.; Mismo defecto: convierte una opción posterior en un paso a planificar.; Mismo defecto: da por prevista una división que el libro deja como opción posterior.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

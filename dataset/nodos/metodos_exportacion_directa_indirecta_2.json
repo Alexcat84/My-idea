@@ -7,8 +7,8 @@
   "resumen_teorico": "Existen dos métodos principales para exportar: la venta indirecta, donde un intermediario (EMC, ETC, agente) asume la responsabilidad de encontrar compradores extranjeros, envíos y cobros; y la venta directa, donde la empresa productora trata directamente con el comprador extranjero, manejando ella misma investigación de mercado, distribución y cobros. La elección depende de los recursos que la empresa esté dispuesta a destinar al esfuerzo internacional.",
   "pasos_accionables": [
     "Evaluar el tamaño de la empresa y su tolerancia al riesgo",
-    "Analizar los recursos disponibles para desarrollar el mercado",
-    "Considerar experiencia previa en exportación",
+    "Analizar los recursos disponibles para desarrollar el mercado y los costos de oportunidad",
+    "Considerar la naturaleza de tus productos o servicios y la experiencia previa en exportación",
     "Estudiar las condiciones de negocio en los mercados objetivo",
     "Decidir si se usará un método único o una combinación de ambos"
   ],
@@ -41,5 +41,41 @@
   "etiqueta_arbol": "Decide Vender Directo o Indirecto",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-053-metodos_exportacion_directa_indirecta_2-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analizar los recursos disponibles para desarrollar el mercado",
+      "texto_nuevo": "Analizar los recursos disponibles para desarrollar el mercado y los costos de oportunidad",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1791-1793",
+        "frase": "Opportunity costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta un factor de la lista del libro: los costos de oportunidad.; Faltan los costos de oportunidad y la naturaleza de los productos; aquí se repone el primero y la naturaleza de los productos se repone en el paso 3, junto a la experiencia previa.; Mismo defecto: falta el costo de oportunidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-metodos_exportacion_directa_indirecta_2-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar experiencia previa en exportación",
+      "texto_nuevo": "Considerar la naturaleza de tus productos o servicios y la experiencia previa en exportación",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1799-1801",
+        "frase": "The nature of your products or services"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta un factor de la lista del libro: la naturaleza de los productos o servicios.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

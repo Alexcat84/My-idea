@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Es el último punto donde el proyecto puede ser eliminado antes de comprometer un gasto fuerte, por eso se le llama 'money gate'. Revisa la calidad de ejecución de la etapa Build Business Case, aplica nuevamente los criterios must-meet/should-meet con mayor rigor, y evalúa formalmente los resultados del análisis financiero. Si es Go, se aprueba el plan de desarrollo y se asigna el equipo completo del proyecto.",
   "pasos_accionables": [
-    "Revisar la calidad de ejecución de todas las tareas de Build Business Case",
+    "Revisar que se hicieron todas las tareas de Build Business Case, con buena calidad de ejecución y resultados positivos",
     "Reaplicar los criterios must-meet y should-meet con mayor rigor y datos sólidos",
     "Evaluar el análisis financiero formal del proyecto",
     "Aprobar el Development Plan y los planes preliminares de operaciones y marketing",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Decide Antes de Invertir Fuerte",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-056-gate3_go_to_development-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar la calidad de ejecución de todas las tareas de Build Business Case",
+      "texto_nuevo": "Revisar que se hicieron todas las tareas de Build Business Case, con buena calidad de ejecución y resultados positivos",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3158",
+        "frase": "that quality of execution was sound, and that the results are positive"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro comprueba que las tareas se hicieron, con buena calidad y resultados positivos; el paso solo pide la calidad.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

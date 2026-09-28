@@ -6,10 +6,10 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "El cálculo del costo de calidad (como % de ventas) es un indicador que revela tanto el estado real de tu negocio como tu nivel de madurez en la gestión de calidad. En etapas tempranas el costo que calculas es engañosamente bajo porque no incluyes todos los costos reales (inspección dispersa, ajustes en línea, correspondencia de garantías, etc.), mientras que en etapas avanzadas el cálculo es más preciso y el costo real disminuye sustancialmente gracias a la prevención. Comparar el costo que calculaste contra el costo real te ayuda a ver el problema con claridad y decidir si conviene invertir en prevención.",
   "pasos_accionables": [
-    "Calcula el costo de calidad actual incluyendo todos los rubros: inspección, reproceso, garantías, correspondencia, ajustes en línea, y personas que dedican tiempo a temas de calidad sin tenerlo asignado formalmente",
+    "Calcula el costo de calidad actual incluyendo todos los rubros: inspección con su carga indirecta, reproceso, garantías con su correspondencia, tiempo de reparación y manejo, ajustes en línea, y personas que dedican tiempo a temas de calidad sin tenerlo asignado formalmente",
     "Compara el costo que calculaste al inicio contra un cálculo más exhaustivo para detectar subestimaciones",
     "Usa la cifra de costo de calidad como argumento concreto para decidir si vale la pena invertir en prevención",
-    "Da seguimiento a la tendencia del costo de calidad a través del tiempo como medida de tu progreso en madurez"
+    "Da seguimiento a la tendencia del costo de calidad a través del tiempo como medida de tu progreso en madurez; cuando sumes rubros nuevos al cálculo, aplícalos también a las cifras pasadas para comparar lo mismo"
   ],
   "entregable_esperado": "Un reporte de costo de calidad (% de ventas) con desglose completo de categorías, comparado con periodos anteriores",
   "nodos_previos": [
@@ -41,6 +41,40 @@
         "evidencia": "F28-031: Sigue en el tiempo el costo de calidad de un negocio en operación como medida de control y mejora. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-046-costo_de_calidad_diagnostico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Da seguimiento a la tendencia del costo de calidad a través del tiempo como medida de tu progreso en madurez",
+      "texto_nuevo": "Da seguimiento a la tendencia del costo de calidad a través del tiempo como medida de tu progreso en madurez; cuando sumes rubros nuevos al cálculo, aplícalos también a las cifras pasadas para comparar lo mismo",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1403",
+        "frase": "you must go back and apply this information to figures obtained in the past"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que al sumar rubros la base crece y hay que rehacer las cifras pasadas para comparar igual con igual.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-costo_de_calidad_diagnostico-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula el costo de calidad actual incluyendo todos los rubros: inspección, reproceso, garantías, correspondencia, ajustes en línea, y personas que dedican tiempo a temas de calidad sin tenerlo asignado formalmente",
+      "texto_nuevo": "Calcula el costo de calidad actual incluyendo todos los rubros: inspección con su carga indirecta, reproceso, garantías con su correspondencia, tiempo de reparación y manejo, ajustes en línea, y personas que dedican tiempo a temas de calidad sin tenerlo asignado formalmente",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "305-307",
+        "frase": "How about the repair time, the handling, the everything else?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala como omisiones típicas la carga indirecta de la inspección y, en garantías, la reparación y el manejo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

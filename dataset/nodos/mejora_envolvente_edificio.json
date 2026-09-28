@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Mejora de Aislamiento y Envolvente del Edificio",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Fortalecer la envolvente del edificio (ventanas, techos, aislamiento) puede reducir costos de HVAC hasta un 40%. Tecnologías como ventanas de alto rendimiento, techos verdes o blancos y barreras radiantes generan ahorros sustanciales en calefacción y refrigeración.",
+  "resumen_teorico": "Fortalecer la envolvente del edificio (ventanas, techos, aislamiento) ahorra energía, y hacerlo más hermético puede reducir costos de HVAC hasta un 40%. Tecnologías como ventanas de alto rendimiento, techos verdes o blancos y barreras radiantes pueden generar ahorros sustanciales en calefacción y refrigeración.",
   "pasos_accionables": [
-    "Instalar ventanas de alto rendimiento con recubrimientos de baja emisión",
+    "Hacer el edificio más hermético para evitar fugas de calefacción o refrigeración, e instalar ventanas de alto rendimiento con recubrimientos de baja emisión",
     "Evaluar instalación de techos verdes o techos blancos reflectantes",
     "Instalar barreras radiantes para reducir ganancia de calor",
     "Usar sombras y deflectores para reducir carga solar en verano"
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Mejora el Aislamiento del Edificio",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-052-mejora_envolvente_edificio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fortalecer la envolvente del edificio (ventanas, techos, aislamiento) puede reducir costos de HVAC hasta un 40%. Tecnologías como ventanas de alto rendimiento, techos verdes o blancos y barreras radiantes generan ahorros sustanciales en calefacción y refrigeración.",
+      "texto_nuevo": "Fortalecer la envolvente del edificio (ventanas, techos, aislamiento) ahorra energía, y hacerlo más hermético puede reducir costos de HVAC hasta un 40%. Tecnologías como ventanas de alto rendimiento, techos verdes o blancos y barreras radiantes pueden generar ahorros sustanciales en calefacción y refrigeración.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2734",
+        "frase": "make a typical building more airtight can cut HVAC costs up to 40 percent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que estas tecnologías pueden ahorrar hasta ciertos porcentajes; el nodo lo da como ahorro seguro.; En el libro el 'hasta 40%' corresponde a hacer el edificio más hermético, medida que el nodo no nombra y cuya cifra atribuye a la envolvente en general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-052-mejora_envolvente_edificio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Instalar ventanas de alto rendimiento con recubrimientos de baja emisión",
+      "texto_nuevo": "Hacer el edificio más hermético para evitar fugas de calefacción o refrigeración, e instalar ventanas de alto rendimiento con recubrimientos de baja emisión",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2734",
+        "frase": "make a typical building more airtight can cut HVAC costs up to 40 percent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Los pasos pierden la medida que el libro pone primero y con mayor ahorro: hacer el edificio más hermético.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

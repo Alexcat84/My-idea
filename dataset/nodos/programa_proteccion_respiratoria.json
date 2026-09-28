@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Protección Respiratoria",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Un programa escrito de protección respiratoria establece procedimientos específicos del lugar de trabajo para seleccionar, usar correctamente, limpiar, desinfectar, almacenar, inspeccionar, reparar y desechar respiradores. Incluye capacitación de trabajadores, uso de equipos aprobados por NIOSH, evaluaciones médicas previas al uso, y pruebas de ajuste (fit-testing) anuales para respiradores ajustados.",
+  "resumen_teorico": "Tras usar, en lo posible, controles de ingeniería contra el aire contaminado, un programa escrito de protección respiratoria establece procedimientos específicos del lugar de trabajo para seleccionar, usar correctamente, limpiar, desinfectar, almacenar, inspeccionar, reparar y desechar respiradores. Incluye capacitación de trabajadores, uso de equipos aprobados por NIOSH, evaluaciones médicas previas al uso, y pruebas de ajuste (fit-testing) anuales para respiradores ajustados.",
   "pasos_accionables": [
     "Redactar un programa escrito específico para el lugar de trabajo según 29 CFR 1910.134",
     "Asegurar que los respiradores sean aprobados por NIOSH para la aplicación específica",
     "Realizar evaluación médica antes del primer uso o prueba de ajuste",
-    "Realizar fit-test antes del primer uso, cada vez que se cambie de pieza facial (talla, estilo, modelo o marca) y al menos anualmente para respiradores ajustados",
-    "Capacitar a los trabajadores antes de que usen el respirador y de nuevo al menos anualmente (y cuando cambien el puesto o el tipo de respirador o se detecten carencias) sobre uso, limitaciones y mantenimiento",
+    "Realizar fit-test antes del primer uso y al menos anualmente para respiradores ajustados",
+    "Capacitar a los trabajadores al menos anualmente sobre uso, limitaciones y mantenimiento",
     "Establecer procedimientos de almacenamiento, limpieza e inspección regular"
   ],
   "entregable_esperado": "Documento de programa de protección respiratoria implementado, con registros de fit-test, evaluaciones médicas y capacitaciones.",
@@ -72,6 +72,56 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Tiene razon B. Verifique hoy en osha.gov que las citas de (k)(5) (\"Retraining shall be administered annually, and when the following situations occur:\") y de (k)(3) son literales y vigentes. La periodicidad anual es correcta, pero el nodo omite la formacion inicial obligatoria antes de exigir el uso",
       "indice": 4,
       "auditoria": "SANEAMIENTO P21 (arbitro)"
+    },
+    {
+      "id": "final-e1-047-programa_proteccion_respiratoria-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar fit-test antes del primer uso, cada vez que se cambie de pieza facial (talla, estilo, modelo o marca) y al menos anualmente para respiradores ajustados",
+      "texto_nuevo": "Realizar fit-test antes del primer uso y al menos anualmente para respiradores ajustados",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1423",
+        "frase": "fit-tested before their first use of a respirator and at least annually thereafter"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide la prueba antes del primer uso y al menos cada año; el cambio de pieza facial no aparece.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-programa_proteccion_respiratoria-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a los trabajadores antes de que usen el respirador y de nuevo al menos anualmente (y cuando cambien el puesto o el tipo de respirador o se detecten carencias) sobre uso, limitaciones y mantenimiento",
+      "texto_nuevo": "Capacitar a los trabajadores al menos anualmente sobre uso, limitaciones y mantenimiento",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1427",
+        "frase": "Workers are trained at least annually in the proper use of respirators"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Además del paréntesis, el libro no fija la capacitación antes del primer uso; solo la pide al menos anual.; El libro pide capacitación al menos anual; los disparadores por cambio de puesto, de respirador o por carencias no aparecen.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-programa_proteccion_respiratoria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un programa escrito de protección respiratoria establece procedimientos específicos del lugar de trabajo para seleccionar, usar correctamente, limpiar, desinfectar, almacenar, inspeccionar, reparar y desechar respiradores. Incluye capacitación de trabajadores, uso de equipos aprobados por NIOSH, evaluaciones médicas previas al uso, y pruebas de ajuste (fit-testing) anuales para respiradores ajustados.",
+      "texto_nuevo": "Tras usar, en lo posible, controles de ingeniería contra el aire contaminado, un programa escrito de protección respiratoria establece procedimientos específicos del lugar de trabajo para seleccionar, usar correctamente, limpiar, desinfectar, almacenar, inspeccionar, reparar y desechar respiradores. Incluye capacitación de trabajadores, uso de equipos aprobados por NIOSH, evaluaciones médicas previas al uso, y pruebas de ajuste (fit-testing) anuales para respiradores ajustados.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1403",
+        "frase": "To the extent feasible, engineering controls are used to prevent atmospheric contamination"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone primero, en la medida de lo posible, los controles de ingeniería para evitar la contaminación del aire.; Mismo defecto: el respirador no es la primera medida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

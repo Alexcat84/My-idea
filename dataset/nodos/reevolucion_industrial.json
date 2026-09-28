@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Re-Evolución Industrial",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hiperfeficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. La verdadera re-evolución requiere que los procesos y productos imiten al mundo vivo, devolviendo nutrientes biológicos y técnicos e incluso generando más energía y recursos de los que consumen.",
+  "resumen_teorico": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan e incluso generen más energía de la que consumen.",
   "pasos_accionables": [
     "Evaluar si las tecnologías nuevas aplicadas realmente cambian el paradigma o solo optimizan el sistema existente",
     "Diseñar procesos que devuelvan nutrientes biológicos y técnicos al sistema",
-    "Buscar que los procesos generen más recursos/energía de los que consumen, no solo reducir el daño",
+    "Buscar que los procesos generen más energía de la que consumen, no solo reducir el daño",
     "Adoptar principios de diseño resonantes con el mundo vivo en toda la cadena de producción"
   ],
   "entregable_esperado": "Evaluación crítica de las tecnologías o procesos actuales del proyecto, identificando si constituyen una verdadera re-evolución o solo una optimización del sistema existente",
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Cambia el Contexto Completo",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-reevolucion_industrial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hiperfeficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. La verdadera re-evolución requiere que los procesos y productos imiten al mundo vivo, devolviendo nutrientes biológicos y técnicos e incluso generando más energía y recursos de los que consumen.",
+      "texto_nuevo": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan e incluso generen más energía de la que consumen.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "797, 879",
+        "frase": "return the biological and technical nutrients they use, but pay back with interest the energy"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de devolver los nutrientes usados y pagar con intereses la energía consumida; 'más recursos' es añadido.; Endurece: el libro dice que productos y procesos pueden ser más eficaces cuanto más se parecen al mundo vivo, no que sea un requisito.; Mismo defecto que la marca 0: 'más recursos de los que consumen' no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-050-reevolucion_industrial-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar que los procesos generen más recursos/energía de los que consumen, no solo reducir el daño",
+      "texto_nuevo": "Buscar que los procesos generen más energía de la que consumen, no solo reducir el daño",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "797",
+        "frase": "pay back with interest the energy they consume"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide pagar con intereses la energía consumida; generar más recursos de los consumidos no lo dice.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

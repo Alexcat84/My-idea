@@ -13,7 +13,7 @@
     "Cerrar con la visión del producto a 18 meses",
     "Ensayar la presentación (máximo 20 minutos) antes de usarla con clientes reales"
   ],
-  "entregable_esperado": "Presentación de solución de máximo 20 minutos, con demo/prototipo/MVP y espacios estructurados para feedback del cliente",
+  "entregable_esperado": "Presentación de solución de máximo 20 minutos, con demo/prototipo/MVP cuando sea posible y espacios estructurados para feedback del cliente",
   "nodos_previos": [
     "mapa_flujo_trabajo_cliente",
     "pivote_o_proceder",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Presenta tu Solución al Cliente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-presentacion_solucion_producto-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentación de solución de máximo 20 minutos, con demo/prototipo/MVP y espacios estructurados para feedback del cliente",
+      "texto_nuevo": "Presentación de solución de máximo 20 minutos, con demo/prototipo/MVP cuando sea posible y espacios estructurados para feedback del cliente",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20798",
+        "frase": "Develop a Demo or Prototype where possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro pide la demo o el prototipo cuando sea posible y el entregable lo exige sin condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

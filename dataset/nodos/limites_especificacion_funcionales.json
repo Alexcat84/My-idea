@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Define los límites de tus piezas según lo que el producto realmente necesita",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando pones un valor deseado y un margen de tolerancia para una característica de tu producto, no lo saques de la manga ni copies un criterio arbitrario: basalo en lo que tu producto necesita para funcionar bien. Para eso, junta datos que relacionen el desempeño de tu producto con las mediciones críticas de sus componentes, usando diagramas de dispersión y ecuaciones de regresión.",
+  "resumen_teorico": "Cuando pones un valor deseado y un margen de tolerancia para una característica de tu producto, no lo saques de la manga ni copies un criterio arbitrario: básalo en lo que tu producto necesita para funcionar bien, en la variabilidad de tu fabricación y en las consecuencias económicas. Si puedes, junta datos que relacionen el desempeño de tu producto con las mediciones críticas de sus componentes, usando diagramas de dispersión y ecuaciones de regresión.",
   "pasos_accionables": [
     "Identifica qué características son críticas para que tu producto funcione",
     "Diseña pruebas que relacionen las variaciones de un componente con el desempeño del producto",
     "Construye diagramas de dispersión y ecuaciones de regresión con esos datos",
     "Define tus límites de tolerancia con base en esos datos, dentro de márgenes de confianza",
-    "Verifica que tu muestra sea suficiente y que tu proceso esté bajo control estadístico"
+    "Procura, en lo posible, que tu muestra sea suficiente y que tu proceso esté bajo control estadístico, sabiendo que rara vez se logran ambas condiciones"
   ],
   "entregable_esperado": "Documento de especificaciones técnicas con límites de tolerancia justificados por datos funcionales",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Define Límites Según la Función",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-055-limites_especificacion_funcionales-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que tu muestra sea suficiente y que tu proceso esté bajo control estadístico",
+      "texto_nuevo": "Procura, en lo posible, que tu muestra sea suficiente y que tu proceso esté bajo control estadístico, sabiendo que rara vez se logran ambas condiciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20406",
+        "frase": "Ideally, the sample size is sufficient, and the data come from a statistically controlled process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El defecto es endurecer a requisito verificable lo que el libro da como ideal, no solo perder una reserva.; El libro presenta ambas condiciones como lo ideal y dice que rara vez se logran; el paso las endurece a requisito.; Mismo endurecimiento de un ideal que rara vez se logra.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-055-limites_especificacion_funcionales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando pones un valor deseado y un margen de tolerancia para una característica de tu producto, no lo saques de la manga ni copies un criterio arbitrario: basalo en lo que tu producto necesita para funcionar bien. Para eso, junta datos que relacionen el desempeño de tu producto con las mediciones críticas de sus componentes, usando diagramas de dispersión y ecuaciones de regresión.",
+      "texto_nuevo": "Cuando pones un valor deseado y un margen de tolerancia para una característica de tu producto, no lo saques de la manga ni copies un criterio arbitrario: básalo en lo que tu producto necesita para funcionar bien, en la variabilidad de tu fabricación y en las consecuencias económicas. Si puedes, junta datos que relacionen el desempeño de tu producto con las mediciones críticas de sus componentes, usando diagramas de dispersión y ecuaciones de regresión.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20397",
+        "frase": "should reflect the functional needs of the product, manufacturing variability, and economic consequences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que a veces se pueden generar esos datos; el nodo lo da como instrucción siempre aplicable.; El libro dice que los límites deben reflejar función, variabilidad de manufactura y consecuencias económicas; el nodo deja solo la función.; Misma omisión de la variabilidad de manufactura y las consecuencias económicas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "environmental",
   "titulo_concepto": "Reinvención del Diseño: De Producto a Sistema Regenerativo",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Este es el paso final y más ambicioso del proceso de diseño eco-efectivo: en lugar de perfeccionar un producto existente (ej. 'diseñar un auto'), se reformula la pregunta de diseño para imaginar sistemas que generen emisiones y efectos positivos en el entorno (ej. 'diseñar un nutrivehículo' que libere vapor de agua limpio o capture partículas dañinas). El siguiente nivel es rediseñar la infraestructura completa (ej. transporte) en vez de solo el objeto. Este enfoque reconoce que la optimización de un producto tiene límites y que la verdadera innovación requiere replantear la necesidad humana subyacente y el contexto cultural cambiante.",
+  "resumen_teorico": "Este es el paso final y más ambicioso del proceso de diseño eco-efectivo: en lugar de perfeccionar un producto existente (ej. 'diseñar un auto'), se reformula la pregunta de diseño para imaginar sistemas que generen emisiones y efectos positivos en el entorno (ej. 'diseñar un nutrivehículo' que capture el vapor de agua de sus emisiones para aprovecharlo o atrape partículas dañinas). El siguiente nivel es rediseñar la infraestructura completa (ej. transporte) en vez de solo el objeto. Este enfoque reconoce que la optimización de un producto tiene límites y que la verdadera innovación requiere replantear la necesidad humana subyacente y el contexto cultural cambiante.",
   "pasos_accionables": [
     "Cuestionar el marco del problema: en vez de mejorar el producto actual, preguntar qué necesidad humana más amplia se busca satisfacer.",
     "Imaginar el producto como generador de efectos positivos netos (no solo neutros) para el ambiente.",
     "Explorar el rediseño del sistema o infraestructura completa en la que el producto opera.",
-    "Validar la viabilidad técnica y cultural de estas ideas disruptivas a través de pilotos o prototipos experimentales."
+    "Sugerencia de My Idea: valida la viabilidad técnica y cultural de estas ideas a través de pilotos o prototipos experimentales."
   ],
   "entregable_esperado": "Documento conceptual de un sistema o producto reinventado con impacto ambiental positivo neto, más allá del producto original.",
   "nodos_previos": [
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Diseña Sistemas, no Solo Productos",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-reinvencion_diseno_nutrivehiculo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este es el paso final y más ambicioso del proceso de diseño eco-efectivo: en lugar de perfeccionar un producto existente (ej. 'diseñar un auto'), se reformula la pregunta de diseño para imaginar sistemas que generen emisiones y efectos positivos en el entorno (ej. 'diseñar un nutrivehículo' que libere vapor de agua limpio o capture partículas dañinas). El siguiente nivel es rediseñar la infraestructura completa (ej. transporte) en vez de solo el objeto. Este enfoque reconoce que la optimización de un producto tiene límites y que la verdadera innovación requiere replantear la necesidad humana subyacente y el contexto cultural cambiante.",
+      "texto_nuevo": "Este es el paso final y más ambicioso del proceso de diseño eco-efectivo: en lugar de perfeccionar un producto existente (ej. 'diseñar un auto'), se reformula la pregunta de diseño para imaginar sistemas que generen emisiones y efectos positivos en el entorno (ej. 'diseñar un nutrivehículo' que capture el vapor de agua de sus emisiones para aprovecharlo o atrape partículas dañinas). El siguiente nivel es rediseñar la infraestructura completa (ej. transporte) en vez de solo el objeto. Este enfoque reconoce que la optimización de un producto tiene límites y que la verdadera innovación requiere replantear la necesidad humana subyacente y el contexto cultural cambiante.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "1014",
+        "frase": "the water vapor in its emissions could be captured, turned back into water"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro propone capturar el vapor de agua de las emisiones, volverlo agua y aprovecharlo, no liberar vapor limpio.; Mismo defecto: el libro habla de capturar y usar el vapor de agua, no de liberarlo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-050-reinvencion_diseno_nutrivehiculo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar la viabilidad técnica y cultural de estas ideas disruptivas a través de pilotos o prototipos experimentales.",
+      "texto_nuevo": "Sugerencia de My Idea: valida la viabilidad técnica y cultural de estas ideas a través de pilotos o prototipos experimentales.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "1012-1024",
+        "frase": "This final step has no absolute end point"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El paso de reinventar del libro no incluye validar con pilotos o prototipos; queda como sugerencia de la casa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

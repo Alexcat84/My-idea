@@ -7,7 +7,7 @@
   "resumen_teorico": "EDI (Electronic Data Interchange) es una tecnología para transmitir datos estandarizados entre empresas (órdenes de compra, facturas, notificaciones de envío). XML es una tecnología más flexible y extensible que permite comunicación entre computadoras y entre computadoras y humanos. Ambas tecnologías están convergiendo en sistemas híbridos.",
   "pasos_accionables": [
     "Identificar qué transacciones de negocio requieren automatización (órdenes, facturas, envíos)",
-    "Evaluar si la infraestructura EDI existente es suficiente o se necesita XML",
+    "Evaluar si la infraestructura EDI existente es suficiente o se necesita XML; si tu EDI funciona bien, no conviene reemplazarlo de una vez, sino añadirle extensiones XML",
     "Definir estándares de datos con socios comerciales",
     "Implementar traducción EDI-XML si se requiere compatibilidad híbrida"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Conecta tus Sistemas de Datos",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-045-data_transmission_edi_xml-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si la infraestructura EDI existente es suficiente o se necesita XML",
+      "texto_nuevo": "Evaluar si la infraestructura EDI existente es suficiente o se necesita XML; si tu EDI funciona bien, no conviene reemplazarlo de una vez, sino añadirle extensiones XML",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2029",
+        "frase": "not cost effective for companies with existing EDI systems that are working well enough"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que si el EDI funciona bien no conviene reemplazarlo de una vez, sino añadirle extensiones XML; eso orienta la evaluación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

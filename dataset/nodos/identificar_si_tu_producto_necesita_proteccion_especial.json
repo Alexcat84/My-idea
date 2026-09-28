@@ -4,12 +4,12 @@
   "dominio": "entrega",
   "titulo_concepto": "Identificar si tu producto necesita protección especial",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de decidir como vas a empacar y probar tus envíos, necesitas saber a que categoría pertenece tu producto. Si se rompe fácilmente con un golpe (vidrio, cerámica, electrónica) se considera frágil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorías exigen mas cuidado que un producto sólido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado o de forma estándar) determina que tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+  "resumen_teorico": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente con un golpe (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
   "pasos_accionables": [
     "Revisa si tu producto se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
-    "Revisa si tu producto es líquido o puede volverse líquido con el calor y derramarse.",
+    "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
     "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una.",
-    "Clasifica la forma de tu empaque (estándar, plano o alargado) para saber qué prueba de caída aplica.",
+    "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
     "Sugerencia de My Idea: refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
   ],
   "entregable_esperado": "Una ficha por producto que indique si es frágil, líquido o normal, y cuántas muestras probaste.",
@@ -158,6 +158,56 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-054-identificar_si_tu_producto_necesita_proteccion_especial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de decidir como vas a empacar y probar tus envíos, necesitas saber a que categoría pertenece tu producto. Si se rompe fácilmente con un golpe (vidrio, cerámica, electrónica) se considera frágil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorías exigen mas cuidado que un producto sólido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado o de forma estándar) determina que tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+      "texto_nuevo": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente con un golpe (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "113",
+        "frase": "or semi-liquids or solids that can become liquid at high temperatures (above 70 degrees Fahrenheit)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define cuatro tipos de paquete; falta el pequeño.; El libro incluye semilíquidos y fija el umbral en más de 70 °F, temperatura ambiente, no calor extremo.; Mismo defecto que la marca 0: faltan semilíquidos y el umbral de unos 21 °C.; Mismo defecto que la marca 1: falta el tipo pequeño.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-054-identificar_si_tu_producto_necesita_proteccion_especial-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si tu producto es líquido o puede volverse líquido con el calor y derramarse.",
+      "texto_nuevo": "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "113",
+        "frase": "or semi-liquids or solids that can become liquid at high temperatures (above 70 degrees Fahrenheit)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan los semilíquidos y el umbral de más de 70 °F (unos 21 °C).; Mismo defecto: semilíquidos y umbral perdidos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-054-identificar_si_tu_producto_necesita_proteccion_especial-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasifica la forma de tu empaque (estándar, plano o alargado) para saber qué prueba de caída aplica.",
+      "texto_nuevo": "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "83",
+        "frase": "do not meet the requirements for Flat, Elongated, or Small"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el tipo pequeño, cuarta categoría del libro.; Mismo defecto: falta el paquete pequeño.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

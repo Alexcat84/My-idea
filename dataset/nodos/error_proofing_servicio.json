@@ -15,7 +15,7 @@
     "Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación",
     "Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores",
     "Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva",
-    "Valida que el dispositivo funcione consistentemente antes de escalar su uso"
+    "Sugerencia de My Idea: valida que el dispositivo funcione consistentemente antes de escalar su uso"
   ],
   "entregable_esperado": "Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores",
   "nodos_previos": [
@@ -82,6 +82,23 @@
         "motivo": "Referencia de un nodo vivo a errores_a_prueba_poka_yoke, deprecado; su superviviente es error_proofing_servicio."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-051-error_proofing_servicio-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Valida que el dispositivo funcione consistentemente antes de escalar su uso",
+      "texto_nuevo": "Sugerencia de My Idea: valida que el dispositivo funcione consistentemente antes de escalar su uso",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21412-21422",
+        "frase": "Five important principles of error-proofing a process are"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro enumera los principios y ejemplos de error-proofing pero no pide validar el dispositivo antes de escalarlo; queda como sugerencia de la casa.; Misma marca: el pasaje de servicios tampoco dice nada de validar antes de escalar.",
+      "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

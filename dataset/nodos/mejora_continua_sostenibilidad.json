@@ -4,12 +4,12 @@
   "dominio": "environmental",
   "titulo_concepto": "Mejora Continua como Filosofía de Sostenibilidad",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La sostenibilidad no es un punto final, es un camino que no termina nunca. Ninguna empresa ni país está completamente cerca de serlo. Las expectativas sociales, la ciencia y las normas cambian todo el tiempo (por ejemplo, el caso del MTBE o los ftalatos en los plásticos), así que tienes que revisar tu estrategia una y otra vez y adaptarte a los nuevos descubrimientos científicos y a las nuevas exigencias regulatorias.",
+  "resumen_teorico": "La sostenibilidad no es un punto final, es un camino que no termina nunca. Ninguna de las empresas estudiadas, ni ningún país, está siquiera cerca de serlo del todo. Las expectativas sociales, la ciencia y las normas cambian todo el tiempo (por ejemplo, el caso del MTBE o los ftalatos en los plásticos), así que tienes que revisar tu estrategia una y otra vez y adaptarte a los nuevos descubrimientos científicos y a las nuevas exigencias regulatorias.",
   "pasos_accionables": [
     "Sigue de cerca los nuevos hallazgos científicos que puedan afectar tu estrategia de sostenibilidad",
     "Revisa y ajusta tus prácticas y productos de forma periódica",
     "Anticipa los cambios regulatorios de tu mercado y ajusta tus procesos antes de que te alcancen",
-    "Fija metas grandes de transformación junto con objetivos trimestrales concretos"
+    "Fija metas grandes de transformación junto con objetivos trimestrales concretos, con alguien que responda por cada uno, y celebra los logros en el camino"
   ],
   "entregable_esperado": "Un proceso propio de revisión periódica de tu estrategia de sostenibilidad",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Ve la Sostenibilidad como Viaje",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-052-mejora_continua_sostenibilidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fija metas grandes de transformación junto con objetivos trimestrales concretos",
+      "texto_nuevo": "Fija metas grandes de transformación junto con objetivos trimestrales concretos, con alguien que responda por cada uno, y celebra los logros en el camino",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7419",
+        "frase": "hold managers accountable, as well as a commitment to celebrating success"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide objetivos operativos de los que alguien responda y el compromiso de celebrar los logros en el camino; el paso pierde ambas partes.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-052-mejora_continua_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La sostenibilidad no es un punto final, es un camino que no termina nunca. Ninguna empresa ni país está completamente cerca de serlo. Las expectativas sociales, la ciencia y las normas cambian todo el tiempo (por ejemplo, el caso del MTBE o los ftalatos en los plásticos), así que tienes que revisar tu estrategia una y otra vez y adaptarte a los nuevos descubrimientos científicos y a las nuevas exigencias regulatorias.",
+      "texto_nuevo": "La sostenibilidad no es un punto final, es un camino que no termina nunca. Ninguna de las empresas estudiadas, ni ningún país, está siquiera cerca de serlo del todo. Las expectativas sociales, la ciencia y las normas cambian todo el tiempo (por ejemplo, el caso del MTBE o los ftalatos en los plásticos), así que tienes que revisar tu estrategia una y otra vez y adaptarte a los nuevos descubrimientos científicos y a las nuevas exigencias regulatorias.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7379",
+        "frase": "no company that we have studied is anywhere close to being fully sustainable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo afirma de las empresas que estudió, no de todas las empresas; el nodo lo generaliza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

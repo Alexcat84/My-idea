@@ -6,8 +6,8 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Un programa de prevención de violencia laboral identifica factores de riesgo (industria de alto riesgo, incidentes previos), analiza registros de incidentes, y establece controles administrativos y de ingeniería (botones de pánico, sistema de acompañamiento, protocolos de llamada a seguridad). Incluye capacitación en técnicas de desescalada y procedimientos de reporte.",
   "pasos_accionables": [
-    "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud, retail nocturno, transporte)",
-    "Revisa tus registros de incidentes (reportes de primeros auxilios, casi accidentes, y los que exija tu mercado)",
+    "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud y asistencia social, entornos correccionales, retail nocturno, taxis y transporte público)",
+    "Revisa tus registros de incidentes (reportes de primeros auxilios, casi accidentes, registros de compensación laboral, reportes de seguros y los que exija tu mercado)",
     "Realiza un análisis de riesgo de tu lugar de trabajo",
     "Desarrolla un programa escrito de prevención de violencia, y revísalo cada año",
     "Implementa controles de ingeniería (alarmas, barreras) y administrativos (sistema de acompañamiento, protocolos)",
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Previene la Violencia Laboral",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-047-prevencion_violencia_laboral-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud, retail nocturno, transporte)",
+      "texto_nuevo": "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud y asistencia social, entornos correccionales, retail nocturno, taxis y transporte público)",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1669",
+        "frase": "healthcare and social assistance, correctional settings, late-night retail, or taxi"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye también asistencia social y entornos correccionales.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-prevencion_violencia_laboral-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa tus registros de incidentes (reportes de primeros auxilios, casi accidentes, y los que exija tu mercado)",
+      "texto_nuevo": "Revisa tus registros de incidentes (reportes de primeros auxilios, casi accidentes, registros de compensación laboral, reportes de seguros y los que exija tu mercado)",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1681",
+        "frase": "first aid records, near miss reports, workers' compensation records, or insurance reports"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta también los registros de compensación laboral y los reportes de seguros.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

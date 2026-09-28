@@ -4,15 +4,15 @@
   "dominio": "exportacion",
   "titulo_concepto": "Negociación del Acuerdo con el Representante Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, requisitos de desempeño (volumen mínimo de ventas), confidencialidad, y la ley aplicable en caso de disputa. Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, confidencialidad y la ley aplicable en caso de disputa; también puede convenir incluir requisitos de desempeño (volumen mínimo de ventas). Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Definir estructura de precios, comisiones y términos de pago",
-    "Establecer si se otorgará exclusividad y por cuánto tiempo",
-    "Incluir cláusulas de rescisión y notificación previa (30-90 días)",
-    "Especificar la ley aplicable y mecanismo de resolución de disputas (arbitraje, CISG, corte)",
+    "Establecer si se otorgará exclusividad y por cuánto tiempo; lo recomendable es no otorgarla hasta que el representante demuestre su capacidad, o darla por un plazo limitado, como un año, con posibilidad de renovación",
+    "Incluir cláusulas de rescisión y notificación previa (30-90 días), la devolución de patentes, marcas, registros de nombre y de clientes, y prever la compensación que la ley del país del representante pueda exigir al terminar",
+    "Especificar la ley aplicable y mecanismo de resolución de disputas (arbitraje, CISG, corte), sabiendo que la ley del país del representante puede prevalecer sobre la que elijas",
     "Definir requisitos de desempeño y volumen mínimo de ventas",
     "Aclarar si el representante tiene poder legal (agente) o no",
-    "Redactar el contrato en inglés y en el idioma oficial del país extranjero",
+    "En la mayoría de los casos, redactar el contrato en inglés y en el idioma oficial del país extranjero",
     "Obtener asesoría legal local antes de firmar"
   ],
   "entregable_esperado": "Contrato de representación/distribución firmado, bilingüe, con cláusulas de terminación, exclusividad, desempeño y jurisdicción claramente definidas.",
@@ -47,6 +47,90 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-053-negociacion_acuerdo_representante_extranjero-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer si se otorgará exclusividad y por cuánto tiempo",
+      "texto_nuevo": "Establecer si se otorgará exclusividad y por cuánto tiempo; lo recomendable es no otorgarla hasta que el representante demuestre su capacidad, o darla por un plazo limitado, como un año, con posibilidad de renovación",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1997",
+        "frase": "It is recommended that you not grant exclusivity until the foreign representative has proven"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recomienda no dar exclusividad hasta que el representante pruebe su capacidad, o por un plazo limitado renovable; el paso lo omite.; Mismo defecto: se cae la recomendación de exclusividad condicionada o por plazo limitado.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-negociacion_acuerdo_representante_extranjero-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir cláusulas de rescisión y notificación previa (30-90 días)",
+      "texto_nuevo": "Incluir cláusulas de rescisión y notificación previa (30-90 días), la devolución de patentes, marcas, registros de nombre y de clientes, y prever la compensación que la ley del país del representante pueda exigir al terminar",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1991-1993",
+        "frase": "you may be required to compensate the representative for losses"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la ley del país del representante puede exigir compensarlo al terminar; el paso lo omite y eso cambia el costo de la salida.; Entre las cuestiones de la terminación se caen la compensación exigible y la devolución de patentes, marcas, registros y clientes.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-negociacion_acuerdo_representante_extranjero-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redactar el contrato en inglés y en el idioma oficial del país extranjero",
+      "texto_nuevo": "En la mayoría de los casos, redactar el contrato en inglés y en el idioma oficial del país extranjero",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1997",
+        "frase": "In most cases, the contract should be in both English and the official language"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'en la mayoría de los casos'; el paso lo vuelve regla sin excepción.; Mismo endurecimiento del 'in most cases' del libro.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-negociacion_acuerdo_representante_extranjero-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, requisitos de desempeño (volumen mínimo de ventas), confidencialidad, y la ley aplicable en caso de disputa. Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, confidencialidad y la ley aplicable en caso de disputa; también puede convenir incluir requisitos de desempeño (volumen mínimo de ventas). Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1979",
+        "frase": "It may be appropriate to include performance requirements, such as a minimum sales volume"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede ser apropiado incluir requisitos de desempeño; el nodo los pone como contenido obligatorio.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-negociacion_acuerdo_representante_extranjero-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Especificar la ley aplicable y mecanismo de resolución de disputas (arbitraje, CISG, corte)",
+      "texto_nuevo": "Especificar la ley aplicable y mecanismo de resolución de disputas (arbitraje, CISG, corte), sabiendo que la ley del país del representante puede prevalecer sobre la que elijas",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1999",
+        "frase": "the laws of the representative's country may take precedence"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la advertencia del libro: aunque elijas otra ley, la del país del representante puede prevalecer.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Celebración de Hitos y Logros del Cliente",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Reconocer y celebrar activamente cuando el cliente completa un proceso complejo o alcanza un logro importante (implementación, primera sesión, meta cumplida) refuerza la relación y genera lealtad. Pequeños gestos simbólicos (una torta, un mensaje personalizado, una visita) tienen un retorno desproporcionadamente alto en comparación con su costo.",
+  "resumen_teorico": "Reconocer y celebrar activamente cuando el cliente completa un proceso complejo o alcanza un logro importante (implementación, meta cumplida) refuerza la relación y genera lealtad. Pequeños gestos simbólicos (una torta, un mensaje personalizado) tienen un retorno desproporcionadamente alto en comparación con su costo.",
   "pasos_accionables": [
     "Identificar los hitos clave dentro del recorrido del cliente que merecen reconocimiento.",
     "Diseñar un gesto de celebración simple, memorable y alineado con la marca (regalo, mensaje, evento).",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Celebra los Logros de tu Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-045-celebracion_hitos_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconocer y celebrar activamente cuando el cliente completa un proceso complejo o alcanza un logro importante (implementación, primera sesión, meta cumplida) refuerza la relación y genera lealtad. Pequeños gestos simbólicos (una torta, un mensaje personalizado, una visita) tienen un retorno desproporcionadamente alto en comparación con su costo.",
+      "texto_nuevo": "Reconocer y celebrar activamente cuando el cliente completa un proceso complejo o alcanza un logro importante (implementación, meta cumplida) refuerza la relación y genera lealtad. Pequeños gestos simbólicos (una torta, un mensaje personalizado) tienen un retorno desproporcionadamente alto en comparación con su costo.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "3893-3903",
+        "frase": "Know the customer’s primary goal and then celebrate with them when they achieve"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro celebra el logro del resultado buscado con un pastel y una tarjeta; la primera sesión y la visita no están.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

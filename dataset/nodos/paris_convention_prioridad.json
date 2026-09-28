@@ -9,7 +9,7 @@
     "Presentar primero la solicitud de patente o marca en un país miembro del Convenio de París (ej. EE.UU.)",
     "Identificar los países adicionales donde se desea protección dentro del plazo de prioridad",
     "Presentar las solicitudes correspondientes antes de que expire el período de prioridad (12 meses patentes, 6 meses marcas/diseños)",
-    "Evitar publicar o vender la invención antes de asegurar la prioridad en países objetivo"
+    "Evitar publicar o vender la invención antes de la primera solicitud; después de ella, publicarla o venderla no pone en riesgo la patentabilidad en los países que reconocen la prioridad, siempre que presentes allí antes de que venza el plazo"
   ],
   "entregable_esperado": "Calendario de solicitudes internacionales de patente/marca dentro del plazo de prioridad del Convenio de París",
   "nodos_previos": [
@@ -39,6 +39,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-053-paris_convention_prioridad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Evitar publicar o vender la invención antes de asegurar la prioridad en países objetivo",
+      "texto_nuevo": "Evitar publicar o vender la invención antes de la primera solicitud; después de ella, publicarla o venderla no pone en riesgo la patentabilidad en los países que reconocen la prioridad, siempre que presentes allí antes de que venza el plazo",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2943",
+        "frase": "neither publication or sale of an invention, nor use of a mark, will jeopardize patentability"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que, tras la primera solicitud, publicar o vender no pone en riesgo la patentabilidad en los países de prioridad si se presenta dentro del plazo; el cuidado es antes de la primera solicitud.; Mismo defecto: invierte el efecto del derecho de prioridad.; Mismo defecto: lo que hay que evitar es publicar antes de la primera solicitud.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

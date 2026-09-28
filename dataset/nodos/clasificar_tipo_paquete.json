@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Clasificar el tipo de paquete antes de despachar",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones y volumen. Esto importa porque cada tipo enfrenta riesgos distintos en tránsito, como caídas, rotación o golpes concentrados en una esquina, y por eso pide refuerzos diferentes. También hay que anotar si el contenido es frágil o si puede derramarse, porque eso suma necesidades de protección adicionales. Esta clasificación no es un capricho de laboratorio: es una guía práctica para decidir cuánto acolchado usar, qué tipo de caja elegir y qué refuerzos aplicar antes de que el paquete salga de tus manos, evitando adivinar la protección al ojo cada vez que empacas algo nuevo.",
+  "resumen_teorico": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
   "pasos_accionables": [
-    "Mide las tres dimensiones y calcula el volumen de tu paquete ya armado.",
-    "Compara esas medidas contra las categorías: volumen grande con dimensión corta es plano, una dimensión mucho mayor que las otras dos es alargado.",
+    "Mide las tres dimensiones, calcula el volumen y pesa tu paquete ya armado.",
+    "Compara esas medidas contra las categorías: es plano si su volumen es de 13.000 cm³ o más, su lado más corto mide 200 mm o menos y el siguiente es al menos cuatro veces mayor; es alargado si su lado más largo mide 900 mm o más y cada uno de los otros dos mide el 20 % o menos de ese lado; es pequeño si su lado más largo mide 350 mm o menos, su volumen es menor de 13.000 cm³ y pesa 4,5 kg o menos; si no es ninguno, es estándar. Si es plano y alargado a la vez, trátalo como alargado.",
     "Marca si el contenido es frágil o si puede derramarse.",
     "Sugerencia de My Idea: anota la categoría en tu checklist de empaque antes de elegir caja y relleno."
   ],
@@ -48,6 +48,56 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. ISTA define las categorias (L81-L121) para decidir que ensayos aplicar. Lo mas cercano que dice sobre registrar es 5.2 (L165): documentar la configuracion, los materiales y la construccion del producto y del paquete ensayados, y eso se refiere al ensayo. No habla de una checklist de empaque ni de anotar la categoria antes de elegir caja y relleno. La checklist es una herramienta y un formato que pone el paso.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-036"
+    },
+    {
+      "id": "final-e1-054-clasificar_tipo_paquete-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones y volumen. Esto importa porque cada tipo enfrenta riesgos distintos en tránsito, como caídas, rotación o golpes concentrados en una esquina, y por eso pide refuerzos diferentes. También hay que anotar si el contenido es frágil o si puede derramarse, porque eso suma necesidades de protección adicionales. Esta clasificación no es un capricho de laboratorio: es una guía práctica para decidir cuánto acolchado usar, qué tipo de caja elegir y qué refuerzos aplicar antes de que el paquete salga de tus manos, evitando adivinar la protección al ojo cada vez que empacas algo nuevo.",
+      "texto_nuevo": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "241-243",
+        "frase": "Rotational Edge Drop 200 mm (8 in.) Required for FLAT and ELONGATED"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no habla de protección adicional: recomienda dos o más muestras y suma prueba de fugas a lo líquido.; El libro usa la clasificación para decidir qué pruebas aplican, no acolchado, caja ni refuerzos.; La categoría pequeño exige además pesar 4,5 kg o menos; clasificar solo por dimensiones y volumen falla.; Mismo defecto: el propósito de elegir acolchado, caja y refuerzos no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-054-clasificar_tipo_paquete-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide las tres dimensiones y calcula el volumen de tu paquete ya armado.",
+      "texto_nuevo": "Mide las tres dimensiones, calcula el volumen y pesa tu paquete ya armado.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "117",
+        "frase": "weight is 4.5 kg (10 lb) or less."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Sin pesar el paquete no se puede saber si es pequeño (4,5 kg o menos).",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-054-clasificar_tipo_paquete-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara esas medidas contra las categorías: volumen grande con dimensión corta es plano, una dimensión mucho mayor que las otras dos es alargado.",
+      "texto_nuevo": "Compara esas medidas contra las categorías: es plano si su volumen es de 13.000 cm³ o más, su lado más corto mide 200 mm o menos y el siguiente es al menos cuatro veces mayor; es alargado si su lado más largo mide 900 mm o más y cada uno de los otros dos mide el 20 % o menos de ese lado; es pequeño si su lado más largo mide 350 mm o menos, su volumen es menor de 13.000 cm³ y pesa 4,5 kg o menos; si no es ninguno, es estándar. Si es plano y alargado a la vez, trátalo como alargado.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "91-105",
+        "frase": "Next longest dimension is four (4) or more times larger than the shortest dimension"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: sin umbrales ni criterio de pequeño la comparación no clasifica como el libro.; Se pierden los umbrales de plano y alargado, el criterio de pequeño y la regla de plano y alargado a la vez.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

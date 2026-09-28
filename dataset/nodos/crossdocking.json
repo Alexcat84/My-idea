@@ -4,13 +4,13 @@
   "dominio": "entrega",
   "titulo_concepto": "Crossdocking en Centros de Distribución",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El crossdocking es una técnica logística en la que los envíos de carga completa llegan a un centro de distribución y se descargan, y al mismo tiempo se fragmentan y combinan con otros productos para cargarse directamente en camiones de salida, minimizando el almacenamiento. Reduce el tiempo de flujo del producto y los costos de manipulación, pero requiere alta coordinación entre entradas y salidas y volúmenes predecibles.",
+  "resumen_teorico": "El crossdocking es una técnica logística en la que los envíos de carga completa llegan a un centro de distribución y se descargan, y al mismo tiempo se fragmentan y combinan con otros productos para cargarse directamente en camiones de salida, minimizando el almacenamiento. Reduce el tiempo de flujo del producto y los costos de manipulación, pero requiere alta coordinación entre entradas y salidas, volúmenes grandes y predecibles y economías de escala en el transporte de entrada y de salida.",
   "pasos_accionables": [
     "Evaluar si el volumen y la predictibilidad de la demanda justifican crossdocking",
     "Sincronizar horarios de llegada de camiones entrantes con la salida de camiones salientes",
     "Diseñar el layout del centro de distribución para minimizar tiempos de manipulación",
     "Establecer sistemas de coordinación en tiempo real entre proveedores y transportistas",
-    "Medir reducción de inventario en tránsito y costos de manipulación"
+    "Medir reducción de inventario en almacenamiento y costos de manipulación"
   ],
   "entregable_esperado": "Proceso documentado de crossdocking con horarios de sincronización y layout del centro de distribución",
   "nodos_previos": [
@@ -40,6 +40,39 @@
         "evidencia": "D-36: El crossdocking en centros de distribución con sincronización de camiones es técnica logística de especialista, ajena a quien no opera un centro de distribución. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-045-crossdocking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El crossdocking es una técnica logística en la que los envíos de carga completa llegan a un centro de distribución y se descargan, y al mismo tiempo se fragmentan y combinan con otros productos para cargarse directamente en camiones de salida, minimizando el almacenamiento. Reduce el tiempo de flujo del producto y los costos de manipulación, pero requiere alta coordinación entre entradas y salidas y volúmenes predecibles.",
+      "texto_nuevo": "El crossdocking es una técnica logística en la que los envíos de carga completa llegan a un centro de distribución y se descargan, y al mismo tiempo se fragmentan y combinan con otros productos para cargarse directamente en camiones de salida, minimizando el almacenamiento. Reduce el tiempo de flujo del producto y los costos de manipulación, pero requiere alta coordinación entre entradas y salidas, volúmenes grandes y predecibles y economías de escala en el transporte de entrada y de salida.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1597",
+        "frase": "when there are large predictable product volumes and when economies of scale"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona los beneficios a volúmenes grandes y predecibles y a economías de escala en ambos transportes.; Mismo matiz perdido: volúmenes grandes y economías de escala de entrada y de salida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-045-crossdocking-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir reducción de inventario en tránsito y costos de manipulación",
+      "texto_nuevo": "Medir reducción de inventario en almacenamiento y costos de manipulación",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1597",
+        "frase": "product flows faster in the supply chain since little inventory is held in storage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye poco inventario en almacenamiento, no una reducción del inventario en tránsito.; Mismo defecto: el efecto sobre el inventario en tránsito no está en el libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

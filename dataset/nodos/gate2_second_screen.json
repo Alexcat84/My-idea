@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Segundo filtro de tu proyecto (Gate 2)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Vuelves a evaluar tu proyecto con más rigor, usando la nueva información que conseguiste en la etapa de exploración (Scoping). Usas los mismos filtros de antes, requisitos indispensables y requisitos deseables, pero ahora sumas la reacción real de tus vendedores y clientes, y cualquier tema legal o regulatorio que pueda frenarte de plano. Aquí haces un primer cálculo financiero simple, como el plazo en que recuperarías la inversión (Payback Period).",
+  "resumen_teorico": "Vuelves a evaluar tu proyecto con más rigor, usando la nueva información que conseguiste en la etapa de exploración (Scoping). Usas los mismos filtros de antes, requisitos indispensables y requisitos deseables, pero ahora puedes sumar la reacción real de tus vendedores y clientes, y cualquier tema legal, técnico o regulatorio que pueda frenarte de plano. Aquí haces un primer cálculo financiero simple, como el plazo en que recuperarías la inversión (Payback Period).",
   "pasos_accionables": [
     "Revisa los resultados de tu etapa de exploración (Scoping)",
     "Repasa la lista de requisitos indispensables actualizada y confirma que los sigues cumpliendo",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Revisa tu Idea con Más Datos",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-056-gate2_second_screen-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vuelves a evaluar tu proyecto con más rigor, usando la nueva información que conseguiste en la etapa de exploración (Scoping). Usas los mismos filtros de antes, requisitos indispensables y requisitos deseables, pero ahora sumas la reacción real de tus vendedores y clientes, y cualquier tema legal o regulatorio que pueda frenarte de plano. Aquí haces un primer cálculo financiero simple, como el plazo en que recuperarías la inversión (Payback Period).",
+      "texto_nuevo": "Vuelves a evaluar tu proyecto con más rigor, usando la nueva información que conseguiste en la etapa de exploración (Scoping). Usas los mismos filtros de antes, requisitos indispensables y requisitos deseables, pero ahora puedes sumar la reacción real de tus vendedores y clientes, y cualquier tema legal, técnico o regulatorio que pueda frenarte de plano. Aquí haces un primer cálculo financiero simple, como el plazo en que recuperarías la inversión (Payback Period).",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3068",
+        "frase": "additional should-meet criteria may be considered, dealing with sales force and customer reaction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que estos criterios deseables adicionales pueden considerarse; el nodo los vuelve obligatorios.; La lista de variables que frenan de plano incluye las técnicas, que el nodo omite.; Mismo defecto que la marca 1.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

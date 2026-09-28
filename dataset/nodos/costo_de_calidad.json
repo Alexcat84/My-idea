@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Costo de la Calidad (Marco de Análisis Financiero)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El Costo de la Calidad es una forma de traducir los problemas de calidad (inventarios excesivos, defectos, retrabajo, faltantes) en dinero, en términos que tú puedas entender y usar para decidir. Al revisar cada mes cosas como el crecimiento del inventario o la caída de ventas, buscas conectar tus decisiones del día a día con su impacto económico real, para priorizar qué corregir primero según lo que realmente te cuesta, no solo según lo que te parece grave.",
+  "resumen_teorico": "El Costo de la Calidad es una forma de traducir los problemas de calidad (defectos, retrabajo, desperdicio, garantías) en dinero, en términos que tú puedas entender y usar para decidir. Así como revisas cada mes en cifras el crecimiento del inventario o la caída de ventas, la calidad también debe reportarse en números, para conectar tus decisiones del día a día con su impacto económico real y priorizar qué corregir primero según lo que realmente te cuesta, no solo según lo que te parece grave.",
   "pasos_accionables": [
     "Arma una revisión mensual de tu negocio con números financieros y operativos juntos.",
-    "Calcula cuánto te cuestan los inventarios excesivos, los defectos y el retrabajo.",
+    "Calcula cuánto te cuestan los defectos, el retrabajo, el desperdicio y las garantías.",
     "Compara esas cifras contra lo que tenías presupuestado y detecta si hay costos evitables que van en aumento.",
     "Define qué parte de tu negocio (compras, control de materiales, ventas) va a investigar y corregir cada desviación.",
     "Usa el costo de calidad como argumento concreto para decidir si vale la pena invertir en prevenir estos problemas."
@@ -49,6 +49,39 @@
         "evidencia": "Q081-030: Tenia razon el lector A: los pasos (revision mensual, costo real de inventario, defectos y retrabajo frente a lo presupuestado, asignar quien corrige cada desviacion) son control operativo de un negocio en marcha, que la regla manda a ejecucion; el uso para decidir invertir en prevencion es solo el ultimo paso y no convierte el nodo en diseno del plan. (arbitro)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-046-costo_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Costo de la Calidad es una forma de traducir los problemas de calidad (inventarios excesivos, defectos, retrabajo, faltantes) en dinero, en términos que tú puedas entender y usar para decidir. Al revisar cada mes cosas como el crecimiento del inventario o la caída de ventas, buscas conectar tus decisiones del día a día con su impacto económico real, para priorizar qué corregir primero según lo que realmente te cuesta, no solo según lo que te parece grave.",
+      "texto_nuevo": "El Costo de la Calidad es una forma de traducir los problemas de calidad (defectos, retrabajo, desperdicio, garantías) en dinero, en términos que tú puedas entender y usar para decidir. Así como revisas cada mes en cifras el crecimiento del inventario o la caída de ventas, la calidad también debe reportarse en números, para conectar tus decisiones del día a día con su impacto económico real y priorizar qué corregir primero según lo que realmente te cuesta, no solo según lo que te parece grave.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1371-1393",
+        "frase": "All things are measured, evaluated calmly, and dispositioned. All, that is, except quality"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Inventarios y faltantes no son costo de calidad en el libro; la revisión mensual de inventario y ventas es el contraste con la calidad sin cifras.; Mismo defecto: inventario, faltantes y ventas son rubros aparte medidos en números, no costo de calidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-costo_de_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto te cuestan los inventarios excesivos, los defectos y el retrabajo.",
+      "texto_nuevo": "Calcula cuánto te cuestan los defectos, el retrabajo, el desperdicio y las garantías.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1389-1393",
+        "frase": "bringing together the easily assembled costs like rework, scrap, warranty, inspection, and test"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El inventario excesivo no forma parte del costo de calidad del libro.; Mismo defecto: los inventarios excesivos no son costo de calidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

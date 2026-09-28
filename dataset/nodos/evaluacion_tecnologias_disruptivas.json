@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Cómo evaluar tecnologías que pueden cambiarlo todo (disruptivas)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Las tecnologías que terminan cambiando todo un mercado suelen verse peor que las actuales al principio, por eso no parecen una amenaza (por ejemplo, las primeras cámaras digitales). Pero mejoran rápido y pueden voltear el tablero. No descartes una tecnología nueva solo porque su primera versión es inferior: tienes que seguirle el rastro y pensar qué tan probable es que mejore, qué tanto te afectaría y cuánto tiempo le tomaría madurar.",
+  "resumen_teorico": "Las tecnologías que terminan cambiando todo un mercado suelen verse peor que las actuales al principio, por eso no parecen una amenaza (por ejemplo, las primeras cámaras digitales). Pero a menudo mejoran rápido y pueden voltear el tablero. No descartes una tecnología nueva solo porque su primera versión es inferior: tienes que seguirle el rastro y pensar qué tan probable es que mejore, qué tanto te afectaría y cuánto tiempo le tomaría madurar.",
   "pasos_accionables": [
     "Identifica tecnologías nuevas que hoy rinden menos pero traen algo distinto a la mesa",
-    "Calcula qué tan probable es que esa tecnología mejore y en cuánto tiempo",
+    "Calcula qué tan probable es que esa tecnología mejore, en cuánto tiempo y qué impacto podría tener en tu negocio",
     "Decide si es una amenaza para tu negocio o una oportunidad que puedes aprovechar",
     "Pregúntate '¿y entonces qué hago?': qué acción concreta vas a tomar frente a esa tecnología"
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Detecta Amenazas Disruptivas a Tiempo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-056-evaluacion_tecnologias_disruptivas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las tecnologías que terminan cambiando todo un mercado suelen verse peor que las actuales al principio, por eso no parecen una amenaza (por ejemplo, las primeras cámaras digitales). Pero mejoran rápido y pueden voltear el tablero. No descartes una tecnología nueva solo porque su primera versión es inferior: tienes que seguirle el rastro y pensar qué tan probable es que mejore, qué tanto te afectaría y cuánto tiempo le tomaría madurar.",
+      "texto_nuevo": "Las tecnologías que terminan cambiando todo un mercado suelen verse peor que las actuales al principio, por eso no parecen una amenaza (por ejemplo, las primeras cámaras digitales). Pero a menudo mejoran rápido y pueden voltear el tablero. No descartes una tecnología nueva solo porque su primera versión es inferior: tienes que seguirle el rastro y pensar qué tan probable es que mejore, qué tanto te afectaría y cuánto tiempo le tomaría madurar.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "8127",
+        "frase": "Often, significant improvements are quickly made to the initial products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo se hacen mejoras rápidas; el nodo lo afirma como regla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-056-evaluacion_tecnologias_disruptivas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula qué tan probable es que esa tecnología mejore y en cuánto tiempo",
+      "texto_nuevo": "Calcula qué tan probable es que esa tecnología mejore, en cuánto tiempo y qué impacto podría tener en tu negocio",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "8129",
+        "frase": "assess the probability and timing of each, the potential impact"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide evaluar también el impacto potencial de cada tecnología y ningún paso lo recoge.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

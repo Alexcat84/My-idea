@@ -11,7 +11,7 @@
     "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (Affirm, Adopt, etc.)",
     "Alinea la intensidad emocional de la celebración con la naturaleza de tu producto o servicio (evita sobreactuar si es algo de bajo involucramiento)"
   ],
-  "entregable_esperado": "Una guía de 'niveles de celebración' según tipo de producto/servicio y ticket promedio.",
+  "entregable_esperado": "Una guía de 'niveles de celebración' según tipo de producto/servicio, el momento de la compra y el cliente.",
   "nodos_previos": [
     "cierre_satisfaccion_postventa"
   ],
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "No Celebres Antes de Tiempo",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-045-calibracion_intensidad_celebracion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una guía de 'niveles de celebración' según tipo de producto/servicio y ticket promedio.",
+      "texto_nuevo": "Una guía de 'niveles de celebración' según tipo de producto/servicio, el momento de la compra y el cliente.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "2384-2394",
+        "frase": "should create a celebration that fits the moment and the customer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro ajusta la celebración al producto o servicio, al momento y al cliente; el ticket promedio como criterio no está.; Mismo defecto: el criterio del ticket promedio es añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

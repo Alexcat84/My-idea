@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ley de Little",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Relación matemática fundamental en Lean: WIP = Throughput × Lead Time. Establece que reducir el trabajo en proceso (WIP) reduce directamente el lead time hacia el cliente, y que si el WIP varía, el lead time también variará proporcionalmente.",
+  "resumen_teorico": "Relación matemática fundamental en Lean: WIP = Throughput × Lead Time. Establece que reducir el trabajo en proceso (WIP) reduce directamente el lead time hacia el cliente, y que si el WIP varía, el lead time también variará; si el WIP se mantiene constante, también lo hará el lead time.",
   "pasos_accionables": [
     "Medir el WIP actual del proceso",
     "Medir el throughput (tasa de producción)",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Menos Trabajo en Curso, Menos Espera",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-055-littles_law-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Relación matemática fundamental en Lean: WIP = Throughput × Lead Time. Establece que reducir el trabajo en proceso (WIP) reduce directamente el lead time hacia el cliente, y que si el WIP varía, el lead time también variará proporcionalmente.",
+      "texto_nuevo": "Relación matemática fundamental en Lean: WIP = Throughput × Lead Time. Establece que reducir el trabajo en proceso (WIP) reduce directamente el lead time hacia el cliente, y que si el WIP varía, el lead time también variará; si el WIP se mantiene constante, también lo hará el lead time.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13444",
+        "frase": "if WIP inventories are allowed to vary, so will lead times"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que si el WIP varía también varía el lead time; 'proporcionalmente' es un cuánto añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

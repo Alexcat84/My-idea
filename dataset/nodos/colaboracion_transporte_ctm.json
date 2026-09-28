@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Gestión Colaborativa de Transporte (CTM)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (hasta 25% según el caso Just Born). El éxito depende de habilitadores humanos como confianza, apertura, liderazgo y beneficios compartidos, superando obstáculos como el control de información propietaria y la falta de estándares.",
+  "resumen_teorico": "La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (en el caso Just Born se estima un ahorro cercano al 25% anual). El éxito depende de habilitadores humanos como confianza, apertura, liderazgo y beneficios compartidos, superando obstáculos como el control de información propietaria y la falta de estándares.",
   "pasos_accionables": [
     "Identificar empresas con envíos complementarios (peso, volumen, destino) para colaborar",
     "Modelar matemáticamente la red de distribución óptima (número de puntos de consolidación)",
@@ -119,6 +119,22 @@
         "motivo": "arista entre dos mundos (environmental -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-045-colaboracion_transporte_ctm-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (hasta 25% según el caso Just Born). El éxito depende de habilitadores humanos como confianza, apertura, liderazgo y beneficios compartidos, superando obstáculos como el control de información propietaria y la falta de estándares.",
+      "texto_nuevo": "La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (en el caso Just Born se estima un ahorro cercano al 25% anual). El éxito depende de habilitadores humanos como confianza, apertura, liderazgo y beneficios compartidos, superando obstáculos como el control de información propietaria y la falta de estándares.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1796",
+        "frase": "It is estimated that this new solution will save the collaborating companies approximately"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el 25 % como ahorro estimado; el nodo lo endurece a resultado logrado, que es invención por endurecer.; Mismo defecto: una estimación presentada como resultado es endurecer, no matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

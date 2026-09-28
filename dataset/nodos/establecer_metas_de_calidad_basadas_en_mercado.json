@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Metas de Calidad Basadas en el Mercado y Benchmarking",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las metas de calidad que afectan la venta de un producto deben basarse principalmente en igualar o superar la calidad del mercado y la competencia. Se pueden usar cuatro bases para fijar metas: el mercado/competencia proyectada al finalizar el proyecto, el benchmarking (comparación con lo logrado por otros, asumiendo que es alcanzable), el historial de desempeño pasado (cuidando no perpetuar desperdicios crónicos), y el reconocimiento de que las metas son un blanco móvil que debe ajustarse ante nueva tecnología, competencia y oportunidades.",
+  "resumen_teorico": "Las metas de calidad que afectan la venta de un producto deben basarse principalmente en igualar o superar la calidad del mercado y la competencia. Se pueden usar cuatro bases para fijar metas: la tecnología, el mercado/competencia proyectada al finalizar el proyecto, el benchmarking (comparación con lo logrado por otros, asumiendo que es alcanzable) y el historial de desempeño pasado (cuidando no perpetuar desperdicios crónicos). Además, las metas son un blanco móvil que debe ajustarse ante nueva tecnología, competencia, amenazas y oportunidades.",
   "pasos_accionables": [
     "Investigar el desempeño de calidad de los competidores actuales y proyectados",
     "Aplicar benchmarking comparando con las mejores prácticas conocidas",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Iguala la Calidad del Mercado",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-establecer_metas_de_calidad_basadas_en_mercado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las metas de calidad que afectan la venta de un producto deben basarse principalmente en igualar o superar la calidad del mercado y la competencia. Se pueden usar cuatro bases para fijar metas: el mercado/competencia proyectada al finalizar el proyecto, el benchmarking (comparación con lo logrado por otros, asumiendo que es alcanzable), el historial de desempeño pasado (cuidando no perpetuar desperdicios crónicos), y el reconocimiento de que las metas son un blanco móvil que debe ajustarse ante nueva tecnología, competencia y oportunidades.",
+      "texto_nuevo": "Las metas de calidad que afectan la venta de un producto deben basarse principalmente en igualar o superar la calidad del mercado y la competencia. Se pueden usar cuatro bases para fijar metas: la tecnología, el mercado/competencia proyectada al finalizar el proyecto, el benchmarking (comparación con lo logrado por otros, asumiendo que es alcanzable) y el historial de desempeño pasado (cuidando no perpetuar desperdicios crónicos). Además, las metas son un blanco móvil que debe ajustarse ante nueva tecnología, competencia, amenazas y oportunidades.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3437-3445",
+        "frase": "it has been the tradition to establish the quality goals on a technological basis"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da cuatro bases (tecnología, mercado, benchmarking e historial); el nodo omite la tecnología y cuenta el blanco móvil como base.; La lista de cambios que mueven las metas omite las amenazas, que el libro incluye.; Misma pérdida de la tecnología como base; el blanco móvil es una condición de todas las metas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

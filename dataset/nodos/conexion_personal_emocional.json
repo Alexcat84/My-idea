@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Conexión mediante Datos Personales y Emocionales",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es la forma más simple y efectiva de lograrlo.",
+  "resumen_teorico": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es por donde empezar y una técnica muy simple para lograrlo.",
   "pasos_accionables": [
     "Clasifica los datos que tienes de tus clientes en personales, emocionales, o ambos a la vez",
     "Da prioridad a recolectar los datos que caen en ambas categorías",
@@ -12,7 +12,7 @@
     "Crea pequeños rituales de reconocimiento con esos datos, por ejemplo felicitarlo cuando gana su equipo favorito",
     "Prioriza datos que sean personales (únicos de cada persona) y emocionales (con una carga afectiva positiva)"
   ],
-  "entregable_esperado": "Una lista de al menos 3 tipos de datos personales o emocionales por cada segmento de cliente, con un plan concreto de cómo vas a usarlos",
+  "entregable_esperado": "Una lista de cinco a diez tipos de datos personales o emocionales que empiezas a registrar ya, con un plan concreto de cómo vas a usarlos",
   "nodos_previos": [
     "rediseno_procesos_negocio_cx",
     "personalizar_interacciones_cliente"
@@ -27,5 +27,39 @@
   "etiqueta_arbol": "Conecta con Datos Emocionales",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-045-conexion_personal_emocional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es la forma más simple y efectiva de lograrlo.",
+      "texto_nuevo": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es por donde empezar y una técnica muy simple para lograrlo.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5515-5522",
+        "frase": "the first place you should start is with their name"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el nombre es por donde empezar y una técnica muy simple; no que sea la más efectiva.; Mismo superlativo añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-045-conexion_personal_emocional-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista de al menos 3 tipos de datos personales o emocionales por cada segmento de cliente, con un plan concreto de cómo vas a usarlos",
+      "texto_nuevo": "Una lista de cinco a diez tipos de datos personales o emocionales que empiezas a registrar ya, con un plan concreto de cómo vas a usarlos",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5541",
+        "frase": "make sure to select five to ten fields you “must start tracking now.”"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La cifra de al menos 3 por segmento no está; el libro propone de cinco a diez campos para registrar ya.; Mismo defecto: la cifra y el reparto por segmento son añadidos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

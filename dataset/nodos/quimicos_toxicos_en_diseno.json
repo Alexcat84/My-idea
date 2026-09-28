@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Riesgos de Químicos Sintéticos y Disruptores Endocrinos en el Diseño de Productos",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Muchos productos cotidianos contienen sustancias químicas sintéticas (como ftalatos y disruptores endocrinos) que se liberan de forma no intencional durante su uso, exponiendo a las personas a toxinas sin evaluación de riesgo formal. Ejemplos documentados incluyen emisiones gaseosas de productos mal diseñados. El diseño sostenible requiere evaluar y eliminar estas sustancias desde la fase de selección de materiales.",
+  "resumen_teorico": "Muchos productos cotidianos contienen sustancias químicas sintéticas (como ftalatos y disruptores endocrinos) que se liberan de forma no intencional durante su uso, exponiendo a las personas a toxinas que no pidieron ni sabían que estaban ahí. Ejemplos documentados incluyen emisiones gaseosas de productos mal diseñados. El diseño sostenible requiere evaluar y eliminar estas sustancias desde la fase de selección de materiales.",
   "pasos_accionables": [
     "Auditar la lista de materiales y químicos usados en el producto o proceso",
     "Identificar sustancias con historial de toxicidad o disrupción endocrina",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Evita Químicos Tóxicos al Diseñar",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-quimicos_toxicos_en_diseno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos productos cotidianos contienen sustancias químicas sintéticas (como ftalatos y disruptores endocrinos) que se liberan de forma no intencional durante su uso, exponiendo a las personas a toxinas sin evaluación de riesgo formal. Ejemplos documentados incluyen emisiones gaseosas de productos mal diseñados. El diseño sostenible requiere evaluar y eliminar estas sustancias desde la fase de selección de materiales.",
+      "texto_nuevo": "Muchos productos cotidianos contienen sustancias químicas sintéticas (como ftalatos y disruptores endocrinos) que se liberan de forma no intencional durante su uso, exponiendo a las personas a toxinas que no pidieron ni sabían que estaban ahí. Ejemplos documentados incluyen emisiones gaseosas de productos mal diseñados. El diseño sostenible requiere evaluar y eliminar estas sustancias desde la fase de selección de materiales.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "238",
+        "frase": "additives that you didn't ask for and didn't know were included"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que no haya evaluación de riesgo; usa la evaluación formal solo como umbral de comparación de un estudio.; Mismo defecto: la evaluación formal de riesgo es una referencia de comparación, no una ausencia afirmada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

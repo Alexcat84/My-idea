@@ -7,12 +7,12 @@
   "resumen_teorico": "Requisitos de capacitación, certificación, inspección y operación segura de montacargas industriales para prevenir accidentes relacionados con cargas, colisiones y mantenimiento inadecuado.",
   "pasos_accionables": [
     "Capacitar y certificar a los operadores de montacargas antes de su uso.",
-    "Evaluar el desempeño del operador al menos cada tres años.",
+    "Evaluar el desempeño del operador al menos cada tres años y volver a capacitarlo cuando haga falta.",
     "Inspeccionar el montacargas al inicio de cada turno y retirar de servicio los que necesiten reparación.",
     "Prohibir que trabajadores no autorizados viajen en el montacargas.",
     "Asegurar que las cargas no excedan la capacidad nominal del equipo."
   ],
-  "entregable_esperado": "Registro de capacitación y certificación de operadores, bitácora de inspecciones diarias y procedimientos de mantenimiento.",
+  "entregable_esperado": "Registro de capacitación y certificación de operadores, bitácora de inspecciones al inicio de cada turno y procedimientos de mantenimiento.",
   "nodos_previos": [
     "materials_handling_safety"
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Asegura tus Montacargas",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-047-powered_industrial_trucks_safety-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar el desempeño del operador al menos cada tres años.",
+      "texto_nuevo": "Evaluar el desempeño del operador al menos cada tres años y volver a capacitarlo cuando haga falta.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1205",
+        "frase": "evaluated at least once every three years, and workers are retrained as necessary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide volver a capacitar a los operadores cuando haga falta.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-powered_industrial_trucks_safety-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registro de capacitación y certificación de operadores, bitácora de inspecciones diarias y procedimientos de mantenimiento.",
+      "texto_nuevo": "Registro de capacitación y certificación de operadores, bitácora de inspecciones al inicio de cada turno y procedimientos de mantenimiento.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1237",
+        "frase": "PITs are inspected at the beginning of each work shift"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide inspeccionar al inicio de cada turno; una bitácora diaria no lo refleja cuando hay varios turnos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

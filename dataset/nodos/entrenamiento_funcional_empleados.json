@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica las competencias clave necesarias para cada rol crítico en la empresa.",
     "Crea documentos o programas de entrenamiento específicos (ej. 'Good PM/Bad PM'). Hazlo para roles clave (ventas, ingeniería, gestión)",
-    "Haz obligatorio el entrenamiento antes de aprobar nuevas contrataciones para un equipo. Y hazlo con seguimiento de cumplimiento",
+    "Haz obligatorio el entrenamiento: no apruebes nuevas contrataciones para un equipo hasta que su responsable haya desarrollado el programa de entrenamiento para ese puesto. Y hazlo con seguimiento de cumplimiento",
     "Mide la productividad de los nuevos empleados antes y después del entrenamiento.",
     "No asumas que la inteligencia o experiencia previa reemplaza la necesidad de entrenamiento específico de la empresa.",
     "Exige que los líderes de área (ej: VP de ventas) documenten y enseñen sus procesos, no solo los ejecuten intuitivamente."
@@ -53,6 +53,23 @@
         "motivo": "El entrenamiento funcional por puesto no conduce a la cultura flexible de autoridad en picos de riesgo; son temas distintos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-055-entrenamiento_funcional_empleados-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Haz obligatorio el entrenamiento antes de aprobar nuevas contrataciones para un equipo. Y hazlo con seguimiento de cumplimiento",
+      "texto_nuevo": "Haz obligatorio el entrenamiento: no apruebes nuevas contrataciones para un equipo hasta que su responsable haya desarrollado el programa de entrenamiento para ese puesto. Y hazlo con seguimiento de cumplimiento",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1409",
+        "frase": "withholding new employee requisitions from managers until they've developed a training program"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro retiene las vacantes hasta que el manager haya desarrollado el programa de entrenamiento para quien se contratará; se pierde quién lo prepara y qué debe existir antes.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

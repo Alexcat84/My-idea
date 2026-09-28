@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Trilogía de Juran (Planificación, Control y Mejora)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: planificación de la calidad, que diseña procesos para crear productos o servicios que satisfagan necesidades; control de calidad, que asegura que la producción cumpla los criterios de diseño eliminando picos esporádicos que se alejan del nivel planificado; y mejora de la calidad, que reduce el desperdicio crónico mediante cambios sistemáticos o disruptivos tipo breakthrough. Distinguir si un problema es un pico esporádico o un desperdicio crónico te permite elegir el método correcto: apagar incendios no es lo mismo que mejorar de forma estructural, y cada uno exige un tratamiento distinto aunque compartan herramientas. Estos tres procesos son la base científica de la gestión de calidad moderna, incluyendo metodologías como Six Sigma.",
+  "resumen_teorico": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: planificación de la calidad, que diseña procesos para crear productos o servicios que satisfagan necesidades; control de calidad, que asegura que la producción cumpla los criterios de diseño eliminando picos esporádicos que se alejan del nivel planificado; y mejora de la calidad, que reduce el desperdicio crónico mediante cambios sistemáticos o disruptivos tipo breakthrough. Distinguir si un problema es un pico esporádico o un desperdicio crónico te permite elegir el método correcto: apagar incendios no es lo mismo que mejorar de forma estructural, y cada uno exige un tratamiento distinto aunque compartan herramientas. Estos tres procesos son universales en la gestión de calidad, y Six Sigma es uno de los métodos del proceso de mejora.",
   "pasos_accionables": [
     "Diseña tus procesos traduciendo lo que pide tu cliente en especificaciones concretas de tu producto o servicio",
     "Verifica si el problema que enfrentas es un pico esporádico o un desperdicio crónico antes de decidir cómo actuar",
@@ -63,5 +63,23 @@
   "etiqueta_arbol": "Planifica, Controla y Mejora tu Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-trilogia_de_juran-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: planificación de la calidad, que diseña procesos para crear productos o servicios que satisfagan necesidades; control de calidad, que asegura que la producción cumpla los criterios de diseño eliminando picos esporádicos que se alejan del nivel planificado; y mejora de la calidad, que reduce el desperdicio crónico mediante cambios sistemáticos o disruptivos tipo breakthrough. Distinguir si un problema es un pico esporádico o un desperdicio crónico te permite elegir el método correcto: apagar incendios no es lo mismo que mejorar de forma estructural, y cada uno exige un tratamiento distinto aunque compartan herramientas. Estos tres procesos son la base científica de la gestión de calidad moderna, incluyendo metodologías como Six Sigma.",
+      "texto_nuevo": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: planificación de la calidad, que diseña procesos para crear productos o servicios que satisfagan necesidades; control de calidad, que asegura que la producción cumpla los criterios de diseño eliminando picos esporádicos que se alejan del nivel planificado; y mejora de la calidad, que reduce el desperdicio crónico mediante cambios sistemáticos o disruptivos tipo breakthrough. Distinguir si un problema es un pico esporádico o un desperdicio crónico te permite elegir el método correcto: apagar incendios no es lo mismo que mejorar de forma estructural, y cada uno exige un tratamiento distinto aunque compartan herramientas. Estos tres procesos son universales en la gestión de calidad, y Six Sigma es uno de los métodos del proceso de mejora.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1059, 13777",
+        "frase": "embodies the universal principles needed to create high-quality goods, services, and processes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro llama universales a los tres procesos y trata Six Sigma como método de mejora; no dice que sean su base científica.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

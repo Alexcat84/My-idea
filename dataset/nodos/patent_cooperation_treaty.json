@@ -7,7 +7,7 @@
   "resumen_teorico": "El PCT permite presentar una única solicitud internacional de patente que designa a los países miembros donde se busca protección, extendiendo por 18 meses el plazo para cumplir los requisitos nacionales de cada país, aunque no otorga una 'patente mundial' — cada país sigue decidiendo si concede protección.",
   "pasos_accionables": [
     "Presentar una solicitud internacional bajo el PCT designando los países de interés",
-    "Aprovechar el plazo de 30 meses desde la fecha de prioridad (18 meses más que los 12 del Convenio de París) antes de entrar en la fase nacional de cada país para decidir en qué países completar los requisitos nacionales",
+    "Aprovechar los 18 meses adicionales que da la solicitud internacional para cumplir los requisitos nacionales de cada país y decidir en qué países completarlos",
     "Consultar a un abogado de IP o a las oficinas nacionales de cada país para procedimientos y tasas específicas",
     "Completar los requisitos sustantivos y de tasas para cada país designado en el plazo correspondiente"
   ],
@@ -40,6 +40,23 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). A y B coinciden en IMPRECISO, y es correcto: \"el plazo extendido de 18 meses\" se lee como si el plazo total fuera de 18 meses, cuando la norma fija 30 meses desde la fecha de prioridad (Art. 22(1) PCT, cita comprobada literalmente hoy). Los 18 meses son la extensión respecto al plazo de 12 meses de ",
       "indice": 1,
       "auditoria": "SANEAMIENTO P21 (arbitro)"
+    },
+    {
+      "id": "final-e1-053-patent_cooperation_treaty-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aprovechar el plazo de 30 meses desde la fecha de prioridad (18 meses más que los 12 del Convenio de París) antes de entrar en la fase nacional de cada país para decidir en qué países completar los requisitos nacionales",
+      "texto_nuevo": "Aprovechar los 18 meses adicionales que da la solicitud internacional para cumplir los requisitos nacionales de cada país y decidir en qué países completarlos",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2947",
+        "frase": "Filing the international application extends by 18 months the period"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que la solicitud internacional extiende 18 meses el plazo; los 30 meses desde la prioridad y el cálculo no están.; Mismo defecto: cifra y punto de cómputo que el libro no da.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

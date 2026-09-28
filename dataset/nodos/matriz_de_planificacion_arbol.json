@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planning Matrix and Tree Diagram",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Combinación de diagrama de árbol (para identificar todas las partes necesarias para alcanzar un objetivo) y matriz de planificación (que agrega responsables, fechas, presupuesto y estado) para gestionar la ejecución de tareas de un proyecto de mejora.",
+  "resumen_teorico": "Combinación de diagrama de árbol (para identificar todas las partes necesarias para alcanzar un objetivo) y matriz de planificación (que agrega responsables y fechas, y puede agregar también presupuesto y estado) para gestionar la ejecución de tareas de un proyecto de mejora.",
   "pasos_accionables": [
     "Usar diagrama de árbol para identificar todas las tareas necesarias",
     "Listar cada tarea y organizarlas en columna vertical",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Planifica con Árbol y Matriz",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-055-matriz_de_planificacion_arbol-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Combinación de diagrama de árbol (para identificar todas las partes necesarias para alcanzar un objetivo) y matriz de planificación (que agrega responsables, fechas, presupuesto y estado) para gestionar la ejecución de tareas de un proyecto de mejora.",
+      "texto_nuevo": "Combinación de diagrama de árbol (para identificar todas las partes necesarias para alcanzar un objetivo) y matriz de planificación (que agrega responsables y fechas, y puede agregar también presupuesto y estado) para gestionar la ejecución de tareas de un proyecto de mejora.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18503",
+        "frase": "It may also specify for each step who will help, what the budget"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro fija quién y cuándo; presupuesto y estado son opcionales ('may also') y el nodo los da como fijos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

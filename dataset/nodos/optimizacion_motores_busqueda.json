@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Visibilidad en Motores de Búsqueda (SEO Internacional)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La visibilidad en buscadores internacionales y locales (Google, Bing, Baidu, etc.) es esencial para que los clientes potenciales encuentren el sitio web de la empresa. Cada buscador cataloga contenido según calidad, cantidad y relevancia; los buscadores regionales suelen priorizar contenido e idiomas locales.",
+  "resumen_teorico": "La visibilidad en buscadores internacionales y locales (Google, Bing, Baidu, etc.) es esencial para que los clientes potenciales encuentren el sitio web de la empresa. Los buscadores grandes catalogan contenido según calidad, cantidad y utilidad, y cada uno muestra los sitios a su manera; los buscadores regionales suelen priorizar contenido e idiomas locales.",
   "pasos_accionables": [
     "Identificar los motores de búsqueda más usados en cada mercado objetivo",
     "Realizar búsquedas propias para verificar el posicionamiento actual de la empresa",
     "Aplicar técnicas de optimización SEO o contratar un especialista",
-    "Registrar el sitio en los motores de búsqueda relevantes del mercado objetivo"
+    "Si hace falta para aparecer en los resultados, registrar el sitio en los motores de búsqueda relevantes del mercado objetivo"
   ],
   "entregable_esperado": "Sitio web posicionado y registrado en los motores de búsqueda relevantes de cada mercado objetivo",
   "nodos_previos": [
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Hazte Visible en Buscadores",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-053-optimizacion_motores_busqueda-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La visibilidad en buscadores internacionales y locales (Google, Bing, Baidu, etc.) es esencial para que los clientes potenciales encuentren el sitio web de la empresa. Cada buscador cataloga contenido según calidad, cantidad y relevancia; los buscadores regionales suelen priorizar contenido e idiomas locales.",
+      "texto_nuevo": "La visibilidad en buscadores internacionales y locales (Google, Bing, Baidu, etc.) es esencial para que los clientes potenciales encuentren el sitio web de la empresa. Los buscadores grandes catalogan contenido según calidad, cantidad y utilidad, y cada uno muestra los sitios a su manera; los buscadores regionales suelen priorizar contenido e idiomas locales.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3271-3275",
+        "frase": "Different search engines find and display sites in different ways."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Generaliza a todos los buscadores el criterio que el libro da para los grandes buscadores internacionales, cuando el libro dice que cada buscador encuentra y muestra los sitios de forma distinta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-optimizacion_motores_busqueda-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registrar el sitio en los motores de búsqueda relevantes del mercado objetivo",
+      "texto_nuevo": "Si hace falta para aparecer en los resultados, registrar el sitio en los motores de búsqueda relevantes del mercado objetivo",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3275",
+        "frase": "if necessary register your site with the search engines so it will appear"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El defecto existe, pero es la condición 'if necessary' que se cae: matiz.; Se cae la condición del libro: registrar el sitio solo si hace falta para aparecer en los resultados.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

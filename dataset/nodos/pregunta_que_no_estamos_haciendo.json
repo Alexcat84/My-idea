@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "La Pregunta Estratégica: '¿Qué No Estamos Haciendo?'",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "En reuniones de staff, la tendencia natural es revisar y mejorar lo que ya se está haciendo (construir, vender, soportar). Sin embargo, insertar deliberadamente la pregunta '¿qué no estamos haciendo?' puede revelar oportunidades estratégicas abandonadas o nunca exploradas que representan el siguiente gran movimiento competitivo de la empresa.",
+  "resumen_teorico": "En reuniones de staff, la tendencia natural es revisar y mejorar lo que ya se está haciendo (construir, vender, soportar). Sin embargo, insertar deliberadamente la pregunta '¿qué no estamos haciendo?' puede revelar oportunidades estratégicas abandonadas o nunca exploradas en las que, a veces, la empresa debería estar enfocada.",
   "pasos_accionables": [
     "Agregar como punto fijo de agenda en reuniones de staff: '¿Qué no estamos haciendo?'",
     "Permitir que el equipo identifique colectivamente áreas descuidadas o abandonadas",
     "Evaluar si esas áreas representan oportunidades de crecimiento u ofensiva competitiva",
-    "Decidir si construir internamente o adquirir capacidad externa para cubrir esa brecha"
+    "Decidir si construir internamente o adquirir capacidad externa para cubrir esa brecha, revisando las opciones externas antes de dimensionar el esfuerzo interno"
   ],
   "entregable_esperado": "Lista de áreas estratégicas no atendidas actualmente y decisión sobre cuál abordar primero",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Pregunta Qué no Haces",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-048-pregunta_que_no_estamos_haciendo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En reuniones de staff, la tendencia natural es revisar y mejorar lo que ya se está haciendo (construir, vender, soportar). Sin embargo, insertar deliberadamente la pregunta '¿qué no estamos haciendo?' puede revelar oportunidades estratégicas abandonadas o nunca exploradas que representan el siguiente gran movimiento competitivo de la empresa.",
+      "texto_nuevo": "En reuniones de staff, la tendencia natural es revisar y mejorar lo que ya se está haciendo (construir, vender, soportar). Sin embargo, insertar deliberadamente la pregunta '¿qué no estamos haciendo?' puede revelar oportunidades estratégicas abandonadas o nunca exploradas en las que, a veces, la empresa debería estar enfocada.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "649",
+        "frase": "the things you're not doing are the things you should actually be focused on."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que a veces lo que no haces es en lo que deberías enfocarte, no que sea el siguiente gran movimiento competitivo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-048-pregunta_que_no_estamos_haciendo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir si construir internamente o adquirir capacidad externa para cubrir esa brecha",
+      "texto_nuevo": "Decidir si construir internamente o adquirir capacidad externa para cubrir esa brecha, revisando las opciones externas antes de dimensionar el esfuerzo interno",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "653",
+        "frase": "I decided to investigate the other companies before sizing the internal effort."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que el libro investiga las opciones externas antes de dimensionar el esfuerzo interno, porque tras la primera línea de código las decisiones se vuelven emocionales.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

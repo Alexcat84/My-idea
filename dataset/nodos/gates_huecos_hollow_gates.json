@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gates Huecos (Hollow Gates): Aprobación sin Recursos",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Un problema crítico ocurre cuando se aprueba un proyecto en el gate (decisión Go) pero no se comprometen los recursos necesarios para ejecutarlo. Esto genera una ilusión de progreso mientras en realidad satura el pipeline con proyectos sin capacidad real de avance, condenando al líder del proyecto al fracaso por falta de recursos.",
+  "resumen_teorico": "Un problema crítico ocurre cuando se aprueba un proyecto en el gate (decisión Go) pero no se comprometen los recursos necesarios para ejecutarlo. Esto genera una ilusión de progreso y suele saturar el pipeline con proyectos sin capacidad real de avance, que tardan demasiado en llegar al mercado, condenando al líder del proyecto al fracaso por falta de recursos.",
   "pasos_accionables": [
     "Verificar que cada decisión Go en un gate venga acompañada de compromiso explícito de recursos (personas, presupuesto, tiempo)",
     "Auditar si los líderes de proyecto salen de las reuniones de gate con los recursos que necesitan",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "No Apruebes sin Recursos",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-056-gates_huecos_hollow_gates-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un problema crítico ocurre cuando se aprueba un proyecto en el gate (decisión Go) pero no se comprometen los recursos necesarios para ejecutarlo. Esto genera una ilusión de progreso mientras en realidad satura el pipeline con proyectos sin capacidad real de avance, condenando al líder del proyecto al fracaso por falta de recursos.",
+      "texto_nuevo": "Un problema crítico ocurre cuando se aprueba un proyecto en el gate (decisión Go) pero no se comprometen los recursos necesarios para ejecutarlo. Esto genera una ilusión de progreso y suele saturar el pipeline con proyectos sin capacidad real de avance, que tardan demasiado en llegar al mercado, condenando al líder del proyecto al fracaso por falta de recursos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6670",
+        "frase": "usually leads to too many projects in the pipeline, and projects taking far too long"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la aprobación hueca suele llevar a demasiados proyectos en el pipeline; el nodo lo afirma como efecto seguro.; Se cae una de las consecuencias que el libro enumera: los proyectos tardan demasiado en llegar al mercado.; Se sostiene por el endurecimiento de la saturación; la ilusión de progreso queda como paráfrasis de que la aprobación sin recursos no significa nada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

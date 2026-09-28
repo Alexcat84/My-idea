@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Metodología y criterios claros de reporte",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si tu tema tiene un protocolo estándar reconocido (como el de gases de efecto invernadero), no te conviene inventar tu propio método: usa el que ya existe.",
+  "resumen_teorico": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si la ley fija cómo reportar tu tema o existe un protocolo estándar reconocido (como el de gases de efecto invernadero), un método inventado por ti no será aceptado: usa el que ya existe.",
   "pasos_accionables": [
     "Elige y anota un año base para comparar tus tendencias",
     "Aclara si tus datos son absolutos o normalizados por intensidad",
@@ -39,6 +39,22 @@
         "motivo": "La autoevaluacion de la gestion y el diseño de metricas no continua en la metodologia para reportar datos de sostenibilidad; solo comparten la idea de medir."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-052-metodologia_clara_reporte-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si tu tema tiene un protocolo estándar reconocido (como el de gases de efecto invernadero), no te conviene inventar tu propio método: usa el que ya existe.",
+      "texto_nuevo": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si la ley fija cómo reportar tu tema o existe un protocolo estándar reconocido (como el de gases de efecto invernadero), un método inventado por ti no será aceptado: usa el que ya existe.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7267",
+        "frase": "On topics where law determines reporting requirements or established methodologies have taken root"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): 'No te conviene' rebaja a preferencia lo que el libro da como no aceptable.; El libro dice que donde la ley fija el reporte o hay un método establecido, las métricas propias no serán aceptadas; el nodo pierde el caso de la ley y lo rebaja a conveniencia.; Se cae el caso en que la ley determina los requisitos de reporte.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

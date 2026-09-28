@@ -7,10 +7,10 @@
   "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecerá grave o insignificante según el animo del día, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
   "pasos_accionables": [
     "Decide antes de la prueba qué tipo de daño en el producto es inaceptable.",
-    "Decide qué nivel de daño superficial en la caja sí toleras sin considerarlo falla.",
+    "Decide qué nivel de daño superficial en la caja toleras sin considerarlo falla, si es que toleras alguno.",
     "Anota el estado del producto y del empaque antes de enviarlo o probarlo.",
     "Compara ese registro contra el estado final para saber si hubo una falla real.",
-    "Ajusta tu empaque solo cuando el daño supere el límite que tú mismo definiste."
+    "Sugerencia de My Idea: ajusta tu empaque cuando el daño supere el límite que tú mismo definiste."
   ],
   "entregable_esperado": "Una lista escrita de qué es daño aceptable y qué no, lista antes de tu primera prueba de empaque.",
   "nodos_previos": [
@@ -124,6 +124,40 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-054-definir_que_cuenta_como_dano_antes_de_probar_empaque-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide qué nivel de daño superficial en la caja sí toleras sin considerarlo falla.",
+      "texto_nuevo": "Decide qué nivel de daño superficial en la caja toleras sin considerarlo falla, si es que toleras alguno.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "195",
+        "frase": "What damage tolerance level is allowable, if any"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide la tolerancia de daño si la hay: puede no tolerarse ninguna, y el paso la da por supuesta.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-054-definir_que_cuenta_como_dano_antes_de_probar_empaque-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajusta tu empaque solo cuando el daño supere el límite que tú mismo definiste.",
+      "texto_nuevo": "Sugerencia de My Idea: ajusta tu empaque cuando el daño supere el límite que tú mismo definiste.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "193",
+        "frase": "The test requestor shall determine all of the following before testing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da regla sobre cuándo ajustar el empaque; es consejo de la casa.; Mismo defecto: la regla de decisión es añadida.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

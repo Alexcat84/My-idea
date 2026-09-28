@@ -4,15 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Vacíos en el Conocimiento del Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Como emprendedor, no des por hecho que tu cliente conoce sus propias necesidades: en muchos casos son los últimos en descubrirlas, como pasó con el Walkman. Estos vacíos de conocimiento se llenan por la competencia del mercado y por quien detecta oportunidades donde los productos disponibles son inadecuados, lentos, escasos o de mala calidad. Una señal clara de vacío es cuando el usuario ya está creando soluciones informales por su cuenta, comprando en mercados no oficiales o improvisando alternativas caseras porque nada de lo disponible le sirve. Ahí, más que preguntar, tienes que observar y anticipar lo que nadie te va a decir directamente en una encuesta.",
+  "resumen_teorico": "Como emprendedor, no des por hecho que tu cliente conoce sus propias necesidades: en algunos casos puede ser el último en descubrirlas, como pasó con el Walkman. Estos vacíos de conocimiento se llenan por la competencia del mercado y por quien detecta oportunidades donde los productos disponibles son inadecuados, lentos, escasos o de mala calidad. Una señal clara de vacío es cuando el usuario ya está creando soluciones informales por su cuenta, comprando en mercados no oficiales o improvisando alternativas caseras porque nada de lo disponible le sirve. Por eso no basta con preguntar en una encuesta: lo que tu cliente sabe de sus necesidades puede ser bastante incompleto.",
   "pasos_accionables": [
     "No depender únicamente de encuestas o investigación de mercado tradicional para descubrir necesidades",
     "Observar productos o servicios existentes que los usuarios perciben como inadecuados, lentos o escasos",
     "Detectar soluciones informales que la gente ya inventa por su cuenta, como arreglos caseros o compras en mercados no oficiales",
-    "Prototipar una solución que anticipe la necesidad no articulada por el cliente",
-    "Lanzar un piloto pequeño para validar si esa necesidad latente es real"
+    "Sugerencia de My Idea: prototipar una solución que anticipe la necesidad no articulada por el cliente",
+    "Sugerencia de My Idea: lanzar un piloto pequeño para validar si esa necesidad latente es real"
   ],
-  "entregable_esperado": "Documento de oportunidades de innovación basado en necesidades latentes no expresadas por el cliente, validadas con un piloto.",
+  "entregable_esperado": "Documento de oportunidades de innovación basado en necesidades latentes no expresadas por el cliente.",
   "nodos_previos": [
     "ingenieria_calidad_proveedores",
     "sistema_manejo_quejas",
@@ -40,5 +40,73 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-vacios_conocimiento_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Como emprendedor, no des por hecho que tu cliente conoce sus propias necesidades: en muchos casos son los últimos en descubrirlas, como pasó con el Walkman. Estos vacíos de conocimiento se llenan por la competencia del mercado y por quien detecta oportunidades donde los productos disponibles son inadecuados, lentos, escasos o de mala calidad. Una señal clara de vacío es cuando el usuario ya está creando soluciones informales por su cuenta, comprando en mercados no oficiales o improvisando alternativas caseras porque nada de lo disponible le sirve. Ahí, más que preguntar, tienes que observar y anticipar lo que nadie te va a decir directamente en una encuesta.",
+      "texto_nuevo": "Como emprendedor, no des por hecho que tu cliente conoce sus propias necesidades: en algunos casos puede ser el último en descubrirlas, como pasó con el Walkman. Estos vacíos de conocimiento se llenan por la competencia del mercado y por quien detecta oportunidades donde los productos disponibles son inadecuados, lentos, escasos o de mala calidad. Una señal clara de vacío es cuando el usuario ya está creando soluciones informales por su cuenta, comprando en mercados no oficiales o improvisando alternativas caseras porque nada de lo disponible le sirve. Por eso no basta con preguntar en una encuesta: lo que tu cliente sabe de sus necesidades puede ser bastante incompleto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "933",
+        "frase": "In practice, customer knowledge can be quite incomplete. In some cases, the customer may"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'en algunos casos'; 'en muchos casos' endurece la frecuencia.; El libro solo dice que el conocimiento del cliente puede ser incompleto y que la investigación de mercado no basta; 'nadie te lo va a decir' endurece.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-050-vacios_conocimiento_cliente-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prototipar una solución que anticipe la necesidad no articulada por el cliente",
+      "texto_nuevo": "Sugerencia de My Idea: prototipar una solución que anticipe la necesidad no articulada por el cliente",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "933-935",
+        "frase": "gaps in customer knowledge are filled in mainly by the forces of the competitive market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone prototipar; queda como sugerencia de la casa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-050-vacios_conocimiento_cliente-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lanzar un piloto pequeño para validar si esa necesidad latente es real",
+      "texto_nuevo": "Sugerencia de My Idea: lanzar un piloto pequeño para validar si esa necesidad latente es real",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "933-935",
+        "frase": "gaps in customer knowledge are filled in mainly by the forces of the competitive market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de validar la necesidad con un piloto; queda como sugerencia de la casa.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-050-vacios_conocimiento_cliente-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento de oportunidades de innovación basado en necesidades latentes no expresadas por el cliente, validadas con un piloto.",
+      "texto_nuevo": "Documento de oportunidades de innovación basado en necesidades latentes no expresadas por el cliente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "933",
+        "frase": "In practice, customer knowledge can be quite incomplete."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La validación con un piloto no viene del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

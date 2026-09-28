@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Sustitución Química Sinergética",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema. Muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque no se analiza el conjunto de interacciones químicas ni la disponibilidad real de los materiales sustitutos en la naturaleza. Existen bases de datos de materiales (unas 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
+  "resumen_teorico": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema, y a veces conviene más conservar el material original en un ciclo técnico cerrado. Muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque nadie pregunta qué se pone en su lugar: el sustituto puede ser igual o más tóxico, o escaso y costoso de extraer. Existen bases de datos de materiales (unas 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
   "pasos_accionables": [
     "Mapear todos los componentes químicos del producto y su función",
     "Consultar bases de datos de materiales para identificar alternativas menos tóxicas",
@@ -55,6 +55,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U2-017 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-050-sustitucion_quimica_sinergetica-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema. Muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque no se analiza el conjunto de interacciones químicas ni la disponibilidad real de los materiales sustitutos en la naturaleza. Existen bases de datos de materiales (unas 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
+      "texto_nuevo": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema, y a veces conviene más conservar el material original en un ciclo técnico cerrado. Muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque nadie pregunta qué se pone en su lugar: el sustituto puede ser igual o más tóxico, o escaso y costoso de extraer. Existen bases de datos de materiales (unas 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "52-56",
+        "frase": "Nobody asks what is put in place of lead."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): En los casos del asbesto y el plomo el libro atribuye el fallo a no preguntar qué entra en su lugar, no a no analizar interacciones.; Mismo defecto.; Se pierde que a veces conviene conservar el material (el plomo) en un ciclo técnico y reutilizarlo sin fin en vez de sustituirlo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

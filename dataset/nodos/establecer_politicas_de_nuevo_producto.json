@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Políticas de Nuevo Producto para el Diseño de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las organizaciones necesitan políticas claras que guíen el diseño de nuevos productos, cubriendo cuatro áreas críticas: (1) fallas en diseños nuevos y heredados, exigiendo que ningún producto nuevo tenga mayor tasa de fallas que el que reemplaza; (2) uso previsto versus no previsto, definiendo cómo diseñar para usos indebidos previsibles; (3) exigencia de un proceso formal de Diseño para la Calidad que enfoque la creatividad en el cliente; y (4) custodia de diseños y control de cambios, asegurando documentación y aprobación formal de cualquier modificación.",
+  "resumen_teorico": "Las organizaciones necesitan políticas claras que guíen el diseño de nuevos productos, cubriendo cuatro áreas críticas: (1) fallas en diseños nuevos y heredados, exigiendo que ningún producto nuevo tenga mayor tasa de fallas que el que reemplaza; (2) uso previsto versus no previsto, decidiendo antes de iniciar el proyecto, según la estrategia y el entorno de uso, si se diseña para usos indebidos previsibles; (3) exigencia de un proceso formal de Diseño para la Calidad que enfoque la creatividad en el cliente; y (4) custodia de diseños y control de cambios, asegurando documentación y aprobación formal de cualquier modificación.",
   "pasos_accionables": [
     "Definir política de confiabilidad mínima para productos nuevos y heredados",
-    "Establecer criterios de diseño para uso previsto y no previsto",
+    "Establecer, antes de iniciar el proyecto y en función de tu estrategia y del entorno de uso, criterios de diseño para uso previsto y no previsto",
     "Formalizar el proceso de Diseño para la Calidad dentro de la organización",
     "Asignar responsables de custodia de diseños y control de cambios"
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Define tus Políticas de Diseño",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-establecer_politicas_de_nuevo_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las organizaciones necesitan políticas claras que guíen el diseño de nuevos productos, cubriendo cuatro áreas críticas: (1) fallas en diseños nuevos y heredados, exigiendo que ningún producto nuevo tenga mayor tasa de fallas que el que reemplaza; (2) uso previsto versus no previsto, definiendo cómo diseñar para usos indebidos previsibles; (3) exigencia de un proceso formal de Diseño para la Calidad que enfoque la creatividad en el cliente; y (4) custodia de diseños y control de cambios, asegurando documentación y aprobación formal de cualquier modificación.",
+      "texto_nuevo": "Las organizaciones necesitan políticas claras que guíen el diseño de nuevos productos, cubriendo cuatro áreas críticas: (1) fallas en diseños nuevos y heredados, exigiendo que ningún producto nuevo tenga mayor tasa de fallas que el que reemplaza; (2) uso previsto versus no previsto, decidiendo antes de iniciar el proyecto, según la estrategia y el entorno de uso, si se diseña para usos indebidos previsibles; (3) exigencia de un proceso formal de Diseño para la Calidad que enfoque la creatividad en el cliente; y (4) custodia de diseños y control de cambios, asegurando documentación y aprobación formal de cualquier modificación.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3481",
+        "frase": "These are policy questions that need to be settled before the project begins."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea si se diseña para el uso indebido como pregunta de política que se resuelve antes del proyecto, según la estrategia y el entorno de uso; el nodo lo da por hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-051-establecer_politicas_de_nuevo_producto-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer criterios de diseño para uso previsto y no previsto",
+      "texto_nuevo": "Establecer, antes de iniciar el proyecto y en función de tu estrategia y del entorno de uso, criterios de diseño para uso previsto y no previsto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3481",
+        "frase": "These are policy questions that need to be settled before the project begins."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide resolver estas preguntas antes de que empiece el proyecto y según la estrategia y el entorno de uso.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

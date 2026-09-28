@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Prueba de alta fidelidad de tu producto mínimo (MVP)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "A diferencia de la prueba sencilla anterior, que solo mide si el problema te interesa a la gente, aquí invitas a un número limitado de clientes reales a usar una versión funcional de tu producto (MVP) para ver si de verdad lo compran o lo usan. No es un lanzamiento completo ni abierto; conviene que el acceso sea solo por invitación, para controlar quién lo ve y evitar que la competencia o la prensa se enteren antes de tiempo. Lo que más te interesa medir es la velocidad con la que tus clientes empiezan a usarlo de verdad.",
+  "resumen_teorico": "A diferencia de la prueba sencilla anterior, que solo mide si el problema te interesa a la gente, aquí invitas a un número limitado de clientes reales a usar una versión funcional de tu producto (MVP) para ver si de verdad lo compran o lo usan. No es un lanzamiento completo ni abierto; conviene que el acceso sea solo por invitación, para controlar quién lo ve, porque un sitio abierto a todos atrae a la competencia. Lo que más te interesa medir es la velocidad con la que tus clientes empiezan a usarlo de verdad, salvo en nichos muy específicos o productos de alto valor, donde pocos clientes valiosos pueden bastar.",
   "pasos_accionables": [
     "Decide un número limitado de clientes a quienes invitarás a probar tu producto (MVP)",
     "Incluye una llamada a la acción clara: comprar, registrarse o saber más",
     "Mide cuántas visitas necesitas antes de que alguien empiece a usarlo",
-    "Mide cuántos usuarios recomiendan tu producto a amigos y qué tan rápido empiezan a usarlo",
-    "Evita publicidad, prensa o demostraciones públicas durante esta prueba"
+    "Mide cuántos usuarios recomiendan tu producto a amigos, qué tan rápido esos amigos empiezan a usarlo y qué tan rápido y seguido vuelven los visitantes",
+    "Evita comunicados de prensa, entrevistas, blogs o demostraciones públicas durante esta prueba, salvo ante posibles inversionistas"
   ],
   "entregable_esperado": "Un reporte de tu prueba con clientes reales, con las métricas de velocidad de uso y los criterios que usaste para decidir si pasa o no pasa",
   "nodos_previos": [
@@ -29,5 +29,57 @@
   "etiqueta_arbol": "Prueba tu Producto Mínimo Real",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-prueba_mvp_alta_fidelidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de la prueba sencilla anterior, que solo mide si el problema te interesa a la gente, aquí invitas a un número limitado de clientes reales a usar una versión funcional de tu producto (MVP) para ver si de verdad lo compran o lo usan. No es un lanzamiento completo ni abierto; conviene que el acceso sea solo por invitación, para controlar quién lo ve y evitar que la competencia o la prensa se enteren antes de tiempo. Lo que más te interesa medir es la velocidad con la que tus clientes empiezan a usarlo de verdad.",
+      "texto_nuevo": "A diferencia de la prueba sencilla anterior, que solo mide si el problema te interesa a la gente, aquí invitas a un número limitado de clientes reales a usar una versión funcional de tu producto (MVP) para ver si de verdad lo compran o lo usan. No es un lanzamiento completo ni abierto; conviene que el acceso sea solo por invitación, para controlar quién lo ve, porque un sitio abierto a todos atrae a la competencia. Lo que más te interesa medir es la velocidad con la que tus clientes empiezan a usarlo de verdad, salvo en nichos muy específicos o productos de alto valor, donde pocos clientes valiosos pueden bastar.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8878",
+        "frase": "A completely open, public site or app invites competitors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro justifica el acceso por invitación porque un sitio abierto atrae a la competencia y dice que la prueba no puede ser secreta; la prensa como razón y el ocultarse son añadidos.; Mismo defecto: se pierde la excepción a la búsqueda de velocidad.; Se cae la excepción del libro: en sitios de nicho o productos de alto valor pueden bastar pocos clientes valiosos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-prueba_mvp_alta_fidelidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide cuántos usuarios recomiendan tu producto a amigos y qué tan rápido empiezan a usarlo",
+      "texto_nuevo": "Mide cuántos usuarios recomiendan tu producto a amigos, qué tan rápido esos amigos empiezan a usarlo y qué tan rápido y seguido vuelven los visitantes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8857-8863",
+        "frase": "how quickly—and how often—visitors return"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las medidas de velocidad del libro falta qué tan rápido y con qué frecuencia vuelven los visitantes, que ningún paso recoge.; Mismo defecto: la tasa de regreso de visitantes no se mide en ningún paso.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-prueba_mvp_alta_fidelidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita publicidad, prensa o demostraciones públicas durante esta prueba",
+      "texto_nuevo": "Evita comunicados de prensa, entrevistas, blogs o demostraciones públicas durante esta prueba, salvo ante posibles inversionistas",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8880",
+        "frase": "now is not the time for press releases, interviews, blogs or public demos"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro desaconseja comunicados de prensa, entrevistas, blogs y demos públicas, no la publicidad, que incluso sirve para las invitaciones.; Mismo defecto: evitar la publicidad es añadido.; Se pierde la excepción del libro: las demostraciones sí caben ante posibles inversionistas.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Equipos de Ruptura y Equipos de Compromiso Diario (VET)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Distingue entre equipos de ruptura interfuncionales (como Lean y Six Sigma) enfocados en mejoras significativas de desempeño, y Value Engagement Teams (VET), equipos pequeños funcionales que continuamente monitorean la efectividad y eficiencia de sus procesos diarios. Ambos requieren vincular su esfuerzo a factores críticos de éxito para evitar la formación de 'equipos falsos' sin objetivos claros.",
+  "resumen_teorico": "Distingue entre equipos de ruptura interfuncionales (como Lean y Six Sigma) enfocados en mejoras significativas de desempeño, y Value Engagement Teams (VET), equipos pequeños funcionales que continuamente monitorean la efectividad y eficiencia de sus procesos diarios. Vincular su esfuerzo a cinco factores críticos de éxito puede evitar la formación de 'equipos falsos' sin objetivos claros.",
   "pasos_accionables": [
     "Definir si el problema requiere un equipo de ruptura interfuncional o un equipo de compromiso diario (VET)",
     "Establecer los cinco factores críticos de éxito antes de iniciar el equipo",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Equipos de Cambio y Vigilancia",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-equipos_ruptura_vet-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distingue entre equipos de ruptura interfuncionales (como Lean y Six Sigma) enfocados en mejoras significativas de desempeño, y Value Engagement Teams (VET), equipos pequeños funcionales que continuamente monitorean la efectividad y eficiencia de sus procesos diarios. Ambos requieren vincular su esfuerzo a factores críticos de éxito para evitar la formación de 'equipos falsos' sin objetivos claros.",
+      "texto_nuevo": "Distingue entre equipos de ruptura interfuncionales (como Lean y Six Sigma) enfocados en mejoras significativas de desempeño, y Value Engagement Teams (VET), equipos pequeños funcionales que continuamente monitorean la efectividad y eficiencia de sus procesos diarios. Vincular su esfuerzo a cinco factores críticos de éxito puede evitar la formación de 'equipos falsos' sin objetivos claros.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1774",
+        "frase": "Linking the effort of the team to five critical success factors can solve this problem."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que vincular el esfuerzo a cinco factores críticos de éxito puede resolver el problema de los equipos falsos; el nodo lo vuelve requisito.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

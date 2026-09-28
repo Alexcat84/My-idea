@@ -4,11 +4,11 @@
   "dominio": "health_safety",
   "titulo_concepto": "Efectos de la Recompensa y el Castigo en el Comportamiento Seguro",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las recompensas son el medio más poderoso para cambiar el comportamiento, pero solo si se entregan de forma cercana en tiempo y lugar a la conducta deseada. Los castigos retrasados generalmente no mejoran el comportamiento y generan resentimiento. Sin embargo, sancionar a los pocos infractores graves (ej. reincidentes o negligentes deliberados) protege la moral del equipo y refuerza los límites de comportamiento aceptable, fortaleciendo la percepción de una cultura justa.",
+  "resumen_teorico": "Las recompensas son el medio más poderoso para cambiar el comportamiento, pero solo si se entregan de forma cercana en tiempo y lugar a la conducta deseada. Los castigos retrasados generalmente no mejoran el comportamiento y pueden generar resentimiento. Sin embargo, sancionar a los pocos infractores graves (ej. reincidentes o negligentes deliberados) protege la moral del equipo y refuerza los límites de comportamiento aceptable, fortaleciendo la percepción de una cultura justa.",
   "pasos_accionables": [
     "Diseñar sistemas de reconocimiento inmediato para comportamientos seguros",
     "Evitar sanciones tardías desconectadas del momento del incidente",
-    "Aplicar sanciones consistentes y visibles solo a casos de negligencia grave o reincidencia comprobada",
+    "Aplicar sanciones consistentes y visibles solo a los pocos casos graves (daño malintencionado, abuso de alcohol o drogas, negligencia grave o reincidencia comprobada), juzgando con cuidado los casos dudosos",
     "Evaluar el impacto de las sanciones en la moral y confianza del equipo"
   ],
   "entregable_esperado": "Esquema de incentivos y sanciones alineado con principios de refuerzo conductual",
@@ -36,6 +36,39 @@
         "motivo": "Aislar el efecto Hawthorne al medir un entrenamiento es otro tema que recompensas y castigos para la conducta segura."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-051-efectos_recompensa_castigo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las recompensas son el medio más poderoso para cambiar el comportamiento, pero solo si se entregan de forma cercana en tiempo y lugar a la conducta deseada. Los castigos retrasados generalmente no mejoran el comportamiento y generan resentimiento. Sin embargo, sancionar a los pocos infractores graves (ej. reincidentes o negligentes deliberados) protege la moral del equipo y refuerza los límites de comportamiento aceptable, fortaleciendo la percepción de una cultura justa.",
+      "texto_nuevo": "Las recompensas son el medio más poderoso para cambiar el comportamiento, pero solo si se entregan de forma cercana en tiempo y lugar a la conducta deseada. Los castigos retrasados generalmente no mejoran el comportamiento y pueden generar resentimiento. Sin embargo, sancionar a los pocos infractores graves (ej. reincidentes o negligentes deliberados) protege la moral del equipo y refuerza los límites de comportamiento aceptable, fortaleciendo la percepción de una cultura justa.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5067",
+        "frase": "they generally do not lead to improved behaviour and can induce resentment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que los castigos retrasados pueden inducir resentimiento.; Misma marca de endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-051-efectos_recompensa_castigo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar sanciones consistentes y visibles solo a casos de negligencia grave o reincidencia comprobada",
+      "texto_nuevo": "Aplicar sanciones consistentes y visibles solo a los pocos casos graves (daño malintencionado, abuso de alcohol o drogas, negligencia grave o reincidencia comprobada), juzgando con cuidado los casos dudosos",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5063, 5077",
+        "frase": "Both malevolent damage and the dangerous use of alcohol or drugs are wholly unacceptable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con el 'solo' la lista deja fuera el daño malintencionado y el abuso de alcohol o drogas, lo más claramente inaceptable para el libro.; Misma pérdida, más el aviso de que los casos dudosos de negligencia exigen juicio cuidadoso.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

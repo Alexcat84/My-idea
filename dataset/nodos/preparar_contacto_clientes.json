@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Preparación de Contactos con Clientes Potenciales",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "El primer paso de salir del edificio es que construyas una lista de al menos 50 clientes potenciales, sin importar el cargo que tengan o si encajan perfecto con tu perfil, y que desarrolles una historia de referencia (reference story): una narrativa breve que explica el problema que buscas resolver y pide tiempo de tu cliente sin intentar venderle nada. También arma en paralelo una lista de innovadores de tu industria.",
+  "resumen_teorico": "El primer paso de salir del edificio es que construyas una lista de al menos 50 clientes potenciales, sin importar el cargo que tengan o si encajan perfecto con tu perfil, y que desarrolles una historia de referencia (reference story): una narrativa breve que explica el problema que buscas resolver, por qué importa resolverlo y la solución que construyes, y pide tiempo de tu cliente sin intentar venderle nada. También arma en paralelo una lista de innovadores de tu industria.",
   "pasos_accionables": [
     "Construye una lista inicial de 50 clientes potenciales usando tus contactos personales, redes y referencias",
     "Crea una lista paralela de innovadores y líderes de opinión del sector",
-    "Redacta una historia de referencia que explique el problema y pida tiempo, no venda producto",
+    "Redacta una historia de referencia que explique el problema, por qué importa resolverlo y la solución que construyes, y que pida tiempo, no venda producto",
     "Envía mensajes introductorios (referidos, LinkedIn, correo) pidiendo reuniones breves de 15 a 20 minutos",
     "Agenda al menos 10 conversaciones diarias hasta llenar tu agenda de reuniones",
     "Arma un calendario maestro de citas y repártelas entre tú y quienes te acompañen en el proyecto"
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Prepara tu Lista de Clientes",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-preparar_contacto_clientes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El primer paso de salir del edificio es que construyas una lista de al menos 50 clientes potenciales, sin importar el cargo que tengan o si encajan perfecto con tu perfil, y que desarrolles una historia de referencia (reference story): una narrativa breve que explica el problema que buscas resolver y pide tiempo de tu cliente sin intentar venderle nada. También arma en paralelo una lista de innovadores de tu industria.",
+      "texto_nuevo": "El primer paso de salir del edificio es que construyas una lista de al menos 50 clientes potenciales, sin importar el cargo que tengan o si encajan perfecto con tu perfil, y que desarrolles una historia de referencia (reference story): una narrativa breve que explica el problema que buscas resolver, por qué importa resolverlo y la solución que construyes, y pide tiempo de tu cliente sin intentar venderle nada. También arma en paralelo una lista de innovadores de tu industria.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20060",
+        "frase": "why it's important to solve them, and the solution you're building"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La historia de referencia del libro también explica por qué importa resolver el problema y la solución que se construye.; Mismo defecto: se caen dos de los tres elementos de la historia de referencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-preparar_contacto_clientes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redacta una historia de referencia que explique el problema y pida tiempo, no venda producto",
+      "texto_nuevo": "Redacta una historia de referencia que explique el problema, por qué importa resolverlo y la solución que construyes, y que pida tiempo, no venda producto",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20060",
+        "frase": "why it's important to solve them, and the solution you're building"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan dos de los tres elementos de la historia de referencia: por qué importa resolver el problema y la solución.; Mismo defecto que la marca anterior.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

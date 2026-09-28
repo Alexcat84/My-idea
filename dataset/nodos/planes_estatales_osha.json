@@ -6,7 +6,7 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Esto es un programa de Estados Unidos: solo te sirve si tu negocio opera allí. En 22 estados y territorios, la seguridad y salud ocupacional no la maneja OSHA Federal directamente sino un plan estatal aprobado por OSHA, que debe proteger a los trabajadores al menos igual de bien que el nivel federal. Si tu taller o negocio está en uno de esos estados, puedes tener requisitos diferentes o adicionales a los federales.",
   "pasos_accionables": [
-    "Revisa si el estado donde tienes tu negocio cuenta con un Plan Estatal aprobado",
+    "Revisa si el estado donde tienes tu negocio cuenta con un Plan Estatal aprobado y si ese plan cubre a los negocios privados o solo a los trabajadores del gobierno estatal y local",
     "Busca en la página de Planes Estatales de OSHA los requisitos que te tocan específicamente",
     "Ajusta tu forma de cumplir según lo que pida tu plan estatal, si aplica",
     "Si tienes dudas puntuales, contacta directamente al Plan Estatal de tu zona"
@@ -40,6 +40,23 @@
         "evidencia": "F28-005: Trata de cumplir la normativa de seguridad laboral de un negocio que ya opera; no valida la idea con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-047-planes_estatales_osha-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si el estado donde tienes tu negocio cuenta con un Plan Estatal aprobado",
+      "texto_nuevo": "Revisa si el estado donde tienes tu negocio cuenta con un Plan Estatal aprobado y si ese plan cubre a los negocios privados o solo a los trabajadores del gobierno estatal y local",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1893-1895",
+        "frase": "State Plan covers state/local government workers only"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro distingue los planes que cubren solo a trabajadores del gobierno estatal y local; ahí el negocio privado sigue bajo OSHA federal.; Mismo defecto: falta revisar si el plan cubre al sector privado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

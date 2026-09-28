@@ -4,10 +4,10 @@
   "dominio": "exportacion",
   "titulo_concepto": "Métodos de Pago Internacional (Sight Draft, Time Draft, Letter of Credit)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Sight Draft permite al exportador retener el título de la mercancía hasta que el pago se realice y el documento de embarque sea endosado; conlleva mayor riesgo si el envío es aéreo, pues el air waybill no requiere presentación para reclamar la mercancía. El Time Draft otorga crédito al comprador, estableciendo que el pago vence en una fecha específica tras la aceptación del draft. La Letter of Credit es el instrumento más seguro, garantizando el pago si se cumplen los términos.",
+  "resumen_teorico": "El Sight Draft permite al exportador retener el título de la mercancía hasta que el pago se realice y el documento de embarque sea endosado; aun así, ningún banco respalda el pago y, si el comprador no paga, la mercancía queda a tu cargo; el riesgo crece en envío aéreo, pues el air waybill no requiere presentación para reclamarla. El Time Draft otorga crédito al comprador, estableciendo que el pago vence en un plazo fijado tras aceptar el draft y recibir la mercancía. La Letter of Credit es uno de los instrumentos más seguros, garantizando el pago si se cumplen los términos.",
   "pasos_accionables": [
     "Evaluar el riesgo del comprador y del mercado para elegir el método de pago adecuado",
-    "Usar Sight Draft solo con embarques marítimos (evitar en aéreos por el riesgo de pérdida de control del título)",
+    "Usar el Sight Draft con más cautela en embarques aéreos, donde el riesgo aumenta porque el comprador puede reclamar la mercancía sin presentar el air waybill",
     "Ofrecer Time Draft si se desea otorgar crédito comercial al comprador",
     "Priorizar Letter of Credit irrevocable para operaciones de alto riesgo o compradores nuevos"
   ],
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Elige Cómo Cobrar tus Ventas",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-053-metodos_de_pago_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El Sight Draft permite al exportador retener el título de la mercancía hasta que el pago se realice y el documento de embarque sea endosado; conlleva mayor riesgo si el envío es aéreo, pues el air waybill no requiere presentación para reclamar la mercancía. El Time Draft otorga crédito al comprador, estableciendo que el pago vence en una fecha específica tras la aceptación del draft. La Letter of Credit es el instrumento más seguro, garantizando el pago si se cumplen los términos.",
+      "texto_nuevo": "El Sight Draft permite al exportador retener el título de la mercancía hasta que el pago se realice y el documento de embarque sea endosado; aun así, ningún banco respalda el pago y, si el comprador no paga, la mercancía queda a tu cargo; el riesgo crece en envío aéreo, pues el air waybill no requiere presentación para reclamarla. El Time Draft otorga crédito al comprador, estableciendo que el pago vence en un plazo fijado tras aceptar el draft y recibir la mercancía. La Letter of Credit es uno de los instrumentos más seguros, garantizando el pago si se cumplen los términos.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4103-4113",
+        "frase": "payment is due by a specific time after the buyer has accepted the time draft"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion, matiz; doble lectura ciega y arbitro): Atribuye al time draft la fecha específica que el libro reserva al date draft; el time draft fija un plazo tras la aceptación y la recepción de la mercancía.; El libro la llama uno de los instrumentos más seguros y pone por delante el pago anticipado.; Mismo defecto que la marca 2.; Mismo defecto que la marca 2: el riesgo del sight draft no se limita al envío aéreo.; Mismo superlativo que la marca 1.; Se cae el límite del libro: ningún banco respalda la obligación del comprador y, si no paga, la mercancía queda a cargo del exportador.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-053-metodos_de_pago_internacional-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar Sight Draft solo con embarques marítimos (evitar en aéreos por el riesgo de pérdida de control del título)",
+      "texto_nuevo": "Usar el Sight Draft con más cautela en embarques aéreos, donde el riesgo aumenta porque el comprador puede reclamar la mercancía sin presentar el air waybill",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4103",
+        "frase": "Risk increases when a sight draft is used with an air shipment."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el riesgo aumenta con envío aéreo, no que el sight draft deba usarse solo en marítimos.; Mismo endurecimiento.; Mismo endurecimiento: el libro no prohíbe el sight draft en aéreos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

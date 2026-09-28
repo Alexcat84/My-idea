@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Volverse Nativo del Lugar (Becoming Native to This Place)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Idea que plantea que los humanos evolucionaron en la Tierra y deben usar su ingenio para integrarse armoniosamente con los ecosistemas locales, en lugar de buscar escapar a otros planetas o separar radicalmente industria y naturaleza mediante zonificación. Incluye ejemplos como la silvicultura sostenible de la tribu Menominee, que extrae recursos madereros manteniendo e incluso incrementando el volumen forestal en pie a largo plazo.",
+  "resumen_teorico": "Idea que plantea que los humanos evolucionaron en la Tierra y deben usar su ingenio para integrarse armoniosamente con los ecosistemas locales, en lugar de buscar escapar a otros planetas. Si la industria es segura, no necesita zonificarse aparte, aunque conviene dejar algunos lugares naturales sin intervención. Un ejemplo es la silvicultura de la tribu Menominee, que extrae madera manteniendo e incluso incrementando el volumen forestal en pie, aunque ese método no es necesariamente universal.",
   "pasos_accionables": [
     "Estudiar prácticas tradicionales o indígenas de manejo de recursos aplicables a la región del proyecto",
     "Diseñar sistemas de extracción de recursos que mantengan o incrementen el capital natural a largo plazo",
-    "Evaluar la posibilidad de integrar industria y comunidad en lugar de separarlas mediante zonificación estricta"
+    "Evaluar la posibilidad de integrar industria y comunidad en lugar de separarlas mediante zonificación estricta, siempre que la fabricación haya dejado de ser peligrosa"
   ],
   "entregable_esperado": "Plan de manejo de recursos locales inspirado en prácticas regenerativas, con métricas de largo plazo (ej. stock forestal, biodiversidad)",
   "nodos_previos": [
@@ -38,6 +38,39 @@
         "evidencia": "F04-023: El entregable es un plan de manejo de recursos con metricas de largo plazo, lo que corresponde a disenar el plan. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-050-volverse_nativo_del_lugar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Idea que plantea que los humanos evolucionaron en la Tierra y deben usar su ingenio para integrarse armoniosamente con los ecosistemas locales, en lugar de buscar escapar a otros planetas o separar radicalmente industria y naturaleza mediante zonificación. Incluye ejemplos como la silvicultura sostenible de la tribu Menominee, que extrae recursos madereros manteniendo e incluso incrementando el volumen forestal en pie a largo plazo.",
+      "texto_nuevo": "Idea que plantea que los humanos evolucionaron en la Tierra y deben usar su ingenio para integrarse armoniosamente con los ecosistemas locales, en lugar de buscar escapar a otros planetas. Si la industria es segura, no necesita zonificarse aparte, aunque conviene dejar algunos lugares naturales sin intervención. Un ejemplo es la silvicultura de la tribu Menominee, que extrae madera manteniendo e incluso incrementando el volumen forestal en pie, aunque ese método no es necesariamente universal.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "535-537",
+        "frase": "when manufacturing is no longer dangerous, commercial and residential sites can exist alongside factories"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona no apartar la industria a que sea segura y defiende dejar algunos lugares naturales sin intervención.; Mismo defecto que la marca 0: la crítica a la zonificación es a separar la industria de la actividad humana.; Mismo defecto que la marca 1.; Se pierde la advertencia de que ese método forestal no es necesariamente universal.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-050-volverse_nativo_del_lugar-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar la posibilidad de integrar industria y comunidad en lugar de separarlas mediante zonificación estricta",
+      "texto_nuevo": "Evaluar la posibilidad de integrar industria y comunidad en lugar de separarlas mediante zonificación estricta, siempre que la fabricación haya dejado de ser peligrosa",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "535",
+        "frase": "when manufacturing is no longer dangerous, commercial and residential sites can exist alongside factories"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la convivencia de fábricas con zonas residenciales a que la fabricación ya no sea peligrosa.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

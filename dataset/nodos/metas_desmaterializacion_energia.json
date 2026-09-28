@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Metas de desmaterialización y reducción de energía",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las empresas líderes en ventaja ecológica establecen metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.",
+  "resumen_teorico": "Las empresas líderes en ventaja ecológica suelen establecer metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto y dando luego a sus diseñadores espacio para resolverlo. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.",
   "pasos_accionables": [
-    "Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía",
+    "Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía, y luego dar a quienes diseñan espacio para resolverlo",
     "Establecer metas cuantitativas de reducción (% de materiales, % de energía)",
-    "Rediseñar empaques para reducir peso y volumen (lightweighting)",
+    "Rediseñar empaques para reducir peso y volumen (lightweighting), sin dejar de proteger el producto contra daños",
     "Comunicar los ahorros de costos y beneficios ambientales generados"
   ],
   "entregable_esperado": "Metas cuantitativas de reducción de materiales y energía definidas, con plan de rediseño de producto o empaque",
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Reduce Materiales y Energía",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-052-metas_desmaterializacion_energia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las empresas líderes en ventaja ecológica establecen metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.",
+      "texto_nuevo": "Las empresas líderes en ventaja ecológica suelen establecer metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto y dando luego a sus diseñadores espacio para resolverlo. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3696",
+        "frase": "They often set quantitative targets for reduced product impacts."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que a menudo fijan metas cuantitativas; el nodo lo vuelve una práctica general.; El libro pone la clave en identificar dónde se concentra el uso y luego dar a los diseñadores espacio para resolverlo; se cae la segunda mitad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-052-metas_desmaterializacion_energia-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía",
+      "texto_nuevo": "Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía, y luego dar a quienes diseñan espacio para resolverlo",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3696",
+        "frase": "then giving designers the space to problem solve"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La clave según el pasaje incluye dar a los diseñadores espacio para resolver el problema tras identificar el punto de mayor uso; el paso lo pierde.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-052-metas_desmaterializacion_energia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rediseñar empaques para reducir peso y volumen (lightweighting)",
+      "texto_nuevo": "Rediseñar empaques para reducir peso y volumen (lightweighting), sin dejar de proteger el producto contra daños",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3700",
+        "frase": "optimal packaging design addresses the unsustainability of overpackaging, yet still prevents product damage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte del equilibrio: evitar el sobreempaque sin dejar de prevenir daños por falta de empaque.; Misma advertencia de equilibrio perdida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

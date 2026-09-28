@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Consulta en Sitio de OSHA (On-Site Consultation)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros, te asesora sobre qué exige la norma y te ayuda a armar un programa de seguridad. Si aplicas las recomendaciones, puedes calificar para el programa SHARP, que te libera de las inspecciones programadas de OSHA.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros, te asesora sobre qué exige la norma y te ayuda a armar un programa de seguridad. Si usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
   "pasos_accionables": [
     "Pide una visita de consulta al programa estatal de On-Site Consultation",
     "Decide junto al consultor qué necesitas: resolver un problema puntual o una evaluación completa",
     "Pon en práctica las recomendaciones que te da el consultor para mejorar la seguridad",
     "Revisa si calificas para el programa SHARP una vez que aplicaste las recomendaciones",
-    "Si obtienes la designación SHARP, aprovecha que quedas exento de las inspecciones programadas"
+    "Si obtienes la designación SHARP, aprovecha que las inspecciones programadas se aplazan mientras tu designación esté vigente"
   ],
   "entregable_esperado": "Visita de consulta OSHA realizada, plan de acción implementado y, si corresponde, certificación SHARP obtenida.",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Pide Consulta Gratis en Sitio",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-047-programa_consulta_osha_onsite-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros, te asesora sobre qué exige la norma y te ayuda a armar un programa de seguridad. Si aplicas las recomendaciones, puedes calificar para el programa SHARP, que te libera de las inspecciones programadas de OSHA.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros, te asesora sobre qué exige la norma y te ayuda a armar un programa de seguridad. Si usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1791",
+        "frase": "receives a deferral from OSHA or State Plan programmed inspections during the period"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da un aplazamiento de las inspecciones programadas mientras la designación siga vigente, no una liberación.; El libro exige haber usado la consulta y operar un programa de seguridad y salud ejemplar, no solo aplicar recomendaciones.; Recoge ambas pérdidas: la condición de elegibilidad y el límite temporal del aplazamiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-programa_consulta_osha_onsite-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si obtienes la designación SHARP, aprovecha que quedas exento de las inspecciones programadas",
+      "texto_nuevo": "Si obtienes la designación SHARP, aprovecha que las inspecciones programadas se aplazan mientras tu designación esté vigente",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1791",
+        "frase": "A worksite receives a deferral from OSHA or State Plan programmed inspections"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Exención en vez del aplazamiento limitado a la vigencia de la designación que da el libro.; Mismo defecto: convertir un aplazamiento temporal en exención endurece lo que dice el libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

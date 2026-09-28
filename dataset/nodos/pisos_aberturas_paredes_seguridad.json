@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguridad en Aberturas de Piso y Pared",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
+  "resumen_teorico": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras y en entradas de escaleras de mano. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
   "pasos_accionables": [
     "Inspeccionar todas las aberturas de piso existentes en la instalación",
     "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
@@ -56,6 +56,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es una cifra normativa: el paso aplica tambien a las barandillas la exigencia del doble de la carga maxima, y el libro la pone solo para las cubiertas (L1481). La proteccion con cubierta, barandilla o equivalente viene de L1477. El resumen_teorico ya lo dice bien y no se toca.",
       "indice": 1,
       "auditoria": "tramo1 SB2-004"
+    },
+    {
+      "id": "final-e1-047-pisos_aberturas_paredes_seguridad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
+      "texto_nuevo": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras y en entradas de escaleras de mano. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1477",
+        "frase": "on all sides (except at stairways or ladder entrances)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa también las entradas de escaleras de mano.; Mismo defecto: falta la excepción de las entradas de escaleras de mano.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

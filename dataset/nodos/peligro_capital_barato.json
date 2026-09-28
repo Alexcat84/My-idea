@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Cuestiona cualquier estrategia de crecimiento que dependa de suponer acceso ilimitado a capital futuro.",
     "Sugerencia de My Idea: modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
-    "Establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperado.",
+    "Sugerencia de My Idea: establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperabas.",
     "Distingue entre crecer rápido de forma sostenible y crecer rápido apalancado en supuestos financieros frágiles."
   ],
   "entregable_esperado": "Análisis de sensibilidad financiera que muestre el impacto de una caída súbita en la disponibilidad de capital sobre el runway de la empresa.",
@@ -42,6 +42,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B. El libro cuenta el gasto masivo de Loudcloud (contrataciones, la Taj de 5 millones, oficinas) y advierte del peligro de pensar como si el capital fuera gratis, pero no propone modelar escenarios de contraccion de capital. Busque en todo el libro model*, scenario, contingenc*: 'modeling' solo aparece en L420 para evaluar la compra de Data Return, y los 'scenarios' de L436 son de separar Opsware, nada de simular una contraccion antes de gastar. Es una herramienta de planificacion que el libro no da, asi que no es OPERATIVO. Tampoco es CONTRARIO: ningun pasaje desaconseja preparar ese tipo de escenarios.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-023"
+    },
+    {
+      "id": "final-e1-048-peligro_capital_barato-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperado.",
+      "texto_nuevo": "Sugerencia de My Idea: establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperabas.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "242",
+        "frase": "\"What would you do if capital were free?\" is a dangerous question"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no recomienda un plan de contingencia de financiamiento; es un consejo práctico que queda como sugerencia de la casa.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

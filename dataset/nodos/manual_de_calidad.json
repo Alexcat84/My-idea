@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Manual de Calidad y Sistema de Control de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El manual de calidad recopila los procedimientos (planes de uso repetitivo) para gestionar la calidad, aportando legitimidad, accesibilidad y estabilidad frente a rotación de personal. Su contenido típico incluye el ciclo de retroalimentación, capacidad de procesos, mantenimiento y calibración, relación con proveedores, sistema de información, entrenamiento y auditoría. Los líderes deben participar en su definición, aprobarlo formalmente y auditar periódicamente su vigencia y cumplimiento.",
+  "resumen_teorico": "El manual de calidad recopila los procedimientos (planes de uso repetitivo) para gestionar la calidad, aportando legitimidad, accesibilidad y estabilidad frente a rotación de personal. Su contenido típico incluye el ciclo de retroalimentación, capacidad de procesos, mantenimiento y calibración, relación con proveedores, sistema de información, entrenamiento y auditoría. Los líderes pueden influir en que sea adecuado participando en su definición, aprobándolo formalmente y auditando periódicamente su vigencia y cumplimiento.",
   "pasos_accionables": [
     "Redactar los procedimientos core: retroalimentación, capacidad de proceso, calibración, proveedores, información, entrenamiento y auditoría",
     "Obtener la firma y aprobación oficial del gerente general para dar legitimidad al manual",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Documenta tu Sistema de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-055-manual_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El manual de calidad recopila los procedimientos (planes de uso repetitivo) para gestionar la calidad, aportando legitimidad, accesibilidad y estabilidad frente a rotación de personal. Su contenido típico incluye el ciclo de retroalimentación, capacidad de procesos, mantenimiento y calibración, relación con proveedores, sistema de información, entrenamiento y auditoría. Los líderes deben participar en su definición, aprobarlo formalmente y auditar periódicamente su vigencia y cumplimiento.",
+      "texto_nuevo": "El manual de calidad recopila los procedimientos (planes de uso repetitivo) para gestionar la calidad, aportando legitimidad, accesibilidad y estabilidad frente a rotación de personal. Su contenido típico incluye el ciclo de retroalimentación, capacidad de procesos, mantenimiento y calibración, relación con proveedores, sistema de información, entrenamiento y auditoría. Los líderes pueden influir en que sea adecuado participando en su definición, aprobándolo formalmente y auditando periódicamente su vigencia y cumplimiento.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8414-8420",
+        "frase": "Leaders are able to influence the adequacy of the quality control manual in several ways"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro enumera estas acciones como formas en que los líderes pueden influir en el manual; el nodo las vuelve obligación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

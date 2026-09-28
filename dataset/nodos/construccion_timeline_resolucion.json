@@ -7,8 +7,8 @@
   "resumen_teorico": "La resolución con que se construye una línea de tiempo determina cuánto se puede aprender sobre el desempeño humano. Un timeline de baja resolución usa fragmentos de comunicación como principio organizador (qué se dijo), mientras uno de alta resolución usa el tiempo mismo como principio organizador, revelando silencios, superposición de habla, ritmo de trabajo y otros fenómenos temporales esenciales para entender carga de trabajo, estrés y gestión de tareas.",
   "pasos_accionables": [
     "Transcribir la comunicación segundo a segundo, no solo por turnos de habla",
-    "Identificar silencios y su posible significado (distracción, otra tarea, carga cognitiva)",
-    "Marcar superposiciones de habla (interrupciones, jerarquías)",
+    "Identificar silencios y su posible significado (distracción, otra tarea, carga cognitiva), y respaldar esa lectura con otras fuentes de evidencia, como hablar con las personas o sus colegas",
+    "Marcar superposiciones de habla (interrupciones, jerarquías o confusión que genera el equipo que se está operando)",
     "Anotar cambios en el ritmo de la conversación (aceleración hacia el final)",
     "Justificar explícitamente el punto de inicio elegido para el timeline"
   ],
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Elige la Resolución de tu Línea",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-construccion_timeline_resolucion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marcar superposiciones de habla (interrupciones, jerarquías)",
+      "texto_nuevo": "Marcar superposiciones de habla (interrupciones, jerarquías o confusión que genera el equipo que se está operando)",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1514",
+        "frase": "clues to look into hierarchical relationships, or the potential confusion presented by the device"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da dos pistas de la superposición: jerarquías o confusión que genera el equipo donde se hacen las entradas.; Misma pérdida de la segunda pista.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-051-construccion_timeline_resolucion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar silencios y su posible significado (distracción, otra tarea, carga cognitiva)",
+      "texto_nuevo": "Identificar silencios y su posible significado (distracción, otra tarea, carga cognitiva), y respaldar esa lectura con otras fuentes de evidencia, como hablar con las personas o sus colegas",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1522",
+        "frase": "these are all leaps of faith that need back-up with converging lines of evidence"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que estas lecturas son saltos de fe que necesitan evidencia convergente.; Misma pérdida del respaldo con evidencia convergente.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

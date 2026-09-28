@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Liderazgo de Mercado a través de la Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El liderazgo de mercado se logra generalmente al entrar primero a un mercado y ganar superioridad, pero debe mantenerse mediante mejoras continuas del producto o servicio. Las organizaciones pueden adoptar una estrategia pasiva ('dejar que la naturaleza siga su curso') o una estrategia activa, estableciendo el liderazgo en calidad como un objetivo de negocio formal. El liderazgo puede enfocarse en distintos aspectos: calidad de diseño, calidad de conformidad, disponibilidad, garantías o velocidad de reparación, cada uno requiriendo distintas capacidades organizacionales.",
+  "resumen_teorico": "El liderazgo de mercado se logra generalmente al entrar primero a un mercado y ganar superioridad, y puede mantenerse mediante mejoras continuas del producto o servicio y una promoción eficaz. Las organizaciones pueden adoptar una estrategia pasiva ('dejar que la naturaleza siga su curso') o una estrategia activa, estableciendo el liderazgo en calidad como un objetivo de negocio formal. El liderazgo puede enfocarse en distintos aspectos: calidad de diseño, calidad de conformidad, disponibilidad, garantías o velocidad de reparación, cada uno requiriendo distintas capacidades organizacionales.",
   "pasos_accionables": [
     "Definir en qué aspecto de la calidad se buscará el liderazgo (diseño, conformidad, disponibilidad, garantías, servicio)",
     "Establecer el liderazgo en calidad como objetivo formal de negocio dentro de la planificación estratégica",
-    "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad, confiabilidad, servicio de campo)",
+    "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad, controles operativos, confiabilidad, servicio de campo)",
     "Monitorear continuamente la posición competitiva para detectar amenazas de otros competidores"
   ],
   "entregable_esperado": "Plan estratégico de liderazgo en calidad con objetivos, métricas y responsables definidos",
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Lidera tu Mercado con Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-055-liderazgo_calidad_mercado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El liderazgo de mercado se logra generalmente al entrar primero a un mercado y ganar superioridad, pero debe mantenerse mediante mejoras continuas del producto o servicio. Las organizaciones pueden adoptar una estrategia pasiva ('dejar que la naturaleza siga su curso') o una estrategia activa, estableciendo el liderazgo en calidad como un objetivo de negocio formal. El liderazgo puede enfocarse en distintos aspectos: calidad de diseño, calidad de conformidad, disponibilidad, garantías o velocidad de reparación, cada uno requiriendo distintas capacidades organizacionales.",
+      "texto_nuevo": "El liderazgo de mercado se logra generalmente al entrar primero a un mercado y ganar superioridad, y puede mantenerse mediante mejoras continuas del producto o servicio y una promoción eficaz. Las organizaciones pueden adoptar una estrategia pasiva ('dejar que la naturaleza siga su curso') o una estrategia activa, estableciendo el liderazgo en calidad como un objetivo de negocio formal. El liderazgo puede enfocarse en distintos aspectos: calidad de diseño, calidad de conformidad, disponibilidad, garantías o velocidad de reparación, cada uno requiriendo distintas capacidades organizacionales.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "514",
+        "frase": "can be maintained through continuing product or service improvement and effective promotion"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la posición puede mantenerse así, no que deba.; Misma omisión de la promoción eficaz.; Mismo endurecimiento de 'can be maintained' a obligación.; Mismo endurecimiento de 'puede' a 'debe'.; Se cae la promoción eficaz, que el libro pone junto a la mejora continua.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-055-liderazgo_calidad_mercado-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad, confiabilidad, servicio de campo)",
+      "texto_nuevo": "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad, controles operativos, confiabilidad, servicio de campo)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "533-539",
+        "frase": "Operational controls"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta uno de los cinco focos del libro, los controles operativos, que corresponde a liderar en disponibilidad.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

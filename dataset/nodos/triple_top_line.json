@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Triple Top Line: Ecología, Equidad y Economía desde el Diseño",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "A diferencia del 'triple bottom line' que evalúa ecología y equidad como añadidos posteriores a la rentabilidad económica, el 'triple top line' propone abordar Ecología, Equidad y Economía como preguntas de diseño desde el inicio del proyecto, con igual peso. Usado como herramienta estratégica de diseño (el 'fractal'), permite crear valor simultáneo en los tres sectores, y proyectos que comienzan preguntándose cómo crear hábitat o empleos pueden resultar sorprendentemente rentables.",
+  "resumen_teorico": "A diferencia del 'triple bottom line', que en la práctica a menudo trata ecología y equidad como añadidos posteriores a la rentabilidad económica, el 'triple top line' propone abordar Ecología, Equidad y Economía como preguntas de diseño desde el inicio del proyecto, con igual peso. Usado como herramienta estratégica de diseño (el 'fractal'), permite crear valor simultáneo en los tres sectores, y proyectos que comienzan preguntándose cómo crear hábitat o empleos pueden resultar sorprendentemente rentables.",
   "pasos_accionables": [
     "Formular preguntas de ecología, equidad y economía ANTES de iniciar el diseño, no después",
     "Definir para el proyecto: ¿cómo creamos hábitat?, ¿cómo generamos empleo justo?, ¿cómo somos rentables?",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Diseña desde Ecología, Equidad y Economía",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-triple_top_line-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia del 'triple bottom line' que evalúa ecología y equidad como añadidos posteriores a la rentabilidad económica, el 'triple top line' propone abordar Ecología, Equidad y Economía como preguntas de diseño desde el inicio del proyecto, con igual peso. Usado como herramienta estratégica de diseño (el 'fractal'), permite crear valor simultáneo en los tres sectores, y proyectos que comienzan preguntándose cómo crear hábitat o empleos pueden resultar sorprendentemente rentables.",
+      "texto_nuevo": "A diferencia del 'triple bottom line', que en la práctica a menudo trata ecología y equidad como añadidos posteriores a la rentabilidad económica, el 'triple top line' propone abordar Ecología, Equidad y Economía como preguntas de diseño desde el inicio del proyecto, con igual peso. Usado como herramienta estratégica de diseño (el 'fractal'), permite crear valor simultáneo en los tres sectores, y proyectos que comienzan preguntándose cómo crear hábitat o empleos pueden resultar sorprendentemente rentables.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "871",
+        "frase": "in practice we find that it often appears to center only on economic considerations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que en la práctica a menudo parece centrarse en lo económico, no que el enfoque lo haga siempre.; Mismo endurecimiento del 'often appears' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

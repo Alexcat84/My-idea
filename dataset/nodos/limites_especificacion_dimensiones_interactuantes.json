@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Límites de Especificación para Dimensiones Interactuantes (Stack-up de Tolerancias)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando varios componentes se ensamblan para formar una dimensión final, sus tolerancias interactúan. Sumarlas directamente es matemáticamente correcto pero demasiado conservador para tu manufactura. El método estadístico usa la raíz de la suma de cuadrados de las tolerancias, porque es estadísticamente improbable que todos los componentes caigan a la vez en el extremo de su tolerancia. Esto exige que cada componente se fabrique de forma independiente y que su dimensión siga una distribución normal; si no se cumple, puedes corregir con el factor de Bender (1.5). El resultado son límites de ensamble más realistas, tolerancias de componente más amplias sin penalizar el ensamble, y un riesgo residual calculable de que una pieza caiga fuera de especificación.",
+  "resumen_teorico": "Cuando varios componentes se ensamblan para formar una dimensión final, sus tolerancias interactúan. Sumarlas directamente es matemáticamente correcto pero a menudo demasiado conservador para tu manufactura. El método estadístico usa la raíz de la suma de cuadrados de las tolerancias, porque es estadísticamente improbable que todos los componentes caigan a la vez en el extremo de su tolerancia. Esto exige que cada componente se fabrique de forma independiente, que su dimensión siga una distribución normal y que su promedio real coincida con el valor nominal, así que controla ese promedio; si no se cumple, puedes corregir con el factor de Bender (1.5). El resultado son límites de ensamble más realistas, tolerancias de componente que pueden ser más amplias sin penalizar el ensamble, y un riesgo residual calculable de que una pieza caiga fuera de especificación.",
   "pasos_accionables": [
     "Identifica todas las dimensiones de componentes que interactúan en tu ensamble final",
     "Anota la tolerancia individual de cada componente",
-    "Verifica que cada componente se fabrique de forma independiente y aleatoria, y que su dimensión siga una distribución normal",
+    "Verifica que cada componente se fabrique de forma independiente y aleatoria, que su dimensión siga una distribución normal y que su promedio real coincida con el valor nominal de la especificación",
     "Aplica la raíz de la suma de cuadrados de las tolerancias para calcular la tolerancia del ensamble",
     "Ajusta las tolerancias individuales con el factor de corrección de Bender (1.5) si las condiciones de independencia o normalidad no se cumplen del todo",
     "Compara el resultado contra la suma simple y calcula el riesgo residual de que el ensamble caiga fuera de tolerancia"
@@ -39,5 +39,40 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-055-limites_especificacion_dimensiones_interactuantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando varios componentes se ensamblan para formar una dimensión final, sus tolerancias interactúan. Sumarlas directamente es matemáticamente correcto pero demasiado conservador para tu manufactura. El método estadístico usa la raíz de la suma de cuadrados de las tolerancias, porque es estadísticamente improbable que todos los componentes caigan a la vez en el extremo de su tolerancia. Esto exige que cada componente se fabrique de forma independiente y que su dimensión siga una distribución normal; si no se cumple, puedes corregir con el factor de Bender (1.5). El resultado son límites de ensamble más realistas, tolerancias de componente más amplias sin penalizar el ensamble, y un riesgo residual calculable de que una pieza caiga fuera de especificación.",
+      "texto_nuevo": "Cuando varios componentes se ensamblan para formar una dimensión final, sus tolerancias interactúan. Sumarlas directamente es matemáticamente correcto pero a menudo demasiado conservador para tu manufactura. El método estadístico usa la raíz de la suma de cuadrados de las tolerancias, porque es estadísticamente improbable que todos los componentes caigan a la vez en el extremo de su tolerancia. Esto exige que cada componente se fabrique de forma independiente, que su dimensión siga una distribución normal y que su promedio real coincida con el valor nominal, así que controla ese promedio; si no se cumple, puedes corregir con el factor de Bender (1.5). El resultado son límites de ensamble más realistas, tolerancias de componente que pueden ser más amplias sin penalizar el ensamble, y un riesgo residual calculable de que una pieza caiga fuera de especificación.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20531",
+        "frase": "The approach of adding component tolerances is mathematically correct, but is often too conservative"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la fórmula puede dar tolerancias de componente más amplias; el nodo lo da como resultado seguro.; El libro dice que la suma directa es a menudo demasiado conservadora; el nodo lo vuelve absoluto.; Mismo endurecimiento: el libro dice 'often too conservative'.; Mismo endurecimiento: se quita el 'a menudo' del libro.; Mismo supuesto omitido del promedio igual al nominal.; Mismo supuesto omitido: promedio real igual al nominal, que hay que controlar.; Se cae el tercer supuesto del libro: el promedio real de cada componente debe coincidir con el nominal.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-055-limites_especificacion_dimensiones_interactuantes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que cada componente se fabrique de forma independiente y aleatoria, y que su dimensión siga una distribución normal",
+      "texto_nuevo": "Verifica que cada componente se fabrique de forma independiente y aleatoria, que su dimensión siga una distribución normal y que su promedio real coincida con el valor nominal de la especificación",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20580",
+        "frase": "The actual average for each component is equal to the nominal value"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta verificar el tercer supuesto del libro: que el promedio real de cada componente coincida con el nominal.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

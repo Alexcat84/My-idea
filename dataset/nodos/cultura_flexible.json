@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Cultura Flexible en Organizaciones de Alta Confiabilidad",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las organizaciones de alta confiabilidad (high-reliability organizations) poseen la capacidad de reconfigurarse ante operaciones de alto ritmo o ciertos tipos de peligro. Una cultura flexible implica pasar del modo jerárquico convencional a una estructura profesional más plana, donde el control pasa a los expertos en la tarea presentes en el lugar, para luego revertir al modo burocrático tradicional una vez pasada la emergencia. Esta adaptabilidad depende crucialmente del respeto por las habilidades, experiencia y capacidades del personal de primera línea, respeto que debe ganarse mediante una inversión importante en capacitación.",
+  "resumen_teorico": "Las organizaciones de alta confiabilidad (high-reliability organizations) poseen la capacidad de reconfigurarse ante operaciones de alto ritmo o ciertos tipos de peligro. Una cultura flexible adopta varias formas, pero en muchos casos implica pasar del modo jerárquico convencional a una estructura profesional más plana, donde el control pasa a los expertos en la tarea presentes en el lugar, para luego revertir al modo burocrático tradicional una vez pasada la emergencia. Esta adaptabilidad depende crucialmente del respeto por las habilidades, experiencia y capacidades del personal y, sobre todo, de los supervisores de primera línea, respeto que debe ganarse mediante una inversión importante en capacitación.",
   "pasos_accionables": [
     "Identificar situaciones de crisis donde la jerarquía tradicional impide respuestas ágiles",
     "Diseñar protocolos que permitan transferir autoridad a expertos técnicos durante emergencias",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Adapta tu Estructura al Riesgo",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-cultura_flexible-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las organizaciones de alta confiabilidad (high-reliability organizations) poseen la capacidad de reconfigurarse ante operaciones de alto ritmo o ciertos tipos de peligro. Una cultura flexible implica pasar del modo jerárquico convencional a una estructura profesional más plana, donde el control pasa a los expertos en la tarea presentes en el lugar, para luego revertir al modo burocrático tradicional una vez pasada la emergencia. Esta adaptabilidad depende crucialmente del respeto por las habilidades, experiencia y capacidades del personal de primera línea, respeto que debe ganarse mediante una inversión importante en capacitación.",
+      "texto_nuevo": "Las organizaciones de alta confiabilidad (high-reliability organizations) poseen la capacidad de reconfigurarse ante operaciones de alto ritmo o ciertos tipos de peligro. Una cultura flexible adopta varias formas, pero en muchos casos implica pasar del modo jerárquico convencional a una estructura profesional más plana, donde el control pasa a los expertos en la tarea presentes en el lugar, para luego revertir al modo burocrático tradicional una vez pasada la emergencia. Esta adaptabilidad depende crucialmente del respeto por las habilidades, experiencia y capacidades del personal y, sobre todo, de los supervisores de primera línea, respeto que debe ganarse mediante una inversión importante en capacitación.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4769",
+        "frase": "A flexible culture takes a number of forms, but in many cases it involves"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que la cultura flexible toma varias formas y en muchos casos implica ese paso.; Misma marca de endurecimiento.; Misma pérdida de los supervisores de primera línea.; Se pierde que el respeto recae sobre todo en los supervisores de primera línea.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

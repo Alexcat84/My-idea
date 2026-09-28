@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Posicionamiento según Tipo de Mercado",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "El tipo de mercado (existente, nuevo, clon, o re-segmentado) cambia radicalmente el mensaje de posicionamiento. En mercado existente se destaca diferenciación (atributos, canal, servicio). En mercado nuevo se comunica visión y pasión, no características, porque no hay contexto comparativo. En mercado clon se imita el posicionamiento de la empresa equivalente en otro país. En re-segmentación (nicho o bajo costo) se comunica comprensión profunda de necesidades desatendidas.",
+  "resumen_teorico": "El tipo de mercado (existente, nuevo, clon, o re-segmentado) cambia radicalmente el mensaje de posicionamiento. En mercado existente se destaca diferenciación (atributos, canal, servicio o cómo resuelve lo que el cliente buscaba). En mercado nuevo se comunica visión y pasión, no características, porque no hay contexto comparativo. En mercado clon se imita el posicionamiento de la empresa equivalente en otro país, y el del producto cuando el mercado está educado. En re-segmentación (nicho o bajo costo) se comunica comprensión profunda de necesidades desatendidas.",
   "pasos_accionables": [
     "Identificar el tipo de mercado seleccionado (existente, nuevo, clon, re-segmentado)",
-    "Si es mercado existente: definir diferenciación en atributos, canal o servicio",
+    "Si es mercado existente: definir diferenciación en atributos, canal o servicio, o en cómo el producto resuelve un problema que el cliente buscaba resolver",
     "Si es mercado nuevo: articular la visión y el problema que se busca resolver",
-    "Si es mercado clon: adoptar el posicionamiento de la empresa análoga en otro país",
+    "Si es mercado clon: adoptar el posicionamiento de la empresa análoga en otro país, y el de su producto en cuanto el mercado esté educado",
     "Si es re-segmentación: comunicar comprensión única de un nicho o ventaja de bajo costo"
   ],
   "entregable_esperado": "Posicionamiento de producto ajustado y coherente con el tipo de mercado elegido",
@@ -41,6 +41,56 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-049-posicionamiento_por_tipo_de_mercado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tipo de mercado (existente, nuevo, clon, o re-segmentado) cambia radicalmente el mensaje de posicionamiento. En mercado existente se destaca diferenciación (atributos, canal, servicio). En mercado nuevo se comunica visión y pasión, no características, porque no hay contexto comparativo. En mercado clon se imita el posicionamiento de la empresa equivalente en otro país. En re-segmentación (nicho o bajo costo) se comunica comprensión profunda de necesidades desatendidas.",
+      "texto_nuevo": "El tipo de mercado (existente, nuevo, clon, o re-segmentado) cambia radicalmente el mensaje de posicionamiento. En mercado existente se destaca diferenciación (atributos, canal, servicio o cómo resuelve lo que el cliente buscaba). En mercado nuevo se comunica visión y pasión, no características, porque no hay contexto comparativo. En mercado clon se imita el posicionamiento de la empresa equivalente en otro país, y el del producto cuando el mercado está educado. En re-segmentación (nicho o bajo costo) se comunica comprensión profunda de necesidades desatendidas.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12525-12549",
+        "frase": "As soon as the market is educated, clone their positioning."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade una cuarta forma de diferenciarse: cómo el producto resuelve lo que el cliente buscaba.; El libro distingue que el posicionamiento del producto se clona en cuanto el mercado está educado, no desde el inicio.; Mismo defecto: se pierde la condición de momento para el posicionamiento del producto en el mercado clon.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-posicionamiento_por_tipo_de_mercado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es mercado existente: definir diferenciación en atributos, canal o servicio",
+      "texto_nuevo": "Si es mercado existente: definir diferenciación en atributos, canal o servicio, o en cómo el producto resuelve un problema que el cliente buscaba resolver",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12525",
+        "frase": "how the product fills a need or solves a problem the customer was searching for"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la cuarta forma de diferenciación del libro: cómo el producto resuelve un problema que el cliente buscaba resolver.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-posicionamiento_por_tipo_de_mercado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es mercado clon: adoptar el posicionamiento de la empresa análoga en otro país",
+      "texto_nuevo": "Si es mercado clon: adoptar el posicionamiento de la empresa análoga en otro país, y el de su producto en cuanto el mercado esté educado",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12549",
+        "frase": "As soon as the market is educated, clone their positioning."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro clona el posicionamiento del producto solo en cuanto el mercado está educado; al principio sus características no tienen contexto.; Mismo defecto: falta la condición de momento para el posicionamiento del producto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

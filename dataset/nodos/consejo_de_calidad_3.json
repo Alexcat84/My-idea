@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Consejos de Calidad (Quality Councils)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el paso trece del programa de 14 pasos, y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').",
+  "resumen_teorico": "Los consejos de calidad son estructuras organizacionales formadas por los profesionales de calidad y quienes encabezan los equipos de mejora, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el paso trece del programa de 14 pasos, y son la mejor fuente de información sobre el estado de los programas y de ideas para actuar.",
   "pasos_accionables": [
-    "Conformar el consejo con representantes de las distintas áreas de mejora",
+    "Conformar el consejo con los profesionales de calidad y quienes encabezan los equipos de mejora de las distintas áreas",
     "Establecer una periodicidad de reuniones para compartir avances",
-    "Coordinar la repetición del ciclo de mejora de calidad",
+    "Determinar en conjunto las acciones necesarias para mejorar el programa de calidad en marcha",
     "Institucionalizar el consejo como parte de la estructura permanente"
   ],
-  "entregable_esperado": "Consejo de calidad establecido con reuniones periódicas y mecanismo de repetición del ciclo de mejora",
+  "entregable_esperado": "Consejo de calidad establecido con reuniones periódicas y acciones acordadas para mejorar el programa",
   "nodos_previos": [
     "programa_mejora_calidad_14_pasos",
     "eliminacion_causas_error_4",
@@ -58,6 +58,72 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R050-032 (CONTRARIO, lector y verificador de acuerdo): Cambia la secuencia de los pasos: los consejos son el paso 13, no el último. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R050-032"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_3-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el paso trece del programa de 14 pasos, y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').",
+      "texto_nuevo": "Los consejos de calidad son estructuras organizacionales formadas por los profesionales de calidad y quienes encabezan los equipos de mejora, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el paso trece del programa de 14 pasos, y son la mejor fuente de información sobre el estado de los programas y de ideas para actuar.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1643-1649",
+        "frase": "The quality professionals and team chairpersons should be brought together regularly"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro forma el consejo con los profesionales de calidad y los presidentes de equipo; se caen los profesionales.; Hacer permanente el programa es el logro del paso 14 (repetir con un equipo nuevo), no de los consejos.; Mismo defecto que la marca 0: atribuye a los consejos el efecto del paso 14.; Mismo defecto que la marca 1: faltan los profesionales de calidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_3-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conformar el consejo con representantes de las distintas áreas de mejora",
+      "texto_nuevo": "Conformar el consejo con los profesionales de calidad y quienes encabezan los equipos de mejora de las distintas áreas",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1643",
+        "frase": "The quality professionals and team chairpersons should be brought together regularly"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan los profesionales de calidad, miembros del consejo junto a los presidentes de equipo.; Mismo defecto: faltan los profesionales de calidad.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_3-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Coordinar la repetición del ciclo de mejora de calidad",
+      "texto_nuevo": "Determinar en conjunto las acciones necesarias para mejorar el programa de calidad en marcha",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1643",
+        "frase": "to determine actions necessary to upgrade and improve the solid quality program being installed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La repetición del ciclo es el paso 14 con un equipo nuevo; al consejo le toca determinar acciones para mejorar el programa.; Mismo defecto: el libro no encarga al consejo repetir el ciclo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_3-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consejo de calidad establecido con reuniones periódicas y mecanismo de repetición del ciclo de mejora",
+      "texto_nuevo": "Consejo de calidad establecido con reuniones periódicas y acciones acordadas para mejorar el programa",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1643-1649",
+        "frase": "to determine actions necessary to upgrade and improve the solid quality program"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El mecanismo de repetición pertenece al paso 14, no al consejo.; Mismo defecto: la repetición del ciclo no es tarea del consejo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

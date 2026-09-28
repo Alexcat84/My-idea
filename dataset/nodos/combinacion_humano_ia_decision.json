@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Combinación Óptima de Personas y Tecnología (Humano + IA)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Basado en el estudio de Brynjolfsson y McAfee sobre torneos de ajedrez, se demuestra que equipos de personas con habilidades moderadas usando IA simple y simulaciones superan tanto a expertos humanos sin tecnología como a sistemas de IA complejos sin intervención humana. La clave del éxito está en dejar que las personas hagan el pensamiento creativo y la resolución de problemas, mientras la tecnología realiza los cálculos masivos y valida ideas rápidamente, especialmente bajo presión de tiempo.",
+  "resumen_teorico": "Basado en el estudio de Brynjolfsson y McAfee sobre torneos de ajedrez, se demuestra que equipos de personas con habilidades moderadas usando IA simple y simulaciones superan tanto a expertos humanos sin tecnología como a otros equipos que usan tecnología más compleja y costosa. La clave del éxito está en dejar que las personas hagan el pensamiento creativo y la resolución de problemas, mientras la tecnología realiza los cálculos masivos y valida ideas rápidamente, especialmente bajo presión de tiempo.",
   "pasos_accionables": [
     "Identificar tareas de tu operación donde la IA/tecnología puede hacer cálculos masivos rápidamente.",
     "Reservar el pensamiento estratégico y creativo para las personas del equipo.",
@@ -40,6 +40,22 @@
         "motivo": "La division entre tareas repetitivas para la maquina y juicio creativo humano lleva a la combinacion optima de ambos."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-045-combinacion_humano_ia_decision-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Basado en el estudio de Brynjolfsson y McAfee sobre torneos de ajedrez, se demuestra que equipos de personas con habilidades moderadas usando IA simple y simulaciones superan tanto a expertos humanos sin tecnología como a sistemas de IA complejos sin intervención humana. La clave del éxito está en dejar que las personas hagan el pensamiento creativo y la resolución de problemas, mientras la tecnología realiza los cálculos masivos y valida ideas rápidamente, especialmente bajo presión de tiempo.",
+      "texto_nuevo": "Basado en el estudio de Brynjolfsson y McAfee sobre torneos de ajedrez, se demuestra que equipos de personas con habilidades moderadas usando IA simple y simulaciones superan tanto a expertos humanos sin tecnología como a otros equipos que usan tecnología más compleja y costosa. La clave del éxito está en dejar que las personas hagan el pensamiento creativo y la resolución de problemas, mientras la tecnología realiza los cálculos masivos y valida ideas rápidamente, especialmente bajo presión de tiempo.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4178",
+        "frase": "also other teams using more complicated and expensive technology"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que vencieron a otros equipos con tecnología más compleja y cara, no a sistemas de IA sin intervención humana.; Mismo defecto: la comparación con IA sin personas no está en el resultado de los torneos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

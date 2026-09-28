@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Alineación de Mensaje Verde con Identidad de Marca",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El marketing relacionado con sostenibilidad funciona mejor cuando el mensaje se alinea con la identidad corporativa o de marca existente. Los consumidores son cada vez más perspicaces y perciben como inauténticos los mensajes que se desvían de la trayectoria real de la empresa, especialmente si esta tiene un historial de incumplimientos ambientales.",
+  "resumen_teorico": "Salvo que lances una marca totalmente nueva, el marketing relacionado con sostenibilidad funciona mejor cuando el mensaje se alinea con la identidad corporativa o de marca existente. Los consumidores son cada vez más perspicaces, y los mensajes que se desvían de la trayectoria real de la empresa corren el riesgo de parecer inauténticos, especialmente si esta tiene un historial de incumplimientos ambientales.",
   "pasos_accionables": [
     "Evaluar la historia y reputación ambiental real de la empresa antes de diseñar campañas",
     "Asegurar coherencia entre el mensaje verde y la identidad de marca existente",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Alinea tu Mensaje Verde",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-052-marketing_verde_autentico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El marketing relacionado con sostenibilidad funciona mejor cuando el mensaje se alinea con la identidad corporativa o de marca existente. Los consumidores son cada vez más perspicaces y perciben como inauténticos los mensajes que se desvían de la trayectoria real de la empresa, especialmente si esta tiene un historial de incumplimientos ambientales.",
+      "texto_nuevo": "Salvo que lances una marca totalmente nueva, el marketing relacionado con sostenibilidad funciona mejor cuando el mensaje se alinea con la identidad corporativa o de marca existente. Los consumidores son cada vez más perspicaces, y los mensajes que se desvían de la trayectoria real de la empresa corren el riesgo de parecer inauténticos, especialmente si esta tiene un historial de incumplimientos ambientales.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5346",
+        "frase": "Unless you're launching an entirely new brand, green-related marketing works best"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que se arriesgan a ser percibidos como inauténticos, no que lo sean con seguridad.; El libro exceptúa el caso de lanzar una marca enteramente nueva.; Misma excepción perdida de la marca nueva.; Mismo endurecimiento del riesgo a certeza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

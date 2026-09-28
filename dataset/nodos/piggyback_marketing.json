@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Piggyback Marketing (Distribución en Conjunto)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El piggyback marketing es un acuerdo en el cual una empresa manufacturera o de servicios distribuye el producto de otra compañía complementaria, generalmente cuando la primera tiene un contrato con un comprador extranjero para proveer una gama de productos que no fabrica en su totalidad. Esto permite a la segunda empresa acceder a mercados internacionales sin incurrir en los costos de marketing y distribución propios de la exportación.",
+  "resumen_teorico": "El piggyback marketing es un acuerdo en el cual una empresa manufacturera o de servicios distribuye el producto de otra compañía complementaria, generalmente cuando la primera tiene un contrato con un comprador extranjero para proveer una gama de productos que no fabrica en su totalidad. Esto permite a la segunda empresa acceder a mercados internacionales, generalmente sin incurrir en los costos de marketing y distribución propios de la exportación.",
   "pasos_accionables": [
     "Identificar empresas con contratos de exportación que requieran productos complementarios",
     "Evaluar la compatibilidad de líneas de producto y clientes objetivo",
@@ -22,5 +22,23 @@
   "etiqueta_arbol": "Distribuye Junto a Otra Empresa",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-053-piggyback_marketing-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El piggyback marketing es un acuerdo en el cual una empresa manufacturera o de servicios distribuye el producto de otra compañía complementaria, generalmente cuando la primera tiene un contrato con un comprador extranjero para proveer una gama de productos que no fabrica en su totalidad. Esto permite a la segunda empresa acceder a mercados internacionales sin incurrir en los costos de marketing y distribución propios de la exportación.",
+      "texto_nuevo": "El piggyback marketing es un acuerdo en el cual una empresa manufacturera o de servicios distribuye el producto de otra compañía complementaria, generalmente cuando la primera tiene un contrato con un comprador extranjero para proveer una gama de productos que no fabrica en su totalidad. Esto permite a la segunda empresa acceder a mercados internacionales, generalmente sin incurrir en los costos de marketing y distribución propios de la exportación.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1883",
+        "frase": "generally without incurring the marketing and distribution costs associated with exporting"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'generally without incurring'; el nodo lo afirma sin excepción.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

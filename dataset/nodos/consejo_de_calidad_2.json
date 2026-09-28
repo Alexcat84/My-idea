@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Consejo de Calidad (Red Autogestionada de Profesionales, Crosby)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+  "resumen_teorico": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbólicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve para que sus miembros compartan con regularidad sus problemas, sentimientos y experiencias, y también como espacio de comunicación entre tú y ellos, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
   "pasos_accionables": [
     "Formar el consejo de calidad con las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango.",
-    "Permitir que el consejo elija su propia dirección, independiente de la jerarquía formal.",
-    "Programar reuniones periódicas donde puedas presentar avances y responder preguntas abiertamente.",
+    "Permitir que el consejo elija su propia dirección, su agenda y sus horarios de reunión, independiente de la jerarquía formal.",
+    "Asistir cuando el consejo te invite a sus reuniones para presentar el programa y responder abiertamente cualquier pregunta.",
     "Mantener la autonomía del consejo respecto a ti (por ejemplo, financiamiento propio de actividades sociales) para preservar su carácter genuino."
   ],
-  "entregable_esperado": "Consejo de calidad operativo con estructura propia, reuniones regulares contigo y canal abierto de comunicación bidireccional.",
+  "entregable_esperado": "Consejo de calidad operativo con estructura propia, reuniones regulares entre sus miembros y canal abierto de comunicación bidireccional contigo.",
   "nodos_previos": [
     "equipo_mejora_calidad_2"
   ],
@@ -126,6 +126,72 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+      "texto_nuevo": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbólicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve para que sus miembros compartan con regularidad sus problemas, sentimientos y experiencias, y también como espacio de comunicación entre tú y ellos, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3381",
+        "frase": "meet regularly just to share their problems, feelings, and experiences with each other"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el propósito central del libro: que los miembros se reúnan a compartir entre sí problemas, sentimientos y experiencias.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_2-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Permitir que el consejo elija su propia dirección, independiente de la jerarquía formal.",
+      "texto_nuevo": "Permitir que el consejo elija su propia dirección, su agenda y sus horarios de reunión, independiente de la jerarquía formal.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3387",
+        "frase": "create their own agenda, and determine their own meeting times"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja al consejo crear su agenda y fijar sus horarios, además de elegir quién lo preside; se pierden agenda y horarios.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_2-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programar reuniones periódicas donde puedas presentar avances y responder preguntas abiertamente.",
+      "texto_nuevo": "Asistir cuando el consejo te invite a sus reuniones para presentar el programa y responder abiertamente cualquier pregunta.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2397-2405, 3387",
+        "frase": "create their own agenda, and determine their own meeting times"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El consejo fija sus propios horarios y agenda y el directivo asiste como invitado; que tú programes reuniones periódicas no está.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-consejo_de_calidad_2-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consejo de calidad operativo con estructura propia, reuniones regulares contigo y canal abierto de comunicación bidireccional.",
+      "texto_nuevo": "Consejo de calidad operativo con estructura propia, reuniones regulares entre sus miembros y canal abierto de comunicación bidireccional contigo.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3381",
+        "frase": "meet regularly just to share their problems, feelings, and experiences with each other"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija reuniones regulares del consejo con el directivo; las regulares son entre sus miembros.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

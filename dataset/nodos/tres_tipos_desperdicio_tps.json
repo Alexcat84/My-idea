@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar condiciones estándar y reducir procesos a sus elementos más simples para evitar Muri",
     "Implementar sistemas Just-in-Time (JIT) y sistemas pull para evitar Mura",
-    "Examinar el muda existente y retroalimentar hacia la etapa de planificación de Mura",
+    "Examinar el muda existente, eliminar sus causas profundas considerando su conexión con Muri y Mura, y retroalimentar el muda y el muri hacia la etapa de planificación de Mura",
     "Balancear demanda y capacidad antes de eliminar actividades sin valor agregado",
     "Institucionalizar el trabajo estándar para prevenir la sobrecarga de los asociados"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Identifica tus Tres Desperdicios Clave",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-tres_tipos_desperdicio_tps-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Examinar el muda existente y retroalimentar hacia la etapa de planificación de Mura",
+      "texto_nuevo": "Examinar el muda existente, eliminar sus causas profundas considerando su conexión con Muri y Mura, y retroalimentar el muda y el muri hacia la etapa de planificación de Mura",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13048",
+        "frase": "eliminate the deeper causes by considering the connections to the muri and mura"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además eliminar las causas profundas del muda por su conexión con muri y mura, y retroalimentar muda y muri a la planificación de mura.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

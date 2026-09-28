@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Plan de Prevención de Enfermedades Relacionadas con el Calor",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física intensa, EPP no transpirable), se requiere un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
+  "resumen_teorico": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física intensa, EPP no transpirable, humedad alta o falta de circulación de aire o de aire acondicionado), conviene tener un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
   "pasos_accionables": [
     "Evaluar los factores de riesgo de calor presentes en el lugar de trabajo",
     "Designar a un responsable capacitado para monitorear condiciones y síntomas de calor",
-    "Implementar un plan de aclimatación para trabajadores nuevos o que regresan de licencia",
+    "Implementar un plan de aclimatación para trabajadores nuevos, temporales o por contrato, o que regresan de licencia",
     "Proveer agua potable, sombra y descansos frecuentes",
     "Establecer un sistema de compañeros para detectar signos de enfermedad por calor",
-    "Capacitar a supervisores y trabajadores en reconocimiento y primeros auxilios para golpe de calor"
+    "Capacitar a supervisores y trabajadores en identificar y controlar los peligros de calor, reconocer los signos de enfermedad por calor, los factores individuales de riesgo, dar primeros auxilios y RCP, y activar rápido los servicios de emergencia"
   ],
   "entregable_esperado": "Plan escrito de prevención de enfermedades por calor con roles y procedimientos definidos",
   "nodos_previos": [
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Previene Enfermedades por Calor",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-047-prevencion_enfermedades_por_calor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física intensa, EPP no transpirable), se requiere un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
+      "texto_nuevo": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física intensa, EPP no transpirable, humedad alta o falta de circulación de aire o de aire acondicionado), conviene tener un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "833-839",
+        "frase": "use the following checklist to assess your preparedness: A written plan is in place"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro cuenta también la humedad relativa alta y la falta de circulación de aire o de aire acondicionado.; El libro plantea el plan escrito como punto de una lista para evaluar la preparación, no como requisito.; Mismo defecto que la marca 1: faltan dos factores de riesgo.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-prevencion_enfermedades_por_calor-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar un plan de aclimatación para trabajadores nuevos o que regresan de licencia",
+      "texto_nuevo": "Implementar un plan de aclimatación para trabajadores nuevos, temporales o por contrato, o que regresan de licencia",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "851",
+        "frase": "(1) new workers, (2) temporary or contract workers, and (3) workers returning"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye también a los trabajadores temporales o por contrato.; Mismo defecto: faltan los trabajadores temporales o por contrato.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-047-prevencion_enfermedades_por_calor-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a supervisores y trabajadores en reconocimiento y primeros auxilios para golpe de calor",
+      "texto_nuevo": "Capacitar a supervisores y trabajadores en identificar y controlar los peligros de calor, reconocer los signos de enfermedad por calor, los factores individuales de riesgo, dar primeros auxilios y RCP, y activar rápido los servicios de emergencia",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "869-879",
+        "frase": "Activating emergency medical services quickly when needed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La capacitación del libro abarca todas las enfermedades por calor, identificar y controlar peligros, factores individuales y activar rápido la emergencia.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

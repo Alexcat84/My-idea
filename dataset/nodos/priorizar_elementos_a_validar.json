@@ -3,13 +3,13 @@
   "dominio": "core",
   "titulo_concepto": "Priorizar Qué Elementos del Modelo de Negocio Validar",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "No es posible validar todas las variables del modelo de negocio a la vez. Usando el lienzo de modelo de negocio como guía, la mayoría de los proyectos deben enfocarse en cuatro elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos. En mercados con múltiples lados (donde hay distintos tipos de actores, como usuarios y quienes pagan), hay que priorizar la validación de cada lado por separado. La clave es identificar las cinco variables -o menos- que realmente determinarán el éxito o el fracaso del negocio, en vez de intentar probarlo todo al mismo tiempo.",
+  "resumen_teorico": "No es posible medir y confirmar todas las variables del modelo de negocio. Usando el lienzo de modelo de negocio como guía, la mayoría de los proyectos deben enfocarse en cuatro elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos, una lista que sirve para muchos negocios, pero no para todos. En mercados con múltiples lados (donde hay distintos tipos de actores, como usuarios y quienes pagan), hay que priorizar la validación de cada lado por separado. La clave es identificar las cinco variables -o menos- que realmente determinarán el éxito o el fracaso del negocio, en vez de intentar probarlo todo.",
   "pasos_accionables": [
     "Revisar el lienzo de modelo de negocio completo",
     "Identificar las cinco variables críticas -o menos- que determinarán el éxito del negocio",
-    "Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos",
+    "Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos, sabiendo que esta lista sirve para muchos negocios, pero no para todos",
     "Si es un mercado con múltiples lados, priorizar la validación de cada lado del mercado por separado",
-    "Evitar intentar validar todas las variables del modelo de negocio de forma simultánea"
+    "Evitar intentar validar todas las variables del modelo de negocio"
   ],
   "entregable_esperado": "Lista priorizada de cinco hipótesis críticas de negocio, o menos, a validar primero",
   "condiciones_activacion": [
@@ -32,5 +32,57 @@
   "etiqueta_arbol": "Elige Qué Validar Primero",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-priorizar_elementos_a_validar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No es posible validar todas las variables del modelo de negocio a la vez. Usando el lienzo de modelo de negocio como guía, la mayoría de los proyectos deben enfocarse en cuatro elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos. En mercados con múltiples lados (donde hay distintos tipos de actores, como usuarios y quienes pagan), hay que priorizar la validación de cada lado por separado. La clave es identificar las cinco variables -o menos- que realmente determinarán el éxito o el fracaso del negocio, en vez de intentar probarlo todo al mismo tiempo.",
+      "texto_nuevo": "No es posible medir y confirmar todas las variables del modelo de negocio. Usando el lienzo de modelo de negocio como guía, la mayoría de los proyectos deben enfocarse en cuatro elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos, una lista que sirve para muchos negocios, pero no para todos. En mercados con múltiples lados (donde hay distintos tipos de actores, como usuarios y quienes pagan), hay que priorizar la validación de cada lado por separado. La clave es identificar las cinco variables -o menos- que realmente determinarán el éxito o el fracaso del negocio, en vez de intentar probarlo todo.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1977-1979",
+        "frase": "This list works for many businesses but not all."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que no se pueden medir y confirmar todas las variables, no solo que no a la vez; priorizar implica dejar algunas sin validar.; Se pierde la salvedad del libro: la lista de cuatro elementos sirve para muchos negocios, no para todos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-priorizar_elementos_a_validar-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos",
+      "texto_nuevo": "Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos, sabiendo que esta lista sirve para muchos negocios, pero no para todos",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1979",
+        "frase": "This list works for many businesses but not all."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso presenta los cuatro elementos para todos, sin la salvedad del libro.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-priorizar_elementos_a_validar-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar intentar validar todas las variables del modelo de negocio de forma simultánea",
+      "texto_nuevo": "Evitar intentar validar todas las variables del modelo de negocio",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1977",
+        "frase": "Validation can't possibly measure and affirm every variable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que no se pueden validar todas las variables; 'de forma simultánea' sugiere que todas se validan después.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

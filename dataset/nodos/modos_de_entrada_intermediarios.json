@@ -7,7 +7,7 @@
   "resumen_teorico": "Existen varias figuras intermediarias para entrar a mercados extranjeros sin necesidad de establecer operación propia: el Remarketer compra directamente al fabricante y revende asumiendo todo el riesgo; el Trading House se especializa en exportar/importar productos de terceros; el Sales Representative presenta el producto a compradores potenciales trabajando a comisión sin asumir riesgo; y el Piggyback Marketing permite que una empresa distribuya el producto de otra bajo un contrato existente con un comprador extranjero.",
   "pasos_accionables": [
     "Evaluar el nivel de riesgo y control que la empresa desea mantener sobre la venta internacional",
-    "Si se busca bajo riesgo y rapidez, considerar vender a un Remarketer o Trading House",
+    "Si se busca bajo riesgo y poco esfuerzo, considerar vender a un Remarketer o Trading House, sabiendo que con un remarketer cedes el control del marketing y la promoción, lo que puede perjudicar ventas futuras si el producto queda mal posicionado, con precio bajo o sin servicio posventa",
     "Si se desea mantener relación directa con el comprador, contratar un Sales Representative bajo contrato",
     "Explorar oportunidades de Piggyback Marketing con empresas que ya tengan contratos en el mercado objetivo"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Elige tu Intermediario Ideal",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-053-modos_de_entrada_intermediarios-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si se busca bajo riesgo y rapidez, considerar vender a un Remarketer o Trading House",
+      "texto_nuevo": "Si se busca bajo riesgo y poco esfuerzo, considerar vender a un Remarketer o Trading House, sabiendo que con un remarketer cedes el control del marketing y la promoción, lo que puede perjudicar ventas futuras si el producto queda mal posicionado, con precio bajo o sin servicio posventa",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1877",
+        "frase": "your company relinquishes control over the marketing and promotion of your product"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no atribuye rapidez; dice que el esfuerzo del fabricante es muy pequeño.; Mismo defecto que la marca 0.; Mismo defecto que la marca 0: se cae la advertencia sobre la pérdida de control.; Se cae la contrapartida del libro: con un remarketer cedes el control del marketing y la promoción, lo que puede perjudicar ventas futuras.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

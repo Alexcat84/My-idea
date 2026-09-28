@@ -6,8 +6,8 @@
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
   "resumen_teorico": "Regla práctica para decidir si es ético contratar empleados de la empresa de un amigo o socio importante: 'Si te horrorizaría que la Empresa X contratara a varios de tus empleados, entonces no deberías contratar a los de ellos'. Ayuda a preservar relaciones clave mientras se construye el equipo, evitando conflictos que pueden dañar alianzas estratégicas.",
   "pasos_accionables": [
-    "Define una lista de empresas 'protegidas' (amigos, socios clave) donde se requiere aprobación ejecutiva antes de reclutar.",
-    "Antes de contratar a alguien de una empresa amiga, comunica la situación abiertamente al CEO de esa empresa.",
+    "Define una lista corta, que incluso puede estar vacía, de empresas 'protegidas' (amigos, socios clave) donde se requiere aprobación ejecutiva antes de reclutar.",
+    "Antes de contratar a alguien de una empresa amiga, avísale al candidato que hablarás con el CEO de su empresa antes de hacerle la oferta (si no quiere, detén el proceso y mantenlo confidencial) y luego comunica la situación abiertamente a ese CEO.",
     "Evalúa el impacto relacional, no solo el beneficio de talento inmediato."
   ],
   "entregable_esperado": "Política escrita o informal sobre reclutamiento de empresas aliadas o de amigos.",
@@ -35,6 +35,40 @@
         "motivo": "La etica de contratar empleados de empresas amigas no tiene relacion con usar testimonios para vencer la resistencia a la calidad."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-048-principio_reflexivo_contratacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define una lista de empresas 'protegidas' (amigos, socios clave) donde se requiere aprobación ejecutiva antes de reclutar.",
+      "texto_nuevo": "Define una lista corta, que incluso puede estar vacía, de empresas 'protegidas' (amigos, socios clave) donde se requiere aprobación ejecutiva antes de reclutar.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1484",
+        "frase": "The number of such companies should be small and may very well be zero."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el límite del libro: esas empresas deben ser pocas y pueden ser ninguna.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-048-principio_reflexivo_contratacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de contratar a alguien de una empresa amiga, comunica la situación abiertamente al CEO de esa empresa.",
+      "texto_nuevo": "Antes de contratar a alguien de una empresa amiga, avísale al candidato que hablarás con el CEO de su empresa antes de hacerle la oferta (si no quiere, detén el proceso y mantenlo confidencial) y luego comunica la situación abiertamente a ese CEO.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1488",
+        "frase": "you will stop the process now and keep the process to date confidential"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que primero avisas al candidato de que hablarás con su CEO y, si no quiere, detienes el proceso y lo mantienes confidencial.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

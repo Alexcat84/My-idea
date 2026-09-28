@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Verificar si el instrumento de monitoreo usa una escala fija y un indicador móvil",
     "Evaluar si los operadores pueden detectar tendencias y magnitudes de cambio de forma intuitiva",
-    "Rediseñar displays que violen el principio de la parte móvil cuando afecten la seguridad operacional"
+    "Evaluar el rediseño de displays que violen el principio de la parte móvil cuando afecten la seguridad operacional, sopesando lo que el formato actual aporta (por ejemplo, ahorro de espacio) frente a lo que dificulta en el monitoreo"
   ],
   "entregable_esperado": "Checklist de evaluación ergonómica de displays críticos basado en el principio de compatibilidad",
   "nodos_previos": [
@@ -21,5 +21,24 @@
   "etiqueta_arbol": "Muestra Datos de Forma Intuitiva",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-compatibilidad_de_visualizacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rediseñar displays que violen el principio de la parte móvil cuando afecten la seguridad operacional",
+      "texto_nuevo": "Evaluar el rediseño de displays que violen el principio de la parte móvil cuando afecten la seguridad operacional, sopesando lo que el formato actual aporta (por ejemplo, ahorro de espacio) frente a lo que dificulta en el monitoreo",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2353, 2381",
+        "frase": "All ways of representing information about a dynamic process have advantages and disadvantages."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta un balance: la cinta ahorra espacio a cambio de un costo en el monitoreo; el paso omite el intercambio.; Misma pérdida: el libro no manda rediseñar, pesa ventajas y desventajas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

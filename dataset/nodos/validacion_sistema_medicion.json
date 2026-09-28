@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evalúa la capacidad de tu sistema de medición usando el análisis MSA",
     "Usa un software estadístico (como Minitab) para hacer el análisis",
-    "Confirma que tus mediciones son confiables antes de fijar los estándares de control"
+    "Confirma que las mediciones con las que evalúas lo que controlas son confiables"
   ],
   "entregable_esperado": "Un reporte que valida tu sistema de medición y confirma su capacidad",
   "nodos_previos": [
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Valida tu Sistema de Medición",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-validacion_sistema_medicion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Confirma que tus mediciones son confiables antes de fijar los estándares de control",
+      "texto_nuevo": "Confirma que las mediciones con las que evalúas lo que controlas son confiables",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14831, 14905",
+        "frase": "ensure that the measurements utilized to evaluate control subjects can be depended on"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En la fase de control el libro fija primero el estándar de cada sujeto de control y después valida las mediciones que lo evalúan; el paso invierte el orden.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

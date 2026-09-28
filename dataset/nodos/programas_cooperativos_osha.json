@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programas Cooperativos de OSHA (Asociaciones Estratégicas, Alianzas, VPP)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones y enfermedades por debajo del promedio nacional de su industria.",
   "pasos_accionables": [
     "Revisa si tu negocio cumple los criterios para participar en VPP",
     "Contacta la Oficina de Área o Regional de OSHA que corresponda a tu zona para explorar una Asociación Estratégica",
@@ -74,6 +74,22 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): programas_cooperativos_osha vuelve a CLASE C. Regresion medida en docs/SANEAMIENTO_DATASET.md: la campania de fidelidad (fidelidad-t3-44) le puso la formula de la clase B a un nodo-frontera.",
       "indice": 2,
       "auditoria": "SANEAMIENTO_DATASET pasada J"
+    },
+    {
+      "id": "final-e1-047-programas_cooperativos_osha-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones y enfermedades por debajo del promedio nacional de su industria.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1851",
+        "frase": "injury and illness rates below national Bureau of Labor Statistics averages for their respective industries"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro compara con el promedio nacional de la industria respectiva, no con el promedio general.; Mismo defecto: el promedio es el de la propia industria, y cuenta lesiones y enfermedades.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

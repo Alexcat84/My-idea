@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Alinear la Complejidad del Sistema con la Capacidad de la Organización",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "No intentes construir un sistema más complejo de lo que tú y tu equipo realmente pueden manejar. Cuando defines el alcance, ponte metas que sean un reto pero alcanzables: eso mantiene la confianza del equipo. Si te propones metas imposibles, agotas esa confianza y terminas en el fracaso.",
+  "resumen_teorico": "No intentes construir un sistema más complejo de lo que tú y tu equipo realmente pueden manejar. Cuando defines el alcance, ponte metas que sean un reto pero alcanzables: eso mantiene la confianza del equipo. Si te propones metas imposibles, agotas esa confianza en esfuerzos en vano por alcanzar metas que no son realistas.",
   "pasos_accionables": [
     "Evaluar honestamente las capacidades técnicas y humanas actuales de la organización",
     "Definir metas desafiantes pero realistas, no utópicas",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Mide la Complejidad que Puedes Asumir",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-045-complejidad_acorde_capacidad_organizacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No intentes construir un sistema más complejo de lo que tú y tu equipo realmente pueden manejar. Cuando defines el alcance, ponte metas que sean un reto pero alcanzables: eso mantiene la confianza del equipo. Si te propones metas imposibles, agotas esa confianza y terminas en el fracaso.",
+      "texto_nuevo": "No intentes construir un sistema más complejo de lo que tú y tu equipo realmente pueden manejar. Cuando defines el alcance, ponte metas que sean un reto pero alcanzables: eso mantiene la confianza del equipo. Si te propones metas imposibles, agotas esa confianza en esfuerzos en vano por alcanzar metas que no son realistas.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4511",
+        "frase": "Avoid exhausting their confidence in vain efforts to reach unrealistic goals."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro advierte que se agota la confianza en esfuerzos vanos; no afirma que el resultado sea el fracaso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

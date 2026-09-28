@@ -7,9 +7,9 @@
   "resumen_teorico": "Caso de estudio de Genentech que muestra cómo aplicar Six Sigma (DMAIC/DMADV) junto con Lean y mapeo de flujo de valor puede reducir los errores de documentación en negocios que operan en entornos regulados. Se identificaron causas raíz como la retroalimentación tardía, la alta frecuencia de cambios en los documentos, la confusión en las reglas de documentación y la complejidad excesiva de las instrucciones, y se atacó cada una con proyectos específicos y metas numéricas medibles.",
   "pasos_accionables": [
     "Definir metas duales y cuantificables de reducción de errores (por ejemplo, 50% de reducción en la tasa de error)",
-    "Armar un equipo enfocado, aunque sea pequeño, y usar DMAIC o DMADV según el tipo de problema que quieras resolver",
+    "Armar un equipo enfocado, aunque sea pequeño, con personas dedicadas (no a tiempo parcial) y un patrocinador activo desde la definición del alcance, y usar DMAIC o DMADV según el tipo de problema que quieras resolver",
     "Usar herramientas como mapeo de flujo de valor, FMEA y pruebas de hipótesis (chi cuadrado, Kruskal Wallis) para encontrar la causa real",
-    "Implementar mejoras rápidas y de bajo costo (por ejemplo, cambiar el color de la tinta o centralizar los registros)",
+    "Implementar mejoras rápidas (por ejemplo, cambiar el color de la tinta o centralizar los registros)",
     "Monitorear la tasa de error hasta alcanzar y sostener un nuevo nivel de control estable"
   ],
   "entregable_esperado": "Proyectos Six Sigma o Lean ejecutados con una reducción medible y sostenida en la tasa de error de tu documentación",
@@ -26,5 +26,41 @@
   "etiqueta_arbol": "Reduce Errores de Documentación",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-error_proofing_six_sigma_lean-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Armar un equipo enfocado, aunque sea pequeño, y usar DMAIC o DMADV según el tipo de problema que quieras resolver",
+      "texto_nuevo": "Armar un equipo enfocado, aunque sea pequeño, con personas dedicadas (no a tiempo parcial) y un patrocinador activo desde la definición del alcance, y usar DMAIC o DMADV según el tipo de problema que quieras resolver",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23400-23402",
+        "frase": "Dedicated resources perform better than part-time teams"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las lecciones del caso condicionan el consejo: recursos dedicados mejor que equipos a tiempo parcial y patrocinio activo al definir el alcance.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-051-error_proofing_six_sigma_lean-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar mejoras rápidas y de bajo costo (por ejemplo, cambiar el color de la tinta o centralizar los registros)",
+      "texto_nuevo": "Implementar mejoras rápidas (por ejemplo, cambiar el color de la tinta o centralizar los registros)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23310-23316",
+        "frase": "generated a list of error-proofing implementation ideas during their rapid improvement phase"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de mejoras rápidas; no dice que sean de bajo costo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

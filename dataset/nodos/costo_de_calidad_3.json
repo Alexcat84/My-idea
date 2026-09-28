@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Paso 4: Costo de la Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
+  "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
   "pasos_accionables": [
     "Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad",
-    "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras",
+    "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, pruebas, auditorías, cambios de ingeniería, cambios en órdenes de compra, atención al consumidor y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, incluyendo tu tiempo o salario, sin minimizar cifras",
     "Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%",
     "Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección",
     "Establece una meta de reducción progresiva del costo de calidad",
@@ -77,6 +77,39 @@
         "motivo": "Referencia de un nodo vivo a costo_de_la_calidad_coq, deprecado; su superviviente es costo_de_mala_calidad_copq."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-046-costo_de_calidad_3-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
+      "texto_nuevo": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1405",
+        "frase": "These three categories should be sufficient at first"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro usa tres categorías (prevención, evaluación y fallas); la división en fallos internos y externos no está.; Para el libro cualquier costo por encima del 2.5 % ya es oportunidad directa de rendimiento; 'muy por encima' lo relaja.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-046-costo_de_calidad_3-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras",
+      "texto_nuevo": "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, pruebas, auditorías, cambios de ingeniería, cambios en órdenes de compra, atención al consumidor y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, incluyendo tu tiempo o salario, sin minimizar cifras",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2637-2651",
+        "frase": "Purchase order changes, Consumer affairs, Test labor, Other costs of doing things wrong"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no divide las fallas en internas y externas; sus categorías son prevención, evaluación y fallas.; La lista del libro trae además pruebas, cambios en órdenes de compra, atención al consumidor y otros costos de hacer las cosas mal.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

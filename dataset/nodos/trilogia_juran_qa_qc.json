@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "La diferencia entre vigilar la calidad y asegurarla (control de calidad y aseguramiento de calidad)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando hablas de control de calidad, te refieres a vigilar en el momento que lo que haces cumple lo que prometiste. Cuando hablas de aseguramiento de calidad, te refieres a revisar y auditar tu propio sistema para comprobar que las mejoras que lograste se mantienen o se ajustan a lo que tu cliente necesita ahora. Ambos términos se unieron internacionalmente bajo el nombre de 'gestión de calidad' en la norma ISO 8402.",
+  "resumen_teorico": "Cuando hablas de control de calidad, te refieres a vigilar en el momento que lo que haces cumple lo que prometiste. Cuando hablas de aseguramiento de calidad, te refieres a revisar y auditar tu propio sistema para comprobar que las mejoras que lograste se mantienen o se ajustan a lo que tu cliente necesita ahora. Internacionalmente, ambos quedaron bajo el término paraguas 'gestión de calidad', definido en la norma ISO 8402, lo que permitió acordar una definición propia para cada uno.",
   "pasos_accionables": [
     "Define qué vas a vigilar día a día para asegurarte de que tus procesos cumplan lo que prometes",
     "Revisa de vez en cuando tu propio sistema para comprobar que las mejoras se mantienen o se ajustan a lo que tu cliente necesita ahora",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Distingue Control y Aseguramiento de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-trilogia_juran_qa_qc-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando hablas de control de calidad, te refieres a vigilar en el momento que lo que haces cumple lo que prometiste. Cuando hablas de aseguramiento de calidad, te refieres a revisar y auditar tu propio sistema para comprobar que las mejoras que lograste se mantienen o se ajustan a lo que tu cliente necesita ahora. Ambos términos se unieron internacionalmente bajo el nombre de 'gestión de calidad' en la norma ISO 8402.",
+      "texto_nuevo": "Cuando hablas de control de calidad, te refieres a vigilar en el momento que lo que haces cumple lo que prometiste. Cuando hablas de aseguramiento de calidad, te refieres a revisar y auditar tu propio sistema para comprobar que las mejoras que lograste se mantienen o se ajustan a lo que tu cliente necesita ahora. Internacionalmente, ambos quedaron bajo el término paraguas 'gestión de calidad', definido en la norma ISO 8402, lo que permitió acordar una definición propia para cada uno.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11204",
+        "frase": "introduced into the ISO 9000 standards as the umbrella term for quality control"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): 'Gestión de calidad' se adoptó como término paraguas y permitió acordar definiciones propias para cada uno; no se fundieron.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

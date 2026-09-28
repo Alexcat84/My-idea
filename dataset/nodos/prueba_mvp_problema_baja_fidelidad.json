@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Invitar a un pequeño grupo inicial usando tácticas push (email, redes sociales)",
     "Usar tácticas pull (SEO, AdWords, blogs) para atraer tráfico interesado",
-    "Considerar tácticas de pago si es necesario (listas, encuestas pagadas)",
+    "Usar también tácticas de pago (listas, encuestas pagadas), porque lo probable es que convenga usar las tres",
     "Medir tasas de conversión, tiempo en sitio y fuente de tráfico con analytics",
     "Realizar entrevistas presenciales para correlacionar datos online con la realidad",
     "Calcular el Net Promoter Score para medir el interés del cliente"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Valida el Problema Primero",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-prueba_mvp_problema_baja_fidelidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar tácticas de pago si es necesario (listas, encuestas pagadas)",
+      "texto_nuevo": "Usar también tácticas de pago (listas, encuestas pagadas), porque lo probable es que convenga usar las tres",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8232",
+        "frase": "you should likely use all three: push, pull or pay."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que lo probable es usar las tres tácticas; el paso vuelve opcional la de pago.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

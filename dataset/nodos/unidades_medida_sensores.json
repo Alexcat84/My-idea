@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Preguntar al cliente cuáles son sus unidades de medida implícitas o explícitas para evaluar calidad",
     "Definir una unidad de medida para cada necesidad o característica identificada",
-    "Seleccionar o diseñar un sensor (instrumento, método o juicio humano) que evalúe esa unidad",
+    "Seleccionar o diseñar un sensor (instrumento, método o juicio humano) que evalúe esa unidad; si juzgan personas, comprobar que la unidad y el sensor se correlacionan con la opinión de un grupo de clientes",
     "Para abstracciones, descomponer la característica en componentes observables y medibles",
-    "Validar que la unidad de medida sea entendible, económica y de interpretación uniforme"
+    "Validar que la unidad de medida sea entendible, una base acordada para decidir, de interpretación uniforme, económica y, si se cumple lo demás, compatible con los sensores existentes"
   ],
   "entregable_esperado": "Lista de necesidades del cliente con su unidad de medida y sensor correspondiente definidos",
   "nodos_previos": [
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Define tus Unidades y Sensores",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-050-unidades_medida_sensores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar o diseñar un sensor (instrumento, método o juicio humano) que evalúe esa unidad",
+      "texto_nuevo": "Seleccionar o diseñar un sensor (instrumento, método o juicio humano) que evalúe esa unidad; si juzgan personas, comprobar que la unidad y el sensor se correlacionan con la opinión de un grupo de clientes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3938",
+        "frase": "must be shown to correlate with a jury of customer opinion"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde que, si juzgan personas, unidad y sensor deben correlacionarse con la opinión de un jurado de clientes.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-050-unidades_medida_sensores-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar que la unidad de medida sea entendible, económica y de interpretación uniforme",
+      "texto_nuevo": "Validar que la unidad de medida sea entendible, una base acordada para decidir, de interpretación uniforme, económica y, si se cumple lo demás, compatible con los sensores existentes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3947-3957",
+        "frase": "Provides an agreed upon basis for decision making"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye que la unidad dé una base acordada para decidir.; Mismo defecto, más la compatibilidad condicionada con los sensores existentes, también en la lista.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

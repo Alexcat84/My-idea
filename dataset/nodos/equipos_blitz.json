@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Equipos Blitz (Blitz Team)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Metodología de equipos de resolución rápida de problemas que utiliza un facilitador dedicado y experimentado para acelerar el proceso estándar de solución de problemas, reduciendo tiempos en enfoque del problema, procesamiento de datos y dinámica grupal. Permite pasar de la identificación del problema a la implementación de soluciones en semanas en lugar de meses.",
+  "resumen_teorico": "Metodología de equipos de resolución rápida de problemas que utiliza un facilitador dedicado y experimentado para acelerar el proceso estándar de solución de problemas, reduciendo tiempos en enfoque del problema, procesamiento de datos y dinámica grupal. En el caso de origen, el equipo pasó de la primera reunión a documentar las causas raíz en una semana y aplicó algunos remedios en las semanas siguientes.",
   "pasos_accionables": [
     "Seleccionar un facilitador experimentado en resolución de problemas",
-    "Formar un equipo multifuncional enfocado en un problema específico y acotado",
+    "Formar un equipo enfocado en un problema específico y acotado, con personas capaces de implementar soluciones rápidamente",
     "Delegar en el facilitador el procesamiento de datos entre reuniones",
     "Documentar causas raíz en un plazo corto (ej. 1 semana)",
     "Diseñar e implementar remedios en las semanas siguientes"
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Resuelve Rápido con Equipos Blitz",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-051-equipos_blitz-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodología de equipos de resolución rápida de problemas que utiliza un facilitador dedicado y experimentado para acelerar el proceso estándar de solución de problemas, reduciendo tiempos en enfoque del problema, procesamiento de datos y dinámica grupal. Permite pasar de la identificación del problema a la implementación de soluciones en semanas en lugar de meses.",
+      "texto_nuevo": "Metodología de equipos de resolución rápida de problemas que utiliza un facilitador dedicado y experimentado para acelerar el proceso estándar de solución de problemas, reduciendo tiempos en enfoque del problema, procesamiento de datos y dinámica grupal. En el caso de origen, el equipo pasó de la primera reunión a documentar las causas raíz en una semana y aplicó algunos remedios en las semanas siguientes.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1761",
+        "frase": "The team went from first meeting to documenting root causes in 1 week."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro narra un caso (causas raíz en una semana, algunos remedios en las semanas siguientes); no lo promete en general ni lo compara con meses.; Misma marca: 'en lugar de meses' y el resultado general no están en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-051-equipos_blitz-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formar un equipo multifuncional enfocado en un problema específico y acotado",
+      "texto_nuevo": "Formar un equipo enfocado en un problema específico y acotado, con personas capaces de implementar soluciones rápidamente",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1763",
+        "frase": "The team's success depends on assigning team people who are capable of implementing solutions quickly."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no dice que el equipo blitz sea multifuncional.; Misma marca: 'multifuncional' no está en el libro.; Misma pérdida de la condición de éxito.; Se cae la condición de éxito del libro: asignar personas capaces de implementar soluciones rápidamente.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

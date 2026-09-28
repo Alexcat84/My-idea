@@ -13,7 +13,7 @@
     "Antes de fijar una métrica, define primero el objetivo cualitativo real que persigues",
     "Pregúntate qué comportamientos generará esa métrica en el equipo antes de implementarla",
     "Complementa métricas cuantitativas con evaluaciones cualitativas (ej: satisfacción del cliente, opinión de ingenieros sobre el producto)",
-    "Evita sacrificar el largo plazo (R&D, calidad) para cumplir números de corto plazo",
+    "Evita sacrificar el largo plazo (por ejemplo, la inversión en R&D) para cumplir números de corto plazo",
     "Aplica el concepto de 'white box': entiende cómo se producen los números, no solo el resultado final"
   ],
   "entregable_esperado": "Un panel de métricas con señales tempranas y resultados finales balanceados, con la razón de cada uno anotada",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Combina Métricas de Hoy y Mañana",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-055-diseno_metricas_lideres_rezagados-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita sacrificar el largo plazo (R&D, calidad) para cumplir números de corto plazo",
+      "texto_nuevo": "Evita sacrificar el largo plazo (por ejemplo, la inversión en R&D) para cumplir números de corto plazo",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1655",
+        "frase": "Some divisions made their numbers, but did so by underfunding R&D."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El ejemplo del libro de largo plazo sacrificado es la inversión en R&D; la calidad se añade a la enumeración.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

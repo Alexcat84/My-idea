@@ -4,15 +4,15 @@
   "dominio": "core",
   "titulo_concepto": "Preservar Efectivo Mientras se Busca el Modelo de Negocio",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "El objetivo de Customer Development no es evitar gastar dinero, sino preservar el efectivo mientras buscas un modelo de negocio repetible y escalable. 'Repetible' significa que tus ventas no dependen de esfuerzos heroicos únicos ni de relaciones puntuales; 'escalable' significa que cada dólar o persona adicional que inviertes genera más ganancia bruta que su costo. Mientras buscas ese modelo, evita contratar personal de ventas o marketing basándote en hipótesis sin comprobar. Una vez que confirmas el product/market fit con hechos, no con suposiciones, el criterio cambia por completo: debes invertir agresivamente para capturar la demanda y llenar tu canal de ventas antes de que otro lo haga.",
+  "resumen_teorico": "El objetivo de Customer Development no es evitar gastar dinero, sino preservar el efectivo mientras buscas un modelo de negocio repetible y escalable. 'Repetible' significa que tus ventas no dependen de esfuerzos heroicos únicos ni de relaciones puntuales; 'escalable' significa que cada dólar o persona adicional que inviertes genera más ganancia bruta que su costo. Mientras buscas ese modelo, evita contratar personal de ventas o marketing basándote en hipótesis sin comprobar. Una vez que confirmas el product/market fit con hechos, no con suposiciones, el criterio cambia por completo: debes invertir agresivamente para crear la demanda y llenar tu canal de ventas.",
   "pasos_accionables": [
     "No contrates equipo de ventas ni marketing hasta validar el modelo con hechos, no hipótesis",
     "Busca patrones de venta repetibles, evitando ventas puntuales por relaciones personales o esfuerzos heroicos",
-    "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido, usando tu ritmo de consumo de caja (burn rate) como tu métrica principal",
+    "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido",
     "Documenta tu propio criterio explícito de qué constituye un modelo validado antes de escalar gasto",
     "Una vez confirmado el product/market fit, invierte agresivamente en generar demanda y llenar el canal de ventas",
-    "Retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.",
-    "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)",
+    "Sugerencia de My Idea: retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.",
+    "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 dólares por test, o 10,000 si estás bien financiado)",
     "Reservar caja suficiente para financiar múltiples pivotes"
   ],
   "entregable_esperado": "Plan de gasto condicionado a hitos de validación del modelo de negocio, con un criterio explícito y documentado de qué constituye un modelo repetible y escalable antes de escalar la inversión.",
@@ -81,5 +81,74 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-049-preservar_efectivo_buscar_modelo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El objetivo de Customer Development no es evitar gastar dinero, sino preservar el efectivo mientras buscas un modelo de negocio repetible y escalable. 'Repetible' significa que tus ventas no dependen de esfuerzos heroicos únicos ni de relaciones puntuales; 'escalable' significa que cada dólar o persona adicional que inviertes genera más ganancia bruta que su costo. Mientras buscas ese modelo, evita contratar personal de ventas o marketing basándote en hipótesis sin comprobar. Una vez que confirmas el product/market fit con hechos, no con suposiciones, el criterio cambia por completo: debes invertir agresivamente para capturar la demanda y llenar tu canal de ventas antes de que otro lo haga.",
+      "texto_nuevo": "El objetivo de Customer Development no es evitar gastar dinero, sino preservar el efectivo mientras buscas un modelo de negocio repetible y escalable. 'Repetible' significa que tus ventas no dependen de esfuerzos heroicos únicos ni de relaciones puntuales; 'escalable' significa que cada dólar o persona adicional que inviertes genera más ganancia bruta que su costo. Mientras buscas ese modelo, evita contratar personal de ventas o marketing basándote en hipótesis sin comprobar. Una vez que confirmas el product/market fit con hechos, no con suposiciones, el criterio cambia por completo: debes invertir agresivamente para crear la demanda y llenar tu canal de ventas.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1370",
+        "frase": "invest the dollars to create end-user demand and drive those customers into the sales channel"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro manda invertir para crear demanda y llevarla al canal, sin dar la carrera contra otros como razón.; Mismo defecto: el porqué competitivo es añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-preservar_efectivo_buscar_modelo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido, usando tu ritmo de consumo de caja (burn rate) como tu métrica principal",
+      "texto_nuevo": "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1358",
+        "frase": "bring in more gross profit (or users or clicks) than you invested"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La prueba de escalabilidad del libro compara ganancia bruta con lo invertido; el burn rate como métrica principal es añadido.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-preservar_efectivo_buscar_modelo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.",
+      "texto_nuevo": "Sugerencia de My Idea: retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1968",
+        "frase": "Customer validation delays sales-and-marketing hiring and spending until validation is nearly complete."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro retrasa la contratación y el gasto de ventas y marketing, no la infraestructura; queda como sugerencia práctica.; Mismo defecto; el consejo no contradice el libro y puede quedar como sugerencia.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-049-preservar_efectivo_buscar_modelo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)",
+      "texto_nuevo": "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 dólares por test, o 10,000 si estás bien financiado)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "10476",
+        "frase": "Don't spend more than $2,000 or, if well-funded, $10,000 to test any one thing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no da un rango: el tope es 2,000 dólares y 10,000 solo si la empresa está bien financiada.; Mismo defecto.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
