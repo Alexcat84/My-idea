@@ -4,11 +4,11 @@
   "dominio": "franquicias",
   "titulo_concepto": "Diseño del Programa de Entrenamiento para Franquiciados",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El programa de entrenamiento debe transmitir el contenido del manual de operaciones de forma estructurada, asumiendo el nivel de conocimiento más bajo posible del franquiciado, para garantizar que todos representen la marca al estándar de calidad esperado. Debe incluir pre-entrenamiento, entrenamiento en oficina central, entrenamiento en sitio y entrenamiento continuo.",
+  "resumen_teorico": "El programa de entrenamiento debe transmitir el contenido del manual de operaciones de forma estructurada, partiendo del perfil de conocimiento de tu franquiciado, para garantizar que incluso el franquiciado nuevo menos preparado represente la marca al estándar de calidad esperado. Por lo general toma varias formas: pre-entrenamiento, entrenamiento en oficina central, entrenamiento en sitio y entrenamiento continuo.",
   "pasos_accionables": [
     "Determinar el perfil de conocimiento esperado del franquiciado típico",
     "Definir el contenido y duración de cada etapa de entrenamiento",
-    "Establecer logística: lugar, instructores, asistentes obligatorios, duración por tema",
+    "Establecer logística: lugar, instructores, asistentes obligatorios, duración por tema, cómo se evaluará a los participantes y qué pasa si alguien no aprueba o no asiste",
     "Crear un currículo maestro con referencias cruzadas al manual de operaciones"
   ],
   "entregable_esperado": "Currículo maestro de entrenamiento con agenda detallada, métodos y pruebas de evaluación",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Diseña el Entrenamiento de Franquiciados",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-006-programa_entrenamiento_franquiciados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El programa de entrenamiento debe transmitir el contenido del manual de operaciones de forma estructurada, asumiendo el nivel de conocimiento más bajo posible del franquiciado, para garantizar que todos representen la marca al estándar de calidad esperado. Debe incluir pre-entrenamiento, entrenamiento en oficina central, entrenamiento en sitio y entrenamiento continuo.",
+      "texto_nuevo": "El programa de entrenamiento debe transmitir el contenido del manual de operaciones de forma estructurada, partiendo del perfil de conocimiento de tu franquiciado, para garantizar que incluso el franquiciado nuevo menos preparado represente la marca al estándar de calidad esperado. Por lo general toma varias formas: pre-entrenamiento, entrenamiento en oficina central, entrenamiento en sitio y entrenamiento continuo.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2641-2661",
+        "frase": "must be good enough to ensure that the least-skilled new franchisee can represent the brand"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el entrenamiento por lo general toma esas formas y el pre-entrenamiento se hace a menudo; el 'debe incluir' lo endurece.; El libro parte del perfil real del franquiciado y fija la vara en el nuevo menos preparado; no manda asumir el nivel más bajo posible.; Mismo defecto que la marca 0.; Mismo defecto que la marca 0: el libro dice que los programas suelen presuponer cierto nivel y se parte de entender al franquiciado.; Mismo defecto que la marca 1.; Mismo defecto que la marca 1: 'generally' pasa a obligación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-programa_entrenamiento_franquiciados-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer logística: lugar, instructores, asistentes obligatorios, duración por tema",
+      "texto_nuevo": "Establecer logística: lugar, instructores, asistentes obligatorios, duración por tema, cómo se evaluará a los participantes y qué pasa si alguien no aprueba o no asiste",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2663-2683",
+        "frase": "What will happen if a trainee fails? Does not attend? Demonstrates a poor attitude?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de logística del libro incluye cómo se evalúa a los participantes y qué pasa si alguien no aprueba o no asiste; el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

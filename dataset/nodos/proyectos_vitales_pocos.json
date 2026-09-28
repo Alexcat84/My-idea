@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Priorización: Los Vitales Pocos vs los Útiles Muchos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal.",
+  "resumen_teorico": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y van a la vez, con personas distintas.",
   "pasos_accionables": [
     "Clasificar los proyectos potenciales de mejora según su impacto potencial",
     "Asignar equipos multifuncionales a los proyectos de alto impacto (vitales pocos)",
     "Delegar proyectos de bajo impacto a equipos departamentales locales",
-    "Balancear recursos entre proyectos vitales y proyectos útiles según su ROI esperado"
+    "Trabajar a la vez en proyectos vitales y proyectos útiles, asignando personas distintas a cada tipo, porque ambos son necesarios"
   ],
   "entregable_esperado": "Matriz de priorización de proyectos de mejora clasificados por impacto y tipo de equipo asignado",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Prioriza los Proyectos Vitales",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-proyectos_vitales_pocos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Balancear recursos entre proyectos vitales y proyectos útiles según su ROI esperado",
+      "texto_nuevo": "Trabajar a la vez en proyectos vitales y proyectos útiles, asignando personas distintas a cada tipo, porque ambos son necesarios",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6708-6710",
+        "frase": "The vital few and useful many projects can be carried out simultaneously."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no reparte recursos por ROI: dice que ambos tipos son necesarios y se trabajan a la vez con personas distintas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-proyectos_vitales_pocos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal.",
+      "texto_nuevo": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y van a la vez, con personas distintas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6708",
+        "frase": "Each is necessary; neither is sufficient."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concluye que ambos tipos son necesarios y se trabajan a la vez con personas distintas; esa conclusión se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

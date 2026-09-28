@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Franquicia de Conversión",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Variante de la franquicia individual donde se otorga franquicia a un operador que ya dirige un negocio similar, generalmente con términos preferenciales (tarifas reducidas) porque ya tiene clientela y requiere menos capacitación. Es útil en mercados fragmentados, reduce costos de marketing y acelera el cobro de regalías, pero los mejores operadores suelen ser los menos interesados y los peores los más entusiastas, además de dificultar la aplicación de acuerdos de no competencia si falla.",
+  "resumen_teorico": "Variante de la franquicia individual donde se otorga franquicia a un operador que ya dirige un negocio similar, generalmente con términos preferenciales (tarifas reducidas) porque ya tiene clientela y requiere menos capacitación. Es útil en mercados fragmentados, reduce costos de marketing y acelera el cobro de regalías, pero estos franquiciados, como empresarios, pueden resistirse más a los controles del sistema, los mejores operadores suelen ser los menos interesados y los peores los más entusiastas, además de dificultar la aplicación de acuerdos de no competencia si falla.",
   "pasos_accionables": [
     "Identificar mercados fragmentados con operadores independientes existentes.",
     "Diseñar una oferta de valor incremental clara para justificar la cuota adicional.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Convierte Negocios Existentes",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-007-franquicia_conversion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Variante de la franquicia individual donde se otorga franquicia a un operador que ya dirige un negocio similar, generalmente con términos preferenciales (tarifas reducidas) porque ya tiene clientela y requiere menos capacitación. Es útil en mercados fragmentados, reduce costos de marketing y acelera el cobro de regalías, pero los mejores operadores suelen ser los menos interesados y los peores los más entusiastas, además de dificultar la aplicación de acuerdos de no competencia si falla.",
+      "texto_nuevo": "Variante de la franquicia individual donde se otorga franquicia a un operador que ya dirige un negocio similar, generalmente con términos preferenciales (tarifas reducidas) porque ya tiene clientela y requiere menos capacitación. Es útil en mercados fragmentados, reduce costos de marketing y acelera el cobro de regalías, pero estos franquiciados, como empresarios, pueden resistirse más a los controles del sistema, los mejores operadores suelen ser los menos interesados y los peores los más entusiastas, además de dificultar la aplicación de acuerdos de no competencia si falla.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1586",
+        "frase": "As entrepreneurs, these franchisees can be more resistant to the controls imposed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se cae el primer desafío de la lista del libro: la mayor resistencia a los controles del sistema.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

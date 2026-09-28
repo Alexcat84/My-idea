@@ -7,7 +7,7 @@
   "resumen_teorico": "El franquiciante puede negociar condiciones de compra con proveedores clave en beneficio de la red, generando valor tangible y manteniendo control de calidad. También puede designar proveedores exclusivos, lo cual debe justificarse (recetas propietarias, control de marca) para evitar riesgos de antitrust (arreglos de vinculación bajo la Sherman Antitrust Act).",
   "pasos_accionables": [
     "Realizar un análisis costo-beneficio de negociar compras centralizadas",
-    "Decidir cómo se distribuirán rebates entre franquiciante, franquiciados o fondo publicitario",
+    "Decidir cómo se distribuirán rebates entre franquiciante, franquiciados o fondo publicitario, o si se renuncia a ellos y solo se negocia el menor precio posible en beneficio de la red",
     "Determinar si se designarán proveedores exclusivos y justificar la razón (calidad, receta propietaria)",
     "Revisar con asesoría legal el riesgo de tying arrangements bajo leyes antitrust",
     "Divulgar relaciones de proveedores en el Item 8 del FDD si aplica"
@@ -38,6 +38,23 @@
         "motivo": "Los programas de compra y proveedores aprobados de la red son operacion del sistema ya franquiciado. No preparan la eleccion del consultor; el orden esta invertido o la relacion es nula."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-006-programas_compra_franquicia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir cómo se distribuirán rebates entre franquiciante, franquiciados o fondo publicitario",
+      "texto_nuevo": "Decidir cómo se distribuirán rebates entre franquiciante, franquiciados o fondo publicitario, o si se renuncia a ellos y solo se negocia el menor precio posible en beneficio de la red",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2884, 2893",
+        "frase": "Or simply negotiate the lowest possible prices on behalf of franchisees as a benefit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea una cuarta opción, no quedarse rebates y solo negociar el precio más bajo para la red, que el paso pierde.; Mismo defecto: se cae la opción de renunciar a los rebates, que el libro pide sopesar al franquiciante que empieza.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -3,11 +3,11 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Ratios Financieros",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Los ratios financieros son relaciones entre dos cifras de los estados financieros que ofrecen un atajo rápido para entender lo que dicen esos estados, sin importar si la empresa es una startup, una empresa mediana o una gran corporación pública. Se agrupan en cuatro categorías: rentabilidad (por ejemplo, retorno sobre activos o ROA, retorno sobre capital o ROE, margen bruto y margen operativo), apalancamiento (razón deuda a capital), liquidez (razón corriente, capital de trabajo) y eficiencia (rotación de activos, días de ventas pendientes de cobro o DSO). Su verdadero valor surge al compararlos en el tiempo (contra periodos anteriores o proyecciones propias) o contra promedios de la industria y competidores, lo que permite detectar anomalías, medir eficiencia y hasta descubrir manipulación contable: el caso de una conocida empresa de electrodomésticos bajo un CEO que impulsaba recortes agresivos ilustra cómo un analista detectó fraude contable al notar un DSO anormalmente alto.",
+  "resumen_teorico": "Los ratios financieros son relaciones entre dos cifras de los estados financieros que ofrecen un atajo rápido para entender lo que dicen esos estados, sin importar si la empresa es una startup, una empresa mediana o una gran corporación pública. Se agrupan en cuatro categorías: rentabilidad (por ejemplo, retorno sobre activos o ROA, retorno sobre capital o ROE, margen bruto y margen operativo), apalancamiento (razón deuda a capital), liquidez (razón corriente, prueba ácida, capital de trabajo) y eficiencia (rotación de activos, días de ventas pendientes de cobro o DSO). Su verdadero valor surge al compararlos en el tiempo (contra periodos anteriores o proyecciones propias) o contra promedios de la industria y competidores, lo que permite detectar anomalías, medir eficiencia y hasta descubrir manipulación contable: el caso de una conocida empresa de electrodomésticos bajo un CEO que impulsaba recortes agresivos ilustra cómo un analista detectó fraude contable al notar un DSO anormalmente alto.",
   "pasos_accionables": [
     "Calcular ratios de rentabilidad: margen bruto, margen operativo, retorno sobre activos (ROA) y retorno sobre capital (ROE)",
-    "Calcular ratios de apalancamiento: razón deuda a capital",
-    "Calcular ratios de liquidez: razón corriente y capital de trabajo",
+    "Calcular ratios de apalancamiento: razón deuda a capital y cobertura de intereses",
+    "Calcular ratios de liquidez: razón corriente, prueba ácida (quick ratio) y capital de trabajo",
     "Calcular ratios de eficiencia: rotación de activos y días de ventas pendientes de cobro (DSO)",
     "Comparar los ratios actuales con periodos anteriores de la misma empresa y con las proyecciones del plan financiero propio",
     "Comparar los ratios con los de competidores o promedios de la industria (disponibles a través de asociaciones gremiales)",
@@ -39,5 +39,57 @@
   "etiqueta_arbol": "Lee tus Ratios Financieros",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-005-analisis_de_ratios_financieros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los ratios financieros son relaciones entre dos cifras de los estados financieros que ofrecen un atajo rápido para entender lo que dicen esos estados, sin importar si la empresa es una startup, una empresa mediana o una gran corporación pública. Se agrupan en cuatro categorías: rentabilidad (por ejemplo, retorno sobre activos o ROA, retorno sobre capital o ROE, margen bruto y margen operativo), apalancamiento (razón deuda a capital), liquidez (razón corriente, capital de trabajo) y eficiencia (rotación de activos, días de ventas pendientes de cobro o DSO). Su verdadero valor surge al compararlos en el tiempo (contra periodos anteriores o proyecciones propias) o contra promedios de la industria y competidores, lo que permite detectar anomalías, medir eficiencia y hasta descubrir manipulación contable: el caso de una conocida empresa de electrodomésticos bajo un CEO que impulsaba recortes agresivos ilustra cómo un analista detectó fraude contable al notar un DSO anormalmente alto.",
+      "texto_nuevo": "Los ratios financieros son relaciones entre dos cifras de los estados financieros que ofrecen un atajo rápido para entender lo que dicen esos estados, sin importar si la empresa es una startup, una empresa mediana o una gran corporación pública. Se agrupan en cuatro categorías: rentabilidad (por ejemplo, retorno sobre activos o ROA, retorno sobre capital o ROE, margen bruto y margen operativo), apalancamiento (razón deuda a capital), liquidez (razón corriente, prueba ácida, capital de trabajo) y eficiencia (rotación de activos, días de ventas pendientes de cobro o DSO). Su verdadero valor surge al compararlos en el tiempo (contra periodos anteriores o proyecciones propias) o contra promedios de la industria y competidores, lo que permite detectar anomalías, medir eficiencia y hasta descubrir manipulación contable: el caso de una conocida empresa de electrodomésticos bajo un CEO que impulsaba recortes agresivos ilustra cómo un analista detectó fraude contable al notar un DSO anormalmente alto.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2658-2686",
+        "frase": "The quick ratio is also known as the acid test"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El capital de trabajo sí aparece en el libro al leer los resultados de liquidez (línea 4559); lo que falla es que se cae la prueba ácida, uno de los dos ratios de liquidez del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-005-analisis_de_ratios_financieros-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular ratios de liquidez: razón corriente y capital de trabajo",
+      "texto_nuevo": "Calcular ratios de liquidez: razón corriente, prueba ácida (quick ratio) y capital de trabajo",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2658-2686",
+        "frase": "The quick ratio is also known as the acid test"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El capital de trabajo tiene respaldo en la lectura de liquidez del libro (línea 4559); el defecto real es la omisión de la prueba ácida.; Los dos ratios de liquidez del libro son la razón corriente y la prueba ácida; el paso omite la segunda.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-005-analisis_de_ratios_financieros-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular ratios de apalancamiento: razón deuda a capital",
+      "texto_nuevo": "Calcular ratios de apalancamiento: razón deuda a capital y cobertura de intereses",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2604",
+        "frase": "we’ll look at just two ratios: debt-to-equity and interest coverage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro trabaja dos ratios de apalancamiento, deuda a capital y cobertura de intereses, y advierte que el banco pedirá ambos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

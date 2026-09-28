@@ -9,7 +9,7 @@
     "Analizar el producto/servicio actual e identificar si solo resuelve una función o si genera una experiencia memorable.",
     "Mapear los puntos de contacto (touchpoints) donde el usuario podría pasar de consumo pasivo a participación activa.",
     "Diseñar elementos que generen conexión emocional, no solo eficiencia funcional.",
-    "Evaluar la ejecución del detalle (calidad, distribución, precio, diseño físico) ya que fallas de ejecución destruyen buenas ideas.",
+    "Evaluar la ejecución del detalle (calidad, marketing, distribución, precio, diseño físico) ya que una buena idea mal ejecutada muy probablemente fracase.",
     "Iterar el diseño de la experiencia con el mismo rigor que se aplicaría a la ingeniería de un producto.",
     "Analizar ejemplos de marcas de experiencia (Whole Foods, Virgin America) para inspirar el diseño propio"
   ],
@@ -43,5 +43,24 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-003-economia_de_la_experiencia-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar la ejecución del detalle (calidad, distribución, precio, diseño físico) ya que fallas de ejecución destruyen buenas ideas.",
+      "texto_nuevo": "Evaluar la ejecución del detalle (calidad, marketing, distribución, precio, diseño físico) ya que una buena idea mal ejecutada muy probablemente fracase.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "731",
+        "frase": "a poorly executed idea will most likely fail."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que una idea mal ejecutada muy probablemente fracasará; el nodo lo vuelve certeza.; La lista del libro incluye el marketing poco imaginativo, que el paso omite y que cambia qué se revisa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

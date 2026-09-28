@@ -7,7 +7,7 @@
   "resumen_teorico": "La varianza es la diferencia entre dos cifras financieras (presupuesto vs. real, mes actual vs. mes anterior). Es clave determinar si una varianza es favorable o desfavorable: más ingresos de lo esperado es favorable, más gastos de lo esperado es desfavorable. Los paréntesis o signos negativos no siempre indican lo mismo dependiendo si es línea de ingreso o gasto.",
   "pasos_accionables": [
     "Sugerencia de My Idea: calcular la varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes.",
-    "Determinar manualmente si cada varianza es favorable o desfavorable",
+    "Determinar manualmente, con unos pocos cálculos que incluyan al menos una línea de ingreso y una de gasto, si las varianzas son favorables o desfavorables",
     "Verificar cómo el sistema contable presenta paréntesis/signos negativos",
     "Priorizar la revisión de varianzas grandes en términos porcentuales",
     "Investiga y anota la causa de cualquier diferencia importante antes de tomar decisiones."
@@ -68,6 +68,23 @@
         "motivo": "El VPN evalua inversiones de capital; no prepara el analisis de varianza presupuesto contra real, que se apoya en el estado de resultados y en porcentajes de cambio."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-005-analisis_varianza_financiera-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar manualmente si cada varianza es favorable o desfavorable",
+      "texto_nuevo": "Determinar manualmente, con unos pocos cálculos que incluyan al menos una línea de ingreso y una de gasto, si las varianzas son favorables o desfavorables",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "968",
+        "frase": "do the calculations for both a revenue line item and an expense line item"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro propone unos pocos cálculos a mano, con una línea de ingreso y una de gasto, para entender cómo se muestran las varianzas; se pierde ese procedimiento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Vender el derecho a abrir varios locales en una zona (desarrollo de área)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Aquí vendes a alguien el derecho exclusivo de abrir un número definido de locales en una zona, siguiendo un calendario de aperturas acordado. Trabajas con menos socios, pero más sólidos, y evitas peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que más de la mitad de estos contratos no se cumplen tal como se firmaron. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
+  "resumen_teorico": "Aquí vendes a alguien el derecho exclusivo de abrir un número definido de locales en una zona, siguiendo un calendario de aperturas acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
   "pasos_accionables": [
     "Decide el tamaño de la zona y el calendario de aperturas, lo recomendable es entre 3 y 5 locales.",
     "Pon criterios claros de capital y experiencia para quien va a desarrollar esa zona.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Vende Derechos de Territorio",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-007-franquicia_desarrollo_area-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aquí vendes a alguien el derecho exclusivo de abrir un número definido de locales en una zona, siguiendo un calendario de aperturas acordado. Trabajas con menos socios, pero más sólidos, y evitas peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que más de la mitad de estos contratos no se cumplen tal como se firmaron. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
+      "texto_nuevo": "Aquí vendes a alguien el derecho exclusivo de abrir un número definido de locales en una zona, siguiendo un calendario de aperturas acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1588-1596",
+        "frase": "area development contracts go unfulfilled—by some estimates, more than 50 percent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da la cifra de más del 50% solo como estimación y cuenta aparte los que no cumplen el calendario.; El libro dice que estos contratos pueden minimizar las disputas territoriales, no evitarlas.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

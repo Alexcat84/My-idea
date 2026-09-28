@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Registrar cada issue con ID único y categoría",
     "Definir impacto en objetivos y nivel de urgencia",
-    "Asignar responsable y fecha límite de resolución",
+    "Asignar responsable, documentar las acciones necesarias para resolverlo y fijar la fecha límite de resolución",
     "Actualizar estado hasta el cierre del issue"
   ],
   "entregable_esperado": "Log de issues actualizado con seguimiento de resolución",
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Registra tus Puntos en Disputa",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-015-issue_log-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asignar responsable y fecha límite de resolución",
+      "texto_nuevo": "Asignar responsable, documentar las acciones necesarias para resolverlo y fijar la fecha límite de resolución",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "4671",
+        "frase": "Document the actions needed to address and resolve the issue."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El registro del libro incluye las acciones para atender y resolver cada issue; el procedimiento del nodo no las pide.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

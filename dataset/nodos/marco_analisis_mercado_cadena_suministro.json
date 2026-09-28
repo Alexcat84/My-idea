@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo entender tu mercado para encontrar oportunidades en tu cadena de suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Antes de decidir dónde enfocar tus esfuerzos, necesitas entender en qué tipo de mercado te mueves: uno maduro, uno en desarrollo o uno estable. Cada tipo te exige destacar en algo distinto: atención al cliente, eficiencia interna, capacidad de adaptarte a la demanda o desarrollo de producto. Tu tarea es identificar en cuál de estas áreas necesitas ser mejor que tu competencia.",
+  "resumen_teorico": "Antes de decidir dónde enfocar tus esfuerzos, necesitas entender en qué tipo de mercado te mueves: uno en desarrollo, uno en crecimiento, uno estable o uno maduro. Cada tipo te exige destacar en algo distinto: atención al cliente, eficiencia interna, capacidad de adaptarte a la demanda o desarrollo de producto. Tu tarea es identificar en cuál de estas áreas necesitas ser mejor que tu competencia.",
   "pasos_accionables": [
     "Identifica los mercados en los que trabajas y quiénes participan en ellos: quienes producen, distribuyen, hacen la logística y venden al público",
     "Define en qué tipo de mercado está cada línea de tu negocio hoy y en qué tipo estará en dos años, de entre los cuadrantes desarrollo, crecimiento, estable o maduro",
@@ -23,9 +23,9 @@
     "Calcular la rotación de inventario actual de la empresa",
     "Calcular el retorno sobre ventas (return on sales)",
     "Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)",
-    "Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario",
-    "Seleccionar 1-2 capacidades de mercado donde concentrarás inversión (no todas a la vez).",
-    "Evitar invertir en eficiencia interna si compites en mercado de crecimiento; prioriza servicio y producto.",
+    "Identificar oportunidades de mejora en cuentas por cobrar/pagar, donde a menudo se puede mejorar más que en los niveles de inventario",
+    "Seleccionar las capacidades de mercado donde concentrarás inversión según lo que exige tu cuadrante (no todas a la vez).",
+    "Si compites en un mercado de crecimiento, prioriza el servicio al cliente por encima de todo, medido por pedidos completos y entregas a tiempo.",
     "Presta atención a señales de que tu mercado está cambiando de cuadrante para anticiparte"
   ],
   "entregable_esperado": "Un mapa claro de en qué necesitas destacar frente a tu competencia, con metas de desempeño definidas para cada una de las cuatro áreas",
@@ -148,6 +148,73 @@
         "motivo": "Entender el tipo de mercado para priorizar capacidades no sigue con compartir datos entre empresas de la cadena."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-017-marco_analisis_mercado_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de decidir dónde enfocar tus esfuerzos, necesitas entender en qué tipo de mercado te mueves: uno maduro, uno en desarrollo o uno estable. Cada tipo te exige destacar en algo distinto: atención al cliente, eficiencia interna, capacidad de adaptarte a la demanda o desarrollo de producto. Tu tarea es identificar en cuál de estas áreas necesitas ser mejor que tu competencia.",
+      "texto_nuevo": "Antes de decidir dónde enfocar tus esfuerzos, necesitas entender en qué tipo de mercado te mueves: uno en desarrollo, uno en crecimiento, uno estable o uno maduro. Cada tipo te exige destacar en algo distinto: atención al cliente, eficiencia interna, capacidad de adaptarte a la demanda o desarrollo de producto. Tu tarea es identificar en cuál de estas áreas necesitas ser mejor que tu competencia.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2877",
+        "frase": "This model defines four basic kinds of markets, or market quadrants."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define cuatro cuadrantes; se cae el mercado en crecimiento, que exige un servicio al cliente muy alto.; Misma omisión del cuadrante de crecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-017-marco_analisis_mercado_cadena_suministro-pasos_accionables-17",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario",
+      "texto_nuevo": "Identificar oportunidades de mejora en cuentas por cobrar/pagar, donde a menudo se puede mejorar más que en los niveles de inventario",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3109",
+        "frase": "A company can often make more improvements in its accounts payable and receivable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo se mejora más en cuentas por cobrar y pagar que en inventario; no fija un orden de prioridad.; Mismo endurecimiento del 'a menudo' del libro en un 'antes que'.",
+      "indice": 17,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-017-marco_analisis_mercado_cadena_suministro-pasos_accionables-18",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar 1-2 capacidades de mercado donde concentrarás inversión (no todas a la vez).",
+      "texto_nuevo": "Seleccionar las capacidades de mercado donde concentrarás inversión según lo que exige tu cuadrante (no todas a la vez).",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4395",
+        "frase": "companies must meet high customer service standards in all of the markets they serve"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El límite de una o dos no está en el libro; los mercados maduros exigen tres áreas y el servicio se exige en todos.; La cifra de una o dos capacidades no está en el libro; la mezcla la dicta el mercado.",
+      "indice": 18,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-017-marco_analisis_mercado_cadena_suministro-pasos_accionables-19",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar invertir en eficiencia interna si compites en mercado de crecimiento; prioriza servicio y producto.",
+      "texto_nuevo": "Si compites en un mercado de crecimiento, prioriza el servicio al cliente por encima de todo, medido por pedidos completos y entregas a tiempo.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3449",
+        "frase": "Growth markets demand customer service above all else."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no manda evitar la eficiencia interna en un mercado de crecimiento ni prioriza ahí el producto; exige servicio al cliente muy alto.; El mercado de crecimiento exige servicio por encima de todo; el desarrollo de producto corresponde al mercado en desarrollo.",
+      "indice": 19,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -7,12 +7,12 @@
   "resumen_teorico": "Make Certain es un programa de mejora orientado a personal de oficina y administrativo (white-collar), diseñado para generar conciencia inmediata sobre la responsabilidad personal en la calidad del trabajo de comunicación y papeleo. Se basa en el reconocimiento de que la mayoría de las personas atribuyen sus problemas a otros y no a sí mismas, y busca revertir esa percepción mediante ejercicios grupales guiados.",
   "pasos_accionables": [
     "Informar al personal directivo sobre el concepto e intención del programa",
-    "Designar coordinadores por departamento administrativo",
+    "Designar coordinadores por departamento administrativo, que preparen a los supervisores para reunirse con su gente y analizar quién es su cliente interno y final, qué espera y cómo medir los fallos",
     "Recolectar ejemplos reales de errores de prevención evitables",
     "Realizar sesión donde cada participante declare su 'mayor problema'",
-    "Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo",
-    "Solicitar ideas escritas de prevención de defectos al equipo de mejora",
-    "Establecer reuniones regulares de prevención de defectos por grupo, similar a los círculos de acción correctiva en manufactura"
+    "Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo; luego pedir ideas para prevenir algunos y volver a preguntar a cada uno su mayor problema, que esta vez debería ser distinto",
+    "Pedir a los participantes que envíen ideas escritas de prevención de defectos al equipo de mejora",
+    "Sugerir a cada grupo que tenga reuniones regulares de prevención de defectos, similares a los círculos de acción correctiva en manufactura"
   ],
   "entregable_esperado": "Sesión Make Certain ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.",
   "nodos_previos": [
@@ -29,5 +29,75 @@
   "etiqueta_arbol": "Haz Certera tu Oficina",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-010-make_certain_programa-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Solicitar ideas escritas de prevención de defectos al equipo de mejora",
+      "texto_nuevo": "Pedir a los participantes que envíen ideas escritas de prevención de defectos al equipo de mejora",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3713",
+        "frase": "Ask them to submit written ideas to the improvement team."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En el libro los participantes envían sus ideas al equipo de mejora; el nodo invierte la dirección.; Misma inversión de dirección.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-make_certain_programa-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo",
+      "texto_nuevo": "Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo; luego pedir ideas para prevenir algunos y volver a preguntar a cada uno su mayor problema, que esta vez debería ser distinto",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3705-3711",
+        "frase": "This time the problems should be different."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la parte del procedimiento que da la vuelta a la percepción: pedir ideas de prevención y volver a preguntar el mayor problema.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-make_certain_programa-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer reuniones regulares de prevención de defectos por grupo, similar a los círculos de acción correctiva en manufactura",
+      "texto_nuevo": "Sugerir a cada grupo que tenga reuniones regulares de prevención de defectos, similares a los círculos de acción correctiva en manufactura",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3795",
+        "frase": "Suggest that they might like to have regular meetings in their groups"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece la sugerencia del libro.; Endurece: el libro solo sugiere que quizá les convenga reunirse con regularidad.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-make_certain_programa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Designar coordinadores por departamento administrativo",
+      "texto_nuevo": "Designar coordinadores por departamento administrativo, que preparen a los supervisores para reunirse con su gente y analizar quién es su cliente interno y final, qué espera y cómo medir los fallos",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3795-3813",
+        "frase": "Who is our customer inside the company?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el núcleo del programa: los coordinadores preparan a los supervisores, que analizan con su gente quién es su cliente, qué quiere y cómo medir los fallos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

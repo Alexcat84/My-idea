@@ -4,11 +4,11 @@
   "dominio": "franquicias",
   "titulo_concepto": "Presupuesto de Publicidad y Flujo de Caja para Vender Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Cuando vendes franquicias, tu presupuesto de marketing tiene que cubrir al menos seis meses antes de que puedas esperar recuperar el costo con las cuotas de franquicia, porque las ventas no llegan de inmediato. Cuanto mas inviertas cada mes en publicidad, mas rápido cerraras tu primera venta. Por ejemplo, si tu meta es vender 6 franquicias en el primer año necesitaras un presupuesto de publicidad menor que si tu meta es vender 12; pregunta el precio de publicidad en tu mercado para calcular el monto real que te corresponde.",
+  "resumen_teorico": "Cuando vendes franquicias, a menudo basta con que tu presupuesto de marketing cubra unos seis meses de publicidad antes de que puedas esperar recuperar el costo con las cuotas de franquicia, porque las ventas no llegan de inmediato. Cuanto más inviertas cada mes en publicidad, más probable es que cierres antes tu primera venta. Por ejemplo, si tu meta es vender 6 franquicias en el primer año necesitarás un presupuesto de publicidad menor que si tu meta es vender 12; pregunta el precio de publicidad en tu mercado para calcular el monto real que te corresponde.",
   "pasos_accionables": [
     "Define cuántas franquicias quieres vender en el primer año",
     "Pregunta el precio de publicidad en tu mercado y calcula el presupuesto que necesitas según esa meta",
-    "Reserva un colchón de flujo de caja para al menos 6 meses de publicidad antes de esperar recuperar el dinero",
+    "Reserva un colchón de flujo de caja para unos 6 meses de publicidad, que a menudo basta, antes de esperar recuperar el dinero",
     "Revisa tu gasto en publicidad contra el ritmo real de ventas y ajusta si hace falta"
   ],
   "entregable_esperado": "Presupuesto de marketing y flujo de caja proyectado para los primeros 6 a 12 meses de venta de franquicias",
@@ -55,6 +55,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-e1-006-presupuesto_publicidad_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando vendes franquicias, tu presupuesto de marketing tiene que cubrir al menos seis meses antes de que puedas esperar recuperar el costo con las cuotas de franquicia, porque las ventas no llegan de inmediato. Cuanto mas inviertas cada mes en publicidad, mas rápido cerraras tu primera venta. Por ejemplo, si tu meta es vender 6 franquicias en el primer año necesitaras un presupuesto de publicidad menor que si tu meta es vender 12; pregunta el precio de publicidad en tu mercado para calcular el monto real que te corresponde.",
+      "texto_nuevo": "Cuando vendes franquicias, a menudo basta con que tu presupuesto de marketing cubra unos seis meses de publicidad antes de que puedas esperar recuperar el costo con las cuotas de franquicia, porque las ventas no llegan de inmediato. Cuanto más inviertas cada mes en publicidad, más probable es que cierres antes tu primera venta. Por ejemplo, si tu meta es vender 6 franquicias en el primer año necesitarás un presupuesto de publicidad menor que si tu meta es vender 12; pregunta el precio de publicidad en tu mercado para calcular el monto real que te corresponde.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5663",
+        "frase": "a cash-flow budget covering six months' worth of planned advertising is often sufficient"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que con más presupuesto mensual probablemente vendas antes; el nodo lo da como seguro.; El libro dice que seis meses de publicidad planificada a menudo bastan, no que sean un mínimo.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-presupuesto_publicidad_franquicia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reserva un colchón de flujo de caja para al menos 6 meses de publicidad antes de esperar recuperar el dinero",
+      "texto_nuevo": "Reserva un colchón de flujo de caja para unos 6 meses de publicidad, que a menudo basta, antes de esperar recuperar el dinero",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5663",
+        "frase": "a cash-flow budget covering six months' worth of planned advertising is often sufficient"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo defecto.; Seis meses es lo que a menudo basta según el libro, no un mínimo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

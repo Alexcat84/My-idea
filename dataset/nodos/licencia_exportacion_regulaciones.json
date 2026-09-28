@@ -6,14 +6,14 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Antes de exportar, es fundamental determinar si el producto requiere una licencia de exportación bajo las regulaciones EAR (Bureau of Industry and Security), ITAR (Departamento de Estado) u OFAC (sanciones económicas). Aunque el 95% de los productos no requieren licencia, todos están sujetos a leyes de control de exportación que determinan a quién y a qué países se puede vender. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
-    "Clasificar el producto con un ECCN (Export Control Classification Number) en bis.gov",
+    "Clasificar el producto con un ECCN (Export Control Classification Number) en bis.gov si lo necesita; si no tiene un ECCN específico, se clasifica como EAR99",
     "Verificar si el producto está en la Lista de Municiones de EE.UU. (USML) bajo ITAR",
     "Consultar las listas de partes denegadas (denied parties lists) en bis.gov",
     "Revisar la lista consolidada de sanciones de OFAC antes de completar pedidos internacionales",
-    "Designar un oficial de cumplimiento de exportaciones si se exportan pocos productos a pocos países",
+    "Considerar designar un oficial de cumplimiento de exportaciones si se exportan pocos productos a pocos países y no se requiere licencia de exportación; con un catálogo grande, considerar un plan de cumplimiento escrito",
     "Incluir la Declaración de Control de Destino en todas las facturas comerciales"
   ],
-  "entregable_esperado": "Documento de clasificación de productos con ECCN asignado y verificación de que no existen restricciones para el mercado/comprador objetivo.",
+  "entregable_esperado": "Documento de clasificación de productos con ECCN asignado (o EAR99 si no tiene uno específico) y verificación de que no existen restricciones para el mercado/comprador objetivo.",
   "nodos_previos": [
     "adaptacion_producto_mercado_exterior",
     "control_exportaciones_bis"
@@ -103,6 +103,56 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-002-licencia_exportacion_regulaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar el producto con un ECCN (Export Control Classification Number) en bis.gov",
+      "texto_nuevo": "Clasificar el producto con un ECCN (Export Control Classification Number) en bis.gov si lo necesita; si no tiene un ECCN específico, se clasifica como EAR99",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "385-409",
+        "frase": "classify your products with an Export Control Classification Number (ECCN), if one is needed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que se clasifica con ECCN si hace falta: solo los artículos de doble uso lo llevan y los demás son EAR99.; Mismo defecto: se cae la condición de que el ECCN se asigna si hace falta y la clase EAR99.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-002-licencia_exportacion_regulaciones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Designar un oficial de cumplimiento de exportaciones si se exportan pocos productos a pocos países",
+      "texto_nuevo": "Considerar designar un oficial de cumplimiento de exportaciones si se exportan pocos productos a pocos países y no se requiere licencia de exportación; con un catálogo grande, considerar un plan de cumplimiento escrito",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "387-403",
+        "frase": "a small number of countries and no export license is required, consider designating"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la condición de que no se requiera licencia, y el libro lo plantea como algo a considerar.; Se cae la condición de que no se requiera licencia, y para un catálogo grande el libro pide considerar un plan de cumplimiento escrito.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-002-licencia_exportacion_regulaciones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento de clasificación de productos con ECCN asignado y verificación de que no existen restricciones para el mercado/comprador objetivo.",
+      "texto_nuevo": "Documento de clasificación de productos con ECCN asignado (o EAR99 si no tiene uno específico) y verificación de que no existen restricciones para el mercado/comprador objetivo.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "409",
+        "frase": "Items that are not specified in the EAR under a specific ECCN are classified"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Solo los artículos de doble uso llevan ECCN específico; los demás se clasifican como EAR99.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

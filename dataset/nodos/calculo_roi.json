@@ -7,7 +7,7 @@
   "resumen_teorico": "Antes de realizar una compra significativa (un camión, un sistema de cómputo, una máquina), un emprendedor financieramente inteligente calcula el retorno esperado de esa inversión para determinar si vale la pena. El ROI permite comparar el beneficio esperado de un gasto de capital contra su costo, informando decisiones de asignación de recursos de manera objetiva en lugar de intuitiva.",
   "pasos_accionables": [
     "Identificar el costo total de la inversión propuesta (incluyendo costos ocultos de instalación, mantenimiento, etc.)",
-    "Estimar los beneficios financieros esperados de la inversión (ahorro de costos, incremento de ingresos)",
+    "Estimar de forma conservadora los beneficios financieros esperados de la inversión (ahorro de costos, incremento de ingresos), traducidos a flujo de efectivo y no a utilidad",
     "Sugerencia de My Idea: calcular el ROI dividiendo el beneficio neto entre el costo de la inversión.",
     "Comparar el ROI de esta inversión con otras alternativas de uso del capital",
     "Tomar la decisión de inversión basada en el análisis, no solo en la intuición"
@@ -54,6 +54,23 @@
         "motivo": "Los cargos únicos como alerta de sesgo contable en los estados financieros no preparan el cálculo del ROI de una compra. La corrección solo marcó la fórmula como sugerencia y no cambia esto."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-005-calculo_roi-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estimar los beneficios financieros esperados de la inversión (ahorro de costos, incremento de ingresos)",
+      "texto_nuevo": "Estimar de forma conservadora los beneficios financieros esperados de la inversión (ahorro de costos, incremento de ingresos), traducidos a flujo de efectivo y no a utilidad",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3023",
+        "frase": "Business owners need to be conservative, even cautious, in projecting future cash flows"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Además de la cautela, el libro pide traducir los beneficios a flujo de efectivo, no a utilidad.; El libro pide proyectar los flujos de la inversión de forma conservadora, incluso cautelosa; se cae esa condición.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

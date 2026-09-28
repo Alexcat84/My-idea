@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Lecciones Aprendidas",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Anota qué te funcionó bien y qué necesitas mejorar en cada parte de tu negocio: lo que pediste, el alcance de lo que hiciste, tus tiempos, tus costos, la calidad, tu equipo, cómo te comunicaste, con quién trataste, los riesgos que enfrentaste y tus compras o contrataciones. Puedes ir anotando esto mientras avanzas o al cerrar cada etapa, y te sirve tanto para mejorar lo que estás haciendo ahora como para tus próximos proyectos.",
+  "resumen_teorico": "Anota qué te funcionó bien y qué necesitas mejorar en cada parte de tu negocio: lo que pediste, el alcance de lo que hiciste, tus tiempos, tus costos, la calidad, tu equipo, cómo te comunicaste, con quién trataste, cómo informaste tu avance, los riesgos que enfrentaste, tus compras o contrataciones, qué procesos mantener o cambiar y lo propio de tu producto. Puedes ir anotando esto mientras avanzas o al cerrar cada etapa, y te sirve tanto para mejorar lo que estás haciendo ahora como para tus próximos proyectos.",
   "pasos_accionables": [
     "Revisa cómo te fue en cada parte de tu trabajo: lo que entregaste, tus costos, tus tiempos, la calidad, tu equipo, tu comunicación, los riesgos y tus proveedores",
     "Anota qué funcionó bien y qué puedes mejorar en cada una de esas partes",
-    "Registra los riesgos que aparecieron, los defectos de calidad y los problemas que tuviste con proveedores concretos",
+    "Registra los riesgos y problemas que aparecieron, los defectos de calidad y los problemas que tuviste con proveedores concretos, con cómo los respondiste o resolviste y qué tan bien funcionó",
     "Identifica qué hiciste excepcionalmente bien para repetirlo en otros proyectos o con otras personas",
     "Reúne todo en un documento final de lecciones aprendidas que puedas consultar más adelante"
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Aprende de tus Proyectos Pasados",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-015-lessons_learned-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota qué te funcionó bien y qué necesitas mejorar en cada parte de tu negocio: lo que pediste, el alcance de lo que hiciste, tus tiempos, tus costos, la calidad, tu equipo, cómo te comunicaste, con quién trataste, los riesgos que enfrentaste y tus compras o contrataciones. Puedes ir anotando esto mientras avanzas o al cerrar cada etapa, y te sirve tanto para mejorar lo que estás haciendo ahora como para tus próximos proyectos.",
+      "texto_nuevo": "Anota qué te funcionó bien y qué necesitas mejorar en cada parte de tu negocio: lo que pediste, el alcance de lo que hiciste, tus tiempos, tus costos, la calidad, tu equipo, cómo te comunicaste, con quién trataste, cómo informaste tu avance, los riesgos que enfrentaste, tus compras o contrataciones, qué procesos mantener o cambiar y lo propio de tu producto. Puedes ir anotando esto mientras avanzas o al cerrar cada etapa, y te sirve tanto para mejorar lo que estás haciendo ahora como para tus próximos proyectos.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5713-5773",
+        "frase": "List any processes that should be changed or discontinued."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae además los reportes de avance, la mejora de procesos y lo propio del producto, que el nodo deja fuera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-015-lessons_learned-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registra los riesgos que aparecieron, los defectos de calidad y los problemas que tuviste con proveedores concretos",
+      "texto_nuevo": "Registra los riesgos y problemas que aparecieron, los defectos de calidad y los problemas que tuviste con proveedores concretos, con cómo los respondiste o resolviste y qué tan bien funcionó",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5789",
+        "frase": "Describe the response and its effectiveness."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide registrar, junto a cada riesgo o issue, defecto y problema con proveedores, cómo se respondió o resolvió y la eficacia de la respuesta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

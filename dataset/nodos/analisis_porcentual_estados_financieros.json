@@ -7,7 +7,7 @@
   "pasos_accionables": [
     "Calcular cada línea de gasto o ingreso como porcentaje de los ingresos totales (porcentaje del total)",
     "Para calcular el porcentaje de cambio o varianza: identificar el valor base (periodo anterior o presupuestado) y el valor nuevo (periodo actual o real), restar el valor base del nuevo, dividir entre el valor base y multiplicar por 100",
-    "Comparar tendencias entre periodos: ¿los márgenes mejoran o empeoran con el tiempo?",
+    "Comparar tendencias entre periodos: ¿los márgenes mejoran o empeoran con el tiempo? Si una línea se mueve en la dirección equivocada, averiguar por qué.",
     "Identificar si el crecimiento de los gastos supera al de los ingresos",
     "Aplicar la misma fórmula de porcentaje de cambio para calcular varianzas presupuestarias (presupuesto vs. real)"
   ],
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Compara tus Cifras Financieras",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-005-analisis_porcentual_estados_financieros-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar tendencias entre periodos: ¿los márgenes mejoran o empeoran con el tiempo?",
+      "texto_nuevo": "Comparar tendencias entre periodos: ¿los márgenes mejoran o empeoran con el tiempo? Si una línea se mueve en la dirección equivocada, averiguar por qué.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2842",
+        "frase": "If you see certain items creep up while others creep down, ask yourself why"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, ante una línea que se mueve en la dirección equivocada, averiguar por qué e indagar hasta saberlo; el paso se queda en observar.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

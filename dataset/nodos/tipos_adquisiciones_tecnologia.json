@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tipos de compra de tu empresa (adquisiciones)",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando alguien quiere comprarte, hay tres lógicas distintas de valor: (1) te compran por el equipo o la tecnología (precio en tu mercado); (2) te compran el producto para venderlo con su propia fuerza comercial (precio mayor que el anterior); (3) te compran el negocio completo, con sus ingresos y ganancias, valorado por métricas financieras. Entender cuál de las tres te están ofreciendo es clave para negociar bien.",
+  "resumen_teorico": "Cuando alguien quiere comprarte, hay tres lógicas distintas de valor: (1) te compran por el equipo o la tecnología (suelen ser tratos de entre 5 y 50 millones de dólares); (2) te compran el producto para venderlo con su propia fuerza comercial (precio mayor que el anterior); (3) te compran el negocio completo, con sus ingresos y ganancias, valorado al menos en parte por métricas financieras. Distinguir cuál de las tres te están ofreciendo te ayuda a pensar si te conviene vender.",
   "pasos_accionables": [
     "Identifica qué te están comprando realmente: la gente, el producto o el negocio completo",
     "Ajusta lo que esperas de valor según cuál de las tres categorías te ofrecen",
@@ -65,6 +65,22 @@
         "motivo": "Una vez decidido vender la empresa, lo siguiente es entender qué tipo de compra se ofrece y cómo se valora cada una."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-012-tipos_adquisiciones_tecnologia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando alguien quiere comprarte, hay tres lógicas distintas de valor: (1) te compran por el equipo o la tecnología (precio en tu mercado); (2) te compran el producto para venderlo con su propia fuerza comercial (precio mayor que el anterior); (3) te compran el negocio completo, con sus ingresos y ganancias, valorado por métricas financieras. Entender cuál de las tres te están ofreciendo es clave para negociar bien.",
+      "texto_nuevo": "Cuando alguien quiere comprarte, hay tres lógicas distintas de valor: (1) te compran por el equipo o la tecnología (suelen ser tratos de entre 5 y 50 millones de dólares); (2) te compran el producto para venderlo con su propia fuerza comercial (precio mayor que el anterior); (3) te compran el negocio completo, con sus ingresos y ganancias, valorado al menos en parte por métricas financieras. Distinguir cuál de las tres te están ofreciendo te ayuda a pensar si te conviene vender.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "3264",
+        "frase": "These kinds of deals typically range between $5 million and $50 million."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El defecto del fragmento es la sustitución del rango del libro por un precio de mercado que el libro no dice; se corrige con el rango.; El libro da un rango típico de 5 a 50 millones de dólares, no un precio de mercado.; El libro usa las categorías para pensar si vender, no afirma que distinguirlas sea clave para negociar.; Quitar el 'al menos en parte' del libro vuelve absoluta la valoración por métricas financieras: es endurecer, no perder un matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

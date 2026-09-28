@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Financial Performance Representations (FPR / Item 19)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Bajo la regla de la FTC, un franquiciador no puede discutir ventas o ganancias con prospectos a menos que estén reveladas en el Item 19 del FDD. Las FPR pueden ser simples (tasas de ocupación, costos de comida y mano de obra, ticket promedio) y no siguen un formato contable estándar. Aunque no son obligatorias, cerca del 60% de franquiciadores las usan porque los prospectos suelen preguntar cuánto pueden ganar.",
+  "resumen_teorico": "Bajo la regla de la FTC, un franquiciador no puede discutir ventas o ganancias con prospectos a menos que estén reveladas en el Item 19 del FDD. Las FPR pueden ser simples (tasas de ocupación, costos de comida y mano de obra, ticket promedio) y no siguen un formato contable estándar. Aunque no son obligatorias, según algunas estimaciones cerca del 60% de franquiciadores las usan, y la mayoría de los prospectos pregunta pronto cuánto puede ganar.",
   "pasos_accionables": [
     "Decidir si se incluirá un FPR en el FDD",
     "Seleccionar la métrica de desempeño a divulgar (ocupación, costos, ticket promedio, ventas)",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Declara tus Cifras con Cuidado",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-007-financial_performance_representations-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Bajo la regla de la FTC, un franquiciador no puede discutir ventas o ganancias con prospectos a menos que estén reveladas en el Item 19 del FDD. Las FPR pueden ser simples (tasas de ocupación, costos de comida y mano de obra, ticket promedio) y no siguen un formato contable estándar. Aunque no son obligatorias, cerca del 60% de franquiciadores las usan porque los prospectos suelen preguntar cuánto pueden ganar.",
+      "texto_nuevo": "Bajo la regla de la FTC, un franquiciador no puede discutir ventas o ganancias con prospectos a menos que estén reveladas en el Item 19 del FDD. Las FPR pueden ser simples (tasas de ocupación, costos de comida y mano de obra, ticket promedio) y no siguen un formato contable estándar. Aunque no son obligatorias, según algunas estimaciones cerca del 60% de franquiciadores las usan, y la mayoría de los prospectos pregunta pronto cuánto puede ganar.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "613-619",
+        "frase": "By some estimates, about 60 percent of franchisors now do FPRs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el 60% como estimación y no lo explica por las preguntas de los prospectos.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

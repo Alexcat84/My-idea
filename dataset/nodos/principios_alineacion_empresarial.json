@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Principios de Alineación Empresarial (Shingo)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La alineación empresarial sostiene que una organización desalineada, como un automóvil fuera de eje, desperdicia energía y produce resultados subóptimos. Se apoya en dos principios: crear constancia de propósito (comunicar con claridad por qué existe la organización y hacia dónde va) y pensar sistemáticamente (entender la conexión e impacto de las partes sobre el todo). Requiere unidad de propósito entre liderazgo y una masa crítica de la organización.",
+  "resumen_teorico": "La alineación empresarial sostiene que una organización desalineada, como un automóvil fuera de eje, desperdicia energía y produce resultados subóptimos. Se apoya en dos principios: crear constancia de propósito (comunicar con claridad por qué existe la organización, hacia dónde va, cómo llegará y con qué principios actúa) y pensar sistemáticamente (entender la conexión e impacto de las partes sobre el todo). Requiere unidad de propósito entre liderazgo y una masa crítica de la organización.",
   "pasos_accionables": [
     "Definir y comunicar de forma clara la visión, propósito y valores organizacionales",
     "Mapear interdependencias entre procesos, unidades y personas de la organización",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Alinea tu Empresa con Propósito",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-principios_alineacion_empresarial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La alineación empresarial sostiene que una organización desalineada, como un automóvil fuera de eje, desperdicia energía y produce resultados subóptimos. Se apoya en dos principios: crear constancia de propósito (comunicar con claridad por qué existe la organización y hacia dónde va) y pensar sistemáticamente (entender la conexión e impacto de las partes sobre el todo). Requiere unidad de propósito entre liderazgo y una masa crítica de la organización.",
+      "texto_nuevo": "La alineación empresarial sostiene que una organización desalineada, como un automóvil fuera de eje, desperdicia energía y produce resultados subóptimos. Se apoya en dos principios: crear constancia de propósito (comunicar con claridad por qué existe la organización, hacia dónde va, cómo llegará y con qué principios actúa) y pensar sistemáticamente (entender la conexión e impacto de las partes sobre el todo). Requiere unidad de propósito entre liderazgo y una masa crítica de la organización.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12911",
+        "frase": "why an organization exists, where it is going, how it will get there"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide expresar también cómo llegará la organización y los principios con que actúa; media enumeración se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

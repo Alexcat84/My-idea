@@ -4,16 +4,16 @@
   "dominio": "exportacion",
   "titulo_concepto": "Desarrollo de un Plan de Exportación Escrito",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Un plan de exportación escrito es una herramienta de gestión flexible (no estática) que reúne hechos, restricciones y metas de la empresa, estableciendo objetivos específicos, cronogramas de implementación e hitos medibles. Solo un tercio de las PYMES exportadoras de EE.UU. tiene un plan escrito, lo cual limita su crecimiento y las hace vulnerables a abandonar el mercado internacional prematuramente.",
+  "resumen_teorico": "Un plan de exportación escrito es una herramienta de gestión flexible (no estática) que reúne hechos, restricciones y metas de la empresa, estableciendo objetivos específicos, cronogramas de implementación e hitos medibles. Solo un tercio de las PYMES exportadoras de EE.UU. tiene un plan escrito; sin él, una empresa puede pasar por alto mejores oportunidades o abandonar el mercado internacional prematuramente.",
   "pasos_accionables": [
     "Reunir consenso entre el personal clave de gestión sobre metas, objetivos, capacidades y restricciones",
     "Responder las 11 preguntas clave del plan de exportación (productos, licencias, países objetivo, canales, precios, etc.)",
     "Mantener el plan inicial simple y de pocas páginas",
     "Establecer el plan como documento vivo, comparando objetivos con resultados reales",
     "Decidir entre plan detallado (exportación directa) o plan simplificado (exportación indirecta o e-commerce)",
-    "Usar el esquema de tabla de contenidos: resumen ejecutivo, políticas, análisis de situación, componente de marketing"
+    "Usar el esquema de tabla de contenidos: resumen ejecutivo, políticas, análisis de situación, componente de marketing, tácticas y pasos de acción, presupuesto de exportación, calendario de implementación y anexos"
   ],
-  "entregable_esperado": "Documento de Plan de Exportación escrito, de al menos algunas páginas, con objetivos, cronograma, mercados objetivo y responsables asignados.",
+  "entregable_esperado": "Documento de Plan de Exportación escrito, de solo unas pocas páginas al inicio, con objetivos, cronograma, mercados objetivo y responsables asignados.",
   "nodos_previos": [
     "evaluacion_preparacion_empresa_exportar",
     "evaluacion_potencial_exportador_producto"
@@ -28,5 +28,56 @@
   "etiqueta_arbol": "Escribe tu Plan de Exportación",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-014-desarrollo_plan_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan de exportación escrito es una herramienta de gestión flexible (no estática) que reúne hechos, restricciones y metas de la empresa, estableciendo objetivos específicos, cronogramas de implementación e hitos medibles. Solo un tercio de las PYMES exportadoras de EE.UU. tiene un plan escrito, lo cual limita su crecimiento y las hace vulnerables a abandonar el mercado internacional prematuramente.",
+      "texto_nuevo": "Un plan de exportación escrito es una herramienta de gestión flexible (no estática) que reúne hechos, restricciones y metas de la empresa, estableciendo objetivos específicos, cronogramas de implementación e hitos medibles. Solo un tercio de las PYMES exportadoras de EE.UU. tiene un plan escrito; sin él, una empresa puede pasar por alto mejores oportunidades o abandonar el mercado internacional prematuramente.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "637",
+        "frase": "Absent a plan, your business may overlook much better opportunities."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que sin plan puedes pasar por alto mejores oportunidades y que los exportadores reactivos pueden rendirse pronto; no afirma que limite su crecimiento.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-014-desarrollo_plan_exportacion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el esquema de tabla de contenidos: resumen ejecutivo, políticas, análisis de situación, componente de marketing",
+      "texto_nuevo": "Usar el esquema de tabla de contenidos: resumen ejecutivo, políticas, análisis de situación, componente de marketing, tácticas y pasos de acción, presupuesto de exportación, calendario de implementación y anexos",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "795-811",
+        "frase": "Part IV: Tactics—Action Steps"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El esquema del libro sigue con tácticas, presupuesto de exportación y calendario de implementación con revisión de resultados.; Mismo defecto que la marca 0, con los anexos.; Mismo defecto que la marca 0.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-014-desarrollo_plan_exportacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Documento de Plan de Exportación escrito, de al menos algunas páginas, con objetivos, cronograma, mercados objetivo y responsables asignados.",
+      "texto_nuevo": "Documento de Plan de Exportación escrito, de solo unas pocas páginas al inicio, con objetivos, cronograma, mercados objetivo y responsables asignados.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "663",
+        "frase": "Your plan need only be a few pages to start"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro pone un techo para el primer plan (solo unas pocas páginas), y el nodo lo convierte en un mínimo.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

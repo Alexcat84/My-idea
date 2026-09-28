@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Hoja de Cálculo de Diseño de Producto (Product Design Spreadsheet)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Herramienta central del proceso Quality by Design que organiza en un solo documento las necesidades del cliente, su traducción, su medición, y las características/features del producto que las satisfacen. Permite verificar que cada necesidad prioritaria esté cubierta por al menos una característica, que cada característica sea necesaria, y que el impacto combinado de las características sea suficiente para satisfacer la necesidad.",
+  "resumen_teorico": "Herramienta central del proceso Quality by Design que organiza en un solo documento las necesidades del cliente, su traducción, su medición, y las características/features del producto que las satisfacen. Permite verificar que cada necesidad prioritaria esté cubierta por al menos una característica, que cada característica sea necesaria, y que el impacto combinado de las características probablemente sea suficiente para satisfacer la necesidad.",
   "pasos_accionables": [
     "Colocar las necesidades del cliente, su traducción y medición en el lado izquierdo de la hoja",
     "Listar las características candidatas del producto como columnas",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Organiza el Diseño del Producto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-product_design_spreadsheet-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Herramienta central del proceso Quality by Design que organiza en un solo documento las necesidades del cliente, su traducción, su medición, y las características/features del producto que las satisfacen. Permite verificar que cada necesidad prioritaria esté cubierta por al menos una característica, que cada característica sea necesaria, y que el impacto combinado de las características sea suficiente para satisfacer la necesidad.",
+      "texto_nuevo": "Herramienta central del proceso Quality by Design que organiza en un solo documento las necesidades del cliente, su traducción, su medición, y las características/features del producto que las satisfacen. Permite verificar que cada necesidad prioritaria esté cubierta por al menos una característica, que cada característica sea necesaria, y que el impacto combinado de las características probablemente sea suficiente para satisfacer la necesidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4145",
+        "frase": "the total impact of the features ... is likely to be sufficient"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide documentar que el impacto total probablemente sea suficiente; el nodo lo vuelve certeza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

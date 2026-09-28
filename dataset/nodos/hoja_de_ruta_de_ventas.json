@@ -10,7 +10,7 @@
     "Identifica cuántas personas deben decir 'sí' para cerrar una venta",
     "Determina el orden correcto de contacto con los distintos stakeholders (ejecutivos, técnicos, usuarios)",
     "Crea un mapa de acceso al cliente que muestre cómo conseguir la primera reunión",
-    "Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo"
+    "Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo y quién dará seguimiento a cada uno"
   ],
   "entregable_esperado": "Una hoja de ruta de ventas completa con mapas de influencia, acceso y plan de implementación",
   "nodos_previos": [
@@ -36,5 +36,24 @@
   "etiqueta_arbol": "Detalla cada Paso del Cierre",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-013-hoja_de_ruta_de_ventas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo",
+      "texto_nuevo": "Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo y quién dará seguimiento a cada uno",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "23075",
+        "frase": "and to determine who will follow up to manage them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El plan de implementación del libro también fija quién dará seguimiento a cada paso pendiente.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

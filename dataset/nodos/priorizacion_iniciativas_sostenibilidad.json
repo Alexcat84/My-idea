@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Verificar cumplimiento total de requisitos legales antes de cualquier otra iniciativa",
     "Evaluar imperativos de mercado comparando la oferta de la empresa contra competidores",
-    "Analizar la efectividad de costos y potencial de expansión de ingresos de cada iniciativa",
+    "Analizar la efectividad de costos, la probabilidad de éxito y el potencial de expansión de ingresos de cada iniciativa",
     "Considerar impactos intangibles como marca, reputación y retención de talento",
     "Evaluar cómo las expectativas del mercado y tecnología podrían cambiar en el futuro"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Prioriza tus Acciones Sostenibles",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-011-priorizacion_iniciativas_sostenibilidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analizar la efectividad de costos y potencial de expansión de ingresos de cada iniciativa",
+      "texto_nuevo": "Analizar la efectividad de costos, la probabilidad de éxito y el potencial de expansión de ingresos de cada iniciativa",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6040",
+        "frase": "how much they will cost to carry out as well as their probability of success"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El criterio del libro evalúa cada iniciativa por su costo y por su probabilidad de éxito; el paso pierde la probabilidad de éxito.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Contratar un consultor o agencia con experiencia específica en marketing de franquicias",
     "Diseñar en formato a cuatro colores con fotografía profesional de alta calidad",
-    "Revisar el copy con el abogado de franquicias (regulado en ocho estados)",
-    "Decidir entre impresión offset (mayor calidad, mayor costo por tirada grande) o digital (menor tirada)"
+    "Revisar el copy con el abogado de franquicias, contando con que también deben revisarlo los reguladores de los ocho estados que regulan la publicidad de franquicias",
+    "Decidir entre impresión offset (demasiado cara en tiradas cortas) o digital (alta calidad con tiradas menores, aunque cueste más por pieza)"
   ],
   "entregable_esperado": "Folleto físico de franquicia de alta calidad listo para distribución a prospectos calificados",
   "nodos_previos": [
@@ -40,6 +40,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-007-folleto_franquicia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar el copy con el abogado de franquicias (regulado en ocho estados)",
+      "texto_nuevo": "Revisar el copy con el abogado de franquicias, contando con que también deben revisarlo los reguladores de los ocho estados que regulan la publicidad de franquicias",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3346",
+        "frase": "ad copy for this brochure needs to be reviewed by regulators in eight states"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el texto del folleto lo revisan los reguladores de ocho estados; el paso pierde esa revisión.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-007-folleto_franquicia-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Decidir entre impresión offset (mayor calidad, mayor costo por tirada grande) o digital (menor tirada)",
+      "texto_nuevo": "Decidir entre impresión offset (demasiado cara en tiradas cortas) o digital (alta calidad con tiradas menores, aunque cueste más por pieza)",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3346",
+        "frase": "offset would be too expensive for a short run"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que la offset es demasiado cara en tiradas cortas, no en las grandes, y que la digital también da alta calidad.; Mismo contrario que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

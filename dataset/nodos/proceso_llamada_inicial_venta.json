@@ -7,14 +7,14 @@
   "resumen_teorico": "La venta de franquicias es un cortejo, no una venta rápida. Los mejores vendedores escuchan más de lo que hablan en la primera llamada, evitando abrumar al prospecto con información. La llamada inicial sigue una agenda estructurada: obtener datos de contacto, calificar financieramente, calificar por otros criterios, determinar urgencia y motivos, entender el proceso de compra del candidato y posicionar frente a competidores, dar una visión general, explicar próximos pasos y pedir un avance (advance).",
   "pasos_accionables": [
     "Obtener información de contacto y fuente del lead",
-    "Calificar financieramente al candidato, y hazlo en los primeros 5 minutos",
+    "Calificar financieramente al candidato, idealmente con la calificación bien avanzada en los primeros 5 minutos",
     "Calificar según experiencia, territorio deseado, etc.",
     "Determinar urgencia y motivos para franquiciar",
     "Identificar por qué considera tu franquicia específicamente (hot buttons)",
     "Entender su proceso de decisión y qué otras franquicias evalúa",
     "Dar overview breve enfatizando hot buttons",
     "Explicar el proceso y cronograma, y solicitar un avance (ej. completar el CIRF), y agenda la siguiente llamada",
-    "Si no califica, recházalo con amabilidad y sugiérele cómo resolver su situación"
+    "Si no califica, recházalo con amabilidad y termina pronto la llamada; si hay forma de remediar su situación, sugiérele cómo hacerlo"
   ],
   "entregable_esperado": "Guion estructurado de primera llamada con checklist de calificación y objetivos de avance definidos",
   "nodos_previos": [
@@ -62,6 +62,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 8
+    },
+    {
+      "id": "final-e1-006-proceso_llamada_inicial_venta-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calificar financieramente al candidato, y hazlo en los primeros 5 minutos",
+      "texto_nuevo": "Calificar financieramente al candidato, idealmente con la calificación bien avanzada en los primeros 5 minutos",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4434",
+        "frase": "Ideally, you want to be well into the qualification process within the first five minutes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que idealmente estés bien avanzado en la calificación a los cinco minutos, no que la completes en ese plazo.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-proceso_llamada_inicial_venta-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si no califica, recházalo con amabilidad y sugiérele cómo resolver su situación",
+      "texto_nuevo": "Si no califica, recházalo con amabilidad y termina pronto la llamada; si hay forma de remediar su situación, sugiérele cómo hacerlo",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4480",
+        "frase": "If there is a way to remedy his shortcomings as a franchise prospect"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la orientación a que exista forma de remediar sus carencias.; Mismo defecto que la marca 0.; Se cae la condición y que la llamada se termine pronto; ambas están en el libro.",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

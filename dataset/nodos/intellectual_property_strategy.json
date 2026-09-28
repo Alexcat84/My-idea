@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia de Propiedad Intelectual",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "La propiedad intelectual (marcas, derechos de autor, contratos, patentes) protege los activos creativos y tecnológicos de una startup. Es crucial evitar errores comunes como no tener título claro sobre invenciones, perder derechos de patente por retrasos o ceder licencias desfavorables que reduzcan el valor futuro de la empresa.",
+  "resumen_teorico": "La propiedad intelectual (marcas, derechos de autor, contratos, patentes) protege los activos creativos y tecnológicos de una startup. Es crucial evitar errores comunes como no romper limpiamente con tu empleador o universidad anterior, no tener título claro sobre invenciones, perder derechos de patente por retrasos o ceder licencias desfavorables que reduzcan el valor futuro de la empresa.",
   "pasos_accionables": [
     "Identificar qué activos requieren trademark, copyright o patente",
-    "Presentar patentes provisionales tempranamente para invenciones clave",
+    "Presentar patentes provisionales tempranamente para invenciones clave, sabiendo que vencen automáticamente al año y no otorgan derechos de patente",
     "Crear acuerdos de cesión de invención con empleados y acuerdos escritos de cesión del trabajo creado con contratistas y subcontratistas",
     "Documentar cadena de título de la propiedad intelectual, desde que fundas tu empresa",
-    "Evitar divulgaciones públicas antes de proteger la invención",
+    "Evitar divulgaciones públicas y ofertas de venta (publicaciones, listas de precios, demostraciones sin acuerdo de confidencialidad) antes de proteger la invención: en EE.UU. pierdes el derecho a patentar si pasa más de un año, y en la mayoría de los demás países no hay ese margen",
     "Define qué ideas e invenciones clave necesitan patente o patente provisional y empieza a presentarlas pronto"
   ],
   "entregable_esperado": "Mapa de estrategia de IP con activos identificados, tipo de protección y cronograma de registro",
@@ -101,6 +101,56 @@
         "motivo": "Las restricciones reputacionales en venture capital no preparan la estrategia de propiedad intelectual."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-013-intellectual_property_strategy-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La propiedad intelectual (marcas, derechos de autor, contratos, patentes) protege los activos creativos y tecnológicos de una startup. Es crucial evitar errores comunes como no tener título claro sobre invenciones, perder derechos de patente por retrasos o ceder licencias desfavorables que reduzcan el valor futuro de la empresa.",
+      "texto_nuevo": "La propiedad intelectual (marcas, derechos de autor, contratos, patentes) protege los activos creativos y tecnológicos de una startup. Es crucial evitar errores comunes como no romper limpiamente con tu empleador o universidad anterior, no tener título claro sobre invenciones, perder derechos de patente por retrasos o ceder licencias desfavorables que reduzcan el valor futuro de la empresa.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7444-7447",
+        "frase": "Founders didn’t make a clean break with previous employer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el primero de los cuatro errores del libro: no romper limpiamente con el empleador o la universidad anterior.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-013-intellectual_property_strategy-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar divulgaciones públicas antes de proteger la invención",
+      "texto_nuevo": "Evitar divulgaciones públicas y ofertas de venta (publicaciones, listas de precios, demostraciones sin acuerdo de confidencialidad) antes de proteger la invención: en EE.UU. pierdes el derecho a patentar si pasa más de un año, y en la mayoría de los demás países no hay ese margen",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7449-7457",
+        "frase": "In the U.S., patent rights are forfeited if you wait more than a year after"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que en EE.UU. los derechos se pierden pasado un año y que en la mayoría de los demás países no hay ese margen.; Se pierden las ofertas de venta y demostraciones sin confidencialidad, y el plazo de un año en EE.UU. sin margen en otros países.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-013-intellectual_property_strategy-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentar patentes provisionales tempranamente para invenciones clave",
+      "texto_nuevo": "Presentar patentes provisionales tempranamente para invenciones clave, sabiendo que vencen automáticamente al año y no otorgan derechos de patente",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7423",
+        "frase": "However, they automatically expire after one year, and no patent rights are granted."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el límite de la patente provisional: vence automáticamente al año y no otorga derechos de patente.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -8,16 +8,16 @@
   "pasos_accionables": [
     "Configurar la logística del equipo (blog, comunicación)",
     "Redactar las hipótesis del modelo de negocio de 9 bloques",
-    "Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z'",
+    "Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z' y comprobar con otras personas que se entienda; si no, darles una explicación más larga y pedirles que la resuman",
     "Configurar dominio y hosting del sitio web",
     "Construir un sitio web de baja fidelidad (splash page, formularios de pre-orden)",
     "Dirigir tráfico de clientes potenciales al sitio para probar segmento y propuesta de valor",
     "Conectar la interfaz de usuario con el código backend",
     "Probar el 'problema del cliente' recopilando datos mediante analytics y encuestas",
-    "Construir una versión de alta fidelidad para probar la 'solución'",
+    "Construir una versión de alta fidelidad para probar la 'solución', que todavía no es el producto completo sino el más pequeño posible con aspecto profesional",
     "Pedir dinero mediante formularios de pre-orden o cobro real"
   ],
-  "entregable_esperado": "Sitio web funcional de alta fidelidad con métricas de tráfico, feedback de usuarios y sistema de cobro implementado",
+  "entregable_esperado": "Sitio web funcional de alta fidelidad, aún el producto más pequeño posible, con métricas de tráfico, feedback de usuarios y un formulario de pre-orden o un sistema de cobro implementado",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "fit_value_proposition",
@@ -52,6 +52,56 @@
         "evidencia": "Q065-018: El proceso consiste en redactar hipotesis, montar un sitio de baja fidelidad, llevar trafico para probar segmento y propuesta, probar problema y solucion y pedir dinero: es validacion con el mercado, no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-013-lean_launchpad_web_startup_process-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z'",
+      "texto_nuevo": "Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z' y comprobar con otras personas que se entienda; si no, darles una explicación más larga y pedirles que la resuman",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "13767-13774",
+        "frase": "give them a longer explanation and ask them to summarize that back to you"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso del libro incluye probar la frase con otras personas y, si no la entienden, pedirles que la resuman; se cae.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-013-lean_launchpad_web_startup_process-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sitio web funcional de alta fidelidad con métricas de tráfico, feedback de usuarios y sistema de cobro implementado",
+      "texto_nuevo": "Sitio web funcional de alta fidelidad, aún el producto más pequeño posible, con métricas de tráfico, feedback de usuarios y un formulario de pre-orden o un sistema de cobro implementado",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "13902-13917",
+        "frase": "form in place (collecting billing information) even before you’re ready to collect money"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Exigir un sistema de cobro implementado endurece el libro, que admite un formulario de pre-orden antes de estar listo para cobrar.; Se pierde que la alta fidelidad sigue siendo el producto más pequeño posible y que el formulario de pre-orden va antes del cobro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-013-lean_launchpad_web_startup_process-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construir una versión de alta fidelidad para probar la 'solución'",
+      "texto_nuevo": "Construir una versión de alta fidelidad para probar la 'solución', que todavía no es el producto completo sino el más pequeño posible con aspecto profesional",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "13897-13902",
+        "frase": "Remember that “High Fidelity” still does not mean “complete product.”"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que alta fidelidad no es producto completo sino el más pequeño posible con aspecto profesional.",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

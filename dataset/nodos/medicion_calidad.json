@@ -4,18 +4,18 @@
   "dominio": "quality",
   "titulo_concepto": "Medición de la Calidad (Paso 3)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Consiste en determinar el estado actual de la calidad en todo tu negocio, estableciendo métricas específicas para cada área de actividad, incluyendo funciones no productivas como contabilidad, finanzas, marketing e ingeniería. Donde ya existan métricas, revísalas; donde no existan, créalas desde cero. El objetivo es documentar con claridad dónde es posible mejorar, dónde se requiere acción correctiva, y construir una base objetiva que te permita medir mejoras futuras y, más adelante, calcular el costo real de la calidad en tu operación. Sin esta línea base inicial, cualquier esfuerzo de mejora posterior carecerá de referencia para comprobar si realmente funcionó.",
+  "resumen_teorico": "Consiste en determinar el estado actual de la calidad en todo tu negocio, estableciendo métricas específicas para cada área de actividad, incluyendo funciones no productivas como contabilidad, finanzas, marketing e ingeniería. Donde ya existan métricas, revísalas; donde no existan, créalas desde cero. El objetivo es documentar con claridad dónde es posible mejorar, dónde se requiere acción correctiva, y construir una base objetiva que te permita medir mejoras futuras. Sin esta línea base inicial, cualquier esfuerzo de mejora posterior carecerá de referencia para comprobar si realmente funcionó.",
   "pasos_accionables": [
     "Identifica métricas de calidad para cada área de tu negocio, como errores, reprocesos o retrasos",
     "Revisa las métricas que ya existan y crea nuevas donde falten, incluyendo áreas administrativas",
     "Involucra a las personas responsables de cada área en la definición de sus propios indicadores",
     "Registra el estado actual como línea base documentada",
     "Publica los resultados en gráficos visibles para toda la organización, semanal o mensualmente",
-    "Clasificar los defectos por gravedad, causa y responsabilidad",
+    "Clasificar los defectos más frecuentes o de mayor riesgo por gravedad, causa y responsabilidad",
     "Establecer metas de mejora visibles junto a los gráficos",
     "Asegurar que el ingeniero de calidad revise diariamente los defectos más frecuentes"
   ],
-  "entregable_esperado": "Sistema de medición de calidad documentado por área, con línea base registrada y visible, listo para calcular el costo de la calidad.",
+  "entregable_esperado": "Sistema de medición de calidad documentado por área, con línea base registrada y visible.",
   "nodos_previos": [
     "equipo_mejora_calidad_2",
     "compromiso_gerencial_calidad",
@@ -61,5 +61,56 @@
   ],
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-010-medicion_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en determinar el estado actual de la calidad en todo tu negocio, estableciendo métricas específicas para cada área de actividad, incluyendo funciones no productivas como contabilidad, finanzas, marketing e ingeniería. Donde ya existan métricas, revísalas; donde no existan, créalas desde cero. El objetivo es documentar con claridad dónde es posible mejorar, dónde se requiere acción correctiva, y construir una base objetiva que te permita medir mejoras futuras y, más adelante, calcular el costo real de la calidad en tu operación. Sin esta línea base inicial, cualquier esfuerzo de mejora posterior carecerá de referencia para comprobar si realmente funcionó.",
+      "texto_nuevo": "Consiste en determinar el estado actual de la calidad en todo tu negocio, estableciendo métricas específicas para cada área de actividad, incluyendo funciones no productivas como contabilidad, finanzas, marketing e ingeniería. Donde ya existan métricas, revísalas; donde no existan, créalas desde cero. El objetivo es documentar con claridad dónde es posible mejorar, dónde se requiere acción correctiva, y construir una base objetiva que te permita medir mejoras futuras. Sin esta línea base inicial, cualquier esfuerzo de mejora posterior carecerá de referencia para comprobar si realmente funcionó.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1565",
+        "frase": "to show where improvement is possible, where corrective action is necessary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da a la medición el fin de mostrar dónde mejorar y corregir y documentar la mejora; el costo de la calidad lo obtiene contraloría en el paso siguiente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-medicion_calidad-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar los defectos por gravedad, causa y responsabilidad",
+      "texto_nuevo": "Clasificar los defectos más frecuentes o de mayor riesgo por gravedad, causa y responsabilidad",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2501",
+        "frase": "defects singled out for their frequency, or problem potential, should be classified"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita la clasificación a los defectos destacados por frecuencia o potencial de problema.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-medicion_calidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sistema de medición de calidad documentado por área, con línea base registrada y visible, listo para calcular el costo de la calidad.",
+      "texto_nuevo": "Sistema de medición de calidad documentado por área, con línea base registrada y visible.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1565",
+        "frase": "to show where improvement is possible, where corrective action is necessary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no presenta el sistema de medición como insumo del cálculo del costo de la calidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

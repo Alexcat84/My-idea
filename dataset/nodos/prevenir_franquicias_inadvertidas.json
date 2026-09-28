@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Prevención de Franquicias Inadvertidas",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Muchas empresas crean relaciones de franquicia sin saberlo, al estructurar acuerdos de distribución, licencia o agencia que cumplen legalmente con la definición de franquicia (marca + sistema de marketing prescrito + tarifa), sin registrarse ni cumplir con las leyes correspondientes. Esto suele originarse por asesoría legal deficiente o por el desconocimiento de que ciertos elementos (incluso una tarifa mínima como la compra de manuales) pueden activar leyes estatales de franquicia, generando demandas millonarias y sanciones severas.",
+  "resumen_teorico": "Muchas empresas crean relaciones de franquicia sin saberlo, al estructurar acuerdos de distribución, licencia o agencia que cumplen legalmente con la definición de franquicia (por lo general marca + sistema de marketing prescrito + tarifa, aunque en algunos estados basta con menos elementos), sin registrarse ni cumplir con las leyes correspondientes. Esto suele originarse por asesoría legal deficiente o por el desconocimiento de que ciertos elementos (incluso una tarifa mínima como la compra de manuales) pueden activar leyes estatales de franquicia, generando demandas millonarias y sanciones severas.",
   "pasos_accionables": [
     "Revisar todos los acuerdos de distribución, licencia o agencia existentes para verificar si cumplen los elementos legales de una franquicia (marca, sistema prescrito, tarifa), y aplica la misma prueba a cada estructura de negocio diseñada",
     "Consultar a un abogado especializado en franquicias (no un abogado generalista) antes de estructurar cualquier relación de negocio con terceros que usen tu marca",
     "Verificar los umbrales de tarifas y las definiciones específicas de franquicia en cada estado donde operes o planees operar",
-    "Documentar explícitamente la naturaleza de cualquier relación contractual para evitar ambigüedad legal"
+    "Documentar la naturaleza de cualquier relación contractual, sabiendo que dejar por escrito que no es una franquicia no te protege si la relación cumple los elementos legales de una franquicia"
   ],
   "entregable_esperado": "Auditoría legal de todos los acuerdos comerciales actuales confirmando que ninguno constituye una franquicia no registrada",
   "nodos_previos": [
@@ -56,6 +56,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-006-prevenir_franquicias_inadvertidas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas empresas crean relaciones de franquicia sin saberlo, al estructurar acuerdos de distribución, licencia o agencia que cumplen legalmente con la definición de franquicia (marca + sistema de marketing prescrito + tarifa), sin registrarse ni cumplir con las leyes correspondientes. Esto suele originarse por asesoría legal deficiente o por el desconocimiento de que ciertos elementos (incluso una tarifa mínima como la compra de manuales) pueden activar leyes estatales de franquicia, generando demandas millonarias y sanciones severas.",
+      "texto_nuevo": "Muchas empresas crean relaciones de franquicia sin saberlo, al estructurar acuerdos de distribución, licencia o agencia que cumplen legalmente con la definición de franquicia (por lo general marca + sistema de marketing prescrito + tarifa, aunque en algunos estados basta con menos elementos), sin registrarse ni cumplir con las leyes correspondientes. Esto suele originarse por asesoría legal deficiente o por el desconocimiento de que ciertos elementos (incluso una tarifa mínima como la compra de manuales) pueden activar leyes estatales de franquicia, generando demandas millonarias y sanciones severas.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "193, 2275",
+        "frase": "the fee element was not even needed to create a franchise relationship"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro muestra que en algunos estados basta con menos elementos (sin tarifa en Connecticut, sin marca en Nueva York), así que faltar uno no garantiza quedar fuera.; Se sostiene en lo principal (en algunos estados ni la tarifa hace falta); la corrección mínima recoge esa excepción.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-prevenir_franquicias_inadvertidas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Documentar explícitamente la naturaleza de cualquier relación contractual para evitar ambigüedad legal",
+      "texto_nuevo": "Documentar la naturaleza de cualquier relación contractual, sabiendo que dejar por escrito que no es una franquicia no te protege si la relación cumple los elementos legales de una franquicia",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2263, 2273",
+        "frase": "both parties had agreed in writing that the relationship was not a franchise"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El defecto existe pero es el mismo contrario: el libro presenta la declaración escrita como algo que no protege, no como algo que evita la ambigüedad.; El libro muestra una condena de más de 6 millones aunque ambas partes habían acordado por escrito que no era franquicia: documentar la naturaleza no protege.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

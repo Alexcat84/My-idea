@@ -6,9 +6,9 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "En tu negocio, el control de calidad debe cubrir funciones concretas: inspección de aceptación de producto (visual y mecánica, hecha por alguien capacitado que no sea quien fabrica), pruebas funcionales con equipos y software (tratando el software de prueba como un producto que también debe calificarse), y calidad de proveedores (involucrando el control de calidad desde el principio en la selección de proveedores, no solo en la compra, en vez de hacer auditorías superficiales de planta). Cada actividad debe planificarse, ejecutarla alguien calificado y mantenerse separada de quien realiza la operación que se está evaluando.",
   "pasos_accionables": [
-    "Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no sea quien fabrica el producto.",
+    "Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no dependa del área que fabrica el producto.",
     "Define pruebas funcionales con procedimientos exactos y trata el software de prueba como un producto que también debe calificarse.",
-    "No dejes que quien diseñó el producto sea quien haga las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.",
+    "No dejes que los ingenieros, incluido quien diseñó el producto, hagan las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.",
     "Involucra el control de calidad desde el principio al elegir y desarrollar proveedores, no solo al momento de comprarles.",
     "Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo."
   ],
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Organiza tu Área de Calidad",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-010-funciones_del_departamento_de_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no sea quien fabrica el producto.",
+      "texto_nuevo": "Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no dependa del área que fabrica el producto.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "767",
+        "frase": "the inspection personnel are organizationally separate from those operations they are inspecting"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que la inspección esté separada en la organización de lo que inspecciona, no solo que la haga otra persona.; Misma condición: separación organizacional respecto de fabricación.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-funciones_del_departamento_de_calidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No dejes que quien diseñó el producto sea quien haga las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.",
+      "texto_nuevo": "No dejes que los ingenieros, incluido quien diseñó el producto, hagan las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "773",
+        "frase": "Testing itself, acceptance testing anyway, should never be performed by engineers."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro excluye de las pruebas de aceptación a los ingenieros en general.; El libro retiró a todos los ingenieros, no solo al diseñador.; Mismo límite estrechado.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,13 +4,13 @@
   "dominio": "franquicias",
   "titulo_concepto": "Principio del Apalancamiento: No Existe un 'Número Mágico' de Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "No existe un número mínimo de franquicias necesario para que franquiciar sea rentable. La clave está en el apalancamiento: si mantienes los gastos bajo control y usas el personal y recursos que ya tienes, puedes recuperar tu inversión inicial y ser rentable vendiendo una sola franquicia. Evita incurrir en costos incrementales innecesarios (oficinas, equipo de ventas, staff de soporte) hasta que las regalías los justifiquen. Tu principal inversión inicial es tu propio esfuerzo (sweat equity), no gasto en infraestructura o contrataciones prematuras. Diseña tu plan para operar con lo que ya tienes y solo escala tu estructura de costos cuando los ingresos por regalías lo respalden.",
+  "resumen_teorico": "No existe un número mínimo de franquicias necesario para que franquiciar sea rentable. La clave está en el apalancamiento: si mantienes los gastos bajo control y usas el personal y recursos que ya tienes, puedes recuperar tu inversión inicial y ser rentable vendiendo una sola franquicia. Evita incurrir en costos incrementales innecesarios (oficinas, equipo de ventas, staff de soporte) hasta que las regalías los justifiquen. Tu único gasto incremental es tu propio esfuerzo (sweat equity), no gasto en infraestructura o contrataciones prematuras. Diseña tu plan para operar con lo que ya tienes y solo escala tu estructura de costos cuando los ingresos por regalías lo respalden.",
   "pasos_accionables": [
     "Diseñar el plan de franquicia para operar con recursos y personal existentes en las primeras ventas",
     "Calcular el punto de equilibrio considerando la venta de una sola franquicia",
     "Evitar incrementar gastos fijos (oficinas, personal, consultores) antes de generar ingresos por regalías suficientes",
     "Establecer umbrales de ingresos por regalías que disparen la contratación de nuevo personal",
-    "Evaluar tu propio esfuerzo (sweat equity) como tu principal inversión inicial",
+    "Contar tu propio esfuerzo (sweat equity) como el único gasto incremental de las primeras ventas",
     "Monitorear la rentabilidad del programa de franquicia unidad por unidad vendida"
   ],
   "entregable_esperado": "Plan de apalancamiento de recursos con análisis de punto de equilibrio y umbrales de contratación basados en ingresos por regalías",
@@ -72,6 +72,39 @@
         "motivo": "Referencia de un nodo vivo a preguntas_clave_decision_franquiciar, deprecado; su superviviente es evaluacion_necesidad_franquiciar."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-006-principio_apalancamiento_numero_magico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No existe un número mínimo de franquicias necesario para que franquiciar sea rentable. La clave está en el apalancamiento: si mantienes los gastos bajo control y usas el personal y recursos que ya tienes, puedes recuperar tu inversión inicial y ser rentable vendiendo una sola franquicia. Evita incurrir en costos incrementales innecesarios (oficinas, equipo de ventas, staff de soporte) hasta que las regalías los justifiquen. Tu principal inversión inicial es tu propio esfuerzo (sweat equity), no gasto en infraestructura o contrataciones prematuras. Diseña tu plan para operar con lo que ya tienes y solo escala tu estructura de costos cuando los ingresos por regalías lo respalden.",
+      "texto_nuevo": "No existe un número mínimo de franquicias necesario para que franquiciar sea rentable. La clave está en el apalancamiento: si mantienes los gastos bajo control y usas el personal y recursos que ya tienes, puedes recuperar tu inversión inicial y ser rentable vendiendo una sola franquicia. Evita incurrir en costos incrementales innecesarios (oficinas, equipo de ventas, staff de soporte) hasta que las regalías los justifiquen. Tu único gasto incremental es tu propio esfuerzo (sweat equity), no gasto en infraestructura o contrataciones prematuras. Diseña tu plan para operar con lo que ya tienes y solo escala tu estructura de costos cuando los ingresos por regalías lo respalden.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1082-1088",
+        "frase": "Its only incremental expense will be the sweat equity it invests in the franchise program."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el esfuerzo propio es el único gasto incremental al atender esa franquicia, no la principal inversión inicial.; Mismo defecto.; Mismo defecto: la inversión inicial existe aparte y es la que se recupera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-principio_apalancamiento_numero_magico-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar tu propio esfuerzo (sweat equity) como tu principal inversión inicial",
+      "texto_nuevo": "Contar tu propio esfuerzo (sweat equity) como el único gasto incremental de las primeras ventas",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1086",
+        "frase": "Its only incremental expense will be the sweat equity it invests in the franchise program."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo defecto.; Mismo desplazamiento que en el resumen: el esfuerzo propio es el único gasto incremental, no la principal inversión inicial.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

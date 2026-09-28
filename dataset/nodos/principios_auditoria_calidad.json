@@ -4,9 +4,9 @@
   "dominio": "quality",
   "titulo_concepto": "Principios del Programa de Auditoría de Calidad (Los Cinco Principios)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un programa de auditoría de calidad exitoso descansa en cinco principios que debes aplicar de forma inquebrantable. Primero, toda conclusión debe basarse en hechos verificables, nunca en opiniones. Segundo, actúa con actitud de servicio hacia quienes gestionan la operación, entregando el detalle suficiente para que puedan actuar. Tercero, busca identificar oportunidades de mejora, no solo señalar deficiencias. Cuarto, cuida las relaciones humanas durante todo el proceso de auditoría, porque la forma en que comunicas los hallazgos importa tanto como el hallazgo mismo. Quinto, desarrolla competencia técnica y de relaciones humanas como auditor. Complementa esto con un proceso claro de seguimiento de las acciones correctivas para que las oportunidades detectadas no queden solo en el papel.",
+  "resumen_teorico": "Un programa de auditoría de calidad exitoso descansa en cinco principios que debes aplicar de forma inquebrantable. Primero, toda conclusión debe basarse en hechos verificables; si alguna no tiene esa base, señálala expresamente como tal. Segundo, actúa con actitud de servicio hacia quienes gestionan la operación, entregando el detalle suficiente para que puedan actuar. Tercero, busca identificar oportunidades de mejora, no solo señalar deficiencias; esto importa en las auditorías internas y en las de un cliente, pero no suele hacerse en las de un tercero, que debe respetar su independencia. Cuarto, cuida las relaciones humanas durante todo el proceso de auditoría. Quinto, desarrolla competencia técnica y de relaciones humanas como auditor. Complementa esto con un proceso claro de seguimiento de las acciones correctivas para que las oportunidades detectadas no queden solo en el papel.",
   "pasos_accionables": [
-    "Establece que toda conclusión de auditoría esté respaldada por hechos verificables antes de comunicarla",
+    "Establece que toda conclusión de auditoría esté respaldada por hechos verificables antes de comunicarla, y que la que no lo esté se señale expresamente como tal",
     "Capacítate en aspectos técnicos y de relaciones humanas para conducir auditorías con criterio",
     "Define tus propios criterios de competencia o busca una certificación externa como referencia (ej. ASQ)",
     "Crea un checklist que te ayude a identificar oportunidades de mejora, no solo fallas",
@@ -40,5 +40,40 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-principios_auditoria_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un programa de auditoría de calidad exitoso descansa en cinco principios que debes aplicar de forma inquebrantable. Primero, toda conclusión debe basarse en hechos verificables, nunca en opiniones. Segundo, actúa con actitud de servicio hacia quienes gestionan la operación, entregando el detalle suficiente para que puedan actuar. Tercero, busca identificar oportunidades de mejora, no solo señalar deficiencias. Cuarto, cuida las relaciones humanas durante todo el proceso de auditoría, porque la forma en que comunicas los hallazgos importa tanto como el hallazgo mismo. Quinto, desarrolla competencia técnica y de relaciones humanas como auditor. Complementa esto con un proceso claro de seguimiento de las acciones correctivas para que las oportunidades detectadas no queden solo en el papel.",
+      "texto_nuevo": "Un programa de auditoría de calidad exitoso descansa en cinco principios que debes aplicar de forma inquebrantable. Primero, toda conclusión debe basarse en hechos verificables; si alguna no tiene esa base, señálala expresamente como tal. Segundo, actúa con actitud de servicio hacia quienes gestionan la operación, entregando el detalle suficiente para que puedan actuar. Tercero, busca identificar oportunidades de mejora, no solo señalar deficiencias; esto importa en las auditorías internas y en las de un cliente, pero no suele hacerse en las de un tercero, que debe respetar su independencia. Cuarto, cuida las relaciones humanas durante todo el proceso de auditoría. Quinto, desarrolla competencia técnica y de relaciones humanas como auditor. Complementa esto con un proceso claro de seguimiento de las acciones correctivas para que las oportunidades detectadas no queden solo en el papel.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9941-9945",
+        "frase": "Any conclusions lacking a factual base must be so labeled."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro enumera las relaciones humanas como principio pero no afirma que la forma importe tanto como el hallazgo.; El libro exceptúa las auditorías de tercera parte, donde debe respetarse la independencia; la excepción se cae.; El libro no veta la conclusión sin base en hechos: exige rotularla como tal; esa condición se pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-principios_auditoria_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece que toda conclusión de auditoría esté respaldada por hechos verificables antes de comunicarla",
+      "texto_nuevo": "Establece que toda conclusión de auditoría esté respaldada por hechos verificables antes de comunicarla, y que la que no lo esté se señale expresamente como tal",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9941",
+        "frase": "Any conclusions lacking a factual base must be so labeled."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no veta la conclusión sin base en hechos: exige rotularla como tal; esa condición se pierde.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

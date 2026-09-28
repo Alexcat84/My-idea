@@ -6,7 +6,7 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Diagrama que describe todas las organizaciones intermedias entre la empresa y el cliente final (mayoristas, distribuidores, minoristas), sus responsabilidades y relaciones financieras. Permite entender cómo fluye el dinero y el producto a través de la cadena, y evitar el error común de asumir que los socios de canal generan demanda por sí mismos.",
   "pasos_accionables": [
-    "Enfócate en validar un solo canal de distribución antes de expandirte a otros",
+    "Enfócate en validar un solo canal de distribución antes de expandirte a otros; si además vendes directo al usuario final desde tu propio sitio web, prueba ese canal en paralelo",
     "Dibuja la cadena completa de organizaciones entre tu empresa y el cliente final",
     "Documenta las responsabilidades de cada eslabón (quién genera demanda vs quién solo distribuye)",
     "Calcula los descuentos y márgenes que cada nivel del canal requiere",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Mapea tu Cadena de Ventas",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-013-mapa_de_canal_de_ventas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfócate en validar un solo canal de distribución antes de expandirte a otros",
+      "texto_nuevo": "Enfócate en validar un solo canal de distribución antes de expandirte a otros; si además vendes directo al usuario final desde tu propio sitio web, prueba ese canal en paralelo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "22794",
+        "frase": "using their own website to sell directly to end-users should also test that in parallel"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone una única excepción a la regla de un solo canal: el sitio web propio de venta directa se prueba en paralelo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

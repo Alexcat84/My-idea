@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Certificado de Origen (COO)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Certificado de Origen es un documento firmado que certifica el país donde se fabricó o produjo un bien exportado. Es requerido por muchas naciones para determinar tratamiento arancelario preferencial (bajo tratados de libre comercio) o para fines estadísticos y de control. Los requisitos varían significativamente por país: algunos no exigen formato específico, otros requieren formularios particulares, y algunos países de Medio Oriente exigen notarización, certificación por cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "El Certificado de Origen es un documento firmado que certifica el país donde se fabricó o produjo un bien exportado. Lo exigen algunos países, y bajo tratados de libre comercio sirve para determinar el tratamiento arancelario preferencial. Los requisitos varían significativamente por país: algunos no exigen formato específico, otros requieren formularios particulares, y algunos países de Medio Oriente exigen notarización, certificación por cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Verificar con el comprador si el país de destino exige un COO",
     "Consultar la guía de documentación de origen específica del país o el U.S. Commercial Service",
@@ -51,6 +51,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-001-certificado_de_origen_coo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Certificado de Origen es un documento firmado que certifica el país donde se fabricó o produjo un bien exportado. Es requerido por muchas naciones para determinar tratamiento arancelario preferencial (bajo tratados de libre comercio) o para fines estadísticos y de control. Los requisitos varían significativamente por país: algunos no exigen formato específico, otros requieren formularios particulares, y algunos países de Medio Oriente exigen notarización, certificación por cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "El Certificado de Origen es un documento firmado que certifica el país donde se fabricó o produjo un bien exportado. Lo exigen algunos países, y bajo tratados de libre comercio sirve para determinar el tratamiento arancelario preferencial. Los requisitos varían significativamente por país: algunos no exigen formato específico, otros requieren formularios particulares, y algunos países de Medio Oriente exigen notarización, certificación por cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3591",
+        "frase": "Required by some countries. A signed statement as to the origin of the export item."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye los fines estadísticos a la declaración aduanera, no al certificado de origen.; El libro dice que lo exigen algunos países; \"muchas naciones\" endurece la frecuencia.; Reúne los dos defectos anteriores: \"muchas naciones\" y los fines estadísticos y de control.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -10,7 +10,7 @@
     "Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y 3PLs para permitir lotes más pequeños y frecuentes",
     "Basar el racionamiento de producto en patrones históricos de pedido, no en el pedido actual, y avisar con anticipación de posibles escaseces",
     "Implementar políticas de precios estables ('everyday low price') para evitar compras anticipadas",
-    "Rediseñar incentivos de ventas e internos usando costeo ABC para eliminar el impulso a vender por cuota a fin de periodo"
+    "Rediseñar incentivos de ventas e internos partiendo de datos de costeo ABC: cuantificar lo que cuestan las compras anticipadas por cuotas de fin de periodo, identificar los incentivos internos en conflicto y experimentar con nuevos planes que apoyen una cadena eficiente"
   ],
   "entregable_esperado": "Plan de acción con al menos una intervención implementada por cada uno de los cinco factores causales del efecto látigo",
   "nodos_previos": [
@@ -44,6 +44,23 @@
         "motivo": "El primer factor del efecto latigo es un pronostico mal basado, asi que se llega tras entender el pronostico de demanda."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-017-mitigacion_efecto_latigo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rediseñar incentivos de ventas e internos usando costeo ABC para eliminar el impulso a vender por cuota a fin de periodo",
+      "texto_nuevo": "Rediseñar incentivos de ventas e internos partiendo de datos de costeo ABC: cuantificar lo que cuestan las compras anticipadas por cuotas de fin de periodo, identificar los incentivos internos en conflicto y experimentar con nuevos planes que apoyen una cadena eficiente",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3591",
+        "frase": "It begins with the use of accurate activity-based costing (ABC) data"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Mismo resultado prometido con ABC que el libro no da; allí ABC es solo el comienzo del proceso.; Promete eliminar el impulso de ventas por cuota; el libro presenta la alineación de incentivos como un reto que cada empresa trabaja a su manera.; Se cae el procedimiento del libro: tras los datos ABC, cuantificar el costo de las compras por cuota, identificar incentivos internos en conflicto y experimentar con nuevos planes.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

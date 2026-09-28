@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Reglas de Compromiso para Consultoría en Transformación de Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir una manera adecuada de medir con datos, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tu puedes ayudar a negocios que compiten entre si sin conflicto de interés, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+  "resumen_teorico": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir con prudente rapidez una organización para la calidad con liderazgo estadístico y personas competentes, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tú puedes ayudar a negocios que compiten entre sí sin conflicto de interés, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
   "pasos_accionables": [
     "Verifica que quien te pide ayuda sea realmente quien dirige el negocio, no un mando intermedio",
     "Pide que todo el equipo que toma decisiones dedique tiempo a estudiar los 14 puntos y las enfermedades mortales",
-    "Establece como condición que el negocio construya una forma competente de medir con datos",
+    "Establece como condición que el negocio construya con prudente rapidez una organización para la calidad, con liderazgo estadístico y personas competentes",
     "Define que el trabajo abarque todo el negocio, no solo un área",
-    "Acuerda una relación de largo plazo con honorarios claros desde el inicio"
+    "Acuerda una relación de largo plazo, que cualquiera de las dos partes puede terminar en cualquier momento, con honorarios claros desde el inicio"
   ],
   "entregable_esperado": "Un acuerdo claro que deje por escrito el alcance del trabajo, el compromiso de quienes lideran y la duración",
   "nodos_previos": [
@@ -54,6 +54,56 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-009-reglas_deming_consultoria_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir una manera adecuada de medir con datos, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tu puedes ayudar a negocios que compiten entre si sin conflicto de interés, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+      "texto_nuevo": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir con prudente rapidez una organización para la calidad con liderazgo estadístico y personas competentes, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tú puedes ayudar a negocios que compiten entre sí sin conflicto de interés, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10609",
+        "frase": "the company will build with prudent speed an organization consistent with Fig. 61."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La condición del libro es construir una organización para la calidad con liderazgo estadístico y personas competentes, no solo una forma de medir.; Mismo defecto: se reduce a medir con datos la organización con liderazgo estadístico que el libro pone como condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-009-reglas_deming_consultoria_calidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece como condición que el negocio construya una forma competente de medir con datos",
+      "texto_nuevo": "Establece como condición que el negocio construya con prudente rapidez una organización para la calidad, con liderazgo estadístico y personas competentes",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10501, 10609",
+        "frase": "Without proper organization and without competent incumbents, my participation would have little chance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide construir una organización para la calidad con personas competentes en estadística, no solo una forma de medir.; Mismo defecto: la condición es una organización con liderazgo estadístico y personas competentes.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-009-reglas_deming_consultoria_calidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Acuerda una relación de largo plazo con honorarios claros desde el inicio",
+      "texto_nuevo": "Acuerda una relación de largo plazo, que cualquiera de las dos partes puede terminar en cualquier momento, con honorarios claros desde el inicio",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10613",
+        "frase": "long-term, though the company or I may break it off at any time."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que cualquiera de las dos partes puede terminar la relación en cualquier momento; el paso lo pierde.; Mismo límite perdido: el acuerdo es de largo plazo, pero cualquiera puede romperlo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

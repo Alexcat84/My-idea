@@ -7,7 +7,7 @@
   "resumen_teorico": "Concepto que viene del análisis de punto de equilibrio: cuando la calidad de lo que recibes se ubica siempre del mismo lado de un punto de equilibrio (k1/k2), lo óptimo es un extremo total, cero inspección o inspección al 100 por ciento, y no revisar solo una muestra parcial. Las reglas arbitrarias que le impones a quien te provee, por ejemplo 'una pieza defectuosa y rechazo todo el lote', son cuestionables porque ignoran esta lógica de costos y pueden subir el costo total sin mejorar realmente la calidad, sobre todo si el material ya entró a producción antes de terminar de revisarlo.",
   "pasos_accionables": [
     "Revisa si el proceso de calidad de lo que te llega está en control estadístico",
-    "Si p es menor que k1/k2, elimina la inspección de entrada y pon el esfuerzo en mejorar la relación con quien te provee",
+    "Si tu historial y tus gráficos de control te dan seguridad de que p seguirá por debajo de k1/k2, elimina la inspección de entrada, sin dejar de mirar lo que llega (quizá por lotes salteados) para tener información y comprobar que es lo que pediste, y pon el esfuerzo en mejorar la relación con quien te provee",
     "Si p es mayor que k1/k2, aplica inspección al 100 por ciento en vez de revisar solo una muestra",
     "Descarta las reglas de rechazo de lote basadas en umbrales fijos que no tengan sustento en costos reales",
     "Si el proceso está fuera de control, entre los dos extremos, aplica inspección al 100 por ciento o usa las reglas de Joyce Orsini como solución temporal"
@@ -40,6 +40,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-033 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-009-regla_todo_o_nada_inspeccion_2-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si p es menor que k1/k2, elimina la inspección de entrada y pon el esfuerzo en mejorar la relación con quien te provee",
+      "texto_nuevo": "Si tu historial y tus gráficos de control te dan seguridad de que p seguirá por debajo de k1/k2, elimina la inspección de entrada, sin dejar de mirar lo que llega (quizá por lotes salteados) para tener información y comprobar que es lo que pediste, y pon el esfuerzo en mejorar la relación con quien te provee",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9285, 9436",
+        "frase": "One should take a look at all incoming material, possibly on a skip-lot basis"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que no inspeccionar no es ir a ciegas: se sigue mirando lo que llega, quizá por lotes salteados, para tener información.; El libro exige estar seguro, por el historial y los gráficos de control, de quedar de ese lado, y siempre comprobar que lo recibido es lo pedido.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

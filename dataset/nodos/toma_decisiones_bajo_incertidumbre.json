@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Toma de Decisiones con Información Incompleta",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "El trabajo esencial del CEO es tomar decisiones, y estas casi siempre se toman con menos del 10% de la información que idealmente se tendría (a diferencia de los casos de estudio post-hoc de escuelas de negocio). Las decisiones más difíciles suelen ser las más importantes precisamente porque serán impopulares entre empleados, inversionistas o clientes. Para mitigar esta incertidumbre, el CEO debe recolectar conocimiento de forma sistemática y continua en cada interacción diaria (reuniones de staff, uno a uno, conversaciones con clientes) en lugar de intentar hacer un análisis exhaustivo puntual antes de cada decisión.",
+  "resumen_teorico": "El trabajo esencial del CEO es tomar decisiones, y estas casi siempre se toman con menos del 10% de la información que idealmente se tendría (a diferencia de los casos de estudio post-hoc de escuelas de negocio). Las decisiones más difíciles, que a menudo son las más importantes, son difíciles precisamente porque serán impopulares entre empleados, inversionistas o clientes. Para mitigar esta incertidumbre, el CEO debe recolectar conocimiento de forma sistemática y continua en cada interacción diaria (reuniones de staff, uno a uno, conversaciones con clientes) en lugar de intentar hacer un análisis exhaustivo puntual antes de cada decisión.",
   "pasos_accionables": [
-    "Aceptar que nunca se tendrá toda la información antes de decidir; fijar un umbral razonable de información suficiente.",
+    "Aceptar que nunca se tendrá toda la información antes de decidir.",
     "Sistematizar la recolección continua de inteligencia: preguntas clave sobre competencia, capacidades técnicas, capacidades organizacionales, riesgo financiero, arquitectura de producto y clima del equipo.",
     "Incorporar estas preguntas en reuniones recurrentes (staff, uno a uno, clientes) en lugar de reservarlas para 'grandes decisiones'.",
     "Tener el coraje de decidir y apostar la dirección de la empresa aun sin certeza completa, especialmente si la decisión será impopular pero correcta."
@@ -42,6 +42,39 @@
         "motivo": "Las decisiones difíciles e impopulares con información incompleta llevan a ver que lo que se pone a prueba es el coraje; coraje_en_decisiones_dificiles no sirve como predecesor porque parece un duplicado del propio nodo."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-012-toma_decisiones_bajo_incertidumbre-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El trabajo esencial del CEO es tomar decisiones, y estas casi siempre se toman con menos del 10% de la información que idealmente se tendría (a diferencia de los casos de estudio post-hoc de escuelas de negocio). Las decisiones más difíciles suelen ser las más importantes precisamente porque serán impopulares entre empleados, inversionistas o clientes. Para mitigar esta incertidumbre, el CEO debe recolectar conocimiento de forma sistemática y continua en cada interacción diaria (reuniones de staff, uno a uno, conversaciones con clientes) en lugar de intentar hacer un análisis exhaustivo puntual antes de cada decisión.",
+      "texto_nuevo": "El trabajo esencial del CEO es tomar decisiones, y estas casi siempre se toman con menos del 10% de la información que idealmente se tendría (a diferencia de los casos de estudio post-hoc de escuelas de negocio). Las decisiones más difíciles, que a menudo son las más importantes, son difíciles precisamente porque serán impopulares entre empleados, inversionistas o clientes. Para mitigar esta incertidumbre, el CEO debe recolectar conocimiento de forma sistemática y continua en cada interacción diaria (reuniones de staff, uno a uno, conversaciones con clientes) en lugar de intentar hacer un análisis exhaustivo puntual antes de cada decisión.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2999",
+        "frase": "The most difficult decisions (and often the most important) are difficult precisely because"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que las decisiones más difíciles lo son porque serán impopulares; el nodo hace de la impopularidad la causa de su importancia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-012-toma_decisiones_bajo_incertidumbre-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aceptar que nunca se tendrá toda la información antes de decidir; fijar un umbral razonable de información suficiente.",
+      "texto_nuevo": "Aceptar que nunca se tendrá toda la información antes de decidir.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "3003",
+        "frase": "there is never enough time to gather all information needed to make a decision"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de fijar un umbral; pide recoger información de forma continua para tener la mayor posible.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

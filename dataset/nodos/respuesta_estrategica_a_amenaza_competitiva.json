@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Pivote Estratégico Rápido Ante Amenaza de Competidor Dominante",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos. En lugar de paralizarse, el equipo (liderado por Homer y Horowitz) desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
+  "resumen_teorico": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos y apostó por servidores web, pero el de Microsoft igualaba sus funciones y era cinco veces más rápido. En lugar de paralizarse, el equipo (liderado por Homer y Horowitz) desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
   "pasos_accionables": [
     "Analizar en detalle el producto/oferta del competidor (ingeniería inversa si es posible) para entender la amenaza real",
     "Definir una ventana de tiempo crítica para responder antes de perder mercado",
     "Evaluar adquisiciones o alianzas estratégicas que aceleren la construcción de una oferta competitiva",
     "Comprimir los ciclos normales de desarrollo de producto para responder a la velocidad del mercado",
-    "Comunicar la nueva estrategia de forma coordinada y no filtrada antes del lanzamiento oficial"
+    "Sugerencia de My Idea: acuerda con tu equipo quién comunica la nueva estrategia y cuándo"
   ],
   "entregable_esperado": "Un plan de pivote de producto con cronograma acelerado, lista de adquisiciones/alianzas necesarias y fecha de lanzamiento definida.",
   "nodos_previos": [
@@ -41,6 +41,39 @@
         "motivo": "Tenia razon el lector B: el plan B ante una crisis inminente, trazado mientras aun hay tiempo y recursos para pivotar de forma controlada, desemboca de forma directa en ejecutar un pivote rapido ante una amenaza existencial. Ademas ambos nodos vienen de la misma experiencia de crisis de Horowitz. El pivote como hipotesis estrategica es un marco generico de Lean y no apunta a la urgencia ni a la amenaza competitiva."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-012-respuesta_estrategica_a_amenaza_competitiva-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar la nueva estrategia de forma coordinada y no filtrada antes del lanzamiento oficial",
+      "texto_nuevo": "Sugerencia de My Idea: acuerda con tu equipo quién comunica la nueva estrategia y cuándo",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "161",
+        "frase": "Marc, without telling Mike or me, revealed the entire strategy"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro narra la filtración previa al lanzamiento y la defensa de romper el silencio, pero no extrae la regla de no filtrar.; Mismo defecto: la regla de comunicación coordinada y sin filtraciones es inventada.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-012-respuesta_estrategica_a_amenaza_competitiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos. En lugar de paralizarse, el equipo (liderado por Homer y Horowitz) desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
+      "texto_nuevo": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos y apostó por servidores web, pero el de Microsoft igualaba sus funciones y era cinco veces más rápido. En lugar de paralizarse, el equipo (liderado por Homer y Horowitz) desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "153-155",
+        "frase": "found that it had every feature that we had"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el detonante directo del pivote: tras apostar por los servidores web, el de Microsoft tenía todas sus funciones y era cinco veces más rápido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

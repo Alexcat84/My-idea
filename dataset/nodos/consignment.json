@@ -4,11 +4,11 @@
   "dominio": "exportacion",
   "titulo_concepto": "Venta en Consignación (Consignment)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Es una variante de cuenta abierta en la que el exportador retiene la titularidad de los bienes hasta que el distribuidor extranjero los vende al cliente final, momento en el cual se genera el pago. Es útil para productos como maquinaria pesada que requieren inventario de exhibición. Es de alto riesgo para el exportador, por lo que requiere asociarse con distribuidores confiables y contar con seguro adecuado para la mercancía en tránsito o en posesión del distribuidor.",
+  "resumen_teorico": "Es una variante de cuenta abierta en la que el exportador retiene la titularidad de los bienes hasta que el distribuidor extranjero los vende al cliente final, momento en el cual se genera el pago. Es útil para productos como maquinaria pesada que requieren inventario de exhibición. Es de alto riesgo para el exportador, por lo que requiere asociarse con distribuidores confiables y contar con seguro adecuado para la mercancía en tránsito o en posesión del distribuidor y para mitigar el riesgo de falta de pago.",
   "pasos_accionables": [
     "Seleccionar un distribuidor extranjero reputado y confiable o un proveedor logístico tercero",
     "Establecer contractualmente el periodo de tiempo para la venta y condiciones de devolución de inventario no vendido",
-    "Contratar seguro para la mercancía en consignación durante el tránsito y almacenamiento",
+    "Contratar seguro para la mercancía en consignación durante el tránsito y almacenamiento, y para mitigar el riesgo de falta de pago",
     "Definir claramente los términos de pago tras la venta al cliente final"
   ],
   "entregable_esperado": "Contrato de consignación firmado con distribuidor, incluyendo cobertura de seguro para la mercancía",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Vende en Consignación",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-014-consignment-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una variante de cuenta abierta en la que el exportador retiene la titularidad de los bienes hasta que el distribuidor extranjero los vende al cliente final, momento en el cual se genera el pago. Es útil para productos como maquinaria pesada que requieren inventario de exhibición. Es de alto riesgo para el exportador, por lo que requiere asociarse con distribuidores confiables y contar con seguro adecuado para la mercancía en tránsito o en posesión del distribuidor.",
+      "texto_nuevo": "Es una variante de cuenta abierta en la que el exportador retiene la titularidad de los bienes hasta que el distribuidor extranjero los vende al cliente final, momento en el cual se genera el pago. Es útil para productos como maquinaria pesada que requieren inventario de exhibición. Es de alto riesgo para el exportador, por lo que requiere asociarse con distribuidores confiables y contar con seguro adecuado para la mercancía en tránsito o en posesión del distribuidor y para mitigar el riesgo de falta de pago.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4133",
+        "frase": "as well as to mitigate the risk of nonpayment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el seguro también mitigue el riesgo de falta de pago, no solo que cubra la mercancía.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-014-consignment-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contratar seguro para la mercancía en consignación durante el tránsito y almacenamiento",
+      "texto_nuevo": "Contratar seguro para la mercancía en consignación durante el tránsito y almacenamiento, y para mitigar el riesgo de falta de pago",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4133",
+        "frase": "as well as to mitigate the risk of nonpayment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el seguro también mitigue el riesgo de falta de pago.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

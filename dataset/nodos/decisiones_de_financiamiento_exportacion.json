@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Evalúa si el financiamiento es lo que puede definir si cierras o no la venta",
     "Determina el plazo de financiamiento que te pide el comprador",
-    "Compara costos (tasas de interés y comisiones) de las opciones que tengas disponibles",
-    "Analiza los riesgos políticos y económicos del país de tu comprador",
+    "Compara costos (tasas de interés y comisiones) de las opciones que tengas disponibles y, como puedes tener que asumir parte o todo ese costo, entiende cómo afecta tu precio y tu ganancia antes de enviar la factura proforma",
+    "Analiza el riesgo de la operación y la estabilidad política y económica del país de tu comprador: cuanto más riesgosa, más difícil y cara de financiar, y el prestamista puede exigirte los medios de pago más seguros",
     "Calcula cuánto capital de trabajo vas a necesitar antes y después del embarque"
   ],
   "entregable_esperado": "Plan de financiamiento de exportación con opciones evaluadas y seleccionadas",
@@ -40,6 +40,40 @@
         "motivo": "Orden invertido: decidir cómo financiar una operación de exportación (plazo del comprador, costo, capital de trabajo al embarcar) es posterior a evaluar si la empresa está preparada para exportar, no la prepara."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-014-decisiones_de_financiamiento_exportacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara costos (tasas de interés y comisiones) de las opciones que tengas disponibles",
+      "texto_nuevo": "Compara costos (tasas de interés y comisiones) de las opciones que tengas disponibles y, como puedes tener que asumir parte o todo ese costo, entiende cómo afecta tu precio y tu ganancia antes de enviar la factura proforma",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4215",
+        "frase": "Before submitting a pro forma invoice to the buyer, you must understand how those costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que puedes asumir parte o todo el costo y que antes de la factura proforma debes entender cómo afecta tu precio y tu ganancia.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-014-decisiones_de_financiamiento_exportacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analiza los riesgos políticos y económicos del país de tu comprador",
+      "texto_nuevo": "Analiza el riesgo de la operación y la estabilidad política y económica del país de tu comprador: cuanto más riesgosa, más difícil y cara de financiar, y el prestamista puede exigirte los medios de pago más seguros",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4217",
+        "frase": "The riskier the transaction, the harder and more costly it will be to finance."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone primero el riesgo de la propia operación (cuanto más riesgosa, más difícil y cara de financiar) y el país como un factor más.; Mismo defecto que la marca 0, con la exigencia de medios de pago seguros por el prestamista.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

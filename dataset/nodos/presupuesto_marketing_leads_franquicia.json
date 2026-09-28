@@ -4,11 +4,11 @@
   "dominio": "franquicias",
   "titulo_concepto": "Presupuesto de marketing para atraer candidatos a franquicia (leads)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Conseguir contactos interesados (leads) calificados es esencial y cuesta dinero: pregunta en tu mercado cuánto necesitas presupuestar por cada franquicia que quieras vender en el año. Como el proceso de venta de una franquicia toma entre 12 y 14 semanas, y las ventas no llegan de forma pareja sino que se concentran hacia la mitad del período (como una curva de campana), tienes que dejar preparado el flujo de caja para varios meses de publicidad antes de recuperar las cuotas de entrada.",
+  "resumen_teorico": "Conseguir contactos interesados (leads) calificados es esencial y cuesta dinero: pregunta en tu mercado cuánto necesitas presupuestar por cada franquicia que quieras vender en el año. Como el proceso de venta de una franquicia toma entre 12 y 14 semanas, y no se puede predecir con exactitud cuándo cierra cada venta (los cierres se reparten como una curva de campana alrededor de ese plazo), tienes que dejar preparado el flujo de caja para varios meses de publicidad antes de recuperar las cuotas de entrada.",
   "pasos_accionables": [
     "Calcula tu presupuesto de marketing multiplicando tu meta anual de ventas por el costo estimado de conseguir cada franquiciado en tu mercado",
-    "Prepara un colchón de flujo de caja de al menos 6 meses de gasto publicitario planificado",
-    "Entiende que las ventas de franquicia no avanzan de forma lineal, sino que se concentran en el medio del período, como una curva de campana",
+    "Prepara un colchón de flujo de caja de unos 6 meses de gasto publicitario planificado, que a menudo basta para quien empieza a franquiciar",
+    "Entiende que no se puede predecir con exactitud cuándo cierra cada venta: los cierres se reparten como una curva de campana alrededor del plazo típico, y con publicidad continua la probabilidad de vender crece cada mes",
     "Revisa la calidad de los contactos que consigues, no solo la cantidad, para mejorar cuántos terminan cerrando"
   ],
   "entregable_esperado": "Un presupuesto de marketing y una proyección de flujo de caja para los primeros 6 a 12 meses de venta de franquicias",
@@ -22,5 +22,57 @@
   "etiqueta_arbol": "Presupuesta la Captación de Prospectos",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-006-presupuesto_marketing_leads_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conseguir contactos interesados (leads) calificados es esencial y cuesta dinero: pregunta en tu mercado cuánto necesitas presupuestar por cada franquicia que quieras vender en el año. Como el proceso de venta de una franquicia toma entre 12 y 14 semanas, y las ventas no llegan de forma pareja sino que se concentran hacia la mitad del período (como una curva de campana), tienes que dejar preparado el flujo de caja para varios meses de publicidad antes de recuperar las cuotas de entrada.",
+      "texto_nuevo": "Conseguir contactos interesados (leads) calificados es esencial y cuesta dinero: pregunta en tu mercado cuánto necesitas presupuestar por cada franquicia que quieras vender en el año. Como el proceso de venta de una franquicia toma entre 12 y 14 semanas, y no se puede predecir con exactitud cuándo cierra cada venta (los cierres se reparten como una curva de campana alrededor de ese plazo), tienes que dejar preparado el flujo de caja para varios meses de publicidad antes de recuperar las cuotas de entrada.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5657-5663",
+        "frase": "there is no absolute predictability to the timing of franchise sales"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La curva de campana del libro describe la incertidumbre del momento de cada cierre alrededor del plazo típico, no que las ventas se concentren a mitad del período.; Mismo defecto: el libro advierte que no hay predictibilidad absoluta del momento de cierre.; Mismo defecto: la concentración a mitad del período no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-presupuesto_marketing_leads_franquicia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prepara un colchón de flujo de caja de al menos 6 meses de gasto publicitario planificado",
+      "texto_nuevo": "Prepara un colchón de flujo de caja de unos 6 meses de gasto publicitario planificado, que a menudo basta para quien empieza a franquiciar",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5663",
+        "frase": "a cash-flow budget covering six months' worth of planned advertising is often sufficient"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que seis meses de publicidad planificada a menudo bastan; 'al menos' lo vuelve un mínimo.; Mismo defecto: 'often sufficient' pasa a mínimo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-presupuesto_marketing_leads_franquicia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Entiende que las ventas de franquicia no avanzan de forma lineal, sino que se concentran en el medio del período, como una curva de campana",
+      "texto_nuevo": "Entiende que no se puede predecir con exactitud cuándo cierra cada venta: los cierres se reparten como una curva de campana alrededor del plazo típico, y con publicidad continua la probabilidad de vender crece cada mes",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5659-5663",
+        "frase": "Stack several of these bell curves together, and the likelihood of making a sale rises"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que las ventas se concentren en el medio del período: habla de la incertidumbre del momento de cada cierre y de la probabilidad que sube mes a mes.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

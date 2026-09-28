@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Franquicia de Representante de Área",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "En esta variante, tú, como dueño de la marca, firmas el contrato directamente con cada franquiciado individual, en lugar de que lo haga un representante intermedio. Esto te da más control contractual, pero es una de las formas más complejas de franquiciar, porque tienes que dar soporte tanto a los operadores individuales como a los representantes de área. No te conviene si recién empiezas a franquiciar y todavía no tienes experiencia sólida en esto.",
+  "resumen_teorico": "En esta variante, tú, como dueño de la marca, firmas el contrato directamente con cada franquiciado individual, en lugar de que lo haga un representante intermedio. Esto te da más control contractual, pero cedes parte de tarifas y regalías, arriesgas la calidad de los franquiciados y es una de las formas más complejas de franquiciar, porque tienes que dar soporte tanto a los operadores individuales como a los representantes de área. No te conviene si recién empiezas a franquiciar y todavía no tienes experiencia sólida en esto.",
   "pasos_accionables": [
     "Evalúa la experiencia de tu equipo en franquicias antes de adoptar esta estructura.",
     "Diseña programas de capacitación y de operación tanto para los representantes de área como para los franquiciados individuales.",
     "Define cómo vas a repartir las tarifas y las responsabilidades de venta y soporte.",
-    "Establece mecanismos legales de control para reducir el riesgo de que te hagan responsable por lo que hagan los representantes."
+    "Ten presente que los representantes no te liberan de la responsabilidad en la venta: puedes terminar en juicio por las declaraciones falsas que hagan al vender tus franquicias."
   ],
   "entregable_esperado": "Una estructura de contratos y de soporte diferenciada para representantes de área y para franquiciados individuales.",
   "nodos_previos": [
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Nombra un Representante de Área",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-007-franquicia_representante_area-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En esta variante, tú, como dueño de la marca, firmas el contrato directamente con cada franquiciado individual, en lugar de que lo haga un representante intermedio. Esto te da más control contractual, pero es una de las formas más complejas de franquiciar, porque tienes que dar soporte tanto a los operadores individuales como a los representantes de área. No te conviene si recién empiezas a franquiciar y todavía no tienes experiencia sólida en esto.",
+      "texto_nuevo": "En esta variante, tú, como dueño de la marca, firmas el contrato directamente con cada franquiciado individual, en lugar de que lo haga un representante intermedio. Esto te da más control contractual, pero cedes parte de tarifas y regalías, arriesgas la calidad de los franquiciados y es una de las formas más complejas de franquiciar, porque tienes que dar soporte tanto a los operadores individuales como a los representantes de área. No te conviene si recién empiezas a franquiciar y todavía no tienes experiencia sólida en esto.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1612-1616",
+        "frase": "the area representative is entitled to a portion of the franchise fee and the royalty"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se caen las desventajas que el libro pone primero: la parte continua de tarifas y regalías que se lleva el representante y su menor exigencia al elegir y formar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-007-franquicia_representante_area-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece mecanismos legales de control para reducir el riesgo de que te hagan responsable por lo que hagan los representantes.",
+      "texto_nuevo": "Ten presente que los representantes no te liberan de la responsabilidad en la venta: puedes terminar en juicio por las declaraciones falsas que hagan al vender tus franquicias.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1616",
+        "frase": "the franchisor could find itself in court for misrepresentations made by its area representatives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de mecanismos que reduzcan el riesgo; dice que la participación de los representantes no te libera de responsabilidad.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

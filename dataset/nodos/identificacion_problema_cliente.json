@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Investigar si los clientes potenciales ya intentaron resolver el problema por sí mismos",
     "Clasificar el problema según su nivel de urgencia: latente, pasivo, activo o de visión",
-    "Formular hipótesis sobre las necesidades emocionales del cliente (glamour, prestigio, etc.) si el producto no resuelve un problema funcional",
+    "Formular hipótesis sobre las necesidades emocionales del cliente (glamour, prestigio, etc.) si el producto no resuelve un problema funcional, y describir cómo convencerlo de que el producto le da esa recompensa emocional, porque aun así necesita justificar la compra",
     "Evaluar si el problema le cuesta al cliente sueño, ingresos o ganancias"
   ],
   "entregable_esperado": "Documento de hipótesis sobre el problema del cliente, clasificado por nivel de urgencia y con evidencia de intentos previos de solución por parte del cliente",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Mide qué Tan Crítico Es",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-013-identificacion_problema_cliente-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formular hipótesis sobre las necesidades emocionales del cliente (glamour, prestigio, etc.) si el producto no resuelve un problema funcional",
+      "texto_nuevo": "Formular hipótesis sobre las necesidades emocionales del cliente (glamour, prestigio, etc.) si el producto no resuelve un problema funcional, y describir cómo convencerlo de que el producto le da esa recompensa emocional, porque aun así necesita justificar la compra",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5657-5659",
+        "frase": "Describe how to convince these customers that the product can deliver an emotional payoff"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que la hipótesis describe cómo convencer de la recompensa emocional, porque aun así el consumidor necesita justificar la compra.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Estrategia de TI Verde (Green IT)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El rol del CIO y profesionales de TI es fundamental para impulsar la ventaja eco-competitiva de las empresas. Las iniciativas de eficiencia energética en TI (virtualización, actualización de equipos, reutilización de calor residual, reducción de e-waste) generan ahorros significativos, mientras la presión regulatoria y de emisiones GEI relacionadas con TI crece, y surgen oportunidades de negocio mediante software de sostenibilidad y análisis.",
+  "resumen_teorico": "El rol del CIO y profesionales de TI es fundamental para impulsar la ventaja eco-competitiva de las empresas. Las iniciativas de eficiencia energética en TI (virtualización, actualización de equipos, reutilización de calor residual, reducción de e-waste) pueden generar ahorros significativos, mientras la presión regulatoria y de emisiones GEI relacionadas con TI crece, y surgen oportunidades de negocio mediante software de sostenibilidad y análisis.",
   "pasos_accionables": [
     "Evaluar oportunidades de virtualización para optimizar utilización de servidores",
     "Implementar sistemas de recuperación de calor residual de centros de datos",
@@ -41,6 +41,22 @@
         "evidencia": "F23-024: Disenar una estrategia de TI verde con objetivos de reduccion de costos y huella es planificacion de iniciativas en una empresa con operaciones de TI, no ideacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-011-estrategia_ti_verde-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El rol del CIO y profesionales de TI es fundamental para impulsar la ventaja eco-competitiva de las empresas. Las iniciativas de eficiencia energética en TI (virtualización, actualización de equipos, reutilización de calor residual, reducción de e-waste) generan ahorros significativos, mientras la presión regulatoria y de emisiones GEI relacionadas con TI crece, y surgen oportunidades de negocio mediante software de sostenibilidad y análisis.",
+      "texto_nuevo": "El rol del CIO y profesionales de TI es fundamental para impulsar la ventaja eco-competitiva de las empresas. Las iniciativas de eficiencia energética en TI (virtualización, actualización de equipos, reutilización de calor residual, reducción de e-waste) pueden generar ahorros significativos, mientras la presión regulatoria y de emisiones GEI relacionadas con TI crece, y surgen oportunidades de negocio mediante software de sostenibilidad y análisis.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3132",
+        "frase": "green IT efforts focused on energy efficiency can generate serious bottom-line savings"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la TI verde centrada en eficiencia energética puede generar ahorros importantes; el nodo lo afirma como resultado seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

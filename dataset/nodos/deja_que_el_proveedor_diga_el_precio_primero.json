@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Deja que el proveedor diga el precio primero",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Cuando negocias una compra y no conoces el valor real de lo que vas a pagar, conviene dejar que el proveedor diga su precio antes que tú. Quien habla primero revela información y corre el riesgo de anclarse en una cifra peor de la que hubiera podido conseguir. Si te presionan para dar un número antes de tiempo, responde con un rango amplio a tu favor, apoyado en ejemplos de precios que ya conoces de otros lugares. Esta táctica funciona incluso frente a negociadores con más experiencia que tú, porque te da margen para calibrar tu respuesta según lo que escuches. Ceder la iniciativa no es debilidad, es una forma sencilla de proteger tu bolsillo cuando el terreno te resulta desconocido.",
+  "resumen_teorico": "Cuando negocias una compra y no conoces el valor real de lo que vas a pagar, conviene dejar que el proveedor diga su precio antes que tú. Quien habla primero revela información y corre el riesgo de anclarse en una cifra peor de la que hubiera podido conseguir. Si te presionan para dar un número antes de tiempo, responde con un rango amplio a tu favor, apoyado en ejemplos de precios que ya conoces de otros lugares. Esta táctica te da margen para calibrar tu respuesta según lo que escuches, pero ve preparado para encajar esa primera cifra: quien negocia con dureza puede abrir con una muy extrema para mover tu referencia. Ceder la iniciativa no es debilidad, es una forma sencilla de proteger tu bolsillo cuando el terreno te resulta desconocido.",
   "pasos_accionables": [
     "Antes de la reunión, busca en internet o pregunta a colegas el rango de precios habitual para lo que vas a comprar.",
     "Si no conoces el valor real, pide primero al proveedor su cotización, sin ofrecer tú una cifra.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Deja hablar primero al proveedor",
   "fuentes_internas": [
     "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-004-deja_que_el_proveedor_diga_el_precio_primero-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando negocias una compra y no conoces el valor real de lo que vas a pagar, conviene dejar que el proveedor diga su precio antes que tú. Quien habla primero revela información y corre el riesgo de anclarse en una cifra peor de la que hubiera podido conseguir. Si te presionan para dar un número antes de tiempo, responde con un rango amplio a tu favor, apoyado en ejemplos de precios que ya conoces de otros lugares. Esta táctica funciona incluso frente a negociadores con más experiencia que tú, porque te da margen para calibrar tu respuesta según lo que escuches. Ceder la iniciativa no es debilidad, es una forma sencilla de proteger tu bolsillo cuando el terreno te resulta desconocido.",
+      "texto_nuevo": "Cuando negocias una compra y no conoces el valor real de lo que vas a pagar, conviene dejar que el proveedor diga su precio antes que tú. Quien habla primero revela información y corre el riesgo de anclarse en una cifra peor de la que hubiera podido conseguir. Si te presionan para dar un número antes de tiempo, responde con un rango amplio a tu favor, apoyado en ejemplos de precios que ya conoces de otros lugares. Esta táctica te da margen para calibrar tu respuesta según lo que escuches, pero ve preparado para encajar esa primera cifra: quien negocia con dureza puede abrir con una muy extrema para mover tu referencia. Ceder la iniciativa no es debilidad, es una forma sencilla de proteger tu bolsillo cuando el terreno te resulta desconocido.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "2657",
+        "frase": "Conviene que estés preparado psicológicamente para encajar la oferta."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no dice que funcione incluso frente a negociadores más expertos; avisa que estos abren con un ancla extrema.; Mismo matiz: falta la advertencia de prepararse para encajar una primera cifra extrema.; Se cae la cautela del libro: al ceder la iniciativa hay que estar preparado para encajar la primera oferta extrema de un profesional.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

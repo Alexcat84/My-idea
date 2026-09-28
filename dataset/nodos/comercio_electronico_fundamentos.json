@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Fundamentos del Comercio Electrónico para Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El comercio electrónico (B2C y B2B) permite a pymes ampliar su presencia internacional a menor costo que los métodos tradicionales, aprovechando el crecimiento del acceso a Internet global. Reduce costos variables de marketing internacional (procesamiento de pedidos, pagos, publicidad) pero requiere adaptar el sitio web a los idiomas y preferencias del mercado objetivo.",
+  "resumen_teorico": "El comercio electrónico (B2C y B2B) permite a pymes ampliar su presencia internacional a menor costo que los métodos tradicionales, aprovechando el crecimiento del acceso a Internet global. Para ciertas industrias, productos y servicios, puede reducir costos variables de marketing internacional (procesamiento de pedidos, pagos, publicidad), pero conviene diseñar el sitio web en los idiomas que predominan en el mercado objetivo.",
   "pasos_accionables": [
     "Analizar el crecimiento del comercio electrónico en las regiones/mercados objetivo",
     "Evaluar si el producto/servicio es apto para venta online o requiere soporte informativo únicamente",
@@ -41,6 +41,22 @@
         "evidencia": "F03-009: El entregable es un documento de estrategia de comercio electrónico dentro del plan de exportación, con mercados e idiomas priorizados: es planificación. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-001-comercio_electronico_fundamentos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El comercio electrónico (B2C y B2B) permite a pymes ampliar su presencia internacional a menor costo que los métodos tradicionales, aprovechando el crecimiento del acceso a Internet global. Reduce costos variables de marketing internacional (procesamiento de pedidos, pagos, publicidad) pero requiere adaptar el sitio web a los idiomas y preferencias del mercado objetivo.",
+      "texto_nuevo": "El comercio electrónico (B2C y B2B) permite a pymes ampliar su presencia internacional a menor costo que los métodos tradicionales, aprovechando el crecimiento del acceso a Internet global. Para ciertas industrias, productos y servicios, puede reducir costos variables de marketing internacional (procesamiento de pedidos, pagos, publicidad), pero conviene diseñar el sitio web en los idiomas que predominan en el mercado objetivo.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3195",
+        "frase": "For certain industries, products, and services, going online reduces variable costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro limita la reducción de costos variables a ciertas industrias, productos y servicios; el nodo la afirma para todos.; El libro pide diseñar el sitio en los idiomas del mercado; la adaptación a sus preferencias no está en el libro.; Mismo defecto que la marca 0: se endurece una reducción de costos que el libro condiciona.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

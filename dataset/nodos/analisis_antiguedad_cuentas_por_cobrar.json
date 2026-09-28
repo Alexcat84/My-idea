@@ -9,7 +9,7 @@
     "Generar un reporte de antigüedad de cuentas por cobrar segmentado por rangos de días.",
     "Identificar el porcentaje de cartera en mora superior a 90 días.",
     "Comparar el aging con el DSO general para detectar riesgos ocultos.",
-    "Priorizar acciones de cobranza sobre los segmentos más antiguos."
+    "Sugerencia de My Idea: priorizar acciones de cobranza sobre los segmentos más antiguos."
   ],
   "entregable_esperado": "Reporte de aging de cuentas por cobrar con plan de acción de cobranza.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Revisa Antigüedad de tus Cobros",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-005-analisis_antiguedad_cuentas_por_cobrar-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar acciones de cobranza sobre los segmentos más antiguos.",
+      "texto_nuevo": "Sugerencia de My Idea: priorizar acciones de cobranza sobre los segmentos más antiguos.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3462",
+        "frase": "It’s usually worth checking out that analysis as well as your overall DSO number"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo recomienda revisar el aging junto al DSO; priorizar la cobranza de los tramos antiguos es añadido, útil como sugerencia.; Misma marca: la regla de priorización no está en el libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

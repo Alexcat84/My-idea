@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Programa de Mentoría a Proveedores (Staircase Model)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Para proveedores esenciales o difíciles de reemplazar que no cumplen aún los estándares, en vez de descartarlos se les puede acompañar mediante un modelo de escalones (staircase model) como el de IKEA, que define niveles progresivos de desempeño (desde inaceptable hasta certificación de tercero como FSC), ofreciendo guía y apoyo financiero para su mejora continua.",
+  "resumen_teorico": "Para proveedores esenciales o difíciles de reemplazar que no cumplen aún los estándares, en vez de descartarlos o bajarles la exigencia se les puede acompañar mediante un modelo de escalones (staircase model) como el de IKEA, que define niveles progresivos de desempeño (desde inaceptable hasta certificación de tercero como FSC), ofreciendo guía y apoyo financiero para su mejora continua.",
   "pasos_accionables": [
-    "Definir niveles de desempeño progresivos (ej. 4 niveles desde mínimo hasta certificación externa)",
+    "Definir niveles de desempeño progresivos (ej. 4 niveles: uno inaceptable que exige un plan de acción inmediato, el mínimo exigido, uno superior y la certificación externa)",
     "Diagnosticar en qué nivel se encuentra cada proveedor rezagado",
     "Diseñar plan de acción y apoyo (técnico o financiero) para avanzar de nivel",
     "Dar seguimiento periódico y establecer nuevas metas al alcanzar cada nivel"
@@ -38,5 +38,40 @@
   "etiqueta_arbol": "Acompaña a tus Proveedores Débiles",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-011-programa_mentoria_proveedores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para proveedores esenciales o difíciles de reemplazar que no cumplen aún los estándares, en vez de descartarlos se les puede acompañar mediante un modelo de escalones (staircase model) como el de IKEA, que define niveles progresivos de desempeño (desde inaceptable hasta certificación de tercero como FSC), ofreciendo guía y apoyo financiero para su mejora continua.",
+      "texto_nuevo": "Para proveedores esenciales o difíciles de reemplazar que no cumplen aún los estándares, en vez de descartarlos o bajarles la exigencia se les puede acompañar mediante un modelo de escalones (staircase model) como el de IKEA, que define niveles progresivos de desempeño (desde inaceptable hasta certificación de tercero como FSC), ofreciendo guía y apoyo financiero para su mejora continua.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4132",
+        "frase": "Rather than cutting them out or lowering expectations for their performance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en vez de descartarlos o de bajarles la exigencia se trabaja con ellos; se cae la segunda parte.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-011-programa_mentoria_proveedores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir niveles de desempeño progresivos (ej. 4 niveles desde mínimo hasta certificación externa)",
+      "texto_nuevo": "Definir niveles de desempeño progresivos (ej. 4 niveles: uno inaceptable que exige un plan de acción inmediato, el mínimo exigido, uno superior y la certificación externa)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4134",
+        "frase": "Level 1 is basically unacceptable and means the supplier needs to develop"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el modelo del libro el primer nivel es inaceptable y exige un plan de acción inmediato, y el mínimo exigido es el segundo; el paso borra ese escalón.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

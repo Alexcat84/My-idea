@@ -7,8 +7,8 @@
   "resumen_teorico": "Proceso estructurado para decidir si vale la pena una inversión grande de capital y para pedir el financiamiento que necesita: (1) determinar el desembolso inicial de efectivo con todos sus costos, (2) proyectar de forma conservadora los flujos de efectivo futuros que generará, y (3) evaluar esos flujos con payback, NPV o IRR para decidir si la inversión es rentable. El mismo análisis, redactado con sus riesgos, supuestos y análisis de sensibilidad, es la propuesta que se lleva a un banco o inversionista. Y la regla que ordena todo lo demás: la decisión se toma con el análisis, no al revés.",
   "pasos_accionables": [
     "Determina el desembolso inicial de efectivo incluyendo todos los costos asociados de la inversión: compra, envío, instalación, capacitación e interrupciones operativas (downtime)",
-    "Proyecta de forma conservadora los flujos de efectivo futuros que generará la inversión, en términos de ahorro de costos o de ingresos adicionales, e involucra en esas proyecciones a los empleados y gerentes con conocimiento técnico",
-    "Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa, y respáldalo con el payback y el IRR",
+    "Proyecta de forma conservadora los flujos de efectivo futuros que generará la inversión, en términos de ahorro de costos o de ingresos adicionales; incluso puedes involucrar en esas proyecciones a los empleados y gerentes con conocimiento técnico",
+    "Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa (si aún no tienes uno, decídelo, y que sea mayor que la tasa de interés del préstamo que solicitas), y respáldalo con el payback y el IRR",
     "Redacta la propuesta de inversión incluyendo los riesgos, los supuestos y un análisis de sensibilidad",
     "Toma la decisión de inversión basada en el análisis, no al revés: el análisis no se hace para justificar una decisión que ya estaba tomada"
   ],
@@ -41,5 +41,41 @@
   ],
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-005-analisis_de_gastos_de_capital-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proyecta de forma conservadora los flujos de efectivo futuros que generará la inversión, en términos de ahorro de costos o de ingresos adicionales, e involucra en esas proyecciones a los empleados y gerentes con conocimiento técnico",
+      "texto_nuevo": "Proyecta de forma conservadora los flujos de efectivo futuros que generará la inversión, en términos de ahorro de costos o de ingresos adicionales; incluso puedes involucrar en esas proyecciones a los empleados y gerentes con conocimiento técnico",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3019",
+        "frase": "You may even want to involve some of the managers and employees"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo plantea como opción ('you may even want to involve'); el paso lo vuelve instrucción.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-005-analisis_de_gastos_de_capital-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa, y respáldalo con el payback y el IRR",
+      "texto_nuevo": "Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa (si aún no tienes uno, decídelo, y que sea mayor que la tasa de interés del préstamo que solicitas), y respáldalo con el payback y el IRR",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3230",
+        "frase": "It obviously needs to be higher than the interest rate on the loan"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del libro: si no tienes hurdle rate, decides uno, y debe superar la tasa del préstamo que pides.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

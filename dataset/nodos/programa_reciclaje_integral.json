@@ -4,12 +4,12 @@
   "dominio": "environmental",
   "titulo_concepto": "Programa de Reciclaje Integral y Meta Cero Residuos",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Un programa de reciclaje efectivo debe ser fácil de usar (contenedores junto a los basureros), auditado en su implementación real (verificar que el personal de limpieza separe correctamente), y puede escalar hacia metas ambiciosas de 'cero residuos'. El caso de Miller-Coors demuestra que es posible reciclar el 99.8% de los residuos de una planta mediante un equipo dedicado y sistemas creativos de reutilización (vidrio, cartón, aluminio, grano para ganado).",
+  "resumen_teorico": "Un programa de reciclaje efectivo debe ser fácil de usar (contenedores junto a los basureros), auditado en su implementación real (si el personal de limpieza junta todo, verificar si la empresa de residuos separa después), y puede escalar hacia metas ambiciosas de 'cero residuos'. El caso de Miller-Coors demuestra que es posible reciclar el 99.8% de los residuos de una planta mediante un equipo dedicado y sistemas creativos de reutilización (vidrio, cartón, aluminio, grano para ganado).",
   "pasos_accionables": [
     "Instalar contenedores de reciclaje junto a cada basurero de la oficina",
     "Verificar con el proveedor de gestión de residuos cómo se procesan los materiales",
     "Realizar visitas de verificación (site visits) si hay dudas sobre la separación real",
-    "Definir metas incrementales hacia 'cero residuos al vertedero'",
+    "Definir metas incrementales hacia 'cero residuos al vertedero', consiguiendo antes la aceptación de la gente para que los cambios no se vivan como una carga",
     "Asignar un equipo dedicado a monitorear y reportar el progreso"
   ],
   "entregable_esperado": "Sistema de reciclaje instalado y verificado, con métricas de porcentaje de residuos desviados del vertedero",
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Recicla Hacia Cero Residuos",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-011-programa_reciclaje_integral-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un programa de reciclaje efectivo debe ser fácil de usar (contenedores junto a los basureros), auditado en su implementación real (verificar que el personal de limpieza separe correctamente), y puede escalar hacia metas ambiciosas de 'cero residuos'. El caso de Miller-Coors demuestra que es posible reciclar el 99.8% de los residuos de una planta mediante un equipo dedicado y sistemas creativos de reutilización (vidrio, cartón, aluminio, grano para ganado).",
+      "texto_nuevo": "Un programa de reciclaje efectivo debe ser fácil de usar (contenedores junto a los basureros), auditado en su implementación real (si el personal de limpieza junta todo, verificar si la empresa de residuos separa después), y puede escalar hacia metas ambiciosas de 'cero residuos'. El caso de Miller-Coors demuestra que es posible reciclar el 99.8% de los residuos de una planta mediante un equipo dedicado y sistemas creativos de reutilización (vidrio, cartón, aluminio, grano para ganado).",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2317",
+        "frase": "it may be okay—if the building's waste management company sorts the trash"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la excepción del libro: que el personal de limpieza junte reciclables y basura puede estar bien si la empresa de residuos separa después; se verifica si hay dudas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-011-programa_reciclaje_integral-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir metas incrementales hacia 'cero residuos al vertedero'",
+      "texto_nuevo": "Definir metas incrementales hacia 'cero residuos al vertedero', consiguiendo antes la aceptación de la gente para que los cambios no se vivan como una carga",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2319",
+        "frase": "Be careful about introducing big changes without getting buy-in."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone antes de las metas ambiciosas la condición de no introducir grandes cambios sin la aceptación de la gente; el paso la pierde.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

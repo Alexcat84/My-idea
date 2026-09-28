@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Distinción entre COGS y Gastos Operativos",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "No todos los costos variables van en COGS ni todos los fijos en gastos operativos. Salarios de supervisores pueden estar en COGS aunque sean fijos a corto plazo; comisiones de ventas son variables pero se clasifican en SG&A. El Costo de Bienes Vendidos (COGS) o Costo de Servicios (COS) incluye lo directamente asociado a producir o entregar, mientras que los gastos operativos son todo lo demás. La línea entre ambos suele ser un juicio (gray área) que afecta el margen bruto y puede cambiarse según necesidades gerenciales, distorsionando tendencias. Entender esta clasificación evita errores al analizar la rentabilidad real del negocio.",
+  "resumen_teorico": "No todos los costos variables van en COGS ni todos los fijos en gastos operativos. Salarios de supervisores pueden estar en COGS aunque sean fijos a corto plazo; comisiones de ventas son en parte variables pero suelen clasificarse en SG&A. El Costo de Bienes Vendidos (COGS) o Costo de Servicios (COS) incluye lo directamente asociado a producir o entregar, mientras que los gastos operativos son todo lo demás. La línea entre ambos suele ser un juicio (gray área) que afecta el margen bruto y puede cambiarse según necesidades gerenciales si la lógica es razonable y consistente, aunque eso puede distorsionar tendencias. Entender esta clasificación evita errores al analizar la rentabilidad real del negocio.",
   "pasos_accionables": [
     "Revisa cómo tu contador clasifica cada línea de costo",
     "Define con tu contador criterios claros y consistentes para clasificar costos como COGS u operativos",
     "Identifica qué costos fijos están incluidos en COGS",
     "Verifica si costos variables como comisiones están en gastos operativos",
-    "Compara tu clasificación con estándares de tu industria",
+    "Verifica que la lógica de cada clasificación sea razonable para la situación de tu negocio, sabiendo que no hay reglas fijas",
     "Evita cambiar frecuentemente la clasificación de costos para no distorsionar tus tendencias de margen"
   ],
   "entregable_esperado": "Documento de clasificación de costos que distinga claramente COGS vs Gastos Operativos con justificación de cada línea",
@@ -57,6 +57,39 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-018-distincion_cogs_gastos_operativos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara tu clasificación con estándares de tu industria",
+      "texto_nuevo": "Verifica que la lógica de cada clasificación sea razonable para la situación de tu negocio, sabiendo que no hay reglas fijas",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "719",
+        "frase": "Companies take those guidelines and apply a logic that makes sense for their particular situations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de estándares de la industria para clasificar costos: no hay reglas fijas y cada empresa aplica una lógica razonable y consistente para su situación.; Misma invención: los estándares de industria para esta clasificación no están en el libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-018-distincion_cogs_gastos_operativos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos los costos variables van en COGS ni todos los fijos en gastos operativos. Salarios de supervisores pueden estar en COGS aunque sean fijos a corto plazo; comisiones de ventas son variables pero se clasifican en SG&A. El Costo de Bienes Vendidos (COGS) o Costo de Servicios (COS) incluye lo directamente asociado a producir o entregar, mientras que los gastos operativos son todo lo demás. La línea entre ambos suele ser un juicio (gray área) que afecta el margen bruto y puede cambiarse según necesidades gerenciales, distorsionando tendencias. Entender esta clasificación evita errores al analizar la rentabilidad real del negocio.",
+      "texto_nuevo": "No todos los costos variables van en COGS ni todos los fijos en gastos operativos. Salarios de supervisores pueden estar en COGS aunque sean fijos a corto plazo; comisiones de ventas son en parte variables pero suelen clasificarse en SG&A. El Costo de Bienes Vendidos (COGS) o Costo de Servicios (COS) incluye lo directamente asociado a producir o entregar, mientras que los gastos operativos son todo lo demás. La línea entre ambos suele ser un juicio (gray área) que afecta el margen bruto y puede cambiarse según necesidades gerenciales si la lógica es razonable y consistente, aunque eso puede distorsionar tendencias. Entender esta clasificación evita errores al analizar la rentabilidad real del negocio.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "738",
+        "frase": "these changes are legal, so long as they meet the reasonable-and-consistent test"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro condiciona esos cambios a que la lógica sea razonable y consistente; el nodo lo pierde.; Endurece: el libro dice que los gastos de venta suelen ir en SG&A y con comisiones son variables en cierta medida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

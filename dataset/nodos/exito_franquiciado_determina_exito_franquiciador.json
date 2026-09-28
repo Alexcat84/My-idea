@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "El Éxito del Franquiciado Determina el Éxito del Franquiciador",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Axioma central del franchising: si los franquiciados fallan, el franquiciador fallará. Los franquiciados fracasados requieren más soporte, pagan menos regalías, compran menos productos, drenan recursos y dan mala validación a prospectos. Por el contrario, franquiciados exitosos se convierten en la mejor herramienta de venta, expanden a múltiples unidades y refieren nuevos candidatos, reduciendo el costo de adquisición. El modelo debe ser 'win-win-win': cliente satisfecho, franquiciado rentable, franquiciador próspero.",
+  "resumen_teorico": "Axioma central del franchising: si los franquiciados fallan, el franquiciador fallará. Los franquiciados fracasados requieren más soporte, pagan menos regalías, compran menos productos, drenan recursos y dan mala validación a prospectos. Por el contrario, franquiciados exitosos se convierten en la mejor herramienta de venta, expanden a múltiples unidades y refieren nuevos candidatos, lo que puede reducir mucho el costo de adquisición. El modelo debe ser 'win-win-win': cliente satisfecho, franquiciado rentable, franquiciador próspero.",
   "pasos_accionables": [
     "Diseñar el sistema de soporte y herramientas para maximizar la probabilidad de éxito del franquiciado.",
     "Evitar depender de fees de franquicia para financiar el crecimiento del franquiciador (riesgo de vender a candidatos no calificados).",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Cuida el Éxito de tus Franquiciados",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-007-exito_franquiciado_determina_exito_franquiciador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Axioma central del franchising: si los franquiciados fallan, el franquiciador fallará. Los franquiciados fracasados requieren más soporte, pagan menos regalías, compran menos productos, drenan recursos y dan mala validación a prospectos. Por el contrario, franquiciados exitosos se convierten en la mejor herramienta de venta, expanden a múltiples unidades y refieren nuevos candidatos, reduciendo el costo de adquisición. El modelo debe ser 'win-win-win': cliente satisfecho, franquiciado rentable, franquiciador próspero.",
+      "texto_nuevo": "Axioma central del franchising: si los franquiciados fallan, el franquiciador fallará. Los franquiciados fracasados requieren más soporte, pagan menos regalías, compran menos productos, drenan recursos y dan mala validación a prospectos. Por el contrario, franquiciados exitosos se convierten en la mejor herramienta de venta, expanden a múltiples unidades y refieren nuevos candidatos, lo que puede reducir mucho el costo de adquisición. El modelo debe ser 'win-win-win': cliente satisfecho, franquiciado rentable, franquiciador próspero.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "828",
+        "frase": "they can dramatically reduce your overall cost of candidate lead generation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que pueden reducir mucho el costo de generar candidatos; el nodo lo da como seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

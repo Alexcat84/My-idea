@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Define el perfil de inversor que buscas (capital, experiencia, sector), y con la región donde quieres crecer",
     "Pide las estadísticas de asistentes de ferias pasadas y contacta a quienes participaron antes como referencia",
-    "Distingue si necesitas una feria de franquicia o una feria de industria según lo que buscas",
+    "Distingue si necesitas una feria de franquicia o una feria de industria según lo que buscas, y si eliges una feria de franquicia en un estado que exige registro, consulta con tu abogado si necesitas registrarte o presentar una exención",
     "Calcula todos los costos, incluidos los que no se ven a simple vista (viaje, materiales, personal, stand), y para reducirlos negocia tarifas de hotel y reserva vuelos con anticipación",
     "Entrena a quien te acompañe para calificar prospectos rápido y aprovechar el flujo de gente en tu stand, con un mini folleto económico para repartir a todos y un folleto completo para los prospectos que realmente te interesan",
-    "Planea el seguimiento después de la feria (charlas, reuniones uno a uno) según el tipo de evento, y que sea inmediato"
+    "Planea el seguimiento según el tipo de evento, y que sea inmediato: en una feria de franquicia, charlas o reuniones uno a uno el día después; en una feria de industria, mejor durante la feria misma"
   ],
   "entregable_esperado": "Un plan de participación en ferias con presupuesto detallado, los criterios para elegir el evento correcto y una forma clara de calificar a los contactos que consigas",
   "nodos_previos": [
@@ -85,6 +85,40 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-007-ferias_comerciales_franquicia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distingue si necesitas una feria de franquicia o una feria de industria según lo que buscas",
+      "texto_nuevo": "Distingue si necesitas una feria de franquicia o una feria de industria según lo que buscas, y si eliges una feria de franquicia en un estado que exige registro, consulta con tu abogado si necesitas registrarte o presentar una exención",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3737",
+        "frase": "Exhibiting at franchise shows in registration states may also require you to be registered"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición legal del libro para exponer en ferias de franquicia en estados de registro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-007-ferias_comerciales_franquicia-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planea el seguimiento después de la feria (charlas, reuniones uno a uno) según el tipo de evento, y que sea inmediato",
+      "texto_nuevo": "Planea el seguimiento según el tipo de evento, y que sea inmediato: en una feria de franquicia, charlas o reuniones uno a uno el día después; en una feria de industria, mejor durante la feria misma",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3739-3749",
+        "frase": "Such events are often better hosted during the show itself."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro distingue: el día extra sirve en ferias de franquicia, pero en las de industria conviene hacerlo durante la feria.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Contacto y Evaluación de Representantes o Distribuidores Extranjeros",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de firmar un acuerdo, tienes que investigar a fondo a los posibles representantes o distribuidores extranjeros: su historial, sus referencias comerciales y bancarias, su capacidad de introducir productos nuevos y su propia lectura del potencial de mercado para lo que vendes. Conviene que consigas al menos dos informes de crédito de fuentes distintas y, si puedes, que visites sus instalaciones. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propia jurisdicción antes de actuar.",
+  "resumen_teorico": "Antes de firmar un acuerdo, tienes que investigar a fondo a los posibles representantes o distribuidores extranjeros: su historial, sus referencias comerciales y bancarias, su capacidad de introducir productos nuevos, si pueden cumplir tus requisitos especiales y su propia lectura del potencial de mercado para lo que vendes. Conviene que consigas al menos dos informes de crédito de fuentes distintas y, si puedes, que visites sus instalaciones. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propia jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Envía información detallada de tu negocio y tus productos al candidato",
     "Pide su historial y sus referencias comerciales y bancarias",
@@ -44,6 +44,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-014-contacto_evaluacion_representantes_extranjeros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de firmar un acuerdo, tienes que investigar a fondo a los posibles representantes o distribuidores extranjeros: su historial, sus referencias comerciales y bancarias, su capacidad de introducir productos nuevos y su propia lectura del potencial de mercado para lo que vendes. Conviene que consigas al menos dos informes de crédito de fuentes distintas y, si puedes, que visites sus instalaciones. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propia jurisdicción antes de actuar.",
+      "texto_nuevo": "Antes de firmar un acuerdo, tienes que investigar a fondo a los posibles representantes o distribuidores extranjeros: su historial, sus referencias comerciales y bancarias, su capacidad de introducir productos nuevos, si pueden cumplir tus requisitos especiales y su propia lectura del potencial de mercado para lo que vendes. Conviene que consigas al menos dos informes de crédito de fuentes distintas y, si puedes, que visites sus instalaciones. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propia jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1951",
+        "frase": "Data on whether your company's special requirements can be met"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye saber si el candidato puede cumplir los requisitos especiales de tu empresa, y el nodo la omite.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

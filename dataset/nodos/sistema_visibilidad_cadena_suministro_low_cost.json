@@ -14,7 +14,7 @@
     "Iterar el sistema agregando nuevas vistas y cálculos según se necesiten",
     "Documentar aprendizajes y extender el sistema a otros productos o líneas"
   ],
-  "entregable_esperado": "Sistema funcional de bajo costo (construido en semanas, no meses) que ofrece visibilidad end-to-end de inventario y demanda entre múltiples actores de la cadena de suministro",
+  "entregable_esperado": "Sistema funcional de bajo costo que ofrece visibilidad end-to-end de inventario y demanda entre múltiples actores de la cadena de suministro",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro"
   ],
@@ -57,6 +57,22 @@
         "motivo": "arista entre dos mundos (compras -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-017-sistema_visibilidad_cadena_suministro_low_cost-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sistema funcional de bajo costo (construido en semanas, no meses) que ofrece visibilidad end-to-end de inventario y demanda entre múltiples actores de la cadena de suministro",
+      "texto_nuevo": "Sistema funcional de bajo costo que ofrece visibilidad end-to-end de inventario y demanda entre múltiples actores de la cadena de suministro",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3787",
+        "frase": "we had to be ready to go in 90 days"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El plazo del caso era de unos 90 días y solo los programas tomaron unas tres semanas; 'semanas, no meses' lo añade el nodo.; Mismo plazo añadido que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Combinación de Tecnologías Emergentes para Cadenas Ágiles",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El verdadero potencial de tecnologías como robots industriales, manufactura aditiva (impresión 3D), vehículos autónomos, drones e IoT se logra cuando se combinan entre sí, no usándolas aisladamente. Empresas como Walmart y Amazon lograron ventajas competitivas dominantes al combinar prácticas logísticas complementarias. La combinación de estas tecnologías permite fábricas flexibles que ajustan rápidamente su producción, almacenes automatizados y entregas más precisas y rápidas.",
+  "resumen_teorico": "El verdadero potencial de tecnologías como robots industriales, manufactura aditiva (impresión 3D), vehículos autónomos, drones e IoT se logra cuando se combinan entre sí, no usándolas aisladamente. Y no reemplazan tus sistemas actuales: necesitan una base de sistemas ya existente sobre la cual instalarse. Walmart llegó a dominar sus mercados al combinar prácticas logísticas complementarias. La combinación de estas tecnologías permite fábricas flexibles que ajustan rápidamente su producción, almacenes automatizados y entregas más precisas y rápidas.",
   "pasos_accionables": [
     "Mapear las tecnologías disponibles (robots, IoT, manufactura aditiva, vehículos autónomos) aplicables a cada nodo de la cadena",
     "Identificar combinaciones sinérgicas entre tecnologías, no implementaciones aisladas",
@@ -39,6 +39,22 @@
         "evidencia": "D-37: Combinar robots, impresión 3D, vehículos autónomos y drones en la cadena es estrategia de operaciones avanzada que solo interesa a quien entra a fondo en logística. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-017-tecnologias_emergentes_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El verdadero potencial de tecnologías como robots industriales, manufactura aditiva (impresión 3D), vehículos autónomos, drones e IoT se logra cuando se combinan entre sí, no usándolas aisladamente. Empresas como Walmart y Amazon lograron ventajas competitivas dominantes al combinar prácticas logísticas complementarias. La combinación de estas tecnologías permite fábricas flexibles que ajustan rápidamente su producción, almacenes automatizados y entregas más precisas y rápidas.",
+      "texto_nuevo": "El verdadero potencial de tecnologías como robots industriales, manufactura aditiva (impresión 3D), vehículos autónomos, drones e IoT se logra cuando se combinan entre sí, no usándolas aisladamente. Y no reemplazan tus sistemas actuales: necesitan una base de sistemas ya existente sobre la cual instalarse. Walmart llegó a dominar sus mercados al combinar prácticas logísticas complementarias. La combinación de estas tecnologías permite fábricas flexibles que ajustan rápidamente su producción, almacenes automatizados y entregas más precisas y rápidas.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2197",
+        "frase": "These technologies do not replace traditional systems."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro atribuye solo a Walmart el dominio por combinar prácticas complementarias; de Amazon no dice eso.; Misma atribución a Amazon que el libro no hace.; Se cae la condición del libro: estas tecnologías complementan y no reemplazan los sistemas existentes, que son la base sobre la que se instalan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

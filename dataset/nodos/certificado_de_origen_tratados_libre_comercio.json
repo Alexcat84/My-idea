@@ -4,13 +4,13 @@
   "dominio": "exportacion",
   "titulo_concepto": "Certificado de Origen y Tratados de Libre Comercio (T-MEC/USMCA, Rules of Origin, RVC)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante los métodos de valor de transacción, Build-Up, Build-Down o Net Cost según el producto y el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
-    "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
-    "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
-    "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
-    "Conservar la documentación de respaldo durante el plazo que fija la aduana: en Estados Unidos, bajo el T-MEC, al menos cinco años desde la importación (importador) o desde que se completó la certificación (exportador o productor); en Canadá, seis años para el importador; otros tratados pueden fijar su propio plazo., y disponible para el importador"
+    "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o, si es un bien sin ensamblar o cuyo contenido no cumple la regla del Anexo 401, con el valor de contenido regional exigido",
+    "Calcular el Regional Value Content del producto según el método que corresponda al producto y al tratado (valor de transacción, Build-Up, Build-Down o Net Cost) y compararlo con el porcentaje que fije su regla de origen; en el NAFTA, para la cuarta vía, 60% por el método de valor de transacción o 50% por el de costo neto",
+    "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA), en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen, de modo que esté en poder del importador cuando reclame la preferencia",
+    "Conservar la documentación de respaldo sobre cómo calificó el producto, en caso de auditoría aduanera, y tenerla disponible para el importador; la mayoría de los tratados exigen guardarla hasta 5 años"
   ],
   "entregable_esperado": "Certificado de Origen firmado y cálculo de RVC documentado que respalde el trato arancelario preferencial",
   "nodos_previos": [
@@ -116,6 +116,90 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-001-certificado_de_origen_tratados_libre_comercio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante los métodos de valor de transacción, Build-Up, Build-Down o Net Cost según el producto y el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4939-4941",
+        "frase": "RVC-based rules are net cost (NC), transaction value (TV), builddown, and buildup."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da cuatro métodos de cálculo del RVC; el nodo omite el de valor de transacción.; Mismo defecto: falta el método de valor de transacción en la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-001-certificado_de_origen_tratados_libre_comercio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
+      "texto_nuevo": "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o, si es un bien sin ensamblar o cuyo contenido no cumple la regla del Anexo 401, con el valor de contenido regional exigido",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2889",
+        "frase": "Unassembled goods and goods whose content does not meet the Annex 401 rule of origin"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La cuarta vía del Artículo 401 solo aplica a bienes sin ensamblar o cuyo contenido no cumple la regla del Anexo 401; el nodo pierde esa condición.; Mismo defecto: se cae la condición de la cuarta vía.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-001-certificado_de_origen_tratados_libre_comercio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
+      "texto_nuevo": "Calcular el Regional Value Content del producto según el método que corresponda al producto y al tratado (valor de transacción, Build-Up, Build-Down o Net Cost) y compararlo con el porcentaje que fije su regla de origen; en el NAFTA, para la cuarta vía, 60% por el método de valor de transacción o 50% por el de costo neto",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2889",
+        "frase": "contains NAFTA regional value of 60 percent according to the transaction value method"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las cifras 60/50 sí están en el libro, pero solo para la cuarta vía del NAFTA; lo que falla es que se cae ese límite de alcance, no que se invente la cifra.; Se pierde que los umbrales 60/50 son los del NAFTA para su cuarta vía (otras reglas fijan otros, como 35 % o 45 %), y falta el método de valor de transacción en la lista.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-001-certificado_de_origen_tratados_libre_comercio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
+      "texto_nuevo": "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA), en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen, de modo que esté en poder del importador cuando reclame la preferencia",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2891",
+        "frase": "the certificate must be in the importer's possession when the importer is making the claim"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija el plazo en el embarque: exige que el certificado esté en poder del importador cuando reclama la preferencia.; Mismo defecto: el momento \"antes del embarque\" no está en el libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-001-certificado_de_origen_tratados_libre_comercio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conservar la documentación de respaldo durante el plazo que fija la aduana: en Estados Unidos, bajo el T-MEC, al menos cinco años desde la importación (importador) o desde que se completó la certificación (exportador o productor); en Canadá, seis años para el importador; otros tratados pueden fijar su propio plazo., y disponible para el importador",
+      "texto_nuevo": "Conservar la documentación de respaldo sobre cómo calificó el producto, en caso de auditoría aduanera, y tenerla disponible para el importador; la mayoría de los tratados exigen guardarla hasta 5 años",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4893",
+        "frase": "Most of the FTA agreements require retention of the documents for up to 5 years."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que la mayoría de los acuerdos exigen conservar hasta 5 años; el T-MEC, los mínimos, las fechas de inicio y los seis años de Canadá no están.; Mismo defecto: plazos y fechas de inicio ajenos al libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

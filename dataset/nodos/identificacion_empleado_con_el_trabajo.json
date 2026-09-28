@@ -7,7 +7,7 @@
   "resumen_teorico": "Concepto centrado en la relación supervisor-empleado como palanca clave para mejorar el desempeño, reducir el ausentismo y aumentar la calidad. Se basa en la premisa de que los empleados no trabajan solo por dinero, sino por reconocimiento, logro, satisfacción personal y seguridad. El supervisor es percibido como 'la empresa' por el empleado, por lo que su capacidad de comunicar, escuchar y mostrar el propósito del trabajo impacta directamente en el compromiso y la calidad del desempeño.",
   "pasos_accionables": [
     "Conocer personalmente a cada miembro del equipo (nombre, proficiencia, intereses).",
-    "Mostrar a los empleados el resultado final de su trabajo y su impacto en la cadena de valor.",
+    "Mostrar a los empleados cómo va su desempeño, de dónde viene su trabajo y quién lo recibe después, y el resultado final de su trabajo y su impacto en la cadena de valor.",
     "Fomentar que los empleados comuniquen sus problemas laborales al supervisor.",
     "Establecer estándares de desempeño claros y comprensibles para cada puesto.",
     "Realizar seguimiento del ausentismo como indicador de identificación con el trabajo.",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Une al Empleado con su Trabajo",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-010-identificacion_empleado_con_el_trabajo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mostrar a los empleados el resultado final de su trabajo y su impacto en la cadena de valor.",
+      "texto_nuevo": "Mostrar a los empleados cómo va su desempeño, de dónde viene su trabajo y quién lo recibe después, y el resultado final de su trabajo y su impacto en la cadena de valor.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1205",
+        "frase": "the supervisor can find ways of showing employees how they are performing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las acciones del supervisor faltan mostrar cómo va su desempeño y de dónde viene y a quién va su trabajo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

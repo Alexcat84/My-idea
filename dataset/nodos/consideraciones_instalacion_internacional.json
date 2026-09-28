@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Consideraciones de Instalación de Productos en el Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Que tu producto sea fácil de instalar en el mercado destino es clave para que el cliente quede satisfecho. Tienes que decidir si preensamblas y pruebas el producto antes de enviarlo, si capacitas a proveedores de servicio locales, o si lo envías desensamblado para reducir el costo del envío (aunque esto puede retrasar el pago). Toda la documentación técnica debe estar disponible en el idioma local. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+  "resumen_teorico": "Al preparar tu producto para exportar, considera qué tan fácil es instalarlo en el mercado destino. Tienes que decidir si preensamblas y pruebas el producto antes de enviarlo, si capacitas a proveedores de servicio locales, o si lo envías desensamblado para reducir el costo del envío (aunque esto puede retrasar el pago si la venta depende de entregarlo ensamblado). Toda la documentación técnica debe estar disponible en el idioma local. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
   "pasos_accionables": [
     "Evalúa si necesitas técnicos en el destino y minimiza su tiempo en campo",
     "Decide entre preensamblar y probar el producto antes del envío o enviarlo desensamblado",
@@ -44,6 +44,22 @@
       },
       "decision": "'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-014-consideraciones_instalacion_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Que tu producto sea fácil de instalar en el mercado destino es clave para que el cliente quede satisfecho. Tienes que decidir si preensamblas y pruebas el producto antes de enviarlo, si capacitas a proveedores de servicio locales, o si lo envías desensamblado para reducir el costo del envío (aunque esto puede retrasar el pago). Toda la documentación técnica debe estar disponible en el idioma local. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "texto_nuevo": "Al preparar tu producto para exportar, considera qué tan fácil es instalarlo en el mercado destino. Tienes que decidir si preensamblas y pruebas el producto antes de enviarlo, si capacitas a proveedores de servicio locales, o si lo envías desensamblado para reducir el costo del envío (aunque esto puede retrasar el pago si la venta depende de entregarlo ensamblado). Toda la documentación técnica debe estar disponible en el idioma local. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2591-2593",
+        "frase": "your company should consider is the ease of installing the product overseas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro condiciona el retraso del pago a que la venta dependa de entregar el producto ensamblado.; El libro solo pide considerar la facilidad de instalación al preparar el producto; lo de la satisfacción del cliente es un porqué añadido.; Mismo defecto que la marca 0: causa añadida que el libro no da.; Mismo defecto que la marca 0: el porqué de la satisfacción no está en el libro.; Mismo defecto que la marca 1: se cae la condición de la venta contingente al producto armado.; Mismo defecto que la marca 1: se cae la condición del retraso del pago.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

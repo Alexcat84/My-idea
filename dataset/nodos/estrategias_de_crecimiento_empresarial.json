@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Cuatro Estrategias Genéricas de Crecimiento",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Existen cuatro caminos típicos para hacer crecer un negocio: (1) Más de lo mismo (aumentar volumen en el mismo modelo de negocio), (2) Expansión geográfica (replicar el modelo en nuevas ubicaciones), (3) Nuevos productos o servicios (diversificar la oferta), y (4) Adquisición (comprar empresas similares o complementarias, incluyendo estrategias de 'roll-up'). Cada estrategia requiere habilidades financieras distintas, desde proyección de ventas hasta due diligence y valoración de empresas.",
+  "resumen_teorico": "Existen cuatro caminos típicos para hacer crecer un negocio: (1) Más de lo mismo (aumentar volumen en el mismo modelo de negocio), (2) Expansión geográfica (replicar el modelo en nuevas ubicaciones), (3) Nuevos productos o servicios (diversificar la oferta), y (4) Adquisición (comprar empresas similares, incluyendo estrategias de 'roll-up'). Cada estrategia requiere habilidades financieras distintas, desde proyección de ventas hasta due diligence y valoración de empresas.",
   "pasos_accionables": [
     "Identificar cuál de las cuatro estrategias se ajusta mejor al modelo de negocio actual",
-    "Para 'más de lo mismo': proyectar ventas y evaluar capacidad operativa y de personal",
+    "Para 'más de lo mismo': proyectar ventas, evaluar capacidad operativa y de personal, y estimar el impacto de ese crecimiento en tu rentabilidad y tu efectivo",
     "Para expansión geográfica: modelar flujo de caja y retorno de inversión por nueva ubicación",
     "Para nuevos productos: hacer investigación de mercado o pruebas piloto de baja inversión",
     "Para adquisiciones: realizar due diligence financiero y análisis de valoración del objetivo",
@@ -43,6 +43,39 @@
         "motivo": "Tiene razon B. La gestion de libro abierto es una practica interna: transparencia financiera, formacion de los empleados, marcador y bonos. Las cuatro estrategias genericas de crecimiento (mas de lo mismo, expansion geografica, nuevos productos, adquisicion) no la usan, no la continuan y no la profundizan. Hoy no comparten tema en ninguno de los dos textos. La correccion solo convirtio un paso en sugerencia, asi que no viene de ella. La DUDOSA de A no hace falta: el texto basta para decidir."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-018-estrategias_de_crecimiento_empresarial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen cuatro caminos típicos para hacer crecer un negocio: (1) Más de lo mismo (aumentar volumen en el mismo modelo de negocio), (2) Expansión geográfica (replicar el modelo en nuevas ubicaciones), (3) Nuevos productos o servicios (diversificar la oferta), y (4) Adquisición (comprar empresas similares o complementarias, incluyendo estrategias de 'roll-up'). Cada estrategia requiere habilidades financieras distintas, desde proyección de ventas hasta due diligence y valoración de empresas.",
+      "texto_nuevo": "Existen cuatro caminos típicos para hacer crecer un negocio: (1) Más de lo mismo (aumentar volumen en el mismo modelo de negocio), (2) Expansión geográfica (replicar el modelo en nuevas ubicaciones), (3) Nuevos productos o servicios (diversificar la oferta), y (4) Adquisición (comprar empresas similares, incluyendo estrategias de 'roll-up'). Cada estrategia requiere habilidades financieras distintas, desde proyección de ventas hasta due diligence y valoración de empresas.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3678",
+        "frase": "Another time-tested strategy for growth is to buy up similar businesses"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe la adquisición como comprar negocios similares (y el roll-up, del mismo negocio); 'complementarias' no está.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-018-estrategias_de_crecimiento_empresarial-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para 'más de lo mismo': proyectar ventas y evaluar capacidad operativa y de personal",
+      "texto_nuevo": "Para 'más de lo mismo': proyectar ventas, evaluar capacidad operativa y de personal, y estimar el impacto de ese crecimiento en tu rentabilidad y tu efectivo",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3647",
+        "frase": "increased operational activity are likely to have on your profitability and cash"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Tras proyectar ventas el libro pide determinar el impacto del aumento de ventas, compensación y operación en la rentabilidad y el efectivo; se pierde.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

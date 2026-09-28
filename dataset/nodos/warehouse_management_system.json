@@ -11,7 +11,7 @@
     "Automatizar procesos de picking, packing y shipping",
     "Integrar el WMS con robots o vehículos automatizados si aplica"
   ],
-  "entregable_esperado": "WMS implementado y operando con seguimiento de inventario en tiempo real",
+  "entregable_esperado": "WMS implementado y operando con seguimiento de niveles de inventario y ubicaciones de almacenamiento",
   "nodos_previos": [
     "erp_systems"
   ],
@@ -38,6 +38,22 @@
         "evidencia": "D-01: Implantar un WMS con picking, packing y hasta robots es operación de almacén de especialista; una tienda pequeña, un servicio o una app nunca lo necesitan. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-017-warehouse_management_system-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "WMS implementado y operando con seguimiento de inventario en tiempo real",
+      "texto_nuevo": "WMS implementado y operando con seguimiento de niveles de inventario y ubicaciones de almacenamiento",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2184",
+        "frase": "These systems keep track of inventory levels and stocking locations within a warehouse."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye al WMS el control de niveles de inventario y ubicaciones, no un seguimiento en tiempo real.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

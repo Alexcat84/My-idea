@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Estimación de Costos de Actividad",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Proporciona información sobre el costo de recursos necesarios para completar el trabajo del proyecto, incluyendo mano de obra, equipo, suministros y materiales. Puede determinarse mediante juicio de expertos o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
+  "resumen_teorico": "Proporciona información sobre el costo de recursos necesarios para completar el trabajo del proyecto, incluyendo mano de obra, equipo, suministros, servicios, instalaciones y materiales. Puede determinarse mediante juicio de expertos o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
   "pasos_accionables": [
     "Identificar los recursos necesarios para cada paquete de trabajo",
     "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos, bottom-up)",
-    "Calcular costos directos e indirectos",
+    "Calcular costos directos e indirectos, teniendo en cuenta también el costo de la calidad, el costo de financiamiento y las cotizaciones de proveedores",
     "Documentar reservas de contingencia",
     "Registrar supuestos, restricciones y nivel de confianza"
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Estima tus Costos de Actividad",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-015-estimacion_costos_actividad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular costos directos e indirectos",
+      "texto_nuevo": "Calcular costos directos e indirectos, teniendo en cuenta también el costo de la calidad, el costo de financiamiento y las cotizaciones de proveedores",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2175",
+        "frase": "the cost of quality, cost of financing, vendor bids, and indirect costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide tener en cuenta también el costo de la calidad, el de financiamiento y las cotizaciones de proveedores; el paso los omite.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-015-estimacion_costos_actividad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proporciona información sobre el costo de recursos necesarios para completar el trabajo del proyecto, incluyendo mano de obra, equipo, suministros y materiales. Puede determinarse mediante juicio de expertos o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
+      "texto_nuevo": "Proporciona información sobre el costo de recursos necesarios para completar el trabajo del proyecto, incluyendo mano de obra, equipo, suministros, servicios, instalaciones y materiales. Puede determinarse mediante juicio de expertos o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2165",
+        "frase": "including labor, equipment, supplies, services, facilities, and material"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de recursos del libro incluye servicios e instalaciones, que el resumen omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Muchas empresas encuentran útil desarrollar sus estrategias ambientales en conjunto con stakeholders críticos como proveedores, clientes, gobierno y ONGs. Este proceso de 'co-creación' cambia el enfoque de ejecución puramente interna a uno colaborativo, permitiendo detectar críticas y ajustar estrategias antes de que se vuelvan públicas.",
   "pasos_accionables": [
-    "Identificar stakeholders críticos en la cadena de valor (proveedores, clientes, ONGs)",
+    "Identificar stakeholders críticos en la cadena de valor (proveedores, clientes, funcionarios de gobierno, ONGs)",
     "Crear comités asesores o roundtables con estos actores",
     "Usar el feedback recibido para refinar metas y compromisos de sostenibilidad"
   ],
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Co-crea tu Cadena de Valor",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-011-expandir_cadena_valor-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar stakeholders críticos en la cadena de valor (proveedores, clientes, ONGs)",
+      "texto_nuevo": "Identificar stakeholders críticos en la cadena de valor (proveedores, clientes, funcionarios de gobierno, ONGs)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6171",
+        "frase": "suppliers, customers, government officials, and sometimes even NGO critics"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración deja fuera a los funcionarios de gobierno, que el libro incluye entre los socios de la co-creación.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

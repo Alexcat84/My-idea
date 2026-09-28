@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Involucramiento del Sindicato en Programas de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Si tu negocio tiene personal sindicalizado, cualquier programa de mejora de calidad necesita la colaboración de los representantes del sindicato desde el principio, no como un permiso automático sino como participación activa y personal de cada uno. Así evitas que el programa se vea como una imposición o como acelerar el trabajo, le das legitimidad ante los trabajadores y te ayuda a identificar a las personas clave para tu equipo de mejora. Invita a los líderes sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, y mantén una comunicación abierta y honesta que reduzca la resistencia al cambio. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
+  "resumen_teorico": "Si tu negocio tiene personal sindicalizado, no descuides la participación del sindicato en tu programa de mejora de calidad desde el principio: puedes sumar a un representante a tu equipo, no como un permiso automático sino como participación personal, o al menos mantenerlos informados. Invita a los líderes sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, lo que te ayuda a identificar a las personas clave para tu equipo de mejora, y mantén una comunicación abierta y honesta. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
   "pasos_accionables": [
     "Programa una reunión temprana con los representantes sindicales para explicar el propósito del programa de calidad",
     "Aclara que buscas participación individual y consultiva, no una aprobación automática",
@@ -12,7 +12,7 @@
     "Resuelve aspectos contractuales como horas extra o turnos que permitan su participación",
     "Mantén una comunicación abierta y transparente para evitar que se perciba como imposición o presión adicional"
   ],
-  "entregable_esperado": "Acuerdo de colaboración con representantes sindicales, con al menos un representante integrado a tu equipo de mejora.",
+  "entregable_esperado": "Acuerdo con los representantes sindicales sobre su participación en el programa de mejora: un representante integrado a tu equipo o, al menos, el compromiso de mantenerlos informados.",
   "nodos_previos": [
     "equipo_mejora_calidad_2",
     "consejo_de_calidad",
@@ -97,6 +97,38 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-010-involucramiento_sindical_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu negocio tiene personal sindicalizado, cualquier programa de mejora de calidad necesita la colaboración de los representantes del sindicato desde el principio, no como un permiso automático sino como participación activa y personal de cada uno. Así evitas que el programa se vea como una imposición o como acelerar el trabajo, le das legitimidad ante los trabajadores y te ayuda a identificar a las personas clave para tu equipo de mejora. Invita a los líderes sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, y mantén una comunicación abierta y honesta que reduzca la resistencia al cambio. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
+      "texto_nuevo": "Si tu negocio tiene personal sindicalizado, no descuides la participación del sindicato en tu programa de mejora de calidad desde el principio: puedes sumar a un representante a tu equipo, no como un permiso automático sino como participación personal, o al menos mantenerlos informados. Invita a los líderes sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, lo que te ayuda a identificar a las personas clave para tu equipo de mejora, y mantén una comunicación abierta y honesta. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3015-3017",
+        "frase": "Whichever way you choose to get union participation, be sure you do not neglect it."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro admite dos vías, un representante en el equipo o solo mantenerlos informados; lo obligatorio es no descuidar su participación.; El libro dice que no conoce sindicato que no coopere de lleno; no hay resistencia que reducir.; El libro no habla de legitimidad ni de resistencia; dice que los sindicatos apoyan estos programas.; El libro solo registra el temor a que se vea como aceleración, y lo da por infundado; la legitimidad no aparece.; El libro sí pide con fuerza no descuidar al sindicato en la planificación, así que no endurece; lo que se pierde es que basta con mantenerlos informados.; Legitimidad ante los trabajadores y reducción de la resistencia son efectos que el libro no afirma.; Se cae la vía de solo mantenerlos informados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-involucramiento_sindical_calidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Acuerdo de colaboración con representantes sindicales, con al menos un representante integrado a tu equipo de mejora.",
+      "texto_nuevo": "Acuerdo con los representantes sindicales sobre su participación en el programa de mejora: un representante integrado a tu equipo o, al menos, el compromiso de mantenerlos informados.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3015",
+        "frase": "Some companies appoint a union representative... Others merely keep them informed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Vuelve requisito lo que el libro da como una de dos opciones.; Vuelve requisito lo que el libro da como una opción.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

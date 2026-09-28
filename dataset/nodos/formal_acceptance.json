@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Verificar la corrección del entregable mediante el proceso de Control de Calidad",
     "Validar que el entregable cumple los criterios de aceptación acordados con el cliente",
-    "Documentar el estado del entregable (aceptado o no) y comentarios si aplica",
+    "Documentar el estado del entregable (aceptado o no) y, si no se aceptó, por qué y qué cambios se requieren para aceptarlo",
     "Obtener la firma de aceptación del cliente o patrocinador",
     "Remitir la documentación al proceso de Cierre del Proyecto o Fase"
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Confirma la Aceptación Formal",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-015-formal_acceptance-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar el estado del entregable (aceptado o no) y comentarios si aplica",
+      "texto_nuevo": "Documentar el estado del entregable (aceptado o no) y, si no se aceptó, por qué y qué cambios se requieren para aceptarlo",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5317",
+        "frase": "Document why the requirement or deliverable was not accepted and the required changes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que los comentarios registran por qué no se aceptó y qué cambios se requieren para aceptarlo; el nodo lo deja genérico.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

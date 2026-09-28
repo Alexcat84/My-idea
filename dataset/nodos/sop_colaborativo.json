@@ -9,7 +9,7 @@
     "Establecer un ciclo recurrente (ej. mensual) de planificación de demanda y suministro.",
     "Recolectar pronósticos de ventas y precios de mercado.",
     "Traducir pronósticos en necesidades de materia prima y producto terminado por instalación.",
-    "Simular el plan de suministro contra el plan de demanda para detectar descalces.",
+    "Armar el plan de suministro (ritmos de producción o compra y rutas de los vehículos) y simularlo contra el plan de demanda para detectar descalces.",
     "Ajustar y validar el plan con todos los socios antes de ponerlo en marcha."
   ],
   "entregable_esperado": "Plan operativo S&OP validado y consensuado para el próximo ciclo (ej. 30 días).",
@@ -43,6 +43,23 @@
         "motivo": "La informacion como base de coordinacion y pronostico precede a convertir datos en un plan S&OP compartido; se evita proceso_sop_mop por duplicado."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-017-sop_colaborativo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Simular el plan de suministro contra el plan de demanda para detectar descalces.",
+      "texto_nuevo": "Armar el plan de suministro (ritmos de producción o compra y rutas de los vehículos) y simularlo contra el plan de demanda para detectar descalces.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4149",
+        "frase": "step 3 creates a supply plan that shows product production / procurement rates"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma omisión del paso de crear el plan de suministro.; Se salta el paso del libro que arma el plan de suministro con ritmos de producción o compra y rutas; el nodo simula un plan que nunca se pidió hacer.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

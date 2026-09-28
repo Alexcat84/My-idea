@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Estructura del Estado de Resultados (Income Statement)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Todo estado de resultados tiene tres categorías principales: ventas/ingresos (arriba), costos y gastos (en medio), y utilidad (abajo). El crecimiento de 'línea superior' se refiere a ventas; observar los números más grandes en relación a las ventas revela las prioridades reales de la empresa, especialmente el COGS o COS.",
+  "resumen_teorico": "Todo estado de resultados tiene tres categorías principales: ventas/ingresos (arriba), costos y gastos (en medio), y utilidad (abajo). El crecimiento de 'línea superior' se refiere a ventas; observar los números más grandes en relación a las ventas suele revelar las prioridades de la empresa. Si el COGS o COS pesa mucho sobre las ventas, vigílalo de cerca y averigua qué incluye.",
   "pasos_accionables": [
     "Identificar la línea de ventas/ingresos como punto de referencia (100%).",
     "Calcular el porcentaje que representa cada línea de costo respecto a las ventas.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Lee tu Estado de Resultados",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-018-estructura_estado_resultados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo estado de resultados tiene tres categorías principales: ventas/ingresos (arriba), costos y gastos (en medio), y utilidad (abajo). El crecimiento de 'línea superior' se refiere a ventas; observar los números más grandes en relación a las ventas revela las prioridades reales de la empresa, especialmente el COGS o COS.",
+      "texto_nuevo": "Todo estado de resultados tiene tres categorías principales: ventas/ingresos (arriba), costos y gastos (en medio), y utilidad (abajo). El crecimiento de 'línea superior' se refiere a ventas; observar los números más grandes en relación a las ventas suele revelar las prioridades de la empresa. Si el COGS o COS pesa mucho sobre las ventas, vigílalo de cerca y averigua qué incluye.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "495",
+        "frase": "If that line is a large fraction of sales, chances are you’ll want to watch"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que así se puede saber por lo general (usually); el nodo lo vuelve certeza.; El libro pide vigilar el COGS o COS solo si es una fracción grande de las ventas y saber exactamente qué incluye; el nodo pierde la condición.; Mismo endurecimiento que la marca 0: 'usually' pasa a revelación segura.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

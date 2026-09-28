@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "EBITDA como Medida de Eficiencia Operativa",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "EBITDA (utilidad antes de intereses, impuestos, depreciación y amortización) es una métrica popular en Wall Street porque ignora gastos no monetarios como la depreciación, ofreciendo una visión más pura de la eficiencia operativa. Surgió como respuesta a manipulaciones de EBIT mediante juegos con depreciación (caso Waste Management).",
+  "resumen_teorico": "EBITDA (utilidad antes de intereses, impuestos, depreciación y amortización) se volvió popular en Wall Street; algunos la ven como mejor medida de la eficiencia operativa porque ignora gastos no monetarios como la depreciación. Surgió como respuesta a manipulaciones de EBIT mediante juegos con depreciación (caso Waste Management). Hoy Wall Street prefiere el flujo de caja libre.",
   "pasos_accionables": [
     "Calcular EBITDA = EBIT + Depreciación + Amortización",
     "Comparar EBITDA con EBIT para entender el peso de gastos no monetarios",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Mide tu Eficiencia Operativa Real",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-005-calculo_ebitda-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "EBITDA (utilidad antes de intereses, impuestos, depreciación y amortización) es una métrica popular en Wall Street porque ignora gastos no monetarios como la depreciación, ofreciendo una visión más pura de la eficiencia operativa. Surgió como respuesta a manipulaciones de EBIT mediante juegos con depreciación (caso Waste Management).",
+      "texto_nuevo": "EBITDA (utilidad antes de intereses, impuestos, depreciación y amortización) se volvió popular en Wall Street; algunos la ven como mejor medida de la eficiencia operativa porque ignora gastos no monetarios como la depreciación. Surgió como respuesta a manipulaciones de EBIT mediante juegos con depreciación (caso Waste Management). Hoy Wall Street prefiere el flujo de caja libre.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "918",
+        "frase": "Some people think EBITDA is a better measure of a company’s operating efficiency"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro aclara que el EBITDA ya no es la medida favorita de Wall Street; hoy lo es el flujo de caja libre.; El libro dice que algunos creen que es mejor medida de eficiencia operativa; el nodo lo afirma como hecho.; Misma pérdida: ya no es la favorita de Wall Street.; Mismo endurecimiento de una opinión ('some people think') a hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -9,7 +9,7 @@
     "Identificar qué inversiones en I+D o software generan ingresos futuros y podrían amortizarse.",
     "Documentar criterios de factibilidad técnica antes de decidir amortizar vs. gastar.",
     "Registrar patentes y propiedad intelectual en el balance y amortizarlas a lo largo de su vida útil, es decir, la vida del flujo de ingresos que generan.",
-    "Ser conservador: si hay duda, expensar en el periodo actual en vez de inflar ganancias."
+    "Sugerencia de My Idea: si hay duda sobre la factibilidad técnica, registrar la I+D como gasto en el periodo en que ocurre, que es el enfoque más conservador, en vez de amortizarla y hacer que las ganancias se vean más altas."
   ],
   "entregable_esperado": "Política contable clara sobre tratamiento de I+D e intangibles, documentada y consistente.",
   "nodos_previos": [
@@ -39,6 +39,23 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro fija la amortizacion de patentes y PI en su vida util o la vida del flujo de ingresos, no en la vida legal (L826: la patente puede valer casi cero tras un par de anos); el paso cambia el plazo.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-086"
+    },
+    {
+      "id": "final-e1-005-activos_intangibles_amortizacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ser conservador: si hay duda, expensar en el periodo actual en vez de inflar ganancias.",
+      "texto_nuevo": "Sugerencia de My Idea: si hay duda sobre la factibilidad técnica, registrar la I+D como gasto en el periodo en que ocurre, que es el enfoque más conservador, en vez de amortizarla y hacer que las ganancias se vean más altas.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "1328",
+        "frase": "Otherwise, it must expense R&D costs as they are incurred—a more conservative approach"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe el gasto inmediato como el enfoque más conservador, no dicta la regla de expensar ante la duda; queda como sugerencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -6,10 +6,10 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "Después del Día Cero Defectos (Día ZD), tienes que convertir los compromisos verbales en acciones concretas: pon metas de mejora específicas y medibles, y mejor si las define quien hace el trabajo, no tú desde arriba. Evita metas de cronograma y enfócate en reducir defectos, porque la mejora en los tiempos llega sola cuando bajan los errores.",
   "pasos_accionables": [
-    "Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Fíjalas a 30, 60 y 90 días",
+    "Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Por lo general, conviene fijarlas a 30, 60 y 90 días",
     "Asegúrate de que las metas sean retadoras, no fáciles de alcanzar.",
     "Publica las metas en un lugar visible para todo el equipo.",
-    "Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras o un lugar de estacionamiento preferencial).",
+    "Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras).",
     "Además de la meta mensual en el gráfico, usa medidas de corto plazo (por ejemplo, horas sin defectos) para mantener el enfoque diario."
   ],
   "entregable_esperado": "Lista de metas de mejora específicas, medibles y publicadas por cada equipo o área de trabajo.",
@@ -68,6 +68,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-010-fijacion_de_metas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras o un lugar de estacionamiento preferencial).",
+      "texto_nuevo": "Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras).",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3285",
+        "frase": "To stimulate the ECR activity at HPA Bill decided to draw a winner"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El estacionamiento se sorteaba entre quienes enviaban formularios de causas de error, no premiaba a los grupos que mejoran.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-010-fijacion_de_metas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Fíjalas a 30, 60 y 90 días",
+      "texto_nuevo": "Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Por lo general, conviene fijarlas a 30, 60 y 90 días",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1631",
+        "frase": "Usually, there should be 30-, 60-, and 90-day goals."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece 'usually' a una instrucción fija.; Endurece 'usually'.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

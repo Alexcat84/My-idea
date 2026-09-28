@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Si vas a comer mierda, no la mordisquees (Reset Total de Expectativas)",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando tienes que dar una mala noticia a quienes invirtieron en ti, a tu equipo o al mercado (por ejemplo, bajar tus proyecciones financieras), sientes la tentación de hacerlo poco a poco para suavizar el golpe. Pero la experiencia de Loudcloud muestra que los ajustes parciales te cuestan credibilidad una y otra vez: si ajustas de a poco y después vuelves a fallar con la nueva meta, pierdes toda la confianza. Lo correcto es absorber todo el dolor de una sola vez: pon una expectativa realista y conservadora, una que sí puedas cumplir, aunque el golpe inicial duela más.",
+  "resumen_teorico": "Cuando tienes que dar una mala noticia a quienes invirtieron en ti, a tu equipo o al mercado (por ejemplo, bajar tus proyecciones financieras), sientes la tentación de hacerlo poco a poco para suavizar el golpe. Pero si ajustas de a poco y después vuelves a fallar con la nueva meta, pierdes toda la confianza que te quedaba. Lo correcto es absorber todo el dolor de una sola vez: pon una expectativa realista y conservadora, una que sí puedas cumplir, aunque el golpe inicial duela más.",
   "pasos_accionables": [
     "Identifica cuándo un objetivo o proyección ya no es alcanzable",
     "Resiste la tentación de ajustar la meta poco a poco",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Da la Mala Noticia de Golpe",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-012-reset_total_de_expectativas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tienes que dar una mala noticia a quienes invirtieron en ti, a tu equipo o al mercado (por ejemplo, bajar tus proyecciones financieras), sientes la tentación de hacerlo poco a poco para suavizar el golpe. Pero la experiencia de Loudcloud muestra que los ajustes parciales te cuestan credibilidad una y otra vez: si ajustas de a poco y después vuelves a fallar con la nueva meta, pierdes toda la confianza. Lo correcto es absorber todo el dolor de una sola vez: pon una expectativa realista y conservadora, una que sí puedas cumplir, aunque el golpe inicial duela más.",
+      "texto_nuevo": "Cuando tienes que dar una mala noticia a quienes invirtieron en ti, a tu equipo o al mercado (por ejemplo, bajar tus proyecciones financieras), sientes la tentación de hacerlo poco a poco para suavizar el golpe. Pero si ajustas de a poco y después vuelves a fallar con la nueva meta, pierdes toda la confianza que te quedaba. Lo correcto es absorber todo el dolor de una sola vez: pon una expectativa realista y conservadora, una que sí puedas cumplir, aunque el golpe inicial duela más.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "410",
+        "frase": "if we didn't lower it enough, we might have to reset again"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Loudcloud no hizo ajustes parciales repetidos: sopesó el riesgo de un segundo ajuste y recortó de una vez.; Mismo defecto: la experiencia de ajustes parciales repetidos es inventada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

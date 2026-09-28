@@ -4,14 +4,14 @@
   "dominio": "exportacion",
   "titulo_concepto": "Certificación de Origen para Beneficios FTA",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. Los envíos de bajo valor no necesitan COO; la factura comercial puede indicar que el bien califica. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Verificar con el comprador o agente aduanal si el FTA requiere un formato específico de COO",
     "Completar la información requerida: nombre/dirección de importador, exportador y productor",
     "Incluir descripción detallada del bien y su clasificación HS a 6 dígitos o más",
     "Indicar el criterio de preferencia según el cual el bien origina (código o explicación textual)",
     "Firmar el certificado por una persona con autoridad legal y acceso a los registros de respaldo",
-    "Conservar la documentación de respaldo durante al menos 5 años (desde la fecha de la certificación si eres exportador o productor; desde la importación si eres importador) en caso de auditoría aduanera"
+    "Conservar la documentación de respaldo sobre cómo calificó el producto en caso de auditoría aduanera; la mayoría de los tratados exigen guardarla hasta 5 años"
   ],
   "entregable_esperado": "Certificado de Origen (COO) completo y firmado, junto con documentación de respaldo archivada",
   "nodos_previos": [
@@ -63,6 +63,39 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-001-certificacion_origen_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. Los envíos de bajo valor no necesitan COO; la factura comercial puede indicar que el bien califica. El documento debe incluir información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4887",
+        "frase": "Shipments with a low value do not need a COO."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la excepción de los envíos de bajo valor.; Se cae la excepción del libro: los envíos de bajo valor no necesitan COO y la factura comercial puede indicar que el bien califica.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-001-certificacion_origen_producto-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conservar la documentación de respaldo durante al menos 5 años (desde la fecha de la certificación si eres exportador o productor; desde la importación si eres importador) en caso de auditoría aduanera",
+      "texto_nuevo": "Conservar la documentación de respaldo sobre cómo calificó el producto en caso de auditoría aduanera; la mayoría de los tratados exigen guardarla hasta 5 años",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4893",
+        "frase": "Most of the FTA agreements require retention of the documents for up to 5 years."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la mayoría de los acuerdos exigen conservar hasta 5 años; el mínimo y los puntos de inicio del plazo no están en el libro.; Mismo defecto: plazo convertido en mínimo y fechas de inicio añadidas.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

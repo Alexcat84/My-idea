@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diez Principios de Medición Efectiva",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Antes de implementar sistemas de medición, es necesario considerar diez principios fundamentales que aseguran que las mediciones sean útiles y accionables: definir el propósito, enfocarse en el cliente, priorizar utilidad sobre facilidad de recolección, fomentar participación de todos los niveles, medir cerca en el tiempo de la actividad, incluir indicadores adelantados y rezagados, planificar de antemano el análisis, buscar simplicidad, evaluar periódicamente la precisión y reconocer que las mediciones por sí solas no mejoran los procesos.",
+  "resumen_teorico": "Antes de implementar sistemas de medición, es necesario considerar diez principios fundamentales que pueden ayudar a que las mediciones sean útiles y accionables: definir el propósito, enfocarse en el cliente, priorizar utilidad sobre facilidad de recolección, fomentar participación de todos los niveles, medir cerca en el tiempo de la actividad, incluir indicadores adelantados y rezagados, planificar de antemano el análisis, buscar simplicidad, evaluar periódicamente la precisión y reconocer que las mediciones por sí solas no mejoran los procesos.",
   "pasos_accionables": [
     "Definir el propósito y uso de la medición antes de recolectar datos",
     "Priorizar medidas relacionadas con clientes internos y externos",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Mide con Principios Claros",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-principios_medicion_efectiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de implementar sistemas de medición, es necesario considerar diez principios fundamentales que aseguran que las mediciones sean útiles y accionables: definir el propósito, enfocarse en el cliente, priorizar utilidad sobre facilidad de recolección, fomentar participación de todos los niveles, medir cerca en el tiempo de la actividad, incluir indicadores adelantados y rezagados, planificar de antemano el análisis, buscar simplicidad, evaluar periódicamente la precisión y reconocer que las mediciones por sí solas no mejoran los procesos.",
+      "texto_nuevo": "Antes de implementar sistemas de medición, es necesario considerar diez principios fundamentales que pueden ayudar a que las mediciones sean útiles y accionables: definir el propósito, enfocarse en el cliente, priorizar utilidad sobre facilidad de recolección, fomentar participación de todos los niveles, medir cerca en el tiempo de la actividad, incluir indicadores adelantados y rezagados, planificar de antemano el análisis, buscar simplicidad, evaluar periódicamente la precisión y reconocer que las mediciones por sí solas no mejoran los procesos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18980",
+        "frase": "principles that can help to develop effective measurements for quality"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los principios pueden ayudar a desarrollar mediciones efectivas, no que lo aseguren.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

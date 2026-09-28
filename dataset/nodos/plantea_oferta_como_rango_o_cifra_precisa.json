@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Plantea tu oferta como un rango o con una cifra precisa, no redonda",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda. Ambas formas transmiten que hiciste un cálculo cuidadoso, en vez de improvisar un número al azar, y dejan menos margen para que te empujen hacia abajo. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales. Esto importa especialmente cuando no conoces con certeza el valor de mercado de lo que negocias.",
+  "resumen_teorico": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales y deja menos margen para que te empujen hacia abajo. Esto sirve sobre todo cuando te exigen dar tu precio primero.",
   "pasos_accionables": [
-    "Antes de dar tu precio, calcula un rango donde el número más bajo sea la cifra que de verdad quieres conseguir.",
-    "Si prefieres dar una sola cifra, hazla específica y no redonda.",
+    "Antes de dar tu precio, calcula un rango donde el número más bajo sea la cifra que de verdad quieres conseguir, y apóyalo en lo que se paga en otros lugares por algo parecido.",
+    "Si prefieres dar una sola cifra, hazla específica y no redonda, aunque pedir un rango al alza suele conseguir bastante más que pedir una cifra exacta.",
     "Practica decir el rango o la cifra en voz alta antes de la reunión para que suene natural, no improvisado.",
     "Si te preguntan por qué esa cifra exacta, ten lista una explicación breve basada en tus costos o en el mercado."
   ],
@@ -93,6 +93,56 @@
         "motivo": "Tras ordenar los puntos de una negociacion se llega a como plantear la cifra de la oferta."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-004-plantea_oferta_como_rango_o_cifra_precisa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda. Ambas formas transmiten que hiciste un cálculo cuidadoso, en vez de improvisar un número al azar, y dejan menos margen para que te empujen hacia abajo. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales. Esto importa especialmente cuando no conoces con certeza el valor de mercado de lo que negocias.",
+      "texto_nuevo": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales y deja menos margen para que te empujen hacia abajo. Esto sirve sobre todo cuando te exigen dar tu precio primero.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "2674-2712",
+        "frase": "da la impresión de que son el resultado de un cálculo concienzudo"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye la impresión de cálculo concienzudo y de cifra firme solo a la cifra no redonda, no al rango.; El libro liga no conocer el valor de mercado a ceder la iniciativa; el rango es para cuando te exigen dar tu precio.; Mismo defecto: el efecto de cálculo cuidadoso se extiende sin base al rango.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-004-plantea_oferta_como_rango_o_cifra_precisa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si prefieres dar una sola cifra, hazla específica y no redonda.",
+      "texto_nuevo": "Si prefieres dar una sola cifra, hazla específica y no redonda, aunque pedir un rango al alza suele conseguir bastante más que pedir una cifra exacta.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "2680-2682",
+        "frase": "acababan ganando considerablemente más que quienes pedían una cifra exacta"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que pedir un rango al alza consigue considerablemente más que pedir una cifra exacta; el paso las iguala.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-004-plantea_oferta_como_rango_o_cifra_precisa-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de dar tu precio, calcula un rango donde el número más bajo sea la cifra que de verdad quieres conseguir.",
+      "texto_nuevo": "Antes de dar tu precio, calcula un rango donde el número más bajo sea la cifra que de verdad quieres conseguir, y apóyalo en lo que se paga en otros lugares por algo parecido.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "2676",
+        "frase": "En otras empresas líderes como la corporación X, en este puesto se está cobrando"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea el rango apoyado en lo que se paga en otros lugares por algo similar, lo que evita poner al otro a la defensiva; el paso lo pierde.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

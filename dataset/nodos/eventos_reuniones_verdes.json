@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Organización de Eventos y Reuniones Sostenibles",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Cuando los eventos presenciales son inevitables, se pueden 'verdear' considerando la ubicación central para minimizar viajes, incorporando criterios de sostenibilidad en la lista de compras, preguntando a proveedores sobre sus prácticas, y gestionando el destino de los materiales sobrantes (donar, reusar, compostar, reciclar). Además, la compra de compensaciones de carbono puede hacer el evento 'carbono neutral'.",
+  "resumen_teorico": "Cuando los eventos presenciales son inevitables, se pueden 'verdear' considerando la ubicación central para minimizar viajes, incorporando criterios de sostenibilidad en la lista de compras cuando el costo y la conveniencia lo permitan, preguntando a proveedores sobre sus prácticas, y gestionando el destino de los materiales sobrantes (donar, reusar, compostar, reciclar). Además, la compra de compensaciones de carbono puede hacer el evento 'carbono neutral'.",
   "pasos_accionables": [
     "Incluir el criterio 'verde' en la selección de proveedores, ubicación y materiales del evento",
     "Comunicar a los asistentes las opciones de participación sostenible (reciclaje, transporte)",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Organiza Eventos Más Sostenibles",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-011-eventos_reuniones_verdes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando los eventos presenciales son inevitables, se pueden 'verdear' considerando la ubicación central para minimizar viajes, incorporando criterios de sostenibilidad en la lista de compras, preguntando a proveedores sobre sus prácticas, y gestionando el destino de los materiales sobrantes (donar, reusar, compostar, reciclar). Además, la compra de compensaciones de carbono puede hacer el evento 'carbono neutral'.",
+      "texto_nuevo": "Cuando los eventos presenciales son inevitables, se pueden 'verdear' considerando la ubicación central para minimizar viajes, incorporando criterios de sostenibilidad en la lista de compras cuando el costo y la conveniencia lo permitan, preguntando a proveedores sobre sus prácticas, y gestionando el destino de los materiales sobrantes (donar, reusar, compostar, reciclar). Además, la compra de compensaciones de carbono puede hacer el evento 'carbono neutral'.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2414",
+        "frase": "choose the more sustainable options when cost and convenience don't demand another choice"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona elegir la opción sostenible a que el costo y la conveniencia no exijan otra; el nodo pierde esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

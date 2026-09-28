@@ -4,11 +4,11 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cumplimiento de Normativa CAN-SPAM en Marketing por E-mail",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El CAN-SPAM Act regula el envío de correos comerciales a consumidores en EE.UU., exigiendo encabezados verídicos, líneas de asunto no engañosas, mecanismo de exclusión (opt-out) visible, y una dirección postal válida del remitente. El incumplimiento puede generar sanciones y rechazo del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "El CAN-SPAM Act regula el envío de correos comerciales a consumidores en EE.UU., exigiendo encabezados verídicos, líneas de asunto no engañosas, mecanismo de exclusión (opt-out) visible y respetado, un aviso claro de que el mensaje es publicidad y una dirección postal válida del remitente. El correo no solicitado puede provocar rechazo en consumidores saturados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Revisar que los encabezados y líneas de asunto de los correos sean verídicos y no engañosos",
     "Incluir mecanismo de opt-out visible y funcional en cada comunicación",
-    "Incluir dirección postal física válida del remitente en los correos",
+    "Incluir en los correos un aviso claro de que el mensaje es publicidad y la dirección postal física válida del remitente",
     "Honrar las solicitudes de exclusión de manera oportuna"
   ],
   "entregable_esperado": "Campañas de e-mail marketing conformes con la normativa CAN-SPAM",
@@ -70,6 +70,39 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-014-cumplimiento_can_spam-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El CAN-SPAM Act regula el envío de correos comerciales a consumidores en EE.UU., exigiendo encabezados verídicos, líneas de asunto no engañosas, mecanismo de exclusión (opt-out) visible, y una dirección postal válida del remitente. El incumplimiento puede generar sanciones y rechazo del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "El CAN-SPAM Act regula el envío de correos comerciales a consumidores en EE.UU., exigiendo encabezados verídicos, líneas de asunto no engañosas, mecanismo de exclusión (opt-out) visible y respetado, un aviso claro de que el mensaje es publicidad y una dirección postal válida del remitente. El correo no solicitado puede provocar rechazo en consumidores saturados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3219-3221",
+        "frase": "An included clear notice must advise recipients that the message is an advertisement"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no habla de sanciones ni ata el rechazo al incumplimiento: el rechazo que menciona viene de consumidores saturados de correos no solicitados.; La lista de requisitos del libro incluye el aviso claro de que el mensaje es publicidad, que el nodo omite.; Mismo defecto que la marca 0.; Mismo defecto que la marca 2.; Se caen el aviso de publicidad y la obligación de respetar las solicitudes de exclusión.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-014-cumplimiento_can_spam-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir dirección postal física válida del remitente en los correos",
+      "texto_nuevo": "Incluir en los correos un aviso claro de que el mensaje es publicidad y la dirección postal física válida del remitente",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3221",
+        "frase": "An included clear notice must advise recipients that the message is an advertisement"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige, en el mismo requisito que la dirección postal, un aviso claro de que el mensaje es publicidad, y ningún paso lo recoge.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

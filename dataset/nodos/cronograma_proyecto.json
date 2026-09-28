@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cronograma del Proyecto (Project Schedule)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto.",
   "pasos_accionables": [
     "Recopilar lista de actividades, diagrama de red y estimaciones de duración",
     "Determinar dependencias entre actividades",
@@ -130,6 +130,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-015-cronograma_proyecto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+      "texto_nuevo": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2023",
+        "frase": "to determine the start and finish dates for project activities"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje del cronograma no le atribuye el propósito de comunicar plazos a los interesados; es un para qué añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

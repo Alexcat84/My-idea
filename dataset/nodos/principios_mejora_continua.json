@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Principios de Mejora Continua (Shingo)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Estos principios promueven la búsqueda incesante del cambio beneficioso, desde mejoras incrementales hasta disruptivas. Incluyen: enfocarse en el proceso (los resultados son consecuencia del proceso), adoptar pensamiento científico (ciclos de experimentación y aprendizaje), fluir y jalar valor (flujo continuo sin interrupciones), asegurar calidad en la fuente (detectar y corregir errores en el punto de origen), y buscar la perfección (meta aspiracional que genera una mentalidad de mejora constante).",
+  "resumen_teorico": "Estos principios promueven la búsqueda incesante del cambio beneficioso, desde mejoras incrementales hasta disruptivas. Incluyen: enfocarse en el proceso (los resultados son consecuencia del proceso), adoptar pensamiento científico (ciclos de experimentación y aprendizaje), fluir y jalar valor (crear valor en respuesta a la demanda real y en un flujo continuo sin interrupciones), asegurar calidad en la fuente (detectar y corregir errores en el punto de origen), y buscar la perfección (meta aspiracional que genera una mentalidad de mejora constante).",
   "pasos_accionables": [
     "Mapear procesos clave y evaluar su estabilidad y capacidad",
     "Implementar ciclos de experimentación tipo PDCA para validar mejoras",
-    "Diseñar flujo continuo de valor eliminando interrupciones y esperas",
+    "Diseñar flujo continuo de valor que responda a la demanda real, eliminando interrupciones y esperas",
     "Establecer controles de calidad en el origen de cada proceso",
     "Definir metas aspiracionales de perfección como guía de mejora continua"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Persigue la Mejora Continua",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-principios_mejora_continua-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estos principios promueven la búsqueda incesante del cambio beneficioso, desde mejoras incrementales hasta disruptivas. Incluyen: enfocarse en el proceso (los resultados son consecuencia del proceso), adoptar pensamiento científico (ciclos de experimentación y aprendizaje), fluir y jalar valor (flujo continuo sin interrupciones), asegurar calidad en la fuente (detectar y corregir errores en el punto de origen), y buscar la perfección (meta aspiracional que genera una mentalidad de mejora constante).",
+      "texto_nuevo": "Estos principios promueven la búsqueda incesante del cambio beneficioso, desde mejoras incrementales hasta disruptivas. Incluyen: enfocarse en el proceso (los resultados son consecuencia del proceso), adoptar pensamiento científico (ciclos de experimentación y aprendizaje), fluir y jalar valor (crear valor en respuesta a la demanda real y en un flujo continuo sin interrupciones), asegurar calidad en la fuente (detectar y corregir errores en el punto de origen), y buscar la perfección (meta aspiracional que genera una mentalidad de mejora constante).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12891",
+        "frase": "created in response to real demand and a continuous and uninterrupted flow"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define jalar como crear valor en respuesta a la demanda real, además del flujo continuo; esa mitad se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-principios_mejora_continua-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar flujo continuo de valor eliminando interrupciones y esperas",
+      "texto_nuevo": "Diseñar flujo continuo de valor que responda a la demanda real, eliminando interrupciones y esperas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12891",
+        "frase": "created in response to real demand and a continuous and uninterrupted flow"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define jalar como crear valor en respuesta a la demanda real, además del flujo continuo; esa mitad se cae.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

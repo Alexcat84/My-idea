@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cálculo de Aranceles y Tarifas de Importación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos pueden ser altos, por lo que es muy importante considerar su efecto en el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar el código HS (Sistema Armonizado) de 6 dígitos del producto.",
     "Consultar la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para el país de destino específico.",
@@ -75,6 +75,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-001-calculo_de_aranceles_importacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Los aranceles, tarifas portuarias e impuestos pueden ser altos, por lo que es muy importante considerar su efecto en el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3681",
+        "frase": "Because tariffs, port handling fees, and taxes can be high, it is very important"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que estos cargos pueden ser altos y por eso importa considerar su efecto; el nodo afirma como hecho que afectan significativamente.; Mismo defecto: se endurece el \"can be high\" del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "En la primera conversación, dedica unos minutos a preguntas personales antes de entrar en cifras.",
     "Escucha qué palabras o valores repite la otra parte y usa ese mismo lenguaje al responder.",
     "Menciona con sinceridad algo que tengan en común: forma de trabajar, sector o experiencia previa.",
-    "Evita fingir similitud que no existe, porque se nota y rompe la confianza."
+    "Sugerencia de My Idea: evita fingir una similitud que no existe."
   ],
   "entregable_esperado": "Una nota con dos o tres puntos en común identificados con la otra parte antes de negociar el trato.",
   "nodos_previos": [
@@ -40,6 +40,23 @@
         "motivo": "Orden invertido: el propio vecino dice que se busca el terreno comun antes de hablar de precio, asi que prepara el nodo y no va despues de dar la oferta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-004-muestra_puntos_en_comun_antes_de_negociar-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita fingir similitud que no existe, porque se nota y rompe la confianza.",
+      "texto_nuevo": "Sugerencia de My Idea: evita fingir una similitud que no existe.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4783-4803",
+        "frase": "confiamos más en las personas cuando nos parecen similares a nosotros"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje de similitud no dice que fingirla se note ni que rompa la confianza; la causa es añadida.; Mismo defecto: la causa 'se nota y rompe la confianza' no está en el libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -7,10 +7,10 @@
   "resumen_teorico": "En lugar de corregir errores en documentos incompletos o incorrectos dentro del propio departamento receptor (lo que oculta el problema y perpetúa la causa), conviene devolver inmediatamente el documento a quien lo generó, explicando el motivo del rechazo. Esto crea un ciclo de aprendizaje rápido: el generador del error recibe la señal de inmediato y corrige su comportamiento futuro, en lugar de que otros absorban silenciosamente el costo del error.",
   "pasos_accionables": [
     "Detectar el punto del proceso donde llegan documentos o insumos incorrectos.",
-    "Establecer una política de devolución inmediata al emisor original, sin corregir internamente.",
+    "Revisar las instrucciones para que sean más claras y establecer una política de devolución inmediata al emisor original, sin corregir internamente.",
     "Acompañar la devolución con una explicación clara del error y su impacto (ej. demora en pago).",
     "Registrar la tasa de incidencias semana a semana para verificar la reducción del problema.",
-    "Comunicar los resultados a los involucrados para reforzar el nuevo comportamiento ('los rumores viajan rápido')."
+    "Sugerencia de My Idea: comunicar los resultados a los involucrados para reforzar el nuevo comportamiento."
   ],
   "entregable_esperado": "Un protocolo formal de devolución de documentos incorrectos al origen, con métricas de reducción de incidencias en pocas semanas.",
   "nodos_previos": [
@@ -40,6 +40,40 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-023 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-009-retroalimentacion_inmediata_de_errores-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer una política de devolución inmediata al emisor original, sin corregir internamente.",
+      "texto_nuevo": "Revisar las instrucciones para que sean más claras y establecer una política de devolución inmediata al emisor original, sin corregir internamente.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4740",
+        "frase": "(1) revise the instructions, for better clarity;"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El cambio del libro tenía dos partes: aclarar las instrucciones y devolver el documento; el paso pierde la primera.; Mismo defecto: falta revisar las instrucciones para que sean más claras.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-009-retroalimentacion_inmediata_de_errores-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar los resultados a los involucrados para reforzar el nuevo comportamiento ('los rumores viajan rápido').",
+      "texto_nuevo": "Sugerencia de My Idea: comunicar los resultados a los involucrados para reforzar el nuevo comportamiento.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4740",
+        "frase": "The problem all but disappeared in a short while. Rumors travel fast."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro 'los rumores viajan rápido' explica por qué el problema desapareció solo; no es un consejo de comunicar resultados. Queda como sugerencia.; Mismo defecto: el paso usa la frase del libro para justificar algo que el libro no recomienda.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

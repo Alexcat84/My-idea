@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Métricas de Servicio al Cliente: Build-to-Stock vs Build-to-Order",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Existen dos modelos operativos con métricas de servicio distintas. Build-to-Stock (BTS) aplica a productos commodity que deben estar disponibles de inmediato (medido por fill rate de orden completa y de línea de producto). Build-to-Order (BTO) aplica a productos personalizados por pedido (medido por tiempo de respuesta cotizado y tasa de cumplimiento a tiempo). Elegir y medir el modelo correcto es esencial para alinear expectativas del cliente con la operación.",
+  "resumen_teorico": "Existen dos modelos operativos con métricas de servicio distintas. Build-to-Stock (BTS) aplica a productos commodity que deben estar disponibles de inmediato (medido por fill rate de orden completa y de línea de producto, entregas a tiempo, pedidos pendientes y devoluciones). Build-to-Order (BTO) aplica a productos personalizados por pedido (medido por tiempo de respuesta cotizado, tasa de cumplimiento y de entrega a tiempo, atrasos y garantías). Elegir y medir el modelo correcto es esencial para alinear expectativas del cliente con la operación.",
   "pasos_accionables": [
     "Determinar si tu producto/servicio opera bajo modelo BTS o BTO",
     "Si es BTS, medir el order fill rate y el line-item fill rate",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Compara Fabricar Contra Pedido o Stock",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-017-metricas_servicio_cliente_bts_bto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos modelos operativos con métricas de servicio distintas. Build-to-Stock (BTS) aplica a productos commodity que deben estar disponibles de inmediato (medido por fill rate de orden completa y de línea de producto). Build-to-Order (BTO) aplica a productos personalizados por pedido (medido por tiempo de respuesta cotizado y tasa de cumplimiento a tiempo). Elegir y medir el modelo correcto es esencial para alinear expectativas del cliente con la operación.",
+      "texto_nuevo": "Existen dos modelos operativos con métricas de servicio distintas. Build-to-Stock (BTS) aplica a productos commodity que deben estar disponibles de inmediato (medido por fill rate de orden completa y de línea de producto, entregas a tiempo, pedidos pendientes y devoluciones). Build-to-Order (BTO) aplica a productos personalizados por pedido (medido por tiempo de respuesta cotizado, tasa de cumplimiento y de entrega a tiempo, atrasos y garantías). Elegir y medir el modelo correcto es esencial para alinear expectativas del cliente con la operación.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2996-3022",
+        "frase": "On-time delivery rate; Value of total back orders and number of back orders"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da cinco métricas por modelo; el nodo deja solo la primera y pierde entregas a tiempo, pedidos pendientes o atrasados y devoluciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

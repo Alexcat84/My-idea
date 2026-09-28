@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Fallar Rápido, Fallar Seguido (Cultura de Prototipado)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "El tiempo que toma llegar al primer prototipo es una medida de la vitalidad de la cultura de innovación. El fallo no es negativo si ocurre temprano y se convierte en aprendizaje. Los prototipos no necesitan ser físicos ni perfectos; storyboards, escenarios o actuaciones improvisadas sirven para validar ideas en el mundo real antes de invertir grandes recursos.",
+  "resumen_teorico": "El tiempo que toma llegar al primer prototipo es una medida de la vitalidad de la cultura de innovación. El fallo no es negativo si ocurre temprano y se convierte en aprendizaje. Los prototipos deben poder probarse, pero no necesitan ser físicos ni perfectos; storyboards, escenarios o actuaciones improvisadas sirven para probar ideas en el mundo real, como parte del proceso creativo y no solo para validar ideas terminadas.",
   "pasos_accionables": [
     "Reducir el tiempo entre la generación de la idea y la creación de un prototipo tangible.",
     "Crear prototipos rápidos, baratos y 'sucios' (quick, cheap, and dirty).",
@@ -39,6 +39,22 @@
         "evidencia": "Q097-029: El nodo trata de crear prototipos rápidos y baratos y probarlos con usuarios reales para validar ideas antes de invertir, y eso es validación, no ejecución. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-016-fallar_rapido_prototipado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tiempo que toma llegar al primer prototipo es una medida de la vitalidad de la cultura de innovación. El fallo no es negativo si ocurre temprano y se convierte en aprendizaje. Los prototipos no necesitan ser físicos ni perfectos; storyboards, escenarios o actuaciones improvisadas sirven para validar ideas en el mundo real antes de invertir grandes recursos.",
+      "texto_nuevo": "El tiempo que toma llegar al primer prototipo es una medida de la vitalidad de la cultura de innovación. El fallo no es negativo si ocurre temprano y se convierte en aprendizaje. Los prototipos deben poder probarse, pero no necesitan ser físicos ni perfectos; storyboards, escenarios o actuaciones improvisadas sirven para probar ideas en el mundo real, como parte del proceso creativo y no solo para validar ideas terminadas.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1378",
+        "frase": "as part of the creative process and not just as a way of validating"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide prototipar como parte del proceso creativo y no solo para validar ideas terminadas, y exige que el prototipo pueda probarse; el nodo lo reduce a validar.; Mismo matiz: el nodo deja el prototipo solo como validación, lo que el libro descarta expresamente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

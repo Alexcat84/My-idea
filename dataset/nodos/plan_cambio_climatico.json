@@ -4,13 +4,13 @@
   "dominio": "environmental",
   "titulo_concepto": "Construir un Plan de Cambio Climático",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El cambio climático representa un mega-desafío estratégico que impacta a toda empresa e industria. Las compañías deben evaluar su huella de carbono, establecer metas de reducción de emisiones, implementar estrategias de reducción y considerar la compensación de carbono (carbon offsets) como parte de un plan de acción integral, como hizo NetJets Europe.",
+  "resumen_teorico": "El cambio climático representa un mega-desafío estratégico que impacta a toda empresa e industria. Las compañías deben evaluar su huella de carbono, establecer metas de reducción de emisiones, implementar estrategias de reducción y considerar la compensación de carbono (carbon offsets) como parte de un plan de acción integral. No toda empresa necesita hacer tanto como NetJets Europe, pero toda debe vigilar el tema.",
   "pasos_accionables": [
     "Evaluar la huella de carbono de la empresa usando herramientas de assessment",
-    "Establecer metas cuantitativas de reducción de emisiones",
+    "Establecer metas cuantitativas de reducción de emisiones, exigentes pero realistas, fijando las de corto plazo y las públicas pensando en cumplirlas",
     "Identificar e implementar estrategias de reducción de emisiones",
-    "Considerar la compra de offsets de carbono como parte de la estrategia",
-    "Formar un consejo asesor ambiental externo para revisar el plan"
+    "Considerar la compra de offsets de carbono para neutralizar las emisiones que no se puedan evitar, como complemento y nunca como sustituto de reducir las propias",
+    "Si la empresa no tiene en casa toda la experiencia necesaria, considerar la ayuda de expertos externos (consultores, grupos ambientales o un consejo asesor) para revisar el plan"
   ],
   "entregable_esperado": "Plan de acción climática documentado con metas, estrategias de reducción y mecanismo de offsets",
   "nodos_previos": [
@@ -30,5 +30,74 @@
   "etiqueta_arbol": "Traza tu Plan Climático",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-011-plan_cambio_climatico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El cambio climático representa un mega-desafío estratégico que impacta a toda empresa e industria. Las compañías deben evaluar su huella de carbono, establecer metas de reducción de emisiones, implementar estrategias de reducción y considerar la compensación de carbono (carbon offsets) como parte de un plan de acción integral, como hizo NetJets Europe.",
+      "texto_nuevo": "El cambio climático representa un mega-desafío estratégico que impacta a toda empresa e industria. Las compañías deben evaluar su huella de carbono, establecer metas de reducción de emisiones, implementar estrategias de reducción y considerar la compensación de carbono (carbon offsets) como parte de un plan de acción integral. No toda empresa necesita hacer tanto como NetJets Europe, pero toda debe vigilar el tema.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6236",
+        "frase": "Not every company needs to do as much as NetJets Europe."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no toda empresa necesita hacer tanto como NetJets Europe; el nodo la pone de modelo sin ese límite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-011-plan_cambio_climatico-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer metas cuantitativas de reducción de emisiones",
+      "texto_nuevo": "Establecer metas cuantitativas de reducción de emisiones, exigentes pero realistas, fijando las de corto plazo y las públicas pensando en cumplirlas",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6283",
+        "frase": "it is important to stretch but also to be realistic"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide metas exigentes pero realistas y fijar las de corto plazo y las públicas pensando en cumplirlas; el paso lo pierde.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-011-plan_cambio_climatico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar la compra de offsets de carbono como parte de la estrategia",
+      "texto_nuevo": "Considerar la compra de offsets de carbono para neutralizar las emisiones que no se puedan evitar, como complemento y nunca como sustituto de reducir las propias",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6370",
+        "frase": "no substitute for a company reducing its own emissions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta los offsets como complemento para neutralizar lo que no se puede evitar, nunca como sustituto de reducir las propias emisiones.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-011-plan_cambio_climatico-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formar un consejo asesor ambiental externo para revisar el plan",
+      "texto_nuevo": "Si la empresa no tiene en casa toda la experiencia necesaria, considerar la ayuda de expertos externos (consultores, grupos ambientales o un consejo asesor) para revisar el plan",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6291",
+        "frase": "others find it useful to get help from climate change experts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El consejo asesor es el caso de NetJets Europe; el libro presenta la ayuda externa como útil para algunas empresas, y el paso la endurece a paso obligatorio para todas.; Endurece a paso general lo que el libro ofrece como opción útil para las empresas que no tienen la experiencia en casa.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

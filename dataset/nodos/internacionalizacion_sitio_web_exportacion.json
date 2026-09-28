@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Internacionalización del Sitio Web para Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Adaptar el sitio web de la empresa para recibir compradores internacionales es una táctica de bajo costo y alto impacto para iniciar o expandir la exportación. Incluye elementos como conversores de moneda, mensajes de bienvenida a compradores internacionales, políticas claras de devolución y envío, testimonios internacionales, y anuncios segmentados por país.",
+  "resumen_teorico": "Adaptar el sitio web de la empresa para recibir compradores internacionales es una táctica para iniciar o expandir la exportación. Incluye elementos como conversores de moneda, mensajes de bienvenida a compradores internacionales, políticas claras de devolución y envío, testimonios internacionales, y anuncios segmentados por país.",
   "pasos_accionables": [
     "Agregar texto de bienvenida a compradores internacionales en la página de inicio",
     "Incluir un conversor de moneda visible junto a cada botón de compra",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Prepara tu Web al Mundo",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-002-internacionalizacion_sitio_web_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Adaptar el sitio web de la empresa para recibir compradores internacionales es una táctica de bajo costo y alto impacto para iniciar o expandir la exportación. Incluye elementos como conversores de moneda, mensajes de bienvenida a compradores internacionales, políticas claras de devolución y envío, testimonios internacionales, y anuncios segmentados por país.",
+      "texto_nuevo": "Adaptar el sitio web de la empresa para recibir compradores internacionales es una táctica para iniciar o expandir la exportación. Incluye elementos como conversores de moneda, mensajes de bienvenida a compradores internacionales, políticas claras de devolución y envío, testimonios internacionales, y anuncios segmentados por país.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1015-1035",
+        "frase": "Internationalize the site by adding text on your homepage welcoming international buyers."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El plan de ejemplo solo enumera las tácticas del sitio; en ningún sitio las califica de bajo costo ni de alto impacto.; Mismo defecto: el resultado prometido de bajo costo y alto impacto no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

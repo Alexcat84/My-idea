@@ -9,8 +9,8 @@
     "Investigar requisitos legales del país anfitrión sobre participación extranjera en empresas locales",
     "Seleccionar un socio local que aporte conocimiento de mercado, distribución y contactos",
     "Negociar términos de control gerencial y protección de propiedad intelectual",
-    "Contratar asesoría legal calificada tanto en EE.UU. como en el país anfitrión",
-    "Definir mecanismos de resolución de conflictos y salida del joint venture"
+    "Contratar asesoría legal calificada en EE.UU. y considerar también asesoría con experiencia en el país anfitrión, sin depender del socio para las aprobaciones del gobierno ni el consejo legal, porque sus intereses no siempre coinciden con los tuyos",
+    "Sugerencia de My Idea: definir mecanismos de resolución de conflictos y salida del joint venture"
   ],
   "entregable_esperado": "Acuerdo de joint venture formalizado con socio local, incluyendo cláusulas de control y protección de IP",
   "nodos_previos": [
@@ -45,6 +45,40 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-002-joint_ventures_internacionales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contratar asesoría legal calificada tanto en EE.UU. como en el país anfitrión",
+      "texto_nuevo": "Contratar asesoría legal calificada en EE.UU. y considerar también asesoría con experiencia en el país anfitrión, sin depender del socio para las aprobaciones del gobierno ni el consejo legal, porque sus intereses no siempre coinciden con los tuyos",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2447-2449",
+        "frase": "U.S. companies contemplating international joint ventures should consider retaining experienced counsel in the host country"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte que depender del socio para las aprobaciones del gobierno y el consejo legal puede ponerte en desventaja; esa advertencia se cae.; El libro exige asesoría en EE.UU. y solo recomienda considerar la del país anfitrión; el paso endurece la segunda.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-002-joint_ventures_internacionales-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir mecanismos de resolución de conflictos y salida del joint venture",
+      "texto_nuevo": "Sugerencia de My Idea: definir mecanismos de resolución de conflictos y salida del joint venture",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2445",
+        "frase": "will find this issue important in negotiations with the prospective joint venture partner"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje de joint ventures no habla de mecanismos de resolución de conflictos ni de salida; como consejo práctico queda como sugerencia de la casa.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

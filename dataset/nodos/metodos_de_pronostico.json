@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Determinar qué método(s) de pronóstico se ajustan a la disponibilidad de datos históricos",
     "Combinar al menos dos métodos (ej. series de tiempo + causal) para mejorar precisión",
-    "Preferir pronósticos agregados y de corto plazo sobre los muy segmentados o de largo plazo",
+    "Tener en cuenta, al evaluar los pronósticos, que los agregados y de corto plazo son más precisos que los muy segmentados o de largo plazo",
     "Definir el margen de error esperado y crear planes de contingencia para desviaciones (ej. +/-20%)"
   ],
   "entregable_esperado": "Pronóstico de demanda documentado con método(s) utilizados, margen de error estimado y plan de contingencia",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Elige tu Método de Pronóstico",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-017-metodos_de_pronostico-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preferir pronósticos agregados y de corto plazo sobre los muy segmentados o de largo plazo",
+      "texto_nuevo": "Tener en cuenta, al evaluar los pronósticos, que los agregados y de corto plazo son más precisos que los muy segmentados o de largo plazo",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "741",
+        "frase": "short-term forecasts are inherently more accurate than long-term forecasts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide tener en cuenta que esos pronósticos son más precisos al evaluarlos; no aconseja preferirlos sobre los de largo plazo o segmentados.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,14 +4,14 @@
   "dominio": "environmental",
   "titulo_concepto": "Cuánto Gastas y Contaminas el Agua (Huella Hídrica)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El agua dulce escasea cada vez más: para 2030, el 47% de la población mundial enfrentará escasez severa. Por eso tienes que evaluar dos cosas: cuánta agua usas de forma directa e indirecta (el agua 'escondida' en tu cadena de valor), y cuánto contaminas los cuerpos de agua cercanos. Puedes apoyarte en herramientas como Water Footprint Network o CDP Water Disclosure Project para medir y reportar esto.",
+  "resumen_teorico": "El agua dulce escasea cada vez más: se prevé que para 2030 el 47% de la población mundial enfrente escasez severa. Por eso tienes que evaluar dos cosas: cuánta agua usas de forma directa e indirecta (el agua 'escondida' en tu cadena de valor), y cuánto contaminas los cuerpos de agua, directa o indirectamente, incluido el impacto de tus proveedores. Puedes apoyarte en herramientas como Water Footprint Network o CDP Water Disclosure Project para medir y reportar esto.",
   "pasos_accionables": [
     "Mapea y mide el agua que usas directamente en tus operaciones (edificios, fabricación, limpieza)",
     "Evalúa cuánta agua usa indirectamente tu cadena de suministro (el agua escondida en lo que compras)",
     "Pon en contexto tu uso de agua según qué tan escasa es en la zona donde operas",
     "Evalúa el daño que puedes causar a ríos, lagos o ecosistemas acuáticos por lo que descargas o contaminas"
   ],
-  "entregable_esperado": "Un reporte de tu huella hídrica que muestre tu uso directo, indirecto y el contexto de escasez de agua en tu zona",
+  "entregable_esperado": "Un reporte de tu huella hídrica que muestre tu uso directo e indirecto, el contexto de escasez de agua en tu zona y el daño que puedes causar a los cuerpos de agua",
   "nodos_previos": [
     "medir_residuos_empresa"
   ],
@@ -39,6 +39,38 @@
         "evidencia": "F21-014: Medir el uso y la contaminacion de agua de las operaciones y la cadena de suministro es control de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-011-evaluar_huella_hidrica-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El agua dulce escasea cada vez más: para 2030, el 47% de la población mundial enfrentará escasez severa. Por eso tienes que evaluar dos cosas: cuánta agua usas de forma directa e indirecta (el agua 'escondida' en tu cadena de valor), y cuánto contaminas los cuerpos de agua cercanos. Puedes apoyarte en herramientas como Water Footprint Network o CDP Water Disclosure Project para medir y reportar esto.",
+      "texto_nuevo": "El agua dulce escasea cada vez más: se prevé que para 2030 el 47% de la población mundial enfrente escasez severa. Por eso tienes que evaluar dos cosas: cuánta agua usas de forma directa e indirecta (el agua 'escondida' en tu cadena de valor), y cuánto contaminas los cuerpos de agua, directa o indirectamente, incluido el impacto de tus proveedores. Puedes apoyarte en herramientas como Water Footprint Network o CDP Water Disclosure Project para medir y reportar esto.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1755",
+        "frase": "47 percent of the world's population predicted to face severe water shortages by 2030"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da el 47% como predicción; el nodo lo afirma como hecho seguro.; El libro habla de contaminar cuerpos de agua de forma directa o indirecta, incluido el impacto de los proveedores; el nodo lo reduce a los cercanos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-011-evaluar_huella_hidrica-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un reporte de tu huella hídrica que muestre tu uso directo, indirecto y el contexto de escasez de agua en tu zona",
+      "texto_nuevo": "Un reporte de tu huella hídrica que muestre tu uso directo e indirecto, el contexto de escasez de agua en tu zona y el daño que puedes causar a los cuerpos de agua",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1765-1769",
+        "frase": "How much your business and products pollute water bodies directly or indirectly"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea dos categorías de impacto, uso y contaminación; el entregable deja fuera la segunda.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

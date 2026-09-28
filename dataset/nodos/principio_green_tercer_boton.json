@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Principio del Verde como 'Tercer Botón'",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Los atributos ambientales de un producto solo funcionan como diferenciador de compra ('tercer botón') después de que el producto haya cumplido con las expectativas básicas de precio y calidad/desempeño. La mayoría de los consumidores no pagará una prima significativa solo por valores ambientales si el producto no compite en estos dos ejes primarios.",
+  "resumen_teorico": "Los atributos ambientales de un producto por lo general solo funcionan como diferenciador de compra ('tercer botón') después de que el producto haya cumplido con las expectativas básicas de precio y calidad/desempeño. La mayoría de los consumidores no pagará una prima significativa solo por valores ambientales si el producto no compite en estos dos ejes, salvo un nicho pequeño de pioneros verdes.",
   "pasos_accionables": [
     "Verificar que el producto iguale o supere el desempeño de la competencia",
     "Confirmar que el precio sea competitivo antes de resaltar atributos verdes",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Lo Verde Como Tercer Argumento",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-011-principio_green_tercer_boton-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los atributos ambientales de un producto solo funcionan como diferenciador de compra ('tercer botón') después de que el producto haya cumplido con las expectativas básicas de precio y calidad/desempeño. La mayoría de los consumidores no pagará una prima significativa solo por valores ambientales si el producto no compite en estos dos ejes primarios.",
+      "texto_nuevo": "Los atributos ambientales de un producto por lo general solo funcionan como diferenciador de compra ('tercer botón') después de que el producto haya cumplido con las expectativas básicas de precio y calidad/desempeño. La mayoría de los consumidores no pagará una prima significativa solo por valores ambientales si el producto no compite en estos dos ejes, salvo un nicho pequeño de pioneros verdes.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5170",
+        "frase": "environmental attributes generally only work as a “third button” marketers can push"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que lo verde por lo general solo funciona como tercer botón; el nodo quita el 'por lo general' y lo vuelve absoluto.; Se cae la excepción de nicho: un segmento pequeño de pioneros verdes sí paga una prima por productos muy verdes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

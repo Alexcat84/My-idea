@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Diagnostico de fallas en el sistema de calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un caso real muestra un diagnostico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+  "resumen_teorico": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna, si tú no asumes la tarea de rediseñar el sistema completo.",
   "pasos_accionables": [
     "Recopilar y revisar los datos históricos de auditoría de calidad (defectos mayores y menores) que ya tienes disponibles",
     "Documentar cómo funciona realmente la detección de defectos: quién los repara, quién los deja pasar y por qué",
     "Revisar si pagas por pieza producida y evaluar qué impacto tiene eso en la calidad",
     "Escribir un diagnóstico claro para ti mismo con los hallazgos, las causas raíz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema",
-    "Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de qué cuenta como defecto"
+    "Eliminar la distinción arbitraria entre defectos mayores y menores (salvo, quizá, en la auditoría de calidad), y crear definiciones claras de qué cuenta como defecto"
   ],
   "entregable_esperado": "Un documento de diagnóstico con los datos de auditoría, las causas raíz identificadas y un plan de acción para rediseñar tu sistema de calidad",
   "nodos_previos": [
@@ -167,6 +167,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-009-reporte_gerencial_diagnostico_calidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de qué cuenta como defecto",
+      "texto_nuevo": "Eliminar la distinción arbitraria entre defectos mayores y menores (salvo, quizá, en la auditoría de calidad), y crear definiciones claras de qué cuenta como defecto",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9086",
+        "frase": "A defect will be a defect, except possibly in the quality-audit."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa, quizá, la auditoría de calidad; el paso pierde esa excepción.; Misma excepción perdida: la distinción podría conservarse en la auditoría de calidad.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-009-reporte_gerencial_diagnostico_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un caso real muestra un diagnostico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+      "texto_nuevo": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna, si tú no asumes la tarea de rediseñar el sistema completo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9110",
+        "frase": "We doubt that new machinery would bring any improvement."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Sobre la maquinaria nueva el libro solo duda que traiga mejora; el resumen lo endurece a que no resuelve nada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

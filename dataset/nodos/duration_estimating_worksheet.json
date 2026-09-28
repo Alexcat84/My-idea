@@ -7,7 +7,7 @@
   "resumen_teorico": "Herramienta que ayuda a desarrollar estimaciones de duración usando métodos cuantitativos: estimaciones paramétricas (basadas en horas de esfuerzo, cantidad de recursos y factor de rendimiento), análogas (comparando con trabajo previo similar) y de tres puntos (usando distribución Beta con escenarios optimista, más probable y pesimista).",
   "pasos_accionables": [
     "Para estimación paramétrica: calcular horas de esfuerzo, dividir por cantidad de recursos y porcentaje de disponibilidad, ajustar por factor de rendimiento",
-    "Para estimación análoga: comparar tamaño del trabajo actual con trabajo previo similar y aplicar multiplicador",
+    "Para estimación análoga: comparar tamaño del trabajo actual con trabajo previo similar y aplicar multiplicador, ajustando por factores como la complejidad; suele usarse para una estimación de alto nivel cuando no hay información detallada",
     "Para estimación de tres puntos: obtener valores optimista, más probable y pesimista, y calcular duración esperada usando distribución Beta, con la fórmula de ponderación Beta",
     "Registrar los resultados en la hoja de trabajo correspondiente"
   ],
@@ -43,5 +43,24 @@
   ],
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-015-duration_estimating_worksheet-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para estimación análoga: comparar tamaño del trabajo actual con trabajo previo similar y aplicar multiplicador",
+      "texto_nuevo": "Para estimación análoga: comparar tamaño del trabajo actual con trabajo previo similar y aplicar multiplicador, ajustando por factores como la complejidad; suele usarse para una estimación de alto nivel cuando no hay información detallada",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1904",
+        "frase": "generally used to get a high-level estimate when detailed information is not available"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el método a estimaciones de alto nivel cuando no hay información detallada y admite ajustar por factores como la complejidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

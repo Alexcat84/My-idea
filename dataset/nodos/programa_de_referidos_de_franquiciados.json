@@ -4,13 +4,13 @@
   "dominio": "franquicias",
   "titulo_concepto": "Programa de Referidos para Venta de Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Los leads por referencia —de franquiciados existentes, proveedores o personas cercanas al sistema— tienen las tasas de cierre más altas de la industria, ya que llegan con mayor credibilidad y menor probabilidad de comparar activamente con competidores. La calidad y volumen de referidos depende directamente del éxito y satisfacción de los franquiciados actuales. Formalizar este canal implica educar activamente a empleados, proveedores y franquiciados sobre el perfil buscado y motivarlos a generar contactos calificados.",
+  "resumen_teorico": "Los leads por referencia (de franquiciados existentes, proveedores o personas cercanas al sistema) tienen algunas de las tasas de cierre más altas de la industria, ya que llegan con mayor credibilidad y menor probabilidad de comparar activamente con competidores. La calidad y volumen de referidos depende directamente del éxito y satisfacción de los franquiciados actuales. Formalizar este canal implica educar activamente a empleados, proveedores y franquiciados sobre el perfil buscado y motivarlos a generar contactos calificados.",
   "pasos_accionables": [
     "Informar a empleados, proveedores y socios sobre el perfil de franquiciado buscado y los beneficios del programa.",
     "Solicitar activamente referencias a franquiciados exitosos, destacando su rol como embajadores de marca.",
     "Contactar proactivamente a franquiciados existentes al expandirse a territorios cercanos, ofreciendo oportunidad de crecimiento multi-unidad.",
-    "Capacitar al equipo de soporte de campo para discutir oportunidades de expansión con franquiciados desde el inicio de la relación.",
-    "Establecer incentivos formales para franquiciados que generen referidos calificados."
+    "Capacitar al equipo de soporte de campo para discutir oportunidades de expansión con franquiciados desde el inicio de la relación, y orientar a los que se consideren capaces de crecer sobre los requisitos para ser elegibles.",
+    "Establecer incentivos formales para franquiciados que generen referidos calificados, consultándolo antes con tu abogado de franquicias, porque pueden activar obligaciones de divulgación y un conflicto de interés."
   ],
   "entregable_esperado": "Programa formal de referidos documentado, con incentivos definidos y proceso de seguimiento a leads referidos.",
   "nodos_previos": [
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Activa Referidos de Franquiciados",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-006-programa_de_referidos_de_franquiciados-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer incentivos formales para franquiciados que generen referidos calificados.",
+      "texto_nuevo": "Establecer incentivos formales para franquiciados que generen referidos calificados, consultándolo antes con tu abogado de franquicias, porque pueden activar obligaciones de divulgación y un conflicto de interés.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3971",
+        "frase": "be careful to speak with your franchise attorney before implementing them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae la cautela del libro: las comisiones por referido pueden activar obligaciones de divulgación y, pagadas a franquiciados, un conflicto de interés; se consultan antes con el abogado.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-programa_de_referidos_de_franquiciados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los leads por referencia —de franquiciados existentes, proveedores o personas cercanas al sistema— tienen las tasas de cierre más altas de la industria, ya que llegan con mayor credibilidad y menor probabilidad de comparar activamente con competidores. La calidad y volumen de referidos depende directamente del éxito y satisfacción de los franquiciados actuales. Formalizar este canal implica educar activamente a empleados, proveedores y franquiciados sobre el perfil buscado y motivarlos a generar contactos calificados.",
+      "texto_nuevo": "Los leads por referencia (de franquiciados existentes, proveedores o personas cercanas al sistema) tienen algunas de las tasas de cierre más altas de la industria, ya que llegan con mayor credibilidad y menor probabilidad de comparar activamente con competidores. La calidad y volumen de referidos depende directamente del éxito y satisfacción de los franquiciados actuales. Formalizar este canal implica educar activamente a empleados, proveedores y franquiciados sobre el perfil buscado y motivarlos a generar contactos calificados.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3555-3557, 3951",
+        "frase": "Leads from genuine referrals have some of the highest close rates in the industry"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que están entre las tasas de cierre más altas y en otro pasaje pone por delante a los contactos de brókers; 'las más altas' lo endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-006-programa_de_referidos_de_franquiciados-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar al equipo de soporte de campo para discutir oportunidades de expansión con franquiciados desde el inicio de la relación.",
+      "texto_nuevo": "Capacitar al equipo de soporte de campo para discutir oportunidades de expansión con franquiciados desde el inicio de la relación, y orientar a los que se consideren capaces de crecer sobre los requisitos para ser elegibles.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3967",
+        "frase": "assuming the franchisees are deemed capable of growth, coach the franchisees on the management"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae el límite del libro: el acompañamiento para crecer es para los franquiciados considerados capaces, con orientación sobre los requisitos para ser elegibles.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

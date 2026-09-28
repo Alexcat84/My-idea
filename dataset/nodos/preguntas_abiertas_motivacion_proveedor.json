@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Usa preguntas abiertas para descubrir la motivación real del proveedor",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Cuando negocies precio o condiciones con un proveedor, no te quedes en preguntas que se contestan con sí o no. Pregunta con cómo y qué sobre su mercado, su ocupación y sus urgencias, y escucha con atención lo que revela sin querer. Muchas veces el proveedor menciona de pasada una presión que tiene, como deudas con otro negocio o falta de clientes, y esa información cambia por completo lo que puedes ofrecer. No se trata de sacarle secretos con trucos, sino de dejar que hable lo suficiente para que aparezca un dato que ni él sabía que te iba a dar. Ese dato, una vez que lo notas, te da una base real para proponer un precio o un plazo distinto sin presionar de más.",
+  "resumen_teorico": "Cuando negocies precio o condiciones con un proveedor, no te quedes en preguntas que se contestan con sí o no. Pregunta con cómo y qué sobre su mercado, su ocupación y sus urgencias, y escucha con atención lo que revela sin querer. A veces el proveedor menciona de pasada una presión que tiene, como deudas con otro negocio o falta de clientes, y esa información cambia por completo lo que puedes ofrecer. No se trata de sacarle secretos con trucos, sino de dejar que hable lo suficiente para que aparezca un dato que ni él sabía que te iba a dar. Ese dato, una vez que lo notas, te da una base real para proponer un precio o un plazo distinto sin presionar de más.",
   "pasos_accionables": [
     "Antes de negociar, prepara preguntas que empiecen con cómo o qué en vez de preguntas de sí o no.",
     "Durante la conversación, pregunta sobre su mercado, su carga de trabajo o sus otros clientes.",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Pregunta para descubrir su urgencia real",
   "fuentes_internas": [
     "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-004-preguntas_abiertas_motivacion_proveedor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando negocies precio o condiciones con un proveedor, no te quedes en preguntas que se contestan con sí o no. Pregunta con cómo y qué sobre su mercado, su ocupación y sus urgencias, y escucha con atención lo que revela sin querer. Muchas veces el proveedor menciona de pasada una presión que tiene, como deudas con otro negocio o falta de clientes, y esa información cambia por completo lo que puedes ofrecer. No se trata de sacarle secretos con trucos, sino de dejar que hable lo suficiente para que aparezca un dato que ni él sabía que te iba a dar. Ese dato, una vez que lo notas, te da una base real para proponer un precio o un plazo distinto sin presionar de más.",
+      "texto_nuevo": "Cuando negocies precio o condiciones con un proveedor, no te quedes en preguntas que se contestan con sí o no. Pregunta con cómo y qué sobre su mercado, su ocupación y sus urgencias, y escucha con atención lo que revela sin querer. A veces el proveedor menciona de pasada una presión que tiene, como deudas con otro negocio o falta de clientes, y esa información cambia por completo lo que puedes ofrecer. No se trata de sacarle secretos con trucos, sino de dejar que hable lo suficiente para que aparezca un dato que ni él sabía que te iba a dar. Ese dato, una vez que lo notas, te da una base real para proponer un precio o un plazo distinto sin presionar de más.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3271",
+        "frase": "la alentarán a dar respuestas largas que pueden revelar información importante"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece el grado: el libro dice que las preguntas abiertas pueden revelar información importante, no que ocurra muchas veces.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

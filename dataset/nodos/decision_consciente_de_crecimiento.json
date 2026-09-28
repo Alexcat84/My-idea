@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Evalúa si de verdad quieres crecer o prefieres mantener estabilidad",
     "Revisa si tu negocio, hoy, tiene la capacidad operativa y financiera para soportar una expansión",
-    "Proyecta cómo afectaría contratar gente nueva a tu flujo de caja y a tu nómina",
-    "Calcula cuánto dinero gastas cada mes por encima de lo que entra (burn rate) y cuánto te dura el capital antes de expandirte",
+    "Proyecta, con criterio conservador, cómo afectaría contratar gente nueva a tu flujo de caja y a tu nómina",
+    "Si estás arrancando con tu capital inicial o con préstamos, calcula cuánto dinero gastas cada mes por encima de lo que entra (burn rate) y si tu operación cubrirá la nómina antes de que se agote tu capital; si ya operas, proyecta las ventas y los gastos del año y cuándo entrará y saldrá el efectivo",
     "Diseña un plan de contratación que responda a lo que tu negocio realmente necesita"
   ],
   "entregable_esperado": "Una decisión clara sobre si vas a crecer y cómo, junto con una proyección de cuánto te va a costar la expansión (nómina, impuestos, beneficios, infraestructura).",
@@ -55,6 +55,40 @@
         "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "final-e1-018-decision_consciente_de_crecimiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto dinero gastas cada mes por encima de lo que entra (burn rate) y cuánto te dura el capital antes de expandirte",
+      "texto_nuevo": "Si estás arrancando con tu capital inicial o con préstamos, calcula cuánto dinero gastas cada mes por encima de lo que entra (burn rate) y si tu operación cubrirá la nómina antes de que se agote tu capital; si ya operas, proyecta las ventas y los gastos del año y cuándo entrará y saldrá el efectivo",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3625",
+        "frase": "If you are in start-up mode—relying mainly on your initial equity investments or loans"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide el burn rate solo en arranque con capital inicial o préstamos, para ver si la operación cubre la nómina; si ya operas, proyectar ventas, gastos y tiempos de caja.; Misma condición perdida que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-018-decision_consciente_de_crecimiento-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proyecta cómo afectaría contratar gente nueva a tu flujo de caja y a tu nómina",
+      "texto_nuevo": "Proyecta, con criterio conservador, cómo afectaría contratar gente nueva a tu flujo de caja y a tu nómina",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3627",
+        "frase": "It is wise to be conservative in these projections."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja ser conservador en estas proyecciones porque los gastos de contratar no son discrecionales.; Misma cautela perdida que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

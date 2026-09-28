@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir el objetivo del sistema (aumentar throughput, reducir inventario y gastos operativos)",
     "Establecer las métricas para medir el progreso hacia ese objetivo",
-    "Aplicar los cinco pasos de enfoque para gestionar las restricciones identificadas"
+    "Aplicar los cinco pasos de enfoque para gestionar las restricciones identificadas: identificar los cuellos de botella, decidir cómo explotarlos para que operen a su máxima capacidad, subordinar todo lo demás a esa decisión, elevar su capacidad y, si un cuello de botella se rompe, volver al primer paso"
   ],
   "entregable_esperado": "Documento de objetivo del sistema con métricas de throughput, inventario y gasto operativo definidas",
   "nodos_previos": [
@@ -40,6 +40,23 @@
         "motivo": "El equilibrio entre utilización, inventario y servicio lleva a la Teoría de Restricciones, que gestiona el cuello de botella para subir el throughput reduciendo inventario y gastos."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-017-teoria_de_restricciones-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar los cinco pasos de enfoque para gestionar las restricciones identificadas",
+      "texto_nuevo": "Aplicar los cinco pasos de enfoque para gestionar las restricciones identificadas: identificar los cuellos de botella, decidir cómo explotarlos para que operen a su máxima capacidad, subordinar todo lo demás a esa decisión, elevar su capacidad y, si un cuello de botella se rompe, volver al primer paso",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3610-3626",
+        "frase": "Subordinate everything else to the above decision"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso manda aplicar cinco pasos sin decir cuáles; el libro los define, incluido subordinar y volver a empezar.; Misma pérdida del contenido del procedimiento.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

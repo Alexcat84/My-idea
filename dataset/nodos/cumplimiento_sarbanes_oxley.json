@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Cumplimiento con la Ley Sarbanes-Oxley",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Sarbanes-Oxley (SOX) es una legislación estadounidense de 2002 que busca fortalecer la transparencia financiera y la gobernanza corporativa tras escándalos de fraude contable. Exige controles internos robustos, certificación de estados financieros por CEOs/CFOs, comités de auditoría independientes y canales de denuncia protegidos. Aunque aplica directamente a empresas públicas, también influye en cómo bancos y auditores tratan a empresas privadas en crecimiento. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "resumen_teorico": "Sarbanes-Oxley (SOX) es una legislación estadounidense de 2002 que busca fortalecer la transparencia financiera y la gobernanza corporativa tras escándalos de fraude contable. Exige controles internos robustos, certificación de estados financieros por CEOs/CFOs y que los comités de auditoría establezcan canales de denuncia confidenciales y protegidos. Aunque aplica directamente a empresas públicas, también influye en cómo bancos y auditores tratan a empresas privadas en crecimiento. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
   "pasos_accionables": [
     "Familiarízate con los requisitos clave de SOX (controles internos, certificación de CFO/CEO)",
     "Evalúa el costo estimado de cumplimiento si planeas crecer o salir a bolsa",
     "Implementa políticas de control interno aunque seas una empresa privada, como buena práctica",
-    "Reúnete con al menos una persona experta en finanzas independiente para revisar tus cuentas con ojo crítico",
+    "Sugerencia de My Idea: reúnete con al menos una persona experta en finanzas independiente para revisar tus cuentas con ojo crítico",
     "Crea canales confidenciales para reportar irregularidades financieras"
   ],
   "entregable_esperado": "Un marco de control interno financiero documentado, alineado con los principios de SOX, útil para auditorías bancarias o futuras rondas de inversión.",
@@ -55,6 +55,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-018-cumplimiento_sarbanes_oxley-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sarbanes-Oxley (SOX) es una legislación estadounidense de 2002 que busca fortalecer la transparencia financiera y la gobernanza corporativa tras escándalos de fraude contable. Exige controles internos robustos, certificación de estados financieros por CEOs/CFOs, comités de auditoría independientes y canales de denuncia protegidos. Aunque aplica directamente a empresas públicas, también influye en cómo bancos y auditores tratan a empresas privadas en crecimiento. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "texto_nuevo": "Sarbanes-Oxley (SOX) es una legislación estadounidense de 2002 que busca fortalecer la transparencia financiera y la gobernanza corporativa tras escándalos de fraude contable. Exige controles internos robustos, certificación de estados financieros por CEOs/CFOs y que los comités de auditoría establezcan canales de denuncia confidenciales y protegidos. Aunque aplica directamente a empresas públicas, también influye en cómo bancos y auditores tratan a empresas privadas en crecimiento. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3746",
+        "frase": "it requires board audit committees to establish procedures whereby employees can confidentially tip off directors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la ley exige a los comités de auditoría de la junta establecer procedimientos de denuncia confidencial; no habla de su independencia.; Misma invención: la independencia de los comités no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-018-cumplimiento_sarbanes_oxley-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reúnete con al menos una persona experta en finanzas independiente para revisar tus cuentas con ojo crítico",
+      "texto_nuevo": "Sugerencia de My Idea: reúnete con al menos una persona experta en finanzas independiente para revisar tus cuentas con ojo crítico",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3746",
+        "frase": "include at least one director who is a financial expert"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que la ley exige un director experto en finanzas en la junta de una empresa pública; la revisión de cuentas con un experto independiente es consejo propio.; Misma invención: el libro no plantea una revisión de cuentas con un experto independiente.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "resumen_teorico": "La depreciación reparte el costo de un activo físico -un vehículo, un camión, un equipo- a lo largo de su vida útil estimada, en lugar de cargar todo el gasto de una sola vez. La amortización aplica la misma idea a activos intangibles, como patentes o plusvalía (goodwill). El concepto es simple, pero tienes bastante margen para decidir esa vida útil: usar 1 año en vez de 3 o 6 para el mismo tipo de activo cambia de forma directa la utilidad neta que reportas y tu patrimonio, una zona clásica de subjetividad contable. Casos reales de fraude, como manipular la depreciación de camiones y contenedores para inflar ganancias en cientos de millones de dólares, muestran cómo cambiar esos supuestos sirve para maquillar resultados. Necesitas entender cómo tu negocio deprecia sus activos, porque eso afecta tu resultado neto, tu balance y las decisiones que tomen bancos e inversionistas sobre ti.",
   "pasos_accionables": [
     "Identifica todos los activos de capital de tu negocio (equipos, vehículos, sistemas, propiedad, planta y equipo) que se deprecian",
-    "Revisa con tu contador qué método de depreciación usas (línea recta u otro) y la vida útil estimada de cada tipo de activo",
+    "Revisa con tu contador qué método de depreciación usas (línea recta u otro) y la vida útil estimada de cada tipo de activo; lo que necesitas saber es si el uso del activo se corresponde con los ingresos que te genera",
     "Evalúa si esa vida útil estimada es razonable comparada con lo que es normal en tu sector",
     "Calcula la depreciación acumulada y su efecto en el valor neto en libros de tus activos",
     "Detecta cambios año tras año en los supuestos de vida útil que puedan indicar que se está maquillando la utilidad",
@@ -37,5 +37,24 @@
   "etiqueta_arbol": "Distribuye el Costo del Activo",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-018-depreciacion_y_amortizacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa con tu contador qué método de depreciación usas (línea recta u otro) y la vida útil estimada de cada tipo de activo",
+      "texto_nuevo": "Revisa con tu contador qué método de depreciación usas (línea recta u otro) y la vida útil estimada de cada tipo de activo; lo que necesitas saber es si el uso del activo se corresponde con los ingresos que te genera",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "811",
+        "frase": "All you need to know is whether the use of the asset is matched appropriately"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que no necesitas conocer los métodos; lo que necesitas saber es si el uso del activo se corresponde con los ingresos que genera.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

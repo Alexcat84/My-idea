@@ -11,7 +11,7 @@
     "Contacta a cada uno usando tu lista de clientes, un email introductorio y un guion de referencia para agendar citas",
     "Pregunta si antes implementaron tecnología nueva en su empresa y descarta a quienes solo buscan aprender sin intención de compra",
     "Confirma que estén dispuestos a pagar por tu solución incompleta y a servir como referencia o caso de estudio",
-    "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no, y registra tu hit rate para mejorar"
+    "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no y que, de quienes sigan, uno de cada tres o menos firmará una orden de compra, y registra tu hit rate para mejorar"
   ],
   "entregable_esperado": "Una lista de earlyvangelists con evidencia de dolor, presupuesto y disposición de compra, con citas de ventas ya agendadas.",
   "nodos_previos": [
@@ -58,5 +58,24 @@
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve",
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-013-identificar_earlyvangelists-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no, y registra tu hit rate para mejorar",
+      "texto_nuevo": "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no y que, de quienes sigan, uno de cada tres o menos firmará una orden de compra, y registra tu hit rate para mejorar",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "23272",
+        "frase": "one of three or fewer will actually sign a purchase order"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que de los pocos que entran al proceso solo uno de cada tres o menos firma; se cae y cambia la expectativa.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

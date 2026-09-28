@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Programa de Auditoría de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un programa de auditoría de calidad puede enfocarse en el cumplimiento, en la efectividad, o en ambos. Auditar por cumplimiento significa verificar que las actividades sigan un estándar o requisito establecido (por ejemplo, que existan instrucciones de trabajo escritas). Auditar por efectividad significa evaluar si ese requisito realmente logra el resultado esperado y si los recursos se usan bien. Cuando revisas tú mismo tu negocio puedes y debes mirar ambas cosas; si le pides a alguien externo que audite, esa persona suele limitarse al cumplimiento, por independencia y alcance.",
+  "resumen_teorico": "Un programa de auditoría de calidad puede enfocarse en el cumplimiento, en la efectividad, o en ambos. Auditar por cumplimiento significa verificar que las actividades sigan un estándar o requisito establecido (por ejemplo, que existan instrucciones de trabajo escritas). Auditar por efectividad significa evaluar si ese requisito realmente logra el resultado esperado y si los recursos se usan bien. Cuando revisas tú mismo tu negocio puedes y debes mirar ambas cosas; si le pides a alguien externo que audite, que evalúe la efectividad puede generarte reparos serios y razonables, porque es difícil hacerlo desde fuera de forma justa y útil.",
   "pasos_accionables": [
     "Definir si el programa se orientará a cumplimiento, efectividad o ambos",
-    "Decidir si vas a auditar tú mismo tu negocio o si vas a pedirle a alguien externo que lo haga, según lo que necesites lograr",
+    "Decidir si vas a auditar tú mismo tu negocio o si vas a pedirle a alguien externo que lo haga, según lo que necesites lograr; en cualquier caso, quien revise una actividad no debe ser quien responde por ella",
     "Establecer el alcance: qué partes de tu negocio, qué líneas de producto, qué sistemas de calidad o qué actividades específicas vas a revisar",
-    "Documentar el propósito y las reglas del programa en un documento que tú mismo apruebes antes de empezar"
+    "Documentar el propósito y las reglas del programa, acordados con quienes serán auditados y con quienes auditan, en un documento que tú mismo apruebes antes de empezar"
   ],
   "entregable_esperado": "Documento con el propósito, el alcance y el tipo de auditoría definidos por ti",
   "nodos_previos": [
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Diseña tu Auditoría de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-programa_auditoria_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un programa de auditoría de calidad puede enfocarse en el cumplimiento, en la efectividad, o en ambos. Auditar por cumplimiento significa verificar que las actividades sigan un estándar o requisito establecido (por ejemplo, que existan instrucciones de trabajo escritas). Auditar por efectividad significa evaluar si ese requisito realmente logra el resultado esperado y si los recursos se usan bien. Cuando revisas tú mismo tu negocio puedes y debes mirar ambas cosas; si le pides a alguien externo que audite, esa persona suele limitarse al cumplimiento, por independencia y alcance.",
+      "texto_nuevo": "Un programa de auditoría de calidad puede enfocarse en el cumplimiento, en la efectividad, o en ambos. Auditar por cumplimiento significa verificar que las actividades sigan un estándar o requisito establecido (por ejemplo, que existan instrucciones de trabajo escritas). Auditar por efectividad significa evaluar si ese requisito realmente logra el resultado esperado y si los recursos se usan bien. Cuando revisas tú mismo tu negocio puedes y debes mirar ambas cosas; si le pides a alguien externo que audite, que evalúe la efectividad puede generarte reparos serios y razonables, porque es difícil hacerlo desde fuera de forma justa y útil.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9930",
+        "frase": "difficult to conduct such audits in a fair and useful way"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que el externo suela limitarse al cumplimiento ni da esa causa: dice que auditar la efectividad desde fuera genera reparos razonables y es difícil hacerlo justo y útil.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-programa_auditoria_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar el propósito y las reglas del programa en un documento que tú mismo apruebes antes de empezar",
+      "texto_nuevo": "Documentar el propósito y las reglas del programa, acordados con quienes serán auditados y con quienes auditan, en un documento que tú mismo apruebes antes de empezar",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10035-10043",
+        "frase": "Without such collective agreements, the audit program may fail."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que propósito y reglas se acuerden con los responsables de lo auditado y quienes auditan; sin ese acuerdo el programa puede fallar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-programa_auditoria_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir si vas a auditar tú mismo tu negocio o si vas a pedirle a alguien externo que lo haga, según lo que necesites lograr",
+      "texto_nuevo": "Decidir si vas a auditar tú mismo tu negocio o si vas a pedirle a alguien externo que lo haga, según lo que necesites lograr; en cualquier caso, quien revise una actividad no debe ser quien responde por ella",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9902",
+        "frase": "the reviewer (called the auditor) is neither the person responsible for the performance under review"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige independencia: quien audita no es el responsable de la actividad revisada ni su jefe inmediato.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

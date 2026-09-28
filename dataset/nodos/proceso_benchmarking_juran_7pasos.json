@@ -4,15 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Ciclo de Benchmarking de 7 Pasos de Juran",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso estructurado en tres fases para conducir un benchmarking efectivo: Fase 1 (análisis de posicionamiento y brechas frente a organizaciones de mejor desempeño), Fase 2 (aprendizaje profundo de las causas de las brechas identificadas) y Fase 3 (transformación mediante adopción/adaptación de prácticas líderes y ejecución de programas de mejora). Este ciclo garantiza que el benchmarking derive en resultados accionables y sostenibles.",
+  "resumen_teorico": "Proceso estructurado en tres fases para conducir un benchmarking efectivo: Fase 1 (análisis de posicionamiento y brechas frente a organizaciones de mejor desempeño), Fase 2 (aprendizaje profundo de las causas de las brechas identificadas) y Fase 3 (transformación mediante adopción/adaptación de prácticas líderes y ejecución de programas de mejora). Seguir un proceso estructurado y sistemático como este es esencial para que el benchmarking tenga éxito.",
   "pasos_accionables": [
     "Determinar objetivos y alcance del estudio de benchmarking (planificación).",
     "Identificar y definir todas las métricas (KPIs) a utilizar con definiciones claras.",
-    "Acordar cronograma, hitos y plazos con los participantes.",
+    "Acordar cronograma, hitos y plazos con los participantes y cumplirlos, asegurando los recursos necesarios y apoyando a los participantes durante todo el proceso.",
     "Diseñar y distribuir el instrumento de recolección de datos con validaciones incorporadas.",
     "Validar y normalizar los datos recibidos antes del análisis.",
-    "Reportar los hallazgos de forma clara y efectiva a todos los participantes.",
-    "Facilitar el intercambio de mejores prácticas y desarrollar programas de mejora basados en los hallazgos."
+    "Analizar los datos de forma objetiva para determinar las brechas frente a los mejores y sus razones, y reportar los hallazgos de forma clara y efectiva a todos los participantes.",
+    "Facilitar el intercambio de mejores prácticas, separar en cada brecha lo controlable de lo no controlable, desarrollar programas de mejora basados en los hallazgos y evaluar después los resultados para replicarlos y repetir el ciclo."
   ],
   "entregable_esperado": "Reporte final de benchmarking con análisis de brechas, prácticas líderes identificadas y plan de mejora derivado.",
   "nodos_previos": [
@@ -30,5 +30,74 @@
   "etiqueta_arbol": "Compárate con los Mejores",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-019-proceso_benchmarking_juran_7pasos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proceso estructurado en tres fases para conducir un benchmarking efectivo: Fase 1 (análisis de posicionamiento y brechas frente a organizaciones de mejor desempeño), Fase 2 (aprendizaje profundo de las causas de las brechas identificadas) y Fase 3 (transformación mediante adopción/adaptación de prácticas líderes y ejecución de programas de mejora). Este ciclo garantiza que el benchmarking derive en resultados accionables y sostenibles.",
+      "texto_nuevo": "Proceso estructurado en tres fases para conducir un benchmarking efectivo: Fase 1 (análisis de posicionamiento y brechas frente a organizaciones de mejor desempeño), Fase 2 (aprendizaje profundo de las causas de las brechas identificadas) y Fase 3 (transformación mediante adopción/adaptación de prácticas líderes y ejecución de programas de mejora). Seguir un proceso estructurado y sistemático como este es esencial para que el benchmarking tenga éxito.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17353",
+        "frase": "it is essential that a well-structured and systematic process be followed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que un proceso estructurado es esencial para el éxito, no que garantice resultados; el nodo endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-proceso_benchmarking_juran_7pasos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Acordar cronograma, hitos y plazos con los participantes.",
+      "texto_nuevo": "Acordar cronograma, hitos y plazos con los participantes y cumplirlos, asegurando los recursos necesarios y apoyando a los participantes durante todo el proceso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17339-17343",
+        "frase": "Agree on a schedule and stick to it."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Entre los factores críticos del libro están cumplir el cronograma, asegurar recursos y apoyar a los participantes; se caen.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-proceso_benchmarking_juran_7pasos-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reportar los hallazgos de forma clara y efectiva a todos los participantes.",
+      "texto_nuevo": "Analizar los datos de forma objetiva para determinar las brechas frente a los mejores y sus razones, y reportar los hallazgos de forma clara y efectiva a todos los participantes.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17455",
+        "frase": "determine, and where possible quantify, the gaps to the leading performers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye un análisis objetivo que determina las brechas frente a los líderes y sus razones; ese paso se cae.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-019-proceso_benchmarking_juran_7pasos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Facilitar el intercambio de mejores prácticas y desarrollar programas de mejora basados en los hallazgos.",
+      "texto_nuevo": "Facilitar el intercambio de mejores prácticas, separar en cada brecha lo controlable de lo no controlable, desarrollar programas de mejora basados en los hallazgos y evaluar después los resultados para replicarlos y repetir el ciclo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17533",
+        "frase": "the organization needs to break them down into controllable and noncontrollable gaps"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El ciclo del libro incluye separar brechas controlables de no controlables y evaluar resultados para replicarlos antes de repetir; se caen.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

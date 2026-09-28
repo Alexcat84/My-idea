@@ -4,11 +4,11 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Control: Minimización y Gestión Técnica de Datos",
   "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
-  "resumen_teorico": "La función Control se enfoca en evaluar si la organización recolecta, comparte o mantiene datos innecesarios, y en diseñar políticas y sistemas con flexibilidad para adaptarse a preferencias cambiantes de privacidad y entornos legales dinámicos. Se promueven técnicas como la de-identificación y el procesamiento descentralizado de datos para disociar información de individuos y dispositivos, maximizando así las ganancias de privacidad mientras se cumplen los objetivos del negocio.",
+  "resumen_teorico": "La función Control se enfoca en evaluar si la organización recolecta, comparte o mantiene datos innecesarios, en considerar los riesgos de privacidad y las obligaciones legales al decidir la funcionalidad de sus sistemas, y en diseñar políticas y sistemas con flexibilidad para adaptarse a preferencias cambiantes de privacidad y entornos legales dinámicos. Técnicas como la de-identificación y el procesamiento descentralizado disocian los datos de individuos y dispositivos: cuanto más se disocian, más gana la privacidad, y podrían permitir cumplir los objetivos del negocio.",
   "pasos_accionables": [
     "Auditar qué datos se recolectan y determinar si son realmente necesarios",
-    "Diseñar políticas que otorguen control sobre los datos tanto a la organización como a los individuos",
-    "Incorporar flexibilidad de diseño en sistemas para adaptarse a cambios legales y de preferencias",
+    "Revisar cómo las políticas ayudan a la organización u otras organizaciones a mantener el control sobre los datos y qué papel podrían tener los individuos",
+    "Tomar en cuenta los riesgos de privacidad y las obligaciones legales al decidir la funcionalidad de los sistemas, e incorporar flexibilidad de diseño para adaptarse a cambios legales y de preferencias",
     "Evaluar e implementar técnicas de de-identificación o procesamiento descentralizado donde sea posible"
   ],
   "entregable_esperado": "Política de minimización de datos y plan de técnicas de disociación implementadas",
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Minimiza los Datos que Recolectas",
   "fuentes_internas": [
     "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-008-control_minimizacion_datos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La función Control se enfoca en evaluar si la organización recolecta, comparte o mantiene datos innecesarios, y en diseñar políticas y sistemas con flexibilidad para adaptarse a preferencias cambiantes de privacidad y entornos legales dinámicos. Se promueven técnicas como la de-identificación y el procesamiento descentralizado de datos para disociar información de individuos y dispositivos, maximizando así las ganancias de privacidad mientras se cumplen los objetivos del negocio.",
+      "texto_nuevo": "La función Control se enfoca en evaluar si la organización recolecta, comparte o mantiene datos innecesarios, en considerar los riesgos de privacidad y las obligaciones legales al decidir la funcionalidad de sus sistemas, y en diseñar políticas y sistemas con flexibilidad para adaptarse a preferencias cambiantes de privacidad y entornos legales dinámicos. Técnicas como la de-identificación y el procesamiento descentralizado disocian los datos de individuos y dispositivos: cuanto más se disocian, más gana la privacidad, y podrían permitir cumplir los objetivos del negocio.",
+      "cita": {
+        "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+        "fichero": "books/seguridad_digital/Getting-Started-NIST-Privacy-Framework-Guide.txt",
+        "lineas": "51-53",
+        "frase": "could allow you to meet your business or agency objectives while protecting privacy"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que estas técnicas podrían permitir cumplir los objetivos; el nodo lo afirma como resultado seguro y maximizado.; Se cae el elemento de tener en cuenta riesgos y obligaciones legales al decidir la funcionalidad, que es consejo central de Control.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-008-control_minimizacion_datos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar políticas que otorguen control sobre los datos tanto a la organización como a los individuos",
+      "texto_nuevo": "Revisar cómo las políticas ayudan a la organización u otras organizaciones a mantener el control sobre los datos y qué papel podrían tener los individuos",
+      "cita": {
+        "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+        "fichero": "books/seguridad_digital/Getting-Started-NIST-Privacy-Framework-Guide.txt",
+        "lineas": "49",
+        "frase": "maintain control over data and how individuals might have a role as well"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide considerar cómo las políticas ayudan a mantener el control y qué papel podrían tener las personas, no otorgarles control.; Mismo defecto: endurece el 'might have a role' en otorgar control a los individuos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-008-control_minimizacion_datos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incorporar flexibilidad de diseño en sistemas para adaptarse a cambios legales y de preferencias",
+      "texto_nuevo": "Tomar en cuenta los riesgos de privacidad y las obligaciones legales al decidir la funcionalidad de los sistemas, e incorporar flexibilidad de diseño para adaptarse a cambios legales y de preferencias",
+      "cita": {
+        "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+        "fichero": "books/seguridad_digital/Getting-Started-NIST-Privacy-Framework-Guide.txt",
+        "lineas": "51",
+        "frase": "Take your privacy risks and legal obligations into account when deciding on the functionality"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Del mismo punto del libro se cae tomar en cuenta riesgos y obligaciones legales al decidir la funcionalidad, que ningún otro paso recoge.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

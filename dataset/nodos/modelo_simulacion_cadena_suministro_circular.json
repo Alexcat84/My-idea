@@ -4,11 +4,11 @@
   "dominio": "entrega",
   "titulo_concepto": "Simulación de Cadenas de Suministro Circulares y Sostenibles",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Antes de implementar una cadena de suministro física, es posible construir un modelo de simulación compuesto por entidades clave (productos, instalaciones, vehículos, rutas) para probar diferentes escenarios de oferta, demanda, costos y ubicaciones. Esto permite generar reportes de P&L y KPIs que sirven de base objetiva para comparar diseños alternativos antes de invertir capital, especialmente relevante en cadenas de suministro circulares (como recolección de aceite usado para biodiesel) donde el impacto ambiental y la eficiencia económica deben equilibrarse.",
+  "resumen_teorico": "Antes de implementar una cadena de suministro física, es posible construir un modelo de simulación compuesto por entidades clave (productos, instalaciones, vehículos, rutas) para probar diferentes escenarios de oferta, demanda, costos y ubicaciones. Esto permite generar reportes de P&L y KPIs que sirven de base objetiva para comparar diseños alternativos antes de invertir capital, y se aplica también a cadenas de suministro circulares (como la recolección de aceite usado para biodiésel), donde la simulación muestra además si la operación puede dar ganancia o al menos cubrir sus costos.",
   "pasos_accionables": [
     "Definir las entidades del modelo: productos, instalaciones, vehículos y rutas",
     "Usar el método del centro de gravedad para ubicar instalaciones de recolección/hubs",
-    "Correr simulaciones de al menos 14 días con distintos supuestos de oferta y demanda",
+    "Correr simulaciones de varios días (en el caso de referencia, 14 días o más) con distintos supuestos de oferta y demanda",
     "Generar reportes de P&L y KPIs a partir de los datos simulados",
     "Comparar diseños alternativos de cadena de suministro antes de la inversión real"
   ],
@@ -109,6 +109,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-017-modelo_simulacion_cadena_suministro_circular-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Correr simulaciones de al menos 14 días con distintos supuestos de oferta y demanda",
+      "texto_nuevo": "Correr simulaciones de varios días (en el caso de referencia, 14 días o más) con distintos supuestos de oferta y demanda",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1432",
+        "frase": "These models simulate operations by running for 14+ days."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Convierte en mínimo obligatorio la duración del caso de ejemplo.; El libro da los 14 días o más como la duración del caso simulado, no como un mínimo que haya que cumplir.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-017-modelo_simulacion_cadena_suministro_circular-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de implementar una cadena de suministro física, es posible construir un modelo de simulación compuesto por entidades clave (productos, instalaciones, vehículos, rutas) para probar diferentes escenarios de oferta, demanda, costos y ubicaciones. Esto permite generar reportes de P&L y KPIs que sirven de base objetiva para comparar diseños alternativos antes de invertir capital, especialmente relevante en cadenas de suministro circulares (como recolección de aceite usado para biodiesel) donde el impacto ambiental y la eficiencia económica deben equilibrarse.",
+      "texto_nuevo": "Antes de implementar una cadena de suministro física, es posible construir un modelo de simulación compuesto por entidades clave (productos, instalaciones, vehículos, rutas) para probar diferentes escenarios de oferta, demanda, costos y ubicaciones. Esto permite generar reportes de P&L y KPIs que sirven de base objetiva para comparar diseños alternativos antes de invertir capital, y se aplica también a cadenas de suministro circulares (como la recolección de aceite usado para biodiésel), donde la simulación muestra además si la operación puede dar ganancia o al menos cubrir sus costos.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1475",
+        "frase": "if the UCO recycling operation can make a profit, or at least cover its costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro aplica el modelo a una cadena circular, pero no dice que sea especialmente relevante ahí ni que impacto ambiental y eficiencia deban equilibrarse; la simulación sirve para ver si la operación da ganancia o cubre costos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

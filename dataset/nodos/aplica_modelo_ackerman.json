@@ -4,13 +4,13 @@
   "dominio": "compras",
   "titulo_concepto": "Aplica el modelo Ackerman de ofertas decrecientes",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "El modelo Ackerman es una secuencia de pasos para negociar un precio sin caer en el típico ir y venir hasta el punto medio. Consiste en fijar primero tu precio objetivo real, abrir con una oferta bastante por debajo de ese objetivo (o por encima si vendes), y subir en tramos cada vez más pequeños, dejando que la otra parte responda entre cada movimiento. Al final conviene cerrar con una cifra específica y no redonda, y sumar un pequeño detalle que no cuesta dinero. Funciona porque combina la sensación de haber ganado terreno con una salida ordenada del regateo. Úsalo con respeto y escucha real cuando negocies con alguien a quien le seguirás comprando, no como una forma de exprimirlo.",
+  "resumen_teorico": "El modelo Ackerman es una secuencia de pasos para negociar un precio sin caer en el típico ir y venir hasta el punto medio. Consiste en fijar primero tu precio objetivo real, abrir con una oferta bastante por debajo de ese objetivo (o por encima si vendes), y subir en tramos cada vez más pequeños, dejando que la otra parte responda entre cada movimiento. Al final conviene cerrar con una cifra específica y no redonda, y sumar algún elemento no monetario, que probablemente la otra parte no quiera, para mostrar que llegaste a tu límite. Funciona porque combina la sensación de haber ganado terreno con una salida ordenada del regateo. Úsalo con respeto y escucha real cuando negocies con alguien a quien le seguirás comprando, no como una forma de exprimirlo.",
   "pasos_accionables": [
     "Define el precio objetivo real que quieres pagar o cobrar antes de hablar con la otra parte.",
-    "Calcula tu primera oferta bastante alejada de ese objetivo, dejando margen para moverte.",
+    "Calcula tu primera oferta en el 65 % de ese objetivo, dejando margen para moverte.",
     "Prepara tres subidas graduales, cada vez más pequeñas (al 85 %, 95 % y 100 % de tu objetivo), en vez de una sola concesión grande.",
-    "Usa preguntas abiertas entre cada oferta para que la otra parte hable antes de que tú vuelvas a mover el número.",
-    "Cierra con una cifra específica y no redonda, y añade un pequeño extra que no cuesta dinero."
+    "Usa empatía, preguntas abiertas y distintas formas de decir que no entre cada oferta, para que la otra parte haga una contraoferta antes de que tú vuelvas a mover el número.",
+    "Cierra con una cifra específica y no redonda, y añade algún elemento no monetario, que probablemente la otra parte no quiera, para mostrar que llegaste a tu límite."
   ],
   "entregable_esperado": "Una secuencia escrita de ofertas graduales lista para usar en la próxima negociación de precio.",
   "nodos_previos": [
@@ -44,6 +44,73 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El modelo Ackerman fija tres tramos decrecientes (85 %, 95 % y 100 %; también en L4444). Decir 'dos o tres' cambia la secuencia del libro.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-014"
+    },
+    {
+      "id": "final-e1-004-aplica_modelo_ackerman-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula tu primera oferta bastante alejada de ese objetivo, dejando margen para moverte.",
+      "texto_nuevo": "Calcula tu primera oferta en el 65 % de ese objetivo, dejando margen para moverte.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4298",
+        "frase": "Fija tu primera oferta en el 65 % de dicho precio objetivo."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento fija la primera oferta en el 65 % del objetivo; el paso lo deja indefinido mientras da las demás cifras.; Mismo defecto: se cae el 65 % del procedimiento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-004-aplica_modelo_ackerman-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa preguntas abiertas entre cada oferta para que la otra parte hable antes de que tú vuelvas a mover el número.",
+      "texto_nuevo": "Usa empatía, preguntas abiertas y distintas formas de decir que no entre cada oferta, para que la otra parte haga una contraoferta antes de que tú vuelvas a mover el número.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4302",
+        "frase": "para conseguir que la otra parte haga contraofertas antes de elevar la tuya"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide empatía y formas de decir no para que la otra parte haga contraofertas antes de subir; que solo hable no basta.; Mismo defecto: la condición es una contraoferta, no solo que hable.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-004-aplica_modelo_ackerman-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cierra con una cifra específica y no redonda, y añade un pequeño extra que no cuesta dinero.",
+      "texto_nuevo": "Cierra con una cifra específica y no redonda, y añade algún elemento no monetario, que probablemente la otra parte no quiera, para mostrar que llegaste a tu límite.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4306",
+        "frase": "(que probablemente la otra parte no quiera) para demostrar que has llegado a tu límite"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se pierde el propósito del último paso.; Se cae el propósito del elemento no monetario final, que probablemente el otro no quiera: mostrar que llegaste a tu límite.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-004-aplica_modelo_ackerman-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El modelo Ackerman es una secuencia de pasos para negociar un precio sin caer en el típico ir y venir hasta el punto medio. Consiste en fijar primero tu precio objetivo real, abrir con una oferta bastante por debajo de ese objetivo (o por encima si vendes), y subir en tramos cada vez más pequeños, dejando que la otra parte responda entre cada movimiento. Al final conviene cerrar con una cifra específica y no redonda, y sumar un pequeño detalle que no cuesta dinero. Funciona porque combina la sensación de haber ganado terreno con una salida ordenada del regateo. Úsalo con respeto y escucha real cuando negocies con alguien a quien le seguirás comprando, no como una forma de exprimirlo.",
+      "texto_nuevo": "El modelo Ackerman es una secuencia de pasos para negociar un precio sin caer en el típico ir y venir hasta el punto medio. Consiste en fijar primero tu precio objetivo real, abrir con una oferta bastante por debajo de ese objetivo (o por encima si vendes), y subir en tramos cada vez más pequeños, dejando que la otra parte responda entre cada movimiento. Al final conviene cerrar con una cifra específica y no redonda, y sumar algún elemento no monetario, que probablemente la otra parte no quiera, para mostrar que llegaste a tu límite. Funciona porque combina la sensación de haber ganado terreno con una salida ordenada del regateo. Úsalo con respeto y escucha real cuando negocies con alguien a quien le seguirás comprando, no como una forma de exprimirlo.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4306",
+        "frase": "para demostrar que has llegado a tu límite"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0: se cae el propósito del último paso.; Se pierde el propósito del elemento no monetario final: mostrar que llegaste a tu límite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

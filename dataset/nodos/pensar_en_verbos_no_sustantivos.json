@@ -7,7 +7,7 @@
   "resumen_teorico": "Si estás resolviendo un problema grande, no te enfoques en rediseñar un producto específico (una mejor máquina de votar); piensa en la experiencia o el verbo subyacente que quieres lograr (cómo mejorar la experiencia democrática). Enfocarte en sustantivos te lleva a un pensamiento incremental; enfocarte en verbos abre el problema a soluciones más amplias e innovadoras.",
   "pasos_accionables": [
     "Reformula el problema que estás resolviendo: cambia el sustantivo objeto por el verbo o la experiencia que quieres habilitar.",
-    "Identifica a todas las personas involucradas en el sistema social o de comportamiento, no solo en el producto.",
+    "Identifica los distintos grupos de personas involucradas en el sistema social o de comportamiento, no solo en el producto, y busca representantes de cada uno.",
     "Prueba soluciones a nivel de todo el sistema, no solo del objeto físico."
   ],
   "entregable_esperado": "Una declaración del problema reformulada en términos de verbo o experiencia, junto con un mapa de las personas involucradas en el sistema.",
@@ -23,5 +23,24 @@
   "etiqueta_arbol": "Piensa en Acciones, No Cosas",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-016-pensar_en_verbos_no_sustantivos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica a todas las personas involucradas en el sistema social o de comportamiento, no solo en el producto.",
+      "texto_nuevo": "Identifica los distintos grupos de personas involucradas en el sistema social o de comportamiento, no solo en el producto, y busca representantes de cada uno.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1521",
+        "frase": "having access to representative experts from the different stakeholder groups proved to be essential"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide acceso a expertos representativos de los distintos grupos de interesados, no identificar a todas las personas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

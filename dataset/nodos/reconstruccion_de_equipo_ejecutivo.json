@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando tu empresa pivota a un modelo de negocio radicalmente distinto (por ejemplo de servicios cloud a venta de software empresarial), las competencias que hicieron exitoso a tu equipo ejecutivo en la etapa anterior pueden no servir en la nueva. Un CFO experto en contabilidad de servicios puede no entender contabilidad de software; un líder de ventas exitoso en un modelo puede fracasar en ventas enterprise o marketing B2B. Debes evaluar objetivamente si cada ejecutivo tiene las competencias específicas que exige la nueva fase, no si es buena persona o buen profesional en general. El desempeño pasado no garantiza éxito futuro en un contexto distinto, y el reemplazo debe explicarse como una cuestión de fit de habilidades, no de valor personal.",
+  "resumen_teorico": "Cuando tu empresa pivota a un modelo de negocio radicalmente distinto (por ejemplo de servicios cloud a venta de software empresarial), las competencias que hicieron exitoso a tu equipo ejecutivo en la etapa anterior pueden no servir en la nueva. Un CFO experto en contabilidad de servicios puede no entender contabilidad de software; un líder de ventas exitoso en un modelo puede fracasar en ventas enterprise o marketing B2B. Debes evaluar objetivamente si cada ejecutivo tiene las competencias específicas que exige la nueva fase, no si es buena persona o buen profesional en general. El desempeño pasado no garantiza éxito futuro en un contexto distinto, y aunque sea duro, es necesario dejar ir a quien no está preparado para su nuevo puesto.",
   "pasos_accionables": [
     "Define las competencias específicas que exige la nueva etapa del negocio, por ejemplo contabilidad de software, ventas enterprise o marketing B2B",
     "Evalúa honestamente si cada ejecutivo posee esas competencias específicas frente a las genéricas que tenía antes",
     "Separa el desempeño pasado en el modelo anterior de la idoneidad real para el nuevo rol",
     "Identifica las brechas de experiencia concretas de cada persona respecto al nuevo modelo",
     "Reemplaza de forma decidida a quienes no cumplan el perfil, aunque haya sido difícil y hayan sido valiosos antes",
-    "Comunica con transparencia que el cambio responde a fit de habilidades, no a un juicio sobre su desempeño personal"
+    "Sugerencia de My Idea: comunica con transparencia que el cambio responde a fit de habilidades, no a un juicio sobre su desempeño personal"
   ],
   "entregable_esperado": "Matriz de competencias requeridas versus competencias del equipo actual, con organigrama actualizado y plan de reemplazo si aplica",
   "nodos_previos": [
@@ -54,6 +54,39 @@
         "motivo": "Reconstruir el equipo ejecutivo tras un pivote no prepara la eleccion de la estrategia de ataque por arena; los temas no se conectan."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-012-reconstruccion_de_equipo_ejecutivo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tu empresa pivota a un modelo de negocio radicalmente distinto (por ejemplo de servicios cloud a venta de software empresarial), las competencias que hicieron exitoso a tu equipo ejecutivo en la etapa anterior pueden no servir en la nueva. Un CFO experto en contabilidad de servicios puede no entender contabilidad de software; un líder de ventas exitoso en un modelo puede fracasar en ventas enterprise o marketing B2B. Debes evaluar objetivamente si cada ejecutivo tiene las competencias específicas que exige la nueva fase, no si es buena persona o buen profesional en general. El desempeño pasado no garantiza éxito futuro en un contexto distinto, y el reemplazo debe explicarse como una cuestión de fit de habilidades, no de valor personal.",
+      "texto_nuevo": "Cuando tu empresa pivota a un modelo de negocio radicalmente distinto (por ejemplo de servicios cloud a venta de software empresarial), las competencias que hicieron exitoso a tu equipo ejecutivo en la etapa anterior pueden no servir en la nueva. Un CFO experto en contabilidad de servicios puede no entender contabilidad de software; un líder de ventas exitoso en un modelo puede fracasar en ventas enterprise o marketing B2B. Debes evaluar objetivamente si cada ejecutivo tiene las competencias específicas que exige la nueva fase, no si es buena persona o buen profesional en general. El desempeño pasado no garantiza éxito futuro en un contexto distinto, y aunque sea duro, es necesario dejar ir a quien no está preparado para su nuevo puesto.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "509",
+        "frase": "It was miserable, but necessary, to see them all go."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que no estaban calificados para sus nuevos puestos y que fue duro pero necesario dejarlos ir; nada de cómo explicar el reemplazo.; Mismo defecto: la forma de explicar el reemplazo no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-012-reconstruccion_de_equipo_ejecutivo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunica con transparencia que el cambio responde a fit de habilidades, no a un juicio sobre su desempeño personal",
+      "texto_nuevo": "Sugerencia de My Idea: comunica con transparencia que el cambio responde a fit de habilidades, no a un juicio sobre su desempeño personal",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "509",
+        "frase": "Every one of them was great at their old jobs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice cómo comunicar las salidas; como consejo práctico que no contradice el pasaje queda como sugerencia.; Mismo defecto: práctica de comunicación ausente del libro.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

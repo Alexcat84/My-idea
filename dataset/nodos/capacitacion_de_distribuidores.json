@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Educación y Capacitación de Distribuidores Internacionales",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y despliegue de personal cuando sea necesario, por ejemplo, con seminarios dirigidos a asociaciones profesionales locales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y, si todo lo demás falla, el envío de técnicos, además de seminarios dirigidos a asociaciones profesionales locales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Evaluar el nivel de conocimiento técnico y regulatorio del distribuidor",
     "Diseñar un programa de capacitación técnica sobre el producto",
@@ -44,6 +44,22 @@
       },
       "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan; la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-001-capacitacion_de_distribuidores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y despliegue de personal cuando sea necesario, por ejemplo, con seminarios dirigidos a asociaciones profesionales locales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "En mercados donde las regulaciones o el entendimiento técnico del producto son limitados, el exportador debe invertir en educar a sus distribuidores y, en algunos casos, a reguladores locales. Esto incluye entrenamiento técnico, soporte remoto y, si todo lo demás falla, el envío de técnicos, además de seminarios dirigidos a asociaciones profesionales locales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5271",
+        "frase": "and, if all else fails, being prepared to dispatch technicians"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta el envío de técnicos solo como último recurso, si todo lo demás falla; el nodo lo deja como opción corriente.; Mismo defecto: se cae la condición de último recurso del envío de técnicos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,15 +4,15 @@
   "dominio": "core",
   "titulo_concepto": "Hipótesis de Recursos Clave",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado) y dónde conseguirlo, y revisa qué dependencias externas escapan a tu control.",
+  "resumen_teorico": "Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado), dónde conseguirlo y cómo asegurarlo, el riesgo de que falte y tus alternativas, y revisa qué dependencias externas escapan a tu control.",
   "pasos_accionables": [
     "Lista los recursos físicos que necesitas: instalaciones, insumos, equipo, redes de distribución",
-    "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
+    "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
     "Define qué talento necesitas ahora y cuál vas a necesitar más adelante",
     "Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual: marca, patentes, bases de datos, saber hacer",
-    "Revisa qué dependes de otros que está fuera de tu control"
+    "Revisa qué dependes de otros que está fuera de tu control: qué tiene que pasar, cuándo, qué harás si no pasa y qué señales usarás para medir si está ocurriendo"
   ],
-  "entregable_esperado": "Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo y cómo asegurarlo, integrado a tu modelo de negocio (Business Model Canvas)",
+  "entregable_esperado": "Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo, cómo asegurarlo, qué riesgo hay de que no esté disponible y qué alternativas tienes, integrado a tu modelo de negocio (Business Model Canvas)",
   "nodos_previos": [
     "estrategia_crecimiento_clientes",
     "lienzo_modelo_negocio",
@@ -45,5 +45,73 @@
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve",
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-013-key_resources_hypothesis-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado) y dónde conseguirlo, y revisa qué dependencias externas escapan a tu control.",
+      "texto_nuevo": "Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado), dónde conseguirlo y cómo asegurarlo, el riesgo de que falte y tus alternativas, y revisa qué dependencias externas escapan a tu control.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7479",
+        "frase": "Be sure to identify the risks of their unavailability, as well as alternatives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide explicar cómo asegurarás cada recurso, el riesgo de que falte y las alternativas; el resumen lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-013-key_resources_hypothesis-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
+      "texto_nuevo": "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7369",
+        "frase": "Companies selling physical products have additional sources of capital"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da el factoring y el arrendamiento de equipo como fuentes adicionales solo para empresas que venden productos físicos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-013-key_resources_hypothesis-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa qué dependes de otros que está fuera de tu control",
+      "texto_nuevo": "Revisa qué dependes de otros que está fuera de tu control: qué tiene que pasar, cuándo, qué harás si no pasa y qué señales usarás para medir si está ocurriendo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7477",
+        "frase": "Note the benchmarks you’ll use to measure whether the change is happening when needed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El análisis de dependencias del libro precisa qué debe pasar, cuándo, qué pasa si no ocurre y con qué señales se mide; el paso se queda en revisar.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-013-key_resources_hypothesis-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo y cómo asegurarlo, integrado a tu modelo de negocio (Business Model Canvas)",
+      "texto_nuevo": "Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo, cómo asegurarlo, qué riesgo hay de que no esté disponible y qué alternativas tienes, integrado a tu modelo de negocio (Business Model Canvas)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7479",
+        "frase": "Be sure to identify the risks of their unavailability, as well as alternatives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también identificar el riesgo de que cada recurso falte y las alternativas que reducen el impacto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

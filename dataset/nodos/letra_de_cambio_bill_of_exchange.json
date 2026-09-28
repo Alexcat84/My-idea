@@ -4,13 +4,13 @@
   "dominio": "exportacion",
   "titulo_concepto": "Letra de cambio y carta de instrucciones para el banco (draft y transmittal letter)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La letra de cambio (draft) es el documento con el que tú, como exportador, le ordenas al comprador o a su banco pagar una suma determinada, ya sea de inmediato (sight draft) o en un plazo (time draft). La acompañas con una carta de instrucciones donde le dices al banco exactamente qué hacer: monto, moneda, cuándo se paga, a quién, qué documentos van adjuntos, si entregas los documentos contra el pago o contra la promesa de pago, quién asume los costos del banco, qué hacer si no te pagan o no aceptan, y a quién contactar por dudas. Es la herramienta que usas cuando cobras por la vía del cobro documentario (documentary collection).",
+  "resumen_teorico": "La letra de cambio (draft) es el documento con el que tú, como exportador, le ordenas al comprador o a su banco pagar una suma determinada, ya sea de inmediato (sight draft) o en un plazo (time draft). La acompañas con una carta de instrucciones donde le dices al banco exactamente qué hacer: monto, moneda, cuándo se paga, a quién, qué documentos van adjuntos, si entregas los documentos contra el pago o contra la promesa de pago, quién asume los costos del banco, qué hacer si no te pagan o no aceptan, y a quién contactar por dudas. Es la herramienta que usas cuando cobras por la vía del cobro documentario (documentary collection), y también acompaña a una carta de crédito.",
   "pasos_accionables": [
     "Completa el monto y la moneda de la letra de cambio según lo que acordaste con el comprador.",
     "Define cuándo se paga (a la vista, o a 30, 45 o 60 días) y a quién se le paga.",
     "Detalla en tu carta de instrucciones qué documentos vas a adjuntar: factura, conocimiento de embarque, lista de empaque, certificados.",
     "Indica si entregas los documentos solo contra el pago (sight draft) o contra la aceptación de pago futuro (time draft).",
-    "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten.",
+    "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten, sabiendo que los gastos extra del protesto suelen cargarse a ti.",
     "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio.",
     "Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft"
   ],
@@ -43,5 +43,40 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-002-letra_de_cambio_bill_of_exchange-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La letra de cambio (draft) es el documento con el que tú, como exportador, le ordenas al comprador o a su banco pagar una suma determinada, ya sea de inmediato (sight draft) o en un plazo (time draft). La acompañas con una carta de instrucciones donde le dices al banco exactamente qué hacer: monto, moneda, cuándo se paga, a quién, qué documentos van adjuntos, si entregas los documentos contra el pago o contra la promesa de pago, quién asume los costos del banco, qué hacer si no te pagan o no aceptan, y a quién contactar por dudas. Es la herramienta que usas cuando cobras por la vía del cobro documentario (documentary collection).",
+      "texto_nuevo": "La letra de cambio (draft) es el documento con el que tú, como exportador, le ordenas al comprador o a su banco pagar una suma determinada, ya sea de inmediato (sight draft) o en un plazo (time draft). La acompañas con una carta de instrucciones donde le dices al banco exactamente qué hacer: monto, moneda, cuándo se paga, a quién, qué documentos van adjuntos, si entregas los documentos contra el pago o contra la promesa de pago, quién asume los costos del banco, qué hacer si no te pagan o no aceptan, y a quién contactar por dudas. Es la herramienta que usas cuando cobras por la vía del cobro documentario (documentary collection), y también acompaña a una carta de crédito.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4081",
+        "frase": "A sight or time draft accompanies the letter of credit."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La letra también acompaña a la carta de crédito (4081) y la carta de instrucciones prevé su negociación (6947); el nodo la limita al cobro documentario.; Mismo defecto: la letra se usa también con la carta de crédito, no solo en el cobro documentario.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-002-letra_de_cambio_bill_of_exchange-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten.",
+      "texto_nuevo": "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten, sabiendo que los gastos extra del protesto suelen cargarse a ti.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "6957",
+        "frase": "Additional bank expenses associated with a protest are usually charged to the seller."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los gastos extra del protesto suelen cargarse al vendedor, dato que pesa en la decisión.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

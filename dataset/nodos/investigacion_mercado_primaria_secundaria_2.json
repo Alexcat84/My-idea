@@ -4,11 +4,11 @@
   "dominio": "exportacion",
   "titulo_concepto": "Investigación de Mercado Primaria y Secundaria",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La investigación primaria consiste en recolectar datos directamente del mercado extranjero mediante entrevistas, encuestas y contacto directo con compradores potenciales; es costosa y lenta pero altamente personalizada. La investigación secundaria usa fuentes existentes como estadísticas comerciales y reportes de mercado; es más económica pero puede tener datos desactualizados o demasiado generales. El Market Survey Report combina ambos enfoques con estadísticas relevantes sobre compradores y competidores.",
+  "resumen_teorico": "La investigación primaria consiste en recolectar datos directamente del mercado extranjero mediante entrevistas, encuestas y contacto directo con compradores potenciales; es costosa y lenta pero altamente personalizada. La investigación secundaria usa fuentes existentes como estadísticas comerciales y reportes de mercado; es más económica pero puede tener datos desactualizados o demasiado generales. El Market Survey Report describe y evalúa el mercado con estadísticas relevantes, a menudo a partir de investigación original, y puede incluir información sobre compradores y competidores.",
   "pasos_accionables": [
     "Iniciar con investigación secundaria: estadísticas comerciales, reportes de mercado (Market Survey), CIA World Factbook",
     "Identificar mercados con crecimiento sostenido mediante estadísticas comerciales de varios años",
-    "Complementar con investigación primaria mediante viajes, entrevistas y encuestas si el presupuesto lo permite",
+    "Complementar con investigación primaria mediante viajes, entrevistas y encuestas si el presupuesto lo permite, o pedir al U.S. Commercial Service que recolecte y analice esos datos por ti, por unos cientos de dólares por mercado y sin viajar",
     "Consultar reportes del U.S. Commercial Service específicos del país objetivo"
   ],
   "entregable_esperado": "Informe de investigación de mercado con datos secundarios y, si aplica, hallazgos primarios sobre compradores y competidores del mercado objetivo",
@@ -41,5 +41,40 @@
   "etiqueta_arbol": "Combina Datos Propios y Existentes",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-002-investigacion_mercado_primaria_secundaria_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La investigación primaria consiste en recolectar datos directamente del mercado extranjero mediante entrevistas, encuestas y contacto directo con compradores potenciales; es costosa y lenta pero altamente personalizada. La investigación secundaria usa fuentes existentes como estadísticas comerciales y reportes de mercado; es más económica pero puede tener datos desactualizados o demasiado generales. El Market Survey Report combina ambos enfoques con estadísticas relevantes sobre compradores y competidores.",
+      "texto_nuevo": "La investigación primaria consiste en recolectar datos directamente del mercado extranjero mediante entrevistas, encuestas y contacto directo con compradores potenciales; es costosa y lenta pero altamente personalizada. La investigación secundaria usa fuentes existentes como estadísticas comerciales y reportes de mercado; es más económica pero puede tener datos desactualizados o demasiado generales. El Market Survey Report describe y evalúa el mercado con estadísticas relevantes, a menudo a partir de investigación original, y puede incluir información sobre compradores y competidores.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1307",
+        "frase": "The reports are often based on original research conducted in the countries studied"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los informes a menudo se basan en investigación original y pueden incluir compradores y competidores; el nodo lo afirma como seguro.; Mismo defecto: endurece el 'often' y el 'may include' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-002-investigacion_mercado_primaria_secundaria_2-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Complementar con investigación primaria mediante viajes, entrevistas y encuestas si el presupuesto lo permite",
+      "texto_nuevo": "Complementar con investigación primaria mediante viajes, entrevistas y encuestas si el presupuesto lo permite, o pedir al U.S. Commercial Service que recolecte y analice esos datos por ti, por unos cientos de dólares por mercado y sin viajar",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1211",
+        "frase": "The U.S. Commercial Service can collect primary data for you and help you analyze it."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la vía de que la oficina recolecte y analice los datos por ti sin viajar.; Se cae que el U.S. Commercial Service puede recolectar y analizar los datos primarios por ti, por unos cientos de dólares por mercado y sin viajar, lo que pesa en la condición de presupuesto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

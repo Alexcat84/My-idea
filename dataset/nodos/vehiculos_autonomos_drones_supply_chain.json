@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Drones y Vehículos Autónomos en la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega en tramos con alto volumen repetitivo.",
+  "resumen_teorico": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega.",
   "pasos_accionables": [
-    "Identifica los tramos de tu cadena de suministro con alto volumen repetitivo (fábrica-almacén, almacén-cliente) que podrían automatizarse",
+    "Identifica los tramos de tu cadena de suministro (fábrica-almacén, almacén-cliente) que podrían automatizarse",
     "Revisa en qué tramos de tu cadena de suministro encajaría cada tipo de dron o vehículo sin conductor antes de avanzar",
-    "Evalúa qué tipo de vehículo autónomo conviene para cada tramo: terrestre para grandes volúmenes, aéreo para entregas rápidas de última milla",
+    "Evalúa qué tipo de vehículo autónomo conviene para cada tramo: camiones sin conductor para grandes volúmenes entre fábrica y almacén, drones aéreos o furgonetas pequeñas sin conductor para la entrega final al cliente",
     "Diseña o contrata un sistema central que programe y coordine la actividad de los vehículos",
     "Lanza un piloto en una ruta o área geográfica limitada y mide su desempeño antes de escalar"
   ],
@@ -83,6 +83,56 @@
         "motivo": "Los drones y vehiculos autonomos no llevan naturalmente a la simulacion de operaciones."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-017-vehiculos_autonomos_drones_supply_chain-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega en tramos con alto volumen repetitivo.",
+      "texto_nuevo": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2243",
+        "frase": "Different kinds of drones can be assigned to move products in different parts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Condición de aplicación que el libro no pone.; El libro no limita el uso ni el beneficio a tramos de alto volumen repetitivo (la propuesta del lector, que dice 'aumentar', no se usa).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-017-vehiculos_autonomos_drones_supply_chain-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa qué tipo de vehículo autónomo conviene para cada tramo: terrestre para grandes volúmenes, aéreo para entregas rápidas de última milla",
+      "texto_nuevo": "Evalúa qué tipo de vehículo autónomo conviene para cada tramo: camiones sin conductor para grandes volúmenes entre fábrica y almacén, drones aéreos o furgonetas pequeñas sin conductor para la entrega final al cliente",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2243",
+        "frase": "warehouses can send aerial drones or small driverless vans to deliver products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Para la entrega final el libro pone drones aéreos o furgonetas pequeñas sin conductor; el paso deja fuera la opción terrestre y añade 'rápidas'.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-017-vehiculos_autonomos_drones_supply_chain-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los tramos de tu cadena de suministro con alto volumen repetitivo (fábrica-almacén, almacén-cliente) que podrían automatizarse",
+      "texto_nuevo": "Identifica los tramos de tu cadena de suministro (fábrica-almacén, almacén-cliente) que podrían automatizarse",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2243",
+        "frase": "Different kinds of drones can be assigned to move products in different parts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El alto volumen repetitivo como criterio para elegir tramos no está en el libro.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

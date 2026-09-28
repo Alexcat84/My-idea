@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar si el comprador acepta pago por adelantado como condición de venta",
     "Elegir el mecanismo de transferencia (wire transfer preferido sobre cheque)",
-    "Considerar el uso de servicios de escrow para transacciones pequeñas con compradores desconocidos",
+    "Considerar el uso de servicios de escrow para transacciones pequeñas con importadores que exigen garantía de que la mercancía se enviará a cambio del pago adelantado",
     "Verificar la validez de transacciones con tarjeta de crédito antes de enviar mercancía"
   ],
   "entregable_esperado": "Confirmación de pago recibido antes del envío de la mercancía",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Cobra por Adelantado",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-001-cash_in_advance-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar el uso de servicios de escrow para transacciones pequeñas con compradores desconocidos",
+      "texto_nuevo": "Considerar el uso de servicios de escrow para transacciones pequeñas con importadores que exigen garantía de que la mercancía se enviará a cambio del pago adelantado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4027",
+        "frase": "small transactions with importers who demand assurance that the goods will be sent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El defecto existe, pero lo que pesa es la condición añadida que el libro no da (compradores desconocidos), no solo la pérdida de la del libro.; La condición \"compradores desconocidos\" no está en el libro, que propone el escrow para importadores que exigen garantía de envío a cambio del pago adelantado.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
