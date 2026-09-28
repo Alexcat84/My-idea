@@ -32,9 +32,11 @@ import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
 import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { avisosNodo } from "./avisos";
-import { preguntaEnIdioma } from "./preguntaEnIdioma";
+import { adaptarResultadoTurno } from "./adaptadorPregunta";
+import { puntuadorDePrioridad, type Puntuador } from "./prioridad";
 import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
+import { contextoDeSesion, fichaVacia, fusionarFicha, type FichaContexto } from "./memoria";
 import {
   interpretarMultiSalto,
   type EventoInterprete,
@@ -107,6 +109,12 @@ export interface EstadoRecorrido {
    * posterior (profundizar o replantear). Viaja con la sesión hasta la entrega
    * del plan, donde se registra en la bitácora. Ausente en todo lo demás. */
   ciclo?: CicloSesion;
+  /** Principio 1 (28 sep 2026): la foto ESTABLE del contexto del proyecto al abrir
+   * la sesion (lib/engine/memoria.ts, textoContextoProyecto). Viaja a toda llamada
+   * de la sesion con cache de 1 hora. Ausente en sesiones anteriores. */
+  contextoProyecto?: string | null;
+  /** Principio 1: la ficha de contexto de la persona, actualizada cada turno. */
+  ficha?: FichaContexto;
 }
 
 /** AUD-09 M16: los dominios que la entrevista puede recorrer. En una sesión de
@@ -134,6 +142,11 @@ export function estadoInicial(params: {
   idioma?: string;
   /** Ciclo de replanteamiento, Fase 2. */
   ciclo?: CicloSesion;
+  /** Principio 1: la foto del contexto del proyecto y la ficha al abrir la sesion. */
+  contextoProyecto?: string | null;
+  ficha?: FichaContexto;
+  /** Construccion 4: lo que la puerta ya dejo escrito (la prioridad en la puerta del seguimiento). */
+  fallbackEvents?: EventoInterprete[];
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -149,8 +162,9 @@ export function estadoInicial(params: {
     puertasDescartadas: [],
     snapshotNucleo: params.snapshotNucleo ?? null,
     idioma: params.idioma ?? "es",
-    fallbackEvents: [],
-    prioridadDeclarada: null,
+    fallbackEvents: params.fallbackEvents ?? [],
+    // Construccion 4 + Principio 1: la prioridad que la persona ya declaro viaja a la sesion nueva.
+    prioridadDeclarada: params.ficha?.prioridad_declarada ?? null,
     preguntaPendiente: null,
     ultimasPreguntas: [],
     repreguntasUsadas: 0,
@@ -161,6 +175,8 @@ export function estadoInicial(params: {
     fase: "esperando_respuesta",
     sigamosDirigido: null,
     ...(params.ciclo ? { ciclo: params.ciclo } : {}),
+    contextoProyecto: params.contextoProyecto ?? null,
+    ficha: params.ficha ?? fichaVacia(),
   };
 }
 
@@ -267,13 +283,15 @@ async function temasPendientesDeLaMesa(
 export async function detectarDecisionPlan(
   client: Anthropic,
   respuesta: string,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  contexto: string | null = null
 ): Promise<{ decision: "generar_ya" | "continuar"; acumulado: UsoAcumulado }> {
   let acumuladoActualizado = acumulado;
   try {
     const r = await llamarClaude(client, SYSTEM_PROFUNDIZAR, respuesta, MODEL_HAIKU, acumulado, {
       maxTokens: 100,
       componente: "turnos",
+      contexto,
     });
     acumuladoActualizado = r.acumulado;
     const data = parsearJson<{ decision?: string }>(r.texto);
@@ -356,7 +374,8 @@ export async function preguntaDirigida(
   ultimasPreguntas: string[],
   acumulado: UsoAcumulado,
   idioma: Locale = LOCALE_BASE,
-  idiomaSalida: string | null = null
+  idiomaSalida: string | null = null,
+  contexto: string | null = null
 ): Promise<{ pregunta: string; acumulado: UsoAcumulado }> {
   const plano = preguntaDeNodo(nid, graph, preguntasCache, idioma);
   try {
@@ -369,6 +388,7 @@ export async function preguntaDirigida(
       maxTokens: 150,
       componente: "turnos",
       idiomaSalida,
+      contexto,
     });
     const texto = r.texto.trim();
     return { pregunta: texto || plano, acumulado: r.acumulado };
@@ -397,33 +417,14 @@ export interface AvanzarTurnoParams {
 }
 
 export async function avanzarTurno(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
-  return adaptarPreguntaDelCache(params, await avanzarTurnoBase(params));
-}
-
-/**
- * D3 (i18n F5): si el turno termina en la pregunta CACHEADA del nodo (en
- * español) y la idea está en otro idioma, la IA la expresa en ese idioma, y
- * esa versión queda como pendiente y en el historial anti-repetición (lo que
- * la persona leyó).
- */
-async function adaptarPreguntaDelCache(params: AvanzarTurnoParams, r: ResultadoTurno): Promise<ResultadoTurno> {
-  const idiomaSalida = r.estado.idioma;
-  if (r.tipo !== "pregunta" || !idiomaSalida || idiomaSalida === "es") return r;
-  const actual = r.estado.ruta[r.estado.ruta.length - 1];
-  const cruda = actual ? params.preguntasCache[resolverId(actual, params.graph) ?? actual]?.pregunta : undefined;
-  if (!cruda || r.pregunta !== cruda) return r;
-  const t = await preguntaEnIdioma(params.client, cruda, idiomaSalida, r.acumulado);
-  if (!t.traducida) return { ...r, acumulado: t.acumulado };
-  return {
-    ...r,
-    pregunta: t.pregunta,
-    acumulado: t.acumulado,
-    estado: {
-      ...r.estado,
-      preguntaPendiente: t.pregunta,
-      ultimasPreguntas: r.estado.ultimasPreguntas.map((q) => (q === cruda ? t.pregunta : q)),
-    },
-  };
+  // CONSTRUCCION 2 (28 sep 2026): si el turno sale con la pregunta de la cache del ultimo nodo, sea por el camino
+  // que sea (re-eleccion, respaldo, dirigida fallida, copia literal), pasa por el adaptador: la dice a esta persona
+  // y en el idioma de su idea. Nunca sale la base cruda: si falla, su neutral o la plantilla neutral (adaptadorPregunta).
+  return adaptarResultadoTurno(params.client, await avanzarTurnoBase(params), {
+    graph: params.graph,
+    preguntasCache: params.preguntasCache,
+    idiomaPlantilla: idiomaDePlantilla(params.estado.idioma ?? "es", params.idioma ?? LOCALE_BASE),
+  });
 }
 
 async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
@@ -440,6 +441,13 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
   let respuestaUsuario = params.respuestaUsuario;
   const rutaLongitudInicial = estado.ruta.length;
 
+  // Construccion 4 (28 sep 2026): la prioridad manda tambien al re-elegir puerta.
+  async function puntuarPrioridadDeSesion(): Promise<Puntuador | null> {
+    const r = await puntuadorDePrioridad(client, estado.prioridadDeclarada?.texto, idiomaSalida, acumulado, graph);
+    acumulado = r.acumulado;
+    return r.puntuar;
+  }
+
   function nodosNuevosDesdeInicio(): NodoTranscrito[] {
     return estado.ruta.slice(rutaLongitudInicial).map((nid, i) => ({
       id: nid,
@@ -455,7 +463,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     if (respuestaUsuario === SENTINELA_SEGUIR_EXPLORANDO) {
       decision = "continuar";
     } else {
-      const r = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado);
+      const r = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado, contextoDeSesion(estado));
       decision = r.decision;
       acumulado = r.acumulado;
     }
@@ -481,7 +489,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     // de familia (antes: elegidos vacios -> listo otra vez, boton muerto).
     if (candidatosFamilia.length === 0 && familiasFaltantesKeys.length === 0) {
       // i18n F5, remedio de F1: el índice está en español.
-      const traducida = await consultaAlEspanol(client, estado.perfilSesion || estado.textoOriginal, idiomaSalida, acumulado);
+      const traducida = await consultaAlEspanol(client, estado.perfilSesion || estado.textoOriginal, idiomaSalida, acumulado, contextoDeSesion(estado));
       acumulado = traducida.acumulado;
       const afinesPerfil = await buscarAfines(traducida.consulta, visitados, {
         k: 6,
@@ -516,7 +524,8 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
       estado.ultimasPreguntas,
       acumulado,
       idioma,
-      idiomaSalida
+      idiomaSalida,
+      contextoDeSesion(estado)
     );
     acumulado = a2;
     estado = {
@@ -533,7 +542,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
 
   // --- Sub-fase: dentro de la extension dirigida (Fase 2.8/2.9) ---
   if (estado.fase === "extendiendo_dirigido" && estado.sigamosDirigido) {
-    const { decision, acumulado: a1 } = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado);
+    const { decision, acumulado: a1 } = await detectarDecisionPlan(client, respuestaUsuario ?? "", acumulado, contextoDeSesion(estado));
     acumulado = a1;
     if (decision === "generar_ya") {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null, sigamosDirigido: null };
@@ -568,7 +577,8 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
       estado.ultimasPreguntas,
       acumulado,
       idioma,
-      idiomaSalida
+      idiomaSalida,
+      contextoDeSesion(estado)
     );
     acumulado = a2;
     estado = {
@@ -607,6 +617,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
         perfilSesion: estado.perfilSesion,
         cubiertos: visitados,
         descartados: new Set(estado.puertasDescartadas),
+        puntuarPrioridad: await puntuarPrioridadDeSesion(),
       });
       if (reeleccion) {
         const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
@@ -657,6 +668,8 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
       ultimasPreguntas: estado.ultimasPreguntas,
       prioridadDeclaradaActual: estado.prioridadDeclarada,
       historialMensajes: estado.historialMensajes,
+      contextoProyecto: estado.contextoProyecto ?? null,
+      fichaActual: estado.ficha ?? fichaVacia(),
       acumulado,
       registrarEvento: (e) => eventosNuevos.push(e),
       dominiosDesbloqueados: dominiosDelRecorrido(estado),
@@ -693,6 +706,17 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     if (resultado.prioridadDeclarada) {
       estado = { ...estado, prioridadDeclarada: resultado.prioridadDeclarada };
     }
+    // Principio 1: lo que el turno revela entra en la ficha (un dato desconocido
+    // nunca pisa uno conocido), y la prioridad declarada con ella.
+    if (resultado.fichaUpdate || resultado.prioridadDeclarada) {
+      estado = {
+        ...estado,
+        ficha: fusionarFicha(estado.ficha ?? fichaVacia(), {
+          ...(resultado.fichaUpdate ?? {}),
+          prioridad_declarada: resultado.prioridadDeclarada ?? null,
+        }),
+      };
+    }
     if (resultado.numerosDetectados) {
       const nuevos = { ...estado.numerosDetectadosSesion };
       const ahora = new Date().toISOString();
@@ -728,6 +752,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
           perfilSesion: estado.perfilSesion,
           cubiertos: new Set([...estado.nodosCubiertosPrevios, ...estado.ruta]),
           descartados,
+          puntuarPrioridad: await puntuarPrioridadDeSesion(),
         });
         const motivo = resultado.razonamiento ?? null;
         if (reeleccion) {

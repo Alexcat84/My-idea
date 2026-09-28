@@ -161,3 +161,31 @@ describe("reporteFlow: el idioma de la idea (i18n F5)", () => {
     expect(clasificarOfertaFalso.mock.calls[0][3]).toBe("ko");
   });
 });
+
+// PRINCIPIO 1 (28 sep 2026): el contexto completo del proyecto viaja tambien al reporte:
+// a la clasificacion de la oferta y a la narracion.
+describe("reporteFlow: el contexto completo llega a sus dos llamadas (Principio 1)", () => {
+  const completos = {
+    costo_materiales_unidad: { valor: 68, unidad: "por pieza", texto_original: null, session_id: null, updated_at: null },
+    horas_por_unidad: { valor: 0, unidad: "por pieza", texto_original: null, session_id: null, updated_at: null },
+    valor_hora: { valor: 0, unidad: "por hora", texto_original: null, session_id: null, updated_at: null },
+    precio_tentativo: { valor: 85, unidad: "por pieza", texto_original: null, session_id: null, updated_at: null },
+    capacidad_semanal: { valor: 10, unidad: "pieza", texto_original: null, session_id: null, updated_at: null },
+    costos_fijos_mensuales: { valor: 200, unidad: "por mes", texto_original: null, session_id: null, updated_at: null },
+  };
+  const CONTEXTO = "CONTEXTO DEL PROYECTO\nIdea original: macetas de cemento";
+
+  it("la narracion recibe el contexto como ultimo argumento", async () => {
+    narrarReporteFalso.mockResolvedValue({ contenido: "x", acumulado: acumuladoVacio });
+    await iniciarReporte({} as never, completos, "producto_fisico", "pieza", acumuladoVacio, "es", null, CONTEXTO);
+    expect(narrarReporteFalso.mock.calls[0].at(-1)).toBe(CONTEXTO);
+  });
+
+  it("la clasificacion de la oferta recibe el contexto como ultimo argumento", async () => {
+    clasificarOfertaFalso.mockResolvedValue({ tipo: "digital", unidad: "suscripcion", acumulado: acumuladoVacio });
+    const r = await iniciarReporte({} as never, {}, null, null, acumuladoVacio, "es", null, CONTEXTO);
+    if (r.tipo !== "pregunta") throw new Error("esperaba pregunta");
+    await avanzarReporte({} as never, r.estado, {}, "vendo una app de suscripciones", acumuladoVacio, "es", null, CONTEXTO);
+    expect(clasificarOfertaFalso.mock.calls[0].at(-1)).toBe(CONTEXTO);
+  });
+});

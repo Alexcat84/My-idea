@@ -34,6 +34,7 @@ import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
 export async function POST(request: Request) {
   const idioma = idiomaDeRequest(request);
@@ -136,6 +137,9 @@ export async function POST(request: Request) {
   let projectId: string;
   // i18n F5: el idioma de la IDEA (el de su texto al nacer), en que escribe la IA.
   let idiomaIdea: string;
+  // Principio 1 (28 sep 2026): la memoria del proyecto al abrir la sesion. Una idea
+  // nueva empieza con su texto y la ficha vacia.
+  let apertura = aperturaDeSesion({ entrada_original: texto, estado_vivo: null, memoria: {} });
   if (projectIdSolicitado) {
     // RLS garantiza que solo se ve el proyecto propio; si no aparece, o
     // no existe o no es de este usuario -- misma respuesta en ambos casos.
@@ -146,6 +150,7 @@ export async function POST(request: Request) {
     }
     projectId = projectIdSolicitado;
     idiomaIdea = idiomaDelProyecto(proyecto);
+    apertura = aperturaDeSesion(proyecto);
   } else {
     ({ projectId, idioma: idiomaIdea } = await nacerIdea(supabase, user.id, texto, idioma));
   }
@@ -166,7 +171,7 @@ export async function POST(request: Request) {
   const client = createAnthropicClient();
   let acumulado = usoVacio();
 
-  const clasificacion = await clasificarEntrada(client, texto, entrySeeds, graph, acumulado);
+  const clasificacion = await clasificarEntrada(client, texto, entrySeeds, graph, acumulado, contextoDeSesion(apertura));
   acumulado = clasificacion.acumulado;
 
   const estadoBase = estadoInicial({
@@ -175,6 +180,7 @@ export async function POST(request: Request) {
     textoOriginal: texto,
     dominiosDesbloqueados: dominios,
     idioma: idiomaIdea,
+    ...apertura,
   });
   // AUD-09 M17: si la clasificación cayó a su respaldo, queda como evento de la
   // sesión (caja de vidrio), no solo en el log.

@@ -21,8 +21,11 @@ describe("la IA no cita libros ni autores como fuente (fundador, 26 sep 2026)", 
   it("toda llamada lleva la regla, en espanol y en cualquier otro idioma, sin tocar el prompt cacheado", () => {
     for (const idioma of ["es", "en", "ar", null]) {
       const b = bloquesDeSistema("PROMPT", idioma);
-      expect(b[0]).toEqual({ type: "text", text: "PROMPT", cache_control: { type: "ephemeral" } });
-      expect(b.some((x) => x.text === REGLA_SIN_FUENTES), String(idioma)).toBe(true);
+      // el prompt va intacto; desde el 28 sep 2026 la marca de cache (1 hora) va en
+      // el ultimo bloque fijo, asi el prefijo cacheado incluye esta regla
+      expect(b[0]).toEqual({ type: "text", text: "PROMPT" });
+      expect(b[1]).toEqual({ type: "text", text: REGLA_SIN_FUENTES });
+      expect(b[2].cache_control).toEqual({ type: "ephemeral", ttl: "1h" });
     }
   });
 

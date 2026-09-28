@@ -79,10 +79,13 @@ export async function redactarDiagnostico(
   material: MaterialDiagnostico,
   acumulado: UsoAcumulado,
   /** i18n F5: el idioma de la idea, en que escribe la IA. */
-  idiomaSalida: string | null = null
+  idiomaSalida: string | null = null,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoDiagnostico> {
   const r = await llamarClaude(client, SYSTEM_DIAGNOSTICO_MUNDO, JSON.stringify(material), MODEL, usoVacio(), {
     maxTokens: 700,
+    contexto,
     componente: "diagnostico",
     presupuestoUsd: PRESUPUESTO_DIAGNOSTICO_USD,
     idiomaSalida,

@@ -96,11 +96,14 @@ export async function clasificarOferta(
   texto: string,
   acumulado: UsoAcumulado,
   /** i18n F5: la unidad de venta se muestra: en el idioma de la idea. */
-  idiomaSalida: string | null = null
+  idiomaSalida: string | null = null,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoClasificarOferta> {
   try {
     const r = await llamarClaude(client, SYSTEM_CLASIFICAR_OFERTA, texto, MODEL_HAIKU, acumulado, {
       maxTokens: 150,
+      contexto,
       componente: "turnos",
       presupuestoUsd: PRESUPUESTO_REPORTE_USD,
       idiomaSalida,
@@ -197,7 +200,9 @@ export async function narrarReporte(
   acumulado: UsoAcumulado,
   idioma: Locale = LOCALE_BASE,
   /** i18n F5: el idioma de la idea, en que narra la IA. */
-  idiomaSalida: string | null = null
+  idiomaSalida: string | null = null,
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
+  contexto: string | null = null
 ): Promise<ResultadoNarracion> {
   const payload = {
     resultados,
@@ -207,6 +212,7 @@ export async function narrarReporte(
   try {
     const r = await llamarClaude(client, SYSTEM_REPORTE, JSON.stringify(payload), MODEL, acumulado, {
       maxTokens: 1800,
+      contexto,
       componente: "reporte",
       presupuestoUsd: PRESUPUESTO_REPORTE_USD,
       idiomaSalida,

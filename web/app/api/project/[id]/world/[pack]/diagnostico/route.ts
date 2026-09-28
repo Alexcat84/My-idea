@@ -28,6 +28,7 @@ import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { materialDiagnostico, redactarDiagnostico } from "@/lib/engine/diagnosticoMundo";
 import { cargarGrafo } from "@/lib/engine/graph";
 import { createClient } from "@/lib/supabase/server";
+import { contextoDeSesion } from "@/lib/engine/memoria";
 
 export const runtime = "nodejs";
 
@@ -115,7 +116,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let resumen: string;
   let acumulado = estadoPersistido.acumulado;
   try {
-    const r = await redactarDiagnostico(createAnthropicClient(), material, acumulado, idiomaDelProyecto(proyecto));
+    const r = await redactarDiagnostico(
+      createAnthropicClient(),
+      material,
+      acumulado,
+      idiomaDelProyecto(proyecto),
+      contextoDeSesion(estadoPersistido.recorrido)
+    );
     resumen = r.resumen;
     acumulado = r.acumulado;
   } catch (e) {

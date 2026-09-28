@@ -7,6 +7,7 @@
 import { describe, expect, it, vi } from "vitest";
 import type Anthropic from "@anthropic-ai/sdk";
 import { REGLA_SIN_FUENTES } from "../reglaSinFuentes";
+import { REGLA_CONTEXTO_USUARIO } from "../reglaContextoUsuario";
 import { bloquesDeSistema, reglaIdiomaSalida } from "./idiomaSalida";
 import { llamarClaude, llamarClaudeConversacion, usoVacio } from "../costmeter";
 
@@ -30,19 +31,28 @@ describe("reglaIdiomaSalida", () => {
 });
 
 describe("bloquesDeSistema", () => {
-  it("español: el prompt cacheado y la regla sin fuentes (26 sep 2026), sin regla de idioma", () => {
+  // Contexto de la entrevista (28 sep 2026): lo fijo va primero y se cachea 1
+  // hora: el prompt, la regla sin fuentes y la REGLA UNICA de no suponer roles.
+  // La marca va en el ULTIMO bloque fijo, para que el cache cubra los tres. Lo
+  // que varia por idioma va despues, sin marca.
+  it("español: prompt, regla sin fuentes y regla de contexto, con la marca de 1 hora en la ultima fija", () => {
     expect(bloquesDeSistema("PROMPT", "es")).toEqual([
-      { type: "text", text: "PROMPT", cache_control: { type: "ephemeral" } },
+      { type: "text", text: "PROMPT" },
       { type: "text", text: REGLA_SIN_FUENTES },
+      { type: "text", text: REGLA_CONTEXTO_USUARIO, cache_control: { type: "ephemeral", ttl: "1h" } },
     ]);
   });
-  it("otro idioma: el cacheado primero, la regla sin fuentes y la del idioma después, sin marca de caché", () => {
+  it("otro idioma: lo fijo primero con su marca de 1 hora, la regla del idioma despues y sin marca", () => {
     const b = bloquesDeSistema("PROMPT", "ar");
-    expect(b).toHaveLength(3);
-    expect(b[0]).toEqual({ type: "text", text: "PROMPT", cache_control: { type: "ephemeral" } });
-    expect(b[1].text).toBe(REGLA_SIN_FUENTES);
-    expect(b[2].text).toMatch(/^IDIOMA DE SALIDA: árabe/);
-    expect(b[2]).not.toHaveProperty("cache_control");
+    expect(b).toHaveLength(4);
+    expect(b[2]).toEqual({ type: "text", text: REGLA_CONTEXTO_USUARIO, cache_control: { type: "ephemeral", ttl: "1h" } });
+    expect(b[3].text).toMatch(/^IDIOMA DE SALIDA: árabe/);
+    expect(b[3]).not.toHaveProperty("cache_control");
+  });
+  it("la regla unica nombra los roles que no se suponen y manda adaptar sin cambiar el fondo", () => {
+    for (const x of ["jefe", "recursos humanos", "directivos", "departamentos", "condicional", "forma", "fondo"]) {
+      expect(REGLA_CONTEXTO_USUARIO).toContain(x);
+    }
   });
 });
 
@@ -59,20 +69,20 @@ describe("llamarClaude y llamarClaudeConversacion llevan el idioma de salida", (
     const { create, client } = clienteFalso();
     await llamarClaude(client, "PROMPT", "u", "m", usoVacio(), { idiomaSalida: "ko" });
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma
-    expect(sistema[2].text).toMatch(/coreano/);
+    expect(sistema).toHaveLength(4); // prompt, sin fuentes, regla de contexto (28 sep 2026), idioma
+    expect(sistema[3].text).toMatch(/coreano/);
   });
   it("llamarClaude sin idiomaSalida: como siempre", async () => {
     const { create, client } = clienteFalso();
     await llamarClaude(client, "PROMPT", "u", "m", usoVacio());
     const sistema = (create.mock.calls[0] as unknown as [{ system: unknown[] }])[0].system;
-    expect(sistema).toHaveLength(2); // prompt y regla sin fuentes (26 sep 2026)
+    expect(sistema).toHaveLength(3); // prompt, sin fuentes y regla de contexto (28 sep 2026)
   });
   it("llamarClaudeConversacion con idiomaSalida hi manda los dos bloques", async () => {
     const { create, client } = clienteFalso();
     await llamarClaudeConversacion(client, "PROMPT", [], "u", "m", usoVacio(), { idiomaSalida: "hi" });
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema[2].text).toMatch(/hindi/);
+    expect(sistema[3].text).toMatch(/hindi/);
   });
 });
 
@@ -91,7 +101,7 @@ describe("los prompts que escriben para la persona terminan con la regla de idio
     "SYSTEM_DIAGNOSTICO_MUNDO",
     "SYSTEM_CLASIFICAR_OFERTA",
     "SYSTEM_REFORMULADOR_PROTECCION",
-    "SYSTEM_TRADUCIR_PREGUNTA",
+    "SYSTEM_ADAPTAR_PREGUNTA",
   ] as const;
   const sinRegla = ["SYSTEM_CLASIFICACION", "SYSTEM_PUERTA_AVANZADA", "SYSTEM_PROFUNDIZAR", "SYSTEM_JUEZ_SESION", "SYSTEM_ENLACE_PROTECCION", "SYSTEM_ESTIMACION_BANDA", "SYSTEM_CONSULTA_AL_ESPANOL"] as const;
 

@@ -76,3 +76,26 @@ describe("el cierre honesto suelta la reserva de la sesión (AUD-09 M25)", () =>
     expect(resolverReserva).toHaveBeenCalledWith("plan:s1", "liberada");
   });
 });
+
+// PRINCIPIO 1 (28 sep 2026): cada turno deja la memoria del proyecto al dia en la
+// base: la ficha de la sesion y, si hubo respuesta, la pareja al final del hilo.
+describe("cada turno guarda la memoria del proyecto", () => {
+  it("fusiona la ficha y añade la pareja del turno al hilo", async () => {
+    const estado = estadoFalsoVacio();
+    estado.projects["p1"] = { id: "p1", session_count: 1, memoria: {} };
+    estado.sessions["s1"] = { id: "s1", project_id: "p1", closed_at: null };
+    const resultado = {
+      tipo: "pregunta",
+      pregunta: "¿Como repartes el trabajo?",
+      estado: { ficha: { papel: "dueno", tiene_jefe: false, equipo: { personas: 2, descripcion: null }, sector: null, etapa: null, prioridad_declarada: null, dijo_textual: [] } },
+      acumulado: usoVacio(),
+      nodosNuevos: [],
+    } as unknown as ResultadoTurno;
+    const entrada = { sesion: "s1", dominio: "core", nodo: "n1", pregunta: "¿Con quien trabajas?", respuesta: "Con dos empleados", en: "t1" };
+    await responderResultadoTurno(crearSupabaseFalso(estado) as unknown as SupabaseClient, "p1", "s1", resultado, usoVacio(), [], [], "es", entrada);
+    const m = estado.projects["p1"].memoria as { ficha: { papel: string; equipo: { personas: number } }; hilo: unknown[] };
+    expect(m.ficha.papel).toBe("dueno");
+    expect(m.ficha.equipo.personas).toBe(2);
+    expect(m.hilo).toEqual([entrada]);
+  });
+});

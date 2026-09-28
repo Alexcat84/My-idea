@@ -56,6 +56,8 @@ import {
 import { cargarFamilies } from "@/lib/readiness";
 import { abrirCiclo, consultarSaldoCiclo, realidadDelCiclo } from "@/lib/cicloApertura";
 import { createClient } from "@/lib/supabase/server";
+import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
+import { puntuadorDePrioridad } from "@/lib/engine/prioridad";
 
 export const runtime = "nodejs";
 
@@ -219,7 +221,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje, null, dominio, { id: sessionIdNueva });
 
   const client = createAnthropicClient();
-  const acumulado = usoVacio();
+  const memoria = aperturaDeSesion(proyecto);
+  // Construccion 4 (28 sep 2026): la prioridad que la persona ya declaro manda tambien en la puerta.
+  const prioridad = await puntuadorDePrioridad(
+    client,
+    memoria.ficha.prioridad_declarada?.texto,
+    idiomaDelProyecto(proyecto),
+    usoVacio(),
+    graph
+  );
+  const acumulado = prioridad.acumulado;
 
   const puerta = await seleccionarPuertaAvanzada(
     client,
@@ -231,7 +242,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     cubiertos,
     entrySeeds,
     acumulado,
-    dominiosPuerta
+    dominiosPuerta,
+    // Principio 1 (28 sep 2026): la memoria del proyecto.
+    contextoDeSesion(memoria),
+    prioridad.puntuar
   );
 
   const estado = estadoInicial({
@@ -245,6 +259,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // Fase 4.3: un follow de mundo es una sesion de mundo. Misma regla.
     dominioSesion: dominio,
     idioma: idiomaDelProyecto(proyecto),
+    // Principio 1 (28 sep 2026): la memoria del proyecto al abrir el seguimiento.
+    ...memoria,
+    fallbackEvents: puerta.eventos,
     // Ciclo de replanteamiento, Fase 2: lo que la persona escribió o dictó
     // viaja con la sesión y se registra en la bitácora al entregar el plan.
     ciclo: { tipo: "profundizar", detalles: detalles?.trim() || null, enfoque: enfoque?.trim() || null },

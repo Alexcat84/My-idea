@@ -4,7 +4,8 @@
 // igual, con banda null, en vez de romper el nacimiento del plan.
 import { describe, expect, it } from "vitest";
 import { crearSupabaseFalso, estadoFalsoVacio } from "./testUtils/fakeSupabase";
-import { crearProyecto, insertarChecklist } from "./db";
+import { anotarEnMemoria, crearProyecto, guardarEstadoSesion, insertarChecklist } from "./db";
+import type { EstadoSesionPersistido } from "./db";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 function falso() {
@@ -139,5 +140,86 @@ describe("crearProyecto: guarda el idioma de la idea (i18n F5, 046)", () => {
       }),
     } as unknown as SupabaseClient;
     await expect(crearProyecto(client, "u1", "x", "es")).rejects.toMatchObject({ code: "23505" });
+  });
+});
+
+// Costes del vuelo del 27 sep 2026: una sesion que se queda a medias (el usuario
+// la deja, o un seguimiento que no llega a plan) gastaba de verdad (turno, puerta
+// avanzada) pero su columna costo_usd se quedaba en 0, porque solo la escribia
+// el cierre. Cada turno guarda ahora tambien el coste y su desglose.
+//
+// A mano, con los precios de costmeter.ts (Haiku 1 $ entrada / 5 $ salida por
+// millon; lectura de cache al 10 %): 1000 in + 200 out + 10000 cache_read =
+//   1000/1e6 * 1 + 200/1e6 * 5 + 10000/1e6 * 1 * 0.1 = 0.001 + 0.001 + 0.001 = 0.003
+describe("guardarEstadoSesion: cada turno deja el coste en la sesion", () => {
+  it("escribe costo_usd y costo_desglose junto al estado", async () => {
+    let escrito: Record<string, unknown> | null = null;
+    const client = {
+      from: () => ({
+        update: (payload: Record<string, unknown>) => {
+          escrito = payload;
+          return { eq: async () => ({ error: null }) };
+        },
+      }),
+    } as unknown as SupabaseClient;
+    const estado = {
+      recorrido: {},
+      acumulado: {
+        uso: { "claude-haiku-4-5": { in: 1000, out: 200, cache_read: 10000, cache_write: 0, llamadas: 2 } },
+        uso_por_componente: { turnos: 0.002, clasificacion: 0.001 },
+        presupuesto_excedido: false,
+      },
+      turnos: [],
+      ultimaPregunta: "¿Que te preocupa?",
+    } as unknown as EstadoSesionPersistido;
+    await guardarEstadoSesion(client, "s1", estado);
+    expect(escrito).not.toBeNull();
+    expect(escrito!.estado_recorrido).toBe(estado);
+    expect(escrito!.costo_usd as number).toBeCloseTo(0.003, 10);
+    expect(escrito!.costo_desglose).toEqual({ turnos: 0.002, clasificacion: 0.001 });
+  });
+});
+
+// PRINCIPIO 1 (28 sep 2026): la memoria del proyecto se guarda en la base y se
+// actualiza en CADA turno: la ficha fusionada y la pareja pregunta-respuesta al
+// final del hilo. A mano: memoria {} + (ficha dueno, pareja 1) -> hilo [1];
+// + (ficha con 2 personas, pareja 2) -> papel sigue dueno, personas 2, hilo [1, 2].
+describe("anotarEnMemoria: la memoria del proyecto crece en cada turno", () => {
+  it("fusiona la ficha y añade la pareja al final del hilo, sin perder lo anterior", async () => {
+    let memoria: unknown = {};
+    const client = {
+      from: () => ({
+        select: () => ({ eq: () => ({ limit: async () => ({ data: [{ memoria }], error: null }) }) }),
+        update: (payload: { memoria: unknown }) => {
+          memoria = payload.memoria;
+          return { eq: async () => ({ error: null }) };
+        },
+      }),
+    } as unknown as SupabaseClient;
+    const p1 = { sesion: "s1", dominio: "core", nodo: "n1", pregunta: "¿Que vendes?", respuesta: "Macetas", en: "t1" };
+    const p2 = { sesion: "s1", dominio: "core", nodo: "n2", pregunta: "¿Con quien?", respuesta: "Con dos empleados", en: "t2" };
+    await anotarEnMemoria(client, "p1", { papel: "dueno" }, p1);
+    await anotarEnMemoria(client, "p1", { equipo: { personas: 2, descripcion: null } }, p2);
+    const m = memoria as { ficha: { papel: string; equipo: { personas: number } }; hilo: unknown[] };
+    expect(m.ficha.papel).toBe("dueno");
+    expect(m.ficha.equipo.personas).toBe(2);
+    expect(m.hilo).toEqual([p1, p2]);
+  });
+
+  it("sin pareja (primer turno de una sesion) solo actualiza la ficha", async () => {
+    let memoria: unknown = { ficha: { papel: "empleado" }, hilo: [{ sesion: "s0", dominio: "core", nodo: null, pregunta: null, respuesta: "x", en: "t0" }] };
+    const client = {
+      from: () => ({
+        select: () => ({ eq: () => ({ limit: async () => ({ data: [{ memoria }], error: null }) }) }),
+        update: (payload: { memoria: unknown }) => {
+          memoria = payload.memoria;
+          return { eq: async () => ({ error: null }) };
+        },
+      }),
+    } as unknown as SupabaseClient;
+    await anotarEnMemoria(client, "p1", { tiene_jefe: true }, null);
+    const m = memoria as { ficha: { papel: string; tiene_jefe: boolean }; hilo: unknown[] };
+    expect(m.ficha).toMatchObject({ papel: "empleado", tiene_jefe: true });
+    expect(m.hilo).toHaveLength(1);
   });
 });
