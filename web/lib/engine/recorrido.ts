@@ -30,7 +30,7 @@ import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
 import { idiomaDePlantilla } from "../i18n/detectarIdioma";
 import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
-import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
+import { esOfrecible, etiquetaArbol, preguntaDeEntrada, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { avisosNodo } from "./avisos";
 import { adaptarResultadoTurno } from "./adaptadorPregunta";
 import { puntuadorDePrioridad, type Puntuador } from "./prioridad";
@@ -620,7 +620,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
         puntuarPrioridad: await puntuarPrioridadDeSesion(),
       });
       if (reeleccion) {
-        const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
+        const pregunta = preguntaDeEntrada(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
         estado = {
           ...estado,
           ruta: [...estado.ruta, reeleccion.puertaId],
@@ -756,7 +756,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
         });
         const motivo = resultado.razonamiento ?? null;
         if (reeleccion) {
-          const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
+          const pregunta = preguntaDeEntrada(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
           estado = {
             ...estado,
             ruta: [...estado.ruta, reeleccion.puertaId],

@@ -33,7 +33,8 @@ export const TIEMPO_MAX_ADAPTADOR_MS = 8000;
 /** Cuantos siguientes del nodo viajan como ancla del fondo. */
 const MAX_SIGUIENTES = 6;
 
-export type SalidaAdaptador = "adaptada" | "neutral" | "plantilla_neutral";
+/** "entrada": la pregunta de entrada de una puerta tal cual (se verificó a ciegas sin papeles supuestos). */
+export type SalidaAdaptador = "adaptada" | "neutral" | "plantilla_neutral" | "entrada";
 
 /** Una etiqueta de nodo que supone un papel o una estructura (la mira en español, que es la del grafo). 100 de las
  * 3.169 etiquetas vivas lo hacen ("Alinea a tu Equipo con el Mapa") al 28 sep 2026. */
@@ -60,6 +61,8 @@ export interface EntradaAdaptador {
   plantilla: string;
   /** las etiquetas de los siguientes entre los que la respuesta ayuda a elegir */
   siguientes: string[];
+  /** true si `base` es la pregunta de ENTRADA de una puerta: su salida segura es ella misma */
+  esEntrada?: boolean;
 }
 
 export interface ResultadoAdaptador {
@@ -113,7 +116,9 @@ export async function adaptarPregunta(
   opts: { idiomaSalida: string | null; contexto: string | null; tiempoMaxMs?: number }
 ): Promise<ResultadoAdaptador> {
   const segura = (fallo: string, acc: UsoAcumulado): ResultadoAdaptador =>
-    entrada.neutral
+    entrada.esEntrada
+      ? { pregunta: entrada.base, busca: null, acumulado: acc, salida: "entrada", fallo }
+      : entrada.neutral
       ? { pregunta: entrada.neutral, busca: null, acumulado: acc, salida: "neutral", fallo }
       : { pregunta: entrada.plantilla, busca: null, acumulado: acc, salida: "plantilla_neutral", fallo };
   const turno = JSON.stringify({ pregunta_base: entrada.base, sirve_para_elegir_entre: entrada.siguientes });
@@ -173,9 +178,12 @@ export async function adaptarResultadoTurno<
   const n = datos.graph[nodo];
   if (!n) return resultado;
   const entradaCache = datos.preguntasCache[nodo];
-  const base = obtenerPregunta(nodo, n, datos.preguntasCache, datos.idiomaPlantilla);
-  const neutral = typeof entradaCache?.pregunta_neutral === "string" && entradaCache.pregunta_neutral.trim() ? entradaCache.pregunta_neutral : null;
   const mostrada = resultado.pregunta;
+  // La pregunta de ENTRADA de una puerta (punto 3 del fundador, 28 sep 2026) se adapta igual que las demás.
+  const deEntrada = typeof entradaCache?.pregunta_entrada === "string" && entradaCache.pregunta_entrada.trim() ? entradaCache.pregunta_entrada : null;
+  const esEntrada = deEntrada !== null && mostrada === deEntrada;
+  const base = esEntrada ? deEntrada : obtenerPregunta(nodo, n, datos.preguntasCache, datos.idiomaPlantilla);
+  const neutral = typeof entradaCache?.pregunta_neutral === "string" && entradaCache.pregunta_neutral.trim() ? entradaCache.pregunta_neutral : null;
   if (mostrada !== base && mostrada !== neutral) return resultado;
 
   const candidatos = Array.isArray(entradaCache?.candidatos) ? (entradaCache.candidatos as unknown[]) : [];
@@ -187,7 +195,7 @@ export async function adaptarResultadoTurno<
     .map((c) => etiquetaArbol(c, datos.graph));
 
   const plantilla = plantillaNeutral(nodo, n, datos.idiomaPlantilla);
-  const a = await adaptarPregunta(client, { nodo, base, neutral, plantilla, siguientes }, resultado.acumulado, {
+  const a = await adaptarPregunta(client, { nodo, base, neutral, plantilla, siguientes, esEntrada }, resultado.acumulado, {
     idiomaSalida: resultado.estado.idioma ?? null,
     contexto: contextoDeSesion(resultado.estado),
     tiempoMaxMs: datos.tiempoMaxMs,

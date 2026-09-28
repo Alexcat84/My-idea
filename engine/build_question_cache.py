@@ -368,7 +368,8 @@ def main():
                 print(f"  omitido (ya tiene su pregunta base; no se toca): {nid}")
                 continue
             pregunta, usage = generar_pregunta(client, graph[nid], elegibles[nid], graph)
-            cache[nid] = {"pregunta": pregunta, "candidatos": elegibles[nid]}
+            # conserva los campos aparte (pregunta_neutral, pregunta_entrada) si el nodo ya los tenia
+            cache[nid] = {**(cache.get(nid) or {}), "pregunta": pregunta, "candidatos": elegibles[nid]}
             total_in += usage.input_tokens
             total_out += usage.output_tokens
             parchados += 1

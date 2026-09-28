@@ -108,7 +108,8 @@ describe("el hilo del idioma", () => {
     // (el suyo si es de los once; si no, el de la interfaz).
     // Construccion 2 (28 sep 2026): el mismo idioma de plantillas va tambien al adaptador.
     expect(start).toMatch(/const idiomaPlantilla = idiomaDePlantilla\(idiomaIdea, idioma\);/);
-    expect(start).toMatch(/obtenerPregunta\(semillaId, graph\[semillaId\], preguntasCache, idiomaPlantilla\)/);
+    // Punto 3 del fundador (28 sep 2026): la puerta entra con su pregunta de entrada, en el mismo idioma de plantillas.
+    expect(start).toMatch(/preguntaDeEntrada\(semillaId, graph\[semillaId\], preguntasCache, idiomaPlantilla\)/);
     expect(start).toMatch(/\{ graph, preguntasCache, idiomaPlantilla \}/);
   });
 });

@@ -174,7 +174,7 @@ export interface EventoAdaptacionPregunta {
   de: string;
   a: string;
   busca: string | null;
-  salida: "adaptada" | "neutral" | "plantilla_neutral";
+  salida: "adaptada" | "neutral" | "plantilla_neutral" | "entrada";
   motivo?: string;
 }
 

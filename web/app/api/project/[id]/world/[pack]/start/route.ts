@@ -51,7 +51,7 @@ import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
-import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta, resolverId } from "@/lib/engine/graph";
+import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, preguntaDeEntrada, resolverId } from "@/lib/engine/graph";
 import { avisosNodo } from "@/lib/engine/avisos";
 import { estadoInicial } from "@/lib/engine/recorrido";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
@@ -284,7 +284,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // La genérica sale en el idioma de las plantillas y tambien se adapta.
   const idiomaIdea = idiomaDelProyecto(proyecto);
   const idiomaPlantilla = idiomaDePlantilla(idiomaIdea, idioma);
-  const cruda = obtenerPregunta(semillaId, graph[semillaId], preguntasCache, idiomaPlantilla);
+  // Punto 3 del fundador (28 sep 2026): la puerta entra con su pregunta de ENTRADA propia, si la tiene.
+  const cruda = preguntaDeEntrada(semillaId, graph[semillaId], preguntasCache, idiomaPlantilla);
   const resultado = await adaptarResultadoTurno(
     createAnthropicClient(),
     {

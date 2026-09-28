@@ -280,6 +280,22 @@ export function obtenerPregunta(
 }
 
 /**
+ * La PREGUNTA DE ENTRADA de una puerta (decisión del fundador, 28 sep 2026, punto 3): la primera pregunta con la que
+ * se entra a un mundo por esa puerta. Vive en un campo aparte de la caché (`pregunta_entrada`) y parte del concepto
+ * de la puerta; la base, que mira a los siguientes, no se toca (Principio 2). Sin pregunta de entrada, sale la base.
+ */
+export function preguntaDeEntrada(
+  nodeId: string,
+  node: NodoGrafo,
+  cache: PreguntasCache,
+  idioma: Locale = LOCALE_BASE
+): string {
+  const entrada = cache[nodeId]?.pregunta_entrada;
+  if (typeof entrada === "string" && entrada.trim()) return entrada;
+  return obtenerPregunta(nodeId, node, cache, idioma);
+}
+
+/**
  * La PREGUNTA de un nodo de cualquier era: su cacheada si la tiene, y si no la
  * generica armada con su titulo.
  *
