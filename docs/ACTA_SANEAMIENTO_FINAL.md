@@ -701,14 +701,14 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
 **3. El pase dirigido (e1b), fijado antes de generar ningún paquete:**
 - **Universo, por elementos (resumen, paso o entregable):**
   - **3a:** todo elemento que cambió alguna tanda de la etapa 1 (`final-e1-*`, con las FUERA y la de la muestra), con
-    su texto vigente. Son 3.548 elementos antes de la tanda de la muestra.
+    su texto vigente. Son 3.548 elementos, contando la tanda de la muestra.
   - **3b:** el barrido mecánico de marcas de certeza. Entra todo elemento, fuera de 3a, cuyo texto contenga una de
     estas marcas: "siempre", "nunca", "jamás", "debe", "deben", "va a", "van a", "vas a", "garantiza…", "sin duda",
     "necesariamente", "inevitable…", "en todos los casos", "seguro que", "te asegura…", "asegura que", "con toda
     seguridad", "sin excepción". Salen 673 elementos. El lector coteja cada marca con el grado del libro.
   - **3c:** los pasos que los lectores del pase y la muestra marcan como paso práctico sin etiqueta se etiquetan.
     Etiquetar no es redactar: solo antepone "Sugerencia de My Idea:" al texto vigente.
-  - **Además:** las 2 correcciones FUERA de la muestra de parada.
+  - **Además:** las 2 correcciones FUERA de la muestra de parada (una ya estaba en 3a).
 - **Lotes:** por libro (el primero de `fuentes_internas`), nodos en orden de `node_id`, hasta 16 nodos por lote. El
   lector ve el nodo entero y juzga solo los elementos de su lista. Orden de lectura: `random.Random(20270501)`.
 - **Trampas sin marca:** una por lote, en un elemento de la lista.
@@ -718,6 +718,11 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
 - **Lectura:** dos lectores Opus con las instrucciones v3 (clases nuevas y política de corrección) y un tercero si
   ninguno caza la trampa. Árbitro Opus con las instrucciones v3. Verificador ciego Opus para lo que redacta o trae
   palabras nuevas.
+- **Generado (`e1b.py generar`, antes de abrir ningún paquete):** 4.222 elementos (3.548 de 3a, 673 de 3b y 1 FUERA)
+  en 2.523 nodos. Salen 184 lotes, de 14 nodos y 23 elementos de media. Las trampas: 63 contrarios, 48 cifras, 39
+  certezas endurecidas y 34 matices.
+- **Filtro de la tanda:** los mismos de la etapa, más la verificación ciega. En modo `quitar`, el piso del resumen baja
+  a 200 caracteres, para que quitar lo inventado no quede bloqueado por el largo.
 
 **4. Semillas nuevas, fijadas aquí antes de sortear nada:**
 - **Muestra de cierre de la etapa 1: 20271001.** Deriva 20271001 a 20271011 (espacios), 20272002 a 20272016
