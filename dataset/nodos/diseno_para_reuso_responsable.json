@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diseño para el Reuso Responsable (Dissociología)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "A través de la narrativa especulativa de 'Dissociology', se plantea que la tecnología futura permitirá extraer valor de los desechos actuales (vertederos), pero surge la pregunta ética de quién debe beneficiarse de ese valor: ¿quienes generaron el desecho o las comunidades que sufrieron sus consecuencias? Este concepto invita a los diseñadores a considerar desde ya la responsabilidad ética y el reparto justo del valor futuro que sus productos y desechos puedan generar.",
+  "resumen_teorico": "A través de la narrativa especulativa de 'Dissociology', se plantea que la tecnología futura permitirá extraer valor de los desechos actuales (vertederos), pero surge la pregunta ética de quién debe beneficiarse de ese valor: ¿quienes generaron el desecho, las comunidades que sufrieron sus consecuencias, el municipio que hoy lo alberga o quien lo recicla, que podría acumular demasiado poder? Este concepto invita a los diseñadores a considerar desde ya la responsabilidad ética y el reparto justo del valor futuro que sus productos y desechos puedan generar.",
   "pasos_accionables": [
     "Identifica los materiales de desecho que tu proyecto generará a largo plazo",
     "Investiga si existen o podrían existir tecnologías futuras para reciclar/reutilizar esos materiales",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Reutiliza con Responsabilidad",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-113-diseno_para_reuso_responsable-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A través de la narrativa especulativa de 'Dissociology', se plantea que la tecnología futura permitirá extraer valor de los desechos actuales (vertederos), pero surge la pregunta ética de quién debe beneficiarse de ese valor: ¿quienes generaron el desecho o las comunidades que sufrieron sus consecuencias? Este concepto invita a los diseñadores a considerar desde ya la responsabilidad ética y el reparto justo del valor futuro que sus productos y desechos puedan generar.",
+      "texto_nuevo": "A través de la narrativa especulativa de 'Dissociology', se plantea que la tecnología futura permitirá extraer valor de los desechos actuales (vertederos), pero surge la pregunta ética de quién debe beneficiarse de ese valor: ¿quienes generaron el desecho, las comunidades que sufrieron sus consecuencias, el municipio que hoy lo alberga o quien lo recicla, que podría acumular demasiado poder? Este concepto invita a los diseñadores a considerar desde ya la responsabilidad ética y el reparto justo del valor futuro que sus productos y desechos puedan generar.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4057",
+        "frase": "Is it the municipality that currently houses the waste?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro abre más candidatos (el municipio que alberga el desecho, quien lo recicla) y advierte que quien extrae el valor puede acumular demasiado poder.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -9,7 +9,7 @@
     "Evalúa el factor de carrera: pregúntate si tienes la experiencia y las habilidades necesarias",
     "Evalúa el factor personal: pregúntate si tu situación familiar y financiera soporta el riesgo",
     "Evalúa el factor de mercado: pregúntate si la oportunidad y el momento son favorables",
-    "Identifica cuál de los tres factores está débil y diseña un plan para fortalecerlo antes de lanzarte"
+    "Identifica cuál de los tres factores está débil y diseña un plan para fortalecerlo antes de lanzarte, vigilando mientras tanto que los otros dos no se vuelvan desfavorables"
   ],
   "entregable_esperado": "Un diagnóstico claro de los tres factores, con un plan de acción para fortalecer los que estén débiles",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Evalúa tu Momento para Emprender",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-116-tres_preguntas_carrera-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica cuál de los tres factores está débil y diseña un plan para fortalecerlo antes de lanzarte",
+      "texto_nuevo": "Identifica cuál de los tres factores está débil y diseña un plan para fortalecerlo antes de lanzarte, vigilando mientras tanto que los otros dos no se vuelvan desfavorables",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "647",
+        "frase": "a moving target and to make sure that other factors have not become unfavorable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido que la marca 0.; Se cae la advertencia del blanco móvil: al trabajar el factor débil hay que vigilar que los otros no se vuelvan desfavorables.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

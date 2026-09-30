@@ -4,14 +4,14 @@
   "dominio": "exportacion",
   "titulo_concepto": "Incoterms: Términos Comerciales Internacionales (EXW, FCA, FAS, FOB)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los Incoterms 2010 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total. El Incoterm elegido debe ser compatible con la documentación que exige el país importador.",
+  "resumen_teorico": "Los Incoterms 2010 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total.",
   "pasos_accionables": [
     "Identificar el modo de transporte que se usará (marítimo, aéreo, terrestre o intermodal).",
-    "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, considerando CIF o CIP si buscas mostrar el costo total al comprador.",
+    "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, cotizando CIF o CIP siempre que sea posible para mostrar al comprador el costo total.",
     "Negociar con el comprador el punto exacto de transferencia de riesgo y costo.",
     "Especificar el Incoterm y el lugar o puerto nombrado en la cotización, pro forma invoice, factura comercial y contrato de venta.",
     "Consultar con un freight forwarder o agente aduanal las obligaciones específicas del término elegido, incluyendo el cálculo de precios CIF o CIP si aplica.",
-    "Verificar que el Incoterm sea compatible con los requisitos de documentación del país importador."
+    "Antes de preparar la factura comercial final, consultar con la oficina local del U.S. Commercial Service si el país importador exige disposiciones especiales de facturación."
   ],
   "entregable_esperado": "Cotización o pro forma invoice y contrato de venta con el Incoterm y el lugar o puerto nombrado claramente especificado.",
   "nodos_previos": [
@@ -100,6 +100,56 @@
         "motivo": "Referencia de un nodo vivo a documentacion_exportacion_basica, deprecado; su superviviente es documentacion_exportacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-113-incoterms_reglas_comerciales_internacionales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los Incoterms 2010 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total. El Incoterm elegido debe ser compatible con la documentación que exige el país importador.",
+      "texto_nuevo": "Los Incoterms 2010 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3871",
+        "frase": "check with your local U.S. Commercial Service office for any special invoicing provisions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no liga el Incoterm con la documentación del país importador; solo pide consultar sus disposiciones especiales de facturación.; Mismo requisito añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-113-incoterms_reglas_comerciales_internacionales-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, considerando CIF o CIP si buscas mostrar el costo total al comprador.",
+      "texto_nuevo": "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, cotizando CIF o CIP siempre que sea posible para mostrar al comprador el costo total.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3905",
+        "frase": "You should quote CIF or CIP prices whenever possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recomienda cotizar CIF o CIP siempre que sea posible; el nodo lo deja como opción condicional.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-113-incoterms_reglas_comerciales_internacionales-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que el Incoterm sea compatible con los requisitos de documentación del país importador.",
+      "texto_nuevo": "Antes de preparar la factura comercial final, consultar con la oficina local del U.S. Commercial Service si el país importador exige disposiciones especiales de facturación.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3871",
+        "frase": "check with your local U.S. Commercial Service office for any special invoicing provisions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de compatibilidad del Incoterm con la documentación; pide consultar las disposiciones especiales de facturación del país importador.; Mismo defecto; se sustituye por lo que el libro sí pide en lugar de dejarlo como sugerencia.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

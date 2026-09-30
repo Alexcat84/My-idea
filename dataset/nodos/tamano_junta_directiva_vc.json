@@ -7,7 +7,7 @@
   "resumen_teorico": "La presencia de múltiples inversionistas de capital de riesgo en la junta directiva de una startup puede generar complejidad en la toma de decisiones. Como bromean los propios VCs: 'los VCs en tu junta son como martinis: uno es bueno, dos es mejor, tres es un problema'. Un tamaño de junta más pequeño permite un control más eficiente, especialmente en situaciones de crisis (como rondas de recapitalización o 'down rounds'), donde reducir la junta puede ser una oportunidad para 'limpiar' inversionistas no participantes o débiles.",
   "pasos_accionables": [
     "Negociar cuidadosamente cuántos asientos de junta se otorgan a cada nuevo inversionista en cada ronda.",
-    "Evaluar si es preferible tener un solo VC líder en la junta en lugar de múltiples representantes de diferentes fondos.",
+    "Evaluar cuántos representantes de fondos distintos conviene tener en la junta: dos pueden sumar, pero con tres empieza el problema.",
     "Anticipar cómo el tamaño de la junta afectará la velocidad de toma de decisiones en momentos críticos.",
     "Revisar la composición de la junta en cada evento de recapitalización como oportunidad de simplificación."
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Define el Tamaño de tu Junta",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-116-tamano_junta_directiva_vc-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si es preferible tener un solo VC líder en la junta en lugar de múltiples representantes de diferentes fondos.",
+      "texto_nuevo": "Evaluar cuántos representantes de fondos distintos conviene tener en la junta: dos pueden sumar, pero con tres empieza el problema.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "5054",
+        "frase": "One is good, two is better, three is a problem."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La frase que recoge el libro dice que dos VCs es mejor que uno y que el problema empieza con el tercero; el paso pierde ese umbral.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

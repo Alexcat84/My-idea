@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Normalización de Datos en Benchmarking (Comparación Justa)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (escala, contrato, regulación, geografía). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como el Factor de Complejidad Juran (CF) y el Índice de Calidad Juran (JQI), útiles cuando la normalización simple por unidad no basta. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
+  "resumen_teorico": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (escala, contrato, regulación, geografía). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como el Factor de Complejidad Juran (CF), útiles cuando la normalización simple por unidad no basta; el Índice de Calidad Juran (JQI) sirve después para comparar los sitios. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
   "pasos_accionables": [
     "Identifica los factores que impulsan las diferencias de desempeño entre lo que estás comparando",
     "Agrupa los sujetos en categorías o grupos de pares con características similares",
@@ -46,5 +46,23 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-114-normalizacion_datos_benchmarking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (escala, contrato, regulación, geografía). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como el Factor de Complejidad Juran (CF) y el Índice de Calidad Juran (JQI), útiles cuando la normalización simple por unidad no basta. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
+      "texto_nuevo": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (escala, contrato, regulación, geografía). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como el Factor de Complejidad Juran (CF), útiles cuando la normalización simple por unidad no basta; el Índice de Calidad Juran (JQI) sirve después para comparar los sitios. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26353",
+        "frase": "the Juran Quality Index is used for the comparative analysis between sites"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro usa el Factor de Complejidad para normalizar y el Índice de Calidad para comparar sitios, no como factor de ponderación.; Mismo defecto: el Índice de Calidad no normaliza, sirve para el análisis comparativo entre sitios.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

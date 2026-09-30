@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Reflexionar periódicamente sobre si las propias capacidades siguen siendo las adecuadas para la etapa actual de la startup",
     "Iniciar proactivamente la conversación sobre sucesión con la junta antes de que sea forzada",
-    "Participar activamente en la búsqueda y selección del propio sucesor",
+    "Participar activamente en la búsqueda y selección del propio sucesor, cuidando que esa participación no alargue la búsqueda ni ahuyente a los mejores candidatos",
     "Negociar de antemano un rol post-transición (consejo, dirección técnica, proyectos especiales)"
   ],
   "entregable_esperado": "Documento de autoevaluación del fundador sobre su ajuste al estadio actual de la empresa y propuesta de transición propia",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Decide Quién Impulsa tu Reemplazo",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-116-sucesion_iniciada_por_fundador-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Participar activamente en la búsqueda y selección del propio sucesor",
+      "texto_nuevo": "Participar activamente en la búsqueda y selección del propio sucesor, cuidando que esa participación no alargue la búsqueda ni ahuyente a los mejores candidatos",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3209-3217",
+        "frase": "involving the founder in the search process can introduce new risks and delays"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el límite del libro: la participación del fundador en la búsqueda puede introducir riesgos y retrasos, y abrirla a todos ahuyentó a los mejores candidatos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

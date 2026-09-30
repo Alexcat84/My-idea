@@ -3,10 +3,10 @@
   "dominio": "core",
   "titulo_concepto": "Modelo Híbrido Agile-Stage-Gate",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Combinación de la estructura macro de etapas y compuertas de decisión (Go/Kill) con la ejecución ágil de sprints dentro de cada etapa. La estructura de etapas aporta visión general, coordinación entre áreas (marketing, producción) y control de la dirección; los sprints cortos (de 1 a 4 semanas, siendo 2 semanas lo más común) aportan velocidad, retroalimentación continua del cliente y mejor comunicación interna del equipo, generando en cada sprint algo tangible (prototipo, diseño, informe de investigación con clientes) para mostrar a los interesados.",
+  "resumen_teorico": "Combinación de la estructura macro de etapas y compuertas de decisión (Go/Kill) con la ejecución ágil de sprints dentro de cada etapa. La estructura de etapas aporta visión general, coordinación entre áreas (marketing, producción) y control de la dirección; los sprints cortos (de 1 a 4 semanas) aportan velocidad, retroalimentación continua del cliente y mejor comunicación interna del equipo, generando en cada sprint algo tangible (prototipo, diseño, informe de investigación con clientes) para mostrar a los interesados.",
   "pasos_accionables": [
     "Mantener las etapas y compuertas de decisión estratégica Go/Kill del proceso existente",
-    "Insertar sprints cortos (de 1 a 4 semanas, típicamente 2) dentro de las etapas técnicas de desarrollo y pruebas",
+    "Insertar sprints cortos (de 1 a 4 semanas) dentro de las etapas técnicas de desarrollo y pruebas",
     "Establecer reuniones diarias breves (15-20 min) lideradas por un facilitador de equipo (scrum master) para sincronizar el trabajo",
     "Definir un entregable tangible y demostrable al final de cada sprint (prototipo, diseño, informe de investigación con clientes, modelo funcional)",
     "Usar tableros visuales y un backlog priorizado para dar seguimiento a las tareas",
@@ -47,5 +47,40 @@
   "etiqueta_arbol": "Combina Etapas con Sprints Ágiles",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-117-modelo_hibrido_agile_stage_gate-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Combinación de la estructura macro de etapas y compuertas de decisión (Go/Kill) con la ejecución ágil de sprints dentro de cada etapa. La estructura de etapas aporta visión general, coordinación entre áreas (marketing, producción) y control de la dirección; los sprints cortos (de 1 a 4 semanas, siendo 2 semanas lo más común) aportan velocidad, retroalimentación continua del cliente y mejor comunicación interna del equipo, generando en cada sprint algo tangible (prototipo, diseño, informe de investigación con clientes) para mostrar a los interesados.",
+      "texto_nuevo": "Combinación de la estructura macro de etapas y compuertas de decisión (Go/Kill) con la ejecución ágil de sprints dentro de cada etapa. La estructura de etapas aporta visión general, coordinación entre áreas (marketing, producción) y control de la dirección; los sprints cortos (de 1 a 4 semanas) aportan velocidad, retroalimentación continua del cliente y mejor comunicación interna del equipo, generando en cada sprint algo tangible (prototipo, diseño, informe de investigación con clientes) para mostrar a los interesados.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3843",
+        "frase": "typically from one to four weeks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da rangos típicos de uno a cuatro o dos a cuatro semanas; dos semanas es solo el caso de una empresa.; Mismo defecto: generaliza a partir del ejemplo de una empresa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-117-modelo_hibrido_agile_stage_gate-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Insertar sprints cortos (de 1 a 4 semanas, típicamente 2) dentro de las etapas técnicas de desarrollo y pruebas",
+      "texto_nuevo": "Insertar sprints cortos (de 1 a 4 semanas) dentro de las etapas técnicas de desarrollo y pruebas",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3843",
+        "frase": "typically from one to four weeks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que dos semanas sea lo típico.; Mismo defecto: el rango típico del libro es de uno a cuatro o dos a cuatro semanas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

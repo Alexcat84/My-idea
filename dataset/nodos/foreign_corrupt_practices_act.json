@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cumplimiento de la Foreign Corrupt Practices Act (FCPA)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios extranjeros con el propósito de obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+  "resumen_teorico": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, también a través de un tercero a sabiendas, para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
   "pasos_accionables": [
     "Establecer políticas internas anticorrupción antes de iniciar operaciones internacionales",
     "Capacitar a empleados, agentes y distribuidores sobre la FCPA",
@@ -41,6 +41,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-113-foreign_corrupt_practices_act-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios extranjeros con el propósito de obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+      "texto_nuevo": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, también a través de un tercero a sabiendas, para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2863",
+        "frase": "payment to any person while knowing that all or a portion of the payment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye partidos políticos extranjeros y candidatos a cargos públicos extranjeros.; El libro prohíbe también pagar a un tercero sabiendo que el pago llegará directa o indirectamente al funcionario.; Se caen los partidos y candidatos extranjeros y el pago a un tercero sabiendo que llegará a ellos, clave con agentes e intermediarios.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

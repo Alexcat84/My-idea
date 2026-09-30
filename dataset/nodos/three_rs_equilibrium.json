@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Equilibrio de las Tres Rs (Relaciones, Roles, Recompensas)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Un equipo fundador alcanza un 'equilibrio de las Tres Rs' cuando las relaciones entre cofundadores, los roles que desempeñan y las recompensas (equity, salario) que reciben están alineados entre sí y con las contribuciones reales de cada persona. Cuando este equilibrio existe, las tensiones internas son bajas y el equipo puede enfocarse en construir valor. Sin embargo, tres desafíos amenazan este equilibrio: la falta de comunicación (evitar 'elefantes en la habitación'), el cambio inevitable en el startup, y la inercia que impide ajustes necesarios.",
+  "resumen_teorico": "Un equipo fundador alcanza un 'equilibrio de las Tres Rs' cuando las relaciones entre cofundadores, los roles que desempeñan y las recompensas (equity, salario) que reciben están alineados entre sí. Cuando este equilibrio existe, las tensiones internas tienden a ser bajas y el equipo puede enfocarse en construir valor. Sin embargo, tres desafíos amenazan este equilibrio: la falta de comunicación (evitar 'elefantes en la habitación'), el cambio inevitable en el startup, y la inercia que impide ajustes necesarios.",
   "pasos_accionables": [
     "Mapear explícitamente las relaciones, roles y recompensas de cada cofundador",
-    "Verificar que estos tres elementos estén alineados entre sí (ej. quien más aporta recibe más equity)",
+    "Verificar que estos tres elementos estén alineados entre sí (ej. entre excompañeros o extraños, quien más aporta recibe más equity; entre familia o amigos, el reparto igual suele ser lo alineado)",
     "Sugerencia de My Idea: establece un mecanismo regular, por ejemplo trimestral, para revisar y renegociar este equilibrio.",
     "Documentar por escrito los acuerdos, no solo verbalmente",
     "Identificar y discutir abiertamente las tensiones no habladas ('elefantes en la habitación')",
@@ -61,6 +61,39 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide reevaluar el equilibrio con regularidad, a medida que la startup evoluciona y cuando hay imprevistos, pero no fija ninguna frecuencia. Busqué quarterly, semiannual, annually y periodic: el libro no da frecuencia para esta revisión.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-003"
+    },
+    {
+      "id": "final-e1-116-three_rs_equilibrium-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un equipo fundador alcanza un 'equilibrio de las Tres Rs' cuando las relaciones entre cofundadores, los roles que desempeñan y las recompensas (equity, salario) que reciben están alineados entre sí y con las contribuciones reales de cada persona. Cuando este equilibrio existe, las tensiones internas son bajas y el equipo puede enfocarse en construir valor. Sin embargo, tres desafíos amenazan este equilibrio: la falta de comunicación (evitar 'elefantes en la habitación'), el cambio inevitable en el startup, y la inercia que impide ajustes necesarios.",
+      "texto_nuevo": "Un equipo fundador alcanza un 'equilibrio de las Tres Rs' cuando las relaciones entre cofundadores, los roles que desempeñan y las recompensas (equity, salario) que reciben están alineados entre sí. Cuando este equilibrio existe, las tensiones internas tienden a ser bajas y el equipo puede enfocarse en construir valor. Sin embargo, tres desafíos amenazan este equilibrio: la falta de comunicación (evitar 'elefantes en la habitación'), el cambio inevitable en el startup, y la inercia que impide ajustes necesarios.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2055, 2099",
+        "frase": "a “Three Rs equilibrium” in which tensions will tend to be low"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define el equilibrio como la alineación de cada par de decisiones; alinear con las contribuciones no es requisito y en lógica social lo alineado es el reparto igual.; Endurece: el libro dice que las tensiones tienden a ser bajas.; Mismo endurecimiento que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-116-three_rs_equilibrium-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que estos tres elementos estén alineados entre sí (ej. quien más aporta recibe más equity)",
+      "texto_nuevo": "Verificar que estos tres elementos estén alineados entre sí (ej. entre excompañeros o extraños, quien más aporta recibe más equity; entre familia o amigos, el reparto igual suele ser lo alineado)",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2055-2061",
+        "frase": "teams operating under a social logic will find the rule of equal distribution"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El reparto proporcional solo es el alineado en equipos con lógica de negocio; en equipos de familia o amigos lo alineado es el reparto igual.; Mismo matiz perdido que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Controles para Tareas No Rutinarias y Emergencias",
   "fuente": "OSHA3886",
-  "resumen_teorico": "El plan de control de peligros debe incluir disposiciones específicas para proteger a los trabajadores durante tareas no rutinarias (izajes críticos, vertidos de concreto) y emergencias previsibles (incendios, derrames, desastres naturales), incluyendo procedimientos, equipos y simulacros.",
+  "resumen_teorico": "El plan de control de peligros debe proteger a los trabajadores en emergencias previsibles (incendios, derrames, desastres naturales), con procedimientos, equipos y simulacros, y en tareas no rutinarias (izajes críticos, vertidos de concreto), que piden especial cautela: revisa antes sus peligros con quienes las harán y avisa a los demás.",
   "pasos_accionables": [
     "Desarrollar procedimientos específicos para tareas no rutinarias",
     "Modificar o crear planes de control para situaciones de emergencia",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Prepara Controles para Emergencias",
   "fuentes_internas": [
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-115-controles_no_rutinarias_emergencias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El plan de control de peligros debe incluir disposiciones específicas para proteger a los trabajadores durante tareas no rutinarias (izajes críticos, vertidos de concreto) y emergencias previsibles (incendios, derrames, desastres naturales), incluyendo procedimientos, equipos y simulacros.",
+      "texto_nuevo": "El plan de control de peligros debe proteger a los trabajadores en emergencias previsibles (incendios, derrames, desastres naturales), con procedimientos, equipos y simulacros, y en tareas no rutinarias (izajes críticos, vertidos de concreto), que piden especial cautela: revisa antes sus peligros con quienes las harán y avisa a los demás.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "737",
+        "frase": "Nonroutine tasks, or tasks workers don't normally do, should be approached with particular caution."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide especial cautela en las tareas no rutinarias: revisar antes su análisis de peligros con quienes las harán y avisar a los demás.; Mismo defecto que la marca 0: se cae la cautela previa a las tareas no rutinarias.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

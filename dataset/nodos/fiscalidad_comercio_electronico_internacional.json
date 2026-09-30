@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Fiscalidad en el Comercio Electrónico Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La venta online a mercados extranjeros implica obligaciones fiscales que varían según jurisdicción. Generalmente una empresa necesita 'establecimiento permanente' en un país para estar sujeta a su jurisdicción tributaria general, pero existen excepciones importantes, como el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios registrarse y cobrar IVA según la ubicación del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "La venta online a mercados extranjeros implica obligaciones fiscales que varían según jurisdicción. Generalmente una empresa necesita 'establecimiento permanente' en un país para estar sujeta a su jurisdicción tributaria general, pero existen excepciones importantes, como el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios de bienes y servicios electrónicos registrarse y cobrar IVA según la ubicación del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado objetivo aplica impuestos según ubicación del cliente o del vendedor",
     "Verificar si se requiere registro fiscal en el país destino (ej. régimen VAT de la UE)",
@@ -54,6 +54,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-113-fiscalidad_comercio_electronico_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La venta online a mercados extranjeros implica obligaciones fiscales que varían según jurisdicción. Generalmente una empresa necesita 'establecimiento permanente' en un país para estar sujeta a su jurisdicción tributaria general, pero existen excepciones importantes, como el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios registrarse y cobrar IVA según la ubicación del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "La venta online a mercados extranjeros implica obligaciones fiscales que varían según jurisdicción. Generalmente una empresa necesita 'establecimiento permanente' en un país para estar sujeta a su jurisdicción tributaria general, pero existen excepciones importantes, como el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios de bienes y servicios electrónicos registrarse y cobrar IVA según la ubicación del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3355",
+        "frase": "taxing sales of electronically supplied goods and services"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El régimen de IVA de la UE se limita a los bienes y servicios suministrados electrónicamente.; Mismo límite perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

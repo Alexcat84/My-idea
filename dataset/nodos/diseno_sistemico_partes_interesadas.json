@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Diseñar sistemas con muchos intereses en juego (fuerzas ocultas)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Cuando diseñas sistemas a gran escala (biomas, ecosistemas, comunidades), tienes que reconciliar los intereses de muchas partes involucradas, humanas y no humanas: flora, fauna, quienes financian, comunidades enteras. Existen 'fuerzas ocultas', intereses de poder o de financiamiento que condicionan decisiones que parecen solo técnicas. Tienes que reconocer estos compromisos, priorizar el bien colectivo por encima de intereses individuales, y aceptar que toda decisión implica sacrificios, tanto para el planeta como para ti.",
+  "resumen_teorico": "Cuando diseñas sistemas a gran escala (biomas, ecosistemas, comunidades), tienes que reconciliar los intereses de muchas partes involucradas, humanas y no humanas: flora, fauna, quienes financian, comunidades enteras. Las no humanas necesitan voz, aunque la controlen personas. En todo proyecto hay 'fuerzas ocultas', intereses de poder o de financiamiento que condicionan decisiones que parecen solo técnicas, y distintos sistemas de valores. Tienes que reconocer estos compromisos, preguntarte si una parte debe sacrificarse por el conjunto, y aceptar que toda decisión implica sacrificios, tanto para el planeta como para ti.",
   "pasos_accionables": [
     "Mapea a todos los involucrados en tu sistema, incluyendo actores no humanos (ecosistemas, especies) y actores invisibles (quienes financian, quienes regulan).",
     "Identifica las fuerzas ocultas: condiciones escondidas o de poder que influyen en las decisiones de tu proyecto.",
     "Evalúa los sacrificios entre viabilidad económica, ética y sostenibilidad ambiental.",
-    "Diseña formas de gobierno del proyecto que limiten el control desproporcionado de quienes tienen intereses económicos particulares.",
+    "Sugerencia de My Idea: diseña formas de gobierno del proyecto que limiten el control desproporcionado de quienes tienen intereses económicos particulares.",
     "Acepta que priorizar el bien del sistema puede exigirte sacrificar partes individuales de tu proyecto."
   ],
   "entregable_esperado": "Un mapa de las personas y fuerzas ocultas involucradas en tu sistema, junto con un análisis de los sacrificios que implica y una propuesta de gobierno que proteja el propósito central de tu proyecto frente a intereses particulares.",
@@ -56,6 +56,39 @@
         "evidencia": "F24-021: Mapear actores, evaluar los sacrificios y disenar el gobierno del proyecto es disenar el modelo y la estrategia. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-113-diseno_sistemico_partes_interesadas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando diseñas sistemas a gran escala (biomas, ecosistemas, comunidades), tienes que reconciliar los intereses de muchas partes involucradas, humanas y no humanas: flora, fauna, quienes financian, comunidades enteras. Existen 'fuerzas ocultas', intereses de poder o de financiamiento que condicionan decisiones que parecen solo técnicas. Tienes que reconocer estos compromisos, priorizar el bien colectivo por encima de intereses individuales, y aceptar que toda decisión implica sacrificios, tanto para el planeta como para ti.",
+      "texto_nuevo": "Cuando diseñas sistemas a gran escala (biomas, ecosistemas, comunidades), tienes que reconciliar los intereses de muchas partes involucradas, humanas y no humanas: flora, fauna, quienes financian, comunidades enteras. Las no humanas necesitan voz, aunque la controlen personas. En todo proyecto hay 'fuerzas ocultas', intereses de poder o de financiamiento que condicionan decisiones que parecen solo técnicas, y distintos sistemas de valores. Tienes que reconocer estos compromisos, preguntarte si una parte debe sacrificarse por el conjunto, y aceptar que toda decisión implica sacrificios, tanto para el planeta como para ti.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "2420",
+        "frase": "Should any one species suffer on behalf of the health of a whole biome?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que en todo proyecto hay fuerzas ocultas y distintos sistemas de valores; se cae lo segundo.; El libro plantea como pregunta abierta si una parte debe sufrir por el todo; el nodo lo vuelve mandato.; El libro pone el límite de que la voz de los no humanos la siguen controlando humanos.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-113-diseno_sistemico_partes_interesadas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña formas de gobierno del proyecto que limiten el control desproporcionado de quienes tienen intereses económicos particulares.",
+      "texto_nuevo": "Sugerencia de My Idea: diseña formas de gobierno del proyecto que limiten el control desproporcionado de quienes tienen intereses económicos particulares.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "2576",
+        "frase": "the way the funders can exert their own control over the project"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro muestra el control oculto de los financiadores, pero no propone diseñar formas de gobierno; queda como sugerencia.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

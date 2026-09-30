@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar si el proceso actual de desarrollo (Stage-Gate) es demasiado rígido para proyectos de alta incertidumbre.",
     "Incorporar metodologías Ágiles (sprints, iteraciones) al proceso de desarrollo de producto existente.",
-    "Asignar equipos dedicados (dedicated teams) con patrocinio ejecutivo fuerte para evitar que el proyecto muera en el 'valle de la muerte'."
+    "Asignar equipos dedicados (dedicated teams) al proyecto, sobre todo en los proyectos críticos y audaces, para ganar velocidad."
   ],
   "entregable_esperado": "Un proceso de desarrollo (pipeline) rediseñado que incluye puntos de control (gates) flexibles y ciclos iterativos.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Cruza del Concepto al Lanzamiento",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-117-motor_idea_a_lanzamiento_agil-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asignar equipos dedicados (dedicated teams) con patrocinio ejecutivo fuerte para evitar que el proyecto muera en el 'valle de la muerte'.",
+      "texto_nuevo": "Asignar equipos dedicados (dedicated teams) al proyecto, sobre todo en los proyectos críticos y audaces, para ganar velocidad.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4104",
+        "frase": "Fully dedicated teams are a must in order to maximize speed, especially for critical"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide equipos dedicados para ganar velocidad, sobre todo en proyectos críticos y audaces; no liga patrocinio ejecutivo ni equipos dedicados al valle de la muerte.; Mismo defecto: el remedio del libro para el valle es el motor de idea a lanzamiento, no equipos con patrocinio ejecutivo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

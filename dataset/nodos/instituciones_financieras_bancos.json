@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Rol de las Instituciones Financieras en la Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los bancos comerciales con departamentos internacionales ofrecen servicios clave para exportadores: cambio de divisas, financiamiento de exportaciones, cobro de facturas y letras de crédito, transferencia de fondos, cartas de crédito e información crediticia sobre compradores extranjeros. Muchos ofrecen consultoría gratuita y publicaciones sobre países específicos.",
+  "resumen_teorico": "Los bancos comerciales con departamentos internacionales ofrecen servicios clave para exportadores: cambio de divisas, financiamiento de exportaciones, cobro de facturas y letras de crédito, transferencia de fondos, cartas de crédito e información crediticia sobre compradores extranjeros. Muchos ofrecen consultoría gratuita a sus clientes y publicaciones sobre países específicos.",
   "pasos_accionables": [
     "Identificar un banco con departamento internacional especializado",
     "Solicitar información crediticia sobre el comprador extranjero",
     "Establecer mecanismos de cobro (letras de crédito, cartas de crédito)",
-    "Consultar publicaciones y seminarios bancarios sobre el país de destino"
+    "Consultar publicaciones bancarias sobre el país de destino y seminarios bancarios sobre cartas de crédito y cobranzas documentarias"
   ],
   "entregable_esperado": "Relación bancaria establecida con servicios de financiamiento y cobro internacional",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Usa Bancos para Exportar",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-113-instituciones_financieras_bancos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los bancos comerciales con departamentos internacionales ofrecen servicios clave para exportadores: cambio de divisas, financiamiento de exportaciones, cobro de facturas y letras de crédito, transferencia de fondos, cartas de crédito e información crediticia sobre compradores extranjeros. Muchos ofrecen consultoría gratuita y publicaciones sobre países específicos.",
+      "texto_nuevo": "Los bancos comerciales con departamentos internacionales ofrecen servicios clave para exportadores: cambio de divisas, financiamiento de exportaciones, cobro de facturas y letras de crédito, transferencia de fondos, cartas de crédito e información crediticia sobre compradores extranjeros. Muchos ofrecen consultoría gratuita a sus clientes y publicaciones sobre países específicos.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1669",
+        "frase": "Banks frequently provide consultation and guidance free of charge to their clients"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la consultoría gratuita a los clientes del banco, que cobra préstamos y servicios; el nodo la abre a cualquiera.; Mismo defecto: se cae la condición de ser cliente del banco.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-113-instituciones_financieras_bancos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consultar publicaciones y seminarios bancarios sobre el país de destino",
+      "texto_nuevo": "Consultar publicaciones bancarias sobre el país de destino y seminarios bancarios sobre cartas de crédito y cobranzas documentarias",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1669",
+        "frase": "seminars and workshops on letters of credit, documentary collections, and other banking subjects"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Las publicaciones tratan de países concretos, pero los seminarios son sobre cartas de crédito, cobranzas documentarias y otros temas bancarios.; Mismo defecto: el libro no ofrece seminarios sobre el país de destino.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

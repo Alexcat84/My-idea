@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Organizaciones Paralelas para Crear Cambio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Son formas organizacionales que existen en adición y simultáneamente con la organización de línea regular, diseñadas para manejar programas de cambio no rutinarios o inusuales que los procedimientos normales no pueden abordar. Ejemplos incluyen equipos de proceso, equipos de proyecto, y comités o consejos directivos de excelencia en el desempeño. Pueden ser permanentes (equipos de valor/VSM) o ad hoc (proyectos Six Sigma o Lean que se disuelven al cumplir su misión).",
+  "resumen_teorico": "Son formas organizacionales que existen en adición y simultáneamente con la organización de línea regular, diseñadas para manejar programas de cambio no rutinarios o inusuales, que en general requieren formas nuevas; los cambios pequeños y similares a menudo se coordinan con procedimientos bien planeados. Ejemplos incluyen equipos de proceso, equipos de proyecto, y comités o consejos directivos de excelencia en el desempeño. Pueden ser permanentes (equipos de valor/VSM) o ad hoc (proyectos Six Sigma o Lean que se disuelven al cumplir su misión).",
   "pasos_accionables": [
     "Identificar los tipos de cambio no rutinario que la organización necesita abordar",
     "Formar equipos de proyecto o steering committees según la naturaleza permanente o temporal del cambio",
-    "Definir claramente el alcance, misión y fecha de disolución (si aplica) del equipo paralelo",
+    "Definir claramente el alcance y la misión del equipo paralelo y, si es temporal, que se disuelve al cumplir su misión",
     "Asegurar patrocinio ejecutivo para dar autoridad y recursos a estos equipos"
   ],
   "entregable_esperado": "Carta de equipo (project charter) para cada organización paralela creada, con misión y duración definida",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Crea Estructuras Paralelas de Cambio",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-114-organizaciones_paralelas_cambio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Son formas organizacionales que existen en adición y simultáneamente con la organización de línea regular, diseñadas para manejar programas de cambio no rutinarios o inusuales que los procedimientos normales no pueden abordar. Ejemplos incluyen equipos de proceso, equipos de proyecto, y comités o consejos directivos de excelencia en el desempeño. Pueden ser permanentes (equipos de valor/VSM) o ad hoc (proyectos Six Sigma o Lean que se disuelven al cumplir su misión).",
+      "texto_nuevo": "Son formas organizacionales que existen en adición y simultáneamente con la organización de línea regular, diseñadas para manejar programas de cambio no rutinarios o inusuales, que en general requieren formas nuevas; los cambios pequeños y similares a menudo se coordinan con procedimientos bien planeados. Ejemplos incluyen equipos de proceso, equipos de proyecto, y comités o consejos directivos de excelencia en el desempeño. Pueden ser permanentes (equipos de valor/VSM) o ad hoc (proyectos Six Sigma o Lean que se disuelven al cumplir su misión).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2619-2621",
+        "frase": "Nonroutine and unusual programs of change generally require new organizational forms."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que lo no rutinario en general requiere formas nuevas y que los cambios pequeños a menudo se coordinan con procedimientos; el nodo lo vuelve absoluto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-114-organizaciones_paralelas_cambio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir claramente el alcance, misión y fecha de disolución (si aplica) del equipo paralelo",
+      "texto_nuevo": "Definir claramente el alcance y la misión del equipo paralelo y, si es temporal, que se disuelve al cumplir su misión",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2623",
+        "frase": "a Lean rapid improvement team is ad hoc and disbands when its mission is accomplished"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el equipo ad hoc se disuelve al cumplir su misión, no en una fecha fijada.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

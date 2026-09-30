@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Netnografía y Monitoreo de Comunidades en Redes Sociales",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "También llamada 'cyber-etnografía', consiste en monitorear blogs, foros y redes sociales para identificar temas, problemas y necesidades emergentes mediante análisis de contenido. Es útil para categorías de alto involucramiento (mascotas, deportes, software) donde existen comunidades de entusiastas organizadas, aunque requiere habilidad analítica considerable.",
+  "resumen_teorico": "También llamada 'cyber-etnografía', consiste en monitorear blogs, foros y redes sociales para identificar temas, problemas y necesidades emergentes mediante análisis de contenido. Probablemente solo aplica a unas pocas categorías de alto involucramiento (mascotas, deportes, software) donde existen comunidades de entusiastas organizadas, y requiere habilidad analítica y tiempo considerables.",
   "pasos_accionables": [
     "Identificar plataformas y comunidades online relevantes al producto/categoría",
     "Recolectar y analizar contenido (blogs, foros, redes sociales) para detectar patrones y temas recurrentes",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Escucha las Redes Sociales",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-117-netnografia_social_media-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "También llamada 'cyber-etnografía', consiste en monitorear blogs, foros y redes sociales para identificar temas, problemas y necesidades emergentes mediante análisis de contenido. Es útil para categorías de alto involucramiento (mascotas, deportes, software) donde existen comunidades de entusiastas organizadas, aunque requiere habilidad analítica considerable.",
+      "texto_nuevo": "También llamada 'cyber-etnografía', consiste en monitorear blogs, foros y redes sociales para identificar temas, problemas y necesidades emergentes mediante análisis de contenido. Probablemente solo aplica a unas pocas categorías de alto involucramiento (mascotas, deportes, software) donde existen comunidades de entusiastas organizadas, y requiere habilidad analítica y tiempo considerables.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5120",
+        "frase": "the method likely only applies to a handful of product classes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el método a unas pocas categorías y dice que exige habilidad y también tiempo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

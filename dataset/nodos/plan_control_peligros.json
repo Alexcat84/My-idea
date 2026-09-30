@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Plan de Control de Peligros",
   "fuente": "OSHA3886",
-  "resumen_teorico": "Documento que describe cómo se implementarán los controles seleccionados, priorizando los peligros más serios primero. Debe asignar responsables, fechas de cumplimiento y mecanismos de seguimiento, y actualizarse conforme cambian las condiciones del sitio.",
+  "resumen_teorico": "Documento que describe cómo implementarás los controles, empezando por los peligros más serios, con controles provisionales si hace falta y la meta de un control eficaz a largo plazo. Asigna responsables, fechas, seguimiento y verificación de eficacia, y se actualiza al cambiar las condiciones del sitio.",
   "pasos_accionables": [
     "Listar los peligros a controlar en orden de prioridad",
     "Asignar responsables con autoridad para implementar cada control",
@@ -39,5 +39,23 @@
   "etiqueta_arbol": "Controla los Peligros Prioritarios",
   "fuentes_internas": [
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-115-plan_control_peligros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento que describe cómo se implementarán los controles seleccionados, priorizando los peligros más serios primero. Debe asignar responsables, fechas de cumplimiento y mecanismos de seguimiento, y actualizarse conforme cambian las condiciones del sitio.",
+      "texto_nuevo": "Documento que describe cómo implementarás los controles, empezando por los peligros más serios, con controles provisionales si hace falta y la meta de un control eficaz a largo plazo. Asigna responsables, fechas, seguimiento y verificación de eficacia, y se actualiza al cambiar las condiciones del sitio.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "691-703",
+        "frase": "Interim controls may be necessary, but the overall goal is to ensure effective long-term control"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en el plan los controles provisionales, con la meta de un control eficaz a largo plazo.; El procedimiento del libro incluye planificar cómo verificar la eficacia de los controles instalados.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

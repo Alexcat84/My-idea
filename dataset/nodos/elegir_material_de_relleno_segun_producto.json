@@ -7,8 +7,8 @@
   "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
   "pasos_accionables": [
     "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
-    "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados.",
-    "Evita maníes de poliestireno comunes con productos planos o electrónicos; usa la versión antiestática si es necesario.",
+    "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+    "Evita maníes de poliestireno comunes con productos planos, estrechos o electrónicos; para la electrónica usa maníes antiestáticos y envuelve el artículo en plástico de burbujas.",
     "Sugerencia de My Idea: reserva el papel kraft bien arrugado para artículos livianos, resistentes y de bajo valor.",
     "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve."
   ],
@@ -59,6 +59,40 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico (C133-009): 'económicos' repite la condicion 'de bajo valor' que el libro no pone (solo livianos y no fragiles). En el resumen se quita el dato.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-009"
+    },
+    {
+      "id": "final-e1-113-elegir_material_de_relleno_segun_producto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita maníes de poliestireno comunes con productos planos o electrónicos; usa la versión antiestática si es necesario.",
+      "texto_nuevo": "Evita maníes de poliestireno comunes con productos planos, estrechos o electrónicos; para la electrónica usa maníes antiestáticos y envuelve el artículo en plástico de burbujas.",
+      "cita": {
+        "libro": "Guia de empaque para transporte",
+        "fichero": "txt/Supply chain/Packaging_Guidelines.txt",
+        "lineas": "61-67",
+        "frase": "Use anti-static peanuts for electronic items, along with bubble sheeting around the item."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro excluye también los productos estrechos y pide plástico de burbujas junto a los maníes antiestáticos en electrónica.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-113-elegir_material_de_relleno_segun_producto-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados.",
+      "texto_nuevo": "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+      "cita": {
+        "libro": "Guia de empaque para transporte",
+        "fichero": "txt/Supply chain/Packaging_Guidelines.txt",
+        "lineas": "47",
+        "frase": "use flat surface of bubble wrap (bubbles facing away from product)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la indicación de envolver con la cara lisa hacia el producto y las burbujas hacia afuera.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

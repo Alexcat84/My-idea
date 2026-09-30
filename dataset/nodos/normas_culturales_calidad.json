@@ -7,7 +7,7 @@
   "resumen_teorico": "Conjunto de creencias organizacionales que facilitan la transformación cultural hacia la calidad: priorizar calidad sobre cantidad, compromiso fanático con el cliente, búsqueda de metas ambiciosas y mejora continua, código de conducta ético orientado al cliente, y creencia en la necesidad de cambio adaptativo continuo.",
   "pasos_accionables": [
     "Auditar las creencias actuales de la organización respecto a calidad vs. cantidad",
-    "Publicar y comunicar un código de conducta orientado al cliente",
+    "Publicar y comunicar un código de conducta orientado al cliente, tenerlo en cuenta en evaluaciones y recompensas, y hacerlo cumplir a todos",
     "Establecer metas de mejora continua (stretch goals) medibles",
     "Crear estructuras que permitan detectar y responder rápidamente a tendencias externas"
   ],
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Construye tu Cultura de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-114-normas_culturales_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Publicar y comunicar un código de conducta orientado al cliente",
+      "texto_nuevo": "Publicar y comunicar un código de conducta orientado al cliente, tenerlo en cuenta en evaluaciones y recompensas, y hacerlo cumplir a todos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2025",
+        "frase": "taken into consideration in performance ratings and in distributing rewards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro el código cuenta en evaluaciones y recompensas y se hace cumplir; sin eso el consejo cambia.; Mismo defecto: se pierde que el código se tiene en cuenta en evaluaciones y recompensas, se hace cumplir y aplica a todos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

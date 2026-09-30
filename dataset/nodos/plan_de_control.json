@@ -13,7 +13,7 @@
     "Decidir quién analizará las mediciones y determinará si el proceso está fuera de control",
     "Decidir quién actuará para diagnosticar y eliminar la causa asignable",
     "Definir los pasos para regresar el proceso a control",
-    "Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta",
+    "Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas, velocidad de respuesta y máximo uso del autocontrol",
     "Capacitar a los dueños del proceso en el uso del plan de control.",
     "Auditar periódicamente la efectividad del plan de control."
   ],
@@ -55,5 +55,24 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-114-plan_de_control-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta",
+      "texto_nuevo": "Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas, velocidad de respuesta y máximo uso del autocontrol",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18194-18200",
+        "frase": "The control plan makes maximum use of self-control."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la tercera verificación del libro: que el plan aproveche al máximo el autocontrol.; Mismo defecto: la revisión pierde la comprobación del máximo uso del autocontrol.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

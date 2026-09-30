@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Gestión del Riesgo de Tipo de Cambio (Foreign Exchange Risk)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El riesgo cambiario surge porque comprador y vendedor rara vez usan la misma moneda, y el valor relativo de las divisas puede cambiar entre el acuerdo y el pago. Cotizar y exigir pago en dólares estadounidenses transfiere este riesgo al comprador, pero puede reducir competitividad. Alternativamente, vender en moneda extranjera y cubrir el riesgo mediante contratos forward (compra/venta de divisa a tasa prefijada con fecha futura) permite ser competitivo mientras se gestiona el riesgo.",
+  "resumen_teorico": "El riesgo cambiario surge porque comprador y vendedor rara vez usan la misma moneda, y el valor relativo de las divisas puede cambiar entre el acuerdo y el pago. Cotizar y exigir pago en dólares estadounidenses transfiere este riesgo al comprador, pero puede reducir competitividad y, si su moneda se devalúa mucho, llevar a que no pueda pagarte. Alternativamente, vender en moneda extranjera y cubrir el riesgo mediante contratos forward (compra/venta de divisa a tasa prefijada con fecha futura) permite ser competitivo mientras se gestiona el riesgo.",
   "pasos_accionables": [
     "Decidir si se cotizará y cobrará en USD o en moneda extranjera",
     "Si se opta por moneda extranjera, consultar con un banquero internacional antes de negociar el contrato",
@@ -56,6 +56,22 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-113-gestion_riesgo_cambiario-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El riesgo cambiario surge porque comprador y vendedor rara vez usan la misma moneda, y el valor relativo de las divisas puede cambiar entre el acuerdo y el pago. Cotizar y exigir pago en dólares estadounidenses transfiere este riesgo al comprador, pero puede reducir competitividad. Alternativamente, vender en moneda extranjera y cubrir el riesgo mediante contratos forward (compra/venta de divisa a tasa prefijada con fecha futura) permite ser competitivo mientras se gestiona el riesgo.",
+      "texto_nuevo": "El riesgo cambiario surge porque comprador y vendedor rara vez usan la misma moneda, y el valor relativo de las divisas puede cambiar entre el acuerdo y el pago. Cotizar y exigir pago en dólares estadounidenses transfiere este riesgo al comprador, pero puede reducir competitividad y, si su moneda se devalúa mucho, llevar a que no pueda pagarte. Alternativamente, vender en moneda extranjera y cubrir el riesgo mediante contratos forward (compra/venta de divisa a tasa prefijada con fecha futura) permite ser competitivo mientras se gestiona el riesgo.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4141",
+        "frase": "could also result in nonpayment by a foreign buyer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que exigir dólares puede terminar en impago si la moneda del comprador se devalúa mucho.; Mismo defecto: el nodo presenta el riesgo como transferido sin esa salvedad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

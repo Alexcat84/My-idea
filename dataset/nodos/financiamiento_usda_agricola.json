@@ -4,9 +4,9 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas de Financiamiento Agrícola del USDA/FAS",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 24 meses mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+  "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
   "pasos_accionables": [
-    "Determinar si el producto exportado es agrícola y elegible para programas USDA",
+    "Determinar si el producto exportado es agrícola, o son bienes o servicios para instalaciones agrícolas en mercados emergentes, y si es elegible para programas USDA",
     "Seleccionar el programa adecuado según el plazo y tipo de transacción (GSM-102, SCGP o FGP)",
     "Registrar la documentación requerida en el sistema GSM Online",
     "Contactar a FAS Contract and Registration branch para validar elegibilidad"
@@ -52,6 +52,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-113-financiamiento_usda_agricola-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 24 meses mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+      "texto_nuevo": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4361",
+        "frase": "The Export Credit Guarantee Program (GSM-102) covers credit terms up to 3 years."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el GSM-102 cubre plazos de crédito de hasta 3 años, no 24 meses.; Misma cifra errónea.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-113-financiamiento_usda_agricola-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si el producto exportado es agrícola y elegible para programas USDA",
+      "texto_nuevo": "Determinar si el producto exportado es agrícola, o son bienes o servicios para instalaciones agrícolas en mercados emergentes, y si es elegible para programas USDA",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4365",
+        "frase": "financing of manufactured goods and services exported from the United States"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El FGP financia bienes manufacturados y servicios para instalaciones agrícolas; limitar la elegibilidad a productos agrícolas lo deja fuera.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

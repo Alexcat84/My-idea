@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Coordinación y Comunicación en Sitios Multiempleador",
   "fuente": "OSHA3886",
-  "resumen_teorico": "Cuando en tu sitio de trabajo coexisten contratistas, subcontratistas o personal de agencias de staffing junto a tu propio equipo, necesitas coordinar y comunicar los peligros presentes para que todos reciban el mismo nivel de protección. La falta de coordinación genera políticas inconsistentes, como el uso de EPP, lo que debilita la credibilidad de tu programa de seguridad y reduce la participación de los trabajadores en la prevención. Esto implica intercambiar información sobre riesgos y controles antes de iniciar labores y ante cualquier cambio de condiciones, definir a quién se reportan incidentes, dar acceso a registros de lesiones e inspecciones, incluir requisitos de seguridad en los contratos, y asegurar que el personal temporal llegue capacitado y equipado antes de comenzar a trabajar.",
+  "resumen_teorico": "Cuando en tu sitio de trabajo coexisten contratistas, subcontratistas o personal de agencias de staffing junto a tu propio equipo, necesitas coordinar y comunicar los peligros presentes para que todos reciban el mismo nivel de protección. No hacerlo puede debilitar tu programa de seguridad: si las políticas son inconsistentes, como las de uso de EPP, los trabajadores pueden creer por error que el equipo no hace falta y lesionarse, o dudar de la credibilidad del programa y participar menos en la prevención. Esto implica intercambiar información sobre riesgos y controles antes de iniciar labores y, según haga falta, cuando cambien las condiciones, definir a quién se reportan incidentes, dar acceso a registros de lesiones e inspecciones, incluir requisitos de seguridad en los contratos, y asegurar que el personal temporal llegue capacitado y equipado antes de comenzar a trabajar.",
   "pasos_accionables": [
     "Establece el compromiso de brindar el mismo nivel de protección a todos los trabajadores presentes en el sitio, sin importar su empleador",
     "Comunica los peligros del sitio y las medidas de control antes de iniciar el trabajo, incluyendo riesgos no rutinarios o de emergencia, y actualiza esta información cuando cambien las condiciones",
-    "Define especificaciones y calificaciones de seguridad para contratistas y agencias de personal e inclúyelas en los contratos",
+    "Define especificaciones y calificaciones de seguridad para contratistas y agencias de personal, inclúyelas en los contratos y asegúrate de que los seleccionados las cumplan",
     "Coordina la planificación y el cronograma de trabajo, acordando antes de empezar quién implementa cada parte del programa de seguridad",
-    "Establece un canal para reportar incidentes y otorga acceso a registros de lesiones e inspecciones entre las partes",
+    "Establece un canal para reportar incidentes y da a contratistas y agencias el derecho a visitar e inspeccionar el sitio y a acceder a los registros de lesiones",
     "Resuelve conflictos de políticas de seguridad, como el uso de EPP, antes de que comience el trabajo"
   ],
   "entregable_esperado": "Protocolo de coordinación documentado entre todos los empleadores del sitio, con roles definidos, canal de comunicación de peligros y procedimiento de resolución de conflictos.",
@@ -111,6 +111,56 @@
         "motivo": "Construir un buen lugar para trabajar en gestion no conduce a coordinar peligros entre contratistas en sitios multiempleador."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-115-coordinacion_sitios_multiempleador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando en tu sitio de trabajo coexisten contratistas, subcontratistas o personal de agencias de staffing junto a tu propio equipo, necesitas coordinar y comunicar los peligros presentes para que todos reciban el mismo nivel de protección. La falta de coordinación genera políticas inconsistentes, como el uso de EPP, lo que debilita la credibilidad de tu programa de seguridad y reduce la participación de los trabajadores en la prevención. Esto implica intercambiar información sobre riesgos y controles antes de iniciar labores y ante cualquier cambio de condiciones, definir a quién se reportan incidentes, dar acceso a registros de lesiones e inspecciones, incluir requisitos de seguridad en los contratos, y asegurar que el personal temporal llegue capacitado y equipado antes de comenzar a trabajar.",
+      "texto_nuevo": "Cuando en tu sitio de trabajo coexisten contratistas, subcontratistas o personal de agencias de staffing junto a tu propio equipo, necesitas coordinar y comunicar los peligros presentes para que todos reciban el mismo nivel de protección. No hacerlo puede debilitar tu programa de seguridad: si las políticas son inconsistentes, como las de uso de EPP, los trabajadores pueden creer por error que el equipo no hace falta y lesionarse, o dudar de la credibilidad del programa y participar menos en la prevención. Esto implica intercambiar información sobre riesgos y controles antes de iniciar labores y, según haga falta, cuando cambien las condiciones, definir a quién se reportan incidentes, dar acceso a registros de lesiones e inspecciones, incluir requisitos de seguridad en los contratos, y asegurar que el personal temporal llegue capacitado y equipado antes de comenzar a trabajar.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "995, 1035",
+        "frase": "workers may mistakenly believe that the equipment is not needed, leading to injury"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la información se comunica según haga falta si cambian las condiciones, no ante cualquier cambio.; El libro dice que no coordinar puede debilitar el programa y que las políticas inconsistentes pueden restar credibilidad; el nodo lo da por seguro.; Mismo defecto que la marca 1.; Mismo endurecimiento que la marca 0.; Se cae la consecuencia principal: con reglas de EPP distintas los trabajadores pueden creer que no hace falta y lesionarse.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-115-coordinacion_sitios_multiempleador-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define especificaciones y calificaciones de seguridad para contratistas y agencias de personal e inclúyelas en los contratos",
+      "texto_nuevo": "Define especificaciones y calificaciones de seguridad para contratistas y agencias de personal, inclúyelas en los contratos y asegúrate de que los seleccionados las cumplan",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "1045",
+        "frase": "ensure that contractors, subcontractors, and staffing agencies selected for the work meet those requirements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además asegurar que los contratistas y agencias seleccionados cumplan esos requisitos.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-115-coordinacion_sitios_multiempleador-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece un canal para reportar incidentes y otorga acceso a registros de lesiones e inspecciones entre las partes",
+      "texto_nuevo": "Establece un canal para reportar incidentes y da a contratistas y agencias el derecho a visitar e inspeccionar el sitio y a acceder a los registros de lesiones",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "1031",
+        "frase": "the right to conduct site visits and inspections and to access injury and illness records"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da derecho a visitar e inspeccionar el sitio, además de acceder a los registros de lesiones; el paso lo reduce a registros.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

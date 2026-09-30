@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Transición de Blueprint Fluido a Blueprint Burocrático",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "A medida que una startup madura, requiere pasar de una fase inicial que necesita personas creativas, curiosas y flexibles (generalistas) a una fase que exige personas más especializadas, cómodas con procesos y roles definidos. Esta transición es difícil de sincronizar y puede causar alta rotación de personal si no se gestiona bien, ya que el tipo de persona que triunfó en la fase inicial puede no encajar en la fase de crecimiento estructurado.",
+  "resumen_teorico": "A medida que una startup madura, requiere pasar de una fase inicial que necesita personas creativas, curiosas y flexibles (generalistas) a una fase que exige personas más especializadas, cómodas con procesos y roles definidos. Esta transición es difícil de sincronizar y puede hacer que la rotación de personal se dispare, ya que el tipo de persona que triunfó en la fase inicial puede no encajar en la fase de crecimiento estructurado.",
   "pasos_accionables": [
     "Identificar señales de que el negocio está 'gelificando' (procesos repetibles, necesidad de escala).",
-    "Evaluar si el equipo actual tiene el perfil generalista/creativo o si ya se necesita especialización.",
-    "Comunicar proactivamente el cambio cultural al equipo para reducir la sorpresa y el desgaste.",
+    "Evaluar, función por función, si el equipo actual tiene el perfil generalista/creativo o si ya se necesita especialización, porque no todas las áreas cambian al mismo ritmo.",
+    "Sugerencia de My Idea: comunica con anticipación a tu equipo el cambio cultural.",
     "Planificar la incorporación gradual de roles más especializados sin desmantelar la cultura fundacional de golpe."
   ],
   "entregable_esperado": "Un plan de transición organizacional que identifique qué roles deben volverse más formales/especializados y en qué momento del crecimiento.",
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Evoluciona de Flexible a Formal",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-116-transicion_organizacional_fluido_a_formal-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si el equipo actual tiene el perfil generalista/creativo o si ya se necesita especialización.",
+      "texto_nuevo": "Evaluar, función por función, si el equipo actual tiene el perfil generalista/creativo o si ya se necesita especialización, porque no todas las áreas cambian al mismo ritmo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2355-2357",
+        "frase": "to understand how it might differ by function, and to manage the disruption"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la especialización no llega al mismo ritmo a todas las funciones; el paso evalúa al equipo en bloque.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-116-transicion_organizacional_fluido_a_formal-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar proactivamente el cambio cultural al equipo para reducir la sorpresa y el desgaste.",
+      "texto_nuevo": "Sugerencia de My Idea: comunica con anticipación a tu equipo el cambio cultural.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2357",
+        "frase": "and to manage the disruption it might cause"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que es difícil manejar la disrupción; no propone comunicar el cambio ni promete que eso reduzca el desgaste.; Mismo defecto: el efecto prometido de la comunicación no está en el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-116-transicion_organizacional_fluido_a_formal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que una startup madura, requiere pasar de una fase inicial que necesita personas creativas, curiosas y flexibles (generalistas) a una fase que exige personas más especializadas, cómodas con procesos y roles definidos. Esta transición es difícil de sincronizar y puede causar alta rotación de personal si no se gestiona bien, ya que el tipo de persona que triunfó en la fase inicial puede no encajar en la fase de crecimiento estructurado.",
+      "texto_nuevo": "A medida que una startup madura, requiere pasar de una fase inicial que necesita personas creativas, curiosas y flexibles (generalistas) a una fase que exige personas más especializadas, cómodas con procesos y roles definidos. Esta transición es difícil de sincronizar y puede hacer que la rotación de personal se dispare, ya que el tipo de persona que triunfó en la fase inicial puede no encajar en la fase de crecimiento estructurado.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2357",
+        "frase": "transitioning from more fluid blueprints to a bureaucratic blueprint caused turnover to jump"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pone la condición de una mala gestión: el estudio encontró que esa transición hizo dispararse la rotación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

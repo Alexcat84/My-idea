@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Test 'Rico versus Rey' para diagnosticar tu motivación como fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si a esa persona la mueve el control, tiende a resistir con fuerza que la reemplacen; si la mueve la riqueza, suele alinearse más fácil con los intereses financieros de quien invierte.",
+  "resumen_teorico": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si a esa persona la mueve el control, tiende a resistir con fuerza que la reemplacen; si la mueve la riqueza, suele alinearse más fácil con los intereses financieros de quien invierte, aunque aun así a menudo duda cuando llega el momento de dejar el cargo.",
   "pasos_accionables": [
     "Indaga, antes de invertir, si quien dirige el negocio prioriza tener el control total o el retorno del dinero.",
     "Ten la conversación difícil sobre qué pasará si algún día decides cambiar al fundador, antes de invertir, no después.",
-    "Pon en el contrato o en los acuerdos de gobierno cláusulas que ya prevean un posible cambio de liderazgo.",
-    "Si ves que quien dirige es claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión."
+    "Habla abiertamente, antes de invertir, de las condiciones que podrían llevar a un cambio de liderazgo.",
+    "Si ves que quien dirige es claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión; en ese caso muchos inversionistas prefieren no invertir."
   ],
   "entregable_esperado": "Un diagnóstico claro sobre qué motiva al fundador, que armas como parte de tu evaluación antes de invertir.",
   "nodos_previos": [
@@ -90,6 +90,56 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro situa el diagnostico en la evaluacion que hacen los inversores de la motivacion del fundador-CEO antes de su primera ronda; el entregable pasaba a la motivacion propia del lector. Se cambia solo de quien es la motivacion.",
       "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "final-e1-116-test_rico_vs_rey-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pon en el contrato o en los acuerdos de gobierno cláusulas que ya prevean un posible cambio de liderazgo.",
+      "texto_nuevo": "Habla abiertamente, antes de invertir, de las condiciones que podrían llevar a un cambio de liderazgo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3337",
+        "frase": "openly discuss the possibility of succession and the conditions that might trigger it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide discutir abiertamente antes de invertir la sucesión y las condiciones que la gatillarían; no habla de cláusulas contractuales.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-116-test_rico_vs_rey-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si a esa persona la mueve el control, tiende a resistir con fuerza que la reemplacen; si la mueve la riqueza, suele alinearse más fácil con los intereses financieros de quien invierte.",
+      "texto_nuevo": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si a esa persona la mueve el control, tiende a resistir con fuerza que la reemplacen; si la mueve la riqueza, suele alinearse más fácil con los intereses financieros de quien invierte, aunque aun así a menudo duda cuando llega el momento de dejar el cargo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3299",
+        "frase": "even the most financially motivated founders often hesitate when the time comes to step down"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la salvedad de que incluso los fundadores más movidos por el dinero a menudo dudan cuando llega el momento de dejar el cargo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-116-test_rico_vs_rey-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si ves que quien dirige es claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión.",
+      "texto_nuevo": "Si ves que quien dirige es claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión; en ese caso muchos inversionistas prefieren no invertir.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3299",
+        "frase": "If the former, many VCs will shy away from making the investment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que ante un fundador movido por el control muchos inversionistas se abstienen de invertir; el paso lo reduce a sopesar un riesgo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

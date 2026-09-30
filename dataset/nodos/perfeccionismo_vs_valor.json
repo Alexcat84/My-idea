@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Perfeccionismo como Desperdicio de Valor (Cuándo la Perfección Sí Vale)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existe un impulso humano instintivo hacia la precisión y la perfección que en ciertos contextos, como seguridad alimentaria, salud, energía nuclear o aviación, resulta indispensable y necesario. Sin embargo, en la mayoría de las demás situaciones, perseguir la perfección más allá de lo que aporta valor real, estético o tecnológico se convierte en 'perfeccionismo': un consumo de materiales, energía y recursos que agrega costo sin aumentar la aptitud del producto para su propósito ni la satisfacción del cliente. Evitar este desperdicio requiere un análisis de 'fit for purpose' que distinga con claridad los atributos críticos de los que no lo son, evitando así la sobreingeniería y sus costos innecesarios.",
+  "resumen_teorico": "Existe un impulso humano instintivo hacia la precisión y la perfección que en ciertos contextos, como seguridad alimentaria, salud, energía nuclear o aviación, resulta indispensable y necesario. Sin embargo, en muchas otras situaciones, perseguir la perfección más allá de lo que aporta valor real, estético o tecnológico se convierte en 'perfeccionismo': un consumo de materiales, energía y recursos que agrega costo sin aumentar la aptitud del producto para su propósito ni la satisfacción del cliente.",
   "pasos_accionables": [
     "Clasifica los atributos de tu producto o servicio según su criticidad para seguridad o salud frente a lo estético o preferencial",
     "Evalúa cada especificación o nivel de precisión contra su verdadero impacto en la satisfacción de tu cliente",
     "Elimina inversión en refinamientos, procesos o controles que no sean perceptibles ni valorados por el cliente",
-    "Reserva el estándar de perfección únicamente para los atributos críticos de seguridad o salud",
+    "Reserva el estándar de perfección para los atributos críticos de seguridad o salud y para aquellos donde de verdad aporte aptitud técnica o estética",
     "Define los criterios de 'fit for purpose' a partir de lo que el cliente valora para detectar sobreingeniería antes de invertir recursos"
   ],
   "entregable_esperado": "Matriz de criticidad de atributos de calidad (crítico de seguridad vs no crítico) con recomendaciones de inversión y especificaciones revisadas.",
@@ -53,6 +53,39 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector A, y hay una cita mas fuerte que la suya. El libro deja claro que la aptitud y el proposito los define el usuario y que cualquier otra respuesta lleva a malentendidos (L3201, L265). Tambien dice que los planificadores no deben sustituir las necesidades del cliente por su propio criterio tecnico (L3610). El paso manda definir criterios propios de fit for purpose, y eso invierte quien decide. Busque con Grep pasajes que dejen esa definicion al proveedor. L8138 (criterios de trabajo para quien no conoce la aptitud de uso) se refiere a especificaciones derivadas de la aptitud, no a definirla. L24412 insiste en que valen las medidas del usuario y no las del fabricante. Detectar el perfeccionismo si esta en el libro (L972), pero el criterio debe salir del cliente.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C052-111"
+    },
+    {
+      "id": "final-e1-114-perfeccionismo_vs_valor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existe un impulso humano instintivo hacia la precisión y la perfección que en ciertos contextos, como seguridad alimentaria, salud, energía nuclear o aviación, resulta indispensable y necesario. Sin embargo, en la mayoría de las demás situaciones, perseguir la perfección más allá de lo que aporta valor real, estético o tecnológico se convierte en 'perfeccionismo': un consumo de materiales, energía y recursos que agrega costo sin aumentar la aptitud del producto para su propósito ni la satisfacción del cliente. Evitar este desperdicio requiere un análisis de 'fit for purpose' que distinga con claridad los atributos críticos de los que no lo son, evitando así la sobreingeniería y sus costos innecesarios.",
+      "texto_nuevo": "Existe un impulso humano instintivo hacia la precisión y la perfección que en ciertos contextos, como seguridad alimentaria, salud, energía nuclear o aviación, resulta indispensable y necesario. Sin embargo, en muchas otras situaciones, perseguir la perfección más allá de lo que aporta valor real, estético o tecnológico se convierte en 'perfeccionismo': un consumo de materiales, energía y recursos que agrega costo sin aumentar la aptitud del producto para su propósito ni la satisfacción del cliente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "972",
+        "frase": "there are numerous other situations in which the pursuit of perfection is antagonistic to society"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define el perfeccionismo pero no dice que evitarlo requiera un análisis de atributos críticos ni habla de sobreingeniería.; El libro dice 'numerosas otras situaciones', no la mayoría; endurece la frecuencia.; Mismo defecto que la marca 0: 'numerous' pasa a 'la mayoría'.; Mismo defecto que la marca 1: el cierre sobre el análisis 'fit for purpose' es un consejo añadido presentado como hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-114-perfeccionismo_vs_valor-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reserva el estándar de perfección únicamente para los atributos críticos de seguridad o salud",
+      "texto_nuevo": "Reserva el estándar de perfección para los atributos críticos de seguridad o salud y para aquellos donde de verdad aporte aptitud técnica o estética",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "972",
+        "frase": "without adding to fitness for purpose, either technologically or aesthetically"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo llama desperdicio a la perfección que no añade aptitud técnica ni estética; reservarla únicamente a seguridad o salud es más tajante.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

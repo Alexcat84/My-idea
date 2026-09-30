@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ajusta a fondo tu proceso y cada una de sus partes",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Después de diseñar pensando en lo crítico y de reducir el margen de error humano, tienes que ajustar tanto el proceso completo como cada parte de él por separado. Busca el mejor equilibrio entre costo, tiempo y calidad, usando los mismos principios que ya aplicaste cuando ajustaste las características de tu producto.",
+  "resumen_teorico": "Después de diseñar pensando en lo crítico y de reducir el margen de error humano, tienes que ajustar primero cada parte del proceso por separado y después el proceso completo. Busca cubrir las necesidades de tu cliente y las tuyas al menor costo combinado, usando los mismos principios que ya aplicaste cuando ajustaste las características de tu producto.",
   "pasos_accionables": [
     "Revisa el diseño completo de tu proceso y el de cada una de sus partes.",
     "Aplica las mismas técnicas de ajuste que ya usaste antes al desarrollar tu producto.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Optimiza tus Procesos y Subprocesos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-114-optimizacion_de_procesos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de diseñar pensando en lo crítico y de reducir el margen de error humano, tienes que ajustar tanto el proceso completo como cada parte de él por separado. Busca el mejor equilibrio entre costo, tiempo y calidad, usando los mismos principios que ya aplicaste cuando ajustaste las características de tu producto.",
+      "texto_nuevo": "Después de diseñar pensando en lo crítico y de reducir el margen de error humano, tienes que ajustar primero cada parte del proceso por separado y después el proceso completo. Busca cubrir las necesidades de tu cliente y las tuyas al menor costo combinado, usando los mismos principios que ya aplicaste cuando ajustaste las características de tu producto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4644",
+        "frase": "optimize first the subprocesses and then the overall process design"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no plantea un equilibrio entre costo, tiempo y calidad; optimizar es cubrir las necesidades de cliente y proveedor al menor costo combinado.; Mismo defecto que la marca 0: el equilibrio costo, tiempo y calidad no está en el libro.; Mismo defecto que la marca 1: el orden subprocesos antes que proceso completo desaparece.; Se pierde el orden del libro: primero los subprocesos y después el proceso completo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

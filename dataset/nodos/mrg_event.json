@@ -7,14 +7,14 @@
   "resumen_teorico": "Un evento MRG es una reunión estructurada fuera de la oficina (off-site) diseñada para generar ideas de alto impacto en pocos días de trabajo intensivo en equipo. Combina análisis de tendencias, tecnología, competencias internas y mapeo de oportunidades, culminando en votación y planes de acción concretos.",
   "pasos_accionables": [
     "Dividir a los asistentes en equipos de trabajo (breakout teams)",
-    "Día 1 mañana: identificar tendencias de mercado y necesidades cambiantes de clientes",
+    "Día 1 mañana: identificar tendencias de mercado y necesidades cambiantes de clientes, y preguntar qué oportunidades sugieren esos cambios",
     "Día 1 tarde: identificar cambios tecnológicos relevantes para la industria",
-    "Evaluar fortalezas internas y competencias core que puedan aprovecharse",
+    "Evaluar fortalezas internas y competencias core que puedan aprovecharse, y los cambios en la estructura de la industria y la cadena de valor (qué actores nuevos llegan y cuáles pueden desaparecer)",
     "Día 2: mapear oportunidades concretas basadas en los análisis previos",
     "Votar las mejores ideas usando scorecards ('puntos verdes')",
     "Definir planes de acción y equipos responsables para las mejores ideas antes de finalizar el evento"
   ],
-  "entregable_esperado": "Lista de 5 a 10 oportunidades mayores identificadas y parcialmente definidas, con equipos asignados y plan de acción inicial.",
+  "entregable_esperado": "Lista de oportunidades mayores (normalmente de 5 a 10) identificadas y parcialmente definidas, con equipos asignados y plan de acción inicial.",
   "nodos_previos": [
     "internal_idea_capture"
   ],
@@ -29,5 +29,57 @@
   "etiqueta_arbol": "Genera Ideas de Alto Impacto",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-117-mrg_event-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar fortalezas internas y competencias core que puedan aprovecharse",
+      "texto_nuevo": "Evaluar fortalezas internas y competencias core que puedan aprovecharse, y los cambios en la estructura de la industria y la cadena de valor (qué actores nuevos llegan y cuáles pueden desaparecer)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5577",
+        "frase": "shifts in the industry and value chain structure"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en la misma tanda los cambios en la estructura de la industria y la cadena de valor; el paso pierde parte de la lista.; Mismo defecto: falta el análisis de la estructura de la industria y la cadena de valor.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-117-mrg_event-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Día 1 mañana: identificar tendencias de mercado y necesidades cambiantes de clientes",
+      "texto_nuevo": "Día 1 mañana: identificar tendencias de mercado y necesidades cambiantes de clientes, y preguntar qué oportunidades sugieren esos cambios",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5573",
+        "frase": "So what? Do these shifts suggest any major new opportunities?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que cada equipo responda qué oportunidades sugieren esos cambios; sin esa pregunta el paso queda en diagnóstico.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-117-mrg_event-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista de 5 a 10 oportunidades mayores identificadas y parcialmente definidas, con equipos asignados y plan de acción inicial.",
+      "texto_nuevo": "Lista de oportunidades mayores (normalmente de 5 a 10) identificadas y parcialmente definidas, con equipos asignados y plan de acción inicial.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5583",
+        "frase": "The result of such MRG events is usually five to ten major opportunities"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el resultado suele ser de cinco a diez oportunidades; el entregable lo endurece a cifra fija.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

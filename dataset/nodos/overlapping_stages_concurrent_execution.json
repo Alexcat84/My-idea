@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Superposición de Etapas y Ejecución Concurrente",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Método para acelerar proyectos ejecutando actividades y etapas en paralelo en lugar de secuencialmente (enfoque 'rugby' vs 'carrera de relevos'). La regla es avanzar cuando la información es confiable y estable, sin esperar información perfecta. Esto puede reducir el tiempo de desarrollo hasta en un 27.6%, aunque añade riesgo que debe calcularse comparando el costo del retraso contra el costo y probabilidad de estar equivocado.",
+  "resumen_teorico": "Método para acelerar proyectos ejecutando actividades y etapas en paralelo en lugar de secuencialmente (enfoque 'rugby' vs 'carrera de relevos'). La regla es avanzar cuando la información es confiable y estable, sin esperar información perfecta. Esto puede reducir el tiempo de desarrollo hasta en un 27.6%, aunque suele añadir riesgo que debe calcularse comparando el costo del retraso contra el costo y probabilidad de estar equivocado.",
   "pasos_accionables": [
     "Mapear las etapas actuales del proyecto y detectar oportunidades de superposición",
     "Evaluar la información disponible en términos de confiabilidad (basada en hechos) y estabilidad (poco probable que cambie)",
     "Adelantar actividades de largo plazo de entrega cuando la información sea suficientemente estable",
     "Calcular el Costo de Retraso (cost of delay) usando los 5 componentes: ingreso diferido, ventana de oportunidad perdida, costos extra de desarrollo, pérdida de ventaja competitiva, otros costos",
-    "Comparar el costo de retraso vs. costo de estar equivocado x probabilidad de error",
+    "Comparar el costo de retraso (días ahorrados x costo diario de retraso) vs. costo de estar equivocado x probabilidad de error",
     "Avanzar con la superposición solo si el costo de retraso supera claramente el riesgo calculado"
   ],
   "entregable_esperado": "Un cronograma de proyecto con etapas y actividades superpuestas, respaldado por un cálculo explícito de costo de retraso vs. riesgo de anticipación",
@@ -31,5 +31,40 @@
   "etiqueta_arbol": "Superpón Etapas de tu Proyecto",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-117-overlapping_stages_concurrent_execution-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar el costo de retraso vs. costo de estar equivocado x probabilidad de error",
+      "texto_nuevo": "Comparar el costo de retraso (días ahorrados x costo diario de retraso) vs. costo de estar equivocado x probabilidad de error",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4002-4006",
+        "frase": "Cost of delay = number of days saved x cost-per-day of delay"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define el costo de retraso comparado como días ahorrados por costo diario; sin eso la comparación mezcla magnitudes.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-117-overlapping_stages_concurrent_execution-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Método para acelerar proyectos ejecutando actividades y etapas en paralelo en lugar de secuencialmente (enfoque 'rugby' vs 'carrera de relevos'). La regla es avanzar cuando la información es confiable y estable, sin esperar información perfecta. Esto puede reducir el tiempo de desarrollo hasta en un 27.6%, aunque añade riesgo que debe calcularse comparando el costo del retraso contra el costo y probabilidad de estar equivocado.",
+      "texto_nuevo": "Método para acelerar proyectos ejecutando actividades y etapas en paralelo en lugar de secuencialmente (enfoque 'rugby' vs 'carrera de relevos'). La regla es avanzar cuando la información es confiable y estable, sin esperar información perfecta. Esto puede reducir el tiempo de desarrollo hasta en un 27.6%, aunque suele añadir riesgo que debe calcularse comparando el costo del retraso contra el costo y probabilidad de estar equivocado.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3922",
+        "frase": "Simultaneous execution usually adds risk to a project."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la ejecución simultánea suele añadir riesgo; el resumen lo afirma sin esa cautela.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Entregas de dinero por etapas como mecanismo de control (staging)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Cuando alguien invierte en tu negocio, casi nunca te da todo el dinero de una vez. Te lo entrega por etapas (staging), y antes de soltar la siguiente parte vuelve a revisar cómo vas. Esto reduce el riesgo de quien invierte, pero le da poder sobre ti, sobre todo si necesitas ese dinero para sobrevivir o seguir creciendo.",
+  "resumen_teorico": "Cuando un fondo de capital de riesgo invierte en tu negocio, en vez de darte todo el dinero de una vez puede entregártelo por etapas (staging), y antes de soltar la siguiente parte vuelve a revisar cómo vas. Esto reduce el riesgo de quien invierte, pero le da poder sobre ti, sobre todo si necesitas ese dinero para sobrevivir o seguir creciendo.",
   "pasos_accionables": [
-    "Espera que antes de cada nueva entrega de dinero te vuelvan a evaluar a fondo",
+    "Espera que antes de cada nueva entrega de dinero te vuelvan a evaluar a fondo, y que puedan ponerte nuevas condiciones o decidir no seguir invirtiendo",
     "Define metas claras que muestren que mereces la siguiente entrega",
-    "Negocia el mayor tiempo posible entre una entrega y otra para tener menos presión y ceder menos"
+    "Decide cuánto tiempo dejar entre una entrega y otra sopesando el miedo a quedarte sin dinero contra el deseo de avanzar más y ceder menos, sin olvidar que no tener demasiados recursos también impone disciplina"
   ],
   "entregable_esperado": "Un plan de metas y una proyección de cuánto dinero necesitas entre una entrega y otra",
   "nodos_previos": [
@@ -24,5 +24,57 @@
   "etiqueta_arbol": "Recibe Capital por Etapas",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-116-staging_de_inversiones_como_control-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando alguien invierte en tu negocio, casi nunca te da todo el dinero de una vez. Te lo entrega por etapas (staging), y antes de soltar la siguiente parte vuelve a revisar cómo vas. Esto reduce el riesgo de quien invierte, pero le da poder sobre ti, sobre todo si necesitas ese dinero para sobrevivir o seguir creciendo.",
+      "texto_nuevo": "Cuando un fondo de capital de riesgo invierte en tu negocio, en vez de darte todo el dinero de una vez puede entregártelo por etapas (staging), y antes de soltar la siguiente parte vuelve a revisar cómo vas. Esto reduce el riesgo de quien invierte, pero le da poder sobre ti, sobre todo si necesitas ese dinero para sobrevivir o seguir creciendo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2967",
+        "frase": "committing small portions of capital sequentially, rather than committing up-front the full amount"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe el staging como mecanismo de control de los fondos de capital de riesgo; no dice que cualquier inversor casi nunca entregue todo.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-116-staging_de_inversiones_como_control-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Espera que antes de cada nueva entrega de dinero te vuelvan a evaluar a fondo",
+      "texto_nuevo": "Espera que antes de cada nueva entrega de dinero te vuelvan a evaluar a fondo, y que puedan ponerte nuevas condiciones o decidir no seguir invirtiendo",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2969",
+        "frase": "to make new demands before reinvesting, or to abandon the investment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En cada revisión el inversor puede reinvertir, poner nuevas exigencias o abandonar la inversión; el paso lo pierde.; Mismo matiz perdido que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-116-staging_de_inversiones_como_control-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negocia el mayor tiempo posible entre una entrega y otra para tener menos presión y ceder menos",
+      "texto_nuevo": "Decide cuánto tiempo dejar entre una entrega y otra sopesando el miedo a quedarte sin dinero contra el deseo de avanzar más y ceder menos, sin olvidar que no tener demasiados recursos también impone disciplina",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2971",
+        "frase": "the fear of running out of cash and having to shut down versus the desire"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta el plazo como un equilibrio entre el miedo a quedarse sin caja y el deseo de ceder menos, y recoge el efecto disciplinante de no tener demasiados recursos.; Mismo matiz perdido que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Mapeo de Patentes (Patent Mapping)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El mapeo de patentes consiste en analizar e interpretar grandes volúmenes de datos de patentes para generar inteligencia accionable. Ayuda a conceptualizar el espacio de propiedad intelectual, detectar áreas tecnológicas emergentes y señalar dónde otros actores están invirtiendo esfuerzos de innovación, sirviendo como disparador para nuevas ideas de producto.",
+  "resumen_teorico": "El mapeo de patentes consiste en analizar e interpretar grandes volúmenes de datos de patentes para generar inteligencia accionable. Ayuda a conceptualizar el espacio de propiedad intelectual, detectar áreas tecnológicas emergentes y señalar dónde otros actores están invirtiendo esfuerzos de innovación, sirviendo como disparador para nuevas ideas de producto. Aun así, no genera ideas por sí mismo y rinde menos que oír al cliente.",
   "pasos_accionables": [
     "Recopilar datos de patentes en el área tecnológica de interés",
     "Identificar zonas de alta actividad de presentación de patentes (señal de interés estratégico de competidores)",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Mapea las Patentes Existentes",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-117-patent_mapping-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El mapeo de patentes consiste en analizar e interpretar grandes volúmenes de datos de patentes para generar inteligencia accionable. Ayuda a conceptualizar el espacio de propiedad intelectual, detectar áreas tecnológicas emergentes y señalar dónde otros actores están invirtiendo esfuerzos de innovación, sirviendo como disparador para nuevas ideas de producto.",
+      "texto_nuevo": "El mapeo de patentes consiste en analizar e interpretar grandes volúmenes de datos de patentes para generar inteligencia accionable. Ayuda a conceptualizar el espacio de propiedad intelectual, detectar áreas tecnológicas emergentes y señalar dónde otros actores están invirtiendo esfuerzos de innovación, sirviendo como disparador para nuevas ideas de producto. Aun así, no genera ideas por sí mismo y rinde menos que oír al cliente.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5514",
+        "frase": "they do not generate new-product ideas per se"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que el mapeo no genera ideas de producto por sí mismo y rinde menos que la voz del cliente; el resumen omite ese límite.; Mismo defecto: se cae el límite de eficacia que el libro señala.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

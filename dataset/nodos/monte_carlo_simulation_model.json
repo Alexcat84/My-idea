@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Simulación Monte Carlo para Evaluación de Proyectos Mayores",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "En lugar de usar estimaciones puntuales para variables financieras (ventas, costos), este método introduce tres estimaciones (mejor caso, peor caso, caso probable) para generar una distribución de probabilidad. El software genera miles de escenarios financieros posibles, produciendo una distribución de NPV esperados en vez de un solo número, lo que permite tomar decisiones Go/Kill con mejor comprensión del riesgo real.",
+  "resumen_teorico": "En lugar de usar estimaciones puntuales para variables financieras (ventas, costos), este método introduce tres estimaciones (mejor caso, peor caso, caso probable) para generar una distribución de probabilidad. El software genera miles de escenarios financieros posibles, produciendo una distribución de NPV esperados en vez de un solo número, lo que permite tomar decisiones Go/Kill con mejor comprensión del riesgo real. Ojo: no contempla detener el proyecto y admite escenarios casi imposibles.",
   "pasos_accionables": [
     "Definir tres estimaciones (optimista, pesimista, probable) para cada variable financiera clave",
     "Construir una curva de distribución de probabilidad para cada variable",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Simula Tus Escenarios de Riesgo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-117-monte_carlo_simulation_model-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de usar estimaciones puntuales para variables financieras (ventas, costos), este método introduce tres estimaciones (mejor caso, peor caso, caso probable) para generar una distribución de probabilidad. El software genera miles de escenarios financieros posibles, produciendo una distribución de NPV esperados en vez de un solo número, lo que permite tomar decisiones Go/Kill con mejor comprensión del riesgo real.",
+      "texto_nuevo": "En lugar de usar estimaciones puntuales para variables financieras (ventas, costos), este método introduce tres estimaciones (mejor caso, peor caso, caso probable) para generar una distribución de probabilidad. El software genera miles de escenarios financieros posibles, produciendo una distribución de NPV esperados en vez de un solo número, lo que permite tomar decisiones Go/Kill con mejor comprensión del riesgo real. Ojo: no contempla detener el proyecto y admite escenarios casi imposibles.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6272",
+        "frase": "the model fails to deal with the options facet of a new-product project"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala dos límites del modelo (no contempla detener el proyecto, admite escenarios casi imposibles) que el resumen omite.; Mismo defecto: se caen las dos limitaciones que el libro advierte.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
