@@ -9,7 +9,7 @@
     "Formular claramente la pregunta o tema a discutir",
     "Comunicar el tema con anticipación y preparar espacio para contribuciones",
     "Revisar reglas conceptuales: sin críticas, ser poco convencional, buscar cantidad, aprovechar ideas de otros",
-    "Revisar reglas prácticas: contribuir por turnos, una idea por turno, se puede pasar",
+    "Revisar reglas prácticas: contribuir por turnos, una idea por turno, se puede pasar, no dar explicaciones",
     "Realizar una sesión de calentamiento antes de iniciar",
     "Registrar todas las ideas visibles para todos y detener antes de la fatiga del grupo",
     "Procesar las ideas generadas (clarificar y eliminar duplicados)"
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Lanza tu Lluvia de Ideas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-124-brainstorming-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar reglas prácticas: contribuir por turnos, una idea por turno, se puede pasar",
+      "texto_nuevo": "Revisar reglas prácticas: contribuir por turnos, una idea por turno, se puede pasar, no dar explicaciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18079-18087",
+        "frase": "Only one idea per turn. You may pass. Do not provide explanations."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro trae cuatro reglas prácticas y el paso pierde la cuarta, no dar explicaciones.; Misma regla perdida.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

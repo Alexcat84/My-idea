@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Fenómenos Señuelo (Decoy Phenomena)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Identificados por Barry Turner, son problemas de seguridad aparentes que capturan la atención y recursos de la organización (etiquetados como 'prioridad top'), desviando la atención de otras fuentes de riesgo desconocidas o subestimadas. Son típicos en organizaciones en el 'borde delgado de la cuña' que persiguen lo que ven como las últimas fronteras de mejora, perdiendo de vista otros riesgos reales.",
+  "resumen_teorico": "Identificados por Barry Turner, son problemas de seguridad aparentes que capturan la atención y recursos de la organización (a veces etiquetados como 'prioridad top'), desviando la atención de otras fuentes de riesgo desconocidas o subestimadas. Son típicos en organizaciones en el 'borde delgado de la cuña' que, persiguiendo lo que ven como las últimas fronteras de mejora, pueden centrarse tanto en uno o pocos temas que pierden de vista el resto.",
   "pasos_accionables": [
     "Identificar cuáles son los 'top 3' o 'top 5' riesgos priorizados actualmente por la organización",
     "Cuestionar si estos riesgos priorizados están consumiendo desproporcionadamente la atención y recursos",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Cuidado con los Señuelos de Seguridad",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-125-fenomenos_senuelo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificados por Barry Turner, son problemas de seguridad aparentes que capturan la atención y recursos de la organización (etiquetados como 'prioridad top'), desviando la atención de otras fuentes de riesgo desconocidas o subestimadas. Son típicos en organizaciones en el 'borde delgado de la cuña' que persiguen lo que ven como las últimas fronteras de mejora, perdiendo de vista otros riesgos reales.",
+      "texto_nuevo": "Identificados por Barry Turner, son problemas de seguridad aparentes que capturan la atención y recursos de la organización (a veces etiquetados como 'prioridad top'), desviando la atención de otras fuentes de riesgo desconocidas o subestimadas. Son típicos en organizaciones en el 'borde delgado de la cuña' que, persiguiendo lo que ven como las últimas fronteras de mejora, pueden centrarse tanto en uno o pocos temas que pierden de vista el resto.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3805",
+        "frase": "they may devote so much time to one or a few issues"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que pueden dedicar tanto tiempo a uno o pocos temas que pierdan de vista el resto ('may').; El libro dice que pueden haber sido señalados como prioridad ('may'), no que lo estén siempre.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

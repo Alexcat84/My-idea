@@ -7,7 +7,7 @@
   "resumen_teorico": "Una auditoría de calidad es una revisión independiente que compara el desempeño de calidad con un estándar definido, determinando si las actividades y resultados cumplen con lo planificado y si estos arreglos son efectivamente implementados. Existen auditorías internas (primera parte), de segunda parte (realizadas por clientes) y de tercera parte (organismos externos de certificación como ISO 9001).",
   "pasos_accionables": [
     "Determinar el tipo de auditoría requerida (interna, de cliente, de certificación)",
-    "Definir si la auditoría será orientada a cumplimiento, a efectividad o ambas",
+    "Definir si la auditoría será orientada a cumplimiento, a efectividad o ambas: si es interna, puede y debe ser ambas; si la hace una parte externa, evaluar la efectividad puede generar problemas serios",
     "Seleccionar auditores independientes de la actividad evaluada",
     "Establecer los estándares o requisitos contra los cuales se comparará el desempeño"
   ],
@@ -39,6 +39,23 @@
         "evidencia": "F28-016: Las auditorías de calidad controlan el sistema de calidad de una organización que ya opera; no prueban la idea en el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-124-concepto_de_auditoria_de_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir si la auditoría será orientada a cumplimiento, a efectividad o ambas",
+      "texto_nuevo": "Definir si la auditoría será orientada a cumplimiento, a efectividad o ambas: si es interna, puede y debe ser ambas; si la hace una parte externa, evaluar la efectividad puede generar problemas serios",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9930",
+        "frase": "When audits are conducted internally, they can and should be both"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma condición perdida.; Se pierde el criterio del libro: las internas pueden y deben ser de ambos tipos y en las externas juzgar la efectividad genera problemas serios.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

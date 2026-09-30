@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "El Bucle de Retroalimentación (Feedback Loop) en Control de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor mide el desempeño real del proceso, un árbitro (umpire) compara esa medición contra un estándar definido, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Este ciclo puede ser automatizado, de autocontrol del empleado, mediante inspección externa, o híbrido, y opera en distintos niveles del negocio. Documentar cada ciclo permite trazabilidad: saber qué se midió, contra qué estándar y qué corrección se aplicó, para repetir el control de forma consistente en el tiempo.",
+  "resumen_teorico": "El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor mide el desempeño real del proceso, un árbitro (umpire) compara esa medición contra un estándar definido, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Este ciclo puede ser automatizado, de autocontrol del empleado o mediante inspección externa, y opera en distintos niveles del negocio. Entre las tareas del árbitro puede estar también registrar los resultados de cada ciclo.",
   "pasos_accionables": [
     "Instalar un sensor adecuado (instrumento, sistema de datos o tu propia observación) para medir el sujeto de control elegido",
     "Definir la unidad de medida y el estándar o meta de calidad contra la cual comparar",
@@ -44,5 +44,23 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-124-bucle_retroalimentacion_control-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor mide el desempeño real del proceso, un árbitro (umpire) compara esa medición contra un estándar definido, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Este ciclo puede ser automatizado, de autocontrol del empleado, mediante inspección externa, o híbrido, y opera en distintos niveles del negocio. Documentar cada ciclo permite trazabilidad: saber qué se midió, contra qué estándar y qué corrección se aplicó, para repetir el control de forma consistente en el tiempo.",
+      "texto_nuevo": "El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor mide el desempeño real del proceso, un árbitro (umpire) compara esa medición contra un estándar definido, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Este ciclo puede ser automatizado, de autocontrol del empleado o mediante inspección externa, y opera en distintos niveles del negocio. Entre las tareas del árbitro puede estar también registrar los resultados de cada ciclo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7588-7598",
+        "frase": "the umpire may be called on to carry out any or all"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe tres formas (automatizada, autocontrol e inspección); la híbrida no aparece.; El libro solo pone registrar los resultados entre las tareas posibles del árbitro; la trazabilidad y repetir el control son un por qué añadido.; Mismo por qué añadido que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

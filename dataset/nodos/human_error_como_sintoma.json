@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El 'Error Humano' como Síntoma, no como Causa",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "En la Nueva Visión, lo que llamamos 'error humano' es el efecto o síntoma visible de problemas más profundos dentro de la organización (diseño de herramientas, procedimientos, presión de tiempo, recursos, contradicciones del trabajo real). Las personas no van a trabajar con la intención de hacer las cosas mal; cuando ocurren malos resultados, hay que mirar más allá del individuo, hacia las condiciones en las que trabajaba. Si esas condiciones no se modifican, el mismo resultado puede repetirse sin importar cuántas sanciones o campañas se apliquen. El caso Fitts y Jones (1947) sobre errores de pilotos demostró que rediseñar los controles de cabina, y no castigar a los pilotos, eliminó la mayoría de los llamados 'errores de piloto'.",
+  "resumen_teorico": "En la Nueva Visión, lo que llamamos 'error humano' es el efecto o síntoma visible de problemas más profundos dentro de la organización (diseño de herramientas, procedimientos, presión de tiempo, recursos, contradicciones del trabajo real). Las personas no van a trabajar con la intención de hacer las cosas mal; cuando ocurren malos resultados, hay que mirar más allá del individuo, hacia las condiciones en las que trabajaba. Si esas condiciones no se modifican, el mismo resultado puede repetirse sin importar cuántas sanciones o campañas se apliquen. El estudio de Fitts y Jones (1947) sobre errores de pilotos sostuvo que rediseñar los controles de cabina, y no entrenar o disciplinar mejor a los pilotos, permitiría eliminar gran parte de los llamados 'errores de piloto'.",
   "pasos_accionables": [
     "Ante un incidente, preguntar '¿qué condiciones de trabajo, herramientas o presiones contribuyeron a esta acción?' en lugar de '¿quién falló?'.",
     "Rediseñar herramientas, procedimientos o entornos de trabajo identificados como fuente de dificultad, en vez de solo entrenar o sancionar a las personas.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Mira Más Allá del Error",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-125-human_error_como_sintoma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En la Nueva Visión, lo que llamamos 'error humano' es el efecto o síntoma visible de problemas más profundos dentro de la organización (diseño de herramientas, procedimientos, presión de tiempo, recursos, contradicciones del trabajo real). Las personas no van a trabajar con la intención de hacer las cosas mal; cuando ocurren malos resultados, hay que mirar más allá del individuo, hacia las condiciones en las que trabajaba. Si esas condiciones no se modifican, el mismo resultado puede repetirse sin importar cuántas sanciones o campañas se apliquen. El caso Fitts y Jones (1947) sobre errores de pilotos demostró que rediseñar los controles de cabina, y no castigar a los pilotos, eliminó la mayoría de los llamados 'errores de piloto'.",
+      "texto_nuevo": "En la Nueva Visión, lo que llamamos 'error humano' es el efecto o síntoma visible de problemas más profundos dentro de la organización (diseño de herramientas, procedimientos, presión de tiempo, recursos, contradicciones del trabajo real). Las personas no van a trabajar con la intención de hacer las cosas mal; cuando ocurren malos resultados, hay que mirar más allá del individuo, hacia las condiciones en las que trabajaba. Si esas condiciones no se modifican, el mismo resultado puede repetirse sin importar cuántas sanciones o campañas se apliquen. El estudio de Fitts y Jones (1947) sobre errores de pilotos sostuvo que rediseñar los controles de cabina, y no entrenar o disciplinar mejor a los pilotos, permitiría eliminar gran parte de los llamados 'errores de piloto'.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "138",
+        "frase": "It should be possible to eliminate a large proportion of so-called ‘pilot-error’ accidents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El estudio sostuvo que debería ser posible eliminar gran parte de esos errores; el nodo lo da como resultado demostrado.; Mismo defecto: convierte una tesis en un resultado logrado sobre la mayoría de los errores.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

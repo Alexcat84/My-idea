@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "El Proyecto como Unidad de Breakthrough",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección (útiles muchos).",
+  "resumen_teorico": "Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección, que produce tanto vitales pocos como útiles muchos.",
   "pasos_accionables": [
     "Definir claramente el problema crónico a resolver como proyecto",
     "Clasificar el proyecto como parte de los 'vitales pocos' o 'útiles muchos'",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Resuelve Problemas Proyecto a Proyecto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-124-concepto_proyecto_breakthrough-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección (útiles muchos).",
+      "texto_nuevo": "Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección, que produce tanto vitales pocos como útiles muchos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6528",
+        "frase": "At the higher levels, the nominations tend to be extensive in size (the vital few)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las nominaciones de niveles altos son vitales pocos y solo las de niveles bajos útiles muchos; el nodo las etiqueta todas como útiles muchos.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

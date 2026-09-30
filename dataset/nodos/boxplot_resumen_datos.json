@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Boxplot (Diagrama de Caja)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El boxplot es un resumen gráfico de cinco números: valor mínimo, primer cuartil, mediana, tercer cuartil y valor máximo, que muestra la dispersión, tendencia central y simetría de un conjunto de datos. Te permite comparar rápidamente la variabilidad y consistencia entre dos o más procesos, grupos o proveedores con solo mirar un gráfico. Antes de dibujarlo debes decidir qué tipo de boxplot construir según lo que quieras analizar, y luego etiquetar bien los ejes para que la comparación visual sea clara. Es una herramienta simple con tu teléfono para tomar decisiones basadas en datos cuando necesitas evaluar desempeño o consistencia entre alternativas.",
+  "resumen_teorico": "El boxplot es un resumen gráfico de cinco números: valor mínimo, primer cuartil, mediana, tercer cuartil y valor máximo, que muestra la dispersión, tendencia central y simetría de un conjunto de datos. Te permite comparar rápidamente la variabilidad y consistencia entre dos o más procesos, grupos o proveedores con solo mirar un gráfico. Antes de dibujarlo debes decidir qué tipo de boxplot construir según lo que quieras analizar, y luego etiquetar bien los ejes para que la comparación visual sea clara. Es una herramienta simple para tomar decisiones basadas en datos cuando necesitas evaluar desempeño o consistencia entre alternativas.",
   "pasos_accionables": [
     "Recolectar los datos crudos y ordenarlos de menor a mayor",
     "Decidir qué tipo de boxplot vas a construir según tu objetivo",
@@ -38,5 +38,23 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-124-boxplot_resumen_datos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El boxplot es un resumen gráfico de cinco números: valor mínimo, primer cuartil, mediana, tercer cuartil y valor máximo, que muestra la dispersión, tendencia central y simetría de un conjunto de datos. Te permite comparar rápidamente la variabilidad y consistencia entre dos o más procesos, grupos o proveedores con solo mirar un gráfico. Antes de dibujarlo debes decidir qué tipo de boxplot construir según lo que quieras analizar, y luego etiquetar bien los ejes para que la comparación visual sea clara. Es una herramienta simple con tu teléfono para tomar decisiones basadas en datos cuando necesitas evaluar desempeño o consistencia entre alternativas.",
+      "texto_nuevo": "El boxplot es un resumen gráfico de cinco números: valor mínimo, primer cuartil, mediana, tercer cuartil y valor máximo, que muestra la dispersión, tendencia central y simetría de un conjunto de datos. Te permite comparar rápidamente la variabilidad y consistencia entre dos o más procesos, grupos o proveedores con solo mirar un gráfico. Antes de dibujarlo debes decidir qué tipo de boxplot construir según lo que quieras analizar, y luego etiquetar bien los ejes para que la comparación visual sea clara. Es una herramienta simple para tomar decisiones basadas en datos cuando necesitas evaluar desempeño o consistencia entre alternativas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11676",
+        "frase": "A simple, clever, and effective way to summarize data is a boxplot."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona el teléfono; solo describe el boxplot como una forma simple de resumir datos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

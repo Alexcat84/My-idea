@@ -4,10 +4,10 @@
   "dominio": "health_safety",
   "titulo_concepto": "Fatiga y su Efecto en el Desempeño Seguro",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "La fatiga es una condición común en trabajos que cruzan periodos normales de vigilia o zonas horarias, cuyos efectos son difíciles de medir por estar confundidos con otros factores. Solo el descanso es efectivo contra ella; las personas fatigadas no pueden evaluar correctamente su propio nivel de fatiga. Se asocia con: reducción de vigilancia, enlentecimiento cognitivo, fallas de memoria y micro-sueños (lapsing). La fatiga también reduce la capacidad de considerar opciones alternativas, favoreciendo la fijación en un curso de acción.",
+  "resumen_teorico": "La fatiga es una condición común en trabajos que cruzan periodos normales de vigilia o zonas horarias, cuyos efectos son difíciles de medir por estar confundidos con otros factores. Solo el descanso es efectivo contra ella; la fatiga deteriora el juicio de las personas sobre su propio nivel de fatiga, así que su autoevaluación es poco fiable. Se asocia con: reducción de vigilancia, enlentecimiento cognitivo, fallas de memoria y micro-sueños (lapsing). La fatiga también reduce la capacidad de considerar opciones alternativas, favoreciendo la fijación en un curso de acción.",
   "pasos_accionables": [
     "Registrar en las investigaciones el tiempo de vigilia continua de los operadores involucrados",
-    "Identificar factores contribuyentes: intensidad de carga laboral, desincronización circadiana, privación de sueño",
+    "Identificar factores contribuyentes: intensidad de carga laboral (o inactividad) y esfuerzo sostenido, esfuerzo físico y psicológico, privación de sueño, efectos de la hora del día y desincronización circadiana",
     "No confiar en autoevaluaciones de fatiga del personal",
     "Revisar políticas de programación y rotación de turnos (rostering) como solución sistémica"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Descansa para Rendir Seguro",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-125-fatigue_performance_effects-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La fatiga es una condición común en trabajos que cruzan periodos normales de vigilia o zonas horarias, cuyos efectos son difíciles de medir por estar confundidos con otros factores. Solo el descanso es efectivo contra ella; las personas fatigadas no pueden evaluar correctamente su propio nivel de fatiga. Se asocia con: reducción de vigilancia, enlentecimiento cognitivo, fallas de memoria y micro-sueños (lapsing). La fatiga también reduce la capacidad de considerar opciones alternativas, favoreciendo la fijación en un curso de acción.",
+      "texto_nuevo": "La fatiga es una condición común en trabajos que cruzan periodos normales de vigilia o zonas horarias, cuyos efectos son difíciles de medir por estar confundidos con otros factores. Solo el descanso es efectivo contra ella; la fatiga deteriora el juicio de las personas sobre su propio nivel de fatiga, así que su autoevaluación es poco fiable. Se asocia con: reducción de vigilancia, enlentecimiento cognitivo, fallas de memoria y micro-sueños (lapsing). La fatiga también reduce la capacidad de considerar opciones alternativas, favoreciendo la fijación en un curso de acción.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2257",
+        "frase": "Fatigue actually impairs people’s judgment about how fatigued they are"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la fatiga deteriora el juicio sobre el propio cansancio y el autorreporte es poco fiable, no que sea imposible.; Mismo defecto: endurece lo que el libro dice con cautela.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-125-fatigue_performance_effects-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar factores contribuyentes: intensidad de carga laboral, desincronización circadiana, privación de sueño",
+      "texto_nuevo": "Identificar factores contribuyentes: intensidad de carga laboral (o inactividad) y esfuerzo sostenido, esfuerzo físico y psicológico, privación de sueño, efectos de la hora del día y desincronización circadiana",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2265-2275",
+        "frase": "fatigue can be the result of a number of factors (or a combination)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae además inactividad y esfuerzo sostenido, esfuerzo físico y psicológico y hora del día.; Mismo defecto: faltan tres de los cinco factores de la lista del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Modelos de Excelencia Empresarial (Baldridge y EFQM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Marcos de referencia diseñados para medir y mejorar holísticamente el desempeño organizacional, considerando todos los aspectos clave que impulsan la excelencia. El Premio Baldridge (EE.UU.) y el Modelo EFQM (Europa) identifican criterios críticos de éxito y sirven tanto para autoevaluación como para benchmarking comparativo generalizado.",
+  "resumen_teorico": "Marcos de referencia diseñados para medir y mejorar holísticamente el desempeño organizacional, considerando todos los aspectos clave que impulsan la excelencia. El Premio Baldridge (EE.UU.) y el Modelo EFQM (Europa) identifican criterios críticos de éxito y sirven tanto para autoevaluación como para benchmarking comparativo genérico, aunque rara vez se usan con ese fin.",
   "pasos_accionables": [
     "Seleccionar un modelo de excelencia (Baldridge o EFQM) alineado con el contexto de la organización.",
     "Realizar una autoevaluación basada en los criterios del modelo elegido.",
@@ -39,6 +39,22 @@
         "evidencia": "F20-009: Es la autoevaluacion y el benchmarking del desempeno de una organizacion en marcha para mejorarlo; es ejecucion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-124-business_excellence_models-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marcos de referencia diseñados para medir y mejorar holísticamente el desempeño organizacional, considerando todos los aspectos clave que impulsan la excelencia. El Premio Baldridge (EE.UU.) y el Modelo EFQM (Europa) identifican criterios críticos de éxito y sirven tanto para autoevaluación como para benchmarking comparativo generalizado.",
+      "texto_nuevo": "Marcos de referencia diseñados para medir y mejorar holísticamente el desempeño organizacional, considerando todos los aspectos clave que impulsan la excelencia. El Premio Baldridge (EE.UU.) y el Modelo EFQM (Europa) identifican criterios críticos de éxito y sirven tanto para autoevaluación como para benchmarking comparativo genérico, aunque rara vez se usan con ese fin.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17044",
+        "frase": "although they are infrequently used for this purpose"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): No invierte nada ('sirven para' equivale a 'lend themselves'), pero 'generalizado' se lee como uso extendido y se cae que rara vez se usan con ese fin.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

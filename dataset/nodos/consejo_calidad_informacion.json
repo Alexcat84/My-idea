@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Consejo de Calidad de la Información (Information Quality Council)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Estructura organizacional prerequisito para la sostenibilidad ágil, que actúa como 'voz del mercado' garantizando la calidad y confiabilidad de los datos usados para la toma de decisiones. Muchas organizaciones tienen abundancia de datos pero carecen de información útil y confiable, generando desconfianza entre departamentos y decisiones deficientes. Este consejo asegura que los datos sean consistentes, veraces y accesibles entre funciones.",
+  "resumen_teorico": "Estructura organizacional prerequisito para la sostenibilidad ágil, que actúa como 'voz del mercado' garantizando la calidad y confiabilidad de los datos usados para la toma de decisiones. Muchas organizaciones tienen abundancia de datos pero carecen de información útil y confiable, generando desconfianza entre departamentos y decisiones deficientes. Este consejo, junto con un sistema de calidad de datos, es quizá el prerrequisito más crucial, porque todo lo demás depende de datos oportunos y confiables.",
   "pasos_accionables": [
     "Establecer un Consejo de Calidad de Información o de Big Data",
     "Definir estándares comunes de datos entre departamentos",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Cuida la Calidad de Datos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-124-consejo_calidad_informacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estructura organizacional prerequisito para la sostenibilidad ágil, que actúa como 'voz del mercado' garantizando la calidad y confiabilidad de los datos usados para la toma de decisiones. Muchas organizaciones tienen abundancia de datos pero carecen de información útil y confiable, generando desconfianza entre departamentos y decisiones deficientes. Este consejo asegura que los datos sean consistentes, veraces y accesibles entre funciones.",
+      "texto_nuevo": "Estructura organizacional prerequisito para la sostenibilidad ágil, que actúa como 'voz del mercado' garantizando la calidad y confiabilidad de los datos usados para la toma de decisiones. Muchas organizaciones tienen abundancia de datos pero carecen de información útil y confiable, generando desconfianza entre departamentos y decisiones deficientes. Este consejo, junto con un sistema de calidad de datos, es quizá el prerrequisito más crucial, porque todo lo demás depende de datos oportunos y confiables.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2103",
+        "frase": "perhaps the most crucial is the Information Quality Council and the data quality system"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Promete un resultado que el libro no afirma; el libro lo presenta como quizá el prerrequisito más crucial porque todo depende de datos confiables.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

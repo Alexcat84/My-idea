@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Eventos en los Datos",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Definir qué constituye un 'evento' en una investigación es una elección analítica, no una realidad objetiva para las personas involucradas. Los eventos pueden inferirse de las verbalizaciones, pero también de acciones no verbalizadas, de cambios en el proceso mismo, o de la ausencia de cambio en el comportamiento (indicando que algo no fue percibido). Las 'no-decisiones' de continuar un curso de acción son eventos solo en retrospectiva.",
+  "resumen_teorico": "Definir qué constituye un 'evento' en una investigación es una elección analítica, no necesariamente una realidad para las personas involucradas. Los eventos pueden inferirse de las verbalizaciones, pero también de acciones no verbalizadas, de cambios en el proceso mismo, o de la ausencia de cambio en el comportamiento (indicando que algo no fue percibido). Las 'no-decisiones' de continuar un curso de acción son eventos solo en retrospectiva.",
   "pasos_accionables": [
     "Buscar marcadores de eventos en verbalizaciones de las personas",
     "Identificar cambios en el proceso que ocurrieron sin comentario verbal",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Define qué Cuenta como Evento",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-125-identificacion_eventos_datos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir qué constituye un 'evento' en una investigación es una elección analítica, no una realidad objetiva para las personas involucradas. Los eventos pueden inferirse de las verbalizaciones, pero también de acciones no verbalizadas, de cambios en el proceso mismo, o de la ausencia de cambio en el comportamiento (indicando que algo no fue percibido). Las 'no-decisiones' de continuar un curso de acción son eventos solo en retrospectiva.",
+      "texto_nuevo": "Definir qué constituye un 'evento' en una investigación es una elección analítica, no necesariamente una realidad para las personas involucradas. Los eventos pueden inferirse de las verbalizaciones, pero también de acciones no verbalizadas, de cambios en el proceso mismo, o de la ausencia de cambio en el comportamiento (indicando que algo no fue percibido). Las 'no-decisiones' de continuar un curso de acción son eventos solo en retrospectiva.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1672",
+        "frase": "not necessarily a reality on the part of the people in the situation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'not necessarily a reality'; el nodo lo vuelve absoluto.; Mismo defecto: endurece el 'no necesariamente' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

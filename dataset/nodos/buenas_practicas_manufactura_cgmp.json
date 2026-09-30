@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Las cGMP son regulaciones que exige el organismo sanitario de tu país para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').",
   "pasos_accionables": [
-    "Establece un sistema robusto de gestión de calidad para tu manufactura",
+    "Establece un sistema robusto de gestión de calidad para tu manufactura y obtén materias primas de calidad apropiada",
     "Define procedimientos operativos estandarizados y validados",
     "Implementa una forma de detectar e investigar desviaciones de calidad en tu producto",
     "Mantén laboratorios de prueba confiables y calibrados",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Cumple las Buenas Prácticas de Manufactura",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-124-buenas_practicas_manufactura_cgmp-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece un sistema robusto de gestión de calidad para tu manufactura",
+      "texto_nuevo": "Establece un sistema robusto de gestión de calidad para tu manufactura y obtén materias primas de calidad apropiada",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26189",
+        "frase": "establishing strong quality management systems, obtaining appropriate quality raw materials"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye obtener materias primas de calidad apropiada y ningún paso la recoge.; Mismo elemento perdido de la enumeración de controles.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

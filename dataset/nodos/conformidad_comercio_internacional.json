@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Evaluación de Conformidad en el Comercio Internacional (Marcado CE)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para vender productos regulados en la Unión Europea, es obligatorio el marcado CE, que exige evidencia de conformidad en cuatro áreas: documentación técnica de diseño, pruebas de tipo, vigilancia del producto y vigilancia del aseguramiento de calidad. Este enfoque modular impulsó masivamente la adopción global de certificaciones ISO 9001/9002, ya que las organizaciones no pueden mantener sistemas de calidad separados para productos regulados y no regulados.",
+  "resumen_teorico": "Para vender productos regulados en la Unión Europea, es obligatorio el marcado CE, que exige evidencia de conformidad en cuatro áreas: documentación técnica de diseño, pruebas de tipo, vigilancia del producto y vigilancia del aseguramiento de calidad. Este enfoque modular impulsó masivamente la adopción global de certificaciones ISO 9001/9002; además, a una organización no le resulta eficaz mantener sistemas de calidad separados para productos regulados y no regulados.",
   "pasos_accionables": [
     "Determinar si el producto cae bajo una directiva regulada de la UE u otro mercado similar",
     "Preparar documentación técnica de diseño y evidencia de pruebas de tipo",
@@ -39,6 +39,22 @@
         "motivo": "Los codigos GTIN/EPC para identificar productos y el marcado CE de conformidad solo coinciden en que son estandares de comercio; el salto desorienta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-124-conformidad_comercio_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para vender productos regulados en la Unión Europea, es obligatorio el marcado CE, que exige evidencia de conformidad en cuatro áreas: documentación técnica de diseño, pruebas de tipo, vigilancia del producto y vigilancia del aseguramiento de calidad. Este enfoque modular impulsó masivamente la adopción global de certificaciones ISO 9001/9002, ya que las organizaciones no pueden mantener sistemas de calidad separados para productos regulados y no regulados.",
+      "texto_nuevo": "Para vender productos regulados en la Unión Europea, es obligatorio el marcado CE, que exige evidencia de conformidad en cuatro áreas: documentación técnica de diseño, pruebas de tipo, vigilancia del producto y vigilancia del aseguramiento de calidad. Este enfoque modular impulsó masivamente la adopción global de certificaciones ISO 9001/9002; además, a una organización no le resulta eficaz mantener sistemas de calidad separados para productos regulados y no regulados.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11322",
+        "frase": "for a supplier organization it is not effective to attempt to have two"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye el impulso a ISO al enfoque modular y da lo de los dos sistemas como incentivo aparte, con 'no es eficaz', no 'no pueden'.; Mismo defecto: causa inventada y grado endurecido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }
