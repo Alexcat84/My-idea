@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Planeación Colaborativa S&OP / M&OP (Sales & Operations / Mission & Operations Planning)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El S&OP (Sales & Operations Planning) es una práctica empresarial de planeación colaborativa cíclica (cada 15-30 días) que se puede adaptar como M&OP (Mission & Operations Planning) para respuesta a desastres. Consta de cinco pasos: (1) órdenes de misión/CONOPS, (2) planeación de demanda, (3) planeación de oferta, (4) conciliación de planes mediante modelado y simulación en mapas digitales, y (5) implementación y monitoreo continuo. Permite que múltiples organizaciones con agendas distintas lleguen a consenso rápido usando datos visuales compartidos.",
+  "resumen_teorico": "El S&OP (Sales & Operations Planning) es una práctica empresarial de planeación colaborativa cíclica (por lo común cada 15-30 días, o cuando hay cambios significativos) que se puede adaptar como M&OP (Mission & Operations Planning) para respuesta a desastres, al ritmo que pida la misión (minutos, horas o días). Consta de cinco pasos: (1) órdenes de misión/CONOPS, (2) planeación de demanda, (3) planeación de oferta, (4) conciliación de planes mediante modelado y simulación en mapas digitales, y (5) implementación y monitoreo continuo. Permite que múltiples organizaciones con agendas distintas lleguen a consenso rápido usando datos visuales compartidos.",
   "pasos_accionables": [
     "Definir la orden de misión o el objetivo de negocio central (CONOPS)",
     "Calcular la demanda proyectada de productos/recursos por ubicación o unidad",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Planifica Operaciones en Ciclos Cortos",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-063-proceso_sop_mop-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El S&OP (Sales & Operations Planning) es una práctica empresarial de planeación colaborativa cíclica (cada 15-30 días) que se puede adaptar como M&OP (Mission & Operations Planning) para respuesta a desastres. Consta de cinco pasos: (1) órdenes de misión/CONOPS, (2) planeación de demanda, (3) planeación de oferta, (4) conciliación de planes mediante modelado y simulación en mapas digitales, y (5) implementación y monitoreo continuo. Permite que múltiples organizaciones con agendas distintas lleguen a consenso rápido usando datos visuales compartidos.",
+      "texto_nuevo": "El S&OP (Sales & Operations Planning) es una práctica empresarial de planeación colaborativa cíclica (por lo común cada 15-30 días, o cuando hay cambios significativos) que se puede adaptar como M&OP (Mission & Operations Planning) para respuesta a desastres, al ritmo que pida la misión (minutos, horas o días). Consta de cinco pasos: (1) órdenes de misión/CONOPS, (2) planeación de demanda, (3) planeación de oferta, (4) conciliación de planes mediante modelado y simulación en mapas digitales, y (5) implementación y monitoreo continuo. Permite que múltiples organizaciones con agendas distintas lleguen a consenso rápido usando datos visuales compartidos.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5673; 5743",
+        "frase": "every 15-30 days, or whenever significant changes occur in their markets"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el ciclo suele ser de 15 a 30 días o cuando hay cambios significativos, y que en M&OP el ritmo depende de la misión.; Mismo defecto: se pierden el disparo por cambios significativos y el ritmo de minutos, horas o días en M&OP.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Cultura Justa (Just Culture) más allá de los programas de categorías",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Muchas organizaciones implementan 'cultura justa' como un programa basado en categorías (blanco=error honesto, gris=riesgo, negro=negligencia intencional) usando árboles de decisión de culpabilidad. Sin embargo, la investigación muestra que estas categorías son arbitrarias y dependen de quién tiene el poder de trazarlas, generando percepciones desiguales de justicia y a veces fomentando el secretismo del riesgo en lugar del aprendizaje. La cultura justa genuina no puede comprarse como programa; requiere esfuerzo cognitivo y moral continuo.",
+  "resumen_teorico": "Algunas organizaciones implementan 'cultura justa' como un programa basado en categorías (blanco=error honesto, gris=riesgo, negro=negligencia intencional) usando árboles de decisión de culpabilidad. Sin embargo, la investigación muestra que estas categorías son arbitrarias y dependen de quién tiene el poder de trazarlas, generando percepciones desiguales de justicia y a veces fomentando el secretismo del riesgo en lugar del aprendizaje. La cultura justa genuina no puede comprarse como programa; requiere esfuerzo cognitivo y moral continuo.",
   "pasos_accionables": [
     "Evitar la compra de programas de 'cultura justa' prediseñados basados solo en categorías de culpabilidad",
     "Preguntar 'qué es responsable' en vez de 'quién es responsable' ante cada incidente",
     "Involucrar en el análisis a personas con conocimiento técnico y credibilidad entre pares (no solo supervisores o jueces)",
-    "Explorar la justicia restaurativa en lugar de la retributiva"
+    "Explorar la justicia restaurativa en lugar de la retributiva, pasar de una rendición de cuentas que mira al pasado a una que mira al futuro y poner en marcha el apoyo a las segundas víctimas"
   ],
-  "entregable_esperado": "Un protocolo de respuesta a incidentes que incorpore preguntas sistémicas, participación de pares expertos y enfoque restaurativo, en lugar de un árbol de decisión de culpabilidad",
+  "entregable_esperado": "Un protocolo de respuesta a incidentes que incorpore preguntas sistémicas, participación de pares expertos, enfoque restaurativo, rendición de cuentas orientada al futuro y apoyo a las segundas víctimas, en lugar de un árbol de decisión de culpabilidad",
   "nodos_previos": [
     "responsabilidad_sistemica",
     "reporte_confidencial_seguridad"
@@ -27,5 +27,56 @@
   "etiqueta_arbol": "Ve Más Allá de Categorías",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-cultura_justa_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas organizaciones implementan 'cultura justa' como un programa basado en categorías (blanco=error honesto, gris=riesgo, negro=negligencia intencional) usando árboles de decisión de culpabilidad. Sin embargo, la investigación muestra que estas categorías son arbitrarias y dependen de quién tiene el poder de trazarlas, generando percepciones desiguales de justicia y a veces fomentando el secretismo del riesgo en lugar del aprendizaje. La cultura justa genuina no puede comprarse como programa; requiere esfuerzo cognitivo y moral continuo.",
+      "texto_nuevo": "Algunas organizaciones implementan 'cultura justa' como un programa basado en categorías (blanco=error honesto, gris=riesgo, negro=negligencia intencional) usando árboles de decisión de culpabilidad. Sin embargo, la investigación muestra que estas categorías son arbitrarias y dependen de quién tiene el poder de trazarlas, generando percepciones desiguales de justicia y a veces fomentando el secretismo del riesgo en lugar del aprendizaje. La cultura justa genuina no puede comprarse como programa; requiere esfuerzo cognitivo y moral continuo.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "604",
+        "frase": "Some organizations implement \"just culture\" as a program, based on categories of behavior"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'Some organizations implement'; 'Muchas' endurece la frecuencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-065-cultura_justa_2-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explorar la justicia restaurativa en lugar de la retributiva",
+      "texto_nuevo": "Explorar la justicia restaurativa en lugar de la retributiva, pasar de una rendición de cuentas que mira al pasado a una que mira al futuro y poner en marcha el apoyo a las segundas víctimas",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "652-656",
+        "frase": "Go from backward to forward-looking accountability. Put second victim support in place."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las cinco direcciones del libro faltan la rendición de cuentas orientada al futuro y el apoyo a segundas víctimas.; Mismo defecto: se caen las direcciones 4 y 5 de la lista del libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-065-cultura_justa_2-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un protocolo de respuesta a incidentes que incorpore preguntas sistémicas, participación de pares expertos y enfoque restaurativo, en lugar de un árbol de decisión de culpabilidad",
+      "texto_nuevo": "Un protocolo de respuesta a incidentes que incorpore preguntas sistémicas, participación de pares expertos, enfoque restaurativo, rendición de cuentas orientada al futuro y apoyo a las segundas víctimas, en lugar de un árbol de decisión de culpabilidad",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "652-656",
+        "frase": "Go from backward to forward-looking accountability. Put second victim support in place."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El protocolo recoge tres de las cinco direcciones del libro; faltan la rendición de cuentas hacia el futuro y el apoyo a segundas víctimas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

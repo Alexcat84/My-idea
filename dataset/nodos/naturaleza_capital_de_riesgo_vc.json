@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Naturaleza del Capital de Riesgo (VC)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "El capital de los VC es distinto al de amigos/familia o ángeles: es mayor en monto, de largo plazo y se despliega en múltiples rondas condicionadas al progreso del startup. Sin embargo, la disponibilidad de este capital es altamente sensible a los ciclos económicos (ej. caídas de 40-50% durante crisis), lo que limita la certeza de financiamiento continuo incluso para startups con buen desempeño.",
+  "resumen_teorico": "El capital de los VC es distinto al de amigos/familia o ángeles: es mayor en monto, de largo plazo y se despliega en múltiples rondas condicionadas al progreso del startup. Sin embargo, la disponibilidad de este capital es altamente sensible a los ciclos económicos (ej. caídas de 52% y luego de 41% tras la burbuja puntocom, y de 37% en 2008-2009), lo que limita la confianza en él como fuente constante de financiamiento.",
   "pasos_accionables": [
     "Evaluar si el startup necesita múltiples rondas de financiamiento a largo plazo antes de buscar VC.",
     "Investigar el momento del ciclo económico actual antes de planificar una ronda.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Conoce el Capital de Riesgo",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-naturaleza_capital_de_riesgo_vc-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El capital de los VC es distinto al de amigos/familia o ángeles: es mayor en monto, de largo plazo y se despliega en múltiples rondas condicionadas al progreso del startup. Sin embargo, la disponibilidad de este capital es altamente sensible a los ciclos económicos (ej. caídas de 40-50% durante crisis), lo que limita la certeza de financiamiento continuo incluso para startups con buen desempeño.",
+      "texto_nuevo": "El capital de los VC es distinto al de amigos/familia o ángeles: es mayor en monto, de largo plazo y se despliega en múltiples rondas condicionadas al progreso del startup. Sin embargo, la disponibilidad de este capital es altamente sensible a los ciclos económicos (ej. caídas de 52% y luego de 41% tras la burbuja puntocom, y de 37% en 2008-2009), lo que limita la confianza en él como fuente constante de financiamiento.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2788",
+        "frase": "limiting the confidence that startups can place in venture capital as a consistent source"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la sensibilidad al ciclo limita la confianza en el VC como fuente constante; no habla de startups con buen desempeño.; El rango 40-50% no está en el libro, que da caídas de 52%, 41% y 37%.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

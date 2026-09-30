@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar cuáles de los tres objetivos (utilización, inventario, servicio) son prioritarios para tu modelo de negocio",
     "Calcular el lote económico de producción (economic lot size) para cada producto, balanceando costos de setup e inventario",
-    "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario), que es inventario disponible / demanda esperada",
+    "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario), que es inventario disponible / demanda esperada, programando primero el producto con el menor valor, asumiendo producido su lote económico y recalculando todos los valores antes de elegir el siguiente",
     "Revisar continuamente el inventario resultante contra la demanda real y ajustar"
   ],
   "entregable_esperado": "Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en run-out time",
@@ -55,6 +55,23 @@
         "motivo": "El equilibrio entre utilización, inventario y servicio lleva a la Teoría de Restricciones, que gestiona el cuello de botella para subir el throughput reduciendo inventario y gastos."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-063-produccion_scheduling_balance_objetivos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario), que es inventario disponible / demanda esperada",
+      "texto_nuevo": "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario), que es inventario disponible / demanda esperada, programando primero el producto con el menor valor, asumiendo producido su lote económico y recalculando todos los valores antes de elegir el siguiente",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1271",
+        "frase": "The first production run is then scheduled for the product with the lowest R-value."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde el procedimiento: programar primero el producto con menor run-out time, asumir producido su lote y recalcular todos los valores.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

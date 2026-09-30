@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Cómo estructurar la seguridad de tu negocio de forma efectiva",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo pequeño pero bien conectado con el día a día puede ser mucho más efectivo. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+  "resumen_teorico": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo pequeño pero bien conectado con el día a día puede ser mucho más efectivo, aunque uno mínimo puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
   "pasos_accionables": [
     "Revisa si lo que generas sobre seguridad te da información útil o solo estadísticas que no sirven para nada",
     "Verifica que quien se encarga de la seguridad esté cerca, física y humanamente, del trabajo de primera línea",
     "Audita si la seguridad participa en las decisiones donde se cruzan producción y seguridad",
     "Elimina las métricas y metas numéricas que empujen a esconder los problemas en vez de reportarlos"
   ],
-  "entregable_esperado": "Un diagnóstico de cómo está organizada la seguridad en tu negocio, con recomendaciones sobre si conviene que sea un rol de apoyo (staff) o parte directa de la operación (línea)",
+  "entregable_esperado": "Un diagnóstico de cómo está organizada la seguridad en tu negocio, con recomendaciones sobre cómo combinar un rol de apoyo (staff) con la participación directa de la operación (línea), porque no se trata de elegir uno u otro",
   "nodos_previos": [
     "safety_i_safety_ii"
   ],
@@ -26,5 +26,39 @@
   "etiqueta_arbol": "Diseña un Área de Seguridad Efectiva",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-diseno_departamento_seguridad_efectivo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo pequeño pero bien conectado con el día a día puede ser mucho más efectivo. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+      "texto_nuevo": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo pequeño pero bien conectado con el día a día puede ser mucho más efectivo, aunque uno mínimo puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3036",
+        "frase": "a lack of safety intelligence in the organization, or an inability to respond adequately"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un área muy pequeña también tiene desventajas: falta de información de seguridad o de capacidad de respuesta.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-065-diseno_departamento_seguridad_efectivo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un diagnóstico de cómo está organizada la seguridad en tu negocio, con recomendaciones sobre si conviene que sea un rol de apoyo (staff) o parte directa de la operación (línea)",
+      "texto_nuevo": "Un diagnóstico de cómo está organizada la seguridad en tu negocio, con recomendaciones sobre cómo combinar un rol de apoyo (staff) con la participación directa de la operación (línea), porque no se trata de elegir uno u otro",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3224",
+        "frase": "So this is not an either–or question."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que no es una elección entre staff o línea sino un intercambio constructivo entre ambos; el entregable pide elegir uno.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

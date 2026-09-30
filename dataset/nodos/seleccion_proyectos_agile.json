@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo elegir qué proyectos merecen el modelo ágil combinado por etapas (Agile-Stage-Gate)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "No todos tus proyectos son candidatos para el modelo híbrido ágil por etapas (Agile-Stage-Gate). Resérvalo para los proyectos más importantes, grandes, innovadores o riesgosos, los que enfrentan mercados que cambian rápido y mucha incertidumbre, porque exige un equipo dedicado y recursos comprometidos solo a eso. Empresas como Corning y Chamberlain lo usan en apenas el 20% de sus proyectos más críticos.",
+  "resumen_teorico": "No todos tus proyectos son candidatos para el modelo híbrido ágil por etapas (Agile-Stage-Gate). Resérvalo para los proyectos más importantes, grandes, innovadores o riesgosos, los que enfrentan mercados que cambian rápido y mucha incertidumbre, porque exige un equipo dedicado y recursos comprometidos solo a eso. Empresas como Corning y Chamberlain lo usan solo en sus proyectos más grandes y críticos, cerca del 20% del total.",
   "pasos_accionables": [
     "Evalúa cuánta incertidumbre de mercado y técnica tiene tu proyecto",
     "Decide si puedes dedicarle un equipo completo, no repartido entre varios proyectos",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Elige tus Proyectos Ágiles Correctos",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-seleccion_proyectos_agile-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos tus proyectos son candidatos para el modelo híbrido ágil por etapas (Agile-Stage-Gate). Resérvalo para los proyectos más importantes, grandes, innovadores o riesgosos, los que enfrentan mercados que cambian rápido y mucha incertidumbre, porque exige un equipo dedicado y recursos comprometidos solo a eso. Empresas como Corning y Chamberlain lo usan en apenas el 20% de sus proyectos más críticos.",
+      "texto_nuevo": "No todos tus proyectos son candidatos para el modelo híbrido ágil por etapas (Agile-Stage-Gate). Resérvalo para los proyectos más importantes, grandes, innovadores o riesgosos, los que enfrentan mercados que cambian rápido y mucha incertidumbre, porque exige un equipo dedicado y recursos comprometidos solo a eso. Empresas como Corning y Chamberlain lo usan solo en sus proyectos más grandes y críticos, cerca del 20% del total.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4674",
+        "frase": "only the major and critical projects go through the new agile system"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el 20% es la parte del total que son los proyectos críticos, no el 20% de los críticos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

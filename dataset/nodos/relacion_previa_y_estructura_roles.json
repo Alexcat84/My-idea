@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Identificar el tipo de relación previa dominante en el equipo fundador",
     "Si son amigos/familia: considerar una estructura de toma de decisiones más colegiada e igualitaria",
-    "Si son excompañeros con jerarquía previa: aprovechar esa jerarquía natural para roles claros desde el inicio",
-    "Si son extraños: decidir conscientemente entre definir roles rápido (riesgo de reasignación) o esperar a conocerse mejor (riesgo de tensión temporal y de perder talento clave)"
+    "Si son excompañeros con jerarquía previa: aprovechar esa jerarquía natural para definir roles, sabiendo que al principio el día a día tiende a roles compartidos y que esa jerarquía facilita el paso a una estructura jerárquica cuando la empresa crezca",
+    "Si son extraños: decidir conscientemente entre definir roles rápido (riesgo de reasignación) o esperar a conocerse mejor (riesgo de tensión temporal)"
   ],
   "entregable_esperado": "Definición justificada de la estructura de roles del equipo fundador, alineada con su historia relacional",
   "nodos_previos": [
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Define Roles según tu Relación",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-relacion_previa_y_estructura_roles-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si son excompañeros con jerarquía previa: aprovechar esa jerarquía natural para roles claros desde el inicio",
+      "texto_nuevo": "Si son excompañeros con jerarquía previa: aprovechar esa jerarquía natural para definir roles, sabiendo que al principio el día a día tiende a roles compartidos y que esa jerarquía facilita el paso a una estructura jerárquica cuando la empresa crezca",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2029",
+        "frase": "the demands of the startup made it more natural to adopt overlapping roles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se pierde que al principio la startup empuja a roles superpuestos y decisiones conjuntas; la jerarquía previa ayuda al pasar después a una estructura jerárquica.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-065-relacion_previa_y_estructura_roles-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si son extraños: decidir conscientemente entre definir roles rápido (riesgo de reasignación) o esperar a conocerse mejor (riesgo de tensión temporal y de perder talento clave)",
+      "texto_nuevo": "Si son extraños: decidir conscientemente entre definir roles rápido (riesgo de reasignación) o esperar a conocerse mejor (riesgo de tensión temporal)",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2042",
+        "frase": "help avoid the risks of allocating roles blindly, but at the cost of early tension"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye a esperar solo el costo de la tensión temprana por los roles; perder talento clave no aparece.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Lista los requerimientos de desempeño que necesitas para las capacidades que elegiste (por ejemplo, visibilidad de inventario en tiempo real).",
     "Conecta cada requerimiento con una operación concreta de tu negocio: pronóstico, inventario, pedidos, entregas o devoluciones.",
-    "Prioriza tus proyectos según su impacto y qué tan dependientes son entre sí (por ejemplo, capacita a tu gente en planeación de ventas y operaciones (S&OP) antes de meter tecnología avanzada).",
-    "Define un cronograma de 12 meses con fases de definición, diseño y construcción."
+    "Prioriza tus proyectos según su impacto y qué tan dependientes son entre sí (por ejemplo, capacita a tu gente en planeación de ventas y operaciones (S&OP) antes de meter tecnología avanzada), y córrelos en paralelo tanto como puedas para que el retraso de uno no frene a los demás.",
+    "Define un cronograma de 12 meses con fases de definición, diseño y construcción, con plazos fijos que respetas ajustando el trabajo al tiempo disponible; concentra los proyectos en los tres primeros trimestres y deja el cuarto para terminar lo atrasado y planear el año siguiente."
   ],
   "entregable_esperado": "Un cronograma de proyectos a 12 meses con responsables, las operaciones de tu negocio que se verán impactadas y las métricas de éxito.",
   "nodos_previos": [
@@ -41,6 +41,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-063-roadmap_proyectos_operacionales_12_meses-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prioriza tus proyectos según su impacto y qué tan dependientes son entre sí (por ejemplo, capacita a tu gente en planeación de ventas y operaciones (S&OP) antes de meter tecnología avanzada).",
+      "texto_nuevo": "Prioriza tus proyectos según su impacto y qué tan dependientes son entre sí (por ejemplo, capacita a tu gente en planeación de ventas y operaciones (S&OP) antes de meter tecnología avanzada), y córrelos en paralelo tanto como puedas para que el retraso de uno no frene a los demás.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5168",
+        "frase": "Notice how they are run in parallel as much as possible."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro corre los proyectos en paralelo tanto como puede para que el retraso de uno no afecte a los demás; el paso lo omite.; Mismo defecto: se pierde la indicación de correr en paralelo para aislar los retrasos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-roadmap_proyectos_operacionales_12_meses-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define un cronograma de 12 meses con fases de definición, diseño y construcción.",
+      "texto_nuevo": "Define un cronograma de 12 meses con fases de definición, diseño y construcción, con plazos fijos que respetas ajustando el trabajo al tiempo disponible; concentra los proyectos en los tres primeros trimestres y deja el cuarto para terminar lo atrasado y planear el año siguiente.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5182-5184; 5421",
+        "frase": "The time frames for each step are strictly adhered to"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: plazos estrictos y cuarto trimestre reservado a lo atrasado y a planear el año siguiente.; Se pierden los plazos fijos por fase que se respetan ajustando el trabajo, y la concentración del trabajo en los tres primeros trimestres.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

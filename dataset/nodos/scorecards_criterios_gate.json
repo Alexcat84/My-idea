@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Los scorecards son herramientas que permiten evaluar proyectos con criterios cualitativos (atractivo de mercado, ventaja competitiva, apalancamiento de competencias) junto con criterios financieros, haciendo la decisión de Go/Kill más objetiva y menos emocional. El 85% de los mejores innovadores usa criterios de Go/Kill específicos, a menudo en forma de scorecard, frente a solo una cuarta parte de las empresas de peor desempeño.",
   "pasos_accionables": [
-    "Diseñar un scorecard con criterios cualitativos y financieros ponderados",
+    "Diseñar un scorecard con criterios cualitativos y financieros ponderados, o considerar adoptar uno ya probado, porque los hechos a medida a menudo no dan buen resultado",
     "Aplicar el scorecard en los gates tempranos (Gates 1, 2 y 3)",
     "Considerar la auto-evaluación del equipo de proyecto antes de la reunión de gate (evitando sesgo del gatekeeper)",
     "Comparar puntuaciones del equipo vs gatekeepers y discutir diferencias en la reunión",
@@ -43,6 +43,23 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R071-024 (CONTRARIO, lector y verificador de acuerdo): Cambia el significado de la cifra: porcentaje de empresas con criterios definidos, no porcentaje de veces que se usa el scorecard. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R071-024"
+    },
+    {
+      "id": "final-e1-062-scorecards_criterios_gate-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar un scorecard con criterios cualitativos y financieros ponderados",
+      "texto_nuevo": "Diseñar un scorecard con criterios cualitativos y financieros ponderados, o considerar adoptar uno ya probado, porque los hechos a medida a menudo no dan buen resultado",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6393",
+        "frase": "You can develop your own scorecards, but often the result is not positive"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los scorecards hechos a medida a menudo no dan buen resultado y sugiere adoptar uno probado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

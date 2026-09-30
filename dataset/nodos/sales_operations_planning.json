@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Planificación de Ventas y Operaciones (S&OP)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+  "resumen_teorico": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
   "pasos_accionables": [
     "Establecer un ciclo mensual de revisión de demanda y oferta a nivel agregado",
     "Involucrar a Gerencia General, Ventas, Operaciones, Finanzas y Desarrollo de Producto en el proceso",
-    "Adoptar un enfoque outside-in, priorizando el análisis de factores externos (clientes, competencia, mercado)",
+    "Adoptar un enfoque outside-in, priorizando el análisis de factores externos (clientes, socios, competencia, mercado)",
     "Definir el mínimo de datos necesarios para tomar decisiones rápidas y precisas, evitando el exceso de datos",
     "Ajustar continuamente los planes operativos según cambien los pronósticos, en lugar de seguir un plan anual fijo"
   ],
@@ -44,6 +44,39 @@
         "motivo": "El S&OP equilibra oferta y demanda agregadas, lo que parte de entender el pronostico de demanda; se evita proceso_sop_mop por ser casi duplicado."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-063-sales_operations_planning-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+      "texto_nuevo": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3750",
+        "frase": "such as the actions of customers, partners, and competitors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro incluye a los socios, con quienes pide colaborar para tener información más precisa; el resumen los omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-sales_operations_planning-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Adoptar un enfoque outside-in, priorizando el análisis de factores externos (clientes, competencia, mercado)",
+      "texto_nuevo": "Adoptar un enfoque outside-in, priorizando el análisis de factores externos (clientes, socios, competencia, mercado)",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3750",
+        "frase": "such as the actions of customers, partners, and competitors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan los socios en la lista de factores externos que el libro manda considerar primero.; Se sostiene por los socios omitidos; 'mercado' es un factor externo genérico coherente con el pasaje y no cambia el consejo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

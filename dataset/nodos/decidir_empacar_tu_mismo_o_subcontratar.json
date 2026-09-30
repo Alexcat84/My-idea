@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Decidir si empacas tú mismo o subcontratas el envío",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrías usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar según el courier que usa, así que el operador que elijas se vuelve parte de tu reputación. No es una decisión de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
+  "resumen_teorico": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Subcontratar pone la marca de tu negocio en manos de otro: muchos compradores eligen en qué tienda comprar según el courier que usa, sobre todo cuando la diferencia de precio es mínima, así que el operador que elijas se vuelve parte de tu reputación.",
   "pasos_accionables": [
     "Calcula cuánto tiempo y espacio te toma empacar cada pedido tú mismo en una semana normal.",
     "Compara ese costo contra las tarifas de un operador logístico local.",
@@ -152,6 +152,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-064-decidir_empacar_tu_mismo_o_subcontratar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrías usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar según el courier que usa, así que el operador que elijas se vuelve parte de tu reputación. No es una decisión de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
+      "texto_nuevo": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Subcontratar pone la marca de tu negocio en manos de otro: muchos compradores eligen en qué tienda comprar según el courier que usa, sobre todo cuando la diferencia de precio es mínima, así que el operador que elijas se vuelve parte de tu reputación.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "200",
+        "frase": "particularly where the price differentiation is minimal"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no dice que la decisión deba revisarse con el volumen.; El libro plantea la decisión sin atribuir control total ni costo de tiempo y espacio a hacerlo en casa.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.; Se cae la condición: el courier pesa sobre todo cuando la diferencia de precio es mínima.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

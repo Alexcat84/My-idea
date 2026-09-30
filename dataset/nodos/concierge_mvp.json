@@ -4,16 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "MVP Conserje (Concierge MVP)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnología. Es ineficiente a proposito, pero maximiza lo que aprendes por cada esfuerzo que haces. Además de recoger opiniones, mide comportamientos reales como finalización, repetición y recomendación, que dicen mas que preguntar. Es especialmente útil cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
+  "resumen_teorico": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnología. Un resultado frecuente es que invalide tu modelo de crecimiento, aunque ya te deje ganancia, y te muestre que necesitas otro enfoque. Es ineficiente a propósito, pero maximiza lo que aprendes por cada esfuerzo que haces. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
   "pasos_accionables": [
     "Consigue un primer cliente real (o un grupo muy pequeño) dispuesto a pagar por el servicio, aunque sea manual.",
     "Entrega el servicio de forma completamente manual y personalizada, sin usar sistemas automatizados.",
     "Anota qué hipótesis de tu modelo de crecimiento estás probando en cada interacción.",
-    "Mide comportamientos concretos del cliente, como finalización, repetición y recomendación, además de su opinión.",
+    "En cada entrega, pide su opinión, haz los cambios necesarios y cobra por el servicio.",
     "Repite el proceso con más clientes uno a uno hasta que atenderlos a mano se te vuelva insostenible.",
     "Automatiza solo las partes del proceso que se conviertan en cuello de botella, una vez que superes tu capacidad manual."
   ],
-  "entregable_esperado": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente (finalización, repetición y recomendación) y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
+  "entregable_esperado": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
   "nodos_previos": [
     "leap_of_faith_assumptions",
     "hipotesis_valor_crecimiento",
@@ -126,6 +126,55 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-066-concierge_mvp-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnología. Es ineficiente a proposito, pero maximiza lo que aprendes por cada esfuerzo que haces. Además de recoger opiniones, mide comportamientos reales como finalización, repetición y recomendación, que dicen mas que preguntar. Es especialmente útil cuando el servicio es complejo de automatizar desde el inicio, por ejemplo si requiere curacion humana. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
+      "texto_nuevo": "Es una técnica de MVP en la que tú mismo entregas manualmente y de forma personalizada el servicio a un cliente o a un grupo muy pequeño, sin automatización ni escalabilidad. El objetivo no es ganar dinero a pequeña escala, sino aprender a fondo sobre las necesidades reales del cliente y validar las hipótesis de tu modelo de crecimiento antes de invertir en producto o tecnología. Un resultado frecuente es que invalide tu modelo de crecimiento, aunque ya te deje ganancia, y te muestre que necesitas otro enfoque. Es ineficiente a propósito, pero maximiza lo que aprendes por cada esfuerzo que haces. Solo automatizas cuando la atención manual se te vuelve un cuello de botella.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1114",
+        "frase": "solicit her feedback, and make changes as necessary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no plantea la complejidad del servicio como condición de utilidad preferente.; Las tres métricas y la afirmación de que dicen más que preguntar no están; el pasaje describe pedir opinión, ajustar y cobrar cada semana.; Mismo defecto que la marca 0: métricas ausentes del libro.; Mismo defecto que la marca 1: condición de uso añadida.; Se cae que un resultado común es invalidar el modelo de crecimiento aun cuando el MVP sea rentable.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-066-concierge_mvp-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide comportamientos concretos del cliente, como finalización, repetición y recomendación, además de su opinión.",
+      "texto_nuevo": "En cada entrega, pide su opinión, haz los cambios necesarios y cobra por el servicio.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1114",
+        "frase": "solicit her feedback, and make changes as necessary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Las tres métricas no están en el libro, que describe pedir opinión y cobrar cada semana.; Mismo defecto: en cada entrega el libro pide opinión, ajusta y cobra.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-066-concierge_mvp-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente (finalización, repetición y recomendación) y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
+      "texto_nuevo": "Registro de aprendizajes validados sobre tu modelo de crecimiento, incluyendo comportamientos reales del cliente y al menos un cliente atendido manualmente, con una decisión informada sobre si automatizar o pivotar.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1114",
+        "frase": "solicit her feedback, and make changes as necessary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo defecto.; Repite en el entregable las tres métricas que el libro no menciona.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Formas de Acelerar las Decisiones de Avanzar o Frenar (Gate)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Para no perder meses esperando entre una etapa y otra de tu proyecto, no siempre necesitas una reunión formal para decidir si sigues o paras. Si el proyecto es pequeño o de bajo riesgo, puedes decidirlo tú mismo. Si trabajas con alguien a distancia, puedes reunirte por videollamada y decidir en el momento, con los criterios a la vista. O puedes revisar la información y dar el visto bueno por escrito, sin reunión, cuando la velocidad importa más que discutirlo a fondo, aunque ahí pierdes la conversación que enriquece la decisión. Cada camino tiene una relación entre rapidez y calidad de la decisión.",
+  "resumen_teorico": "Para no perder meses esperando entre una etapa y otra de tu proyecto, no siempre necesitas una reunión formal para decidir si sigues o paras. Si el proyecto es pequeño y de bajo riesgo, puedes tomar tú mismo algunas de esas decisiones. Si trabajas con alguien a distancia, puedes reunirte por videollamada y decidir en el momento, con los criterios a la vista. O puedes revisar la información y dar el visto bueno por escrito, sin reunión, cuando la velocidad importa más que discutirlo a fondo, aunque ahí pierdes la conversación que enriquece la decisión. Cada camino tiene una relación entre rapidez y calidad de la decisión.",
   "pasos_accionables": [
     "Clasifica tus proyectos según su riesgo y tamaño para decidir qué forma de revisión te conviene usar.",
-    "Si el proyecto es de bajo riesgo, decide tú mismo si avanza o se frena, sin necesidad de una reunión formal.",
+    "Si el proyecto es pequeño y de bajo riesgo, toma tú mismo algunas de las decisiones de avanzar o frenar, sin necesidad de una reunión formal.",
     "Si trabajas con gente en otros lugares, ten una forma confiable de hacer videollamadas para decidir en tiempo real.",
-    "Usa el visto bueno por escrito, sin reunión, solo cuando la velocidad importe más que conversarlo a fondo.",
+    "Usa el visto bueno por escrito, sin reunión, cuando la velocidad importe más que conversarlo a fondo o cuando quienes deciden estén lejos o no puedan asistir.",
     "Revisa qué pasos o entregables puedes quitar del proceso porque no aportan valor real."
   ],
   "entregable_esperado": "Un mapa que indique qué forma de revisión usarás según el tipo de proyecto: completa, simplificada, por videollamada, por escrito o decidida por ti mismo.",
@@ -34,5 +34,57 @@
   "etiqueta_arbol": "Acelera tus Decisiones de Etapa",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-aceleracion_de_gates-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para no perder meses esperando entre una etapa y otra de tu proyecto, no siempre necesitas una reunión formal para decidir si sigues o paras. Si el proyecto es pequeño o de bajo riesgo, puedes decidirlo tú mismo. Si trabajas con alguien a distancia, puedes reunirte por videollamada y decidir en el momento, con los criterios a la vista. O puedes revisar la información y dar el visto bueno por escrito, sin reunión, cuando la velocidad importa más que discutirlo a fondo, aunque ahí pierdes la conversación que enriquece la decisión. Cada camino tiene una relación entre rapidez y calidad de la decisión.",
+      "texto_nuevo": "Para no perder meses esperando entre una etapa y otra de tu proyecto, no siempre necesitas una reunión formal para decidir si sigues o paras. Si el proyecto es pequeño y de bajo riesgo, puedes tomar tú mismo algunas de esas decisiones. Si trabajas con alguien a distancia, puedes reunirte por videollamada y decidir en el momento, con los criterios a la vista. O puedes revisar la información y dar el visto bueno por escrito, sin reunión, cuando la velocidad importa más que discutirlo a fondo, aunque ahí pierdes la conversación que enriquece la decisión. Cada camino tiene una relación entre rapidez y calidad de la decisión.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7529",
+        "frase": "In the case of smaller and lower-risk projects, some gates are now self-managed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja autogestionar solo algunas etapas y en proyectos pequeños y de bajo riesgo a la vez.; Mismo defecto: solo algunas decisiones de etapa se autogestionan, no todas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-062-aceleracion_de_gates-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el proyecto es de bajo riesgo, decide tú mismo si avanza o se frena, sin necesidad de una reunión formal.",
+      "texto_nuevo": "Si el proyecto es pequeño y de bajo riesgo, toma tú mismo algunas de las decisiones de avanzar o frenar, sin necesidad de una reunión formal.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7529",
+        "frase": "In the case of smaller and lower-risk projects, some gates are now self-managed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el libro autogestiona solo algunas de las decisiones de etapa.; Se pierden el tamaño pequeño y el límite de que solo algunas etapas se autogestionan.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-062-aceleracion_de_gates-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa el visto bueno por escrito, sin reunión, solo cuando la velocidad importe más que conversarlo a fondo.",
+      "texto_nuevo": "Usa el visto bueno por escrito, sin reunión, cuando la velocidad importe más que conversarlo a fondo o cuando quienes deciden estén lejos o no puedan asistir.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7547",
+        "frase": "The goal here is to reduce absenteeism of key gatekeepers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro también usa el visto bueno sin reunión cuando quienes deciden están lejos o faltarían; el 'solo' por velocidad lo recorta. El costo ya está implícito.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

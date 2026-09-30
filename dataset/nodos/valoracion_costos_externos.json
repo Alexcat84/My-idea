@@ -4,10 +4,10 @@
   "dominio": "environmental",
   "titulo_concepto": "Valoración de Costos y Beneficios Externos (Ambientales)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Metodologías para asignar valor monetario a impactos ambientales externos que carecen de mercado directo. Se dividen en métodos del lado de la demanda (disposición a pagar, como Hedonic Pricing, Travel Cost Method, Contingent Valuation) y métodos del lado de la oferta (costos de prevención, restauración, productividad) que estiman el costo de prevenir, restaurar o compensar el daño ambiental.",
+  "resumen_teorico": "Metodologías para asignar valor monetario a impactos ambientales externos que carecen de mercado directo. Se dividen en métodos del lado de la demanda (disposición a pagar, como Hedonic Pricing, Travel Cost Method y Contingent Valuation, esta última la menos fiable por basarse en conducta hipotética) y métodos del lado de la oferta (costos de prevención, restauración, productividad) que estiman el costo de prevenir, restaurar o compensar el daño ambiental.",
   "pasos_accionables": [
     "Determinar si el impacto ambiental a valorar tiene un mercado sustituto disponible",
-    "Elegir un método de demanda (willingness to pay/accept) o de oferta (costos de prevención/restauración) según el contexto",
+    "Elegir un método de demanda (willingness to pay/accept) o de oferta (costos de prevención/restauración) según el contexto, teniendo en cuenta que la valoración contingente, basada en respuestas hipotéticas, es el menos fiable de los métodos de demanda",
     "Recopilar datos de encuestas, mercados sustitutos o costos de restauración según el método elegido",
     "Asignar un valor monetario estimado al costo o beneficio ambiental externo"
   ],
@@ -23,5 +23,40 @@
   "etiqueta_arbol": "Valora tus Costos Ambientales",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-066-valoracion_costos_externos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir un método de demanda (willingness to pay/accept) o de oferta (costos de prevención/restauración) según el contexto",
+      "texto_nuevo": "Elegir un método de demanda (willingness to pay/accept) o de oferta (costos de prevención/restauración) según el contexto, teniendo en cuenta que la valoración contingente, basada en respuestas hipotéticas, es el menos fiable de los métodos de demanda",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5833",
+        "frase": "the most unreliable of the three demand-side methods because it is subject to inherent bias"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la valoración contingente, basada en conducta hipotética, es la menos fiable de los métodos de demanda, lo que pesa al elegir.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-066-valoracion_costos_externos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodologías para asignar valor monetario a impactos ambientales externos que carecen de mercado directo. Se dividen en métodos del lado de la demanda (disposición a pagar, como Hedonic Pricing, Travel Cost Method, Contingent Valuation) y métodos del lado de la oferta (costos de prevención, restauración, productividad) que estiman el costo de prevenir, restaurar o compensar el daño ambiental.",
+      "texto_nuevo": "Metodologías para asignar valor monetario a impactos ambientales externos que carecen de mercado directo. Se dividen en métodos del lado de la demanda (disposición a pagar, como Hedonic Pricing, Travel Cost Method y Contingent Valuation, esta última la menos fiable por basarse en conducta hipotética) y métodos del lado de la oferta (costos de prevención, restauración, productividad) que estiman el costo de prevenir, restaurar o compensar el daño ambiental.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5833",
+        "frase": "Based on hypothetical behavior inferred from surveys or experiments rather than on actual observed behavior"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la advertencia de que la valoración contingente es la menos fiable de los métodos de demanda por basarse en conducta hipotética.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

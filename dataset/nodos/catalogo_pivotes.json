@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Catálogo de Tipos de Pivote",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Un pivote es un cambio estructurado, no un simple cambio cualquiera, diseñado para probar una nueva hipótesis fundamental sobre tu producto, modelo de negocio o motor de crecimiento. El catálogo incluye zoom in (una función se vuelve todo el producto), zoom out (el producto pasa a ser una función de algo mayor), segmento de cliente (mismo problema, cliente distinto, por ejemplo de B2C a B2B), necesidad del cliente (mismo cliente, problema distinto), plataforma, arquitectura de negocio, captura de valor, motor de crecimiento, canal y tecnología. Para elegir el tipo correcto, analiza el feedback recurrente de tus clientes y detecta qué parte de tu producto genera valor real antes de rediseñar tus hipótesis de salto de fe.",
+  "resumen_teorico": "Un pivote es un cambio estructurado, no un simple cambio cualquiera, diseñado para probar una nueva hipótesis fundamental sobre tu producto, modelo de negocio o motor de crecimiento. El catálogo incluye zoom in (una función se vuelve todo el producto), zoom out (el producto pasa a ser una función de algo mayor), segmento de cliente (mismo problema, cliente distinto), necesidad del cliente (mismo cliente, problema distinto), plataforma, arquitectura de negocio, captura de valor, motor de crecimiento, canal y tecnología. Para elegir el tipo correcto, analiza el feedback recurrente de tus clientes y detecta qué parte de tu producto genera valor real antes de rediseñar tus hipótesis de salto de fe.",
   "pasos_accionables": [
     "Identificar cuál hipótesis del modelo de negocio no se está validando (cliente, problema, canal, monetización, tecnología, etc.)",
     "Analizar el feedback recurrente de tus clientes para detectar qué parte del producto genera valor real",
@@ -49,5 +49,23 @@
   ],
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-066-catalogo_pivotes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un pivote es un cambio estructurado, no un simple cambio cualquiera, diseñado para probar una nueva hipótesis fundamental sobre tu producto, modelo de negocio o motor de crecimiento. El catálogo incluye zoom in (una función se vuelve todo el producto), zoom out (el producto pasa a ser una función de algo mayor), segmento de cliente (mismo problema, cliente distinto, por ejemplo de B2C a B2B), necesidad del cliente (mismo cliente, problema distinto), plataforma, arquitectura de negocio, captura de valor, motor de crecimiento, canal y tecnología. Para elegir el tipo correcto, analiza el feedback recurrente de tus clientes y detecta qué parte de tu producto genera valor real antes de rediseñar tus hipótesis de salto de fe.",
+      "texto_nuevo": "Un pivote es un cambio estructurado, no un simple cambio cualquiera, diseñado para probar una nueva hipótesis fundamental sobre tu producto, modelo de negocio o motor de crecimiento. El catálogo incluye zoom in (una función se vuelve todo el producto), zoom out (el producto pasa a ser una función de algo mayor), segmento de cliente (mismo problema, cliente distinto), necesidad del cliente (mismo cliente, problema distinto), plataforma, arquitectura de negocio, captura de valor, motor de crecimiento, canal y tecnología. Para elegir el tipo correcto, analiza el feedback recurrente de tus clientes y detecta qué parte de tu producto genera valor real antes de rediseñar tus hipótesis de salto de fe.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1987",
+        "frase": "solving the right problem, but for a different customer than originally anticipated"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese ejemplo para el pivote de segmento; asocia B2B frente a consumo al pivote de arquitectura de negocio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

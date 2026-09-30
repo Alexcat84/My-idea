@@ -7,9 +7,9 @@
   "resumen_teorico": "Evaluación sistemática de si la empresa cuenta con suficientes recursos (personas, tiempo, presupuesto) para ejecutar los proyectos activos y cumplir los objetivos estratégicos de innovación. La falta de foco y recursos insuficientes es la principal debilidad detectada en estudios de benchmarking, generando corners cortados, retrasos y baja moral del equipo.",
   "pasos_accionables": [
     "Listar todos los proyectos activos y sus cronogramas",
-    "Determinar los recursos requeridos por proyecto en días-persona por departamento",
+    "Determinar los recursos requeridos por proyecto en días-persona por departamento, y también los que exigen los objetivos de innovación (cuántos proyectos lanzar cada año y tener en cada etapa)",
     "Evaluar la disponibilidad real de recursos por departamento y mes",
-    "Comparar demanda vs. capacidad y detectar cuellos de botella",
+    "Comparar demanda vs. capacidad, tanto para los proyectos activos como para los objetivos de innovación, y detectar cuellos de botella",
     "Ajustar objetivos de innovación o aumentar recursos según los hallazgos",
     "Considerar el método de 'Strategic Buckets' para reservar recursos por tipo de proyecto"
   ],
@@ -37,5 +37,41 @@
   "etiqueta_arbol": "Revisa tus Recursos Disponibles",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-analisis_de_capacidad_de_recursos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar demanda vs. capacidad y detectar cuellos de botella",
+      "texto_nuevo": "Comparar demanda vs. capacidad, tanto para los proyectos activos como para los objetivos de innovación, y detectar cuellos de botella",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2140",
+        "frase": "Determine if you have enough resources to achieve your business’s product-innovation objectives."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro compara demanda y capacidad también para los objetivos de innovación, no solo para los proyectos activos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-062-analisis_de_capacidad_de_recursos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar los recursos requeridos por proyecto en días-persona por departamento",
+      "texto_nuevo": "Determinar los recursos requeridos por proyecto en días-persona por departamento, y también los que exigen los objetivos de innovación (cuántos proyectos lanzar cada año y tener en cada etapa)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2140",
+        "frase": "Determine if you have enough resources to achieve your business’s product-innovation objectives."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el segundo cálculo del procedimiento: los recursos que exigen los objetivos de innovación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

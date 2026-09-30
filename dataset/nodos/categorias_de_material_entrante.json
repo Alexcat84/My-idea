@@ -9,7 +9,7 @@
     "Clasificar todos los lotes de material entrante según las cuatro categorías definidas",
     "Cuantificar el costo real del material usado en desesperación (retrabajo, desperdicio, riesgo de rechazo)",
     "Antes de decidir sobre un material cuestionable, juntar la mirada de quien compra, quien produce y quien puede evaluarlo técnicamente, aunque seas tú quien cumpla varios de esos roles",
-    "Evitar mantener inventario de origen desconocido; preferir la inspección total solo si es inevitable",
+    "Evitar mantener inventario, salvo como protección ante un alza de precio o una huelga inminente; si ya tienes material de origen desconocido, la única vía segura es la inspección total",
     "Revisar las especificaciones de compra cuando el problema recurrente sea de origen técnico, no del proveedor"
   ],
   "entregable_esperado": "Un registro de clasificación de materiales entrantes con estimación de los costos ocultos de la categoría 2",
@@ -38,6 +38,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-064-categorias_de_material_entrante-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar mantener inventario de origen desconocido; preferir la inspección total solo si es inevitable",
+      "texto_nuevo": "Evitar mantener inventario, salvo como protección ante un alza de precio o una huelga inminente; si ya tienes material de origen desconocido, la única vía segura es la inspección total",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2014",
+        "frase": "A better way is to avoid inventory except for protection against a rise in price"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con origen desconocido la inspección total es la única vía segura; el paso la presenta como último recurso y pierde esa condición.; El libro aconseja evitar el inventario salvo como protección ante un alza de precio o una huelga inminente; el paso pierde las excepciones.; Mismo defecto que la marca 0: se caen las excepciones de precio y huelga.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

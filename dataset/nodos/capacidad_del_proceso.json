@@ -6,7 +6,7 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.",
   "pasos_accionables": [
-    "Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)",
+    "Verificar primero que el proceso y el sistema de medición estén en control estadístico (gráfico de corridas o X-barra/R)",
     "Calcular la media y el rango promedio del proceso estable",
     "Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)",
     "Comunicar la capacidad real a diseño e ingeniería para ajustar especificaciones realistas"
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Calcula lo que tu Proceso Rinde",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-064-capacidad_del_proceso-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)",
+      "texto_nuevo": "Verificar primero que el proceso y el sistema de medición estén en control estadístico (gráfico de corridas o X-barra/R)",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7826",
+        "frase": "decide whether the process of manufacture and the system of measurement show statistical control"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide comprobar el control estadístico del proceso y también del sistema de medición; el paso omite la medición.; Mismo defecto: falta el sistema de medición.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

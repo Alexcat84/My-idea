@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Designar un Maestro de los Cinco Porqués",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Rol de facilitador senior, pero no tan alto que no pueda asistir a las sesiones, encargado de moderar las reuniones de Cinco Porqués, decidir las inversiones de prevención y asignar el trabajo de seguimiento. Este maestro actúa como punto de responsabilidad y agente de cambio, evaluando si las inversiones realizadas están dando resultado. Es clave iniciar con un área de problema acotada y específica antes de expandir el proceso a temas de mayor envergadura.",
+  "resumen_teorico": "Rol de facilitador senior, uno por cada área en la que usas el método, pero no tan alto que no pueda asistir a las sesiones, encargado de moderar las reuniones de Cinco Porqués, decidir las inversiones de prevención y asignar el trabajo de seguimiento. Este maestro actúa como punto de responsabilidad y agente de cambio, evaluando si las inversiones realizadas están dando resultado. Es clave iniciar con un área de problema acotada y específica antes de expandir el proceso a temas de mayor envergadura.",
   "pasos_accionables": [
     "Elegir a una persona con suficiente autoridad para asegurar cumplimiento de las tareas asignadas, pero con disponibilidad para asistir a las sesiones",
     "Comenzar con una categoría de síntomas específica y de bajo riesgo (ej. una herramienta interna, no un sistema crítico de clientes)",
-    "Definir una regla simple e inequívoca sobre qué tipo de incidentes disparan automáticamente una sesión de Cinco Porqués",
+    "Definir una regla simple e inequívoca sobre qué tipo de incidentes disparan automáticamente una sesión de Cinco Porqués, con un volumen lo bastante bajo para reunirse cada vez (si son demasiados, elegir un subconjunto)",
     "Expandir gradualmente el alcance del proceso a medida que el equipo gana experiencia y confianza",
     "Evaluar periódicamente si las inversiones de prevención realizadas están reduciendo la frecuencia/severidad de los problemas"
   ],
@@ -31,5 +31,40 @@
   "etiqueta_arbol": "Nombra un Maestro Facilitador",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-066-cinco_porques_master-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir una regla simple e inequívoca sobre qué tipo de incidentes disparan automáticamente una sesión de Cinco Porqués",
+      "texto_nuevo": "Definir una regla simple e inequívoca sobre qué tipo de incidentes disparan automáticamente una sesión de Cinco Porqués, con un volumen lo bastante bajo para reunirse cada vez (si son demasiados, elegir un subconjunto)",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2802",
+        "frase": "this requires that there be a small enough volume of complaints"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae la condición: el volumen debe ser lo bastante bajo para reunirse cada vez; si hay demasiados, se elige un subconjunto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-066-cinco_porques_master-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rol de facilitador senior, pero no tan alto que no pueda asistir a las sesiones, encargado de moderar las reuniones de Cinco Porqués, decidir las inversiones de prevención y asignar el trabajo de seguimiento. Este maestro actúa como punto de responsabilidad y agente de cambio, evaluando si las inversiones realizadas están dando resultado. Es clave iniciar con un área de problema acotada y específica antes de expandir el proceso a temas de mayor envergadura.",
+      "texto_nuevo": "Rol de facilitador senior, uno por cada área en la que usas el método, pero no tan alto que no pueda asistir a las sesiones, encargado de moderar las reuniones de Cinco Porqués, decidir las inversiones de prevención y asignar el trabajo de seguimiento. Este maestro actúa como punto de responsabilidad y agente de cambio, evaluando si las inversiones realizadas están dando resultado. Es clave iniciar con un área de problema acotada y específica antes de expandir el proceso a temas de mayor envergadura.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2813",
+        "frase": "appoint a Five Whys master for each area in which the method is being used"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro designa un maestro por cada área donde se usa el método, lo que importa al expandir el proceso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

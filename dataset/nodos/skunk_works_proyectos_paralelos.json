@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Proyectos Skunk Works y Tiempo Libre para Innovar",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los mejores innovadores permiten que empleados apasionados trabajen en proyectos no oficiales, fuera de la burocracia formal, dedicando tiempo y recursos propios (como el famoso 15% de 3M). Estos equipos 'skunk works' operan con mayor libertad y suelen ser fuente de innovaciones radicales que después se integran al proceso formal de desarrollo.",
+  "resumen_teorico": "Muchos de los mejores innovadores dan a empleados apasionados tiempo libre y recursos para sus propios proyectos, sin aprobación formal (como el famoso 15% de 3M). Ese tiempo suele ser fuente de innovación, y esos proyectos pasan al proceso formal cuando piden recursos importantes. Algunos fomentan además equipos 'skunk works', fuera de la estructura oficial, para proyectos muy innovadores y críticos.",
   "pasos_accionables": [
     "Permitir que empleados dediquen un porcentaje de su tiempo (ej. 15%) a proyectos propios sin aprobación formal previa.",
     "Proveer recursos semilla (dinero, equipo) para exploración creativa.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Da Espacio a Ideas Paralelas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-skunk_works_proyectos_paralelos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los mejores innovadores permiten que empleados apasionados trabajen en proyectos no oficiales, fuera de la burocracia formal, dedicando tiempo y recursos propios (como el famoso 15% de 3M). Estos equipos 'skunk works' operan con mayor libertad y suelen ser fuente de innovaciones radicales que después se integran al proceso formal de desarrollo.",
+      "texto_nuevo": "Muchos de los mejores innovadores dan a empleados apasionados tiempo libre y recursos para sus propios proyectos, sin aprobación formal (como el famoso 15% de 3M). Ese tiempo suele ser fuente de innovación, y esos proyectos pasan al proceso formal cuando piden recursos importantes. Algunos fomentan además equipos 'skunk works', fuera de la estructura oficial, para proyectos muy innovadores y críticos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2295",
+        "frase": "Many best-innovator businesses provide resources and time off to creative employees"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): Atribuye a los skunk works lo que el libro dice del tiempo libre y de los proyectos del 15%.; En el libro es la empresa la que da tiempo libre y recursos, no los empleados quienes ponen los suyos.; Generaliza: el libro dice muchos de los mejores innovadores (tiempo libre) y algunos (skunk works).; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Sensibilidad y Ratio Riesgo-Retorno",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Técnica para identificar riesgos clave de un proyecto probando cómo cambian los resultados financieros al variar supuestos críticos (ej. ventas al 75%, costos +10%, retraso de lanzamiento). También se calcula el ratio riesgo-retorno dividiendo la máxima pérdida acumulada posible entre el NPV del proyecto, para cuantificar el riesgo relativo.",
+  "resumen_teorico": "Técnica para identificar riesgos clave de un proyecto probando cómo cambian los resultados financieros al variar supuestos críticos (ej. ventas al 75%, costos +10%, retraso de lanzamiento): el supuesto que vuelve negativo el retorno es crítico. También se calcula el ratio riesgo-retorno dividiendo la máxima pérdida acumulada posible entre el NPV del proyecto; un ratio alto indica alto riesgo.",
   "pasos_accionables": [
     "Identificar los supuestos clave del modelo financiero (ventas, costos, fecha de lanzamiento)",
     "Modificar cada supuesto uno a la vez y recalcular NPV/IRR/Payback",
@@ -74,6 +74,22 @@
         "motivo": "Quien ya identifico y cuantifico los riesgos clave de su proyecto al variar supuestos criticos sigue naturalmente con el ciclo completo de enmarcar, evaluar, responder y monitorear el riesgo."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2."
+    },
+    {
+      "id": "final-e1-062-analisis_de_sensibilidad_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica para identificar riesgos clave de un proyecto probando cómo cambian los resultados financieros al variar supuestos críticos (ej. ventas al 75%, costos +10%, retraso de lanzamiento). También se calcula el ratio riesgo-retorno dividiendo la máxima pérdida acumulada posible entre el NPV del proyecto, para cuantificar el riesgo relativo.",
+      "texto_nuevo": "Técnica para identificar riesgos clave de un proyecto probando cómo cambian los resultados financieros al variar supuestos críticos (ej. ventas al 75%, costos +10%, retraso de lanzamiento): el supuesto que vuelve negativo el retorno es crítico. También se calcula el ratio riesgo-retorno dividiendo la máxima pérdida acumulada posible entre el NPV del proyecto; un ratio alto indica alto riesgo.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6116",
+        "frase": "if some “what if” scenarios yield negative returns, then the associated assumptions become critical"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se pierde cómo leer ambos resultados.; Se cae el criterio de lectura del libro: supuesto crítico si da retornos negativos y ratio alto igual a alto riesgo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

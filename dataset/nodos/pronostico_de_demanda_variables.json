@@ -6,9 +6,9 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Todo pronóstico de demanda depende de cuatro variables: Oferta (número de proveedores y lead times), Demanda (crecimiento, estacionalidad, madurez del mercado), Características del producto (si es sustituible, complementario, nuevo o maduro) y Entorno competitivo (participación de mercado, promociones, guerras de precios). Cuanta más incertidumbre haya en estas variables, más difícil y menos preciso será el pronóstico.",
   "pasos_accionables": [
-    "Evaluar el número de proveedores y lead times de tu cadena de suministro",
+    "Evaluar el número de proveedores y lead times de tu cadena de suministro, y hacer que el pronóstico cubra un horizonte que abarque los lead times combinados de todos los componentes del producto final",
     "Analizar tendencia de crecimiento/declive y estacionalidad de la demanda de tu mercado",
-    "Clasificar tu producto según madurez, sustitución y complementariedad",
+    "Clasificar tu producto según madurez, sustitución y complementariedad, y pronosticar juntos los productos que compiten o se complementan entre sí",
     "Monitorear la participación de mercado propia y de competidores, incluyendo promociones planeadas"
   ],
   "entregable_esperado": "Ficha de análisis de las cuatro variables de mercado como insumo para el pronóstico",
@@ -57,6 +57,40 @@
         "motivo": "El S&OP equilibra oferta y demanda agregadas, lo que parte de entender el pronostico de demanda; se evita proceso_sop_mop por ser casi duplicado."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-063-pronostico_de_demanda_variables-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar el número de proveedores y lead times de tu cadena de suministro",
+      "texto_nuevo": "Evaluar el número de proveedores y lead times de tu cadena de suministro, y hacer que el pronóstico cubra un horizonte que abarque los lead times combinados de todos los componentes del producto final",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "704",
+        "frase": "forecasts must cover a time period that encompasses the combined lead times"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde la consecuencia que el libro saca: el pronóstico debe cubrir los lead times combinados de todos los componentes.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-pronostico_de_demanda_variables-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar tu producto según madurez, sustitución y complementariedad",
+      "texto_nuevo": "Clasificar tu producto según madurez, sustitución y complementariedad, y pronosticar juntos los productos que compiten o se complementan entre sí",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "708",
+        "frase": "Products that either compete with or complement each other should be forecasted together."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde la indicación de pronosticar juntos los productos que compiten o se complementan.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

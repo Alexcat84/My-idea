@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Selección de Arenas Estratégicas (Pick Your Battlefields)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Antes de generar ideas de nuevos productos, define tus arenas estratégicas: los mercados, sectores, tecnologías o tipos de producto donde concentrarás tu esfuerzo de innovación. Sin arenas claras, la búsqueda de ideas se dispersa y tu cartera de proyectos termina llena de iniciativas no relacionadas y poco rentables. El principio de concentración de fuerzas indica que es mejor enfocarse en pocas áreas bien elegidas que dispersarse en muchas. El proceso implica primero divergir, identificando muchas arenas potenciales, y luego converger, eligiendo las mejores apuestas. Evita definiciones demasiado amplias y opta por segmentos específicos. Revisa si tus arenas actuales son solo áreas familiares y maduras, o si representan verdaderas oportunidades de crecimiento.",
+  "resumen_teorico": "Antes de generar ideas de nuevos productos, define tus arenas estratégicas: los mercados, sectores, tecnologías o tipos de producto donde concentrarás tu esfuerzo de innovación. Sin arenas claras, la búsqueda de ideas se dispersa y tu cartera de proyectos probablemente termine llena de iniciativas no relacionadas y poco rentables. El principio de concentración de fuerzas indica que es mejor enfocarse en pocas áreas bien elegidas que dispersarse en muchas. El proceso implica primero divergir, identificando muchas arenas potenciales, y luego converger, eligiendo las mejores apuestas. Evita definiciones demasiado amplias y opta por segmentos específicos. Revisa si tus arenas actuales son solo áreas familiares y maduras, o si representan verdaderas oportunidades de crecimiento.",
   "pasos_accionables": [
     "Dedica una sesión de reflexión estratégica enfocada exclusivamente en definir tus arenas de innovación",
     "Analiza previamente el mercado, las tendencias, la competencia y tus propias competencias centrales",
     "Genera una lista amplia de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias",
     "Evalúa cada arena según su atractivo de mercado, tu fortaleza para competir en ella y si representa una oportunidad real de crecimiento y no solo un área familiar o madura",
-    "Busca especialmente mercados emergentes o de rápido crecimiento con grandes problemas sin resolver",
+    "Busca especialmente mercados emergentes o de rápido crecimiento, o mercados grandes y establecidos, que enfrenten grandes problemas sin resolver",
     "Selecciona y prioriza unas pocas arenas específicas como foco final"
   ],
   "entregable_esperado": "Una lista corta de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.",
@@ -125,6 +125,39 @@
         "motivo": "Referencia de un nodo vivo a busqueda_vs_ejecucion, deprecado; su superviviente es search_for_business_model."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-062-seleccion_arenas_estrategicas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca especialmente mercados emergentes o de rápido crecimiento con grandes problemas sin resolver",
+      "texto_nuevo": "Busca especialmente mercados emergentes o de rápido crecimiento, o mercados grandes y establecidos, que enfrenten grandes problemas sin resolver",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7936",
+        "frase": "a third approach is to find large and established markets"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro propone también mercados grandes y establecidos con grandes problemas sin resolver.; Mismo defecto: se deja fuera el enfoque de los mercados establecidos.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-062-seleccion_arenas_estrategicas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de generar ideas de nuevos productos, define tus arenas estratégicas: los mercados, sectores, tecnologías o tipos de producto donde concentrarás tu esfuerzo de innovación. Sin arenas claras, la búsqueda de ideas se dispersa y tu cartera de proyectos termina llena de iniciativas no relacionadas y poco rentables. El principio de concentración de fuerzas indica que es mejor enfocarse en pocas áreas bien elegidas que dispersarse en muchas. El proceso implica primero divergir, identificando muchas arenas potenciales, y luego converger, eligiendo las mejores apuestas. Evita definiciones demasiado amplias y opta por segmentos específicos. Revisa si tus arenas actuales son solo áreas familiares y maduras, o si representan verdaderas oportunidades de crecimiento.",
+      "texto_nuevo": "Antes de generar ideas de nuevos productos, define tus arenas estratégicas: los mercados, sectores, tecnologías o tipos de producto donde concentrarás tu esfuerzo de innovación. Sin arenas claras, la búsqueda de ideas se dispersa y tu cartera de proyectos probablemente termine llena de iniciativas no relacionadas y poco rentables. El principio de concentración de fuerzas indica que es mejor enfocarse en pocas áreas bien elegidas que dispersarse en muchas. El proceso implica primero divergir, identificando muchas arenas potenciales, y luego converger, eligiendo las mejores apuestas. Evita definiciones demasiado amplias y opta por segmentos específicos. Revisa si tus arenas actuales son solo áreas familiares y maduras, o si representan verdaderas oportunidades de crecimiento.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7893",
+        "frase": "the project portfolio for new products is likely to accumulate a lot of unrelated projects"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la cartera probablemente acumule proyectos no relacionados; el nodo lo da por seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

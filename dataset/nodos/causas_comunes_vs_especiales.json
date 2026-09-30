@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Causas Comunes vs Causas Especiales de Variación",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas (se estima que alrededor del 94%); son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+  "resumen_teorico": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas (se estima que alrededor del 94%); son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: tratar como algo puntual una variación que es del sistema y ajustar de más, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
   "pasos_accionables": [
     "Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes",
     "Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos",
-    "Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales",
+    "Aplicar reglas simples, fijadas de antemano (como un punto fuera de los límites o una corrida de siete u ocho puntos por encima o por debajo del promedio), para detectar posibles causas especiales",
     "Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla",
     "Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas",
     "Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales",
@@ -232,6 +232,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-064-causas_comunes_vs_especiales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas (se estima que alrededor del 94%); son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+      "texto_nuevo": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas (se estima que alrededor del 94%); son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: tratar como algo puntual una variación que es del sistema y ajustar de más, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7388-7394",
+        "frase": "a special cause when in fact the cause belongs to the system (common causes)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En el libro el sobreajuste es atribuir a una causa especial lo que es del sistema; el nodo lo describe al revés, como cambiar el sistema por algo puntual.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-064-causas_comunes_vs_especiales-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales",
+      "texto_nuevo": "Aplicar reglas simples, fijadas de antemano (como un punto fuera de los límites o una corrida de siete u ocho puntos por encima o por debajo del promedio), para detectar posibles causas especiales",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7225, 7443-7445",
+        "frase": "It is necessary to state in advance what the rules are"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro exige fijar de antemano las reglas, porque con el gráfico en la mano siempre se inventa un patrón.; El libro no pide puntos consecutivos fuera de límite: basta un punto fuera de los límites, o una corrida de siete u ocho puntos por encima o por debajo del promedio.; Mismo defecto que la marca 1: se cae que las reglas se fijan de antemano.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

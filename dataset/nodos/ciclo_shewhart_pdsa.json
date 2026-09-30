@@ -10,7 +10,7 @@
     "Llevar a cabo el cambio o prueba, preferiblemente a pequeña escala (Do)",
     "Estudiar los resultados obtenidos y comparar con lo esperado (Study)",
     "Actuar: adoptar, adaptar o abandonar el cambio según los resultados obtenidos (Act)",
-    "Repetir el ciclo bajo condiciones ambientales diferentes para confirmar la validez de los resultados"
+    "Si los resultados son favorables, repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados"
   ],
   "entregable_esperado": "Un registro documentado de al menos un ciclo PDSA completo aplicado a una etapa de proceso, incluyendo hipótesis, datos y conclusiones",
   "nodos_previos": [
@@ -45,5 +45,24 @@
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-064-ciclo_shewhart_pdsa-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repetir el ciclo bajo condiciones ambientales diferentes para confirmar la validez de los resultados",
+      "texto_nuevo": "Si los resultados son favorables, repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1877",
+        "frase": "favorable, we may decide to go through the cycle again, preferably under different environmental conditions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro repite el ciclo solo si los resultados del primero son favorables; el paso pierde esa condición.; Mismo defecto: se cae la condición de resultados favorables.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

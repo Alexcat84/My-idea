@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "No Repetir el Mismo Enfoque tras un Fracaso de Proyecto",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. El equipo está desmoralizado y requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.",
+  "resumen_teorico": "Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. Es probable que el equipo esté desmoralizado y no responda sin cambios de fondo; requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.",
   "pasos_accionables": [
     "Realizar un análisis post-mortem detallado del proyecto fallido",
     "Identificar causas raíz específicas, no solo síntomas",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Cambia de Enfoque tras Fallar",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-063-rediseno_tras_fracaso_proyecto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. El equipo está desmoralizado y requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.",
+      "texto_nuevo": "Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. Es probable que el equipo esté desmoralizado y no responda sin cambios de fondo; requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4513",
+        "frase": "People are probably demoralized after the first failure"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la gente probablemente está desmoralizada; el nodo lo afirma como hecho.; Mismo defecto: endurece el 'probably' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -10,7 +10,7 @@
     "Identificar y medir características de calidad de servicio (precisión, rapidez, confiabilidad de entrega)",
     "Concientizar a los empleados de servicio de que su trabajo constituye un producto que impacta al cliente",
     "Establecer procedimientos definidos y actualizados, ya que su ausencia es fuente común de errores",
-    "Calcular el costo real de corregir errores en las distintas etapas del proceso de servicio"
+    "Calcular el costo de corregir errores en las distintas etapas del proceso de servicio, sabiendo que crece cuanto más avanza el error y que el costo del que llega al cliente nadie lo conoce"
   ],
   "entregable_esperado": "Diagnóstico de calidad de servicio con procedimientos documentados y plan de mejora",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Aplica Calidad a tus Servicios",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-064-calidad_del_servicio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el costo real de corregir errores en las distintas etapas del proceso de servicio",
+      "texto_nuevo": "Calcular el costo de corregir errores en las distintas etapas del proceso de servicio, sabiendo que crece cuanto más avanza el error y que el costo del que llega al cliente nadie lo conoce",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4210",
+        "frase": "The further a mistake goes without correction, the greater the cost to correct it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el costo crece cuanto más avanza el error y que el del defecto que llega al cliente nadie lo conoce; el paso lo da por calculable del todo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

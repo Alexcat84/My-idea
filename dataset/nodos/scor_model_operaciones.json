@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Modelo SCOR: Marco de Operaciones de Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) es un marco estandarizado y reconocido mundialmente para analizar y mejorar el desempeño de la cadena de suministro. Organiza las operaciones en seis procesos de alto nivel: Planificar, Abastecer, Fabricar, Entregar, Devolver y Habilitar. Provee un lenguaje común, métricas estándar (KPIs de confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos) y permite benchmarking entre empresas. La versión más reciente, SCOR DS, incorpora resiliencia, sostenibilidad y procesos digitales.",
+  "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) es un marco estandarizado y reconocido mundialmente para analizar y mejorar el desempeño de la cadena de suministro. Organiza las operaciones en seis procesos de alto nivel: Planificar, Abastecer, Fabricar, Entregar, Devolver y Habilitar. Provee un lenguaje común, métricas estándar (KPIs de confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos) y permite benchmarking entre empresas. La versión más reciente, SCOR DS, incorpora resiliencia, sostenibilidad y procesos digitales. Su contra es la complejidad creciente: cuesta más entenderlo y adaptarlo, y pide más datos y capacitación.",
   "pasos_accionables": [
     "Mapear las operaciones actuales de tu empresa según las categorías Plan-Source-Make-Deliver (y Return/Enable si aplica)",
-    "Definir métricas KPI de nivel 1 para cada categoría (confiabilidad, agilidad, costo)",
+    "Definir métricas KPI de nivel 1 para la cadena en su conjunto (confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos), sin confundirlas con las categorías de proceso: los niveles 2 y 3 son los que desglosan esos KPI",
     "Comparar (benchmark) tu desempeño contra estándares de la industria",
     "Identificar cuellos de botella u operaciones no optimizadas usando el marco común",
     "Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de retorno)",
@@ -84,6 +84,39 @@
         "evidencia": "Q100-021: Tenía razón el lector B: los dos coinciden en que la fase es ejecución porque el nodo mapea, mide y compara operaciones que ya están activas, pero la condición 3 activaría el nodo ante cualquier problema recurrente, y el marco SCOR solo cubre los de la cadena de suministro. (arbitro)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-063-scor_model_operaciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Definir métricas KPI de nivel 1 para cada categoría (confiabilidad, agilidad, costo)",
+      "texto_nuevo": "Definir métricas KPI de nivel 1 para la cadena en su conjunto (confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos), sin confundirlas con las categorías de proceso: los niveles 2 y 3 son los que desglosan esos KPI",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "659-661",
+        "frase": "level-one metrics are not designed to measure level-one processes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, matiz; doble lectura ciega y arbitro): El libro advierte que las métricas de nivel 1 no están hechas para medir los procesos de nivel 1; el paso las asigna a cada categoría de proceso.; El libro incluye capacidad de respuesta y gestión de activos entre los atributos que miden los KPI.; Mismo defecto que la marca 0: confunde la jerarquía de métricas con la de procesos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-scor_model_operaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El modelo SCOR (Supply Chain Operations Reference) es un marco estandarizado y reconocido mundialmente para analizar y mejorar el desempeño de la cadena de suministro. Organiza las operaciones en seis procesos de alto nivel: Planificar, Abastecer, Fabricar, Entregar, Devolver y Habilitar. Provee un lenguaje común, métricas estándar (KPIs de confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos) y permite benchmarking entre empresas. La versión más reciente, SCOR DS, incorpora resiliencia, sostenibilidad y procesos digitales.",
+      "texto_nuevo": "El modelo SCOR (Supply Chain Operations Reference) es un marco estandarizado y reconocido mundialmente para analizar y mejorar el desempeño de la cadena de suministro. Organiza las operaciones en seis procesos de alto nivel: Planificar, Abastecer, Fabricar, Entregar, Devolver y Habilitar. Provee un lenguaje común, métricas estándar (KPIs de confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos) y permite benchmarking entre empresas. La versión más reciente, SCOR DS, incorpora resiliencia, sostenibilidad y procesos digitales. Su contra es la complejidad creciente: cuesta más entenderlo y adaptarlo, y pide más datos y capacitación.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "568",
+        "frase": "Disadvantages of the SCOR model come from its increasing complexity."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala como límite del modelo su complejidad creciente, que lo hace más difícil de entender y adaptar y exige más datos y capacitación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

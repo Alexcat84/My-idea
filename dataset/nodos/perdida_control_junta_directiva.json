@@ -7,7 +7,7 @@
   "resumen_teorico": "A medida que avanzas en rondas de financiamiento, vas perdiendo representación en la junta directiva (de 34% tras la ronda A a 21% tras la ronda B), mientras los inversionistas externos ganan mayoría. Esto puede limitar tu capacidad, como fundador que también dirige el negocio, para cambiar de rumbo o tomar decisiones por tu cuenta, generando tensión entre necesitar orden en las decisiones y necesitar agilidad para moverte.",
   "pasos_accionables": [
     "Negocia que tu asiento en la junta esté ligado a ser fundador (founder seat) y no solo a ser director general (CEO seat), para asegurar tu lugar aunque cambien los roles.",
-    "Establece con claridad qué decisiones estratégicas críticas necesitan mayorías especiales antes de aprobarse.",
+    "Revisa qué decisiones quedan sujetas a mayorías especiales o derechos de veto de los inversionistas, porque pueden darles más control del que indica su participación.",
     "Anticipa que perder algo de control es parte del costo de recibir capital, y piensa desde ahora qué papel quieres jugar cuando eso pase."
   ],
   "entregable_esperado": "Un acuerdo de gobierno de la junta con protecciones concretas para que mantengas representación como fundador.",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Cuida tu Poder en la Junta",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-perdida_control_junta_directiva-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece con claridad qué decisiones estratégicas críticas necesitan mayorías especiales antes de aprobarse.",
+      "texto_nuevo": "Revisa qué decisiones quedan sujetas a mayorías especiales o derechos de veto de los inversionistas, porque pueden darles más control del que indica su participación.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2926",
+        "frase": "supermajority or veto terms can give them greater control rights"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no recomienda al fundador fijar mayorías especiales; las describe como derechos que negocian los inversionistas y les dan más control.; Mismo defecto que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

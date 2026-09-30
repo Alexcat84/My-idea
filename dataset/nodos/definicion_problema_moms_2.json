@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Definición y Selección del Problema (Criterios MOMS)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Fase inicial del proceso de Análisis de Causa Raíz y Acción Correctiva (RCCA) que consiste en seleccionar el problema más relevante mediante datos y análisis de Pareto, y redactar un enunciado de problema claro utilizando el acrónimo MOMS: Medible, Observable, Manejable y Específico. El enunciado no debe incluir implicaciones de causa, culpa o soluciones sugeridas.",
+  "resumen_teorico": "Fase inicial del proceso de Análisis de Causa Raíz y Acción Correctiva (RCCA) que consiste en seleccionar el problema más relevante mediante datos y análisis de Pareto, y redactar un enunciado de problema claro utilizando el acrónimo MOMS: Medible, Observable, Manejable y Específico. El enunciado no debe incluir implicaciones de causa, culpa o soluciones sugeridas. Si es crónico y no esporádico, considera métodos de mejora de avance.",
   "pasos_accionables": [
     "Recolectar datos e información sobre problemas potenciales.",
     "Aplicar análisis de Pareto para identificar los problemas más importantes.",
@@ -52,6 +52,22 @@
         "evidencia": "F20-010: Es el primer paso de un analisis de causa raiz y accion correctiva ante problemas de calidad recurrentes en la operacion; es mejora operativa. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-063-definicion_problema_moms_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fase inicial del proceso de Análisis de Causa Raíz y Acción Correctiva (RCCA) que consiste en seleccionar el problema más relevante mediante datos y análisis de Pareto, y redactar un enunciado de problema claro utilizando el acrónimo MOMS: Medible, Observable, Manejable y Específico. El enunciado no debe incluir implicaciones de causa, culpa o soluciones sugeridas.",
+      "texto_nuevo": "Fase inicial del proceso de Análisis de Causa Raíz y Acción Correctiva (RCCA) que consiste en seleccionar el problema más relevante mediante datos y análisis de Pareto, y redactar un enunciado de problema claro utilizando el acrónimo MOMS: Medible, Observable, Manejable y Específico. El enunciado no debe incluir implicaciones de causa, culpa o soluciones sugeridas. Si es crónico y no esporádico, considera métodos de mejora de avance.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15198; 15319",
+        "frase": "sporadic or chronic (if the latter, apply breakthrough methods)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Definir el problema incluye distinguir si es esporádico o crónico; si es crónico, el libro remite a métodos de mejora de avance.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

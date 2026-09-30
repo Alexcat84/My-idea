@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Decisión de Conformidad del Producto",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es el juicio operativo mediante el cual inspectores o trabajadores de producción determinan si un producto cumple con las especificaciones establecidas. Dado el volumen de decisiones diarias, esta responsabilidad se delega a inspectores entrenados o instrumentos automatizados, quienes identifican el producto conforme ('stamp it up') para que continúe su flujo hacia el siguiente destino.",
+  "resumen_teorico": "Es el juicio operativo mediante el cual inspectores o trabajadores de producción determinan si un producto cumple con las especificaciones establecidas. Salvo en empresas pequeñas, dado el volumen de decisiones diarias, esta responsabilidad se delega a inspectores entrenados o instrumentos automatizados, quienes identifican el producto conforme ('stamp it up') para que continúe su flujo hacia el siguiente destino.",
   "pasos_accionables": [
     "Entrenar a inspectores y operadores en el conocimiento de productos, estándares e instrumentos.",
     "Delegar la autoridad de juicio de conformidad a inspectores o sistemas automatizados.",
@@ -40,6 +40,22 @@
         "motivo": "Tiene razon B: el nucleo trata del diseno de la operacion (enfoque de producto o funcional de la fabrica, metodo de almacen); la decision de conformidad de un producto inspeccionado es un acto puntual de inspeccion que no lo continua, y la unica mencion de calidad en el programa maestro es una palabra suelta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-063-decision_conformidad_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es el juicio operativo mediante el cual inspectores o trabajadores de producción determinan si un producto cumple con las especificaciones establecidas. Dado el volumen de decisiones diarias, esta responsabilidad se delega a inspectores entrenados o instrumentos automatizados, quienes identifican el producto conforme ('stamp it up') para que continúe su flujo hacia el siguiente destino.",
+      "texto_nuevo": "Es el juicio operativo mediante el cual inspectores o trabajadores de producción determinan si un producto cumple con las especificaciones establecidas. Salvo en empresas pequeñas, dado el volumen de decisiones diarias, esta responsabilidad se delega a inspectores entrenados o instrumentos automatizados, quienes identifican el producto conforme ('stamp it up') para que continúe su flujo hacia el siguiente destino.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24389",
+        "frase": "Except in small companies, the number of conformance decisions made each year is huge."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa a las empresas pequeñas del volumen enorme que obliga a delegar.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

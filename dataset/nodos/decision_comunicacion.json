@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Decisión de Comunicación sobre No Conformidades",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Involucra decidir qué información comunicar a clientes (outsiders) y a empleados internos (insiders) cuando se envía un producto no conforme como apto para el uso. La falta de comunicación puede generar desconfianza en clientes o desmotivación en inspectores y operarios que perciben que sus reportes no tienen efecto.",
+  "resumen_teorico": "Involucra decidir qué información comunicar a clientes (outsiders) y a empleados internos (insiders) cuando se envía un producto no conforme como apto para el uso. Los clientes tienen derecho y necesidad de saberlo; y dentro, la falta de comunicación puede generar desmotivación en inspectores y operarios que perciben que sus reportes no tienen efecto.",
   "pasos_accionables": [
     "Diseñar formularios que obliguen a decidir qué comunicar a clientes y empleados.",
     "Establecer un protocolo de notificación a clientes cuando se envían productos no conformes.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Decide qué Comunicar sobre Fallas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-063-decision_comunicacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Involucra decidir qué información comunicar a clientes (outsiders) y a empleados internos (insiders) cuando se envía un producto no conforme como apto para el uso. La falta de comunicación puede generar desconfianza en clientes o desmotivación en inspectores y operarios que perciben que sus reportes no tienen efecto.",
+      "texto_nuevo": "Involucra decidir qué información comunicar a clientes (outsiders) y a empleados internos (insiders) cuando se envía un producto no conforme como apto para el uso. Los clientes tienen derecho y necesidad de saberlo; y dentro, la falta de comunicación puede generar desmotivación en inspectores y operarios que perciben que sus reportes no tienen efecto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24437-24439",
+        "frase": "(Usually customers) who have a right and a need to know."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye desconfianza del cliente a la falta de comunicación; dice que el cliente tiene derecho y necesidad de saber.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

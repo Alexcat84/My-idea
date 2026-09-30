@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Redactar la meta del proyecto especificando qué se hará y cuándo",
     "Verificar que la meta sea medible definiendo indicadores de calidad, cantidad, costo y tiempo",
-    "Validar que la meta sea realista pero desafiante",
+    "Validar que la meta sea realista: puede ser exigente, pero debe ser plausible",
     "Obtener acuerdo de todos los afectados sobre la meta final"
   ],
   "entregable_esperado": "Enunciado de meta de proyecto redactado en formato SMART, validado por el equipo y stakeholders",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Fija Metas Claras y Medibles",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-063-definir_metas_smart_de_proyecto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar que la meta sea realista pero desafiante",
+      "texto_nuevo": "Validar que la meta sea realista: puede ser exigente, pero debe ser plausible",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3467",
+        "frase": "it can be a stretch, but it must be plausible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro permite que la meta sea exigente pero solo exige que sea plausible; 'desafiante' la endurece.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

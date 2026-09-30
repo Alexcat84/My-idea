@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis del Flujo de Valor (Value-Stream Analysis)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Técnica de manufactura esbelta aplicada a tu proceso de innovación para separar lo que agrega valor al cliente de lo que es puro desperdicio: papeleo, aprobaciones redundantes, esperas y retrabajos. En vez de mapear el proceso ideal, documentas cómo funciona realmente tu desarrollo, etapa por etapa, con tiempos típicos, y comparas ambas versiones. Cada actividad se somete a preguntas simples: qué trabajo implica, cuánto tarda, si es necesaria y cómo acelerarla. El fin es reducir el ciclo de idea a lanzamiento eliminando entregables excesivos y templates sobrecargados, por ejemplo recortando documentos extensos a lo esencial, y resolviendo cuellos de botella mediante análisis de causa raíz para llegar más rápido al mercado.",
+  "resumen_teorico": "Técnica de manufactura esbelta aplicada a tu proceso de innovación para separar lo que agrega valor al cliente de lo que es puro desperdicio: papeleo, aprobaciones redundantes, esperas y retrabajos. En vez de mapear el proceso ideal, documentas cómo funciona realmente tu desarrollo, etapa por etapa, con tiempos típicos, y comparas ambas versiones. Cada actividad se somete a preguntas simples: qué trabajo implica, qué tan bien se ejecuta, cuánto tarda, si es necesaria y cómo mejorarla y acelerarla. El fin es reducir el ciclo de idea a lanzamiento eliminando entregables excesivos y templates sobrecargados, por ejemplo recortando documentos extensos a lo esencial, y resolviendo cuellos de botella mediante análisis de causa raíz para llegar más rápido al mercado.",
   "pasos_accionables": [
     "Mapea en un documento o papel todas las etapas, decisiones y actividades reales de tu proceso de desarrollo, con tiempos típicos, sin idealizar",
     "Compara cómo crees que funciona tu proceso versus cómo funciona realmente en la práctica",
@@ -48,5 +48,23 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-analisis_flujo_de_valor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica de manufactura esbelta aplicada a tu proceso de innovación para separar lo que agrega valor al cliente de lo que es puro desperdicio: papeleo, aprobaciones redundantes, esperas y retrabajos. En vez de mapear el proceso ideal, documentas cómo funciona realmente tu desarrollo, etapa por etapa, con tiempos típicos, y comparas ambas versiones. Cada actividad se somete a preguntas simples: qué trabajo implica, cuánto tarda, si es necesaria y cómo acelerarla. El fin es reducir el ciclo de idea a lanzamiento eliminando entregables excesivos y templates sobrecargados, por ejemplo recortando documentos extensos a lo esencial, y resolviendo cuellos de botella mediante análisis de causa raíz para llegar más rápido al mercado.",
+      "texto_nuevo": "Técnica de manufactura esbelta aplicada a tu proceso de innovación para separar lo que agrega valor al cliente de lo que es puro desperdicio: papeleo, aprobaciones redundantes, esperas y retrabajos. En vez de mapear el proceso ideal, documentas cómo funciona realmente tu desarrollo, etapa por etapa, con tiempos típicos, y comparas ambas versiones. Cada actividad se somete a preguntas simples: qué trabajo implica, qué tan bien se ejecuta, cuánto tarda, si es necesaria y cómo mejorarla y acelerarla. El fin es reducir el ciclo de idea a lanzamiento eliminando entregables excesivos y templates sobrecargados, por ejemplo recortando documentos extensos a lo esencial, y resolviendo cuellos de botella mediante análisis de causa raíz para llegar más rápido al mercado.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4053-4057",
+        "frase": "How well do we execute this activity? ... how can it be made better?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las cuatro preguntas del libro se caen qué tan bien se ejecuta y cómo hacerla mejor.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

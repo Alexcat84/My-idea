@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Sistema Triple A (Adaptativo, Ágil, Acelerado)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Evolución del proceso Stage-Gate tradicional hacia un sistema de nueva generación que es Adaptativo y Flexible (se ajusta a circunstancias cambiantes mediante desarrollo en espiral), Ágil (incorpora sprints y scrums del desarrollo de software) y Acelerado (elimina burocracia, solapa actividades y etapas, y agudiza el 'fuzzy front end'). Responde a críticas de que Stage-Gate es demasiado lineal, rígido y burocrático para proyectos innovadores en mercados impredecibles.",
+  "resumen_teorico": "Evolución del Stage-Gate tradicional hacia un sistema de nueva generación que es Adaptativo y Flexible (se ajusta a circunstancias cambiantes mediante desarrollo en espiral y adapta actividades y entregables a cada proyecto), Ágil (incorpora sprints y scrums del desarrollo de software) y Acelerado (con recursos y equipo multifuncional dedicado, elimina burocracia, solapa actividades y etapas, y agudiza el 'fuzzy front end'). Responde a críticas de que Stage-Gate es demasiado lineal, rígido y burocrático para proyectos innovadores en mercados impredecibles.",
   "pasos_accionables": [
     "Evaluar si el sistema actual de innovación es demasiado rígido o lineal para el contexto actual",
     "Incorporar ciclos de desarrollo en espiral (build-test-feedback-revise) en el plan de desarrollo",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Vuelve tu Proceso Ágil y Veloz",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-sistema_triple_a_stage_gate-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evolución del proceso Stage-Gate tradicional hacia un sistema de nueva generación que es Adaptativo y Flexible (se ajusta a circunstancias cambiantes mediante desarrollo en espiral), Ágil (incorpora sprints y scrums del desarrollo de software) y Acelerado (elimina burocracia, solapa actividades y etapas, y agudiza el 'fuzzy front end'). Responde a críticas de que Stage-Gate es demasiado lineal, rígido y burocrático para proyectos innovadores en mercados impredecibles.",
+      "texto_nuevo": "Evolución del Stage-Gate tradicional hacia un sistema de nueva generación que es Adaptativo y Flexible (se ajusta a circunstancias cambiantes mediante desarrollo en espiral y adapta actividades y entregables a cada proyecto), Ágil (incorpora sprints y scrums del desarrollo de software) y Acelerado (con recursos y equipo multifuncional dedicado, elimina burocracia, solapa actividades y etapas, y agudiza el 'fuzzy front end'). Responde a críticas de que Stage-Gate es demasiado lineal, rígido y burocrático para proyectos innovadores en mercados impredecibles.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3573",
+        "frase": "properly resourced, especially major projects, and fully staffed by a dedicated cross-functional team"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Lo flexible en el libro es adaptar actividades y entregables a cada proyecto y su riesgo, no solo la espiral.; Mismo defecto que la marca 1.; Se cae la base de lo acelerado: proyectos con recursos y un equipo multifuncional dedicado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

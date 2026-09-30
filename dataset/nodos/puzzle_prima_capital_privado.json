@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Por qué fundar rara vez te hace más rico (la prima de capital privado ausente)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Aunque se asume que al fundar buscas maximizar tu ganancia financiera, la evidencia muestra que, en promedio, ganas igual o menos que si hubieras invertido en mercados públicos o trabajado en un empleo tradicional (hasta un 35% menos en 10 años). Esto sugiere que lo que realmente te mueve al fundar no es solo la riqueza, sino también el control, y que si eliges quedarte con el control ('King'), sacrificas riqueza potencial de forma sistemática.",
+  "resumen_teorico": "Aunque se asume que al fundar buscas maximizar tu ganancia financiera, la evidencia muestra que, en promedio, ganas igual o menos que si hubieras invertido en mercados públicos o trabajado en un empleo tradicional (en conjunto, un 35% menos en 10 años que en un empleo). Esto sugiere que lo que realmente te mueve al fundar no es solo la riqueza, sino también el control, y que si eliges quedarte con el control ('King'), sacrificas riqueza potencial de forma sistemática.",
   "pasos_accionables": [
     "Cuestiona la suposición de que fundar te garantiza mayor retorno financiero que un empleo tradicional.",
     "Evalúa si tus decisiones están priorizando el control por encima de maximizar el valor financiero.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Cuestiona tu Prima Esperada",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-puzzle_prima_capital_privado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aunque se asume que al fundar buscas maximizar tu ganancia financiera, la evidencia muestra que, en promedio, ganas igual o menos que si hubieras invertido en mercados públicos o trabajado en un empleo tradicional (hasta un 35% menos en 10 años). Esto sugiere que lo que realmente te mueve al fundar no es solo la riqueza, sino también el control, y que si eliges quedarte con el control ('King'), sacrificas riqueza potencial de forma sistemática.",
+      "texto_nuevo": "Aunque se asume que al fundar buscas maximizar tu ganancia financiera, la evidencia muestra que, en promedio, ganas igual o menos que si hubieras invertido en mercados públicos o trabajado en un empleo tradicional (en conjunto, un 35% menos en 10 años que en un empleo). Esto sugiere que lo que realmente te mueve al fundar no es solo la riqueza, sino también el control, y que si eliges quedarte con el control ('King'), sacrificas riqueza potencial de forma sistemática.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "144",
+        "frase": "All told, entrepreneurs earned 35% less over a 10-year period"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el 35% como lo que ganaron de menos en 10 años frente a un empleo, no como tope; 'hasta' cambia la cifra.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

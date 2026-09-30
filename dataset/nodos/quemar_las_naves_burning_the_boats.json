@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "'Quemar las Naves' (Burning the Boats) como Motivador de Persistencia",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Fenómeno en el que un fundador, al aceptar dinero de amigos y familia, se compromete emocionalmente de tal forma que no puede darse el lujo de abandonar el proyecto, incluso cuando la lógica de negocio sugeriría hacerlo. Puede actuar como motivador poderoso para superar momentos difíciles ('roller coaster' emprendedor), pero también puede llevar a decisiones irracionales o aversión al riesgo excesiva, y ser visto como 'suicidio emprendedor' si compromete el bienestar personal y familiar del fundador.",
+  "resumen_teorico": "Fenómeno en el que un fundador, al aceptar dinero de amigos y familia, se compromete emocionalmente de tal forma que no puede darse el lujo de abandonar el proyecto, incluso cuando la lógica de negocio sugeriría hacerlo. Puede actuar como motivador poderoso para superar momentos difíciles ('roller coaster' emprendedor), pero también puede llevar a decisiones irracionales o a más aversión al riesgo y a vender por menos, algo que algunos fundadores prefieren, y ser visto como 'suicidio emprendedor' si compromete el bienestar personal y familiar del fundador.",
   "pasos_accionables": [
     "Reflexionar honestamente si la motivación para continuar es estratégica o solo emocional/social",
     "Definir de antemano criterios objetivos de éxito/fracaso (pivotar o perseverar)",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Quema tus Naves y Persiste",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-quemar_las_naves_burning_the_boats-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fenómeno en el que un fundador, al aceptar dinero de amigos y familia, se compromete emocionalmente de tal forma que no puede darse el lujo de abandonar el proyecto, incluso cuando la lógica de negocio sugeriría hacerlo. Puede actuar como motivador poderoso para superar momentos difíciles ('roller coaster' emprendedor), pero también puede llevar a decisiones irracionales o aversión al riesgo excesiva, y ser visto como 'suicidio emprendedor' si compromete el bienestar personal y familiar del fundador.",
+      "texto_nuevo": "Fenómeno en el que un fundador, al aceptar dinero de amigos y familia, se compromete emocionalmente de tal forma que no puede darse el lujo de abandonar el proyecto, incluso cuando la lógica de negocio sugeriría hacerlo. Puede actuar como motivador poderoso para superar momentos difíciles ('roller coaster' emprendedor), pero también puede llevar a decisiones irracionales o a más aversión al riesgo y a vender por menos, algo que algunos fundadores prefieren, y ser visto como 'suicidio emprendedor' si compromete el bienestar personal y familiar del fundador.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2704",
+        "frase": "Founders who prefer a higher-probability small exit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede volverlo más averso al riesgo y vender por menos, y que algunos lo verían como algo bueno; 'excesiva' añade un juicio.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

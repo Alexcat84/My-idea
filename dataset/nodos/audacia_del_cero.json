@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "La audacia del cero (la paradoja de los números pequeños)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Hay una trampa peligrosa: te resulta más fácil conseguir apoyo, inversión y confianza cuando todavía tienes cero clientes y cero datos, porque ahí todos pueden imaginar un éxito futuro sin límite. En cambio, cuando ya tienes números reales pero pequeños, esos mismos números invitan a dudar de si algún día crecerán. Esto te empuja a un incentivo peligroso: posponer el lanzamiento y posponer medir datos reales hasta sentirte seguro del éxito, lo cual aumenta el riesgo de que trabajes meses en algo que nadie quiere.",
+  "resumen_teorico": "Hay una trampa peligrosa: a menudo te resulta más fácil conseguir apoyo, inversión y confianza cuando todavía tienes cero clientes y cero datos, porque ahí todos pueden imaginar un éxito futuro sin límite. En cambio, cuando ya tienes números reales pero pequeños, esos mismos números invitan a dudar de si algún día crecerán. Esto te empuja a un incentivo peligroso: posponer el lanzamiento y posponer medir datos reales hasta sentirte seguro del éxito, lo cual aumenta el riesgo de que construyas algo que nadie quiere. Lanzar y esperar tampoco basta: te protege el aprendizaje validado, no las métricas de vanidad.",
   "pasos_accionables": [
-    "Anticipa que vas a perder algo de confianza (la tuya, la de quien te apoya) apenas aparezcan números pequeños pero reales",
+    "Anticipa que puedes perder algo de confianza (la tuya, la de quien te apoya) apenas aparezcan números pequeños pero reales",
     "Prepara de antemano una explicación clara de cómo piensas pasar de números pequeños a números grandes, apoyada en lo que ya validaste",
     "Resiste la tentación de volver a esconder tu producto o sacarlo del mercado solo porque las primeras métricas son bajas",
     "Usa esos números pequeños como punto de partida para medir si cada cambio que haces mejora las cosas o no",
@@ -42,6 +42,39 @@
         "motivo": "La trampa de los numeros pequeños al buscar apoyo o inversion no es un paso natural despues de preparar la reunion de presentacion del problema. La correccion del entregable (50 clientes) no la sostenia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-066-audacia_del_cero-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hay una trampa peligrosa: te resulta más fácil conseguir apoyo, inversión y confianza cuando todavía tienes cero clientes y cero datos, porque ahí todos pueden imaginar un éxito futuro sin límite. En cambio, cuando ya tienes números reales pero pequeños, esos mismos números invitan a dudar de si algún día crecerán. Esto te empuja a un incentivo peligroso: posponer el lanzamiento y posponer medir datos reales hasta sentirte seguro del éxito, lo cual aumenta el riesgo de que trabajes meses en algo que nadie quiere.",
+      "texto_nuevo": "Hay una trampa peligrosa: a menudo te resulta más fácil conseguir apoyo, inversión y confianza cuando todavía tienes cero clientes y cero datos, porque ahí todos pueden imaginar un éxito futuro sin límite. En cambio, cuando ya tienes números reales pero pequeños, esos mismos números invitan a dudar de si algún día crecerán. Esto te empuja a un incentivo peligroso: posponer el lanzamiento y posponer medir datos reales hasta sentirte seguro del éxito, lo cual aumenta el riesgo de que construyas algo que nadie quiere. Lanzar y esperar tampoco basta: te protege el aprendizaje validado, no las métricas de vanidad.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "595",
+        "frase": "it is often easier to raise money or acquire other resources when you have zero"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Añade el plazo 'meses'; el libro habla del riesgo de construir algo que nadie quiere.; Endurece el 'often easier' del libro.; Mismo defecto que la marca 0.; Se cae que lanzar y esperar lo mejor tampoco sirve y que el remedio es el aprendizaje validado sin métricas de vanidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-066-audacia_del_cero-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipa que vas a perder algo de confianza (la tuya, la de quien te apoya) apenas aparezcan números pequeños pero reales",
+      "texto_nuevo": "Anticipa que puedes perder algo de confianza (la tuya, la de quien te apoya) apenas aparezcan números pequeños pero reales",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "599",
+        "frase": "some began to lose faith, as did some of our advisers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro cuenta que algunos perdieron la fe, no que ocurra con certeza.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

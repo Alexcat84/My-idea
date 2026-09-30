@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Método de Debriefing de Participantes (Klein)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Gary Klein desarrolló un método estructurado de debriefing para reconstruir la situación tal como la vivieron los participantes de un incidente. El orden propuesto es: 1) dejar que cuenten la historia con sus propias palabras sin recordatorios que distorsionen la memoria; 2) el investigador repite la historia para verificar comprensión; 3) identificar junto con los participantes los puntos críticos de la secuencia; 4) profundizar en cada punto crítico preguntando sobre señales observadas, conocimiento usado, expectativas, metas y opciones percibidas. Las discrepancias entre relatos no son un obstáculo sino datos valiosos sobre cómo diferentes personas percibieron la situación.",
+  "resumen_teorico": "Gary Klein desarrolló un método estructurado de debriefing para reconstruir la situación tal como la vivieron los participantes de un incidente. El orden propuesto es: 1) dejar que cuenten la historia con sus propias palabras sin recordatorios que distorsionen la memoria; 2) el investigador repite la historia para verificar comprensión; 3) identificar junto con los participantes los puntos críticos de la secuencia; 4) profundizar en cada punto crítico preguntando sobre señales observadas, conocimiento usado, expectativas, metas, opciones percibidas y otras influencias operativas u organizacionales que moldearon cómo interpretaron la situación. Las discrepancias entre relatos no son un obstáculo sino datos valiosos sobre cómo diferentes personas percibieron la situación.",
   "pasos_accionables": [
     "Pedir a cada participante que narre los hechos con sus propias palabras, sin repeticiones de grabaciones previas",
     "Repetir la historia al participante para confirmar que se entendió correctamente",
     "Identificar junto con el participante los puntos críticos (junctures) de la secuencia",
-    "En cada punto crítico, preguntar sobre señales observadas, expectativas, metas, opciones consideradas y experiencia previa",
-    "Documentar explícitamente las discrepancias entre relatos de distintos participantes como datos adicionales"
+    "En cada punto crítico, preguntar sobre señales observadas, expectativas, metas, opciones consideradas, experiencia previa y qué otras influencias operativas u organizacionales moldearon su interpretación y su acción; en esta etapa sí conviene mostrar la grabación, si existe, para llenar vacíos o distinguir los datos disponibles de los que realmente observó",
+    "Documentar explícitamente las discrepancias entre relatos de distintos participantes como datos adicionales y, si una misma persona contradice lo que dijo antes, elegir qué versión usar en el análisis y explicar por qué"
   ],
   "entregable_esperado": "Transcripciones de debriefing estructuradas por puntos críticos, incluyendo discrepancias documentadas entre testigos",
   "nodos_previos": [
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Reconstruye lo Vivido en Equipo",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-debriefing_participantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Gary Klein desarrolló un método estructurado de debriefing para reconstruir la situación tal como la vivieron los participantes de un incidente. El orden propuesto es: 1) dejar que cuenten la historia con sus propias palabras sin recordatorios que distorsionen la memoria; 2) el investigador repite la historia para verificar comprensión; 3) identificar junto con los participantes los puntos críticos de la secuencia; 4) profundizar en cada punto crítico preguntando sobre señales observadas, conocimiento usado, expectativas, metas y opciones percibidas. Las discrepancias entre relatos no son un obstáculo sino datos valiosos sobre cómo diferentes personas percibieron la situación.",
+      "texto_nuevo": "Gary Klein desarrolló un método estructurado de debriefing para reconstruir la situación tal como la vivieron los participantes de un incidente. El orden propuesto es: 1) dejar que cuenten la historia con sus propias palabras sin recordatorios que distorsionen la memoria; 2) el investigador repite la historia para verificar comprensión; 3) identificar junto con los participantes los puntos críticos de la secuencia; 4) profundizar en cada punto crítico preguntando sobre señales observadas, conocimiento usado, expectativas, metas, opciones percibidas y otras influencias operativas u organizacionales que moldearon cómo interpretaron la situación. Las discrepancias entre relatos no son un obstáculo sino datos valiosos sobre cómo diferentes personas percibieron la situación.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1032",
+        "frase": "How did other influences (operational or organizational) help determine how they interpreted the situation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en cada punto crítico cómo otras influencias operativas u organizacionales moldearon interpretación y acción.; Mismo defecto: falta el cuarto elemento de la lista del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-065-debriefing_participantes-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En cada punto crítico, preguntar sobre señales observadas, expectativas, metas, opciones consideradas y experiencia previa",
+      "texto_nuevo": "En cada punto crítico, preguntar sobre señales observadas, expectativas, metas, opciones consideradas, experiencia previa y qué otras influencias operativas u organizacionales moldearon su interpretación y su acción; en esta etapa sí conviene mostrar la grabación, si existe, para llenar vacíos o distinguir los datos disponibles de los que realmente observó",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1022",
+        "frase": "Here it is appropriate to show a re-play (if available) to fill the gaps"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en esta etapa sí procede mostrar la grabación para llenar vacíos; el nodo solo recoge la prohibición inicial.; Falta indagar las otras influencias operativas u organizacionales que el libro pone en la lista de cada punto crítico.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-065-debriefing_participantes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar explícitamente las discrepancias entre relatos de distintos participantes como datos adicionales",
+      "texto_nuevo": "Documentar explícitamente las discrepancias entre relatos de distintos participantes como datos adicionales y, si una misma persona contradice lo que dijo antes, elegir qué versión usar en el análisis y explicar por qué",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1109",
+        "frase": "choose which version you want to rely on for your analysis and make explicit why"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que, si una misma persona contradice sus declaraciones previas, hay que elegir qué versión usar y explicar por qué.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

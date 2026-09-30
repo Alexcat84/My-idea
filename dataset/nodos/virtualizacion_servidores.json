@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Virtualización de Servidores",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La mayoría de los servidores operan solo entre 5-15% de su capacidad máxima debido al aprovisionamiento para picos de demanda. La virtualización permite ejecutar múltiples instancias de servidor en una sola máquina física, consolidando hasta 10 servidores en uno y mejorando la utilización hasta en un 85%, generando ahorros energéticos significativos.",
+  "resumen_teorico": "La mayoría de los servidores operan solo entre 5-15% de su capacidad máxima debido al aprovisionamiento para picos de demanda. La virtualización permite ejecutar múltiples instancias de servidor en una sola máquina física, consolidando hasta 10 servidores en uno y mejorando la utilización hasta en un 85%, con ahorros energéticos que pueden ser significativos.",
   "pasos_accionables": [
-    "Medir el nivel de utilización actual de los servidores físicos",
+    "Medir el consumo eléctrico y el nivel de utilización actual de los servidores físicos",
     "Implementar software de virtualización (ej. VMware)",
     "Consolidar múltiples servidores físicos en instancias virtuales",
     "Monitorear mejoras en utilización y ahorro energético resultante"
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Aprovecha Mejor tus Servidores",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-066-virtualizacion_servidores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mayoría de los servidores operan solo entre 5-15% de su capacidad máxima debido al aprovisionamiento para picos de demanda. La virtualización permite ejecutar múltiples instancias de servidor en una sola máquina física, consolidando hasta 10 servidores en uno y mejorando la utilización hasta en un 85%, generando ahorros energéticos significativos.",
+      "texto_nuevo": "La mayoría de los servidores operan solo entre 5-15% de su capacidad máxima debido al aprovisionamiento para picos de demanda. La virtualización permite ejecutar múltiples instancias de servidor en una sola máquina física, consolidando hasta 10 servidores en uno y mejorando la utilización hasta en un 85%, con ahorros energéticos que pueden ser significativos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3342",
+        "frase": "The savings from virtualization can be significant."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que los ahorros de la virtualización pueden ser significativos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-066-virtualizacion_servidores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir el nivel de utilización actual de los servidores físicos",
+      "texto_nuevo": "Medir el consumo eléctrico y el nivel de utilización actual de los servidores físicos",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3340",
+        "frase": "your first step is to measure the electricity draw of your servers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como primer paso medir el consumo eléctrico de los servidores, la línea base del ahorro que luego se monitorea.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

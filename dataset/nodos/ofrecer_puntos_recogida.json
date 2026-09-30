@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Ofrecer puntos de recogida en vez de entrega a domicilio",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Cuando el cliente no esta en casa, la entrega falla y el paquete regresa al vehículo o termina en un centro de distribución lejano, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaiven y reduce el costo de la ultima milla, porque el cliente decide cuando pasar a buscar su pedido. Esta opción también ayuda a que el impacto ambiental sea menor, siempre que el cliente recoja su pedido de camino a otro lugar y no haga un viaje exclusivo para eso. Cada vez mas negocios pequeños encuentran aliados locales, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+  "resumen_teorico": "Cuando el cliente no está en casa, la entrega falla y el paquete regresa al vehículo o termina en un centro de distribución lejano, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
   "pasos_accionables": [
     "Pregunta a couriers y negocios cercanos qué puntos de recogida tienen disponibles.",
     "Agrega la opción de recoger en tienda o en un punto aliado al finalizar la compra.",
@@ -175,6 +175,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-064-ofrecer_puntos_recogida-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el cliente no esta en casa, la entrega falla y el paquete regresa al vehículo o termina en un centro de distribución lejano, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaiven y reduce el costo de la ultima milla, porque el cliente decide cuando pasar a buscar su pedido. Esta opción también ayuda a que el impacto ambiental sea menor, siempre que el cliente recoja su pedido de camino a otro lugar y no haga un viaje exclusivo para eso. Cada vez mas negocios pequeños encuentran aliados locales, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+      "texto_nuevo": "Cuando el cliente no está en casa, la entrega falla y el paquete regresa al vehículo o termina en un centro de distribución lejano, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "234-236, 266",
+        "frase": "CnC obviates the need to deliver to customers' homes and therefore reduces costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Afirma una tendencia de negocios pequeños que el libro no menciona; solo nombra terceros como puntos de recogida.; El libro atribuye el ahorro a que ya no hay que entregar en cada domicilio, no a que el cliente decida cuándo pasar.; Endurece: el libro dice que el efecto ambiental puede ser positivo o negativo según cómo se recoja y que el balance es difícil de juzgar.; Mismo defecto que la marca 0.; Mismo defecto que la marca 2.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

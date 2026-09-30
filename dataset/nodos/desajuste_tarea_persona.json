@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Desajuste entre Tarea y Persona (Mismatch)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando se observa un patrón repetido de errores en una persona ('bad apple' aparente), en realidad puede tratarse de un desajuste entre las capacidades/estilo del individuo y las demandas del trabajo asignado. La responsabilidad de resolver este desajuste puede recaer en el individuo (cuando tiene amplio espacio discrecional) o en la organización (cuando el trabajador tiene poco margen de maniobra), incluyendo selección, reclutamiento y gestión de personas.",
+  "resumen_teorico": "Cuando se observa un patrón repetido de errores en una persona ('bad apple' aparente), en realidad puede tratarse de un desajuste entre las capacidades/estilo del individuo y las demandas del trabajo asignado. La responsabilidad de resolver este desajuste puede recaer en el individuo (cuando tiene amplio espacio discrecional) o en la organización (cuando el trabajador tiene poco margen de maniobra), incluyendo selección, reclutamiento y gestión de personas. Aun así, si se prueba, un 'bad apple' es problema y responsabilidad del sistema.",
   "pasos_accionables": [
     "Identificar si el patrón de error responde a un desajuste sistemático entre tarea y persona",
     "Evaluar cuánto espacio discrecional tiene el trabajador para ajustar su desempeño",
@@ -39,6 +39,22 @@
         "evidencia": "Q075-025: Diagnosticar errores repetidos de un trabajador y corregir el desajuste es gestion operativa de un negocio en marcha, no planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-065-desajuste_tarea_persona-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se observa un patrón repetido de errores en una persona ('bad apple' aparente), en realidad puede tratarse de un desajuste entre las capacidades/estilo del individuo y las demandas del trabajo asignado. La responsabilidad de resolver este desajuste puede recaer en el individuo (cuando tiene amplio espacio discrecional) o en la organización (cuando el trabajador tiene poco margen de maniobra), incluyendo selección, reclutamiento y gestión de personas.",
+      "texto_nuevo": "Cuando se observa un patrón repetido de errores en una persona ('bad apple' aparente), en realidad puede tratarse de un desajuste entre las capacidades/estilo del individuo y las demandas del trabajo asignado. La responsabilidad de resolver este desajuste puede recaer en el individuo (cuando tiene amplio espacio discrecional) o en la organización (cuando el trabajador tiene poco margen de maniobra), incluyendo selección, reclutamiento y gestión de personas. Aun así, si se prueba, un 'bad apple' es problema y responsabilidad del sistema.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "504",
+        "frase": "to the extent that you can prove its existence, is a system problem"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concluye que un problema de 'bad apple', en la medida en que se pruebe, es un problema y una responsabilidad del sistema.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

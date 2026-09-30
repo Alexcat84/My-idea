@@ -7,13 +7,13 @@
   "resumen_teorico": "Una vez que tienes listo el diseño de tu producto, tienes que definir el proceso con el que lo vas a crear y entregar de forma continua. Este desarrollo incluye 11 actividades, desde revisar las metas del producto hasta publicar el diseño final del proceso, asegurándote de que sea orientado a metas, sistemático, capaz y legítimo.",
   "pasos_accionables": [
     "Revisa las metas de calidad de tu producto junto con quienes te ayuden a diseñar el proceso",
-    "Identifica las condiciones de operación: cómo entiende el usuario tu producto, cómo lo usa en la realidad y en qué entorno lo usa",
+    "Identifica las condiciones de operación del proceso: cómo entienden el trabajo quienes lo operan o lo usan, cómo se usa el proceso en la realidad y qué entorno puede afectar su desempeño",
     "Reúne información sobre los procesos alternativos que tienes disponibles",
     "Elige el diseño general del proceso usando diagramas de flujo de alto nivel",
-    "Identifica las características y metas detalladas del proceso y optimízalas",
+    "Identifica las características y metas detalladas del proceso, diséñalo para los factores críticos y el error humano, y optimízalas",
     "Establece la capacidad del proceso y publica el diseño final"
   ],
-  "entregable_esperado": "Un diagrama de flujo de proceso de alto nivel con las 11 actividades de desarrollo documentadas y aprobadas",
+  "entregable_esperado": "El diseño final del proceso, publicado con su hoja de diseño y sus diagramas de flujo detallados, como resultado de las 11 actividades de desarrollo",
   "nodos_previos": [
     "establecer_diseno_final_producto"
   ],
@@ -41,6 +41,56 @@
         "evidencia": "Q036-012: El nodo trata de disenar el proceso de creacion y entrega antes de operarlo (metas, alternativas, diagrama de flujo, diseno final), que es planificacion y no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-063-desarrollar_caracteristicas_proceso_2-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica las condiciones de operación: cómo entiende el usuario tu producto, cómo lo usa en la realidad y en qué entorno lo usa",
+      "texto_nuevo": "Identifica las condiciones de operación del proceso: cómo entienden el trabajo quienes lo operan o lo usan, cómo se usa el proceso en la realidad y qué entorno puede afectar su desempeño",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4392-4401",
+        "frase": "Process planners need to know how these people will understand the work to be done."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El nodo afirma un qué distinto al del libro: condiciones de uso del producto en lugar de las del proceso.; No se cae algo, se cambia el objeto: el libro habla de cómo entienden y usan el proceso quienes lo operan, no el usuario el producto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-desarrollar_caracteristicas_proceso_2-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica las características y metas detalladas del proceso y optimízalas",
+      "texto_nuevo": "Identifica las características y metas detalladas del proceso, diséñalo para los factores críticos y el error humano, y optimízalas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4365-4369",
+        "frase": "7. Design for critical factors and human error."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Entre identificar el detalle y optimizar, el libro pone diseñar para los factores críticos y el error humano.; Mismo defecto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-desarrollar_caracteristicas_proceso_2-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un diagrama de flujo de proceso de alto nivel con las 11 actividades de desarrollo documentadas y aprobadas",
+      "texto_nuevo": "El diseño final del proceso, publicado con su hoja de diseño y sus diagramas de flujo detallados, como resultado de las 11 actividades de desarrollo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4671-4679",
+        "frase": "The completed process design spreadsheet and detailed flow diagrams are the common information"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El diagrama de alto nivel es solo el diseño general; el resultado del desarrollo es el diseño final publicado con su hoja de diseño y diagramas detallados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

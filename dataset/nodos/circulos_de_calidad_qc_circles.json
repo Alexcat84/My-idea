@@ -13,7 +13,7 @@
     "Compartir los éxitos con otras áreas de la empresa y con otras organizaciones mediante publicaciones, visitas y convenciones",
     "Reconocer y premiar a los círculos con resultados extraordinarios"
   ],
-  "entregable_esperado": "Un sistema formal de círculos de calidad operando en la organización, con registros de mejoras logradas y un mecanismo de difusión de buenas prácticas entre áreas.",
+  "entregable_esperado": "Círculos de calidad operando en la organización como grupos informales de trabajadores, con registros de mejoras logradas y un mecanismo de difusión de buenas prácticas entre áreas.",
   "nodos_previos": [
     "educacion_estadistica_para_la_calidad",
     "responsabilidad_gerencial_en_la_calidad"
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Crea Círculos de Calidad Voluntarios",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-064-circulos_de_calidad_qc_circles-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un sistema formal de círculos de calidad operando en la organización, con registros de mejoras logradas y un mecanismo de difusión de buenas prácticas entre áreas.",
+      "texto_nuevo": "Círculos de calidad operando en la organización como grupos informales de trabajadores, con registros de mejoras logradas y un mecanismo de difusión de buenas prácticas entre áreas.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2952",
+        "frase": "a QC-Circle in Japan is an informal group of workers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro contrapone el círculo formal, que se desintegra, al grupo informal japonés; pedir un sistema formal invierte el consejo.; Mismo defecto: el entregable pide la estructura formal que el libro desaconseja.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Decidir cuánto cobrar por velocidad y ventana de entrega",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige mas viajes, mas coordinación y menos margen de error. Antes de prometer un servicio rápido, calcula cuanto te cuesta realmente sostenerlo: cuantas entregas puedes agrupar por ruta, cuanto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y este dispuesto a pagar, en vez de subsidiar un servicio caro para todos. Decidir bien cuanto cobrar por cada nivel evita que la promesa de velocidad se convierta en una perdida silenciosa en cada venta.",
+  "resumen_teorico": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
   "pasos_accionables": [
     "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
     "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
@@ -171,6 +171,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-064-decidir_cobro_velocidad_ventana_entrega-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige mas viajes, mas coordinación y menos margen de error. Antes de prometer un servicio rápido, calcula cuanto te cuesta realmente sostenerlo: cuantas entregas puedes agrupar por ruta, cuanto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y este dispuesto a pagar, en vez de subsidiar un servicio caro para todos. Decidir bien cuanto cobrar por cada nivel evita que la promesa de velocidad se convierta en una perdida silenciosa en cada venta.",
+      "texto_nuevo": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "232, 242",
+        "frase": "the van cannot deliver at the same time as customers have chosen two different delivery"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro explica el mayor costo por las franjas que impiden agrupar entregas; 'más coordinación' y 'menos margen de error' son causas añadidas.; El libro no habla de subsidiar la entrega rápida; es una razón añadida.; Mismo defecto que la marca 0.; Mismo defecto que la marca 2.; Resultado prometido, la pérdida en cada venta, que el libro no afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

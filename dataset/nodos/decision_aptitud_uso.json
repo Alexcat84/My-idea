@@ -6,9 +6,9 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. La decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
   "pasos_accionables": [
-    "Identifica quién es el usuario final y su nivel de sofisticación técnica.",
+    "Identifica quién es el usuario final, su nivel de sofisticación técnica y si tiene fácil acceso a servicio técnico.",
     "Determina cómo se usará realmente el producto no conforme.",
-    "Evalúa los riesgos de seguridad, integridad estructural o impacto ambiental.",
+    "Evalúa los riesgos de seguridad, integridad estructural o impacto ambiental: si son significativos, lo demás deja de contar, y en productos con esos riesgos es habitual tratar todo lo no conforme como no apto.",
     "Analiza la urgencia y la economía de reparar frente a usar el producto tal cual.",
     "Consulta las medidas de aptitud del cliente, aunque difieran de las tuyas.",
     "Define un criterio de delegación: si hay poco dinero en juego, delega la decisión en quien lleva la calidad o en un especialista; si hay mucho, tómala tú con tus personas clave, y trata la pérdida como una oportunidad de mejora sin buscar culpables."
@@ -95,6 +95,40 @@
         "motivo": "Referencia de un nodo vivo a accion_correctiva_diagnostico_remedio, deprecado; su superviviente es accion_correctiva."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-063-decision_aptitud_uso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa los riesgos de seguridad, integridad estructural o impacto ambiental.",
+      "texto_nuevo": "Evalúa los riesgos de seguridad, integridad estructural o impacto ambiental: si son significativos, lo demás deja de contar, y en productos con esos riesgos es habitual tratar todo lo no conforme como no apto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24406; 8219",
+        "frase": "Where such risks are significant, all else is academic."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto central: los riesgos significativos pesan por encima de todo.; Se pierde que, si esos riesgos son significativos, todo lo demás es académico, y que en productos con esos riesgos se suele tratar todo lo no conforme como no apto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-decision_aptitud_uso-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica quién es el usuario final y su nivel de sofisticación técnica.",
+      "texto_nuevo": "Identifica quién es el usuario final, su nivel de sofisticación técnica y si tiene fácil acceso a servicio técnico.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24402",
+        "frase": "A nearby user may have easy access to field service"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el otro rasgo del usuario que el libro pide mirar: si tiene fácil acceso a servicio técnico.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

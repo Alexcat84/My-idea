@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Sistema de Captura y Gestión de Ideas (Idea Management System)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Las ideas son como uvas en la vid: si no se recogen, se marchitan. Se necesita un mecanismo formal para capturar ideas de múltiples fuentes, incubarlas (dejarlas 'crecer piernas' antes de exponerlas a revisión formal), y luego pasarlas por un gate de selección (Gate 1) donde las mejores avanzan y el resto va a una 'bóveda de ideas' accesible para revisión futura.",
+  "resumen_teorico": "Las ideas son como uvas en la vid: si no se recogen, se marchitan. Se necesita un mecanismo formal para capturar ideas de múltiples fuentes, valorar si conviene incubarlas (dejarlas 'crecer piernas' antes de exponerlas a revisión formal) y luego pasarlas por un gate de selección (Gate 1) donde las mejores avanzan y el resto va a una 'bóveda de ideas' accesible para revisión futura.",
   "pasos_accionables": [
     "Establecer líneas de flujo de ideas desde fuentes internas y externas (universidades, concursos internos, investigación de mercado)",
     "Crear un grupo de incubación (I-Group) que refine ideas crudas antes de la revisión formal",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Captura y Cultiva tus Ideas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-sistema_captura_ideas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las ideas son como uvas en la vid: si no se recogen, se marchitan. Se necesita un mecanismo formal para capturar ideas de múltiples fuentes, incubarlas (dejarlas 'crecer piernas' antes de exponerlas a revisión formal), y luego pasarlas por un gate de selección (Gate 1) donde las mejores avanzan y el resto va a una 'bóveda de ideas' accesible para revisión futura.",
+      "texto_nuevo": "Las ideas son como uvas en la vid: si no se recogen, se marchitan. Se necesita un mecanismo formal para capturar ideas de múltiples fuentes, valorar si conviene incubarlas (dejarlas 'crecer piernas' antes de exponerlas a revisión formal) y luego pasarlas por un gate de selección (Gate 1) donde las mejores avanzan y el resto va a una 'bóveda de ideas' accesible para revisión futura.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4949",
+        "frase": "Next, consider installing an incubation group"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro exige capturar, evaluar y avanzar las ideas, pero la incubación la propone como algo a considerar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -6,8 +6,8 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El aseguramiento de calidad es la actividad de reunir evidencia para tener confianza en que se cumplirán los requisitos de calidad. Incluye actividades planificadas y sistemáticas dentro de tu forma de trabajar la calidad, demostradas cuando haga falta, para dar la seguridad de que lo que ofreces cumplirá lo esperado. Es parecido a lo que hace una auditoría financiera, que da confianza sobre la integridad de las cuentas.",
   "pasos_accionables": [
-    "Define hasta dónde llega el aseguramiento de calidad en tu negocio (planificación, control, mejora, revisión)",
-    "Establece evidencias concretas: inspecciones, pruebas, revisiones de tus planes",
+    "Define hasta dónde llega el aseguramiento de calidad en tu negocio: aportar evidencia de que se cumplirán los requisitos, sin confundirlo con el área que a veces lleva ese nombre y también planifica, controla y mejora",
+    "Establece evidencias concretas: inspecciones y pruebas; si lo que ofreces es complejo, también revisiones de tus planes y auditorías de que se cumplen",
     "Diferencia el aseguramiento de calidad de otras tareas de calidad relacionadas",
     "Comunica el propósito del aseguramiento a todos los que participan en tu negocio"
   ],
@@ -25,5 +25,41 @@
   "etiqueta_arbol": "Genera Confianza en tu Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-063-definicion_y_concepto_de_aseguramiento_de_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define hasta dónde llega el aseguramiento de calidad en tu negocio (planificación, control, mejora, revisión)",
+      "texto_nuevo": "Define hasta dónde llega el aseguramiento de calidad en tu negocio: aportar evidencia de que se cumplirán los requisitos, sin confundirlo con el área que a veces lleva ese nombre y también planifica, controla y mejora",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9883",
+        "frase": "Readers are warned that other meanings are common."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que llamar aseguramiento a un área que planifica, controla y mejora es otro significado; en su sentido es aportar evidencia de que se cumplirán los requisitos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-definicion_y_concepto_de_aseguramiento_de_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece evidencias concretas: inspecciones, pruebas, revisiones de tus planes",
+      "texto_nuevo": "Establece evidencias concretas: inspecciones y pruebas; si lo que ofreces es complejo, también revisiones de tus planes y auditorías de que se cumplen",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9885",
+        "frase": "also reviews of plans and audits of the execution of plans"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto, y se pierde que para lo simple basta la inspección o la prueba.; Para productos complejos el libro añade auditorías de la ejecución de los planes; el paso las omite.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

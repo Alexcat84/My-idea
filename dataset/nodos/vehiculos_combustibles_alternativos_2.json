@@ -7,10 +7,10 @@
   "resumen_teorico": "Migrar tu vehículo o tu pequeña flota a combustibles alternativos (gas natural, propano, etanol, biodiesel o híbridos) reduce emisiones contaminantes y de gases de efecto invernadero, y puede bajar tus costos operativos a largo plazo. Cada opción tiene un balance distinto entre costo inicial, eficiencia, disponibilidad de infraestructura y beneficio ambiental neto, que depende del origen y método de producción del combustible (por ejemplo etanol de caña vs maíz, o biodiesel local vs importado). La elección correcta depende de la infraestructura que tengas disponible, los costos de conversión, los incentivos fiscales existentes y las necesidades específicas de tus rutas y del uso que le das al vehículo.",
   "pasos_accionables": [
     "Evalúa tu perfil de uso (rutas urbanas cortas vs largas distancias) para elegir el combustible más adecuado.",
-    "Calcula el ciclo de vida total de costos y beneficios de cada opción: combustible, mantenimiento, incentivos fiscales y valor de reventa.",
+    "Calcula el ciclo de vida total de costos y beneficios de cada opción: combustible, mantenimiento, incentivos fiscales, valor de reventa, reducción de emisiones y beneficios de reputación.",
     "Prueba una unidad o tecnología antes de convertir todo tu vehículo o flota de forma masiva.",
     "Verifica la disponibilidad de infraestructura de reabastecimiento o recarga para el combustible elegido en tus rutas habituales.",
-    "Prioriza biodiesel o etanol de fuentes locales y menor impacto sobre opciones importadas de alto impacto.",
+    "Prioriza biodiésel de fuentes locales y menor impacto sobre el importado de alto impacto, y en etanol prefiere el de menor impacto en su ciclo de vida, como el de caña sobre el de maíz.",
     "Averigua qué incentivos fiscales y certificaciones existen en tu mercado para reducir el costo de la transición."
   ],
   "entregable_esperado": "Plan de transición con selección de combustible o vehículo justificada por análisis costo beneficio y ambiental, cronograma de implementación e incentivos aplicables.",
@@ -39,5 +39,41 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-066-vehiculos_combustibles_alternativos_2-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula el ciclo de vida total de costos y beneficios de cada opción: combustible, mantenimiento, incentivos fiscales y valor de reventa.",
+      "texto_nuevo": "Calcula el ciclo de vida total de costos y beneficios de cada opción: combustible, mantenimiento, incentivos fiscales, valor de reventa, reducción de emisiones y beneficios de reputación.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4917",
+        "frase": "including fuel, maintenance, tax incentives, potential resale value, emissions reductions, and reputational benefits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye también reducción de emisiones y beneficios de reputación, que evitan descartar opciones por su costo inicial.; Mismo defecto: el nodo reduce a lo financiero una lista que en el libro incluye emisiones y reputación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-066-vehiculos_combustibles_alternativos_2-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prioriza biodiesel o etanol de fuentes locales y menor impacto sobre opciones importadas de alto impacto.",
+      "texto_nuevo": "Prioriza biodiésel de fuentes locales y menor impacto sobre el importado de alto impacto, y en etanol prefiere el de menor impacto en su ciclo de vida, como el de caña sobre el de maíz.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4945-4953",
+        "frase": "Locally sourced biodiesel made from waste cooking oil, for instance, offers significant net benefits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro opone local e importado solo en el biodiésel; en el etanol el beneficio neto depende de la materia prima, caña mejor que maíz.; Mismo defecto: el criterio local aplicado al etanol no está en el libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

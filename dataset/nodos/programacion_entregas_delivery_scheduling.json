@@ -9,8 +9,8 @@
     "Evaluar si el EOQ de cada ubicación receptora coincide con cargas completas de transporte",
     "Si coincide, implementar entregas directas por su simplicidad",
     "Si no coincide, diseñar rutas milk run combinando pedidos",
-    "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando la única restricción es capacidad del vehículo",
-    "Decidir entre entregas desde ubicaciones de producto único o desde centros de distribución",
+    "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando las restricciones se limitan a la capacidad del vehículo o al tiempo total de viaje",
+    "Decidir entre entregas desde ubicaciones de producto único (si la demanda es alta y predecible y el cliente recibe a granel) o desde centros de distribución (si los proveedores están lejos de los clientes)",
     "Diseñar la secuencia de recogidas/entregas y validar con software de ruteo",
     "Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada"
   ],
@@ -96,6 +96,40 @@
         "motivo": "Tras elegir el modo según tamaño de envío, lo siguiente es decidir si cada carga va directa o se consolida en milk run según la capacidad del modo."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-063-programacion_entregas_delivery_scheduling-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando la única restricción es capacidad del vehículo",
+      "texto_nuevo": "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando las restricciones se limitan a la capacidad del vehículo o al tiempo total de viaje",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1574",
+        "frase": "limited to vehicle capacity or to total travel time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recomienda la asignación generalizada cuando las restricciones se limitan a la capacidad del vehículo o al tiempo total de viaje.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-063-programacion_entregas_delivery_scheduling-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir entre entregas desde ubicaciones de producto único o desde centros de distribución",
+      "texto_nuevo": "Decidir entre entregas desde ubicaciones de producto único (si la demanda es alta y predecible y el cliente recibe a granel) o desde centros de distribución (si los proveedores están lejos de los clientes)",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1591-1593",
+        "frase": "appropriate when there is a predictable and high level of demand"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierden los criterios del libro: producto único con demanda alta y predecible y clientes que reciben a granel; centro de distribución cuando los proveedores están lejos.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

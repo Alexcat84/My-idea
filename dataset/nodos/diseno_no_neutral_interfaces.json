@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El Diseño de Interfaces No es Neutral",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Todo diseño de interfaz (por ejemplo, un dial redondo vs. una cinta de velocidad) tiene consecuencias cognitivas para el operador. Eliminar 'trampas de error' de un diseño anterior puede reducir también la profundidad cognitiva del involucramiento del operador con la tarea, afectando la construcción de memoria y comprensión de relaciones críticas (como configuración/velocidad). No existe un diseño 'neutral': cada elección de representación visual trae ganancias y costos.",
+  "resumen_teorico": "Todo diseño de interfaz (por ejemplo, un dial redondo vs. una cinta de velocidad) tiene consecuencias cognitivas para el operador. Eliminar 'trampas de error' de un diseño anterior puede reducir también la profundidad cognitiva del involucramiento del operador con la tarea, lo que probablemente afecta la construcción de memoria y comprensión de relaciones críticas (como configuración/velocidad). No existe un diseño 'neutral': cada elección de representación visual trae ganancias y costos.",
   "pasos_accionables": [
     "Analizar qué trabajo cognitivo desaparece al introducir una nueva interfaz o herramienta",
     "Evaluar si la reducción de pasos manuales reduce también la comprensión del operador sobre el sistema",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "No Ignores tus Interfaces",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-065-diseno_no_neutral_interfaces-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo diseño de interfaz (por ejemplo, un dial redondo vs. una cinta de velocidad) tiene consecuencias cognitivas para el operador. Eliminar 'trampas de error' de un diseño anterior puede reducir también la profundidad cognitiva del involucramiento del operador con la tarea, afectando la construcción de memoria y comprensión de relaciones críticas (como configuración/velocidad). No existe un diseño 'neutral': cada elección de representación visual trae ganancias y costos.",
+      "texto_nuevo": "Todo diseño de interfaz (por ejemplo, un dial redondo vs. una cinta de velocidad) tiene consecuencias cognitivas para el operador. Eliminar 'trampas de error' de un diseño anterior puede reducir también la profundidad cognitiva del involucramiento del operador con la tarea, lo que probablemente afecta la construcción de memoria y comprensión de relaciones críticas (como configuración/velocidad). No existe un diseño 'neutral': cada elección de representación visual trae ganancias y costos.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2371",
+        "frase": "It is likely that this has consequences for crews' appreciation of configuration/speed relationships"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que es probable que tenga consecuencias sobre la memoria y la relación configuración/velocidad; el nodo lo da por seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

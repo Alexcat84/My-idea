@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Scorecard de Desempeño y Bucle de Retroalimentación Autocorrectivo",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentación autocorrectivo: las empresas corrigen sus propios problemas rápidamente sin esperar instrucciones, porque saben que su desempeño es visible para todos. Esto eleva el desempeño colectivo de la cadena por encima de lo que lograría cada empresa operando de forma aislada.",
+  "resumen_teorico": "Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentación autocorrectivo: cuando una empresa ve que su desempeño cae por debajo de los estándares acordados y sabe que es visible para todos, corrige sus propios problemas rápidamente sin esperar instrucciones. Esto eleva el desempeño colectivo de la cadena por encima de lo que lograría cada empresa operando de forma aislada.",
   "pasos_accionables": [
     "Definir métricas clave de desempeño compartidas entre todos los socios de la cadena (entregas a tiempo, niveles de inventario, precisión de pronósticos)",
     "Construir un scorecard visible para todas las partes, actualizado en tiempo real o casi real",
@@ -67,6 +67,22 @@
         "motivo": "arista entre dos mundos (compras -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-063-scorecard_desempeno_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentación autocorrectivo: las empresas corrigen sus propios problemas rápidamente sin esperar instrucciones, porque saben que su desempeño es visible para todos. Esto eleva el desempeño colectivo de la cadena por encima de lo que lograría cada empresa operando de forma aislada.",
+      "texto_nuevo": "Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentación autocorrectivo: cuando una empresa ve que su desempeño cae por debajo de los estándares acordados y sabe que es visible para todos, corrige sus propios problemas rápidamente sin esperar instrucciones. Esto eleva el desempeño colectivo de la cadena por encima de lo que lograría cada empresa operando de forma aislada.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3999",
+        "frase": "see their own performance slipping below agreed standards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dispara la autocorrección cuando cada empresa ve su desempeño caer por debajo de los estándares acordados y sabe que todos lo ven.; Mismo defecto: se cae la condición de los estándares acordados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Cadena de Valor",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Consiste en examinar la cadena de valor completa, tanto aguas arriba (proveedores) como aguas abajo (clientes de los clientes, usuarios finales), para identificar roles cambiantes, posibles desintermediaciones y oportunidades de negocio donde la empresa podría capturar valor que actualmente otros players se llevan.",
+  "resumen_teorico": "Consiste en examinar la cadena de valor completa, tanto aguas arriba (proveedores) como aguas abajo (clientes de los clientes, usuarios finales), para identificar roles cambiantes, posibles desintermediaciones, amenazas para el negocio y oportunidades donde la empresa podría capturar valor que actualmente otros players se llevan.",
   "pasos_accionables": [
     "Mapear todos los actores de la cadena de valor: proveedores, clientes directos, clientes de los clientes, usuario final",
     "Analizar cómo están cambiando los roles de cada actor",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Examina tu Cadena de Valor",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-062-analisis_cadena_de_valor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en examinar la cadena de valor completa, tanto aguas arriba (proveedores) como aguas abajo (clientes de los clientes, usuarios finales), para identificar roles cambiantes, posibles desintermediaciones y oportunidades de negocio donde la empresa podría capturar valor que actualmente otros players se llevan.",
+      "texto_nuevo": "Consiste en examinar la cadena de valor completa, tanto aguas arriba (proveedores) como aguas abajo (clientes de los clientes, usuarios finales), para identificar roles cambiantes, posibles desintermediaciones, amenazas para el negocio y oportunidades donde la empresa podría capturar valor que actualmente otros players se llevan.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "8021",
+        "frase": "And what are the threats or opportunities for your business?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pregunta por amenazas y oportunidades para tu negocio; el nodo pierde las amenazas.; Mismo defecto: se caen las amenazas de la pregunta del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

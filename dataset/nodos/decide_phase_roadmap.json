@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Realizar evaluación de lealtad de cliente",
     "Identificar fortalezas y problemas de desempeño organizacional",
-    "Entender actitudes de empleados hacia los cambios propuestos",
+    "Entender actitudes de empleados hacia los cambios propuestos y cómo afectarán esos cambios a los procesos clave del negocio",
     "Realizar análisis de costos de procesos con bajo desempeño (COPQ)",
     "Definir infraestructura, metodología, metas y objetivos del plan de despliegue"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Decide el Cambio y su Plan",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-063-decide_phase_roadmap-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Entender actitudes de empleados hacia los cambios propuestos",
+      "texto_nuevo": "Entender actitudes de empleados hacia los cambios propuestos y cómo afectarán esos cambios a los procesos clave del negocio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2229-2231",
+        "frase": "Understand the key business processes and how the changes will affect them."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye entender los procesos clave del negocio y cómo los afectarán los cambios; los pasos lo omiten.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
