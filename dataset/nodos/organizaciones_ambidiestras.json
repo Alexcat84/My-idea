@@ -10,7 +10,7 @@
     "Evalúa la similitud estratégica entre ambos modelos",
     "Estima el riesgo de que el nuevo modelo dañe la marca, ingresos o legalidad del negocio principal",
     "Decide entre integración, separación total, o un enfoque por fases",
-    "Si decides separar, busca explotar sinergias posibles con el negocio principal (manufactura, R&D, compras)"
+    "Si decides separar, busca explotar con cuidado las sinergias posibles con el negocio principal"
   ],
   "entregable_esperado": "Decisión documentada y justificada sobre la estructura organizacional (integrada, separada o híbrida) del nuevo modelo de negocio",
   "nodos_previos": [
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Gestiona Varios Modelos de Negocio",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-s04-organizaciones_ambidiestras-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si decides separar, busca explotar sinergias posibles con el negocio principal (manufactura, R&D, compras)",
+      "texto_nuevo": "Si decides separar, busca explotar con cuidado las sinergias posibles con el negocio principal",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "4009",
+        "frase": "should be carefully exploited even when the new model is implemented in a standalone unit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no enumera sinergias para la unidad separada; manufactura, compras e I+D son lo que se centralizó al integrar. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

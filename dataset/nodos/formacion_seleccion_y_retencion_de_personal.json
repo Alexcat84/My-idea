@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Selección, Capacitación y Retención de Personal para Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La calidad organizacional depende de seleccionar personal con las competencias adecuadas, capacitarlo de forma oportuna e interactiva, y retenerlo mediante compensación, empoderamiento, desarrollo de carrera y reconocimiento. Las fallas comunes en capacitación incluyen entrenar sin oportunidad de aplicación inmediata, falta de participación de gerentes de línea y exceso de dependencia en el método de lectura/clase.",
+  "resumen_teorico": "La calidad organizacional depende de seleccionar personal con las competencias adecuadas, capacitarlo de forma oportuna e interactiva, y retenerlo mediante compensación, empoderamiento, desarrollo de carrera y reconocimiento. Las fallas comunes en capacitación incluyen entrenar sin oportunidad de aplicación inmediata, falta de participación de gerentes de línea, exceso de dependencia en el método de lectura/clase y comunicación poco clara, que pide lenguaje simple y gráficos.",
   "pasos_accionables": [
     "Definir criterios de selección basados en competencias diferenciadoras (ej. cuestionarios validados)",
     "Diseñar capacitación 'justo a tiempo' con enfoque interactivo",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la compensación y ocho factores; el paso omite compensación, puestos para el autocontrol, quitar estrés y agotamiento, participación en la planeación y contacto con clientes.; Mismo defecto: la lista de retención del libro es más amplia y lo omitido cambia el consejo.",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s06-formacion_seleccion_y_retencion_de_personal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La calidad organizacional depende de seleccionar personal con las competencias adecuadas, capacitarlo de forma oportuna e interactiva, y retenerlo mediante compensación, empoderamiento, desarrollo de carrera y reconocimiento. Las fallas comunes en capacitación incluyen entrenar sin oportunidad de aplicación inmediata, falta de participación de gerentes de línea y exceso de dependencia en el método de lectura/clase.",
+      "texto_nuevo": "La calidad organizacional depende de seleccionar personal con las competencias adecuadas, capacitarlo de forma oportuna e interactiva, y retenerlo mediante compensación, empoderamiento, desarrollo de carrera y reconocimiento. Las fallas comunes en capacitación incluyen entrenar sin oportunidad de aplicación inmediata, falta de participación de gerentes de línea, exceso de dependencia en el método de lectura/clase y comunicación poco clara, que pide lenguaje simple y gráficos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9753",
+        "frase": "Poor communication during training."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de fallas del libro tiene cuatro elementos; se cae la mala comunicación durante la capacitación.; Mismo cuarto elemento de la lista que se pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

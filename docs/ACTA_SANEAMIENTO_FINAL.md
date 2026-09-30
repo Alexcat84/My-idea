@@ -635,3 +635,44 @@ cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de conta
     reclasificada de ese tipo. PASA con 0 contrarios, 0 invenciones, matiz ≤ 0,2 por nodo (30 en 150) y todas las
     trampas de matiz cazadas.
   - **Código:** `parada_e1.py`, en las claves del remedio.
+
+**Etapa 1, correcciones aplicadas (30 sep 2026):** tandas `final-e1-01` a `final-e1-32` (arbitrajes 1 a 176), más
+`final-e1-fuera` (46) y `final-e1-fuera-2` (2), las correcciones FUERA reescritas solo en la forma. Los 289 lotes
+se leyeron con dos lectores Opus y, donde hizo falta, un tercero.
+
+**Muestra de parada de la etapa 1 (semilla 20261001), 30 sep 2026: NO PASA.**
+
+| Criterio | Umbral | Resultado |
+|---|---|---|
+| Contrarios | 0 | **1** (un elemento) |
+| Invenciones | 0 | **39** elementos en 34 nodos |
+| Matiz | ≤ 0,2 por nodo (30 en 150) | **0,553** por nodo (83 elementos en 66 nodos) |
+| Trampas de matiz cazadas | todas | **1 de 2**: la del lote p12 no la cazó ninguno de los tres lectores |
+
+- **Trampas:** cazadas 14 de 15.
+  - La que falló (p12) quitaba un "solo" de alcance ("solo a ciertos destinos" pasó a "a ciertos destinos"). Es el
+    plantado de reserva, que se usa cuando el nodo no tiene condición ni excepción que quitar, y es la más débil de
+    las trampas de matiz.
+  - La regla la cuenta como fallo.
+- **El árbitro:** confirmó o reclasificó 180 de las 190 marcas. 88 de los 150 nodos tienen al menos un defecto
+  confirmado.
+  - Los contrarios e invenciones caen en los diez espacios: core 12, risk_management 6, compras 4, y de 2 a 3 en cada
+    uno de los demás.
+- **Dónde estaban:** de 39 invenciones, 15 están en elementos que la etapa 1 ya había corregido y 24 en elementos que
+  sus dos lectores dejaron pasar. De 83 matices, 26 y 57. El único contrario estaba en un elemento sin tocar.
+  - 5 invenciones se resuelven pasando el paso a "Sugerencia de My Idea:". Varias son un "puede" del libro que el nodo
+    da como seguro.
+- **Lo que dice sobre el método:** una segunda lectura doble y ciega, con el mismo método, sigue encontrando
+  defectos a un ritmo parecido en texto ya leído y corregido.
+  - La etapa 1 no converge hacia cero con una sola pasada.
+  - La muestra tampoco mide lo mismo que la medida 1: allí leía un lector por nodo sin cotejo, aquí dos lectores con
+    cotejo obligatorio y un árbitro. Las cifras no se comparan directamente.
+- **Aplicado:** las 116 correcciones confirmadas de la muestra, en 87 nodos, en la tanda `final-e1-parada`. Otras 2
+  quedan FUERA por baranda (`proteger_fragiles_caja_dentro_de_caja`, resumen; `seguimiento_accion_correctiva`,
+  paso 4), pendientes de reescritura.
+- **Lo que manda la regla (9.4) y queda pendiente de decisión del fundador:** "se releen los lotes del libro o del
+  espacio donde cayó lo confirmado, y se mide otra muestra con semilla 20261001 + k".
+  - Lo confirmado cae en los diez espacios, así que la regla pide releer la etapa entera: unos 600 agentes más.
+  - Con k = 1, la semilla sería 20261002, que ya es la semilla fijada para la muestra de la etapa 2 (9.5). Hay que
+    fijar otra antes de sortear.
+  - No se relanza nada hasta su decisión.

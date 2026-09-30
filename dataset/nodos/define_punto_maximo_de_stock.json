@@ -4,14 +4,14 @@
   "dominio": "compras",
   "titulo_concepto": "Define tu punto máximo de stock y cada cuánto lo revisas",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "Para no quedarte sin producto ni acumular de más, conviene fijar un punto de reorden: la cantidad mínima con la que todavía puedes esperar a que llegue el próximo pedido sin quedarte a cero. Ese punto se calcula combinando cuánto vendes por semana, cuánto tarda tu proveedor en entregar, y un colchón extra por si hay retrasos o defectos. A partir de ahí también puedes fijar un máximo: cuánto quieres tener en total antes de dejar de pedir más. Estos números no son fijos para siempre: cambian si tu ritmo de ventas cambia o si tu proveedor modifica sus tiempos de entrega, así que conviene revisarlos cada vez que eso ocurra.",
+  "resumen_teorico": "Para no quedarte sin producto ni acumular de más, conviene fijar un punto de reorden: la cantidad mínima, sumando lo que tienes y lo que ya está pedido, con la que todavía puedes esperar a que llegue el próximo pedido sin quedarte a cero. Ese punto se calcula combinando cuánto vendes por semana, cuánto tarda tu proveedor en entregar, y un colchón extra por si hay retrasos o defectos. A partir de ahí también puedes fijar un máximo: cuánto quieres tener en total, contando lo ya pedido, antes de dejar de pedir más. Estos números no son fijos para siempre: cambian si tu ritmo de ventas cambia o si tu proveedor modifica sus tiempos de entrega, así que conviene revisarlos cada vez que eso ocurra.",
   "pasos_accionables": [
     "Calcula cuánto vendes o usas de ese producto en una semana normal.",
     "Pregunta a tu proveedor cuánto tarda en llegar un pedido desde que lo haces.",
     "Multiplica tu uso semanal por el tiempo de entrega para saber tu reserva de trabajo.",
     "Añade un colchón de seguridad, como guía la mitad de esa reserva, ajustada luego según tu experiencia, para cubrir retrasos o defectos.",
     "Suma reserva más colchón para obtener tu punto de reorden, y anótalo junto al producto.",
-    "Decide cada cuánto revisarás y pedirás (tu ciclo de revisión) y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor."
+    "Calcula cada cuánto revisarás y pedirás (tu ciclo de revisión) a partir de lo que le compras en total a ese proveedor y de la cantidad mínima que te pide para darte descuento, teniendo en cuenta la temporada, y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor."
   ],
   "entregable_esperado": "Un punto de reorden y un nivel máximo de stock calculados y escritos para cada producto clave.",
   "nodos_previos": [
@@ -85,6 +85,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la mitad de la reserva de trabajo como guía para el colchón, ajustada según la experiencia.",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-define_punto_maximo_de_stock-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide cada cuánto revisarás y pedirás (tu ciclo de revisión) y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor.",
+      "texto_nuevo": "Calcula cada cuánto revisarás y pedirás (tu ciclo de revisión) a partir de lo que le compras en total a ese proveedor y de la cantidad mínima que te pide para darte descuento, teniendo en cuenta la temporada, y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "3964-3976",
+        "frase": "The discount quantity is the minimum amount you have to order"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro calcula el ciclo de revisión con las compras totales al proveedor y la cantidad mínima con descuento, y lo ajusta por temporada.; Mismo defecto: el ciclo no es de libre elección en el libro, sale de una fórmula y de la temporada. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-define_punto_maximo_de_stock-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para no quedarte sin producto ni acumular de más, conviene fijar un punto de reorden: la cantidad mínima con la que todavía puedes esperar a que llegue el próximo pedido sin quedarte a cero. Ese punto se calcula combinando cuánto vendes por semana, cuánto tarda tu proveedor en entregar, y un colchón extra por si hay retrasos o defectos. A partir de ahí también puedes fijar un máximo: cuánto quieres tener en total antes de dejar de pedir más. Estos números no son fijos para siempre: cambian si tu ritmo de ventas cambia o si tu proveedor modifica sus tiempos de entrega, así que conviene revisarlos cada vez que eso ocurra.",
+      "texto_nuevo": "Para no quedarte sin producto ni acumular de más, conviene fijar un punto de reorden: la cantidad mínima, sumando lo que tienes y lo que ya está pedido, con la que todavía puedes esperar a que llegue el próximo pedido sin quedarte a cero. Ese punto se calcula combinando cuánto vendes por semana, cuánto tarda tu proveedor en entregar, y un colchón extra por si hay retrasos o defectos. A partir de ahí también puedes fijar un máximo: cuánto quieres tener en total, contando lo ya pedido, antes de dejar de pedir más. Estos números no son fijos para siempre: cambian si tu ritmo de ventas cambia o si tu proveedor modifica sus tiempos de entrega, así que conviene revisarlos cada vez que eso ocurra.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "3891, 3962",
+        "frase": "the lowest amount of an item you will have on hand and on order"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta en el mínimo y el máximo lo que hay en mano y lo ya pedido; sin eso se puede pedir de más. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

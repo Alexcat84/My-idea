@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Evitar el Micro-Matching (Comparación Retrospectiva con Reglas)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "El micro-matching consiste en comparar fragmentos de comportamiento pasado contra procedimientos, datos disponibles o estándares de buena práctica identificados después del hecho. Esta comparación no explica el comportamiento, solo lo juzga, porque contrasta la conducta con una realidad que el investigador conoce ahora, no con la que rodeaba a la persona en el momento. Existe diferencia crucial entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era realmente perceptible dado el contexto, interfaz y tareas concurrentes).",
+  "resumen_teorico": "El micro-matching consiste en comparar fragmentos de comportamiento pasado contra procedimientos, datos disponibles o estándares de buena práctica identificados después del hecho. Esta comparación no explica el comportamiento, solo lo juzga, porque contrasta la conducta con una realidad que el investigador conoce ahora, no con la que rodeaba a la persona en el momento. Existe diferencia crucial entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era realmente perceptible dado el contexto, la interfaz, las tareas concurrentes y los objetivos, intereses, conocimientos y cultura de quienes miraban).",
   "pasos_accionables": [
     "Evitar juzgar acciones solo contra procedimientos hallados aplicables en retrospectiva",
     "Distinguir entre datos disponibles físicamente y datos observables en el contexto real",
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que la brecha casi siempre existe y casi siempre sin malas consecuencias, así que mostrarla aclara poco el porqué.",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s01-evitar_micro_matching-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El micro-matching consiste en comparar fragmentos de comportamiento pasado contra procedimientos, datos disponibles o estándares de buena práctica identificados después del hecho. Esta comparación no explica el comportamiento, solo lo juzga, porque contrasta la conducta con una realidad que el investigador conoce ahora, no con la que rodeaba a la persona en el momento. Existe diferencia crucial entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era realmente perceptible dado el contexto, interfaz y tareas concurrentes).",
+      "texto_nuevo": "El micro-matching consiste en comparar fragmentos de comportamiento pasado contra procedimientos, datos disponibles o estándares de buena práctica identificados después del hecho. Esta comparación no explica el comportamiento, solo lo juzga, porque contrasta la conducta con una realidad que el investigador conoce ahora, no con la que rodeaba a la persona en el momento. Existe diferencia crucial entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era realmente perceptible dado el contexto, la interfaz, las tareas concurrentes y los objetivos, intereses, conocimientos y cultura de quienes miraban).",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1728-1732",
+        "frase": "goals, interests, knowledge and even culture of the people looking at it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro hace depender la observabilidad también de los objetivos, intereses, conocimiento y cultura de quienes miraban; el nodo pierde que lo perceptible depende de quién mira. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

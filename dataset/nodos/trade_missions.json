@@ -7,10 +7,10 @@
   "resumen_teorico": "Las misiones comerciales son viajes organizados a otros países en los que participas junto a otras empresas, a veces con un funcionario de alto nivel al frente. Te permiten reunirte cara a cara con contactos internacionales ya preseleccionados, aprovechando el tiempo con distribuidores, representantes de ventas o socios calificados. Suelen enfocarse en una industria especifica y cubrir de dos a cuatro países por viaje. Conviene preguntar en tu mercado si existe un programa así.",
   "pasos_accionables": [
     "Identifica las misiones comerciales relevantes para tu industria",
-    "Inscríbete y entrega la información de tu negocio para el proceso de preselección",
+    "Inscríbete en la misión comercial que elegiste",
     "Revisa la agenda de citas coordinada por los especialistas del programa",
     "Viaja y reúnete cara a cara con los contactos preseleccionados",
-    "Da seguimiento después de la misión a los contactos que generaste"
+    "Sugerencia de My Idea: da seguimiento después de la misión a los contactos que generaste"
   ],
   "entregable_esperado": "Agenda de reuniones internacionales confirmadas durante una misión comercial oficial",
   "nodos_previos": [
@@ -111,6 +111,40 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-s01-trade_missions-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inscríbete y entrega la información de tu negocio para el proceso de preselección",
+      "texto_nuevo": "Inscríbete en la misión comercial que elegiste",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2313",
+        "frase": "U.S. Commercial Service specialists abroad will prescreen contacts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro la preselección es de los contactos internacionales, hecha por los especialistas; el paso inventa una preselección de tu negocio. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s01-trade_missions-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Da seguimiento después de la misión a los contactos que generaste",
+      "texto_nuevo": "Sugerencia de My Idea: da seguimiento después de la misión a los contactos que generaste",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2313",
+        "frase": "This preparatory effort is followed up by a 1-week trip"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de seguimiento posterior a la misión; queda como sugerencia porque es un consejo práctico que no afirma nada como hecho. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

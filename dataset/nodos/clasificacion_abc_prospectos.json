@@ -7,7 +7,7 @@
   "resumen_teorico": "Sistema para categorizar leads de franquicia en tres tipos: 'A' (3-5%, totalmente comprometidos y responsivos), 'B' (12-15%, parcialmente comprometidos, requieren más guía) y 'C' (80-85%, no calificados o no comprometidos, deben archivarse). Permite priorizar el tiempo del equipo de ventas en los prospectos con mayor probabilidad de cierre.",
   "pasos_accionables": [
     "Clasificar cada prospecto como A, B o C en la primera llamada",
-    "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A",
+    "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A, con preguntas de sondeo para decidir si cada B puede pasar a A o debe salir del pipeline",
     "Archivar prospectos C en un archivo de contacto a 6 meses sin perseguirlos activamente",
     "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas; como referencia, apunta a que ronde el 80 %, aunque a un vendedor novato le puede costar más llegar"
   ],
@@ -60,6 +60,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la referencia (alrededor del 80 % en 48 horas) y advierte que a un vendedor novato le cuesta más; el paso pide un benchmark vacío. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-clasificacion_abc_prospectos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A",
+      "texto_nuevo": "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A, con preguntas de sondeo para decidir si cada B puede pasar a A o debe salir del pipeline",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4440-4444",
+        "frase": "ask probing questions to determine if the “B” prospect can be moved to “A” status"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide preguntas de sondeo para decidir si un B pasa a A o sale del pipeline.; Mismo defecto: se pierde la opción de sacar al B del pipeline. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Tres Supuestos Erróneos en el Diseño de Procedimientos",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
+  "resumen_teorico": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones. Y aunque se aprende a manejarlas, se tiende a subestimar el mayor riesgo de error en esas condiciones.",
   "pasos_accionables": [
     "Revisar los procedimientos existentes e identificar dónde asumen linealidad, predictibilidad o controlabilidad",
     "Realizar observaciones de campo para contrastar el trabajo real (interleaving de tareas) contra el trabajo prescrito",
@@ -72,6 +72,22 @@
         "frase": "based on the three assumptions above) tend to be brittle, or fragile"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos procedimientos 'tend to be brittle' y se desmoronan con facilidad; el nodo lo afirma como efecto seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s08-supuestos_de_procedimientos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
+      "texto_nuevo": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones. Y aunque se aprende a manejarlas, se tiende a subestimar el mayor riesgo de error en esas condiciones.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2447",
+        "frase": "tend to underestimate their own increased vulnerability to error in those circumstances"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea dos problemas y el resumen pierde el segundo: se subestima la mayor vulnerabilidad al error con tareas concurrentes. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

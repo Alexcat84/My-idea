@@ -6,8 +6,8 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de acción, en lugar de seguir una lista estándar de actividades. Se usan post its para volcar hipótesis en cada área: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposición, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una versión mas estructurada del lienzo en blanco que usan los mas expertos, útil para aumentar tu propio compromiso con el plan.",
   "pasos_accionables": [
-    "Completa el canvas con post its en una sesión dedicada",
-    "Define los segmentos de clientes objetivo y sus necesidades no resueltas",
+    "Completa el canvas con post its en una sesión dedicada con el equipo del proyecto; esa sesión suele hacerse con alguien que la facilite",
+    "Define los segmentos de clientes objetivo, sus requisitos estándar y sus necesidades no resueltas",
     "Mapea tendencias de mercado y competidores relevantes",
     "Articula la propuesta de valor, las soluciones consideradas, cómo obtendrás valor del proyecto (modelo de negocio) y los riesgos que podrían ponerlo en peligro",
     "Separa qué es hecho comprobado y qué es suposición no probada, y prioriza las brechas críticas a cerrar",
@@ -202,6 +202,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define cada actividad clave con quién la hace; el paso pierde el responsable.",
       "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s01-lienzo_proyecto_innovacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Completa el canvas con post its en una sesión dedicada",
+      "texto_nuevo": "Completa el canvas con post its en una sesión dedicada con el equipo del proyecto; esa sesión suele hacerse con alguien que la facilite",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3779-3805",
+        "frase": "This team process is usually a facilitated one."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta el lienzo como trabajo del equipo del proyecto en una reunión que suele ser facilitada; el paso lo deja sin equipo ni facilitación. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s01-lienzo_proyecto_innovacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define los segmentos de clientes objetivo y sus necesidades no resueltas",
+      "texto_nuevo": "Define los segmentos de clientes objetivo, sus requisitos estándar y sus necesidades no resueltas",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3783",
+        "frase": "What are the standard requirements and important unsolved problems or unfulfilled wishes?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El área de necesidades del lienzo incluye los requisitos estándar además de los problemas no resueltos; el paso deja fuera los requisitos estándar. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

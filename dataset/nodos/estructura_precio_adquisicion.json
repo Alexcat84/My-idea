@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Estructura del Precio en una Adquisición",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El precio 'de titular' en una LOI raramente es el precio real final. Factores como el escrow (retención de fondos por reclamos futuros), ajustes de capital de trabajo, earn-outs (pagos condicionados a metas futuras) y pools de retención gerencial reducen sustancialmente el valor efectivo recibido por los vendedores. Entender estos componentes es crítico para evaluar el verdadero valor de una oferta de adquisición.",
+  "resumen_teorico": "El precio 'de titular' en una LOI raramente es el precio real final. Factores como el escrow (retención de fondos por reclamos futuros), ajustes de capital de trabajo, earn-outs (pagos condicionados a metas futuras) y pools de retención gerencial pueden reducir, y en general reducen, el valor efectivo recibido por los vendedores. Entender estos componentes es crítico para evaluar el verdadero valor de una oferta de adquisición.",
   "pasos_accionables": [
-    "Desglosar el precio anunciado en sus componentes: efectivo al cierre, escrow, working capital, earn-out y pool de retención",
+    "Desglosar el precio anunciado en sus componentes: efectivo al cierre, escrow, working capital, earn-out y pool de retención, y revisar si el comprador asume o no las opciones y warrants no ejercidos",
     "Estar dispuesto a respaldar las representaciones y garantías con un escrow razonable de 12 a 18 meses como mínimo; si no lo aceptas, parecerá que ocultas algo",
     "Negociar que el requisito de working capital sea cero o bidireccional",
     "Evaluar críticamente los earn-outs como mecanismo que permite al comprador pagar menos al cierre",
@@ -44,6 +44,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da los 12 a 18 meses como mínimo que debes aceptar; 'negociar' lo deja leer como tope.; Mismo defecto que la marca 0.",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-estructura_precio_adquisicion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desglosar el precio anunciado en sus componentes: efectivo al cierre, escrow, working capital, earn-out y pool de retención",
+      "texto_nuevo": "Desglosar el precio anunciado en sus componentes: efectivo al cierre, escrow, working capital, earn-out y pool de retención, y revisar si el comprador asume o no las opciones y warrants no ejercidos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4002, 4027",
+        "frase": "like the working capital clause, it can impact the overall value of the deal"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta también que el comprador no asuma opciones y warrants no ejercidos, que puede cambiar el valor esperado.; Mismo componente omitido del desglose: el trato de opciones y warrants no ejercidos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-estructura_precio_adquisicion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El precio 'de titular' en una LOI raramente es el precio real final. Factores como el escrow (retención de fondos por reclamos futuros), ajustes de capital de trabajo, earn-outs (pagos condicionados a metas futuras) y pools de retención gerencial reducen sustancialmente el valor efectivo recibido por los vendedores. Entender estos componentes es crítico para evaluar el verdadero valor de una oferta de adquisición.",
+      "texto_nuevo": "El precio 'de titular' en una LOI raramente es el precio real final. Factores como el escrow (retención de fondos por reclamos futuros), ajustes de capital de trabajo, earn-outs (pagos condicionados a metas futuras) y pools de retención gerencial pueden reducir, y en general reducen, el valor efectivo recibido por los vendedores. Entender estos componentes es crítico para evaluar el verdadero valor de una oferta de adquisición.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4000-4014",
+        "frase": "There are a lot of factors that can (and generally will) impact the final price"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos factores pueden, y en general van a, afectar el precio; 'sustancialmente' es un cuánto añadido. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

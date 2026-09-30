@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Las Fuentes de Incertidumbre del Proyecto",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Todo plan se apoya en suposiciones, y el riesgo vive donde una suposición se quiebra. Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Para un emprendedor solo el ejercicio clave es sacar a la luz los supuestos callados de su plan, esos que da por ciertos sin haberlos comprobado, porque son las grietas por donde el proyecto se puede colar.",
+  "resumen_teorico": "Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo encajará lo que haces con quienes lo usan y con otros sistemas, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, si alguien usará su poder para imponer condiciones que chocan con la realidad, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Entre lo que hace que un proyecto se tuerza están los supuestos ocultos, esos que das por ciertos sin haberlos comprobado, así que conviene sacarlos a la luz.",
   "pasos_accionables": [
     "Escribe todas las suposiciones sobre las que se sostiene tu plan.",
     "Marca cuáles has comprobado de verdad y cuáles solo estás dando por ciertas.",
@@ -105,6 +105,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone pruebas baratas de supuestos; es un consejo útil que queda como sugerencia de la casa.",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-nombra_tus_suposiciones_fragiles-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo plan se apoya en suposiciones, y el riesgo vive donde una suposición se quiebra. Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Para un emprendedor solo el ejercicio clave es sacar a la luz los supuestos callados de su plan, esos que da por ciertos sin haberlos comprobado, porque son las grietas por donde el proyecto se puede colar.",
+      "texto_nuevo": "Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo encajará lo que haces con quienes lo usan y con otros sistemas, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, si alguien usará su poder para imponer condiciones que chocan con la realidad, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Entre lo que hace que un proyecto se tuerza están los supuestos ocultos, esos que das por ciertos sin haberlos comprobado, así que conviene sacarlos a la luz.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "192-202, 1154",
+        "frase": "including poor planning, overlooked tasks, imperfectly nurtured relationships, hidden assumptions, overreliance on good luck"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro sitúa el riesgo en la incertidumbre; los supuestos ocultos aparecen solo entre las causas de que un proyecto se tuerza, no como doctrina ni ejercicio clave.; La lista del libro trae también cómo encajará lo hecho con usuarios y otros sistemas y el poder que impone restricciones irreales.; Mismo hueco en la enumeración: falta cómo encajará lo que haces con quienes lo usan y con otros sistemas. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

@@ -10,7 +10,7 @@
     "Definir claramente el proceso: máquina, método, material, personas involucradas",
     "Recolectar datos representativos de mediciones de producto bajo condiciones estables",
     "Calcular la desviación estándar del proceso (σ) a partir de datos de control",
-    "Comparar la variación de 6σ contra los límites de especificación",
+    "Comparar la variación de 6σ contra los límites de especificación; como referencia, que el ancho de la especificación sea al menos 1,33 veces esa variación (Cp de 1,33 o más)",
     "Utilizar la información resultante para decisiones de diseño, selección de procesos y control"
   ],
   "entregable_esperado": "Informe de capacidad de proceso con distribución de variación cuantificada y su relación con especificaciones",
@@ -59,6 +59,23 @@
         "evidencia": "F03-014: Calcular la capacidad de un proceso bajo control estadístico es control de calidad de la operación. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-s04-capacidad_proceso_concepto-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar la variación de 6σ contra los límites de especificación",
+      "texto_nuevo": "Comparar la variación de 6σ contra los límites de especificación; como referencia, que el ancho de la especificación sea al menos 1,33 veces esa variación (Cp de 1,33 o más)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20801-20819",
+        "frase": "suggest that Cp should be at least 1.33"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da un criterio para esa comparación: por criticidad y porque la media se descentra, Cp de al menos 1,33. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Medir si el Método de Riesgo Funciona",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+  "resumen_teorico": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó, o prueba tu método con datos que ya tienes, porque con riesgos raros esperar a que ocurran tarda demasiado. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
   "pasos_accionables": [
     "Escribe hoy tus predicciones de riesgo, con probabilidad, y guárdalas con fecha.",
     "Cuando pase el tiempo, compara lo que predijiste con lo que de verdad ocurrió.",
@@ -89,6 +89,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La prueba del libro compara la frecuencia real con la probabilidad asignada.; Mismo criterio de calibración perdido.",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-como_sabes_que_tu_metodo_sirve-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+      "texto_nuevo": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó, o prueba tu método con datos que ya tienes, porque con riesgos raros esperar a que ocurran tarda demasiado. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "4768",
+        "frase": "In other words, you test the model against data you already had."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade probar el modelo contra datos históricos que ya tienes y advierte que con eventos raros esperar tarda demasiado. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

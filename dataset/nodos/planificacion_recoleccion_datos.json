@@ -12,12 +12,12 @@
     "Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)",
     "Auditar el proceso de recolección y validar resultados",
     "Filtrar y analizar los datos",
-    "Evaluar supuestos del tamaño de muestra y del análisis",
+    "Evaluar supuestos del tamaño de muestra y del análisis, y tomar medidas correctivas si hace falta (incluso recoger más observaciones)",
     "Aplicar técnicas gráficas y estadísticas al problema original",
     "Determinar si se necesitan más datos y análisis",
     "Considerar un análisis de sensibilidad",
     "Revisar que las conclusiones respondan al problema técnico original",
-    "Presentar los resultados en un informe claro con resumen ejecutivo",
+    "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos",
     "Determinar si las conclusiones aplican a otros problemas"
   ],
   "entregable_esperado": "Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados",
@@ -101,6 +101,40 @@
       },
       "decision": "se quita la voz de libro sin cambiar el sentido: el numero de pasos se conserva",
       "auditoria": "guarda vozDeLibro en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-s02-planificacion_recoleccion_datos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar supuestos del tamaño de muestra y del análisis",
+      "texto_nuevo": "Evaluar supuestos del tamaño de muestra y del análisis, y tomar medidas correctivas si hace falta (incluso recoger más observaciones)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19102",
+        "frase": "Take corrective steps (including additional observations) if required."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade tomar medidas correctivas, incluidas observaciones adicionales, si hace falta; el paso se queda en evaluar. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s02-planificacion_recoleccion_datos-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentar los resultados en un informe claro con resumen ejecutivo",
+      "texto_nuevo": "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19114",
+        "frase": "emphasizing results in terms of the original problem rather than the statistical indexes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide expresar las conclusiones en términos del problema original y no de los índices estadísticos; se pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 11,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

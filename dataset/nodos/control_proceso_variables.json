@@ -7,7 +7,7 @@
   "resumen_teorico": "Consiste en descubrir mediante análisis de datos las relaciones entre las variables del proceso y los resultados del producto, lo cual permite crear características de control de proceso (límites y mecanismos reguladores) para mantener el proceso estable. El diseño estadístico de experimentos (DOE) es clave para entender interacciones entre variables bajo enfoques como Six Sigma.",
   "pasos_accionables": [
     "Recolectar datos de variables de proceso y resultados de producto",
-    "Aplicar diseño estadístico de experimentos para identificar relaciones causales",
+    "Aplicar diseño estadístico de experimentos para identificar relaciones causales, con personas dedicadas y formadas para diseñarlos y analizarlos",
     "Establecer límites y mecanismos reguladores en las variables críticas",
     "Documentar en una hoja de control de proceso (control plan)"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Correlaciona Proceso y Resultado",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-s02-control_proceso_variables-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar diseño estadístico de experimentos para identificar relaciones causales",
+      "texto_nuevo": "Aplicar diseño estadístico de experimentos para identificar relaciones causales, con personas dedicadas y formadas para diseñarlos y analizarlos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22436",
+        "frase": "resources for full-time personnel to design and analyze the experiments"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el diseño de experimentos a contar con personas dedicadas a diseñarlos y analizarlos y con formación; el paso lo omite. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

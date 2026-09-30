@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Procedimiento Continuo de Control de Sustancias Peligrosas (COSHH)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las regulaciones COSHH (1988) establecen un procedimiento continuo ('rolling procedure') para la identificación, evaluación y control de riesgos derivados de sustancias peligrosas en el lugar de trabajo. A diferencia de otras leyes de seguridad, exige a los empleadores conocer las propiedades de miles de sustancias y aplicar un ciclo continuo de gestión de riesgos que incluye listado, control de exposición, pruebas de equipos, monitoreo, vigilancia de salud y capacitación.",
+  "resumen_teorico": "Las regulaciones COSHH (1988) establecen un procedimiento continuo ('rolling procedure') para la identificación, evaluación y control de riesgos derivados de sustancias peligrosas en el lugar de trabajo. A diferencia de la ley general británica de salud y seguridad en el trabajo (HSW Act), exige a los empleadores conocer las propiedades de miles de sustancias y aplicar un ciclo continuo de gestión de riesgos que incluye listado, control de exposición, pruebas de equipos, monitoreo, vigilancia de salud y capacitación.",
   "pasos_accionables": [
     "Elaborar una lista de todas las sustancias peligrosas presentes, identificando puntos de uso",
     "Realizar evaluaciones de riesgo, contratando expertos externos si es necesario",
@@ -44,6 +44,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide usar sustancias menos peligrosas donde sea posible; el paso quita esa condición.",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-coshh_procedimiento_rolling-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las regulaciones COSHH (1988) establecen un procedimiento continuo ('rolling procedure') para la identificación, evaluación y control de riesgos derivados de sustancias peligrosas en el lugar de trabajo. A diferencia de otras leyes de seguridad, exige a los empleadores conocer las propiedades de miles de sustancias y aplicar un ciclo continuo de gestión de riesgos que incluye listado, control de exposición, pruebas de equipos, monitoreo, vigilancia de salud y capacitación.",
+      "texto_nuevo": "Las regulaciones COSHH (1988) establecen un procedimiento continuo ('rolling procedure') para la identificación, evaluación y control de riesgos derivados de sustancias peligrosas en el lugar de trabajo. A diferencia de la ley general británica de salud y seguridad en el trabajo (HSW Act), exige a los empleadores conocer las propiedades de miles de sustancias y aplicar un ciclo continuo de gestión de riesgos que incluye listado, control de exposición, pruebas de equipos, monitoreo, vigilancia de salud y capacitación.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4360",
+        "frase": "They also adopted a strategy that was in marked contrast to the HSW Act"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro contrasta COSHH solo con la HSW Act, no con las leyes de seguridad en general.; Mismo defecto: generaliza a otras leyes un contraste que el libro hace con una sola ley. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

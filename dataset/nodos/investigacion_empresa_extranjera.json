@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Investigación de Clientes Potenciales en el Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y te ahorra tiempo y dinero.",
+  "resumen_teorico": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y puede ahorrarte tiempo y dinero.",
   "pasos_accionables": [
     "Consultar publicaciones y directorios del sector privado sobre empresas internacionales",
     "Contactar bancos internacionales para obtener información sobre la empresa extranjera",
@@ -127,6 +127,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da como fuentes de reportes de crédito muchas privadas y la oficina, que además ayuda a identificarlas; el paso deja solo la oficina.; Mismo defecto: se cae la vía de las fuentes privadas de reportes de crédito.",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s05-investigacion_empresa_extranjera-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y te ahorra tiempo y dinero.",
+      "texto_nuevo": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y puede ahorrarte tiempo y dinero.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4681",
+        "frase": "By using available resources, your company can save time and money."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos recursos pueden ahorrar tiempo y dinero ('can save'); el nodo lo da como seguro. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

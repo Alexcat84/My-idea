@@ -12,7 +12,7 @@
     "Realizar un chequeo de preparación comercial (readiness check)",
     "Aprobar el Plan de Lanzamiento al Mercado y el Plan de Operaciones para su implementación"
   ],
-  "entregable_esperado": "Decisión formal Go/Kill/Hold y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+  "entregable_esperado": "Decisión formal Go/Kill/Hold/Recycle y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
   "nodos_previos": [
     "etapa_testing_validation"
   ],
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Decide tu Lanzamiento Final",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-s01-gate5_go_to_launch-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decisión formal Go/Kill/Hold y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+      "texto_nuevo": "Decisión formal Go/Kill/Hold/Recycle y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3271",
+        "frase": "Gates also have Outputs, namely, a decision: Go/Kill/Hold/Recycle."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las salidas de una puerta son cuatro (Go/Kill/Hold/Recycle); el entregable pierde Recycle, la opción de devolver el proyecto a rehacer trabajo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

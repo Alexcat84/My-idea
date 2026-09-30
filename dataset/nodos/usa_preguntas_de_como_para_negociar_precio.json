@@ -4,15 +4,15 @@
   "dominio": "compras",
   "titulo_concepto": "Usa preguntas de 'cómo' para rebajar un precio sin decir que no",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Cuando alguien te ofrece un precio o condición que no puedes aceptar, decir 'no' de forma directa puede tensar una relación con la que seguirás comprando. Una alternativa más segura es responder con una pregunta que empiece por 'cómo', formulada como una petición de ayuda y no como un reclamo: '¿cómo se supone que voy a pagar eso?'. Esta pregunta traslada el problema a la otra parte y la invita a ofrecer una solución mejor sin que tú hayas dicho no explícitamente. Guarda silencio después de preguntar, deja que piensen, y repite la técnica cada vez que la respuesta no te convenza, acercándote poco a poco a un número que sí puedas pagar.",
+  "resumen_teorico": "Cuando alguien te ofrece un precio o condición que no puedes aceptar, decir 'no' de forma directa puede tensar una relación con la que seguirás comprando. Una alternativa más segura es responder con una pregunta que empiece por 'cómo', formulada como una petición de ayuda y no como un reclamo: '¿cómo se supone que voy a pagar eso?'. Esta pregunta traslada el problema a la otra parte y la invita a ofrecer una solución mejor sin que tú hayas dicho no explícitamente. Guarda silencio después de preguntar, deja que piensen, y si la respuesta no te convence, sigue negándote sin decir no, con frases amables cada vez más directas, acercándote poco a poco a un número que sí puedas pagar.",
   "pasos_accionables": [
     "Cuando te den un precio o condición que no te conviene, responde con una pregunta que empiece por 'cómo'.",
     "Usa un tono de petición de ayuda, no de reclamo, para que no se sienta atacado.",
     "Guarda silencio después de preguntar y deja que la otra parte piense su respuesta.",
-    "Si te ofrecen una mejora, repite la misma técnica hasta acercarte a tu número real.",
+    "Si te ofrecen una mejora que todavía no te sirve, sigue diciendo que no sin decirlo, con frases amables cada vez algo más directas, como 'es muy generoso, pero no me soluciona nada, lo siento' o 'lo siento, no puedo hacerlo', hasta acercarte a tu número real.",
     "Evita aceptar la primera mejora que te ofrezcan, sigue preguntando cómo hacerlo posible."
   ],
-  "entregable_esperado": "Una serie de respuestas en forma de pregunta que consiguen mejoras de precio sin usar la palabra no.",
+  "entregable_esperado": "Una serie de respuestas, primero una pregunta de 'cómo' y después negativas amables cada vez más directas, que consiguen mejoras de precio sin usar la palabra no.",
   "nodos_previos": [
     "etiqueta_lo_que_piensa_el_proveedor",
     "presentate_con_tu_nombre_para_descuento"
@@ -28,5 +28,56 @@
   "etiqueta_arbol": "Pregunta cómo para bajar el precio",
   "fuentes_internas": [
     "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-s04-usa_preguntas_de_como_para_negociar_precio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si te ofrecen una mejora, repite la misma técnica hasta acercarte a tu número real.",
+      "texto_nuevo": "Si te ofrecen una mejora que todavía no te sirve, sigue diciendo que no sin decirlo, con frases amables cada vez algo más directas, como 'es muy generoso, pero no me soluciona nada, lo siento' o 'lo siento, no puedo hacerlo', hasta acercarte a tu número real.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3735-3747",
+        "frase": "tu oferta es muy generosa y te lo agradezco, pero creo que no me soluciona"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no repite la misma pregunta: tras el primer cómo vienen negativas amables cada vez más directas.; Mismo defecto: se pierde la serie de negativas escalonadas que sigue a la pregunta de cómo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-usa_preguntas_de_como_para_negociar_precio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando alguien te ofrece un precio o condición que no puedes aceptar, decir 'no' de forma directa puede tensar una relación con la que seguirás comprando. Una alternativa más segura es responder con una pregunta que empiece por 'cómo', formulada como una petición de ayuda y no como un reclamo: '¿cómo se supone que voy a pagar eso?'. Esta pregunta traslada el problema a la otra parte y la invita a ofrecer una solución mejor sin que tú hayas dicho no explícitamente. Guarda silencio después de preguntar, deja que piensen, y repite la técnica cada vez que la respuesta no te convenza, acercándote poco a poco a un número que sí puedas pagar.",
+      "texto_nuevo": "Cuando alguien te ofrece un precio o condición que no puedes aceptar, decir 'no' de forma directa puede tensar una relación con la que seguirás comprando. Una alternativa más segura es responder con una pregunta que empiece por 'cómo', formulada como una petición de ayuda y no como un reclamo: '¿cómo se supone que voy a pagar eso?'. Esta pregunta traslada el problema a la otra parte y la invita a ofrecer una solución mejor sin que tú hayas dicho no explícitamente. Guarda silencio después de preguntar, deja que piensen, y si la respuesta no te convence, sigue negándote sin decir no, con frases amables cada vez más directas, acercándote poco a poco a un número que sí puedas pagar.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3733-3749",
+        "frase": "se puede decir «no» hasta cuatro veces antes de pronunciar explícitamente la palabra"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no repite la misma pregunta: la de cómo es el primer paso de negativas amables cada vez más directas. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s04-usa_preguntas_de_como_para_negociar_precio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una serie de respuestas en forma de pregunta que consiguen mejoras de precio sin usar la palabra no.",
+      "texto_nuevo": "Una serie de respuestas, primero una pregunta de 'cómo' y después negativas amables cada vez más directas, que consiguen mejoras de precio sin usar la palabra no.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "3737-3747",
+        "frase": "El primer paso en esta serie de negativas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La serie del libro sigue, tras la pregunta de cómo, con negativas en forma de frase. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Probabilidad e Impacto",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de daño mínimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
+  "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo improbable capaz de hundirte merece tu atención aparte, y a todos tus riesgos aplícales el mismo criterio.",
   "pasos_accionables": [
     "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderías, o al daño concreto que causaría (a personas, a tu reputación), no a una etiqueta de color; si tiene varias consecuencias, califícalo por la más grave.",
     "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja, y el plazo al que se refiere.",
@@ -197,6 +197,22 @@
         "frase": "the levels of impact assessed for any risk could differ"
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo recorte de los tipos de impacto que el libro contempla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-cuan_probable_y_cuanto_doleria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de daño mínimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
+      "texto_nuevo": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo improbable capaz de hundirte merece tu atención aparte, y a todos tus riesgos aplícales el mismo criterio.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5326",
+        "frase": "Such risks do not fit comfortably into qualitative risk assessment models and should be flagged"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que un riesgo probable de daño mínimo pueda esperar; solo pide atención aparte para los de cola larga.; Mismo defecto; el libro deja el reparto de severidad a la política de la organización. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

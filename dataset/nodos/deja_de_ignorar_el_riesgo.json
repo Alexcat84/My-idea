@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Sesgo del Optimismo y la Negación del Riesgo",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Hay una trampa en la que a veces se cae: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista, te vuelve dueño de tu proyecto.",
+  "resumen_teorico": "Hay una trampa en la que a veces se cae: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista.",
   "pasos_accionables": [
     "Dedica un rato, a propósito, a escribir lo que preferirías no pensar de tu proyecto.",
     "De tu lista de miedos, marca los que estás ignorando justo porque no sabes cómo resolverlos.",
@@ -102,6 +102,22 @@
         "frase": "Companies that seem to understand the necessity of risk-taking are sometimes prone"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que se cae en esto a veces; 'muy común' endurece la frecuencia.; El libro no dice nada de no tener un equipo que avise; es un hecho añadido.; Mismo defecto: el libro dice 'sometimes prone', no que sea muy común.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s01-deja_de_ignorar_el_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hay una trampa en la que a veces se cae: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista, te vuelve dueño de tu proyecto.",
+      "texto_nuevo": "Hay una trampa en la que a veces se cae: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "274",
+        "frase": "negative thinking is the only way to avoid being blindsided by risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Promete un resultado (volverte dueño de tu proyecto) que el libro no afirma; el libro solo dice que pensar en negativo es la única forma de no ser emboscado. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

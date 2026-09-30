@@ -9,7 +9,7 @@
     "Identificar si el mercado objetivo aplica impuestos según ubicación del cliente o del vendedor",
     "Verificar si se requiere registro fiscal en el país destino (ej. régimen VAT de la UE)",
     "Consultar herramientas de proveedores de e-commerce y U.S. Commercial Service sobre recaudación fiscal",
-    "Establecer un proceso de cobro y remisión de impuestos según el país del comprador"
+    "Si el mercado destino grava las ventas según la ubicación del cliente (como la UE), establecer un proceso de cobro y remisión de impuestos según el país del comprador"
   ],
   "entregable_esperado": "Matriz de obligaciones fiscales por país objetivo y proceso de registro/cobro de impuestos definido",
   "nodos_previos": [
@@ -69,6 +69,23 @@
         "frase": "taxing sales of electronically supplied goods and services"
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El régimen de IVA de la UE se limita a los bienes y servicios suministrados electrónicamente.; Mismo límite perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s01-fiscalidad_comercio_electronico_internacional-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un proceso de cobro y remisión de impuestos según el país del comprador",
+      "texto_nuevo": "Si el mercado destino grava las ventas según la ubicación del cliente (como la UE), establecer un proceso de cobro y remisión de impuestos según el país del comprador",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3355",
+        "frase": "However, there are important exceptions to this general rule."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El defecto existe, pero es la condición perdida (la excepción de la UE vuelta regla general), el mismo que la marca 0; se resuelve devolviendo la condición.; Se cae la condición: en general sin establecimiento permanente no hay sujeción fiscal, y el cobro según el país del cliente solo aplica en mercados con esa excepción, como la UE. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

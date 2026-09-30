@@ -7,7 +7,7 @@
   "resumen_teorico": "Cada ronda de financiamiento diluye la propiedad de fundadores y empleados, cediendo derechos económicos y de control a los inversores. Después de la ronda C, los VCs suelen poseer más de la mitad del capital en promedio. Las 'down rounds' (cuando el precio por acción baja) aceleran esta dilución, especialmente si el startup no cumple sus hitos o el ciclo económico es desfavorable.",
   "pasos_accionables": [
     "Modelar la tabla de capitalización (cap table) proyectada para cada ronda futura antes de negociar.",
-    "Establecer hitos claros de desempeño para evitar negociar desde una posición débil (down round).",
+    "Establecer hitos claros de desempeño y vigilar su cumplimiento, porque no cumplirlos puede llevarte a negociar desde una posición débil (down round); el ciclo económico también influye y escapa a tu control.",
     "Comparar el porcentaje de dilución esperado con benchmarks de la industria (ej. tecnología vs ciencias de la vida)."
   ],
   "entregable_esperado": "Cap table proyectada con escenarios de dilución para las próximas 2-3 rondas de financiamiento.",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Vigila tu Dilución en Cada Ronda",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-s06-dilucion_propiedad_por_ronda-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer hitos claros de desempeño para evitar negociar desde una posición débil (down round).",
+      "texto_nuevo": "Establecer hitos claros de desempeño y vigilar su cumplimiento, porque no cumplirlos puede llevarte a negociar desde una posición débil (down round); el ciclo económico también influye y escapa a tu control.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2860, 2866",
+        "frase": "due both to its own ability to execute and to factors outside of its control"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Promete que fijar hitos evita la down round; el libro solo dice que a veces ocurre al incumplir hitos.; Se pierde el límite del libro: la exposición a una down round depende también del ciclo económico, fuera de tu control. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

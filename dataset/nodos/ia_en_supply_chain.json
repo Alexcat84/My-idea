@@ -4,14 +4,14 @@
   "dominio": "entrega",
   "titulo_concepto": "Inteligencia Artificial Aplicada a la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como clima o eventos sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
+  "resumen_teorico": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como el clima, los eventos políticos y militares o el sentimiento en redes sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
   "pasos_accionables": [
     "Auditar tus fuentes de datos actuales de demanda, rutas o almacén para evaluar su calidad y volumen",
     "Priorizar un área piloto entre forecasting, optimización de rutas u operaciones de almacén",
     "Seleccionar una herramienta de IA/ML compatible con los sistemas que ya usas",
     "Integrar esa herramienta con tus datos históricos y en tiempo real disponibles (tráfico, clima, redes sociales)",
     "Medir la mejora en precisión de pronóstico o eficiencia operativa antes de escalar a otra área",
-    "Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo"
+    "Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo, teniendo en cuenta que puede inventar información o recomendar cosas absurdas o incluso peligrosas"
   ],
   "entregable_esperado": "Un plan piloto de IA implementado en un área de tu cadena de suministro, con métricas de mejora documentadas para decidir si escalarlo.",
   "nodos_previos": [
@@ -111,6 +111,39 @@
         "frase": "only escalating the most critical decisions to human managers"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la IA decide en tiempo real y solo escala a las personas lo más crítico y lo inesperado; el nodo reserva toda decisión a la persona.; El libro dice que los métodos tradicionales, con pocos datos, a menudo fallan, no que ya no sirvan.; El libro solo dice que la capacidad humana para analizar tantos datos es limitada; el teléfono es añadido.; El teléfono y la ventaja competitiva no están en el libro, y 'ya no alcanzan' endurece el 'often fail' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-ia_en_supply_chain-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como clima o eventos sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
+      "texto_nuevo": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como el clima, los eventos políticos y militares o el sentimiento en redes sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2293",
+        "frase": "external factors such as weather, political and military events, and social media sentiments"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro nombra el clima, los eventos políticos y militares y el sentimiento en redes sociales, no eventos sociales. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-ia_en_supply_chain-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo",
+      "texto_nuevo": "Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo, teniendo en cuenta que puede inventar información o recomendar cosas absurdas o incluso peligrosas",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2314",
+        "frase": "quotes nonexistent sources of information that it has simply made up or makes recommendations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la IA funciona como caja negra y puede inventar fuentes o recomendar cosas absurdas o peligrosas, límite que pesa al darle autonomía. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

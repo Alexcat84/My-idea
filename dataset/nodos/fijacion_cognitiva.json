@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Fijación Cognitiva (Cognitive Fixation)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "La fijación cognitiva ocurre cuando el contexto inmediato de resolución de problemas sesga a las personas hacia una interpretación particular de la situación, activando cierto conocimiento y actividades de diagnóstico a expensas de otras. En situaciones inciertas y dinámicas, las personas deben hacer evaluaciones provisionales basadas en datos parciales; tomar una acción compromete a una interpretación particular y genera explicaciones que la justifican, las cuales pueden persistir aunque surjan nuevos datos contradictorios. El caso del vuelo con desbalance de combustible ilustra cómo una tripulación mantuvo la interpretación de 'problema de indicación' pese a evidencia posterior.",
+  "resumen_teorico": "La fijación cognitiva ocurre cuando el contexto inmediato de resolución de problemas sesga a las personas hacia una interpretación particular de la situación, que puede activar cierto conocimiento y actividades de diagnóstico a expensas de otras. En situaciones inciertas y dinámicas, las personas deben hacer evaluaciones provisionales basadas en datos parciales; tomar una acción compromete a una interpretación particular y genera explicaciones que la justifican, las cuales pueden persistir aunque surjan nuevos datos contradictorios. El caso del vuelo con desbalance de combustible ilustra cómo una tripulación mantuvo la interpretación de 'problema de indicación' pese a evidencia posterior.",
   "pasos_accionables": [
     "Identificar el momento en que se formó la interpretación inicial y qué datos la sustentaron",
     "Documentar qué evidencia posterior contradecía la interpretación y por qué no fue suficiente para cambiarla",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en ese equilibrio no hay acierto ni error y solo la retrospectiva lo muestra; hay que reconocerlo, no calificarlo.",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s02-fijacion_cognitiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La fijación cognitiva ocurre cuando el contexto inmediato de resolución de problemas sesga a las personas hacia una interpretación particular de la situación, activando cierto conocimiento y actividades de diagnóstico a expensas de otras. En situaciones inciertas y dinámicas, las personas deben hacer evaluaciones provisionales basadas en datos parciales; tomar una acción compromete a una interpretación particular y genera explicaciones que la justifican, las cuales pueden persistir aunque surjan nuevos datos contradictorios. El caso del vuelo con desbalance de combustible ilustra cómo una tripulación mantuvo la interpretación de 'problema de indicación' pese a evidencia posterior.",
+      "texto_nuevo": "La fijación cognitiva ocurre cuando el contexto inmediato de resolución de problemas sesga a las personas hacia una interpretación particular de la situación, que puede activar cierto conocimiento y actividades de diagnóstico a expensas de otras. En situaciones inciertas y dinámicas, las personas deben hacer evaluaciones provisionales basadas en datos parciales; tomar una acción compromete a una interpretación particular y genera explicaciones que la justifican, las cuales pueden persistir aunque surjan nuevos datos contradictorios. El caso del vuelo con desbalance de combustible ilustra cómo una tripulación mantuvo la interpretación de 'problema de indicación' pese a evidencia posterior.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2182",
+        "frase": "But it can activate certain kinds of knowledge and trouble-shooting activities"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la interpretación preliminar puede activar cierto conocimiento a expensas de otro, no que lo haga siempre. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

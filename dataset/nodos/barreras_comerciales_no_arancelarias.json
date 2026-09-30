@@ -9,7 +9,7 @@
     "Consulta con la oficina de comercio exterior de tu país sobre las regulaciones del mercado al que quieres vender",
     "Revisa los textos de los acuerdos comerciales que apliquen entre tu país y el país destino",
     "Si detectas una barrera que te parece injusta o discriminatoria, averigua cómo presentar una queja formal ante el organismo correspondiente en tu mercado",
-    "Ajusta tu producto o tu proceso de exportación según lo que descubras en la revisión regulatoria"
+    "Ajusta tu producto o tu proceso de exportación según lo que descubras en la revisión regulatoria, siempre que el potencial del mercado justifique los costos de esa adaptación"
   ],
   "entregable_esperado": "Un reporte con las barreras comerciales que identificaste en el mercado que quieres conquistar y un plan para resolverlas o para presentar una queja formal",
   "nodos_previos": [
@@ -58,6 +58,23 @@
         "frase": "This free program is available to assist all U.S. exporters or investors facing trade barriers"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro solo describe un programa gratuito del gobierno de EE.UU. para sus exportadores; 'en muchos países' es un hecho añadido.; La lista del libro incluye restringir bienes originados en ciertos países o con componentes de ellos, que el resumen omite.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s06-barreras_comerciales_no_arancelarias-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajusta tu producto o tu proceso de exportación según lo que descubras en la revisión regulatoria",
+      "texto_nuevo": "Ajusta tu producto o tu proceso de exportación según lo que descubras en la revisión regulatoria, siempre que el potencial del mercado justifique los costos de esa adaptación",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2557",
+        "frase": "Market potential must be large enough to justify the direct and indirect costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la adaptación del producto a que el potencial del mercado justifique sus costos directos e indirectos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

@@ -9,7 +9,7 @@
     "Dejar de evaluar el trabajo, propio o de quien te ayuda, con metas numéricas, cuotas o cifras frías",
     "Aprender a fondo el trabajo real antes de dirigirlo o delegarlo",
     "Escuchar y corregir las condiciones que dificultan el trabajo, como herramientas, materiales o criterios de calidad poco claros",
-    "Usar datos para identificar qué está realmente fuera de línea, no solo quién quedó bajo el promedio"
+    "Usar datos para identificar quién está estadísticamente fuera de línea y necesita ayuda, no quién quedó bajo el promedio"
   ],
   "entregable_esperado": "Una forma de liderar centrada en apoyar y mejorar el sistema, dejando atrás las métricas puramente numéricas para juzgar el desempeño",
   "nodos_previos": [
@@ -160,6 +160,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide abolir la evaluación por números y cuotas; el 'solo' permite seguir usándola junto a otras cosas.; Mismo defecto: el 'solo' suaviza el consejo.",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-adopcion_liderazgo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Usar datos para identificar qué está realmente fuera de línea, no solo quién quedó bajo el promedio",
+      "texto_nuevo": "Usar datos para identificar quién está estadísticamente fuera de línea y necesita ayuda, no quién quedó bajo el promedio",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1212",
+        "frase": "problem is not the bottom 10 percent, but who is statistically out of line"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro descarta el criterio de quedar bajo el promedio; 'no solo' lo conserva como criterio válido. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

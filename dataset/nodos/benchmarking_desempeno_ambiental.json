@@ -4,13 +4,13 @@
   "dominio": "environmental",
   "titulo_concepto": "Benchmarking del Desempeño Ambiental frente a Competidores",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El benchmarking es una herramienta diagnóstica clave para evaluar el desempeño de una empresa en control de contaminación y gestión de recursos naturales, comparándolo con el de la competencia o con mejores prácticas del sector. Permite identificar fortalezas, debilidades y prioridades de mejora en cuatro áreas: Eco-Estrategia, Compromiso/Cultura/Capacidad, Ejecución y Logros Ambientales, y Comunicación y Compromiso con stakeholders.",
+  "resumen_teorico": "El benchmarking es una herramienta diagnóstica clave para evaluar el desempeño de una empresa en control de contaminación y gestión de recursos naturales, comparándolo con el de la competencia o con mejores prácticas del sector. Permite identificar fortalezas, debilidades y prioridades de mejora en cuatro áreas: Eco-Estrategia, Compromiso/Cultura/Capacidad, Ejecución y Logros Ambientales, y Comunicación y Compromiso con stakeholders. Es un punto de partida sin metodología establecida: adáptalo a tu negocio.",
   "pasos_accionables": [
     "Realizar una autoevaluación rápida en las cuatro áreas clave: eco-estrategia, cultura, ejecución y comunicación",
     "Definir indicadores clave de desempeño (KPIs) relevantes para el sector y someterlos a comentarios de expertos internos y actores externos (ONG, clientes clave, consejo)",
     "Seleccionar de 4 a 8 empresas comparables, desde rezagadas hasta líderes reconocidos",
     "Construir una matriz comparativa de KPIs vs. empresas para identificar brechas y liderazgos",
-    "Priorizar áreas de mejora antes de comunicar externamente cualquier liderazgo ambiental"
+    "Priorizar áreas de mejora y atender las brechas básicas de control de contaminación y gestión de recursos naturales antes de comunicar externamente cualquier liderazgo ambiental"
   ],
   "entregable_esperado": "Una matriz de benchmarking completa con KPIs, comparación de pares y lista priorizada de brechas a atender.",
   "nodos_previos": [
@@ -57,6 +57,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide someter el borrador de KPIs a expertos internos y actores externos antes de usarlo.",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s08-benchmarking_desempeno_ambiental-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El benchmarking es una herramienta diagnóstica clave para evaluar el desempeño de una empresa en control de contaminación y gestión de recursos naturales, comparándolo con el de la competencia o con mejores prácticas del sector. Permite identificar fortalezas, debilidades y prioridades de mejora en cuatro áreas: Eco-Estrategia, Compromiso/Cultura/Capacidad, Ejecución y Logros Ambientales, y Comunicación y Compromiso con stakeholders.",
+      "texto_nuevo": "El benchmarking es una herramienta diagnóstica clave para evaluar el desempeño de una empresa en control de contaminación y gestión de recursos naturales, comparándolo con el de la competencia o con mejores prácticas del sector. Permite identificar fortalezas, debilidades y prioridades de mejora en cuatro áreas: Eco-Estrategia, Compromiso/Cultura/Capacidad, Ejecución y Logros Ambientales, y Comunicación y Compromiso con stakeholders. Es un punto de partida sin metodología establecida: adáptalo a tu negocio.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2100",
+        "frase": "you will need to tailor our list to the particular needs of your business"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no hay metodología ni lista acordada y que su propuesta es un punto de partida a adaptar; el resumen la presenta como marco cerrado. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s08-benchmarking_desempeno_ambiental-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar áreas de mejora antes de comunicar externamente cualquier liderazgo ambiental",
+      "texto_nuevo": "Priorizar áreas de mejora y atender las brechas básicas de control de contaminación y gestión de recursos naturales antes de comunicar externamente cualquier liderazgo ambiental",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2169",
+        "frase": "Gaps in basic pollution control or natural resource management must be addressed before"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige atender las brechas básicas de control de contaminación y gestión de recursos antes de reclamar liderazgo; priorizarlas no basta. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

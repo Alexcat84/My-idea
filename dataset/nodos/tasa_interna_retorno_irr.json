@@ -8,7 +8,7 @@
     "Proyectar los flujos de efectivo futuros de la inversión",
     "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el NPV sea igual a cero",
     "Comparar esa tasa con el hurdle rate (tasa de retorno requerida) de la empresa",
-    "Usar el IRR en conjunto con el NPV -nunca de forma aislada- cuando los montos son grandes o los proyectos tienen duraciones distintas"
+    "Usar el IRR en conjunto con el NPV, nunca de forma aislada, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV"
   ],
   "entregable_esperado": "Cálculo de la Tasa Interna de Retorno del proyecto, comparado explícitamente contra el hurdle rate de la empresa",
   "condiciones_activacion": [
@@ -44,6 +44,23 @@
         "frase": "the net present value method is the best choice when the methods conflict"
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que cuando los métodos chocan el NPV es la mejor elección; el resumen solo pide usarlos juntos.; Mismo matiz: se pierde que ante decisiones distintas la correcta es la del NPV.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-tasa_interna_retorno_irr-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el IRR en conjunto con el NPV -nunca de forma aislada- cuando los montos son grandes o los proyectos tienen duraciones distintas",
+      "texto_nuevo": "Usar el IRR en conjunto con el NPV, nunca de forma aislada, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3190",
+        "frase": "it always makes sense to use NPV calculations for your investment decisions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que siempre conviene decidir con el NPV; la condición del paso deja entender que fuera de esos casos basta el IRR. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

@@ -10,7 +10,7 @@
     "Evaluar las respuestas a riesgos implementadas y su nivel de éxito",
     "Auditar el cumplimiento del proceso de gestión de riesgos",
     "Documentar las herramientas y técnicas utilizadas",
-    "Identificar buenas prácticas y áreas de mejora para futuros proyectos"
+    "Identificar buenas prácticas y áreas de mejora del proceso de gestión de riesgos"
   ],
   "entregable_esperado": "Informe de Auditoría de Riesgos con hallazgos sobre eventos, respuestas y proceso general",
   "nodos_previos": [
@@ -130,6 +130,23 @@
         "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-s03-risk_audit-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar buenas prácticas y áreas de mejora para futuros proyectos",
+      "texto_nuevo": "Identificar buenas prácticas y áreas de mejora del proceso de gestión de riesgos",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5113-5153",
+        "frase": "The Risk Audit is a tool used in process 11.6 Control Risks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro ubica la auditoría en el control de riesgos del proyecto en curso; el destino 'futuros proyectos' lo añade el nodo.; Mismo defecto que la marca 0. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

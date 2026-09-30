@@ -7,8 +7,8 @@
   "resumen_teorico": "Pasar a los números no te salva solo. Hasta las cuentas más sofisticadas engañan cuando arrancan de datos inventados o de supuestos frágiles: un resultado con muchos decimales parece riguroso y por eso da una confianza que no merece. La falsa precisión es peligrosa justo porque tranquiliza. Un cálculo solo vale lo que valen sus insumos: si metiste una probabilidad que sacaste de la manga, la respuesta exacta que salga sigue siendo un invento con apariencia de ciencia. Para el emprendedor, la lección no es huir de los números, sino usarlos con honestidad: reconoce de dónde salió cada dato, calibra tus estimaciones, prefiere un rango honesto a un decimal falso, compara después tus cálculos con lo que de verdad pasó, y desconfía de cualquier resultado que se vea más seguro que la información con que lo hiciste.",
   "pasos_accionables": [
     "De cualquier cálculo de riesgo, rastrea de dónde salió cada número que metiste.",
-    "Marca los datos que en realidad inventaste o supusiste sin base.",
-    "No presentes más decimales de los que tus datos aguantan: redondea con honestidad.",
+    "Marca los datos que en realidad inventaste o supusiste sin base y, de esos, sal a medir los que más pesan en el resultado.",
+    "Sugerencia de My Idea: no presentes más decimales de los que tus datos aguantan; redondea con honestidad.",
     "Desconfía de todo resultado que parezca más seguro que la información que lo alimentó."
   ],
   "entregable_esperado": "Un cálculo de riesgo con el origen de cada dato marcado y los supuestos inventados señalados, redondeado con honestidad.",
@@ -57,6 +57,40 @@
         "frase": "Models have to be tested empirically, regardless of how advanced they appear to be."
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el remedio del libro: calibrar las estimaciones y contrastar los pronósticos con la realidad.; Se pierde que todo modelo debe probarse contra lo que realmente pasó.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-cuidado_con_la_falsa_precision-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marca los datos que en realidad inventaste o supusiste sin base.",
+      "texto_nuevo": "Marca los datos que en realidad inventaste o supusiste sin base y, de esos, sal a medir los que más pesan en el resultado.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "3389",
+        "frase": "an additional empirical measurement to reduce uncertainty where the model is the most sensitive"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como remedio medir de verdad las variables inciertas donde el modelo es más sensible; marcar sin medir pierde esa parte. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-cuidado_con_la_falsa_precision-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No presentes más decimales de los que tus datos aguantan: redondea con honestidad.",
+      "texto_nuevo": "Sugerencia de My Idea: no presentes más decimales de los que tus datos aguantan; redondea con honestidad.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "3462",
+        "frase": "You can't give them the range that represents your uncertainty"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de decimales ni de redondear; su remedio son los rangos. Como consejo práctico queda como sugerencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

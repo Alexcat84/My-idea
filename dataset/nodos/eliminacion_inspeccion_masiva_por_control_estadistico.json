@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Establecer cartas de control para verificar la estabilidad del proceso",
     "Demostrar mediante datos que el proceso está bajo control estadístico",
-    "Reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control",
-    "Comunicar a las áreas de calidad y clientes el cambio y su justificación estadística"
+    "Si la proporción media de defectos es menor que el punto de equilibrio k1/k2, reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control; si es mayor, mantener la inspección 100%",
+    "Sugerencia de My Idea: comunica a las áreas de calidad y a tus clientes el cambio y su justificación estadística"
   ],
   "entregable_esperado": "Evidencia estadística de proceso bajo control y nuevo protocolo de muestreo aprobado",
   "nodos_previos": [
@@ -40,6 +40,40 @@
         "frase": "realization of minimum total cost may call for 100 percent inspection of some items"
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con el proceso en control, la inspección al 100% es la regla de menor costo si la proporción de defectos supera k1/k2.; Mismo defecto: estar en control no basta por sí solo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-eliminacion_inspeccion_masiva_por_control_estadistico-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control",
+      "texto_nuevo": "Si la proporción media de defectos es menor que el punto de equilibrio k1/k2, reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control; si es mayor, mantener la inspección 100%",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9300-9306",
+        "frase": "Case 2: If p > k1/k2, 100 percent inspection"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Aun bajo control, el libro manda inspección 100% si la proporción media de defectos supera k1/k2.; Mismo defecto que la marca 0. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-eliminacion_inspeccion_masiva_por_control_estadistico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar a las áreas de calidad y clientes el cambio y su justificación estadística",
+      "texto_nuevo": "Sugerencia de My Idea: comunica a las áreas de calidad y a tus clientes el cambio y su justificación estadística",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9308",
+        "frase": "keep an eye on the state of statistical control and on the average fraction defective"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pide comunicar el cambio a calidad ni a clientes; como consejo práctico queda como sugerencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

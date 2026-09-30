@@ -11,7 +11,7 @@
     "Para los requisitos no satisfechos, crear un POAM con plazos y responsables de mitigación",
     "Usar como guía las plantillas de muestra del plan de seguridad del sistema del Defense Industrial Base Sector Coordinating Council"
   ],
-  "entregable_esperado": "Documentos SSP y POAM completos, actualizados y disponibles para revisión de auditores o agencias federales",
+  "entregable_esperado": "Documentos SSP y POAM completos, revisados y actualizados periódicamente, protegidos contra divulgación no autorizada y disponibles para revisión de auditores o agencias federales",
   "nodos_previos": [
     "determinar_alcance_cui",
     "estructura_sp800171"
@@ -58,6 +58,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye a ese consejo plantillas de muestra del plan de seguridad del sistema; la plantilla editable es otra y no se le atribuye.",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s02-plan_seguridad_sistema_poam-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentos SSP y POAM completos, actualizados y disponibles para revisión de auditores o agencias federales",
+      "texto_nuevo": "Documentos SSP y POAM completos, revisados y actualizados periódicamente, protegidos contra divulgación no autorizada y disponibles para revisión de auditores o agencias federales",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "737",
+        "frase": "Periodically review and update the system security plan and take steps to protect it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide proteger el plan contra la divulgación no autorizada; el entregable solo lo deja disponible.; El libro pide revisar periódicamente el plan y protegerlo de divulgación no autorizada; se pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

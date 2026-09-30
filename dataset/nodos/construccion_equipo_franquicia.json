@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Construcción del Equipo para el Lanzamiento de la Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "La mayoría de quienes empiezan a franquiciar arrancan con muy poca gente, a veces uno mismo cubriendo varias funciones a la vez. Franquiciar te suma responsabilidades nuevas: marketing de franquicias, ventas, entrenamiento de franquiciados, supervisión de puntos y manejo del fondo publicitario. El momento de sumar ayuda es clave y, según la velocidad de crecimiento que busques, puede que tengas que adelantarte un poco a la necesidad real, para dejar tiempo de entrenamiento.",
+  "resumen_teorico": "La mayoría de quienes empiezan a franquiciar arrancan con muy poca gente, a veces uno mismo cubriendo varias funciones a la vez. Franquiciar te suma responsabilidades nuevas: marketing de franquicias, ventas, entrenamiento de franquiciados, supervisión de puntos, manejo del fondo publicitario y gestión. El momento de sumar ayuda es clave y, según la velocidad de crecimiento que busques, puede que tengas que adelantarte un poco a la necesidad real, para dejar tiempo de entrenamiento.",
   "pasos_accionables": [
     "Identifica qué funciones nuevas necesita tu negocio al franquiciar (marketing, ventas, entrenamiento, supervisión de puntos, manejo del fondo publicitario y gestión)",
     "Determina qué tareas puedes cubrir tú o tu equipo actual sin sumar a alguien más",
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista omite el manejo del fondo publicitario y la gestión, que el libro incluye entre las responsabilidades nuevas.",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s08-construccion_equipo_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mayoría de quienes empiezan a franquiciar arrancan con muy poca gente, a veces uno mismo cubriendo varias funciones a la vez. Franquiciar te suma responsabilidades nuevas: marketing de franquicias, ventas, entrenamiento de franquiciados, supervisión de puntos y manejo del fondo publicitario. El momento de sumar ayuda es clave y, según la velocidad de crecimiento que busques, puede que tengas que adelantarte un poco a la necesidad real, para dejar tiempo de entrenamiento.",
+      "texto_nuevo": "La mayoría de quienes empiezan a franquiciar arrancan con muy poca gente, a veces uno mismo cubriendo varias funciones a la vez. Franquiciar te suma responsabilidades nuevas: marketing de franquicias, ventas, entrenamiento de franquiciados, supervisión de puntos, manejo del fondo publicitario y gestión. El momento de sumar ayuda es clave y, según la velocidad de crecimiento que busques, puede que tengas que adelantarte un poco a la necesidad real, para dejar tiempo de entrenamiento.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5491",
+        "frase": "field supervision, advertising fund management, and management"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de responsabilidades nuevas incluye también la gestión (management), que el resumen omite. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

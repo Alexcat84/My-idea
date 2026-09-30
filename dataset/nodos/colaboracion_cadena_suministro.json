@@ -9,7 +9,7 @@
     "Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)",
     "Graficar la divergencia entre demanda de clientes y órdenes a proveedores y, con esa magnitud, estimar cuánto le cuesta a la empresa (producción, transporte, inventario, ventas perdidas) como base para decidir cuánto vale corregirla",
     "Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)",
-    "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave",
+    "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave, resolviendo antes qué datos es razonable compartir, cómo proteger la privacidad de los datos críticos y qué beneficios trae compartirlos",
     "Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado"
   ],
   "entregable_esperado": "Gráfico de medición del efecto látigo propio y acuerdo inicial de intercambio de datos con al menos un socio clave",
@@ -93,6 +93,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se cae la estimación del costo de la variabilidad que sigue a la medición.; Tras medir la magnitud, el libro pide estimar su costo en producción, transporte, inventario y ventas perdidas como base para decidir cuánto vale corregirlo.",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s01-colaboracion_cadena_suministro-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave",
+      "texto_nuevo": "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave, resolviendo antes qué datos es razonable compartir, cómo proteger la privacidad de los datos críticos y qué beneficios trae compartirlos",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3404",
+        "frase": "What data is it reasonable to share? How can privacy of critical data be maintained?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide resolver antes qué datos compartir, cómo proteger los críticos y qué beneficios trae; el paso omite esas condiciones previas. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

@@ -9,9 +9,9 @@
     "Identifica todas las leyes ambientales que te aplican, sean nacionales, regionales o locales",
     "Consigue a alguien que sepa de cumplimiento ambiental, sea un equipo propio, una consultoría o, si tu negocio es pequeño, una asociación gremial o empresarial que asesore en el tema",
     "Revisa tus procesos actuales contra lo que la normativa exige",
-    "Corrige cualquier brecha de cumplimiento antes de lanzar iniciativas de marketing verde"
+    "Corrige cualquier brecha de cumplimiento antes de lanzar iniciativas de marketing verde o cualquier otra estrategia ambiental más avanzada"
   ],
-  "entregable_esperado": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas críticas pendientes",
+  "entregable_esperado": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas pendientes",
   "nodos_previos": [
     "crear_infraestructura_producto"
   ],
@@ -96,6 +96,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la vía de las asociaciones para la pequeña empresa.; Para negocios pequeños el libro señala que la asesoría llega sobre todo por asociaciones gremiales o empresariales, opción que el paso omite.",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s05-cumplimiento_normativo_ambiental-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Corrige cualquier brecha de cumplimiento antes de lanzar iniciativas de marketing verde",
+      "texto_nuevo": "Corrige cualquier brecha de cumplimiento antes de lanzar iniciativas de marketing verde o cualquier otra estrategia ambiental más avanzada",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5539",
+        "frase": "full compliance with the law before moving to any of the more advanced"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige cumplir antes de cualquier jugada verde más avanzada, no solo antes del marketing verde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s05-cumplimiento_normativo_ambiental-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas críticas pendientes",
+      "texto_nuevo": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas pendientes",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5539",
+        "frase": "companies ensure that they are in full compliance with the law"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige cumplimiento pleno de la ley en todo momento; limitarlo a las brechas críticas deja pasar incumplimientos menores. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

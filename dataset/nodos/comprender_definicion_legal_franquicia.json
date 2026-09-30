@@ -4,11 +4,11 @@
   "dominio": "franquicias",
   "titulo_concepto": "Entiende la definición legal de franquicia (regla federal FTC 436)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
+  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador más de $500 (verifica la cifra vigente) en los primeros seis meses de operación. Te sirve para saber si el acuerdo que estás armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
   "pasos_accionables": [
     "Revisa si tu modelo de negocio dará a los operadores el derecho a usar una marca o nombre en común (basta el derecho aunque no los obligues, y un contrato que calla sobre esto puede bastar)",
     "Identifica si vas a ejercer control significativo (sitio, horarios, técnicas de producción, contabilidad, etc.) o si vas a dar asistencia significativa (entrenamiento, manual de operaciones, marketing); puede bastar uno solo de esos elementos",
-    "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+    "Calcula si la suma de pagos obligatorios que le pedirías al operador (cuota inicial, regalías, publicidad, entrenamiento, equipo) supera los $500 (verifica la cifra vigente) en los primeros seis meses de operación; no cuenta la mercancía para reventa a precio mayorista genuino, pero sí lo que no se revende, como exhibidores o material de punto de venta",
     "Consulta con un abogado especializado en franquicias para confirmar cómo se clasifica legalmente tu modelo"
   ],
   "entregable_esperado": "Un análisis legal preliminar que te confirme si tu modelo de negocio califica como franquicia bajo la definición federal",
@@ -200,6 +200,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un solo elemento de control o asistencia puede activar el requisito; sin eso el paso invita a subestimarlo.",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s07-comprender_definicion_legal_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
+      "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador más de $500 (verifica la cifra vigente) en los primeros seis meses de operación. Te sirve para saber si el acuerdo que estás armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "121",
+        "frase": "A required payment of more than $500 in the first six months of operation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro fija más de $500 en los primeros seis meses de operación; la cifra de $735, su ajuste de 2024 y el antes de abrir no están en el libro.; La cifra de $735 y el ajuste de 2024 no están en el libro, que dice $500. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s07-comprender_definicion_legal_franquicia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+      "texto_nuevo": "Calcula si la suma de pagos obligatorios que le pedirías al operador (cuota inicial, regalías, publicidad, entrenamiento, equipo) supera los $500 (verifica la cifra vigente) en los primeros seis meses de operación; no cuenta la mercancía para reventa a precio mayorista genuino, pero sí lo que no se revende, como exhibidores o material de punto de venta",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "121-145",
+        "frase": "A required payment of more than $500 in the first six months of operation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice más de $500 en los primeros seis meses de operación; $735, el ajuste de 2024 y el antes de abrir son añadidos.; La cifra de $735 y su ajuste de 2024 no están en el libro.; Se pierde la única exclusión (mercancía para reventa a precio mayorista genuino) y la advertencia de que sí cuentan exhibidores y material no revendible.; Se pierde que cuenta la suma de todos los pagos obligatorios (cuotas, regalías, publicidad, entrenamiento, equipo), lo que cambia el cálculo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

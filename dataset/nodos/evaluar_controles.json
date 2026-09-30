@@ -12,7 +12,7 @@
     "Preparar un informe de evaluación con hallazgos y recomendaciones (Tarea A-4).",
     "Preparar un Plan de Acción y Metas (POA&M) para corregir deficiencias (Tarea A-6)."
   ],
-  "entregable_esperado": "Un informe de evaluación de controles y un Plan de Acción y Metas (POA&M) con tareas de remediación priorizadas.",
+  "entregable_esperado": "Un informe de evaluación de controles y un Plan de Acción y Metas (POA&M) con tareas de remediación, recursos, hitos y fechas de cumplimiento.",
   "nodos_previos": [
     "implementar_controles"
   ],
@@ -42,6 +42,22 @@
         "frase": "ASSESS if the controls selected are implemented correctly, operating as intended"
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide comprobar si los controles están implementados correctamente; 'funcionan' pierde ese criterio.; Mismo defecto: se pierde el criterio de implementación correcta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s03-evaluar_controles-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un informe de evaluación de controles y un Plan de Acción y Metas (POA&M) con tareas de remediación priorizadas.",
+      "texto_nuevo": "Un informe de evaluación de controles y un Plan de Acción y Metas (POA&M) con tareas de remediación, recursos, hitos y fechas de cumplimiento.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "201",
+        "frase": "identifies tasks that need to be accomplished. It details resources required"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define el plan por tareas, recursos, hitos y fechas; no pide priorizarlas.; Mismo defecto que la marca 0. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

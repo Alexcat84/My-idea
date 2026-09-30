@@ -6,7 +6,7 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El crossdocking es una técnica logística en la que los envíos de carga completa llegan a un centro de distribución y se descargan, y al mismo tiempo se fragmentan y combinan con otros productos para cargarse directamente en camiones de salida, minimizando el almacenamiento. Reduce el tiempo de flujo del producto y los costos de manipulación, pero requiere alta coordinación entre entradas y salidas, volúmenes grandes y predecibles y economías de escala en el transporte de entrada y de salida.",
   "pasos_accionables": [
-    "Evaluar si el volumen y la predictibilidad de la demanda justifican crossdocking",
+    "Evaluar si el volumen y la predictibilidad de la demanda, y las economías de escala en el transporte de entrada y de salida, justifican crossdocking",
     "Sincronizar horarios de llegada de camiones entrantes con la salida de camiones salientes",
     "Diseñar el layout del centro de distribución para minimizar tiempos de manipulación",
     "Establecer sistemas de coordinación en tiempo real entre proveedores y transportistas",
@@ -72,6 +72,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye poco inventario en almacenamiento, no una reducción del inventario en tránsito.; Mismo defecto: el efecto sobre el inventario en tránsito no está en el libro.",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s05-crossdocking-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si el volumen y la predictibilidad de la demanda justifican crossdocking",
+      "texto_nuevo": "Evaluar si el volumen y la predictibilidad de la demanda, y las economías de escala en el transporte de entrada y de salida, justifican crossdocking",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1597",
+        "frase": "when economies of scale can be had on both the inbound and outbound transportation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone dos condiciones y el paso omite las economías de escala en el transporte de entrada y de salida.; Mismo defecto: cae la segunda condición del libro, las economías de escala en ambos transportes. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

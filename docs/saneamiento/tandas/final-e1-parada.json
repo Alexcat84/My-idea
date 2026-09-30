@@ -1,0 +1,2038 @@
+[
+ {
+  "id": "final-e1-s01-lienzo_proyecto_innovacion-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "lienzo_proyecto_innovacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Completa el canvas con post its en una sesión dedicada",
+  "texto_nuevo": "Completa el canvas con post its en una sesión dedicada con el equipo del proyecto; esa sesión suele hacerse con alguien que la facilite",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "3779-3805",
+   "frase": "This team process is usually a facilitated one."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta el lienzo como trabajo del equipo del proyecto en una reunión que suele ser facilitada; el paso lo deja sin equipo ni facilitación. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s01-gate5_go_to_launch-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "gate5_go_to_launch",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decisión formal Go/Kill/Hold y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+  "texto_nuevo": "Decisión formal Go/Kill/Hold/Recycle y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "3271",
+   "frase": "Gates also have Outputs, namely, a decision: Go/Kill/Hold/Recycle."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las salidas de una puerta son cuatro (Go/Kill/Hold/Recycle); el entregable pierde Recycle, la opción de devolver el proyecto a rehacer trabajo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s01-asset_deal_vs_stock_deal-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "asset_deal_vs_stock_deal",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal",
+  "texto_nuevo": "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, los directivos y consejeros pueden asumir responsabilidad personal",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4046",
+   "frase": "If they do, the officers and directors can have personal liability."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que con esas condiciones el asset deal puede ser muy perjudicial y que cerca de la insolvencia los directivos pueden responder en lo personal; el paso pierde esa consecuencia.; Mismo defecto: se pierde la responsabilidad personal de los directivos cerca de la insolvencia, que da peso a la comprobación. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s01-gestion_riesgo_seguridad_ia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_riesgo_seguridad_ia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los sistemas de IA pueden ser manipulados mediante técnicas como 'prompt injection' (instrucciones ocultas en contenido web o documentos que la IA lee) y 'jailbreaking' (convencer a la IA de romper sus reglas mediante escenarios ficticios o roleplay). Esto representa un riesgo real para cualquier negocio que integre IA con acceso a datos externos, atención al cliente automatizada o generación de contenido, ya que actores malintencionados pueden explotar estas vulnerabilidades para phishing, desinformación o fraude, y puede que estos ataques deliberados no se puedan evitar del todo.",
+  "texto_nuevo": "Los sistemas de IA pueden ser manipulados mediante técnicas como 'prompt injection' (instrucciones ocultas en contenido web o documentos que la IA lee) y 'jailbreaking' (convencer a la IA de romper sus reglas mediante escenarios ficticios o roleplay). Es una debilidad conocida de estos sistemas: actores malintencionados pueden explotar estas vulnerabilidades para phishing, desinformación o fraude, y puede que estos ataques deliberados no se puedan evitar del todo.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "343-345",
+   "frase": "This is a known weakness in AI systems"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice a qué negocios afecta el riesgo; lo presenta como una debilidad conocida que crea vulnerabilidades considerables.; Mismo defecto: la lista de tres usos de negocio en riesgo no está en el libro. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s01-issue_spotting_ambiental-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "issue_spotting_ambiental",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es el primer paso para que entiendas qué desafíos ambientales y de sostenibilidad enfrenta tu negocio. Aquí decides si tu enfoque será solo ambiental o una agenda más amplia que también incluya lo económico y lo social (conocida como triple bottom line). Repasa una lista de 12 problemas ambientales clave: cambio climático, energía, contaminación del aire, agotamiento de la capa de ozono, químicos tóxicos, residuos, agua dulce, océanos, uso de suelo, deforestación, biodiversidad y seguridad alimentaria y, si eliges la agenda amplia, también una lista adicional de problemas sociales.",
+  "texto_nuevo": "Es el primer paso para que entiendas qué desafíos ambientales y de sostenibilidad enfrenta tu negocio. Aquí decides si tu enfoque será solo ambiental o una agenda más amplia que también incluya lo económico y lo social (conocida como triple bottom line). Repasa una lista de 12 problemas ambientales clave: cambio climático, energía, contaminación del aire, agotamiento de la capa de ozono, químicos tóxicos, residuos, agua dulce, océanos, uso de suelo, deforestación, biodiversidad e inocuidad de los alimentos y, si eliges la agenda amplia, también una lista adicional de problemas sociales.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "1249",
+   "frase": "From pesticide exposure to chemical contaminants, the health and safety of food"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El duodécimo problema del libro es la inocuidad de los alimentos (pesticidas y contaminantes); en español neutro 'seguridad alimentaria' suele nombrar el acceso a alimentos, un problema que la lista no trae. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s01-lienzo_proyecto_innovacion-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "lienzo_proyecto_innovacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define los segmentos de clientes objetivo y sus necesidades no resueltas",
+  "texto_nuevo": "Define los segmentos de clientes objetivo, sus requisitos estándar y sus necesidades no resueltas",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "3783",
+   "frase": "What are the standard requirements and important unsolved problems or unfulfilled wishes?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El área de necesidades del lienzo incluye los requisitos estándar además de los problemas no resueltos; el paso deja fuera los requisitos estándar. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s01-colaboracion_cadena_suministro-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "colaboracion_cadena_suministro",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave",
+  "texto_nuevo": "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave, resolviendo antes qué datos es razonable compartir, cómo proteger la privacidad de los datos críticos y qué beneficios trae compartirlos",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "3404",
+   "frase": "What data is it reasonable to share? How can privacy of critical data be maintained?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide resolver antes qué datos compartir, cómo proteger los críticos y qué beneficios trae; el paso omite esas condiciones previas. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s01-fiscalidad_comercio_electronico_internacional-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "fiscalidad_comercio_electronico_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer un proceso de cobro y remisión de impuestos según el país del comprador",
+  "texto_nuevo": "Si el mercado destino grava las ventas según la ubicación del cliente (como la UE), establecer un proceso de cobro y remisión de impuestos según el país del comprador",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3355",
+   "frase": "However, there are important exceptions to this general rule."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El defecto existe, pero es la condición perdida (la excepción de la UE vuelta regla general), el mismo que la marca 0; se resuelve devolviendo la condición.; Se cae la condición: en general sin establecimiento permanente no hay sujeción fiscal, y el cobro según el país del cliente solo aplica en mercados con esa excepción, como la UE. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s01-cultura_de_experiencia-pasos_accionables-6",
+  "fecha": "2026-09-28",
+  "node_id": "cultura_de_experiencia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Recoger y priorizar ideas antes de implementar cambios estructurales.",
+  "texto_nuevo": "Sugerencia de My Idea: recoger y priorizar las ideas antes de implementar cambios estructurales.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "795",
+   "frase": "Empowering employees to seize opportunities when and where they see them"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no trae este procedimiento de recoger y priorizar ideas antes de cambios estructurales; queda como sugerencia porque no afirma nada como hecho.; Mismo defecto: ni el caso de la cultura de experiencia ni el de los talleres proponen ese orden ni esa priorización. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 6
+ },
+ {
+  "id": "final-e1-s01-modelo_eco_criterios_ponderados-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "modelo_eco_criterios_ponderados",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aplica ese sistema de puntos a los proyectos que compiten por tu inversión.",
+  "texto_nuevo": "Aplica ese sistema de puntos, junto con un grupo variado de personas de distintas áreas, a los proyectos que compiten por tu inversión.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "714-718",
+   "frase": "A cross-functional team assigns scores to projects"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro los puntajes los asigna un equipo interfuncional y de ahí sale su credibilidad; el paso lo deja como tarea de una sola persona. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s01-evitar_micro_matching-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "evitar_micro_matching",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El micro-matching consiste en comparar fragmentos de comportamiento pasado contra procedimientos, datos disponibles o estándares de buena práctica identificados después del hecho. Esta comparación no explica el comportamiento, solo lo juzga, porque contrasta la conducta con una realidad que el investigador conoce ahora, no con la que rodeaba a la persona en el momento. Existe diferencia crucial entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era realmente perceptible dado el contexto, interfaz y tareas concurrentes).",
+  "texto_nuevo": "El micro-matching consiste en comparar fragmentos de comportamiento pasado contra procedimientos, datos disponibles o estándares de buena práctica identificados después del hecho. Esta comparación no explica el comportamiento, solo lo juzga, porque contrasta la conducta con una realidad que el investigador conoce ahora, no con la que rodeaba a la persona en el momento. Existe diferencia crucial entre disponibilidad de datos (lo que físicamente estaba presente) y observabilidad de datos (lo que era realmente perceptible dado el contexto, la interfaz, las tareas concurrentes y los objetivos, intereses, conocimientos y cultura de quienes miraban).",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "1728-1732",
+   "frase": "goals, interests, knowledge and even culture of the people looking at it"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro hace depender la observabilidad también de los objetivos, intereses, conocimiento y cultura de quienes miraban; el nodo pierde que lo perceptible depende de quién mira. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s01-cultura_de_experiencia-pasos_accionables-7",
+  "fecha": "2026-09-28",
+  "node_id": "cultura_de_experiencia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comunicar el rol de cada empleado en la experiencia global del cliente.",
+  "texto_nuevo": "Sugerencia de My Idea: comunicar el rol de cada empleado en la experiencia global del cliente.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "795",
+   "frase": "we encourage them to become design thinkers themselves"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no incluye este paso; queda como sugerencia porque no afirma nada como hecho. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 7
+ },
+ {
+  "id": "final-e1-s01-deja_de_ignorar_el_riesgo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "deja_de_ignorar_el_riesgo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Hay una trampa en la que a veces se cae: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista, te vuelve dueño de tu proyecto.",
+  "texto_nuevo": "Hay una trampa en la que a veces se cae: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "274",
+   "frase": "negative thinking is the only way to avoid being blindsided by risk"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Promete un resultado (volverte dueño de tu proyecto) que el libro no afirma; el libro solo dice que pensar en negativo es la única forma de no ser emboscado. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s01-diferenciacion_de_marca_contraintuitiva-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "diferenciacion_de_marca_contraintuitiva",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando toda una industria sigue una convención no cuestionada (ej. VCs que no hacen PR/marketing por tradición histórica), existe una oportunidad de diferenciarse haciendo exactamente lo opuesto. Al identificar la razón histórica detrás de una norma de industria y determinar que ya no aplica, una empresa nueva sin track record puede usar marketing agresivo y visibilidad pública, apoyándose en la reputación que ya tienen sus fundadores, para construir credibilidad rápidamente.",
+  "texto_nuevo": "Cuando toda una industria sigue una convención no cuestionada (ej. VCs que no hacen PR/marketing por tradición histórica), existe una oportunidad de diferenciarse haciendo exactamente lo opuesto. Al identificar la razón histórica detrás de una norma de industria y determinar que ya no aplica, una empresa nueva sin track record, que ya diseñó una oferta mejor y distinta, puede usar marketing agresivo y visibilidad pública para darla a conocer, apoyándose en la reputación que ya tienen sus fundadores, para construir credibilidad rápidamente.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "3365-3397",
+   "frase": "Once we designed the firm, we needed to help entrepreneurs understand how we were different."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la firma primero se diseñó para ser mejor y distinta y la publicidad sirvió para darla a conocer; el nodo deja la visibilidad como diferenciación por sí sola.; Mismo defecto: se pierde que la visibilidad explicaba una oferta ya diseñada para ser mejor y distinta. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s01-trade_missions-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "trade_missions",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Inscríbete y entrega la información de tu negocio para el proceso de preselección",
+  "texto_nuevo": "Inscríbete en la misión comercial que elegiste",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2313",
+   "frase": "U.S. Commercial Service specialists abroad will prescreen contacts"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro la preselección es de los contactos internacionales, hecha por los especialistas; el paso inventa una preselección de tu negocio. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s01-trade_missions-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "trade_missions",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Da seguimiento después de la misión a los contactos que generaste",
+  "texto_nuevo": "Sugerencia de My Idea: da seguimiento después de la misión a los contactos que generaste",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2313",
+   "frase": "This preparatory effort is followed up by a 1-week trip"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de seguimiento posterior a la misión; queda como sugerencia porque es un consejo práctico que no afirma nada como hecho. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s01-evaluacion_preparacion_empresa_exportar-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_preparacion_empresa_exportar",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas",
+  "texto_nuevo": "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas, y pregúntate si los beneficios esperados valen esos costos o si esos recursos rendirían más en nuevo negocio doméstico",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "537",
+   "frase": "Are the expected benefits worth the costs, or would company resources be better used"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la pregunta del libro de si los beneficios esperados valen los costos o si esos recursos rendirían más en nuevo negocio doméstico, que es el criterio de decisión. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s01-un_dueno_para_cada_riesgo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "un_dueno_para_cada_riesgo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cada riesgo que decides manejar necesita un dueño claro, alguien que se ocupa de vigilarlo y de actuar cuando toque. La regla que ordena esto es sencilla: mientras más grave el riesgo, más alto debe estar quien responde por él; los riesgos menores se cuidan con rutinas simples, los graves piden atención directa de quien manda. En una empresa esa responsabilidad se reparte entre áreas; en un negocio de una sola persona, el dueño de todos los riesgos eres tú, pero el principio sigue valiendo: nombra explícitamente, para cada riesgo grave, que eres tú quien lo vigila y cuándo. Escribirlo evita que un riesgo quede huérfano y crezca sin que nadie lo mire.",
+  "texto_nuevo": "Cada riesgo que decides manejar necesita un dueño claro, alguien que se ocupa de vigilarlo y de actuar cuando toque. La regla que ordena esto es sencilla: mientras más grave el riesgo, más alto debe estar quien responde por él; los riesgos menores se cuidan con rutinas simples, los graves piden atención directa de quien manda. En una empresa esa responsabilidad se reparte entre áreas; en un negocio de una sola persona, el dueño de todos los riesgos eres tú, pero el principio sigue valiendo: nombra explícitamente, para cada riesgo grave, que eres tú quien lo vigila y cuándo.",
+  "cita": {
+   "libro": "Edwards et al., Managing Project Risks",
+   "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+   "lineas": "5929",
+   "frase": "the higher the risk severity, the higher should be the level of management assigned"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un efecto (escribirlo evita que el riesgo quede huérfano y crezca) que el pasaje no afirma. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s02-usa_silencio_no_partas_diferencia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "usa_silencio_no_partas_diferencia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio suele dejar un trato insatisfactorio para los dos. El silencio, después de plantear tu oferta, le da a la otra parte espacio para pensar sin que tú cedas primero ni te disculpes de más. La imagen de unos zapatos desparejados lo ilustra: partir la diferencia entre dos opciones claras deja un resultado peor que elegir una de ellas. Con quien te va a volver a vender o comprar mantienes una actitud cooperativa y empática, pero eres firme y no cedes al punto medio: no cerrar trato es mejor que cerrar uno malo.",
+  "texto_nuevo": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio suele dejar un trato insatisfactorio para los dos. El silencio, después de plantear tu oferta, le da a la otra parte espacio para pensar sin que tú cedas primero, aunque no todos lo leen igual: para algunas personas el silencio significa enfado. La imagen de unos zapatos desparejados lo ilustra: partir la diferencia entre dos opciones claras deja un resultado peor que elegir una de ellas. Con quien te va a volver a vender o comprar mantienes una actitud cooperativa y empática, pero eres firme y no cedes al punto medio: no cerrar trato es mejor que cerrar uno malo.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "3743, 4075-4077",
+   "frase": "La disculpa («lo siento») también suaviza la negativa y genera empatía."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el silencio se interpreta distinto según la persona y que para algunas significa enfado, hasta estropear un trato.; El libro no pide evitar disculparse; usa el «lo siento» junto al silencio y niega que disculparse sea debilidad.; Mismo defecto que la marca 0: el «ni te disculpes de más» no está en el libro, que recomienda la disculpa. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s02-ciclo_construir_medir_aprender-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "ciclo_construir_medir_aprender",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Construye la versión de tu producto, o de una parte de él, que te permita recorrer el ciclo con el menor esfuerzo para probar una idea",
+  "texto_nuevo": "Decide primero qué necesitas aprender y qué vas a medir para saberlo; luego construye la versión de tu producto, o de una parte de él, que te permita recorrer el ciclo con el menor esfuerzo para probar una idea",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "863",
+   "frase": "our planning really works in the reverse order: we figure out what we need"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro subraya que el ciclo se planifica al revés: primero qué aprender y qué medir, luego qué construir.; Mismo defecto que la marca 0, con la misma evidencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s02-alternativa_dealership_distributorship-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "alternativa_dealership_distributorship",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evitar vender equipo o displays no destinados a reventa (riesgo de activar elemento de fee)",
+  "texto_nuevo": "Evitar vender equipo, displays u otros artículos no destinados a reventa, aunque sea sin ganancia: eso activa el elemento de fee",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1205",
+   "frase": "even if not sold at a profit—will trigger the fee element"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que vender esos artículos activa el elemento de fee aunque sea sin ganancia; el paso lo rebaja a riesgo y pierde esa condición. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s02-usa_silencio_no_partas_diferencia-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "usa_silencio_no_partas_diferencia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Practica quedarte en silencio unos segundos después de tu oferta, aunque te incomode.",
+  "texto_nuevo": "Practica quedarte en silencio unos segundos después de tu oferta, aunque te incomode, pero ten en cuenta que para algunas personas el silencio significa enfado.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "4075-4077",
+   "frase": "Para alguien del tipo acomodador, el silencio significa enfado."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que cada tipo de negociador lee el silencio distinto y que para algunos significa enfado; el paso lo aconseja sin ese límite. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s02-fijacion_cognitiva-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "fijacion_cognitiva",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La fijación cognitiva ocurre cuando el contexto inmediato de resolución de problemas sesga a las personas hacia una interpretación particular de la situación, activando cierto conocimiento y actividades de diagnóstico a expensas de otras. En situaciones inciertas y dinámicas, las personas deben hacer evaluaciones provisionales basadas en datos parciales; tomar una acción compromete a una interpretación particular y genera explicaciones que la justifican, las cuales pueden persistir aunque surjan nuevos datos contradictorios. El caso del vuelo con desbalance de combustible ilustra cómo una tripulación mantuvo la interpretación de 'problema de indicación' pese a evidencia posterior.",
+  "texto_nuevo": "La fijación cognitiva ocurre cuando el contexto inmediato de resolución de problemas sesga a las personas hacia una interpretación particular de la situación, que puede activar cierto conocimiento y actividades de diagnóstico a expensas de otras. En situaciones inciertas y dinámicas, las personas deben hacer evaluaciones provisionales basadas en datos parciales; tomar una acción compromete a una interpretación particular y genera explicaciones que la justifican, las cuales pueden persistir aunque surjan nuevos datos contradictorios. El caso del vuelo con desbalance de combustible ilustra cómo una tripulación mantuvo la interpretación de 'problema de indicación' pese a evidencia posterior.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "2182",
+   "frase": "But it can activate certain kinds of knowledge and trouble-shooting activities"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la interpretación preliminar puede activar cierto conocimiento a expensas de otro, no que lo haga siempre. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s02-control_proceso_variables-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "control_proceso_variables",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aplicar diseño estadístico de experimentos para identificar relaciones causales",
+  "texto_nuevo": "Aplicar diseño estadístico de experimentos para identificar relaciones causales, con personas dedicadas y formadas para diseñarlos y analizarlos",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22436",
+   "frase": "resources for full-time personnel to design and analyze the experiments"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el diseño de experimentos a contar con personas dedicadas a diseñarlos y analizarlos y con formación; el paso lo omite. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s02-foreign_corrupt_practices_act-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "foreign_corrupt_practices_act",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, también a través de un tercero a sabiendas, para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+  "texto_nuevo": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, también a través de un tercero a sabiendas (y cuenta como saberlo hacerte de la vista gorda), para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2863",
+   "frase": "\"Knowing\" includes the concepts of conscious disregard and willful blindness."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que saber incluye la indiferencia consciente y la ceguera deliberada; sin eso parece que basta con no preguntar.; Mismo defecto que la marca 0, con la misma evidencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s02-lleva_scorecard_desempeno_proveedor-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "lleva_scorecard_desempeno_proveedor",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, en vez de números que aparenten una precisión que no tienes, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te dice a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre.",
+  "texto_nuevo": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, en vez de números que aparenten una precisión que no tienes, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te ayuda a ver a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre. Es solo una parte de gestionar al proveedor: su desempeño también tiene aspectos intangibles que el registro no recoge.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5553",
+   "frase": "Creating a supplier performance scorecard is only one part of managing the supplier relationship."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el registro es solo una parte de gestionar al proveedor y que su desempeño tiene aspectos intangibles; el resumen lo presenta como lo que decide.; Mismo defecto que la marca 0, con la misma evidencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s02-lleva_scorecard_desempeno_proveedor-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "lleva_scorecard_desempeno_proveedor",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Escribe una lista corta con lo que más te importa de ese proveedor, partiendo de los criterios con que lo elegiste, como plazo, calidad, precio y trato, y acuérdala con él: puede aportar puntos en los que no habías pensado.",
+  "texto_nuevo": "Escribe una lista con todo lo que te importa de ese proveedor, partiendo de los criterios con que lo elegiste, como plazo, calidad, precio y trato, más cualquier condición del contrato que le dé un bono o un pago más rápido, y acuérdala con él: puede aportar puntos en los que no habías pensado.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5557-5559",
+   "frase": "these terms should go on the supplier performance scorecard as well"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el registro incluya todos los criterios de desempeño y los términos que dan bonos o pago más rápido; el paso lo reduce a una lista corta y omite los bonos.; Se pierde que las condiciones de bono o pago más rápido van al registro para medir su cumplimiento de forma objetiva. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s02-decision_diy_vs_consultor_franquicia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "decision_diy_vs_consultor_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Puedes desarrollar tu programa de franquicia por tu cuenta, pero la pregunta que importa no es si puedes sino si te conviene. Armar un programa de franquicia exige investigar a la competencia, construir el modelo financiero, escribir los manuales de operación, diseñar el entrenamiento, el marketing y la estrategia de ventas. Ese conjunto de habilidades casi nunca lo tienes disponible sin distraer recursos de tu negocio principal.",
+  "texto_nuevo": "Puedes desarrollar tu programa de franquicia por tu cuenta, pero la pregunta que importa no es si puedes sino si te conviene. Armar un programa de franquicia exige investigar a la competencia, construir el modelo financiero, escribir los manuales de operación, diseñar el entrenamiento, el marketing y la estrategia de ventas. Ese conjunto de habilidades casi nunca lo tienes disponible sin distraer recursos de tu negocio principal. Y algunos errores por inexperiencia, incluso legales, pueden tardar años en notarse.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5219-5225",
+   "frase": "some may not become apparent for years"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no se queda en el tiempo: advierte que los errores por inexperiencia, como un manual que no protege de responsabilidad, pueden tardar años en notarse, y eso pesa en la decisión. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s02-plan_seguridad_sistema_poam-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "plan_seguridad_sistema_poam",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Documentos SSP y POAM completos, actualizados y disponibles para revisión de auditores o agencias federales",
+  "texto_nuevo": "Documentos SSP y POAM completos, revisados y actualizados periódicamente, protegidos contra divulgación no autorizada y disponibles para revisión de auditores o agencias federales",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "737",
+   "frase": "Periodically review and update the system security plan and take steps to protect it"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide proteger el plan contra la divulgación no autorizada; el entregable solo lo deja disponible.; El libro pide revisar periódicamente el plan y protegerlo de divulgación no autorizada; se pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s02-plan_mejora_procesos-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "plan_mejora_procesos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar el punto de inicio y fin del proceso",
+  "texto_nuevo": "Identificar el punto de inicio y fin del proceso, su dueño (responsable de mantenerlo y de que funcione) y sus interesados",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "2672-2676",
+   "frase": "Identify the entity responsible for the maintenance and success of the process."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La tabla de elementos del plan pide además identificar al dueño del proceso, responsable de su mantenimiento y éxito, y a sus interesados, con quienes se trabaja la mejora. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s02-planificacion_recoleccion_datos-pasos_accionables-6",
+  "fecha": "2026-09-28",
+  "node_id": "planificacion_recoleccion_datos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar supuestos del tamaño de muestra y del análisis",
+  "texto_nuevo": "Evaluar supuestos del tamaño de muestra y del análisis, y tomar medidas correctivas si hace falta (incluso recoger más observaciones)",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "19102",
+   "frase": "Take corrective steps (including additional observations) if required."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade tomar medidas correctivas, incluidas observaciones adicionales, si hace falta; el paso se queda en evaluar. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 6
+ },
+ {
+  "id": "final-e1-s02-planificacion_recoleccion_datos-pasos_accionables-11",
+  "fecha": "2026-09-28",
+  "node_id": "planificacion_recoleccion_datos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Presentar los resultados en un informe claro con resumen ejecutivo",
+  "texto_nuevo": "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "19114",
+   "frase": "emphasizing results in terms of the original problem rather than the statistical indexes"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide expresar las conclusiones en términos del problema original y no de los índices estadísticos; se pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 11
+ },
+ {
+  "id": "final-e1-s03-analisis_motivaciones_fundador-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_motivaciones_fundador",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera, mientras que otras motivaciones dominan en quienes no emprenden. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+  "texto_nuevo": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera; salvo esta última, que también pesa en quienes no emprenden, en ellos dominan otras motivaciones, sobre todo al inicio de la carrera. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "297",
+   "frase": "with the exception of financial gain, the top-ranked motivations for entrepreneurs were much lower ranked"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la diferencia se da sobre todo al inicio de la carrera y que los perfiles se acercan en los 40.; El libro exceptúa la ganancia financiera, que también está arriba en quienes no emprenden; el nodo la presenta como rasgo distintivo.; Mismo defecto que la marca 0: se pierde la excepción de la ganancia financiera. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s03-encuestar_al_cliente_para_saber_que_valora-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "encuestar_al_cliente_para_saber_que_valora",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pregunta qué aspectos del envío les importan más: tiempo, condición, aviso o devolución fácil.",
+  "texto_nuevo": "Pregunta primero, sin darles una lista hecha, qué aspectos del envío les importan; después pídeles que ordenen por importancia los que salieron (por ejemplo tiempo, condición, aviso o devolución fácil).",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "2643",
+   "frase": "measures of service that are generated by customers themselves and not imposed arbitrarily"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que los elementos del servicio los generen los propios clientes y no se impongan desde fuera; la lista cerrada pierde ese primer paso. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s03-adopcion_liderazgo-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "adopcion_liderazgo",
+  "campo": "pasos_accionables",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Usar datos para identificar qué está realmente fuera de línea, no solo quién quedó bajo el promedio",
+  "texto_nuevo": "Usar datos para identificar quién está estadísticamente fuera de línea y necesita ayuda, no quién quedó bajo el promedio",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1212",
+   "frase": "problem is not the bottom 10 percent, but who is statistically out of line"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro descarta el criterio de quedar bajo el promedio; 'no solo' lo conserva como criterio válido. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s03-risk_audit-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "risk_audit",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar buenas prácticas y áreas de mejora para futuros proyectos",
+  "texto_nuevo": "Identificar buenas prácticas y áreas de mejora del proceso de gestión de riesgos",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "5113-5153",
+   "frase": "The Risk Audit is a tool used in process 11.6 Control Risks"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro ubica la auditoría en el control de riesgos del proyecto en curso; el destino 'futuros proyectos' lo añade el nodo.; Mismo defecto que la marca 0. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s03-cuan_probable_y_cuanto_doleria-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cuan_probable_y_cuanto_doleria",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de daño mínimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
+  "texto_nuevo": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo improbable capaz de hundirte merece tu atención aparte, y a todos tus riesgos aplícales el mismo criterio.",
+  "cita": {
+   "libro": "Edwards et al., Managing Project Risks",
+   "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+   "lineas": "5326",
+   "frase": "Such risks do not fit comfortably into qualitative risk assessment models and should be flagged"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que un riesgo probable de daño mínimo pueda esperar; solo pide atención aparte para los de cola larga.; Mismo defecto; el libro deja el reparto de severidad a la política de la organización. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s03-evaluar_controles-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "evaluar_controles",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un informe de evaluación de controles y un Plan de Acción y Metas (POA&M) con tareas de remediación priorizadas.",
+  "texto_nuevo": "Un informe de evaluación de controles y un Plan de Acción y Metas (POA&M) con tareas de remediación, recursos, hitos y fechas de cumplimiento.",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "201",
+   "frase": "identifies tasks that need to be accomplished. It details resources required"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define el plan por tareas, recursos, hitos y fechas; no pide priorizarlas.; Mismo defecto que la marca 0. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s03-eliminacion_inspeccion_masiva_por_control_estadistico-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "eliminacion_inspeccion_masiva_por_control_estadistico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control",
+  "texto_nuevo": "Si la proporción media de defectos es menor que el punto de equilibrio k1/k2, reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control; si es mayor, mantener la inspección 100%",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9300-9306",
+   "frase": "Case 2: If p > k1/k2, 100 percent inspection"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Aun bajo control, el libro manda inspección 100% si la proporción media de defectos supera k1/k2.; Mismo defecto que la marca 0. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s03-tasa_interna_retorno_irr-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "tasa_interna_retorno_irr",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usar el IRR en conjunto con el NPV -nunca de forma aislada- cuando los montos son grandes o los proyectos tienen duraciones distintas",
+  "texto_nuevo": "Usar el IRR en conjunto con el NPV, nunca de forma aislada, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3190",
+   "frase": "it always makes sense to use NPV calculations for your investment decisions"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que siempre conviene decidir con el NPV; la condición del paso deja entender que fuera de esos casos basta el IRR. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s03-eliminacion_inspeccion_masiva_por_control_estadistico-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "eliminacion_inspeccion_masiva_por_control_estadistico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comunicar a las áreas de calidad y clientes el cambio y su justificación estadística",
+  "texto_nuevo": "Sugerencia de My Idea: comunica a las áreas de calidad y a tus clientes el cambio y su justificación estadística",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9308",
+   "frase": "keep an eye on the state of statistical control and on the average fraction defective"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pide comunicar el cambio a calidad ni a clientes; como consejo práctico queda como sugerencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s03-cuidado_con_la_falsa_precision-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "cuidado_con_la_falsa_precision",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Marca los datos que en realidad inventaste o supusiste sin base.",
+  "texto_nuevo": "Marca los datos que en realidad inventaste o supusiste sin base y, de esos, sal a medir los que más pesan en el resultado.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "3389",
+   "frase": "an additional empirical measurement to reduce uncertainty where the model is the most sensitive"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como remedio medir de verdad las variables inciertas donde el modelo es más sensible; marcar sin medir pierde esa parte. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s03-ia_en_supply_chain-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "ia_en_supply_chain",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como clima o eventos sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
+  "texto_nuevo": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como el clima, los eventos políticos y militares o el sentimiento en redes sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "2293",
+   "frase": "external factors such as weather, political and military events, and social media sentiments"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro nombra el clima, los eventos políticos y militares y el sentimiento en redes sociales, no eventos sociales. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s03-ia_en_supply_chain-pasos_accionables-5",
+  "fecha": "2026-09-28",
+  "node_id": "ia_en_supply_chain",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo",
+  "texto_nuevo": "Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo, teniendo en cuenta que puede inventar información o recomendar cosas absurdas o incluso peligrosas",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "2314",
+   "frase": "quotes nonexistent sources of information that it has simply made up or makes recommendations"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la IA funciona como caja negra y puede inventar fuentes o recomendar cosas absurdas o peligrosas, límite que pesa al darle autonomía. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-s03-como_sabes_que_tu_metodo_sirve-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "como_sabes_que_tu_metodo_sirve",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+  "texto_nuevo": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó, o prueba tu método con datos que ya tienes, porque con riesgos raros esperar a que ocurran tarda demasiado. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "4768",
+   "frase": "In other words, you test the model against data you already had."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade probar el modelo contra datos históricos que ya tienes y advierte que con eventos raros esperar tarda demasiado. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s03-estatus_fundador_simbolico-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "estatus_fundador_simbolico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El título de 'fundador' puede ser objetivo (basado en fecha de inicio, aporte de idea, rol inicial) o simbólico, otorgado a contrataciones tempranas para incentivar compromiso sin ceder participación, que es escasa, ni efectivo. Sin embargo, otorgar este título con facilidad conlleva riesgos: puede generar sentido de derecho a posiciones senior que la persona podría no sostener en etapas posteriores (metáfora de 'jungla, camino de tierra y autopista').",
+  "texto_nuevo": "El título de 'fundador' puede ser objetivo (basado en fecha de inicio, aporte de idea, rol inicial) o simbólico, otorgado a contrataciones tempranas para incentivar compromiso sin ceder participación, que es escasa, ni efectivo. Sin embargo, otorgar este título con facilidad conlleva riesgos: puede generar sentido de derecho a posiciones senior que la persona podría no sostener en etapas posteriores (metáfora de 'jungla, camino de tierra y autopista'); si luego hay que apartarla, el título agrava el daño a la cultura y al equipo.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "888",
+   "frase": "these problems have even deeper, sometimes unanticipated, impacts on the startup's culture and employees"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como peligro que, si hay que apartar o despedir a quien lleva el título, el daño a la cultura y al equipo es más hondo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s03-cuidado_con_la_falsa_precision-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "cuidado_con_la_falsa_precision",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No presentes más decimales de los que tus datos aguantan: redondea con honestidad.",
+  "texto_nuevo": "Sugerencia de My Idea: no presentes más decimales de los que tus datos aguantan; redondea con honestidad.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "3462",
+   "frase": "You can't give them the range that represents your uncertainty"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de decimales ni de redondear; su remedio son los rangos. Como consejo práctico queda como sugerencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s04-usa_preguntas_de_como_para_negociar_precio-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "usa_preguntas_de_como_para_negociar_precio",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si te ofrecen una mejora, repite la misma técnica hasta acercarte a tu número real.",
+  "texto_nuevo": "Si te ofrecen una mejora que todavía no te sirve, sigue diciendo que no sin decirlo, con frases amables cada vez algo más directas, como 'es muy generoso, pero no me soluciona nada, lo siento' o 'lo siento, no puedo hacerlo', hasta acercarte a tu número real.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "3735-3747",
+   "frase": "tu oferta es muy generosa y te lo agradezco, pero creo que no me soluciona"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no repite la misma pregunta: tras el primer cómo vienen negativas amables cada vez más directas.; Mismo defecto: se pierde la serie de negativas escalonadas que sigue a la pregunta de cómo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s04-estructura_precio_adquisicion-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "estructura_precio_adquisicion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Desglosar el precio anunciado en sus componentes: efectivo al cierre, escrow, working capital, earn-out y pool de retención",
+  "texto_nuevo": "Desglosar el precio anunciado en sus componentes: efectivo al cierre, escrow, working capital, earn-out y pool de retención, y revisar si el comprador asume o no las opciones y warrants no ejercidos",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4002, 4027",
+   "frase": "like the working capital clause, it can impact the overall value of the deal"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta también que el comprador no asuma opciones y warrants no ejercidos, que puede cambiar el valor esperado.; Mismo componente omitido del desglose: el trato de opciones y warrants no ejercidos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s04-coshh_procedimiento_rolling-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "coshh_procedimiento_rolling",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las regulaciones COSHH (1988) establecen un procedimiento continuo ('rolling procedure') para la identificación, evaluación y control de riesgos derivados de sustancias peligrosas en el lugar de trabajo. A diferencia de otras leyes de seguridad, exige a los empleadores conocer las propiedades de miles de sustancias y aplicar un ciclo continuo de gestión de riesgos que incluye listado, control de exposición, pruebas de equipos, monitoreo, vigilancia de salud y capacitación.",
+  "texto_nuevo": "Las regulaciones COSHH (1988) establecen un procedimiento continuo ('rolling procedure') para la identificación, evaluación y control de riesgos derivados de sustancias peligrosas en el lugar de trabajo. A diferencia de la ley general británica de salud y seguridad en el trabajo (HSW Act), exige a los empleadores conocer las propiedades de miles de sustancias y aplicar un ciclo continuo de gestión de riesgos que incluye listado, control de exposición, pruebas de equipos, monitoreo, vigilancia de salud y capacitación.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "4360",
+   "frase": "They also adopted a strategy that was in marked contrast to the HSW Act"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro contrasta COSHH solo con la HSW Act, no con las leyes de seguridad en general.; Mismo defecto: generaliza a otras leyes un contraste que el libro hace con una sola ley. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-define_punto_maximo_de_stock-pasos_accionables-5",
+  "fecha": "2026-09-28",
+  "node_id": "define_punto_maximo_de_stock",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide cada cuánto revisarás y pedirás (tu ciclo de revisión) y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor.",
+  "texto_nuevo": "Calcula cada cuánto revisarás y pedirás (tu ciclo de revisión) a partir de lo que le compras en total a ese proveedor y de la cantidad mínima que te pide para darte descuento, teniendo en cuenta la temporada, y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor.",
+  "cita": {
+   "libro": "Max Muller, Essentials of Inventory Management",
+   "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+   "lineas": "3964-3976",
+   "frase": "The discount quantity is the minimum amount you have to order"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro calcula el ciclo de revisión con las compras totales al proveedor y la cantidad mínima con descuento, y lo ajusta por temporada.; Mismo defecto: el ciclo no es de libre elección en el libro, sale de una fórmula y de la temporada. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-s04-seguimiento_accion_correctiva-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "seguimiento_accion_correctiva",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas que las conclusiones del reporte sean correctas y que haya acuerdo sobre ellas; si no lo hay, resuelves ese desacuerdo. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que te muevan a actuar, por ejemplo, en términos monetarios.",
+  "texto_nuevo": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas que las conclusiones del reporte sean correctas y que haya acuerdo sobre ellas; si no lo hay, resuelves ese desacuerdo. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que pesen ante la dirección, por ejemplo, en términos monetarios.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10278-10284",
+   "frase": "Restating the deficiency in monetary or other terms that will have an impact on management"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reformula la deficiencia en términos que tengan impacto en la dirección; el nodo pierde ese destinatario.; No es lo opuesto: el nodo pierde a quién va dirigida la reformulación (la dirección, para conseguir recursos) y la pone en ti. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-nombra_tus_suposiciones_fragiles-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "nombra_tus_suposiciones_fragiles",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Todo plan se apoya en suposiciones, y el riesgo vive donde una suposición se quiebra. Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Para un emprendedor solo el ejercicio clave es sacar a la luz los supuestos callados de su plan, esos que da por ciertos sin haberlos comprobado, porque son las grietas por donde el proyecto se puede colar.",
+  "texto_nuevo": "Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo encajará lo que haces con quienes lo usan y con otros sistemas, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, si alguien usará su poder para imponer condiciones que chocan con la realidad, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Entre lo que hace que un proyecto se tuerza están los supuestos ocultos, esos que das por ciertos sin haberlos comprobado, así que conviene sacarlos a la luz.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "192-202, 1154",
+   "frase": "including poor planning, overlooked tasks, imperfectly nurtured relationships, hidden assumptions, overreliance on good luck"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro sitúa el riesgo en la incertidumbre; los supuestos ocultos aparecen solo entre las causas de que un proyecto se tuerza, no como doctrina ni ejercicio clave.; La lista del libro trae también cómo encajará lo hecho con usuarios y otros sistemas y el poder que impone restricciones irreales.; Mismo hueco en la enumeración: falta cómo encajará lo que haces con quienes lo usan y con otros sistemas. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-capacidad_proceso_concepto-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "capacidad_proceso_concepto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comparar la variación de 6σ contra los límites de especificación",
+  "texto_nuevo": "Comparar la variación de 6σ contra los límites de especificación; como referencia, que el ancho de la especificación sea al menos 1,33 veces esa variación (Cp de 1,33 o más)",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20801-20819",
+   "frase": "suggest that Cp should be at least 1.33"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da un criterio para esa comparación: por criticidad y porque la media se descentra, Cp de al menos 1,33. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s04-local_rationality_principle-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "local_rationality_principle",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Base psicológica de la New View que establece que lo que las personas hacen tiene sentido para ellas en el momento, dado sus objetivos, foco atencional y conocimiento disponible en ese instante—de lo contrario no lo harían. Las personas no van a trabajar con la intención de hacer un mal trabajo. Este principio obliga al investigador a posicionarse desde la perspectiva del trabajador ('el túnel') para entender por qué sus acciones tuvieron sentido en ese contexto, en lugar de juzgar desde la retrospectiva (hindsight) con conocimiento del resultado.",
+  "texto_nuevo": "Base psicológica de la New View que establece que lo que las personas hacen tiene sentido para ellas en el momento, dado sus objetivos, foco atencional y conocimiento disponible en ese instante; de lo contrario no lo harían. Las personas no van a trabajar con la intención de hacer un mal trabajo (el sabotaje o el acto criminal deliberado quedan fuera de este principio y piden otra explicación). Este principio obliga al investigador a posicionarse desde la perspectiva del trabajador ('el túnel') para entender por qué sus acciones tuvieron sentido en ese contexto, en lugar de juzgar desde la retrospectiva (hindsight) con conocimiento del resultado.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "380",
+   "frase": "it takes you into the realm of sabotage, criminality, terrorism which requires different explanations"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja fuera del principio el sabotaje y el acto criminal, que piden otras explicaciones. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-usa_preguntas_de_como_para_negociar_precio-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "usa_preguntas_de_como_para_negociar_precio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando alguien te ofrece un precio o condición que no puedes aceptar, decir 'no' de forma directa puede tensar una relación con la que seguirás comprando. Una alternativa más segura es responder con una pregunta que empiece por 'cómo', formulada como una petición de ayuda y no como un reclamo: '¿cómo se supone que voy a pagar eso?'. Esta pregunta traslada el problema a la otra parte y la invita a ofrecer una solución mejor sin que tú hayas dicho no explícitamente. Guarda silencio después de preguntar, deja que piensen, y repite la técnica cada vez que la respuesta no te convenza, acercándote poco a poco a un número que sí puedas pagar.",
+  "texto_nuevo": "Cuando alguien te ofrece un precio o condición que no puedes aceptar, decir 'no' de forma directa puede tensar una relación con la que seguirás comprando. Una alternativa más segura es responder con una pregunta que empiece por 'cómo', formulada como una petición de ayuda y no como un reclamo: '¿cómo se supone que voy a pagar eso?'. Esta pregunta traslada el problema a la otra parte y la invita a ofrecer una solución mejor sin que tú hayas dicho no explícitamente. Guarda silencio después de preguntar, deja que piensen, y si la respuesta no te convence, sigue negándote sin decir no, con frases amables cada vez más directas, acercándote poco a poco a un número que sí puedas pagar.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "3733-3749",
+   "frase": "se puede decir «no» hasta cuatro veces antes de pronunciar explícitamente la palabra"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no repite la misma pregunta: la de cómo es el primer paso de negativas amables cada vez más directas. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-usa_preguntas_de_como_para_negociar_precio-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "usa_preguntas_de_como_para_negociar_precio",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Una serie de respuestas en forma de pregunta que consiguen mejoras de precio sin usar la palabra no.",
+  "texto_nuevo": "Una serie de respuestas, primero una pregunta de 'cómo' y después negativas amables cada vez más directas, que consiguen mejoras de precio sin usar la palabra no.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "3737-3747",
+   "frase": "El primer paso en esta serie de negativas"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La serie del libro sigue, tras la pregunta de cómo, con negativas en forma de frase. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-estructura_precio_adquisicion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "estructura_precio_adquisicion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El precio 'de titular' en una LOI raramente es el precio real final. Factores como el escrow (retención de fondos por reclamos futuros), ajustes de capital de trabajo, earn-outs (pagos condicionados a metas futuras) y pools de retención gerencial reducen sustancialmente el valor efectivo recibido por los vendedores. Entender estos componentes es crítico para evaluar el verdadero valor de una oferta de adquisición.",
+  "texto_nuevo": "El precio 'de titular' en una LOI raramente es el precio real final. Factores como el escrow (retención de fondos por reclamos futuros), ajustes de capital de trabajo, earn-outs (pagos condicionados a metas futuras) y pools de retención gerencial pueden reducir, y en general reducen, el valor efectivo recibido por los vendedores. Entender estos componentes es crítico para evaluar el verdadero valor de una oferta de adquisición.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4000-4014",
+   "frase": "There are a lot of factors that can (and generally will) impact the final price"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos factores pueden, y en general van a, afectar el precio; 'sustancialmente' es un cuánto añadido. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-define_punto_maximo_de_stock-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "define_punto_maximo_de_stock",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para no quedarte sin producto ni acumular de más, conviene fijar un punto de reorden: la cantidad mínima con la que todavía puedes esperar a que llegue el próximo pedido sin quedarte a cero. Ese punto se calcula combinando cuánto vendes por semana, cuánto tarda tu proveedor en entregar, y un colchón extra por si hay retrasos o defectos. A partir de ahí también puedes fijar un máximo: cuánto quieres tener en total antes de dejar de pedir más. Estos números no son fijos para siempre: cambian si tu ritmo de ventas cambia o si tu proveedor modifica sus tiempos de entrega, así que conviene revisarlos cada vez que eso ocurra.",
+  "texto_nuevo": "Para no quedarte sin producto ni acumular de más, conviene fijar un punto de reorden: la cantidad mínima, sumando lo que tienes y lo que ya está pedido, con la que todavía puedes esperar a que llegue el próximo pedido sin quedarte a cero. Ese punto se calcula combinando cuánto vendes por semana, cuánto tarda tu proveedor en entregar, y un colchón extra por si hay retrasos o defectos. A partir de ahí también puedes fijar un máximo: cuánto quieres tener en total, contando lo ya pedido, antes de dejar de pedir más. Estos números no son fijos para siempre: cambian si tu ritmo de ventas cambia o si tu proveedor modifica sus tiempos de entrega, así que conviene revisarlos cada vez que eso ocurra.",
+  "cita": {
+   "libro": "Max Muller, Essentials of Inventory Management",
+   "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+   "lineas": "3891, 3962",
+   "frase": "the lowest amount of an item you will have on hand and on order"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta en el mínimo y el máximo lo que hay en mano y lo ya pedido; sin eso se puede pedir de más. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-disenar_verbos_no_sustantivos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "disenar_verbos_no_sustantivos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Idea del diseñador Bill Moggridge: tu verdadero trabajo al diseñar no es crear un objeto sino la acción o el comportamiento que ese objeto permite o impide. Cada decisión que tomas -el tamaño de un botón, la forma de una mesa, lo fácil o difícil que es desarmar algo- moldea conversaciones, hábitos y consecuencias que no se ven a simple vista, como que algo se reutilice, se repare o incluya a mas personas. Diseñar así significa anticipar los efectos que vienen después de tu decisión, no solo el resultado inmediato.",
+  "texto_nuevo": "Idea del diseñador Bill Moggridge: tu verdadero trabajo al diseñar no es crear un objeto sino la acción o el comportamiento que ese objeto permite o impide. Cada decisión que tomas -el tamaño de un botón, la forma de una mesa, lo fácil o difícil que es desarmar algo- moldea conversaciones y consecuencias que no se ven a simple vista, como que algo se reutilice, se repare o incluya a más personas. Diseñar así significa anticipar los efectos que vienen después de tu decisión, no solo el resultado inmediato.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "663",
+   "frase": "the shape of a tabletop shapes a conversation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Los efectos del libro son conversación, alcance, reutilización y reparación; 'hábitos' no está. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-disenar_verbos_no_sustantivos-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "disenar_verbos_no_sustantivos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Anota los efectos que no se ven a simple vista de tu diseño: conversaciones, hábitos, personas que quedan afuera, no solo la función evidente.",
+  "texto_nuevo": "Anota los efectos que no se ven a simple vista de tu diseño: conversaciones, personas que quedan afuera, no solo la función evidente.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "663",
+   "frase": "the shape of a tabletop shapes a conversation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): 'Hábitos' no está entre los efectos que enumera el libro. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s04-seguimiento_accion_correctiva-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "seguimiento_accion_correctiva",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Programar una auditoría de seguimiento para verificar que las acciones correctivas se implementaron",
+  "texto_nuevo": "Programar una auditoría de seguimiento para verificar que las acciones correctivas se implementaron y que son eficaces",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10278",
+   "frase": "and that the corrective action is effective"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El seguimiento del libro confirma también que la acción correctiva es eficaz. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s04-infection_control_plan-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "infection_control_plan",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacítate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
+  "texto_nuevo": "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacítate al menos una vez al año sobre cómo protegerte, qué hacer ante un arañazo o una mordida y cómo reconocer un animal enfermo; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
+  "cita": {
+   "libro": "SMALL_BUSINESS",
+   "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+   "lineas": "921",
+   "frase": "what to do in the event of an animal scratch or bite"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La capacitación anual del libro cubre también qué hacer ante arañazo o mordida y cómo reconocer un animal enfermo.; Mismo contenido de la capacitación omitido. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s04-vender_sin_stock_con_drop_shipping-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "vender_sin_stock_con_drop_shipping",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde evitas manipular la carga dos veces. El riesgo es que pierdes control sobre lo que el cliente realmente recibe: la calidad del empaque, el tiempo de entrega y el trato quedan en manos de un tercero que no eliges pedido por pedido. Existen proveedores que no cumplen lo prometido.",
+  "texto_nuevo": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde evitas manipular la carga dos veces. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+  "cita": {
+   "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+   "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+   "lineas": "198",
+   "frase": "it is difficult to ensure the desired level of customer service"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que es difícil asegurar el nivel de servicio deseado; el desglose y el pedido por pedido son añadidos.; Endurece la dificultad del libro a pérdida de control y añade riesgos concretos que no trae. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-clasificacion_abc_prospectos-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "clasificacion_abc_prospectos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A",
+  "texto_nuevo": "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A, con preguntas de sondeo para decidir si cada B puede pasar a A o debe salir del pipeline",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4440-4444",
+   "frase": "ask probing questions to determine if the “B” prospect can be moved to “A” status"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide preguntas de sondeo para decidir si un B pasa a A o sale del pipeline.; Mismo defecto: se pierde la opción de sacar al B del pipeline. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s04-organizaciones_ambidiestras-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "organizaciones_ambidiestras",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si decides separar, busca explotar sinergias posibles con el negocio principal (manufactura, R&D, compras)",
+  "texto_nuevo": "Si decides separar, busca explotar con cuidado las sinergias posibles con el negocio principal",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "4009",
+   "frase": "should be carefully exploited even when the new model is implemented in a standalone unit"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no enumera sinergias para la unidad separada; manufactura, compras e I+D son lo que se centralizó al integrar. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s04-consejo_de_calidad_2-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "consejo_de_calidad_2",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbólicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve para que sus miembros compartan con regularidad sus problemas, sentimientos y experiencias, y también como espacio de comunicación entre tú y ellos, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+  "texto_nuevo": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evalúan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbólicas (como pagar cada quien sus propias bebidas) para preservar su autonomía. Sirve para que sus miembros compartan con regularidad sus problemas, sentimientos y experiencias y decidan acciones para mejorar el programa de calidad, y también como espacio de comunicación entre tú y ellos, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1643-1645",
+   "frase": "determine actions necessary to upgrade and improve the solid quality program being installed"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da al consejo la tarea de decidir acciones para mejorar el programa; el resumen lo reduce a compartir.; Mismo defecto: se pierde la función de decidir acciones de mejora. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-consejo_de_calidad_2-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "consejo_de_calidad_2",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Asistir cuando el consejo te invite a sus reuniones para presentar el programa y responder abiertamente cualquier pregunta.",
+  "texto_nuevo": "Proponer al consejo reunirte con él en una de sus reuniones para presentar el programa y responder abiertamente cualquier pregunta.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2085-2087",
+   "frase": "Perhaps it would be a good idea if I met with them."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la dirección toma la iniciativa de reunirse con el consejo; el paso la deja esperando una invitación. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s04-verifica_quien_tiene_el_poder_de_decidir_o_vetar-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En toda negociación hay personas que no están sentadas contigo pero que pueden aprobar o tumbar el acuerdo después: un socio, un familiar, un jefe que no viste. Si solo negocias con quien tienes enfrente, corres el riesgo de cerrar un trato que luego alguien mas rompe. Usa preguntas simples como como afecta esto a los demás involucrados o quien mas necesita estar de acuerdo con esto, para descubrir esas presencias ocultas antes de que se conviertan en un problema al final. Presta atención también a como habla la otra parte: si usa mucho yo, mi y me, suele ser señal de que decide otra persona; si usa nosotros o ellos, suele tener capacidad de decisión y remite a terceros para no quedar atrapada. Reconocer esto a tiempo te ahorra negociar dos veces por el mismo trato.",
+  "texto_nuevo": "En casi toda negociación hay personas que no están sentadas contigo pero que pueden aprobar o tumbar el acuerdo después: un socio, un familiar, un jefe que no viste. Si solo negocias con quien tienes enfrente, corres el riesgo de cerrar un trato que luego alguien más rompe. Usa preguntas simples como '¿cómo afecta esto a los demás involucrados?' o '¿quién más necesita estar de acuerdo con esto?', para descubrir esas presencias ocultas antes de que se conviertan en un problema al final. Presta atención también a cómo habla la otra parte: si usa mucho yo, mi y me, suele ser señal de que decide otra persona; si usa nosotros o ellos, suele tener capacidad de decisión y remite a terceros para no quedar atrapada. Reconocer esto a tiempo evita que el trato se caiga cuando ya lo dabas por cerrado.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "3478-3506",
+   "frase": "por lo general, casi siempre hay más gente implicada"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que por lo general casi siempre hay más gente implicada y admite quien negocia solo; 'en toda' endurece.; El libro habla de un trato que se cae al cerrarlo; negociar dos veces es un efecto añadido.; Mismo efecto añadido: el libro no habla de negociar dos veces. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-liderazgo_ejecutivo_innovacion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "liderazgo_ejecutivo_innovacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Apoyar la innovación es necesario, pero no basta con eso para que un producto tenga éxito. Si lideras, comprométete de verdad con innovar y pon los recursos necesarios sin desviarlos a urgencias: construye tú mismo una estrategia de innovación, participa en las decisiones de seguir o frenar cada proyecto, revisa qué proyectos tienes en marcha en conjunto, entiende cómo funciona el camino de la idea al lanzamiento, crea el clima adecuado y responde por los resultados, pero sin meterte a microgestionar a quienes ejecutan.",
+  "texto_nuevo": "Apoyar la innovación es necesario, pero no basta con eso para que un producto tenga éxito. Si lideras, comprométete de verdad con innovar y pon los recursos necesarios sin desviarlos a urgencias: construye tú mismo una estrategia de innovación, participa en las decisiones de seguir o frenar cada proyecto, revisa qué proyectos tienes en marcha en conjunto, entiende cómo funciona el camino de la idea al lanzamiento, crea el clima adecuado y pide cuentas por los resultados, a ti y a tus equipos, averiguando por qué cuando no se llega a la meta, pero sin meterte a microgestionar a quienes ejecutan.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "2411-2415",
+   "frase": "They hold themselves, other executives, and project teams accountable for results."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide exigir resultados a uno mismo, a otros directivos y a los equipos, y averiguar por qué se falló. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s04-lectura_estado_resultados-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "lectura_estado_resultados",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verificar el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, mira también el real)",
+  "texto_nuevo": "Verificar qué abarca (toda la empresa, una división, una unidad o un local), el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, mira también el real)",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "466-471",
+   "frase": "If you were running a division of a large company, you might see income statements"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide ver primero qué mide el estado (empresa, división, unidad o local) antes del periodo y las unidades. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s04-verifica_quien_tiene_el_poder_de_decidir_o_vetar-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si detectas un tercero con poder de veto, busca la forma de incluirlo o de que se entere del trato antes de cerrarlo.",
+  "texto_nuevo": "Si detectas un tercero con poder de veto, averigua qué le mueve y busca la forma de influir en él, de incluirlo o de que se entere del trato antes de cerrarlo.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "3478-3480",
+   "frase": "debes descubrir cómo influir sobre esas personas"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide descubrir cómo influir sobre quien puede vetar e identificar sus motivaciones. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s05-contacto_evaluacion_representantes_extranjeros-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "contacto_evaluacion_representantes_extranjeros",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pide su historial y sus referencias comerciales y bancarias",
+  "texto_nuevo": "Pide su historial, sus referencias comerciales y bancarias, cómo introduce productos nuevos en su territorio y si puede cumplir tus requisitos especiales",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1943-1951",
+   "frase": "Methods of introducing new products into the sales territory"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide cuatro datos del candidato y el paso, que es el único que los enumera, deja fuera sus métodos para introducir productos nuevos y si puede cumplir tus requisitos especiales. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s05-contacto_evaluacion_representantes_extranjeros-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "contacto_evaluacion_representantes_extranjeros",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Visita las instalaciones del candidato o reúnete con él en ferias comerciales",
+  "texto_nuevo": "Visita las instalaciones del candidato o reúnete con él en ferias comerciales, y conoce a su fuerza de ventas para evaluar su fortaleza en el mercado",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1959",
+   "frase": "your company should meet each sales force and try to assess its strength"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además conocer a la fuerza de ventas de cada candidato y evaluar su fortaleza en el mercado, y ningún paso lo recoge. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s05-crossdocking-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "crossdocking",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar si el volumen y la predictibilidad de la demanda justifican crossdocking",
+  "texto_nuevo": "Evaluar si el volumen y la predictibilidad de la demanda, y las economías de escala en el transporte de entrada y de salida, justifican crossdocking",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "1597",
+   "frase": "when economies of scale can be had on both the inbound and outbound transportation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone dos condiciones y el paso omite las economías de escala en el transporte de entrada y de salida.; Mismo defecto: cae la segunda condición del libro, las economías de escala en ambos transportes. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s05-preparar_fdd-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "preparar_fdd",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer el proceso interno para entregar el FDD vigente al menos 14 días naturales antes de que el candidato firme cualquier acuerdo vinculante o pague cualquier cantidad al franquiciador o a una filial (y entregar el contrato de franquicia completo al menos 7 días naturales antes de la firma, plazo que puede correr a la vez; si negocias cambios, la espera puede alargarse)",
+  "texto_nuevo": "Establecer el proceso interno para entregar el FDD vigente al menos 14 días naturales antes de que el candidato firme cualquier acuerdo vinculante o pague cualquier cantidad al franquiciador, sin contar el día de la entrega ni el de la firma, o en un plazo razonable si el candidato lo pide (y entregar el contrato de franquicia completo al menos 7 días naturales antes de la firma, plazo que puede correr a la vez; si negocias cambios, la espera puede alargarse)",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1965",
+   "frase": "14 calendar days prior to taking any fees or signing any contracts with them"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro añade la entrega en un plazo razonable cuando el candidato la pide, y el proceso la omite.; El libro fija el plazo antes de cobrar cualquier cuota o firmar; los pagos a una filial no aparecen en ese pasaje.; El libro precisa que no se cuentan el día de la entrega ni el de la firma (se firma el día 16), y sin eso el plazo se calcula mal.; Mismo defecto que la marca 0: la filial no aparece en el libro.; Mismo defecto que la marca 2: falta la entrega a petición razonable del candidato. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s05-cumplimiento_normativo_ambiental-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "cumplimiento_normativo_ambiental",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Corrige cualquier brecha de cumplimiento antes de lanzar iniciativas de marketing verde",
+  "texto_nuevo": "Corrige cualquier brecha de cumplimiento antes de lanzar iniciativas de marketing verde o cualquier otra estrategia ambiental más avanzada",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "5539",
+   "frase": "full compliance with the law before moving to any of the more advanced"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige cumplir antes de cualquier jugada verde más avanzada, no solo antes del marketing verde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s05-ia_como_nivelador_habilidades-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "ia_como_nivelador_habilidades",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Estudios muestran que la IA beneficia proporcionalmente más a quienes tienen menor desempeño en una tarea, acercando su resultado al de los más hábiles. Por ejemplo, en consultoría la brecha de desempeño bajó de 22% a 4%, y en escritura creativa o derecho los resultados se equipararon. Para ti como emprendedor con recursos limitados, esto significa que la IA no solo potencia tus fortalezas sino que eleva el piso en las tareas donde tienes menos experiencia o donde tus colaboradores o freelancers rinden de forma desigual. Esto permite escalar sin depender exclusivamente de contratar talento senior, usando la IA como herramienta para nivelar capacidades en las áreas más débiles del negocio.",
+  "texto_nuevo": "Estudios muestran que la IA beneficia proporcionalmente más a quienes tienen menor desempeño en una tarea, acercando su resultado al de los más hábiles. Por ejemplo, en consultoría la brecha de desempeño bajó de 22% a 4%, y en escritura creativa o derecho los resultados se equipararon. Para ti como emprendedor con recursos limitados, esto significa que la IA no solo potencia tus fortalezas sino que eleva el piso en las tareas donde tienes menos experiencia o donde tus colaboradores o freelancers rinden de forma desigual. Esto podría permitirte escalar sin depender exclusivamente de contratar talento senior, usando la IA como herramienta para nivelar capacidades en las áreas más débiles del negocio.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "1163-1165",
+   "frase": "This suggests the potential for a more radical reconfiguration of work"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la nivelación como potencial ('suggests the potential', 'may') y el nodo da como seguro un efecto sobre tu negocio. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s05-investigacion_empresa_extranjera-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "investigacion_empresa_extranjera",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y te ahorra tiempo y dinero.",
+  "texto_nuevo": "Antes de cerrar un negocio formal con un socio en el extranjero, conviene investigar a esa contraparte usando los recursos que tienes a mano: bibliotecas de negocios, bancos internacionales, embajadas extranjeras, fuentes de información crediticia, la oficina de comercio exterior de tu país e internet. Esto te permite validar si el comprador o socio potencial es confiable, y puede ahorrarte tiempo y dinero.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4681",
+   "frase": "By using available resources, your company can save time and money."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos recursos pueden ahorrar tiempo y dinero ('can save'); el nodo lo da como seguro. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s05-cumplimiento_normativo_ambiental-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "cumplimiento_normativo_ambiental",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas críticas pendientes",
+  "texto_nuevo": "Un reporte de auditoría de cumplimiento normativo ambiental sin brechas pendientes",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "5539",
+   "frase": "companies ensure that they are in full compliance with the law"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige cumplimiento pleno de la ley en todo momento; limitarlo a las brechas críticas deja pasar incumplimientos menores. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-value_stream_mapping_ambiental-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "value_stream_mapping_ambiental",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El Value Stream Mapping (VSM) tradicional se enriquece integrando datos ambientales y energéticos, permitiendo identificar no solo ineficiencias productivas sino también fuentes de contaminación, uso de materiales peligrosos y flujos de información hacia entes regulatorios. Esto ayuda a priorizar oportunidades de mejora en el proceso completo.",
+  "texto_nuevo": "El Value Stream Mapping (VSM) tradicional se enriquece integrando datos ambientales y energéticos, permitiendo identificar no solo ineficiencias productivas sino también las materias primas usadas en productos y procesos, las fuentes de contaminación y los flujos de información hacia entes regulatorios. Esto ayuda a priorizar oportunidades de mejora en el proceso completo.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "4428",
+   "frase": "raw materials used in products and processes; pollution and other environmental wastes"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de materias primas usadas en productos y procesos; lo peligroso solo aparece como residuo de salida.; Mismo defecto: 'uso de materiales peligrosos' sustituye a las materias primas que el libro nombra. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-value_stream_mapping_ambiental-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "value_stream_mapping_ambiental",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Registrar costos de compra de materiales, gestión y disposición de residuos por proceso",
+  "texto_nuevo": "Registrar la cantidad de residuos que genera cada proceso, incluyendo costos de compra de materiales, gestión y disposición de residuos",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "4442",
+   "frase": "Record the amount of waste generated by each process."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso del libro es registrar la cantidad de residuo por proceso, con sus costos; el nodo se queda solo con los costos.; Mismo defecto: se cae la cantidad de residuo generado por cada proceso. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s06-reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de la reunión, fija tu propio límite de tiempo y de precio, y no lo cambies solo porque el vendedor apura.",
+  "texto_nuevo": "Antes de la reunión, fija tu propio límite de tiempo y de precio, y no lo cambies solo porque el vendedor apura; si negocias con otras personas, que todas respeten ese acuerdo y nadie lo cambie sin consultar al resto.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5031-5047",
+   "frase": "it needs to be honored by every member of the team."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro insiste en que la decisión previa la respete cada integrante del equipo; basta que uno ceda para perderla. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s06-empoderamiento_de_participantes-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "empoderamiento_de_participantes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En lugar de sistemas jerárquicos rígidos diseñados una vez y ejecutados muchas veces, los sistemas exitosos necesitan ser flexibles y evolucionar constantemente, y una forma de lograrlo es dar a cada participante cierto grado de control sobre el resultado. Cada interacción se vuelve una oportunidad de empatía, insight, innovación e implementación, como en colonias de abejas o Wikipedia. Pero participar no basta: el sistema debe rendir al menos igual que uno jerárquico.",
+  "texto_nuevo": "En lugar de sistemas jerárquicos rígidos diseñados una vez y ejecutados muchas veces, los sistemas exitosos necesitan ser flexibles y evolucionar constantemente, y una forma de lograrlo es dar a cada participante cierto grado de control sobre el resultado. Cada interacción se vuelve una oportunidad de empatía, insight, innovación e implementación, como en colonias de abejas o Wikipedia. Pero participar no basta: los objetivos de quienes participan deben estar alineados y el sistema debe rendir al menos igual que uno jerárquico.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "1136, 1156",
+   "frase": "ensure that the objectives of different participants are aligned"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como principio rector que los objetivos de los participantes estén alineados, y Wikipedia lo ilustra; el nodo lo pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-audio_analysis_framework-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "audio_analysis_framework",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar los Aspectos ambientales que afectan directamente a la empresa (energía, GEI, agua como prioridad)",
+  "texto_nuevo": "Identificar los Aspectos ambientales que pueden afectar a la empresa (energía, GEI, agua como prioridad)",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "1297",
+   "frase": "Aspects: Highlight environmental issues that might affect the company."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice aspectos que podrían afectar a la empresa; 'directamente' y el indicativo endurecen y estrechan el alcance. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s06-value_stream_mapping_ambiental-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "value_stream_mapping_ambiental",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usar iconos y colores para diferenciar flujos de recursos y flujos de desperdicio",
+  "texto_nuevo": "Usar iconos para señalar en cada proceso las oportunidades de eficiencia energética y ambiental, y colores para diferenciar flujos de recursos y flujos de desperdicio",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "4438-4440",
+   "frase": "Use icons to identify energy-efficiency environmental opportunities in each process."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro los iconos señalan las oportunidades de eficiencia energética y ambiental de cada proceso y los colores separan flujos; se pierde lo primero. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s06-reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchos vendedores usan frases como que solo queda una unidad o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Es una táctica de presión que cabe esperar de un vendedor y, aunque lo que dice sea cierto, no debería cambiar tu decisión. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
+  "texto_nuevo": "Muchos vendedores usan frases como que solo queda una unidad o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Es una táctica de presión que cabe esperar de un vendedor y, aunque lo que dice sea cierto, no debería cambiar tu decisión. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción u otro proveedor. Mantén tu propio ritmo de decisión, no el que te impone el vendedor.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5051",
+   "frase": "Another Prius will be available, either from another dealership or by ordering it"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que habrá otra unidad, de otro vendedor o por pedido; no habla de más tiempo del que parece.; El libro no afirma que mantener tu ritmo te dé una posición fuerte; solo que la presión no debe influir en la decisión. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-barreras_comerciales_no_arancelarias-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "barreras_comerciales_no_arancelarias",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ajusta tu producto o tu proceso de exportación según lo que descubras en la revisión regulatoria",
+  "texto_nuevo": "Ajusta tu producto o tu proceso de exportación según lo que descubras en la revisión regulatoria, siempre que el potencial del mercado justifique los costos de esa adaptación",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2557",
+   "frase": "Market potential must be large enough to justify the direct and indirect costs"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la adaptación del producto a que el potencial del mercado justifique sus costos directos e indirectos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s06-estrategia_ventas_diy-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "estrategia_ventas_diy",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Planificar el ritmo de ventas según la capacidad de generación de leads (ej. 50 leads/mes para 1 venta/mes)",
+  "texto_nuevo": "Planificar el ritmo de ventas según la capacidad de generación de leads (ej. 50 leads/mes para 1 venta/mes), contando con que cerrar una venta de franquicia toma entre 12 y 14 semanas",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4801",
+   "frase": "it takes between 12 and 14 weeks to close a franchise sale"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro planifica el ritmo contando con que cerrar una venta de franquicia toma entre 12 y 14 semanas; sin ese plazo el plan inicial se lee mal. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s06-escaleras_fijas_seguridad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "escaleras_fijas_seguridad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si en tu negocio hay escaleras fijas con cuatro o más escalones, necesitas barandillas y pasamanos que cumplan con la altura, el ancho, la resistencia de carga y el espacio libre adecuados según la normativa de tu mercado. Además, cada escalón debe ser antideslizante y mantener la misma altura y profundidad de un descanso a otro, y la inclinación de la escalera y el tamaño de los descansos deben respetar las medidas que fija esa normativa.",
+  "texto_nuevo": "Si en tu negocio hay escaleras fijas con cuatro o más escalones, necesitas barandillas y pasamanos que cumplan con la altura, el ancho, la resistencia de carga y el espacio libre adecuados según la normativa de tu mercado. Además, cada escalón debe ser antideslizante y mantener la misma altura y profundidad de un descanso a otro, y la inclinación de la escalera y el tamaño de los descansos deben respetar las medidas que fija esa normativa, sin que una puerta que abra sobre un descanso reduzca su profundidad útil.",
+  "cita": {
+   "libro": "SMALL_BUSINESS",
+   "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+   "lineas": "1549",
+   "frase": "The swing of doors or gates opening directly on a stairway platform does not reduce"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye que el giro de puertas sobre un descanso no reduzca su profundidad útil bajo el mínimo; el nodo lo omite.; Mismo elemento de la lista que se cae: las puertas que abren sobre un descanso. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-institucionalizar_breakthrough-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "institucionalizar_breakthrough",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer revisiones periódicas del progreso",
+  "texto_nuevo": "Establecer revisiones periódicas del progreso a cargo de la dirección",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7204, 7216",
+   "frase": "Scheduled, periodic reviews of progress by upper managers are an essential part"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone las revisiones a cargo de la alta dirección, porque lo que no revisa pierde prioridad; el paso omite quién revisa. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s06-formacion_seleccion_y_retencion_de_personal-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "formacion_seleccion_y_retencion_de_personal",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La calidad organizacional depende de seleccionar personal con las competencias adecuadas, capacitarlo de forma oportuna e interactiva, y retenerlo mediante compensación, empoderamiento, desarrollo de carrera y reconocimiento. Las fallas comunes en capacitación incluyen entrenar sin oportunidad de aplicación inmediata, falta de participación de gerentes de línea y exceso de dependencia en el método de lectura/clase.",
+  "texto_nuevo": "La calidad organizacional depende de seleccionar personal con las competencias adecuadas, capacitarlo de forma oportuna e interactiva, y retenerlo mediante compensación, empoderamiento, desarrollo de carrera y reconocimiento. Las fallas comunes en capacitación incluyen entrenar sin oportunidad de aplicación inmediata, falta de participación de gerentes de línea, exceso de dependencia en el método de lectura/clase y comunicación poco clara, que pide lenguaje simple y gráficos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9753",
+   "frase": "Poor communication during training."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de fallas del libro tiene cuatro elementos; se cae la mala comunicación durante la capacitación.; Mismo cuarto elemento de la lista que se pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-dilucion_propiedad_por_ronda-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "dilucion_propiedad_por_ronda",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer hitos claros de desempeño para evitar negociar desde una posición débil (down round).",
+  "texto_nuevo": "Establecer hitos claros de desempeño y vigilar su cumplimiento, porque no cumplirlos puede llevarte a negociar desde una posición débil (down round); el ciclo económico también influye y escapa a tu control.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "2860, 2866",
+   "frase": "due both to its own ability to execute and to factors outside of its control"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Promete que fijar hitos evita la down round; el libro solo dice que a veces ocurre al incumplir hitos.; Se pierde el límite del libro: la exposición a una down round depende también del ciclo económico, fuera de tu control. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-s06-entrenamiento_y_control_estadistico-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "entrenamiento_y_control_estadistico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el trabajo de una persona ha alcanzado el control estadístico, ha completado su aprendizaje de esa tarea particular; continuar entrenándola de la misma forma no es económico, aunque podría beneficiarse de aprender otra tarea. Sin embargo, si el trabajo aún no ha alcanzado el control estadístico, más entrenamiento sí ayuda. En un estado de caos (mala supervisión, mala gestión, nada bajo control estadístico) es imposible que alguien desarrolle su potencial de uniformidad o calidad. La carta de control indica cuándo una persona ha llegado al estado de control estadístico.",
+  "texto_nuevo": "Cuando el trabajo de una persona ha alcanzado el control estadístico, la hayan entrenado bien o mal, ha completado su aprendizaje de esa tarea particular; por eso importa entrenar bien a quien llega a un puesto. Continuar entrenándola de la misma forma no es económico, aunque podría beneficiarse de aprender otra tarea. Sin embargo, si el trabajo aún no ha alcanzado el control estadístico, más entrenamiento sí ayuda. En un estado de caos (mala supervisión, mala gestión, nada bajo control estadístico) es imposible que alguien desarrolle su potencial de uniformidad o calidad. La carta de control indica cuándo una persona ha llegado al estado de control estadístico.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "6054-6056",
+   "frase": "whether he was trained well or badly, is in a rut."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que esto vale haya sido la persona bien o mal entrenada, lo que cambia la lectura del consejo.; Mismo defecto; el libro saca de ahí la importancia de entrenar bien a quien llega al puesto. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-evaluacion_riesgo_mercado_dinero_gestion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_riesgo_mercado_dinero_gestion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de franquiciar debes cuantificar el riesgo de fracaso analizando tres factores: mercado, dinero y gestión. En mercado, revisa si crece o se consolida, quién compite y si tu diferenciación aguanta frente a franquiciados y consumidores; valora empezar local o regional antes de aspirar a nivel nacional. En dinero, necesitas capital suficiente para implementar el programa sin depender de los fees de venta de franquicias para financiar el crecimiento. En gestión, la fuerza de tu equipo directivo, incluidos tu temperamento y tus habilidades como franquiciador, es el factor más determinante: una buena gestión puede salvar un concepto mediocre, pero una mala gestión destruye hasta el mejor concepto. Ignorar estos riesgos significa perseguir una estrategia sin medir tus probabilidades reales de éxito.",
+  "texto_nuevo": "Antes de franquiciar debes cuantificar el riesgo de fracaso analizando tres factores: mercado, dinero y gestión. En mercado, revisa si crece o se consolida, quién compite y si tu diferenciación aguanta frente a franquiciados y consumidores; si tu oferta es única, conviene moverte rápido, y valora empezar local o regional antes de aspirar a nivel nacional. En dinero, necesitas capital suficiente para implementar el programa y apoyar a tus franquiciados, sin depender de los fees de venta de franquicias para financiar el crecimiento. En gestión, la fuerza de tu equipo directivo, incluidos tu temperamento y tus habilidades como franquiciador, es el factor más determinante: una buena gestión puede salvar un concepto mediocre, pero una mala gestión destruye hasta el mejor concepto. Ignorar estos riesgos significa perseguir una estrategia sin medir tus probabilidades reales de éxito.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "766, 775",
+   "frase": "the capital and resources to implement a franchise program and support the franchisees"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que si tu oferta es única conviene moverte rápido; es una condición que cambia el consejo de mercado.; El libro pide capital para implementar el programa y también para apoyar a los franquiciados; sin lo segundo sube el riesgo de fracaso y litigios.; Mismo defecto que la marca 0: falta el capital para apoyar a los franquiciados. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-evaluacion_riesgo_mercado_dinero_gestion-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_riesgo_mercado_dinero_gestion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcula el capital necesario para implementar el programa, incluyendo documentación legal, manual de operaciones y marketing, sin depender de los fees de venta de franquicias",
+  "texto_nuevo": "Calcula el capital necesario para implementar el programa, incluyendo documentación legal, manual de operaciones, marketing y venta de franquicias, y para apoyar a tus franquiciados, sin depender de los fees de venta de franquicias",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "974",
+   "frase": "If you don't have the capital needed to properly support your franchisees"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Deja fuera el capital para apoyar a los franquiciados y los costos de venta de franquicias, que el libro enumera.; El cálculo deja fuera el capital para apoyar a los franquiciados, que el libro incluye. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s06-identificar_si_tu_producto_necesita_proteccion_especial-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente con un golpe (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+  "texto_nuevo": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente al caer sin un empaque que lo proteja (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+  "cita": {
+   "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+   "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+   "lineas": "111",
+   "frase": "Items that could easily break when dropped without having protective packaging"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define frágil como lo que se rompe al caer sin empaque protector; sin esa condición se puede clasificar mal. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s06-identificar_si_tu_producto_necesita_proteccion_especial-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Revisa si tu producto se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
+  "texto_nuevo": "Revisa si tu producto, sin empaque protector, se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
+  "cita": {
+   "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+   "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+   "lineas": "111",
+   "frase": "Items that could easily break when dropped without having protective packaging"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del libro: la fragilidad se juzga sin empaque protector. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s06-muestreo_con_seguimiento_no_respondientes-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "muestreo_con_seguimiento_no_respondientes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "texto_nuevo": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen; limitar las conclusiones a tendencias no elimina ese riesgo. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "5007",
+   "frase": "is only an expression of hope, with little foundation."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cierra la salida común de limitar las conclusiones a tendencias, que llama una esperanza sin fundamento; el nodo la deja abierta. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s07-principio_mejora_continua_ia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "principio_mejora_continua_ia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las capacidades de la IA vienen mejorando a ritmo exponencial y no hay motivos para esperar que dejen de crecer pronto; el modelo actual siempre será el más limitado que se use en el futuro. Este principio invita a planificar el negocio asumiendo mejoras continuas en las herramientas de IA, evitando descartar la tecnología por sus limitaciones actuales y manteniéndose abierto a integrar nuevas versiones y agentes autónomos de IA en los procesos del negocio.",
+  "texto_nuevo": "Las capacidades de la IA vienen mejorando a ritmo exponencial y no hay motivos para esperar que dejen de crecer pronto; el modelo actual siempre será el más limitado que se use en el futuro. Este principio invita a planificar el negocio asumiendo mejoras continuas en las herramientas de IA, evitando descartar la tecnología por sus limitaciones actuales y manteniéndose abierto a integrar nuevas versiones y agentes semiautónomos de IA en los procesos del negocio.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "487",
+   "frase": "semi-autonomous AIs that can be given a goal"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe los agentes que vienen como semiautónomos, con mínima ayuda humana; llamarlos autónomos endurece.; Mismo defecto: el libro dice semi-autonomous, el nodo dice autónomos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s07-comprender_definicion_legal_franquicia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "comprender_definicion_legal_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
+  "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en común, que exista control o ayuda operativa significativa, y que se pague al franquiciador más de $500 (verifica la cifra vigente) en los primeros seis meses de operación. Te sirve para saber si el acuerdo que estás armando con otros (licencia, distribución, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulación.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "121",
+   "frase": "A required payment of more than $500 in the first six months of operation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro fija más de $500 en los primeros seis meses de operación; la cifra de $735, su ajuste de 2024 y el antes de abrir no están en el libro.; La cifra de $735 y el ajuste de 2024 no están en el libro, que dice $500. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s07-comprender_definicion_legal_franquicia-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "comprender_definicion_legal_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+  "texto_nuevo": "Calcula si la suma de pagos obligatorios que le pedirías al operador (cuota inicial, regalías, publicidad, entrenamiento, equipo) supera los $500 (verifica la cifra vigente) en los primeros seis meses de operación; no cuenta la mercancía para reventa a precio mayorista genuino, pero sí lo que no se revende, como exhibidores o material de punto de venta",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "121-145",
+   "frase": "A required payment of more than $500 in the first six months of operation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice más de $500 en los primeros seis meses de operación; $735, el ajuste de 2024 y el antes de abrir son añadidos.; La cifra de $735 y su ajuste de 2024 no están en el libro.; Se pierde la única exclusión (mercancía para reventa a precio mayorista genuino) y la advertencia de que sí cuentan exhibidores y material no revendible.; Se pierde que cuenta la suma de todos los pagos obligatorios (cuotas, regalías, publicidad, entrenamiento, equipo), lo que cambia el cálculo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s07-framework_tres_rs_sucesion-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "framework_tres_rs_sucesion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Asignar al fundador un área específica donde su experiencia siga siendo valiosa (ej. cultura, contratación)",
+  "texto_nuevo": "Cuando encaje, asignar al fundador un área específica donde su experiencia siga siendo valiosa (ej. cultura, contratación); otras veces encaja mejor un rol de proyectos especiales",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "3324",
+   "frase": "Sometimes, the founder can take over and be accountable for a specific function"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a veces el fundador puede asumir una función concreta y otras encaja mejor en proyectos especiales; el paso lo vuelve una asignación fija. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s07-proceso_llamada_inicial_venta-pasos_accionables-7",
+  "fecha": "2026-09-28",
+  "node_id": "proceso_llamada_inicial_venta",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Explicar el proceso y cronograma, y solicitar un avance (ej. completar el CIRF), y agenda la siguiente llamada",
+  "texto_nuevo": "Avisar que le enviarás materiales, explicar el proceso y cronograma, preguntarle si tiene dudas, y solicitar un avance (ej. completar el CIRF), y agenda la siguiente llamada",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4474-4478",
+   "frase": "Tell him you will be sending materials and discuss the process and timetable."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La agenda del libro incluye avisar que se enviarán materiales y preguntar si tiene dudas antes de pedir el avance; el paso omite ambos elementos del procedimiento.; Mismo defecto: faltan dos elementos de la agenda del libro. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 7
+ },
+ {
+  "id": "final-e1-s07-vesting_acciones_fundadores-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "vesting_acciones_fundadores",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El vesting es la forma en que ganas la propiedad de tus acciones u opciones con el tiempo, no de golpe. Lo común: 4 años con un año de espera inicial (cliff), sin nada ese primer año; al cumplirlo recibes 25%, y el resto mes a mes durante los 3 años siguientes. Si te vas antes, la empresa puede recomprar lo no adquirido. Al fundar, tu acción de fundador se emite a precio bajo, sujeta a un calendario similar, a menudo con crédito por el tiempo que ya trabajaste, y, si tu empresa está constituida en Estados Unidos, conviene presentar la elección fiscal 83(b) en los 30 días siguientes. También puedes pactar aceleración si la empresa cambia de manos: de un solo gatillo, que libera todo de inmediato, o de doble gatillo -la más usada en capital de riesgo- que exige el cambio de control y un despido sin causa dentro de un plazo pactado, por ejemplo un año. Verifica estos detalles con un profesional en tu país.",
+  "texto_nuevo": "El vesting es la forma en que ganas la propiedad de tus acciones u opciones con el tiempo, no de golpe. Lo común: 4 años con un año de espera inicial (cliff), sin nada ese primer año; al cumplirlo recibes 25%, y el resto mes a mes durante los 3 años siguientes. Si te vas antes, la empresa puede recomprar lo no adquirido. Al fundar, tu acción de fundador se emite a precio bajo, sujeta a un calendario similar, a menudo con crédito por el tiempo que ya trabajaste, y, si tu empresa está constituida en Estados Unidos, conviene presentar la elección fiscal 83(b) en los 30 días siguientes. También puedes pactar aceleración si la empresa cambia de manos: de un solo gatillo, que acelera la consolidación automáticamente con la venta, o de doble gatillo -la más usada en capital de riesgo- que exige el cambio de control y un despido sin causa dentro de un plazo pactado, por ejemplo un año. Verifica estos detalles con un profesional en tu país.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "1196",
+   "frase": "Single-trigger acceleration refers to automatic accelerated vesting upon a merger."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define el gatillo único como consolidación acelerada automática con la venta, sin decir que libere todo; el todo es un cuánto añadido. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s07-vesting_acciones_fundadores-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "vesting_acciones_fundadores",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisición mensual durante los siguientes 3 años, y distínguelo del tuyo como fundador",
+  "texto_nuevo": "Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisición mensual durante los siguientes 3 años, teniendo en cuenta que el tuyo como fundador a menudo lleva condiciones algo distintas",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "1179",
+   "frase": "Often, founders will get somewhat different vesting provisions than the rest of the employees."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo los fundadores reciben condiciones algo distintas; el paso lo endurece a una instrucción. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s08-benchmarking_desempeno_ambiental-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "benchmarking_desempeno_ambiental",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El benchmarking es una herramienta diagnóstica clave para evaluar el desempeño de una empresa en control de contaminación y gestión de recursos naturales, comparándolo con el de la competencia o con mejores prácticas del sector. Permite identificar fortalezas, debilidades y prioridades de mejora en cuatro áreas: Eco-Estrategia, Compromiso/Cultura/Capacidad, Ejecución y Logros Ambientales, y Comunicación y Compromiso con stakeholders.",
+  "texto_nuevo": "El benchmarking es una herramienta diagnóstica clave para evaluar el desempeño de una empresa en control de contaminación y gestión de recursos naturales, comparándolo con el de la competencia o con mejores prácticas del sector. Permite identificar fortalezas, debilidades y prioridades de mejora en cuatro áreas: Eco-Estrategia, Compromiso/Cultura/Capacidad, Ejecución y Logros Ambientales, y Comunicación y Compromiso con stakeholders. Es un punto de partida sin metodología establecida: adáptalo a tu negocio.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2100",
+   "frase": "you will need to tailor our list to the particular needs of your business"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no hay metodología ni lista acordada y que su propuesta es un punto de partida a adaptar; el resumen la presenta como marco cerrado. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s08-benchmarking_desempeno_ambiental-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "benchmarking_desempeno_ambiental",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Priorizar áreas de mejora antes de comunicar externamente cualquier liderazgo ambiental",
+  "texto_nuevo": "Priorizar áreas de mejora y atender las brechas básicas de control de contaminación y gestión de recursos naturales antes de comunicar externamente cualquier liderazgo ambiental",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2169",
+   "frase": "Gaps in basic pollution control or natural resource management must be addressed before"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige atender las brechas básicas de control de contaminación y gestión de recursos antes de reclamar liderazgo; priorizarlas no basta. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-s08-conoce_insumos_vitales-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "conoce_insumos_vitales",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor, sabiendo que ambos reducen el riesgo a cambio de un costo mayor.",
+  "texto_nuevo": "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor que no comparta con el habitual el mismo país de riesgo ni los mismos transportistas o puertos, sabiendo que ambos reducen el riesgo a cambio de un costo mayor.",
+  "cita": {
+   "libro": "Max Muller, Essentials of Inventory Management",
+   "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+   "lineas": "6114-6116",
+   "frase": "The same risks arise in using multiple suppliers that ship through the same carriers"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un segundo proveedor en el mismo país de riesgo o con los mismos transportistas y puertos falla junto con el primero. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-s08-supuestos_de_procedimientos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "supuestos_de_procedimientos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
+  "texto_nuevo": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones. Y aunque se aprende a manejarlas, se tiende a subestimar el mayor riesgo de error en esas condiciones.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "2447",
+   "frase": "tend to underestimate their own increased vulnerability to error in those circumstances"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea dos problemas y el resumen pierde el segundo: se subestima la mayor vulnerabilidad al error con tareas concurrentes. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s08-construccion_equipo_franquicia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "construccion_equipo_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La mayoría de quienes empiezan a franquiciar arrancan con muy poca gente, a veces uno mismo cubriendo varias funciones a la vez. Franquiciar te suma responsabilidades nuevas: marketing de franquicias, ventas, entrenamiento de franquiciados, supervisión de puntos y manejo del fondo publicitario. El momento de sumar ayuda es clave y, según la velocidad de crecimiento que busques, puede que tengas que adelantarte un poco a la necesidad real, para dejar tiempo de entrenamiento.",
+  "texto_nuevo": "La mayoría de quienes empiezan a franquiciar arrancan con muy poca gente, a veces uno mismo cubriendo varias funciones a la vez. Franquiciar te suma responsabilidades nuevas: marketing de franquicias, ventas, entrenamiento de franquiciados, supervisión de puntos, manejo del fondo publicitario y gestión. El momento de sumar ayuda es clave y, según la velocidad de crecimiento que busques, puede que tengas que adelantarte un poco a la necesidad real, para dejar tiempo de entrenamiento.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5491",
+   "frase": "field supervision, advertising fund management, and management"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de responsabilidades nuevas incluye también la gestión (management), que el resumen omite. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s08-practicas_gerenciales_no_delegables-pasos_accionables-5",
+  "fecha": "2026-09-28",
+  "node_id": "practicas_gerenciales_no_delegables",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Actuar para quitar obstáculos y resistencias cuando el avance sea lento",
+  "texto_nuevo": "Actuar para quitar obstáculos y resistencias, dar apoyo y tomar otras acciones correctivas cuando el avance sea demasiado lento",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1651",
+   "frase": "dissolving resistance, and providing support and other corrective action if progress is too slow"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La práctica del libro incluye además dar apoyo y tomar otras acciones correctivas si el avance es demasiado lento. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-s08-practicas_gerenciales_no_delegables-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "practicas_gerenciales_no_delegables",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conjunto de responsabilidades que tu no puedes delegar si quieres sostener mejoras reales de desempeño: liderar tu mismo el esfuerzo de mejora, dar tiempo real a quien trabaja en ello, montar la estructura mínima necesaria, asignar los recursos, revisar el avance de los proyectos y quitar obstáculos o resistencias cuando el progreso se estanca.",
+  "texto_nuevo": "Conjunto de responsabilidades que tú no puedes delegar si quieres sostener mejoras reales de desempeño: liderar tú mismo el esfuerzo de mejora, dar tiempo real a quien trabaja en ello, montar la estructura mínima necesaria, asignar los recursos, revisar el avance de los proyectos y, cuando el progreso es demasiado lento, quitar obstáculos o resistencias, dar apoyo y tomar otras acciones correctivas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1651",
+   "frase": "providing support and other corrective action if progress is too slow"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La sexta práctica del libro incluye dar apoyo y tomar otras acciones correctivas, no solo quitar obstáculos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-s08-clausula_antidesviacion-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "clausula_antidesviacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Incluye la declaración mínima de control de destino en tu factura comercial",
+  "texto_nuevo": "Incluye la declaración mínima de control de destino en todas tus facturas comerciales, también en las de clientes nacionales o trading companies que podrían revender tu producto al exterior",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "397",
+   "frase": "Include the Destination Control Statement on all commercial invoices, including ones for domestic customers"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide la declaración en todas las facturas comerciales, también las de clientes nacionales o trading companies que puedan revender al exterior. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-s08-eliminar_miedo-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "eliminar_miedo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Eliminar la evaluación anual de desempeño como fuente de miedo",
+  "texto_nuevo": "Formar primero en liderazgo y después eliminar la evaluación anual de desempeño como fuente de miedo, porque el liderazgo ocupa su lugar",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "2541",
+   "frase": "The first step in a company will be to provide education in leadership."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como primer paso formar en liderazgo; solo después se elimina la evaluación anual, que el liderazgo reemplaza. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-s08-conoce_insumos_vitales-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "conoce_insumos_vitales",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo caro y fácil de reponer, mientras un insumo critico y económico se queda sin control hasta que un día falta y detiene tu operación. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+  "texto_nuevo": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+  "cita": {
+   "libro": "Max Muller, Essentials of Inventory Management",
+   "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+   "lineas": "5523",
+   "frase": "The criterion used may not be reflective of the entire inventory."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que clasificar por un único criterio como el dinero no refleja todo el inventario; los errores comunes y el paro de la operación son añadidos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ }
+]

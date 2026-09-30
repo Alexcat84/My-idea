@@ -7,7 +7,7 @@
   "resumen_teorico": "Detalla los pasos para analizar procesos de gestión de proyecto, desarrollo de producto u organizacionales para identificar actividades que mejoren su valor. Puede incluir descripción del proceso 'as-is', flujo con entradas/salidas, métricas actuales, objetivos de mejora ('to-be') y el enfoque para lograrlos.",
   "pasos_accionables": [
     "Documentar el proceso actual (as-is) incluyendo pasos, entradas y salidas",
-    "Identificar el punto de inicio y fin del proceso",
+    "Identificar el punto de inicio y fin del proceso, su dueño (responsable de mantenerlo y de que funcione) y sus interesados",
     "Definir métricas y límites de control actuales",
     "Establecer objetivos explícitos de mejora (to-be)",
     "Diseñar el enfoque de mejora (combinar, fast-track, eliminar pasos, usar tecnología)"
@@ -44,6 +44,23 @@
         "frase": "The Process Improvement Plan can include"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el plan puede incluir esos elementos; el nodo lo endurece a contenido fijo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s02-plan_mejora_procesos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar el punto de inicio y fin del proceso",
+      "texto_nuevo": "Identificar el punto de inicio y fin del proceso, su dueño (responsable de mantenerlo y de que funcione) y sus interesados",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2672-2676",
+        "frase": "Identify the entity responsible for the maintenance and success of the process."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La tabla de elementos del plan pide además identificar al dueño del proceso, responsable de su mantenimiento y éxito, y a sus interesados, con quienes se trabaja la mejora. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

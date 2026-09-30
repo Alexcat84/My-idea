@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Principio de Racionalidad Local",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Base psicológica de la New View que establece que lo que las personas hacen tiene sentido para ellas en el momento, dado sus objetivos, foco atencional y conocimiento disponible en ese instante—de lo contrario no lo harían. Las personas no van a trabajar con la intención de hacer un mal trabajo. Este principio obliga al investigador a posicionarse desde la perspectiva del trabajador ('el túnel') para entender por qué sus acciones tuvieron sentido en ese contexto, en lugar de juzgar desde la retrospectiva (hindsight) con conocimiento del resultado.",
+  "resumen_teorico": "Base psicológica de la New View que establece que lo que las personas hacen tiene sentido para ellas en el momento, dado sus objetivos, foco atencional y conocimiento disponible en ese instante; de lo contrario no lo harían. Las personas no van a trabajar con la intención de hacer un mal trabajo (el sabotaje o el acto criminal deliberado quedan fuera de este principio y piden otra explicación). Este principio obliga al investigador a posicionarse desde la perspectiva del trabajador ('el túnel') para entender por qué sus acciones tuvieron sentido en ese contexto, en lugar de juzgar desde la retrospectiva (hindsight) con conocimiento del resultado.",
   "pasos_accionables": [
     "Reconstruir el contexto y la información disponible para la persona en el momento de la acción",
     "Identificar los objetivos y presiones que la persona enfrentaba en ese momento",
@@ -40,6 +40,22 @@
         "evidencia": "Q027-027: Aplicar la racionalidad local al investigar un incidente o accidente ya ocurrido es controlar y mejorar la operación en marcha, no planificar. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-s04-local_rationality_principle-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Base psicológica de la New View que establece que lo que las personas hacen tiene sentido para ellas en el momento, dado sus objetivos, foco atencional y conocimiento disponible en ese instante—de lo contrario no lo harían. Las personas no van a trabajar con la intención de hacer un mal trabajo. Este principio obliga al investigador a posicionarse desde la perspectiva del trabajador ('el túnel') para entender por qué sus acciones tuvieron sentido en ese contexto, en lugar de juzgar desde la retrospectiva (hindsight) con conocimiento del resultado.",
+      "texto_nuevo": "Base psicológica de la New View que establece que lo que las personas hacen tiene sentido para ellas en el momento, dado sus objetivos, foco atencional y conocimiento disponible en ese instante; de lo contrario no lo harían. Las personas no van a trabajar con la intención de hacer un mal trabajo (el sabotaje o el acto criminal deliberado quedan fuera de este principio y piden otra explicación). Este principio obliga al investigador a posicionarse desde la perspectiva del trabajador ('el túnel') para entender por qué sus acciones tuvieron sentido en ese contexto, en lugar de juzgar desde la retrospectiva (hindsight) con conocimiento del resultado.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "380",
+        "frase": "it takes you into the realm of sabotage, criminality, terrorism which requires different explanations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja fuera del principio el sabotaje y el acto criminal, que piden otras explicaciones. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

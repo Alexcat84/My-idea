@@ -7,7 +7,7 @@
   "resumen_teorico": "Los dealerships y distribuidoras involucran la venta de productos a terceros a precio mayorista de buena fe para reventa, sin cobrar tarifa (evitando así el elemento 'fee' de franquicia). Es apropiado solo para fabricantes y mayoristas. Muchos fabricantes lo encuentran menos eficiente que franquiciar porque el soporte se da gratis (erosionando el margen mayorista) y los distribuidores a menudo tienen poca lealtad de marca frente a competidores con mejores condiciones.",
   "pasos_accionables": [
     "Confirmar que el negocio es de manufactura o mayoreo de productos físicos",
-    "Evitar vender equipo o displays no destinados a reventa (riesgo de activar elemento de fee)",
+    "Evitar vender equipo, displays u otros artículos no destinados a reventa, aunque sea sin ganancia: eso activa el elemento de fee",
     "Comparar la eficiencia de soporte gratuito (dealer) vs. soporte pagado con regalías (franquicia)",
     "Evaluar el riesgo de baja lealtad de marca en distribuidores"
   ],
@@ -55,6 +55,23 @@
         "frase": "many manufacturers these days are finding that the traditional dealer model is much less efficient"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que muchos fabricantes lo encuentran menos eficiente y que los distribuidores a menudo tienen poca lealtad.; Mismo endurecimiento sobre la eficiencia.; Mismo endurecimiento sobre la lealtad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-s02-alternativa_dealership_distributorship-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar vender equipo o displays no destinados a reventa (riesgo de activar elemento de fee)",
+      "texto_nuevo": "Evitar vender equipo, displays u otros artículos no destinados a reventa, aunque sea sin ganancia: eso activa el elemento de fee",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1205",
+        "frase": "even if not sold at a profit—will trigger the fee element"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que vender esos artículos activa el elemento de fee aunque sea sin ganancia; el paso lo rebaja a riesgo y pierde esa condición. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
