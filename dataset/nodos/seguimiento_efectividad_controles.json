@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguimiento de la Efectividad de los Controles (Industria General)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, es clave para mantener la protección a lo largo del tiempo.",
+  "resumen_teorico": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, ayuda a mantener la protección a lo largo del tiempo.",
   "pasos_accionables": [
     "Verificar que todos los controles se implementaron según el plan y que se usan de forma correcta y constante",
     "Confirmar que los controles de ingeniería fueron instalados y probados",
@@ -110,6 +110,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro condiciona el monitoreo de higiene industrial a que esté indicado.; Mismo endurecimiento.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-seguimiento_efectividad_controles-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, es clave para mantener la protección a lo largo del tiempo.",
+      "texto_nuevo": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, ayuda a mantener la protección a lo largo del tiempo.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "393",
+        "frase": "and helps sustain the program over time"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la participación de los trabajadores ayuda a sostener el programa; 'es clave' lo endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

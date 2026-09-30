@@ -9,7 +9,7 @@
     "Definir de forma rigurosa qué cuenta como 'nuevo producto' en la organización (ej: mínimo de inversión, funcionalidad visible para el cliente).",
     "Revisar los productos lanzados en los últimos 3 años y clasificarlos según los 6 tipos de la taxonomía.",
     "Construir un gráfico circular (pie chart) con la distribución de proyectos por tipo.",
-    "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera y qué tasa de éxito tiene, y decidir si es la deseada."
+    "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera, qué tasa de éxito tiene y cuál es la relación entre ventas (o ganancias) y gasto, y decidir si es la deseada."
   ],
   "entregable_esperado": "Una clasificación documentada del portafolio de productos actual según los 6 tipos de novedad, con gráfico de distribución.",
   "nodos_previos": [
@@ -64,6 +64,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide revisar por tipo los recursos, las ventas y ganancias y la tasa de éxito antes de decidir el reparto.; Mismo defecto: se cae el desglose por tipo previo a la decisión.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-037-definicion_tipos_nuevo_producto-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera y qué tasa de éxito tiene, y decidir si es la deseada.",
+      "texto_nuevo": "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera, qué tasa de éxito tiene y cuál es la relación entre ventas (o ganancias) y gasto, y decidir si es la deseada.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1152",
+        "frase": "what's the ratio of sales (or profits) to spending per project type"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro tiene un cuarto elemento, la relación entre ventas (o ganancias) y gasto por tipo, que el paso deja fuera.; Mismo defecto: falta la productividad de cada tipo en el procedimiento.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Capacitación de Empleadores, Gerentes y Supervisores en sus Roles",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Los líderes de la organización pueden necesitar capacitación específica sobre sus responsabilidades bajo la OSH Act y los derechos que da a los trabajadores, cómo responder a reportes de incidentes sin desalentar el reporte, y técnicas de reconocimiento y control de peligros, incluyendo análisis de causa raíz.",
+  "resumen_teorico": "Los líderes de la organización pueden necesitar capacitación específica sobre sus responsabilidades bajo la OSH Act y los derechos que da a los trabajadores, cómo responder a reportes de incidentes sin desalentar el reporte, técnicas de reconocimiento y control de peligros, y técnicas de investigación de incidentes, incluyendo análisis de causa raíz.",
   "pasos_accionables": [
     "Reforzar el conocimiento de responsabilidades legales bajo la OSH Act y de los derechos que esa ley garantiza a los trabajadores",
     "Entrenar en procedimientos de respuesta a reportes de lesiones, enfermedades e incidentes, incluidas formas de no desalentar el reporte",
     "Instruir sobre técnicas de reconocimiento y jerarquía de controles",
     "Capacitar en técnicas de investigación de incidentes y análisis de causa raíz"
   ],
-  "entregable_esperado": "Gerentes y supervisores capacitados en su rol dentro del programa de seguridad",
+  "entregable_esperado": "Empleadores, gerentes y supervisores capacitados en su rol dentro del programa de seguridad",
   "nodos_previos": [
     "capacitacion_educacion_seguridad"
   ],
@@ -93,6 +93,38 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición central del punto: responder sin desalentar el reporte, y que cubre lesiones y enfermedades.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-capacitacion_roles_gerencia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los líderes de la organización pueden necesitar capacitación específica sobre sus responsabilidades bajo la OSH Act y los derechos que da a los trabajadores, cómo responder a reportes de incidentes sin desalentar el reporte, y técnicas de reconocimiento y control de peligros, incluyendo análisis de causa raíz.",
+      "texto_nuevo": "Los líderes de la organización pueden necesitar capacitación específica sobre sus responsabilidades bajo la OSH Act y los derechos que da a los trabajadores, cómo responder a reportes de incidentes sin desalentar el reporte, técnicas de reconocimiento y control de peligros, y técnicas de investigación de incidentes, incluyendo análisis de causa raíz.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "841",
+        "frase": "Instruct employers, managers, and supervisors on incident investigation techniques, including root cause analysis"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la investigación de incidentes, con el análisis de causa raíz, como tema aparte; el resumen la pierde.; Misma omisión: se cae el cuarto contenido, la investigación de incidentes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-036-capacitacion_roles_gerencia-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Gerentes y supervisores capacitados en su rol dentro del programa de seguridad",
+      "texto_nuevo": "Empleadores, gerentes y supervisores capacitados en su rol dentro del programa de seguridad",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "829",
+        "frase": "Train employers, managers, and supervisors on their roles in the program"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dirige esta capacitación a empleadores, gerentes y supervisores; el entregable deja fuera al empleador.; Misma omisión del empleador.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Definición de Procedimientos en Organizaciones de Servicio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
+  "resumen_teorico": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
   "pasos_accionables": [
     "Auditar todos los departamentos de servicio para verificar si existen procedimientos escritos y actualizados",
     "Definir operacionalmente qué constituye un error o defecto en cada proceso de servicio",
@@ -87,6 +87,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro dice que la ausencia de procedimientos definidos se da en servicios igual que en manufactura, no en contraste con ella.; Endurece: el libro dice que el problema afecta a algunas organizaciones de servicio y que en muchos estudios es tan difícil, no que lo sea en general.; Mismo contrario que la marca 0: 'as in manufacturing'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-procedimientos_definidos_en_servicios-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
+      "texto_nuevo": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4232",
+        "frase": "The correct code and a mistake in coding are in many studies as difficult"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no atribuye los errores de codificación a la falta de guías, sino a lo difícil de definir el código correcto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

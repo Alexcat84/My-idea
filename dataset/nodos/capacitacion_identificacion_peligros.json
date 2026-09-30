@@ -12,7 +12,7 @@
     "Entrenar en uso correcto de prácticas administrativas y EPP",
     "Dar capacitación adicional, según haga falta, cuando un cambio de instalaciones, equipos, procesos, materiales u organización del trabajo pueda aumentar los peligros, y cada vez que se asigne una tarea nueva"
   ],
-  "entregable_esperado": "Trabajadores capacitados en identificación y control de peligros de su puesto",
+  "entregable_esperado": "Trabajadores capacitados en identificación y control de los peligros de su puesto y de los peligros generales del trabajo",
   "nodos_previos": [
     "capacitacion_roles_gerencia",
     "capacitacion_educacion_seguridad"
@@ -62,6 +62,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de capacitar; la certificación no aparece.; Misma certificación añadida que el libro no menciona.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-capacitacion_identificacion_peligros-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Trabajadores capacitados en identificación y control de peligros de su puesto",
+      "texto_nuevo": "Trabajadores capacitados en identificación y control de los peligros de su puesto y de los peligros generales del trabajo",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "871",
+        "frase": "hazards they may encounter in their own jobs, as well as more general"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye también los peligros generales del trabajo, no solo los del propio puesto.; Misma omisión de los peligros generales del trabajo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

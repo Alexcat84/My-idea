@@ -9,7 +9,7 @@
     "Realizar pruebas con muestras que reflejen la variación real esperada en producción, no solo valores nominales",
     "Aplicar métodos Monte Carlo para simular variaciones de dimensión, presión, temperatura, etc. en diseño asistido por computadora",
     "Verificar el estado de control estadístico del proceso antes de confiar en resultados de prototipos",
-    "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen?"
+    "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen? ¿Aumentan tu confianza en alguna predicción que necesitas para planear? ¿Cómo te ayudan a planear un cambio? ¿Qué significa en la práctica aprender, al estudiar un proceso para mejorarlo?"
   ],
   "entregable_esperado": "Un protocolo de pruebas de prototipos que incluya variación realista de parámetros y simulación de condiciones de producción",
   "nodos_previos": [
@@ -53,6 +53,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De la lista de preguntas del libro se cae la de bajo qué condiciones los resultados predicen la corrida de mañana o la cosecha del año próximo, que conecta la prueba con la variación real.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-pruebas_inadecuadas_prototipos-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen?",
+      "texto_nuevo": "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen? ¿Aumentan tu confianza en alguna predicción que necesitas para planear? ¿Cómo te ayudan a planear un cambio? ¿Qué significa en la práctica aprender, al estudiar un proceso para mejorarlo?",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3047-3051",
+        "frase": "Will they add to my degree of belief for some prediction"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro añade tres preguntas más: confianza para planear, cómo ayudan a planear un cambio y qué significa aprender.; Misma omisión de tres de las seis preguntas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

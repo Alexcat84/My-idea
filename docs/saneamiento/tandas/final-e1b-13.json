@@ -1,0 +1,607 @@
+[
+ {
+  "id": "final-e1b-035-habilidad_prompting_como_experticia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "habilidad_prompting_como_experticia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Puede estar surgiendo un nuevo tipo de ventaja competitiva: es posible que personas o equipos excepcionalmente hábiles trabajando con sistemas de IA (adoptando prácticas 'Cyborg', diseñando prompts efectivos, iterando con la IA) logren mejoras de rendimiento órdenes de magnitud mayores que el usuario promedio. Esta habilidad, aunque difícil de definir con precisión, puede convertirse en un diferenciador clave para founders y equipos que buscan maximizar el retorno de sus herramientas de IA.",
+  "texto_nuevo": "Puede estar surgiendo un nuevo tipo de ventaja competitiva: es posible que personas o equipos excepcionalmente hábiles trabajando con sistemas de IA (adoptando prácticas 'Cyborg') logren mejoras de rendimiento órdenes de magnitud mayores que el usuario promedio. Esta habilidad, aunque difícil de definir con precisión, puede convertirse en un diferenciador clave para founders y equipos que buscan maximizar el retorno de sus herramientas de IA.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "1345",
+   "frase": "They can adopt Cyborg practices better than others and have a natural (or learned) gift"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro describe la habilidad solo como adoptar prácticas Cyborg y tener un don para trabajar con LLM, y dice que el diseño de prompts no será útil para la mayoría; no nombra la iteración.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-035-legislacion_especifica_vs_accidente_organizacional-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "legislacion_especifica_vs_accidente_organizacional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las legislaciones de seguridad más exitosas históricamente (acopladores Janney en ferrocarriles, límites de velocidad, cinturones de seguridad) han sido efectivas porque atacan actos inseguros específicos con peligros, situaciones y personas en riesgo bien conocidas. Sin embargo, esta misma especificidad no funciona para accidentes organizacionales complejos, cuya etiología aún no se comprende completamente, lo que deja abierta la pregunta de cómo pueden los reguladores limitar mejor estos eventos catastróficos pero infrecuentes.",
+  "texto_nuevo": "Las legislaciones de seguridad más exitosas históricamente (acopladores Janney en ferrocarriles, límites de velocidad, cinturones de seguridad) han sido efectivas porque atacan actos inseguros específicos con peligros, situaciones y personas en riesgo bien conocidas. Sin embargo, el mismo grado de especificidad, o incluso de comprensión, no existe para los accidentes organizacionales, lo que deja abierta la pregunta de cómo pueden los reguladores limitar mejor estos eventos catastróficos pero infrecuentes.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "4246",
+   "frase": "the same degree of specificity—or even understanding—does not exist for organizational accidents"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no dice que la especificidad no funcione, sino que ese grado de especificidad, o incluso de comprensión, no existe para los accidentes organizacionales.; Mismo defecto: el libro dice que ese grado de especificidad no existe, no que no funcione.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-prevencion_control_peligros-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "prevencion_control_peligros",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Este elemento consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros ya identificados. Sigue el modelo NIOSH de jerarquía de controles, donde las opciones más efectivas remueven físicamente el peligro (eliminación, sustitución) y las menos efectivas dependen de tu comportamiento (controles administrativos, EPP), pasando por soluciones de ingeniería y prácticas de trabajo seguras. Debes evitar controles que generen nuevos peligros y combinar varios niveles cuando uno solo no baste. Siempre que sea posible, aplica principios de Prevención mediante el Diseño al elegir equipos y materiales. Los peligros graves se eliminan o controlan de inmediato, y el resultado debe plasmarse en un plan que los atienda primero y garantice implementación con plazos, protección provisional mientras se aplican controles definitivos, y verificación posterior de que realmente funcionan.",
+  "texto_nuevo": "Este elemento consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros ya identificados. Sigue el modelo NIOSH de jerarquía de controles, donde las opciones más efectivas remueven físicamente el peligro (eliminación, sustitución) y las menos efectivas dependen de tu comportamiento (controles administrativos, EPP), pasando por soluciones de ingeniería y prácticas de trabajo seguras. Debes evitar controles que generen nuevos peligros y combinar varios niveles cuando uno solo no baste. Siempre que sea posible, aplica principios de Prevención mediante el Diseño al elegir equipos y materiales. Los peligros graves se eliminan o controlan de inmediato, y el resultado debe plasmarse en un plan que los atienda primero y garantice implementación con plazos, protección provisional mientras se aplican controles definitivos, seguimiento del avance y verificación posterior de que realmente funcionan.",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "189",
+   "frase": "controls are implemented, interim protection is provided, progress is tracked"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone el seguimiento del avance entre lo que asegura el plan y el resumen lo pierde.; Misma omisión: de los cuatro elementos del plan se cae el seguimiento del avance.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-prevencion_control_peligros-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "prevencion_control_peligros",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar opciones de control revisando estándares, literatura de fabricantes y experiencias de otros sitios, y pidiendo a quienes trabajan contigo su opinión sobre su viabilidad y eficacia",
+  "texto_nuevo": "Identificar opciones de control revisando estándares, literatura de fabricantes y experiencias de otros sitios, pidiendo a quienes trabajan contigo su opinión sobre su viabilidad y eficacia y, ante peligros complejos, consultando a expertos en seguridad y salud",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "661",
+   "frase": "For complex hazards, consult with safety and health experts"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro añade consultar a expertos en seguridad y salud ante peligros complejos; el paso lo pierde.; Misma omisión de la cuarta vía para identificar opciones de control.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-036-peligros_emergencias_no_rutinarias-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "peligros_emergencias_no_rutinarias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+  "texto_nuevo": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, los materiales y equipos en uso y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "597",
+   "frase": "taking into account the types of material and equipment in use"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide tener en cuenta los materiales y también los equipos en uso; el resumen pierde los equipos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-seguimiento_efectividad_controles-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "seguimiento_efectividad_controles",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, es clave para mantener la protección a lo largo del tiempo.",
+  "texto_nuevo": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, ayuda a mantener la protección a lo largo del tiempo.",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "393",
+   "frase": "and helps sustain the program over time"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la participación de los trabajadores ayuda a sostener el programa; 'es clave' lo endurece.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-inspeccion_lugar_trabajo_peligros-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "inspeccion_lugar_trabajo_peligros",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúa cambios propuestos en procesos o equipos antes de implementarlos, pidiendo la opinión de quienes trabajan contigo sobre sus posibles peligros",
+  "texto_nuevo": "Evalúa los cambios propuestos en operaciones, puestos o flujo de trabajo, los cambios importantes de organización y la introducción de nuevos equipos, materiales o procesos antes de implementarlos, pidiendo la opinión de quienes trabajan contigo sobre sus posibles peligros",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "537",
+   "frase": "Before changing operations, workstations, or workflow; making major organizational changes"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide evaluar también cambios de operaciones, puestos, flujo de trabajo, organización y materiales.; Misma omisión en la lista de cambios que piden evaluación previa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-036-capacitacion_identificacion_peligros-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "capacitacion_identificacion_peligros",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Trabajadores capacitados en identificación y control de peligros de su puesto",
+  "texto_nuevo": "Trabajadores capacitados en identificación y control de los peligros de su puesto y de los peligros generales del trabajo",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "871",
+   "frase": "hazards they may encounter in their own jobs, as well as more general"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye también los peligros generales del trabajo, no solo los del propio puesto.; Misma omisión de los peligros generales del trabajo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-identificacion_recopilacion_informacion_peligros-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "identificacion_recopilacion_informacion_peligros",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Organiza y revisa con tu equipo toda la información recopilada para identificar qué peligros puede haber, quién está expuesto y los patrones de lesiones o enfermedades",
+  "texto_nuevo": "Organiza y revisa con tu equipo toda la información recopilada para identificar qué peligros puede haber, quién está o podría estar expuesto y los patrones de lesiones o enfermedades",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "465",
+   "frase": "which workers may be exposed or potentially exposed"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide identificar a quienes están expuestos o podrían estarlo; el paso deja fuera a los potencialmente expuestos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-036-identificacion_peligros_salud-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "identificacion_peligros_salud",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+  "texto_nuevo": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos, debidamente anonimizados para proteger la privacidad, para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "543",
+   "frase": "medical records (appropriately redacted to ensure patient/worker privacy) can be useful"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la revisión de registros médicos a que estén debidamente anonimizados para proteger la privacidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-capacitacion_roles_gerencia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "capacitacion_roles_gerencia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los líderes de la organización pueden necesitar capacitación específica sobre sus responsabilidades bajo la OSH Act y los derechos que da a los trabajadores, cómo responder a reportes de incidentes sin desalentar el reporte, y técnicas de reconocimiento y control de peligros, incluyendo análisis de causa raíz.",
+  "texto_nuevo": "Los líderes de la organización pueden necesitar capacitación específica sobre sus responsabilidades bajo la OSH Act y los derechos que da a los trabajadores, cómo responder a reportes de incidentes sin desalentar el reporte, técnicas de reconocimiento y control de peligros, y técnicas de investigación de incidentes, incluyendo análisis de causa raíz.",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "841",
+   "frase": "Instruct employers, managers, and supervisors on incident investigation techniques, including root cause analysis"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la investigación de incidentes, con el análisis de causa raíz, como tema aparte; el resumen la pierde.; Misma omisión: se cae el cuarto contenido, la investigación de incidentes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-capacitacion_roles_gerencia-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "capacitacion_roles_gerencia",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Gerentes y supervisores capacitados en su rol dentro del programa de seguridad",
+  "texto_nuevo": "Empleadores, gerentes y supervisores capacitados en su rol dentro del programa de seguridad",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "829",
+   "frase": "Train employers, managers, and supervisors on their roles in the program"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dirige esta capacitación a empleadores, gerentes y supervisores; el entregable deja fuera al empleador.; Misma omisión del empleador.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-evaluacion_mejora_programa-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "evaluacion_mejora_programa",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúa tu programa de seguridad y salud desde el inicio y luego al menos una vez al año, para confirmar que se aplica tal como lo pensaste en tu sitio de trabajo y que avanza hacia sus metas. Usa indicadores adelantados y rezagados, y verifica que los procesos clave, como reporte de incidentes, inspecciones y control de peligros, funcionen correctamente. Involucra a tus trabajadores en la identificación de oportunidades de mejora y comparte con ellos los resultados. Cuando detectes deficiencias, actúa de inmediato para corregirlas y evitar que se repitan. La mejora es continua: empieza con metas modestas, ajústalas cuando dejen de ser relevantes y revisa si los cambios en procesos, equipos o personas clave piden cambiar el programa. Puedes apoyarte en herramientas de autoevaluación que existan en tu mercado.",
+  "texto_nuevo": "Evalúa tu programa de seguridad y salud desde el inicio y luego al menos una vez al año, para confirmar que se aplica tal como lo pensaste en tu sitio de trabajo y que avanza hacia sus metas. Usa indicadores adelantados y rezagados, y verifica que los procesos clave, como reporte de incidentes, inspecciones y control de peligros, funcionen correctamente. Involucra a tus trabajadores en la identificación de oportunidades de mejora y comparte con ellos los resultados. Cuando detectes deficiencias, actúa de inmediato para corregirlas y evitar que se repitan. La mejora es continua: empieza con metas modestas, ajústalas cuando dejen de ser relevantes y revisa si los cambios en procesos, equipos, instalaciones, materiales, personas clave o prácticas de trabajo piden cambiar el programa. Puedes apoyarte en herramientas de autoevaluación que existan en tu mercado.",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "973",
+   "frase": "changes in equipment, facilities, materials, key personnel, or work practices"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye instalaciones, materiales y prácticas de trabajo entre los cambios que pueden pedir cambiar el programa.; Misma omisión de instalaciones y materiales.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-participacion_trabajadores-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "participacion_trabajadores",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Crea un proceso simple para que te reporten peligros, incidentes y casi accidentes, incluyendo la opción de hacerlo de forma anónima, y faculta a todos para detener o pedir que se detenga temporalmente cualquier tarea que crean insegura",
+  "texto_nuevo": "Crea un proceso simple para que te reporten lesiones, enfermedades, casi accidentes, peligros y otras inquietudes de seguridad y salud, incluyendo la opción de hacerlo de forma anónima, y faculta a todos para detener o pedir que se detenga temporalmente cualquier tarea que crean insegura",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "356",
+   "frase": "report injuries, illnesses, close calls/near misses, hazards, and other safety and health concerns"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El proceso de reporte del libro incluye lesiones, enfermedades y otras inquietudes de seguridad y salud.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-036-reporte_gerencial_diagnostico_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reporte_gerencial_diagnostico_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna, si tú no asumes la tarea de rediseñar el sistema completo.",
+  "texto_nuevo": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna: puede traer problemas nuevos mientras no entiendas qué está mal y cuál es tu responsabilidad para mejorar.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9110",
+   "frase": "we fear that new machinery would bring on a whole new set of problems"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro duda sin condición de la maquinaria nueva y teme problemas nuevos mientras la dirección no entienda qué está mal; el nodo cambia esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-riesgos_consenso_inspeccion-pasos_accionables-6",
+  "fecha": "2026-09-30",
+  "node_id": "riesgos_consenso_inspeccion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Programar revisiones periódicas (ej. cada 20° ítem) donde ambos evalúen el mismo ítem, cada uno de forma independiente y registrando su propio resultado.",
+  "texto_nuevo": "Programar revisiones periódicas (ej. cada 20° ítem) donde ambos evalúen el mismo ítem, cada uno de forma independiente y registrando su propio resultado, turnándose para elegir ese ítem.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "10003",
+   "frase": "They will take turns on the selection of the bundle."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro dice que los inspectores se turnan para elegir el ítem que revisan ambos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 6
+ },
+ {
+  "id": "final-e1b-036-responsabilidad_gerencial_en_la_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "responsabilidad_gerencial_en_la_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La transformación de la calidad en Japón se basó en entender que mejorar la calidad y la productividad es responsabilidad de quien dirige el negocio, no solo de quien hace el trabajo técnico o revisa el resultado. Algunos expertos en calidad enseñaron a los gerentes japoneses una nueva forma de asumir ese papel. El éxito se apoyó en la fuerza de trabajo, en la dedicación y el conocimiento de esos gerentes sobre su propio trabajo, su disposición a aprender y su compromiso real con la tarea, y en la expansión de la formación. Lo muestran los reportes de mejora de trece empresas japonesas presentados en 1952: todos los escribió la propia dirección, metida de lleno en la planta.",
+  "texto_nuevo": "La transformación de la calidad en Japón se basó en entender que mejorar la calidad y la productividad es responsabilidad de quien dirige el negocio, no solo de quien hace el trabajo técnico o revisa el resultado. Algunos expertos en calidad enseñaron a los gerentes japoneses una nueva forma de asumir ese papel. La confianza en que ese cambio tendría éxito se apoyaba en la fuerza de trabajo, en la dedicación y el conocimiento de esos gerentes sobre su propio trabajo, su disposición a aprender y su compromiso real con la tarea, y en la expansión de la formación. Lo muestran los reportes de mejora de trece empresas japonesas presentados en 1952: todos los escribió la propia dirección, metida de lleno en la planta.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "10872",
+   "frase": "The basis for my confidence in this prediction was"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El nodo convierte la base de una predicción en la causa del éxito, algo que el libro no afirma.; Los cuatro puntos son en el libro la base de su confianza en una predicción, no una causa comprobada del éxito.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-transformacion_gerencial_para_la_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "transformacion_gerencial_para_la_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Adoptar de verdad una cultura de calidad no es un evento sino un proceso de transformación lento: aun con buena gestión, cambiar cómo compras toma unos 5 años, y quitar otras barreras, entre 5 y 10. Requiere resolver barreras como la presión por resultados de corto plazo, la resistencia a cambiar cómo compras, y que las personas que te asesoran en temas económicos o regulatorios entiendan este enfoque. Solo los negocios con constancia de propósito sostenida sobreviven en el largo plazo.",
+  "texto_nuevo": "Adoptar de verdad una cultura de calidad no es un evento sino un proceso de transformación lento: aun con buena gestión, cambiar cómo compras toma unos 5 años, y quitar las barreras que impiden a tu gente sentirse orgullosa de su trabajo, unos 5, y en muchos negocios 10. Requiere resolver barreras como la presión por resultados de corto plazo, la resistencia a cambiar cómo compras, y que las personas que te asesoran en temas económicos o regulatorios entiendan este enfoque. Solo los negocios con constancia de propósito sostenida sobreviven en el largo plazo.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "3261",
+   "frase": "Companies with good management will require five years to remove the barriers"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de las barreras que impiden al trabajador sentirse orgulloso de su trabajo: 5 años con buena gestión, 10 en muchas empresas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-plan_de_accion_transformacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "plan_de_accion_transformacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El Punto 14 describe los pasos concretos que debes seguir, como quien lidera el negocio, para llevar adelante la transformación: acordar qué significan los 14 puntos y las enfermedades mortales, tener el coraje de romper con la tradición, explicarle el cambio a un grupo suficiente de personas mediante charlas o sesiones, y empezar cuanto antes a construir una forma de trabajar orientada a la mejora continua de la calidad, guiada por el ciclo de Shewhart.",
+  "texto_nuevo": "El Punto 14 describe los pasos que debes seguir, como quien lidera el negocio, para lograr la transformación: acordar qué significan los 14 puntos, las enfermedades mortales y los obstáculos, tener el coraje de romper con la tradición, explicarle el cambio a un grupo suficiente de personas, ver cada trabajo como un proceso por etapas, formar equipos que mejoren cada etapa y empezar cuanto antes a construir, con estadísticos competentes, una forma de trabajar orientada a la mejora continua de la calidad, guiada por el ciclo de Shewhart.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1821-1897",
+   "frase": "Every activity, every job is a part of a process."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide acordar el significado de los puntos, las enfermedades mortales y los obstáculos; se caen los obstáculos.; El procedimiento del libro incluye ver el trabajo como proceso por etapas y formar equipos por etapa; el resumen los omite.; Misma omisión de los obstáculos.; Se omiten los pasos del proceso por etapas, los equipos y la participación de estadísticos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-procedimientos_definidos_en_servicios-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "procedimientos_definidos_en_servicios",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
+  "texto_nuevo": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "4232",
+   "frase": "The correct code and a mistake in coding are in many studies as difficult"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no atribuye los errores de codificación a la falta de guías, sino a lo difícil de definir el código correcto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-pruebas_inadecuadas_prototipos-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "pruebas_inadecuadas_prototipos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen?",
+  "texto_nuevo": "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen? ¿Aumentan tu confianza en alguna predicción que necesitas para planear? ¿Cómo te ayudan a planear un cambio? ¿Qué significa en la práctica aprender, al estudiar un proceso para mejorarlo?",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "3047-3051",
+   "frase": "Will they add to my degree of belief for some prediction"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro añade tres preguntas más: confianza para planear, cómo ayudan a planear un cambio y qué significa aprender.; Misma omisión de tres de las seis preguntas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-036-reglas_deming_consultoria_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reglas_deming_consultoria_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir con prudente rapidez una organización para la calidad con liderazgo estadístico y personas competentes, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, y tú puedes ayudar a negocios que compiten entre sí sin conflicto de interés, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+  "texto_nuevo": "Conviene fijar condiciones claras antes de aceptar ayudar a un negocio en su transformación de calidad: la invitación debe venir de quien realmente dirige el negocio, todo el equipo que toma decisiones debe dedicar tiempo a entender sus responsabilidades, el negocio debe construir con prudente rapidez una organización para la calidad con liderazgo estadístico y personas competentes, el trabajo abarca todo el negocio y no solo un área, el compromiso es de largo plazo, aunque cualquiera de las dos partes puede terminarlo en cualquier momento, y tú puedes ayudar a negocios que compiten entre sí, porque tu meta es elevar el nivel de la profesión, no favorecer a un solo cliente.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "10613-10621",
+   "frase": "The arrangement will be long-term, though the company or I may break it off"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro añade que cualquiera de las dos partes puede terminar el acuerdo en cualquier momento.; El libro solo dice que puede aceptar firmas competidoras; no afirma que no haya conflicto de interés.; Misma afirmación añadida de que no hay conflicto de interés.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-preguntas_para_formacion_de_equipos-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "preguntas_para_formacion_de_equipos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Responder como equipo: ¿dónde encaja nuestra unidad en la organización total y qué produce? ¿Cómo sabemos si nuestros resultados son buenos o malos, con qué estándares, y cómo se fijaron?",
+  "texto_nuevo": "Responder como equipo: ¿dónde encaja nuestra unidad en la organización total, qué produce, con qué procesos lo produce y qué pasaría si dejara de producirlo? ¿Cómo sabemos si nuestros resultados son buenos o malos, con qué estándares, y cómo se fijaron?",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1915-1917",
+   "frase": "How does it provide these products and services; i.e., what processes are used?"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pregunta además con qué procesos produce la unidad y qué pasaría si dejara de producir.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-036-negociacion_carta_compromiso_banquero-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "negociacion_carta_compromiso_banquero",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La carta de compromiso es un contrato complejo que define qué va a hacer el banquero por ti, cuánto le pagas si hay venta (pago por éxito), un pago mensual fijo, cuánto dura el acuerdo, cómo lo terminas (incluyendo la cláusula de cola), quién responde si algo sale mal, si quieres exigir que trabaje una persona en particular contigo y si necesitas una opinión de valor justo. Entiéndela y negóciala con apoyo legal antes de firmar, porque implica un compromiso serio de tu tiempo y tu dinero.",
+  "texto_nuevo": "La carta de compromiso es un contrato complejo que define qué va a hacer el banquero por ti, cuánto le pagas si hay venta (pago por éxito), un pago mensual fijo, qué gastos le reembolsas, cuánto dura el acuerdo, cómo lo terminas (incluyendo la cláusula de cola), quién responde si algo sale mal y cómo se resuelven los desacuerdos, si quieres exigir que trabaje una persona en particular contigo y si necesitas una opinión de valor justo. Entiéndela y negóciala con apoyo legal antes de firmar, porque implica un compromiso serio de tu tiempo y tu dinero.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4445-4449",
+   "frase": "Retainer and expense reimbursement ... Indemnification and dispute resolution"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de términos a negociar pierde el reembolso de gastos y la resolución de desacuerdos, que el libro incluye.; Misma omisión de dos términos de la lista del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-036-metodo_conversion_notas_cap_table-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "metodo_conversion_notas_cap_table",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando tus notas convertibles se convierten en participación accionaria durante una ronda Serie A, tienes tres formas comunes de decidir quién absorbe la dilución que genera el descuento de conversión: (1) fijas la valuación de tu empresa antes de la inversión (método pre-money), y la dilución recae sobre ti y los inversionistas de la Serie A en proporción a su participación; (2) fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo), y toda la dilución la absorbes tú; o (3) fijas el valor de tu empresa después de la inversión (método de dólares invertidos), un punto intermedio donde solo tú absorbes la dilución del descuento, aunque bastante menos que con el porcentaje fijo, y se te reconoce el capital más el interés acumulado de tus notas.",
+  "texto_nuevo": "Cuando tus notas convertibles se convierten en participación accionaria durante una ronda Serie A, tienes tres formas comunes de decidir quién absorbe la dilución que genera el descuento de conversión: (1) fijas la valuación de tu empresa antes de la inversión (método pre-money), y la dilución recae sobre ti y los inversionistas de la Serie A en proporción a su participación; (2) fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo), y toda la dilución la absorbes tú; o (3) fijas el valor de tu empresa después de la inversión igual a la valuación antes de la inversión más lo que invierte la Serie A más el capital y el interés acumulado de las notas que se convierten (método de dólares invertidos), un punto intermedio donde solo tú absorbes la dilución del descuento, aunque bastante menos que con el porcentaje fijo.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "2574",
+   "frase": "the post-money valuation of the company is fixed to equal the agreed-upon pre-money valuation"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la regla que define el método de dólares invertidos; fijar sin más el valor posterior equivale, según el libro, al porcentaje fijo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-037-equipo_multifuncional_real-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "equipo_multifuncional_real",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Elige cómo vas a organizar al equipo según qué tan complejo sea el proyecto: con un líder que comparte la autoridad con los jefes de área, con un líder que tiene la autoridad principal, o con un equipo propio que responde solo al líder, que encaja mejor en proyectos grandes y complejos",
+  "texto_nuevo": "Elige cómo vas a organizar al equipo según qué tan complejo sea el proyecto: con un líder que comparte la autoridad con los jefes de área, con un líder que tiene la autoridad principal, que funciona mejor tanto en proyectos complejos como en los más simples, o con un equipo propio que responde solo al líder, que encaja mejor en proyectos grandes y complejos",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "2193",
+   "frase": "a project-matrix approach works best for both complex and simpler projects"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da el criterio de la matriz de proyecto (funciona mejor en proyectos complejos y simples) y el paso solo conserva el del equipo propio, lo que sesga la elección por complejidad.; Mismo defecto: se cae que la matriz de proyecto es la que mejor funciona tanto en proyectos complejos como en simples.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-037-criterios_de_exito_gate-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "criterios_de_exito_gate",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Como alternativa a evaluar solo con números financieros, puedes definir criterios de éxito claros para cada etapa (gate) de tu proyecto, por ejemplo ventas del primer año, margen de utilidad o fecha de lanzamiento. Este método, que usan compañías como P&G, te sirve para decidir en cada etapa sucesiva si el proyecto sigue o se cancela, y en la revisión posterior al lanzamiento te hace responsable de lo que prometiste. Tiene riesgos: úsalo solo si ya evalúas por etapas y estimas con realismo.",
+  "texto_nuevo": "Como alternativa a evaluar solo con números financieros, puedes definir criterios de éxito claros para cada etapa (gate) de tu proyecto, por ejemplo ventas del primer año, margen de utilidad o fecha de lanzamiento. Este método, que usan compañías como P&G, te sirve para decidir en cada etapa sucesiva si el proyecto sigue o se cancela, y en la revisión posterior al lanzamiento te hace responsable de lo que prometiste. Tiene riesgos: úsalo solo si ya tienes bastante experiencia evaluando por etapas y un historial sólido de estimaciones realistas.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6204",
+   "frase": "reserved for businesses with considerable experience with gating systems and a solid track record"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro reserva el método a negocios con considerable experiencia en sistemas de etapas y un historial sólido de estimaciones realistas; el resumen rebaja la condición a ya evaluar por etapas.; Mismo defecto: la condición de experiencia considerable e historial sólido se reduce a una condición más laxa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-037-definicion_gatekeepers-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "definicion_gatekeepers",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los gatekeepers son el grupo multifuncional de personas que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad), con autoridad real para comprometerlos y no solo opinión, y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite): mandos medios en los gates tempranos o de menor riesgo, y personas más senior donde el compromiso es grande. El 85% de los mejores innovadores tiene claramente definidos a sus gatekeepers.",
+  "texto_nuevo": "Los gatekeepers son el grupo multifuncional de personas que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones y quizá ventas, compras y calidad), con autoridad real para comprometerlos y no solo opinión, y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite): mandos medios en los gates tempranos o de menor riesgo, y personas más senior donde el compromiso es grande. El 85% de los mejores innovadores tiene claramente definidos a sus gatekeepers.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "7239",
+   "frase": "R&D, marketing, engineering, operations, and perhaps sales, purchasing, and quality assurance"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye compras y presenta ventas, compras y calidad como posibles ('perhaps'); el resumen quita compras y las da como fijas.; Mismo defecto de la enumeración: falta compras y se pierde el 'quizá'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-037-data_integrity_forecasting-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "data_integrity_forecasting",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. Los errores promedio en pronósticos de ventas y ganancias reales rondan el 200%, y el error real es aún mayor. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+  "texto_nuevo": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. En los pocos estudios privados disponibles, los errores promedio en pronósticos de ventas y ganancias de productos realmente nuevos rondan el 200%, y el error real es aún mayor. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6287",
+   "frase": "The few private studies I've seen reveal average errors for genuine new-project projects"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro saca el 200% de los pocos estudios privados que conoce, sobre productos realmente nuevos, sin estudios publicados; el resumen lo presenta como dato general.; Mismo defecto: se pierde la base limitada de la cifra y su alcance a productos realmente nuevos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-037-definicion_tipos_nuevo_producto-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "definicion_tipos_nuevo_producto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera y qué tasa de éxito tiene, y decidir si es la deseada.",
+  "texto_nuevo": "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera, qué tasa de éxito tiene y cuál es la relación entre ventas (o ganancias) y gasto, y decidir si es la deseada.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "1152",
+   "frase": "what's the ratio of sales (or profits) to spending per project type"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro tiene un cuarto elemento, la relación entre ventas (o ganancias) y gasto por tipo, que el paso deja fuera.; Mismo defecto: falta la productividad de cada tipo en el procedimiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-037-design_thinking_proceso-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "design_thinking_proceso",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un concepto de producto probado y parcialmente validado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
+  "texto_nuevo": "Un concepto de producto probado y parcialmente validado, listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "5139",
+   "frase": "to testable prototypes (or protocepts) and finally to a robust, tested and partially validated concept"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): En el libro el protocepto es el prototipo de prueba intermedio, no el concepto probado y parcialmente validado que sale del proceso.; Mismo defecto: la equivalencia entre el concepto final y el protocepto no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-037-desarrollo_attack_plans-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "desarrollo_attack_plans",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower o Defensor; no elijas ser Reactor, que solo responde cuando lo obligan y casi no es una estrategia",
+  "texto_nuevo": "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower o Defensor; no elijas ser Reactor, que solo responde cuando lo obligan y que para algunos ni siquiera es una estrategia",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "8403",
+   "frase": "some would argue that it's a “non strategy”"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta que el Reactor no es una estrategia como opinión de algunos ('some would argue'); el paso lo afirma como hecho.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-037-desarrollo_attack_plans-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "desarrollo_attack_plans",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un documento donde para cada arena dejas claro cómo vas a competir, hasta dónde llega tu alcance geográfico y cómo vas a entrar",
+  "texto_nuevo": "Un documento donde para cada arena dejas claro cómo vas a competir y hasta dónde llega tu alcance geográfico y, para las arenas nuevas, cómo vas a entrar",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "8429",
+   "frase": "entry strategies should be defined for new arenas"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide definir la estrategia de entrada solo para las arenas nuevas; el entregable la extiende a todas las arenas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-037-definicion_sprint_terminado_fisico-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "definicion_sprint_terminado_fisico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. Usar límites de tiempo en las tareas de evaluación evita caer en sobre ingeniería al intentar cerrar un sprint.",
+  "texto_nuevo": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. En una empresa, poner un límite de tiempo a tareas de evaluación, como evaluar un concepto, ayudó al equipo a evitar la sobreingeniería.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "4428",
+   "frase": "The concept of time-boxing was also introduced to improve efficiency in some tasks"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro cuenta que en una empresa el límite de tiempo ayudó al equipo a evitar la sobreingeniería; el resumen lo vuelve regla general que siempre lo evita.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-037-desarrollo_en_espiral-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "desarrollo_en_espiral",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. En un estudio de dos fabricantes líderes que venden a otras empresas, el ciclo se repitió en promedio entre 3 y 4,5 veces (firmas de diseño como IDEO iteran en promedio 15 veces), y cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
+  "texto_nuevo": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. En un estudio de dos fabricantes líderes que venden a otras empresas, el ciclo se repitió en promedio entre 3 y 4,5 veces (firmas de diseño como IDEO iteran en promedio 15 veces), y cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "1669-1675",
+   "frase": "Develop your “product definition” as best you can before Development begins"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pide definir el producto lo mejor posible antes del desarrollo y solo en mercados fluidos o proyectos arriesgados admite dejar partes variables; el resumen lo da como regla general.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ }
+]

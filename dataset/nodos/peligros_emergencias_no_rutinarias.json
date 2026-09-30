@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+  "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, los materiales y equipos en uso y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
   "pasos_accionables": [
     "Identificar escenarios de emergencia previsibles según el tipo de instalación, material manejado y ubicación",
     "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
@@ -167,6 +167,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye conseguir el equipo, asignar responsables y hacer simulacros que comprueben la protección.; Mismo defecto: se pierden equipo, responsables y simulacros.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-peligros_emergencias_no_rutinarias-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+      "texto_nuevo": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, los materiales y equipos en uso y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "597",
+        "frase": "taking into account the types of material and equipment in use"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide tener en cuenta los materiales y también los equipos en uso; el resumen pierde los equipos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

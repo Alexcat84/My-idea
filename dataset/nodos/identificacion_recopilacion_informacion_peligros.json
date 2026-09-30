@@ -10,7 +10,7 @@
     "Revisa tus registros de lesiones y enfermedades laborales y los resultados de monitoreo de exposición",
     "Consulta fuentes externas como los organismos de salud y seguridad laboral de tu país, sindicatos y consultores de seguridad",
     "Recoge los aportes de tu equipo mediante encuestas o conversaciones directas",
-    "Organiza y revisa con tu equipo toda la información recopilada para identificar qué peligros puede haber, quién está expuesto y los patrones de lesiones o enfermedades"
+    "Organiza y revisa con tu equipo toda la información recopilada para identificar qué peligros puede haber, quién está o podría estar expuesto y los patrones de lesiones o enfermedades"
   ],
   "entregable_esperado": "Un inventario documentado y organizado de fuentes de información y peligros potenciales identificados en tu negocio",
   "nodos_previos": [
@@ -84,6 +84,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide revisar la información con los trabajadores para saber qué peligros puede haber y quién está expuesto; el paso pierde esa revisión y su fin.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-identificacion_recopilacion_informacion_peligros-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Organiza y revisa con tu equipo toda la información recopilada para identificar qué peligros puede haber, quién está expuesto y los patrones de lesiones o enfermedades",
+      "texto_nuevo": "Organiza y revisa con tu equipo toda la información recopilada para identificar qué peligros puede haber, quién está o podría estar expuesto y los patrones de lesiones o enfermedades",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "465",
+        "frase": "which workers may be exposed or potentially exposed"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide identificar a quienes están expuestos o podrían estarlo; el paso deja fuera a los potencialmente expuestos.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Peligros para la Salud (Industria General)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+  "resumen_teorico": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos, debidamente anonimizados para proteger la privacidad, para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
   "pasos_accionables": [
     "Revisa SDS y etiquetas de productos para identificar químicos de riesgo",
     "Evalúa tu exposición a ruido, calor o radiación",
@@ -95,6 +95,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae de la lista el trabajo por encima de la altura del hombro.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-identificacion_peligros_salud-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+      "texto_nuevo": "A diferencia de los peligros físicos, los peligros de salud (químicos, físicos, biológicos, ergonómicos) suelen ser menos evidentes ya que pueden ser invisibles o sin olor perceptible, y detectarlos puede requerir conocimiento especializado. Incluyen exposición a solventes, ruido, calor, radiación, agentes biológicos (enfermedades infecciosas, moho, plantas tóxicas, animales, alérgenos) y factores de riesgo ergonómico como levantamiento de cargas, movimientos repetitivos o vibración. Implica revisar SDS, realizar evaluaciones cuantitativas de exposición cuando sea posible y examinar registros médicos, debidamente anonimizados para proteger la privacidad, para detectar patrones relacionados con el trabajo. Si no cuentas con la especialización necesaria, existen programas de consulta externos a los que puedes recurrir para obtener apoyo.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "543",
+        "frase": "medical records (appropriately redacted to ensure patient/worker privacy) can be useful"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la revisión de registros médicos a que estén debidamente anonimizados para proteger la privacidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. En un estudio de dos fabricantes líderes que venden a otras empresas, el ciclo se repitió en promedio entre 3 y 4,5 veces (firmas de diseño como IDEO iteran en promedio 15 veces), y cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
+  "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. En un estudio de dos fabricantes líderes que venden a otras empresas, el ciclo se repitió en promedio entre 3 y 4,5 veces (firmas de diseño como IDEO iteran en promedio 15 veces), y cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
   "pasos_accionables": [
     "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final",
     "Probar la versión con clientes reales para medir interés, preferencia e intención de compra",
@@ -145,6 +145,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Generaliza a los fabricantes B2B una cifra de un estudio de dos fabricantes líderes.; Mismo defecto.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-037-desarrollo_en_espiral-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. En un estudio de dos fabricantes líderes que venden a otras empresas, el ciclo se repitió en promedio entre 3 y 4,5 veces (firmas de diseño como IDEO iteran en promedio 15 veces), y cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
+      "texto_nuevo": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. En un estudio de dos fabricantes líderes que venden a otras empresas, el ciclo se repitió en promedio entre 3 y 4,5 veces (firmas de diseño como IDEO iteran en promedio 15 veces), y cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1669-1675",
+        "frase": "Develop your “product definition” as best you can before Development begins"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pide definir el producto lo mejor posible antes del desarrollo y solo en mercados fluidos o proyectos arriesgados admite dejar partes variables; el resumen lo da como regla general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

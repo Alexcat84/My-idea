@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo convertir tus notas convertibles en el reparto de acciones (cap table)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando tus notas convertibles se convierten en participación accionaria durante una ronda Serie A, tienes tres formas comunes de decidir quién absorbe la dilución que genera el descuento de conversión: (1) fijas la valuación de tu empresa antes de la inversión (método pre-money), y la dilución recae sobre ti y los inversionistas de la Serie A en proporción a su participación; (2) fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo), y toda la dilución la absorbes tú; o (3) fijas el valor de tu empresa después de la inversión (método de dólares invertidos), un punto intermedio donde solo tú absorbes la dilución del descuento, aunque bastante menos que con el porcentaje fijo, y se te reconoce el capital más el interés acumulado de tus notas.",
+  "resumen_teorico": "Cuando tus notas convertibles se convierten en participación accionaria durante una ronda Serie A, tienes tres formas comunes de decidir quién absorbe la dilución que genera el descuento de conversión: (1) fijas la valuación de tu empresa antes de la inversión (método pre-money), y la dilución recae sobre ti y los inversionistas de la Serie A en proporción a su participación; (2) fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo), y toda la dilución la absorbes tú; o (3) fijas el valor de tu empresa después de la inversión igual a la valuación antes de la inversión más lo que invierte la Serie A más el capital y el interés acumulado de las notas que se convierten (método de dólares invertidos), un punto intermedio donde solo tú absorbes la dilución del descuento, aunque bastante menos que con el porcentaje fijo.",
   "pasos_accionables": [
     "Identifica la valuación acordada antes de la inversión, el monto que invertirá la Serie A, el capital más interés de tus notas, y la tasa de descuento",
     "Calcula el resultado si fijas la valuación antes de la inversión (método pre-money) y derivas el precio de conversión con el descuento",
@@ -45,6 +45,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que solo los fundadores absorben la dilución del descuento, aunque bastante menos que con el porcentaje fijo, como punto intermedio.; El libro reparte la dilución en proporción a la participación, no por partes iguales.; Mismo defecto que la marca 0: 'por igual' afirma un reparto que el libro no dice, es invención más que matiz.; Mismo defecto que la marca 1: 'principalmente' pierde el 'solo' y la comparación con el porcentaje fijo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-metodo_conversion_notas_cap_table-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tus notas convertibles se convierten en participación accionaria durante una ronda Serie A, tienes tres formas comunes de decidir quién absorbe la dilución que genera el descuento de conversión: (1) fijas la valuación de tu empresa antes de la inversión (método pre-money), y la dilución recae sobre ti y los inversionistas de la Serie A en proporción a su participación; (2) fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo), y toda la dilución la absorbes tú; o (3) fijas el valor de tu empresa después de la inversión (método de dólares invertidos), un punto intermedio donde solo tú absorbes la dilución del descuento, aunque bastante menos que con el porcentaje fijo, y se te reconoce el capital más el interés acumulado de tus notas.",
+      "texto_nuevo": "Cuando tus notas convertibles se convierten en participación accionaria durante una ronda Serie A, tienes tres formas comunes de decidir quién absorbe la dilución que genera el descuento de conversión: (1) fijas la valuación de tu empresa antes de la inversión (método pre-money), y la dilución recae sobre ti y los inversionistas de la Serie A en proporción a su participación; (2) fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo), y toda la dilución la absorbes tú; o (3) fijas el valor de tu empresa después de la inversión igual a la valuación antes de la inversión más lo que invierte la Serie A más el capital y el interés acumulado de las notas que se convierten (método de dólares invertidos), un punto intermedio donde solo tú absorbes la dilución del descuento, aunque bastante menos que con el porcentaje fijo.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2574",
+        "frase": "the post-money valuation of the company is fixed to equal the agreed-upon pre-money valuation"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la regla que define el método de dólares invertidos; fijar sin más el valor posterior equivale, según el libro, al porcentaje fijo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

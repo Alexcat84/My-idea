@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Definir un 'Sprint Terminado' para Productos Físicos",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. Usar límites de tiempo en las tareas de evaluación evita caer en sobre ingeniería al intentar cerrar un sprint.",
+  "resumen_teorico": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. En una empresa, poner un límite de tiempo a tareas de evaluación, como evaluar un concepto, ayudó al equipo a evitar la sobreingeniería.",
   "pasos_accionables": [
     "Define qué entregable tangible marca el cierre de cada sprint: boceto, prototipo, modelo de trabajo o informe de estudio de mercado",
     "Crea una checklist de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
@@ -90,6 +90,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona un revisor externo; revisa un colega experto.; Mismo defecto: lo que revisa un colega experto es el resultado del sprint, no la checklist.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-037-definicion_sprint_terminado_fisico-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. Usar límites de tiempo en las tareas de evaluación evita caer en sobre ingeniería al intentar cerrar un sprint.",
+      "texto_nuevo": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. En una empresa, poner un límite de tiempo a tareas de evaluación, como evaluar un concepto, ayudó al equipo a evitar la sobreingeniería.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4428",
+        "frase": "The concept of time-boxing was also introduced to improve efficiency in some tasks"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro cuenta que en una empresa el límite de tiempo ayudó al equipo a evitar la sobreingeniería; el resumen lo vuelve regla general que siempre lo evita.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

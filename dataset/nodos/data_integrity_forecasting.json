@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Integridad de Datos y Responsabilidad en las Proyecciones",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. Los errores promedio en pronósticos de ventas y ganancias reales rondan el 200%, y el error real es aún mayor. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+  "resumen_teorico": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. En los pocos estudios privados disponibles, los errores promedio en pronósticos de ventas y ganancias de productos realmente nuevos rondan el 200%, y el error real es aún mayor. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
   "pasos_accionables": [
     "Definir con claridad qué información se necesita en cada gate (plantillas de entregables)",
     "Exigir a los equipos de proyecto que presenten y se responsabilicen por sus proyecciones de ventas, costos y fecha de lanzamiento",
@@ -50,6 +50,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro da el 200% como promedio y dice que el error real es mucho mayor; 'hasta' lo vuelve techo.; Mismo defecto: convierte un promedio en máximo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-037-data_integrity_forecasting-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. Los errores promedio en pronósticos de ventas y ganancias reales rondan el 200%, y el error real es aún mayor. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+      "texto_nuevo": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. En los pocos estudios privados disponibles, los errores promedio en pronósticos de ventas y ganancias de productos realmente nuevos rondan el 200%, y el error real es aún mayor. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6287",
+        "frase": "The few private studies I've seen reveal average errors for genuine new-project projects"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro saca el 200% de los pocos estudios privados que conoce, sobre productos realmente nuevos, sin estudios publicados; el resumen lo presenta como dato general.; Mismo defecto: se pierde la base limitada de la cifra y su alcance a productos realmente nuevos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

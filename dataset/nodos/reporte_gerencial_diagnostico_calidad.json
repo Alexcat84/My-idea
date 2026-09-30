@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diagnostico de fallas en el sistema de calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna, si tú no asumes la tarea de rediseñar el sistema completo.",
+  "resumen_teorico": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna: puede traer problemas nuevos mientras no entiendas qué está mal y cuál es tu responsabilidad para mejorar.",
   "pasos_accionables": [
     "Recopilar y revisar los datos históricos de auditoría de calidad (defectos mayores y menores) que ya tienes disponibles",
     "Documentar cómo funciona realmente la detección de defectos: quién los repara, quién los deja pasar y por qué",
@@ -200,6 +200,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Sobre la maquinaria nueva el libro solo duda que traiga mejora; el resumen lo endurece a que no resuelve nada.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-reporte_gerencial_diagnostico_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna, si tú no asumes la tarea de rediseñar el sistema completo.",
+      "texto_nuevo": "Un caso real muestra un diagnóstico hecho con datos que ya existen (auditorías de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raíz de la mala calidad, y falta de definiciones claras sobre qué es un defecto. La conclusión es que inspeccionar más no resuelve nada, y que es dudoso que comprar maquinaria nueva traiga mejora alguna: puede traer problemas nuevos mientras no entiendas qué está mal y cuál es tu responsabilidad para mejorar.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9110",
+        "frase": "we fear that new machinery would bring on a whole new set of problems"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro duda sin condición de la maquinaria nueva y teme problemas nuevos mientras la dirección no entienda qué está mal; el nodo cambia esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

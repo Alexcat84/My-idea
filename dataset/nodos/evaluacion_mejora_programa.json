@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Evaluación y Mejora del Programa de Seguridad y Salud",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Evalúa tu programa de seguridad y salud desde el inicio y luego al menos una vez al año, para confirmar que se aplica tal como lo pensaste en tu sitio de trabajo y que avanza hacia sus metas. Usa indicadores adelantados y rezagados, y verifica que los procesos clave, como reporte de incidentes, inspecciones y control de peligros, funcionen correctamente. Involucra a tus trabajadores en la identificación de oportunidades de mejora y comparte con ellos los resultados. Cuando detectes deficiencias, actúa de inmediato para corregirlas y evitar que se repitan. La mejora es continua: empieza con metas modestas, ajústalas cuando dejen de ser relevantes y revisa si los cambios en procesos, equipos o personas clave piden cambiar el programa. Puedes apoyarte en herramientas de autoevaluación que existan en tu mercado.",
+  "resumen_teorico": "Evalúa tu programa de seguridad y salud desde el inicio y luego al menos una vez al año, para confirmar que se aplica tal como lo pensaste en tu sitio de trabajo y que avanza hacia sus metas. Usa indicadores adelantados y rezagados, y verifica que los procesos clave, como reporte de incidentes, inspecciones y control de peligros, funcionen correctamente. Involucra a tus trabajadores en la identificación de oportunidades de mejora y comparte con ellos los resultados. Cuando detectes deficiencias, actúa de inmediato para corregirlas y evitar que se repitan. La mejora es continua: empieza con metas modestas, ajústalas cuando dejen de ser relevantes y revisa si los cambios en procesos, equipos, instalaciones, materiales, personas clave o prácticas de trabajo piden cambiar el programa. Puedes apoyarte en herramientas de autoevaluación que existan en tu mercado.",
   "pasos_accionables": [
     "Definir indicadores rezagados (lesiones, enfermedades) y adelantados (participación, capacitación)",
     "Recolectar y analizar datos de desempeño periódicamente y compartirlos con tus trabajadores",
@@ -154,6 +154,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide revisar si los cambios en equipos, personal clave o prácticas exigen cambiar el programa; el nodo lo vuelve un ajuste automático de las metas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-036-evaluacion_mejora_programa-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa tu programa de seguridad y salud desde el inicio y luego al menos una vez al año, para confirmar que se aplica tal como lo pensaste en tu sitio de trabajo y que avanza hacia sus metas. Usa indicadores adelantados y rezagados, y verifica que los procesos clave, como reporte de incidentes, inspecciones y control de peligros, funcionen correctamente. Involucra a tus trabajadores en la identificación de oportunidades de mejora y comparte con ellos los resultados. Cuando detectes deficiencias, actúa de inmediato para corregirlas y evitar que se repitan. La mejora es continua: empieza con metas modestas, ajústalas cuando dejen de ser relevantes y revisa si los cambios en procesos, equipos o personas clave piden cambiar el programa. Puedes apoyarte en herramientas de autoevaluación que existan en tu mercado.",
+      "texto_nuevo": "Evalúa tu programa de seguridad y salud desde el inicio y luego al menos una vez al año, para confirmar que se aplica tal como lo pensaste en tu sitio de trabajo y que avanza hacia sus metas. Usa indicadores adelantados y rezagados, y verifica que los procesos clave, como reporte de incidentes, inspecciones y control de peligros, funcionen correctamente. Involucra a tus trabajadores en la identificación de oportunidades de mejora y comparte con ellos los resultados. Cuando detectes deficiencias, actúa de inmediato para corregirlas y evitar que se repitan. La mejora es continua: empieza con metas modestas, ajústalas cuando dejen de ser relevantes y revisa si los cambios en procesos, equipos, instalaciones, materiales, personas clave o prácticas de trabajo piden cambiar el programa. Puedes apoyarte en herramientas de autoevaluación que existan en tu mercado.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "973",
+        "frase": "changes in equipment, facilities, materials, key personnel, or work practices"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye instalaciones, materiales y prácticas de trabajo entre los cambios que pueden pedir cambiar el programa.; Misma omisión de instalaciones y materiales.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
