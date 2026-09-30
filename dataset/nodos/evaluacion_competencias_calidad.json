@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Evaluación de Competencias y Habilidades del Personal de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Método de ocho pasos del Juran Institute para evaluar el nivel de dominio de la persona que se encarga de calidad en tu negocio, en siete áreas clave (auditoría, pensamiento crítico, control de procesos, teoría de calidad, análisis de causa raíz, estadística y trabajo en equipo). Los hallazgos históricos muestran debilidades recurrentes en análisis estadístico, herramientas de causa raíz y conocimiento de teoría de calidad (incluyendo desconocimiento de figuras como Deming, Shewhart y Juran), lo cual limita tu capacidad para impulsar mejoras reales.",
+  "resumen_teorico": "Método de ocho pasos del Juran Institute para evaluar el nivel de dominio de la persona que se encarga de calidad en tu negocio, en siete áreas clave (auditoría, pensamiento crítico, control de procesos, teoría de calidad, análisis de causa raíz, estadística y trabajo en equipo). Los hallazgos históricos muestran debilidades recurrentes en análisis estadístico, herramientas de causa raíz y conocimiento de teoría de calidad (incluyendo desconocimiento de figuras como Deming, Shewhart y Juran), lo cual puede impedir que esa persona impulse mejoras reales.",
   "pasos_accionables": [
-    "Definir las siete áreas de competencia a evaluar (auditoría, pensamiento crítico, control de proceso, teoría de calidad, causa raíz, estadística, trabajo en equipo)",
+    "Revisar qué competencias necesita tu negocio y, a partir de eso, definir las siete áreas de competencia a evaluar (auditoría, pensamiento crítico, control de proceso, teoría de calidad, causa raíz, estadística, trabajo en equipo)",
     "Diseñar preguntas de evaluación escritas y orales adaptadas a la terminología que usas en tu negocio",
-    "Aplicar la evaluación valorando el nivel de dominio de la persona y comparar contra las mejores prácticas del sector",
+    "Aplicar la evaluación valorando cada respuesta con una escala de 1 (sin respuesta o muy pobre) a 5 (sobresaliente y detallada), resumir los resultados por pregunta y por persona, y comparar contra las mejores prácticas del sector",
     "Analizar los resultados y tener claro qué muestran antes de decidir los siguientes pasos",
     "Diseñar un plan de capacitación y desarrollo para cerrar las brechas identificadas"
   ],
@@ -41,6 +41,56 @@
         "evidencia": "F17-024: Evalua las competencias del personal de calidad de un negocio en marcha y define su capacitacion, es gestion operativa. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-060-evaluacion_competencias_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Método de ocho pasos del Juran Institute para evaluar el nivel de dominio de la persona que se encarga de calidad en tu negocio, en siete áreas clave (auditoría, pensamiento crítico, control de procesos, teoría de calidad, análisis de causa raíz, estadística y trabajo en equipo). Los hallazgos históricos muestran debilidades recurrentes en análisis estadístico, herramientas de causa raíz y conocimiento de teoría de calidad (incluyendo desconocimiento de figuras como Deming, Shewhart y Juran), lo cual limita tu capacidad para impulsar mejoras reales.",
+      "texto_nuevo": "Método de ocho pasos del Juran Institute para evaluar el nivel de dominio de la persona que se encarga de calidad en tu negocio, en siete áreas clave (auditoría, pensamiento crítico, control de procesos, teoría de calidad, análisis de causa raíz, estadística y trabajo en equipo). Los hallazgos históricos muestran debilidades recurrentes en análisis estadístico, herramientas de causa raíz y conocimiento de teoría de calidad (incluyendo desconocimiento de figuras como Deming, Shewhart y Juran), lo cual puede impedir que esa persona impulse mejoras reales.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2521",
+        "frase": "some of the staff may not be able to drive Quality and Performance Excellence"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que parte del personal puede no ser capaz de impulsar mejoras; el resumen lo afirma como efecto seguro.; Mismo endurecimiento de 'some of the staff may not be able to drive'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-060-evaluacion_competencias_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir las siete áreas de competencia a evaluar (auditoría, pensamiento crítico, control de proceso, teoría de calidad, causa raíz, estadística, trabajo en equipo)",
+      "texto_nuevo": "Revisar qué competencias necesita tu negocio y, a partir de eso, definir las siete áreas de competencia a evaluar (auditoría, pensamiento crítico, control de proceso, teoría de calidad, causa raíz, estadística, trabajo en equipo)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2446",
+        "frase": "Reviewed skills questions and an organization's competency models to identify the organization's needs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El primer paso del método es revisar los modelos de competencias para identificar las necesidades de la organización, y el nodo lo omite.; Mismo paso perdido del procedimiento de ocho pasos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-060-evaluacion_competencias_calidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar la evaluación valorando el nivel de dominio de la persona y comparar contra las mejores prácticas del sector",
+      "texto_nuevo": "Aplicar la evaluación valorando cada respuesta con una escala de 1 (sin respuesta o muy pobre) a 5 (sobresaliente y detallada), resumir los resultados por pregunta y por persona, y comparar contra las mejores prácticas del sector",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2462-2474",
+        "frase": "An anchored scale of 1 to 5 was used for scoring the participant responses"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El método pide puntuar cada respuesta con una escala anclada de 1 a 5 y resumir resultados por pregunta y por persona; el paso lo omite.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Identificación y Gestión de Barreras Comerciales No Arancelarias",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud, exigencias ambientales, estándares eléctricos distintos o restricciones culturales. En muchos países existen oficinas de comercio exterior que ayudan gratis a resolver este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "resumen_teorico": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud, exigencias ambientales, estándares eléctricos distintos, límites a bienes que vienen de ciertos países o llevan componentes de ellos, o restricciones culturales. En Estados Unidos, una oficina del gobierno ofrece un programa gratuito que ayuda a los exportadores con este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
   "pasos_accionables": [
     "Consulta con la oficina de comercio exterior de tu país sobre las regulaciones del mercado al que quieres vender",
     "Revisa los textos de los acuerdos comerciales que apliquen entre tu país y el país destino",
@@ -43,6 +43,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-057-barreras_comerciales_no_arancelarias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud, exigencias ambientales, estándares eléctricos distintos o restricciones culturales. En muchos países existen oficinas de comercio exterior que ayudan gratis a resolver este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+      "texto_nuevo": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud, exigencias ambientales, estándares eléctricos distintos, límites a bienes que vienen de ciertos países o llevan componentes de ellos, o restricciones culturales. En Estados Unidos, una oficina del gobierno ofrece un programa gratuito que ayuda a los exportadores con este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2545-2551",
+        "frase": "This free program is available to assist all U.S. exporters or investors facing trade barriers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro solo describe un programa gratuito del gobierno de EE.UU. para sus exportadores; 'en muchos países' es un hecho añadido.; La lista del libro incluye restringir bienes originados en ciertos países o con componentes de ellos, que el resumen omite.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "exportacion",
   "titulo_concepto": "Branding, Etiquetado y Empaque para Mercados Internacionales",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La marca, el etiquetado y el empaque deben adaptarse culturalmente al mercado destino. Esto incluye decidir si usar la marca original o una marca local, evaluar el significado cultural de colores, cumplir con requisitos legales de idioma e información de contenido, convertir pesos y medidas a unidades locales, y considerar el uso de figuras o endosos culturalmente relevantes en lugar de referentes estadounidenses.",
+  "resumen_teorico": "La marca, el etiquetado y el empaque pueden necesitar adaptarse culturalmente al mercado destino. Esto incluye decidir si usar la marca original o una marca local, evaluar el significado cultural de colores, cumplir con requisitos legales de idioma e información de contenido, convertir pesos y medidas a unidades locales, y considerar el uso de figuras o endosos culturalmente relevantes en lugar de referentes estadounidenses.",
   "pasos_accionables": [
     "Evaluar si el nombre de marca estadounidense debe mantenerse o adaptarse localmente",
     "Investigar el significado cultural de colores usados en el empaque y etiqueta",
-    "Verificar requisitos legales de idioma para etiquetas e instrucciones",
+    "Verificar requisitos legales de idioma para etiquetas e instrucciones, si cada unidad debe etiquetarse por separado y si hay requisitos especiales de etiquetado para alimentos, fármacos u otros productos",
     "Incluir información de contenido, origen y medidas en unidades locales (kilogramos, litros)",
     "Adaptar imágenes, endosos y referencias culturales al público local"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Adapta Marca, Etiqueta y Empaque",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-057-branding_etiquetado_empaque_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La marca, el etiquetado y el empaque deben adaptarse culturalmente al mercado destino. Esto incluye decidir si usar la marca original o una marca local, evaluar el significado cultural de colores, cumplir con requisitos legales de idioma e información de contenido, convertir pesos y medidas a unidades locales, y considerar el uso de figuras o endosos culturalmente relevantes en lugar de referentes estadounidenses.",
+      "texto_nuevo": "La marca, el etiquetado y el empaque pueden necesitar adaptarse culturalmente al mercado destino. Esto incluye decidir si usar la marca original o una marca local, evaluar el significado cultural de colores, cumplir con requisitos legales de idioma e información de contenido, convertir pesos y medidas a unidades locales, y considerar el uso de figuras o endosos culturalmente relevantes en lugar de referentes estadounidenses.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2569-2573",
+        "frase": "in some places, it may be more valuable than it is in the U.S."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea consideraciones a evaluar y admite que la marca original puede valer más afuera; 'deben adaptarse' endurece.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-branding_etiquetado_empaque_internacional-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar requisitos legales de idioma para etiquetas e instrucciones",
+      "texto_nuevo": "Verificar requisitos legales de idioma para etiquetas e instrucciones, si cada unidad debe etiquetarse por separado y si hay requisitos especiales de etiquetado para alimentos, fármacos u otros productos",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2583",
+        "frase": "There may be special labeling requirements for foods, pharmaceuticals, and other products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye si cada pieza debe etiquetarse por separado y los requisitos especiales para alimentos, fármacos y otros productos; el paso los pierde.; Mismo defecto: se cae ese elemento de la lista.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

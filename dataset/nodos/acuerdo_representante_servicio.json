@@ -4,10 +4,10 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cláusulas de Servicio y Capacitación en Acuerdos con Representantes",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los acuerdos con representantes extranjeros deben especificar claramente las condiciones de servicio postventa (instalaciones de reparación, personal, inspecciones) y los programas de capacitación (frecuencia, participantes, ubicación y quién asume los costos de viaje). La calidad del servicio ofrecido por el representante impacta directamente la reputación de la empresa exportadora en el mercado, por lo que las garantías ofrecidas deben ajustarse a la capacidad real de servicio disponible.",
+  "resumen_teorico": "Los acuerdos con representantes extranjeros deben especificar claramente las condiciones de servicio postventa (instalaciones de reparación, personal, inspecciones y quién paga los costos de mantener la instalación) y los programas de capacitación (frecuencia, participantes, ubicación y quién asume los costos de viaje). La calidad del servicio ofrecido por el representante impacta directamente la reputación de la empresa exportadora en el mercado, por lo que las garantías ofrecidas deben ajustarse a la capacidad real de servicio disponible.",
   "pasos_accionables": [
     "Definir en el contrato la forma y capacidad de la instalación de servicio/reparación del representante",
-    "Establecer el número de personal necesario y provisiones de inspección",
+    "Establecer el número de personal necesario, las provisiones de inspección y quién paga los costos de mantener una instalación adecuada",
     "Determinar el alcance de la garantía según la capacidad de servicio en ese mercado",
     "Especificar el programa de capacitación: frecuencia, personal a capacitar, lugar y quién cubre costos de viaje y viáticos"
   ],
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Define Servicio y Capacitación",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-057-acuerdo_representante_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los acuerdos con representantes extranjeros deben especificar claramente las condiciones de servicio postventa (instalaciones de reparación, personal, inspecciones) y los programas de capacitación (frecuencia, participantes, ubicación y quién asume los costos de viaje). La calidad del servicio ofrecido por el representante impacta directamente la reputación de la empresa exportadora en el mercado, por lo que las garantías ofrecidas deben ajustarse a la capacidad real de servicio disponible.",
+      "texto_nuevo": "Los acuerdos con representantes extranjeros deben especificar claramente las condiciones de servicio postventa (instalaciones de reparación, personal, inspecciones y quién paga los costos de mantener la instalación) y los programas de capacitación (frecuencia, participantes, ubicación y quién asume los costos de viaje). La calidad del servicio ofrecido por el representante impacta directamente la reputación de la empresa exportadora en el mercado, por lo que las garantías ofrecidas deben ajustarse a la capacidad real de servicio disponible.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4785",
+        "frase": "inspection provisions, training programs, and payment of costs associated with maintaining a suitable facility"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de lo que el acuerdo debe precisar incluye el pago de los costos de mantener la instalación de servicio; el resumen lo pierde.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-acuerdo_representante_servicio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer el número de personal necesario y provisiones de inspección",
+      "texto_nuevo": "Establecer el número de personal necesario, las provisiones de inspección y quién paga los costos de mantener una instalación adecuada",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4785",
+        "frase": "inspection provisions, training programs, and payment of costs associated with maintaining a suitable facility"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el pago de los costos de mantener la instalación, que el libro pone junto al personal y las inspecciones; ningún paso lo recoge.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

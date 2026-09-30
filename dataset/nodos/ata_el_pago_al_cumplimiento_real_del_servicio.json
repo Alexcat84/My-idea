@@ -4,12 +4,12 @@
   "dominio": "compras",
   "titulo_concepto": "Ata el pago al cumplimiento real del servicio",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es un error común que te cuesta dinero sin darte cuenta. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Esto evita conflictos, porque tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te da además una base sólida para negociar mejor en el siguiente contrato con ese mismo proveedor.",
+  "resumen_teorico": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es pagar por algo que no recibiste. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Así tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te da además una base sólida para negociar mejor en el siguiente contrato con ese mismo proveedor.",
   "pasos_accionables": [
     "Antes de firmar, define en el contrato qué tareas específicas cubre cada pago.",
     "Si el proveedor no cumple una tarea pactada, descuenta del pago el costo equivalente a esa tarea, no el total.",
     "Revisa cada factura contra el trabajo entregado antes de autorizar el pago.",
-    "Documenta por escrito cualquier incumplimiento para usarlo en la próxima negociación.",
+    "Documenta por escrito cualquier incumplimiento para tenerlo en cuenta al decidir si renuevas.",
     "Comunica al proveedor desde el inicio que el pago está condicionado al cumplimiento verificado."
   ],
   "entregable_esperado": "Una cláusula de pago escrita que vincula cada monto a una tarea cumplida y verificable.",
@@ -55,6 +55,39 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por contract_close_out."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-058-ata_el_pago_al_cumplimiento_real_del_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es un error común que te cuesta dinero sin darte cuenta. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Esto evita conflictos, porque tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te da además una base sólida para negociar mejor en el siguiente contrato con ese mismo proveedor.",
+      "texto_nuevo": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es pagar por algo que no recibiste. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Así tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te da además una base sólida para negociar mejor en el siguiente contrato con ese mismo proveedor.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "7543",
+        "frase": "Failure to perform Quarterly and SemiAnnual Services will result in a deduction of payment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no afirma que la cláusula evite conflictos; su objetivo es obtener el cumplimiento completo.; El libro no dice que sea un error común ni que cueste dinero sin darte cuenta.; Mismo efecto inventado que la marca 1.; Mismo hecho inventado que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-058-ata_el_pago_al_cumplimiento_real_del_servicio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta por escrito cualquier incumplimiento para usarlo en la próxima negociación.",
+      "texto_nuevo": "Documenta por escrito cualquier incumplimiento para tenerlo en cuenta al decidir si renuevas.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "7547",
+        "frase": "at the sole discretion of XYZ Company based upon satisfactory performance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no usa el incumplimiento para negociar; la renovación depende del desempeño satisfactorio.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

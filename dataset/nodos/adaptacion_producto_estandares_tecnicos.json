@@ -4,11 +4,11 @@
   "dominio": "exportacion",
   "titulo_concepto": "Adaptación del Producto a Estándares Técnicos Internacionales",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los productos deben adaptarse no solo a preferencias culturales sino también a requisitos técnicos fundamentales del mercado destino, como voltajes, fases y ciclos eléctricos, así como el sistema métrico. Estados Unidos es prácticamente el único país que usa un sistema no métrico, por lo que competir globalmente exige convertir especificaciones, manuales e instrucciones a unidades métricas (centímetros, kilos, grados Celsius).",
+  "resumen_teorico": "Los productos pueden necesitar adaptarse no solo a preferencias culturales sino también a requisitos técnicos fundamentales del mercado destino, como voltajes, fases y ciclos eléctricos, así como el sistema métrico. Estados Unidos es prácticamente el único país que usa un sistema no métrico, y quienes compiten con éxito afuera ven la conversión de especificaciones, manuales e instrucciones a unidades métricas (centímetros, kilos, grados Celsius) como un detalle importante.",
   "pasos_accionables": [
     "Investigar los estándares eléctricos (voltaje, fase, ciclos) del país destino, incluso variaciones internas",
     "Determinar si el producto requiere un motor especial o un ratio de transmisión diferente",
-    "Convertir todas las especificaciones técnicas y manuales al sistema métrico",
+    "Convertir al sistema métrico las especificaciones técnicas que lo requieran para integrarse con otros equipos o cumplir las normas del país, y dar en unidades métricas las medidas de los manuales",
     "Consultar al National Institute of Standards and Technology (NIST) para normas y certificaciones extranjeras"
   ],
   "entregable_esperado": "Ficha técnica del producto adaptada a los estándares eléctricos y métricos del mercado destino",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Ajusta tu Producto a Estándares",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-057-adaptacion_producto_estandares_tecnicos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los productos deben adaptarse no solo a preferencias culturales sino también a requisitos técnicos fundamentales del mercado destino, como voltajes, fases y ciclos eléctricos, así como el sistema métrico. Estados Unidos es prácticamente el único país que usa un sistema no métrico, por lo que competir globalmente exige convertir especificaciones, manuales e instrucciones a unidades métricas (centímetros, kilos, grados Celsius).",
+      "texto_nuevo": "Los productos pueden necesitar adaptarse no solo a preferencias culturales sino también a requisitos técnicos fundamentales del mercado destino, como voltajes, fases y ciclos eléctricos, así como el sistema métrico. Estados Unidos es prácticamente el único país que usa un sistema no métrico, y quienes compiten con éxito afuera ven la conversión de especificaciones, manuales e instrucciones a unidades métricas (centímetros, kilos, grados Celsius) como un detalle importante.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2561-2565",
+        "frase": "even fundamental aspects of products may require changing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que incluso aspectos fundamentales pueden requerir cambios; 'deben adaptarse' endurece.; El libro presenta la conversión métrica como un detalle importante para vender afuera, no como una exigencia para competir.; Mismo endurecimiento que la marca 0.; Mismo endurecimiento que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-adaptacion_producto_estandares_tecnicos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Convertir todas las especificaciones técnicas y manuales al sistema métrico",
+      "texto_nuevo": "Convertir al sistema métrico las especificaciones técnicas que lo requieran para integrarse con otros equipos o cumplir las normas del país, y dar en unidades métricas las medidas de los manuales",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2565",
+        "frase": "many kinds of equipment must be engineered in the metric system for integration"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que muchos tipos de equipo deben diseñarse en métrico para integrarse o cumplir normas y que los manuales deberían dar medidas métricas; 'todas las especificaciones' endurece.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "exportacion",
   "titulo_concepto": "Autocertificación de Origen por el Exportador",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto sin intervención de terceros, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
-    "Determinar si el embarque es único o parte de envíos múltiples idénticos",
-    "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
-    "Identificar a la persona con autoridad legal para firmar en nombre de la empresa",
+    "Determinar si el embarque es único o parte de envíos múltiples idénticos; si es único, indicar el número de la factura comercial",
+    "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses); el formato de fecha lo fija el modelo que uses, no la norma",
+    "Identificar a la persona con autoridad legal para firmar en nombre de la empresa y con acceso a los registros de soporte",
     "Redactar la declaración de certificación conforme al tratado aplicable",
     "Conservar toda la documentación de soporte por si se solicita auditoría"
   ],
@@ -72,6 +72,73 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-057-autocertificacion_del_exportador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto sin intervención de terceros, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5227",
+        "frase": "A buyer may also ask you (the exporter) to certify the origin of a product"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el comprador puede pedir al exportador que certifique el origen; 'sin intervención de terceros' es una afirmación que el libro no hace.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-autocertificacion_del_exportador-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si el embarque es único o parte de envíos múltiples idénticos",
+      "texto_nuevo": "Determinar si el embarque es único o parte de envíos múltiples idénticos; si es único, indicar el número de la factura comercial",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5229-5231",
+        "frase": "Provide the commercial invoice number."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Para el envío único el libro pide indicar el número de la factura comercial; ningún paso lo recoge.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-autocertificacion_del_exportador-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
+      "texto_nuevo": "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses); el formato de fecha lo fija el modelo que uses, no la norma",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5233-5235",
+        "frase": "Provide the blanket period in \"mm/dd/yyyy to mm/dd/yyyy\" format (12-month maximum)."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro fija un máximo de 12 meses para el periodo, pero no dice que se cuente desde la fecha de la certificación.; Mismo defecto: punto de partida del plazo añadido.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-autocertificacion_del_exportador-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar a la persona con autoridad legal para firmar en nombre de la empresa",
+      "texto_nuevo": "Identificar a la persona con autoridad legal para firmar en nombre de la empresa y con acceso a los registros de soporte",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5239",
+        "frase": "The signee must have access to the underlying records"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que quien firma tenga, además de autoridad legal, acceso a los registros de soporte; el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

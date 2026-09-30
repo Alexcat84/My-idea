@@ -10,7 +10,7 @@
     "Calcula el promedio de ese gasto histórico.",
     "Compara el nuevo precio contra ese promedio con la fórmula: uno menos el nuevo gasto entre el promedio, multiplicado por cien.",
     "Guarda ese número junto con la fecha y el proveedor en un archivo simple de compras.",
-    "Usa ese ahorro documentado como argumento cuando renueves o negocies el próximo contrato."
+    "Consulta ese ahorro documentado cuando debas decidir si renuevas el contrato o buscas otras ofertas."
   ],
   "entregable_esperado": "Un registro con el porcentaje de ahorro de cada compra comparado contra tu gasto histórico.",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Calcula tu ahorro real de compra",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-058-documenta_el_ahorro_real_de_cada_compra-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa ese ahorro documentado como argumento cuando renueves o negocies el próximo contrato.",
+      "texto_nuevo": "Consulta ese ahorro documentado cuando debas decidir si renuevas el contrato o buscas otras ofertas.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5805",
+        "frase": "very important when making the decision to renew or compete the contract."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro usa el ahorro documentado para decidir si renovar o volver a concursar el contrato, no como argumento de negociación.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

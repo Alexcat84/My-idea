@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Evaluación de Alternativas de Solución",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Fase creativa-convergente donde el equipo genera múltiples alternativas de solución mediante lluvia de ideas y luego las evalúa usando matrices de selección basadas en criterios, con el fin de determinar la solución (o combinación de soluciones) que mejor elimine la causa raíz identificada.",
+  "resumen_teorico": "Fase creativa-convergente donde el equipo genera múltiples alternativas de solución mediante lluvia de ideas y luego las evalúa, pudiendo apoyarse en matrices de selección basadas en criterios, con el fin de determinar la solución (o combinación de soluciones) que mejor elimine la causa raíz identificada.",
   "pasos_accionables": [
     "Realizar lluvia de ideas para generar múltiples alternativas de solución.",
-    "Construir diagramas de flujo para visualizar la implementación de cada alternativa.",
-    "Usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
+    "Si te ayuda, construir diagramas de flujo para visualizar la implementación de cada alternativa.",
+    "Si te ayuda a decidir, usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
     "Seleccionar la solución óptima o combinación de soluciones."
   ],
   "entregable_esperado": "Una matriz de selección de soluciones con la alternativa (o combinación) elegida para implementar.",
@@ -37,5 +37,57 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-060-evaluacion_alternativas_solucion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fase creativa-convergente donde el equipo genera múltiples alternativas de solución mediante lluvia de ideas y luego las evalúa usando matrices de selección basadas en criterios, con el fin de determinar la solución (o combinación de soluciones) que mejor elimine la causa raíz identificada.",
+      "texto_nuevo": "Fase creativa-convergente donde el equipo genera múltiples alternativas de solución mediante lluvia de ideas y luego las evalúa, pudiendo apoyarse en matrices de selección basadas en criterios, con el fin de determinar la solución (o combinación de soluciones) que mejor elimine la causa raíz identificada.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15457-15458",
+        "frase": "They may also use a criteria-based selection matrix to assist their decision-making"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el equipo puede usar la matriz como apoyo ('may also use'), no como el medio fijo de evaluación.; Mismo defecto: la matriz es un apoyo opcional en el libro, el resumen la vuelve el modo de evaluar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-060-evaluacion_alternativas_solucion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construir diagramas de flujo para visualizar la implementación de cada alternativa.",
+      "texto_nuevo": "Si te ayuda, construir diagramas de flujo para visualizar la implementación de cada alternativa.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15457",
+        "frase": "The team may construct flow diagrams of possible solution implementations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el equipo puede construir diagramas de flujo ('may construct'); el paso lo vuelve obligatorio.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-060-evaluacion_alternativas_solucion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
+      "texto_nuevo": "Si te ayuda a decidir, usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15457",
+        "frase": "They may also use a criteria-based selection matrix to assist their decision-making"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La matriz de selección es un apoyo que el equipo puede usar ('may also use'), no un paso obligado.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

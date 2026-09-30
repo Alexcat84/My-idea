@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cálculo del Contenido de Valor Regional (RVC)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift) ni la excepción de minimis, puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC), si la regla del producto lo admite. Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Elaborar una lista de materiales con costos (costed bill of materials)",
     "Identificar el valor de los materiales no originarios (VNM) usados en la producción",
@@ -45,6 +45,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-057-calculo_contenido_valor_regional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift) ni la excepción de minimis, puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC), si la regla del producto lo admite. Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4881-4883",
+        "frase": "the product does not qualify under the TS or the de minimis exception"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pasa al RVC solo si tampoco se cumple la excepción de minimis y si la regla del producto admite el RVC; el resumen pierde ambas condiciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

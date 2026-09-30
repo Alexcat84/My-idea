@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Certificación Profesional de Expertos en Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La certificación profesional (como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma) te sirve para demostrar que de verdad sabes de calidad. La lección de la era de la Gestión de Calidad Total y del auge de Six Sigma es que un solo proyecto o un examen sin supervisión no bastan para probar que dominas el tema; elige organismos certificadores con buena reputación y respalda tu certificación con evidencia práctica sostenida en el tiempo.",
+  "resumen_teorico": "La certificación profesional (como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma) te sirve para demostrar que de verdad sabes de calidad. La experiencia con la certificación enseña que un solo proyecto o un examen sin supervisión no bastan para probar que dominas el tema; elige organismos certificadores con buena reputación y respalda tu certificación con evidencia independiente de que dominas los métodos.",
   "pasos_accionables": [
-    "Elige un organismo certificador con buena reputación (ASQ, Juran Institute, PMI, etc.)",
+    "Elige un organismo certificador con buena reputación (por ejemplo, ASQ)",
     "Define qué necesitas saber (tu cuerpo de conocimiento) según tu rol",
-    "Evalúate con examen y con un proyecto aplicado, no solo con uno de los dos",
-    "Recertifícate cada cierto tiempo para mantener tus competencias vigentes"
+    "Evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+    "Sugerencia de My Idea: recertifícate cada cierto tiempo para mantener tus competencias vigentes"
   ],
   "entregable_esperado": "Tu plan de certificación con el organismo elegido y los criterios de evaluación definidos",
   "nodos_previos": [
@@ -26,5 +26,74 @@
   "etiqueta_arbol": "Certifica a tus Expertos en Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-061-certificacion_profesional_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La certificación profesional (como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma) te sirve para demostrar que de verdad sabes de calidad. La lección de la era de la Gestión de Calidad Total y del auge de Six Sigma es que un solo proyecto o un examen sin supervisión no bastan para probar que dominas el tema; elige organismos certificadores con buena reputación y respalda tu certificación con evidencia práctica sostenida en el tiempo.",
+      "texto_nuevo": "La certificación profesional (como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma) te sirve para demostrar que de verdad sabes de calidad. La experiencia con la certificación enseña que un solo proyecto o un examen sin supervisión no bastan para probar que dominas el tema; elige organismos certificadores con buena reputación y respalda tu certificación con evidencia independiente de que dominas los métodos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15050-15056",
+        "frase": "you need independent evidence that the person is knowledgeable about the methods"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide evidencia independiente de que la persona conoce los métodos; 'sostenida en el tiempo' no está.; La lección de la era TQM fue la falta de formación en herramientas de datos; lo del proyecto y el examen son lecciones sobre la certificación.; Mismo defecto: atribuye a la era TQM y Six Sigma una lección que el libro da sobre certificar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-certificacion_profesional_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige un organismo certificador con buena reputación (ASQ, Juran Institute, PMI, etc.)",
+      "texto_nuevo": "Elige un organismo certificador con buena reputación (por ejemplo, ASQ)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2995",
+        "frase": "the ASQ is in a better position to monitor the certifications"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo presenta a ASQ; Juran Institute y PMI como certificadores reputados no están.; Mismo defecto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-certificacion_profesional_calidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúate con examen y con un proyecto aplicado, no solo con uno de los dos",
+      "texto_nuevo": "Evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3005",
+        "frase": "Passing a written test that is not proctored is no guarantee"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un examen escrito sin supervisión no garantiza nada; se cae la condición.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-certificacion_profesional_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recertifícate cada cierto tiempo para mantener tus competencias vigentes",
+      "texto_nuevo": "Sugerencia de My Idea: recertifícate cada cierto tiempo para mantener tus competencias vigentes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3001-3009",
+        "frase": "here are some lessons learned about certification"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de recertificación; queda como sugerencia de la casa.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

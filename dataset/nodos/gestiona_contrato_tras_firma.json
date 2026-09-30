@@ -4,12 +4,12 @@
   "dominio": "compras",
   "titulo_concepto": "Gestiona el contrato después de firmarlo, no lo archives",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Muchos emprendedores guardan el contrato en una carpeta y no vuelven a mirarlo hasta que algo falla. Para evitarlo, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+  "resumen_teorico": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
   "pasos_accionables": [
     "Anota en tu calendario la fecha de vencimiento del contrato y una alerta unos meses antes.",
-    "Revisa cada factura del proveedor contra lo que realmente se pactó antes de pagarla.",
+    "Revisa cada factura del proveedor contra lo que realmente se pactó y confirma que se recibió todo lo que cobra antes de pagarla.",
     "Sugerencia de My Idea: habla cada uno o dos meses con tu contacto en el proveedor para saber cómo va el servicio.",
-    "Decide con anticipación si vas a renovar, renegociar o cambiar de proveedor cuando se acerque el vencimiento.",
+    "Decide con anticipación si vas a renovar, renegociar, cambiar de proveedor, traer el trabajo de vuelta a tu negocio o terminar el contrato si ya no lo necesitas, cuando se acerque el vencimiento.",
     "Guarda una copia del contrato firmado en un lugar donde puedas encontrarla en minutos."
   ],
   "entregable_esperado": "Un calendario de vencimientos y una rutina de revisión de facturas y desempeño del proveedor.",
@@ -44,6 +44,56 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de hablar con el proveedor de vez en cuando. El plazo de uno a tres meses lo da para revisar facturas y hablar con tu propia gente, no con el proveedor. La frecuencia de uno o dos meses no la da el libro.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-042"
+    },
+    {
+      "id": "final-e1-058-gestiona_contrato_tras_firma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Muchos emprendedores guardan el contrato en una carpeta y no vuelven a mirarlo hasta que algo falla. Para evitarlo, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+      "texto_nuevo": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5507",
+        "frase": "Administering a contract means managing the contract."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Afirma un hecho sobre lo que hacen muchos emprendedores que el libro no dice.; Mismo hecho inventado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-058-gestiona_contrato_tras_firma-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada factura del proveedor contra lo que realmente se pactó antes de pagarla.",
+      "texto_nuevo": "Revisa cada factura del proveedor contra lo que realmente se pactó y confirma que se recibió todo lo que cobra antes de pagarla.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5529",
+        "frase": "Make sure that these people have received everything the invoice shows."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide confirmar que se recibió todo lo que la factura cobra, no solo cotejarla con lo pactado.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-058-gestiona_contrato_tras_firma-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide con anticipación si vas a renovar, renegociar o cambiar de proveedor cuando se acerque el vencimiento.",
+      "texto_nuevo": "Decide con anticipación si vas a renovar, renegociar, cambiar de proveedor, traer el trabajo de vuelta a tu negocio o terminar el contrato si ya no lo necesitas, cuando se acerque el vencimiento.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5525",
+        "frase": "To terminate this contract and bring the work back inside the com pany"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista pierde dos opciones del libro: traer el trabajo de vuelta a tu negocio o terminar el contrato si ya no se necesita.; Mismas opciones perdidas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

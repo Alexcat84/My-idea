@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Causas Especiales y Comunes de Variación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+  "resumen_teorico": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales suelen ser esporádicas, a menudo originadas en una variable dominante y comparativamente fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes suelen ser crónicas, por lo general originadas en la interacción de múltiples variables menores, y difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
   "pasos_accionables": [
     "Analizar si la desviación observada tiene origen en una sola variable dominante (especial) o en múltiples variables menores (común)",
     "Si es causa especial: activar acción correctiva inmediata vía PDCA",
@@ -43,6 +43,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-027 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-061-causas_especiales_y_comunes_variacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+      "texto_nuevo": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales suelen ser esporádicas, a menudo originadas en una variable dominante y comparativamente fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes suelen ser crónicas, por lo general originadas en la interacción de múltiples variables menores, y difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7973",
+        "frase": "Special causes are typically sporadic, and often have their origin in single variables"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice típicamente, a menudo, comparativamente y por lo general; el nodo quita esa cautela.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

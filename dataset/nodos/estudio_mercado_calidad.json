@@ -10,7 +10,7 @@
     "Definir atributos clave del producto/servicio a evaluar",
     "Encuestar a clientes actuales, clientes perdidos y no clientes sobre importancia y satisfacción de atributos",
     "Comparar resultados propios contra competidores usando ponderación de importancia",
-    "Graficar resultados en un mapa de cuadrantes (importancia vs. satisfacción) para priorizar acciones"
+    "Si te ayuda, graficar resultados en un mapa de cuadrantes (importancia vs. satisfacción) para priorizar acciones"
   ],
   "entregable_esperado": "Informe de estudio de mercado con mapa de cuadrantes que identifique fortalezas a explotar y debilidades críticas a mejorar",
   "nodos_previos": [
@@ -46,6 +46,23 @@
         "motivo": "El estudio de mercado sobre la posición competitiva en calidad no prepara las preguntas de situación en una llamada de venta SPIN. La relación no se sostiene."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-060-estudio_mercado_calidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Graficar resultados en un mapa de cuadrantes (importancia vs. satisfacción) para priorizar acciones",
+      "texto_nuevo": "Si te ayuda, graficar resultados en un mapa de cuadrantes (importancia vs. satisfacción) para priorizar acciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "25915",
+        "frase": "Graphing the market research results can be helpful."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que graficar en el mapa de cuadrantes puede ser útil ('can be helpful'), no que sea un paso obligado.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

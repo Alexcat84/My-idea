@@ -9,7 +9,7 @@
     "Definir checklist de arranque (setup) con criterios de verificación previos al inicio",
     "Establecer el bucle de control en marcha para decisiones de continuar/detener",
     "Diseñar el control de producto terminado con responsables idealmente independientes de sesgos",
-    "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist y calendario",
+    "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan",
     "Auditar de forma independiente el cumplimiento del calendario de mantenimiento"
   ],
   "entregable_esperado": "Procedimientos documentados para cada etapa de control (arranque, marcha, producto, instalaciones)",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Controla cada Etapa Operativa",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-060-etapas_de_control_operativo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist y calendario",
+      "texto_nuevo": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7897-7899",
+        "frase": "Train the maintenance forces to perform the tasks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye capacitar al personal de mantenimiento, que además señala como punto débil con tecnología nueva.; La lista del libro incluye también la capacitación y un responsable claro del cumplimiento del calendario.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

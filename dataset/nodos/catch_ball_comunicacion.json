@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Comunicación Catch Ball para Despliegue de Metas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo se repite hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
+  "resumen_teorico": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo puede repetirse varias veces hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
   "pasos_accionables": [
     "Comunicar las áreas clave de enfoque de tu plan estratégico",
     "Pedirle a la persona que te ayuda que identifique necesidades y proponga áreas de atención",
-    "Repetir el diálogo entre ambas partes hasta llegar a un acuerdo sobre el plan final",
+    "Repetir el diálogo entre ambas partes hasta llegar a un acuerdo sobre el plan final, incluida la decisión de qué hará cada quien con las áreas identificadas",
     "Preparar a quien recibe la propuesta para que responda de forma útil en este proceso"
   ],
-  "entregable_esperado": "Plan estratégico acordado entre tú y las personas que te ayudan, logrado a través de varias rondas de retroalimentación",
+  "entregable_esperado": "Plan estratégico acordado entre tú y las personas que te ayudan, logrado a través de las rondas de retroalimentación que hagan falta",
   "nodos_previos": [
     "desplegar_metas_organizacion"
   ],
@@ -24,5 +24,56 @@
   "etiqueta_arbol": "Dialoga tus Metas en Equipo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-061-catch_ball_comunicacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo se repite hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
+      "texto_nuevo": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo puede repetirse varias veces hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9049",
+        "frase": "This process may be repeated several times until there is general satisfaction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el proceso puede repetirse varias veces; el nodo lo da por hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-catch_ball_comunicacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan estratégico acordado entre tú y las personas que te ayudan, logrado a través de varias rondas de retroalimentación",
+      "texto_nuevo": "Plan estratégico acordado entre tú y las personas que te ayudan, logrado a través de las rondas de retroalimentación que hagan falta",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9049",
+        "frase": "This process may be repeated several times until there is general satisfaction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las rondas pueden repetirse; exigir varias endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-catch_ball_comunicacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repetir el diálogo entre ambas partes hasta llegar a un acuerdo sobre el plan final",
+      "texto_nuevo": "Repetir el diálogo entre ambas partes hasta llegar a un acuerdo sobre el plan final, incluida la decisión de qué hará cada quien con las áreas identificadas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9057",
+        "frase": "Decisions as to what departments and functions should do about the areas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye decidir qué hará cada área con los temas identificados, y ningún paso lo recoge.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

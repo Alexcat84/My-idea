@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Ciclo Adaptativo de Inteligencia Organizacional",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias tecnológicas, benchmarking).",
+  "resumen_teorico": "Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking).",
   "pasos_accionables": [
     "Recopilar datos internos: capacidad de procesos, COPQ, cultura organizacional, lealtad de empleados",
-    "Recopilar datos externos: necesidades del cliente, tendencias tecnológicas, benchmarking competitivo",
+    "Recopilar datos externos: necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking competitivo",
     "Interpretar y evaluar la información recolectada",
     "Referir la información destilada a funciones empoderadas para tomar acción",
     "Repetir el ciclo de forma periódica y continua"
@@ -42,6 +42,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-061-ciclo_adaptativo_inteligencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias tecnológicas, benchmarking).",
+      "texto_nuevo": "Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2173",
+        "frase": "Scientific, technological, social, and governmental trends that can affect us"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide vigilar tendencias científicas, tecnológicas, sociales y gubernamentales y atribuye fracasos a no mirar las necesidades de la sociedad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-ciclo_adaptativo_inteligencia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recopilar datos externos: necesidades del cliente, tendencias tecnológicas, benchmarking competitivo",
+      "texto_nuevo": "Recopilar datos externos: necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking competitivo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2173",
+        "frase": "Scientific, technological, social, and governmental trends that can affect us"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso deja solo las tendencias tecnológicas de una lista de cuatro.; Mismo defecto: se caen las tendencias científicas, sociales y gubernamentales.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

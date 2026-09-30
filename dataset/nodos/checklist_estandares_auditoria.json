@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Usa estándares de referencia y listas de verificación (checklists) al revisar tu negocio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando revises cómo va algo en tu negocio, compara lo que realmente pasa contra un estándar claro: tus políticas escritas, una especificación o una norma de tu sector. Esto reduce que juzgues por sensación. Si no tienes ese estándar definido, primero defínelo antes de revisar nada, porque sin él nadie sabe qué se espera. Puedes usar una lista general de áreas a revisar o una lista detallada con puntos específicos a verificar.",
+  "resumen_teorico": "Cuando revises cómo va algo en tu negocio, compara lo que realmente pasa contra un estándar claro: tus políticas escritas, una especificación o una norma de tu sector. Esto reduce que juzgues por sensación. Si no tienes ese estándar definido, primero haz que lo defina quien es responsable de esa actividad antes de revisar nada, porque sin él nadie sabe qué se espera. Puedes usar una lista general de áreas a revisar o una lista detallada con puntos específicos a verificar.",
   "pasos_accionables": [
     "Reúne los estándares que ya tienes o que aplican a lo que vas a revisar: tus políticas, especificaciones o normas de tu sector",
-    "Verifica que exista un estándar claro para eso que vas a revisar; si no existe, defínelo tú antes de revisar",
+    "Verifica que exista un estándar claro para eso que vas a revisar; si no existe, que lo defina quien es responsable de esa actividad antes de revisar",
     "Arma o adapta tu lista de verificación según qué tan detallado necesites ser",
     "Permítete cuestionar el estándar mismo si crees que ya no es el adecuado"
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Audita Contra un Estándar",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-061-checklist_estandares_auditoria-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que exista un estándar claro para eso que vas a revisar; si no existe, defínelo tú antes de revisar",
+      "texto_nuevo": "Verifica que exista un estándar claro para eso que vas a revisar; si no existe, que lo defina quien es responsable de esa actividad antes de revisar",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10131",
+        "frase": "he asks those responsible for the activity to define a standard"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el estándar faltante lo definan los responsables de la actividad, no quien revisa.; Mismo defecto: se pierde quién define el estándar faltante.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-checklist_estandares_auditoria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando revises cómo va algo en tu negocio, compara lo que realmente pasa contra un estándar claro: tus políticas escritas, una especificación o una norma de tu sector. Esto reduce que juzgues por sensación. Si no tienes ese estándar definido, primero defínelo antes de revisar nada, porque sin él nadie sabe qué se espera. Puedes usar una lista general de áreas a revisar o una lista detallada con puntos específicos a verificar.",
+      "texto_nuevo": "Cuando revises cómo va algo en tu negocio, compara lo que realmente pasa contra un estándar claro: tus políticas escritas, una especificación o una norma de tu sector. Esto reduce que juzgues por sensación. Si no tienes ese estándar definido, primero haz que lo defina quien es responsable de esa actividad antes de revisar nada, porque sin él nadie sabe qué se espera. Puedes usar una lista general de áreas a revisar o una lista detallada con puntos específicos a verificar.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10131",
+        "frase": "he asks those responsible for the activity to define a standard"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone que el estándar faltante lo definen los responsables de la actividad, a pedido de quien audita.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

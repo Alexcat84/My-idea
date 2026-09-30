@@ -9,7 +9,7 @@
     "Definir los ocho puntos de contribución de la junta que vas a evaluar",
     "Aplicar la escala de cuatro niveles a cada punto",
     "Usar un formulario que cruce los temas evaluados con las contribuciones de la junta",
-    "Identificar qué mejorar primero según las calificaciones obtenidas",
+    "Identificar qué mejorar primero según las calificaciones obtenidas, sin dejar que un nivel general aceptable esconda un punto con nivel muy bajo",
     "Revisar estas evaluaciones cada cierto tiempo para mantener el foco en resultados"
   ],
   "entregable_esperado": "Un formulario de evaluación completado con la calificación de cada uno de los ocho puntos de contribución de la junta, junto con un plan de mejora con prioridades claras.",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Evalúa a tu Junta Directiva",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-060-evaluacion_desempeno_junta_directiva-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar qué mejorar primero según las calificaciones obtenidas",
+      "texto_nuevo": "Identificar qué mejorar primero según las calificaciones obtenidas, sin dejar que un nivel general aceptable esconda un punto con nivel muy bajo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10842",
+        "frase": "each and every board contribution item should be seriously considered"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un nivel general aceptable no compensa un punto con nivel muy bajo, que sería inadmisible.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

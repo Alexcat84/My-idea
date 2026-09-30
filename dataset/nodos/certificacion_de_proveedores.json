@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Certificación de Proveedores",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, es esencial para manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+  "resumen_teorico": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, ofrece un modelo para los niveles muy bajos de defectos que necesita la manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
   "pasos_accionables": [
     "Definir criterios de certificación (ej. 90% de cumplimiento por 4 trimestres consecutivos)",
     "Aplicar los ocho criterios recomendados por ASQ para certificación",
@@ -44,6 +44,22 @@
         "evidencia": "F14-026: Certificar y clasificar proveedores para reducir inspeccion es gestion operativa de la cadena de suministro. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-061-certificacion_de_proveedores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, es esencial para manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+      "texto_nuevo": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, ofrece un modelo para los niveles muy bajos de defectos que necesita la manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24011",
+        "frase": "provides a model for the low DPM levels necessary for just-in-time manufacture"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la certificación ofrece un modelo para los bajos niveles de defectos que exige el JIT; 'esencial' endurece.; Mismo defecto; se corrige sobre el texto actual, que dice bien que reduce (no aumenta) los costos de inspección.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

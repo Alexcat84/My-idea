@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Identificar necesidades de envío (volumen, tipo de carga, destino)",
     "Buscar freight forwarders licenciados por IATA (aéreo) o Federal Maritime Commission (marítimo)",
-    "Solicitar cotización que incluya fletes, tasas portuarias, seguros y honorarios",
-    "Delegar preparación de documentación y filing electrónico en AES",
+    "Solicitar cotización que incluya fletes, tasas portuarias, tasas consulares, costos de documentación especial, seguros y honorarios",
+    "Delegar preparación de documentación y filing electrónico en AES, sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
     "Coordinar con freight forwarder la reserva de espacio en el medio de transporte (booking contract)"
   ],
   "entregable_esperado": "Contrato o acuerdo de servicio con un freight forwarder seleccionado",
@@ -45,6 +45,40 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-057-seleccion_agente_carga_internacional-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar cotización que incluya fletes, tasas portuarias, seguros y honorarios",
+      "texto_nuevo": "Solicitar cotización que incluya fletes, tasas portuarias, tasas consulares, costos de documentación especial, seguros y honorarios",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3479",
+        "frase": "advising on freight costs, port charges, consular fees, costs of special documentation, insurance costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de lo que entra en la cotización incluye tasas consulares y costos de documentación especial, que el paso omite.; Mismo defecto: se caen dos partidas de la lista del libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-seleccion_agente_carga_internacional-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Delegar preparación de documentación y filing electrónico en AES",
+      "texto_nuevo": "Delegar preparación de documentación y filing electrónico en AES, sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3561",
+        "frase": "as the exporter, you are ultimately responsible for the accuracy of the necessary documents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja delegar la documentación pero advierte que el exportador sigue siendo el responsable último de su exactitud; el paso pierde ese límite.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

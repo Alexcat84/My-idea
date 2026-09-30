@@ -4,10 +4,10 @@
   "dominio": "franquicias",
   "titulo_concepto": "Inversionistas Pasivos vs. Propietarios-Operadores",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Decisión estratégica sobre si permitir inversionistas pasivos o exigir que el franquiciado opere el negocio directamente. Los propietarios-operadores suelen tener mejor desempeño a nivel unitario, mientras que los inversionistas pasivos permiten crecimiento más rápido y acceso a mayor capital. Se puede exigir un 'operating partner' con equity que aporte las habilidades operativas necesarias.",
+  "resumen_teorico": "Decisión estratégica sobre si permitir inversionistas pasivos o exigir que el franquiciado opere el negocio directamente. Los propietarios-operadores, si están bien seleccionados, suelen tener mejor desempeño a nivel unitario, mientras que los inversionistas pasivos permiten crecimiento más rápido y acceso a mayor capital. Se puede exigir un 'operating partner' con equity que aporte las habilidades operativas necesarias.",
   "pasos_accionables": [
     "Definir la política del sistema respecto a inversionistas pasivos",
-    "Si se permiten inversionistas grupales, exigir designación de un socio operador con equity",
+    "Si se permiten inversionistas grupales, considerar exigir la designación de un socio operador con equity",
     "Evaluar qué modelo se ajusta mejor a la velocidad de crecimiento deseada",
     "Considerar el impacto en calidad de servicio a nivel unitario"
   ],
@@ -38,6 +38,39 @@
         "evidencia": "Q105-009: Definir la politica de propiedad aceptada y el tipo de franquiciado dentro de la estrategia de expansion es disenar el modelo, no operar. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-059-pasivos_vs_operadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decisión estratégica sobre si permitir inversionistas pasivos o exigir que el franquiciado opere el negocio directamente. Los propietarios-operadores suelen tener mejor desempeño a nivel unitario, mientras que los inversionistas pasivos permiten crecimiento más rápido y acceso a mayor capital. Se puede exigir un 'operating partner' con equity que aporte las habilidades operativas necesarias.",
+      "texto_nuevo": "Decisión estratégica sobre si permitir inversionistas pasivos o exigir que el franquiciado opere el negocio directamente. Los propietarios-operadores, si están bien seleccionados, suelen tener mejor desempeño a nivel unitario, mientras que los inversionistas pasivos permiten crecimiento más rápido y acceso a mayor capital. Se puede exigir un 'operating partner' con equity que aporte las habilidades operativas necesarias.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4372",
+        "frase": "Owner-operators, if properly selected, will typically have better unit-level performance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el mejor desempeño a que los propietarios-operadores estén bien seleccionados.; Mismo defecto: se cae la condición de buena selección.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-059-pasivos_vs_operadores-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si se permiten inversionistas grupales, exigir designación de un socio operador con equity",
+      "texto_nuevo": "Si se permiten inversionistas grupales, considerar exigir la designación de un socio operador con equity",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4378",
+        "frase": "You can always require investor groups to designate an operating partner"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta el socio operador como una opción que puedes exigir, no como obligación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

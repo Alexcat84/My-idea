@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Decide cómo vas a elegir proveedor antes de buscar",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Antes de pedir cotizaciones, decide si lo que buscas es el precio más bajo o el mejor valor. El precio manda cuando compras algo que se consume y no distingue calidad, como insumos de oficina. El valor manda cuando la compra sostiene tu negocio: ahí pesan la capacidad del proveedor para cumplir plazos, la consistencia de su calidad, su salud financiera y el costo total de usar ese producto, no solo el precio de etiqueta. Escribe estos criterios en una lista corta antes de comparar ofertas, así no te dejas arrastrar por la primera cifra baja que veas. Si decides comprarle a un solo proveedor sin comparar, anota la razón concreta: es el único disponible, cambiar te costaría demasiado, o nadie más ofrece algo equivalente. Esa nota te protege después.",
+  "resumen_teorico": "Antes de pedir cotizaciones, decide si lo que buscas es el precio más bajo o el mejor valor. El precio manda cuando compras algo que se consume y donde la calidad importa menos que el precio por unidad, como insumos de oficina. El valor manda cuando la compra sostiene tu negocio: ahí pesan la capacidad del proveedor para cumplir plazos, la consistencia de su calidad, su salud financiera y el costo total de usar ese producto, no solo el precio de etiqueta. Escribe estos criterios en una lista corta antes de comparar ofertas, así no te dejas arrastrar por la primera cifra baja que veas. Si decides comprarle a un solo proveedor sin comparar, anota la razón concreta: es el único disponible, cambiar te costaría demasiado, o nadie más ofrece algo equivalente. Si es el único, guarda los datos del mercado que lo muestran; que te guste o que ya te haya trabajado no basta. Esa nota te protege después.",
   "pasos_accionables": [
     "Escribe en una hoja qué necesitas comprar con el mayor detalle posible antes de contactar a nadie.",
     "Decide si esta compra es de bajo riesgo, donde manda el precio, o de alto riesgo, donde manda el valor.",
@@ -89,6 +89,22 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-058-decide_criterio_eleccion_proveedor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de pedir cotizaciones, decide si lo que buscas es el precio más bajo o el mejor valor. El precio manda cuando compras algo que se consume y no distingue calidad, como insumos de oficina. El valor manda cuando la compra sostiene tu negocio: ahí pesan la capacidad del proveedor para cumplir plazos, la consistencia de su calidad, su salud financiera y el costo total de usar ese producto, no solo el precio de etiqueta. Escribe estos criterios en una lista corta antes de comparar ofertas, así no te dejas arrastrar por la primera cifra baja que veas. Si decides comprarle a un solo proveedor sin comparar, anota la razón concreta: es el único disponible, cambiar te costaría demasiado, o nadie más ofrece algo equivalente. Esa nota te protege después.",
+      "texto_nuevo": "Antes de pedir cotizaciones, decide si lo que buscas es el precio más bajo o el mejor valor. El precio manda cuando compras algo que se consume y donde la calidad importa menos que el precio por unidad, como insumos de oficina. El valor manda cuando la compra sostiene tu negocio: ahí pesan la capacidad del proveedor para cumplir plazos, la consistencia de su calidad, su salud financiera y el costo total de usar ese producto, no solo el precio de etiqueta. Escribe estos criterios en una lista corta antes de comparar ofertas, así no te dejas arrastrar por la primera cifra baja que veas. Si decides comprarle a un solo proveedor sin comparar, anota la razón concreta: es el único disponible, cambiar te costaría demasiado, o nadie más ofrece algo equivalente. Si es el único, guarda los datos del mercado que lo muestran; que te guste o que ya te haya trabajado no basta. Esa nota te protege después.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "939",
+        "frase": "The quality of the paper towels and copy paper is not as important"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que en los consumibles la calidad importa menos que el precio por unidad, no que no haya diferencia de calidad.; El libro excluye expresamente como justificación que te guste el proveedor o que ya haya hecho el trabajo antes.; El libro exige adjuntar los datos del mercado cuando la razón es que hay un solo proveedor.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

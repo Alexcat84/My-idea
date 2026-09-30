@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Adaptar tu producto para vender afuera",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de exportar, revisa si tu producto necesita cambios para cumplir las reglas del país destino, sus condiciones de clima o geografía, sus gustos culturales o sus estándares eléctricos y de medición. Decide esto mirando cuánto te cuesta adaptarlo contra cuánto puedes ganar, y qué tan en serio quieres apostarle a ese mercado. Este esquema refleja normativa y acuerdos de un momento y un país concreto: pregunta el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "resumen_teorico": "Antes de exportar, revisa si tu producto necesita cambios para cumplir las reglas del país destino, sus condiciones de clima o geografía, sus gustos culturales, su nivel de vida o sus estándares eléctricos y de medición, o para facilitar el envío. Decide esto mirando cuánto te cuesta adaptarlo contra cuánto puedes ganar, y qué tan en serio quieres apostarle a ese mercado. Este esquema refleja normativa y acuerdos de un momento y un país concreto: pregunta el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
   "pasos_accionables": [
     "Investiga las reglas del gobierno del país al que quieres vender, tanto aranceles como otros requisitos",
     "Averigua los gustos culturales, sensoriales y de tamaño corporal de la gente en ese mercado",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Adapta tu Producto al Exportar",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-057-adaptacion_producto_mercado_exterior-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de exportar, revisa si tu producto necesita cambios para cumplir las reglas del país destino, sus condiciones de clima o geografía, sus gustos culturales o sus estándares eléctricos y de medición. Decide esto mirando cuánto te cuesta adaptarlo contra cuánto puedes ganar, y qué tan en serio quieres apostarle a ese mercado. Este esquema refleja normativa y acuerdos de un momento y un país concreto: pregunta el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+      "texto_nuevo": "Antes de exportar, revisa si tu producto necesita cambios para cumplir las reglas del país destino, sus condiciones de clima o geografía, sus gustos culturales, su nivel de vida o sus estándares eléctricos y de medición, o para facilitar el envío. Decide esto mirando cuánto te cuesta adaptarlo contra cuánto puedes ganar, y qué tan en serio quieres apostarle a ese mercado. Este esquema refleja normativa y acuerdos de un momento y un país concreto: pregunta el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2533",
+        "frase": "government regulations, geographic and climatic conditions, buyer preferences, or standards of living"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de motivos del libro incluye el nivel de vida del mercado y la adaptación para facilitar el envío, que el resumen omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

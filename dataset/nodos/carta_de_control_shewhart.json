@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Carta de Control de Shewhart",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad, riesgo económico, necesidades del cliente), evitando el uso excesivo e ignorado de cartas sin valor real.",
+  "resumen_teorico": "Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad o ambiente, riesgo económico, necesidades del cliente, precisión adicional necesaria para el control), evitando el uso excesivo e ignorado de cartas sin valor real.",
   "pasos_accionables": [
     "Recolectar datos de desempeño del proceso en el tiempo",
     "Calcular la línea central (promedio) y los límites de control estadísticos",
     "Graficar los puntos y clasificar si caen dentro o fuera de los límites",
-    "Si están dentro: asumir causas comunes, no tomar acción individual",
+    "Si están dentro: asumir causas comunes, no tomar acción individual; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
     "Si están fuera: investigar causa especial y tomar acción correctiva",
-    "Justificar el uso de la carta según impacto en cliente, seguridad o economía"
+    "Justificar el uso de la carta según impacto en cliente, seguridad o ambiente, economía, o necesidad de precisión adicional para el control"
   ],
   "entregable_esperado": "Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación",
   "nodos_previos": [
@@ -29,5 +29,57 @@
   "etiqueta_arbol": "Usa Cartas de Control",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-061-carta_de_control_shewhart-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Justificar el uso de la carta según impacto en cliente, seguridad o economía",
+      "texto_nuevo": "Justificar el uso de la carta según impacto en cliente, seguridad o ambiente, economía, o necesidad de precisión adicional para el control",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8034-8042",
+        "frase": "There is risk to human safety or the environment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la cuarta justificación: la precisión adicional necesaria para el control.; La lista del libro incluye el riesgo ambiental y la necesidad de precisión adicional para el control.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-carta_de_control_shewhart-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad, riesgo económico, necesidades del cliente), evitando el uso excesivo e ignorado de cartas sin valor real.",
+      "texto_nuevo": "Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad o ambiente, riesgo económico, necesidades del cliente, precisión adicional necesaria para el control), evitando el uso excesivo e ignorado de cartas sin valor real.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8034-8042",
+        "frase": "The added precision is needed for control"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye el riesgo ambiental y la precisión adicional necesaria para el control.; Mismo defecto: falta la cuarta justificación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-061-carta_de_control_shewhart-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si están dentro: asumir causas comunes, no tomar acción individual",
+      "texto_nuevo": "Si están dentro: asumir causas comunes, no tomar acción individual; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8009-8017",
+        "frase": "a process in statistical control was nevertheless improved by an order of magnitude"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que un proceso en control puede mejorarse atacando variables menores si hay defectos o el cliente pide más uniformidad.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

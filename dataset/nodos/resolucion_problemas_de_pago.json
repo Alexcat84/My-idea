@@ -4,10 +4,10 @@
   "dominio": "exportacion",
   "titulo_concepto": "Resolución de Problemas de Pago en Comercio Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+  "resumen_teorico": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona y la suma en juego es lo bastante significativa, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
   "pasos_accionables": [
     "Contactar y negociar directamente con el comprador si no te paga",
-    "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona",
+    "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona y la suma en juego es lo bastante significativa",
     "Considerar el arbitraje de la ICC como alternativa a una acción legal",
     "Documentar todos tus intentos de cobro, útil para reclamos de seguro de crédito"
   ],
@@ -42,6 +42,39 @@
       },
       "decision": "'al momento de la fuente' es voz de libro: pasa a 'en su momento'; el aviso de verificar la norma vigente se conserva",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guarda G6"
+    },
+    {
+      "id": "final-e1-057-resolucion_problemas_de_pago-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+      "texto_nuevo": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona y la suma en juego es lo bastante significativa, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4163",
+        "frase": "if negotiations fail and the sum involved is considered significant enough"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone dos condiciones para pedir esa ayuda: que la negociación falle y que la suma sea lo bastante significativa; el resumen pierde la segunda.; Mismo defecto: falta la condición de que la suma en juego sea significativa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-resolucion_problemas_de_pago-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona",
+      "texto_nuevo": "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona y la suma en juego es lo bastante significativa",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4163",
+        "frase": "if negotiations fail and the sum involved is considered significant enough"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la segunda condición del libro: que la suma involucrada sea lo bastante significativa.; Mismo defecto: se cae la condición del monto significativo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

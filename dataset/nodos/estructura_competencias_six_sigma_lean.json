@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Estructura de Competencias Six Sigma y Lean (Belts)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participante en proyectos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.",
+  "resumen_teorico": "Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participa en proyectos y puede liderarlos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.",
   "pasos_accionables": [
     "Definir el perfil de competencias requerido para cada nivel (Green Belt, Black Belt, Master Black Belt, Lean Expert, Lean Master)",
     "Asignar roles y responsabilidades claras según el nivel de experiencia y liderazgo esperado",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Define tus Niveles de Experto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-060-estructura_competencias_six_sigma_lean-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participante en proyectos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.",
+      "texto_nuevo": "Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participa en proyectos y puede liderarlos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26569",
+        "frase": "They can be a team leader or a team member."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el Green Belt puede ser líder o miembro de equipo y puede liderar proyectos.; Mismo recorte del rol.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

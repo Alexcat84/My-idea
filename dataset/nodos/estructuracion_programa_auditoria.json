@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Cómo armar tus reglas de auditoría",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa falla porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque terminas ignorando los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+  "resumen_teorico": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa puede fallar porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque quien está a cargo de lo revisado no hace caso a los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
   "pasos_accionables": [
     "Reúnete con las tres partes (quien es auditado, quien audita y tú) para acordar reglas y propósito",
     "Escribe un documento con las políticas, el alcance y los métodos que vas a usar en tus auditorías",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Coordina tu Programa de Auditoría",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-060-estructuracion_programa_auditoria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa falla porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque terminas ignorando los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+      "texto_nuevo": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa puede fallar porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque quien está a cargo de lo revisado no hace caso a los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10043",
+        "frase": "the audit program may fail. The usual failure modes are"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro dice que sin esos acuerdos el programa puede fallar ('may fail').; En el libro quienes no atienden los reportes son los responsables de lo auditado, no la dirección que preside ambas partes (el 'tú' del resumen).; Mismo endurecimiento de 'may fail'.; Mismo sujeto invertido: el que ignora los reportes es el responsable del área auditada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

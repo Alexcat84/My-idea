@@ -4,12 +4,12 @@
   "dominio": "compras",
   "titulo_concepto": "Documenta lo que no incluye tu compra y frena cualquier cambio de alcance",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Tan importante como escribir qué incluye tu compra es dejar por escrito qué queda explícitamente fuera: tareas, cantidades, plazos o condiciones que asumiste al pedir el precio. Sin esto, cualquier cambio de última hora se convierte en una discusión sin base y en un gasto no previsto. Cuando surja un cambio, sea porque tú lo pides o porque el proveedor lo sugiere, exige primero conocer cuánto se modifica el costo o el tiempo de entrega antes de aceptarlo. Lleva un registro simple de cada cambio aprobado, con fecha, motivo y ajuste acordado, para comparar siempre contra tu presupuesto original. Esta disciplina evita que pequeñas modificaciones acumuladas terminen desbordando lo que planeaste pagar.",
+  "resumen_teorico": "Tan importante como escribir qué incluye tu compra es dejar por escrito qué queda explícitamente fuera: tareas, cantidades, plazos o condiciones que asumiste al pedir el precio. Sin esto, cualquier cambio de última hora se convierte en una discusión sin base y en un gasto no previsto. Cuando surja un cambio, sea porque tú lo pides o porque el proveedor lo sugiere, exige primero conocer cuánto se modifica el costo o el tiempo de entrega antes de aceptarlo, y si no te trae un beneficio, usa tu plan original para rechazarlo. Lleva un registro simple de cada cambio aprobado, con fecha, motivo y ajuste acordado, para comparar siempre contra tu presupuesto original. Esta disciplina evita que pequeñas modificaciones acumuladas terminen desbordando lo que planeaste pagar.",
   "pasos_accionables": [
     "Escribe en tu acuerdo o pedido qué tareas y entregas quedan explícitamente fuera de la compra.",
     "Anota también los supuestos que asumiste al pedir el precio, por ejemplo cantidad o plazo esperado.",
     "Cuando alguien quiera cambiar algo, pide primero cuánto cambia el costo o el tiempo.",
-    "Registra cada cambio aceptado en una lista simple con fecha, motivo y ajuste acordado.",
+    "Registra cada cambio aceptado en una lista simple con fecha, motivo y ajuste acordado, actualiza tu acuerdo o pedido para que lo refleje y avisa a quienes les afecta.",
     "Antes de aprobar un cambio, compáralo contra tu presupuesto original para evitar sorpresas."
   ],
   "entregable_esperado": "Un documento con lo que no incluye la compra y un registro de cambios con su impacto.",
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Define qué no incluye tu compra",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-058-documenta_lo_que_no_incluye_tu_compra-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tan importante como escribir qué incluye tu compra es dejar por escrito qué queda explícitamente fuera: tareas, cantidades, plazos o condiciones que asumiste al pedir el precio. Sin esto, cualquier cambio de última hora se convierte en una discusión sin base y en un gasto no previsto. Cuando surja un cambio, sea porque tú lo pides o porque el proveedor lo sugiere, exige primero conocer cuánto se modifica el costo o el tiempo de entrega antes de aceptarlo. Lleva un registro simple de cada cambio aprobado, con fecha, motivo y ajuste acordado, para comparar siempre contra tu presupuesto original. Esta disciplina evita que pequeñas modificaciones acumuladas terminen desbordando lo que planeaste pagar.",
+      "texto_nuevo": "Tan importante como escribir qué incluye tu compra es dejar por escrito qué queda explícitamente fuera: tareas, cantidades, plazos o condiciones que asumiste al pedir el precio. Sin esto, cualquier cambio de última hora se convierte en una discusión sin base y en un gasto no previsto. Cuando surja un cambio, sea porque tú lo pides o porque el proveedor lo sugiere, exige primero conocer cuánto se modifica el costo o el tiempo de entrega antes de aceptarlo, y si no te trae un beneficio, usa tu plan original para rechazarlo. Lleva un registro simple de cada cambio aprobado, con fecha, motivo y ajuste acordado, para comparar siempre contra tu presupuesto original. Esta disciplina evita que pequeñas modificaciones acumuladas terminen desbordando lo que planeaste pagar.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "4131",
+        "frase": "If the change will not bring positive impact to the procurement, use the baseline"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide rechazar, con el plan original como argumento, el cambio que no trae un impacto positivo; el nodo solo pide conocer su costo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-058-documenta_lo_que_no_incluye_tu_compra-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registra cada cambio aceptado en una lista simple con fecha, motivo y ajuste acordado.",
+      "texto_nuevo": "Registra cada cambio aceptado en una lista simple con fecha, motivo y ajuste acordado, actualiza tu acuerdo o pedido para que lo refleje y avisa a quienes les afecta.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "4133",
+        "frase": "When a change is approved, you need to update the SOW"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, al aprobar un cambio, actualizar el documento de alcance y avisar a los afectados; el nodo solo lo registra aparte.; Mismo paso perdido: actualizar el documento de alcance para que refleje el cambio.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

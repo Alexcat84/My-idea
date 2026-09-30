@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Seguro de Crédito a la Exportación (Export Credit Insurance)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El seguro de crédito a la exportación te protege contra el riesgo de que un comprador extranjero no te pague, ya sea por quiebra o incumplimiento (riesgo comercial) o por problemas como la imposibilidad de convertir moneda o conflictos políticos (riesgo político). En muchos países existen entidades que ofrecen pólizas que cubren entre el 90 y el 100% del riesgo, lo que mejora tu flujo de caja y te permite ofrecer plazos de pago mas atractivos a tus compradores internacionales. Puedes elegir entre una póliza para un solo comprador (Single-Buyer) o para varios compradores (Multi-Buyer), y también existen productos pensados para instituciones financieras.",
+  "resumen_teorico": "El seguro de crédito a la exportación te protege contra el riesgo de que un comprador extranjero no te pague, ya sea por quiebra o incumplimiento (riesgo comercial) o por problemas como la imposibilidad de convertir moneda o conflictos políticos (riesgo político). En EE.UU., el banco oficial de exportación e importación asume entre el 90 y el 100% del riesgo comercial y de ciertos riesgos políticos, lo que mejora tu flujo de caja y te permite ofrecer plazos de pago más atractivos a tus compradores internacionales. Puedes elegir entre una póliza para un solo comprador (Single-Buyer) o para varios compradores (Multi-Buyer), y también existen productos pensados para instituciones financieras.",
   "pasos_accionables": [
     "Evalúa el riesgo de impago de tus compradores internacionales antes de darles crédito.",
     "Averigua en tu país qué entidad ofrece seguro de crédito a la exportación (bancos de exportación e importación, agencias de desarrollo o similares) y explora tus opciones.",
@@ -96,6 +96,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-057-seguro_de_credito_a_la_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El seguro de crédito a la exportación te protege contra el riesgo de que un comprador extranjero no te pague, ya sea por quiebra o incumplimiento (riesgo comercial) o por problemas como la imposibilidad de convertir moneda o conflictos políticos (riesgo político). En muchos países existen entidades que ofrecen pólizas que cubren entre el 90 y el 100% del riesgo, lo que mejora tu flujo de caja y te permite ofrecer plazos de pago mas atractivos a tus compradores internacionales. Puedes elegir entre una póliza para un solo comprador (Single-Buyer) o para varios compradores (Multi-Buyer), y también existen productos pensados para instituciones financieras.",
+      "texto_nuevo": "El seguro de crédito a la exportación te protege contra el riesgo de que un comprador extranjero no te pague, ya sea por quiebra o incumplimiento (riesgo comercial) o por problemas como la imposibilidad de convertir moneda o conflictos políticos (riesgo político). En EE.UU., el banco oficial de exportación e importación asume entre el 90 y el 100% del riesgo comercial y de ciertos riesgos políticos, lo que mejora tu flujo de caja y te permite ofrecer plazos de pago más atractivos a tus compradores internacionales. Puedes elegir entre una póliza para un solo comprador (Single-Buyer) o para varios compradores (Multi-Buyer), y también existen productos pensados para instituciones financieras.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3655",
+        "frase": "assumes 90 to 100 percent of the risk concerning commercial and certain political risks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da la cobertura del 90 al 100% solo para el banco oficial de exportación de EE.UU. y para riesgos comerciales y ciertos políticos; atribuirla a entidades de muchos países es un hecho añadido.; Mismo defecto: la cifra se generaliza a muchos países sin respaldo del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

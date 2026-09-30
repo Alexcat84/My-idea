@@ -1,0 +1,1723 @@
+[
+ {
+  "id": "final-e1-057-seleccion_agente_carga_internacional-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_agente_carga_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Solicitar cotización que incluya fletes, tasas portuarias, seguros y honorarios",
+  "texto_nuevo": "Solicitar cotización que incluya fletes, tasas portuarias, tasas consulares, costos de documentación especial, seguros y honorarios",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3479",
+   "frase": "advising on freight costs, port charges, consular fees, costs of special documentation, insurance costs"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de lo que entra en la cotización incluye tasas consulares y costos de documentación especial, que el paso omite.; Mismo defecto: se caen dos partidas de la lista del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-057-seleccion_agente_carga_internacional-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_agente_carga_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Delegar preparación de documentación y filing electrónico en AES",
+  "texto_nuevo": "Delegar preparación de documentación y filing electrónico en AES, sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3561",
+   "frase": "as the exporter, you are ultimately responsible for the accuracy of the necessary documents"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja delegar la documentación pero advierte que el exportador sigue siendo el responsable último de su exactitud; el paso pierde ese límite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-057-resolucion_problemas_de_pago-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "resolucion_problemas_de_pago",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+  "texto_nuevo": "Es más fácil evitar las deudas incobrables que resolverlas después. Si un cliente no te paga, lo primero es negociar directamente con él. Si eso no funciona y la suma en juego es lo bastante significativa, busca ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país. Como última instancia, puedes recurrir al arbitraje internacional de la ICC. Esta mecánica refleja normativas y acuerdos vigentes en su momento, así que verifica el acuerdo y la regulación de tu mercado antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4163",
+   "frase": "if negotiations fail and the sum involved is considered significant enough"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone dos condiciones para pedir esa ayuda: que la negociación falle y que la suma sea lo bastante significativa; el resumen pierde la segunda.; Mismo defecto: falta la condición de que la suma en juego sea significativa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-resolucion_problemas_de_pago-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "resolucion_problemas_de_pago",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona",
+  "texto_nuevo": "Buscar ayuda del banco, un asesor legal y los organismos de apoyo al comercio exterior de tu país si la negociación no funciona y la suma en juego es lo bastante significativa",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4163",
+   "frase": "if negotiations fail and the sum involved is considered significant enough"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la segunda condición del libro: que la suma involucrada sea lo bastante significativa.; Mismo defecto: se cae la condición del monto significativo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-057-seguro_de_credito_a_la_exportacion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "seguro_de_credito_a_la_exportacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El seguro de crédito a la exportación te protege contra el riesgo de que un comprador extranjero no te pague, ya sea por quiebra o incumplimiento (riesgo comercial) o por problemas como la imposibilidad de convertir moneda o conflictos políticos (riesgo político). En muchos países existen entidades que ofrecen pólizas que cubren entre el 90 y el 100% del riesgo, lo que mejora tu flujo de caja y te permite ofrecer plazos de pago mas atractivos a tus compradores internacionales. Puedes elegir entre una póliza para un solo comprador (Single-Buyer) o para varios compradores (Multi-Buyer), y también existen productos pensados para instituciones financieras.",
+  "texto_nuevo": "El seguro de crédito a la exportación te protege contra el riesgo de que un comprador extranjero no te pague, ya sea por quiebra o incumplimiento (riesgo comercial) o por problemas como la imposibilidad de convertir moneda o conflictos políticos (riesgo político). En EE.UU., el banco oficial de exportación e importación asume entre el 90 y el 100% del riesgo comercial y de ciertos riesgos políticos, lo que mejora tu flujo de caja y te permite ofrecer plazos de pago más atractivos a tus compradores internacionales. Puedes elegir entre una póliza para un solo comprador (Single-Buyer) o para varios compradores (Multi-Buyer), y también existen productos pensados para instituciones financieras.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3655",
+   "frase": "assumes 90 to 100 percent of the risk concerning commercial and certain political risks"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da la cobertura del 90 al 100% solo para el banco oficial de exportación de EE.UU. y para riesgos comerciales y ciertos políticos; atribuirla a entidades de muchos países es un hecho añadido.; Mismo defecto: la cifra se generaliza a muchos países sin respaldo del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-screening_mercados_potenciales-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "screening_mercados_potenciales",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Detectar mercados emergentes con tasas de crecimiento sustancialmente altas y baja competencia",
+  "texto_nuevo": "Detectar mercados emergentes con tasas de crecimiento sustancialmente altas, donde por estar abriéndose puede haber menos competencia",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1263",
+   "frase": "If the market is just beginning to open up, there may be fewer competitors"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que un mercado que empieza a abrirse puede tener menos competidores; el paso lo endurece a rasgo o requisito.; Mismo endurecimiento de un 'puede haber' del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-057-respuesta_consultas_internacionales-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "respuesta_consultas_internacionales",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchos exportadores exitosos comenzaron respondiendo a consultas de empresas extranjeras. Es esencial crear un sistema para responder de forma pronta, completa y clara a las consultas internacionales, ya que estas pueden convertirse en oportunidades de negocio futuras. La mayoría de empresas que reciben consultas no llegan a ser exportadoras exitosas por falta de un proceso adecuado. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "texto_nuevo": "Muchos exportadores exitosos comenzaron respondiendo a consultas de empresas extranjeras. Es esencial crear un sistema para responder de forma pronta, completa y clara a las consultas internacionales, ya que estas pueden convertirse en oportunidades de negocio futuras. La mayoría de empresas que reciben consultas no llegan a ser exportadoras exitosas, y las que sí lo logran en general dan prioridad a crear sistemas para responderlas. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4655",
+   "frase": "Generally, successful companies make it a priority to create systems to properly respond to inquiries"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro constata que la mayoría no llega a exportar con éxito y que las exitosas en general priorizan sistemas, pero no atribuye el fracaso a la falta de proceso.; Mismo defecto: causa añadida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-seleccion_de_distribuidor_internacional-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_de_distribuidor_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer acuerdos contractuales claros sobre soporte, inventario y responsabilidades",
+  "texto_nuevo": "Establecer acuerdos contractuales claros sobre soporte, inventario y responsabilidades, con una cláusula de salida para terminar la relación si el socio no cumple",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1981",
+   "frase": "It is vital to include an escape clause in the agreement"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro llama vital incluir una cláusula de salida para terminar la relación si el representante no cumple; el paso la pierde.; Mismo defecto: se cae la cláusula de salida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-057-seguro_inversion_opic-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "seguro_inversion_opic",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Solicitar seguro de riesgo político o garantía de financiamiento según el tipo de proyecto",
+  "texto_nuevo": "Solicitar seguro de riesgo político, garantía de financiamiento o préstamo directo según el tipo de proyecto",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4375",
+   "frase": "offering political risk insurance, all-risk guarantees, and direct loans"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera tres instrumentos (seguro de riesgo político, garantías y préstamos directos); el paso omite los préstamos directos como opción.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-057-seleccion_canales_distribucion-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_canales_distribucion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles, y la velocidad de entrada",
+  "texto_nuevo": "Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1887",
+   "frase": "your company needs to devote more time, personnel, and resources to direct exporting"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro contrasta control con tiempo, personal y recursos; la velocidad de entrada como criterio no aparece en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-057-seleccion_de_distribuidor_internacional-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_de_distribuidor_internacional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La elección de un distribuidor o representante de ventas adecuado en el mercado destino es crítica para el éxito de la exportación. Un distribuidor compra los bienes y los revende asumiendo riesgo, mientras que un representante de ventas trabaja a comisión sin asumir riesgo. La capacidad técnica y afinidad cultural con la empresa exportadora son factores clave, tal como lo evidencia el caso de una empresa exportadora al buscar socios técnicamente capacitados en países en desarrollo.",
+  "texto_nuevo": "La elección de un distribuidor o representante de ventas adecuado en el mercado destino es crítica para el éxito de la exportación. Un distribuidor compra los bienes y los revende asumiendo riesgo, mientras que un representante de ventas trabaja a comisión sin asumir riesgo. La capacidad técnica y la afinidad de perfil con la empresa exportadora son factores clave, tal como lo evidencia el caso de una empresa exportadora al buscar socios técnicamente capacitados en países en desarrollo.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "5283",
+   "frase": "found good matches in terms of company personality and technical expertise"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El caso del libro habla de compatibilidad de perfil de empresa y pericia técnica, no de afinidad cultural.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-seleccion_de_distribuidor_internacional-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_de_distribuidor_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar la capacidad técnica del candidato en la industria relacionada",
+  "texto_nuevo": "Evaluar la capacidad técnica del candidato en la industria relacionada e investigarlo con cuidado antes del acuerdo, incluidas sus referencias comerciales y bancarias",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1943-1949",
+   "frase": "should investigate potential representatives or distributors carefully before entering into an agreement with them"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide investigar con cuidado al candidato antes del acuerdo, con referencias comerciales y bancarias; ningún paso lo recoge y el consejo pierde la verificación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-057-antiboycott_regulations-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "antiboycott_regulations",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No dar información sobre tus relaciones comerciales con países boicoteados",
+  "texto_nuevo": "No dar información sobre tus relaciones comerciales con países boicoteados o con empresas en listas negras cuando te la pidan para cumplir un boicot",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2855",
+   "frase": "or blacklisted companies in response to boycott requirements"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La prohibición del libro es dar esa información en respuesta a exigencias de boicot y cubre también a empresas en listas negras; el paso pierde la condición.; Mismo defecto: se cae la condición y las empresas en listas negras.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-057-adaptacion_producto_estandares_tecnicos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "adaptacion_producto_estandares_tecnicos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los productos deben adaptarse no solo a preferencias culturales sino también a requisitos técnicos fundamentales del mercado destino, como voltajes, fases y ciclos eléctricos, así como el sistema métrico. Estados Unidos es prácticamente el único país que usa un sistema no métrico, por lo que competir globalmente exige convertir especificaciones, manuales e instrucciones a unidades métricas (centímetros, kilos, grados Celsius).",
+  "texto_nuevo": "Los productos pueden necesitar adaptarse no solo a preferencias culturales sino también a requisitos técnicos fundamentales del mercado destino, como voltajes, fases y ciclos eléctricos, así como el sistema métrico. Estados Unidos es prácticamente el único país que usa un sistema no métrico, y quienes compiten con éxito afuera ven la conversión de especificaciones, manuales e instrucciones a unidades métricas (centímetros, kilos, grados Celsius) como un detalle importante.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2561-2565",
+   "frase": "even fundamental aspects of products may require changing"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que incluso aspectos fundamentales pueden requerir cambios; 'deben adaptarse' endurece.; El libro presenta la conversión métrica como un detalle importante para vender afuera, no como una exigencia para competir.; Mismo endurecimiento que la marca 0.; Mismo endurecimiento que la marca 1.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-asistencia_embajadas_consulados_comerciales-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "asistencia_embajadas_consulados_comerciales",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los oficiales comerciales y económicos de las embajadas y consulados de EE.UU. brindan información detallada, arreglan presentaciones con empresas, individuos y funcionarios gubernamentales locales, y pueden ayudar a resolver disputas comerciales o problemas de cobro en el extranjero. Es recomendable contactarlos con anticipación y compartir información sobre la empresa y su experiencia internacional.",
+  "texto_nuevo": "Los oficiales comerciales y económicos de las embajadas y consulados de EE.UU. brindan información detallada y arreglan presentaciones con empresas, individuos y funcionarios gubernamentales locales. Es recomendable contactarlos con anticipación y compartir información sobre la empresa y su experiencia internacional.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4551",
+   "frase": "providing in-depth briefings and arranging introductions to appropriate companies, individuals, or foreign government officials"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye a los oficiales de embajadas y consulados informes y presentaciones, no la resolución de disputas o cobros.; Mismo defecto: función añadida a los oficiales de embajadas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-asistencia_embajadas_consulados_comerciales-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "asistencia_embajadas_consulados_comerciales",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Solicitar apoyo en caso de disputas comerciales o problemas de cobro",
+  "texto_nuevo": "Si un problema de cobro no se resuelve negociando con el cliente y la suma es significativa, pedir ayuda al U.S. Commercial Service, junto con tu banco y tu asesor legal",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4163",
+   "frase": "the U.S. Commercial Service, which can often resolve payment problems informally"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no ofrece apoyo de la embajada en disputas comerciales; la ayuda con cobros la da el U.S. Commercial Service, con banco y asesor legal, si la negociación falla.; La ayuda con problemas de pago se busca, según el libro, si la negociación falla y el monto es significativo; el paso pierde ambas condiciones.; Mismo defecto: las disputas comerciales en general no tienen respaldo en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-057-branding_etiquetado_empaque_internacional-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "branding_etiquetado_empaque_internacional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La marca, el etiquetado y el empaque deben adaptarse culturalmente al mercado destino. Esto incluye decidir si usar la marca original o una marca local, evaluar el significado cultural de colores, cumplir con requisitos legales de idioma e información de contenido, convertir pesos y medidas a unidades locales, y considerar el uso de figuras o endosos culturalmente relevantes en lugar de referentes estadounidenses.",
+  "texto_nuevo": "La marca, el etiquetado y el empaque pueden necesitar adaptarse culturalmente al mercado destino. Esto incluye decidir si usar la marca original o una marca local, evaluar el significado cultural de colores, cumplir con requisitos legales de idioma e información de contenido, convertir pesos y medidas a unidades locales, y considerar el uso de figuras o endosos culturalmente relevantes en lugar de referentes estadounidenses.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2569-2573",
+   "frase": "in some places, it may be more valuable than it is in the U.S."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea consideraciones a evaluar y admite que la marca original puede valer más afuera; 'deben adaptarse' endurece.; Mismo endurecimiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-branding_etiquetado_empaque_internacional-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "branding_etiquetado_empaque_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verificar requisitos legales de idioma para etiquetas e instrucciones",
+  "texto_nuevo": "Verificar requisitos legales de idioma para etiquetas e instrucciones, si cada unidad debe etiquetarse por separado y si hay requisitos especiales de etiquetado para alimentos, fármacos u otros productos",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2583",
+   "frase": "There may be special labeling requirements for foods, pharmaceuticals, and other products"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye si cada pieza debe etiquetarse por separado y los requisitos especiales para alimentos, fármacos y otros productos; el paso los pierde.; Mismo defecto: se cae ese elemento de la lista.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-057-barreras_comerciales_no_arancelarias-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "barreras_comerciales_no_arancelarias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud, exigencias ambientales, estándares eléctricos distintos o restricciones culturales. En muchos países existen oficinas de comercio exterior que ayudan gratis a resolver este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "texto_nuevo": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud, exigencias ambientales, estándares eléctricos distintos, límites a bienes que vienen de ciertos países o llevan componentes de ellos, o restricciones culturales. En Estados Unidos, una oficina del gobierno ofrece un programa gratuito que ayuda a los exportadores con este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2545-2551",
+   "frase": "This free program is available to assist all U.S. exporters or investors facing trade barriers"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro solo describe un programa gratuito del gobierno de EE.UU. para sus exportadores; 'en muchos países' es un hecho añadido.; La lista del libro incluye restringir bienes originados en ciertos países o con componentes de ellos, que el resumen omite.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-autocertificacion_del_exportador-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "autocertificacion_del_exportador",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto sin intervención de terceros, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "texto_nuevo": "En ciertos tratados de libre comercio (como el TLC EE.UU.-Corea), el propio exportador puede certificar el origen del producto, asumiendo responsabilidad legal por la veracidad de la información. Esto requiere identificar si el envío es único o múltiple (periodo cobertura de 12 meses máximo), proporcionar firma autorizada con acceso a los registros y comprometerse a mantener documentación de soporte disponible. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "5227",
+   "frase": "A buyer may also ask you (the exporter) to certify the origin of a product"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el comprador puede pedir al exportador que certifique el origen; 'sin intervención de terceros' es una afirmación que el libro no hace.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-autocertificacion_del_exportador-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "autocertificacion_del_exportador",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Determinar si el embarque es único o parte de envíos múltiples idénticos",
+  "texto_nuevo": "Determinar si el embarque es único o parte de envíos múltiples idénticos; si es único, indicar el número de la factura comercial",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "5229-5231",
+   "frase": "Provide the commercial invoice number."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Para el envío único el libro pide indicar el número de la factura comercial; ningún paso lo recoge.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-057-autocertificacion_del_exportador-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "autocertificacion_del_exportador",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses desde la fecha de la certificación); el formato de fecha lo fija el modelo que uses, no la norma",
+  "texto_nuevo": "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses); el formato de fecha lo fija el modelo que uses, no la norma",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "5233-5235",
+   "frase": "Provide the blanket period in \"mm/dd/yyyy to mm/dd/yyyy\" format (12-month maximum)."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro fija un máximo de 12 meses para el periodo, pero no dice que se cuente desde la fecha de la certificación.; Mismo defecto: punto de partida del plazo añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-057-autocertificacion_del_exportador-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "autocertificacion_del_exportador",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar a la persona con autoridad legal para firmar en nombre de la empresa",
+  "texto_nuevo": "Identificar a la persona con autoridad legal para firmar en nombre de la empresa y con acceso a los registros de soporte",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "5239",
+   "frase": "The signee must have access to the underlying records"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que quien firma tenga, además de autoridad legal, acceso a los registros de soporte; el paso lo pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-057-calculo_contenido_valor_regional-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "calculo_contenido_valor_regional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift), puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC). Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "texto_nuevo": "Cuando un producto no cumple la regla de cambio arancelario (Tariff Shift) ni la excepción de minimis, puede calificar para beneficios FTA mediante el cumplimiento de un porcentaje mínimo de Contenido de Valor Regional (RVC), si la regla del producto lo admite. Existen cuatro métodos de cálculo: Net Cost (costo neto), Transaction Value (valor de transacción), Buildup (acumulación) y Builddown (deducción), cada uno con su propia fórmula y aplicabilidad según el FTA y el producto. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4881-4883",
+   "frase": "the product does not qualify under the TS or the de minimis exception"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pasa al RVC solo si tampoco se cumple la excepción de minimis y si la regla del producto admite el RVC; el resumen pierde ambas condiciones.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-acuerdo_representante_servicio-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "acuerdo_representante_servicio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los acuerdos con representantes extranjeros deben especificar claramente las condiciones de servicio postventa (instalaciones de reparación, personal, inspecciones) y los programas de capacitación (frecuencia, participantes, ubicación y quién asume los costos de viaje). La calidad del servicio ofrecido por el representante impacta directamente la reputación de la empresa exportadora en el mercado, por lo que las garantías ofrecidas deben ajustarse a la capacidad real de servicio disponible.",
+  "texto_nuevo": "Los acuerdos con representantes extranjeros deben especificar claramente las condiciones de servicio postventa (instalaciones de reparación, personal, inspecciones y quién paga los costos de mantener la instalación) y los programas de capacitación (frecuencia, participantes, ubicación y quién asume los costos de viaje). La calidad del servicio ofrecido por el representante impacta directamente la reputación de la empresa exportadora en el mercado, por lo que las garantías ofrecidas deben ajustarse a la capacidad real de servicio disponible.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4785",
+   "frase": "inspection provisions, training programs, and payment of costs associated with maintaining a suitable facility"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de lo que el acuerdo debe precisar incluye el pago de los costos de mantener la instalación de servicio; el resumen lo pierde.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-acuerdo_representante_servicio-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "acuerdo_representante_servicio",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer el número de personal necesario y provisiones de inspección",
+  "texto_nuevo": "Establecer el número de personal necesario, las provisiones de inspección y quién paga los costos de mantener una instalación adecuada",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4785",
+   "frase": "inspection provisions, training programs, and payment of costs associated with maintaining a suitable facility"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el pago de los costos de mantener la instalación, que el libro pone junto al personal y las inspecciones; ningún paso lo recoge.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-057-adaptacion_producto_estandares_tecnicos-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "adaptacion_producto_estandares_tecnicos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Convertir todas las especificaciones técnicas y manuales al sistema métrico",
+  "texto_nuevo": "Convertir al sistema métrico las especificaciones técnicas que lo requieran para integrarse con otros equipos o cumplir las normas del país, y dar en unidades métricas las medidas de los manuales",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2565",
+   "frase": "many kinds of equipment must be engineered in the metric system for integration"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que muchos tipos de equipo deben diseñarse en métrico para integrarse o cumplir normas y que los manuales deberían dar medidas métricas; 'todas las especificaciones' endurece.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-057-asistencia_agencias_minoritarias_mbda-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "asistencia_agencias_minoritarias_mbda",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: la MBDA es una agencia federal estadounidense dedicada al crecimiento y la competitividad global de empresas propiedad de minorías. Si tu negocio califica, puedes recibir información de mercado, acceso a financiamiento y tecnología, y ayuda para preparar tu plan de marketing internacional a través de una red de más de 40 centros de negocios.",
+  "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: la MBDA es una agencia federal estadounidense dedicada al crecimiento y la competitividad global de empresas propiedad de minorías. Si tu negocio califica, puedes recibir información de mercado, orientación sobre cómo acceder a educación, financiamiento y tecnología, y ayuda para preparar tu plan de marketing internacional a través de una red de más de 40 centros de negocios.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1613",
+   "frase": "identifies ways to access education, finance, and technology to help minority businesses succeed"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la agencia identifica vías para acceder a educación, financiamiento y tecnología, no que otorgue ese acceso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-057-adaptacion_producto_mercado_exterior-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "adaptacion_producto_mercado_exterior",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de exportar, revisa si tu producto necesita cambios para cumplir las reglas del país destino, sus condiciones de clima o geografía, sus gustos culturales o sus estándares eléctricos y de medición. Decide esto mirando cuánto te cuesta adaptarlo contra cuánto puedes ganar, y qué tan en serio quieres apostarle a ese mercado. Este esquema refleja normativa y acuerdos de un momento y un país concreto: pregunta el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "texto_nuevo": "Antes de exportar, revisa si tu producto necesita cambios para cumplir las reglas del país destino, sus condiciones de clima o geografía, sus gustos culturales, su nivel de vida o sus estándares eléctricos y de medición, o para facilitar el envío. Decide esto mirando cuánto te cuesta adaptarlo contra cuánto puedes ganar, y qué tan en serio quieres apostarle a ese mercado. Este esquema refleja normativa y acuerdos de un momento y un país concreto: pregunta el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2533",
+   "frase": "government regulations, geographic and climatic conditions, buyer preferences, or standards of living"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de motivos del libro incluye el nivel de vida del mercado y la adaptación para facilitar el envío, que el resumen omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-domina_lo_que_compras-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "domina_lo_que_compras",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si no conoces bien lo que estas comprando, cualquier vendedor con mas información que tu puede llevarte a pagar de mas o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quienes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque esta pensado para que el salga ganando, no para que compares opciones a tu favor. Habla con otras personas que compren lo mismo en tu rubro para saber que condiciones son normales y cuales son abusivas. Llegar informado no busca vencer al proveedor de una vez, sino sostener una relación de compra pareja con quien te seguirá vendiendo en el futuro.",
+  "texto_nuevo": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor. Habla con otras personas que compren lo mismo en tu rubro para saber qué condiciones son normales y cuáles son abusivas. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5871",
+   "frase": "You will not get the best value because you do not know what that is."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da como razón de conocer lo que compras obtener el mejor valor y saber qué importa en la negociación, no sostener una relación futura.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-depura_proveedores_sin_respuesta-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "depura_proveedores_sin_respuesta",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando envías una solicitud de cotización a varios proveedores, es común que algunos no respondan nunca. Sin un mecanismo para cerrar ese silencio, terminas persiguiendo contactos que ya decidieron no participar, perdiendo tiempo valioso. La solución es enviar un aviso corto pidiendo confirmación explícita: que digan si participan, si no pueden esta vez pero quieren seguir en tu lista, o si prefieren salir de ella por completo. Esto te permite depurar tu base de proveedores, quedarte solo con contactos activos y mantener una relación cordial con quienes no participan hoy pero podrían servirte en el futuro. Un silencio total, sin ninguna respuesta, es la señal más clara de que ese contacto ya no es confiable para tu proceso de compra.",
+  "texto_nuevo": "Cuando envías una solicitud de cotización a varios proveedores, es común que algunos no respondan nunca. La solución es enviar un aviso corto pidiendo confirmación explícita: que digan si participan, si no pueden esta vez pero quieren seguir en tu lista, o si prefieren salir de ella por completo. Esto te permite depurar tu base de proveedores, quedarte solo con contactos activos y mantener una relación cordial con quienes no participan hoy pero podrían servirte en el futuro. A quien no dé ninguna respuesta puedes retirarlo de tu lista.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "8165",
+   "frase": "VENDORS MAKING NO RESPONSE MAY BE REMOVED FROM THAT LISTING."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese porqué de perseguir contactos y perder tiempo; solo presenta el aviso y su efecto sobre la lista.; El libro solo dice que quien no responde puede ser retirado de la lista; no lo juzga como poco confiable.; Misma conclusión inventada que la marca 0: el libro dice 'may be removed', nada sobre confiabilidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-depura_proveedores_sin_respuesta-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "depura_proveedores_sin_respuesta",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Marca como inactivos a quienes no respondan en ese plazo y quítalos de tu lista activa.",
+  "texto_nuevo": "Puedes marcar como inactivos a quienes no respondan en ese plazo y quitarlos de tu lista activa.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "8165",
+   "frase": "VENDORS MAKING NO RESPONSE MAY BE REMOVED FROM THAT LISTING."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que quien no responde puede ser retirado, no que deba quitarse.; Mismo endurecimiento: el 'may' del libro pasa a orden.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-058-documenta_lo_que_no_incluye_tu_compra-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "documenta_lo_que_no_incluye_tu_compra",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tan importante como escribir qué incluye tu compra es dejar por escrito qué queda explícitamente fuera: tareas, cantidades, plazos o condiciones que asumiste al pedir el precio. Sin esto, cualquier cambio de última hora se convierte en una discusión sin base y en un gasto no previsto. Cuando surja un cambio, sea porque tú lo pides o porque el proveedor lo sugiere, exige primero conocer cuánto se modifica el costo o el tiempo de entrega antes de aceptarlo. Lleva un registro simple de cada cambio aprobado, con fecha, motivo y ajuste acordado, para comparar siempre contra tu presupuesto original. Esta disciplina evita que pequeñas modificaciones acumuladas terminen desbordando lo que planeaste pagar.",
+  "texto_nuevo": "Tan importante como escribir qué incluye tu compra es dejar por escrito qué queda explícitamente fuera: tareas, cantidades, plazos o condiciones que asumiste al pedir el precio. Sin esto, cualquier cambio de última hora se convierte en una discusión sin base y en un gasto no previsto. Cuando surja un cambio, sea porque tú lo pides o porque el proveedor lo sugiere, exige primero conocer cuánto se modifica el costo o el tiempo de entrega antes de aceptarlo, y si no te trae un beneficio, usa tu plan original para rechazarlo. Lleva un registro simple de cada cambio aprobado, con fecha, motivo y ajuste acordado, para comparar siempre contra tu presupuesto original. Esta disciplina evita que pequeñas modificaciones acumuladas terminen desbordando lo que planeaste pagar.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "4131",
+   "frase": "If the change will not bring positive impact to the procurement, use the baseline"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide rechazar, con el plan original como argumento, el cambio que no trae un impacto positivo; el nodo solo pide conocer su costo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-documenta_lo_que_no_incluye_tu_compra-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "documenta_lo_que_no_incluye_tu_compra",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Registra cada cambio aceptado en una lista simple con fecha, motivo y ajuste acordado.",
+  "texto_nuevo": "Registra cada cambio aceptado en una lista simple con fecha, motivo y ajuste acordado, actualiza tu acuerdo o pedido para que lo refleje y avisa a quienes les afecta.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "4133",
+   "frase": "When a change is approved, you need to update the SOW"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, al aprobar un cambio, actualizar el documento de alcance y avisar a los afectados; el nodo solo lo registra aparte.; Mismo paso perdido: actualizar el documento de alcance para que refleje el cambio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-058-documenta_el_ahorro_real_de_cada_compra-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "documenta_el_ahorro_real_de_cada_compra",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usa ese ahorro documentado como argumento cuando renueves o negocies el próximo contrato.",
+  "texto_nuevo": "Consulta ese ahorro documentado cuando debas decidir si renuevas el contrato o buscas otras ofertas.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5805",
+   "frase": "very important when making the decision to renew or compete the contract."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro usa el ahorro documentado para decidir si renovar o volver a concursar el contrato, no como argumento de negociación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-058-decide_criterio_eleccion_proveedor-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "decide_criterio_eleccion_proveedor",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de pedir cotizaciones, decide si lo que buscas es el precio más bajo o el mejor valor. El precio manda cuando compras algo que se consume y no distingue calidad, como insumos de oficina. El valor manda cuando la compra sostiene tu negocio: ahí pesan la capacidad del proveedor para cumplir plazos, la consistencia de su calidad, su salud financiera y el costo total de usar ese producto, no solo el precio de etiqueta. Escribe estos criterios en una lista corta antes de comparar ofertas, así no te dejas arrastrar por la primera cifra baja que veas. Si decides comprarle a un solo proveedor sin comparar, anota la razón concreta: es el único disponible, cambiar te costaría demasiado, o nadie más ofrece algo equivalente. Esa nota te protege después.",
+  "texto_nuevo": "Antes de pedir cotizaciones, decide si lo que buscas es el precio más bajo o el mejor valor. El precio manda cuando compras algo que se consume y donde la calidad importa menos que el precio por unidad, como insumos de oficina. El valor manda cuando la compra sostiene tu negocio: ahí pesan la capacidad del proveedor para cumplir plazos, la consistencia de su calidad, su salud financiera y el costo total de usar ese producto, no solo el precio de etiqueta. Escribe estos criterios en una lista corta antes de comparar ofertas, así no te dejas arrastrar por la primera cifra baja que veas. Si decides comprarle a un solo proveedor sin comparar, anota la razón concreta: es el único disponible, cambiar te costaría demasiado, o nadie más ofrece algo equivalente. Si es el único, guarda los datos del mercado que lo muestran; que te guste o que ya te haya trabajado no basta. Esa nota te protege después.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "939",
+   "frase": "The quality of the paper towels and copy paper is not as important"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que en los consumibles la calidad importa menos que el precio por unidad, no que no haya diferencia de calidad.; El libro excluye expresamente como justificación que te guste el proveedor o que ya haya hecho el trabajo antes.; El libro exige adjuntar los datos del mercado cuando la razón es que hay un solo proveedor.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-decide_si_lo_compras_o_lo_haces_tu-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "decide_si_lo_compras_o_lo_haces_tu",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de firmar con un proveedor, calcula que te cuesta hacerlo tu mismo: tu tiempo, materiales, herramientas y gastos fijos que ya pagas. Compara esa cifra con la cotización del proveedor, incluyendo entrega, calidad y riesgo. La decisión no es solo el precio final, sino el valor total: a veces contratar afuera libera tu tiempo para vender mas, y a veces hacerlo tu mismo te ahorra dinero real. Este ejercicio evita que elijas comprar por comodidad o hacerlo tu por orgullo, sin números que respalden la elección. Escribe ambos costos en una hoja simple antes de decidir.",
+  "texto_nuevo": "Antes de firmar con un proveedor, calcula qué te cuesta hacerlo tú mismo: tu tiempo, materiales, herramientas y gastos fijos que ya pagas. Compara esa cifra con la cotización del proveedor, incluyendo entrega, calidad y riesgo. La decisión no es solo el precio final, sino el valor total: a veces contratar afuera te ahorra dinero y a veces no. Así la elección queda respaldada por números. Escribe ambos costos en una hoja simple antes de decidir.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "895",
+   "frase": "All of these costs are the basis for your cost savings by outsourcing the service."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro compara costos propios contra el precio del proveedor; no habla de liberar tiempo para vender más.; Mismo beneficio inventado de liberar tiempo; el libro solo habla de ahorro o falta de ahorro.; Mismo porqué psicológico inventado que la marca 1.; Porqué psicológico (comodidad, orgullo) que el libro no da; solo usa los costos como base para medir el ahorro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-decide_si_lo_compras_o_lo_haces_tu-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "decide_si_lo_compras_o_lo_haces_tu",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Compara ambas cifras y decide cuál te deja más margen o más tiempo libre.",
+  "texto_nuevo": "Compara ambas cifras y decide cuál te deja más margen.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "895",
+   "frase": "All of these costs are the basis for your cost savings by outsourcing the service."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): 'Más tiempo libre' es un criterio que el libro no da; compara costos para medir el ahorro.; Mismo criterio inventado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-058-ata_el_pago_al_cumplimiento_real_del_servicio-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "ata_el_pago_al_cumplimiento_real_del_servicio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es un error común que te cuesta dinero sin darte cuenta. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Esto evita conflictos, porque tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te da además una base sólida para negociar mejor en el siguiente contrato con ese mismo proveedor.",
+  "texto_nuevo": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es pagar por algo que no recibiste. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Así tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te da además una base sólida para negociar mejor en el siguiente contrato con ese mismo proveedor.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "7543",
+   "frase": "Failure to perform Quarterly and SemiAnnual Services will result in a deduction of payment"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no afirma que la cláusula evite conflictos; su objetivo es obtener el cumplimiento completo.; El libro no dice que sea un error común ni que cueste dinero sin darte cuenta.; Mismo efecto inventado que la marca 1.; Mismo hecho inventado que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-ata_el_pago_al_cumplimiento_real_del_servicio-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "ata_el_pago_al_cumplimiento_real_del_servicio",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Documenta por escrito cualquier incumplimiento para usarlo en la próxima negociación.",
+  "texto_nuevo": "Documenta por escrito cualquier incumplimiento para tenerlo en cuenta al decidir si renuevas.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "7547",
+   "frase": "at the sole discretion of XYZ Company based upon satisfactory performance"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no usa el incumplimiento para negociar; la renovación depende del desempeño satisfactorio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-058-documento_alcance_servicio-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "documento_alcance_servicio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando contratas un servicio recurrente, como limpieza, mantenimiento o cualquier trabajo que se repite cada semana o cada mes, no basta con nombrar el servicio: hay que describir por escrito exactamente que se hará, con que frecuencia, con que estándar de calidad, y quien es responsable de cada tarea. Este documento también deja claro que queda fuera del servicio, para evitar disputas mas adelante. Sirve tanto para pedir cotizaciones comparables como para medir después si el proveedor cumplió lo acordado. Sin este detalle, cualquier desacuerdo sobre calidad o alcance termina siendo una discusión de opiniones en lugar de una comparación con algo escrito que ambas partes aceptaron desde el inicio de la relación.",
+  "texto_nuevo": "Cuando contratas un servicio recurrente, como limpieza, mantenimiento o cualquier trabajo que se repite cada semana o cada mes, no basta con nombrar el servicio: hay que describir por escrito exactamente qué se hará, dónde, con qué frecuencia, con qué estándar de calidad, quién es responsable de cada tarea y quién pone los equipos y materiales. Este documento también deja claro qué queda fuera del servicio, para evitar disputas más adelante. Sirve tanto para pedir cotizaciones comparables como para medir después si el proveedor cumplió lo acordado. Sin este detalle, cualquier desacuerdo sobre calidad o alcance termina siendo una discusión de opiniones en lugar de una comparación con algo escrito que ambas partes aceptaron desde el inicio de la relación.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "1061",
+   "frase": "You need to know when and where services will be performed and who supplies"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige saber dónde se hará el trabajo y quién pone los equipos y materiales; el nodo los pierde.; La enumeración pierde elementos del libro, sobre todo dónde se hace el trabajo; el resto de su lista de la línea 869 es ilustrativa ('might include') y queda fuera para no alargar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-gestiona_contrato_tras_firma-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gestiona_contrato_tras_firma",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Muchos emprendedores guardan el contrato en una carpeta y no vuelven a mirarlo hasta que algo falla. Para evitarlo, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+  "texto_nuevo": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5507",
+   "frase": "Administering a contract means managing the contract."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Afirma un hecho sobre lo que hacen muchos emprendedores que el libro no dice.; Mismo hecho inventado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-058-gestiona_contrato_tras_firma-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "gestiona_contrato_tras_firma",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Revisa cada factura del proveedor contra lo que realmente se pactó antes de pagarla.",
+  "texto_nuevo": "Revisa cada factura del proveedor contra lo que realmente se pactó y confirma que se recibió todo lo que cobra antes de pagarla.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5529",
+   "frase": "Make sure that these people have received everything the invoice shows."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide confirmar que se recibió todo lo que la factura cobra, no solo cotejarla con lo pactado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-058-gestiona_contrato_tras_firma-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "gestiona_contrato_tras_firma",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide con anticipación si vas a renovar, renegociar o cambiar de proveedor cuando se acerque el vencimiento.",
+  "texto_nuevo": "Decide con anticipación si vas a renovar, renegociar, cambiar de proveedor, traer el trabajo de vuelta a tu negocio o terminar el contrato si ya no lo necesitas, cuando se acerque el vencimiento.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5525",
+   "frase": "To terminate this contract and bring the work back inside the com pany"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista pierde dos opciones del libro: traer el trabajo de vuelta a tu negocio o terminar el contrato si ya no se necesita.; Mismas opciones perdidas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-058-investiga_a_fondo_antes_de_renovar_un_contrato_existente-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Habla con tu contacto en el proveedor sobre qué ha ido bien y qué problemas ha habido de su lado.",
+  "texto_nuevo": "Habla con tu contacto en el proveedor sobre qué ha ido bien y qué problemas ha habido de su lado, sin insinuar ni prometer que renovarás: esa charla es para informarte, no para negociar.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "889",
+   "frase": "Be careful that you do not imply or promise that this supplier will get"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma cautela perdida.; Se cae la cautela del libro: no insinuar ni prometer la renovación; la charla es para averiguar, no para negociar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-058-investiga_a_fondo_antes_de_renovar_un_contrato_existente-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Compara el costo actual con lo que cobrarían otros proveedores similares antes de aceptar renovar igual.",
+  "texto_nuevo": "Compara el costo actual con lo que cobrarían otros proveedores similares, y revisa su situación financiera, antes de aceptar renovar igual.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "891",
+   "frase": "Along with this information, gather data on each prospective company's financial sta tus."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae parte de la investigación del libro: reunir datos de la situación financiera de las empresas que ofrecen lo mismo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-058-depura_proveedores_sin_respuesta-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "depura_proveedores_sin_respuesta",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Envía un mensaje corto a cada proveedor que no cotizó pidiendo que confirme si participa o no.",
+  "texto_nuevo": "Incluye en tu solicitud de cotización un aviso corto que pida a cada proveedor invitado confirmar si participa o no, aunque no vaya a cotizar.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "7381",
+   "frase": "Vendors must respond to the proposal request whether they can or cannot"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro el aviso va dentro de la solicitud, para todos los invitados, que deben responder puedan o no cotizar; el nodo lo reduce a un seguimiento a quien no cotizó.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-059-mix_medios_marketing_franquicia-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "mix_medios_marketing_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Distribuir el presupuesto combinando canales de alto costo/alta calidad (PR, brokers, referidos) con canales de mayor volumen (internet, impresos)",
+  "texto_nuevo": "Distribuir el presupuesto combinando canales que dan leads de alta calidad pero menos constantes (PR, brokers, referidos) con canales que dan muchos leads de menor calidad con regularidad (internet)",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3565-3567",
+   "frase": "the internet—which can deliver numerous lower-quality leads with great regularity"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro justifica la mezcla por calidad frente a constancia y pone referidos y brokers al final de menor costo por lead; los impresos tienen costo alto.; El libro pone los referidos en el extremo de menor costo por lead, no de alto costo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-059-motivaciones_reales_franquiciado-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "motivaciones_reales_franquiciado",
+  "campo": "pasos_accionables",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Evitar la falacia de composición al asumir que el mensaje previo determina las respuestas",
+  "texto_nuevo": "Evitar la falacia de composición: si tu mensaje previo se centró en un motivo, como la independencia, tus franquiciados actuales tenderán a repetirlo, así que no tomes sus respuestas como el motivo general de tu categoría",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3090",
+   "frase": "If, for example, all your prior messaging was focused on independence"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro advierte que el mensaje previo puede moldear las respuestas; el error es no tenerlo en cuenta, no suponerlo.; Mismo defecto: el paso invierte en qué consiste la falacia de composición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-059-modelo_curva_campana_ventas_franquicia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "modelo_curva_campana_ventas_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las ventas de franquicia no ocurren a un ritmo predecible o lineal; siguen un patrón estadístico similar a una curva de campana, donde cada lead o esfuerzo de marketing tiene una probabilidad de convertirse en venta distribuida a lo largo de varias semanas (típicamente 12-14 semanas desde el llenado del pipeline). Al apilar múltiples cohortes mensuales de leads, la probabilidad acumulada de cerrar una venta aumenta con cada mes que pasa. Esto implica que un franquiciante debe pensar en términos de flujo continuo de leads y no esperar resultados inmediatos o uniformes.",
+  "texto_nuevo": "El momento de las ventas de franquicia no es del todo predecible; conviene pensarlas como una curva de campana, donde cada lead o esfuerzo de marketing tiene una probabilidad de convertirse en venta distribuida a lo largo de varias semanas (típicamente 12-14 semanas desde el llenado del pipeline). Al apilar múltiples cohortes mensuales de leads, la probabilidad acumulada de cerrar una venta aumenta con cada mes que pasa. Esto implica que un franquiciante debe pensar en términos de flujo continuo de leads y no esperar resultados inmediatos o uniformes.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5657",
+   "frase": "worthwhile to think of franchise sales occurring around the middle of a typical bell curve"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro propone pensar las ventas como una curva de campana a modo de modelo, no afirma que sigan ese patrón.; Mismo defecto: convierte en hecho un modelo útil y endurece la falta de previsibilidad absoluta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-059-modelo_curva_campana_ventas_franquicia-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "modelo_curva_campana_ventas_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Proyectar múltiples cohortes mensuales de leads en paralelo para suavizar la variabilidad",
+  "texto_nuevo": "Proyectar múltiples cohortes mensuales de leads en paralelo, sabiendo que al apilarlas la probabilidad de cerrar una venta sube con cada mes",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5661",
+   "frase": "Stack several of these bell curves together, and the likelihood of making a sale rises"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que al apilar las curvas la probabilidad de vender sube cada mes; no habla de suavizar la variabilidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-059-modelo_curva_campana_ventas_franquicia-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "modelo_curva_campana_ventas_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ajustar expectativas considerando factores internos (calidad de oferta, validación, marketing) y externos (economía)",
+  "texto_nuevo": "Ajustar expectativas considerando factores internos (calidad de oferta, validación, calidad de los leads, marketing, proceso y capacidad de venta) y externos (economía)",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5653",
+   "frase": "the quality of your leads, marketing plan, marketing materials, and messaging; and your sales process"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye la calidad de los leads y tu proceso y capacidad de venta, que se caen.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-059-otros_terminos_contractuales-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "otros_terminos_contractuales",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir plazo del contrato y condiciones de renovación",
+  "texto_nuevo": "Definir plazo del contrato y condiciones de renovación, sopesando que un plazo largo hace más vendible la franquicia y uno corto te da más flexibilidad, porque al renovar se firma el contrato vigente",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1829",
+   "frase": "a shorter contract term provides you with much more flexibility"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el criterio del libro para decidir el plazo: largo es más vendible, corto da más flexibilidad al renovar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-059-otros_terminos_contractuales-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "otros_terminos_contractuales",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer requisitos de remodelación periódica de unidades",
+  "texto_nuevo": "Decidir si exigirás remodelaciones periódicas de las unidades en un plazo definido y si separarás los requisitos por componente (tecnología, equipo, local)",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1831",
+   "frase": "Should you mandate that a franchisee must make certain major refurbishments"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea como pregunta abierta si exigir remodelaciones en un plazo; el paso da por hecho que se exigen.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-059-outsourcing_ventas_fso-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "outsourcing_ventas_fso",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer mecanismos de control y dirección sobre el equipo externo",
+  "texto_nuevo": "Establecer mecanismos de control y dirección sobre el equipo externo, sabiendo que no son tus empleados y que tu autoridad sobre ellos tiene límites",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4873",
+   "frase": "ultimately, they are not your employees. There are limits to how much authority"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el FSO no son tus empleados y que tu autoridad sobre ellos tiene límites.; Mismo límite de autoridad; lo de la competencia interna de ventas es otra consideración que no cambia este paso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-059-pasivos_vs_operadores-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "pasivos_vs_operadores",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decisión estratégica sobre si permitir inversionistas pasivos o exigir que el franquiciado opere el negocio directamente. Los propietarios-operadores suelen tener mejor desempeño a nivel unitario, mientras que los inversionistas pasivos permiten crecimiento más rápido y acceso a mayor capital. Se puede exigir un 'operating partner' con equity que aporte las habilidades operativas necesarias.",
+  "texto_nuevo": "Decisión estratégica sobre si permitir inversionistas pasivos o exigir que el franquiciado opere el negocio directamente. Los propietarios-operadores, si están bien seleccionados, suelen tener mejor desempeño a nivel unitario, mientras que los inversionistas pasivos permiten crecimiento más rápido y acceso a mayor capital. Se puede exigir un 'operating partner' con equity que aporte las habilidades operativas necesarias.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4372",
+   "frase": "Owner-operators, if properly selected, will typically have better unit-level performance"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el mejor desempeño a que los propietarios-operadores estén bien seleccionados.; Mismo defecto: se cae la condición de buena selección.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-059-pasivos_vs_operadores-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "pasivos_vs_operadores",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si se permiten inversionistas grupales, exigir designación de un socio operador con equity",
+  "texto_nuevo": "Si se permiten inversionistas grupales, considerar exigir la designación de un socio operador con equity",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4378",
+   "frase": "You can always require investor groups to designate an operating partner"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta el socio operador como una opción que puedes exigir, no como obligación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-059-mix_ubicaciones_corporativas_franquicia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "mix_ubicaciones_corporativas_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicación: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones subóptimas y cede las mejores a franquiciados para mejorar la validación del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validación ante futuros franquiciados y velocidad de crecimiento, por lo que la elección depende de tu capital disponible y tu plan de salida.",
+  "texto_nuevo": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicación: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, poco frecuente, que cuando debes aceptar ubicaciones subóptimas junto con otras buenas toma para ti las subóptimas y cede las mejores a franquiciados para mejorar la validación del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validación ante futuros franquiciados y velocidad de crecimiento, por lo que la elección depende de tu capital disponible y tu plan de salida.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3513",
+   "frase": "employed when a franchisor is asked to take subprime locations as part of a package"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro la presenta como poco frecuente y propia del caso en que te obligan a aceptar ubicaciones subóptimas en un paquete con otras buenas.; Mismo defecto: se cae la condición y la rareza de la estrategia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-059-mix_ubicaciones_corporativas_franquicia-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "mix_ubicaciones_corporativas_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide si continuarás abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
+  "texto_nuevo": "Decide si continuarás abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, teniendo en cuenta que si tu empresa es pequeña suele convenir pausar el crecimiento corporativo uno o dos años mientras te estableces como franquiciador; si sigues con ambos, lanza el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1280",
+   "frase": "put corporate growth on the back burner for a year or two"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae la recomendación del libro de que las empresas pequeñas pausen el crecimiento corporativo uno o dos años.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-059-obtencion_marca_registrada-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "obtencion_marca_registrada",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En una franquicia se otorga al franquiciado una licencia para usar el nombre de marca, por lo que es esencial poseer legalmente un trademark federal antes de licenciarlo. Si el nombre ya está registrado por otro o es genérico/descriptivo (difícil de proteger), puede requerirse un cambio de nombre. Muchas marcas exitosas (Burger King, Dunkin' Donuts, KFC, Subway) cambiaron su nombre original sin que esto afectara su éxito posterior. El proceso de registro puede tomar un año o más, pero los derechos se establecen desde la fecha de solicitud, por lo que no es necesario completar el proceso antes de comenzar a franquiciar.",
+  "texto_nuevo": "En una franquicia se otorga al franquiciado una licencia para usar el nombre de marca, por lo que es esencial poseer legalmente un trademark federal antes de licenciarlo. Si el nombre ya está registrado por otro o es genérico/descriptivo (difícil de proteger), a veces basta una solución simple (falta de ortografía intencional, añadir una palabra, comprar los derechos) y si no, puede requerirse un cambio de nombre. Muchas marcas exitosas (Burger King, Dunkin' Donuts, KFC, Subway) cambiaron su nombre original sin que esto afectara su éxito posterior. El proceso de registro puede tomar un año o más, pero los derechos se establecen desde la fecha de solicitud, por lo que no es necesario completar el proceso antes de comenzar a franquiciar.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2128",
+   "frase": "Sometimes there are simple solutions—an intentional misspelling, a modified word added to your existing name"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro ofrece soluciones simples antes del cambio de nombre: falta de ortografía intencional, añadir una palabra o comprar los derechos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-059-motivated_management_franquiciado-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "motivated_management_franquiciado",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un franquiciado, al invertir su propio capital y a menudo sus ahorros, tiene un compromiso a largo plazo, mejor desempeño operativo, mayor innovación y mejor gestión de gastos que un gerente contratado. Estudios de caso (Texaco UK, Sterling Optical) muestran incrementos de ventas al convertir gerentes en propietarios franquiciados; en Sterling Optical las ventas subieron un 32% con las mismas condiciones de ubicación, personal e inventario.",
+  "texto_nuevo": "Un franquiciado, al invertir su propio capital y a menudo sus ahorros, suele tener un compromiso a largo plazo, mejor desempeño operativo, mayor innovación y mejor gestión de gastos que un gerente contratado. Estudios de caso (Texaco UK, Sterling Optical) muestran incrementos de ventas al convertir gerentes en propietarios franquiciados; en Sterling Optical las ventas subieron un 32% con las mismas condiciones de ubicación, personal e inventario.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "303",
+   "frase": "Franchisees typically out-manage managers."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los franquiciados típicamente superan a los gerentes; el nodo lo afirma sin matiz.; Mismo defecto: endurece lo que el libro dice con cautela.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-059-motivated_management_franquiciado-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "motivated_management_franquiciado",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Apoyarse en la motivación que da la propiedad al franquiciado, sabiendo que ningún plan de incentivos para gerentes la replica",
+  "texto_nuevo": "Apoyarse en la motivación que da la propiedad al franquiciado, que tiene su dinero invertido y cobra sobre todo en forma de ganancias",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "289",
+   "frase": "No one is more motivated than someone who is materially invested"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de planes de incentivos para gerentes; solo de la motivación de quien tiene su dinero invertido.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-060-evaluacion_alternativas_solucion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_alternativas_solucion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Fase creativa-convergente donde el equipo genera múltiples alternativas de solución mediante lluvia de ideas y luego las evalúa usando matrices de selección basadas en criterios, con el fin de determinar la solución (o combinación de soluciones) que mejor elimine la causa raíz identificada.",
+  "texto_nuevo": "Fase creativa-convergente donde el equipo genera múltiples alternativas de solución mediante lluvia de ideas y luego las evalúa, pudiendo apoyarse en matrices de selección basadas en criterios, con el fin de determinar la solución (o combinación de soluciones) que mejor elimine la causa raíz identificada.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "15457-15458",
+   "frase": "They may also use a criteria-based selection matrix to assist their decision-making"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el equipo puede usar la matriz como apoyo ('may also use'), no como el medio fijo de evaluación.; Mismo defecto: la matriz es un apoyo opcional en el libro, el resumen la vuelve el modo de evaluar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-060-evaluacion_alternativas_solucion-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_alternativas_solucion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Construir diagramas de flujo para visualizar la implementación de cada alternativa.",
+  "texto_nuevo": "Si te ayuda, construir diagramas de flujo para visualizar la implementación de cada alternativa.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "15457",
+   "frase": "The team may construct flow diagrams of possible solution implementations"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el equipo puede construir diagramas de flujo ('may construct'); el paso lo vuelve obligatorio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-060-evaluacion_alternativas_solucion-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_alternativas_solucion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
+  "texto_nuevo": "Si te ayuda a decidir, usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "15457",
+   "frase": "They may also use a criteria-based selection matrix to assist their decision-making"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La matriz de selección es un apoyo que el equipo puede usar ('may also use'), no un paso obligado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-060-evaluacion_competencias_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_competencias_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Método de ocho pasos del Juran Institute para evaluar el nivel de dominio de la persona que se encarga de calidad en tu negocio, en siete áreas clave (auditoría, pensamiento crítico, control de procesos, teoría de calidad, análisis de causa raíz, estadística y trabajo en equipo). Los hallazgos históricos muestran debilidades recurrentes en análisis estadístico, herramientas de causa raíz y conocimiento de teoría de calidad (incluyendo desconocimiento de figuras como Deming, Shewhart y Juran), lo cual limita tu capacidad para impulsar mejoras reales.",
+  "texto_nuevo": "Método de ocho pasos del Juran Institute para evaluar el nivel de dominio de la persona que se encarga de calidad en tu negocio, en siete áreas clave (auditoría, pensamiento crítico, control de procesos, teoría de calidad, análisis de causa raíz, estadística y trabajo en equipo). Los hallazgos históricos muestran debilidades recurrentes en análisis estadístico, herramientas de causa raíz y conocimiento de teoría de calidad (incluyendo desconocimiento de figuras como Deming, Shewhart y Juran), lo cual puede impedir que esa persona impulse mejoras reales.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2521",
+   "frase": "some of the staff may not be able to drive Quality and Performance Excellence"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que parte del personal puede no ser capaz de impulsar mejoras; el resumen lo afirma como efecto seguro.; Mismo endurecimiento de 'some of the staff may not be able to drive'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-060-evaluacion_competencias_calidad-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_competencias_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir las siete áreas de competencia a evaluar (auditoría, pensamiento crítico, control de proceso, teoría de calidad, causa raíz, estadística, trabajo en equipo)",
+  "texto_nuevo": "Revisar qué competencias necesita tu negocio y, a partir de eso, definir las siete áreas de competencia a evaluar (auditoría, pensamiento crítico, control de proceso, teoría de calidad, causa raíz, estadística, trabajo en equipo)",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2446",
+   "frase": "Reviewed skills questions and an organization's competency models to identify the organization's needs"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El primer paso del método es revisar los modelos de competencias para identificar las necesidades de la organización, y el nodo lo omite.; Mismo paso perdido del procedimiento de ocho pasos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-060-evaluacion_de_factores_de_riesgo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_de_factores_de_riesgo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando identificas varios riesgos, conviene ordenarlos para saber cuál atacar primero. Para eso, revisas cada uno según su gravedad, qué tan probable es que ocurra, qué tan rápido golpearía, cuánto indignaría a tus clientes, su complejidad, su alcance y cuánta incertidumbre tiene. Combinando estos factores obtienes una lista clara de prioridades para enfocar tu esfuerzo de prevención.",
+  "texto_nuevo": "Cuando identificas varios riesgos, conviene ordenarlos para saber cuál atacar primero. Para eso, revisas cada uno según su gravedad, qué tan probable es que ocurra, qué tan rápido golpearía, cuánto indignaría a tus clientes, su complejidad, su alcance y cuánta incertidumbre tiene. Combinando estos factores obtienes una lista clara de prioridades para enfocar tu esfuerzo de prevención, sin dejar de reducir cualquier riesgo cuando sea posible y razonable.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12224",
+   "frase": "we must do what is possible and reasonable to reduce or eliminate risk"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro subraya que, aunque se prioriza, hay que reducir o eliminar cualquier riesgo cuando sea posible y razonable, sea cual sea su puntaje.; Mismo límite perdido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-060-evaluacion_de_factores_de_riesgo-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_de_factores_de_riesgo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Junta estas impresiones para tener una idea clara de qué tan urgente es cada riesgo.",
+  "texto_nuevo": "Dale a cada factor un valor (1 bajo, 2 medio, 3 alto) y combínalos: multiplica los valores o, si incluyes más factores que gravedad y probabilidad, súmalos, para tener una idea clara de qué tan urgente es cada riesgo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12236",
+   "frase": "it may be better to add the values assigned to each risk rather than multiply"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro asigna un valor 1, 2 o 3 a cada factor y los multiplica, o los suma si hay más factores; 'juntar impresiones' pierde ese procedimiento.; Mismo procedimiento de puntaje perdido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-060-evaluacion_desempeno_proyectos-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_desempeno_proyectos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Medir el valor generado en términos de reducción de costos y ROI",
+  "texto_nuevo": "Medir el valor generado en términos de mejora en el desempeño del producto, reducción de costos y ROI",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7249",
+   "frase": "Value of completed projects in terms of breakthrough in product performance, reduction in costs"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro incluye el avance en el desempeño del producto como forma de valor.; Mismo elemento de la enumeración perdido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-060-evaluacion_desempeno_proyectos-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_desempeno_proyectos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer criterios cualitativos para evaluar contribución individual dentro del equipo",
+  "texto_nuevo": "Juzgar la contribución individual dentro del equipo con información de todas las fuentes disponibles, sabiendo que no hay un método exacto para separarla del resultado colectivo",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7243",
+   "frase": "This new problem has as yet no scientific solution"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la contribución individual no tiene solución científica y el supervisor la juzga con insumos de todas las fuentes.; Mismo límite perdido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-060-estudio_mercado_calidad-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "estudio_mercado_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Graficar resultados en un mapa de cuadrantes (importancia vs. satisfacción) para priorizar acciones",
+  "texto_nuevo": "Si te ayuda, graficar resultados en un mapa de cuadrantes (importancia vs. satisfacción) para priorizar acciones",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "25915",
+   "frase": "Graphing the market research results can be helpful."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que graficar en el mapa de cuadrantes puede ser útil ('can be helpful'), no que sea un paso obligado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-060-estructura_competencias_six_sigma_lean-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "estructura_competencias_six_sigma_lean",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participante en proyectos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.",
+  "texto_nuevo": "Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participa en proyectos y puede liderarlos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "26569",
+   "frase": "They can be a team leader or a team member."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el Green Belt puede ser líder o miembro de equipo y puede liderar proyectos.; Mismo recorte del rol.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-060-estructuracion_programa_auditoria-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "estructuracion_programa_auditoria",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa falla porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque terminas ignorando los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+  "texto_nuevo": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa puede fallar porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque quien está a cargo de lo revisado no hace caso a los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10043",
+   "frase": "the audit program may fail. The usual failure modes are"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro dice que sin esos acuerdos el programa puede fallar ('may fail').; En el libro quienes no atienden los reportes son los responsables de lo auditado, no la dirección que preside ambas partes (el 'tú' del resumen).; Mismo endurecimiento de 'may fail'.; Mismo sujeto invertido: el que ignora los reportes es el responsable del área auditada.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-060-estructura_global_oficina_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "estructura_global_oficina_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando tu negocio opera en varios países o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. El modelo típico ubica a un responsable máximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en áreas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
+  "texto_nuevo": "Cuando tu negocio opera en varios países o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. Un ejemplo de organización multinacional ubica a un responsable máximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en áreas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2792",
+   "frase": "we will look at an example of a multinational global organization"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta esa estructura como ejemplo de una organización multinacional, no como el modelo típico.; Misma generalización de un ejemplo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-060-etapas_de_control_operativo-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "etapas_de_control_operativo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist y calendario",
+  "texto_nuevo": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7897-7899",
+   "frase": "Train the maintenance forces to perform the tasks"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye capacitar al personal de mantenimiento, que además señala como punto débil con tecnología nueva.; La lista del libro incluye también la capacitación y un responsable claro del cumplimiento del calendario.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-060-evaluacion_competencias_calidad-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_competencias_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aplicar la evaluación valorando el nivel de dominio de la persona y comparar contra las mejores prácticas del sector",
+  "texto_nuevo": "Aplicar la evaluación valorando cada respuesta con una escala de 1 (sin respuesta o muy pobre) a 5 (sobresaliente y detallada), resumir los resultados por pregunta y por persona, y comparar contra las mejores prácticas del sector",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2462-2474",
+   "frase": "An anchored scale of 1 to 5 was used for scoring the participant responses"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El método pide puntuar cada respuesta con una escala anclada de 1 a 5 y resumir resultados por pregunta y por persona; el paso lo omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-060-estudio_lealtad_cliente-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "estudio_lealtad_cliente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Diseña preguntas estandarizadas, pensadas con cuidado, sobre tus productos y tu desempeño",
+  "texto_nuevo": "Diseña preguntas estandarizadas, pensadas con cuidado, sobre tus productos y tu desempeño, para hacérselas a tus clientes y también a quienes dejaron de serlo",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2185",
+   "frase": "Customers and former customers are asked carefully crafted standard questions"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pregunta a clientes y también a antiguos clientes, fuente de lo que haría falta para recuperarlos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-060-evaluacion_desempeno_junta_directiva-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "evaluacion_desempeno_junta_directiva",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar qué mejorar primero según las calificaciones obtenidas",
+  "texto_nuevo": "Identificar qué mejorar primero según las calificaciones obtenidas, sin dejar que un nivel general aceptable esconda un punto con nivel muy bajo",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10842",
+   "frase": "each and every board contribution item should be seriously considered"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un nivel general aceptable no compensa un punto con nivel muy bajo, que sería inadmisible.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-061-checklist_estandares_auditoria-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "checklist_estandares_auditoria",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verifica que exista un estándar claro para eso que vas a revisar; si no existe, defínelo tú antes de revisar",
+  "texto_nuevo": "Verifica que exista un estándar claro para eso que vas a revisar; si no existe, que lo defina quien es responsable de esa actividad antes de revisar",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10131",
+   "frase": "he asks those responsible for the activity to define a standard"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el estándar faltante lo definan los responsables de la actividad, no quien revisa.; Mismo defecto: se pierde quién define el estándar faltante.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-061-certificacion_de_proveedores-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "certificacion_de_proveedores",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, es esencial para manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+  "texto_nuevo": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, ofrece un modelo para los niveles muy bajos de defectos que necesita la manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24011",
+   "frase": "provides a model for the low DPM levels necessary for just-in-time manufacture"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la certificación ofrece un modelo para los bajos niveles de defectos que exige el JIT; 'esencial' endurece.; Mismo defecto; se corrige sobre el texto actual, que dice bien que reduce (no aumenta) los costos de inspección.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-carta_proyecto_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "carta_proyecto_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cada proyecto seleccionado debe acompañarse de una declaración escrita del problema y la meta que define el enfoque y resultado esperado. Esta carta define las acciones requeridas del equipo, establece responsabilidad clara (la meta se vuelve parte de la descripción de trabajo de cada miembro), otorga legitimidad oficial al proyecto, y confiere derechos al equipo como convocar reuniones y solicitar datos.",
+  "texto_nuevo": "Cada proyecto seleccionado debe acompañarse de una declaración escrita del problema y la meta que define el enfoque y resultado esperado. Esta carta define las acciones requeridas del equipo, le ayuda a saber cuándo terminó el proyecto, establece responsabilidad clara (la meta se vuelve parte de la descripción de trabajo de cada miembro), otorga legitimidad oficial al proyecto, y confiere derechos al equipo como convocar reuniones y solicitar datos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6806",
+   "frase": "helps the team know when it has completed the project"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae uno de los propósitos de la lista: al definir problema y resultado, ayuda al equipo a saber cuándo terminó.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-ciclo_adaptativo_inteligencia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "ciclo_adaptativo_inteligencia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias tecnológicas, benchmarking).",
+  "texto_nuevo": "Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2173",
+   "frase": "Scientific, technological, social, and governmental trends that can affect us"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide vigilar tendencias científicas, tecnológicas, sociales y gubernamentales y atribuye fracasos a no mirar las necesidades de la sociedad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-ciclo_adaptativo_inteligencia-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "ciclo_adaptativo_inteligencia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Recopilar datos externos: necesidades del cliente, tendencias tecnológicas, benchmarking competitivo",
+  "texto_nuevo": "Recopilar datos externos: necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking competitivo",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2173",
+   "frase": "Scientific, technological, social, and governmental trends that can affect us"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso deja solo las tendencias tecnológicas de una lista de cuatro.; Mismo defecto: se caen las tendencias científicas, sociales y gubernamentales.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-061-carta_de_control_shewhart-pasos_accionables-5",
+  "fecha": "2026-09-28",
+  "node_id": "carta_de_control_shewhart",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Justificar el uso de la carta según impacto en cliente, seguridad o economía",
+  "texto_nuevo": "Justificar el uso de la carta según impacto en cliente, seguridad o ambiente, economía, o necesidad de precisión adicional para el control",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8034-8042",
+   "frase": "There is risk to human safety or the environment"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la cuarta justificación: la precisión adicional necesaria para el control.; La lista del libro incluye el riesgo ambiental y la necesidad de precisión adicional para el control.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-061-carta_de_control_shewhart-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "carta_de_control_shewhart",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad, riesgo económico, necesidades del cliente), evitando el uso excesivo e ignorado de cartas sin valor real.",
+  "texto_nuevo": "Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad o ambiente, riesgo económico, necesidades del cliente, precisión adicional necesaria para el control), evitando el uso excesivo e ignorado de cartas sin valor real.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8034-8042",
+   "frase": "The added precision is needed for control"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye el riesgo ambiental y la precisión adicional necesaria para el control.; Mismo defecto: falta la cuarta justificación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-certificacion_profesional_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "certificacion_profesional_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La certificación profesional (como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma) te sirve para demostrar que de verdad sabes de calidad. La lección de la era de la Gestión de Calidad Total y del auge de Six Sigma es que un solo proyecto o un examen sin supervisión no bastan para probar que dominas el tema; elige organismos certificadores con buena reputación y respalda tu certificación con evidencia práctica sostenida en el tiempo.",
+  "texto_nuevo": "La certificación profesional (como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma) te sirve para demostrar que de verdad sabes de calidad. La experiencia con la certificación enseña que un solo proyecto o un examen sin supervisión no bastan para probar que dominas el tema; elige organismos certificadores con buena reputación y respalda tu certificación con evidencia independiente de que dominas los métodos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "15050-15056",
+   "frase": "you need independent evidence that the person is knowledgeable about the methods"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide evidencia independiente de que la persona conoce los métodos; 'sostenida en el tiempo' no está.; La lección de la era TQM fue la falta de formación en herramientas de datos; lo del proyecto y el examen son lecciones sobre la certificación.; Mismo defecto: atribuye a la era TQM y Six Sigma una lección que el libro da sobre certificar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-certificacion_profesional_calidad-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "certificacion_profesional_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Elige un organismo certificador con buena reputación (ASQ, Juran Institute, PMI, etc.)",
+  "texto_nuevo": "Elige un organismo certificador con buena reputación (por ejemplo, ASQ)",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2995",
+   "frase": "the ASQ is in a better position to monitor the certifications"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo presenta a ASQ; Juran Institute y PMI como certificadores reputados no están.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-061-certificacion_profesional_calidad-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "certificacion_profesional_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúate con examen y con un proyecto aplicado, no solo con uno de los dos",
+  "texto_nuevo": "Evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3005",
+   "frase": "Passing a written test that is not proctored is no guarantee"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un examen escrito sin supervisión no garantiza nada; se cae la condición.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-061-certificacion_profesional_calidad-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "certificacion_profesional_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Recertifícate cada cierto tiempo para mantener tus competencias vigentes",
+  "texto_nuevo": "Sugerencia de My Idea: recertifícate cada cierto tiempo para mantener tus competencias vigentes",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3001-3009",
+   "frase": "here are some lessons learned about certification"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de recertificación; queda como sugerencia de la casa.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-061-carryover_fallas_producto-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "carryover_fallas_producto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: siempre es mas atractivo sumar algo nuevo que corregir algo viejo. Resolverlo exige que tu, como responsable del negocio, lo pongas como prioridad explícita.",
+  "texto_nuevo": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: suele haber presión por sumar algo nuevo, y crear lo nuevo da más prestigio que corregir algo viejo. Resolverlo exige que tú, como responsable del negocio, lo pongas como prioridad explícita.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "422",
+   "frase": "usually under intense pressure from the marketers to develop new product"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que suele haber presión por lo nuevo y que lo nuevo da más prestigio; 'siempre' endurece.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-certificacion_registro_sistema_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "certificacion_registro_sistema_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los estándares ISO 9000, adoptados por más de 100 países, ofrecen un marco no prescriptivo para asegurar calidad en diseño, producción, entrega y soporte. Para evitar que cada cliente audite por separado a su proveedor, surgen organismos certificadores de tercera parte que auditan la conformidad de tu sistema de gestión de calidad frente a normas como ISO 9001 o ISO 9002. Al aprobar, emiten un certificado público y te registran, lo que reduce costos, elimina auditorías redundantes y da credibilidad internacional en la cadena de suministro. El estatus se mantiene con auditorías de vigilancia periódicas, usualmente semestrales, y auditorías completas cada cierto tiempo.",
+  "texto_nuevo": "Los estándares ISO 9000, adoptados por más de 100 países, ofrecen un marco no prescriptivo para asegurar calidad en diseño, producción, entrega y soporte. Para evitar que cada cliente audite por separado a su proveedor, surgen organismos certificadores de tercera parte que auditan la conformidad de tu sistema de gestión de calidad frente a normas como ISO 9001 o ISO 9002. Al aprobar, emiten un certificado público y te registran, lo que reduce costos, disminuye mucho las auditorías redundantes y da credibilidad internacional en la cadena de suministro. El estatus se mantiene con auditorías de vigilancia periódicas, usualmente semestrales, y auditorías completas cada cierto tiempo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11240, 11282",
+   "frase": "a means to reduce the redundant, non-value-adding effort of these multiple audits"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que reduce el esfuerzo redundante de auditorías, no que lo elimine.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-causas_especiales_y_comunes_variacion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "causas_especiales_y_comunes_variacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+  "texto_nuevo": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales suelen ser esporádicas, a menudo originadas en una variable dominante y comparativamente fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes suelen ser crónicas, por lo general originadas en la interacción de múltiples variables menores, y difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7973",
+   "frase": "Special causes are typically sporadic, and often have their origin in single variables"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice típicamente, a menudo, comparativamente y por lo general; el nodo quita esa cautela.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-checklist_estandares_auditoria-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "checklist_estandares_auditoria",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando revises cómo va algo en tu negocio, compara lo que realmente pasa contra un estándar claro: tus políticas escritas, una especificación o una norma de tu sector. Esto reduce que juzgues por sensación. Si no tienes ese estándar definido, primero defínelo antes de revisar nada, porque sin él nadie sabe qué se espera. Puedes usar una lista general de áreas a revisar o una lista detallada con puntos específicos a verificar.",
+  "texto_nuevo": "Cuando revises cómo va algo en tu negocio, compara lo que realmente pasa contra un estándar claro: tus políticas escritas, una especificación o una norma de tu sector. Esto reduce que juzgues por sensación. Si no tienes ese estándar definido, primero haz que lo defina quien es responsable de esa actividad antes de revisar nada, porque sin él nadie sabe qué se espera. Puedes usar una lista general de áreas a revisar o una lista detallada con puntos específicos a verificar.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10131",
+   "frase": "he asks those responsible for the activity to define a standard"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone que el estándar faltante lo definen los responsables de la actividad, a pedido de quien audita.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-catch_ball_comunicacion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "catch_ball_comunicacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo se repite hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
+  "texto_nuevo": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo puede repetirse varias veces hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9049",
+   "frase": "This process may be repeated several times until there is general satisfaction"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el proceso puede repetirse varias veces; el nodo lo da por hecho.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-catch_ball_comunicacion-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "catch_ball_comunicacion",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Plan estratégico acordado entre tú y las personas que te ayudan, logrado a través de varias rondas de retroalimentación",
+  "texto_nuevo": "Plan estratégico acordado entre tú y las personas que te ayudan, logrado a través de las rondas de retroalimentación que hagan falta",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9049",
+   "frase": "This process may be repeated several times until there is general satisfaction"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las rondas pueden repetirse; exigir varias endurece.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-061-catch_ball_comunicacion-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "catch_ball_comunicacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Repetir el diálogo entre ambas partes hasta llegar a un acuerdo sobre el plan final",
+  "texto_nuevo": "Repetir el diálogo entre ambas partes hasta llegar a un acuerdo sobre el plan final, incluida la decisión de qué hará cada quien con las áreas identificadas",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9057",
+   "frase": "Decisions as to what departments and functions should do about the areas"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye decidir qué hará cada área con los temas identificados, y ningún paso lo recoge.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-061-carta_de_control_shewhart-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "carta_de_control_shewhart",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si están dentro: asumir causas comunes, no tomar acción individual",
+  "texto_nuevo": "Si están dentro: asumir causas comunes, no tomar acción individual; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8009-8017",
+   "frase": "a process in statistical control was nevertheless improved by an order of magnitude"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que un proceso en control puede mejorarse atacando variables menores si hay defectos o el cliente pide más uniformidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ }
+]

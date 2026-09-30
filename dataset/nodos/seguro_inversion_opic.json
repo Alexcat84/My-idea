@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar si el proyecto de exportación implica inversión directa en el extranjero (construcción de instalaciones, equipos)",
     "Contactar OPIC InfoLine o FactsLine para determinar elegibilidad",
-    "Solicitar seguro de riesgo político o garantía de financiamiento según el tipo de proyecto",
+    "Solicitar seguro de riesgo político, garantía de financiamiento o préstamo directo según el tipo de proyecto",
     "Explorar el Small Business Center de OPIC si la empresa es PYME"
   ],
   "entregable_esperado": "Solicitud de seguro o financiamiento OPIC presentada para el proyecto de inversión en el exterior",
@@ -40,6 +40,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-057-seguro_inversion_opic-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar seguro de riesgo político o garantía de financiamiento según el tipo de proyecto",
+      "texto_nuevo": "Solicitar seguro de riesgo político, garantía de financiamiento o préstamo directo según el tipo de proyecto",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4375",
+        "frase": "offering political risk insurance, all-risk guarantees, and direct loans"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera tres instrumentos (seguro de riesgo político, garantías y préstamos directos); el paso omite los préstamos directos como opción.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

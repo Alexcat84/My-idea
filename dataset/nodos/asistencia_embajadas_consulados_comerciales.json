@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Asistencia de Embajadas y Consulados de EE.UU. en el Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los oficiales comerciales y económicos de las embajadas y consulados de EE.UU. brindan información detallada, arreglan presentaciones con empresas, individuos y funcionarios gubernamentales locales, y pueden ayudar a resolver disputas comerciales o problemas de cobro en el extranjero. Es recomendable contactarlos con anticipación y compartir información sobre la empresa y su experiencia internacional.",
+  "resumen_teorico": "Los oficiales comerciales y económicos de las embajadas y consulados de EE.UU. brindan información detallada y arreglan presentaciones con empresas, individuos y funcionarios gubernamentales locales. Es recomendable contactarlos con anticipación y compartir información sobre la empresa y su experiencia internacional.",
   "pasos_accionables": [
     "Contactar a la oficina local de U.S. Commercial Service para coordinar con la embajada del país destino",
     "Revisar la Country Commercial Guide del país a visitar",
     "Compartir con anticipación información de la empresa y objetivos del viaje",
-    "Solicitar apoyo en caso de disputas comerciales o problemas de cobro"
+    "Si un problema de cobro no se resuelve negociando con el cliente y la suma es significativa, pedir ayuda al U.S. Commercial Service, junto con tu banco y tu asesor legal"
   ],
   "entregable_esperado": "Contacto establecido con la embajada/consulado y briefing programado antes del viaje",
   "nodos_previos": [
@@ -39,6 +39,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-057-asistencia_embajadas_consulados_comerciales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los oficiales comerciales y económicos de las embajadas y consulados de EE.UU. brindan información detallada, arreglan presentaciones con empresas, individuos y funcionarios gubernamentales locales, y pueden ayudar a resolver disputas comerciales o problemas de cobro en el extranjero. Es recomendable contactarlos con anticipación y compartir información sobre la empresa y su experiencia internacional.",
+      "texto_nuevo": "Los oficiales comerciales y económicos de las embajadas y consulados de EE.UU. brindan información detallada y arreglan presentaciones con empresas, individuos y funcionarios gubernamentales locales. Es recomendable contactarlos con anticipación y compartir información sobre la empresa y su experiencia internacional.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4551",
+        "frase": "providing in-depth briefings and arranging introductions to appropriate companies, individuals, or foreign government officials"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye a los oficiales de embajadas y consulados informes y presentaciones, no la resolución de disputas o cobros.; Mismo defecto: función añadida a los oficiales de embajadas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-057-asistencia_embajadas_consulados_comerciales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar apoyo en caso de disputas comerciales o problemas de cobro",
+      "texto_nuevo": "Si un problema de cobro no se resuelve negociando con el cliente y la suma es significativa, pedir ayuda al U.S. Commercial Service, junto con tu banco y tu asesor legal",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4163",
+        "frase": "the U.S. Commercial Service, which can often resolve payment problems informally"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no ofrece apoyo de la embajada en disputas comerciales; la ayuda con cobros la da el U.S. Commercial Service, con banco y asesor legal, si la negociación falla.; La ayuda con problemas de pago se busca, según el libro, si la negociación falla y el monto es significativo; el paso pierde ambas condiciones.; Mismo defecto: las disputas comerciales en general no tienen respaldo en el libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }
