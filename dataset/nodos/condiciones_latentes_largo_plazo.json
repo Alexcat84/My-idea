@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Condiciones Latentes de Largo Plazo en Infraestructura",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador (en este caso, la eliminación de castores y una temporada lluviosa) la activa, causando un accidente. La debilidad venía de la construcción original y no daba señales visibles: solo un análisis geotécnico detallado podía revelarla. Es un caso muy especial, porque lo habitual es que las debilidades latentes se noten antes.",
+  "resumen_teorico": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador (en este caso, la eliminación de castores y una temporada lluviosa) la activa, causando un accidente. La debilidad venía de la construcción original y no daba señales visibles: solo un análisis geotécnico detallado podía revelarla. Es un caso muy especial, porque lo habitual es que las debilidades latentes sean potencialmente, o incluso realmente, evidentes antes de un mal resultado.",
   "pasos_accionables": [
     "Revisar el historial de diseño original de infraestructuras críticas, no solo su mantenimiento actual.",
     "Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales. Cuentan entre ellos la eliminación de fauna, patrones climáticos",
@@ -96,6 +96,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): La conclusión prescriptiva sobre las auditorías no está en el libro.; Se pierde que la falla era prácticamente indetectable, sin señales visibles, y que el libro lo presenta como un caso muy especial.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-047-condiciones_latentes_largo_plazo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador (en este caso, la eliminación de castores y una temporada lluviosa) la activa, causando un accidente. La debilidad venía de la construcción original y no daba señales visibles: solo un análisis geotécnico detallado podía revelarla. Es un caso muy especial, porque lo habitual es que las debilidades latentes se noten antes.",
+      "texto_nuevo": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador (en este caso, la eliminación de castores y una temporada lluviosa) la activa, causando un accidente. La debilidad venía de la construcción original y no daba señales visibles: solo un análisis geotécnico detallado podía revelarla. Es un caso muy especial, porque lo habitual es que las debilidades latentes sean potencialmente, o incluso realmente, evidentes antes de un mal resultado.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "584",
+        "frase": "More usually, latent weaknesses in defences are potentially—or even actually—evident prior to a bad outcome."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que lo habitual es que las debilidades sean potencialmente, o incluso realmente, evidentes; el nodo afirma que se notan.; Mismo defecto: 'potentially, or even actually, evident' pasa a una afirmación sin matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

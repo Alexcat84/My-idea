@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Lleva un scorecard de desempeño de cada proveedor",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, en vez de números que aparenten una precisión que no tienes, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te ayuda a ver a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre. Es solo una parte de gestionar al proveedor: su desempeño también tiene aspectos intangibles que el registro no recoge.",
+  "resumen_teorico": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te ayuda a ver a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre. Es solo una parte de gestionar al proveedor: su desempeño también tiene aspectos intangibles que el registro no recoge.",
   "pasos_accionables": [
     "Escribe una lista con todo lo que te importa de ese proveedor, partiendo de los criterios con que lo elegiste, como plazo, calidad, precio y trato, más cualquier condición del contrato que le dé un bono o un pago más rápido, y acuérdala con él: puede aportar puntos en los que no habías pensado.",
     "Cada vez que recibas un pedido o servicio, anota en palabras si cumplió, no cumplió o superó cada punto.",
@@ -119,6 +119,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el registro incluya todos los criterios de desempeño y los términos que dan bonos o pago más rápido; el paso lo reduce a una lista corta y omite los bonos.; Se pierde que las condiciones de bono o pago más rápido van al registro para medir su cumplimiento de forma objetiva. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-046-lleva_scorecard_desempeno_proveedor-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, en vez de números que aparenten una precisión que no tienes, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te ayuda a ver a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre. Es solo una parte de gestionar al proveedor: su desempeño también tiene aspectos intangibles que el registro no recoge.",
+      "texto_nuevo": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te ayuda a ver a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre. Es solo una parte de gestionar al proveedor: su desempeño también tiene aspectos intangibles que el registro no recoge.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5615-5617",
+        "frase": "Exceeds Requirement Meets Requirement Fails to Meet Requirement Comments"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El ejemplo del libro usa categorías en palabras con comentarios, pero no las contrapone a números ni da esa razón de falsa precisión.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

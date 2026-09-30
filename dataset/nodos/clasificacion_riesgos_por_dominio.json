@@ -10,7 +10,7 @@
     "Comparar el perfil de riesgo actual contra dominios similares usando referencias históricas",
     "Identificar si el enfoque de gestión de riesgos está desactualizado respecto a cambios tecnológicos o sociales recientes",
     "Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales",
-    "Definir cómo vas a vigilar cada tipo de riesgo que identifiques"
+    "Sugerencia de My Idea: definir cómo vas a vigilar cada tipo de riesgo que identifiques"
   ],
   "entregable_esperado": "Matriz de clasificación de riesgos por tipo (personal, operador, latente, terceros) específica para la organización, con nivel estimado de cada uno",
   "nodos_previos": [
@@ -40,5 +40,24 @@
   ],
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-047-clasificacion_riesgos_por_dominio-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir cómo vas a vigilar cada tipo de riesgo que identifiques",
+      "texto_nuevo": "Sugerencia de My Idea: definir cómo vas a vigilar cada tipo de riesgo que identifiques",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5603",
+        "frase": "the balance between the risks varies from domain to domain"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El pasaje de los cuatro tipos de riesgo por dominio no aconseja definir cómo vigilar cada riesgo; es consejo útil sin la etiqueta.; Mismo defecto: consejo práctico que el libro no da, sin afirmar hechos y sin etiqueta.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

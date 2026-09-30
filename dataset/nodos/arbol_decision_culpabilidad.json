@@ -10,7 +10,7 @@
     "Verificar consumo de sustancias no autorizadas al momento del acto",
     "Determinar si hubo violación consciente de procedimientos existentes y adecuados",
     "Aplicar la prueba de sustitución con un jurado de pares",
-    "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva",
+    "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva o incluso orientación de carrera",
     "Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), posible violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa"
   ],
   "entregable_esperado": "Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión",
@@ -59,6 +59,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que el historial no necesariamente pesa en la culpabilidad del acto, pero indica formación correctiva.; Misma condición perdida.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-047-arbol_decision_culpabilidad-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva",
+      "texto_nuevo": "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva o incluso orientación de carrera",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5061",
+        "frase": "it does indicate the necessity for corrective training or even career counselling"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos salidas, formación correctiva o incluso orientación de carrera; el paso deja solo la primera.; Mismo defecto: se cae la orientación de carrera de la enumeración del libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

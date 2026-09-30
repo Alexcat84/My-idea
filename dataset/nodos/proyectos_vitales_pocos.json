@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Priorización: Los Vitales Pocos vs los Útiles Muchos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y van a la vez, con personas distintas.",
+  "resumen_teorico": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y pueden llevarse a la vez, con personas distintas.",
   "pasos_accionables": [
     "Clasificar los proyectos potenciales de mejora según su impacto potencial",
     "Asignar equipos multifuncionales a los proyectos de alto impacto (vitales pocos)",
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concluye que ambos tipos son necesarios y se trabajan a la vez con personas distintas; esa conclusión se cae.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-046-proyectos_vitales_pocos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y van a la vez, con personas distintas.",
+      "texto_nuevo": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y pueden llevarse a la vez, con personas distintas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6704-6710",
+        "frase": "The vital few and useful many projects can be carried out simultaneously"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que ambos tipos pueden llevarse a cabo a la vez porque ocupan a personas distintas; el nodo lo da como hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

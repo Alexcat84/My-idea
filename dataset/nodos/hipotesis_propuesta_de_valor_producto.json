@@ -7,7 +7,7 @@
   "resumen_teorico": "Documenta tu propuesta de valor en tres partes: tu Visión de Producto (a dónde quieres llegar a largo plazo), las Características y Beneficios (qué hace tu producto y por qué la gente lo compraría, distinguiendo entre lo que construyes -features- y el problema que le resuelves al cliente -benefits-), y tu producto mínimo viable. Escríbelo en viñetas, no en párrafos largos.",
   "pasos_accionables": [
     "Escribe tu visión a 3-5 años en viñetas cortas",
-    "Haz una lista de máximo 10 características principales de tu producto y, partiendo de qué necesitas aprender y de quién, marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
+    "Haz una lista de máximo 10 características principales de tu producto y, partiendo de qué necesitas aprender y de quién, marca el grupo mínimo que funciona como producto por sí solo, resuelve al menos el problema central y demuestra el valor de tu producto: ese es tu producto mínimo viable",
     "Traduce cada característica en un beneficio visto con los ojos de tu cliente",
     "Escribe una historia breve explicando qué trabajo hará tu producto y qué problema resuelve",
     "Piensa aspectos clave: si hay efectos de red, cómo vas a cobrar, qué tan atado se queda el cliente contigo, cuánto te queda de margen, si la gente lo recomienda sola"
@@ -95,6 +95,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro empieza el MVP por qué necesitas aprender y de quién; el paso deja solo el recorte de funciones.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-048-hipotesis_propuesta_de_valor_producto-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Haz una lista de máximo 10 características principales de tu producto y, partiendo de qué necesitas aprender y de quién, marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
+      "texto_nuevo": "Haz una lista de máximo 10 características principales de tu producto y, partiendo de qué necesitas aprender y de quién, marca el grupo mínimo que funciona como producto por sí solo, resuelve al menos el problema central y demuestra el valor de tu producto: ese es tu producto mínimo viable",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5420",
+        "frase": "smallest possible group of features that will work as a stand-alone product"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro define el MVP como el grupo mínimo que funciona como producto por sí solo, resuelve al menos el problema central y demuestra el valor; el paso se queda solo con resolver el problema.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

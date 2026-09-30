@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Aplicar una regla fija de colchón de relleno",
   "fuente": "Requisitos de empaque de los couriers",
-  "resumen_teorico": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
+  "resumen_teorico": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto.",
   "pasos_accionables": [
     "Mide con una regla la distancia entre el producto y cada pared de la caja antes de cerrarla.",
     "Ajusta el tamaño de caja si la distancia es menor a cinco centímetros en algún lado.",
@@ -74,6 +74,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija un mínimo de unos 5 cm, no un rango con techo de 6 cm.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-047-aplicar_regla_fija_de_colchon_de_relleno-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
+      "texto_nuevo": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "26-30",
+        "frase": "todo vacío se rellena para que nada se mueva en tránsito"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): La fuente da las cifras de colchón sin justificar esa distancia; el motivo del aplastamiento y el costo se refiere al tamaño de la caja, no a los 5 cm.; La fuente no promete menos reclamos ni una capacitación más fácil.; Mismo defecto que la marca 0: justificación causal de la distancia que la fuente no da.; Mismo defecto que la marca 1: resultado prometido que la fuente no afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Mantenimiento Centrado en Confiabilidad (RCM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+  "resumen_teorico": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos, equipos redundantes, elementos pequeños y simples y activos con baja tasa de falla), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
   "pasos_accionables": [
     "Clasificar todos los activos según su criticidad y su patrón de falla (reactivo, preventivo, predictivo)",
     "Para activos reactivos, permitir operación hasta falla",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro separa preventivo de predictivo también por el patrón de falla, no solo por criticidad.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-046-rcm_reliability_centered_maintenance-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+      "texto_nuevo": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos, equipos redundantes, elementos pequeños y simples y activos con baja tasa de falla), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13621",
+        "frase": "noncritical components, redundant equipment, small simple items, and assets with low failure rates"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone en la categoría reactiva también los equipos redundantes, los elementos pequeños y simples y los activos con baja tasa de falla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

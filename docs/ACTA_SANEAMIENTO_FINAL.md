@@ -793,3 +793,10 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   de que salga de tus manos" pasaba a "después de"). Es una trampa válida del plan original, y ninguno de los tres
   lectores la cazó. Queda como **fallo de método** en ese lote. Es el mismo punto ciego del orden temporal que ya se
   había visto en la etapa 1, y la instrucción v3 no lo cerró.
+- **Lote 129 (contrario, nodo `diseno_consecuencias_no_intencionadas`):** otra vez el orden temporal. La corrección,
+  reversión o mitigación pasaba de hacerse "antes de escalar una solución" a hacerse "después de". Ninguno de los tres
+  lectores la cazó. Queda como **fallo de método** en ese lote.
+- **Lectura de los dos casos:** las dos trampas de contrario que nadie cazó en el pase cambian "antes de" por "después
+  de". Las demás trampas de contrario sí se cazaron. El punto ciego es concreto: la inversión de orden temporal
+  dentro de una frase que por lo demás sigue siendo verdad. La muestra de cierre lo mide con trampas del mismo
+  diseño, sin retocarlas.

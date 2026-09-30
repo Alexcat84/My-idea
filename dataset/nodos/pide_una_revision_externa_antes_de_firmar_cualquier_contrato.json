@@ -4,13 +4,13 @@
   "dominio": "compras",
   "titulo_concepto": "Pide una revisión externa antes de firmar cualquier contrato",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Antes de firmar, pide que alguien más lea el contrato completo: un colega con más experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si no tienes formación en contratos o si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o cláusulas faltantes que tú, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza con más experiencia que tú en compras y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo esté mal. Esta revisión no garantiza cubrirlo todo, pero sí la mayoría; si algo queda fuera, se puede corregir después con una enmienda por escrito acordada con el proveedor.",
+  "resumen_teorico": "Antes de firmar, pide que alguien más lea el contrato completo: un colega con más experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si no tienes formación en contratos. Una segunda mirada a menudo encuentra huecos, ambigüedades o cláusulas faltantes que tú, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza con más experiencia que tú en compras y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo esté mal. Esta revisión no garantiza cubrirlo todo; si algo queda fuera, se puede corregir después con una enmienda por escrito acordada con el proveedor.",
   "pasos_accionables": [
     "Termina el borrador del contrato con todos los términos que negociaste incluidos.",
     "Envíalo a al menos una persona de confianza con más experiencia en contratos o en tu tipo de negocio.",
     "Pídele que marque cualquier cláusula que le parezca ambigua, incompleta o riesgosa.",
     "Agrega la información que falte antes de mandar el contrato al proveedor para su firma.",
-    "Si no tienes formación en contratos o el monto es alto, paga una consulta puntual con un abogado solo para esa revisión."
+    "Si no tienes formación en contratos, paga una consulta puntual con un abogado solo para esa revisión."
   ],
   "entregable_esperado": "Un contrato revisado por un segundo par de ojos, con los huecos corregidos antes de firmar.",
   "nodos_previos": [
@@ -158,6 +158,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se pierde la condición del libro para acudir al abogado: no tener formación en contratos.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-046-pide_una_revision_externa_antes_de_firmar_cualquier_contrato-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de firmar, pide que alguien más lea el contrato completo: un colega con más experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si no tienes formación en contratos o si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o cláusulas faltantes que tú, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza con más experiencia que tú en compras y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo esté mal. Esta revisión no garantiza cubrirlo todo, pero sí la mayoría; si algo queda fuera, se puede corregir después con una enmienda por escrito acordada con el proveedor.",
+      "texto_nuevo": "Antes de firmar, pide que alguien más lea el contrato completo: un colega con más experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si no tienes formación en contratos. Una segunda mirada a menudo encuentra huecos, ambigüedades o cláusulas faltantes que tú, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza con más experiencia que tú en compras y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo esté mal. Esta revisión no garantiza cubrirlo todo; si algo queda fuera, se puede corregir después con una enmienda por escrito acordada con el proveedor.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5229-5231",
+        "frase": "Frequently another person will think of things that need to be there"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): Cubrir la mayoría se atribuye en el libro a la revisión amplia, no a la lectura de una persona de confianza.; El libro aconseja un abogado si no tienes formación en contratos; el monto como criterio no aparece.; El libro dice que a menudo otra persona piensa en lo que faltaba, no que siempre lo encuentre.; El libro dice que con frecuencia otra persona ve lo que faltaba, no siempre.; El libro promete cubrir la mayoría solo con la revisión amplia (legal, supervisor, gerente y dueño de la compra); atribuirlo a una sola lectura es un resultado que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-046-pide_una_revision_externa_antes_de_firmar_cualquier_contrato-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si no tienes formación en contratos o el monto es alto, paga una consulta puntual con un abogado solo para esa revisión.",
+      "texto_nuevo": "Si no tienes formación en contratos, paga una consulta puntual con un abogado solo para esa revisión.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5209",
+        "frase": "consult an attorney if you are not trained in contracts"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro pone como condición para consultar a un abogado no tener formación en contratos; el monto alto es un criterio añadido.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

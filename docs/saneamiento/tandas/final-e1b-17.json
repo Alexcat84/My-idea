@@ -1,0 +1,471 @@
+[
+ {
+  "id": "final-e1b-046-seleccion_modelo_ia_adecuado-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "seleccion_modelo_ia_adecuado",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir la complejidad de la tarea que la IA debe resolver",
+  "texto_nuevo": "Sugerencia de My Idea: definir la complejidad de la tarea que la IA debe resolver",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "219",
+   "frase": "small, specialized LLMs that are limited in capability but also very cheap to run"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro solo describe los tipos de LLM y sus usos; no da como paso definir la complejidad de la tarea.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-046-simulacion_clientes_ia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "simulacion_clientes_ia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los LLMs pueden adoptar personas de consumidores con distintos niveles de ingreso y comportamientos de compra, generando estimaciones de disposición a pagar (willingness to pay) consistentes con estudios de mercado reales. Esto permite 'entrevistar' a un cliente simulado antes de hablar con clientes reales, como forma de práctica y para obtener insights iniciales, aunque nunca debe reemplazar la validación con clientes reales.",
+  "texto_nuevo": "Los LLMs pueden adoptar personas de consumidores con distintos niveles de ingreso y comportamientos de compra, generando estimaciones de disposición a pagar (willingness to pay) consistentes con estudios de mercado reales. Esto permite 'entrevistar' a un cliente simulado antes de hablar con clientes reales, como forma de práctica y para obtener insights iniciales, aunque no conviene usarlo como reemplazo de la investigación de mercado más tradicional.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "526",
+   "frase": "While I wouldn’t use that as a replacement for more traditional market research"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro expresa una reserva personal (no lo usaría como reemplazo de la investigación de mercado más tradicional), no una prohibición absoluta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-principio_humano_en_el_loop-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "principio_humano_en_el_loop",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve, sobre todo en lo que más te puede costar si sale mal, como plata, temas legales o salud.",
+  "texto_nuevo": "La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "420",
+   "frase": "you will need to be able to check the AI for hallucinations and lies"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro pide revisar las alucinaciones en general; no prioriza áreas ni enumera dinero, temas legales o salud.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-prompting_por_persona_ia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "prompting_por_persona_ia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los modelos de IA con los que conversas cambian de tono, agresividad y contenido según el papel que tú les asignas al empezar la conversación. El experimento con un asistente de IA con acceso a internet (conocido como Sydney) muestra que la misma pregunta obtiene respuestas hostiles, empáticas o neutras según te presentes como antagonista, como profesor, o simplemente pidas un análisis. Esto significa que la forma en que planteas tus preguntas al inicio cambia el tono y el contenido de lo que recibes, y a menudo puede mejorarlo, algo clave cuando usas IA para investigar tu mercado, atender clientes o generar contenido.",
+  "texto_nuevo": "Los modelos de IA con los que conversas cambian de tono, agresividad y contenido según el papel que tú les asignas al empezar la conversación. El experimento con un asistente de IA con acceso a internet muestra que la misma pregunta obtiene respuestas hostiles, empáticas o neutras según te presentes como antagonista, como profesor, o simplemente pidas un análisis. Esto significa que la forma en que planteas tus preguntas al inicio cambia el tono y el contenido de lo que recibes, y puede mejorarlo, algo clave cuando usas IA para investigar tu mercado, atender clientes o generar contenido.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "447",
+   "frase": "how defining an AI persona can improve your results"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura; modo quitar; doble lectura ciega, arbitro): El experimento se hace con Bing ya relanzado sin la personalidad Sydney; llamarlo Sydney es un dato que el libro no sostiene.; El libro dice que definir la persona puede ayudar o mejorar los resultados, sin afirmar que ocurra a menudo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-practica_deliberada_asistida_ia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "practica_deliberada_asistida_ia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La verdadera maestría no proviene de la repetición simple sino de la práctica deliberada: retroalimentación constante, dificultad creciente y mentoría estructurada. Tradicionalmente esto requiere coaches humanos escasos y costosos. La IA puede actuar como un mentor disponible las 24 horas, ofreciendo retroalimentación instantánea, simulaciones realistas (como pitches ante un 'inversor IA') y seguimiento del progreso, acelerando la curva de aprendizaje de founders y equipos. Hoy lo logra solo de forma limitada: todavía alucina y no conecta bien conceptos complejos.",
+  "texto_nuevo": "La verdadera maestría no proviene de la repetición simple sino de la práctica deliberada: retroalimentación constante, dificultad creciente y mentoría estructurada. Tradicionalmente esto requiere coaches humanos escasos. La IA puede actuar como un mentor disponible las 24 horas, ofreciendo retroalimentación instantánea, simulaciones realistas (como pitches ante un 'inversor IA') y seguimiento del progreso, acelerando la curva de aprendizaje de founders y equipos. Hoy lo logra solo de forma limitada: todavía alucina y no conecta bien conceptos complejos.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "1316",
+   "frase": "Good coaches are rare, and are skilled experts in their own right"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que los buenos coaches son escasos y expertos, no que sean costosos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-lleva_scorecard_desempeno_proveedor-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "lleva_scorecard_desempeno_proveedor",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, en vez de números que aparenten una precisión que no tienes, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te ayuda a ver a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre. Es solo una parte de gestionar al proveedor: su desempeño también tiene aspectos intangibles que el registro no recoge.",
+  "texto_nuevo": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te ayuda a ver a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre. Es solo una parte de gestionar al proveedor: su desempeño también tiene aspectos intangibles que el registro no recoge.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5615-5617",
+   "frase": "Exceeds Requirement Meets Requirement Fails to Meet Requirement Comments"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El ejemplo del libro usa categorías en palabras con comentarios, pero no las contrapone a números ni da esa razón de falsa precisión.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-pide_una_revision_externa_antes_de_firmar_cualquier_contrato-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de firmar, pide que alguien más lea el contrato completo: un colega con más experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si no tienes formación en contratos o si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o cláusulas faltantes que tú, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza con más experiencia que tú en compras y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo esté mal. Esta revisión no garantiza cubrirlo todo, pero sí la mayoría; si algo queda fuera, se puede corregir después con una enmienda por escrito acordada con el proveedor.",
+  "texto_nuevo": "Antes de firmar, pide que alguien más lea el contrato completo: un colega con más experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si no tienes formación en contratos. Una segunda mirada a menudo encuentra huecos, ambigüedades o cláusulas faltantes que tú, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza con más experiencia que tú en compras y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo esté mal. Esta revisión no garantiza cubrirlo todo; si algo queda fuera, se puede corregir después con una enmienda por escrito acordada con el proveedor.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5229-5231",
+   "frase": "Frequently another person will think of things that need to be there"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): Cubrir la mayoría se atribuye en el libro a la revisión amplia, no a la lectura de una persona de confianza.; El libro aconseja un abogado si no tienes formación en contratos; el monto como criterio no aparece.; El libro dice que a menudo otra persona piensa en lo que faltaba, no que siempre lo encuentre.; El libro dice que con frecuencia otra persona ve lo que faltaba, no siempre.; El libro promete cubrir la mayoría solo con la revisión amplia (legal, supervisor, gerente y dueño de la compra); atribuirlo a una sola lectura es un resultado que el libro no da.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-pide_una_revision_externa_antes_de_firmar_cualquier_contrato-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si no tienes formación en contratos o el monto es alto, paga una consulta puntual con un abogado solo para esa revisión.",
+  "texto_nuevo": "Si no tienes formación en contratos, paga una consulta puntual con un abogado solo para esa revisión.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5209",
+   "frase": "consult an attorney if you are not trained in contracts"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro pone como condición para consultar a un abogado no tener formación en contratos; el monto alto es un criterio añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-046-ten_reglas_claras_para_avisar_a_proveedores_no_elegidos-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si las ofertas quedaron muy distintas entre sí, espera a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido; si quedaron parejas, puedes avisar antes. A quien entregó tarde o incompleto, avísale por escrito en cuanto cierre el plazo, con ese motivo.",
+  "texto_nuevo": "Si las ofertas quedaron muy distintas entre sí, quizá te convenga esperar a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido; si quedaron parejas, probablemente es seguro avisar antes. A quien entregó tarde o incompleto, avísale por escrito en cuanto cierre el plazo, con ese motivo.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5451",
+   "frase": "areas of the RFX are wide, then you may want to wait"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que quizá convenga esperar y que avisar antes es probablemente seguro; el paso lo vuelve orden y permiso sin matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-046-ten_reglas_claras_para_avisar_a_proveedores_no_elegidos-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No reveles información confidencial de tu negocio ni del proveedor ganador, ni los detalles de la propuesta ganadora, ni en qué lugar quedó cada proveedor en tu evaluación.",
+  "texto_nuevo": "No reveles información confidencial de tu negocio ni del proveedor ganador, ni los detalles de la propuesta ganadora, ni en qué lugar quedó cada proveedor en tu evaluación, ni los méritos o la posición técnica de los competidores, ni los márgenes de ganancia tuyos o de cualquier proveedor.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5463-5465",
+   "frase": "details of the winning proposal, and the merits or technical standings of competitors"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso omite los méritos o la posición técnica de los competidores, que el libro manda no compartir.; La lista del libro de lo que no se revela incluye además los méritos o la posición técnica de los competidores y los márgenes de ganancia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-046-ten_reglas_claras_para_avisar_a_proveedores_no_elegidos-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ten_reglas_claras_para_avisar_a_proveedores_no_elegidos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu reputación y tu poder de negociación futuro. Si las ofertas quedaron muy distintas, conviene esperar a tener la decisión final antes de notificar, porque si los descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido; si quedaron parejas, avisar antes probablemente es seguro. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
+  "texto_nuevo": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu poder de negociación futuro. Si las ofertas quedaron muy distintas, conviene esperar a tener la decisión final antes de notificar, porque si los descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido; si quedaron parejas, avisar antes probablemente es seguro. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5451",
+   "frase": "You have a better position for negotiation when these suppliers have no idea"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro liga el aviso a la posición negociadora; el efecto sobre la reputación no aparece.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-ten_un_checklist_de_clausulas_de_contrato-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ten_un_checklist_de_clausulas_de_contrato",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantías, quién es responsable de qué, requisitos de seguro si aplica, cómo se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y qué pasa si alguna parte incumple. No todos los contratos necesitan cada cláusula, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrió. Si no conoces alguno de estos conceptos o no tienes formación en contratos, consulta a alguien con más experiencia o a un abogado.",
+  "texto_nuevo": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantías, quién es responsable de qué, requisitos de seguro si aplica, cómo se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y qué pasa si alguna parte incumple. No todos los contratos necesitan cada cláusula, y algunos pueden necesitar términos que no están en la lista, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrió. Si no conoces alguno de estos conceptos o no tienes formación en contratos, consulta a alguien con más experiencia o a un abogado.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5223",
+   "frase": "some contracts may need terms that are not listed"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae que algunos contratos pueden necesitar términos que no están en la lista, lo que limita lo que la lista cubre.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-rcm_reliability_centered_maintenance-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "rcm_reliability_centered_maintenance",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+  "texto_nuevo": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos, equipos redundantes, elementos pequeños y simples y activos con baja tasa de falla), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "13621",
+   "frase": "noncritical components, redundant equipment, small simple items, and assets with low failure rates"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone en la categoría reactiva también los equipos redundantes, los elementos pequeños y simples y los activos con baja tasa de falla.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-proyectos_vitales_pocos-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "proyectos_vitales_pocos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y van a la vez, con personas distintas.",
+  "texto_nuevo": "La mayoría de las ganancias medibles de un programa de mejora provienen de una minoría de proyectos multifuncionales de alto impacto ('vitales pocos'), mientras que la mayoría de los proyectos ('útiles muchos') son departamentales y de bajo impacto individual pero valiosos para la participación del personal. Ambos son necesarios y pueden llevarse a la vez, con personas distintas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6704-6710",
+   "frase": "The vital few and useful many projects can be carried out simultaneously"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que ambos tipos pueden llevarse a cabo a la vez porque ocupan a personas distintas; el nodo lo da como hecho.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-046-programa_auditoria_calidad-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "programa_auditoria_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer el alcance: qué partes de tu negocio, qué líneas de producto, qué sistemas de calidad o qué actividades específicas vas a revisar",
+  "texto_nuevo": "Establecer el alcance: qué partes de tu negocio, qué líneas de producto, qué sistemas de calidad, qué controles de producto y de proceso o qué actividades específicas vas a revisar",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9997-10000",
+   "frase": "evaluate whether current product and process controls (including measurement) are in place"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera cinco formas de repartir la materia de auditoría y el paso omite la de los sistemas de control de producto y proceso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-046-principios_medicion_efectiva-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "principios_medicion_efectiva",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de implementar sistemas de medición, es necesario considerar diez principios fundamentales que pueden ayudar a que las mediciones sean útiles y accionables: definir el propósito, enfocarse en el cliente, priorizar utilidad sobre facilidad de recolección, fomentar participación de todos los niveles, medir cerca en el tiempo de la actividad, incluir indicadores adelantados y rezagados, planificar de antemano el análisis, buscar simplicidad, evaluar periódicamente la precisión y reconocer que las mediciones por sí solas no mejoran los procesos.",
+  "texto_nuevo": "Antes de implementar sistemas de medición, es necesario considerar diez principios fundamentales que pueden ayudar a que las mediciones sean útiles y accionables: definir el propósito, enfocarse en el cliente, priorizar utilidad sobre facilidad de recolección, fomentar participación de todos los niveles, medir cerca en el tiempo de la actividad, incluir indicadores concurrentes, adelantados y rezagados, planificar de antemano el análisis, buscar simplicidad, evaluar periódicamente la precisión y reconocer que las mediciones por sí solas no mejoran los procesos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18992",
+   "frase": "Provide not only concurrent indicators but also leading and lagging indicators"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide indicadores concurrentes además de adelantados y rezagados; el resumen omite los concurrentes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-047-condiciones_latentes_largo_plazo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "condiciones_latentes_largo_plazo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador (en este caso, la eliminación de castores y una temporada lluviosa) la activa, causando un accidente. La debilidad venía de la construcción original y no daba señales visibles: solo un análisis geotécnico detallado podía revelarla. Es un caso muy especial, porque lo habitual es que las debilidades latentes se noten antes.",
+  "texto_nuevo": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador (en este caso, la eliminación de castores y una temporada lluviosa) la activa, causando un accidente. La debilidad venía de la construcción original y no daba señales visibles: solo un análisis geotécnico detallado podía revelarla. Es un caso muy especial, porque lo habitual es que las debilidades latentes sean potencialmente, o incluso realmente, evidentes antes de un mal resultado.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "584",
+   "frase": "More usually, latent weaknesses in defences are potentially—or even actually—evident prior to a bad outcome."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que lo habitual es que las debilidades sean potencialmente, o incluso realmente, evidentes; el nodo afirma que se notan.; Mismo defecto: 'potentially, or even actually, evident' pasa a una afirmación sin matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-047-arbol_decision_culpabilidad-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "arbol_decision_culpabilidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva",
+  "texto_nuevo": "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva o incluso orientación de carrera",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "5061",
+   "frase": "it does indicate the necessity for corrective training or even career counselling"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos salidas, formación correctiva o incluso orientación de carrera; el paso deja solo la primera.; Mismo defecto: se cae la orientación de carrera de la enumeración del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-047-clasificacion_riesgos_por_dominio-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "clasificacion_riesgos_por_dominio",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir cómo vas a vigilar cada tipo de riesgo que identifiques",
+  "texto_nuevo": "Sugerencia de My Idea: definir cómo vas a vigilar cada tipo de riesgo que identifiques",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "5603",
+   "frase": "the balance between the risks varies from domain to domain"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El pasaje de los cuatro tipos de riesgo por dominio no aconseja definir cómo vigilar cada riesgo; es consejo útil sin la etiqueta.; Mismo defecto: consejo práctico que el libro no da, sin afirmar hechos y sin etiqueta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-047-aplicar_regla_fija_de_colchon_de_relleno-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "aplicar_regla_fija_de_colchon_de_relleno",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto. Esta distancia no es un capricho: da lugar suficiente para el material de relleno sin que la caja quede tan grande que se aplaste o encarezca el envío. Aplicar esta misma regla cada vez que empacas, en lugar de improvisar según el pedido, reduce reclamos y facilita capacitar a quien te ayude a empacar.",
+  "texto_nuevo": "No adivines cuánto relleno poner en cada caja: usa una regla fija. Los couriers coinciden en una cifra similar: deja como mínimo unos cinco centímetros de separación entre el producto y cada pared de la caja (algunos piden seis o hasta siete y medio), y llena por completo cualquier espacio vacío para que nada se desplace durante el trayecto.",
+  "cita": {
+   "libro": "Requisitos de empaque de los couriers",
+   "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+   "lineas": "26-30",
+   "frase": "todo vacío se rellena para que nada se mueva en tránsito"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): La fuente da las cifras de colchón sin justificar esa distancia; el motivo del aplastamiento y el costo se refiere al tamaño de la caja, no a los 5 cm.; La fuente no promete menos reclamos ni una capacitación más fácil.; Mismo defecto que la marca 0: justificación causal de la distancia que la fuente no da.; Mismo defecto que la marca 1: resultado prometido que la fuente no afirma.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-047-elegir_caja_correcta-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "elegir_caja_correcta",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Descarta cualquier caja gastada, aplastada o perforada, sin excepción.",
+  "texto_nuevo": "Descarta cualquier caja gastada, aplastada, perforada o que perdió rigidez, sin excepción.",
+  "cita": {
+   "libro": "Requisitos de empaque de los couriers",
+   "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+   "lineas": "10-12",
+   "frase": "JAMÁS reusar cajas gastadas, aplastadas, perforadas o que perdieron rigidez"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración de la fuente trae cuatro casos; el paso pierde la caja que perdió rigidez.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-047-seesaw_salario_equity-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "seesaw_salario_equity",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Existe una relación negativa entre el salario en efectivo y la participación en equity ofrecida a ejecutivos y empleados clave: a mayor salario, menor equity, y viceversa. Diseñar paquetes de compensación implica decidir entre alto salario/bajo equity o bajo salario/alto equity, lo cual atrae distintos perfiles de riesgo y alinea incentivos de forma diferente (crecimiento de largo plazo vs. seguridad inmediata). Esta decisión debe alinearse con tu perfil de riesgo, tus objetivos y tu 'burn rate', y ajustarse según el cargo y la etapa de madurez de tu startup, ya que la dilución esperada varía con el tiempo. Mantener consistencia entre las personas que contratas evita conflictos futuros, especialmente si la empresa crece en valor o se vende.",
+  "texto_nuevo": "Existe una relación negativa entre el salario en efectivo y la participación en equity ofrecida a ejecutivos y empleados clave: a mayor salario, menor equity, y viceversa. Diseñar paquetes de compensación implica decidir entre alto salario/bajo equity o bajo salario/alto equity, lo cual atrae distintos perfiles de riesgo y alinea incentivos de forma diferente (crecimiento de largo plazo vs. seguridad inmediata). Esta decisión debe ajustarse según el cargo y la etapa de madurez de tu startup, ya que la dilución esperada varía con el tiempo.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "2527-2531",
+   "frase": "Some startups choose to have all hires on one side of the seesaw"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que la posición en el balancín depende de las motivaciones del fundador y del empleado; no fija la norma de alinearla con perfil de riesgo, objetivos y burn rate.; El libro presenta como válidas ambas opciones, todos en un lado o que cada contratado elija; no afirma que la consistencia evite conflictos.; Mismo defecto que la marca 0: el perfil de riesgo que se sondea es el del candidato, no el del fundador.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-047-recursos_de_segundo_nivel-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "recursos_de_segundo_nivel",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No tienes que elegir entre los dos extremos: un socio estrella o ir solo, un ejecutivo con mucha experiencia o alguien sin ella, un inversionista líder o financiarte con lo tuyo. Puedes optar por recursos intermedios, como rondas más pequeñas, que aportan bastante valor pero amenazan menos tu control. Frank Addante armó un equipo B para StrongMail buscando gente por Craigslist, con eso bajó el gasto mensual y ganó tiempo para probar su idea, a costa de dirigir a un equipo poco motivado, antes de cambiar ese equipo por talento de primer nivel una vez que levantó capital.",
+  "texto_nuevo": "No tienes que elegir entre los dos extremos: un socio estrella o ir solo, un ejecutivo con mucha experiencia o alguien sin ella, un inversionista líder o financiarte con lo tuyo. Puedes optar por recursos intermedios, como rondas más pequeñas, que pueden aportar bastante valor pero amenazan menos tu control. Frank Addante armó un equipo B para StrongMail buscando gente por Craigslist, con eso bajó el gasto mensual y ganó tiempo para probar su idea, a costa de dirigir a un equipo poco motivado, antes de cambiar ese equipo por talento de primer nivel una vez que levantó capital.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "3478",
+   "frase": "second-tier resources that may add more value (but not the maximum)"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los recursos intermedios pueden aportar más valor ('may add'); el nodo lo da por seguro.; Mismo defecto: el 'may' del libro se pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-047-puzzle_prima_capital_privado-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "puzzle_prima_capital_privado",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aunque se asume que al fundar buscas maximizar tu ganancia financiera, la evidencia muestra que, en promedio, ganas igual o menos que si hubieras invertido en mercados públicos o trabajado en un empleo tradicional (en conjunto, un 35% menos en 10 años que en un empleo). Esto sugiere que lo que realmente te mueve al fundar no es solo la riqueza, sino también el control, y que si eliges quedarte con el control ('King'), sacrificas riqueza potencial de forma sistemática.",
+  "texto_nuevo": "Aunque se asume que al fundar buscas maximizar tu ganancia financiera, la evidencia muestra que, en promedio, ganas igual o menos que si hubieras invertido en mercados públicos o trabajado en un empleo tradicional (en conjunto, un 35% menos en 10 años que en un empleo). Esto sugiere que lo que realmente te mueve al fundar no es solo la riqueza, sino también el control, la pasión por la idea y otras motivaciones, y que si eliges quedarte con el control ('King'), sacrificas riqueza potencial de forma sistemática.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "3698",
+   "frase": "many other founders are motivated by control, passion for the idea, and other motivations"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro explica la prima ausente por el control, la pasión por la idea y otras motivaciones; el nodo deja solo el control.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-048-hipotesis_propuesta_de_valor_producto-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "hipotesis_propuesta_de_valor_producto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Haz una lista de máximo 10 características principales de tu producto y, partiendo de qué necesitas aprender y de quién, marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
+  "texto_nuevo": "Haz una lista de máximo 10 características principales de tu producto y, partiendo de qué necesitas aprender y de quién, marca el grupo mínimo que funciona como producto por sí solo, resuelve al menos el problema central y demuestra el valor de tu producto: ese es tu producto mínimo viable",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "5420",
+   "frase": "smallest possible group of features that will work as a stand-alone product"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro define el MVP como el grupo mínimo que funciona como producto por sí solo, resuelve al menos el problema central y demuestra el valor; el paso se queda solo con resolver el problema.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-048-keep_customers_strategy-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "keep_customers_strategy",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Retener a un cliente cuesta entre 5 y 10 veces menos que adquirir uno nuevo, pero ninguna táctica funciona si antes no cumples lo prometido con un gran producto y un gran servicio. Sobre esa base, conviene probar tácticas de bajo costo durante el customer discovery: programas de lealtad (su impacto tarda en medirse), llamadas de seguimiento, encuestas de satisfacción, boletines de producto y monitoreo de quejas. Cada táctica debe evaluarse por su costo y retorno individual, con A/B testing de incentivos y mensajes. Identifica a tus clientes más leales mediante umbrales de gasto o compra, y diséñales un onboarding especial con beneficios exclusivos, comunicando el logro de ese nivel como un hito, no como una simple transacción. Organiza todo por cohortes para saber quién se queda, quién se va y por qué, y usa esos datos para justificar inversión en experiencia postventa frente a marketing de adquisición.",
+  "texto_nuevo": "Retener a un cliente cuesta entre 5 y 10 veces menos que adquirir uno nuevo, pero ninguna táctica funciona si antes no cumples lo prometido con un gran producto y un gran servicio. Sobre esa base, conviene probar tácticas de bajo costo durante el customer discovery: programas de lealtad (su impacto tarda en medirse), llamadas de seguimiento, encuestas de satisfacción, boletines de producto y monitoreo de quejas. Donde sea posible, porque al principio hay pocos clientes, cada táctica debe evaluarse por su costo y retorno individual, con A/B testing de incentivos y mensajes. Identifica a tus clientes más leales mediante umbrales de gasto o compra, y diséñales un onboarding especial con beneficios exclusivos, comunicando el logro de ese nivel como un hito, no como una simple transacción. Organiza todo por cohortes para saber quién se queda, quién se va y por qué, y usa esos datos para justificar inversión en experiencia postventa frente a marketing de adquisición.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12045",
+   "frase": "Where possible (recognizing that it’s early and there aren’t many customers yet), monitor the costs"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide medir costo y retorno de cada programa por separado solo donde sea posible, porque es pronto y hay pocos clientes; el resumen lo vuelve exigencia sin esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-048-hipotesis_de_tamano_de_mercado-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "hipotesis_de_tamano_de_mercado",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Estima el mercado total (TAM) usando reportes de la industria, comparándolo con tus competidores y conversando con inversionistas y clientes",
+  "texto_nuevo": "Estima el mercado total (TAM) usando informes de analistas de la industria, estudios de mercado, comunicados de prensa de tus competidores, bibliotecas universitarias y conversaciones con inversionistas y clientes",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "5010",
+   "frase": "Use industry-analyst reports, market-research reports, competitors’ press releases, university libraries"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro usa los comunicados de prensa de los competidores como fuente para dimensionar, no una comparación con ellos, y el paso pierde estudios de mercado y bibliotecas universitarias de la lista de fuentes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ }
+]

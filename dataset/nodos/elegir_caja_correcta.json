@@ -6,7 +6,7 @@
   "fuente": "Requisitos de empaque de los couriers",
   "resumen_teorico": "La caja que uses determina si tu producto llega entero y si pagas de más por el envío. Una caja gastada, aplastada o sin rigidez ya perdió su capacidad de proteger. El tamaño también importa en ambas direcciones: una caja muy ajustada no deja espacio para el acolchado, y una muy grande se aplasta o cuesta más porque los couriers cobran según el volumen que ocupa, no solo el peso real. Para contenido pesado o delicado, una caja de doble pared resiste mejor el manejo. Antes de armar tu envío, conviene preguntar directamente a tu courier cuál es su método para calcular el peso por volumen.",
   "pasos_accionables": [
-    "Descarta cualquier caja gastada, aplastada o perforada, sin excepción.",
+    "Descarta cualquier caja gastada, aplastada, perforada o que perdió rigidez, sin excepción.",
     "Elige el tamaño que deje espacio para el relleno sin quedar demasiado holgado.",
     "Usa caja de doble pared cuando el contenido sea pesado o frágil.",
     "Pregunta a tu courier cuál es su fórmula de peso por volumen antes de armar el envío.",
@@ -182,6 +182,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que la fórmula del peso por volumen varíe entre empresas ni que se actualice con el tiempo.; El libro solo manda no reusar cajas cansadas; que ningún relleno lo compense es un efecto añadido.; Mismo porqué inventado que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-047-elegir_caja_correcta-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Descarta cualquier caja gastada, aplastada o perforada, sin excepción.",
+      "texto_nuevo": "Descarta cualquier caja gastada, aplastada, perforada o que perdió rigidez, sin excepción.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "10-12",
+        "frase": "JAMÁS reusar cajas gastadas, aplastadas, perforadas o que perdieron rigidez"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración de la fuente trae cuatro casos; el paso pierde la caja que perdió rigidez.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Principio 2: Sé tú quien decide, no la IA (mantente en el ciclo)",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve, sobre todo en lo que más te puede costar si sale mal, como plata, temas legales o salud.",
+  "resumen_teorico": "La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve.",
   "pasos_accionables": [
     "Antes de que algo generado por IA llegue a un cliente o se ejecute, revísalo tú mismo",
     "Aprende a reconocer cuándo la IA está inventando: citas que no existen, datos que no puedes comprobar, respuestas dadas con demasiada seguridad",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): 'Sin excepción' endurece: el libro admite tareas automatizadas que no se revisan, hoy pocas.; Mismo defecto: el libro reconoce una categoría pequeña de tareas sin revisión.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-046-principio_humano_en_el_loop-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve, sobre todo en lo que más te puede costar si sale mal, como plata, temas legales o salud.",
+      "texto_nuevo": "La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "420",
+        "frase": "you will need to be able to check the AI for hallucinations and lies"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro pide revisar las alucinaciones en general; no prioriza áreas ni enumera dinero, temas legales o salud.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo el papel que le das a la IA cambia su tono (prompting por persona)",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Los modelos de IA con los que conversas cambian de tono, agresividad y contenido según el papel que tú les asignas al empezar la conversación. El experimento con un asistente de IA con acceso a internet (conocido como Sydney) muestra que la misma pregunta obtiene respuestas hostiles, empáticas o neutras según te presentes como antagonista, como profesor, o simplemente pidas un análisis. Esto significa que la forma en que planteas tus preguntas al inicio cambia el tono y el contenido de lo que recibes, y a menudo puede mejorarlo, algo clave cuando usas IA para investigar tu mercado, atender clientes o generar contenido.",
+  "resumen_teorico": "Los modelos de IA con los que conversas cambian de tono, agresividad y contenido según el papel que tú les asignas al empezar la conversación. El experimento con un asistente de IA con acceso a internet muestra que la misma pregunta obtiene respuestas hostiles, empáticas o neutras según te presentes como antagonista, como profesor, o simplemente pidas un análisis. Esto significa que la forma en que planteas tus preguntas al inicio cambia el tono y el contenido de lo que recibes, y puede mejorarlo, algo clave cuando usas IA para investigar tu mercado, atender clientes o generar contenido.",
   "pasos_accionables": [
     "Define explícitamente el papel que quieres que la IA adopte antes de hacer tu pregunta principal (por ejemplo: 'actúa como analista de mercado objetivo').",
     "Prueba la misma consulta con al menos dos formas de plantear la conversación (neutral, empática, crítica) y compara qué tan útiles son las respuestas.",
@@ -44,6 +44,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El experimento muestra cambios de tono y contenido; 'determina la calidad y la utilidad' endurece lo que el libro dice con cautela.; El libro dice que el papel a menudo mejora las respuestas y no es magia; 'determina' endurece.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-046-prompting_por_persona_ia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los modelos de IA con los que conversas cambian de tono, agresividad y contenido según el papel que tú les asignas al empezar la conversación. El experimento con un asistente de IA con acceso a internet (conocido como Sydney) muestra que la misma pregunta obtiene respuestas hostiles, empáticas o neutras según te presentes como antagonista, como profesor, o simplemente pidas un análisis. Esto significa que la forma en que planteas tus preguntas al inicio cambia el tono y el contenido de lo que recibes, y a menudo puede mejorarlo, algo clave cuando usas IA para investigar tu mercado, atender clientes o generar contenido.",
+      "texto_nuevo": "Los modelos de IA con los que conversas cambian de tono, agresividad y contenido según el papel que tú les asignas al empezar la conversación. El experimento con un asistente de IA con acceso a internet muestra que la misma pregunta obtiene respuestas hostiles, empáticas o neutras según te presentes como antagonista, como profesor, o simplemente pidas un análisis. Esto significa que la forma en que planteas tus preguntas al inicio cambia el tono y el contenido de lo que recibes, y puede mejorarlo, algo clave cuando usas IA para investigar tu mercado, atender clientes o generar contenido.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "447",
+        "frase": "how defining an AI persona can improve your results"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura; modo quitar; doble lectura ciega, arbitro): El experimento se hace con Bing ya relanzado sin la personalidad Sydney; llamarlo Sydney es un dato que el libro no sostiene.; El libro dice que definir la persona puede ayudar o mejorar los resultados, sin afirmar que ocurra a menudo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

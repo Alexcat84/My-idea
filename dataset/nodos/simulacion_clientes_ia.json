@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Simulación de Clientes con IA para Validación Preliminar",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Los LLMs pueden adoptar personas de consumidores con distintos niveles de ingreso y comportamientos de compra, generando estimaciones de disposición a pagar (willingness to pay) consistentes con estudios de mercado reales. Esto permite 'entrevistar' a un cliente simulado antes de hablar con clientes reales, como forma de práctica y para obtener insights iniciales, aunque nunca debe reemplazar la validación con clientes reales.",
+  "resumen_teorico": "Los LLMs pueden adoptar personas de consumidores con distintos niveles de ingreso y comportamientos de compra, generando estimaciones de disposición a pagar (willingness to pay) consistentes con estudios de mercado reales. Esto permite 'entrevistar' a un cliente simulado antes de hablar con clientes reales, como forma de práctica y para obtener insights iniciales, aunque no conviene usarlo como reemplazo de la investigación de mercado más tradicional.",
   "pasos_accionables": [
     "Asignar a la IA una persona de cliente objetivo con datos demográficos y de comportamiento específicos",
     "Realizar una 'entrevista' simulada sobre el producto o propuesta de valor",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Simula Clientes Antes de Lanzar",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-046-simulacion_clientes_ia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los LLMs pueden adoptar personas de consumidores con distintos niveles de ingreso y comportamientos de compra, generando estimaciones de disposición a pagar (willingness to pay) consistentes con estudios de mercado reales. Esto permite 'entrevistar' a un cliente simulado antes de hablar con clientes reales, como forma de práctica y para obtener insights iniciales, aunque nunca debe reemplazar la validación con clientes reales.",
+      "texto_nuevo": "Los LLMs pueden adoptar personas de consumidores con distintos niveles de ingreso y comportamientos de compra, generando estimaciones de disposición a pagar (willingness to pay) consistentes con estudios de mercado reales. Esto permite 'entrevistar' a un cliente simulado antes de hablar con clientes reales, como forma de práctica y para obtener insights iniciales, aunque no conviene usarlo como reemplazo de la investigación de mercado más tradicional.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "526",
+        "frase": "While I wouldn’t use that as a replacement for more traditional market research"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro expresa una reserva personal (no lo usaría como reemplazo de la investigación de mercado más tradicional), no una prohibición absoluta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }
