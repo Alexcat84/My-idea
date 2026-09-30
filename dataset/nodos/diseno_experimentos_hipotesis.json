@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Pregúntate qué necesitas saber para poder avanzar",
     "Define la prueba más simple posible para conseguir esa respuesta",
-    "Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real",
+    "Diseña el experimento; la mayoría de las veces basta con una maqueta, una demo o un prototipo físico, sin programar nada real",
     "Haz la prueba con un número mínimo de clientes y mide la señal que obtienes"
   ],
   "entregable_esperado": "Protocolo de experimento documentado con criterio de éxito o fracaso definido antes de ejecutarlo",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Prueba tus Hipótesis en Terreno",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-134-diseno_experimentos_hipotesis-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real",
+      "texto_nuevo": "Diseña el experimento; la mayoría de las veces basta con una maqueta, una demo o un prototipo físico, sin programar nada real",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8020",
+        "frase": "Most of the time you can mock up the web page or create a demo"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la mayoría de las veces basta con una maqueta, demo o prototipo, no que nunca haga falta programar.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

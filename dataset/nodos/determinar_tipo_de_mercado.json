@@ -10,9 +10,9 @@
     "Si el mercado es existente, identificar qué atributos valora el cliente y compararlos contra tus competidores",
     "Si el mercado es nuevo, evitar gastar rápido en marketing y enfocarte en validar si hay una base de clientes persuadible",
     "Si el mercado está dominado por incumbentes fuertes, evaluar re-segmentarlo por bajo costo o por nicho",
-    "Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente",
+    "Evaluar si el modelo de negocio ya funciona en otro país pero aún no ha llegado al tuyo (por barreras de idioma, cultura o ley) y puede clonarse localmente",
     "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío",
-    "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable",
+    "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio, mercado con un líder claro, mercado inestable o mercado sin jugador dominante (el más fácil de penetrar)",
     "Si se ataca mercado existente, calcular el costo de entrada (3x el presupuesto combinado de ventas y marketing del jugador dominante, o 1.7x el de la empresa que atacas si hay varios participantes)",
     "Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)",
     "Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas",
@@ -146,6 +146,40 @@
         "motivo": "Razon para B. El nodo de hoy presenta la re-segmentacion como uno de los cuatro tipos de mercado y como paso que sale del analisis (\"si el mercado esta dominado por incumbentes fuertes, evaluar re-segmentarlo\"); por tanto va despues, no lo prepara. El sentido correcto ya existe en R05-09-10. No tiene que ver con la correccion del costo de entrada."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-134-determinar_tipo_de_mercado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente",
+      "texto_nuevo": "Evaluar si el modelo de negocio ya funciona en otro país pero aún no ha llegado al tuyo (por barreras de idioma, cultura o ley) y puede clonarse localmente",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12545",
+        "frase": "that hasn’t made it to your country (due to language, cultural or legal barriers)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición del clon: el modelo no ha llegado a tu país por barreras de idioma, cultura o ley.; Se pierde la condición del libro: el modelo probado en otro país aún no ha llegado al tuyo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-134-determinar_tipo_de_mercado-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable",
+      "texto_nuevo": "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio, mercado con un líder claro, mercado inestable o mercado sin jugador dominante (el más fácil de penetrar)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6066-6074",
+        "frase": "Startups that want to enter an existing market find these the easiest to penetrate."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro trae además el mercado con líder claro y el mercado sin jugador dominante, que cambian la decisión de entrada.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

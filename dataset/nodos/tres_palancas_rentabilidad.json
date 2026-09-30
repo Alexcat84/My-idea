@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Las Tres Palancas para Mejorar la Rentabilidad",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo). Enfocarse solo en recortes es posponer el problema de fondo.",
+  "resumen_teorico": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo). Enfocarse solo en recortes probablemente solo pospone el problema de fondo.",
   "pasos_accionables": [
     "Diagnosticar cuál de las tres palancas explica la baja rentabilidad actual",
     "Si es ventas: analizar el embudo de ventas y nuevos mercados potenciales",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Activa tus Tres Palancas de Rentabilidad",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-133-tres_palancas_rentabilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo). Enfocarse solo en recortes es posponer el problema de fondo.",
+      "texto_nuevo": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo). Enfocarse solo en recortes probablemente solo pospone el problema de fondo.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "944",
+        "frase": "if that’s your only focus, you’re probably just postponing the day of reckoning"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'probablemente' estás posponiendo el problema; el nodo lo vuelve certeza.; Mismo endurecimiento del 'probably' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

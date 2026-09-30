@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir el precio de compra y estructura de pago (cash, escrow, notas)",
     "Establecer periodo de exclusive dealing y su duración",
-    "Negociar breakup fee en caso de incumplimiento",
+    "Negociar la breakup fee en caso de incumplimiento; si eres el vendedor, por lo general conviene resistirla y pedir que el comprador confíe en la cláusula de exclusividad",
     "Acordar términos de acceso a información y confidencialidad",
     "Definir la fecha de terminación de las disposiciones vinculantes"
   ],
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Redacta tu Carta de Intención",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-135-carta_de_intencion_loi-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar breakup fee en caso de incumplimiento",
+      "texto_nuevo": "Negociar la breakup fee en caso de incumplimiento; si eres el vendedor, por lo general conviene resistirla y pedir que el comprador confíe en la cláusula de exclusividad",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4329",
+        "frase": "We generally resist any request of a buyer to institute a breakup fee"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja por lo general resistir la breakup fee que pide el comprador y remitirlo a la exclusividad; el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

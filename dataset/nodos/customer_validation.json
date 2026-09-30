@@ -6,14 +6,14 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Es el segundo paso del método de desarrollo de clientes (Customer Development). Aquí compruebas si el modelo de negocio que validaste en la etapa de descubrimiento de clientes (Customer Discovery) se puede repetir y escalar. Pruebas con más clientes si tu producto, tu forma de conseguirlos, tu precio y tu canal de venta funcionan, usando pruebas más rigurosas y con números, incluyendo ventas reales que confirmen que la gente sí está dispuesta a pagar.",
   "pasos_accionables": [
-    "Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes",
+    "Si vendes por internet o por una aplicación, despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes",
     "Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes",
     "Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)",
     "Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar, y cuentan como evidencia los usuarios o clics reales, no solo respuestas de encuestas",
     "Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar",
     "Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?",
     "Probar la repetibilidad del proceso de ventas o adquisición de usuarios",
-    "Buscar pedidos u órdenes reales a precio completo como prueba de validación",
+    "Si en tu modelo quien usa es quien paga, buscar suficientes pedidos u órdenes reales a precio completo como prueba de validación",
     "Probar canales de ventas y distribución",
     "Escuchar activamente a los clientes para identificar pivotes necesarios",
     "Posicionar correctamente el producto y la empresa"
@@ -101,6 +101,40 @@
         "motivo": "La validacion con clientes (Customer Development) no continua ni profundiza la gestion de alucinaciones de la IA; los nodos no tienen que ver."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-135-customer_validation-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes",
+      "texto_nuevo": "Si vendes por internet o por una aplicación, despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "883",
+        "frase": "In web/mobile apps, customer validation calls for the deployment of a “hi-fidelity” version"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide el MVP de alta fidelidad en web y apps móviles; el paso pierde esa condición de canal.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-135-customer_validation-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar pedidos u órdenes reales a precio completo como prueba de validación",
+      "texto_nuevo": "Si en tu modelo quien usa es quien paga, buscar suficientes pedidos u órdenes reales a precio completo como prueba de validación",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1837",
+        "frase": "single-sided commerce, the only acceptable proof is enough full-price orders"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige órdenes a precio completo como única prueba cuando el modelo es de un solo lado; el paso pierde esa condición.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

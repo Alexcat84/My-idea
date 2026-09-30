@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Capital Calls: Cómo los VCs Obtienen Dinero de sus LPs",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando un VC anuncia haber levantado un fondo, no significa que tenga ese dinero disponible en el banco. Debe solicitarlo a sus LPs mediante un 'capital call' cada vez que necesita invertir, proceso que toma típicamente dos semanas. Los LPs están legalmente obligados a responder, pero en crisis económicas (como 2008) algunos LPs no pudieron cumplir, afectando la capacidad del VC de cerrar inversiones. Entender este mecanismo ayuda al emprendedor a comprender riesgos de timing en el cierre de rondas de financiamiento.",
+  "resumen_teorico": "Cuando un VC anuncia haber levantado un fondo, no significa que tenga ese dinero disponible en el banco. Debe solicitarlo a sus LPs mediante un 'capital call' cada vez que necesita invertir, proceso que toma típicamente dos semanas. Los LPs están legalmente obligados a responder, pero en crisis económicas (como 2008) algunos LPs no pudieron cumplir, afectando la capacidad del VC de cerrar inversiones. Es poco frecuente y, salvo en momentos de estrés extremo, el VC suele terminar consiguiendo el dinero. Entender este mecanismo ayuda al emprendedor a comprender riesgos de timing en el cierre de rondas de financiamiento.",
   "pasos_accionables": [
     "Considerar el timing de dos semanas típico para capital calls al planificar el cierre de una ronda",
-    "En momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
+    "Sugerencia de My Idea: en momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
     "Entender que un mercado secundario de LPs existe para mitigar riesgos de incumplimiento"
   ],
   "entregable_esperado": "Comprensión del timing y riesgos asociados a la disponibilidad real de capital comprometido por el VC",
@@ -23,5 +23,40 @@
   "etiqueta_arbol": "Entiende las Llamadas de Capital",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-135-capital_calls_lp-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un VC anuncia haber levantado un fondo, no significa que tenga ese dinero disponible en el banco. Debe solicitarlo a sus LPs mediante un 'capital call' cada vez que necesita invertir, proceso que toma típicamente dos semanas. Los LPs están legalmente obligados a responder, pero en crisis económicas (como 2008) algunos LPs no pudieron cumplir, afectando la capacidad del VC de cerrar inversiones. Entender este mecanismo ayuda al emprendedor a comprender riesgos de timing en el cierre de rondas de financiamiento.",
+      "texto_nuevo": "Cuando un VC anuncia haber levantado un fondo, no significa que tenga ese dinero disponible en el banco. Debe solicitarlo a sus LPs mediante un 'capital call' cada vez que necesita invertir, proceso que toma típicamente dos semanas. Los LPs están legalmente obligados a responder, pero en crisis económicas (como 2008) algunos LPs no pudieron cumplir, afectando la capacidad del VC de cerrar inversiones. Es poco frecuente y, salvo en momentos de estrés extremo, el VC suele terminar consiguiendo el dinero. Entender este mecanismo ayuda al emprendedor a comprender riesgos de timing en el cierre de rondas de financiamiento.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3082-3096",
+        "frase": "except in moments of extreme stress, the VC usually ends up with the money"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro califica el incumplimiento de raro y dice que, salvo estrés extremo, el VC suele conseguir el dinero; sin eso el riesgo se exagera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-135-capital_calls_lp-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
+      "texto_nuevo": "Sugerencia de My Idea: en momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3082",
+        "frase": "Fortunately, this is a rare occurrence."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese consejo; como consejo práctico que no afirma un hecho queda como sugerencia de la casa.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Eco-Efectividad",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "La eco-efectividad es un paradigma de diseño que busca rediseñar tus procesos y productos por completo, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.",
+  "resumen_teorico": "La eco-efectividad es un paradigma de diseño que busca replantear tus procesos y productos desde un cambio de perspectiva, que puede llevarte a una innovación radical o solo a optimizar lo que ya existe, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.",
   "pasos_accionables": [
     "Analiza el ciclo de vida completo de tu producto o proceso identificando todos los flujos de materiales",
     "Cuestiona si tu diseño actual es el correcto, no solo si puede ser más eficiente, y si realmente regenera el entorno",
@@ -51,5 +51,23 @@
   ],
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-133-eco_efectividad_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La eco-efectividad es un paradigma de diseño que busca rediseñar tus procesos y productos por completo, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.",
+      "texto_nuevo": "La eco-efectividad es un paradigma de diseño que busca replantear tus procesos y productos desde un cambio de perspectiva, que puede llevarte a una innovación radical o solo a optimizar lo que ya existe, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "515",
+        "frase": "It's not the solution itself that is necessarily radical but the shift in perspective"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que lo radical es el cambio de perspectiva y que el resultado puede ser solo optimizar lo existente; 'por completo' endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

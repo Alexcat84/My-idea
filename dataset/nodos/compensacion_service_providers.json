@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Compensación de Proveedores de Servicios mediante Equity",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable inmediato por el valor de mercado recibido. Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
   "pasos_accionables": [
     "Crear un equity incentive plan (option pool) con asesoría legal",
     "Decidir entre otorgar stock directo (con 83(b)) u options según implicaciones fiscales del receptor",
@@ -43,6 +43,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-135-compensacion_service_providers-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable inmediato por el valor de mercado recibido. Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "texto_nuevo": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4745",
+        "frase": "fair market value of the stock received in excess of what that individual paid"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro grava el valor de mercado en exceso de lo pagado; sin ese límite parece que siempre tributa el valor completo.; Se pierde el exceso sobre lo pagado y que se reconoce en el año de la concesión si presenta la elección 83(b).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

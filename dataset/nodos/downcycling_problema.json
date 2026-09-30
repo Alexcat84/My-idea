@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "El Problema del Downcycling",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "La mayoría del reciclaje convencional es en realidad 'downcycling': reduce la calidad del material con cada ciclo. Ejemplos incluyen acero de automóviles mezclado con otros metales perdiendo sus propiedades originales, aluminio de latas de refresco mezclado en aleaciones más débiles, y plásticos reciclados que requieren más aditivos químicos. El downcycling no solo pierde valor material sino que puede aumentar la contaminación de la biosfera al mezclar toxinas.",
+  "resumen_teorico": "La mayoría del reciclaje convencional es en realidad 'downcycling': reduce la calidad del material con cada ciclo. Ejemplos incluyen acero de automóviles mezclado con otros metales perdiendo sus propiedades originales, aluminio de latas de refresco mezclado en aleaciones más débiles, y plásticos reciclados a los que a menudo se añaden más aditivos químicos. El downcycling no solo pierde valor material sino que puede aumentar la contaminación de la biosfera al mezclar toxinas.",
   "pasos_accionables": [
     "Auditar los materiales de tus productos actuales para identificar si son reciclables en el mismo nivel de calidad o solo downcycables",
     "Investigar si los materiales usados fueron diseñados originalmente para reciclaje o solo se están forzando a un segundo uso",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "No Pierdas Calidad al Reciclar",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-133-downcycling_problema-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mayoría del reciclaje convencional es en realidad 'downcycling': reduce la calidad del material con cada ciclo. Ejemplos incluyen acero de automóviles mezclado con otros metales perdiendo sus propiedades originales, aluminio de latas de refresco mezclado en aleaciones más débiles, y plásticos reciclados que requieren más aditivos químicos. El downcycling no solo pierde valor material sino que puede aumentar la contaminación de la biosfera al mezclar toxinas.",
+      "texto_nuevo": "La mayoría del reciclaje convencional es en realidad 'downcycling': reduce la calidad del material con cada ciclo. Ejemplos incluyen acero de automóviles mezclado con otros metales perdiendo sus propiedades originales, aluminio de latas de refresco mezclado en aleaciones más débiles, y plásticos reciclados a los que a menudo se añaden más aditivos químicos. El downcycling no solo pierde valor material sino que puede aumentar la contaminación de la biosfera al mezclar toxinas.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "336",
+        "frase": "more chemicals are often added to make the materials useful again"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo se añaden o pueden añadirse aditivos, no que el plástico reciclado los requiera.; Mismo endurecimiento de 'often' y 'may' a un requisito.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

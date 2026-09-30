@@ -9704,12 +9704,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Evaluación de la comisión por cancelación (breakup fee) al vender tu empresa",
-      "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando el comprador sea un competidor y sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
       "pasos_accionables": [
         "Evalúa si el comprador tiene intención real de cerrar o si solo está buscando información sin compromiso",
         "Determina qué riesgo corres con tus clientes o empleados al iniciar el proceso de venta",
         "Resiste por defecto la petición de comisión por cancelación, apoyándote en la cláusula de exclusividad (no-shop)",
-        "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
+        "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si el comprador es un competidor y sospechas una expedición de pesca, o si asumes un gran riesgo con clientes o empleados",
         "Consulta con quien te asesore legalmente antes de aceptar cualquier comisión de este tipo"
       ],
       "entregable_esperado": "Una postura clara y por escrito sobre si aceptas o rechazas la comisión por cancelación en la carta de intención (LOI)",
@@ -12220,12 +12220,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Cómo armar tu tabla de reparto de acciones (cap table)",
-      "resumen_teorico": "La tabla de capitalización (cap table) resume quién tiene qué parte de tu negocio, antes y después de recibir una inversión. Necesitas entender cómo calcular el porcentaje que le corresponde a cada tipo de dueño (tú como fundador, la bolsa de opciones para empleados, los inversionistas), sobre todo cuando se agrega una bolsa de opciones después de la inversión (post-money), porque eso te diluye a ti, no a los inversionistas.",
+      "resumen_teorico": "La tabla de capitalización (cap table) resume quién tiene qué parte de tu negocio, antes y después de recibir una inversión. Necesitas entender cómo calcular el porcentaje que le corresponde a cada tipo de dueño (tú como fundador, la bolsa de opciones para empleados, los inversionistas), sobre todo cuando la propuesta exige una bolsa de opciones medida sobre la valuación post-money, porque esa bolsa se cuenta entre las acciones previas a la inversión y eso te diluye a ti, no a los inversionistas.",
       "pasos_accionables": [
         "Lista las acciones que tienes como fundador antes de recibir la inversión",
         "Define la valuación antes de la inversión (pre-money) y el monto que vas a recibir, para calcular la valuación después de la inversión (post-money)",
         "Calcula el porcentaje que le corresponde al inversionista dividiendo lo que invierte entre la valuación post-money",
-        "Si vas a crear una bolsa de opciones después de la inversión, resta ese porcentaje del tuyo para saber cuánto te queda realmente",
+        "Si la propuesta exige una bolsa de opciones medida sobre la valuación post-money, resta ese porcentaje del tuyo para saber cuánto te queda realmente",
         "Resuelve lo que falta en tu tabla (total de acciones, precio por acción) con álgebra básica",
         "Verifica tus cálculos comparando la valuación pre-money implícita contra el número de acciones y el precio por acción",
         "Usa decimales o fracciones de acciones en los cálculos intermedios y redondea solo al final"
@@ -12565,10 +12565,10 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Capital Calls: Cómo los VCs Obtienen Dinero de sus LPs",
-      "resumen_teorico": "Cuando un VC anuncia haber levantado un fondo, no significa que tenga ese dinero disponible en el banco. Debe solicitarlo a sus LPs mediante un 'capital call' cada vez que necesita invertir, proceso que toma típicamente dos semanas. Los LPs están legalmente obligados a responder, pero en crisis económicas (como 2008) algunos LPs no pudieron cumplir, afectando la capacidad del VC de cerrar inversiones. Entender este mecanismo ayuda al emprendedor a comprender riesgos de timing en el cierre de rondas de financiamiento.",
+      "resumen_teorico": "Cuando un VC anuncia haber levantado un fondo, no significa que tenga ese dinero disponible en el banco. Debe solicitarlo a sus LPs mediante un 'capital call' cada vez que necesita invertir, proceso que toma típicamente dos semanas. Los LPs están legalmente obligados a responder, pero en crisis económicas (como 2008) algunos LPs no pudieron cumplir, afectando la capacidad del VC de cerrar inversiones. Es poco frecuente y, salvo en momentos de estrés extremo, el VC suele terminar consiguiendo el dinero. Entender este mecanismo ayuda al emprendedor a comprender riesgos de timing en el cierre de rondas de financiamiento.",
       "pasos_accionables": [
         "Considerar el timing de dos semanas típico para capital calls al planificar el cierre de una ronda",
-        "En momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
+        "Sugerencia de My Idea: en momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
         "Entender que un mercado secundario de LPs existe para mitigar riesgos de incumplimiento"
       ],
       "entregable_esperado": "Comprensión del timing y riesgos asociados a la disponibilidad real de capital comprometido por el VC",
@@ -12968,7 +12968,7 @@
       "pasos_accionables": [
         "Definir el precio de compra y estructura de pago (cash, escrow, notas)",
         "Establecer periodo de exclusive dealing y su duración",
-        "Negociar breakup fee en caso de incumplimiento",
+        "Negociar la breakup fee en caso de incumplimiento; si eres el vendedor, por lo general conviene resistirla y pedir que el comprador confíe en la cláusula de exclusividad",
         "Acordar términos de acceso a información y confidencialidad",
         "Definir la fecha de terminación de las disposiciones vinculantes"
       ],
@@ -16107,7 +16107,7 @@
         "Evaluar si la empresa tiene caja disponible para pagar salarios de mercado",
         "Si hay caja y la persona es en realidad empleada: clasificarla como empleada y pagar el salario y los impuestos correspondientes",
         "Si no hay caja: estructurar contratos de consultoría con proyectos y pagos definidos por entregable",
-        "Evitar supervisión directa, provisión de equipo o exclusividad con los consultores",
+        "Evitar supervisión directa, provisión de equipo o entrenamiento, exclusividad o relaciones terminables a voluntad con los consultores",
         "Consultar con un abogado laboral para minimizar riesgo de reclasificación"
       ],
       "entregable_esperado": "Contratos de consultoría o de empleo correctamente estructurados según la relación real de trabajo",
@@ -16609,7 +16609,7 @@
         "Identificar si la contratación del banco depende de una persona específica",
         "Negociar una cláusula de terminación anticipada si esa persona se va",
         "Asegurar la opción de transferir el compromiso al nuevo empleador de esa persona",
-        "Revisar también el 'tail agreement' asociado"
+        "Procurar que la cláusula permita terminar, idealmente, también el 'tail agreement' asociado si esa persona se va"
       ],
       "entregable_esperado": "Carta de compromiso (engagement letter) con cláusula de persona clave incluida",
       "nodos_previos": [
@@ -16819,12 +16819,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Acuerdos para vender junto con los inversionistas o arrastrar a los minoritarios en una venta (Co-Sale y Drag-Along)",
-      "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
+      "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los demás accionistas, incluidos tú y los otros fundadores, a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
       "pasos_accionables": [
         "Acepta que la cláusula de co-venta va a estar ahí, porque es prácticamente estándar en todo financiamiento de capital de riesgo",
         "Negocia un piso mínimo de acciones que puedas vender sin necesidad de ofrecer co-venta a los inversionistas",
         "Confirma que la cláusula de co-venta termina automáticamente al llegar a una oferta pública inicial calificada",
-        "Define el umbral de aprobación necesario para activar el arrastre (por ejemplo, mayoría de una serie de inversión determinada)",
+        "Define el umbral de aprobación necesario para activar el arrastre (por ejemplo, mayoría de una serie de inversión determinada); el punto intermedio más común es pedir que siga a la mayoría de las acciones comunes y no a la de las preferentes",
         "Deja claras las excepciones razonables al acuerdo de co-venta",
         "Sugerencia de My Idea: deja ambas cláusulas por escrito en los acuerdos de la ronda, por ejemplo la co-venta en un acuerdo de co-venta y el arrastre en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta"
       ],
@@ -17947,7 +17947,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Compensación de Proveedores de Servicios mediante Equity",
-      "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable inmediato por el valor de mercado recibido. Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
       "pasos_accionables": [
         "Crear un equity incentive plan (option pool) con asesoría legal",
         "Decidir entre otorgar stock directo (con 83(b)) u options según implicaciones fiscales del receptor",
@@ -25771,9 +25771,9 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Costos de preparación para armar tu nueva franquicia",
-      "resumen_teorico": "Además de los costos de desarrollo, marketing y personal, tienes que contar los costos de preparación para armar formalmente tu nuevo negocio de franquicia. Esto incluye crear una nueva empresa, hacer una auditoría de apertura del balance, duplicar tus materiales (folletos, videos, papelería), registrar las marcas adicionales que necesites, cubrir los viajes de la persona que te asesora, y conseguir equipo y mobiliario nuevo. Pregunta el costo aproximado en tu mercado, porque varía según la escala del esfuerzo.",
+      "resumen_teorico": "Además de los costos de desarrollo, legales, de marketing y de personal, tienes que contar los costos de preparación para armar formalmente tu nuevo negocio de franquicia. Esto incluye crear una nueva empresa, hacer una auditoría de apertura del balance, duplicar tus materiales (folletos, videos, papelería), registrar las marcas adicionales que necesites, cubrir los viajes de la persona que te asesora, y conseguir equipo y mobiliario nuevo. Pregunta el costo aproximado en tu mercado, porque varía según la escala del esfuerzo.",
       "pasos_accionables": [
-        "Decide si vas a crear una nueva empresa para operar tu franquicia",
+        "Decide si vas a crear una nueva empresa para operar tu franquicia y, si la creas, presupuesta la auditoría de apertura de su balance",
         "Presupuesta la duplicación de tus materiales de marketing y piezas de apoyo",
         "Registra las marcas adicionales que necesites para proteger tu marca franquiciada",
         "Presupuesta los viajes, el equipo y el mobiliario para tu operación de franquicia"
@@ -26370,10 +26370,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "franquicias",
       "titulo_concepto": "Crecimiento desde la Base de Franquiciados Existentes",
-      "resumen_teorico": "En sistemas de franquicia de alto rendimiento, la mayoría del crecimiento proviene de franquiciados existentes que abren nuevas unidades o refieren a sus contactos. Esto reduce costos de generación de leads, fortalece la cultura de marca y permite expandirse con operadores probados. Si un franquiciador no espera crecimiento significativo desde su base actual, es señal de problemas internos que deben resolverse.",
+      "resumen_teorico": "En sistemas de franquicia de alto rendimiento, la mayoría del crecimiento a menudo proviene de franquiciados existentes que abren nuevas unidades o refieren a sus contactos. Esto reduce costos de generación de leads, fortalece la cultura de marca y permite expandirse con operadores probados. Si un franquiciador no espera crecimiento significativo desde su base actual, es señal de problemas internos que deben resolverse para que el sistema pueda crecer a un ritmo agresivo.",
       "pasos_accionables": [
         "Medir qué porcentaje de nuevas ventas proviene de franquiciados actuales o sus referidos.",
-        "Crear incentivos o programas de referidos para franquiciados exitosos.",
+        "Crear incentivos o programas de referidos para franquiciados exitosos, consultando antes con tu abogado de franquicias, porque pagar por referidos puede activar obligaciones de divulgación y crear un conflicto de interés.",
         "Identificar y resolver problemas internos si el crecimiento interno es bajo.",
         "Fomentar relaciones y comunicación abierta entre franquiciador y franquiciados."
       ],
@@ -26455,7 +26455,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
-      "resumen_teorico": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+      "resumen_teorico": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto puede lograr ahorros dignos de considerar si el costo de aplicar la prueba maestra a las partes no aceptadas no es demasiado alto.",
       "pasos_accionables": [
         "Verificar que se cumple la condición pk2 > k1 (inspección al 100% es óptima).",
         "Diseñar y calibrar una prueba barata que nunca acepte lo que la prueba maestra rechazaría.",
@@ -28124,12 +28124,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Cuestionario de Autoevaluación para la Transformación de Calidad",
-      "resumen_teorico": "Un extenso conjunto de preguntas te permite diagnosticar en qué punto estás respecto a los 14 puntos de Deming y las enfermedades mortales: constancia de propósito, estabilidad de procesos, relación con proveedores, gestión por objetivos, barreras al orgullo del trabajo, entre otros. Sirve como herramienta de diagnóstico honesto antes de avanzar en cualquier plan de transformación.",
+      "resumen_teorico": "Un extenso conjunto de preguntas te permite diagnosticar en qué punto estás respecto a los 14 puntos de Deming y las enfermedades mortales: constancia de propósito, estabilidad de procesos, relación con proveedores, gestión por objetivos, barreras al orgullo del trabajo, entre otros. Puede darte una base para entender mejor tus responsabilidades como quien dirige.",
       "pasos_accionables": [
         "Responder con honestidad cada bloque de preguntas, uno por uno",
         "Anotar sin adornos en qué áreas hay obstáculos (constancia de propósito, proveedores, gestión por números, etc.)",
         "Priorizar las áreas con mayores brechas para intervenir de inmediato",
-        "Repetir el cuestionario cada tanto para medir el avance"
+        "Sugerencia de My Idea: repite el cuestionario cada tanto para ver cómo avanzas"
       ],
       "entregable_esperado": "Un diagnóstico con las brechas identificadas y un plan de prioridades",
       "nodos_previos": [
@@ -29141,7 +29141,7 @@
       "resumen_teorico": "Esta es una regla de Estados Unidos, de la Comisión Federal de Comercio (FTC), y aplica solo si vendes o piensas vender franquicias ahí. Si no la cumples, junto con las leyes de cada estado donde vendas, te expones a sanciones severas: multas civiles de hasta $11,000 por cada violación, congelamiento de tus cuentas, cancelación de contratos, devolución de la inversión inicial a quien te compró la franquicia, y hasta 10 años de obligación de declarar esas violaciones en tu documento de divulgación (FDD, por su sigla en inglés). A diferencia de la regla federal, que no permite que te demanden directamente por su incumplimiento, muchas leyes estatales sí dejan que quien te compró la franquicia te demande, con multas que pueden subir hasta $100,000 y, en algunos casos, cargos penales graves.",
       "pasos_accionables": [
         "Identifica en qué estados vas a vender tus franquicias y revisa las leyes de registro y divulgación de cada uno",
-        "Prepara tu documento de divulgación de franquicia (FDD) cumpliendo con todos los requisitos de la regla federal (FTC 436)",
+        "Prepara, con un abogado de franquicias competente y con experiencia, tu documento de divulgación de franquicia (FDD) cumpliendo con todos los requisitos de la regla federal (FTC 436)",
         "Establece un calendario anual para renovar y actualizar tus registros estatales",
         "Capacita a quien venda tus franquicias para que no haga promesas fuera de lo que dice tu FDD"
       ],
@@ -29300,10 +29300,10 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Cumplir con las Leyes Estatales de Franquicia",
-      "resumen_teorico": "Además de la regulación federal, 30 estados en EE.UU. regulan las franquicias u oportunidades de negocio con leyes de registro, leyes de oportunidad de negocio o leyes de relación. Cada estado tiene sus propias definiciones, exenciones y requisitos (como aprobación previa de publicidad o períodos de espera distintos), por lo que el franquiciador debe identificar en qué estados debe registrarse o presentar documentación antes de vender franquicias.",
+      "resumen_teorico": "Además de la regulación federal, 30 estados en EE.UU. regulan las franquicias u oportunidades de negocio con leyes de registro, leyes de oportunidad de negocio o leyes de relación. Cada estado tiene sus propias definiciones, exenciones y requisitos (como aprobación previa de publicidad o períodos de espera distintos), por lo que el franquiciador debe identificar en qué estados debe registrarse o presentar documentación antes de vender franquicias. Estas leyes cambian constantemente: apóyate en un abogado de franquicias con experiencia.",
       "pasos_accionables": [
-        "Identificar en qué estados se ubicará, incorporará o venderá franquicias el negocio",
-        "Determinar si esos estados exigen registro formal, presentación de documentos de oportunidad de negocio, o cumplimiento de leyes de relación",
+        "Identificar en qué estados se ubicará o incorporará el negocio, en cuáles residen los franquiciados o quedan sus territorios y en cuáles se conversa la venta",
+        "Determinar, con un abogado de franquicias con experiencia (estas leyes cambian constantemente), si esos estados exigen registro formal, presentación de documentos de oportunidad de negocio, o cumplimiento de leyes de relación",
         "Revisar exenciones aplicables (por tamaño de la empresa, uso de marca registrada, etc.)",
         "Ajustar el FDD con adendas específicas por estado según se requiera",
         "Establecer un calendario de cumplimiento para renovaciones anuales de registro estatal"
@@ -29806,7 +29806,7 @@
         "Documentar 'Esto es lo que pensábamos' antes de la semana",
         "Documentar 'Esto es lo que encontramos' durante el Customer Discovery de la semana",
         "Documentar 'Esto es lo que haremos' la próxima semana",
-        "Enfatizar el descubrimiento relacionado al componente del canvas asignado esa semana (canal, cliente, modelo de ingresos)"
+        "Enfatizar el descubrimiento relacionado al componente del canvas asignado esa semana (canal, cliente, modelo de ingresos), e incluir también lo demás que aprendiste sobre el modelo de negocio"
       ],
       "entregable_esperado": "Presentación semanal de lecciones aprendidas con business model canvas actualizado y changelog documentado",
       "nodos_previos": [
@@ -29827,14 +29827,14 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Descubrimiento del cliente (Customer Discovery)",
-      "resumen_teorico": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+      "resumen_teorico": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Incluye dos fases fuera del edificio: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
       "pasos_accionables": [
         "Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea",
         "Prueba cómo percibe el cliente el problema antes de mostrarle nada del producto",
         "Construye una versión mínima del producto (MVP) para testear la solución",
         "Confirma que el problema le importa lo suficiente como para que decida comprar",
         "Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback",
-        "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis",
+        "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis, con la lista de experimentos para probarla o descartarla",
         "Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales",
         "Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano",
         "Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más"
@@ -29988,7 +29988,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Descubre si tu idea resuelve un problema real (Customer Discovery)",
-      "resumen_teorico": "Descubrir a tus clientes (Customer Discovery) es el primer paso para convertir en hechos las ideas que tienes sobre tu mercado y tus clientes. El caso de Iridium, que fracasó perdiendo 5.2 mil millones de dólares, muestra el riesgo de seguir un plan de negocio durante años sin salir a validarlo con clientes reales.",
+      "resumen_teorico": "Descubrir a tus clientes (Customer Discovery) es el primer paso para convertir en hechos las ideas que tienes sobre tu mercado y tus clientes. El caso de Iridium, una apuesta de 5.2 mil millones de dólares que terminó en quiebra, muestra el riesgo de seguir un plan de negocio durante años sin salir a validarlo con clientes reales.",
       "pasos_accionables": [
         "Hazte las 4 preguntas clave: ¿hay un problema que el cliente quiere resolver?, ¿tu producto lo resuelve?, ¿hay un modelo de negocio viable?, ¿has aprendido lo suficiente para vender?",
         "Sal del edificio repetidamente, durante semanas o meses, a hablar con clientes reales",
@@ -30566,14 +30566,14 @@
       "titulo_concepto": "Validación con clientes (Customer Validation)",
       "resumen_teorico": "Es el segundo paso del método de desarrollo de clientes (Customer Development). Aquí compruebas si el modelo de negocio que validaste en la etapa de descubrimiento de clientes (Customer Discovery) se puede repetir y escalar. Pruebas con más clientes si tu producto, tu forma de conseguirlos, tu precio y tu canal de venta funcionan, usando pruebas más rigurosas y con números, incluyendo ventas reales que confirmen que la gente sí está dispuesta a pagar.",
       "pasos_accionables": [
-        "Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes",
+        "Si vendes por internet o por una aplicación, despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes",
         "Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes",
         "Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)",
         "Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar, y cuentan como evidencia los usuarios o clics reales, no solo respuestas de encuestas",
         "Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar",
         "Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?",
         "Probar la repetibilidad del proceso de ventas o adquisición de usuarios",
-        "Buscar pedidos u órdenes reales a precio completo como prueba de validación",
+        "Si en tu modelo quien usa es quien paga, buscar suficientes pedidos u órdenes reales a precio completo como prueba de validación",
         "Probar canales de ventas y distribución",
         "Escuchar activamente a los clientes para identificar pivotes necesarios",
         "Posicionar correctamente el producto y la empresa"
@@ -32017,7 +32017,7 @@
       "pasos_accionables": [
         "Revisa cuánto tiempo tienes disponible tú (o tu equipo) para armar el programa de franquicia",
         "Haz una lista de las habilidades que necesitas: legal, financiera, operativa, de marketing y de ventas",
-        "Compara el costo de contratar a alguien fijo frente a pagarle a un especialista externo por este trabajo puntual",
+        "Compara el costo de contratar a alguien fijo frente a pagarle a un especialista externo por este trabajo puntual, teniendo en cuenta que es difícil encontrar a una sola persona con todas esas habilidades y que muchas solo se necesitan después de arrancar",
         "Piensa cómo afecta la velocidad de lanzamiento a tu ventana de oportunidad frente a la competencia",
         "Decide qué partes vas a hacer tú mismo y cuáles vas a delegar"
       ],
@@ -32157,7 +32157,7 @@
       "resumen_teorico": "El franquiciante no está obligado a proporcionar información sobre ventas, ganancias o gastos, pero si decide hacerlo, debe incluirse en el Item 19 del FDD como una Financial Performance Representation (FPR o 'earnings claim'). No hay correlación comprobada entre usar un FPR y una venta más rápida de franquicias, pero puede reducir la exposición legal frente a reclamos de tergiversación. La decisión de usar FPR depende de si el prototipo es representativo de las futuras unidades y si el franquiciante desea hacer pública su información financiera.",
       "pasos_accionables": [
         "Evaluar si el desempeño financiero del prototipo es representativo de las futuras unidades franquiciadas",
-        "Sopesar los factores de incluir un FPR: reduce la exposición legal y le da al candidato información para decidir, frente a un historial poco representativo de lo que logrará un franquiciado o la confidencialidad de tus cifras",
+        "Sopesar los factores de incluir un FPR: reduce la exposición legal, le da al candidato información para decidir y facilita la venta, sobre todo si eres nuevo o tu competencia directa lo usa, frente a un historial poco representativo de lo que logrará un franquiciado, la confidencialidad de tus cifras o unas cifras que no se comparan bien con las de tu competencia",
         "Si se decide usar FPR, preparar la información según el Item 19 sin necesidad de cumplir con GAAP",
         "Documentar la decisión y su justificación con el abogado de franquicias"
       ],
@@ -32185,7 +32185,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Decisión Estratégica: Franquiciar vs. Expansión con Unidades Propias vs. Capital Externo",
-      "resumen_teorico": "Franquiciar es una herramienta estratégica para crecer, no un fin en sí mismo. Antes de elegir entre franquiciar, abrir más unidades propias o traer un socio de capital, define tu meta financiera personal (valoración deseada y plazo de retiro o venta) y compara la brecha entre esa meta y lo que cada estrategia puede entregar, dado tu capital disponible, tiempo y tolerancia al riesgo. Si tus metas son moderadas y prefieres bajo riesgo, la expansión propia puede bastar. Si son muy agresivas y el capital propio es limitado, franquiciar (solo o combinado con crecimiento propio) suele ser la única vía viable para cerrar esa brecha en el plazo deseado.",
+      "resumen_teorico": "Franquiciar es una herramienta estratégica para crecer, no un fin en sí mismo. Antes de elegir entre franquiciar, abrir más unidades propias o traer un socio de capital, define tu meta financiera personal (valoración deseada y plazo de retiro o venta) y compara la brecha entre esa meta y lo que cada estrategia puede entregar, dado tu capital disponible, tiempo y tolerancia al riesgo. Si tus metas son moderadas, la expansión propia puede bastar si confías en la nueva unidad o toleras más riesgo; si prefieres bajo riesgo, puedes seguir como estás y reducir o aplazar tus metas. Si son muy agresivas y el capital propio es limitado, franquiciar (solo o combinado con crecimiento propio) suele ser la única vía viable para cerrar esa brecha en el plazo deseado.",
       "pasos_accionables": [
         "Define tu meta financiera personal: valoración objetivo del negocio y plazo de retiro o venta.",
         "Calcula el escenario de mantener el negocio tal como está (status quo) a 5-10 años.",
@@ -32348,9 +32348,9 @@
         "Evalúa si tu negocio depende de la preferencia y el reconocimiento del cliente",
         "Analiza si una marca común te facilitaría el acceso a cuentas grandes o corporativas",
         "Determina si tu modelo de negocio, por ejemplo uno de trastienda, puede prescindir de una marca compartida",
-        "Decide cuánto control quieres tener sobre cómo se representa tu marca"
+        "Si otros van a usar tu marca, define cómo vas a controlar la forma en que se representa: sin ese control, un operador puede dañarla, y no hacer cumplir tus estándares de calidad puede hacerte perder la marca registrada"
       ],
-      "entregable_esperado": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y cuánto control quieres tener sobre ella",
+      "entregable_esperado": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y, si la incluye, cómo vas a controlar la forma en que se representa",
       "nodos_previos": [
         "marco_name_system_fee"
       ],
@@ -32394,14 +32394,14 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Decisión: Pivotar o Proceder",
-      "resumen_teorico": "Es el momento decisivo al final de la validación de clientes: decidir si inviertes fuertemente para ejecutar y escalar tu modelo de negocio, o si necesitas volver a etapas anteriores para refinar hipótesis. Es el punto de no retorno, porque ejecutar implica gastar dinero de inversionistas de forma rápida e irrevocable, con menor tolerancia a errores. Exige honestidad radical para distinguir hechos validados con decenas o cientos de clientes de opiniones o exceso de confianza: ¿el producto se vendió bien y fácilmente?, ¿la llegada de clientes es predecible, escalable y rentable?, ¿existe un proceso de ventas repetible?, ¿los tiempos de entrega son realistas? Revisa también si existen game changers posibles, no solo mejoras incrementales, y pide a tu consejo asesor que cuestione tu modelo. Nueve de cada diez proyectos necesitan al menos un pivote adicional antes de proceder con confianza.",
+      "resumen_teorico": "Es el momento decisivo al final de la validación de clientes: decidir si inviertes fuertemente para ejecutar y escalar tu modelo de negocio, o si necesitas volver a etapas anteriores para refinar hipótesis. Es el punto de no retorno, porque ejecutar implica gastar dinero de inversionistas de forma rápida e irrevocable, con menor tolerancia a errores. Exige honestidad radical para distinguir hechos validados con decenas o cientos de clientes de opiniones o exceso de confianza: ¿el producto se vendió bien y fácilmente?, ¿la llegada de clientes es predecible, escalable y rentable?, ¿existe un proceso de ventas repetible?, ¿los tiempos de entrega son realistas? Revisa también si existen game changers posibles, no solo mejoras incrementales, y pide a tu consejo asesor que cuestione tu modelo. Probablemente nueve de cada diez proyectos necesiten al menos un pivote adicional antes de proceder con confianza.",
       "pasos_accionables": [
         "Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado",
         "Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible",
         "Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo",
         "Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales",
         "Presenta tu canvas a tu consejo asesor para que lo cuestione activamente",
-        "Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes"
+        "Actualiza el canvas con lo aprendido y decide formalmente si pivotar, volviendo a descubrimiento o al inicio de la validación (prepararte para vender), o proceder avanzando a creación de clientes"
       ],
       "entregable_esperado": "Documento de decisión de pivotar o proceder, con checklist completado, Business Model Canvas actualizado y evidencia de las pruebas de éxito y fracaso realizadas",
       "condiciones_activacion": [
@@ -32490,7 +32490,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Decidir Fuente de Ingresos: Royalties vs. Venta de Productos",
-      "resumen_teorico": "El franquiciador debe determinar si generará ingresos principalmente por royalties, por venta de productos, o por ambos. Sustituir royalties por venta de productos puede ser riesgoso a largo plazo si el producto se vuelve obsoleto o si los franquiciados generan ingresos por servicios (que solo pueden capturarse vía royalty). La recomendación es cobrar por separado cada componente de valor entregado.",
+      "resumen_teorico": "Si puede exigir legalmente a los franquiciados que le compren productos, el franquiciador debe determinar si generará ingresos principalmente por royalties, por venta de productos, o por ambos. Sustituir royalties por venta de productos puede ser riesgoso a largo plazo si el producto se vuelve obsoleto o si los franquiciados generan ingresos por servicios (que probablemente solo se captan vía royalty). La recomendación es cobrar por separado cada componente de valor entregado.",
       "pasos_accionables": [
         "Analizar si el producto/servicio del negocio podría volverse obsoleto en el tiempo",
         "Determinar si los franquiciados generarán ingresos por servicios además de productos",
@@ -32516,7 +32516,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Decisión sobre Abrir una Segunda Unidad Antes de Franquiciar",
-      "resumen_teorico": "Existe el mito de que se necesitan al menos dos unidades operativas para franquiciar, pero casos como Massage Envy demuestran lo contrario. Aunque abrir una segunda unidad mejora la credibilidad, el flujo de caja y permite probar el concepto en diferentes condiciones, el impacto real en la tasa de cierre de ventas de franquicia suele ser pequeño (ej. de 2% a 2.2%). El análisis debe comparar el costo de oportunidad de retrasar un año el inicio de la franquicia contra el beneficio marginal de tener una segunda unidad.",
+      "resumen_teorico": "Existe el mito de que se necesitan al menos dos unidades operativas para franquiciar, pero casos como Massage Envy demuestran lo contrario. Aunque abrir una segunda unidad mejora la credibilidad, el flujo de caja y permite probar el concepto en diferentes condiciones, el impacto real en la tasa de cierre de ventas de franquicia suele ser pequeño (ej. de 2% a 2.2%). El análisis debe comparar el costo de oportunidad de retrasar un año el inicio de la franquicia contra el beneficio de una segunda unidad; en el ejemplo gana franquiciar antes, y esa unidad puede distraerte, rendir menos o dar ventaja a un competidor.",
       "pasos_accionables": [
         "Evaluar si la unidad actual es un prototipo razonable y rentable para ofrecer a franquiciados",
         "Calcular el impacto estimado en la tasa de cierre de ventas de franquicia al tener una unidad adicional",
@@ -32621,11 +32621,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Decisiones Reversibles vs Irreversibles",
-      "resumen_teorico": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha. El análisis profundo se reserva para las irreversibles.",
+      "resumen_teorico": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha.",
       "pasos_accionables": [
         "Clasificar cada decisión pendiente como reversible o irreversible antes de analizarla",
         "Para las reversibles, fijarte un límite de tiempo corto y decidir antes de pasar a la siguiente tarea",
-        "Reservar el análisis profundo solo para las decisiones irreversibles",
+        "Sugerencia de My Idea: reservar el análisis más detenido para las decisiones irreversibles",
         "Crear un registro simple para revisar y corregir rápido las decisiones que resultaron erróneas",
         "Sugerencia de My Idea: anotar cuántas decisiones tomas y revisas por semana para medir tu tempo"
       ],
@@ -33782,11 +33782,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Definiciones Operacionales (Traducir Conceptos Abstractos)",
-      "resumen_teorico": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
+      "resumen_teorico": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un muestreo, un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
       "pasos_accionables": [
         "Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').",
         "Definir una prueba específica y reproducible para evaluar dicho concepto.",
-        "Establecer un criterio de juicio claro y cuantificable.",
+        "Establecer un criterio de juicio claro.",
         "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.",
         "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.",
         "Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú."
@@ -33848,7 +33848,7 @@
       "resumen_teorico": "Muchas disputas entre proveedor y cliente surgen porque ambas partes no tienen una definición clara y medible de lo que constituye 'calidad aceptable' para un producto o característica. El caso del fabricante de forros de freno muestra que, tras años de conflictos, desarrollar definiciones operacionales conjuntas (medibles mediante cartas de control) eliminó las disputas y alineó expectativas.",
       "pasos_accionables": [
         "Identificar todas las características críticas de calidad del producto según el cliente",
-        "Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles",
+        "Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles, definiendo tanto lo que el cliente quiere como lo que el proveedor puede fabricar",
         "Establecer cartas de control (X-barra y R) para cada característica clave",
         "Compartir los resultados de las cartas de control con el cliente de forma continua"
       ],
@@ -33872,7 +33872,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Definiciones Operacionales para Clasificación de Defectos",
-      "resumen_teorico": "Conviene abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector, y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
+      "resumen_teorico": "Conviene abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector (salvo, posiblemente, en la auditoría de calidad), y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
       "pasos_accionables": [
         "Reunir a supervisores, operadores y calidad para definir criterios objetivos de aceptación/rechazo por tipo de defecto",
         "Redactar definiciones operacionales claras, medibles y sin ambigüedad para cada categoría de defecto",
@@ -35103,7 +35103,7 @@
         "Revisar la declaración de misión creada durante el descubrimiento de clientes",
         "Comparar la descripción de la empresa con la de sus competidores",
         "Redactar una declaración de posicionamiento de empresa simple y centrada en el cliente",
-        "Evitar superlativos no demostrables; usar afirmaciones comprobables",
+        "Evitar superlativos no demostrables; usar afirmaciones comprobables, teniendo en cuenta que presentarte como el más barato suele ser arriesgado porque la competencia puede responder rápido",
         "Ajustar el posicionamiento al tipo de mercado correspondiente"
       ],
       "entregable_esperado": "Company Positioning Brief que articula la visión y misión de la empresa",
@@ -35397,13 +35397,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Desarrollo del Posicionamiento de Producto",
-      "resumen_teorico": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente durante el descubrimiento de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
+      "resumen_teorico": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente al comienzo de la validación de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
       "pasos_accionables": [
         "Revisar la declaración de posicionamiento inicial creada al comienzo de la validación de clientes",
         "Contrastarla con las reacciones reales de los clientes durante la validación: ¿resonó?, ¿fue creíble y efectiva?",
         "Volver a contactar clientes si la razón de compra no quedó clara",
         "Incorporar la retroalimentación de clientes y de socios de canal",
-        "Redactar el resumen de posicionamiento final, de una sola página",
+        "Redactar el resumen de posicionamiento revisado, de una sola página, sin buscar que sea perfecto: se seguirá afinando durante la creación de clientes",
         "Usar el resumen como referencia para mantener consistencia en todo el material de marketing y ventas futuro"
       ],
       "entregable_esperado": "Resumen de posicionamiento de producto (una página), validado con clientes reales y listo como referencia para todo el material de marketing posterior",
@@ -36345,7 +36345,7 @@
       "resumen_teorico": "En la naturaleza no existe el desperdicio: cada residuo de un proceso biológico se convierte en nutriente de otro, como ocurre con los ciclos de carbono, hidrógeno, oxígeno y nitrógeno que se reciclan continuamente en la biosfera. Esto contrasta con el modelo industrial de cuna a tumba, donde extraes, usas y desechas materiales sin retorno útil. Aplicado a tu producto, este principio te invita a pensar en dos metabolismos posibles: el biológico, con materiales que se biodegradan de forma segura y nutren el suelo, y el técnico, con materiales que circulan indefinidamente en ciclos industriales cerrados sin degradarse ni contaminar. Diseñar bajo esta lógica implica revisar el ciclo de vida completo de lo que fabricas y decidir a qué ciclo pertenece cada componente.",
       "pasos_accionables": [
         "Analiza el ciclo de vida completo de tu producto identificando qué sucede con cada residuo o salida",
-        "Clasifica cada material como nutriente biológico o técnico",
+        "Clasifica cada material como nutriente biológico o técnico, y aparta los peligrosos que no encajan en ninguno para guardarlos de forma segura hasta poder desintoxicarlos o prescindir de ellos",
         "Diseña el producto para que sus componentes se separen fácilmente al final de su vida útil",
         "Elimina sustancias tóxicas que impidan reintegrar el material a un ciclo de forma segura",
         "Rediseña el proceso para que los subproductos alimenten otro ciclo en lugar de convertirse en basura",
@@ -36676,12 +36676,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Detección de Trabajadores Fuera del Sistema (Líderes y Rezagados)",
-      "resumen_teorico": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Ejemplos incluyen soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
+      "resumen_teorico": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Los demás son el sistema: no se clasifican y solo mejoran si cambia el sistema. Ejemplos: soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
       "pasos_accionables": [
         "Recolectar datos comparables de desempeño de todos los miembros del grupo",
         "Graficar los datos en un gráfico de control con límites superior e inferior",
         "Identificar individuos fuera de los límites de control",
-        "Investigar causas específicas para los de bajo desempeño (equipo, entrenamiento, salud)",
+        "Investigar causas específicas para los de bajo desempeño: primero si el trabajo que reciben es más difícil (en ese caso no necesitan más atención) y luego equipo, entrenamiento y salud",
         "Estudiar y documentar métodos de los de alto desempeño para replicarlos"
       ],
       "entregable_esperado": "Un análisis de desempeño grupal con identificación de casos individuales que requieren atención o reconocimiento",
@@ -36729,12 +36729,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
-      "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, permitiéndote detener la producción antes de que la variación se traduzca en defectos. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+      "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
       "pasos_accionables": [
         "Determina si la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos).",
         "Reemplaza la inspección masiva del producto terminado por mediciones continuas durante el proceso.",
         "Diseña un esquema de muestreo pequeño y frecuente (por ejemplo 4 unidades, 25 veces al día) y construye tus cartas X-barra y R con esas mediciones.",
-        "Detén la producción en cuanto la carta señale una causa especial de variación.",
+        "Retén la tanda producida en cuanto la carta señale que algo cambió, hasta encontrar la causa del problema.",
         "Investiga la causa raíz antes de decidir si liberas o rechazas el lote.",
         "Decide racionalmente si condenas todo el lote o liberas solo la parte que corresponda según lo que encontraste."
       ],
@@ -37238,9 +37238,9 @@
         "Si el mercado es existente, identificar qué atributos valora el cliente y compararlos contra tus competidores",
         "Si el mercado es nuevo, evitar gastar rápido en marketing y enfocarte en validar si hay una base de clientes persuadible",
         "Si el mercado está dominado por incumbentes fuertes, evaluar re-segmentarlo por bajo costo o por nicho",
-        "Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente",
+        "Evaluar si el modelo de negocio ya funciona en otro país pero aún no ha llegado al tuyo (por barreras de idioma, cultura o ley) y puede clonarse localmente",
         "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío",
-        "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable",
+        "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio, mercado con un líder claro, mercado inestable o mercado sin jugador dominante (el más fácil de penetrar)",
         "Si se ataca mercado existente, calcular el costo de entrada (3x el presupuesto combinado de ventas y marketing del jugador dominante, o 1.7x el de la empresa que atacas si hay varios participantes)",
         "Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)",
         "Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas",
@@ -37584,7 +37584,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "environmental",
       "titulo_concepto": "Diagnóstico de Productos Crudos",
-      "resumen_teorico": "Un 'producto crudo' es aquel diseñado únicamente para ser atractivo, cumplir regulaciones y venderse, sin considerar la salud humana o ecológica. Estos productos suelen contener aditivos químicos innecesarios (catalizadores, colorantes, retardantes) provenientes de cadenas de suministro globales no trazadas, lo que provoca contaminación del aire interior, bioacumulación y riesgos a la salud. El diseño descuidado, no la mala intención, es la causa raíz.",
+      "resumen_teorico": "Un 'producto crudo' es aquel diseñado únicamente para ser atractivo, cumplir regulaciones y venderse, sin considerar la salud humana o ecológica. Estos productos suelen contener aditivos químicos innecesarios (catalizadores, colorantes) provenientes de cadenas de suministro globales no trazadas, lo que provoca contaminación del aire interior y riesgos a la salud. El diseño descuidado, no la mala intención, es la causa raíz.",
       "pasos_accionables": [
         "Realizar un inventario completo de materiales y químicos usados en el producto o servicio actual",
         "Para cada componente, preguntar explícitamente '¿por qué está aquí y es necesario para la función?'",
@@ -39103,7 +39103,7 @@
         "Preguntarse qué se quiere aprender",
         "Diseñar el test pass/fail más simple posible",
         "Definir criterios numéricos claros de éxito o fracaso",
-        "Ejecutar el test y evitar detenerlo antes de tiempo",
+        "Ejecutar el test lo más corto posible, sin detenerlo antes de darle la oportunidad de alcanzar el máximo global; si recibes una señal fuerte temprana, puedes pararlo y declararlo un éxito",
         "Registrar aprendizajes e insights, no solo datos"
       ],
       "entregable_esperado": "Lista de hipótesis del modelo de negocio con sus tests pass/fail diseñados y criterios de éxito definidos",
@@ -39238,7 +39238,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Diseño Biomimético de Edificios (Inspirado en la Naturaleza)",
-      "resumen_teorico": "Se trata de diseñar edificios y espacios humanos imitando los principios de sistemas naturales, como el cerezo, que producen abundancia sin agotar recursos. Un edificio eco-efectivo no solo ahorra energía sino que maximiza el bienestar humano y ecológico: luz natural, ventilación cruzada, techos verdes, y conexión con el entorno. Estos diseños pueden ser tan eficientes como los convencionales, pero logran ese resultado como efecto secundario de un objetivo más amplio: mejorar la vida de las personas y el ecosistema circundante.",
+      "resumen_teorico": "Se trata de diseñar edificios y espacios humanos imitando los principios de sistemas naturales, como el cerezo, que producen abundancia sin agotar recursos. Un edificio eco-efectivo no solo ahorra energía sino que maximiza el bienestar humano y ecológico: luz natural, ventilación cruzada, techos verdes, y conexión con el entorno. Estos diseños pueden ser tan eficientes en energía como un edificio diseñado para ahorrarla, pero logran ese resultado como efecto secundario de un objetivo más amplio: mejorar la vida de las personas y el ecosistema circundante.",
       "pasos_accionables": [
         "Analizar cómo un ecosistema natural (como un árbol) resolvería las funciones del edificio",
         "Priorizar luz natural, ventilación operable y materiales no tóxicos",
@@ -39472,7 +39472,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Construcción de la calidad desde la etapa de diseño y planificación",
-      "resumen_teorico": "El ejemplo de un hotel lo ilustra: una vez que los planos y la construcción avanzan, es demasiado tarde para incorporar calidad; la ubicación de camas frente a ductos de aire, ascensores insuficientes o interruptores de luz confusos son defectos de diseño que ningún gerente puede corregir después. La calidad de un producto o servicio, especialmente en proyectos únicos ('one of a kind'), debe planificarse considerando la experiencia real del usuario final antes de la ejecución física.",
+      "resumen_teorico": "El ejemplo de un hotel lo ilustra: una vez que los planos y la construcción avanzan, es demasiado tarde para incorporar calidad; la ubicación de camas frente a ductos de aire, ascensores insuficientes o interruptores de luz confusos son defectos de diseño que ningún gerente puede corregir después. Como casi todo producto o servicio es único ('one of a kind'), su calidad debe planificarse considerando la experiencia real del usuario final antes de la ejecución física.",
       "pasos_accionables": [
         "Antes de finalizar cualquier diseño físico o de proceso, simular la experiencia del usuario final paso a paso.",
         "Identificar puntos de fricción previsibles (ergonomía, señalización, flujo de uso) durante la fase de planos.",
@@ -40031,7 +40031,7 @@
       "pasos_accionables": [
         "Pregúntate qué necesitas saber para poder avanzar",
         "Define la prueba más simple posible para conseguir esa respuesta",
-        "Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real",
+        "Diseña el experimento; la mayoría de las veces basta con una maqueta, una demo o un prototipo físico, sin programar nada real",
         "Haz la prueba con un número mínimo de clientes y mide la señal que obtienes"
       ],
       "entregable_esperado": "Protocolo de experimento documentado con criterio de éxito o fracaso definido antes de ejecutarlo",
@@ -40054,13 +40054,13 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Diseño de Experimentos Pass/Fail para Probar Hipótesis",
-      "resumen_teorico": "Cada hipótesis del modelo de negocio debe convertirse en un experimento simple y objetivo de tipo pass/fail, ejecutable con rapidez y bajo costo. El ciclo es Hipótesis, Diseño de Experimento, Test, Insight. No buscas precisión estadística perfecta sino una señal fuerte que salga del ruido, tan clara que te la puedan arrancar de las manos. Para lograrlo, tienes que salir del edificio y probar con clientes reales, usando landing pages de prueba, presentaciones a prospectos, mockups o prototipos. Extiende la duración del test lo suficiente para no confundir un máximo local con el máximo global de tu modelo de negocio.",
+      "resumen_teorico": "Cada hipótesis del modelo de negocio debe convertirse en un experimento simple y objetivo de tipo pass/fail, ejecutable con rapidez y bajo costo. El ciclo es Hipótesis, Diseño de Experimento, Test, Insight. No buscas precisión estadística perfecta sino una señal fuerte que salga del ruido, tan clara que te la puedan arrancar de las manos. Para lograrlo, tienes que salir del edificio y probar con clientes reales, usando landing pages de prueba, presentaciones a prospectos, mockups o prototipos. Cuanto más corto el test, mejor, y con una señal fuerte temprana puedes darlo por aprobado, pero dale la duración suficiente para no confundir un máximo local con el máximo global de tu modelo de negocio.",
       "pasos_accionables": [
         "Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test",
         "Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga",
         "Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)",
         "Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo",
-        "Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global",
+        "Mantener el test tan corto como sea posible, pero con la duración suficiente para no confundir un máximo local con el máximo global; ante una señal fuerte temprana puedes pararlo y declararlo un éxito",
         "Registrar no solo el resultado pass/fail sino también los insights cualitativos"
       ],
       "entregable_esperado": "Lista de experimentos pass/fail diseñados y ejecutados, con criterios de éxito y resultados documentados para cada hipótesis crítica del modelo de negocio.",
@@ -40207,13 +40207,13 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Diseño de Landing Page para Activación",
-      "resumen_teorico": "La landing page es el principal punto de activación de clientes y debe funcionar como una invitación a activar ahora, no como un folleto online. Se desarrolla en cuatro ejes: contenido, apariencia, funcionalidad y navegación. El contenido explica de dónde viene el visitante y qué problema resuelve el producto, reforzando el mensaje y tono del anuncio o email que lo trajo. La apariencia debe ser coherente con la audiencia y sus diferencias culturales, con diseño limpio y llamado a la acción único. La funcionalidad incluye demos breves, pruebas gratuitas y herramientas interactivas. La navegación minimiza clics y puede diferenciarse según la fuente de tráfico. Todo reduce la confusión y facilita la conversión inmediata.",
+      "resumen_teorico": "La landing page es el principal punto de activación de clientes y debe funcionar como una invitación a activar ahora, no como un folleto online. Se desarrolla en cuatro ejes: contenido, apariencia, funcionalidad y navegación. El contenido explica de dónde viene el visitante y qué problema resuelve el producto, reforzando el mensaje y tono del anuncio o email que lo trajo. La apariencia debe ser coherente con la audiencia y sus diferencias culturales, con diseño limpio y un llamado a la acción principal mucho más destacado que los demás. La funcionalidad incluye demos breves, pruebas gratuitas y herramientas interactivas. La navegación minimiza clics y puede diferenciarse según la fuente de tráfico. Todo reduce la confusión y facilita la conversión inmediata.",
       "pasos_accionables": [
-        "Escribe contenido claro que explique de dónde viene el visitante y qué problema resuelve el producto",
+        "Escribe contenido claro que explique de dónde viene el visitante, qué problema resuelve el producto, cómo funciona y qué tan fácil es de usar, con una prueba rápida de que funciona (testimonios, demos, comparativas)",
         "Refuerza el mensaje y tono del anuncio o email que trajo al usuario, y define un único llamado a la acción principal reforzado de forma redundante pero no confusa",
         "Aplica diseño limpio con espacio en blanco, pocos elementos gráficos y botones grandes, coherente con tu audiencia y sus diferencias culturales",
         "Incluye demos de menos de un minuto, pruebas gratuitas o calculadoras interactivas que terminen en el llamado a la acción",
-        "Simplifica la navegación para minimizar los clics hasta completar la acción deseada, creando páginas específicas según la fuente de tráfico"
+        "Simplifica la navegación para minimizar los clics hasta completar la acción deseada, ofreciendo varias rutas que lleven al llamado a la acción y creando páginas específicas según la fuente de tráfico"
       ],
       "entregable_esperado": "Una landing page funcional con contenido, diseño, funcionalidad y navegación optimizados para la conversión, con llamadas a la acción claras y lista para pruebas A/B",
       "nodos_previos": [
@@ -40961,7 +40961,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Disruptores Endocrinos y Salud Industrial",
-      "resumen_teorico": "Compuestos químicos industriales, muchos presentes en plásticos y productos de consumo, pueden imitar hormonas humanas y alterar sistemas biológicos incluso en cantidades mínimas, afectando particularmente a fetos y niños. De los aproximadamente 80,000 químicos industriales en uso, solo una fracción ha sido estudiada en profundidad, lo que representa un vacío crítico de conocimiento para el diseño seguro de productos.",
+      "resumen_teorico": "Compuestos químicos industriales, muchos presentes en plásticos y productos de consumo, pueden imitar hormonas humanas y alterar sistemas biológicos incluso en cantidades mínimas, afectando particularmente a quienes se exponen a ellos en el útero. De los aproximadamente 80,000 químicos industriales en uso, solo una fracción ha sido estudiada en profundidad, lo que representa un vacío crítico de conocimiento para el diseño seguro de productos.",
       "pasos_accionables": [
         "Identificar si el producto contiene plásticos, PVC o aditivos con potencial disruptor endocrino conocido",
         "Consultar bases de datos disponibles de sustancias químicas peligrosas antes de finalizar la lista de materiales",
@@ -41556,7 +41556,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "environmental",
       "titulo_concepto": "Respeto a la Diversidad Cultural y Ecológica en el Diseño",
-      "resumen_teorico": "El diseño eco-efectivo debe considerar la diversidad de usos, usuarios, culturas y contextos ecológicos en lugar de aplicar soluciones únicas ('one-size-fits-all'). Esto implica diseñar productos y empaques adaptables a diferentes condiciones locales (por ejemplo, jabón en polvo vs líquido según disponibilidad de agua, empaques biodegradables según infraestructura de reciclaje local) y edificios que puedan reconvertirse para múltiples usos a lo largo del tiempo.",
+      "resumen_teorico": "El diseño eco-efectivo debe considerar la diversidad de usos, usuarios, culturas y contextos ecológicos en lugar de aplicar soluciones únicas ('one-size-fits-all'). Esto implica diseñar productos y empaques adaptables a diferentes condiciones locales (por ejemplo, jabón en polvo o en pastillas con variantes según el agua sea dura o blanda, empaques biodegradables según infraestructura de reciclaje local) y edificios que puedan reconvertirse para múltiples usos a lo largo del tiempo.",
       "pasos_accionables": [
         "Investigar las condiciones culturales, ecológicas y económicas específicas del mercado objetivo",
         "Diseñar productos con opciones de personalización local sin comprometer la integridad del producto",
@@ -42403,7 +42403,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "environmental",
       "titulo_concepto": "El Problema del Downcycling",
-      "resumen_teorico": "La mayoría del reciclaje convencional es en realidad 'downcycling': reduce la calidad del material con cada ciclo. Ejemplos incluyen acero de automóviles mezclado con otros metales perdiendo sus propiedades originales, aluminio de latas de refresco mezclado en aleaciones más débiles, y plásticos reciclados que requieren más aditivos químicos. El downcycling no solo pierde valor material sino que puede aumentar la contaminación de la biosfera al mezclar toxinas.",
+      "resumen_teorico": "La mayoría del reciclaje convencional es en realidad 'downcycling': reduce la calidad del material con cada ciclo. Ejemplos incluyen acero de automóviles mezclado con otros metales perdiendo sus propiedades originales, aluminio de latas de refresco mezclado en aleaciones más débiles, y plásticos reciclados a los que a menudo se añaden más aditivos químicos. El downcycling no solo pierde valor material sino que puede aumentar la contaminación de la biosfera al mezclar toxinas.",
       "pasos_accionables": [
         "Auditar los materiales de tus productos actuales para identificar si son reciclables en el mismo nivel de calidad o solo downcycables",
         "Investigar si los materiales usados fueron diseñados originalmente para reciclaje o solo se están forzando a un segundo uso",
@@ -43056,7 +43056,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "environmental",
       "titulo_concepto": "Eco-Efectividad",
-      "resumen_teorico": "La eco-efectividad es un paradigma de diseño que busca rediseñar tus procesos y productos por completo, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.",
+      "resumen_teorico": "La eco-efectividad es un paradigma de diseño que busca replantear tus procesos y productos desde un cambio de perspectiva, que puede llevarte a una innovación radical o solo a optimizar lo que ya existe, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.",
       "pasos_accionables": [
         "Analiza el ciclo de vida completo de tu producto o proceso identificando todos los flujos de materiales",
         "Cuestiona si tu diseño actual es el correcto, no solo si puede ser más eficiente, y si realmente regenera el entorno",
@@ -117015,7 +117015,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Tasa Interna de Retorno (IRR)",
-      "resumen_teorico": "La Tasa Interna de Retorno (IRR) es la tasa de descuento que hace que el Valor Presente Neto (NPV) de un proyecto sea igual a cero. Es útil para comparar de forma rápida y sencilla el retorno de un proyecto contra la tasa mínima requerida (hurdle rate) de la empresa. Sin embargo, tiene limitaciones importantes: no cuantifica la contribución en valor absoluto (dólares) que el proyecto agrega a la empresa, ni considera directamente la duración del retorno ni la escala de la inversión, por lo que conviene usarla junto con el NPV, especialmente cuando se comparan proyectos de distinto tamaño o duración.",
+      "resumen_teorico": "La Tasa Interna de Retorno (IRR) es la tasa de descuento que hace que el Valor Presente Neto (NPV) de un proyecto sea igual a cero. Es útil para comparar de forma rápida y sencilla el retorno de un proyecto contra la tasa mínima requerida (hurdle rate) de la empresa. Sin embargo, tiene limitaciones importantes: no cuantifica la contribución en valor absoluto (dólares) que el proyecto agrega a la empresa, ni considera directamente la duración del retorno ni la escala de la inversión, por lo que conviene usarla junto con el NPV, especialmente cuando se comparan proyectos de distinto tamaño o duración. Si los dos métodos apuntan a decisiones distintas, el NPV es la mejor guía.",
       "pasos_accionables": [
         "Proyectar los flujos de efectivo futuros de la inversión",
         "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el NPV sea igual a cero",
@@ -120495,7 +120495,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Las Tres Palancas para Mejorar la Rentabilidad",
-      "resumen_teorico": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo). Enfocarse solo en recortes es posponer el problema de fondo.",
+      "resumen_teorico": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo). Enfocarse solo en recortes probablemente solo pospone el problema de fondo.",
       "pasos_accionables": [
         "Diagnosticar cuál de las tres palancas explica la baja rentabilidad actual",
         "Si es ventas: analizar el embudo de ventas y nuevos mercados potenciales",

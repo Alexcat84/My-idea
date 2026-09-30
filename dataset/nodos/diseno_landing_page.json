@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Diseño de Landing Page para Activación",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "La landing page es el principal punto de activación de clientes y debe funcionar como una invitación a activar ahora, no como un folleto online. Se desarrolla en cuatro ejes: contenido, apariencia, funcionalidad y navegación. El contenido explica de dónde viene el visitante y qué problema resuelve el producto, reforzando el mensaje y tono del anuncio o email que lo trajo. La apariencia debe ser coherente con la audiencia y sus diferencias culturales, con diseño limpio y llamado a la acción único. La funcionalidad incluye demos breves, pruebas gratuitas y herramientas interactivas. La navegación minimiza clics y puede diferenciarse según la fuente de tráfico. Todo reduce la confusión y facilita la conversión inmediata.",
+  "resumen_teorico": "La landing page es el principal punto de activación de clientes y debe funcionar como una invitación a activar ahora, no como un folleto online. Se desarrolla en cuatro ejes: contenido, apariencia, funcionalidad y navegación. El contenido explica de dónde viene el visitante y qué problema resuelve el producto, reforzando el mensaje y tono del anuncio o email que lo trajo. La apariencia debe ser coherente con la audiencia y sus diferencias culturales, con diseño limpio y un llamado a la acción principal mucho más destacado que los demás. La funcionalidad incluye demos breves, pruebas gratuitas y herramientas interactivas. La navegación minimiza clics y puede diferenciarse según la fuente de tráfico. Todo reduce la confusión y facilita la conversión inmediata.",
   "pasos_accionables": [
-    "Escribe contenido claro que explique de dónde viene el visitante y qué problema resuelve el producto",
+    "Escribe contenido claro que explique de dónde viene el visitante, qué problema resuelve el producto, cómo funciona y qué tan fácil es de usar, con una prueba rápida de que funciona (testimonios, demos, comparativas)",
     "Refuerza el mensaje y tono del anuncio o email que trajo al usuario, y define un único llamado a la acción principal reforzado de forma redundante pero no confusa",
     "Aplica diseño limpio con espacio en blanco, pocos elementos gráficos y botones grandes, coherente con tu audiencia y sus diferencias culturales",
     "Incluye demos de menos de un minuto, pruebas gratuitas o calculadoras interactivas que terminen en el llamado a la acción",
-    "Simplifica la navegación para minimizar los clics hasta completar la acción deseada, creando páginas específicas según la fuente de tráfico"
+    "Simplifica la navegación para minimizar los clics hasta completar la acción deseada, ofreciendo varias rutas que lleven al llamado a la acción y creando páginas específicas según la fuente de tráfico"
   ],
   "entregable_esperado": "Una landing page funcional con contenido, diseño, funcionalidad y navegación optimizados para la conversión, con llamadas a la acción claras y lista para pruebas A/B",
   "nodos_previos": [
@@ -38,5 +38,57 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-134-diseno_landing_page-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "La landing page es el principal punto de activación de clientes y debe funcionar como una invitación a activar ahora, no como un folleto online. Se desarrolla en cuatro ejes: contenido, apariencia, funcionalidad y navegación. El contenido explica de dónde viene el visitante y qué problema resuelve el producto, reforzando el mensaje y tono del anuncio o email que lo trajo. La apariencia debe ser coherente con la audiencia y sus diferencias culturales, con diseño limpio y llamado a la acción único. La funcionalidad incluye demos breves, pruebas gratuitas y herramientas interactivas. La navegación minimiza clics y puede diferenciarse según la fuente de tráfico. Todo reduce la confusión y facilita la conversión inmediata.",
+      "texto_nuevo": "La landing page es el principal punto de activación de clientes y debe funcionar como una invitación a activar ahora, no como un folleto online. Se desarrolla en cuatro ejes: contenido, apariencia, funcionalidad y navegación. El contenido explica de dónde viene el visitante y qué problema resuelve el producto, reforzando el mensaje y tono del anuncio o email que lo trajo. La apariencia debe ser coherente con la audiencia y sus diferencias culturales, con diseño limpio y un llamado a la acción principal mucho más destacado que los demás. La funcionalidad incluye demos breves, pruebas gratuitas y herramientas interactivas. La navegación minimiza clics y puede diferenciarse según la fuente de tráfico. Todo reduce la confusión y facilita la conversión inmediata.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "10736",
+        "frase": "Offer multiple calls to action"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro pide varios llamados a la acción, redundantes sin confundir, con uno mucho más destacado; no uno único.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-134-diseno_landing_page-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe contenido claro que explique de dónde viene el visitante y qué problema resuelve el producto",
+      "texto_nuevo": "Escribe contenido claro que explique de dónde viene el visitante, qué problema resuelve el producto, cómo funciona y qué tan fácil es de usar, con una prueba rápida de que funciona (testimonios, demos, comparativas)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "10716-10728",
+        "frase": "Provide fast proof that it works (user quotes, competitive analysis, demos, etc.)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera lo que la página siempre debe lograr: además del problema, facilidad de uso, cómo funciona y prueba rápida de que funciona.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-134-diseno_landing_page-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Simplifica la navegación para minimizar los clics hasta completar la acción deseada, creando páginas específicas según la fuente de tráfico",
+      "texto_nuevo": "Simplifica la navegación para minimizar los clics hasta completar la acción deseada, ofreciendo varias rutas que lleven al llamado a la acción y creando páginas específicas según la fuente de tráfico",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "10796",
+        "frase": "“Friendly” navigation provides users several “routes” to the call to action."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que la navegación debe ofrecer varias rutas hacia el llamado a la acción, porque no se puede prever qué querrá hacer el visitante.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

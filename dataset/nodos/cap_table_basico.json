@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Cómo armar tu tabla de reparto de acciones (cap table)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La tabla de capitalización (cap table) resume quién tiene qué parte de tu negocio, antes y después de recibir una inversión. Necesitas entender cómo calcular el porcentaje que le corresponde a cada tipo de dueño (tú como fundador, la bolsa de opciones para empleados, los inversionistas), sobre todo cuando se agrega una bolsa de opciones después de la inversión (post-money), porque eso te diluye a ti, no a los inversionistas.",
+  "resumen_teorico": "La tabla de capitalización (cap table) resume quién tiene qué parte de tu negocio, antes y después de recibir una inversión. Necesitas entender cómo calcular el porcentaje que le corresponde a cada tipo de dueño (tú como fundador, la bolsa de opciones para empleados, los inversionistas), sobre todo cuando la propuesta exige una bolsa de opciones medida sobre la valuación post-money, porque esa bolsa se cuenta entre las acciones previas a la inversión y eso te diluye a ti, no a los inversionistas.",
   "pasos_accionables": [
     "Lista las acciones que tienes como fundador antes de recibir la inversión",
     "Define la valuación antes de la inversión (pre-money) y el monto que vas a recibir, para calcular la valuación después de la inversión (post-money)",
     "Calcula el porcentaje que le corresponde al inversionista dividiendo lo que invierte entre la valuación post-money",
-    "Si vas a crear una bolsa de opciones después de la inversión, resta ese porcentaje del tuyo para saber cuánto te queda realmente",
+    "Si la propuesta exige una bolsa de opciones medida sobre la valuación post-money, resta ese porcentaje del tuyo para saber cuánto te queda realmente",
     "Resuelve lo que falta en tu tabla (total de acciones, precio por acción) con álgebra básica",
     "Verifica tus cálculos comparando la valuación pre-money implícita contra el número de acciones y el precio por acción",
     "Usa decimales o fracciones de acciones en los cálculos intermedios y redondea solo al final"
@@ -43,5 +43,40 @@
   "etiqueta_arbol": "Construye tu Tabla de Capitalización",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-135-cap_table_basico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "La tabla de capitalización (cap table) resume quién tiene qué parte de tu negocio, antes y después de recibir una inversión. Necesitas entender cómo calcular el porcentaje que le corresponde a cada tipo de dueño (tú como fundador, la bolsa de opciones para empleados, los inversionistas), sobre todo cuando se agrega una bolsa de opciones después de la inversión (post-money), porque eso te diluye a ti, no a los inversionistas.",
+      "texto_nuevo": "La tabla de capitalización (cap table) resume quién tiene qué parte de tu negocio, antes y después de recibir una inversión. Necesitas entender cómo calcular el porcentaje que le corresponde a cada tipo de dueño (tú como fundador, la bolsa de opciones para empleados, los inversionistas), sobre todo cuando la propuesta exige una bolsa de opciones medida sobre la valuación post-money, porque esa bolsa se cuenta entre las acciones previas a la inversión y eso te diluye a ti, no a los inversionistas.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2450-2472",
+        "frase": "the shares prior to the financing (2 million founders’ shares plus the 20% option pool)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En el libro la bolsa exigida en la ronda se cuenta entre las acciones previas a la inversión, no se agrega después; por eso diluye al fundador.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-135-cap_table_basico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si vas a crear una bolsa de opciones después de la inversión, resta ese porcentaje del tuyo para saber cuánto te queda realmente",
+      "texto_nuevo": "Si la propuesta exige una bolsa de opciones medida sobre la valuación post-money, resta ese porcentaje del tuyo para saber cuánto te queda realmente",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2450-2468",
+        "frase": "A = 100% minus the VC percentage minus the employee pool percentage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El cálculo del libro es para una bolsa exigida en la ronda y medida sobre la post-money, no creada después de la inversión.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

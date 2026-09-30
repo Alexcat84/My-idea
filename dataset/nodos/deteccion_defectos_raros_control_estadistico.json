@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, permitiéndote detener la producción antes de que la variación se traduzca en defectos. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+  "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
   "pasos_accionables": [
     "Determina si la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos).",
     "Reemplaza la inspección masiva del producto terminado por mediciones continuas durante el proceso.",
     "Diseña un esquema de muestreo pequeño y frecuente (por ejemplo 4 unidades, 25 veces al día) y construye tus cartas X-barra y R con esas mediciones.",
-    "Detén la producción en cuanto la carta señale una causa especial de variación.",
+    "Retén la tanda producida en cuanto la carta señale que algo cambió, hasta encontrar la causa del problema.",
     "Investiga la causa raíz antes de decidir si liberas o rechazas el lote.",
     "Decide racionalmente si condenas todo el lote o liberas solo la parte que corresponda según lo que encontraste."
   ],
@@ -54,6 +54,39 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pone como ejemplo de defectos extremadamente raros 1 en 5000 o menos (p = 1/5000); el paso cambia el umbral de ejemplo a 1 en 1000, que el libro no usa.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C083-070"
+    },
+    {
+      "id": "final-e1-134-deteccion_defectos_raros_control_estadistico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, permitiéndote detener la producción antes de que la variación se traduzca en defectos. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+      "texto_nuevo": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9787",
+        "frase": "a run of product must be held up until the cause of the trouble"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la carta muestra si algo cambió y que la tanda se retiene hasta hallar la causa; no promete frenar antes de los defectos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-134-deteccion_defectos_raros_control_estadistico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detén la producción en cuanto la carta señale una causa especial de variación.",
+      "texto_nuevo": "Retén la tanda producida en cuanto la carta señale que algo cambió, hasta encontrar la causa del problema.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9787",
+        "frase": "a run of product must be held up until the cause of the trouble"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro manda retener la tanda de producto hasta hallar la causa, no detener la producción.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

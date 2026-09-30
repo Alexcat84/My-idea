@@ -4,10 +4,10 @@
   "dominio": "franquicias",
   "titulo_concepto": "Crecimiento desde la Base de Franquiciados Existentes",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "En sistemas de franquicia de alto rendimiento, la mayoría del crecimiento proviene de franquiciados existentes que abren nuevas unidades o refieren a sus contactos. Esto reduce costos de generación de leads, fortalece la cultura de marca y permite expandirse con operadores probados. Si un franquiciador no espera crecimiento significativo desde su base actual, es señal de problemas internos que deben resolverse.",
+  "resumen_teorico": "En sistemas de franquicia de alto rendimiento, la mayoría del crecimiento a menudo proviene de franquiciados existentes que abren nuevas unidades o refieren a sus contactos. Esto reduce costos de generación de leads, fortalece la cultura de marca y permite expandirse con operadores probados. Si un franquiciador no espera crecimiento significativo desde su base actual, es señal de problemas internos que deben resolverse para que el sistema pueda crecer a un ritmo agresivo.",
   "pasos_accionables": [
     "Medir qué porcentaje de nuevas ventas proviene de franquiciados actuales o sus referidos.",
-    "Crear incentivos o programas de referidos para franquiciados exitosos.",
+    "Crear incentivos o programas de referidos para franquiciados exitosos, consultando antes con tu abogado de franquicias, porque pagar por referidos puede activar obligaciones de divulgación y crear un conflicto de interés.",
     "Identificar y resolver problemas internos si el crecimiento interno es bajo.",
     "Fomentar relaciones y comunicación abierta entre franquiciador y franquiciados."
   ],
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Crece con tus Franquiciados Actuales",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-133-crecimiento_desde_franquiciados_existentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En sistemas de franquicia de alto rendimiento, la mayoría del crecimiento proviene de franquiciados existentes que abren nuevas unidades o refieren a sus contactos. Esto reduce costos de generación de leads, fortalece la cultura de marca y permite expandirse con operadores probados. Si un franquiciador no espera crecimiento significativo desde su base actual, es señal de problemas internos que deben resolverse.",
+      "texto_nuevo": "En sistemas de franquicia de alto rendimiento, la mayoría del crecimiento a menudo proviene de franquiciados existentes que abren nuevas unidades o refieren a sus contactos. Esto reduce costos de generación de leads, fortalece la cultura de marca y permite expandirse con operadores probados. Si un franquiciador no espera crecimiento significativo desde su base actual, es señal de problemas internos que deben resolverse para que el sistema pueda crecer a un ritmo agresivo.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1553",
+        "frase": "the majority of growth will often come from the existing franchisee community"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la mayoría del crecimiento a menudo viene de ahí ('will often come'); el nodo lo afirma como regla.; Misma condición perdida del ritmo agresivo de expansión.; Mismo endurecimiento del 'will often' del libro.; Se cae la condición: esos problemas deben resolverse para que el sistema pueda expandirse a un ritmo agresivo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-133-crecimiento_desde_franquiciados_existentes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear incentivos o programas de referidos para franquiciados exitosos.",
+      "texto_nuevo": "Crear incentivos o programas de referidos para franquiciados exitosos, consultando antes con tu abogado de franquicias, porque pagar por referidos puede activar obligaciones de divulgación y crear un conflicto de interés.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3971",
+        "frase": "they may trigger some disclosure obligations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que pagar comisiones por referido puede activar obligaciones de divulgación y crear un conflicto de interés, y pide consultarlo con el abogado.; Mismo matiz: se pierde la cautela legal sobre los pagos por referido.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

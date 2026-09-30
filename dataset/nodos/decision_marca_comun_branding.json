@@ -9,9 +9,9 @@
     "Evalúa si tu negocio depende de la preferencia y el reconocimiento del cliente",
     "Analiza si una marca común te facilitaría el acceso a cuentas grandes o corporativas",
     "Determina si tu modelo de negocio, por ejemplo uno de trastienda, puede prescindir de una marca compartida",
-    "Decide cuánto control quieres tener sobre cómo se representa tu marca"
+    "Si otros van a usar tu marca, define cómo vas a controlar la forma en que se representa: sin ese control, un operador puede dañarla, y no hacer cumplir tus estándares de calidad puede hacerte perder la marca registrada"
   ],
-  "entregable_esperado": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y cuánto control quieres tener sobre ella",
+  "entregable_esperado": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y, si la incluye, cómo vas a controlar la forma en que se representa",
   "nodos_previos": [
     "marco_name_system_fee"
   ],
@@ -51,6 +51,39 @@
         "evidencia": "F19-021: Decidir si la expansión llevará marca común y cuánto control tener es diseño del modelo de expansión. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-133-decision_marca_comun_branding-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide cuánto control quieres tener sobre cómo se representa tu marca",
+      "texto_nuevo": "Si otros van a usar tu marca, define cómo vas a controlar la forma en que se representa: sin ese control, un operador puede dañarla, y no hacer cumplir tus estándares de calidad puede hacerte perder la marca registrada",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1329-1331",
+        "frase": "you could actually lose your trademark for failing to enforce quality standards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz: el libro lo llama obligado por lógica, no una preferencia abierta.; Si otros usan tu marca, controlarla no es opcional: un operador sin control puede dañarla y no hacer cumplir estándares puede costarte la marca registrada.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-133-decision_marca_comun_branding-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y cuánto control quieres tener sobre ella",
+      "texto_nuevo": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y, si la incluye, cómo vas a controlar la forma en que se representa",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1327-1331",
+        "frase": "If you are going to allow someone to use your name"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con marca compartida el control no es opcional según el libro; el entregable lo presenta como una cantidad a elegir.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

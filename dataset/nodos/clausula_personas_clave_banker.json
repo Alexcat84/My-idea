@@ -9,7 +9,7 @@
     "Identificar si la contratación del banco depende de una persona específica",
     "Negociar una cláusula de terminación anticipada si esa persona se va",
     "Asegurar la opción de transferir el compromiso al nuevo empleador de esa persona",
-    "Revisar también el 'tail agreement' asociado"
+    "Procurar que la cláusula permita terminar, idealmente, también el 'tail agreement' asociado si esa persona se va"
   ],
   "entregable_esperado": "Carta de compromiso (engagement letter) con cláusula de persona clave incluida",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Protege tu Persona Clave Contratada",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-135-clausula_personas_clave_banker-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar también el 'tail agreement' asociado",
+      "texto_nuevo": "Procurar que la cláusula permita terminar, idealmente, también el 'tail agreement' asociado si esa persona se va",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4451",
+        "frase": "terminate the engagement and ideally the tail agreement in the event that those individuals leave"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que la cláusula permita terminar, idealmente, también el tail agreement si la persona se va; revisar pierde qué hacer.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

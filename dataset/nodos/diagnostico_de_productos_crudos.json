@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Diagnóstico de Productos Crudos",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Un 'producto crudo' es aquel diseñado únicamente para ser atractivo, cumplir regulaciones y venderse, sin considerar la salud humana o ecológica. Estos productos suelen contener aditivos químicos innecesarios (catalizadores, colorantes, retardantes) provenientes de cadenas de suministro globales no trazadas, lo que provoca contaminación del aire interior, bioacumulación y riesgos a la salud. El diseño descuidado, no la mala intención, es la causa raíz.",
+  "resumen_teorico": "Un 'producto crudo' es aquel diseñado únicamente para ser atractivo, cumplir regulaciones y venderse, sin considerar la salud humana o ecológica. Estos productos suelen contener aditivos químicos innecesarios (catalizadores, colorantes) provenientes de cadenas de suministro globales no trazadas, lo que provoca contaminación del aire interior y riesgos a la salud. El diseño descuidado, no la mala intención, es la causa raíz.",
   "pasos_accionables": [
     "Realizar un inventario completo de materiales y químicos usados en el producto o servicio actual",
     "Para cada componente, preguntar explícitamente '¿por qué está aquí y es necesario para la función?'",
@@ -41,6 +41,22 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por garantias_implicitas_vs_expresas."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-133-diagnostico_de_productos_crudos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un 'producto crudo' es aquel diseñado únicamente para ser atractivo, cumplir regulaciones y venderse, sin considerar la salud humana o ecológica. Estos productos suelen contener aditivos químicos innecesarios (catalizadores, colorantes, retardantes) provenientes de cadenas de suministro globales no trazadas, lo que provoca contaminación del aire interior, bioacumulación y riesgos a la salud. El diseño descuidado, no la mala intención, es la causa raíz.",
+      "texto_nuevo": "Un 'producto crudo' es aquel diseñado únicamente para ser atractivo, cumplir regulaciones y venderse, sin considerar la salud humana o ecológica. Estos productos suelen contener aditivos químicos innecesarios (catalizadores, colorantes) provenientes de cadenas de suministro globales no trazadas, lo que provoca contaminación del aire interior y riesgos a la salud. El diseño descuidado, no la mala intención, es la causa raíz.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "237-245",
+        "frase": "Product contains toxic dyes and catalysts."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro nombra tintes y catalizadores como aditivos no pedidos; los retardantes no aparecen.; Entre los efectos de los productos crudos el libro da la mala calidad del aire interior y riesgos a la salud, no la bioacumulación.; Mismo defecto que la marca 0: los retardantes no están en el pasaje.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

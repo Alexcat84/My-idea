@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Decidir Fuente de Ingresos: Royalties vs. Venta de Productos",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El franquiciador debe determinar si generará ingresos principalmente por royalties, por venta de productos, o por ambos. Sustituir royalties por venta de productos puede ser riesgoso a largo plazo si el producto se vuelve obsoleto o si los franquiciados generan ingresos por servicios (que solo pueden capturarse vía royalty). La recomendación es cobrar por separado cada componente de valor entregado.",
+  "resumen_teorico": "Si puede exigir legalmente a los franquiciados que le compren productos, el franquiciador debe determinar si generará ingresos principalmente por royalties, por venta de productos, o por ambos. Sustituir royalties por venta de productos puede ser riesgoso a largo plazo si el producto se vuelve obsoleto o si los franquiciados generan ingresos por servicios (que probablemente solo se captan vía royalty). La recomendación es cobrar por separado cada componente de valor entregado.",
   "pasos_accionables": [
     "Analizar si el producto/servicio del negocio podría volverse obsoleto en el tiempo",
     "Determinar si los franquiciados generarán ingresos por servicios además de productos",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Elige entre Regalías o Producto",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-133-decision_royalties_vs_venta_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El franquiciador debe determinar si generará ingresos principalmente por royalties, por venta de productos, o por ambos. Sustituir royalties por venta de productos puede ser riesgoso a largo plazo si el producto se vuelve obsoleto o si los franquiciados generan ingresos por servicios (que solo pueden capturarse vía royalty). La recomendación es cobrar por separado cada componente de valor entregado.",
+      "texto_nuevo": "Si puede exigir legalmente a los franquiciados que le compren productos, el franquiciador debe determinar si generará ingresos principalmente por royalties, por venta de productos, o por ambos. Sustituir royalties por venta de productos puede ser riesgoso a largo plazo si el producto se vuelve obsoleto o si los franquiciados generan ingresos por servicios (que probablemente solo se captan vía royalty). La recomendación es cobrar por separado cada componente de valor entregado.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1735-1739",
+        "frase": "Assuming you can legally require your franchisees to purchase some or all of their products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que probablemente ('chances are') el royalty sea la única vía; el nodo lo vuelve absoluto.; El libro plantea la decisión suponiendo que puedes exigir legalmente a los franquiciados que te compren productos; esa condición se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

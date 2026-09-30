@@ -9,7 +9,7 @@
     "Evaluar si la empresa tiene caja disponible para pagar salarios de mercado",
     "Si hay caja y la persona es en realidad empleada: clasificarla como empleada y pagar el salario y los impuestos correspondientes",
     "Si no hay caja: estructurar contratos de consultoría con proyectos y pagos definidos por entregable",
-    "Evitar supervisión directa, provisión de equipo o exclusividad con los consultores",
+    "Evitar supervisión directa, provisión de equipo o entrenamiento, exclusividad o relaciones terminables a voluntad con los consultores",
     "Consultar con un abogado laboral para minimizar riesgo de reclasificación"
   ],
   "entregable_esperado": "Contratos de consultoría o de empleo correctamente estructurados según la relación real de trabajo",
@@ -41,6 +41,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro dice pagar salarios e impuestos si de verdad son empleados; las prestaciones no aparecen en el libro.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-082"
+    },
+    {
+      "id": "final-e1-135-clasificacion_consultores_empleados-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar supervisión directa, provisión de equipo o exclusividad con los consultores",
+      "texto_nuevo": "Evitar supervisión directa, provisión de equipo o entrenamiento, exclusividad o relaciones terminables a voluntad con los consultores",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4730",
+        "frase": "(4) not providing equipment or training"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista omite dos criterios del libro: no dar entrenamiento y no hacer la relación terminable a voluntad.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

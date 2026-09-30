@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Definiciones Operacionales para Clasificación de Defectos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Conviene abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector, y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
+  "resumen_teorico": "Conviene abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector (salvo, posiblemente, en la auditoría de calidad), y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
   "pasos_accionables": [
     "Reunir a supervisores, operadores y calidad para definir criterios objetivos de aceptación/rechazo por tipo de defecto",
     "Redactar definiciones operacionales claras, medibles y sin ambigüedad para cada categoría de defecto",
@@ -39,6 +39,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-030 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-134-definiciones_operacionales_defectos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conviene abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector, y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
+      "texto_nuevo": "Conviene abolir distinciones arbitrarias entre 'defecto mayor' y 'defecto menor' que dependen del criterio subjetivo del inspector (salvo, posiblemente, en la auditoría de calidad), y en su lugar construir definiciones operacionales claras y verificables que permitan a todos los operadores entender exactamente qué constituye trabajo correcto e incorrecto. Estas definiciones deben probarse estadísticamente para confirmar que funcionan consistentemente en la práctica.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9086",
+        "frase": "A defect will be a defect, except possibly in the quality-audit."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro trae la excepción de la auditoría de calidad, que el nodo pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

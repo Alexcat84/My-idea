@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Diseño Biomimético de Edificios (Inspirado en la Naturaleza)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Se trata de diseñar edificios y espacios humanos imitando los principios de sistemas naturales, como el cerezo, que producen abundancia sin agotar recursos. Un edificio eco-efectivo no solo ahorra energía sino que maximiza el bienestar humano y ecológico: luz natural, ventilación cruzada, techos verdes, y conexión con el entorno. Estos diseños pueden ser tan eficientes como los convencionales, pero logran ese resultado como efecto secundario de un objetivo más amplio: mejorar la vida de las personas y el ecosistema circundante.",
+  "resumen_teorico": "Se trata de diseñar edificios y espacios humanos imitando los principios de sistemas naturales, como el cerezo, que producen abundancia sin agotar recursos. Un edificio eco-efectivo no solo ahorra energía sino que maximiza el bienestar humano y ecológico: luz natural, ventilación cruzada, techos verdes, y conexión con el entorno. Estos diseños pueden ser tan eficientes en energía como un edificio diseñado para ahorrarla, pero logran ese resultado como efecto secundario de un objetivo más amplio: mejorar la vida de las personas y el ecosistema circundante.",
   "pasos_accionables": [
     "Analizar cómo un ecosistema natural (como un árbol) resolvería las funciones del edificio",
     "Priorizar luz natural, ventilación operable y materiales no tóxicos",
@@ -43,6 +43,22 @@
         "evidencia": "F29-007: El contenido es diseñar un edificio o espacio y su entregable es un brief de diseño arquitectonico, lo que corresponde a planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-133-diseno_biomimetico_de_edificios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Se trata de diseñar edificios y espacios humanos imitando los principios de sistemas naturales, como el cerezo, que producen abundancia sin agotar recursos. Un edificio eco-efectivo no solo ahorra energía sino que maximiza el bienestar humano y ecológico: luz natural, ventilación cruzada, techos verdes, y conexión con el entorno. Estos diseños pueden ser tan eficientes como los convencionales, pero logran ese resultado como efecto secundario de un objetivo más amplio: mejorar la vida de las personas y el ecosistema circundante.",
+      "texto_nuevo": "Se trata de diseñar edificios y espacios humanos imitando los principios de sistemas naturales, como el cerezo, que producen abundancia sin agotar recursos. Un edificio eco-efectivo no solo ahorra energía sino que maximiza el bienestar humano y ecológico: luz natural, ventilación cruzada, techos verdes, y conexión con el entorno. Estos diseños pueden ser tan eficientes en energía como un edificio diseñado para ahorrarla, pero logran ese resultado como efecto secundario de un objetivo más amplio: mejorar la vida de las personas y el ecosistema circundante.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "447-451",
+        "frase": "this building is just as energy-efficient as the first"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro compara con el edificio eco-eficiente diseñado para ahorrar energía, no con uno convencional.; Mismo matiz: la vara de comparación del libro es el edificio ahorrador de energía.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

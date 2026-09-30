@@ -7,7 +7,7 @@
   "resumen_teorico": "En la naturaleza no existe el desperdicio: cada residuo de un proceso biológico se convierte en nutriente de otro, como ocurre con los ciclos de carbono, hidrógeno, oxígeno y nitrógeno que se reciclan continuamente en la biosfera. Esto contrasta con el modelo industrial de cuna a tumba, donde extraes, usas y desechas materiales sin retorno útil. Aplicado a tu producto, este principio te invita a pensar en dos metabolismos posibles: el biológico, con materiales que se biodegradan de forma segura y nutren el suelo, y el técnico, con materiales que circulan indefinidamente en ciclos industriales cerrados sin degradarse ni contaminar. Diseñar bajo esta lógica implica revisar el ciclo de vida completo de lo que fabricas y decidir a qué ciclo pertenece cada componente.",
   "pasos_accionables": [
     "Analiza el ciclo de vida completo de tu producto identificando qué sucede con cada residuo o salida",
-    "Clasifica cada material como nutriente biológico o técnico",
+    "Clasifica cada material como nutriente biológico o técnico, y aparta los peligrosos que no encajan en ninguno para guardarlos de forma segura hasta poder desintoxicarlos o prescindir de ellos",
     "Diseña el producto para que sus componentes se separen fácilmente al final de su vida útil",
     "Elimina sustancias tóxicas que impidan reintegrar el material a un ciclo de forma segura",
     "Rediseña el proceso para que los subproductos alimenten otro ciclo en lugar de convertirse en basura",
@@ -44,5 +44,24 @@
   ],
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-133-desperdicio_es_alimento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasifica cada material como nutriente biológico o técnico",
+      "texto_nuevo": "Clasifica cada material como nutriente biológico o técnico, y aparta los peligrosos que no encajan en ninguno para guardarlos de forma segura hasta poder desintoxicarlos o prescindir de ellos",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "680-686",
+        "frase": "Some materials do not fit into either the organic or technical metabolism"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que algunos materiales peligrosos no encajan en ningún metabolismo y deben guardarse de forma segura.; Mismo matiz: la clasificación binaria pierde los materiales no comercializables que el libro manda guardar.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

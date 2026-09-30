@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Disruptores Endocrinos y Salud Industrial",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Compuestos químicos industriales, muchos presentes en plásticos y productos de consumo, pueden imitar hormonas humanas y alterar sistemas biológicos incluso en cantidades mínimas, afectando particularmente a fetos y niños. De los aproximadamente 80,000 químicos industriales en uso, solo una fracción ha sido estudiada en profundidad, lo que representa un vacío crítico de conocimiento para el diseño seguro de productos.",
+  "resumen_teorico": "Compuestos químicos industriales, muchos presentes en plásticos y productos de consumo, pueden imitar hormonas humanas y alterar sistemas biológicos incluso en cantidades mínimas, afectando particularmente a quienes se exponen a ellos en el útero. De los aproximadamente 80,000 químicos industriales en uso, solo una fracción ha sido estudiada en profundidad, lo que representa un vacío crítico de conocimiento para el diseño seguro de productos.",
   "pasos_accionables": [
     "Identificar si el producto contiene plásticos, PVC o aditivos con potencial disruptor endocrino conocido",
     "Consultar bases de datos disponibles de sustancias químicas peligrosas antes de finalizar la lista de materiales",
@@ -38,6 +38,22 @@
         "evidencia": "F14-019: Establecer un protocolo de revision toxicologica de materiales antes de cerrar el diseno es planificar el producto. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-133-disruptores_endocrinos_y_salud_industrial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compuestos químicos industriales, muchos presentes en plásticos y productos de consumo, pueden imitar hormonas humanas y alterar sistemas biológicos incluso en cantidades mínimas, afectando particularmente a fetos y niños. De los aproximadamente 80,000 químicos industriales en uso, solo una fracción ha sido estudiada en profundidad, lo que representa un vacío crítico de conocimiento para el diseño seguro de productos.",
+      "texto_nuevo": "Compuestos químicos industriales, muchos presentes en plásticos y productos de consumo, pueden imitar hormonas humanas y alterar sistemas biológicos incluso en cantidades mínimas, afectando particularmente a quienes se exponen a ellos en el útero. De los aproximadamente 80,000 químicos industriales en uso, solo una fracción ha sido estudiada en profundidad, lo que representa un vacío crítico de conocimiento para el diseño seguro de productos.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "322",
+        "frase": "particularly in those exposed in the womb"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje destaca el daño en quienes se exponen en el útero; los niños como grupo afectado no aparecen.; Mismo defecto: añade a los niños, que el pasaje no menciona.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

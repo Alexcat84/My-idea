@@ -3,13 +3,13 @@
   "dominio": "core",
   "titulo_concepto": "Desarrollo del Posicionamiento de Producto",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente durante el descubrimiento de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
+  "resumen_teorico": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente al comienzo de la validación de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
   "pasos_accionables": [
     "Revisar la declaración de posicionamiento inicial creada al comienzo de la validación de clientes",
     "Contrastarla con las reacciones reales de los clientes durante la validación: ¿resonó?, ¿fue creíble y efectiva?",
     "Volver a contactar clientes si la razón de compra no quedó clara",
     "Incorporar la retroalimentación de clientes y de socios de canal",
-    "Redactar el resumen de posicionamiento final, de una sola página",
+    "Redactar el resumen de posicionamiento revisado, de una sola página, sin buscar que sea perfecto: se seguirá afinando durante la creación de clientes",
     "Usar el resumen como referencia para mantener consistencia en todo el material de marketing y ventas futuro"
   ],
   "entregable_esperado": "Resumen de posicionamiento de producto (una página), validado con clientes reales y listo como referencia para todo el material de marketing posterior",
@@ -72,6 +72,39 @@
         "motivo": "Los 9 pecados del modelo de introduccion de producto son el punto de partida del metodo de desarrollo de clientes. No son un paso que siga al posicionamiento final, asi que el orden esta invertido."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-134-desarrollo_posicionamiento_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente durante el descubrimiento de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
+      "texto_nuevo": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente al comienzo de la validación de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12400",
+        "frase": "In Phase 1 of validation, you crafted initial positioning for product and company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro sitúa la primera versión del posicionamiento al comienzo de la validación, no en el descubrimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-134-desarrollo_posicionamiento_producto-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redactar el resumen de posicionamiento final, de una sola página",
+      "texto_nuevo": "Redactar el resumen de posicionamiento revisado, de una sola página, sin buscar que sea perfecto: se seguirá afinando durante la creación de clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12455",
+        "frase": "The positioning doesn’t have to be perfect, since it will be refined further"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Existe, pero es matiz: se pierde que el resumen no tiene que ser perfecto y seguirá refinándose; no es un opuesto.; Se pierde que el posicionamiento se seguirá refinando en la creación de clientes; el criterio de salida es un resumen revisado.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

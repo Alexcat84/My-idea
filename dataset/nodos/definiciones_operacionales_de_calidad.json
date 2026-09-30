@@ -7,7 +7,7 @@
   "resumen_teorico": "Muchas disputas entre proveedor y cliente surgen porque ambas partes no tienen una definición clara y medible de lo que constituye 'calidad aceptable' para un producto o característica. El caso del fabricante de forros de freno muestra que, tras años de conflictos, desarrollar definiciones operacionales conjuntas (medibles mediante cartas de control) eliminó las disputas y alineó expectativas.",
   "pasos_accionables": [
     "Identificar todas las características críticas de calidad del producto según el cliente",
-    "Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles",
+    "Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles, definiendo tanto lo que el cliente quiere como lo que el proveedor puede fabricar",
     "Establecer cartas de control (X-barra y R) para cada característica clave",
     "Compartir los resultados de las cartas de control con el cliente de forma continua"
   ],
@@ -41,6 +41,23 @@
         "evidencia": "Q044-014: Resolver disputas recurrentes de calidad con un cliente mediante definiciones operacionales y cartas de control compartidas de forma continua es gestion operativa de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-134-definiciones_operacionales_de_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles",
+      "texto_nuevo": "Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles, definiendo tanto lo que el cliente quiere como lo que el proveedor puede fabricar",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3098",
+        "frase": "develop operational definitions of what he wished to have, and what we could make"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define juntos lo que el cliente quiere y lo que el proveedor puede fabricar; el paso pierde la segunda mitad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

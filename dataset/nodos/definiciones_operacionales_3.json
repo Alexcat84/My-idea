@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Definiciones Operacionales (Traducir Conceptos Abstractos)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
+  "resumen_teorico": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un muestreo, un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
   "pasos_accionables": [
     "Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').",
     "Definir una prueba específica y reproducible para evaluar dicho concepto.",
-    "Establecer un criterio de juicio claro y cuantificable.",
+    "Establecer un criterio de juicio claro.",
     "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.",
     "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.",
     "Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú."
@@ -41,5 +41,40 @@
   ],
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-134-definiciones_operacionales_3-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
+      "texto_nuevo": "Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un muestreo, un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6597",
+        "frase": "expressed in operational terms of sampling, test, and criterion"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define el significado comunicable en términos de muestreo, prueba y criterio; el nodo pierde el muestreo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-134-definiciones_operacionales_3-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un criterio de juicio claro y cuantificable.",
+      "texto_nuevo": "Establecer un criterio de juicio claro.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6603",
+        "frase": "A criterion (or criteria) for judgment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide un criterio de juicio; la exigencia de que sea cuantificable no está y sus ejemplos incluyen apariencia o color.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

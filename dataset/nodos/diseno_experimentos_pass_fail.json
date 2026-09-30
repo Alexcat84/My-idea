@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Diseño de Experimentos Pass/Fail para Probar Hipótesis",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Cada hipótesis del modelo de negocio debe convertirse en un experimento simple y objetivo de tipo pass/fail, ejecutable con rapidez y bajo costo. El ciclo es Hipótesis, Diseño de Experimento, Test, Insight. No buscas precisión estadística perfecta sino una señal fuerte que salga del ruido, tan clara que te la puedan arrancar de las manos. Para lograrlo, tienes que salir del edificio y probar con clientes reales, usando landing pages de prueba, presentaciones a prospectos, mockups o prototipos. Extiende la duración del test lo suficiente para no confundir un máximo local con el máximo global de tu modelo de negocio.",
+  "resumen_teorico": "Cada hipótesis del modelo de negocio debe convertirse en un experimento simple y objetivo de tipo pass/fail, ejecutable con rapidez y bajo costo. El ciclo es Hipótesis, Diseño de Experimento, Test, Insight. No buscas precisión estadística perfecta sino una señal fuerte que salga del ruido, tan clara que te la puedan arrancar de las manos. Para lograrlo, tienes que salir del edificio y probar con clientes reales, usando landing pages de prueba, presentaciones a prospectos, mockups o prototipos. Cuanto más corto el test, mejor, y con una señal fuerte temprana puedes darlo por aprobado, pero dale la duración suficiente para no confundir un máximo local con el máximo global de tu modelo de negocio.",
   "pasos_accionables": [
     "Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test",
     "Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga",
     "Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)",
     "Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo",
-    "Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global",
+    "Mantener el test tan corto como sea posible, pero con la duración suficiente para no confundir un máximo local con el máximo global; ante una señal fuerte temprana puedes pararlo y declararlo un éxito",
     "Registrar no solo el resultado pass/fail sino también los insights cualitativos"
   ],
   "entregable_esperado": "Lista de experimentos pass/fail diseñados y ejecutados, con criterios de éxito y resultados documentados para cada hipótesis crítica del modelo de negocio.",
@@ -43,5 +43,40 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-134-diseno_experimentos_pass_fail-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada hipótesis del modelo de negocio debe convertirse en un experimento simple y objetivo de tipo pass/fail, ejecutable con rapidez y bajo costo. El ciclo es Hipótesis, Diseño de Experimento, Test, Insight. No buscas precisión estadística perfecta sino una señal fuerte que salga del ruido, tan clara que te la puedan arrancar de las manos. Para lograrlo, tienes que salir del edificio y probar con clientes reales, usando landing pages de prueba, presentaciones a prospectos, mockups o prototipos. Extiende la duración del test lo suficiente para no confundir un máximo local con el máximo global de tu modelo de negocio.",
+      "texto_nuevo": "Cada hipótesis del modelo de negocio debe convertirse en un experimento simple y objetivo de tipo pass/fail, ejecutable con rapidez y bajo costo. El ciclo es Hipótesis, Diseño de Experimento, Test, Insight. No buscas precisión estadística perfecta sino una señal fuerte que salga del ruido, tan clara que te la puedan arrancar de las manos. Para lograrlo, tienes que salir del edificio y probar con clientes reales, usando landing pages de prueba, presentaciones a prospectos, mockups o prototipos. Cuanto más corto el test, mejor, y con una señal fuerte temprana puedes darlo por aprobado, pero dale la duración suficiente para no confundir un máximo local con el máximo global de tu modelo de negocio.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8020-8022",
+        "frase": "while shorter is always better, be sure you’ve given yourself the opportunity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que más corto siempre es mejor y que con una señal fuerte temprana se puede parar y declarar éxito.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-134-diseno_experimentos_pass_fail-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global",
+      "texto_nuevo": "Mantener el test tan corto como sea posible, pero con la duración suficiente para no confundir un máximo local con el máximo global; ante una señal fuerte temprana puedes pararlo y declararlo un éxito",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8020-8022",
+        "frase": "while shorter is always better, be sure you’ve given yourself the opportunity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el contrapeso del libro: más corto siempre es mejor y con señal fuerte temprana se puede parar.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

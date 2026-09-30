@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Descubrimiento del cliente (Customer Discovery)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+  "resumen_teorico": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Incluye dos fases fuera del edificio: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
   "pasos_accionables": [
     "Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea",
     "Prueba cómo percibe el cliente el problema antes de mostrarle nada del producto",
     "Construye una versión mínima del producto (MVP) para testear la solución",
     "Confirma que el problema le importa lo suficiente como para que decida comprar",
     "Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback",
-    "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis",
+    "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis, con la lista de experimentos para probarla o descartarla",
     "Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales",
     "Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano",
     "Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más"
@@ -162,6 +162,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-135-customer_discovery-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis",
+      "texto_nuevo": "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis, con la lista de experimentos para probarla o descartarla",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1739",
+        "frase": "including the list of experiments or tests you’ll need to conduct"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Cada resumen del libro incluye la lista de experimentos para probar o descartar la hipótesis; el paso lo pierde.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-135-customer_discovery-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+      "texto_nuevo": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Incluye dos fases fuera del edificio: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión mínima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "856",
+        "frase": "Customer discovery includes two outside-the-building phases."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro habla de dos fases fuera del edificio dentro de un proceso de cuatro fases; sin esa precisión el resumen fija dos fases en total.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

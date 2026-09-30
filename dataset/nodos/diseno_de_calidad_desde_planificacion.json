@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Construcción de la calidad desde la etapa de diseño y planificación",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El ejemplo de un hotel lo ilustra: una vez que los planos y la construcción avanzan, es demasiado tarde para incorporar calidad; la ubicación de camas frente a ductos de aire, ascensores insuficientes o interruptores de luz confusos son defectos de diseño que ningún gerente puede corregir después. La calidad de un producto o servicio, especialmente en proyectos únicos ('one of a kind'), debe planificarse considerando la experiencia real del usuario final antes de la ejecución física.",
+  "resumen_teorico": "El ejemplo de un hotel lo ilustra: una vez que los planos y la construcción avanzan, es demasiado tarde para incorporar calidad; la ubicación de camas frente a ductos de aire, ascensores insuficientes o interruptores de luz confusos son defectos de diseño que ningún gerente puede corregir después. Como casi todo producto o servicio es único ('one of a kind'), su calidad debe planificarse considerando la experiencia real del usuario final antes de la ejecución física.",
   "pasos_accionables": [
     "Antes de finalizar cualquier diseño físico o de proceso, simular la experiencia del usuario final paso a paso.",
     "Identificar puntos de fricción previsibles (ergonomía, señalización, flujo de uso) durante la fase de planos.",
@@ -41,6 +41,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-012 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-134-diseno_de_calidad_desde_planificacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El ejemplo de un hotel lo ilustra: una vez que los planos y la construcción avanzan, es demasiado tarde para incorporar calidad; la ubicación de camas frente a ductos de aire, ascensores insuficientes o interruptores de luz confusos son defectos de diseño que ningún gerente puede corregir después. La calidad de un producto o servicio, especialmente en proyectos únicos ('one of a kind'), debe planificarse considerando la experiencia real del usuario final antes de la ejecución física.",
+      "texto_nuevo": "El ejemplo de un hotel lo ilustra: una vez que los planos y la construcción avanzan, es demasiado tarde para incorporar calidad; la ubicación de camas frente a ductos de aire, ascensores insuficientes o interruptores de luz confusos son defectos de diseño que ningún gerente puede corregir después. Como casi todo producto o servicio es único ('one of a kind'), su calidad debe planificarse considerando la experiencia real del usuario final antes de la ejecución física.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4777",
+        "frase": "As was emphasized in Chapter 2, nearly everything is one of a kind."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que casi todo lo que se produce es único; el nodo lo reduce a un subconjunto de proyectos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

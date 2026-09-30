@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Respeto a la Diversidad Cultural y Ecológica en el Diseño",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "El diseño eco-efectivo debe considerar la diversidad de usos, usuarios, culturas y contextos ecológicos en lugar de aplicar soluciones únicas ('one-size-fits-all'). Esto implica diseñar productos y empaques adaptables a diferentes condiciones locales (por ejemplo, jabón en polvo vs líquido según disponibilidad de agua, empaques biodegradables según infraestructura de reciclaje local) y edificios que puedan reconvertirse para múltiples usos a lo largo del tiempo.",
+  "resumen_teorico": "El diseño eco-efectivo debe considerar la diversidad de usos, usuarios, culturas y contextos ecológicos en lugar de aplicar soluciones únicas ('one-size-fits-all'). Esto implica diseñar productos y empaques adaptables a diferentes condiciones locales (por ejemplo, jabón en polvo o en pastillas con variantes según el agua sea dura o blanda, empaques biodegradables según infraestructura de reciclaje local) y edificios que puedan reconvertirse para múltiples usos a lo largo del tiempo.",
   "pasos_accionables": [
     "Investigar las condiciones culturales, ecológicas y económicas específicas del mercado objetivo",
     "Diseñar productos con opciones de personalización local sin comprometer la integridad del producto",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Respeta la Diversidad al Diseñar",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-133-diversidad_en_diseno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El diseño eco-efectivo debe considerar la diversidad de usos, usuarios, culturas y contextos ecológicos en lugar de aplicar soluciones únicas ('one-size-fits-all'). Esto implica diseñar productos y empaques adaptables a diferentes condiciones locales (por ejemplo, jabón en polvo vs líquido según disponibilidad de agua, empaques biodegradables según infraestructura de reciclaje local) y edificios que puedan reconvertirse para múltiples usos a lo largo del tiempo.",
+      "texto_nuevo": "El diseño eco-efectivo debe considerar la diversidad de usos, usuarios, culturas y contextos ecológicos en lugar de aplicar soluciones únicas ('one-size-fits-all'). Esto implica diseñar productos y empaques adaptables a diferentes condiciones locales (por ejemplo, jabón en polvo o en pastillas con variantes según el agua sea dura o blanda, empaques biodegradables según infraestructura de reciclaje local) y edificios que puedan reconvertirse para múltiples usos a lo largo del tiempo.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "817",
+        "frase": "different kinds of pellets and powder might be used for places with hard water"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro propone polvo o pastillas porque enviar agua es innecesario, con variantes por dureza del agua, no por su disponibilidad.; Mismo defecto: la forma del jabón no se liga a la disponibilidad de agua en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

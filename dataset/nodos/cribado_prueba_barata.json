@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+  "resumen_teorico": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto puede lograr ahorros dignos de considerar si el costo de aplicar la prueba maestra a las partes no aceptadas no es demasiado alto.",
   "pasos_accionables": [
     "Verificar que se cumple la condición pk2 > k1 (inspección al 100% es óptima).",
     "Diseñar y calibrar una prueba barata que nunca acepte lo que la prueba maestra rechazaría.",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Filtra Barato Antes de lo Caro",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-134-cribado_prueba_barata-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto genera ahorros significativos si el costo de la prueba barata es bajo y la proporción de partes que requieren la prueba maestra es manejable.",
+      "texto_nuevo": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto puede lograr ahorros dignos de considerar si el costo de aplicar la prueba maestra a las partes no aceptadas no es demasiado alto.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9892",
+        "frase": "this plan may accomplish savings worth consideration"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que el plan puede lograr ahorros dignos de considerar, con la condición del costo de la prueba maestra sobre las no aceptadas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

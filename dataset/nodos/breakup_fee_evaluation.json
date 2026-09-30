@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de la comisión por cancelación (breakup fee) al vender tu empresa",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+  "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando el comprador sea un competidor y sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
   "pasos_accionables": [
     "Evalúa si el comprador tiene intención real de cerrar o si solo está buscando información sin compromiso",
     "Determina qué riesgo corres con tus clientes o empleados al iniciar el proceso de venta",
     "Resiste por defecto la petición de comisión por cancelación, apoyándote en la cláusula de exclusividad (no-shop)",
-    "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
+    "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si el comprador es un competidor y sospechas una expedición de pesca, o si asumes un gran riesgo con clientes o empleados",
     "Consulta con quien te asesore legalmente antes de aceptar cualquier comisión de este tipo"
   ],
   "entregable_esperado": "Una postura clara y por escrito sobre si aceptas o rechazas la comisión por cancelación en la carta de intención (LOI)",
@@ -69,6 +69,39 @@
         "motivo": "Tiene razon B. El nodo trata de la comision por cancelacion en la venta de la empresa, antes del cierre. El vecino trata de corregir las condiciones de una ronda de financiamiento ya cerrada, con nuevas rondas, inversionistas lideres y la motivacion del equipo. Despues de vender la empresa no hay rondas que levantar, asi que el vecino no usa ni continua esta decision. Lo unico en comun es la idea generica de 'un trato', que es demasiado vaga para un recorrido. La correccion no cambio nada que importe aqui (el resumen visible es igual ANTES y AHORA), asi que el desajuste ya venia de antes."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-135-breakup_fee_evaluation-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "texto_nuevo": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando el comprador sea un competidor y sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4338",
+        "frase": "If the buyer is competitive and the seller is concerned"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como condición que el comprador sea un competidor y se tema una expedición de pesca; se cae lo de competidor.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-135-breakup_fee_evaluation-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
+      "texto_nuevo": "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si el comprador es un competidor y sospechas una expedición de pesca, o si asumes un gran riesgo con clientes o empleados",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4338",
+        "frase": "If the buyer is competitive and the seller is concerned"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como condición que el comprador sea un competidor y se tema una expedición de pesca; se cae lo de competidor.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [
