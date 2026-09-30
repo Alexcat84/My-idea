@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Definición de Exclusividad Territorial para Representantes",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Define también con claridad el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+  "resumen_teorico": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Puede que también necesites definir el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
   "pasos_accionables": [
     "Evalúa el desempeño del representante antes de otorgarle exclusividad",
     "Limita la exclusividad a un periodo definido, con opción de renovación",
-    "Define con claridad el territorio geográfico que cubre la exclusividad",
-    "Verifica si las leyes de tu país permiten este tipo de límite territorial"
+    "Si hace falta, define con claridad el territorio geográfico que cubre la exclusividad",
+    "Verifica si las leyes del país del representante permiten este tipo de límite territorial"
   ],
   "entregable_esperado": "Una cláusula de exclusividad territorial delimitada en tiempo y espacio dentro de tu contrato",
   "nodos_previos": [
@@ -42,6 +42,56 @@
       },
       "decision": "'al momento de la fuente' es voz de libro: pasa a 'en su momento'; el aviso de verificar la norma vigente se conserva",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guarda G6"
+    },
+    {
+      "id": "final-e1-094-exclusividad_territorial_representante-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica si las leyes de tu país permiten este tipo de límite territorial",
+      "texto_nuevo": "Verifica si las leyes del país del representante permiten este tipo de límite territorial",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1997-1999",
+        "frase": "the laws of the representative's country may take precedence"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Cambia la jurisdicción a revisar por la del emprendedor, que el libro no señala.; El libro habla de las leyes de algunos países y, en ese contrato, de las del país del representante; mandar a revisar las del país propio añade una jurisdicción que el libro no da.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-094-exclusividad_territorial_representante-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Define también con claridad el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "texto_nuevo": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Puede que también necesites definir el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1997",
+        "frase": "The territory covered by exclusivity may also need to be defined"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el territorio puede necesitar definirse ('may also need to be defined'); el nodo lo vuelve obligación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-094-exclusividad_territorial_representante-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define con claridad el territorio geográfico que cubre la exclusividad",
+      "texto_nuevo": "Si hace falta, define con claridad el territorio geográfico que cubre la exclusividad",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1997",
+        "frase": "The territory covered by exclusivity may also need to be defined"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece a obligación lo que el libro plantea como algo que puede hacer falta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

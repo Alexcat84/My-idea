@@ -4,11 +4,11 @@
   "dominio": "entrega",
   "titulo_concepto": "Gestión del Racionamiento y Shortage Gaming",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Cuando la demanda supera la oferta, los fabricantes racionan producto según pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
+  "resumen_teorico": "Cuando la demanda supera la oferta, un modo común de racionar es que el fabricante reparta el producto según los pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
   "pasos_accionables": [
     "Basar las decisiones de racionamiento en patrones históricos de pedidos del cliente, no en el tamaño de la orden actual",
     "Comunicar con anticipación a los clientes cuando se detecte que la demanda superará la oferta",
-    "Implementar sistemas de alerta temprana de escasez para evitar compras de pánico"
+    "Implementar sistemas de alerta temprana de escasez para reducir las compras de pánico"
   ],
   "entregable_esperado": "Política de racionamiento basada en histórico y protocolo de comunicación anticipada de escasez",
   "nodos_previos": [
@@ -38,6 +38,39 @@
         "evidencia": "D-29: Diseñar políticas de racionamiento contra el shortage gaming de distribuidores solo aplica a fabricantes que reparten oferta escasa entre canales. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-096-gestion_rationing_shortage_gaming-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la demanda supera la oferta, los fabricantes racionan producto según pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
+      "texto_nuevo": "Cuando la demanda supera la oferta, un modo común de racionar es que el fabricante reparta el producto según los pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3567",
+        "frase": "One common rationing approach is for a manufacturer to allocate the available supply"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo presenta como un modo común de racionar, no como lo que hacen todos los fabricantes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-096-gestion_rationing_shortage_gaming-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar sistemas de alerta temprana de escasez para evitar compras de pánico",
+      "texto_nuevo": "Implementar sistemas de alerta temprana de escasez para reducir las compras de pánico",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3569",
+        "frase": "product shortages will not take buyers by surprise, and there will be less panic buying"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que avisar con anticipación deja menos compras de pánico, no que las evite.; Mismo defecto: endurece el 'less panic buying' del libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

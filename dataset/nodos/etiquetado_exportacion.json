@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Etiquetado y Marcado de Exportación (Labeling)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, y ayudan a los receptores a identificar el embarque, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, ocultan el contenido, ayudan a los receptores a identificar el embarque y cumplen normas ambientales y de seguridad, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias e ingredientes (si aplica) en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Confirmar marcas de exportación requeridas por el comprador",
     "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos",
@@ -44,6 +44,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-094-etiquetado_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, y ayudan a los receptores a identificar el embarque, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, ocultan el contenido, ayudan a los receptores a identificar el embarque y cumplen normas ambientales y de seguridad, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias e ingredientes (si aplica) en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3525-3531",
+        "frase": "Conceal the identity of the contents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de funciones del libro incluye ocultar la identidad del contenido, que el nodo omite.; La lista de marcas del libro incluye los ingredientes, si aplica, también en el idioma de destino.; Mismo defecto que la marca 1: faltan los ingredientes.; Se caen dos funciones del libro: ocultar el contenido y asegurar normas ambientales y de seguridad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

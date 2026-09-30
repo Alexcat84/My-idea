@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Fundar Solo o Formar un Equipo: la Decisión que Enfrentas al Inicio",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Uno de los primeros grandes dilemas al fundar tu negocio es decidir si lo haces solo o buscas socios que te acompañen. Si fundas solo, evitas los conflictos de relaciones, roles y repartos entre socios, mantienes el control total y decides rápido, pero cargas tú solo con todos los riesgos de talento, contactos y dinero, sin nadie que te sostenga emocionalmente: solo el 16.1% de los fundadores de negocios de alto potencial funda en solitario. Si formas equipo, sumas recursos complementarios, pero también tensiones para coordinarte, negociar roles y repartir lo que se gane. La decisión correcta depende de si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras), del nivel de crecimiento que exige tu negocio (los de alto crecimiento suelen pedir equipo), de qué tan compleja es tu idea y de cuánto necesitas tú tener el control de las decisiones.",
+  "resumen_teorico": "Uno de los primeros grandes dilemas al fundar tu negocio es decidir si lo haces solo o buscas socios que te acompañen. Si fundas solo, evitas los conflictos de relaciones, roles y repartos entre socios, mantienes el control total y decides rápido, pero cargas tú solo con todos los riesgos de talento, contactos y dinero, sin nadie que te sostenga emocionalmente: solo el 16.1% de los negocios de alto potencial se funda en solitario. Si formas equipo, sumas recursos complementarios, pero también tensiones para coordinarte, negociar roles y repartir lo que se gane. La decisión correcta depende de si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras), del nivel de crecimiento que exige tu negocio (los de alto crecimiento suelen pedir equipo), de qué tan compleja es tu idea y de cuánto necesitas tú tener el control de las decisiones.",
   "pasos_accionables": [
     "Evalúa si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras) para tu negocio",
     "Piensa qué tanto crecimiento esperas: si tu negocio depende de efectos de red o de llegar primero al mercado, probablemente necesitas equipo",
@@ -75,6 +75,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-095-decision_fundador_solo_vs_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Uno de los primeros grandes dilemas al fundar tu negocio es decidir si lo haces solo o buscas socios que te acompañen. Si fundas solo, evitas los conflictos de relaciones, roles y repartos entre socios, mantienes el control total y decides rápido, pero cargas tú solo con todos los riesgos de talento, contactos y dinero, sin nadie que te sostenga emocionalmente: solo el 16.1% de los fundadores de negocios de alto potencial funda en solitario. Si formas equipo, sumas recursos complementarios, pero también tensiones para coordinarte, negociar roles y repartir lo que se gane. La decisión correcta depende de si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras), del nivel de crecimiento que exige tu negocio (los de alto crecimiento suelen pedir equipo), de qué tan compleja es tu idea y de cuánto necesitas tú tener el control de las decisiones.",
+      "texto_nuevo": "Uno de los primeros grandes dilemas al fundar tu negocio es decidir si lo haces solo o buscas socios que te acompañen. Si fundas solo, evitas los conflictos de relaciones, roles y repartos entre socios, mantienes el control total y decides rápido, pero cargas tú solo con todos los riesgos de talento, contactos y dinero, sin nadie que te sostenga emocionalmente: solo el 16.1% de los negocios de alto potencial se funda en solitario. Si formas equipo, sumas recursos complementarios, pero también tensiones para coordinarte, negociar roles y repartir lo que se gane. La decisión correcta depende de si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras), del nivel de crecimiento que exige tu negocio (los de alto crecimiento suelen pedir equipo), de qué tan compleja es tu idea y de cuánto necesitas tú tener el control de las decisiones.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "785",
+        "frase": "in my dataset of high-potential startups, only 16.1% were solo-founded"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La cifra del libro es la proporción de startups fundadas en solitario, no de fundadores.; Mismo defecto: cambia la unidad de la cifra de startups a fundadores.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

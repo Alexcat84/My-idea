@@ -1966,7 +1966,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Adaptar el empaque según el tipo de artículo",
-      "resumen_teorico": "Cada categoría de producto tiene un punto débil distinto durante el transporte, y el empaque genérico no lo resuelve. Los líquidos necesitan un envase sellado dentro de una bolsa plástica adicional para contener fugas. Los artículos pesados requieren cajas de doble pared y cinta reforzada, revisando que no superen el límite de peso de la caja. Los objetos irregulares, como tubos o piezas con bordes filosos, se protegen con tubos rígidos o cubriendo cada borde con cartón. Los artículos frágiles se benefician del método de caja dentro de caja, con una caja exterior más grande y colchón entre ambas. Reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento, reduce las devoluciones por daño.",
+      "resumen_teorico": "Cada categoría de producto tiene un punto débil distinto durante el transporte, y el empaque genérico no lo resuelve. Los líquidos, como las bebidas, piden un empaque suficiente y cuidadoso. Los artículos de más de 25 kg piden cajas de doble pared y material que no se desprenda con facilidad, y conviene sellarlos con cinta reforzada, revisando que no superen los límites de tamaño y peso de la caja. Los objetos enrollados, como mapas, pósteres o planos, van en tubos triangulares o cilíndricos. Los artículos frágiles se envuelven por separado y van en una caja nueva de doble pared, sin reutilizar cajas gastadas, rotas o con esquinas dañadas. Conviene reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento.",
       "pasos_accionables": [
         "Clasifica cada producto que vendes en una de estas categorías: líquido, pesado, frágil o de forma irregular.",
         "Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
@@ -20665,13 +20665,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "entrega",
       "titulo_concepto": "Conocer los límites de peso y tamaño del courier",
-      "resumen_teorico": "Cada courier fija un peso máximo y unas dimensiones máximas por paquete, además de un método para calcular el peso volumétrico: el volumen del paquete dividido entre un factor propio de cada transportista. El costo se cobra por el mayor entre el peso real y ese peso volumétrico, así que una caja demasiado grande para su contenido puede salir mas cara aunque pese poco. También existen recargos por manejo adicional cuando el paquete tiene forma irregular, materiales rígidos como metal o madera, o cuando supera ciertos umbrales de largo o de suma de largo mas perímetro. Estos números cambian por courier y por país, así que hay que preguntarlos directamente en lugar de asumirlos.",
+      "resumen_teorico": "Cada courier fija un peso máximo y unas dimensiones máximas por paquete, además de un método para calcular el peso volumétrico: el volumen del paquete en centímetros dividido entre 5000. El costo se cobra por el mayor entre el peso real, ese peso volumétrico y el peso mínimo facturable, así que una caja demasiado grande para su contenido puede salir más cara aunque pese poco. También existen recargos por manejo adicional cuando el paquete va en un contenedor exterior de metal o madera, cuando es un objeto cilíndrico que no va del todo dentro de cartón corrugado, o cuando su lado más largo, su segundo lado o su peso real superan ciertos umbrales, y un cargo aparte cuando la suma de largo más perímetro supera cierto umbral. Confirma estos números directamente con tu courier en lugar de asumirlos.",
       "pasos_accionables": [
-        "Pregunta a tu courier cuál es el peso máximo y las dimensiones máximas que acepta sin cargo extra.",
+        "Pregunta a tu courier cuál es el peso máximo y las dimensiones máximas que acepta, y desde qué peso y medidas cobra recargos.",
         "Pide el divisor que usa tu courier para calcular el peso volumétrico de tus paquetes.",
         "Calcula el peso volumétrico de tu paquete típico y compáralo contra su peso real.",
-        "Usa el mayor de los dos valores para estimar el costo real de cada envío.",
-        "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de más."
+        "Usa el mayor entre peso real, peso volumétrico y peso mínimo facturable para estimar el costo real de cada envío.",
+        "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de más, dejando al menos 5 a 6 cm entre el contenido y las paredes para el material de protección."
       ],
       "entregable_esperado": "Una tabla propia con peso, medidas y peso volumétrico de tus paquetes típicos, comparada contra los límites de tu courier.",
       "nodos_previos": [
@@ -25983,7 +25983,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Creación de Option Pool para Contrataciones Futuras",
-      "resumen_teorico": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar.",
+      "resumen_teorico": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar o los paquetes de equity menores que hacen falta para atraerlas.",
       "pasos_accionables": [
         "Estimar el número de contrataciones clave necesarias antes de la siguiente ronda de financiamiento.",
         "Definir el tamaño del option pool al crearlo o refrescarlo en la ronda, según las contrataciones clave previstas hasta la siguiente ronda.",
@@ -26011,7 +26011,7 @@
       "resumen_teorico": "Los equipos fundadores comienzan con estructuras planas dominadas por títulos C-level ocupados por fundadores. A medida que el startup madura y levanta financiamiento, se crean roles VP especializados (ventas, marketing, ingeniería, desarrollo de negocio) y eventualmente el CFO se convierte en la contratación C-level más común. El rol de COO/presidente es menos frecuente y puede ser señal de alerta si no está bien justificado.",
       "pasos_accionables": [
         "Evaluar la complejidad financiera del negocio para decidir el momento de contratar un CFO",
-        "Priorizar la creación del rol VP-Ventas como una de las primeras posiciones especializadas",
+        "Tener en cuenta que el VP de Ventas suele ser una de las primeras posiciones especializadas que se crean, pero evitar contratar a un especialista que no pueda hacer otra cosa mientras el producto aún no se ha asentado",
         "Analizar si el rol de COO/presidente resuelve una necesidad real o solo compensa una carencia del CEO",
         "Revisar el ratio de empleados por ejecutivo (leverage estructural) para justificar nuevas contrataciones"
       ],
@@ -26619,13 +26619,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Criterios para la División de Equity entre Fundadores",
-      "resumen_teorico": "No existen respuestas 'correctas' objetivas para dividir el equity entre cofundadores, pero cuatro categorías de factores ayudan a estructurar la negociación: (1) contribuciones pasadas -incluyendo quién tuvo la idea original (que suele reconocerse con una 'prima de idea' de 10 a 15 puntos porcentuales adicionales) y el capital aportado por cada uno-; (2) el costo de oportunidad que cada fundador sacrifica al unirse (salario que deja de percibir, otras oportunidades); (3) las contribuciones futuras esperadas, según la experiencia previa como emprendedor serial, el nivel de compromiso (tiempo completo o parcial) y el cargo o título de cada uno; y (4) las motivaciones y preferencias personales de cada fundador, como su aversión al riesgo y su tolerancia al conflicto. La investigación empírica muestra que la similitud en el capital inicial aportado por cada cofundador es, de estos factores, el predictor más fuerte de si un equipo terminará dividiendo el equity de forma igualitaria (50/50) o desigual: cuanto más parecidos son los montos invertidos al inicio, más probable es que el equipo opte por una división equitativa.",
+      "resumen_teorico": "No existen respuestas 'correctas' objetivas para dividir el equity entre cofundadores, pero cuatro categorías de factores ayudan a estructurar la negociación: (1) contribuciones pasadas -incluyendo quién tuvo la idea original (que suele reconocerse con una 'prima de idea' de 10 a 15 puntos porcentuales adicionales) y el capital aportado por cada uno-; (2) el costo de oportunidad que cada fundador sacrifica al unirse (salario que deja de percibir, otras oportunidades); (3) las contribuciones futuras esperadas, según la experiencia previa como emprendedor serial, el nivel de compromiso (tiempo completo o parcial) y el cargo o título de cada uno; y (4) las motivaciones y preferencias personales de cada fundador, como su aversión al riesgo y su tolerancia al conflicto. La investigación empírica muestra que la similitud en el capital inicial aportado por cada cofundador es, de estos factores, casi siempre el predictor más fuerte de si un equipo terminará dividiendo el equity de forma igualitaria (50/50) o desigual: cuanto más parecidos son los montos invertidos al inicio, más probable es que el equipo opte por una división equitativa.",
       "pasos_accionables": [
         "Listar las contribuciones pasadas de cada fundador: quién tuvo la idea original, cuánto capital, tiempo o activos aportó cada uno",
         "Documentar el capital exacto que cada cofundador aporta (dinero, activos, equipo) y discutir abiertamente si esas contribuciones son similares o desiguales, ya que esto predice fuertemente si el split terminará siendo igualitario o no",
         "Calcular el costo de oportunidad de cada fundador (salario u otras oportunidades que deja de percibir al unirse)",
         "Estimar las contribuciones futuras esperadas según la experiencia previa fundando startups y el nivel de dedicación (tiempo completo vs. parcial)",
-        "Considerar si se otorga una 'prima de idea' de 10 a 15 puntos porcentuales al fundador que originó el concepto",
+        "Considerar si se otorga una 'prima de idea' de 10 a 15 puntos porcentuales al fundador que originó el concepto, mayor si la idea está bien desarrollada y menor si es incipiente",
         "Discutir abiertamente las motivaciones y la tolerancia al conflicto de cada fundador",
         "Ajustar el split proporcionalmente si algún fundador dedicará menos tiempo (por ejemplo, 80% de dedicación equivale a 80% del equity que le correspondería a tiempo completo)",
         "Registrar por escrito la lógica detrás de la decisión de split para evitar conflictos futuros",
@@ -31801,7 +31801,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "¿Financiarte con lo tuyo o buscar inversores?",
-      "resumen_teorico": "Tienes que decidir si financias tu negocio con tu propio dinero (autofinanciamiento o 'bootstrapping') o si buscas inversores externos. Financiarte con lo propio te deja el control y evita repartir parte de tu negocio (equity), pero limita qué tan rápido puedes crecer y te expone a quedarte sin dinero si gastas más de lo que entra (burn rate). La decisión depende de tu industria, de cuánto capital necesita el negocio y de qué tan rápido quieres crecer.",
+      "resumen_teorico": "Tienes que decidir si financias tu negocio con tu propio dinero (autofinanciamiento o 'bootstrapping') o si buscas inversores externos. Financiarte con lo propio te deja el control y evita repartir parte de tu negocio (equity), pero limita qué tan rápido puedes crecer y te expone a quedarte sin dinero si gastas más de lo que entra (burn rate). La decisión depende de tu industria, del momento de la economía, de cuánto capital necesita el negocio, de tu modelo de negocio y de qué tan rápido quieres crecer.",
       "pasos_accionables": [
         "Calcula cuánto dinero gastas cada mes y cuántos meses de efectivo te quedan al ritmo actual (runway).",
         "Evalúa si tu modelo de negocio te permite conseguir ingresos pronto de clientes, por ejemplo con consultoría o pagos por adelantado, para no necesitar financiamiento externo.",
@@ -31911,7 +31911,7 @@
         "Evaluar tus factores de carrera: ¿tienes las habilidades y experiencia necesarias o necesitarás cofundadores/empleados para compensar?",
         "Evaluar factores de mercado: ¿tu idea es lo suficientemente sólida o tu pasión te está sesgando el juicio?",
         "Evaluar factores personales: ¿tu situación familiar y económica permite asumir el riesgo del emprendimiento?",
-        "Identificar cuál de los tres factores es más débil y diseñar un plan para mitigarlo antes de dar el salto"
+        "Identificar cuál de los tres factores es más débil y diseñar un plan para mitigarlo antes de dar el salto, sin esperar una alineación perfecta, que casi nunca llega"
       ],
       "entregable_esperado": "Matriz de autoevaluación de los tres factores (carrera, mercado, personal) con plan de mitigación para los factores débiles",
       "nodos_previos": [
@@ -31940,13 +31940,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Decidir si Sacar tu Empresa a Bolsa (IPO)",
-      "resumen_teorico": "Salir a bolsa te da acceso a nuevo capital, credibilidad y una especie de moneda pública que puedes usar para comprar otras empresas. Pero también trae escrutinio público, más regulación, costos de mostrar tus números obligatoriamente y presión cada tres meses por los resultados. Si eres fundador y sigues como director general, el IPO casi nunca es tu salida completa: hay un período de bloqueo (lockup) después de la salida a bolsa antes de que puedas vender tus acciones, y las ventas posteriores están limitadas para no mandar señales negativas al mercado. A diferencia de los inversionistas de capital de riesgo, para quienes el IPO suele ser una salida real (el 62% abandona la junta directiva tras la salida a bolsa), para ti como fundador es más bien el comienzo de una nueva etapa de financiamiento y exposición pública.",
+      "resumen_teorico": "Salir a bolsa te da acceso a nuevo capital, credibilidad y una especie de moneda pública que puedes usar para comprar otras empresas. Pero también trae escrutinio público, más regulación, costos de mostrar tus números obligatoriamente y presión cada tres meses por los resultados. Si eres fundador y sigues como director general, el IPO casi nunca es tu salida completa: hay un período de bloqueo (lockup) después de la salida a bolsa antes de que puedas vender tus acciones, y las ventas posteriores están limitadas para no mandar señales negativas al mercado. A diferencia de los inversionistas de capital de riesgo, para quienes el IPO suele ser una salida real (el 62% abandona la junta directiva tras la salida a bolsa), para ti como fundador a veces es más bien el comienzo de una nueva etapa de financiamiento y exposición pública.",
       "pasos_accionables": [
         "Evalúa si de verdad necesitas capital público o si te sirven otras fuentes de financiamiento privadas",
         "Piensa en el impacto personal de la exposición pública: tus finanzas, tus decisiones, la presión de reportar cada trimestre",
         "Prepárate para el período de bloqueo después del IPO y para las restricciones al vender tus acciones",
         "Considera cómo va a cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
-        "Diseña cómo vas a comunicarte con accionistas dispersos que piensan en el corto plazo"
+        "Diseña cómo vas a comunicarte con accionistas dispersos que no conoces, algunos de los cuales piensan en el corto plazo"
       ],
       "entregable_esperado": "Un análisis de ventajas y desventajas hecho a tu medida sobre si te conviene salir a bolsa, incluyendo cómo afecta tu control, tus finanzas personales y la estructura de tu junta directiva.",
       "nodos_previos": [
@@ -31975,14 +31975,14 @@
         "Determina tu punto de inflexión: ¿en qué momento perderás el control necesario para negociar buenos términos?",
         "Compara el valor de vender ahora contra esperar y arriesgar que se diluya tu influencia en la decisión",
         "Redefine cuál es tu mercado real (no el que crees que es) y quiénes serán tus competidores futuros, evalúa con honestidad su tamaño y cómo va a evolucionar, si es al menos diez veces más grande que el que ya explotaste, y qué probabilidades reales tienes de convertirte en el jugador número uno",
-        "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo",
+        "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo, porque el análisis de mercado y de ser número uno sirve sobre todo para las de negocio, algo para las de producto y casi nada para las de talento y tecnología",
         "Corre un proceso corto y discreto de sondeo de fusiones y adquisiciones (M&A) con varios compradores potenciales, para detectar cuál es el precio máximo que el mercado te puede dar en este momento",
         "Define un precio mínimo aceptable basado en el valor real de tu negocio, no en la primera oferta que te hagan ni en el extra que te ofrezcan sobre el precio actual",
         "Comunica ese precio con firmeza a todos los compradores potenciales y sostenlo, dispuesto a esperar aunque no lleguen ofertas de inmediato",
         "Compara las ofertas de adquisición contra tu proyección de valor a 3 o 5 años si sigues independiente",
         "Define criterios objetivos y fáciles de comunicar sobre cuándo mantendrías tu empresa independiente y cuándo la venderías, y comunícalos a tu equipo de forma consistente para evitar que sientan que los traicionaste",
         "Separa la decisión estratégica y la discusión sobre vender de tu situación financiera personal",
-        "Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y consulta con tu consejo (board) y asesores de confianza para equilibrarla con el análisis racional",
+        "Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y busca acallar tanto el impulso de seguir como el de vender",
         "Ajusta tu salario como CEO a valores de mercado una vez que tu empresa se convierta en un negocio real y consolidado, y en un objetivo atractivo de adquisición"
       ],
       "entregable_esperado": "Un análisis de escenarios que compare el valor esperado de vender ahora contra seguir operando, incluyendo tu punto de inflexión de control.",
@@ -32038,10 +32038,10 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Decidir entre todos o que decida uno: dos formas de tomar decisiones en tu equipo",
-      "resumen_teorico": "Cuando tienes que tomar decisiones importantes con tu socio o tu equipo, puedes elegir entre dos maneras extremas: decidir todos juntos, buscando el acuerdo y actuando como pares, o que una sola persona tenga la última palabra. Decidir entre todos puede mejorar la calidad de las decisiones y la unión del equipo cuando el camino no está claro, pero es más lento y puede fallar si lo usas para evitar resolver quién manda. Que decida uno solo es más rápido, pero falla si esa persona no puede procesar toda la información o si genera bandos dentro del equipo. Los estudios muestran que cuando quien decide es dominante o autoritario, el rendimiento baja un 19% en industrias muy innovadoras. Lo que suele funcionar mejor es un modelo mixto, a veces llamado consenso con calificaciones: buscar el acuerdo primero y, si no aparece, que una persona designada decida tras escuchar a todos.",
+      "resumen_teorico": "Cuando tienes que tomar decisiones importantes con tu socio o tu equipo, puedes elegir entre dos maneras extremas: decidir todos juntos, buscando el acuerdo y actuando como pares, o que una sola persona tenga la última palabra. Decidir entre todos puede mejorar la calidad de las decisiones y la unión del equipo cuando el camino no está claro, pero es más lento y puede fallar si lo usas para evitar resolver quién manda. Que decida uno solo es más rápido, pero falla si esa persona no puede procesar toda la información o si genera bandos dentro del equipo. Un estudio de grandes empresas de computación, una industria muy innovadora, asoció a quien decide de forma dominante con un rendimiento un 19% menor. Una forma de equilibrar ambas maneras es un modelo mixto, a veces llamado consenso con calificaciones: buscar el acuerdo primero y, si no aparece, que una persona designada decida tras escuchar a todos.",
       "pasos_accionables": [
         "Habla con tu socio, antes de la primera crisis, sobre cómo van a tomar las decisiones importantes",
-        "Piensa si tú y tus socios vienen de mundos parecidos, lo que favorece decidir entre todos, y si tu mercado es agitado, lo que también favorece decidir en conjunto, o si necesitas mucha velocidad, lo que favorece que decida una sola persona",
+        "Piensa si tú y tus socios vienen de mundos parecidos, lo que favorece decidir entre todos, y si tu mercado es agitado, donde varias personas procesan mejor la información compleja pero el consenso pleno puede resultar demasiado lento, o si necesitas mucha velocidad, lo que favorece que decida una sola persona",
         "Define con claridad qué decisiones necesitan el acuerdo de todos y cuáles puede tomar una sola persona",
         "Prueba el modelo mixto: busca el acuerdo primero y, si no aparece, deja que la persona designada decida después de escuchar a todos",
         "No uses el 'decidir entre todos' para evitar resolver quién manda de verdad",
@@ -32218,7 +32218,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Fundar Solo o Formar un Equipo: la Decisión que Enfrentas al Inicio",
-      "resumen_teorico": "Uno de los primeros grandes dilemas al fundar tu negocio es decidir si lo haces solo o buscas socios que te acompañen. Si fundas solo, evitas los conflictos de relaciones, roles y repartos entre socios, mantienes el control total y decides rápido, pero cargas tú solo con todos los riesgos de talento, contactos y dinero, sin nadie que te sostenga emocionalmente: solo el 16.1% de los fundadores de negocios de alto potencial funda en solitario. Si formas equipo, sumas recursos complementarios, pero también tensiones para coordinarte, negociar roles y repartir lo que se gane. La decisión correcta depende de si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras), del nivel de crecimiento que exige tu negocio (los de alto crecimiento suelen pedir equipo), de qué tan compleja es tu idea y de cuánto necesitas tú tener el control de las decisiones.",
+      "resumen_teorico": "Uno de los primeros grandes dilemas al fundar tu negocio es decidir si lo haces solo o buscas socios que te acompañen. Si fundas solo, evitas los conflictos de relaciones, roles y repartos entre socios, mantienes el control total y decides rápido, pero cargas tú solo con todos los riesgos de talento, contactos y dinero, sin nadie que te sostenga emocionalmente: solo el 16.1% de los negocios de alto potencial se funda en solitario. Si formas equipo, sumas recursos complementarios, pero también tensiones para coordinarte, negociar roles y repartir lo que se gane. La decisión correcta depende de si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras), del nivel de crecimiento que exige tu negocio (los de alto crecimiento suelen pedir equipo), de qué tan compleja es tu idea y de cuánto necesitas tú tener el control de las decisiones.",
       "pasos_accionables": [
         "Evalúa si ya tienes tú mismo el rango completo de habilidades necesarias (técnicas, comerciales, financieras) para tu negocio",
         "Piensa qué tanto crecimiento esperas: si tu negocio depende de efectos de red o de llegar primero al mercado, probablemente necesitas equipo",
@@ -32367,7 +32367,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "El Momento para Fundar (When to Found)",
-      "resumen_teorico": "Sientes la tensión entre fundar temprano en tu carrera o esperar para acumular más preparación. Esperar te permite construir experiencia, contactos y ahorros, pero fundar tarde puede dejarte con la manera de pensar de las grandes empresas (career imprints), que dificulta el salto a una startup. Tienes que evaluar con honestidad si tus experiencias de carrera te han preparado para dar ese salto.",
+      "resumen_teorico": "Sientes la tensión entre fundar temprano en tu carrera o esperar para acumular más preparación. Esperar te permite construir experiencia, contactos y ahorros, pero fundar tarde puede atarte más a tu empleo y a tu vida (un buen sueldo, un cargo, tu familia) y dejarte con la manera de pensar de las grandes empresas (career imprints), que dificulta el salto a una startup. Tienes que evaluar con honestidad si tus experiencias de carrera te han preparado para dar ese salto.",
       "pasos_accionables": [
         "Evalúa cuánto conocimiento y habilidades has acumulado, tanto el que aprendiste formalmente como el que solo se aprende con la práctica",
         "Revisa tu experiencia dirigiendo personas y trabajando en distintas áreas de un negocio",
@@ -53675,15 +53675,15 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Poner una etiqueta duplicada dentro del paquete",
-      "resumen_teorico": "La etiqueta pegada por fuera de la caja es la única guia del paquete durante el viaje, pero se puede rasgar, mojar o despegar con el manejo. Por eso conviene imprimir la etiqueta de envio dos veces: una para la parte exterior de la caja, en su cara mas grande y visible, y otra copia idéntica que se coloca dentro, encima del contenido, antes de sellar. Esa copia interna incluye la dirección completa del remitente y del destinatario, para que si la etiqueta externa se pierde o se daña, quien abra la caja pueda identificar de donde viene y a donde va. Es una practica de bajo costo que evita que un envio se convierta en paquete perdido dentro de la bodega del courier.",
+      "resumen_teorico": "Conviene imprimir la etiqueta de envío dos veces: una para la parte exterior de la caja, en su cara más grande y visible, y otra copia idéntica que se coloca dentro, encima del contenido, antes de sellar. Ambas copias llevan la dirección completa del remitente y del destinatario. Si reutilizas una caja, retira antes las etiquetas anteriores para evitar confusiones.",
       "pasos_accionables": [
         "Imprime la etiqueta de envío por duplicado antes de cerrar la caja.",
         "Pega la primera copia en la cara más grande y plana de la caja, sin arrugas.",
         "Coloca la segunda copia dentro de la caja, encima del contenido, antes de sellar.",
         "Verifica que ambas copias tengan la dirección completa de remitente y destinatario.",
-        "Revisa que ninguna cinta ni otra etiqueta cubra la información de contacto."
+        "Revisa que ninguna cinta ni otra etiqueta cubra la información de contacto y, si reutilizas la caja, retira las etiquetas anteriores."
       ],
-      "entregable_esperado": "Un paquete con etiqueta doble que sigue siendo identificable aunque la etiqueta externa se dañe.",
+      "entregable_esperado": "Un paquete con la etiqueta de envío en su cara más grande y una copia idéntica dentro.",
       "nodos_previos": [
         "colocar_etiquetas_de_manejo_correctamente"
       ],
@@ -53729,7 +53729,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Etiquetado y Marcado de Exportación (Labeling)",
-      "resumen_teorico": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, y ayudan a los receptores a identificar el embarque, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "resumen_teorico": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, ocultan el contenido, ayudan a los receptores a identificar el embarque y cumplen normas ambientales y de seguridad, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias e ingredientes (si aplica) en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Confirmar marcas de exportación requeridas por el comprador",
         "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos",
@@ -54954,7 +54954,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Evaluación de la Preparación de la Empresa para Exportar (Export Readiness)",
-      "resumen_teorico": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, ya que esto último suele indicar falta de preparación real para sostener el esfuerzo exportador en el tiempo.",
+      "resumen_teorico": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
       "pasos_accionables": [
         "Responde con honestidad qué esperas ganar al exportar y verifica que sean motivos sólidos, no una solución rápida a caídas en ventas domésticas",
         "Evalúa tu nivel real de compromiso con el esfuerzo exportador y si es consistente con tus otras metas de negocio",
@@ -56400,12 +56400,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Definición de Exclusividad Territorial para Representantes",
-      "resumen_teorico": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Define también con claridad el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "resumen_teorico": "Los representantes extranjeros suelen pedirte exclusividad de mercadeo en un país o región. No otorgues esa exclusividad hasta que el representante haya demostrado sus capacidades, o dásela por un periodo limitado y definido (por ejemplo, un año) con posibilidad de renovación. Puede que también necesites definir el territorio que cubre, aunque algunas leyes locales pueden prohibir ese tipo de limitación. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
       "pasos_accionables": [
         "Evalúa el desempeño del representante antes de otorgarle exclusividad",
         "Limita la exclusividad a un periodo definido, con opción de renovación",
-        "Define con claridad el territorio geográfico que cubre la exclusividad",
-        "Verifica si las leyes de tu país permiten este tipo de límite territorial"
+        "Si hace falta, define con claridad el territorio geográfico que cubre la exclusividad",
+        "Verifica si las leyes del país del representante permiten este tipo de límite territorial"
       ],
       "entregable_esperado": "Una cláusula de exclusividad territorial delimitada en tiempo y espacio dentro de tu contrato",
       "nodos_previos": [
@@ -56990,7 +56990,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Fundamentos de la Exportación de Servicios",
-      "resumen_teorico": "El sector servicios es el componente más grande de la economía estadounidense y representa una oportunidad significativa de exportación, con sectores de alto crecimiento como turismo, servicios ambientales, transporte, finanzas, telecomunicaciones, educación, servicios profesionales, entretenimiento y construcción. Exportar servicios presenta retos únicos por su naturaleza intangible: mayor necesidad de viajes, gestión de mano de obra local, e investigación de mercado más intensiva. La intangibilidad también dificulta el financiamiento al no existir garantía colateral.",
+      "resumen_teorico": "El sector servicios es el componente más grande de la economía estadounidense y representa una oportunidad significativa de exportación, con sectores de alto crecimiento como turismo, servicios ambientales, transporte, finanzas, telecomunicaciones, educación, servicios profesionales, entretenimiento y construcción. Exportar servicios presenta retos únicos por su naturaleza intangible: mayor necesidad de viajes, gestión de mano de obra local, e investigación de mercado más intensiva. La intangibilidad también hace algo más difícil el financiamiento al no existir garantía colateral, aunque muchas instituciones públicas y privadas apoyan a exportadores de servicios solventes.",
       "pasos_accionables": [
         "Identificar el sector de servicios en el que compite la empresa (turismo, TI, financiero, educativo, etc.)",
         "Evaluar necesidades de viaje, presencia local y permisos de trabajo en el mercado destino",
@@ -57016,7 +57016,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Extensión de Crédito a Compradores Extranjeros",
-      "resumen_teorico": "Los compradores extranjeros suelen solicitar plazos de pago más largos. El exportador debe basarse en los términos comerciales normales de su industria (generalmente 30-180 días para bienes de consumo) y ser cauteloso al establecer precedentes con nuevos clientes, ya que los términos concedidos tienden a mantenerse en ventas futuras. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "resumen_teorico": "Los compradores extranjeros suelen solicitar plazos de pago más largos, y negarse a dar crédito puede costar la venta; hay que equilibrar competitividad, costo y riesgo. Una guía útil son los términos comerciales normales de la industria (generalmente 30-180 días para bienes de consumo), y conviene ser cauteloso al establecer precedentes con nuevos clientes, ya que los términos concedidos tienden a mantenerse en ventas futuras. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Investigar los términos comerciales normales de la industria para el producto",
         "Definir el plazo de crédito según el tipo de producto (bienes de consumo vs bienes de capital)",
@@ -59042,7 +59042,7 @@
       "resumen_teorico": "Poner el precio correcto a tu producto en el mercado internacional es uno de los pasos más críticos y difíciles de vender afuera. Trabajas con tres piezas: tus costos, la demanda del mercado y la competencia, pero cada una se mira distinto que en tu mercado local. Tienes que pensar en tu objetivo, en cómo quieres posicionarte, en los descuentos que darás y en costos extra como aranceles, el tipo de cambio y el impuesto al valor agregado (IVA), que pueden llegar a duplicar lo que finalmente paga quien te compra. Pregunta siempre el acuerdo comercial y la regulación vigente en tu propio mercado antes de decidir, porque cambian según el país y el momento.",
       "pasos_accionables": [
         "Define tu objetivo en ese mercado: entrar con fuerza, crecer a largo plazo o sacarte de encima un excedente.",
-        "Calcula el costo real de tu producto para exportación usando costeo marginal, no el método de costo más margen (cost-plus).",
+        "Calcula el costo real de tu producto para exportación; para entrar al mercado, el costeo marginal es más competitivo que el método de costo más margen (cost-plus), que puede dejar tu precio fuera de competencia.",
         "Saca de la cuenta los costos que no aportan nada a la venta afuera, como tu publicidad local.",
         "Suma los costos que no son de mercado, como aranceles y trámites de aduana.",
         "Evalúa la demanda en ese mercado: cuánto gana la gente, qué tan sensible es al precio y quién es tu cliente ahí.",
@@ -59704,11 +59704,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Programas de Financiamiento de la SBA para Exportadores",
-      "resumen_teorico": "Si eres una pequeña empresa exportadora en Estados Unidos, la SBA te ofrece garantías de préstamo pensadas para tu negocio. El Export Working Capital Program (EWCP) garantiza hasta 1.5 millones de dólares o el 90% del préstamo para capital de trabajo. El International Trade Loan Program puede garantizar hasta 1.25 millones combinando capital de trabajo y financiamiento de activos fijos. Export Express te da préstamos rápidos de hasta 250,000 dólares con garantía del 75 al 85%. El Surety Bond Program cubre fianzas de licitación y desempeño en contratos internacionales. Para acceder necesitas al menos un año en operación y poder mostrar el impacto en tus ventas de exportación. Antes de acudir a un prestamista, puedes pedir orientación gratuita en la oficina local de la SBA o del U.S. Commercial Service.",
+      "resumen_teorico": "Si eres una pequeña empresa exportadora en Estados Unidos, la SBA te ofrece garantías de préstamo pensadas para tu negocio. El Export Working Capital Program (EWCP) garantiza hasta 1.5 millones de dólares o el 90% del préstamo, lo que sea menor, para capital de trabajo. El International Trade Loan Program puede garantizar hasta 1.25 millones combinando capital de trabajo y financiamiento de activos fijos. Export Express te da préstamos rápidos de hasta 250,000 dólares con garantía del 75 al 85%. El Surety Bond Program puede ayudarte a obtener fianzas de licitación y desempeño en contratos internacionales. Para Export Express necesitas al menos un año en operación y poder mostrar el impacto en tus ventas de exportación, además de los demás requisitos de la SBA. Antes de acudir a un prestamista, puedes pedir orientación en la oficina local de la SBA o del U.S. Commercial Service.",
       "pasos_accionables": [
         "Define tu necesidad concreta: capital de trabajo, activos fijos o fianzas de licitación",
         "Busca orientación en la oficina local de la SBA o del U.S. Commercial Service",
-        "Verifica si cumples los requisitos: al menos un año en operación y evidencia de impacto en tus ventas de exportación",
+        "Verifica si cumples los requisitos del programa que elijas: para Export Express, al menos un año en operación y evidencia de impacto en tus ventas de exportación, además de los demás requisitos de la SBA",
         "Busca un prestamista comercial que participe en programas de la SBA",
         "Prepara la documentación según el programa que elijas, como el formulario de una página para EWCP",
         "Si te sirve, pide a la SBA una carta de precalificación antes de negociar con el prestamista"
@@ -64481,7 +64481,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Cuánto y qué compras en tu negocio (procurement)",
-      "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
+      "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
       "pasos_accionables": [
         "Clasifica lo que compras en materiales estratégicos y compras indirectas (MRO)",
         "Define cuánto esperas consumir de cada producto en cada lugar donde operas",
@@ -64509,11 +64509,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Gestión del Racionamiento y Shortage Gaming",
-      "resumen_teorico": "Cuando la demanda supera la oferta, los fabricantes racionan producto según pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
+      "resumen_teorico": "Cuando la demanda supera la oferta, un modo común de racionar es que el fabricante reparta el producto según los pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
       "pasos_accionables": [
         "Basar las decisiones de racionamiento en patrones históricos de pedidos del cliente, no en el tamaño de la orden actual",
         "Comunicar con anticipación a los clientes cuando se detecte que la demanda superará la oferta",
-        "Implementar sistemas de alerta temprana de escasez para evitar compras de pánico"
+        "Implementar sistemas de alerta temprana de escasez para reducir las compras de pánico"
       ],
       "entregable_esperado": "Política de racionamiento basada en histórico y protocolo de comunicación anticipada de escasez",
       "nodos_previos": [
@@ -64614,7 +64614,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "Cómo manejar el riesgo natural y operativo en tu cadena de suministro",
-      "resumen_teorico": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir.",
+      "resumen_teorico": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir. En entornos muy cambiantes, esta evaluación es un proceso continuo, no algo de una sola vez.",
       "pasos_accionables": [
         "Define cuánto riesgo estás dispuesto a asumir hoy",
         "Cuantifica el riesgo natural de cada país o región donde operas (terremotos, huracanes, sequías, etc.)",
@@ -64679,7 +64679,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Gestión Inteligente del Riesgo de Crédito",
-      "resumen_teorico": "La función de crédito debe ayudar a la empresa a tomar riesgos inteligentes que apoyen su plan de negocio. Una decisión de crédito aparentemente mala desde una perspectiva puede ser una buena decisión de negocio desde otra (por ejemplo, ganar cuota de mercado). Se pueden crear programas de crédito adaptados a segmentos específicos (startups, contratistas, clientes extranjeros) usando seguros de crédito, garantías y avales gubernamentales.",
+      "resumen_teorico": "La función de crédito debe ayudar a la empresa a tomar riesgos inteligentes que apoyen su plan de negocio. Una decisión de crédito aparentemente mala desde una perspectiva puede ser una buena decisión de negocio desde otra (por ejemplo, ganar cuota de mercado). Se pueden crear programas de crédito adaptados a segmentos específicos (startups, contratistas, clientes extranjeros) usando seguros de crédito, garantías sobre activos del cliente y avales gubernamentales a préstamos para exportaciones.",
       "pasos_accionables": [
         "Identificar segmentos de mercado estratégicos que requieran condiciones de crédito especiales",
         "Diseñar términos de pago atractivos para esos segmentos",
@@ -66399,7 +66399,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Siete Guías Estratégicas para el Diseño de Sistemas",
-      "resumen_teorico": "Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; violar tres o más indica un diseño gravemente defectuoso.",
+      "resumen_teorico": "Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; si viola una o dos (nunca la primera) aún puede servir, con muy buenas razones y compensaciones concretas; violar tres o más indica un diseño gravemente defectuoso.",
       "pasos_accionables": [
         "Verificar que el diseño esté alineado con las metas y métricas de desempeño del negocio (guía obligatoria, no violable)",
         "Evaluar si el sistema puede generar una ventaja competitiva difícil de copiar",
@@ -68275,7 +68275,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Inteligencia Artificial Aplicada a la Cadena de Suministro",
-      "resumen_teorico": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como clima o eventos sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable desde el teléfono, y tú decides qué hacer con esas señales para ganar ventaja competitiva frente a métodos tradicionales que ya no alcanzan.",
+      "resumen_teorico": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como clima o eventos sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
       "pasos_accionables": [
         "Auditar tus fuentes de datos actuales de demanda, rutas o almacén para evaluar su calidad y volumen",
         "Priorizar un área piloto entre forecasting, optimización de rutas u operaciones de almacén",
@@ -70482,7 +70482,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "El Rol de la Información como Driver de la Cadena de Suministro",
-      "resumen_teorico": "La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compartes con proveedores y clientes, mejores decisiones podrás tomar, maximizando la rentabilidad conjunta. La información cumple dos funciones: coordinar actividades diarias, como la programación de producción, los niveles de inventario y las rutas de transporte, y sustentar pronósticos de demanda, tanto a nivel táctico (cronogramas mensuales o trimestrales) como estratégico (decisiones de expansión o entrada y salida de mercados).",
+      "resumen_teorico": "La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compartes con proveedores y clientes, mejores decisiones podrás tomar, lo que tiende a maximizar la rentabilidad conjunta. La información cumple dos funciones: coordinar actividades diarias, como la programación de producción, los niveles de inventario y las rutas de transporte, y sustentar pronósticos de demanda, tanto a nivel táctico (cronogramas mensuales o trimestrales) como estratégico (decisiones de expansión o entrada y salida de mercados).",
       "pasos_accionables": [
         "Mapea qué datos compartes actualmente con tus proveedores y clientes",
         "Identifica las brechas de información que te llevan a tomar decisiones subóptimas",
@@ -73319,13 +73319,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Los tres niveles de datos de tu negocio: estratégicos, operativos y tácticos (modelo SCOR)",
-      "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) clasifica los datos de tu negocio en tres niveles según para qué los usas: los datos estratégicos te sirven a ti para ver el desempeño global en atención al cliente, eficiencia interna, capacidad de responder a cambios en la demanda y desarrollo de producto; los datos operativos los necesita quien coordina el trabajo día a día en cada sucursal para planificar; y los datos tácticos los usa quien resuelve los problemas del terreno. Esta estructura evita que te ahogues en información y permite que cada persona vea solo el nivel de detalle que necesita para su trabajo.",
+      "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) clasifica los datos de tu negocio en tres niveles según para qué los usas: los datos estratégicos te sirven a ti para ver el desempeño global en atención al cliente, eficiencia interna, capacidad de responder a cambios en la demanda y desarrollo de producto; los datos operativos los necesita quien coordina el trabajo día a día en cada sucursal para planificar; y los datos tácticos los usa quien resuelve los problemas del terreno. Esta estructura evita que te ahogues en información y permite que cada persona llegue rápido al nivel de detalle que necesita para su trabajo, y que tú bajes al nivel operativo o táctico cuando haga falta.",
       "pasos_accionables": [
         "Define qué datos necesitas ver tú a nivel estratégico, cuáles a nivel operativo y cuáles a nivel táctico, siguiendo el modelo SCOR",
         "Organiza la recolección de datos según quién los usa: tú, quien coordina el día a día, o quien resuelve problemas en el terreno",
         "Suma datos externos, como el tamaño de tu mercado, indicadores económicos y comparaciones con otros negocios de tu sector, al nivel estratégico",
-        "Revisa que cada persona en tu negocio tenga acceso solo a la información que necesita para su función",
-        "Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables",
+        "Revisa que cada persona en tu negocio llegue rápido a la información que necesita para su función",
+        "Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables, empezando rápido con algo simple y pequeño que amplíes a medida que ganes experiencia",
         "Automatiza la captura de datos y evita meterlos a mano",
         "Crea reportes fijos según el tipo de decisión que necesites tomar (grandes decisiones, decisiones de cómo ejecutar, o resolver problemas puntuales) y deja abierta la posibilidad de hacer consultas puntuales cuando las necesites"
       ],
@@ -77118,7 +77118,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Manufactura Aditiva (Impresión 3D) para Producción Bajo Demanda",
-      "resumen_teorico": "La impresión 3D o manufactura aditiva permite crear productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y mejora el nivel de servicio al cliente al minimizar quiebres de stock.",
+      "resumen_teorico": "La impresión 3D o manufactura aditiva permite crear algunos productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y mejora el nivel de servicio al cliente al minimizar quiebres de stock.",
       "pasos_accionables": [
         "Identificar productos o componentes con alta variabilidad y baja predictibilidad de demanda",
         "Evaluar la viabilidad técnica y de costos de fabricarlos mediante manufactura aditiva",
@@ -79256,7 +79256,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Medir el paquete redondeando hacia arriba",
-      "resumen_teorico": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La formula y el divisor exactos varían según el courier y el país, así que hay que confirmarlos directamente con quien te va a hacer el envio.",
+      "resumen_teorico": "Antes de cotizar un envío hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado más largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milímetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La fórmula es largo por ancho por alto, en centímetros, dividido entre 5000; confírmala con quien te va a hacer el envío.",
       "pasos_accionables": [
         "Mide largo, ancho y alto de la caja ya cerrada y empacada, no del producto solo.",
         "Define el lado más largo como el largo del paquete.",
@@ -99240,7 +99240,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Use Unconventional Mediums: Prototipar con Materiales Inesperados",
-      "resumen_teorico": "El medio con el que construyes un prototipo moldea directamente cómo piensas y qué soluciones descubres: un modelo en arcilla se vuelve más grueso, uno en madera se vuelve más angular. Si cambias el material habitual de tu proyecto (físico en vez de digital, blando en vez de duro, visible en vez de invisible), revelas sesgos ocultos en tu propio pensamiento y abres posibilidades que el medio convencional te tapaba. Casos como el auto GINA de BMW, con piel de tela en vez de metal, o algoritmos de machine learning traducidos a cartas de papel, muestran cómo un medio no convencional hace tangible lo invisible y puede acercar a nuevas personas a tu proceso creativo.",
+      "resumen_teorico": "El medio con el que construyes un prototipo moldea directamente cómo piensas y qué soluciones descubres: un modelo en arcilla se vuelve más grueso, uno en madera se vuelve más angular. Si cambias el material habitual de tu proyecto (físico en vez de digital, blando en vez de duro, visible en vez de invisible), puedes revelar sesgos ocultos en tu propio pensamiento y abrir posibilidades que el medio convencional te tapaba. Casos como el auto GINA de BMW, con piel de tela en vez de metal, o algoritmos de machine learning traducidos a cartas de papel, muestran cómo un medio no convencional hace tangible lo invisible y puede acercar a nuevas personas a tu proceso creativo.",
       "pasos_accionables": [
         "Identifica el medio o material por defecto que usas normalmente para tu proyecto o prototipo",
         "Elige un medio radicalmente distinto al habitual (tela en vez de metal, papel en vez de código, arcilla en vez de boceto)",
@@ -101413,12 +101413,12 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Reconocer la Apofenia y el Sesgo de Patrones en la Investigación",
-      "resumen_teorico": "El cerebro humano está diseñado para encontrar patrones y significado incluso donde no existen (apofenia), y para confirmar creencias previas (sesgo de confirmación). Esto es útil para el reconocimiento facial o la supervivencia, pero puede llevar a conclusiones erróneas al diseñar futuros o interpretar datos de usuarios. Diferenciar entre una 'epifanía' real (un insight fundamentado) y una 'apofenia' (una conexión ilusoria) es crítico para no construir soluciones sobre bases falsas.",
+      "resumen_teorico": "El cerebro humano está diseñado para encontrar patrones y significado incluso donde no existen (apofenia), y para confirmar creencias previas (sesgo de confirmación). Esto es útil para el reconocimiento facial o la supervivencia, pero puede llevar a conclusiones erróneas al diseñar futuros o interpretar datos de usuarios. La apofenia también ayuda a llegar a una epifanía, y las dos se sienten parecidas; por eso diferenciar entre una 'epifanía' real (un insight fundamentado) y una 'apofenia' (una conexión ilusoria) es crítico para no construir soluciones sobre bases falsas.",
       "pasos_accionables": [
         "Antes de aceptar un insight como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
         "Buscar activamente evidencia que contradiga la hipótesis favorita del equipo, no solo la que la confirma.",
-        "Distinguir explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
-        "Someter los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
+        "Sugerencia de My Idea: distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
+        "Sugerencia de My Idea: somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
       ],
       "entregable_esperado": "Un documento de insights de investigación clasificados en 'validados con evidencia' vs 'hipótesis a probar', evitando confundir patrones ilusorios con verdades del usuario.",
       "nodos_previos": [
@@ -109733,7 +109733,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Salir de la Cabeza: Cognición Espacial y Creatividad",
-      "resumen_teorico": "Mover el cuerpo en el espacio activa el hipocampo y cambia la forma en que el cerebro procesa la información, favoreciendo nuevas ideas y el cuestionamiento de supuestos. La dependencia de tecnologías como el GPS reduce nuestra memoria espacial y capacidad de navegación. Ejercitar deliberadamente la orientación física (caminar sin GPS, explorar lugares nuevos) fortalece la creatividad y la capacidad de observación crítica necesaria para el diseño.",
+      "resumen_teorico": "Mover el cuerpo en el espacio cambia la forma en que el cerebro procesa la información, favoreciendo nuevas ideas y el cuestionamiento de supuestos. La dependencia de tecnologías como el GPS reduce el uso del hipocampo, y con él nuestra memoria espacial y capacidad de navegación. Explorar lugares nuevos despierta la creatividad, y orientarte sin GPS ejercita tu capacidad de navegación, que mejora con la práctica.",
       "pasos_accionables": [
         "Antes de tu próxima sesión de ideación, camina o viaja a un lugar nuevo sin usar GPS ni navegación digital",
         "Traza tu propia ruta usando un mapa físico o instrucciones escritas por ti mismo",
@@ -113104,7 +113104,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Shapeshifting: Cultivar la Diversidad de Pensamiento",
-      "resumen_teorico": "El 'shapeshifting' es la capacidad de cambiar ágilmente entre formas de pensar y actuar, explorando los límites de disciplinas y experiencias para encontrar solapamientos que generen nuevas posibilidades. Se contrapone a la 'sameness' (homogeneización), ejemplificada por monocultivos como el banano Cavendish, que ganan eficiencia pero pierden resiliencia genética y quedan vulnerables a amenazas (como enfermedades). De igual forma, la homogeneización cultural y lingüística reduce la 'ideadiversidad' colectiva. Preservar la diversidad —biológica, cultural, de pensamiento— es clave para la resiliencia de cualquier sistema, incluyendo equipos y proyectos de innovación.",
+      "resumen_teorico": "El 'shapeshifting' es la capacidad de cambiar ágilmente entre formas de pensar y actuar, explorando los límites de disciplinas y experiencias para encontrar solapamientos que generen nuevas posibilidades. Se contrapone a la 'sameness' (homogeneización), ejemplificada por monocultivos como el banano Cavendish, que ganan eficiencia pero pierden resiliencia genética y quedan vulnerables a amenazas (como enfermedades). De igual forma, la diversidad cultural y lingüística ha caído, y la 'ideadiversidad' colectiva podría estar en su punto más bajo por una política de opciones binarias y unos medios que repiten lo mismo. Preservar la diversidad (biológica, cultural, de pensamiento) es clave para la resiliencia de cualquier sistema, incluyendo equipos y proyectos de innovación.",
       "pasos_accionables": [
         "Evalúa si tu equipo, proceso o solución depende de una única fuente, perspectiva o método ('monocultivo')",
         "Busca activamente perspectivas de otras disciplinas, culturas o experiencias para incorporar al proyecto",
@@ -114618,7 +114618,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Diseñar Sistemas Sabios (no Ignorantes)",
-      "resumen_teorico": "Los sistemas que creas (económicos, sociales, tecnológicos) pueden ser sabios (dinámicos, diversos y que reparten los recursos de forma justa, aprendiendo y ajustándose con el tiempo, como la red de raíces y hongos de un bosque) o ignorantes (fijos, que solo se sirven a sí mismos y extraen recursos en una sola dirección, como el colonialismo). Antes de diseñar tu solución, evalúa si el sistema que estás construyendo reparte el valor de forma justa y capaz de adaptarse, o si concentra los beneficios y explota recursos sin devolver nada a cambio.",
+      "resumen_teorico": "Los sistemas que creas (económicos, sociales, tecnológicos) pueden ser sabios (dinámicos, diversos y que reparten los recursos de forma justa, aprendiendo y ajustándose con el tiempo, como la red de raíces y hongos de un bosque) o ignorantes (fijos, que solo se sirven a sí mismos y extraen recursos principalmente en una dirección, como el colonialismo). Antes de diseñar tu solución, evalúa si el sistema que estás construyendo reparte el valor de forma justa y capaz de adaptarse, o si concentra los beneficios y explota recursos sin devolver nada a cambio.",
       "pasos_accionables": [
         "Mapea quiénes participan en tu sistema o producto y cómo se mueven los recursos entre ellos.",
         "Evalúa si tu modelo de negocio saca valor en una sola dirección o si genera un intercambio real donde todos ganan algo.",
@@ -117263,12 +117263,12 @@
       "titulo_concepto": "Técnica de Cambio de Perspectiva y Escala (Zoom Out/Zoom In)",
       "resumen_teorico": "Cambiar drásticamente la escala de observación de un problema (por ejemplo, ver la Tierra como un 'punto azul pálido' desde el espacio, o un río visto desde miles de metros de altura mediante LiDAR) revela patrones, relaciones e insights que son invisibles desde la perspectiva cotidiana. Esta técnica ayuda a los equipos de diseño a reencuadrar problemas complejos, identificar qué es realmente importante y qué se vuelve insignificante al cambiar el marco de referencia.",
       "pasos_accionables": [
-        "Tomar el problema o sistema que se está diseñando y visualizarlo en una escala radicalmente distinta (macro: años/décadas/planeta; micro: segundo a segundo, célula a célula).",
+        "Tomar el problema o sistema que se está diseñando y visualizarlo en una escala radicalmente distinta y mucho más alejada que la cotidiana (años, décadas, el planeta).",
         "Preguntar: '¿Qué se vuelve insignificante desde esta nueva perspectiva? ¿Qué se vuelve más importante?'",
         "Usar visualizaciones de datos históricos o patrones de largo plazo (mapas, líneas de tiempo) para revelar tendencias ocultas.",
         "Documentar los nuevos insights que emergen del cambio de escala y contrastarlos con la visión original del equipo."
       ],
-      "entregable_esperado": "Un mapa o visualización del problema de diseño en al menos dos escalas distintas (micro y macro), con una lista de insights generados por el contraste.",
+      "entregable_esperado": "Un mapa o visualización del problema de diseño en al menos dos escalas distintas (la cotidiana y una mucho más alejada), con una lista de insights generados por el contraste.",
       "nodos_previos": [
         "analisis_y_sintesis"
       ],
@@ -120238,12 +120238,12 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Tratar las Creencias como Vehículos, no como Monumentos",
-      "resumen_teorico": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. Las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a soltarla y reemplazarla, en lugar de aferrarse por seguridad emocional o social. Esto es la base filosófica del pivote en metodologías ágiles.",
+      "resumen_teorico": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. Las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a ajustarla o reemplazarla, en lugar de aferrarse por seguridad emocional o social.",
       "pasos_accionables": [
         "Antes de lanzar una prueba de validación, define explícitamente qué resultado haría que abandones o cambies tu hipótesis actual.",
         "Revisa periódicamente tus creencias fundacionales del negocio con la pregunta: '¿Sigue esto sirviendo o me estoy aferrando por comodidad?'",
         "Cuando el contexto cambie (mercado, tecnología, usuario), evalúa si tu narrativa de negocio sigue vigente.",
-        "Practica comunicar los cambios de dirección (pivotes) como evolución natural, no como fracaso."
+        "Sugerencia de My Idea: practica comunicar los cambios de dirección (pivotes) como evolución natural, no como fracaso."
       ],
       "entregable_esperado": "Criterios de decisión (pivot/persevere) documentados antes de cada ciclo de validación, junto con un registro de hipótesis descartadas y por qué.",
       "nodos_previos": [

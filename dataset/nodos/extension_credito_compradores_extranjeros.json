@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Extensión de Crédito a Compradores Extranjeros",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los compradores extranjeros suelen solicitar plazos de pago más largos. El exportador debe basarse en los términos comerciales normales de su industria (generalmente 30-180 días para bienes de consumo) y ser cauteloso al establecer precedentes con nuevos clientes, ya que los términos concedidos tienden a mantenerse en ventas futuras. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Los compradores extranjeros suelen solicitar plazos de pago más largos, y negarse a dar crédito puede costar la venta; hay que equilibrar competitividad, costo y riesgo. Una guía útil son los términos comerciales normales de la industria (generalmente 30-180 días para bienes de consumo), y conviene ser cauteloso al establecer precedentes con nuevos clientes, ya que los términos concedidos tienden a mantenerse en ventas futuras. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Investigar los términos comerciales normales de la industria para el producto",
     "Definir el plazo de crédito según el tipo de producto (bienes de consumo vs bienes de capital)",
@@ -43,6 +43,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-094-extension_credito_compradores_extranjeros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los compradores extranjeros suelen solicitar plazos de pago más largos. El exportador debe basarse en los términos comerciales normales de su industria (generalmente 30-180 días para bienes de consumo) y ser cauteloso al establecer precedentes con nuevos clientes, ya que los términos concedidos tienden a mantenerse en ventas futuras. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Los compradores extranjeros suelen solicitar plazos de pago más largos, y negarse a dar crédito puede costar la venta; hay que equilibrar competitividad, costo y riesgo. Una guía útil son los términos comerciales normales de la industria (generalmente 30-180 días para bienes de consumo), y conviene ser cauteloso al establecer precedentes con nuevos clientes, ya que los términos concedidos tienden a mantenerse en ventas futuras. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4231-4233",
+        "frase": "One useful guide for determining the appropriate credit period"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro presenta los términos normales de la industria como una guía útil, no como obligación.; Mismo defecto que la marca 0: 'one useful guide' pasa a 'debe basarse'.; Mismo defecto que la marca 1.; Se cae el contrapeso: quien se niega a dar crédito puede perder la venta, y hay que equilibrar competitividad con costo y seguridad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

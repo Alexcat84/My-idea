@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Rol de la Información como Driver de la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compartes con proveedores y clientes, mejores decisiones podrás tomar, maximizando la rentabilidad conjunta. La información cumple dos funciones: coordinar actividades diarias, como la programación de producción, los niveles de inventario y las rutas de transporte, y sustentar pronósticos de demanda, tanto a nivel táctico (cronogramas mensuales o trimestrales) como estratégico (decisiones de expansión o entrada y salida de mercados).",
+  "resumen_teorico": "La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compartes con proveedores y clientes, mejores decisiones podrás tomar, lo que tiende a maximizar la rentabilidad conjunta. La información cumple dos funciones: coordinar actividades diarias, como la programación de producción, los niveles de inventario y las rutas de transporte, y sustentar pronósticos de demanda, tanto a nivel táctico (cronogramas mensuales o trimestrales) como estratégico (decisiones de expansión o entrada y salida de mercados).",
   "pasos_accionables": [
     "Mapea qué datos compartes actualmente con tus proveedores y clientes",
     "Identifica las brechas de información que te llevan a tomar decisiones subóptimas",
@@ -83,6 +83,22 @@
         "motivo": "La informacion como base de coordinacion y pronostico precede a convertir datos en un plan S&OP compartido; se evita proceso_sop_mop por duplicado."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-096-information_driver_supply_chain-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compartes con proveedores y clientes, mejores decisiones podrás tomar, maximizando la rentabilidad conjunta. La información cumple dos funciones: coordinar actividades diarias, como la programación de producción, los niveles de inventario y las rutas de transporte, y sustentar pronósticos de demanda, tanto a nivel táctico (cronogramas mensuales o trimestrales) como estratégico (decisiones de expansión o entrada y salida de mercados).",
+      "texto_nuevo": "La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compartes con proveedores y clientes, mejores decisiones podrás tomar, lo que tiende a maximizar la rentabilidad conjunta. La información cumple dos funciones: coordinar actividades diarias, como la programación de producción, los niveles de inventario y las rutas de transporte, y sustentar pronósticos de demanda, tanto a nivel táctico (cronogramas mensuales o trimestrales) como estratégico (decisiones de expansión o entrada y salida de mercados).",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "220",
+        "frase": "This will also tend to maximize the profitability of the supply chain as a whole"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la buena información tiende a maximizar la rentabilidad de la cadena, no que la maximice.; Mismo defecto: endurece el 'tend to maximize' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

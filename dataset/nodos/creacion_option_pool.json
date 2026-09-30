@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Creación de Option Pool para Contrataciones Futuras",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar.",
+  "resumen_teorico": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar o los paquetes de equity menores que hacen falta para atraerlas.",
   "pasos_accionables": [
     "Estimar el número de contrataciones clave necesarias antes de la siguiente ronda de financiamiento.",
     "Definir el tamaño del option pool al crearlo o refrescarlo en la ronda, según las contrataciones clave previstas hasta la siguiente ronda.",
@@ -69,6 +69,22 @@
         "motivo": "Orden invertido: decidir entre financiarte solo o buscar inversores va antes de crear un option pool en cada ronda, no despues. Esto no viene de la correccion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-095-creacion_option_pool-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar.",
+      "texto_nuevo": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar o los paquetes de equity menores que hacen falta para atraerlas.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2578",
+        "frase": "the smaller equity stakes required to attract them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro atribuye la caída a que quedan menos contrataciones clave y/o a que hacen falta paquetes menores para atraerlas; se cae la segunda causa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

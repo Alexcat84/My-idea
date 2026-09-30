@@ -6,12 +6,12 @@
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
   "resumen_teorico": "Cambiar drásticamente la escala de observación de un problema (por ejemplo, ver la Tierra como un 'punto azul pálido' desde el espacio, o un río visto desde miles de metros de altura mediante LiDAR) revela patrones, relaciones e insights que son invisibles desde la perspectiva cotidiana. Esta técnica ayuda a los equipos de diseño a reencuadrar problemas complejos, identificar qué es realmente importante y qué se vuelve insignificante al cambiar el marco de referencia.",
   "pasos_accionables": [
-    "Tomar el problema o sistema que se está diseñando y visualizarlo en una escala radicalmente distinta (macro: años/décadas/planeta; micro: segundo a segundo, célula a célula).",
+    "Tomar el problema o sistema que se está diseñando y visualizarlo en una escala radicalmente distinta y mucho más alejada que la cotidiana (años, décadas, el planeta).",
     "Preguntar: '¿Qué se vuelve insignificante desde esta nueva perspectiva? ¿Qué se vuelve más importante?'",
     "Usar visualizaciones de datos históricos o patrones de largo plazo (mapas, líneas de tiempo) para revelar tendencias ocultas.",
     "Documentar los nuevos insights que emergen del cambio de escala y contrastarlos con la visión original del equipo."
   ],
-  "entregable_esperado": "Un mapa o visualización del problema de diseño en al menos dos escalas distintas (micro y macro), con una lista de insights generados por el contraste.",
+  "entregable_esperado": "Un mapa o visualización del problema de diseño en al menos dos escalas distintas (la cotidiana y una mucho más alejada), con una lista de insights generados por el contraste.",
   "nodos_previos": [
     "analisis_y_sintesis"
   ],
@@ -41,6 +41,39 @@
         "motivo": "La tecnica de zoom out/zoom in no tiene relacion con la busqueda del modelo de negocio."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-097-tecnica_cambio_de_perspectiva_escala-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tomar el problema o sistema que se está diseñando y visualizarlo en una escala radicalmente distinta (macro: años/décadas/planeta; micro: segundo a segundo, célula a célula).",
+      "texto_nuevo": "Tomar el problema o sistema que se está diseñando y visualizarlo en una escala radicalmente distinta y mucho más alejada que la cotidiana (años, décadas, el planeta).",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "1825",
+        "frase": "It’s about as zoomed out as we can get."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo practica alejarse de la vista cotidiana; la escala micro no aparece.; Mismo defecto: la escala micro es añadida al procedimiento.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-097-tecnica_cambio_de_perspectiva_escala-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un mapa o visualización del problema de diseño en al menos dos escalas distintas (micro y macro), con una lista de insights generados por el contraste.",
+      "texto_nuevo": "Un mapa o visualización del problema de diseño en al menos dos escalas distintas (la cotidiana y una mucho más alejada), con una lista de insights generados por el contraste.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "1815",
+        "frase": "When you see how a river moves from this vantage point, thousands of feet above"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro contrasta la vista cotidiana con una muy alejada; no trae la escala micro.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diseñar Sistemas Sabios (no Ignorantes)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Los sistemas que creas (económicos, sociales, tecnológicos) pueden ser sabios (dinámicos, diversos y que reparten los recursos de forma justa, aprendiendo y ajustándose con el tiempo, como la red de raíces y hongos de un bosque) o ignorantes (fijos, que solo se sirven a sí mismos y extraen recursos en una sola dirección, como el colonialismo). Antes de diseñar tu solución, evalúa si el sistema que estás construyendo reparte el valor de forma justa y capaz de adaptarse, o si concentra los beneficios y explota recursos sin devolver nada a cambio.",
+  "resumen_teorico": "Los sistemas que creas (económicos, sociales, tecnológicos) pueden ser sabios (dinámicos, diversos y que reparten los recursos de forma justa, aprendiendo y ajustándose con el tiempo, como la red de raíces y hongos de un bosque) o ignorantes (fijos, que solo se sirven a sí mismos y extraen recursos principalmente en una dirección, como el colonialismo). Antes de diseñar tu solución, evalúa si el sistema que estás construyendo reparte el valor de forma justa y capaz de adaptarse, o si concentra los beneficios y explota recursos sin devolver nada a cambio.",
   "pasos_accionables": [
     "Mapea quiénes participan en tu sistema o producto y cómo se mueven los recursos entre ellos.",
     "Evalúa si tu modelo de negocio saca valor en una sola dirección o si genera un intercambio real donde todos ganan algo.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Diseña Sistemas Sabios, no Ignorantes",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-097-sistemas_sabios_vs_ignorantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los sistemas que creas (económicos, sociales, tecnológicos) pueden ser sabios (dinámicos, diversos y que reparten los recursos de forma justa, aprendiendo y ajustándose con el tiempo, como la red de raíces y hongos de un bosque) o ignorantes (fijos, que solo se sirven a sí mismos y extraen recursos en una sola dirección, como el colonialismo). Antes de diseñar tu solución, evalúa si el sistema que estás construyendo reparte el valor de forma justa y capaz de adaptarse, o si concentra los beneficios y explota recursos sin devolver nada a cambio.",
+      "texto_nuevo": "Los sistemas que creas (económicos, sociales, tecnológicos) pueden ser sabios (dinámicos, diversos y que reparten los recursos de forma justa, aprendiendo y ajustándose con el tiempo, como la red de raíces y hongos de un bosque) o ignorantes (fijos, que solo se sirven a sí mismos y extraen recursos principalmente en una dirección, como el colonialismo). Antes de diseñar tu solución, evalúa si el sistema que estás construyendo reparte el valor de forma justa y capaz de adaptarse, o si concentra los beneficios y explota recursos sin devolver nada a cambio.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "625",
+        "frase": "extract resources mainly in one direction."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que extraen recursos principalmente en una dirección.; Mismo defecto: 'mainly' pasa a 'una sola dirección'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

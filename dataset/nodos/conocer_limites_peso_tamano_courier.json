@@ -4,13 +4,13 @@
   "dominio": "entrega",
   "titulo_concepto": "Conocer los límites de peso y tamaño del courier",
   "fuente": "Guia visual de empaque",
-  "resumen_teorico": "Cada courier fija un peso máximo y unas dimensiones máximas por paquete, además de un método para calcular el peso volumétrico: el volumen del paquete dividido entre un factor propio de cada transportista. El costo se cobra por el mayor entre el peso real y ese peso volumétrico, así que una caja demasiado grande para su contenido puede salir mas cara aunque pese poco. También existen recargos por manejo adicional cuando el paquete tiene forma irregular, materiales rígidos como metal o madera, o cuando supera ciertos umbrales de largo o de suma de largo mas perímetro. Estos números cambian por courier y por país, así que hay que preguntarlos directamente en lugar de asumirlos.",
+  "resumen_teorico": "Cada courier fija un peso máximo y unas dimensiones máximas por paquete, además de un método para calcular el peso volumétrico: el volumen del paquete en centímetros dividido entre 5000. El costo se cobra por el mayor entre el peso real, ese peso volumétrico y el peso mínimo facturable, así que una caja demasiado grande para su contenido puede salir más cara aunque pese poco. También existen recargos por manejo adicional cuando el paquete va en un contenedor exterior de metal o madera, cuando es un objeto cilíndrico que no va del todo dentro de cartón corrugado, o cuando su lado más largo, su segundo lado o su peso real superan ciertos umbrales, y un cargo aparte cuando la suma de largo más perímetro supera cierto umbral. Confirma estos números directamente con tu courier en lugar de asumirlos.",
   "pasos_accionables": [
-    "Pregunta a tu courier cuál es el peso máximo y las dimensiones máximas que acepta sin cargo extra.",
+    "Pregunta a tu courier cuál es el peso máximo y las dimensiones máximas que acepta, y desde qué peso y medidas cobra recargos.",
     "Pide el divisor que usa tu courier para calcular el peso volumétrico de tus paquetes.",
     "Calcula el peso volumétrico de tu paquete típico y compáralo contra su peso real.",
-    "Usa el mayor de los dos valores para estimar el costo real de cada envío.",
-    "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de más."
+    "Usa el mayor entre peso real, peso volumétrico y peso mínimo facturable para estimar el costo real de cada envío.",
+    "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de más, dejando al menos 5 a 6 cm entre el contenido y las paredes para el material de protección."
   ],
   "entregable_esperado": "Una tabla propia con peso, medidas y peso volumétrico de tus paquetes típicos, comparada contra los límites de tu courier.",
   "nodos_previos": [
@@ -142,6 +142,73 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-094-conocer_limites_peso_tamano_courier-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada courier fija un peso máximo y unas dimensiones máximas por paquete, además de un método para calcular el peso volumétrico: el volumen del paquete dividido entre un factor propio de cada transportista. El costo se cobra por el mayor entre el peso real y ese peso volumétrico, así que una caja demasiado grande para su contenido puede salir mas cara aunque pese poco. También existen recargos por manejo adicional cuando el paquete tiene forma irregular, materiales rígidos como metal o madera, o cuando supera ciertos umbrales de largo o de suma de largo mas perímetro. Estos números cambian por courier y por país, así que hay que preguntarlos directamente en lugar de asumirlos.",
+      "texto_nuevo": "Cada courier fija un peso máximo y unas dimensiones máximas por paquete, además de un método para calcular el peso volumétrico: el volumen del paquete en centímetros dividido entre 5000. El costo se cobra por el mayor entre el peso real, ese peso volumétrico y el peso mínimo facturable, así que una caja demasiado grande para su contenido puede salir más cara aunque pese poco. También existen recargos por manejo adicional cuando el paquete va en un contenedor exterior de metal o madera, cuando es un objeto cilíndrico que no va del todo dentro de cartón corrugado, o cuando su lado más largo, su segundo lado o su peso real superan ciertos umbrales, y un cargo aparte cuando la suma de largo más perímetro supera cierto umbral. Confirma estos números directamente con tu courier en lugar de asumirlos.",
+      "cita": {
+        "libro": "Guia visual de empaque",
+        "fichero": "txt/Supply chain/packaging_guide_infographic.txt",
+        "lineas": "93-121",
+        "frase": "It compares the actual weight of the package to its dimensional weight"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro compara tres pesos y cobra el mayor; se cae el peso mínimo facturable.; El libro da el divisor concreto 5000 con medidas en centímetros; no dice que sea propio de cada transportista.; El libro no dice que las cifras cambien por courier o país; da cifras concretas.; El recargo es para contenedores exteriores de metal o madera y cilindros no empacados del todo en corrugado; 'forma irregular' y 'materiales rígidos' no son esas condiciones.; La lista no calza: faltan lado más largo, segundo lado y peso real, y la suma largo más perímetro es un cargo aparte de paquete grande.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Mismo defecto que la marca 4.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-094-conocer_limites_peso_tamano_courier-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pregunta a tu courier cuál es el peso máximo y las dimensiones máximas que acepta sin cargo extra.",
+      "texto_nuevo": "Pregunta a tu courier cuál es el peso máximo y las dimensiones máximas que acepta, y desde qué peso y medidas cobra recargos.",
+      "cita": {
+        "libro": "Guia visual de empaque",
+        "fichero": "txt/Supply chain/packaging_guide_infographic.txt",
+        "lineas": "107-125",
+        "frase": "are not accepted for transport"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro separa los máximos por encima de los cuales no se acepta el paquete de los umbrales de recargo por manejo adicional.; Mismo defecto que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-094-conocer_limites_peso_tamano_courier-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa el mayor de los dos valores para estimar el costo real de cada envío.",
+      "texto_nuevo": "Usa el mayor entre peso real, peso volumétrico y peso mínimo facturable para estimar el costo real de cada envío.",
+      "cita": {
+        "libro": "Guia visual de empaque",
+        "fichero": "txt/Supply chain/packaging_guide_infographic.txt",
+        "lineas": "101-103",
+        "frase": "The greater of the three is the the billable weight"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro toma el mayor de tres valores; falta el peso mínimo facturable.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-094-conocer_limites_peso_tamano_courier-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de más.",
+      "texto_nuevo": "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de más, dejando al menos 5 a 6 cm entre el contenido y las paredes para el material de protección.",
+      "cita": {
+        "libro": "Guia visual de empaque",
+        "fichero": "txt/Supply chain/packaging_guide_infographic.txt",
+        "lineas": "5-15",
+        "frase": "A box that perfectly fits the size of the products is not recommended"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro desaconseja la caja justa y pide al menos 5 a 6 cm entre contenido y paredes para el material de protección.; Mismo defecto que la marca 0.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

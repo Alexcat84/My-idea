@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión Inteligente del Riesgo de Crédito",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La función de crédito debe ayudar a la empresa a tomar riesgos inteligentes que apoyen su plan de negocio. Una decisión de crédito aparentemente mala desde una perspectiva puede ser una buena decisión de negocio desde otra (por ejemplo, ganar cuota de mercado). Se pueden crear programas de crédito adaptados a segmentos específicos (startups, contratistas, clientes extranjeros) usando seguros de crédito, garantías y avales gubernamentales.",
+  "resumen_teorico": "La función de crédito debe ayudar a la empresa a tomar riesgos inteligentes que apoyen su plan de negocio. Una decisión de crédito aparentemente mala desde una perspectiva puede ser una buena decisión de negocio desde otra (por ejemplo, ganar cuota de mercado). Se pueden crear programas de crédito adaptados a segmentos específicos (startups, contratistas, clientes extranjeros) usando seguros de crédito, garantías sobre activos del cliente y avales gubernamentales a préstamos para exportaciones.",
   "pasos_accionables": [
     "Identificar segmentos de mercado estratégicos que requieran condiciones de crédito especiales",
     "Diseñar términos de pago atractivos para esos segmentos",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Toma Riesgos de Crédito Inteligentes",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-096-gestion_riesgo_credito-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La función de crédito debe ayudar a la empresa a tomar riesgos inteligentes que apoyen su plan de negocio. Una decisión de crédito aparentemente mala desde una perspectiva puede ser una buena decisión de negocio desde otra (por ejemplo, ganar cuota de mercado). Se pueden crear programas de crédito adaptados a segmentos específicos (startups, contratistas, clientes extranjeros) usando seguros de crédito, garantías y avales gubernamentales.",
+      "texto_nuevo": "La función de crédito debe ayudar a la empresa a tomar riesgos inteligentes que apoyen su plan de negocio. Una decisión de crédito aparentemente mala desde una perspectiva puede ser una buena decisión de negocio desde otra (por ejemplo, ganar cuota de mercado). Se pueden crear programas de crédito adaptados a segmentos específicos (startups, contratistas, clientes extranjeros) usando seguros de crédito, garantías sobre activos del cliente y avales gubernamentales a préstamos para exportaciones.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1092",
+        "frase": "credit insurance, liens on customer assets, and government loan guarantees for exports"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro habla de garantías sobre activos del cliente y de avales del gobierno solo para préstamos a exportaciones.; Mismo defecto: los avales gubernamentales del libro se limitan a préstamos para exportaciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

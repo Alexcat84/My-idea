@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "¿Financiarte con lo tuyo o buscar inversores?",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Tienes que decidir si financias tu negocio con tu propio dinero (autofinanciamiento o 'bootstrapping') o si buscas inversores externos. Financiarte con lo propio te deja el control y evita repartir parte de tu negocio (equity), pero limita qué tan rápido puedes crecer y te expone a quedarte sin dinero si gastas más de lo que entra (burn rate). La decisión depende de tu industria, de cuánto capital necesita el negocio y de qué tan rápido quieres crecer.",
+  "resumen_teorico": "Tienes que decidir si financias tu negocio con tu propio dinero (autofinanciamiento o 'bootstrapping') o si buscas inversores externos. Financiarte con lo propio te deja el control y evita repartir parte de tu negocio (equity), pero limita qué tan rápido puedes crecer y te expone a quedarte sin dinero si gastas más de lo que entra (burn rate). La decisión depende de tu industria, del momento de la economía, de cuánto capital necesita el negocio, de tu modelo de negocio y de qué tan rápido quieres crecer.",
   "pasos_accionables": [
     "Calcula cuánto dinero gastas cada mes y cuántos meses de efectivo te quedan al ritmo actual (runway).",
     "Evalúa si tu modelo de negocio te permite conseguir ingresos pronto de clientes, por ejemplo con consultoría o pagos por adelantado, para no necesitar financiamiento externo.",
@@ -67,6 +67,22 @@
         "evidencia": "F27-019: Decidir como financiar el negocio (runway, control cedido, capital) es planificar recursos, no probar con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-095-decision_autofinanciamiento_vs_inversion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tienes que decidir si financias tu negocio con tu propio dinero (autofinanciamiento o 'bootstrapping') o si buscas inversores externos. Financiarte con lo propio te deja el control y evita repartir parte de tu negocio (equity), pero limita qué tan rápido puedes crecer y te expone a quedarte sin dinero si gastas más de lo que entra (burn rate). La decisión depende de tu industria, de cuánto capital necesita el negocio y de qué tan rápido quieres crecer.",
+      "texto_nuevo": "Tienes que decidir si financias tu negocio con tu propio dinero (autofinanciamiento o 'bootstrapping') o si buscas inversores externos. Financiarte con lo propio te deja el control y evita repartir parte de tu negocio (equity), pero limita qué tan rápido puedes crecer y te expone a quedarte sin dinero si gastas más de lo que entra (burn rate). La decisión depende de tu industria, del momento de la economía, de cuánto capital necesita el negocio, de tu modelo de negocio y de qué tan rápido quieres crecer.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2624",
+        "frase": "The startup's industry, the macroeconomic context in which it operates, its degree of capital-intensity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera industria, contexto macroeconómico, intensidad de capital y modelo de negocio; el resumen pierde el contexto económico y el modelo de negocio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

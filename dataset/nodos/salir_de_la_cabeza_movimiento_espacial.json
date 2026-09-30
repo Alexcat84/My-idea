@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Salir de la Cabeza: Cognición Espacial y Creatividad",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Mover el cuerpo en el espacio activa el hipocampo y cambia la forma en que el cerebro procesa la información, favoreciendo nuevas ideas y el cuestionamiento de supuestos. La dependencia de tecnologías como el GPS reduce nuestra memoria espacial y capacidad de navegación. Ejercitar deliberadamente la orientación física (caminar sin GPS, explorar lugares nuevos) fortalece la creatividad y la capacidad de observación crítica necesaria para el diseño.",
+  "resumen_teorico": "Mover el cuerpo en el espacio cambia la forma en que el cerebro procesa la información, favoreciendo nuevas ideas y el cuestionamiento de supuestos. La dependencia de tecnologías como el GPS reduce el uso del hipocampo, y con él nuestra memoria espacial y capacidad de navegación. Explorar lugares nuevos despierta la creatividad, y orientarte sin GPS ejercita tu capacidad de navegación, que mejora con la práctica.",
   "pasos_accionables": [
     "Antes de tu próxima sesión de ideación, camina o viaja a un lugar nuevo sin usar GPS ni navegación digital",
     "Traza tu propia ruta usando un mapa físico o instrucciones escritas por ti mismo",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Muévete para Pensar Mejor",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-097-salir_de_la_cabeza_movimiento_espacial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mover el cuerpo en el espacio activa el hipocampo y cambia la forma en que el cerebro procesa la información, favoreciendo nuevas ideas y el cuestionamiento de supuestos. La dependencia de tecnologías como el GPS reduce nuestra memoria espacial y capacidad de navegación. Ejercitar deliberadamente la orientación física (caminar sin GPS, explorar lugares nuevos) fortalece la creatividad y la capacidad de observación crítica necesaria para el diseño.",
+      "texto_nuevo": "Mover el cuerpo en el espacio cambia la forma en que el cerebro procesa la información, favoreciendo nuevas ideas y el cuestionamiento de supuestos. La dependencia de tecnologías como el GPS reduce el uso del hipocampo, y con él nuestra memoria espacial y capacidad de navegación. Explorar lugares nuevos despierta la creatividad, y orientarte sin GPS ejercita tu capacidad de navegación, que mejora con la práctica.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3944-3952",
+        "frase": "Exploring different places piques creativity."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que explorar despierta la creatividad y que navegar mejora con la práctica; la observación crítica es añadida.; El libro liga el hipocampo a la memoria espacial de la navegación, no a mover el cuerpo.; Mismo defecto: orientarse sin GPS no se promete como fortalecedor de la creatividad ni de la observación crítica.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

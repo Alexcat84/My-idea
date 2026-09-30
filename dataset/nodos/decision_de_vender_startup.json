@@ -12,14 +12,14 @@
     "Determina tu punto de inflexión: ¿en qué momento perderás el control necesario para negociar buenos términos?",
     "Compara el valor de vender ahora contra esperar y arriesgar que se diluya tu influencia en la decisión",
     "Redefine cuál es tu mercado real (no el que crees que es) y quiénes serán tus competidores futuros, evalúa con honestidad su tamaño y cómo va a evolucionar, si es al menos diez veces más grande que el que ya explotaste, y qué probabilidades reales tienes de convertirte en el jugador número uno",
-    "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo",
+    "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo, porque el análisis de mercado y de ser número uno sirve sobre todo para las de negocio, algo para las de producto y casi nada para las de talento y tecnología",
     "Corre un proceso corto y discreto de sondeo de fusiones y adquisiciones (M&A) con varios compradores potenciales, para detectar cuál es el precio máximo que el mercado te puede dar en este momento",
     "Define un precio mínimo aceptable basado en el valor real de tu negocio, no en la primera oferta que te hagan ni en el extra que te ofrezcan sobre el precio actual",
     "Comunica ese precio con firmeza a todos los compradores potenciales y sostenlo, dispuesto a esperar aunque no lleguen ofertas de inmediato",
     "Compara las ofertas de adquisición contra tu proyección de valor a 3 o 5 años si sigues independiente",
     "Define criterios objetivos y fáciles de comunicar sobre cuándo mantendrías tu empresa independiente y cuándo la venderías, y comunícalos a tu equipo de forma consistente para evitar que sientan que los traicionaste",
     "Separa la decisión estratégica y la discusión sobre vender de tu situación financiera personal",
-    "Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y consulta con tu consejo (board) y asesores de confianza para equilibrarla con el análisis racional",
+    "Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y busca acallar tanto el impulso de seguir como el de vender",
     "Ajusta tu salario como CEO a valores de mercado una vez que tu empresa se convierta en un negocio real y consolidado, y en un objetivo atractivo de adquisición"
   ],
   "entregable_esperado": "Un análisis de escenarios que compare el valor esperado de vender ahora contra seguir operando, incluyendo tu punto de inflexión de control.",
@@ -61,6 +61,40 @@
         "motivo": "Una vez decidido vender la empresa, lo siguiente es entender qué tipo de compra se ofrece y cómo se valora cada una."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-095-decision_de_vender_startup-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo",
+      "texto_nuevo": "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo, porque el análisis de mercado y de ser número uno sirve sobre todo para las de negocio, algo para las de producto y casi nada para las de talento y tecnología",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam | The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "3270",
+        "frase": "most applicable to business acquisitions, with some relevance to product acquisitions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que su análisis sirve sobre todo para adquisiciones de negocio, algo para las de producto y casi nada para las de talento o tecnología; el paso pierde para qué clasificar.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-095-decision_de_vender_startup-pasos_accionables-13",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y consulta con tu consejo (board) y asesores de confianza para equilibrarla con el análisis racional",
+      "texto_nuevo": "Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y busca acallar tanto el impulso de seguir como el de vender",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam | The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "3308",
+        "frase": "Clearly they are irreconcilable, but the key is to mute them both."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone consultar al consejo para equilibrar la emoción de vender, sino acallar tanto el impulso de seguir como el de vender.",
+      "indice": 13,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

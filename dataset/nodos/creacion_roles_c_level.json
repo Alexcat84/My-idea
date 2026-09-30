@@ -7,7 +7,7 @@
   "resumen_teorico": "Los equipos fundadores comienzan con estructuras planas dominadas por títulos C-level ocupados por fundadores. A medida que el startup madura y levanta financiamiento, se crean roles VP especializados (ventas, marketing, ingeniería, desarrollo de negocio) y eventualmente el CFO se convierte en la contratación C-level más común. El rol de COO/presidente es menos frecuente y puede ser señal de alerta si no está bien justificado.",
   "pasos_accionables": [
     "Evaluar la complejidad financiera del negocio para decidir el momento de contratar un CFO",
-    "Priorizar la creación del rol VP-Ventas como una de las primeras posiciones especializadas",
+    "Tener en cuenta que el VP de Ventas suele ser una de las primeras posiciones especializadas que se crean, pero evitar contratar a un especialista que no pueda hacer otra cosa mientras el producto aún no se ha asentado",
     "Analizar si el rol de COO/presidente resuelve una necesidad real o solo compensa una carencia del CEO",
     "Revisar el ratio de empleados por ejecutivo (leverage estructural) para justificar nuevas contrataciones"
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Decide Cuándo Sumar Ejecutivos",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-095-creacion_roles_c_level-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar la creación del rol VP-Ventas como una de las primeras posiciones especializadas",
+      "texto_nuevo": "Tener en cuenta que el VP de Ventas suele ser una de las primeras posiciones especializadas que se crean, pero evitar contratar a un especialista que no pueda hacer otra cosa mientras el producto aún no se ha asentado",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2298",
+        "frase": "The first VP-level position created is often the VP-sales"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte, con el ejemplo de un VP de ventas, que contratar especialistas mientras el producto sigue cambiando puede ser un gran error.; El libro solo describe que el VP de ventas suele ser el primer puesto VP creado; no recomienda priorizarlo.; Mismo defecto que la marca 0: una descripción convertida en prescripción.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

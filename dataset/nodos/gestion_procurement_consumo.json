@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Cuánto y qué compras en tu negocio (procurement)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
+  "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
   "pasos_accionables": [
     "Clasifica lo que compras en materiales estratégicos y compras indirectas (MRO)",
     "Define cuánto esperas consumir de cada producto en cada lugar donde operas",
@@ -81,6 +81,22 @@
         "motivo": "Tras marcar los insumos por valor y criticidad, lo natural es medir cuánto consumes realmente de cada categoría y vigilar sus desviaciones."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-096-gestion_procurement_consumo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
+      "texto_nuevo": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "997",
+        "frase": "how much of what kinds of products are bought from whom and at what prices"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye entender a quién le compras y a qué precios.; Mismo defecto: se cae a quién y a qué precio, y el desglose por unidad operativa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

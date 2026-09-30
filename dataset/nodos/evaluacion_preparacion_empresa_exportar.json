@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Evaluación de la Preparación de la Empresa para Exportar (Export Readiness)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, ya que esto último suele indicar falta de preparación real para sostener el esfuerzo exportador en el tiempo.",
+  "resumen_teorico": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
   "pasos_accionables": [
     "Responde con honestidad qué esperas ganar al exportar y verifica que sean motivos sólidos, no una solución rápida a caídas en ventas domésticas",
     "Evalúa tu nivel real de compromiso con el esfuerzo exportador y si es consistente con tus otras metas de negocio",
@@ -80,6 +80,22 @@
         "evidencia": "F06-020: Autoevaluacion interna de compromiso, capital, personal y capacidad para exportar es evaluacion de recursos y estrategia, no prueba con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-094-evaluacion_preparacion_empresa_exportar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, ya que esto último suele indicar falta de preparación real para sostener el esfuerzo exportador en el tiempo.",
+      "texto_nuevo": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "701",
+        "frase": "Will export customers be neglected if domestic sales pick up?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro solo plantea la pregunta de si exportar es un parche ante ventas locales en caída y si se descuidaría al cliente extranjero; el diagnóstico 'suele indicar' es añadido.; La cualidad del libro incluye dar capacitación y servicio posventa, que el nodo omite de la lista.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

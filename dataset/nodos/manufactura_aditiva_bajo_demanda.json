@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Manufactura Aditiva (Impresión 3D) para Producción Bajo Demanda",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La impresión 3D o manufactura aditiva permite crear productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y mejora el nivel de servicio al cliente al minimizar quiebres de stock.",
+  "resumen_teorico": "La impresión 3D o manufactura aditiva permite crear algunos productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y mejora el nivel de servicio al cliente al minimizar quiebres de stock.",
   "pasos_accionables": [
     "Identificar productos o componentes con alta variabilidad y baja predictibilidad de demanda",
     "Evaluar la viabilidad técnica y de costos de fabricarlos mediante manufactura aditiva",
@@ -51,6 +51,22 @@
         "motivo": "La impresion 3D bajo demanda no conduce naturalmente a la simulacion de operaciones."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-096-manufactura_aditiva_bajo_demanda-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La impresión 3D o manufactura aditiva permite crear productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y mejora el nivel de servicio al cliente al minimizar quiebres de stock.",
+      "texto_nuevo": "La impresión 3D o manufactura aditiva permite crear algunos productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y mejora el nivel de servicio al cliente al minimizar quiebres de stock.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2400",
+        "frase": "It is now possible to manufacture some products on demand"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que hoy es posible fabricar bajo demanda algunos productos, no cualquiera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

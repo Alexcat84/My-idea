@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Shapeshifting: Cultivar la Diversidad de Pensamiento",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "El 'shapeshifting' es la capacidad de cambiar ágilmente entre formas de pensar y actuar, explorando los límites de disciplinas y experiencias para encontrar solapamientos que generen nuevas posibilidades. Se contrapone a la 'sameness' (homogeneización), ejemplificada por monocultivos como el banano Cavendish, que ganan eficiencia pero pierden resiliencia genética y quedan vulnerables a amenazas (como enfermedades). De igual forma, la homogeneización cultural y lingüística reduce la 'ideadiversidad' colectiva. Preservar la diversidad —biológica, cultural, de pensamiento— es clave para la resiliencia de cualquier sistema, incluyendo equipos y proyectos de innovación.",
+  "resumen_teorico": "El 'shapeshifting' es la capacidad de cambiar ágilmente entre formas de pensar y actuar, explorando los límites de disciplinas y experiencias para encontrar solapamientos que generen nuevas posibilidades. Se contrapone a la 'sameness' (homogeneización), ejemplificada por monocultivos como el banano Cavendish, que ganan eficiencia pero pierden resiliencia genética y quedan vulnerables a amenazas (como enfermedades). De igual forma, la diversidad cultural y lingüística ha caído, y la 'ideadiversidad' colectiva podría estar en su punto más bajo por una política de opciones binarias y unos medios que repiten lo mismo. Preservar la diversidad (biológica, cultural, de pensamiento) es clave para la resiliencia de cualquier sistema, incluyendo equipos y proyectos de innovación.",
   "pasos_accionables": [
     "Evalúa si tu equipo, proceso o solución depende de una única fuente, perspectiva o método ('monocultivo')",
     "Busca activamente perspectivas de otras disciplinas, culturas o experiencias para incorporar al proyecto",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Cultiva tu Pensamiento Diverso",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-097-shapeshifting_diversidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El 'shapeshifting' es la capacidad de cambiar ágilmente entre formas de pensar y actuar, explorando los límites de disciplinas y experiencias para encontrar solapamientos que generen nuevas posibilidades. Se contrapone a la 'sameness' (homogeneización), ejemplificada por monocultivos como el banano Cavendish, que ganan eficiencia pero pierden resiliencia genética y quedan vulnerables a amenazas (como enfermedades). De igual forma, la homogeneización cultural y lingüística reduce la 'ideadiversidad' colectiva. Preservar la diversidad —biológica, cultural, de pensamiento— es clave para la resiliencia de cualquier sistema, incluyendo equipos y proyectos de innovación.",
+      "texto_nuevo": "El 'shapeshifting' es la capacidad de cambiar ágilmente entre formas de pensar y actuar, explorando los límites de disciplinas y experiencias para encontrar solapamientos que generen nuevas posibilidades. Se contrapone a la 'sameness' (homogeneización), ejemplificada por monocultivos como el banano Cavendish, que ganan eficiencia pero pierden resiliencia genética y quedan vulnerables a amenazas (como enfermedades). De igual forma, la diversidad cultural y lingüística ha caído, y la 'ideadiversidad' colectiva podría estar en su punto más bajo por una política de opciones binarias y unos medios que repiten lo mismo. Preservar la diversidad (biológica, cultural, de pensamiento) es clave para la resiliencia de cualquier sistema, incluyendo equipos y proyectos de innovación.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3119",
+        "frase": "may be at an all-time low as present-day politics and policies cement us"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la ideadiversidad 'podría' estar en su mínimo por la política binaria y los medios, no por la homogeneización cultural.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

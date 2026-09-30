@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Medir el paquete redondeando hacia arriba",
   "fuente": "Guia visual de empaque",
-  "resumen_teorico": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La formula y el divisor exactos varían según el courier y el país, así que hay que confirmarlos directamente con quien te va a hacer el envio.",
+  "resumen_teorico": "Antes de cotizar un envío hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado más largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milímetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La fórmula es largo por ancho por alto, en centímetros, dividido entre 5000; confírmala con quien te va a hacer el envío.",
   "pasos_accionables": [
     "Mide largo, ancho y alto de la caja ya cerrada y empacada, no del producto solo.",
     "Define el lado más largo como el largo del paquete.",
@@ -99,6 +99,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-094-medir_paquete_redondeando_hacia_arriba-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de cotizar un envio hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado mas largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milimetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La formula y el divisor exactos varían según el courier y el país, así que hay que confirmarlos directamente con quien te va a hacer el envio.",
+      "texto_nuevo": "Antes de cotizar un envío hay que medir el paquete ya cerrado y listo, no el producto suelto. Se toman largo, ancho y alto, y el lado más largo se define como el largo. Cada medida se redondea siempre hacia arriba a la unidad completa, porque los couriers cobran por esa medida redondeada, y una diferencia de milímetros puede cambiar el rango de tarifa. Con esas tres medidas se puede calcular el peso volumétrico o dimensional, que compara el espacio que ocupa la caja contra su peso real: el courier cobra por el que sea mayor entre peso real, peso volumétrico y peso mínimo facturable. La fórmula es largo por ancho por alto, en centímetros, dividido entre 5000; confírmala con quien te va a hacer el envío.",
+      "cita": {
+        "libro": "Guia visual de empaque",
+        "fichero": "txt/Supply chain/packaging_guide_infographic.txt",
+        "lineas": "93-99",
+        "frase": "Dimensional weight = (L x W x H ) 5000"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da la fórmula concreta (largo por ancho por alto en centímetros entre 5000) y no dice que varíe por courier o país.; Mismo defecto; confirmar con el courier queda como indicación operativa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

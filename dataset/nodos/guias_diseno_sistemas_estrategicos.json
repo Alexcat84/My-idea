@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Siete Guías Estratégicas para el Diseño de Sistemas",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; violar tres o más indica un diseño gravemente defectuoso.",
+  "resumen_teorico": "Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; si viola una o dos (nunca la primera) aún puede servir, con muy buenas razones y compensaciones concretas; violar tres o más indica un diseño gravemente defectuoso.",
   "pasos_accionables": [
     "Verificar que el diseño esté alineado con las metas y métricas de desempeño del negocio (guía obligatoria, no violable)",
     "Evaluar si el sistema puede generar una ventaja competitiva difícil de copiar",
@@ -34,5 +34,23 @@
   "etiqueta_arbol": "Diseña Sistemas con Estrategia",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-096-guias_diseno_sistemas_estrategicos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; violar tres o más indica un diseño gravemente defectuoso.",
+      "texto_nuevo": "Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; si viola una o dos (nunca la primera) aún puede servir, con muy buenas razones y compensaciones concretas; violar tres o más indica un diseño gravemente defectuoso.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4497",
+        "frase": "may still be a workable design if one or two of these guidelines are violated"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite que violar una o dos guías, nunca la primera, puede seguir siendo viable con muy buenas razones y compensaciones.; Mismo defecto: se pierde la excepción de una o dos guías violadas con razones y compensaciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

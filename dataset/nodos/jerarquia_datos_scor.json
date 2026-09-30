@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Los tres niveles de datos de tu negocio: estratégicos, operativos y tácticos (modelo SCOR)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) clasifica los datos de tu negocio en tres niveles según para qué los usas: los datos estratégicos te sirven a ti para ver el desempeño global en atención al cliente, eficiencia interna, capacidad de responder a cambios en la demanda y desarrollo de producto; los datos operativos los necesita quien coordina el trabajo día a día en cada sucursal para planificar; y los datos tácticos los usa quien resuelve los problemas del terreno. Esta estructura evita que te ahogues en información y permite que cada persona vea solo el nivel de detalle que necesita para su trabajo.",
+  "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) clasifica los datos de tu negocio en tres niveles según para qué los usas: los datos estratégicos te sirven a ti para ver el desempeño global en atención al cliente, eficiencia interna, capacidad de responder a cambios en la demanda y desarrollo de producto; los datos operativos los necesita quien coordina el trabajo día a día en cada sucursal para planificar; y los datos tácticos los usa quien resuelve los problemas del terreno. Esta estructura evita que te ahogues en información y permite que cada persona llegue rápido al nivel de detalle que necesita para su trabajo, y que tú bajes al nivel operativo o táctico cuando haga falta.",
   "pasos_accionables": [
     "Define qué datos necesitas ver tú a nivel estratégico, cuáles a nivel operativo y cuáles a nivel táctico, siguiendo el modelo SCOR",
     "Organiza la recolección de datos según quién los usa: tú, quien coordina el día a día, o quien resuelve problemas en el terreno",
     "Suma datos externos, como el tamaño de tu mercado, indicadores económicos y comparaciones con otros negocios de tu sector, al nivel estratégico",
-    "Revisa que cada persona en tu negocio tenga acceso solo a la información que necesita para su función",
-    "Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables",
+    "Revisa que cada persona en tu negocio llegue rápido a la información que necesita para su función",
+    "Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables, empezando rápido con algo simple y pequeño que amplíes a medida que ganes experiencia",
     "Automatiza la captura de datos y evita meterlos a mano",
     "Crea reportes fijos según el tipo de decisión que necesites tomar (grandes decisiones, decisiones de cómo ejecutar, o resolver problemas puntuales) y deja abierta la posibilidad de hacer consultas puntuales cuando las necesites"
   ],
@@ -55,6 +55,56 @@
         "motivo": "Los niveles de datos del modelo SCOR pertenecen a la gestion de cadena de suministro; no usan ni profundizan el lienzo de modelo de negocio."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-096-jerarquia_datos_scor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El modelo SCOR (Supply Chain Operations Reference) clasifica los datos de tu negocio en tres niveles según para qué los usas: los datos estratégicos te sirven a ti para ver el desempeño global en atención al cliente, eficiencia interna, capacidad de responder a cambios en la demanda y desarrollo de producto; los datos operativos los necesita quien coordina el trabajo día a día en cada sucursal para planificar; y los datos tácticos los usa quien resuelve los problemas del terreno. Esta estructura evita que te ahogues en información y permite que cada persona vea solo el nivel de detalle que necesita para su trabajo.",
+      "texto_nuevo": "El modelo SCOR (Supply Chain Operations Reference) clasifica los datos de tu negocio en tres niveles según para qué los usas: los datos estratégicos te sirven a ti para ver el desempeño global en atención al cliente, eficiencia interna, capacidad de responder a cambios en la demanda y desarrollo de producto; los datos operativos los necesita quien coordina el trabajo día a día en cada sucursal para planificar; y los datos tácticos los usa quien resuelve los problemas del terreno. Esta estructura evita que te ahogues en información y permite que cada persona llegue rápido al nivel de detalle que necesita para su trabajo, y que tú bajes al nivel operativo o táctico cuando haga falta.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3304",
+        "frase": "They can drill down to the operational level or even the tactical levels"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro busca que cada quien acceda rápido a lo suyo y que la dirección pueda bajar al detalle operativo o táctico.; Mismo defecto: se pierde que la dirección puede bajar al nivel operativo o táctico cuando lo necesita.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-096-jerarquia_datos_scor-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa que cada persona en tu negocio tenga acceso solo a la información que necesita para su función",
+      "texto_nuevo": "Revisa que cada persona en tu negocio llegue rápido a la información que necesita para su función",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3304",
+        "frase": "people can quickly access what they need to do their jobs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no plantea restringir el acceso; organiza los datos para que cada quien encuentre rápido lo que necesita.; Mismo defecto: restricción de acceso que el libro no dice.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-096-jerarquia_datos_scor-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables",
+      "texto_nuevo": "Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables, empezando rápido con algo simple y pequeño que amplíes a medida que ganes experiencia",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3329",
+        "frase": "best to start quickly with something that is simple and on a smaller scale"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja empezar rápido con algo simple y pequeño y crecer con la experiencia.; Mismo defecto: se cae la condición de empezar simple y pequeño y ampliar con la experiencia.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

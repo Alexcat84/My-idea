@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Reconocer la Apofenia y el Sesgo de Patrones en la Investigación",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "El cerebro humano está diseñado para encontrar patrones y significado incluso donde no existen (apofenia), y para confirmar creencias previas (sesgo de confirmación). Esto es útil para el reconocimiento facial o la supervivencia, pero puede llevar a conclusiones erróneas al diseñar futuros o interpretar datos de usuarios. Diferenciar entre una 'epifanía' real (un insight fundamentado) y una 'apofenia' (una conexión ilusoria) es crítico para no construir soluciones sobre bases falsas.",
+  "resumen_teorico": "El cerebro humano está diseñado para encontrar patrones y significado incluso donde no existen (apofenia), y para confirmar creencias previas (sesgo de confirmación). Esto es útil para el reconocimiento facial o la supervivencia, pero puede llevar a conclusiones erróneas al diseñar futuros o interpretar datos de usuarios. La apofenia también ayuda a llegar a una epifanía, y las dos se sienten parecidas; por eso diferenciar entre una 'epifanía' real (un insight fundamentado) y una 'apofenia' (una conexión ilusoria) es crítico para no construir soluciones sobre bases falsas.",
   "pasos_accionables": [
     "Antes de aceptar un insight como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
     "Buscar activamente evidencia que contradiga la hipótesis favorita del equipo, no solo la que la confirma.",
-    "Distinguir explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
-    "Someter los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
+    "Sugerencia de My Idea: distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
+    "Sugerencia de My Idea: somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
   ],
   "entregable_esperado": "Un documento de insights de investigación clasificados en 'validados con evidencia' vs 'hipótesis a probar', evitando confundir patrones ilusorios con verdades del usuario.",
   "nodos_previos": [
@@ -45,6 +45,56 @@
         "motivo": "La apofenia y el sesgo de patrones al interpretar datos o diseñar futuros no preparan la selección de elementos de valor para la propuesta. Los dos nodos no tienen que ver."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-097-reconocer_sesgo_de_apofenia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El cerebro humano está diseñado para encontrar patrones y significado incluso donde no existen (apofenia), y para confirmar creencias previas (sesgo de confirmación). Esto es útil para el reconocimiento facial o la supervivencia, pero puede llevar a conclusiones erróneas al diseñar futuros o interpretar datos de usuarios. Diferenciar entre una 'epifanía' real (un insight fundamentado) y una 'apofenia' (una conexión ilusoria) es crítico para no construir soluciones sobre bases falsas.",
+      "texto_nuevo": "El cerebro humano está diseñado para encontrar patrones y significado incluso donde no existen (apofenia), y para confirmar creencias previas (sesgo de confirmación). Esto es útil para el reconocimiento facial o la supervivencia, pero puede llevar a conclusiones erróneas al diseñar futuros o interpretar datos de usuarios. La apofenia también ayuda a llegar a una epifanía, y las dos se sienten parecidas; por eso diferenciar entre una 'epifanía' real (un insight fundamentado) y una 'apofenia' (una conexión ilusoria) es crítico para no construir soluciones sobre bases falsas.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "1867-1871",
+        "frase": "Apophenia and epiphany can feel similar to the person experiencing them."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la apofenia también ayuda a llegar a una epifanía y que ambas se sienten parecidas; el nodo lo omite.; Mismo defecto: se pierde que la apofenia sirve para llegar a la epifanía y que se sienten iguales.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-097-reconocer_sesgo_de_apofenia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distinguir explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
+      "texto_nuevo": "Sugerencia de My Idea: distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "1838",
+        "frase": "But our hardwiring for sensemaking can lead us astray too."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de correlación ni causalidad; queda como sugerencia de la casa.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-097-reconocer_sesgo_de_apofenia-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Someter los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño.",
+      "texto_nuevo": "Sugerencia de My Idea: somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "1871",
+        "frase": "Apophenia and epiphany can feel similar to the person experiencing them."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone validación externa por otro equipo o experto; queda como sugerencia de la casa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

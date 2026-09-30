@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Cómo manejar el riesgo natural y operativo en tu cadena de suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir.",
+  "resumen_teorico": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir. En entornos muy cambiantes, esta evaluación es un proceso continuo, no algo de una sola vez.",
   "pasos_accionables": [
     "Define cuánto riesgo estás dispuesto a asumir hoy",
     "Cuantifica el riesgo natural de cada país o región donde operas (terremotos, huracanes, sequías, etc.)",
@@ -97,6 +97,22 @@
         "motivo": "El plan B general se concreta en la cadena de suministro con stock de seguridad y proveedores duplicados, y además la candidata ya se activa cuando dependes de algo sin reemplazo."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-096-gestion_riesgo_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir.",
+      "texto_nuevo": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir. En entornos muy cambiantes, esta evaluación es un proceso continuo, no algo de una sola vez.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3843",
+        "frase": "risk assessment and creation of appropriate supply chain contingency plans is an ongoing process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en entornos volátiles la evaluación de riesgo y los planes de contingencia son un proceso continuo, no de una sola vez.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }
