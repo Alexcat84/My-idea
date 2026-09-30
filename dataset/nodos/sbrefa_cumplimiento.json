@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Small Business Regulatory Enforcement Fairness Act (SBREFA)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es una ley estadounidense de 1996 que ayuda a los pequeños negocios a entender y cumplir las regulaciones de seguridad laboral de OSHA, y les da voz cuando se preparan normas nuevas. Gracias a esta ley, OSHA tiene que ofrecerte guías de cumplimiento pensadas para negocios pequeños, responder tus consultas, aplicar políticas de reducción de multas si tu empresa es chica, y dejarte participar antes de que una regla nueva se termine de definir.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es una ley estadounidense de 1996 que ayuda a los pequeños negocios a entender y cumplir las regulaciones de seguridad laboral de OSHA, y les da voz cuando se preparan normas nuevas. Gracias a esta ley, OSHA tiene que ofrecer guías de cumplimiento para negocios pequeños en algunas de sus normas, responder tus consultas, aplicar políticas de reducción de multas si tu empresa es chica y escuchar a los pequeños negocios en paneles de revisión antes de definir reglas que previsiblemente afecten mucho a muchos de ellos.",
   "pasos_accionables": [
     "Cuando tengas dudas sobre una norma, busca si OSHA publicó para ella una Guía de Cumplimiento para Pequeñas Entidades (Small Entity Compliance Guide): solo existen para algunas normas",
     "Usa los canales de consulta de OSHA para resolver dudas específicas antes de que te citen por algo",
     "Si recibes una citación, pregunta por la política de reducción de penalidades para pequeños negocios: puede bajarte la multa",
-    "Si una regla nueva te afecta de forma importante, puedes participar en los paneles de revisión donde se escucha a los pequeños negocios"
+    "Si es previsible que una regla nueva afecte de forma importante a muchos negocios pequeños, puedes participar en los paneles de revisión donde se escucha a los pequeños negocios"
   ],
   "entregable_esperado": "Saber con claridad qué beneficios y protecciones de SBREFA puedes usar en tu negocio",
   "nodos_previos": [
@@ -54,6 +54,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que solo hay guías para algunas normas; el paso supone que existe una para cualquiera.",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f04-sbrefa_cumplimiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es una ley estadounidense de 1996 que ayuda a los pequeños negocios a entender y cumplir las regulaciones de seguridad laboral de OSHA, y les da voz cuando se preparan normas nuevas. Gracias a esta ley, OSHA tiene que ofrecerte guías de cumplimiento pensadas para negocios pequeños, responder tus consultas, aplicar políticas de reducción de multas si tu empresa es chica, y dejarte participar antes de que una regla nueva se termine de definir.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es una ley estadounidense de 1996 que ayuda a los pequeños negocios a entender y cumplir las regulaciones de seguridad laboral de OSHA, y les da voz cuando se preparan normas nuevas. Gracias a esta ley, OSHA tiene que ofrecer guías de cumplimiento para negocios pequeños en algunas de sus normas, responder tus consultas, aplicar políticas de reducción de multas si tu empresa es chica y escuchar a los pequeños negocios en paneles de revisión antes de definir reglas que previsiblemente afecten mucho a muchos de ellos.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1987",
+        "frase": "Produce Small Entity Compliance Guides for some agency rules"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que las guías se producen solo para algunas normas.; La participación se limita a reglas que se espera afecten mucho a muchos pequeños negocios, mediante paneles.; Mismo defecto que la marca 0: guías solo para algunas normas.; Mismo defecto que la marca 1: paneles solo para reglas de impacto significativo en muchos negocios pequeños. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f04-sbrefa_cumplimiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si una regla nueva te afecta de forma importante, puedes participar en los paneles de revisión donde se escucha a los pequeños negocios",
+      "texto_nuevo": "Si es previsible que una regla nueva afecte de forma importante a muchos negocios pequeños, puedes participar en los paneles de revisión donde se escucha a los pequeños negocios",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1987",
+        "frase": "proposed rules expected to significantly affect a large number of small entities"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro habla de reglas que se espera afecten de forma significativa a muchos negocios pequeños, no a ti en particular.; Misma condición: impacto significativo en un gran número de pequeñas entidades. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

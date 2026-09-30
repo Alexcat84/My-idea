@@ -14,7 +14,7 @@
     "Anotar en el informe final los desacuerdos del cliente o, si sus comentarios son correctos, cambiar el informe",
     "Si el informe se va a distribuir, enviarlo directamente desde la planta auditada"
   ],
-  "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, validado por gerencia de calidad y gerencia general",
+  "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, revisado primero con quien lleva la calidad y luego con quien dirige la planta auditada, con sus desacuerdos anotados si los hay",
   "nodos_previos": [
     "accion_correctiva_sistematica"
   ],
@@ -79,6 +79,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El defecto existe, pero es convertir una condición en obligación: endurecer, no matiz.; El libro lo pone como condición: si el informe se va a distribuir; el nodo lo vuelve obligación.; Mismo endurecimiento de la condición.",
       "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f04-auditoria_calidad_proveedores-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Informe de auditoría con acciones requeridas y situación general documentada, validado por gerencia de calidad y gerencia general",
+      "texto_nuevo": "Informe de auditoría con acciones requeridas y situación general documentada, revisado primero con quien lleva la calidad y luego con quien dirige la planta auditada, con sus desacuerdos anotados si los hay",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2939-2941",
+        "frase": "Review the report first with the quality manager and then with the general manager"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro revisa el informe con ambos gerentes y anota sus desacuerdos; no dice que lo validen.; Mismo añadido: revisar no es validar ni aprobar. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

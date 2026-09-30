@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Cálculo del Retorno de Inversión (ROI) en Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.",
+  "resumen_teorico": "El ROI es un factor decisivo, a igualdad de lo demás, para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo puede complicarse porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que en algunos países reciben un trato fiscal y contable distinto. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que bastan para decidir y una decisión de gestión a veces tolera un margen de error.",
   "pasos_accionables": [
     "Buscar ayuda de alguien que entienda de finanzas para armar la información de ROI",
     "Diferenciar entre gastos de capital y gastos operativos en el cálculo",
@@ -41,6 +41,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-021 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-f03-calculo_roi_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.",
+      "texto_nuevo": "El ROI es un factor decisivo, a igualdad de lo demás, para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo puede complicarse porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que en algunos países reciben un trato fiscal y contable distinto. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que bastan para decidir y una decisión de gestión a veces tolera un margen de error.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6230",
+        "frase": "Computation of ROI can be complicated because two kinds of money are involved"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el ROI es decisivo a igualdad de lo demás; se cae la condición.; El libro dice que el cálculo puede complicarse, no que sea complejo.; El libro dice que la decisión de gestión a veces tolera un margen de error; 'rara vez cambia tu decisión' lo endurece.; El libro limita el trato fiscal distinto a algunos países, como EE.UU.; el nodo lo da como regla general.; Misma condición perdida que la marca 0.; Mismo endurecimiento que la marca 2. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Cultura Organizacional y su Impacto en la Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso no se debe a debilidades técnicas sino a la falta de adaptación a la cultura existente (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
+  "resumen_teorico": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
   "pasos_accionables": [
     "Diagnosticar las normas, valores y patrones culturales actuales de la organización",
     "Identificar posibles conflictos entre nuevas iniciativas de calidad y la estructura de autoridad existente",
@@ -84,6 +84,22 @@
         "motivo": "Tiene razon B: el nucleo trata de rituales convertidos en ceremonia vacia por la IA y del sentido del trabajo humano, mientras el nodo de calidad trata de la legitimidad de herramientas como las cartas de control ante supervisores; solo comparten la idea general de cultura y cambio, y quien llega desde el nucleo se desorienta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-f02-cultura_organizacional_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso no se debe a debilidades técnicas sino a la falta de adaptación a la cultura existente (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
+      "texto_nuevo": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1399",
+        "frase": "due mainly to lack of adaptation into the culture of the factory"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye el fracaso principalmente a la falta de adaptación cultural, sin descartar del todo lo técnico.; Mismo endurecimiento que la marca 0. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

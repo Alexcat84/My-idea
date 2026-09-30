@@ -9,7 +9,7 @@
     "Antes de construir, responder: ¿el cliente reconoce el problema?, ¿compraría una solución?, ¿nos la compraría a nosotros?, ¿podemos construirla?",
     "Construir un prototipo mínimo (aunque incompleto) y exponerlo a clientes reales",
     "Registrar qué funcionalidades reclaman los clientes como faltantes (señal de importancia real)",
-    "No añadir funcionalidades del roadmap original que los clientes no reclamen",
+    "Cuestionar las funcionalidades del roadmap original que los clientes no reclamen: quizá no sean tan importantes como parecían",
     "Iterar con base en el uso real antes de invertir en marketing o lanzamiento masivo"
   ],
   "entregable_esperado": "Prototipo mínimo probado con clientes reales y lista de funcionalidades priorizadas según reclamos reales, no supuestos del roadmap",
@@ -41,6 +41,23 @@
         "evidencia": "Q063-008: El nodo trata de probar el problema y la solucion con un prototipo minimo ante clientes reales antes de construir o lanzar, que es validacion y no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-176-producto_como_experimento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No añadir funcionalidades del roadmap original que los clientes no reclamen",
+      "texto_nuevo": "Cuestionar las funcionalidades del roadmap original que los clientes no reclamen: quizá no sean tan importantes como parecían",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "762",
+        "frase": "Maybe those features weren't as important as they initially seemed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo sugiere que quizá esas funcionalidades no eran tan importantes; el paso lo endurece en prohibición.; Mismo defecto: la duda del libro se vuelve una orden de no añadirlas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

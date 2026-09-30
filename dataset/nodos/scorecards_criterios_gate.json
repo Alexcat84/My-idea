@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diseñar un scorecard con criterios cualitativos y financieros ponderados, o considerar adoptar uno ya probado, porque los hechos a medida a menudo no dan buen resultado",
     "Aplicar el scorecard en los gates tempranos (Gates 1, 2 y 3)",
-    "Considerar la auto-evaluación del equipo de proyecto antes de la reunión de gate (evitando sesgo del gatekeeper)",
+    "Considerar la auto-evaluación del equipo de proyecto antes de la reunión de gate, con los gatekeepers haciendo su propia evaluación antes de ver la del equipo para evitar sesgos",
     "Comparar puntuaciones del equipo vs gatekeepers y discutir diferencias en la reunión",
     "Integrar métricas financieras (NPV, ECV, Payback Period) al scorecard"
   ],
@@ -59,6 +59,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los scorecards hechos a medida a menudo no dan buen resultado y sugiere adoptar uno probado.",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f01-scorecards_criterios_gate-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar la auto-evaluación del equipo de proyecto antes de la reunión de gate (evitando sesgo del gatekeeper)",
+      "texto_nuevo": "Considerar la auto-evaluación del equipo de proyecto antes de la reunión de gate, con los gatekeepers haciendo su propia evaluación antes de ver la del equipo para evitar sesgos",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6866",
+        "frase": "but before seeing the project team’s scores in order to avoid bias"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Lo que evita el sesgo es que los gatekeepers puntúen antes de ver las puntuaciones del equipo.; Mismo defecto. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

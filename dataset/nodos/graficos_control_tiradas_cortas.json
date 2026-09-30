@@ -7,7 +7,7 @@
   "resumen_teorico": "En procesos de producción corta o en sistemas de manufactura esbelta con cambios frecuentes de producto, no es factible recolectar 20-30 muestras para establecer un gráfico de control tradicional. Existen cuatro enfoques: ignorar la variabilidad sistemática, estratificar datos, usar análisis de regresión con residuos, o estandarizar los datos mediante transformación Z para normalizarlos a una línea base común.",
   "pasos_accionables": [
     "Identificar si el proceso tiene corridas cortas por cambios frecuentes de producto",
-    "Seleccionar el método de construcción del gráfico (estratificación, regresión, estandarización)",
+    "Seleccionar el método de construcción del gráfico (ignorar la variabilidad sistemática, estratificación, regresión, estandarización)",
     "Aplicar la transformación Z si se elige el método de estandarización",
     "Graficar los datos transformados en un gráfico de control único",
     "Interpretar señales de fuera de control sobre la escala estandarizada"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Controla Corridas Cortas de Producción",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-graficos_control_tiradas_cortas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar el método de construcción del gráfico (estratificación, regresión, estandarización)",
+      "texto_nuevo": "Seleccionar el método de construcción del gráfico (ignorar la variabilidad sistemática, estratificación, regresión, estandarización)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20621",
+        "frase": "Ignore the systematic variability, and plot on a single chart."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la primera de las cuatro opciones del libro: ignorar la variabilidad sistemática.; Mismo defecto: se omite ignorar la variabilidad sistemática.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

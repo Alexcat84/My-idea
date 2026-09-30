@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)",
     "Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas",
-    "Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos",
+    "Comunica a tu proveedor estos criterios estadísticos y capacítalo en su interpretación correcta, dejándole claro que esperas que todo producto que te entregue cumpla las especificaciones",
     "Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)"
   ],
   "entregable_esperado": "Plan de muestreo de aceptación con índices numéricos de calidad y confiabilidad definidos y comunicados al proveedor",
@@ -64,6 +64,23 @@
         "frase": "These criteria can also be a source of confusion in product liability discussions."
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los criterios pueden ser fuente de confusión en discusiones de responsabilidad; el nodo lo vuelve efecto seguro de la mala interpretación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f02-requisitos_numericos_calidad_lotes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos",
+      "texto_nuevo": "Comunica a tu proveedor estos criterios estadísticos y capacítalo en su interpretación correcta, dejándole claro que esperas que todo producto que te entregue cumpla las especificaciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23598",
+        "frase": "Suppliers must understand that all product submitted is expected to meet specifications."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se pierde lo que el libro pide que el proveedor entienda: se espera que todo producto enviado cumpla las especificaciones. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

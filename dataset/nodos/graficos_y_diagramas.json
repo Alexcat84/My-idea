@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Graphs and Charts (Gráficos y Diagramas)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Conjunto de herramientas para resumir datos cuantitativos de forma pictórica, incluyendo gráficos de línea (relación entre variables continuas), gráficos de barras (comparación de categorías) y gráficos circulares (proporciones del total). Deben respetar integridad gráfica, escala consistente y simplicidad.",
+  "resumen_teorico": "Conjunto de herramientas para resumir datos cuantitativos de forma pictórica, incluyendo gráficos de línea (relación entre variables continuas), gráficos de barras (comparación de categorías) y gráficos circulares (proporciones del total). Deben respetar integridad gráfica, escala consistente, facilidad de lectura, símbolos coherentes entre gráficos y simplicidad.",
   "pasos_accionables": [
     "Determinar rango y escala de los ejes",
     "Seleccionar el tipo de gráfico adecuado (línea, barra o pastel)",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Resume tus Datos Visualmente",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-graficos_y_diagramas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conjunto de herramientas para resumir datos cuantitativos de forma pictórica, incluyendo gráficos de línea (relación entre variables continuas), gráficos de barras (comparación de categorías) y gráficos circulares (proporciones del total). Deben respetar integridad gráfica, escala consistente y simplicidad.",
+      "texto_nuevo": "Conjunto de herramientas para resumir datos cuantitativos de forma pictórica, incluyendo gráficos de línea (relación entre variables continuas), gráficos de barras (comparación de categorías) y gráficos circulares (proporciones del total). Deben respetar integridad gráfica, escala consistente, facilidad de lectura, símbolos coherentes entre gráficos y simplicidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18396-18398",
+        "frase": "Consistency of symbols: When two or more graphs are to be compared"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da cinco principios; faltan la facilidad de lectura y la consistencia de símbolos.; Mismo defecto: faltan dos de los cinco principios.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

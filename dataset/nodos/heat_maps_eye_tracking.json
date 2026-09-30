@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Heat Maps y Eye Tracking",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Los heat maps usan seguimiento ocular para mostrar dónde miran o hacen clic más los usuarios en una página, traduciendo la atención en colores (amarillo, naranja, rojo). El eye tracking muestra el orden en que los usuarios observan los elementos (patrón 'Z' es común en lectura occidental). Ambas herramientas ayudan a ubicar contenido clave donde los usuarios efectivamente prestan atención.",
+  "resumen_teorico": "Los heat maps usan seguimiento ocular para mostrar dónde miran o hacen clic más los usuarios en una página, traduciendo la atención en colores (amarillo, naranja, rojo). El eye tracking muestra el orden en que los usuarios observan los elementos (el patrón 'Z' pasa por ser el más común al leer una página web en un mercado concreto, lo que no lo vuelve universal). Ambas herramientas ayudan a ubicar contenido clave donde los usuarios efectivamente prestan atención.",
   "pasos_accionables": [
     "Implementar software de heat mapping en las páginas críticas del funnel",
     "Analizar dónde se concentra la atención visual y los clics de los usuarios",
@@ -40,6 +40,22 @@
         "evidencia": "F09-006: Instala heat maps en el funnel de un sitio en marcha y reubica CTAs: es optimizar lo que ya opera. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-f03-heat_maps_eye_tracking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los heat maps usan seguimiento ocular para mostrar dónde miran o hacen clic más los usuarios en una página, traduciendo la atención en colores (amarillo, naranja, rojo). El eye tracking muestra el orden en que los usuarios observan los elementos (patrón 'Z' es común en lectura occidental). Ambas herramientas ayudan a ubicar contenido clave donde los usuarios efectivamente prestan atención.",
+      "texto_nuevo": "Los heat maps usan seguimiento ocular para mostrar dónde miran o hacen clic más los usuarios en una página, traduciendo la atención en colores (amarillo, naranja, rojo). El eye tracking muestra el orden en que los usuarios observan los elementos (el patrón 'Z' pasa por ser el más común al leer una página web en un mercado concreto, lo que no lo vuelve universal). Ambas herramientas ayudan a ubicar contenido clave donde los usuarios efectivamente prestan atención.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "11670",
+        "frase": "The “Z” pattern is considered the most common way Americans read a web page"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo dice de cómo leen una página web en EE.UU.; generalizarlo a la lectura occidental añade un hecho. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

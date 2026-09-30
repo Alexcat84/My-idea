@@ -9,7 +9,7 @@
     "Clasificar cada prospecto como A, B o C en la primera llamada",
     "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A",
     "Archivar prospectos C en un archivo de contacto a 6 meses sin perseguirlos activamente",
-    "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas como benchmark"
+    "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas; como referencia, apunta a que ronde el 80 %, aunque a un vendedor novato le puede costar más llegar"
   ],
   "entregable_esperado": "Sistema de clasificación y pipeline de ventas con categorías A/B/C implementado",
   "nodos_previos": [
@@ -43,6 +43,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reparte el tiempo entre llevar a los A al cierre y mover los B hacia A; el paso omite a los A.; Mismo defecto: falta llevar a los A al cierre.",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f01-clasificacion_abc_prospectos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas como benchmark",
+      "texto_nuevo": "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas; como referencia, apunta a que ronde el 80 %, aunque a un vendedor novato le puede costar más llegar",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4438",
+        "frase": "expects about 80 percent of their “A” prospects to complete the required paperwork"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la referencia (alrededor del 80 % en 48 horas) y advierte que a un vendedor novato le cuesta más; el paso pide un benchmark vacío. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

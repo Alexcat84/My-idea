@@ -7,7 +7,7 @@
   "resumen_teorico": "Tu negocio se adapta cuando ajusta sus procesos y su desempeño a lo que estás viviendo ahora, sin caer en dos extremos: llenarte de procesos antes de tiempo (lo que frena tu lanzamiento) o no tener ningún sistema (lo que provoca fallas grandes cuando creces rápido, como le pasó a Friendster). En vez de dividir la diferencia entre un extremo y otro, algo que solo te empuja a tomar posiciones extremas, usa un freno que se activa cuando resuelves la causa real de los problemas que tienes ahora. Así el proceso crece de forma natural, por ejemplo cuando un programa de entrenamiento surge de ir mejorando tu forma de trabajar.",
   "pasos_accionables": [
     "No impongas procesos rígidos desde el inicio; déjalos crecer a partir de resolver problemas reales",
-    "Detecta cuándo un problema necesita que inviertas en prevenirlo en vez de seguir avanzando rápido",
+    "Detecta cuándo un problema necesita que inviertas en prevenirlo en vez de seguir avanzando rápido, con una inversión proporcional: pequeña si el síntoma es menor y mayor solo si el problema es grande",
     "Une el desempeño de quien guía con el de quien entra nuevo, para asegurar calidad al incorporar gente",
     "Evita dividir la diferencia al decidir tus procesos: eso empuja a tomar posiciones extremas"
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Construye una Organización Adaptativa",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-176-organizacion_adaptativa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detecta cuándo un problema necesita que inviertas en prevenirlo en vez de seguir avanzando rápido",
+      "texto_nuevo": "Detecta cuándo un problema necesita que inviertas en prevenirlo en vez de seguir avanzando rápido, con una inversión proporcional: pequeña si el síntoma es menor y mayor solo si el problema es grande",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2713",
+        "frase": "the investment should be smaller when the symptom is minor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide una inversión proporcional al síntoma, pequeña si es menor y grande solo ante problemas grandes.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

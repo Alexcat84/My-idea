@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Los Roles Clave para Implementar Six Sigma",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; y el dueño del proceso aporta el conocimiento técnico. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
+  "resumen_teorico": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; tu equipo de proyecto y los expertos en la materia aportan lo que saben del proceso; y el dueño del proceso apoya al implementar mejoras y el plan de control. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
   "pasos_accionables": [
     "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt, equipo de proyecto con expertos en la materia y dueño del proceso",
     "Capacita a tu liderazgo para que entienda y respalde la metodología Six Sigma",
@@ -60,6 +60,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el equipo de proyecto y los expertos en la materia, uno de los siete roles clave del libro.; Misma omisión en la enumeración de roles.",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f03-roles_six_sigma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; y el dueño del proceso aporta el conocimiento técnico. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
+      "texto_nuevo": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; tu equipo de proyecto y los expertos en la materia aportan lo que saben del proceso; y el dueño del proceso apoya al implementar mejoras y el plan de control. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13960-13974",
+        "frase": "Project Team and Subject Matter Experts (SMEs)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no atribuye al dueño del proceso el conocimiento técnico: es el mando responsable del producto que apoya al equipo sobre todo en Improve y Control.; La lista de roles clave del libro incluye al equipo de proyecto y los expertos en la materia, que el nodo omite.; Mismo rol omitido de la lista de siete del libro. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Análisis de Sensibilidad",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "No todas tus incertidumbres pesan igual. De todas las cosas que no sabes, unas pocas deciden el resultado y el resto casi no importa. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: preguntas cuál de tus supuestos, si cambia, mueve más el resultado final, y ahí concentras tu atención, tu medición y tu esfuerzo por reducir la incertidumbre. Sin esto, es fácil perder semanas afinando un número que no cambia nada mientras ignoras el que lo decide todo. Para el emprendedor con tiempo y dinero limitados, saber qué mueve la aguja es lo que separa el esfuerzo útil del desperdiciado: mide primero lo que más incertidumbre le quita a tu decisión.",
+  "resumen_teorico": "No todo lo que construyes vale lo mismo. El valor de un proyecto casi nunca está repartido por igual: se concentra en unas pocas funciones centrales, a veces no más de una décima parte del trabajo, y el resto es soporte necesario o simples adornos. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: asignas a cada pieza su costo y el valor que esperas de ella, calculas la proporción entre ambos y separas lo esencial del soporte y de los adornos. Las piezas de proporción alta van primero, y como el esfuerzo crece más que en proporción al tamaño, recortar las de proporción baja es probablemente la forma más fácil de aliviar plazo y presupuesto. Si no consigues cifras de valor, al menos ordena las piezas por prioridad.",
   "pasos_accionables": [
     "Divide tu proyecto en sus piezas principales y asigna a cada una su costo estimado.",
     "Estima el valor que aporta cada pieza y calcula su proporción valor/costo; si no logras cifras, al menos ordénalas por valor.",
@@ -143,6 +143,22 @@
         "frase": "it allows you to rank-order components for inclusion in the versions"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El resultado del ejercicio en el libro son piezas ordenadas por valor/costo para planear las entregas, no supuestos para medir.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f02-mide_lo_que_de_verdad_mueve_la_aguja-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todas tus incertidumbres pesan igual. De todas las cosas que no sabes, unas pocas deciden el resultado y el resto casi no importa. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: preguntas cuál de tus supuestos, si cambia, mueve más el resultado final, y ahí concentras tu atención, tu medición y tu esfuerzo por reducir la incertidumbre. Sin esto, es fácil perder semanas afinando un número que no cambia nada mientras ignoras el que lo decide todo. Para el emprendedor con tiempo y dinero limitados, saber qué mueve la aguja es lo que separa el esfuerzo útil del desperdiciado: mide primero lo que más incertidumbre le quita a tu decisión.",
+      "texto_nuevo": "No todo lo que construyes vale lo mismo. El valor de un proyecto casi nunca está repartido por igual: se concentra en unas pocas funciones centrales, a veces no más de una décima parte del trabajo, y el resto es soporte necesario o simples adornos. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: asignas a cada pieza su costo y el valor que esperas de ella, calculas la proporción entre ambos y separas lo esencial del soporte y de los adornos. Las piezas de proporción alta van primero, y como el esfuerzo crece más que en proporción al tamaño, recortar las de proporción baja es probablemente la forma más fácil de aliviar plazo y presupuesto. Si no consigues cifras de valor, al menos ordena las piezas por prioridad.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1480-1490",
+        "frase": "You'd use them to separate core functionality from necessary infrastructure from bells and whistles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El análisis de sensibilidad del libro reparte costo y valor entre las piezas del proyecto; no trata de supuestos inciertos ni de medir para reducir incertidumbre. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

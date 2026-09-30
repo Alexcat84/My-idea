@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación del Trabajo a Destajo (Piece Work)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El pago por pieza (piece work) es una causa estructural de mala calidad: incentiva al operador a producir cantidad sobre calidad, roba el orgullo por el trabajo bien hecho y provoca que defectos se oculten o pasen a la línea de producción. Eliminar este esquema requiere rediseñar la supervisión y la capacitación, alineando los incentivos con la calidad del producto y no solo el volumen producido.",
+  "resumen_teorico": "El pago por pieza (piece work) es una causa estructural de mala calidad: incentiva al operador a producir cantidad sobre calidad, roba el orgullo por el trabajo bien hecho y hace que se le pague también por las piezas defectuosas. Eliminar este esquema requiere mejor capacitación y una nueva forma de supervisión, que ocupe el lugar de las cuotas y del pago por incentivos.",
   "pasos_accionables": [
     "Auditar los esquemas de compensación vigentes para identificar pago por pieza o metas de volumen que penalicen la calidad",
     "Rediseñar el sistema de compensación para desvincular el pago de la cantidad de piezas producidas",
@@ -12,7 +12,7 @@
     "Establecer control estadístico de proceso para dar seguimiento objetivo al desempeño sin presión de producción",
     "Comunicar el cambio de enfoque a los trabajadores y sindicatos"
   ],
-  "entregable_esperado": "Nuevo esquema de compensación e incentivos alineado con calidad, junto con plan de capacitación de supervisores",
+  "entregable_esperado": "Nuevo esquema de compensación sin pago por pieza ni pago por incentivos, junto con plan de capacitación de supervisores",
   "nodos_previos": [
     "reporte_gerencial_diagnostico_calidad",
     "supervision_a_liderazgo"
@@ -53,6 +53,38 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-018 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-175-eliminar_trabajo_a_destajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El pago por pieza (piece work) es una causa estructural de mala calidad: incentiva al operador a producir cantidad sobre calidad, roba el orgullo por el trabajo bien hecho y provoca que defectos se oculten o pasen a la línea de producción. Eliminar este esquema requiere rediseñar la supervisión y la capacitación, alineando los incentivos con la calidad del producto y no solo el volumen producido.",
+      "texto_nuevo": "El pago por pieza (piece work) es una causa estructural de mala calidad: incentiva al operador a producir cantidad sobre calidad, roba el orgullo por el trabajo bien hecho y hace que se le pague también por las piezas defectuosas. Eliminar este esquema requiere mejor capacitación y una nueva forma de supervisión, que ocupe el lugar de las cuotas y del pago por incentivos.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1506-1510, 9084",
+        "frase": "This act will require better training and a new mode of supervision."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el pago por incentivos es destajo y lo reemplaza por supervisión inteligente, no por incentivos alineados con la calidad.; El libro no habla de ocultar defectos; dice que al operador se le pagan también las piezas defectuosas.; Mismo defecto que la marca 0: el libro no propone otro esquema de incentivos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-175-eliminar_trabajo_a_destajo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Nuevo esquema de compensación e incentivos alineado con calidad, junto con plan de capacitación de supervisores",
+      "texto_nuevo": "Nuevo esquema de compensación sin pago por pieza ni pago por incentivos, junto con plan de capacitación de supervisores",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1506",
+        "frase": "Piece work is more devastating than work standards. Incentive pay is piece work."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide salir del destajo con mejor capacitación y supervisión, no un nuevo esquema de incentivos.; El libro trata el pago por incentivos como destajo y pide eliminarlo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

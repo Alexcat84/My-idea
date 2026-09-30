@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Protección Física de Instalaciones y Sistemas",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+  "resumen_teorico": "Limita a personas autorizadas el acceso físico a sistemas, equipos y entornos operativos, aun en sitios de trabajo alternos; protege la instalación y su infraestructura, provee servicios de soporte y controla amenazas ambientales.",
   "pasos_accionables": [
     "Desarrollar y mantener una lista de personas autorizadas a acceder a las instalaciones.",
     "Emitir credenciales de identificación para empleados y visitantes.",
@@ -42,6 +42,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-f04-getting_started_physical_protection-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+      "texto_nuevo": "Limita a personas autorizadas el acceso físico a sistemas, equipos y entornos operativos, aun en sitios de trabajo alternos; protege la instalación y su infraestructura, provee servicios de soporte y controla amenazas ambientales.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "573",
+        "frase": "protecting systems against environmental hazards; and providing appropriate environmental controls"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La familia abarca también servicios de soporte, protección contra amenazas ambientales y controles ambientales. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

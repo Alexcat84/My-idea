@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Registro de Issues (Issue Log)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Documento dinámico que registra y monitorea puntos en disputa o discusión entre stakeholders del proyecto, incluyendo impacto, responsable y estado de resolución.",
+  "resumen_teorico": "Documento dinámico que registra y monitorea puntos en disputa o discusión entre stakeholders, o surgidos de un riesgo ya ocurrido, con impacto, responsable y estado de resolución.",
   "pasos_accionables": [
     "Registrar cada issue con ID único y categoría",
     "Definir impacto en objetivos y nivel de urgencia",
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El registro del libro incluye las acciones para atender y resolver cada issue; el procedimiento del nodo no las pide.",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f01-issue_log-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento dinámico que registra y monitorea puntos en disputa o discusión entre stakeholders del proyecto, incluyendo impacto, responsable y estado de resolución.",
+      "texto_nuevo": "Documento dinámico que registra y monitorea puntos en disputa o discusión entre stakeholders, o surgidos de un riesgo ya ocurrido, con impacto, responsable y estado de resolución.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "4629",
+        "frase": "Issues can also arise from a risk event that has occurred"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que un issue también puede surgir de un riesgo ya ocurrido que hay que atender, lo que amplía el uso del registro. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

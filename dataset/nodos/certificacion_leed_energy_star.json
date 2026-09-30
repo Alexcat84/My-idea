@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Certificación LEED o Energy Star",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior). Energy Star certifica edificios que están entre el 25% más eficiente energéticamente, usando la herramienta Portfolio Manager. Los edificios certificados suelen mostrar mayor ocupación y mejores precios de renta y venta.",
+  "resumen_teorico": "LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior, ecoinnovación en el diseño). Energy Star certifica, con Portfolio Manager, a los edificios del 25% más eficiente. Los edificios LEED suelen mostrar mayor ocupación y mejores precios de renta y venta. Certificarte puede elevar los costos iniciales, aunque el retorno puede ser rápido.",
   "pasos_accionables": [
     "Evalúa si tu proyecto o local califica para LEED o Energy Star",
     "Usa Portfolio Manager para medir la eficiencia energética actual del espacio",
-    "Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior",
+    "Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior e innovación en el diseño",
     "Documenta y reúne la evidencia necesaria para presentar la certificación",
     "Comunica la certificación como ventaja competitiva a tus clientes y a quienes trabajan contigo"
   ],
@@ -40,6 +40,39 @@
         "evidencia": "F24-014: Medir la eficiencia de un local y tramitar la certificacion LEED o Energy Star es operacion y mejora de lo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-175-certificacion_leed_energy_star-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior). Energy Star certifica edificios que están entre el 25% más eficiente energéticamente, usando la herramienta Portfolio Manager. Los edificios certificados suelen mostrar mayor ocupación y mejores precios de renta y venta.",
+      "texto_nuevo": "LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior, ecoinnovación en el diseño). Energy Star certifica, con Portfolio Manager, a los edificios del 25% más eficiente. Los edificios LEED suelen mostrar mayor ocupación y mejores precios de renta y venta. Certificarte puede elevar los costos iniciales, aunque el retorno puede ser rápido.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2799, 2807",
+        "frase": "Pursuing LEED or Energy Star certification can raise up-front costs for design and construction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro atribuye la mayor ocupación y mejores precios a los edificios LEED; el nodo lo extiende a todo edificio certificado.; La lista de atributos LEED incluye la ecoinnovación en el proceso de diseño.; Misma advertencia de costos que la marca 1.; Misma omisión que la marca 0.; Se cae la advertencia de que certificarse puede elevar los costos iniciales, aunque el retorno puede ser rápido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-175-certificacion_leed_energy_star-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior",
+      "texto_nuevo": "Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior e innovación en el diseño",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2799",
+        "frase": "indoor environmental quality, and eco-innovation in the design process."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la ecoinnovación en el proceso de diseño entre las categorías que dan puntos.; Misma omisión.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

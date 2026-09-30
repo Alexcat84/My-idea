@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Biomímesis (Biomimicry) como inspiración de diseño",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Popularizada por Janine Benyus, la biomímesis propone que la naturaleza opera eficientemente y resuelve problemas ecológicos, por lo que puedes usarla como inspiración para diseñar. Los principios incluyen: autoensamblarse, optimizar en lugar de maximizar, usar energía libre, adaptarse y evolucionar, usar materiales no tóxicos, y relaciones simbióticas. Ejemplos: Calera capturando carbono inspirado en cómo los organismos marinos crean conchas, y Boeing usando winglets inspirados en alas de murciélagos.",
+  "resumen_teorico": "Popularizada por Janine Benyus, la biomímesis propone que la naturaleza a menudo opera eficientemente y resuelve problemas ecológicos, por lo que puedes usarla como inspiración para diseñar. Los principios incluyen: autoensamblarse, optimizar en lugar de maximizar, usar energía libre, adaptarse y evolucionar, usar materiales no tóxicos, y relaciones simbióticas. Ejemplos: Calera, con una tecnología que promete capturar carbono, inspirada en cómo los organismos marinos crean conchas, y Boeing usando winglets inspirados en alas de murciélagos.",
   "pasos_accionables": [
     "Descompón el problema de diseño en sus componentes esenciales",
     "Investiga procesos naturales análogos al problema que quieres resolver",
-    "Evalúa soluciones que emulen esos procesos naturales y usen materiales no tóxicos",
+    "Evalúa soluciones que busquen la mayor eficiencia, emulen esos procesos naturales y usen materiales no tóxicos",
     "Prioriza energía renovable y diseña pensando en evolucionar en lugar de buscar la perfección"
   ],
   "entregable_esperado": "Análisis de biomímesis con al menos una solución de diseño inspirada en procesos naturales aplicada a tu producto",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Inspírate en la Naturaleza",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-175-biomimicry_diseno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Popularizada por Janine Benyus, la biomímesis propone que la naturaleza opera eficientemente y resuelve problemas ecológicos, por lo que puedes usarla como inspiración para diseñar. Los principios incluyen: autoensamblarse, optimizar en lugar de maximizar, usar energía libre, adaptarse y evolucionar, usar materiales no tóxicos, y relaciones simbióticas. Ejemplos: Calera capturando carbono inspirado en cómo los organismos marinos crean conchas, y Boeing usando winglets inspirados en alas de murciélagos.",
+      "texto_nuevo": "Popularizada por Janine Benyus, la biomímesis propone que la naturaleza a menudo opera eficientemente y resuelve problemas ecológicos, por lo que puedes usarla como inspiración para diseñar. Los principios incluyen: autoensamblarse, optimizar en lugar de maximizar, usar energía libre, adaptarse y evolucionar, usar materiales no tóxicos, y relaciones simbióticas. Ejemplos: Calera, con una tecnología que promete capturar carbono, inspirada en cómo los organismos marinos crean conchas, y Boeing usando winglets inspirados en alas de murciélagos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3789, 3805",
+        "frase": "that nature often operates efficiently and solves eco-related problems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la naturaleza a menudo opera eficientemente; el nodo quita la cautela.; El libro dice que la tecnología de Calera promete extraer carbono; el nodo lo presenta como logrado.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-175-biomimicry_diseno-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa soluciones que emulen esos procesos naturales y usen materiales no tóxicos",
+      "texto_nuevo": "Evalúa soluciones que busquen la mayor eficiencia, emulen esos procesos naturales y usen materiales no tóxicos",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3793",
+        "frase": "Seek the most efficient solutions."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las seis pautas del libro se cae buscar las soluciones más eficientes, que ningún paso recoge.; Misma pauta perdida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Pivote Estratégico basado en Evidencia",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Un pivote es el abandono de una estrategia original de negocio (que ha sido invalidada empíricamente) para adoptar una nueva dirección basada en lo aprendido de los clientes. Implica el costo emocional y práctico de desechar trabajo previo (código, diseño, planificación), pero es preferible a seguir ejecutando un plan que 'no lleva a ningún lado'. El caso de IMVU muestra que tras el pivote (de add-on de IM a red IM independiente centrada en hacer nuevos amigos), la productividad del equipo de desarrollo mejoró dramáticamente, no porque trabajaran más duro sino porque estaban alineados con las necesidades reales del cliente.",
+  "resumen_teorico": "Un pivote es el abandono de una estrategia original de negocio (que ha sido invalidada empíricamente) para adoptar una nueva dirección basada en lo aprendido de los clientes. Implica el costo emocional y práctico de desechar parte del trabajo previo (código, diseño, planificación), aunque no hace falta tirarlo todo (es común reaprovechar lo construido y lo aprendido), y es preferible a seguir ejecutando un plan que 'no lleva a ningún lado'. El caso de IMVU muestra que tras el pivote (de add-on de IM a red IM independiente centrada en hacer nuevos amigos), la productividad del equipo de desarrollo mejoró dramáticamente, no porque trabajaran más duro sino porque estaban alineados con las necesidades reales del cliente.",
   "pasos_accionables": [
     "Aceptar la evidencia empírica aunque contradiga meses de trabajo e inversión previa (sunk cost)",
     "Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes",
@@ -131,6 +131,22 @@
         "motivo": "Referencia de un nodo vivo a manifiesto_regla4_iteraciones_pivotes, deprecado; su superviviente es pivote_estrategico."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-176-pivote_estrategico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un pivote es el abandono de una estrategia original de negocio (que ha sido invalidada empíricamente) para adoptar una nueva dirección basada en lo aprendido de los clientes. Implica el costo emocional y práctico de desechar trabajo previo (código, diseño, planificación), pero es preferible a seguir ejecutando un plan que 'no lleva a ningún lado'. El caso de IMVU muestra que tras el pivote (de add-on de IM a red IM independiente centrada en hacer nuevos amigos), la productividad del equipo de desarrollo mejoró dramáticamente, no porque trabajaran más duro sino porque estaban alineados con las necesidades reales del cliente.",
+      "texto_nuevo": "Un pivote es el abandono de una estrategia original de negocio (que ha sido invalidada empíricamente) para adoptar una nueva dirección basada en lo aprendido de los clientes. Implica el costo emocional y práctico de desechar parte del trabajo previo (código, diseño, planificación), aunque no hace falta tirarlo todo (es común reaprovechar lo construido y lo aprendido), y es preferible a seguir ejecutando un plan que 'no lleva a ningún lado'. El caso de IMVU muestra que tras el pivote (de add-on de IM a red IM independiente centrada en hacer nuevos amigos), la productividad del equipo de desarrollo mejoró dramáticamente, no porque trabajaran más duro sino porque estaban alineados con las necesidades reales del cliente.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1916",
+        "frase": "it is not necessary to throw out everything that came before and start over"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en un pivote no hace falta tirar todo y que es común reaprovechar lo construido y lo aprendido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Cómo manejar la resistencia al cambio en las personas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La resistencia al cambio aparece por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades o rechazo a soluciones que vienen de afuera. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa qué tan fuerte es cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo suficiente, trátalas con dignidad y enfrenta la resistencia de forma directa.",
+  "resumen_teorico": "La resistencia al cambio aparece por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades, rechazo a soluciones de afuera, no ver el problema, fracasos previos o el costo. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa la fuerza de cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo, no cargues tu propuesta con lo innecesario, trátalas con dignidad, ponte en su lugar y enfrenta la resistencia de forma directa.",
   "pasos_accionables": [
     "Identifica qué frena el cambio (las barreras) y qué lo facilita (los apoyos)",
     "Evalúa qué tan fuerte es cada barrera y cada apoyo",
     "Busca formas concretas de superar cada barrera",
-    "Haz participar a las personas, dales tiempo suficiente y trátalas con dignidad",
+    "Haz participar a las personas, dales tiempo suficiente, mantén tu propuesta libre de cargas innecesarias, trátalas con dignidad y ponte en su lugar para entender el impacto en su cultura",
     "Enfrenta la resistencia de forma seria y directa, sin evitarla"
   ],
   "entregable_esperado": "Un plan para manejar el cambio cultural, con formas concretas de superar cada barrera",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Vence la Resistencia al Cambio",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-gestion_resistencia_cultural_cambio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La resistencia al cambio aparece por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades o rechazo a soluciones que vienen de afuera. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa qué tan fuerte es cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo suficiente, trátalas con dignidad y enfrenta la resistencia de forma directa.",
+      "texto_nuevo": "La resistencia al cambio aparece por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades, rechazo a soluciones de afuera, no ver el problema, fracasos previos o el costo. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa la fuerza de cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo, no cargues tu propuesta con lo innecesario, trátalas con dignidad, ponte en su lugar y enfrenta la resistencia de forma directa.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14872-14890",
+        "frase": "Failure to recognize that a problem exists"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de causas omite no reconocer el problema, el fracaso de soluciones previas y el costo.; Las contramedidas omiten mantener la propuesta sin carga excesiva y ponerse en el lugar del otro.; Mismo defecto que la marca 0: faltan tres causas del libro.; Mismo defecto que la marca 1: faltan dos contramedidas del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-174-gestion_resistencia_cultural_cambio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Haz participar a las personas, dales tiempo suficiente y trátalas con dignidad",
+      "texto_nuevo": "Haz participar a las personas, dales tiempo suficiente, mantén tu propuesta libre de cargas innecesarias, trátalas con dignidad y ponte en su lugar para entender el impacto en su cultura",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14886-14890",
+        "frase": "Reversing positions to better understand the impact on the culture"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan dos contramedidas del libro: propuesta sin carga excesiva y ponerse en el lugar del otro.; Mismo defecto: faltan las mismas dos contramedidas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

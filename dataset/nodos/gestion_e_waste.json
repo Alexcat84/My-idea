@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "El e-waste es un problema global creciente con implicaciones regulatorias y ambientales debido a metales pesados y tóxicos. Las empresas pueden reducir su huella mediante venta de equipos usados a recicladores certificados, donación de equipos funcionales, devolución a fabricantes, y compra de equipos remanufacturados, asegurando siempre la responsabilidad extendida del producto.",
   "pasos_accionables": [
-    "Establecer ciclo de renovación de equipos cada 3-4 años y vender a recicladores certificados",
+    "Si ya renuevas tus equipos con regularidad (cada 3-4 años), vende los que retiras a un reacondicionador de buena reputación",
     "Donar equipos funcionales a escuelas u organizaciones sin fines de lucro, borrando datos previamente",
     "Utilizar programas de devolución (take-back) de fabricantes como Dell, HP, Apple",
     "Considerar compra o arrendamiento de equipos remanufacturados",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Recicla tus Residuos Electrónicos",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-175-gestion_e_waste-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer ciclo de renovación de equipos cada 3-4 años y vender a recicladores certificados",
+      "texto_nuevo": "Si ya renuevas tus equipos con regularidad (cada 3-4 años), vende los que retiras a un reacondicionador de buena reputación",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3305",
+        "frase": "will often be able to sell the machines they are retiring to a computer refurbisher"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no recomienda fijar un ciclo de 3-4 años; dice que quien ya renueva así a menudo puede vender lo que retira.; Mismo defecto; además el libro habla de venderlos a un reacondicionador de buena reputación.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

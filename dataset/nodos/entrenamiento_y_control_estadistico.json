@@ -7,9 +7,9 @@
   "resumen_teorico": "Cuando el trabajo de una persona ha alcanzado el control estadístico, ha completado su aprendizaje de esa tarea particular; continuar entrenándola de la misma forma no es económico, aunque podría beneficiarse de aprender otra tarea. Sin embargo, si el trabajo aún no ha alcanzado el control estadístico, más entrenamiento sí ayuda. En un estado de caos (mala supervisión, mala gestión, nada bajo control estadístico) es imposible que alguien desarrolle su potencial de uniformidad o calidad. La carta de control indica cuándo una persona ha llegado al estado de control estadístico.",
   "pasos_accionables": [
     "Establecer cartas de control para monitorear el aprendizaje de cada trabajador",
-    "Determinar mediante la curva de aprendizaje cuándo se alcanza el control estadístico",
+    "Cuando la curva de aprendizaje se estabilice, usar la carta de control para determinar si y cuándo se alcanzó el control estadístico",
     "Detener el entrenamiento repetitivo una vez alcanzado el control, y evaluar reasignación a otra tarea",
-    "Si el proceso aún no está en control estadístico, continuar y reforzar el entrenamiento"
+    "Si el trabajo de la persona aún no está en control estadístico, continuar y reforzar el entrenamiento, sabiendo que en un estado de caos (mala supervisión, mala gestión) nadie puede desarrollar su potencial"
   ],
   "entregable_esperado": "Registro de curvas de aprendizaje y cartas de control por trabajador que determinen necesidad de entrenamiento adicional",
   "nodos_previos": [
@@ -24,5 +24,41 @@
   "etiqueta_arbol": "Entrena Según el Control Logrado",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-175-entrenamiento_y_control_estadistico-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar mediante la curva de aprendizaje cuándo se alcanza el control estadístico",
+      "texto_nuevo": "Cuando la curva de aprendizaje se estabilice, usar la carta de control para determinar si y cuándo se alcanzó el control estadístico",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6056",
+        "frase": "Once the learning curve levels off, a control chart will indicate whether and when"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la curva de aprendizaje marca cuándo mirar y es la carta de control la que indica si y cuándo se alcanzó el control.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-175-entrenamiento_y_control_estadistico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el proceso aún no está en control estadístico, continuar y reforzar el entrenamiento",
+      "texto_nuevo": "Si el trabajo de la persona aún no está en control estadístico, continuar y reforzar el entrenamiento, sabiendo que en un estado de caos (mala supervisión, mala gestión) nadie puede desarrollar su potencial",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6058-6060",
+        "frase": "if a man’s work has not yet reached statistical control, further training will help him."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el entrenamiento al trabajo de la persona y advierte que en un estado de caos nadie desarrolla su potencial; el paso habla del proceso y pierde ese límite.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Cost Management Plan",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es la parte de tu plan de proyecto que define cómo vas a estimar, estructurar, monitorear y controlar los costos a lo largo de todo el ciclo de vida del proyecto. Incluye el nivel de precisión que necesitas en tus estimaciones, las unidades de medida y la moneda que usarás, los umbrales de varianza para detectar desviaciones del presupuesto, y las reglas de medición de desempeño, como el valor ganado. También cubre las técnicas de estimación que aplicarás y el proceso para desarrollar el presupuesto por fases, así como quién tiene autoridad para asignar partidas presupuestarias. Este documento te da el marco de referencia para tomar decisiones financieras consistentes durante toda la ejecución del proyecto.",
+  "resumen_teorico": "Es la parte de tu plan de proyecto que define cómo vas a estimar, estructurar, monitorear y controlar los costos a lo largo de todo el ciclo de vida del proyecto. Incluye el nivel de precisión que necesitas en tus estimaciones, las unidades de medida y la moneda que usarás, los umbrales de varianza para detectar desviaciones del presupuesto, las reglas de medición de desempeño, como el valor ganado, y la información y el formato de los informes de costos. También cubre las técnicas de estimación que aplicarás y el proceso para desarrollar el presupuesto por fases, así como quién tiene autoridad para asignar partidas presupuestarias. Este documento te da el marco de referencia para tomar decisiones financieras consistentes durante toda la ejecución del proyecto.",
   "pasos_accionables": [
     "Define el nivel de precisión requerido para tus estimaciones de costo",
     "Establece las unidades de medida, la moneda y los umbrales de varianza que usarás para detectar desviaciones",
-    "Documenta las técnicas de estimación y el proceso para desarrollar el presupuesto por fases",
+    "Documenta las técnicas de estimación, el proceso para desarrollar el presupuesto por fases, el proceso para monitorear, controlar y actualizar los costos, y la información y el formato de los informes de costos",
     "Especifica las reglas de medición de desempeño, como el valor ganado, y quién tiene autoridad para asignar presupuesto"
   ],
   "entregable_esperado": "Un plan de gestión de costos documentado y aprobado que guía la estimación, el presupuesto y el control financiero del proyecto.",
@@ -60,6 +60,39 @@
         "motivo": "El plan de gestion de costos no tiene como continuacion natural la auditoria de riesgos."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-174-cost_management_plan-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta las técnicas de estimación y el proceso para desarrollar el presupuesto por fases",
+      "texto_nuevo": "Documenta las técnicas de estimación, el proceso para desarrollar el presupuesto por fases, el proceso para monitorear, controlar y actualizar los costos, y la información y el formato de los informes de costos",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2102-2108",
+        "frase": "Cost reporting information and format"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en el plan el formato de los informes de costos y el proceso para monitorear y controlar costos, ausentes de los pasos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-174-cost_management_plan-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es la parte de tu plan de proyecto que define cómo vas a estimar, estructurar, monitorear y controlar los costos a lo largo de todo el ciclo de vida del proyecto. Incluye el nivel de precisión que necesitas en tus estimaciones, las unidades de medida y la moneda que usarás, los umbrales de varianza para detectar desviaciones del presupuesto, y las reglas de medición de desempeño, como el valor ganado. También cubre las técnicas de estimación que aplicarás y el proceso para desarrollar el presupuesto por fases, así como quién tiene autoridad para asignar partidas presupuestarias. Este documento te da el marco de referencia para tomar decisiones financieras consistentes durante toda la ejecución del proyecto.",
+      "texto_nuevo": "Es la parte de tu plan de proyecto que define cómo vas a estimar, estructurar, monitorear y controlar los costos a lo largo de todo el ciclo de vida del proyecto. Incluye el nivel de precisión que necesitas en tus estimaciones, las unidades de medida y la moneda que usarás, los umbrales de varianza para detectar desviaciones del presupuesto, las reglas de medición de desempeño, como el valor ganado, y la información y el formato de los informes de costos. También cubre las técnicas de estimación que aplicarás y el proceso para desarrollar el presupuesto por fases, así como quién tiene autoridad para asignar partidas presupuestarias. Este documento te da el marco de referencia para tomar decisiones financieras consistentes durante toda la ejecución del proyecto.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2102, 2148",
+        "frase": "Cost reporting information and format Document the cost information required for status and progress reporting."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro lista la información y el formato de los informes de costos como parte del plan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

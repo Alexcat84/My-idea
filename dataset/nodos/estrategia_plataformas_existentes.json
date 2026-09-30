@@ -9,8 +9,8 @@
     "Identificar en qué plataformas online se congregan tus clientes potenciales (redes sociales, marketplaces, app stores, extensiones).",
     "Analizar qué funcionalidad falta en esa plataforma que tus usuarios necesitan.",
     "Diseñar una feature o producto complementario que llene ese vacío y redirija tráfico hacia tu producto.",
-    "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras.",
-    "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita.",
+    "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras, o probar aspectos nuevos de las plataformas grandes, donde hay menos competencia.",
+    "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita, sabiendo que si la plataforma fracasa ese esfuerzo se puede perder.",
     "Lanzar la integración y medir el tráfico/referidos generados"
   ],
   "entregable_esperado": "Una feature o integración específica lanzada en una plataforma existente, con métricas de tráfico/usuarios adquiridos a través de ella.",
@@ -43,5 +43,41 @@
   ],
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-176-estrategia_plataformas_existentes-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras.",
+      "texto_nuevo": "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras, o probar aspectos nuevos de las plataformas grandes, donde hay menos competencia.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "3011",
+        "frase": "Or try new aspects of major platforms because there is less competition there."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da como alternativa probar aspectos nuevos de las plataformas grandes, donde hay menos competencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-176-estrategia_plataformas_existentes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita.",
+      "texto_nuevo": "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita, sabiendo que si la plataforma fracasa ese esfuerzo se puede perder.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "2984",
+        "frase": "This build-early strategy doesn't work in every case, especially when the underlying platform flops."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que llegar temprano no funciona siempre, sobre todo si la plataforma fracasa.; Mismo defecto: se pierde el riesgo de que la plataforma fracase y el esfuerzo se pierda.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

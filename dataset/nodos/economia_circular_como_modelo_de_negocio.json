@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Economía Circular como Modelo de Negocio Regenerativo",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Frente al modelo lineal tradicional (extraer-fabricar-desechar), la economía circular propone rediseñar los sistemas industriales para que sean restaurativos y regenerativos, transformando el desperdicio en un nutriente para la siguiente generación de productos. No requiere elegir entre altruismo y oportunidad: las empresas que la adoptan reducen costos de materiales, usan mejor sus activos y fortalecen el vínculo con sus clientes mientras cuidan el planeta. IDEO, junto a la Ellen MacArthur Foundation, desarrolló una guía práctica con 24 medidas concretas y prototipables.",
+  "resumen_teorico": "Frente al modelo lineal tradicional (extraer-fabricar-desechar), la economía circular propone rediseñar los sistemas industriales para que sean restaurativos y regenerativos, transformando el desperdicio en un nutriente para la siguiente generación de productos. No requiere elegir entre altruismo y oportunidad: la apuesta es que, si la adoptas, podrás reducir costos de materiales, usar mejor tus activos y fortalecer el vínculo con tus clientes mientras cuidas el planeta. IDEO, junto a la Ellen MacArthur Foundation, desarrolló una guía práctica con 24 medidas concretas y prototipables.",
   "pasos_accionables": [
     "Mapear el ciclo de vida completo del producto: origen de materiales, uso y destino final",
     "Identificar puntos donde el 'desperdicio' actual podría convertirse en insumo para otro proceso",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Convierte tu Desperdicio en Recurso",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-f01-economia_circular_como_modelo_de_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Frente al modelo lineal tradicional (extraer-fabricar-desechar), la economía circular propone rediseñar los sistemas industriales para que sean restaurativos y regenerativos, transformando el desperdicio en un nutriente para la siguiente generación de productos. No requiere elegir entre altruismo y oportunidad: las empresas que la adoptan reducen costos de materiales, usan mejor sus activos y fortalecen el vínculo con sus clientes mientras cuidan el planeta. IDEO, junto a la Ellen MacArthur Foundation, desarrolló una guía práctica con 24 medidas concretas y prototipables.",
+      "texto_nuevo": "Frente al modelo lineal tradicional (extraer-fabricar-desechar), la economía circular propone rediseñar los sistemas industriales para que sean restaurativos y regenerativos, transformando el desperdicio en un nutriente para la siguiente generación de productos. No requiere elegir entre altruismo y oportunidad: la apuesta es que, si la adoptas, podrás reducir costos de materiales, usar mejor tus activos y fortalecer el vínculo con tus clientes mientras cuidas el planeta. IDEO, junto a la Ellen MacArthur Foundation, desarrolló una guía práctica con 24 medidas concretas y prototipables.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1567",
+        "frase": "We believe that by embracing its principles, companies will be able to make more money"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo formula como creencia sobre lo que las empresas podrán lograr; el nodo lo afirma como hecho.; Mismo defecto: 'we believe ... will be able to' endurecido a hecho comprobado.; Mismo defecto: la convicción del libro pasa a ser un resultado que ocurre. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

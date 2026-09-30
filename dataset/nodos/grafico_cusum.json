@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gráfico de Suma Acumulada (CUSUM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). A diferencia de los gráficos Shewhart tradicionales, cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
+  "resumen_teorico": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). Cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
   "pasos_accionables": [
     "Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra",
     "Definir el valor objetivo T y la desviación estándar del proceso",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Detecta Cambios Acumulados a Tiempo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-grafico_cusum-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). A diferencia de los gráficos Shewhart tradicionales, cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
+      "texto_nuevo": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). Cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20642",
+        "frase": "Each point plotted contains information from all observations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no compara con los gráficos Shewhart; solo dice que cada punto acumula todas las observaciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

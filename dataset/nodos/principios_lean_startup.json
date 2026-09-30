@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Los cinco principios para emprender con menos riesgo (Lean Startup)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "El método Lean Startup se basa en cinco principios que cambian la forma de pensar tu proyecto: (1) puedes ser emprendedor en cualquier lugar, no solo en un garaje; (2) emprender es una forma de gestionar que se adapta a la incertidumbre extrema; (3) lo que valida tu avance es aprender de forma comprobada mediante experimentos, no solo tener una idea; (4) el ciclo Crear-Medir-Aprender (Build-Measure-Learn) te ayuda a convertir ideas en decisiones más rápido; (5) la contabilidad de la innovación (Innovation Accounting) te permite medir tu progreso real y fijar metas que tengan sentido.",
+  "resumen_teorico": "El método Lean Startup se basa en cinco principios que cambian la forma de pensar tu proyecto: (1) puedes ser emprendedor en cualquier lugar, no solo en un garaje; (2) emprender es una forma de gestionar que se adapta a la incertidumbre extrema; (3) lo que valida tu avance es aprender de forma comprobada mediante experimentos, no solo tener una idea; (4) el ciclo Crear-Medir-Aprender (Build-Measure-Learn) te ayuda a convertir ideas en decisiones más rápido; (5) la contabilidad de la innovación (Innovation Accounting) te permite medir tu progreso real, fijar metas que tengan sentido y decidir qué trabajo priorizar.",
   "pasos_accionables": [
     "Reconoce que si estás creando algo bajo mucha incertidumbre, eres una startup, sin importar el tamaño de tu proyecto o la industria en la que estés",
     "Trata emprender como una disciplina que gestionas con método, no como algo improvisado",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Adopta los Principios Emprendedores",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-176-principios_lean_startup-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El método Lean Startup se basa en cinco principios que cambian la forma de pensar tu proyecto: (1) puedes ser emprendedor en cualquier lugar, no solo en un garaje; (2) emprender es una forma de gestionar que se adapta a la incertidumbre extrema; (3) lo que valida tu avance es aprender de forma comprobada mediante experimentos, no solo tener una idea; (4) el ciclo Crear-Medir-Aprender (Build-Measure-Learn) te ayuda a convertir ideas en decisiones más rápido; (5) la contabilidad de la innovación (Innovation Accounting) te permite medir tu progreso real y fijar metas que tengan sentido.",
+      "texto_nuevo": "El método Lean Startup se basa en cinco principios que cambian la forma de pensar tu proyecto: (1) puedes ser emprendedor en cualquier lugar, no solo en un garaje; (2) emprender es una forma de gestionar que se adapta a la incertidumbre extrema; (3) lo que valida tu avance es aprender de forma comprobada mediante experimentos, no solo tener una idea; (4) el ciclo Crear-Medir-Aprender (Build-Measure-Learn) te ayuda a convertir ideas en decisiones más rápido; (5) la contabilidad de la innovación (Innovation Accounting) te permite medir tu progreso real, fijar metas que tengan sentido y decidir qué trabajo priorizar.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "148",
+        "frase": "how to measure progress, how to set up milestones, and how to prioritize work"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera medir el progreso, fijar hitos y priorizar el trabajo; el resumen omite la priorización.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

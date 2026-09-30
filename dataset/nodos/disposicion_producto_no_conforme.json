@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Disposición de Producto No Conforme",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso formal que sigue a la detección de un lote no conforme: se genera un reporte, el lote se pone en cuarentena, se investiga la causa y se decide entre no enviar (reparar, reclasificar, desechar) o enviar mediante alguna forma de waiver (del diseñador, cliente, departamento de calidad o junta de revisión de material).",
+  "resumen_teorico": "Al detectar un lote no conforme sigues un proceso formal: lo reportas, lo pones en cuarentena, evalúas su aptitud para el uso y decides entre no enviarlo (seleccionar, reparar, reclasificar o desechar, según su economía) o enviarlo con un waiver (del diseñador, cliente, responsable de calidad, junta de revisión de material o, en casos críticos, quien dirige la empresa).",
   "pasos_accionables": [
     "Marcar el lote como 'hold' y enviarlo a área de cuarentena.",
     "Asignar un investigador para recopilar información de aptitud para el uso.",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Omite la selección entre las opciones de no envío y que la mejor se elige estudiando la economía de cada una.",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f04-disposicion_producto_no_conforme-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proceso formal que sigue a la detección de un lote no conforme: se genera un reporte, el lote se pone en cuarentena, se investiga la causa y se decide entre no enviar (reparar, reclasificar, desechar) o enviar mediante alguna forma de waiver (del diseñador, cliente, departamento de calidad o junta de revisión de material).",
+      "texto_nuevo": "Al detectar un lote no conforme sigues un proceso formal: lo reportas, lo pones en cuarentena, evalúas su aptitud para el uso y decides entre no enviarlo (seleccionar, reparar, reclasificar o desechar, según su economía) o enviarlo con un waiver (del diseñador, cliente, responsable de calidad, junta de revisión de material o, en casos críticos, quien dirige la empresa).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24448-24476",
+        "frase": "An investigator is assigned to collect the type of information needed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): En el libro el investigador reúne información para la decisión de aptitud para el uso, no investiga la causa.; Falta el waiver de la alta dirección, reservado a casos críticos.; Falta la selección entre las opciones de no envío y que se elige estudiando la economía de cada una.; Misma investigación de causa que el libro no pone.; Mismo waiver de la alta dirección omitido. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

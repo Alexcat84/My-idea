@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Solicitar al contratista el informe periódico de desempeño",
     "Revisar el desempeño de alcance, calidad, cronograma y costo del periodo actual",
-    "Analizar los pronósticos de fecha de entrega y costo final",
-    "Registrar reclamaciones, disputas o riesgos nuevos",
+    "Analizar los pronósticos de fecha de entrega y costo final; si el contrato es de precio fijo, no se pronostica el costo",
+    "Registrar reclamaciones, disputas, riesgos o problemas nuevos, y las acciones correctivas o preventivas previstas",
     "Integrar la información en el Informe de Desempeño del Proyecto"
   ],
   "entregable_esperado": "Informe de Estado del Contratista completo con desempeño actual y pronósticos futuros",
@@ -29,5 +29,41 @@
   "etiqueta_arbol": "Revisa el Estado de tu Contratista",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-contractor_status_report-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registrar reclamaciones, disputas o riesgos nuevos",
+      "texto_nuevo": "Registrar reclamaciones, disputas, riesgos o problemas nuevos, y las acciones correctivas o preventivas previstas",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5222-5224",
+        "frase": "Identify planned corrective or preventive actions necessary to recover schedule, cost, scope"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El informe incluye también los problemas nuevos y las acciones correctivas o preventivas previstas.; Mismo defecto: faltan los problemas nuevos y las acciones correctivas o preventivas previstas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-174-contractor_status_report-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analizar los pronósticos de fecha de entrega y costo final",
+      "texto_nuevo": "Analizar los pronósticos de fecha de entrega y costo final; si el contrato es de precio fijo, no se pronostica el costo",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5216",
+        "frase": "If the contract is a fixed price, do not enter cost forecasts."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro excluye el pronóstico de costo cuando el contrato es de precio fijo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

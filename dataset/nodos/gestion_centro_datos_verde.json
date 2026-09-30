@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcula el PUE actual de tu centro de datos (divide la potencia total de la instalación entre la potencia que usan tus equipos de TI)",
     "Instala barreras que separen el aire frío del caliente entre tus racks (los estantes de servidores)",
-    "Ajusta los termostatos de los pasillos fríos a 25-27°C en lugar de 20-22°C",
+    "Ajusta los termostatos de los pasillos fríos a 25-27°C en lugar de 20-22°C, con cuidado y de forma planificada, porque se reduce el margen de seguridad si falla la refrigeración",
     "Instala sistemas que aprovechen el agua o el aire exterior para enfriar cuando las condiciones lo permitan (economizadores)",
     "Aprovecha el calor que sueltan tus servidores para calentar tus oficinas"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Optimiza tu Consumo Energético",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-175-gestion_centro_datos_verde-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajusta los termostatos de los pasillos fríos a 25-27°C en lugar de 20-22°C",
+      "texto_nuevo": "Ajusta los termostatos de los pasillos fríos a 25-27°C en lugar de 20-22°C, con cuidado y de forma planificada, porque se reduce el margen de seguridad si falla la refrigeración",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3362",
+        "frase": "this has to be done carefully, with a view to the reduced temperature safety margin"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide hacerlo con cuidado y planificado por el menor margen de seguridad si falla la refrigeración.; Misma condición perdida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

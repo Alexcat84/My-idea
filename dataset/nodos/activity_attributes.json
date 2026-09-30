@@ -9,7 +9,7 @@
     "Identificar actividades predecesoras y sucesoras",
     "Describir el tipo de relación lógica entre actividades",
     "Documentar leads y lags aplicables",
-    "Especificar restricciones y supuestos por actividad",
+    "Especificar fechas impuestas, restricciones y supuestos por actividad",
     "Definir requisitos de recursos y habilidades necesarias"
   ],
   "entregable_esperado": "Documento de atributos detallados para cada actividad del proyecto",
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Detalla los Atributos de tus Actividades",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-activity_attributes-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Especificar restricciones y supuestos por actividad",
+      "texto_nuevo": "Especificar fechas impuestas, restricciones y supuestos por actividad",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1566",
+        "frase": "Imposed dates Note any required dates for start, completion, reviews, or accomplishments."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide documentar por actividad las fechas impuestas, que ningún paso recoge.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

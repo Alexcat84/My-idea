@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisa si tu producto se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
     "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
-    "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una.",
+    "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una; para un resultado más confiable, en cualquier producto te conviene repetir la prueba cinco o más veces con unidades nuevas.",
     "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
     "Sugerencia de My Idea: refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
   ],
@@ -207,6 +207,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el tipo pequeño, cuarta categoría del libro.; Mismo defecto: falta el paquete pequeño.",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-f01-identificar_si_tu_producto_necesita_proteccion_especial-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una.",
+      "texto_nuevo": "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una; para un resultado más confiable, en cualquier producto te conviene repetir la prueba cinco o más veces con unidades nuevas.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "153",
+        "frase": "performing the project five (5) or more times using new samples with each test"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El mínimo recomendado del libro para todo paquete es repetir cinco o más veces con muestras nuevas; dos no es la meta.; Mismo defecto: se presenta el mínimo de dos como suficiente. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],

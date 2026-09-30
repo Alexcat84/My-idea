@@ -4,10 +4,10 @@
   "dominio": "environmental",
   "titulo_concepto": "Certificación Cradle to Cradle",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en salud), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+  "resumen_teorico": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
   "pasos_accionables": [
     "Identificar todos los materiales del producto hasta el nivel de 100 ppm",
-    "Definir un plan de reutilización de materiales con tasas objetivo (50%, 65%, 80%+)",
+    "Definir un plan de reutilización de materiales en productos de igual o mayor valor, con tasas objetivo (50%, 65%, 80%+)",
     "Caracterizar las fuentes de energía usadas en producción y ensamblaje",
     "Establecer plan de conservación y calidad del agua",
     "Documentar políticas de responsabilidad social y obtener evaluación de terceros",
@@ -53,6 +53,39 @@
         "evidencia": "F01-016: Certificar un producto existente documentando materiales, energia y agua es operacion y cumplimiento, no prueba con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-175-certificacion_cradle_to_cradle-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en salud), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+      "texto_nuevo": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3752",
+        "frase": "material impact on human and environmental health, and forest source and wood harvesting standards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El criterio de materiales incluye el origen forestal y los estándares de tala de la madera.; Misma omisión, y el libro precisa salud humana y ambiental.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-175-certificacion_cradle_to_cradle-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir un plan de reutilización de materiales con tasas objetivo (50%, 65%, 80%+)",
+      "texto_nuevo": "Definir un plan de reutilización de materiales en productos de igual o mayor valor, con tasas objetivo (50%, 65%, 80%+)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3754",
+        "frase": "whether materials can be reutilized into a product of equal or higher value"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro evalúa también si los materiales se reutilizan en un producto de igual o mayor valor.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

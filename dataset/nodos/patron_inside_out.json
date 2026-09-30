@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Patrón Inside-Out (Innovación de Adentro hacia Afuera)",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Patrón donde las organizaciones licencian o venden su propiedad intelectual o tecnologías no utilizadas a terceros, generando nuevas fuentes de ingreso a partir de activos ociosos. Ejemplo: GlaxoSmithKline's patent pools para enfermedades desatendidas.",
+  "resumen_teorico": "Patrón donde las organizaciones licencian o venden a terceros su propiedad intelectual o tecnologías sin usar, generando nuevas fuentes de ingreso con activos ociosos. En los pools de patentes de GlaxoSmithKline para enfermedades desatendidas el motivo fue otro: acceso a medicamentos e investigación.",
   "pasos_accionables": [
     "Auditar el portafolio de I+D interno para identificar propiedad intelectual sin explotación comercial",
     "Evaluar mercados o industrias alternativas donde ese conocimiento podría tener valor",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Vende tu Tecnología Sin Usar",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-patron_inside_out-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Patrón donde las organizaciones licencian o venden su propiedad intelectual o tecnologías no utilizadas a terceros, generando nuevas fuentes de ingreso a partir de activos ociosos. Ejemplo: GlaxoSmithKline's patent pools para enfermedades desatendidas.",
+      "texto_nuevo": "Patrón donde las organizaciones licencian o venden a terceros su propiedad intelectual o tecnologías sin usar, generando nuevas fuentes de ingreso con activos ociosos. En los pools de patentes de GlaxoSmithKline para enfermedades desatendidas el motivo fue otro: acceso a medicamentos e investigación.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "1611",
+        "frase": "The company’s goal was to make drugs more accessible in the world’s poorest countries"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que en el caso GSK el motivo no fue monetizar sino el acceso a medicamentos y la investigación.; Mismo defecto: el ejemplo se presenta como generación de ingresos cuando el libro dice que el motivo fue otro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Formación de un Green Team en la Oficina",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Un green team es un grupo interno con representación amplia de la organización que examina los procedimientos de oficina, identifica oportunidades de sostenibilidad y propone planes de acción para liderar el cambio cultural. Aunque las actividades cotidianas de oficina no generan grandes impactos ambientales, tienen un valor simbólico clave para la credibilidad de tu estrategia de sostenibilidad. Puede surgir de tu propia iniciativa, de un champion ejecutivo o de presiones externas como regulación o industria. Su éxito depende de darle un mandato claro para diagnosticar problemas, proponer soluciones alineadas con la cultura existente y coordinar con quienes gestionan instalaciones y tecnología para atender la eficiencia energética.",
+  "resumen_teorico": "Un green team es un grupo interno con representación amplia de la organización que examina los procedimientos de oficina, identifica oportunidades de sostenibilidad y propone planes de acción para liderar el cambio cultural. Aunque en la mayoría de las empresas las actividades cotidianas de oficina no generan grandes impactos ambientales, tienen un valor simbólico clave para la credibilidad de tu estrategia de sostenibilidad. Puede surgir de la iniciativa de tus empleados, de un champion ejecutivo o, a veces, de iniciativas externas como un programa de gobierno o un compromiso de una asociación de tu industria. Su éxito depende de darle un mandato claro para diagnosticar problemas y proponer soluciones alineadas con la cultura existente.",
   "pasos_accionables": [
     "Identifica y convoca a empleados comprometidos de distintas áreas para formar el equipo verde",
     "Asigna al equipo la tarea de examinar los procedimientos de oficina bajo el criterio de reducir, reusar y reciclar",
@@ -41,5 +41,23 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-175-green_team_oficina-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un green team es un grupo interno con representación amplia de la organización que examina los procedimientos de oficina, identifica oportunidades de sostenibilidad y propone planes de acción para liderar el cambio cultural. Aunque las actividades cotidianas de oficina no generan grandes impactos ambientales, tienen un valor simbólico clave para la credibilidad de tu estrategia de sostenibilidad. Puede surgir de tu propia iniciativa, de un champion ejecutivo o de presiones externas como regulación o industria. Su éxito depende de darle un mandato claro para diagnosticar problemas, proponer soluciones alineadas con la cultura existente y coordinar con quienes gestionan instalaciones y tecnología para atender la eficiencia energética.",
+      "texto_nuevo": "Un green team es un grupo interno con representación amplia de la organización que examina los procedimientos de oficina, identifica oportunidades de sostenibilidad y propone planes de acción para liderar el cambio cultural. Aunque en la mayoría de las empresas las actividades cotidianas de oficina no generan grandes impactos ambientales, tienen un valor simbólico clave para la credibilidad de tu estrategia de sostenibilidad. Puede surgir de la iniciativa de tus empleados, de un champion ejecutivo o, a veces, de iniciativas externas como un programa de gobierno o un compromiso de una asociación de tu industria. Su éxito depende de darle un mandato claro para diagnosticar problemas y proponer soluciones alineadas con la cultura existente.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2250-2258",
+        "frase": "For most companies, day-to-day office activities don't generate big environmental impacts."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de iniciativa de los empleados desde abajo; el nodo la cambia por la iniciativa de quien lee.; El libro habla de iniciativas externas ocasionales (un programa de gobierno, un compromiso de una asociación de industria), no de presión regulatoria.; El libro lo dice de la mayoría de las empresas; el nodo lo vuelve absoluto.; El libro no pone la coordinación con instalaciones y tecnología como condición del éxito del equipo; lo que más importa es empoderarlo para pensar y proponer soluciones acordes a la cultura.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

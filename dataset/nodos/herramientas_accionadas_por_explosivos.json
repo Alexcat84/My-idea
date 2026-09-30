@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Uso Seguro de Herramientas Accionadas por Pólvora/Explosivos",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Si usas herramientas accionadas por explosivos, necesitas estar capacitado y contar con una tarjeta válida que lo acredite. Mantén la herramienta descargada hasta el momento de usarla, revísala antes de cada uso y guárdala en un contenedor individual con llave. Mientras la estés usando, coloca una señal visible que avise que hay una herramienta explosiva en funcionamiento.",
+  "resumen_teorico": "Si usas herramientas accionadas por explosivos, necesitas estar capacitado y contar con una tarjeta válida que lo acredite. Mantén la herramienta descargada hasta el momento de usarla, revísala antes de cada uso y guárdala en un contenedor individual con llave. Mientras la uses, lleva la protección personal adecuada y coloca una señal visible que avise que hay una herramienta explosiva en funcionamiento.",
   "pasos_accionables": [
     "Capacítate y obtén tu tarjeta de operador válida",
     "Revisa la herramienta antes de cada uso para detectar defectos",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Usa con Cuidado Herramientas Explosivas",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-f02-herramientas_accionadas_por_explosivos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si usas herramientas accionadas por explosivos, necesitas estar capacitado y contar con una tarjeta válida que lo acredite. Mantén la herramienta descargada hasta el momento de usarla, revísala antes de cada uso y guárdala en un contenedor individual con llave. Mientras la estés usando, coloca una señal visible que avise que hay una herramienta explosiva en funcionamiento.",
+      "texto_nuevo": "Si usas herramientas accionadas por explosivos, necesitas estar capacitado y contar con una tarjeta válida que lo acredite. Mantén la herramienta descargada hasta el momento de usarla, revísala antes de cada uso y guárdala en un contenedor individual con llave. Mientras la uses, lleva la protección personal adecuada y coloca una señal visible que avise que hay una herramienta explosiva en funcionamiento.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "651",
+        "frase": "Workers who operate explosive-actuated tools use appropriate PPE."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que quien opera la herramienta use el equipo de protección personal adecuado; el resumen lo omite.; Mismo defecto: se pierde el equipo de protección personal del operador. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

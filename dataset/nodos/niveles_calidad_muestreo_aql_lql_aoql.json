@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Índices de Calidad para Planes de Muestreo (AQL, LQL, IQL, AOQL)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor.",
+  "resumen_teorico": "Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, entre AQL y LQL, a menudo con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor, sobre todo en series continuas de lotes; para lotes aislados, usa el LQL.",
   "pasos_accionables": [
     "Definir qué nivel de no conformidad es aceptable como promedio de proceso (AQL) según necesidades del producto",
     "Establecer el nivel de calidad límite inaceptable (LQL/LTPD) y el riesgo del consumidor asociado",
@@ -37,5 +37,23 @@
   "etiqueta_arbol": "Fija tus Niveles de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-f02-niveles_calidad_muestreo_aql_lql_aoql-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor.",
+      "texto_nuevo": "Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, entre AQL y LQL, a menudo con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor, sobre todo en series continuas de lotes; para lotes aislados, usa el LQL.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24970",
+        "frase": "These indexes apply primarily when the production occurs in a continuing series of lots."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el IQL está entre AQL y LQL y que con frecuencia se define con probabilidad 0.5; el nodo lo da como definición fija.; Mismo defecto que la marca 0.; Se pierde el límite del libro: los índices aplican sobre todo a series continuas de lotes y para lotes aislados se recomienda el LQL. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

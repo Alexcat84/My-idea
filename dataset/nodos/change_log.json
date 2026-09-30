@@ -6,7 +6,7 @@
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Documento dinámico que rastrea todas las solicitudes de cambio desde su presentación hasta su disposición final, incluyendo estado y categoría.",
   "pasos_accionables": [
-    "Registrar cada Change Request con un ID único",
+    "Registrar cada Change Request con un ID único, su categoría, la descripción del cambio, quién lo solicitó y la fecha de solicitud",
     "Actualizar el estado (abierto, pendiente, cerrado)",
     "Documentar la disposición final de cada cambio"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Registra Todos tus Cambios",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-change_log-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registrar cada Change Request con un ID único",
+      "texto_nuevo": "Registrar cada Change Request con un ID único, su categoría, la descripción del cambio, quién lo solicitó y la fecha de solicitud",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "4174-4182",
+        "frase": "Change ID Category Description of change Submitter Submission date"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro registra también categoría, descripción, solicitante y fecha de cada cambio.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

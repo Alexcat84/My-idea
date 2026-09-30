@@ -1010,13 +1010,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Acolchado según la forma de la pieza",
-      "resumen_teorico": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilíndrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de protección quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, además, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el método de acolchado según la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
+      "resumen_teorico": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilíndrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita, como mínimo, que el material de protección quede pegado con cinta para que no se corra durante el trayecto, y conviene además meterla en una caja. Las piezas de más de unos 68 kilos van sujetas a una base apta para montacargas y transpaleta, con flejes a la tarima o con refuerzos dentro de la caja. Decidir el método de acolchado según la forma real de cada producto, en vez de usar el mismo relleno para todo, ayuda a reducir las roturas y los raspones.",
       "pasos_accionables": [
         "Identifica si tu pieza es plana, cilíndrica o de forma irregular antes de elegir el material de relleno.",
         "En piezas planas o con bordes filosos, cubre esquinas y bordes con espuma o cartón corrugado.",
         "En piezas cilíndricas o tubulares, empácalas en caja o en tubo con relleno adecuado, como acolchado en los extremos y cacahuates sueltos, para que no perforen los cierres de los extremos.",
         "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto y, además, conviene meter la pieza en una caja.",
-        "En piezas pesadas, asegura con flejes o una base firme antes de cerrar el empaque."
+        "En piezas de más de unos 68 kilos, sujétalas a una base apta para montacargas y transpaleta, con flejes a la tarima o con refuerzos dentro de la caja, antes de cerrar el empaque."
       ],
       "entregable_esperado": "Un método de acolchado específico según la forma de cada producto que envías.",
       "nodos_previos": [
@@ -1250,7 +1250,7 @@
         "Identificar actividades predecesoras y sucesoras",
         "Describir el tipo de relación lógica entre actividades",
         "Documentar leads y lags aplicables",
-        "Especificar restricciones y supuestos por actividad",
+        "Especificar fechas impuestas, restricciones y supuestos por actividad",
         "Definir requisitos de recursos y habilidades necesarias"
       ],
       "entregable_esperado": "Documento de atributos detallados para cada actividad del proyecto",
@@ -1275,9 +1275,9 @@
       "titulo_concepto": "Activity Duration Estimates",
       "resumen_teorico": "Estimaciones del tiempo necesario para completar el trabajo del proyecto, determinadas mediante juicio experto o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
       "pasos_accionables": [
-        "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos)",
-        "Convertir horas de esfuerzo en días o semanas según corresponda",
-        "Incluir reserva de contingencia para riesgos de incertidumbre",
+        "Seleccionar el método de estimación apropiado: juicio experto, decisión en grupo o un método cuantitativo (paramétrico, análogo, tres puntos)",
+        "En las actividades que dependen de personas, no de material o equipo, convertir horas de esfuerzo en días o semanas según corresponda",
+        "Si hace falta, incluir reserva de contingencia para riesgos de incertidumbre",
         "Documentar la duración estimada para cada actividad"
       ],
       "entregable_esperado": "Documento de estimaciones de duración para cada actividad del WBS",
@@ -1568,7 +1568,7 @@
       "titulo_concepto": "Actualiza tu modelo de negocio: ¿cambias de rumbo o sigues adelante?",
       "resumen_teorico": "Cuando ya entiendes a fondo a tu cliente y tu mercado, detente un momento y revisa todas las suposiciones que hiciste en tu lienzo de modelo de negocio (Business Model Canvas). Dibuja el mapa de cómo tu cliente típico hace las cosas hoy, compáralo con lo que habías supuesto al inicio y decide si tu producto realmente resuelve el problema, es decir, si encaja con el mercado (product market fit). Si no encaja, prioriza cambiar de segmento de clientes antes que agregar funciones nuevas: tu meta es tener una lista de características que quepa en un párrafo y sirva a miles de clientes, no una lista de diez páginas pensada para venderle a diez personas.",
       "pasos_accionables": [
-        "Reúnete con tu equipo cercano y, si tienes, con quienes invierten en tu negocio para hacer esta revisión juntos",
+        "Reúnete con la mayor parte posible de quienes dirigen tu negocio (no solo con tus socios, también con quienes encabezan cada área o coordinan a otras personas) y, si tienes, con quienes invierten en él para hacer esta revisión juntos",
         "Dibuja el mapa de cómo tu cliente resuelve hoy el problema, con y sin tu producto",
         "Evalúa qué tan bien lo que ofreces resuelve realmente ese problema",
         "Revisa tu lista de funcionalidades, ordénalas por su importancia para tus clientes y elimina o pospón las que no importan de verdad",
@@ -4436,7 +4436,7 @@
       "pasos_accionables": [
         "Mapea en un documento o papel todas las etapas, decisiones y actividades reales de tu proceso de desarrollo, con tiempos típicos, sin idealizar",
         "Compara cómo crees que funciona tu proceso versus cómo funciona realmente en la práctica",
-        "Para cada actividad pregunta: qué trabajo se hace, cuánto tarda, si es realmente necesaria y cómo se puede acelerar",
+        "Para cada actividad pregunta: qué trabajo implica, qué tan bien la ejecutas, cuánto tarda, si es realmente necesaria y, si lo es, cómo puedes mejorarla y acelerarla",
         "Identifica actividades sin valor agregado como papeleo excesivo, aprobaciones redundantes, esperas y templates sobrecargados",
         "Realiza un análisis de causa raíz sobre los cuellos de botella que detectes",
         "Elimina o simplifica esas actividades, por ejemplo recortando documentos extensos a lo esencial, e implementa las mejoras"
@@ -6942,7 +6942,7 @@
       "resumen_teorico": "Documento dinámico que registra los supuestos (factores considerados verdaderos sin comprobación) y las restricciones (limitaciones como presupuesto fijo o hitos obligatorios) que afectan la planificación y ejecución del proyecto. Se actualiza continuamente conforme los supuestos se validan o invalidan.",
       "pasos_accionables": [
         "Identificar supuestos provenientes de cualquier documento o del equipo del proyecto, y categorizar cada supuesto o restricción",
-        "Documentar restricciones definidas por el charter, cliente o reguladores",
+        "Documentar restricciones definidas por el charter, el cliente, el patrocinador o los reguladores",
         "Asignar responsable y fecha límite para validar cada supuesto",
         "Registrar acciones tomadas y el estado actual de cada ítem, que puede ser activo, pendiente, cerrado",
         "Actualizar el log conforme se validan o invalidan los supuestos"
@@ -7422,7 +7422,7 @@
         "Anotar en el informe final los desacuerdos del cliente o, si sus comentarios son correctos, cambiar el informe",
         "Si el informe se va a distribuir, enviarlo directamente desde la planta auditada"
       ],
-      "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, validado por gerencia de calidad y gerencia general",
+      "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, revisado primero con quien lleva la calidad y luego con quien dirige la planta auditada, con sus desacuerdos anotados si los hay",
       "nodos_previos": [
         "accion_correctiva_sistematica"
       ],
@@ -7895,7 +7895,7 @@
       "pasos_accionables": [
         "Recopilar reportes existentes de sostenibilidad del proveedor antes de pedir nueva información",
         "Usar marcos estandarizados de la industria (ej. CDP) para reducir carga de reporte",
-        "Priorizar auditorías en proveedores de mayor impacto en costos, continuidad o reputación",
+        "Priorizar auditorías en proveedores de mayor impacto en costos, continuidad, reputación o calidad del producto",
         "Realizar visitas in-situ anunciadas y no anunciadas a proveedores críticos"
       ],
       "entregable_esperado": "Programa de auditorías con calendario, criterios de selección y reportes de cumplimiento",
@@ -8954,7 +8954,7 @@
       "resumen_teorico": "El benchmarking es una herramienta diagnóstica clave para evaluar el desempeño de una empresa en control de contaminación y gestión de recursos naturales, comparándolo con el de la competencia o con mejores prácticas del sector. Permite identificar fortalezas, debilidades y prioridades de mejora en cuatro áreas: Eco-Estrategia, Compromiso/Cultura/Capacidad, Ejecución y Logros Ambientales, y Comunicación y Compromiso con stakeholders.",
       "pasos_accionables": [
         "Realizar una autoevaluación rápida en las cuatro áreas clave: eco-estrategia, cultura, ejecución y comunicación",
-        "Definir indicadores clave de desempeño (KPIs) relevantes para el sector",
+        "Definir indicadores clave de desempeño (KPIs) relevantes para el sector y someterlos a comentarios de expertos internos y actores externos (ONG, clientes clave, consejo)",
         "Seleccionar de 4 a 8 empresas comparables, desde rezagadas hasta líderes reconocidos",
         "Construir una matriz comparativa de KPIs vs. empresas para identificar brechas y liderazgos",
         "Priorizar áreas de mejora antes de comunicar externamente cualquier liderazgo ambiental"
@@ -9228,11 +9228,11 @@
       "fase_proyecto": "ideacion",
       "dominio": "environmental",
       "titulo_concepto": "Biomímesis (Biomimicry) como inspiración de diseño",
-      "resumen_teorico": "Popularizada por Janine Benyus, la biomímesis propone que la naturaleza opera eficientemente y resuelve problemas ecológicos, por lo que puedes usarla como inspiración para diseñar. Los principios incluyen: autoensamblarse, optimizar en lugar de maximizar, usar energía libre, adaptarse y evolucionar, usar materiales no tóxicos, y relaciones simbióticas. Ejemplos: Calera capturando carbono inspirado en cómo los organismos marinos crean conchas, y Boeing usando winglets inspirados en alas de murciélagos.",
+      "resumen_teorico": "Popularizada por Janine Benyus, la biomímesis propone que la naturaleza a menudo opera eficientemente y resuelve problemas ecológicos, por lo que puedes usarla como inspiración para diseñar. Los principios incluyen: autoensamblarse, optimizar en lugar de maximizar, usar energía libre, adaptarse y evolucionar, usar materiales no tóxicos, y relaciones simbióticas. Ejemplos: Calera, con una tecnología que promete capturar carbono, inspirada en cómo los organismos marinos crean conchas, y Boeing usando winglets inspirados en alas de murciélagos.",
       "pasos_accionables": [
         "Descompón el problema de diseño en sus componentes esenciales",
         "Investiga procesos naturales análogos al problema que quieres resolver",
-        "Evalúa soluciones que emulen esos procesos naturales y usen materiales no tóxicos",
+        "Evalúa soluciones que busquen la mayor eficiencia, emulen esos procesos naturales y usen materiales no tóxicos",
         "Prioriza energía renovable y diseña pensando en evolucionar en lugar de buscar la perfección"
       ],
       "entregable_esperado": "Análisis de biomímesis con al menos una solución de diseño inspirada en procesos naturales aplicada a tu producto",
@@ -9995,7 +9995,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Buenas Prácticas de Manufactura Actuales (cGMP)",
-      "resumen_teorico": "Las cGMP son regulaciones que exige el organismo sanitario de tu país para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').",
+      "resumen_teorico": "Las cGMP son regulaciones que hace cumplir la autoridad sanitaria de un país concreto, que no tiene por qué ser el tuyo, para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').",
       "pasos_accionables": [
         "Establece un sistema robusto de gestión de calidad para tu manufactura y obtén materias primas de calidad apropiada",
         "Define procedimientos operativos estandarizados y validados",
@@ -10455,7 +10455,7 @@
         "Evalúa cada issue contra los 9 factores de impacto competitivo: costos, proveedores, clientes, diferenciación, barreras de entrada, innovación, crecimiento, stakeholders y regulación",
         "Crea un scorecard de materialidad clasificando cada issue según su impacto potencial",
         "Prioriza los issues con mayor potencial de impacto en tu posición competitiva para enfoque inmediato",
-        "Complementa con el análisis externo de stakeholders",
+        "Complementa con el análisis externo de stakeholders y ajusta la priorización según las tendencias futuras probables",
         "Programa una actualización anual de la priorización y una reevaluación más completa cada 3 a 4 años"
       ],
       "entregable_esperado": "Scorecard de materialidad con issues de sostenibilidad priorizados según su impacto potencial en la posición competitiva del negocio",
@@ -11227,7 +11227,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Cálculo del Retorno de Inversión (ROI) en Calidad",
-      "resumen_teorico": "El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.",
+      "resumen_teorico": "El ROI es un factor decisivo, a igualdad de lo demás, para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo puede complicarse porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que en algunos países reciben un trato fiscal y contable distinto. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que bastan para decidir y una decisión de gestión a veces tolera un margen de error.",
       "pasos_accionables": [
         "Buscar ayuda de alguien que entienda de finanzas para armar la información de ROI",
         "Diferenciar entre gastos de capital y gastos operativos en el cálculo",
@@ -12066,7 +12066,7 @@
         "Diseñar campañas educativas que expliquen problemas ambientales de forma positiva y accesible",
         "Utilizar redes existentes (empleados, representantes, comunidades) para difundir el mensaje",
         "Incluir instrucciones prácticas en el empaque o etiquetas para fomentar comportamientos sostenibles",
-        "Medir el impacto de la campaña en el cambio real de comportamiento del consumidor"
+        "Sugerencia de My Idea: medir el impacto de la campaña en el cambio real de comportamiento del consumidor"
       ],
       "entregable_esperado": "Campaña de educación y engagement del consumidor con métricas de comportamiento definidas",
       "nodos_previos": [
@@ -14255,10 +14255,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Certificación Cradle to Cradle",
-      "resumen_teorico": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en salud), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+      "resumen_teorico": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
       "pasos_accionables": [
         "Identificar todos los materiales del producto hasta el nivel de 100 ppm",
-        "Definir un plan de reutilización de materiales con tasas objetivo (50%, 65%, 80%+)",
+        "Definir un plan de reutilización de materiales en productos de igual o mayor valor, con tasas objetivo (50%, 65%, 80%+)",
         "Caracterizar las fuentes de energía usadas en producción y ensamblaje",
         "Establecer plan de conservación y calidad del agua",
         "Documentar políticas de responsabilidad social y obtener evaluación de terceros",
@@ -14336,11 +14336,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Certificación LEED o Energy Star",
-      "resumen_teorico": "LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior). Energy Star certifica edificios que están entre el 25% más eficiente energéticamente, usando la herramienta Portfolio Manager. Los edificios certificados suelen mostrar mayor ocupación y mejores precios de renta y venta.",
+      "resumen_teorico": "LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior, ecoinnovación en el diseño). Energy Star certifica, con Portfolio Manager, a los edificios del 25% más eficiente. Los edificios LEED suelen mostrar mayor ocupación y mejores precios de renta y venta. Certificarte puede elevar los costos iniciales, aunque el retorno puede ser rápido.",
       "pasos_accionables": [
         "Evalúa si tu proyecto o local califica para LEED o Energy Star",
         "Usa Portfolio Manager para medir la eficiencia energética actual del espacio",
-        "Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior",
+        "Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior e innovación en el diseño",
         "Documenta y reúne la evidencia necesaria para presentar la certificación",
         "Comunica la certificación como ventaja competitiva a tus clientes y a quienes trabajan contigo"
       ],
@@ -14627,7 +14627,7 @@
       "titulo_concepto": "Registro de Cambios (Change Log)",
       "resumen_teorico": "Documento dinámico que rastrea todas las solicitudes de cambio desde su presentación hasta su disposición final, incluyendo estado y categoría.",
       "pasos_accionables": [
-        "Registrar cada Change Request con un ID único",
+        "Registrar cada Change Request con un ID único, su categoría, la descripción del cambio, quién lo solicitó y la fecha de solicitud",
         "Actualizar el estado (abierto, pendiente, cerrado)",
         "Documentar la disposición final de cada cambio"
       ],
@@ -16030,7 +16030,7 @@
         "Clasificar cada prospecto como A, B o C en la primera llamada",
         "Enfocar el tiempo de ventas en llevar a los prospectos A al cierre y en mover prospectos B hacia A",
         "Archivar prospectos C en un archivo de contacto a 6 meses sin perseguirlos activamente",
-        "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas como benchmark"
+        "Medir el porcentaje de prospectos A que completan el CIRF en 48 horas; como referencia, apunta a que ronde el 80 %, aunque a un vendedor novato le puede costar más llegar"
       ],
       "entregable_esperado": "Sistema de clasificación y pipeline de ventas con categorías A/B/C implementado",
       "nodos_previos": [
@@ -18204,7 +18204,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Alineación y Ética de la IA",
-      "resumen_teorico": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en su mayoría web abierta, dominada por perspectivas occidentales y masculinas) y que el ajuste posterior que se les hace (conocido como RLHF) no elimina esos sesgos del todo, solo los esconde o los cambia por otros. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
+      "resumen_teorico": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
       "pasos_accionables": [
         "Revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
         "Pon a prueba el modelo con casos reales de tu negocio buscando sesgos de género, raza o cultura",
@@ -19015,7 +19015,7 @@
         "Establecer reportes regulares de resultados a empleados y gerentes",
         "Celebrar éxitos y reconocer contribuciones para crear cultura de Eco-Advantage",
         "Comunicar abiertamente fallas o incidentes ambientales con análisis de causa raíz",
-        "Cumplir con requisitos regulatorios de divulgación (ej. emisiones de gases de efecto invernadero)"
+        "Cumplir con los requisitos regulatorios de divulgación que te apliquen (ej. emisiones de gases de efecto invernadero, que la regulación ambiental de algunos países exige al menos a las empresas grandes)"
       ],
       "entregable_esperado": "Sistema de reporte interno y externo de sostenibilidad establecido y transparente",
       "nodos_previos": [
@@ -22757,8 +22757,8 @@
       "pasos_accionables": [
         "Solicitar al contratista el informe periódico de desempeño",
         "Revisar el desempeño de alcance, calidad, cronograma y costo del periodo actual",
-        "Analizar los pronósticos de fecha de entrega y costo final",
-        "Registrar reclamaciones, disputas o riesgos nuevos",
+        "Analizar los pronósticos de fecha de entrega y costo final; si el contrato es de precio fijo, no se pronostica el costo",
+        "Registrar reclamaciones, disputas, riesgos o problemas nuevos, y las acciones correctivas o preventivas previstas",
         "Integrar la información en el Informe de Desempeño del Proyecto"
       ],
       "entregable_esperado": "Informe de Estado del Contratista completo con desempeño actual y pronósticos futuros",
@@ -24782,11 +24782,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Cost Management Plan",
-      "resumen_teorico": "Es la parte de tu plan de proyecto que define cómo vas a estimar, estructurar, monitorear y controlar los costos a lo largo de todo el ciclo de vida del proyecto. Incluye el nivel de precisión que necesitas en tus estimaciones, las unidades de medida y la moneda que usarás, los umbrales de varianza para detectar desviaciones del presupuesto, y las reglas de medición de desempeño, como el valor ganado. También cubre las técnicas de estimación que aplicarás y el proceso para desarrollar el presupuesto por fases, así como quién tiene autoridad para asignar partidas presupuestarias. Este documento te da el marco de referencia para tomar decisiones financieras consistentes durante toda la ejecución del proyecto.",
+      "resumen_teorico": "Es la parte de tu plan de proyecto que define cómo vas a estimar, estructurar, monitorear y controlar los costos a lo largo de todo el ciclo de vida del proyecto. Incluye el nivel de precisión que necesitas en tus estimaciones, las unidades de medida y la moneda que usarás, los umbrales de varianza para detectar desviaciones del presupuesto, las reglas de medición de desempeño, como el valor ganado, y la información y el formato de los informes de costos. También cubre las técnicas de estimación que aplicarás y el proceso para desarrollar el presupuesto por fases, así como quién tiene autoridad para asignar partidas presupuestarias. Este documento te da el marco de referencia para tomar decisiones financieras consistentes durante toda la ejecución del proyecto.",
       "pasos_accionables": [
         "Define el nivel de precisión requerido para tus estimaciones de costo",
         "Establece las unidades de medida, la moneda y los umbrales de varianza que usarás para detectar desviaciones",
-        "Documenta las técnicas de estimación y el proceso para desarrollar el presupuesto por fases",
+        "Documenta las técnicas de estimación, el proceso para desarrollar el presupuesto por fases, el proceso para monitorear, controlar y actualizar los costos, y la información y el formato de los informes de costos",
         "Especifica las reglas de medición de desempeño, como el valor ganado, y quién tiene autoridad para asignar presupuesto"
       ],
       "entregable_esperado": "Un plan de gestión de costos documentado y aprobado que guía la estimación, el presupuesto y el control financiero del proyecto.",
@@ -26627,7 +26627,7 @@
         "Estimar las contribuciones futuras esperadas según la experiencia previa fundando startups y el nivel de dedicación (tiempo completo vs. parcial)",
         "Considerar si se otorga una 'prima de idea' de 10 a 15 puntos porcentuales al fundador que originó el concepto, mayor si la idea está bien desarrollada y menor si es incipiente",
         "Discutir abiertamente las motivaciones y la tolerancia al conflicto de cada fundador",
-        "Ajustar el split proporcionalmente si algún fundador dedicará menos tiempo (por ejemplo, 80% de dedicación equivale a 80% del equity que le correspondería a tiempo completo)",
+        "Considera ajustar el split si algún cofundador dedicará menos tiempo, ya que quien trabaja a tiempo completo tiende a recibir más equity que quien trabaja a tiempo parcial (en un caso, una fundadora que trabajaría el 80% del tiempo negoció recibir el 80% del equity que le habría correspondido)",
         "Registrar por escrito la lógica detrás de la decisión de split para evitar conflictos futuros",
         "No cierres el acuerdo con un simple apretón de manos rápido: tómate el tiempo de discutirlo a fondo, aunque termines eligiendo un reparto igual"
       ],
@@ -26701,7 +26701,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Criterios para Elegir a tus Proveedores (Source Selection Criteria)",
-      "resumen_teorico": "Es la lista de puntos que le pides a un proveedor para trabajar contigo en un contrato. Te sirve para comparar propuestas sin dejarte llevar solo por la primera impresión: le das más peso a lo que más te importa y calificas a cada proveedor en cada punto para llegar a un resultado claro.",
+      "resumen_teorico": "Es la lista de puntos que le pides a un proveedor para trabajar contigo en un contrato. Te sirve para definir y calificar los criterios con que comparas propuestas: le das más peso a lo que más te importa, con pesos que suman el 100 %, y calificas a cada proveedor en cada punto para llegar a un resultado claro.",
       "pasos_accionables": [
         "Decide qué vas a evaluar en cada proveedor (experiencia, precio, calidad, etc.)",
         "Reparte la importancia entre esos puntos hasta que sumen el 100%",
@@ -28975,7 +28975,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Cultura Organizacional y su Impacto en la Calidad",
-      "resumen_teorico": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso no se debe a debilidades técnicas sino a la falta de adaptación a la cultura existente (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
+      "resumen_teorico": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
       "pasos_accionables": [
         "Diagnosticar las normas, valores y patrones culturales actuales de la organización",
         "Identificar posibles conflictos entre nuevas iniciativas de calidad y la estructura de autoridad existente",
@@ -29499,7 +29499,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Customer Appreciation como Canal de Tracción",
-      "resumen_teorico": "Forma sostenible de PR no convencional basada en hacer sentir apreciados a los clientes mediante gestos personalizados (notas escritas a mano, regalos, contests). Esto genera boca a boca, fortalece la marca y puede generar cobertura de prensa espontánea, incluso si ese no es el objetivo principal. Ejemplos: Hipmunk, reddit, Grasshopper.com, Zappos.",
+      "resumen_teorico": "Forma sostenible de PR no convencional basada en hacer sentir apreciados a los clientes mediante gestos personalizados (notas escritas a mano, regalos, contests). Su objetivo sigue siendo generar cobertura de prensa, y aunque no la consigas, te quedan clientes contentos y una marca más fuerte, lo que aumenta mucho el boca a boca. Ejemplos: Hipmunk, reddit, Grasshopper.com, Zappos.",
       "pasos_accionables": [
         "Identificar momentos clave del customer journey para sorprender con gestos genuinos",
         "Enviar notas escritas a mano, regalos pequeños o reconocimientos públicos a clientes tempranos, además de la resolución de problemas fuera del alcance normal",
@@ -32154,7 +32154,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Decisión sobre Financial Performance Representations (FPR)",
-      "resumen_teorico": "El franquiciante no está obligado a proporcionar información sobre ventas, ganancias o gastos, pero si decide hacerlo, debe incluirse en el Item 19 del FDD como una Financial Performance Representation (FPR o 'earnings claim'). No hay correlación comprobada entre usar un FPR y una venta más rápida de franquicias, pero puede reducir la exposición legal frente a reclamos de tergiversación. La decisión de usar FPR depende de si el prototipo es representativo de las futuras unidades y si el franquiciante desea hacer pública su información financiera.",
+      "resumen_teorico": "No estás obligado a dar información sobre ventas, ganancias o gastos, pero si decides hacerlo, tiene que ir en el Item 19 del FDD como una Financial Performance Representation (FPR o 'earnings claim'). No hay correlación comprobada entre usar un FPR y vender franquicias más rápido, pero puede reducir tu exposición legal frente a reclamos de tergiversación. Por lo general conviene usarlo siempre que sea posible, aunque no sirve para todos: la decisión depende de si tu prototipo es representativo de las futuras unidades y de si quieres hacer pública tu información financiera.",
       "pasos_accionables": [
         "Evaluar si el desempeño financiero del prototipo es representativo de las futuras unidades franquiciadas",
         "Sopesar los factores de incluir un FPR: reduce la exposición legal, le da al candidato información para decidir y facilita la venta, sobre todo si eres nuevo o tu competencia directa lo usa, frente a un historial poco representativo de lo que logrará un franquiciado, la confidencialidad de tus cifras o unas cifras que no se comparan bien con las de tu competencia",
@@ -39421,7 +39421,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Diseño de Controles del Proceso Mejorado",
-      "resumen_teorico": "En la fase de control, el equipo diseña y documenta los controles necesarios para sostener las ganancias de la mejora. Esto incluye actualizar el FMEA, aplicar técnicas de a prueba de errores (mistake-proofing), establecer estándares de control basados en el desempeño real del nuevo proceso, y garantizar el autocontrol de los individuos mediante retroalimentación oportuna y autoridad para ajustar el proceso.",
+      "resumen_teorico": "En la fase de control, tu equipo diseña y documenta los controles para sostener las ganancias de la mejora: actualizar el FMEA, aplicar técnicas a prueba de errores (mistake-proofing), fijar estándares de control según el desempeño real del nuevo proceso y garantizar el autocontrol de los individuos: que conozcan exactamente los estándares de producto y de proceso, reciban retroalimentación oportuna y tengan un proceso capaz, los medios necesarios y autoridad para ajustarlo.",
       "pasos_accionables": [
         "Actualizar el FMEA para identificar controles necesarios",
         "Aplicar técnicas de mistake-proofing en las mejoras, si es posible",
@@ -40935,7 +40935,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Disposición de Producto No Conforme",
-      "resumen_teorico": "Proceso formal que sigue a la detección de un lote no conforme: se genera un reporte, el lote se pone en cuarentena, se investiga la causa y se decide entre no enviar (reparar, reclasificar, desechar) o enviar mediante alguna forma de waiver (del diseñador, cliente, departamento de calidad o junta de revisión de material).",
+      "resumen_teorico": "Al detectar un lote no conforme sigues un proceso formal: lo reportas, lo pones en cuarentena, evalúas su aptitud para el uso y decides entre no enviarlo (seleccionar, reparar, reclasificar o desechar, según su economía) o enviarlo con un waiver (del diseñador, cliente, responsable de calidad, junta de revisión de material o, en casos críticos, quien dirige la empresa).",
       "pasos_accionables": [
         "Marcar el lote como 'hold' y enviarlo a área de cuarentena.",
         "Asignar un investigador para recopilar información de aptitud para el uso.",
@@ -43240,7 +43240,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Economía Circular como Modelo de Negocio Regenerativo",
-      "resumen_teorico": "Frente al modelo lineal tradicional (extraer-fabricar-desechar), la economía circular propone rediseñar los sistemas industriales para que sean restaurativos y regenerativos, transformando el desperdicio en un nutriente para la siguiente generación de productos. No requiere elegir entre altruismo y oportunidad: las empresas que la adoptan reducen costos de materiales, usan mejor sus activos y fortalecen el vínculo con sus clientes mientras cuidan el planeta. IDEO, junto a la Ellen MacArthur Foundation, desarrolló una guía práctica con 24 medidas concretas y prototipables.",
+      "resumen_teorico": "Frente al modelo lineal tradicional (extraer-fabricar-desechar), la economía circular propone rediseñar los sistemas industriales para que sean restaurativos y regenerativos, transformando el desperdicio en un nutriente para la siguiente generación de productos. No requiere elegir entre altruismo y oportunidad: la apuesta es que, si la adoptas, podrás reducir costos de materiales, usar mejor tus activos y fortalecer el vínculo con tus clientes mientras cuidas el planeta. IDEO, junto a la Ellen MacArthur Foundation, desarrolló una guía práctica con 24 medidas concretas y prototipables.",
       "pasos_accionables": [
         "Mapear el ciclo de vida completo del producto: origen de materiales, uso y destino final",
         "Identificar puntos donde el 'desperdicio' actual podría convertirse en insumo para otro proceso",
@@ -43805,7 +43805,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Verificar los hechos antes de escribir el reporte de auditoría",
-      "resumen_teorico": "Cuando estás revisando algo por dentro, no anotes un problema sin confirmarlo antes con la persona responsable de esa parte del negocio. Verifica cada hallazgo con ella antes de ponerlo en el reporte. Decide también si tú vas a investigar por qué pasó el problema o si eso queda en manos de quien maneja esa área. En general puedes proponer mejoras, pero evita diseñar tú mismo la solución exacta.",
+      "resumen_teorico": "Cuando estás revisando algo por dentro, no anotes un problema sin confirmarlo antes con la persona responsable de esa parte del negocio. Verifica cada hallazgo con ella antes de ponerlo en el reporte. Decide también si tú vas a investigar por qué pasó el problema o si eso queda en manos de quien maneja esa área. Proponer mejoras siempre te corresponde, pero evita diseñar tú mismo la solución exacta.",
       "pasos_accionables": [
         "Confirma cada hallazgo con la persona responsable de esa área antes de escribirlo en el reporte",
         "Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio; en ese caso, incluye en tus recomendaciones la propuesta de esa investigación",
@@ -45743,7 +45743,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Eliminación del Trabajo a Destajo (Piece Work)",
-      "resumen_teorico": "El pago por pieza (piece work) es una causa estructural de mala calidad: incentiva al operador a producir cantidad sobre calidad, roba el orgullo por el trabajo bien hecho y provoca que defectos se oculten o pasen a la línea de producción. Eliminar este esquema requiere rediseñar la supervisión y la capacitación, alineando los incentivos con la calidad del producto y no solo el volumen producido.",
+      "resumen_teorico": "El pago por pieza (piece work) es una causa estructural de mala calidad: incentiva al operador a producir cantidad sobre calidad, roba el orgullo por el trabajo bien hecho y hace que se le pague también por las piezas defectuosas. Eliminar este esquema requiere mejor capacitación y una nueva forma de supervisión, que ocupe el lugar de las cuotas y del pago por incentivos.",
       "pasos_accionables": [
         "Auditar los esquemas de compensación vigentes para identificar pago por pieza o metas de volumen que penalicen la calidad",
         "Rediseñar el sistema de compensación para desvincular el pago de la cantidad de piezas producidas",
@@ -45751,7 +45751,7 @@
         "Establecer control estadístico de proceso para dar seguimiento objetivo al desempeño sin presión de producción",
         "Comunicar el cambio de enfoque a los trabajadores y sindicatos"
       ],
-      "entregable_esperado": "Nuevo esquema de compensación e incentivos alineado con calidad, junto con plan de capacitación de supervisores",
+      "entregable_esperado": "Nuevo esquema de compensación sin pago por pieza ni pago por incentivos, junto con plan de capacitación de supervisores",
       "nodos_previos": [
         "reporte_gerencial_diagnostico_calidad",
         "supervision_a_liderazgo"
@@ -47097,7 +47097,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Enfocarse en los Procesos, no Solo en los Problemas",
-      "resumen_teorico": "Muchas organizaciones pasan décadas resolviendo problemas individuales sin atacar las causas sistémicas que los generan repetidamente. La mejora sostenible requiere analizar y rediseñar los procesos subyacentes en lugar de aplicar soluciones puntuales y reactivas a cada incidente.",
+      "resumen_teorico": "Hay organizaciones que pasan años resolviendo problemas individuales sin atacar las causas sistémicas que los generan repetidamente. Resolver problemas no basta: la mejora sostenible requiere analizar y rediseñar los procesos subyacentes en lugar de aplicar soluciones puntuales y reactivas a cada incidente.",
       "pasos_accionables": [
         "Documentar los problemas recurrentes durante un periodo definido",
         "Identificar el proceso común que genera cada categoría de problema",
@@ -47586,7 +47586,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Ingeniería como Marketing (Engineering as Marketing)",
-      "resumen_teorico": "Consiste en usar recursos de ingeniería para construir herramientas gratuitas (calculadoras, widgets, microsites) que atraigan leads calificados hacia el producto principal. A diferencia de la publicidad pagada, estas herramientas se convierten en activos de marketing de largo plazo que generan retornos continuos con costo marginal casi nulo una vez creadas. Ejemplos: HubSpot's Marketing Grader, Moz's Followerwonk, WP Engine's speed test tool.",
+      "resumen_teorico": "Consiste en usar recursos de ingeniería para construir herramientas gratuitas (calculadoras, widgets, microsites) que atraigan leads calificados hacia el producto principal. A diferencia de la publicidad pagada, estas herramientas pueden convertirse en activos de marketing de largo plazo que a menudo generan retornos continuos con costo marginal casi nulo una vez creadas. Ejemplos: HubSpot's Marketing Grader, Moz's Followerwonk, WP Engine's speed test tool.",
       "pasos_accionables": [
         "Identificar un problema específico y frecuente de tu cliente ideal",
         "Construir una herramienta simple y gratuita que resuelva ese problema puntual",
@@ -47614,7 +47614,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Enseñanza deficiente de métodos estadísticos en la industria",
-      "resumen_teorico": "La capacitación masiva y apresurada en métodos estadísticos, impartida por instructores incompetentes, genera más daño que beneficio. La correcta enseñanza de cartas de control y teoría estadística requiere conocimiento profundo (nivel de maestría) y experiencia bajo la guía de un experto. Muchos programas universitarios enseñan estadística enumerativa correctamente, pero fallan al aplicar estos conceptos a problemas analíticos de predicción y mejora continua.",
+      "resumen_teorico": "La capacitación masiva y apresurada en métodos estadísticos, impartida por instructores incompetentes, genera más daño que beneficio. La correcta enseñanza de cartas de control y teoría estadística requiere conocimiento profundo (nivel de maestría) y experiencia bajo la guía de un experto. La enseñanza universitaria de la teoría suele ser excelente y su aplicación a estudios enumerativos casi siempre correcta, pero muchos libros de texto fallan al aplicarla a problemas analíticos de predicción y mejora continua.",
       "pasos_accionables": [
         "Verificar las credenciales y experiencia real de quienes imparten capacitación estadística",
         "Diferenciar entre estudios enumerativos y estudios analíticos antes de aplicar técnicas",
@@ -48193,9 +48193,9 @@
       "resumen_teorico": "Cuando el trabajo de una persona ha alcanzado el control estadístico, ha completado su aprendizaje de esa tarea particular; continuar entrenándola de la misma forma no es económico, aunque podría beneficiarse de aprender otra tarea. Sin embargo, si el trabajo aún no ha alcanzado el control estadístico, más entrenamiento sí ayuda. En un estado de caos (mala supervisión, mala gestión, nada bajo control estadístico) es imposible que alguien desarrolle su potencial de uniformidad o calidad. La carta de control indica cuándo una persona ha llegado al estado de control estadístico.",
       "pasos_accionables": [
         "Establecer cartas de control para monitorear el aprendizaje de cada trabajador",
-        "Determinar mediante la curva de aprendizaje cuándo se alcanza el control estadístico",
+        "Cuando la curva de aprendizaje se estabilice, usar la carta de control para determinar si y cuándo se alcanzó el control estadístico",
         "Detener el entrenamiento repetitivo una vez alcanzado el control, y evaluar reasignación a otra tarea",
-        "Si el proceso aún no está en control estadístico, continuar y reforzar el entrenamiento"
+        "Si el trabajo de la persona aún no está en control estadístico, continuar y reforzar el entrenamiento, sabiendo que en un estado de caos (mala supervisión, mala gestión) nadie puede desarrollar su potencial"
       ],
       "entregable_esperado": "Registro de curvas de aprendizaje y cartas de control por trabajador que determinen necesidad de entrenamiento adicional",
       "nodos_previos": [
@@ -48897,7 +48897,7 @@
       "pasos_accionables": [
         "Formar equipos que incluyan al proveedor elegido, ingeniero de diseño, ingeniero de proceso y manufactura",
         "Asignar tiempo suficiente ('long lead time') para hacer bien el trabajo de diseño conjunto",
-        "Mantener el precio como tema a resolver después, priorizando la colaboración técnica",
+        "Mantener el precio como tema a resolver después, con todas las cuentas abiertas y un objetivo común, priorizando la colaboración técnica",
         "Aplicar el modelo a componentes críticos con proyección de 3-4 años"
       ],
       "entregable_esperado": "Equipo multidisciplinario formalizado trabajando en el desarrollo de un componente crítico con el proveedor",
@@ -50046,7 +50046,7 @@
         "Evaluar la posición actual de la organización en el continuo resistencia-vulnerabilidad",
         "Identificar las corrientes que empujan a la organización hacia mayor vulnerabilidad (complacencia, drift)",
         "Identificar las fuerzas que impulsan hacia mayor resistencia (presión reguladora, cultura de seguridad)",
-        "Implementar navegación activa: monitoreo continuo en vez de reacción pasiva a accidentes",
+        "Navega activamente en vez de reaccionar de forma pasiva a los accidentes: pon un motor interno (tu compromiso, tu competencia y tu conciencia al frente del negocio) y ayudas de navegación que combinen medidas reactivas y proactivas",
         "Establecer revisiones periódicas de la posición organizacional en el espacio de seguridad"
       ],
       "entregable_esperado": "Diagnóstico de posición organizacional en el espacio de seguridad, con plan de navegación activa hacia mayor resistencia",
@@ -52135,7 +52135,7 @@
         "Haz una lista de todos los eventos relevantes de tu industria.",
         "Evalúa cada evento según el tipo de interacción que buscas, íntima o masiva, y si se ajusta a tus objetivos.",
         "Establece tu presupuesto anual y repártelo por trimestre.",
-        "Calcula el retorno que esperas, cuántos asistentes calificados habrá, cuánto cuesta el estand y cuál es el precio de tu producto, antes de comprometerte.",
+        "Calcula el retorno que esperas, cuántos asistentes calificados habrá, cuánto cuesta el estand y cuál es el precio de tu producto, antes de comprometerte, y compáralo con las otras oportunidades de tracción que tienes en ese momento.",
         "Visita como invitado un evento el año anterior a exhibir, o pregúntale a quienes ya expusieron."
       ],
       "entregable_esperado": "Un calendario anual de ferias comerciales seleccionadas con presupuesto asignado y la justificación del retorno que esperas de cada una.",
@@ -52405,8 +52405,8 @@
         "Identificar en qué plataformas online se congregan tus clientes potenciales (redes sociales, marketplaces, app stores, extensiones).",
         "Analizar qué funcionalidad falta en esa plataforma que tus usuarios necesitan.",
         "Diseñar una feature o producto complementario que llene ese vacío y redirija tráfico hacia tu producto.",
-        "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras.",
-        "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita.",
+        "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras, o probar aspectos nuevos de las plataformas grandes, donde hay menos competencia.",
+        "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita, sabiendo que si la plataforma fracasa ese esfuerzo se puede perder.",
         "Lanzar la integración y medir el tráfico/referidos generados"
       ],
       "entregable_esperado": "Una feature o integración específica lanzada en una plataforma existente, con métricas de tráfico/usuarios adquiridos a través de ella.",
@@ -52648,7 +52648,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Estrategia de Ventas para Clientes Empresariales",
-      "resumen_teorico": "Para productos enterprise o costosos, la venta directa (sales) es el canal más efectivo porque los clientes requieren interacción humana antes de comprar. Los primeros clientes suelen surgir de contactos conocidos o de la red profesional del founder, y las conversaciones iniciales deben enfocarse en entender el problema del prospecto antes de vender la solución.",
+      "resumen_teorico": "Para productos enterprise o costosos, la venta directa (sales) es un canal especialmente útil porque a menudo los clientes desean trato personal antes de comprar. Los primeros clientes pueden surgir de contactos conocidos o de la red profesional del founder, o quizá de llamadas o correos en frío, y las conversaciones iniciales deben enfocarse en entender el problema del prospecto antes de vender la solución.",
       "pasos_accionables": [
         "Listar todos los proyectos y contactos previos relevantes para identificar primeros prospectos",
         "Preparar un 'lunch pitch': una página con 5-10 bullets y un visual que enfoque la conversación",
@@ -53186,7 +53186,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Estructura de Reporte Dual para Especialistas Estadísticos",
-      "resumen_teorico": "Conviene que los estadísticos que trabajan dentro de las divisiones operativas reporten simultáneamente a dos autoridades: al jefe de la división (por el trabajo diario) y a un líder estadístico central (por la calidad metodológica y desarrollo profesional continuo). Esta estructura de 'línea punteada' es común en otras funciones corporativas (finanzas, legal, seguridad) y garantiza que el rigor técnico no se sacrifique por presiones operativas locales, mientras se mantiene la relevancia práctica del trabajo.",
+      "resumen_teorico": "Conviene que los estadísticos que trabajan dentro de las divisiones operativas reporten simultáneamente a dos autoridades: al jefe de la división (por el trabajo diario) y a un líder estadístico central (por la calidad metodológica y desarrollo profesional continuo). Esta estructura de 'línea punteada' es común en otras funciones corporativas (finanzas, legal, seguridad) y, siempre que el liderazgo estadístico sea competente y de confianza, garantiza que el rigor técnico no se sacrifique por presiones operativas locales, mientras se mantiene la relevancia práctica del trabajo.",
       "pasos_accionables": [
         "Nombrar un líder de metodología estadística con autoridad transversal en la organización",
         "Asignar estadísticos a divisiones operativas manteniendo reporte dual (división + líder estadístico)",
@@ -53873,7 +53873,7 @@
       "fase_proyecto": "validacion",
       "dominio": "environmental",
       "titulo_concepto": "Evaluación de Actitudes de los Empleados hacia la Sostenibilidad",
-      "resumen_teorico": "Uno de los errores más comunes es asumir que los líderes saben cómo piensan los empleados. Antes de decidir la estrategia de engagement, es necesario evaluar cuidadosamente las actitudes de la organización hacia el medio ambiente y la sostenibilidad usando entrevistas, encuestas anónimas, reuniones pequeñas o town halls, para entender reacciones, escepticismo, conexión con el trabajo diario y nivel de conocimiento existente.",
+      "resumen_teorico": "Uno de los errores más comunes es asumir que, como líder, sabes cómo piensa tu equipo. Antes de decidir tu estrategia de engagement, conviene que evalúes con cuidado las actitudes de tu gente hacia el medio ambiente y la sostenibilidad usando entrevistas, encuestas anónimas, reuniones pequeñas o town halls, para entender reacciones, escepticismo, conexión con el trabajo diario y nivel de conocimiento existente.",
       "pasos_accionables": [
         "Diseñar encuestas anónimas o entrevistas sobre percepciones de sostenibilidad",
         "Identificar reacciones a palabras como 'verde', 'ambiental', 'sostenibilidad'",
@@ -59007,7 +59007,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Fijar metas de mejora (Paso 10)",
-      "resumen_teorico": "Después del Día Cero Defectos (Día ZD), tienes que convertir los compromisos verbales en acciones concretas: pon metas de mejora específicas y medibles, y mejor si las define quien hace el trabajo, no tú desde arriba. Evita metas de cronograma y enfócate en reducir defectos, porque la mejora en los tiempos llega sola cuando bajan los errores.",
+      "resumen_teorico": "Después del Día Cero Defectos (Día ZD), convierte los compromisos verbales en acciones concretas: pon metas de mejora específicas y medibles, como retos que el grupo elige y no como cuotas; mejor si las define quien hace el trabajo, aunque llegues con tu propia idea. Evita metas de cronograma y enfócate en reducir defectos: la mejora en los tiempos llega sola cuando bajan los errores.",
       "pasos_accionables": [
         "Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Por lo general, conviene fijarlas a 30, 60 y 90 días",
         "Asegúrate de que las metas sean retadoras, no fáciles de alcanzar.",
@@ -60636,7 +60636,7 @@
         "Establecer una línea de tiempo detallada del proyecto conjunto",
         "Definir una línea base de desempeño ambiental y de negocio",
         "Formar un equipo multifuncional (operaciones, marketing, legal, RRPP) para gestionar la alianza",
-        "Mantener transparencia pública sobre financiamiento y resultados"
+        "Mantener transparencia pública sobre financiamiento, proceso de toma de decisiones y resultados"
       ],
       "entregable_esperado": "Acuerdo formal de alianza firmado, con equipo de gestión y cronograma definido",
       "nodos_previos": [
@@ -60756,7 +60756,7 @@
       "titulo_concepto": "Formar un Consejo Asesor de Sostenibilidad",
       "resumen_teorico": "Práctica avanzada de gobernanza en sostenibilidad donde la empresa constituye un consejo externo de expertos (exfuncionarios, académicos, líderes de ONGs y comunidades) que revisa las iniciativas internas y anticipa tendencias emergentes. Funciona como mecanismo de retroalimentación y radar estratégico de largo plazo.",
       "pasos_accionables": [
-        "Definir el perfil de expertos externos necesarios (gubernamentales, académicos, ONGs, comunidad)",
+        "Definir el perfil de expertos externos necesarios (gubernamentales, académicos, ONGs, comunidad), que representen distintas perspectivas y posturas políticas",
         "Convocar y formalizar la conformación del consejo asesor",
         "Establecer reuniones periódicas de revisión de iniciativas y tendencias emergentes",
         "Integrar las recomendaciones del consejo en la planificación estratégica de sostenibilidad"
@@ -63059,7 +63059,7 @@
       "pasos_accionables": [
         "Calcula el PUE actual de tu centro de datos (divide la potencia total de la instalación entre la potencia que usan tus equipos de TI)",
         "Instala barreras que separen el aire frío del caliente entre tus racks (los estantes de servidores)",
-        "Ajusta los termostatos de los pasillos fríos a 25-27°C en lugar de 20-22°C",
+        "Ajusta los termostatos de los pasillos fríos a 25-27°C en lugar de 20-22°C, con cuidado y de forma planificada, porque se reduce el margen de seguridad si falla la refrigeración",
         "Instala sistemas que aprovechen el agua o el aire exterior para enfriar cuando las condiciones lo permitan (economizadores)",
         "Aprovecha el calor que sueltan tus servidores para calentar tus oficinas"
       ],
@@ -63724,7 +63724,7 @@
       "titulo_concepto": "Gestión de Residuos Electrónicos (E-Waste)",
       "resumen_teorico": "El e-waste es un problema global creciente con implicaciones regulatorias y ambientales debido a metales pesados y tóxicos. Las empresas pueden reducir su huella mediante venta de equipos usados a recicladores certificados, donación de equipos funcionales, devolución a fabricantes, y compra de equipos remanufacturados, asegurando siempre la responsabilidad extendida del producto.",
       "pasos_accionables": [
-        "Establecer ciclo de renovación de equipos cada 3-4 años y vender a recicladores certificados",
+        "Si ya renuevas tus equipos con regularidad (cada 3-4 años), vende los que retiras a un reacondicionador de buena reputación",
         "Donar equipos funcionales a escuelas u organizaciones sin fines de lucro, borrando datos previamente",
         "Utilizar programas de devolución (take-back) de fabricantes como Dell, HP, Apple",
         "Considerar compra o arrendamiento de equipos remanufacturados",
@@ -64222,7 +64222,7 @@
       "resumen_teorico": "El manejo de materiales peligrosos (pinturas, combustibles, solventes, químicos) requiere cumplimiento riguroso de regulaciones, capacitación de empleados y uso de software de seguimiento para evitar riesgos operativos, sanciones regulatorias y daños reputacionales. Un solo error puede tener consecuencias catastróficas para el negocio.",
       "pasos_accionables": [
         "Realizar auditoría de cumplimiento regulatorio sobre almacenamiento, transporte y disposición de materiales peligrosos.",
-        "Implementar programas de capacitación y protocolos de seguridad para empleados.",
+        "Implementar programas de capacitación y procedimientos para empleados, con inspecciones rutinarias, protocolos de seguridad y procedimientos de emergencia.",
         "Adoptar software de planificación y seguimiento que alerte sobre situaciones de riesgo con materiales peligrosos."
       ],
       "entregable_esperado": "Protocolo documentado de gestión de materiales peligrosos con evidencia de cumplimiento regulatorio y capacitación del personal.",
@@ -64562,12 +64562,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Cómo manejar la resistencia al cambio en las personas",
-      "resumen_teorico": "La resistencia al cambio aparece por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades o rechazo a soluciones que vienen de afuera. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa qué tan fuerte es cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo suficiente, trátalas con dignidad y enfrenta la resistencia de forma directa.",
+      "resumen_teorico": "La resistencia al cambio aparece por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades, rechazo a soluciones de afuera, no ver el problema, fracasos previos o el costo. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa la fuerza de cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo, no cargues tu propuesta con lo innecesario, trátalas con dignidad, ponte en su lugar y enfrenta la resistencia de forma directa.",
       "pasos_accionables": [
         "Identifica qué frena el cambio (las barreras) y qué lo facilita (los apoyos)",
         "Evalúa qué tan fuerte es cada barrera y cada apoyo",
         "Busca formas concretas de superar cada barrera",
-        "Haz participar a las personas, dales tiempo suficiente y trátalas con dignidad",
+        "Haz participar a las personas, dales tiempo suficiente, mantén tu propuesta libre de cargas innecesarias, trátalas con dignidad y ponte en su lugar para entender el impacto en su cultura",
         "Enfrenta la resistencia de forma seria y directa, sin evitarla"
       ],
       "entregable_esperado": "Un plan para manejar el cambio cultural, con formas concretas de superar cada barrera",
@@ -65323,7 +65323,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Seguridad del Personal",
-      "resumen_teorico": "Asegura que los individuos, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad, protegiendo la información durante y después de acciones de personal como despidos o transferencias.",
+      "resumen_teorico": "Asegura que las personas, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad; protege la información durante y después de despidos o transferencias, y sanciona formalmente a quien incumpla las políticas de seguridad.",
       "pasos_accionables": [
         "Establecer un proceso de verificación (background checks) antes de otorgar acceso al sistema.",
         "Definir políticas de terminación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
@@ -65346,7 +65346,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Protección Física de Instalaciones y Sistemas",
-      "resumen_teorico": "Limita el acceso físico a sistemas, equipos y entornos operativos a individuos autorizados, protegiendo la infraestructura de soporte y controlando el acceso en sitios de trabajo alternativos.",
+      "resumen_teorico": "Limita a personas autorizadas el acceso físico a sistemas, equipos y entornos operativos, aun en sitios de trabajo alternos; protege la instalación y su infraestructura, provee servicios de soporte y controla amenazas ambientales.",
       "pasos_accionables": [
         "Desarrollar y mantener una lista de personas autorizadas a acceder a las instalaciones.",
         "Emitir credenciales de identificación para empleados y visitantes.",
@@ -65642,7 +65642,7 @@
       "pasos_accionables": [
         "Redactar el alcance del proyecto (producto y mercados a atender)",
         "Definir los resultados esperados (metas de ventas, desempeño, etc.)",
-        "Seleccionar la base para las metas: tecnología, mercado, benchmarking o historia",
+        "Seleccionar la base para las metas: tecnología, mercado (igualar o superar a la competencia prevista al terminar el proyecto), benchmarking o historia (vigilando que no perpetúe un desempeño crónicamente derrochador)",
         "Verificar que la meta cumpla los cinco criterios SMART",
         "Evitar sobre-especificar restricciones que limiten alternativas de diseño"
       ],
@@ -65701,7 +65701,7 @@
         "Define tu visión considerando el propósito más amplio de tu negocio en la sociedad",
         "Crea una forma de comunicación en dos sentidos entre quienes dependen de tu negocio y quien te ayuda a decidir",
         "Capacítate de forma continua en principios de excelencia y calidad",
-        "Considera armar un grupo de personas de confianza que te asesoren, o un consejo familiar si tu negocio es familiar"
+        "Considera armar un consejo asesor con personas independientes y objetivas que sepan cuestionarte, o un consejo familiar si tu negocio es familiar"
       ],
       "entregable_esperado": "Un plan sencillo con quién te ayuda a decidir, tus valores documentados y una forma de verificar que los planes se cumplan",
       "nodos_previos": [
@@ -65834,9 +65834,9 @@
       "resumen_teorico": "A diferencia de otros gráficos de control cuyo objetivo es monitorear y reducir la variabilidad por causas especiales, el gráfico Box-Jenkins tiene como objetivo analizar los datos del proceso para regular el mismo después de cada observación, minimizando así la variación del proceso mediante ajustes continuos.",
       "pasos_accionables": [
         "Recolectar datos secuenciales del proceso después de cada observación",
-        "Modelar la serie temporal del proceso usando técnicas Box-Jenkins",
+        "Sugerencia de My Idea: modelar la serie temporal del proceso usando técnicas Box-Jenkins",
         "Calcular el ajuste recomendado tras cada observación",
-        "Aplicar el ajuste al proceso para minimizar la variación acumulada",
+        "Aplicar el ajuste al proceso para minimizar su variación",
         "Repetir el ciclo de observación-ajuste de forma continua"
       ],
       "entregable_esperado": "Sistema de ajuste continuo de proceso basado en retroalimentación tras cada observación",
@@ -65857,7 +65857,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Gráfico de Suma Acumulada (CUSUM)",
-      "resumen_teorico": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). A diferencia de los gráficos Shewhart tradicionales, cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
+      "resumen_teorico": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). Cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
       "pasos_accionables": [
         "Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra",
         "Definir el valor objetivo T y la desviación estándar del proceso",
@@ -65944,7 +65944,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Gráficos de Control para Datos de Atributos (p, np, c, u)",
-      "resumen_teorico": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos.",
+      "resumen_teorico": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
       "pasos_accionables": [
         "Determinar si se cuenta unidades defectuosas o número de defectos",
         "Seleccionar el tipo de gráfico apropiado (p, np, c o u) según el tipo de conteo y tamaño de muestra",
@@ -66054,7 +66054,7 @@
       "resumen_teorico": "En procesos de producción corta o en sistemas de manufactura esbelta con cambios frecuentes de producto, no es factible recolectar 20-30 muestras para establecer un gráfico de control tradicional. Existen cuatro enfoques: ignorar la variabilidad sistemática, estratificar datos, usar análisis de regresión con residuos, o estandarizar los datos mediante transformación Z para normalizarlos a una línea base común.",
       "pasos_accionables": [
         "Identificar si el proceso tiene corridas cortas por cambios frecuentes de producto",
-        "Seleccionar el método de construcción del gráfico (estratificación, regresión, estandarización)",
+        "Seleccionar el método de construcción del gráfico (ignorar la variabilidad sistemática, estratificación, regresión, estandarización)",
         "Aplicar la transformación Z si se elige el método de estandarización",
         "Graficar los datos transformados en un gráfico de control único",
         "Interpretar señales de fuera de control sobre la escala estandarizada"
@@ -66083,7 +66083,7 @@
         "Determinar el tamaño del subgrupo racional (si es 1, usar X-mR)",
         "Calcular promedio y rango/desviación estándar de cada subgrupo",
         "Graficar X-bar y R (o s) uno encima del otro en la misma línea vertical temporal",
-        "Interpretar primero el gráfico R/s antes que el X-bar",
+        "Por lo general, interpretar primero el gráfico R/s antes que el X-bar",
         "Identificar patrones no aleatorios usando las pruebas de Nelson (8 tests con zonas de 1σ)"
       ],
       "entregable_esperado": "Par de gráficos X-bar y R/s completos con interpretación de causas especiales identificadas",
@@ -66128,7 +66128,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Graphs and Charts (Gráficos y Diagramas)",
-      "resumen_teorico": "Conjunto de herramientas para resumir datos cuantitativos de forma pictórica, incluyendo gráficos de línea (relación entre variables continuas), gráficos de barras (comparación de categorías) y gráficos circulares (proporciones del total). Deben respetar integridad gráfica, escala consistente y simplicidad.",
+      "resumen_teorico": "Conjunto de herramientas para resumir datos cuantitativos de forma pictórica, incluyendo gráficos de línea (relación entre variables continuas), gráficos de barras (comparación de categorías) y gráficos circulares (proporciones del total). Deben respetar integridad gráfica, escala consistente, facilidad de lectura, símbolos coherentes entre gráficos y simplicidad.",
       "pasos_accionables": [
         "Determinar rango y escala de los ejes",
         "Seleccionar el tipo de gráfico adecuado (línea, barra o pastel)",
@@ -66184,7 +66184,7 @@
         "Formar un equipo multifuncional que incluya expertos ambientales.",
         "Usar mapas de flujo de valor para identificar áreas de enfoque potenciales.",
         "Aplicar mapeo jerárquico de procesos para hallar fuentes específicas de desperdicio.",
-        "Implementar cambios rápidos dentro de las 72 horas del evento."
+        "Implementar cambios rápidos, normalmente dentro de las 72 horas del evento."
       ],
       "entregable_esperado": "Reporte de evento kaizen con acciones implementadas, ahorro estimado y seguimiento de objetivos EHS (ambientales, salud y seguridad).",
       "nodos_previos": [
@@ -66230,7 +66230,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Formación de un Green Team en la Oficina",
-      "resumen_teorico": "Un green team es un grupo interno con representación amplia de la organización que examina los procedimientos de oficina, identifica oportunidades de sostenibilidad y propone planes de acción para liderar el cambio cultural. Aunque las actividades cotidianas de oficina no generan grandes impactos ambientales, tienen un valor simbólico clave para la credibilidad de tu estrategia de sostenibilidad. Puede surgir de tu propia iniciativa, de un champion ejecutivo o de presiones externas como regulación o industria. Su éxito depende de darle un mandato claro para diagnosticar problemas, proponer soluciones alineadas con la cultura existente y coordinar con quienes gestionan instalaciones y tecnología para atender la eficiencia energética.",
+      "resumen_teorico": "Un green team es un grupo interno con representación amplia de la organización que examina los procedimientos de oficina, identifica oportunidades de sostenibilidad y propone planes de acción para liderar el cambio cultural. Aunque en la mayoría de las empresas las actividades cotidianas de oficina no generan grandes impactos ambientales, tienen un valor simbólico clave para la credibilidad de tu estrategia de sostenibilidad. Puede surgir de la iniciativa de tus empleados, de un champion ejecutivo o, a veces, de iniciativas externas como un programa de gobierno o un compromiso de una asociación de tu industria. Su éxito depende de darle un mandato claro para diagnosticar problemas y proponer soluciones alineadas con la cultura existente.",
       "pasos_accionables": [
         "Identifica y convoca a empleados comprometidos de distintas áreas para formar el equipo verde",
         "Asigna al equipo la tarea de examinar los procedimientos de oficina bajo el criterio de reducir, reusar y reciclar",
@@ -66866,7 +66866,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Heat Maps y Eye Tracking",
-      "resumen_teorico": "Los heat maps usan seguimiento ocular para mostrar dónde miran o hacen clic más los usuarios en una página, traduciendo la atención en colores (amarillo, naranja, rojo). El eye tracking muestra el orden en que los usuarios observan los elementos (patrón 'Z' es común en lectura occidental). Ambas herramientas ayudan a ubicar contenido clave donde los usuarios efectivamente prestan atención.",
+      "resumen_teorico": "Los heat maps usan seguimiento ocular para mostrar dónde miran o hacen clic más los usuarios en una página, traduciendo la atención en colores (amarillo, naranja, rojo). El eye tracking muestra el orden en que los usuarios observan los elementos (el patrón 'Z' pasa por ser el más común al leer una página web en un mercado concreto, lo que no lo vuelve universal). Ambas herramientas ayudan a ubicar contenido clave donde los usuarios efectivamente prestan atención.",
       "pasos_accionables": [
         "Implementar software de heat mapping en las páginas críticas del funnel",
         "Analizar dónde se concentra la atención visual y los clics de los usuarios",
@@ -66919,7 +66919,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Uso Seguro de Herramientas Accionadas por Pólvora/Explosivos",
-      "resumen_teorico": "Si usas herramientas accionadas por explosivos, necesitas estar capacitado y contar con una tarjeta válida que lo acredite. Mantén la herramienta descargada hasta el momento de usarla, revísala antes de cada uso y guárdala en un contenedor individual con llave. Mientras la estés usando, coloca una señal visible que avise que hay una herramienta explosiva en funcionamiento.",
+      "resumen_teorico": "Si usas herramientas accionadas por explosivos, necesitas estar capacitado y contar con una tarjeta válida que lo acredite. Mantén la herramienta descargada hasta el momento de usarla, revísala antes de cada uso y guárdala en un contenedor individual con llave. Mientras la uses, lleva la protección personal adecuada y coloca una señal visible que avise que hay una herramienta explosiva en funcionamiento.",
       "pasos_accionables": [
         "Capacítate y obtén tu tarjeta de operador válida",
         "Revisa la herramienta antes de cada uso para detectar defectos",
@@ -68854,7 +68854,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Identifica a tus proveedores críticos",
-      "resumen_teorico": "Antes de construir una cadena de suministro sostenible, mapea qué compras y a quién se lo compras. Prioriza a los proveedores que representan mayor valor de tu producto final, que impactan en los temas ecológicos más relevantes para tu industria, que te dan insumos esenciales, que trabajan en tu sitio como subcontratistas, que enfrentan riesgos ambientales propios, o que son líderes de opinión cuya influencia pública recae sobre ti.",
+      "resumen_teorico": "Antes de construir una cadena de suministro sostenible, mapea qué compras y a quién se lo compras. Prioriza a los proveedores que representan mayor valor de tu producto final, que impactan en los temas ecológicos más relevantes para tu industria, que te dan insumos esenciales, que trabajan en tu sitio como subcontratistas, que enfrentan riesgos ambientales propios, que pueden mejorar tu desempeño con su experiencia, o que son líderes de opinión o sobre los que el público espera que tengas influencia.",
       "pasos_accionables": [
         "Lista todos los materiales, insumos y servicios que compras",
         "Identifica a tus proveedores por categoría (manufactura, insumos operativos, subcontratistas)",
@@ -69428,7 +69428,7 @@
       "pasos_accionables": [
         "Revisa si tu producto se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
         "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
-        "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una.",
+        "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una; para un resultado más confiable, en cualquier producto te conviene repetir la prueba cinco o más veces con unidades nuevas.",
         "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
         "Sugerencia de My Idea: refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
       ],
@@ -72692,7 +72692,7 @@
         "Elige otros 5 a 10 datos para registrar en los próximos 6 a 12 meses",
         "Revisa LinkedIn, Facebook, el sitio web de la empresa y Google para completar esos datos en tu CRM",
         "Guarda las URLs de los perfiles sociales en el CRM para facilitar futuras búsquedas",
-        "Usa encuestas breves solo cuando no consigas la información de otra forma",
+        "Usa encuestas breves cuando te falte un mismo dato en todo tu CRM, y coordínalas con todo tu equipo para no estar pidiéndole datos al cliente a cada rato",
         "Aplica la técnica de contar tú algo primero para animar a que te cuenten, cuando necesites preguntar directamente",
         "Practica la escucha enfocada para captar datos que surjan espontáneamente en las conversaciones",
         "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar y define quién se encarga de mantener los datos al día",
@@ -73144,7 +73144,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Registro de Issues (Issue Log)",
-      "resumen_teorico": "Documento dinámico que registra y monitorea puntos en disputa o discusión entre stakeholders del proyecto, incluyendo impacto, responsable y estado de resolución.",
+      "resumen_teorico": "Documento dinámico que registra y monitorea puntos en disputa o discusión entre stakeholders, o surgidos de un riesgo ya ocurrido, con impacto, responsable y estado de resolución.",
       "pasos_accionables": [
         "Registrar cada issue con ID único y categoría",
         "Definir impacto en objetivos y nivel de urgencia",
@@ -79795,7 +79795,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Adaptar el Mensaje para Operadores Multi-Unidad y Desarrolladores de Área",
-      "resumen_teorico": "Los operadores multi-unidad (que controlan más del 50% de las unidades de franquicia en EE.UU.) buscan la oportunidad como inversión, no como proyecto emocional de 'ser tu propio jefe'. Esperan datos financieros sólidos (FPR), y analizarán a fondo la estructura de soporte del franquiciador en publicidad, capacitación, bienes raíces y operaciones.",
+      "resumen_teorico": "Los operadores multi-unidad (que controlan más del 50% de las unidades de franquicia en EE.UU.) buscan la oportunidad como inversión, no como proyecto emocional de 'ser tu propio jefe'. Esperan datos financieros sólidos (FPR) y analizarán a fondo el soporte del franquiciador en publicidad, capacitación, bienes raíces, diseño, construcción y operaciones, además de su solidez financiera y de quienes lo dirigen.",
       "pasos_accionables": [
         "Preparar una Representación de Desempeño Financiero (FPR) robusta y documentada",
         "Desarrollar material que detalle la estructura de soporte en publicidad, capacitación, bienes raíces, diseño, construcción y operaciones",
@@ -81219,7 +81219,7 @@
       "fase_proyecto": "validacion",
       "dominio": "risk_management",
       "titulo_concepto": "Análisis de Sensibilidad",
-      "resumen_teorico": "No todas tus incertidumbres pesan igual. De todas las cosas que no sabes, unas pocas deciden el resultado y el resto casi no importa. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: preguntas cuál de tus supuestos, si cambia, mueve más el resultado final, y ahí concentras tu atención, tu medición y tu esfuerzo por reducir la incertidumbre. Sin esto, es fácil perder semanas afinando un número que no cambia nada mientras ignoras el que lo decide todo. Para el emprendedor con tiempo y dinero limitados, saber qué mueve la aguja es lo que separa el esfuerzo útil del desperdiciado: mide primero lo que más incertidumbre le quita a tu decisión.",
+      "resumen_teorico": "No todo lo que construyes vale lo mismo. El valor de un proyecto casi nunca está repartido por igual: se concentra en unas pocas funciones centrales, a veces no más de una décima parte del trabajo, y el resto es soporte necesario o simples adornos. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: asignas a cada pieza su costo y el valor que esperas de ella, calculas la proporción entre ambos y separas lo esencial del soporte y de los adornos. Las piezas de proporción alta van primero, y como el esfuerzo crece más que en proporción al tamaño, recortar las de proporción baja es probablemente la forma más fácil de aliviar plazo y presupuesto. Si no consigues cifras de valor, al menos ordena las piezas por prioridad.",
       "pasos_accionables": [
         "Divide tu proyecto en sus piezas principales y asigna a cada una su costo estimado.",
         "Estima el valor que aporta cada pieza y calcula su proporción valor/costo; si no logras cifras, al menos ordénalas por valor.",
@@ -83854,7 +83854,7 @@
       "pasos_accionables": [
         "Identifica dos o más segmentos de clientes que se necesitan mutuamente y se beneficiarían de conectarse",
         "Diseña una propuesta de valor de acceso específica para cada lado de la plataforma",
-        "Decide qué lado subsidiarás y cuál generará los ingresos principales",
+        "Decide si subsidiarás algún lado (también puedes cobrar a ambos) y cuál generará los ingresos principales, comprobando qué lado es más sensible al precio y si el otro cubrirá el subsidio",
         "Define los mecanismos de matchmaking que reduzcan costos de búsqueda entre los segmentos",
         "Desarrolla las actividades y recursos necesarios para gestionar, promocionar y mantener tu plataforma"
       ],
@@ -84399,7 +84399,7 @@
       "titulo_concepto": "Negociación de la Carta de Compromiso (Engagement Letter) con el Banquero",
       "resumen_teorico": "La carta de compromiso es un contrato complejo que define qué va a hacer el banquero por ti, cuánto le pagas si hay venta (pago por éxito), un pago mensual fijo, cuánto dura el acuerdo, cómo lo terminas (incluyendo la cláusula de cola), quién responde si algo sale mal, si quieres exigir que trabaje una persona en particular contigo y si necesitas una opinión de valor justo. Entiéndela y negóciala con apoyo legal antes de firmar, porque implica un compromiso serio de tu tiempo y tu dinero.",
       "pasos_accionables": [
-        "Define con claridad qué quieres que haga el banquero por ti (venta, doble vía, valuación, opinión de valor justo)",
+        "Define con claridad qué quieres que haga el banquero por ti (venta, doble vía, valuación, opinión de valor justo); si incluye buscar inversión, verifica antes que tenga licencia para colocar valores y esté registrado ante el regulador de valores que corresponda",
         "Negocia el pago por éxito como un porcentaje que cambia según el tamaño de la venta, con cuidado con los porcentajes adicionales por ventas más altas, que se conceden fácil pero pueden salir muy caros; calcula tú mismo cuánto te tocaría pagar en cada escenario y deja previsto que, si la venta se paga en acciones u otra forma no monetaria, el banquero cobre en la misma forma que tus accionistas",
         "Acuerda un pago mensual fijo que se descuente del pago por éxito; pregunta el rango que se maneja en tu mercado",
         "Pon límites razonables a los gastos que puedes reembolsar; considera fijar un tope y exige aprobar los viajes largos antes de que sucedan",
@@ -84721,7 +84721,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Índices de Calidad para Planes de Muestreo (AQL, LQL, IQL, AOQL)",
-      "resumen_teorico": "Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor.",
+      "resumen_teorico": "Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, entre AQL y LQL, a menudo con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor, sobre todo en series continuas de lotes; para lotes aislados, usa el LQL.",
       "pasos_accionables": [
         "Definir qué nivel de no conformidad es aceptable como promedio de proceso (AQL) según necesidades del producto",
         "Establecer el nivel de calidad límite inaceptable (LQL/LTPD) y el riesgo del consumidor asociado",
@@ -85793,7 +85793,7 @@
       "resumen_teorico": "Es la función organizacional responsable de asegurar que se diseñen, controlen y mejoren continuamente el producto, el proceso y las personas para satisfacer las necesidades cambiantes de los clientes. Debe actuar como un habilitador (enabler) tanto a nivel táctico como estratégico, integrando recursos que tradicionalmente estaban dispersos en departamentos paralelos, y hablando el 'lenguaje del dinero' además del 'lenguaje de las cosas' para influir en la dirección ejecutiva.",
       "pasos_accionables": [
         "Definir la misión de la Oficina alineada a la estrategia del negocio",
-        "Determinar el nivel jerárquico y a quién reporta el líder de la Oficina",
+        "Determina el nivel jerárquico y a quién reporta el líder de la Oficina: debe formar parte de la dirección del negocio contigo o reportarte directamente, con autoridad acorde a su responsabilidad",
         "Distinguir responsabilidades directas (personal a cargo) de indirectas (funciones habilitadas en otras áreas)",
         "Diseñar el organigrama según el alcance (local, multinacional, matricial)",
         "Evitar el enfoque de 'departamento elitista' o 'gaviota corporativa' que llega, hace ruido y se va dejando un desorden"
@@ -86659,7 +86659,7 @@
       "resumen_teorico": "Tu negocio se adapta cuando ajusta sus procesos y su desempeño a lo que estás viviendo ahora, sin caer en dos extremos: llenarte de procesos antes de tiempo (lo que frena tu lanzamiento) o no tener ningún sistema (lo que provoca fallas grandes cuando creces rápido, como le pasó a Friendster). En vez de dividir la diferencia entre un extremo y otro, algo que solo te empuja a tomar posiciones extremas, usa un freno que se activa cuando resuelves la causa real de los problemas que tienes ahora. Así el proceso crece de forma natural, por ejemplo cuando un programa de entrenamiento surge de ir mejorando tu forma de trabajar.",
       "pasos_accionables": [
         "No impongas procesos rígidos desde el inicio; déjalos crecer a partir de resolver problemas reales",
-        "Detecta cuándo un problema necesita que inviertas en prevenirlo en vez de seguir avanzando rápido",
+        "Detecta cuándo un problema necesita que inviertas en prevenirlo en vez de seguir avanzando rápido, con una inversión proporcional: pequeña si el síntoma es menor y mayor solo si el problema es grande",
         "Une el desempeño de quien guía con el de quien entra nuevo, para asegurar calidad al incorporar gente",
         "Evita dividir la diferencia al decidir tus procesos: eso empuja a tomar posiciones extremas"
       ],
@@ -87998,7 +87998,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Patrón Inside-Out (Innovación de Adentro hacia Afuera)",
-      "resumen_teorico": "Patrón donde las organizaciones licencian o venden su propiedad intelectual o tecnologías no utilizadas a terceros, generando nuevas fuentes de ingreso a partir de activos ociosos. Ejemplo: GlaxoSmithKline's patent pools para enfermedades desatendidas.",
+      "resumen_teorico": "Patrón donde las organizaciones licencian o venden a terceros su propiedad intelectual o tecnologías sin usar, generando nuevas fuentes de ingreso con activos ociosos. En los pools de patentes de GlaxoSmithKline para enfermedades desatendidas el motivo fue otro: acceso a medicamentos e investigación.",
       "pasos_accionables": [
         "Auditar el portafolio de I+D interno para identificar propiedad intelectual sin explotación comercial",
         "Evaluar mercados o industrias alternativas donde ese conocimiento podría tener valor",
@@ -89470,7 +89470,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Pirámide de Control (Delegación de Responsabilidades)",
-      "resumen_teorico": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin que nadie tenga que intervenir; lo que puede autocontrolar la persona que te ayuda, dándole criterio propio; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras.",
+      "resumen_teorico": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras.",
       "pasos_accionables": [
         "Identificar qué partes de tu negocio pueden automatizarse con tecnología",
         "Definir qué decisiones puede tomar por su cuenta la persona que te ayuda",
@@ -89722,7 +89722,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Pivote Estratégico basado en Evidencia",
-      "resumen_teorico": "Un pivote es el abandono de una estrategia original de negocio (que ha sido invalidada empíricamente) para adoptar una nueva dirección basada en lo aprendido de los clientes. Implica el costo emocional y práctico de desechar trabajo previo (código, diseño, planificación), pero es preferible a seguir ejecutando un plan que 'no lleva a ningún lado'. El caso de IMVU muestra que tras el pivote (de add-on de IM a red IM independiente centrada en hacer nuevos amigos), la productividad del equipo de desarrollo mejoró dramáticamente, no porque trabajaran más duro sino porque estaban alineados con las necesidades reales del cliente.",
+      "resumen_teorico": "Un pivote es el abandono de una estrategia original de negocio (que ha sido invalidada empíricamente) para adoptar una nueva dirección basada en lo aprendido de los clientes. Implica el costo emocional y práctico de desechar parte del trabajo previo (código, diseño, planificación), aunque no hace falta tirarlo todo (es común reaprovechar lo construido y lo aprendido), y es preferible a seguir ejecutando un plan que 'no lleva a ningún lado'. El caso de IMVU muestra que tras el pivote (de add-on de IM a red IM independiente centrada en hacer nuevos amigos), la productividad del equipo de desarrollo mejoró dramáticamente, no porque trabajaran más duro sino porque estaban alineados con las necesidades reales del cliente.",
       "pasos_accionables": [
         "Aceptar la evidencia empírica aunque contradiga meses de trabajo e inversión previa (sunk cost)",
         "Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes",
@@ -91238,7 +91238,7 @@
         "Define reglas claras de cómo participa tu familia y qué esperas de la junta directiva",
         "Decide qué necesitas para sumar a la junta a personas externas independientes: busca respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación y capacidad de ayudar a corregir las fuentes de conflicto familiar",
         "Evita que los directores se metan en el día a día de tu negocio",
-        "Si todavía no estás listo para una junta formal, empieza con un consejo asesor (advisory board) como paso intermedio"
+        "Antes de nombrar una junta formal, considera empezar con un consejo asesor (advisory board) como paso intermedio, la vía preferida con frecuencia: facilita la transición con tu familia y con quienes dirigen contigo el negocio, y la búsqueda de directores independientes"
       ],
       "entregable_esperado": "Un plan maestro de sucesión y de mando familiar, con el consejo familiar y la junta directiva ya definidos",
       "nodos_previos": [
@@ -92218,7 +92218,7 @@
       "resumen_teorico": "Ningún método de selección de proyectos funciona perfectamente por sí solo. Para proyectos audaces y grandes, las empresas de mejor desempeño combinan múltiples enfoques: análisis financiero (NPV, Productivity Index, ECV para proyectos riesgosos) no en los gates tempranos, sino a más tardar en Gate 3, scorecards en gates tempranos (1-3) especialmente para proyectos audaces o tecnológicos, criterios de éxito claros para responsabilizar equipos, y herramientas visuales (gráficos de burbuja, pie charts) para revisiones de portafolio. Para proyectos pequeños y de bajo riesgo convienen otros métodos. La integridad de los datos sigue siendo la base de todos los métodos.",
       "pasos_accionables": [
         "No confiar en un solo método de evaluación; combinar financiero + scorecard + criterios estratégicos",
-        "Aplicar análisis financiero (NPV, IRR, Payback, Productivity Index) a partir de Gate 3, no antes",
+        "Aplicar análisis financiero (NPV, IRR, Payback, Productivity Index) no en los gates tempranos; por lo general, tenerlo listo a más tardar en Gate 3",
         "Usar scorecards en gates 1-3 y para proyectos tecnológicos/audaces",
         "Establecer pocos criterios de éxito clave (ventas primer año, fecha de lanzamiento, rentabilidad) desde Gate 3",
         "Usar Strategic Buckets y Roadmaps para alinear decisiones tácticas con la estrategia global",
@@ -95258,7 +95258,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Los cinco principios para emprender con menos riesgo (Lean Startup)",
-      "resumen_teorico": "El método Lean Startup se basa en cinco principios que cambian la forma de pensar tu proyecto: (1) puedes ser emprendedor en cualquier lugar, no solo en un garaje; (2) emprender es una forma de gestionar que se adapta a la incertidumbre extrema; (3) lo que valida tu avance es aprender de forma comprobada mediante experimentos, no solo tener una idea; (4) el ciclo Crear-Medir-Aprender (Build-Measure-Learn) te ayuda a convertir ideas en decisiones más rápido; (5) la contabilidad de la innovación (Innovation Accounting) te permite medir tu progreso real y fijar metas que tengan sentido.",
+      "resumen_teorico": "El método Lean Startup se basa en cinco principios que cambian la forma de pensar tu proyecto: (1) puedes ser emprendedor en cualquier lugar, no solo en un garaje; (2) emprender es una forma de gestionar que se adapta a la incertidumbre extrema; (3) lo que valida tu avance es aprender de forma comprobada mediante experimentos, no solo tener una idea; (4) el ciclo Crear-Medir-Aprender (Build-Measure-Learn) te ayuda a convertir ideas en decisiones más rápido; (5) la contabilidad de la innovación (Innovation Accounting) te permite medir tu progreso real, fijar metas que tengan sentido y decidir qué trabajo priorizar.",
       "pasos_accionables": [
         "Reconoce que si estás creando algo bajo mucha incertidumbre, eres una startup, sin importar el tamaño de tu proyecto o la industria en la que estés",
         "Trata emprender como una disciplina que gestionas con método, no como algo improvisado",
@@ -96667,7 +96667,7 @@
         "Antes de construir, responder: ¿el cliente reconoce el problema?, ¿compraría una solución?, ¿nos la compraría a nosotros?, ¿podemos construirla?",
         "Construir un prototipo mínimo (aunque incompleto) y exponerlo a clientes reales",
         "Registrar qué funcionalidades reclaman los clientes como faltantes (señal de importancia real)",
-        "No añadir funcionalidades del roadmap original que los clientes no reclamen",
+        "Cuestionar las funcionalidades del roadmap original que los clientes no reclamen: quizá no sean tan importantes como parecían",
         "Iterar con base en el uso real antes de invertir en marketing o lanzamiento masivo"
       ],
       "entregable_esperado": "Prototipo mínimo probado con clientes reales y lista de funcionalidades priorizadas según reclamos reales, no supuestos del roadmap",
@@ -98709,7 +98709,7 @@
       "resumen_teorico": "La Patente otorga al titular el derecho exclusivo, dentro del país que la reconoce, de impedir a terceros usar, fabricar o vender el objeto patentado durante un periodo determinado. La Marca (Trademark) es una palabra, símbolo, nombre o combinación que identifica y distingue el origen de los bienes, y puede servir como índice de calidad. Ambas deben protegerse en cada país donde se planea exportar o licenciar tecnología.",
       "pasos_accionables": [
         "Registrar la patente y/o marca en el país de origen si no se ha hecho",
-        "Investigar y registrar la protección de IP en cada mercado extranjero objetivo antes de exportar o licenciar",
+        "Investigar y registrar la protección de IP en cada mercado extranjero objetivo antes de exportar o licenciar (si varios países forman un bloque cuyas leyes aplican a todos sus miembros, basta con un solo registro ante ese bloque)",
         "Verificar que no existan conflictos de marcas o patentes previas en el mercado destino",
         "Incluir cláusulas de protección de IP en cualquier acuerdo de licenciamiento o distribución"
       ],
@@ -98760,7 +98760,7 @@
       "titulo_concepto": "Protección de Propiedad Intelectual en Mercados Internacionales",
       "resumen_teorico": "La propiedad intelectual (patentes, marcas, derechos de autor) debe protegerse activamente en cada mercado de exportación, ya que las patentes y marcas son de carácter territorial mientras que el copyright es reconocido globalmente. Una empresa extranjera podría apropiarse de la IP antes de que la empresa exportadora ingrese al mercado, por lo que es crucial contar con una estrategia de protección temprana.",
       "pasos_accionables": [
-        "Registrar patentes y marcas en cada país objetivo antes de iniciar operaciones o negociaciones",
+        "Registrar patentes y marcas en cada país objetivo antes de iniciar operaciones o negociaciones (si varios países forman un bloque cuyas leyes aplican a todos sus miembros, basta con presentarlas una sola vez ante ese bloque)",
         "Utilizar el Patent Cooperation Treaty (PCT) y el Madrid Protocol para protección multinacional eficiente",
         "Consultar www.stopfakes.gov y uspto.gov para guías específicas por país",
         "Incluir cláusulas de protección de IP en todo contrato de licenciamiento o joint venture"
@@ -102535,7 +102535,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Reducción de Residuos Relacionados con la Construcción",
-      "resumen_teorico": "Reducir residuos no se limita a reciclaje, sino a eliminar ineficiencias en el uso de materiales de construcción y operaciones de instalaciones. Casos como el Masdar Institute demuestran que es posible alcanzar tasas de desvío de residuos de construcción de hasta 99% mediante planificación integrada de demolición y construcción.",
+      "resumen_teorico": "Reducir residuos no se limita a reciclaje, sino a eliminar ineficiencias en el uso de materiales de construcción y operaciones de instalaciones. El Masdar Institute se fijó la meta de reutilizar o reciclar todos sus residuos de construcción, y quienes llevaron el proyecto afirman haber desviado de los vertederos el 99% de ellos.",
       "pasos_accionables": [
         "Establecer metas de reutilización/reciclaje de residuos de construcción",
         "Sugerencia de My Idea: planificar en conjunto la demolición y la construcción para reducir el desperdicio",
@@ -105240,7 +105240,7 @@
       "pasos_accionables": [
         "Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)",
         "Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas",
-        "Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos",
+        "Comunica a tu proveedor estos criterios estadísticos y capacítalo en su interpretación correcta, dejándole claro que esperas que todo producto que te entregue cumpla las especificaciones",
         "Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)"
       ],
       "entregable_esperado": "Plan de muestreo de aceptación con índices numéricos de calidad y confiabilidad definidos y comunicados al proveedor",
@@ -108895,7 +108895,7 @@
       "resumen_teorico": "El facilitador, que no tiene que ser miembro del equipo de proyecto, ayuda a mejorar las relaciones humanas, asiste en asuntos fuera del alcance del equipo, apoya a los miembros manteniendo el foco en la meta, cuestiona afirmaciones sin sustento y reporta el progreso a los consejos de calidad. Requiere entrenamiento especializado en construcción de equipos, resolución de conflictos y conocimiento de las herramientas de breakthrough.",
       "pasos_accionables": [
         "Capacitar al facilitador en team building, resolución de conflictos y comunicación, además de herramientas de mejora",
-        "Asignar facilitador de forma parcial durante la fase de arranque del proyecto",
+        "Asignar facilitador de forma parcial, sobre todo en la etapa en que tu negocio arranca con los equipos de mejora",
         "Usar preguntas para desafiar teorías sin evidencia dentro del equipo",
         "Reportar avances del equipo a los consejos de calidad periódicamente",
         "Usar al facilitador para detectar cuándo el equipo se estanca y redirigir el proyecto",
@@ -109139,7 +109139,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Los Roles Clave para Implementar Six Sigma",
-      "resumen_teorico": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; y el dueño del proceso aporta el conocimiento técnico. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
+      "resumen_teorico": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; tu equipo de proyecto y los expertos en la materia aportan lo que saben del proceso; y el dueño del proceso apoya al implementar mejoras y el plan de control. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
       "pasos_accionables": [
         "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt, equipo de proyecto con expertos en la materia y dueño del proceso",
         "Capacita a tu liderazgo para que entienda y respalde la metodología Six Sigma",
@@ -109532,7 +109532,7 @@
         "Identificar las prácticas compartidas actuales relacionadas con seguridad en la organización",
         "Diseñar e introducir nuevas prácticas y sistemas de gestión enfocados en seguridad, incluido un sistema de información de seguridad eficaz",
         "Evitar depender de transformaciones dramáticas post-accidente que suelen ser efímeras",
-        "Medir el compromiso mediante comunicación basada en confianza mutua y percepción compartida de importancia de la seguridad",
+        "Revisar si tu negocio muestra los rasgos de una cultura de seguridad positiva: comunicación basada en confianza mutua, percepción compartida de la importancia de la seguridad y confianza en la eficacia de las medidas preventivas",
         "Iterar y sostener las prácticas como un proceso de aprendizaje colectivo continuo"
       ],
       "entregable_esperado": "Plan de intervención en prácticas organizacionales orientado a construir una cultura de seguridad sostenible",
@@ -109815,12 +109815,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Small Business Regulatory Enforcement Fairness Act (SBREFA)",
-      "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es una ley estadounidense de 1996 que ayuda a los pequeños negocios a entender y cumplir las regulaciones de seguridad laboral de OSHA, y les da voz cuando se preparan normas nuevas. Gracias a esta ley, OSHA tiene que ofrecerte guías de cumplimiento pensadas para negocios pequeños, responder tus consultas, aplicar políticas de reducción de multas si tu empresa es chica, y dejarte participar antes de que una regla nueva se termine de definir.",
+      "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es una ley estadounidense de 1996 que ayuda a los pequeños negocios a entender y cumplir las regulaciones de seguridad laboral de OSHA, y les da voz cuando se preparan normas nuevas. Gracias a esta ley, OSHA tiene que ofrecer guías de cumplimiento para negocios pequeños en algunas de sus normas, responder tus consultas, aplicar políticas de reducción de multas si tu empresa es chica y escuchar a los pequeños negocios en paneles de revisión antes de definir reglas que previsiblemente afecten mucho a muchos de ellos.",
       "pasos_accionables": [
         "Cuando tengas dudas sobre una norma, busca si OSHA publicó para ella una Guía de Cumplimiento para Pequeñas Entidades (Small Entity Compliance Guide): solo existen para algunas normas",
         "Usa los canales de consulta de OSHA para resolver dudas específicas antes de que te citen por algo",
         "Si recibes una citación, pregunta por la política de reducción de penalidades para pequeños negocios: puede bajarte la multa",
-        "Si una regla nueva te afecta de forma importante, puedes participar en los paneles de revisión donde se escucha a los pequeños negocios"
+        "Si es previsible que una regla nueva afecte de forma importante a muchos negocios pequeños, puedes participar en los paneles de revisión donde se escucha a los pequeños negocios"
       ],
       "entregable_esperado": "Saber con claridad qué beneficios y protecciones de SBREFA puedes usar en tu negocio",
       "nodos_previos": [
@@ -110054,7 +110054,7 @@
       "pasos_accionables": [
         "Diseñar un scorecard con criterios cualitativos y financieros ponderados, o considerar adoptar uno ya probado, porque los hechos a medida a menudo no dan buen resultado",
         "Aplicar el scorecard en los gates tempranos (Gates 1, 2 y 3)",
-        "Considerar la auto-evaluación del equipo de proyecto antes de la reunión de gate (evitando sesgo del gatekeeper)",
+        "Considerar la auto-evaluación del equipo de proyecto antes de la reunión de gate, con los gatekeepers haciendo su propia evaluación antes de ver la del equipo para evitar sesgos",
         "Comparar puntuaciones del equipo vs gatekeepers y discutir diferencias en la reunión",
         "Integrar métricas financieras (NPV, ECV, Payback Period) al scorecard"
       ],
@@ -116521,7 +116521,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Transformación de la Supervisión en Liderazgo",
-      "resumen_teorico": "Los supervisores deben convertirse en líderes que entienden el trabajo, ayudan a identificar quién necesita ayuda individual y quién es sobresaliente, en lugar de solo vigilar cumplimiento de cuotas.",
+      "resumen_teorico": "Haz de tus supervisores líderes que entienden el trabajo, detectan a quien queda fuera del sistema (necesita ayuda individual o sobresale) sin clasificar al resto y te dicen qué corregir para que actúes, en vez de solo vigilar cuotas.",
       "pasos_accionables": [
         "Redefinir el rol del supervisor/foreman hacia el acompañamiento y desarrollo",
         "Capacitar a los líderes en el conocimiento técnico del trabajo que supervisan",

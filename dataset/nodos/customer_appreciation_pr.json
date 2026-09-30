@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Customer Appreciation como Canal de Tracción",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Forma sostenible de PR no convencional basada en hacer sentir apreciados a los clientes mediante gestos personalizados (notas escritas a mano, regalos, contests). Esto genera boca a boca, fortalece la marca y puede generar cobertura de prensa espontánea, incluso si ese no es el objetivo principal. Ejemplos: Hipmunk, reddit, Grasshopper.com, Zappos.",
+  "resumen_teorico": "Forma sostenible de PR no convencional basada en hacer sentir apreciados a los clientes mediante gestos personalizados (notas escritas a mano, regalos, contests). Su objetivo sigue siendo generar cobertura de prensa, y aunque no la consigas, te quedan clientes contentos y una marca más fuerte, lo que aumenta mucho el boca a boca. Ejemplos: Hipmunk, reddit, Grasshopper.com, Zappos.",
   "pasos_accionables": [
     "Identificar momentos clave del customer journey para sorprender con gestos genuinos",
     "Enviar notas escritas a mano, regalos pequeños o reconocimientos públicos a clientes tempranos, además de la resolución de problemas fuera del alcance normal",
@@ -42,5 +42,23 @@
   ],
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-176-customer_appreciation_pr-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Forma sostenible de PR no convencional basada en hacer sentir apreciados a los clientes mediante gestos personalizados (notas escritas a mano, regalos, contests). Esto genera boca a boca, fortalece la marca y puede generar cobertura de prensa espontánea, incluso si ese no es el objetivo principal. Ejemplos: Hipmunk, reddit, Grasshopper.com, Zappos.",
+      "texto_nuevo": "Forma sostenible de PR no convencional basada en hacer sentir apreciados a los clientes mediante gestos personalizados (notas escritas a mano, regalos, contests). Su objetivo sigue siendo generar cobertura de prensa, y aunque no la consigas, te quedan clientes contentos y una marca más fuerte, lo que aumenta mucho el boca a boca. Ejemplos: Hipmunk, reddit, Grasshopper.com, Zappos.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1104",
+        "frase": "The goal is still generating publicity."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que el objetivo sigue siendo generar publicidad; el nodo dice lo opuesto.; Mismo defecto: la prensa es el objetivo según el libro, no algo secundario.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Enfocarse en los Procesos, no Solo en los Problemas",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Muchas organizaciones pasan décadas resolviendo problemas individuales sin atacar las causas sistémicas que los generan repetidamente. La mejora sostenible requiere analizar y rediseñar los procesos subyacentes en lugar de aplicar soluciones puntuales y reactivas a cada incidente.",
+  "resumen_teorico": "Hay organizaciones que pasan años resolviendo problemas individuales sin atacar las causas sistémicas que los generan repetidamente. Resolver problemas no basta: la mejora sostenible requiere analizar y rediseñar los procesos subyacentes en lugar de aplicar soluciones puntuales y reactivas a cada incidente.",
   "pasos_accionables": [
     "Documentar los problemas recurrentes durante un periodo definido",
     "Identificar el proceso común que genera cada categoría de problema",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Mejora Procesos, no Solo Problemas",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-175-enfoque_en_procesos_no_en_problemas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas organizaciones pasan décadas resolviendo problemas individuales sin atacar las causas sistémicas que los generan repetidamente. La mejora sostenible requiere analizar y rediseñar los procesos subyacentes en lugar de aplicar soluciones puntuales y reactivas a cada incidente.",
+      "texto_nuevo": "Hay organizaciones que pasan años resolviendo problemas individuales sin atacar las causas sistémicas que los generan repetidamente. Resolver problemas no basta: la mejora sostenible requiere analizar y rediseñar los procesos subyacentes en lugar de aplicar soluciones puntuales y reactivas a cada incidente.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3102",
+        "frase": "We have for twenty-five years been working on problems, and not on the processes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro trae el testimonio de una empresa con veinticinco años en problemas; 'muchas organizaciones' y 'décadas' generalizan un hecho que no dice.; Mismo fragmento: el plazo de décadas como hecho general no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

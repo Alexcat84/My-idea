@@ -7,7 +7,7 @@
   "resumen_teorico": "Documento dinámico que registra los supuestos (factores considerados verdaderos sin comprobación) y las restricciones (limitaciones como presupuesto fijo o hitos obligatorios) que afectan la planificación y ejecución del proyecto. Se actualiza continuamente conforme los supuestos se validan o invalidan.",
   "pasos_accionables": [
     "Identificar supuestos provenientes de cualquier documento o del equipo del proyecto, y categorizar cada supuesto o restricción",
-    "Documentar restricciones definidas por el charter, cliente o reguladores",
+    "Documentar restricciones definidas por el charter, el cliente, el patrocinador o los reguladores",
     "Asignar responsable y fecha límite para validar cada supuesto",
     "Registrar acciones tomadas y el estado actual de cada ítem, que puede ser activo, pendiente, cerrado",
     "Actualizar el log conforme se validan o invalidan los supuestos"
@@ -39,5 +39,24 @@
   ],
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-assumption_constraint_log-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar restricciones definidas por el charter, cliente o reguladores",
+      "texto_nuevo": "Documentar restricciones definidas por el charter, el cliente, el patrocinador o los reguladores",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1067",
+        "frase": "Constraints are generally documented in the project charter and are determined by the customer, sponsor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro nombra también al patrocinador entre quienes determinan las restricciones.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

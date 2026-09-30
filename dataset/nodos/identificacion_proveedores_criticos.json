@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Identifica a tus proveedores críticos",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Antes de construir una cadena de suministro sostenible, mapea qué compras y a quién se lo compras. Prioriza a los proveedores que representan mayor valor de tu producto final, que impactan en los temas ecológicos más relevantes para tu industria, que te dan insumos esenciales, que trabajan en tu sitio como subcontratistas, que enfrentan riesgos ambientales propios, o que son líderes de opinión cuya influencia pública recae sobre ti.",
+  "resumen_teorico": "Antes de construir una cadena de suministro sostenible, mapea qué compras y a quién se lo compras. Prioriza a los proveedores que representan mayor valor de tu producto final, que impactan en los temas ecológicos más relevantes para tu industria, que te dan insumos esenciales, que trabajan en tu sitio como subcontratistas, que enfrentan riesgos ambientales propios, que pueden mejorar tu desempeño con su experiencia, o que son líderes de opinión o sobre los que el público espera que tengas influencia.",
   "pasos_accionables": [
     "Lista todos los materiales, insumos y servicios que compras",
     "Identifica a tus proveedores por categoría (manufactura, insumos operativos, subcontratistas)",
@@ -40,6 +40,22 @@
         "evidencia": "F27-030: Mapear y priorizar proveedores criticos para arrancar un programa de compras sostenibles es planificar el programa sobre un negocio existente, no explorar una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-175-identificacion_proveedores_criticos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Antes de construir una cadena de suministro sostenible, mapea qué compras y a quién se lo compras. Prioriza a los proveedores que representan mayor valor de tu producto final, que impactan en los temas ecológicos más relevantes para tu industria, que te dan insumos esenciales, que trabajan en tu sitio como subcontratistas, que enfrentan riesgos ambientales propios, o que son líderes de opinión cuya influencia pública recae sobre ti.",
+      "texto_nuevo": "Antes de construir una cadena de suministro sostenible, mapea qué compras y a quién se lo compras. Prioriza a los proveedores que representan mayor valor de tu producto final, que impactan en los temas ecológicos más relevantes para tu industria, que te dan insumos esenciales, que trabajan en tu sitio como subcontratistas, que enfrentan riesgos ambientales propios, que pueden mejorar tu desempeño con su experiencia, o que son líderes de opinión o sobre los que el público espera que tengas influencia.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4005-4007",
+        "frase": "opinion leaders or which the public would expect your company to be able to influence."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, matiz; doble lectura ciega y arbitro): El libro habla de proveedores sobre los que el público espera que tu empresa pueda influir; el nodo invierte la dirección de la influencia.; Falta el criterio de los proveedores que pueden mejorar tu desempeño con su experiencia.; Misma inversión de la influencia que la marca 1.; Mismo criterio omitido que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

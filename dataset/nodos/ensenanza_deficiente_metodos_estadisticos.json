@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Enseñanza deficiente de métodos estadísticos en la industria",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La capacitación masiva y apresurada en métodos estadísticos, impartida por instructores incompetentes, genera más daño que beneficio. La correcta enseñanza de cartas de control y teoría estadística requiere conocimiento profundo (nivel de maestría) y experiencia bajo la guía de un experto. Muchos programas universitarios enseñan estadística enumerativa correctamente, pero fallan al aplicar estos conceptos a problemas analíticos de predicción y mejora continua.",
+  "resumen_teorico": "La capacitación masiva y apresurada en métodos estadísticos, impartida por instructores incompetentes, genera más daño que beneficio. La correcta enseñanza de cartas de control y teoría estadística requiere conocimiento profundo (nivel de maestría) y experiencia bajo la guía de un experto. La enseñanza universitaria de la teoría suele ser excelente y su aplicación a estudios enumerativos casi siempre correcta, pero muchos libros de texto fallan al aplicarla a problemas analíticos de predicción y mejora continua.",
   "pasos_accionables": [
     "Verificar las credenciales y experiencia real de quienes imparten capacitación estadística",
     "Diferenciar entre estudios enumerativos y estudios analíticos antes de aplicar técnicas",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Enseña Bien lo Estadístico",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-175-ensenanza_deficiente_metodos_estadisticos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La capacitación masiva y apresurada en métodos estadísticos, impartida por instructores incompetentes, genera más daño que beneficio. La correcta enseñanza de cartas de control y teoría estadística requiere conocimiento profundo (nivel de maestría) y experiencia bajo la guía de un experto. Muchos programas universitarios enseñan estadística enumerativa correctamente, pero fallan al aplicar estos conceptos a problemas analíticos de predicción y mejora continua.",
+      "texto_nuevo": "La capacitación masiva y apresurada en métodos estadísticos, impartida por instructores incompetentes, genera más daño que beneficio. La correcta enseñanza de cartas de control y teoría estadística requiere conocimiento profundo (nivel de maestría) y experiencia bajo la guía de un experto. La enseñanza universitaria de la teoría suele ser excelente y su aplicación a estudios enumerativos casi siempre correcta, pero muchos libros de texto fallan al aplicarla a problemas analíticos de predicción y mejora continua.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2854",
+        "frase": "is unfortunately, however, in many textbooks deceptive and misleading."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro elogia la enseñanza universitaria de la teoría y culpa de la mala aplicación analítica a muchos libros de texto, no a los programas universitarios.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

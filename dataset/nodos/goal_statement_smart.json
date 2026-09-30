@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Redactar el alcance del proyecto (producto y mercados a atender)",
     "Definir los resultados esperados (metas de ventas, desempeño, etc.)",
-    "Seleccionar la base para las metas: tecnología, mercado, benchmarking o historia",
+    "Seleccionar la base para las metas: tecnología, mercado (igualar o superar a la competencia prevista al terminar el proyecto), benchmarking o historia (vigilando que no perpetúe un desempeño crónicamente derrochador)",
     "Verificar que la meta cumpla los cinco criterios SMART",
     "Evitar sobre-especificar restricciones que limiten alternativas de diseño"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Define tu Meta con Claridad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-174-goal_statement_smart-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar la base para las metas: tecnología, mercado, benchmarking o historia",
+      "texto_nuevo": "Seleccionar la base para las metas: tecnología, mercado (igualar o superar a la competencia prevista al terminar el proyecto), benchmarking o historia (vigilando que no perpetúe un desempeño crónicamente derrochador)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3439-3443",
+        "frase": "the historical basis helps to perpetuate a chronically wasteful performance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con base en el mercado, el libro pide igualar o superar a la competencia prevista al terminar el proyecto.; Mismo defecto: falta la advertencia sobre el mal uso de la base histórica.; Se pierde la advertencia de vigilar que la base histórica perpetúe un desempeño crónicamente derrochador.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
