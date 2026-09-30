@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Design for Six Sigma (DFSS) y Metodología DMADV",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "DFSS es un enfoque sistemático para crear, al mismo tiempo, un producto nuevo y su proceso de producción con niveles de calidad cercanos a Six Sigma, minimizando fallas desde el inicio en lugar de corregirlas después. A diferencia de DMAIC, que mejora procesos existentes, DMADV (Definir, Medir, Analizar, Diseñar, Verificar) se usa cuando no hay un proceso previo que mejorar sino que debe crearse desde cero. Parte siempre de escuchar la voz del cliente y traducir sus necesidades en CTQs (Critical to Quality) medibles, evalúa varios conceptos de diseño con métodos estadísticos, detalla el diseño ganador y verifica que cumpla tanto las necesidades del negocio como del cliente antes de pasar a producción a escala completa.",
+  "resumen_teorico": "DFSS es un enfoque sistemático para crear, al mismo tiempo, un producto nuevo y su proceso de producción con niveles de calidad cercanos a Six Sigma, minimizando fallas desde el inicio en lugar de corregirlas después. A diferencia de DMAIC, que mejora procesos existentes, DMADV (Definir, Medir, Analizar, Diseñar, Verificar) se usa para diseñar un producto, servicio o proceso nuevo, o para rediseñar o modificar uno existente. Parte siempre de escuchar la voz del cliente y traducir sus necesidades en CTQs (Critical to Quality) medibles, evalúa varios conceptos de diseño con métodos estadísticos, detalla el diseño ganador y verifica que cumpla tanto las necesidades del negocio como del cliente antes de pasar a producción a escala completa.",
   "pasos_accionables": [
     "Revisa tu plan de negocio y define el alcance del proyecto de diseño antes de empezar.",
     "Identifica a tus clientes objetivo y traduce sus necesidades en requerimientos medibles (CTQs).",
@@ -81,6 +81,22 @@
         "motivo": "Una tecnica simple de ideacion no tiene como continuacion natural DFSS y DMADV."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-092-design_for_six_sigma_dfss-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "DFSS es un enfoque sistemático para crear, al mismo tiempo, un producto nuevo y su proceso de producción con niveles de calidad cercanos a Six Sigma, minimizando fallas desde el inicio en lugar de corregirlas después. A diferencia de DMAIC, que mejora procesos existentes, DMADV (Definir, Medir, Analizar, Diseñar, Verificar) se usa cuando no hay un proceso previo que mejorar sino que debe crearse desde cero. Parte siempre de escuchar la voz del cliente y traducir sus necesidades en CTQs (Critical to Quality) medibles, evalúa varios conceptos de diseño con métodos estadísticos, detalla el diseño ganador y verifica que cumpla tanto las necesidades del negocio como del cliente antes de pasar a producción a escala completa.",
+      "texto_nuevo": "DFSS es un enfoque sistemático para crear, al mismo tiempo, un producto nuevo y su proceso de producción con niveles de calidad cercanos a Six Sigma, minimizando fallas desde el inicio en lugar de corregirlas después. A diferencia de DMAIC, que mejora procesos existentes, DMADV (Definir, Medir, Analizar, Diseñar, Verificar) se usa para diseñar un producto, servicio o proceso nuevo, o para rediseñar o modificar uno existente. Parte siempre de escuchar la voz del cliente y traducir sus necesidades en CTQs (Critical to Quality) medibles, evalúa varios conceptos de diseño con métodos estadísticos, detalla el diseño ganador y verifica que cumpla tanto las necesidades del negocio como del cliente antes de pasar a producción a escala completa.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "16087",
+        "frase": "applicable to developing new or revised products, services, and processes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aplica DFSS también a rediseños y modificaciones de diseños existentes, no solo a lo que se crea desde cero.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir claramente el efecto (Y) a explicar y colocarlo en una caja a la derecha",
     "Usar brainstorming o enfoque racional para identificar posibles causas (Xs)",
-    "Agrupar las causas en 2 a 5 categorías principales conectadas a la espina central en ángulo de 70°",
+    "Agrupar las causas en categorías principales (no menos de 2 y normalmente no más de 5) conectadas a la espina central en un ángulo de unos 70°",
     "Añadir causas subsidiarias a cada categoría principal",
     "Continuar añadiendo causas hasta llegar a posibles causas raíz",
     "Verificar la validez lógica de cada cadena causal",
@@ -32,5 +32,24 @@
   "etiqueta_arbol": "Rastrea la Causa de tu Efecto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-092-diagrama_causa_efecto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Agrupar las causas en 2 a 5 categorías principales conectadas a la espina central en ángulo de 70°",
+      "texto_nuevo": "Agrupar las causas en categorías principales (no menos de 2 y normalmente no más de 5) conectadas a la espina central en un ángulo de unos 70°",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18120",
+        "frase": "not less than 2 and normally not more than 5"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pone no menos de 2 y normalmente no más de 5, a unos 70°; el nodo lo fija como regla.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Titula tu garantía como 'completa' o 'limitada' (Full o Limited Warranty)",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una ley estadounidense (Magnuson-Moss Warranty Act) y solo te aplica si vendes o piensas vender a clientes en Estados Unidos. Si ofreces una garantía escrita sobre un producto que cuesta más de $10, tienes que titularla explícitamente como 'Full Warranty' (completa) o 'Limited Warranty' (limitada). Puedes llamarla 'completa' solo si cumples cinco condiciones: no limitas la duración de las garantías implícitas, cubres a cualquier propietario durante el periodo, la ofreces gratis, das reemplazo o reembolso si no puedes reparar el producto, y no le impones condiciones irrazonables a quien te compra. Si te falta alguna de esas condiciones, tienes que llamarla 'limitada'.",
+  "resumen_teorico": "Esta es una ley estadounidense (Magnuson-Moss Warranty Act) y solo te aplica si vendes o piensas vender a clientes en Estados Unidos. Si ofreces una garantía escrita sobre un producto que cuesta más de $10, tienes que titularla explícitamente como 'Full Warranty' (completa) o 'Limited Warranty' (limitada). Puedes llamarla 'completa' solo si cumples cinco condiciones: no limitas la duración de las garantías implícitas, cubres a cualquier propietario durante el periodo, la ofreces gratis, das, a elección del cliente, reemplazo o reembolso total si tras un número razonable de intentos no puedes reparar el producto, y no le impones condiciones irrazonables a quien te compra. Si te falta alguna de esas condiciones, tienes que llamarla 'limitada'.",
   "pasos_accionables": [
     "Revisa tu garantía contra las cinco condiciones de una garantía completa.",
     "Si las cumples todas, titúlala 'Full Warranty' (completa); si no, titúlala 'Limited Warranty' (limitada).",
@@ -36,5 +36,23 @@
   "etiqueta_arbol": "Titula tu Garantía con Claridad",
   "fuentes_internas": [
     "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-092-clasificacion_garantia_full_limited-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta es una ley estadounidense (Magnuson-Moss Warranty Act) y solo te aplica si vendes o piensas vender a clientes en Estados Unidos. Si ofreces una garantía escrita sobre un producto que cuesta más de $10, tienes que titularla explícitamente como 'Full Warranty' (completa) o 'Limited Warranty' (limitada). Puedes llamarla 'completa' solo si cumples cinco condiciones: no limitas la duración de las garantías implícitas, cubres a cualquier propietario durante el periodo, la ofreces gratis, das reemplazo o reembolso si no puedes reparar el producto, y no le impones condiciones irrazonables a quien te compra. Si te falta alguna de esas condiciones, tienes que llamarla 'limitada'.",
+      "texto_nuevo": "Esta es una ley estadounidense (Magnuson-Moss Warranty Act) y solo te aplica si vendes o piensas vender a clientes en Estados Unidos. Si ofreces una garantía escrita sobre un producto que cuesta más de $10, tienes que titularla explícitamente como 'Full Warranty' (completa) o 'Limited Warranty' (limitada). Puedes llamarla 'completa' solo si cumples cinco condiciones: no limitas la duración de las garantías implícitas, cubres a cualquier propietario durante el periodo, la ofreces gratis, das, a elección del cliente, reemplazo o reembolso total si tras un número razonable de intentos no puedes reparar el producto, y no le impones condiciones irrazonables a quien te compra. Si te falta alguna de esas condiciones, tienes que llamarla 'limitada'.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "565-572",
+        "frase": "You provide, at the consumer's choice, either a replacement or a full refund"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El reemplazo o el reembolso total es a elección del cliente y tras un número razonable de intentos de reparación.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

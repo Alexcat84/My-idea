@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Romper las barreras entre las áreas de tu negocio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Quien se encarga de investigación, diseno, compras, ventas y producción en tu negocio debe conocer los problemas que enfrentan las otras partes con los materiales y las especificaciones. Si cada parte trabaja aislada, sin mirar el conjunto, tu negocio entero puede fracasar aunque cada quien crea que esta haciendo un trabajo excelente por su cuenta.",
+  "resumen_teorico": "Quien se encarga de investigación, diseño, compras, ventas y recepción de materiales en tu negocio debe conocer los problemas que los materiales y las especificaciones causan en producción; si no, habrá pérdidas por retrabajo. Si cada parte trabaja aislada, sin mirar el conjunto, tu negocio entero puede fracasar aunque cada quien crea que está haciendo un trabajo excelente por su cuenta.",
   "pasos_accionables": [
     "Procura que diseño, ventas, producción y atención trabajen juntos desde el inicio de cada proyecto, aunque las hagas tú mismo o las manejen distintas personas",
     "Crea una forma sencilla de llevar lo que escuchas de tus clientes o de quien atiende de vuelta a quien fabrica y a quien diseña",
-    "Evita cambiar el diseño a último momento sin avisar a quien produce",
-    "Usa las quejas tempranas, como las de cobros o pagos, como información para mejorar la calidad"
+    "Evita cambiar el diseño a último momento, cuando la producción ya está lista, porque le dejas muy poco tiempo a quien diseña y a quien produce",
+    "Usa las quejas tempranas, como las que llegan con los cobros o pagos, como información para mejorar la calidad, con inteligencia, sabiendo que las quejas dan una imagen sesgada"
   ],
   "entregable_esperado": "Una forma sencilla de que las distintas partes de tu negocio trabajen en equipo, con un proceso claro para que la información fluya entre ellas",
   "nodos_previos": [
@@ -83,6 +83,56 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-093-eliminar_barreras_departamentales-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita cambiar el diseño a último momento sin avisar a quien produce",
+      "texto_nuevo": "Evita cambiar el diseño a último momento, cuando la producción ya está lista, porque le dejas muy poco tiempo a quien diseña y a quien produce",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1371",
+        "frase": "last-minute changes in style and engineering, after the plans are submitted and production is ready"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala el cambio de último momento en sí, que deja muy poco tiempo a diseño y producción, no la falta de aviso.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-eliminar_barreras_departamentales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa las quejas tempranas, como las de cobros o pagos, como información para mejorar la calidad",
+      "texto_nuevo": "Usa las quejas tempranas, como las que llegan con los cobros o pagos, como información para mejorar la calidad, con inteligencia, sabiendo que las quejas dan una imagen sesgada",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1383-1385",
+        "frase": "study of complaints gives a biased picture of quality"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae que las quejas dan una imagen sesgada y solo sirven usadas con inteligencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-eliminar_barreras_departamentales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Quien se encarga de investigación, diseno, compras, ventas y producción en tu negocio debe conocer los problemas que enfrentan las otras partes con los materiales y las especificaciones. Si cada parte trabaja aislada, sin mirar el conjunto, tu negocio entero puede fracasar aunque cada quien crea que esta haciendo un trabajo excelente por su cuenta.",
+      "texto_nuevo": "Quien se encarga de investigación, diseño, compras, ventas y recepción de materiales en tu negocio debe conocer los problemas que los materiales y las especificaciones causan en producción; si no, habrá pérdidas por retrabajo. Si cada parte trabaja aislada, sin mirar el conjunto, tu negocio entero puede fracasar aunque cada quien crea que está haciendo un trabajo excelente por su cuenta.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1361",
+        "frase": "must learn about the problems encountered with various materials and specifications in production and assembly"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que esas áreas deben conocer los problemas que materiales y especificaciones causan en producción, o habrá retrabajo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

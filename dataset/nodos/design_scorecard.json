@@ -10,7 +10,7 @@
     "Registra los resultados de las pruebas que hagas y de los análisis de capacidad de tu proceso",
     "Actualiza tu scorecard en cada etapa del proyecto: cuando midas, cuando analices, cuando diseñes",
     "Compara lo que proyectas contra los objetivos de calidad que definiste al inicio",
-    "Usa el scorecard para decidir si tu diseño ya está listo"
+    "Usa el scorecard para seguir el desempeño de tu diseño frente a los objetivos y ver la brecha que todavía falta cerrar"
   ],
   "entregable_esperado": "Un scorecard de diseño actualizado que te muestre lo que proyectas frente a los objetivos de calidad que te propusiste",
   "nodos_previos": [
@@ -40,6 +40,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-092-design_scorecard-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa el scorecard para decidir si tu diseño ya está listo",
+      "texto_nuevo": "Usa el scorecard para seguir el desempeño de tu diseño frente a los objetivos y ver la brecha que todavía falta cerrar",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "16406-16410",
+        "frase": "to track the design performance against the established goals, continuing the gap analysis"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El scorecard sigue el desempeño contra las metas y la brecha; el cierre del diseño lo marcan la verificación y la revisión de diseño.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

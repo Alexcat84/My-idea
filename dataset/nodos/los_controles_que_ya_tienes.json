@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Inventario de Controles Existentes",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Antes de inventar defensas nuevas contra un riesgo, mira lo que ya te protege. Casi siempre tienes controles que no llamas así: un respaldo que ya haces, una cláusula en un contrato, una costumbre que reduce errores, un ahorro que amortigua un mal mes. Reconocerlos te evita gastar en proteger algo que ya está cubierto y te muestra dónde están los huecos reales, los riesgos que hoy no tienen ninguna defensa. El ejercicio es simple: para cada riesgo grave, pregúntate qué te protege hoy de él, y si esa protección es suficiente o tiene fugas. Para el emprendedor, empezar por lo que ya tiene es más barato y más rápido que armar todo desde cero, y concentra el esfuerzo nuevo donde de verdad falta.",
+  "resumen_teorico": "Antes de inventar defensas nuevas contra un riesgo, mira lo que ya te protege. Puedes tener controles que no llamas así: un respaldo que ya haces, una cláusula en un contrato, una costumbre que reduce errores, un ahorro que amortigua un mal mes. Reconocerlos te evita gastar en proteger algo que ya está cubierto y te muestra dónde están los huecos reales, los riesgos que hoy no tienen ninguna defensa. El ejercicio es simple: para cada riesgo grave, pregúntate qué te protege hoy de él, y si esa protección es suficiente o tiene fugas. Para el emprendedor, revisar lo que ya tiene y sus huecos aumenta su conciencia del riesgo, reduce parte de la incertidumbre y concentra el esfuerzo nuevo donde de verdad falta.",
   "pasos_accionables": [
     "Para cada riesgo grave, escribe qué te protege hoy de él, aunque nunca lo llamaste control.",
     "Marca los riesgos que no tienen ninguna protección: esos son tus huecos reales.",
-    "Revisa si los controles que ya tienes son suficientes o tienen fugas.",
+    "Revisa si los controles que ya tienes son suficientes o tienen fugas, y si siguen sirviendo para este proyecto: tus políticas, tus contratos o la normativa pueden haber cambiado.",
     "Concentra tu esfuerzo nuevo en los huecos, no en reforzar lo que ya está cubierto."
   ],
   "entregable_esperado": "Un inventario de lo que ya te protege de cada riesgo grave, con los huecos sin cubrir marcados.",
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Los Controles Que Ya Tienes",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-090-los_controles_que_ya_tienes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de inventar defensas nuevas contra un riesgo, mira lo que ya te protege. Casi siempre tienes controles que no llamas así: un respaldo que ya haces, una cláusula en un contrato, una costumbre que reduce errores, un ahorro que amortigua un mal mes. Reconocerlos te evita gastar en proteger algo que ya está cubierto y te muestra dónde están los huecos reales, los riesgos que hoy no tienen ninguna defensa. El ejercicio es simple: para cada riesgo grave, pregúntate qué te protege hoy de él, y si esa protección es suficiente o tiene fugas. Para el emprendedor, empezar por lo que ya tiene es más barato y más rápido que armar todo desde cero, y concentra el esfuerzo nuevo donde de verdad falta.",
+      "texto_nuevo": "Antes de inventar defensas nuevas contra un riesgo, mira lo que ya te protege. Puedes tener controles que no llamas así: un respaldo que ya haces, una cláusula en un contrato, una costumbre que reduce errores, un ahorro que amortigua un mal mes. Reconocerlos te evita gastar en proteger algo que ya está cubierto y te muestra dónde están los huecos reales, los riesgos que hoy no tienen ninguna defensa. El ejercicio es simple: para cada riesgo grave, pregúntate qué te protege hoy de él, y si esa protección es suficiente o tiene fugas. Para el emprendedor, revisar lo que ya tiene y sus huecos aumenta su conciencia del riesgo, reduce parte de la incertidumbre y concentra el esfuerzo nuevo donde de verdad falta.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5500-5530",
+        "frase": "Existing risk controls may be found in many areas of an organisation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que sea más barato ni más rápido; dice que revisar controles y huecos sube la conciencia del riesgo y reduce parte de la incertidumbre.; Endurece a 'casi siempre' lo que el libro dice que puede encontrarse ('may be found').; Mismo beneficio añadido que la marca 1.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-090-los_controles_que_ya_tienes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si los controles que ya tienes son suficientes o tienen fugas.",
+      "texto_nuevo": "Revisa si los controles que ya tienes son suficientes o tienen fugas, y si siguen sirviendo para este proyecto: tus políticas, tus contratos o la normativa pueden haber cambiado.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5526-5528",
+        "frase": "Organisational policies and procedures may have changed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que un control de antes puede no servir para el proyecto nuevo porque cambiaron políticas, contratos o normas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación de Firmas y Revisiones Redundantes en Procesos Administrativos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Casos reales (tarjetas de nómina, órdenes de compra, formularios de viáticos) demuestran que exigir múltiples firmas o revisiones diluye la responsabilidad, porque si todos son responsables, nadie lo es, y genera más errores, no menos. La solución es simplificar el proceso, asignar responsabilidad clara a una sola persona, eliminar tareas que no le corresponden como cálculos aritméticos que debe hacer el área técnica, y devolver inmediatamente los documentos incorrectos a su origen para corrección, en lugar de corregirlos en el flujo posterior. Reducir revisores a uno solo simplifica el proceso y reduce drásticamente los errores.",
+  "resumen_teorico": "Casos reales (tarjetas de nómina, órdenes de compra, formularios de viáticos) demuestran que exigir múltiples firmas o revisiones diluye la responsabilidad, porque si todos son responsables, nadie lo es, y genera más errores, no menos. La solución es simplificar el proceso, aclarar las instrucciones, asignar responsabilidad clara a una sola persona, eliminar tareas que no le corresponden como cálculos aritméticos que debe hacer el área técnica, y devolver inmediatamente los documentos incorrectos a su origen para corrección, en lugar de corregirlos en el flujo posterior. Reducir revisores a uno solo simplifica el proceso y reduce drásticamente los errores.",
   "pasos_accionables": [
     "Mapea todos los puntos de firma o revisión en tus procesos administrativos",
     "Identifica si existe una única persona claramente responsable de la exactitud de cada documento",
     "Elimina firmas o revisiones redundantes que no agregan valor de control real",
-    "Reasigna tareas de cálculo o verificación al área técnica correspondiente, no al usuario final",
+    "Reasigna las tareas de cálculo al área técnica correspondiente, no al usuario final",
     "Implementa el retorno inmediato de documentos incorrectos a quien los originó, con explicación del error",
     "Mide tu tasa de errores antes y después del cambio para verificar la mejora"
   ],
@@ -83,6 +83,39 @@
         "motivo": "El traspaso de un cliente de ventas a gestion de cuentas no tiene relacion con eliminar firmas redundantes en procesos administrativos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-093-eliminacion_firmas_redundantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Casos reales (tarjetas de nómina, órdenes de compra, formularios de viáticos) demuestran que exigir múltiples firmas o revisiones diluye la responsabilidad, porque si todos son responsables, nadie lo es, y genera más errores, no menos. La solución es simplificar el proceso, asignar responsabilidad clara a una sola persona, eliminar tareas que no le corresponden como cálculos aritméticos que debe hacer el área técnica, y devolver inmediatamente los documentos incorrectos a su origen para corrección, en lugar de corregirlos en el flujo posterior. Reducir revisores a uno solo simplifica el proceso y reduce drásticamente los errores.",
+      "texto_nuevo": "Casos reales (tarjetas de nómina, órdenes de compra, formularios de viáticos) demuestran que exigir múltiples firmas o revisiones diluye la responsabilidad, porque si todos son responsables, nadie lo es, y genera más errores, no menos. La solución es simplificar el proceso, aclarar las instrucciones, asignar responsabilidad clara a una sola persona, eliminar tareas que no le corresponden como cálculos aritméticos que debe hacer el área técnica, y devolver inmediatamente los documentos incorrectos a su origen para corrección, en lugar de corregirlos en el flujo posterior. Reducir revisores a uno solo simplifica el proceso y reduce drásticamente los errores.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4738-4740",
+        "frase": "revise the instructions, for better clarity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el caso de los viáticos el libro pone como primer cambio aclarar las instrucciones.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-eliminacion_firmas_redundantes-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reasigna tareas de cálculo o verificación al área técnica correspondiente, no al usuario final",
+      "texto_nuevo": "Reasigna las tareas de cálculo al área técnica correspondiente, no al usuario final",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4714-4716",
+        "frase": "Require only the signature of the employee. Make him responsible for the card."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro saca solo la aritmética del empleado y lo deja responsable de la exactitud; quitarle la verificación no está.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

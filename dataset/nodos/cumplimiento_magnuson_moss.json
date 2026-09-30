@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Cumplimiento de la Ley Federal Magnuson-Moss",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una ley federal de Estados Unidos, la Magnuson-Moss Warranty Act, que regula las garantías escritas sobre productos de consumo vendidos a clientes en ese país. No te obliga a ofrecer una garantía escrita, pero si decides hacerlo debes cumplir tres cosas: titularla como garantía total o limitada (full o limited), explicar sus terminos con claridad antes de la venta (regla de divulgación) y ponerla a disposición del comprador antes de que pague (regla de disponibilidad previa). Además no puedes eliminar las garantías implícitas, ni condicionar tu garantía a que el cliente compre otro producto o servicio tuyo, ni usar terminos engañosos. Como es una ley de Estados Unidos, si vendes en otro país conviene revisar la norma equivalente que aplique allí.",
+  "resumen_teorico": "Esta es una ley federal de Estados Unidos, la Magnuson-Moss Warranty Act, que regula las garantías escritas sobre productos de consumo vendidos a clientes en ese país. No te obliga a ofrecer una garantía escrita, pero si decides hacerlo debes cumplir tres cosas: titularla como garantía total o limitada (full o limited) si el producto cuesta más de 10 dólares y, si cuesta más de 15, explicar sus términos con claridad antes de la venta (regla de divulgación) y ponerla a disposición del comprador antes de que pague (regla de disponibilidad previa). Además no puedes eliminar las garantías implícitas, ni condicionar tu garantía a que el cliente compre o use algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni usar términos engañosos. Como es una ley de Estados Unidos, si vendes en otro país conviene revisar la norma equivalente que aplique allí.",
   "pasos_accionables": [
     "Decide si vas a ofrecer una garantía escrita sobre tu producto.",
-    "Si decides ofrecerla, verifica que cumple los tres requisitos: título claro, términos divulgados con claridad y disponibilidad antes de la venta.",
-    "Revisa que tu garantía no obligue al cliente a comprarte algo más ni use frases engañosas.",
+    "Si decides ofrecerla, verifica que cumple los tres requisitos: título 'full' o 'limited', términos divulgados con claridad y disponibilidad antes de la venta.",
+    "Revisa que tu garantía no obligue al cliente a comprar o usar algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni use frases engañosas.",
     "Consulta con un abogado que conozca esta ley antes de publicar tu garantía, para confirmar que todo está en regla."
   ],
   "entregable_esperado": "El texto de tu garantía revisado por un abogado, listo antes de imprimirlo o publicarlo, si vendes a clientes en Estados Unidos.",
@@ -128,6 +128,56 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-092-cumplimiento_magnuson_moss-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta es una ley federal de Estados Unidos, la Magnuson-Moss Warranty Act, que regula las garantías escritas sobre productos de consumo vendidos a clientes en ese país. No te obliga a ofrecer una garantía escrita, pero si decides hacerlo debes cumplir tres cosas: titularla como garantía total o limitada (full o limited), explicar sus terminos con claridad antes de la venta (regla de divulgación) y ponerla a disposición del comprador antes de que pague (regla de disponibilidad previa). Además no puedes eliminar las garantías implícitas, ni condicionar tu garantía a que el cliente compre otro producto o servicio tuyo, ni usar terminos engañosos. Como es una ley de Estados Unidos, si vendes en otro país conviene revisar la norma equivalente que aplique allí.",
+      "texto_nuevo": "Esta es una ley federal de Estados Unidos, la Magnuson-Moss Warranty Act, que regula las garantías escritas sobre productos de consumo vendidos a clientes en ese país. No te obliga a ofrecer una garantía escrita, pero si decides hacerlo debes cumplir tres cosas: titularla como garantía total o limitada (full o limited) si el producto cuesta más de 10 dólares y, si cuesta más de 15, explicar sus términos con claridad antes de la venta (regla de divulgación) y ponerla a disposición del comprador antes de que pague (regla de disponibilidad previa). Además no puedes eliminar las garantías implícitas, ni condicionar tu garantía a que el cliente compre o use algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni usar términos engañosos. Como es una ley de Estados Unidos, si vendes en otro país conviene revisar la norma equivalente que aplique allí.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "323-350",
+        "frase": "applies to all written warranties on consumer products costing more than $10"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La prohibición cubre algo de cualquier empresa en particular, no solo tuyo, y tiene las excepciones de darlo gratis o de la exención de la FTC.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se caen los umbrales: título para productos de más de 10 dólares, divulgación y disponibilidad previa para los de más de 15.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-092-cumplimiento_magnuson_moss-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa que tu garantía no obligue al cliente a comprarte algo más ni use frases engañosas.",
+      "texto_nuevo": "Revisa que tu garantía no obligue al cliente a comprar o usar algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni use frases engañosas.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "344-350",
+        "frase": "must buy or use an item or service from a particular company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La prohibición cubre comprar o usar algo de cualquier empresa en particular y admite excepciones si es gratis o hay exención de la FTC.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-092-cumplimiento_magnuson_moss-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si decides ofrecerla, verifica que cumple los tres requisitos: título claro, términos divulgados con claridad y disponibilidad antes de la venta.",
+      "texto_nuevo": "Si decides ofrecerla, verifica que cumple los tres requisitos: título 'full' o 'limited', términos divulgados con claridad y disponibilidad antes de la venta.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "324",
+        "frase": "you must designate, or title, your written warranty as either \"full\" or \"limited.\""
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El requisito no es un título claro cualquiera sino titularla 'full' o 'limited'.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

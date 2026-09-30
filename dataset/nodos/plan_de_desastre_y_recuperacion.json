@@ -4,14 +4,14 @@
   "dominio": "risk_management",
   "titulo_concepto": "Planificación de la Recuperación ante Desastres",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Un desastre es el golpe grande, la calamidad que no siempre puedes evitar: un incendio, un robo, la pérdida total de tus datos, un problema de salud. Como no siempre se puede impedir, hace falta planear cómo te vas a levantar después. La recuperación se piensa mejor como un proyecto en sí mismo: qué pasos, en qué orden, con qué recursos, te devuelven a operar. Preparado de antemano, ese plan te da un camino claro cuando todo se ve oscuro; improvisado en el momento, se vuelve caos. No necesitas prever cada desastre posible, sino los pocos que te dejarían fuera del juego, y tener para cada uno una ruta de vuelta. Para el emprendedor solo, un plan de recuperación simple pero escrito puede ser la diferencia entre reabrir en días o no reabrir.",
+  "resumen_teorico": "Un desastre es el golpe grande, la calamidad que no siempre puedes evitar: un incendio, una inundación, la pérdida total de tus datos, un accidente grave. Como no siempre se puede impedir, hace falta planear cómo te vas a levantar después. La recuperación se piensa mejor como un proyecto en sí mismo: qué pasos, en qué orden, con qué recursos, te devuelven a operar. Preparado de antemano, ese plan te da un camino claro cuando todo se ve oscuro; improvisado en el momento, se vuelve caos. No necesitas prever cada desastre posible, sino los pocos que te dejarían fuera del juego, y tener para cada uno una ruta de vuelta. Para el emprendedor solo, un plan de recuperación simple pero escrito es esa ruta de vuelta preparada de antemano.",
   "pasos_accionables": [
-    "Identifica los pocos desastres que te dejarían fuera del juego: pérdida de datos, salud, un local.",
+    "Identifica los pocos desastres que te dejarían fuera del juego: pérdida de datos, un incendio o una inundación en tu local.",
     "Para cada uno, escribe los pasos concretos que te devolverían a operar, en orden.",
     "Prepara de antemano lo que esa recuperación necesita: respaldos, contactos, un fondo.",
-    "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás."
+    "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo."
   ],
-  "entregable_esperado": "Un plan de recuperación escrito para cada desastre que te sacaría del juego, con sus pasos y recursos listos de antemano.",
+  "entregable_esperado": "Un plan de recuperación escrito para cada desastre que te sacaría del juego, con sus pasos y recursos listos de antemano, mantenido al día y ensayado.",
   "nodos_previos": [
     "cuando_el_riesgo_se_vuelve_realidad",
     "plan_de_contingencia_b"
@@ -55,6 +55,72 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por plan_de_contingencia_b."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-090-plan_de_desastre_y_recuperacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un desastre es el golpe grande, la calamidad que no siempre puedes evitar: un incendio, un robo, la pérdida total de tus datos, un problema de salud. Como no siempre se puede impedir, hace falta planear cómo te vas a levantar después. La recuperación se piensa mejor como un proyecto en sí mismo: qué pasos, en qué orden, con qué recursos, te devuelven a operar. Preparado de antemano, ese plan te da un camino claro cuando todo se ve oscuro; improvisado en el momento, se vuelve caos. No necesitas prever cada desastre posible, sino los pocos que te dejarían fuera del juego, y tener para cada uno una ruta de vuelta. Para el emprendedor solo, un plan de recuperación simple pero escrito puede ser la diferencia entre reabrir en días o no reabrir.",
+      "texto_nuevo": "Un desastre es el golpe grande, la calamidad que no siempre puedes evitar: un incendio, una inundación, la pérdida total de tus datos, un accidente grave. Como no siempre se puede impedir, hace falta planear cómo te vas a levantar después. La recuperación se piensa mejor como un proyecto en sí mismo: qué pasos, en qué orden, con qué recursos, te devuelven a operar. Preparado de antemano, ese plan te da un camino claro cuando todo se ve oscuro; improvisado en el momento, se vuelve caos. No necesitas prever cada desastre posible, sino los pocos que te dejarían fuera del juego, y tener para cada uno una ruta de vuelta. Para el emprendedor solo, un plan de recuperación simple pero escrito es esa ruta de vuelta preparada de antemano.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "8978-8980",
+        "frase": "Disasters may include the occurrence and aftermath of events such as fires, floods"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El robo y el problema de salud no están entre los desastres del libro (incendios, inundaciones, sismos, accidentes graves, fallas estructurales).; Reabrir en días es un resultado con plazo que el libro no promete.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-090-plan_de_desastre_y_recuperacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los pocos desastres que te dejarían fuera del juego: pérdida de datos, salud, un local.",
+      "texto_nuevo": "Identifica los pocos desastres que te dejarían fuera del juego: pérdida de datos, un incendio o una inundación en tu local.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "8978-8980",
+        "frase": "Disasters may include the occurrence and aftermath of events such as fires, floods"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La salud personal no figura entre los desastres que enumera el libro.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-090-plan_de_desastre_y_recuperacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan de recuperación escrito para cada desastre que te sacaría del juego, con sus pasos y recursos listos de antemano.",
+      "texto_nuevo": "Un plan de recuperación escrito para cada desastre que te sacaría del juego, con sus pasos y recursos listos de antemano, mantenido al día y ensayado.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "6066",
+        "frase": "appropriate emergency response and recovery plans and procedures should be in place and rehearsed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide preparar y mantener los planes, y que los de riesgos altos estén en su lugar y ensayados; el entregable se queda en tenerlos listos una vez.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-090-plan_de_desastre_y_recuperacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás.",
+      "texto_nuevo": "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "6140-6154",
+        "frase": "prepare and maintain plans to deal with the more severe risks they face"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide preparar y mantener los planes de desastre y ensayar los procedimientos; el paso se queda en guardarlo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

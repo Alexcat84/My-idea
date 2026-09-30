@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Evaluación de la Severidad del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. El peligro ahora no es la fórmula, es la honestidad: es tentador inflar la gravedad de lo que ya decidiste evitar, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
+  "resumen_teorico": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. El peligro ahora no es la fórmula, es la honestidad: es tentador inflar por pesimismo la gravedad de algunos riesgos, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
   "pasos_accionables": [
     "Repasa tu lista ya ordenada por gravedad y pregúntate, riesgo por riesgo, si le pusiste el nivel que le corresponde o el que te conviene creer.",
     "Marca los riesgos donde notas que minimizaste algo que no quieres enfrentar.",
-    "Marca los riesgos donde notas que inflaste la gravedad de algo que ya decidiste evitar de todos modos.",
+    "Marca los riesgos donde notas que inflaste la gravedad por pesimismo excesivo.",
     "Vuelve a mirar tu orden final y confirma que los más graves según el mismo criterio, no según tu miedo, sean los que atenderás primero.",
     "Si tu orden cambia después de esta revisión, quédate con el nuevo orden aunque incomode."
   ],
@@ -110,6 +110,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-090-evalua_la_gravedad_sin_autoengano-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. El peligro ahora no es la fórmula, es la honestidad: es tentador inflar la gravedad de lo que ya decidiste evitar, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
+      "texto_nuevo": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. El peligro ahora no es la fórmula, es la honestidad: es tentador inflar por pesimismo la gravedad de algunos riesgos, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "4862-4870",
+        "frase": "Errors in human judgment include those arising from biases such as"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro nombra el pesimismo excesivo como sesgo, no el inflar la gravedad de lo que ya se decidió evitar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-090-evalua_la_gravedad_sin_autoengano-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marca los riesgos donde notas que inflaste la gravedad de algo que ya decidiste evitar de todos modos.",
+      "texto_nuevo": "Marca los riesgos donde notas que inflaste la gravedad por pesimismo excesivo.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "4862-4870",
+        "frase": "Errors in human judgment include those arising from biases such as"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo mecanismo añadido: el libro habla de pesimismo excesivo, no de inflar lo que ya se decidió evitar.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

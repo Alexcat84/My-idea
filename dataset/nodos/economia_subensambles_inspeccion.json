@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Economía de Inspección mediante Construcción de Subensambles Intermedios",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El costo de corrección (k2) suele multiplicarse en cada etapa del proceso de producción, alcanzando valores muy altos en el ensamblaje final. Una estrategia para evitar este costo extremo es construir subensambles intermedios, inspeccionarlos y ajustarlos antes de integrarlos al ensamblaje final, tratando cada subensamble como un nuevo punto de partida con su propio análisis de costo k1/k2.",
+  "resumen_teorico": "El costo de corrección (k2) suele multiplicarse en cada etapa del proceso de producción y puede alcanzar valores muy altos en el ensamblaje final. A veces es posible evitar este costo extremo construyendo subensambles intermedios, inspeccionándolos y ajustándolos antes de integrarlos al ensamblaje final, tratando cada subensamble como un nuevo punto de partida con su propio análisis de costo k1/k2.",
   "pasos_accionables": [
     "Dividir el proceso de producción en etapas de subensamblaje intermedio.",
     "Aplicar la teoría de costos k1/k2 a cada subensamblaje de forma independiente.",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Inspecciona por Partes Intermedias",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-093-economia_subensambles_inspeccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El costo de corrección (k2) suele multiplicarse en cada etapa del proceso de producción, alcanzando valores muy altos en el ensamblaje final. Una estrategia para evitar este costo extremo es construir subensambles intermedios, inspeccionarlos y ajustarlos antes de integrarlos al ensamblaje final, tratando cada subensamble como un nuevo punto de partida con su propio análisis de costo k1/k2.",
+      "texto_nuevo": "El costo de corrección (k2) suele multiplicarse en cada etapa del proceso de producción y puede alcanzar valores muy altos en el ensamblaje final. A veces es posible evitar este costo extremo construyendo subensambles intermedios, inspeccionándolos y ajustándolos antes de integrarlos al ensamblaje final, tratando cada subensamble como un nuevo punto de partida con su propio análisis de costo k1/k2.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9768",
+        "frase": "It is sometimes possible to avoid extreme cost through construction of subassemblies"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que k2 puede llegar muy alto y que a veces es posible evitarlo con subensambles.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

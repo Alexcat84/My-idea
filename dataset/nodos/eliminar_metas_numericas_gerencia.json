@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación de Metas Numéricas Internas sin Método",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Fijar metas numéricas internas (ej. 'aumentar productividad 3%') sin un plan o método concreto para lograrlas es una farsa gerencial. Este tipo de 'gestión por números' es en realidad gestión por miedo y no aporta conocimiento sobre cómo mejorar el proceso. Si un sistema es estable, se obtendrá lo que el sistema puede dar, y una meta más allá de su capacidad no se alcanzará sin cambiar el sistema; si es inestable, tampoco tiene sentido fijar metas porque no hay capacidad predecible.",
+  "resumen_teorico": "Fijar metas numéricas internas (ej. 'aumentar productividad 3%') sin un plan o método concreto para lograrlas es una farsa gerencial. Esta 'gestión por números' suele ser en realidad gestión por miedo y no aporta conocimiento sobre cómo mejorar el proceso. Si un sistema es estable, no sirve fijar una meta: se obtendrá lo que el sistema puede dar, y una meta más allá de su capacidad no se alcanzará; si es inestable, tampoco, porque no hay capacidad predecible. La única cifra válida es un hecho claro sobre la supervivencia del negocio.",
   "pasos_accionables": [
     "Revisar las metas numéricas actuales de gerencia y verificar si cuentan con un plan de acción concreto",
     "Eliminar metas que solo se basen en deseos o presión sin método definido",
-    "Determinar la capacidad real del sistema mediante análisis estadístico antes de fijar cualquier meta",
+    "Determinar la capacidad real del sistema mediante análisis estadístico, sabiendo que si es estable no sirve fijar una meta: obtendrás lo que el sistema da",
     "Reemplazar metas arbitrarias por objetivos de mejora continua con planes de acción específicos",
-    "Reconocer el costo oculto de manejar tu negocio por miedo a los números"
+    "Reconocer que manejar tu negocio con metas numéricas, sin saber qué hacer para lograrlas, suele ser manejarlo por miedo"
   ],
   "entregable_esperado": "Documento de metas organizacionales revisado, con cada meta vinculada a un método y análisis de capacidad del sistema",
   "nodos_previos": [
@@ -52,6 +52,56 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U2-006 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-093-eliminar_metas_numericas_gerencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fijar metas numéricas internas (ej. 'aumentar productividad 3%') sin un plan o método concreto para lograrlas es una farsa gerencial. Este tipo de 'gestión por números' es en realidad gestión por miedo y no aporta conocimiento sobre cómo mejorar el proceso. Si un sistema es estable, se obtendrá lo que el sistema puede dar, y una meta más allá de su capacidad no se alcanzará sin cambiar el sistema; si es inestable, tampoco tiene sentido fijar metas porque no hay capacidad predecible.",
+      "texto_nuevo": "Fijar metas numéricas internas (ej. 'aumentar productividad 3%') sin un plan o método concreto para lograrlas es una farsa gerencial. Esta 'gestión por números' suele ser en realidad gestión por miedo y no aporta conocimiento sobre cómo mejorar el proceso. Si un sistema es estable, no sirve fijar una meta: se obtendrá lo que el sistema puede dar, y una meta más allá de su capacidad no se alcanzará; si es inestable, tampoco, porque no hay capacidad predecible. La única cifra válida es un hecho claro sobre la supervivencia del negocio.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1571-1581",
+        "frase": "and in fact is usually management by fear"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que suele ser gestión por miedo.; Mismo endurecimiento.; Se cae la única excepción: la cifra que es un hecho claro sobre la supervivencia.; Se cae que con un sistema estable no sirve fijar una meta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-eliminar_metas_numericas_gerencia-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconocer el costo oculto de manejar tu negocio por miedo a los números",
+      "texto_nuevo": "Reconocer que manejar tu negocio con metas numéricas, sin saber qué hacer para lograrlas, suele ser manejarlo por miedo",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1577",
+        "frase": "and in fact is usually management by fear"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de costo oculto ni de miedo a los números; dice que gestionar por metas numéricas suele ser gestionar por miedo.; Mismo defecto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-eliminar_metas_numericas_gerencia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar la capacidad real del sistema mediante análisis estadístico antes de fijar cualquier meta",
+      "texto_nuevo": "Determinar la capacidad real del sistema mediante análisis estadístico, sabiendo que si es estable no sirve fijar una meta: obtendrás lo que el sistema da",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1571",
+        "frase": "If you have a stable system, then there is no use to specify a goal."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que con un sistema estable no sirve fijar una meta; el paso sugiere que conocer la capacidad la legitima.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

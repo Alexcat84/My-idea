@@ -4,11 +4,11 @@
   "dominio": "franquicias",
   "titulo_concepto": "Capitalización Adecuada del Programa de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Franquiciar no es una estrategia de expansión de costo cero. El franquiciador necesita capital suficiente para desarrollar manuales, documentos legales, materiales de marketing, y soportar la venta y el apoyo a franquiciados. Existen tres formas de capitalizar el lanzamiento: usar capital propio o de inversionistas, usar el flujo de caja del negocio actual, o financiarse con las cuotas iniciales de franquicia (esta última es considerada una 'mala práctica' que aumenta el riesgo de vender a candidatos no calificados).",
+  "resumen_teorico": "Franquiciar no es una estrategia de expansión de costo cero. El franquiciador necesita capital suficiente para desarrollar manuales, documentos legales, materiales de marketing, y soportar la venta y el apoyo a franquiciados. Existen tres formas de capitalizar el lanzamiento: usar capital propio o conseguido con prestamistas o inversionistas, usar el flujo de caja del negocio actual, o financiarse con las cuotas iniciales de franquicia o la venta de productos (esta última es considerada una 'mala práctica' que aumenta el riesgo de vender a candidatos no calificados).",
   "pasos_accionables": [
     "Estimar el presupuesto necesario para desarrollar el sistema de franquicia (documentos legales, manuales, marketing)",
     "Identificar la fuente de capital: ahorros/inversionistas, flujo de caja operativo, o cuotas de franquicia",
-    "Evitar depender de las cuotas iniciales de franquicia como fuente principal de financiamiento",
+    "Evitar financiar el lanzamiento con las cuotas iniciales de franquicia: aun usándolas con moderación, depender de ellas es siempre peligroso",
     "Consultar con expertos en franquicias para validar el presupuesto y la estructura de capitalización"
   ],
   "entregable_esperado": "Presupuesto de capitalización del programa de franquicia con fuente de fondos definida",
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Capitaliza Bien tu Franquicia",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-093-capitalizacion_adecuada_del_franquiciador-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar depender de las cuotas iniciales de franquicia como fuente principal de financiamiento",
+      "texto_nuevo": "Evitar financiar el lanzamiento con las cuotas iniciales de franquicia: aun usándolas con moderación, depender de ellas es siempre peligroso",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "976-978",
+        "frase": "even if used with constraint, relying on fees to fund cash flow is always dangerous"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que aun con moderación depender de las cuotas es siempre peligroso; limitarlo a fuente principal lo pierde.; Mismo defecto: se pierde que aun usadas con moderación apoyarse en las cuotas es siempre peligroso.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-capitalizacion_adecuada_del_franquiciador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Franquiciar no es una estrategia de expansión de costo cero. El franquiciador necesita capital suficiente para desarrollar manuales, documentos legales, materiales de marketing, y soportar la venta y el apoyo a franquiciados. Existen tres formas de capitalizar el lanzamiento: usar capital propio o de inversionistas, usar el flujo de caja del negocio actual, o financiarse con las cuotas iniciales de franquicia (esta última es considerada una 'mala práctica' que aumenta el riesgo de vender a candidatos no calificados).",
+      "texto_nuevo": "Franquiciar no es una estrategia de expansión de costo cero. El franquiciador necesita capital suficiente para desarrollar manuales, documentos legales, materiales de marketing, y soportar la venta y el apoyo a franquiciados. Existen tres formas de capitalizar el lanzamiento: usar capital propio o conseguido con prestamistas o inversionistas, usar el flujo de caja del negocio actual, o financiarse con las cuotas iniciales de franquicia o la venta de productos (esta última es considerada una 'mala práctica' que aumenta el riesgo de vender a candidatos no calificados).",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "976-978",
+        "frase": "finance your franchise efforts out of your initial fees and/or product sales"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración pierde a los prestamistas y la venta de productos, que el libro incluye en la mala práctica.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

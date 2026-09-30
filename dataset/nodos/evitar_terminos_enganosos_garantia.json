@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evitar Términos Engañosos en la Garantía",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una ley de Estados Unidos: la Ley Magnuson-Moss, en su sección 110(c)(2). Si le das a un cliente una garantía escrita, no puedes simular que cubres algo que en realidad no cubres, ni prometer un servicio que no piensas o no puedes cumplir. Hacerlo es ilegal y te puede llevar a un litigio y a sanciones. Los conceptos son universales, pero si vendes fuera de Estados Unidos conviene que confirmes la norma vigente en tu propio mercado.",
+  "resumen_teorico": "Esta es una ley de Estados Unidos: la Ley Magnuson-Moss, en su sección 110(c)(2). Si le das a un cliente una garantía escrita, no puedes simular que cubres algo que en realidad no cubres, ni prometer un servicio que no piensas o no puedes cumplir. Hacerlo es engañoso e ilegal. Los conceptos son universales, pero si vendes fuera de Estados Unidos conviene que confirmes la norma vigente en tu propio mercado.",
   "pasos_accionables": [
     "Revisa que cada término de cobertura de tu garantía corresponda a una característica real de tu producto.",
     "Confirma tú mismo que puedes cumplir cada promesa de servicio antes de publicarla.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "No Engañes en tu Garantía",
   "fuentes_internas": [
     "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-092-evitar_terminos_enganosos_garantia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta es una ley de Estados Unidos: la Ley Magnuson-Moss, en su sección 110(c)(2). Si le das a un cliente una garantía escrita, no puedes simular que cubres algo que en realidad no cubres, ni prometer un servicio que no piensas o no puedes cumplir. Hacerlo es ilegal y te puede llevar a un litigio y a sanciones. Los conceptos son universales, pero si vendes fuera de Estados Unidos conviene que confirmes la norma vigente en tu propio mercado.",
+      "texto_nuevo": "Esta es una ley de Estados Unidos: la Ley Magnuson-Moss, en su sección 110(c)(2). Si le das a un cliente una garantía escrita, no puedes simular que cubres algo que en realidad no cubres, ni prometer un servicio que no piensas o no puedes cumplir. Hacerlo es engañoso e ilegal. Los conceptos son universales, pero si vendes fuera de Estados Unidos conviene que confirmes la norma vigente en tu propio mercado.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "358",
+        "frase": "would be deceptive and unlawful"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos términos son engañosos e ilegales; litigio y sanciones como consecuencia no los menciona.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

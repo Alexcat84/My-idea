@@ -10,8 +10,8 @@
     "Brainstorm de lista de barreras potenciales y seleccionar las más críticas",
     "Brainstorm de lista de ayudas existentes para superar esas barreras",
     "Posicionar cada ayuda frente a la barrera que ayuda a superar",
-    "Identificar barreras sin ayudas adecuadas y diseñar contramedidas específicas",
-    "Revisar el diagrama completo para validar efectividad"
+    "Valorar las barreras y las ayudas según su fuerza percibida, identificar las barreras sin ayudas adecuadas y diseñar contramedidas específicas",
+    "Revisar el diagrama completo para detectar barreras vitales que falten y validar la efectividad de ayudas y contramedidas"
   ],
   "entregable_esperado": "Diagrama de barreras, ayudas y contramedidas para la implementación de una mejora",
   "nodos_previos": [
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Mapea Barreras y Apoyos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-092-diagrama_barreras_ayudas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar barreras sin ayudas adecuadas y diseñar contramedidas específicas",
+      "texto_nuevo": "Valorar las barreras y las ayudas según su fuerza percibida, identificar las barreras sin ayudas adecuadas y diseñar contramedidas específicas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17881",
+        "frase": "rate the barriers and known aids according to their perceived strengths"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye como paso mayor valorar barreras y ayudas según su fuerza percibida, lo que decide cuáles quedan sin ayuda adecuada.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-092-diagrama_barreras_ayudas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar el diagrama completo para validar efectividad",
+      "texto_nuevo": "Revisar el diagrama completo para detectar barreras vitales que falten y validar la efectividad de ayudas y contramedidas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17899",
+        "frase": "Review the chart for missing vital-few barriers, the effectiveness of aids"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La revisión del libro busca también barreras vitales que falten, no solo la eficacia.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

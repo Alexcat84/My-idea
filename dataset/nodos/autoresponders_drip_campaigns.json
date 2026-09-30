@@ -4,10 +4,10 @@
   "dominio": "franquicias",
   "titulo_concepto": "Sistema de Autorespuesta y Campañas de Goteo",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El internet genera un volumen masivo de leads no calificados que deben filtrarse eficientemente. Un sistema de mensajes automáticos personalizados según el perfil del prospecto (ej. capitalización) permite nutrir leads interesados y filtrar los no calificados sin desperdiciar tiempo del personal de ventas.",
+  "resumen_teorico": "El internet genera un volumen masivo de leads no calificados que deben filtrarse eficientemente. Un sistema de mensajes automáticos personalizados según el perfil del prospecto (ej. capitalización) permite nutrir leads interesados y filtrar los no calificados sin desperdiciar tiempo del personal de ventas, aunque su conveniencia varía de un franquiciador a otro.",
   "pasos_accionables": [
     "Integrar el sistema de autorrespuesta con el software de gestión de contactos (CRM)",
-    "Crear mensajes diferenciados según variables clave (capital disponible, timeline, ubicación)",
+    "Crear mensajes diferenciados según las respuestas del prospecto (por ejemplo, su capital disponible)",
     "Configurar notificaciones (BCC) al equipo de ventas para prospectos altamente calificados",
     "Revisar y pulir la redacción para mantener profesionalismo y cumplimiento regulatorio"
   ],
@@ -39,6 +39,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-093-autoresponders_drip_campaigns-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El internet genera un volumen masivo de leads no calificados que deben filtrarse eficientemente. Un sistema de mensajes automáticos personalizados según el perfil del prospecto (ej. capitalización) permite nutrir leads interesados y filtrar los no calificados sin desperdiciar tiempo del personal de ventas.",
+      "texto_nuevo": "El internet genera un volumen masivo de leads no calificados que deben filtrarse eficientemente. Un sistema de mensajes automáticos personalizados según el perfil del prospecto (ej. capitalización) permite nutrir leads interesados y filtrar los no calificados sin desperdiciar tiempo del personal de ventas, aunque su conveniencia varía de un franquiciador a otro.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3373",
+        "frase": "the appropriateness of this strategy varies from franchisor to franchisor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la conveniencia de esta estrategia varía de un franquiciador a otro.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-autoresponders_drip_campaigns-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear mensajes diferenciados según variables clave (capital disponible, timeline, ubicación)",
+      "texto_nuevo": "Crear mensajes diferenciados según las respuestas del prospecto (por ejemplo, su capital disponible)",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3333-3335",
+        "frase": "customized messages to your prospects, depending on the nature of their answers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro diferencia según las respuestas del prospecto y solo pone la capitalización de ejemplo; timeline y ubicación se añaden como variables clave.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "risk_management",
   "titulo_concepto": "Apetito y Actitud ante el Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Cuánto riesgo estás dispuesto a asumir es una decisión, no un rasgo fijo, y conviene tomarla a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y hasta el estado de ánimo: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito reciente infla el apetito; un susto lo encoge. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
+  "resumen_teorico": "Cuánto riesgo estás dispuesto a asumir no es un rasgo fijo: está condicionado por tu cultura, tu entorno y tu psicología, y conviene revisarlo a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y hasta el estado de ánimo: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito reciente infla el apetito; un susto puede encogerlo. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
   "pasos_accionables": [
     "Antes de una decisión grande, pregúntate cuánto riesgo estás dispuesto a asumir en ella.",
     "Revisa si un éxito o un susto reciente te está inflando o encogiendo el apetito sin razón.",
     "Desconfía de datos viejos: comprueba si siguen siendo ciertos antes de apoyarte en ellos.",
-    "Deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino."
+    "Sugerencia de My Idea: deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino."
   ],
   "entregable_esperado": "Una declaración escrita de cuánto riesgo estás dispuesto a asumir en tu decisión clave, revisada contra tu estado de ánimo reciente.",
   "nodos_previos": [
@@ -41,6 +41,39 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por gestion_riesgo_incremental."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-090-evitar_o_asumir_decide_a_conciencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuánto riesgo estás dispuesto a asumir es una decisión, no un rasgo fijo, y conviene tomarla a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y hasta el estado de ánimo: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito reciente infla el apetito; un susto lo encoge. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
+      "texto_nuevo": "Cuánto riesgo estás dispuesto a asumir no es un rasgo fijo: está condicionado por tu cultura, tu entorno y tu psicología, y conviene revisarlo a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y hasta el estado de ánimo: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito reciente infla el apetito; un susto puede encogerlo. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5457-5471",
+        "frase": "These profiles and attitudes are culturally, socially and psychologically conditioned."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que el apetito de riesgo sea una decisión; dice que está condicionado cultural, social y psicológicamente y que hay que revisarlo.; Endurece: una experiencia adversa puede llevar a menos disposición al riesgo, no siempre.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-090-evitar_o_asumir_decide_a_conciencia-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino.",
+      "texto_nuevo": "Sugerencia de My Idea: deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5485-5489",
+        "frase": "sole practitioners should also interrogate their risk profiles on a regular basis"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone fijar por escrito el nivel aceptado ni dice que evite cambios por impulso; como consejo práctico queda como sugerencia de la casa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

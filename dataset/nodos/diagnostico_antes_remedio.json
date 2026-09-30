@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "No aplicar ningún remedio sin evidencia validada de la causa real",
     "Cuestionar cualquier afirmación, propia o de quien te asesora, que no tenga datos que la respalden",
-    "Investigar a fondo cuando tengas una creencia arraigada sobre la causa de un problema",
+    "Considerar una investigación especial cuando una creencia arraigada sobre la causa de un problema esté muy extendida",
     "Usar datos históricos parecidos a estudios de fallas para validar tus hipótesis"
   ],
   "entregable_esperado": "Un registro de causas validadas con evidencia, antes de proponer cualquier remedio",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Diagnostica Antes de Actuar",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-092-diagnostico_antes_remedio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investigar a fondo cuando tengas una creencia arraigada sobre la causa de un problema",
+      "texto_nuevo": "Considerar una investigación especial cuando una creencia arraigada sobre la causa de un problema esté muy extendida",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7186",
+        "frase": "Where deep-seated beliefs are widespread, special research may be needed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede hacer falta investigación especial donde las creencias arraigadas están extendidas; el nodo lo vuelve obligatorio y cambia la condición.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Las Cuatro Etapas del Pensamiento Creativo (Wallas)",
   "fuente": "The Art of Thought - Graham Wallas",
-  "resumen_teorico": "Todo proceso de pensamiento creativo o resolución de problemas, sea científico, artístico o de negocios, atraviesa cuatro etapas que no son estrictamente lineales y pueden solaparse cuando trabajas en varios problemas a la vez. Preparación: investigas el problema en profundidad y de forma consciente, reuniendo toda la información relevante. Incubación: dejas de pensar conscientemente en el problema mientras descansas o haces otra cosa, pero el trabajo mental inconsciente sigue activo. Iluminación: aparece de golpe la idea o solución feliz, a menudo precedida por señales sutiles de que algo se está formando, llamadas intimación. Verificación: sometes la idea a un análisis lógico riguroso y a pruebas antes de implementarla. Este modelo es la base histórica de casi todos los procesos modernos de pensamiento de diseño e ideación.",
+  "resumen_teorico": "En general, en un proceso de pensamiento creativo o de resolución de problemas, sea científico, artístico o de negocios, pueden distinguirse cuatro etapas que no son estrictamente lineales y pueden solaparse cuando trabajas en varios problemas a la vez. Preparación: investigas el problema en profundidad y de forma consciente, reuniendo toda la información relevante. Incubación: dejas de pensar conscientemente en el problema mientras descansas o haces otra cosa, aunque puede seguir un trabajo mental inconsciente. Iluminación: aparece de golpe la idea o solución feliz, a menudo precedida por señales sutiles de que algo se está formando, llamadas intimación. Verificación: sometes la idea a un análisis lógico riguroso y a pruebas antes de implementarla.",
   "pasos_accionables": [
     "Preparación: define claramente el problema e investígalo a fondo, reuniendo toda la información relevante posible",
     "Incubación: aléjate deliberadamente del problema (duerme, camina, trabaja en otra cosa) sin forzar conscientemente una solución, creando condiciones de silencio, actividad relajada",
@@ -95,6 +95,22 @@
         "motivo": "Orden invertido: la etapa de incubacion es una parte del modelo de las cuatro etapas y deberia ir despues del panorama general, no antes (el mismo nodo ya la tiene tambien como DESPUES, igual que preparacion y verificacion)."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-090-cuatro_etapas_del_pensamiento_creativo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo proceso de pensamiento creativo o resolución de problemas, sea científico, artístico o de negocios, atraviesa cuatro etapas que no son estrictamente lineales y pueden solaparse cuando trabajas en varios problemas a la vez. Preparación: investigas el problema en profundidad y de forma consciente, reuniendo toda la información relevante. Incubación: dejas de pensar conscientemente en el problema mientras descansas o haces otra cosa, pero el trabajo mental inconsciente sigue activo. Iluminación: aparece de golpe la idea o solución feliz, a menudo precedida por señales sutiles de que algo se está formando, llamadas intimación. Verificación: sometes la idea a un análisis lógico riguroso y a pruebas antes de implementarla. Este modelo es la base histórica de casi todos los procesos modernos de pensamiento de diseño e ideación.",
+      "texto_nuevo": "En general, en un proceso de pensamiento creativo o de resolución de problemas, sea científico, artístico o de negocios, pueden distinguirse cuatro etapas que no son estrictamente lineales y pueden solaparse cuando trabajas en varios problemas a la vez. Preparación: investigas el problema en profundidad y de forma consciente, reuniendo toda la información relevante. Incubación: dejas de pensar conscientemente en el problema mientras descansas o haces otra cosa, aunque puede seguir un trabajo mental inconsciente. Iluminación: aparece de golpe la idea o solución feliz, a menudo precedida por señales sutiles de que algo se está formando, llamadas intimación. Verificación: sometes la idea a un análisis lógico riguroso y a pruebas antes de implementarla.",
+      "cita": {
+        "libro": "The Art of Thought - Graham Wallas",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "313-325",
+        "frase": "can generally be distinguished form each other"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Afirma una influencia histórica sobre los procesos modernos que el libro no dice.; El libro dice que durante la incubación puede darse actividad inconsciente ('may take place'); el nodo la da por segura.; Endurece a 'todo' lo que el libro dice que en general puede distinguirse, con la salvedad de que parte del pensamiento no encaja en el esquema.; Mismo endurecimiento que la marca 0.; Mismo endurecimiento que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

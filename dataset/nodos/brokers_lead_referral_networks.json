@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Usar redes de intermediarios (brokers) para conseguir prospectos",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Los brokers de franquicia (también llamados redes de referidos) son redes que te consiguen prospectos ya filtrados a cambio de una comisión que pagas solo si cierras la venta (pregunta el precio en tu mercado). La ventaja es que el costo es variable y los prospectos suelen llegar con mejor calidad, pero corres el riesgo de que alguien que no controlas represente mal tu marca, y esto no reemplaza que tú mismo trabajes tus propias ventas.",
+  "resumen_teorico": "Los brokers de franquicia (también llamados redes de referidos) te consiguen prospectos ya filtrados por una comisión que en general pagas solo al cerrar la venta, aunque algunos cobran por aceptarte (pregunta el precio en tu mercado). El costo es variable y los prospectos suelen llegar con mejor calidad, pero cada uno sale más caro que uno propio, estar en la red no te garantiza ventas ni más prospectos, alguien que no controlas puede representar mal tu marca, y esto no reemplaza que tú mismo trabajes tus ventas.",
   "pasos_accionables": [
-    "Evalúa tu presupuesto de marketing y tus metas de crecimiento para decidir si te conviene usar brokers",
+    "Evalúa tu presupuesto de marketing, tus metas de crecimiento, la cobertura geográfica que buscas y tu disposición a vigilar de cerca a la red para decidir si te conviene usar brokers",
     "Elige las redes de brokers con el mismo cuidado con el que contratarías a alguien para vender por ti",
     "Evita brokers que te pidan un porcentaje de regalías o cualquier pago continuo, más allá de la comisión por cierre",
-    "Vigila de cerca cómo los brokers hablan de tu marca frente a los prospectos",
+    "Vigila de cerca cómo los brokers hablan de tu marca frente a los prospectos, dales capacitación y retroalimentación continua y asegúrate de que cada prospecto quede plenamente informado desde tu lado",
     "Asiste a convenciones y mantén comunicación constante para que tu marca esté siempre presente en la mente de esa red"
   ],
   "entregable_esperado": "Un acuerdo firmado con una o varias redes de brokers, junto con una forma de vigilarlos y mantenerlos al tanto de tu marca",
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Usa Redes para Conseguir Prospectos",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-093-brokers_lead_referral_networks-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los brokers de franquicia (también llamados redes de referidos) son redes que te consiguen prospectos ya filtrados a cambio de una comisión que pagas solo si cierras la venta (pregunta el precio en tu mercado). La ventaja es que el costo es variable y los prospectos suelen llegar con mejor calidad, pero corres el riesgo de que alguien que no controlas represente mal tu marca, y esto no reemplaza que tú mismo trabajes tus propias ventas.",
+      "texto_nuevo": "Los brokers de franquicia (también llamados redes de referidos) te consiguen prospectos ya filtrados por una comisión que en general pagas solo al cerrar la venta, aunque algunos cobran por aceptarte (pregunta el precio en tu mercado). El costo es variable y los prospectos suelen llegar con mejor calidad, pero cada uno sale más caro que uno propio, estar en la red no te garantiza ventas ni más prospectos, alguien que no controlas puede representar mal tu marca, y esto no reemplaza que tú mismo trabajes tus ventas.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3986-4004",
+        "frase": "some brokers will take fees to accept a franchisor into their network"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que en general se paga al cerrar y que algunos cobran por aceptarte en la red.; Mismo endurecimiento del cobro solo al cierre.; Se cae que el prospecto de broker es más caro que generarlo internamente.; Se cae que estar en la red no garantiza ventas ni más prospectos.; Se caen dos desventajas del libro: el prospecto sale más caro que uno propio y la red no garantiza ventas ni más prospectos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-brokers_lead_referral_networks-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa tu presupuesto de marketing y tus metas de crecimiento para decidir si te conviene usar brokers",
+      "texto_nuevo": "Evalúa tu presupuesto de marketing, tus metas de crecimiento, la cobertura geográfica que buscas y tu disposición a vigilar de cerca a la red para decidir si te conviene usar brokers",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4006",
+        "frase": "the desired geographic coverage, and your willingness to monitor the brokerage network closely"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De los cuatro factores de decisión del libro faltan la cobertura geográfica y la disposición a vigilar la red.; Mismo defecto: faltan dos de los cuatro factores.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-brokers_lead_referral_networks-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vigila de cerca cómo los brokers hablan de tu marca frente a los prospectos",
+      "texto_nuevo": "Vigila de cerca cómo los brokers hablan de tu marca frente a los prospectos, dales capacitación y retroalimentación continua y asegúrate de que cada prospecto quede plenamente informado desde tu lado",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3996",
+        "frase": "provide the brokers with ongoing training and feedback"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además capacitación y retroalimentación continua a los brokers y que el prospecto quede plenamente informado desde tu lado.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

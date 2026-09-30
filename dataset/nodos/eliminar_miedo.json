@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Identificar las expresiones de miedo en las personas que trabajan contigo (temor a perder su lugar, a admitir errores, a hacer preguntas)",
     "Crear canales seguros para que cualquiera exprese problemas sin temor a represalias",
-    "Eliminar la evaluación de desempeño punitiva como fuente de miedo",
-    "Analizar las quejas con datos antes de actuar contra una persona o un grupo específico"
+    "Eliminar la evaluación anual de desempeño como fuente de miedo",
+    "Analizar las quejas con datos, por cálculo y no a ojo, para saber si una categoría está fuera de control respecto de las demás; si lo está, darle atención y ayuda, y trabajar en el sistema para reducir todas las quejas"
   ],
   "entregable_esperado": "Diagnóstico de las fuentes de miedo en tu negocio y un plan para eliminarlas, con evidencia de canales de comunicación seguros ya funcionando.",
   "nodos_previos": [
@@ -94,6 +94,40 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-093-eliminar_miedo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Eliminar la evaluación de desempeño punitiva como fuente de miedo",
+      "texto_nuevo": "Eliminar la evaluación anual de desempeño como fuente de miedo",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1350",
+        "frase": "may be attributed in large part to the annual rating of performance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro atribuye gran parte del miedo a la evaluación anual de desempeño en sí.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-eliminar_miedo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analizar las quejas con datos antes de actuar contra una persona o un grupo específico",
+      "texto_nuevo": "Analizar las quejas con datos, por cálculo y no a ojo, para saber si una categoría está fuera de control respecto de las demás; si lo está, darle atención y ayuda, y trabajar en el sistema para reducir todas las quejas",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1352",
+        "frase": "If yes, then this category requires his special attention and help."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, si la categoría está fuera de control, atención y ayuda y trabajar en el sistema; no actuar contra alguien.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

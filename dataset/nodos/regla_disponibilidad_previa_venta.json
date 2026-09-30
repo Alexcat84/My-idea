@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Disponibilidad de la Garantía Antes de la Venta (Pre-Sale Availability Rule)",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantía escrita a clientes en ese país, la norma exige que el texto completo de la garantía este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantía antes de decidirse.",
+  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos de más de 15 dólares con garantía escrita a clientes en ese país, la norma exige que el texto completo de la garantía esté disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiéndola junto al producto, incluyéndola en tu catálogo o página de venta, o entregándola de inmediato si el cliente la pide antes de pagar, siempre que pongas carteles visibles que avisen que puede pedirla. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantía antes de decidirse.",
   "pasos_accionables": [
     "Revisa por qué canal vendes (tienda física, en línea, puerta a puerta) y define cómo vas a mostrar la garantía antes de que la persona compre en ese canal.",
     "Coloca el texto de la garantía visible junto al producto si vendes en persona, o en la misma página del producto si vendes en línea.",
-    "Prepara a quien te ayuda a vender para que muestre la garantía completa si el cliente la pide antes de decidirse."
+    "Prepara a quien te ayuda a vender para que muestre la garantía completa si el cliente la pide antes de decidirse, y pon carteles visibles que avisen que se puede pedir; si vendes puerta a puerta, que ofrezca copia de la garantía antes de cerrar la venta aunque no se la pidan."
   ],
   "entregable_esperado": "Un método simple, por cada canal donde vendes, para mostrar la garantía escrita antes de que el cliente compre.",
   "nodos_previos": [
@@ -155,6 +155,39 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-092-regla_disponibilidad_previa_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantía escrita a clientes en ese país, la norma exige que el texto completo de la garantía este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantía antes de decidirse.",
+      "texto_nuevo": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos de más de 15 dólares con garantía escrita a clientes en ese país, la norma exige que el texto completo de la garantía esté disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiéndola junto al producto, incluyéndola en tu catálogo o página de venta, o entregándola de inmediato si el cliente la pide antes de pagar, siempre que pongas carteles visibles que avisen que puede pedirla. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantía antes de decidirse.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "694-700",
+        "frase": "warranties on consumer products costing more than $15 be available to consumers before they buy"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Entregarla a pedido exige además carteles visibles que avisen que se puede examinar.; La regla aplica a garantías escritas de productos de más de 15 dólares y el umbral se pierde.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-092-regla_disponibilidad_previa_venta-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prepara a quien te ayuda a vender para que muestre la garantía completa si el cliente la pide antes de decidirse.",
+      "texto_nuevo": "Prepara a quien te ayuda a vender para que muestre la garantía completa si el cliente la pide antes de decidirse, y pon carteles visibles que avisen que se puede pedir; si vendes puerta a puerta, que ofrezca copia de la garantía antes de cerrar la venta aunque no se la pidan.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "700-750",
+        "frase": "posting prominent signs to let customers know that warranties can be examined upon request"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En la venta puerta a puerta hay que ofrecer copia antes de cerrar la venta, sin esperar a que la pidan.; Entregarla solo a pedido exige carteles visibles que avisen que la garantía se puede examinar.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

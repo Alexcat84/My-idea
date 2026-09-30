@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Diferenciación entre Garantía y Contrato de Servicio",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los terminos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si ofreces un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto.",
+  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los términos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si haces tú mismo un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
   "pasos_accionables": [
     "Distingue con claridad en tu oferta la garantía incluida y el contrato de servicio opcional que se paga aparte.",
     "Escribe los términos del contrato de servicio en lenguaje simple y visible, sin que se confunda con una garantía.",
     "Revisa que no estés renunciando a garantías implícitas al ofrecer un contrato de servicio sobre tu propio producto.",
-    "Deja claro quién responde por el cumplimiento de los términos: tú como vendedor o el fabricante."
+    "Ten claro quién hace el contrato de servicio: esa empresa es la responsable de divulgar sus términos como exige la ley, y tú como vendedor solo lo eres si también lo haces."
   ],
   "entregable_esperado": "Una estructura comercial clara que separa la garantía base del contrato de servicio opcional, con los términos documentados.",
   "nodos_previos": [
@@ -124,6 +124,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-092-diferenciacion_garantia_contrato_servicio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los terminos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si ofreces un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto.",
+      "texto_nuevo": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los términos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si haces tú mismo un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "882",
+        "frase": "merely sell service contracts as agents of service contract companies"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se pierde la excepción del vendedor que solo vende contratos de servicio como agente y no da garantía escrita.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-092-diferenciacion_garantia_contrato_servicio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Deja claro quién responde por el cumplimiento de los términos: tú como vendedor o el fabricante.",
+      "texto_nuevo": "Ten claro quién hace el contrato de servicio: esa empresa es la responsable de divulgar sus términos como exige la ley, y tú como vendedor solo lo eres si también lo haces.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "878",
+        "frase": "The company that makes the service contract is responsible for ensuring that the terms"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro asigna a la empresa que hace el contrato la divulgación de los términos; no habla de responder por su cumplimiento ni del fabricante.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,17 +4,17 @@
   "dominio": "franquicias",
   "titulo_concepto": "Cuánto retorno gana quien compra tu franquicia (ROI cash on cash)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. El punto de referencia de la industria es un retorno mínimo del 15% para el segundo o tercer año de operación. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión, el mismo dato que declararás en el documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos).",
+  "resumen_teorico": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión, el mismo dato que declararás en el documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos).",
   "pasos_accionables": [
     "Calcula la inversión inicial total que necesita quien compre tu franquicia (equipo, obra, inventario, cuota de entrada, capital de trabajo) en valores actuales.",
     "Toma el estado de resultados de tu unidad más representativa del negocio actual.",
     "Ajusta el salario de gerencia o dueño a la tasa de mercado.",
-    "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca).",
+    "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca) y los gastos únicos o de inversión, y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
     "Quita los gastos financieros (intereses), los que no son en efectivo (depreciación y amortización) y los impuestos.",
     "Agrega la línea de regalías y aportes al fondo de marketing del sistema.",
     "Divide el flujo de caja ajustado entre la inversión total para obtener el retorno proyectado."
   ],
-  "entregable_esperado": "Una hoja de cálculo con la proyección de retorno de quien compre tu franquicia, mostrando al menos 15% para el año 2 o 3, lista para incluir en el documento de divulgación de tu franquicia (Item 19 del FDD) si decides publicarla.",
+  "entregable_esperado": "Una hoja de cálculo con la proyección de retorno de quien compre tu franquicia para el año 2 o 3, que te muestre si llega al menos al 15%. Es para tu propio análisis: solo puedes mostrar proyecciones a un candidato si las presentas como corresponde en el Item 19 del FDD.",
   "nodos_previos": [
     "evaluacion_necesidad_franquiciar",
     "documentacion_sistemas_operativos",
@@ -60,6 +60,55 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase B: calcular el retorno del franquiciado es metodo universal y el FDD es el ejemplo de EE.UU.; la condicion de solo EE.UU. lo contradecia.",
       "indice": 0,
       "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "final-e1-093-calculo_roi_franquiciado_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. El punto de referencia de la industria es un retorno mínimo del 15% para el segundo o tercer año de operación. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión, el mismo dato que declararás en el documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos).",
+      "texto_nuevo": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión, el mismo dato que declararás en el documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos).",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "692-748",
+        "frase": "generally looks for the franchisee to achieve an ROI of at least 15 percent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro presenta el 15% como lo que suele buscar una consultora para ser competitivo, no como referencia de la industria.; Mismo defecto: convierte en norma de la industria un criterio habitual.; Se cae que con operadores de varias unidades el retorno por unidad debe ser algo mayor.; Se cae que el retorno debe crecer con el riesgo percibido, como en un franquiciador nuevo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-calculo_roi_franquiciado_2-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca).",
+      "texto_nuevo": "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca) y los gastos únicos o de inversión, y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "726-732",
+        "frase": "Eliminate any one-time-only or investment expenses that show up as an expense item"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro también quita gastos únicos o de inversión y ajusta partidas distintas para el franquiciado.; Mismo defecto: faltan dos pasos del procedimiento del libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-093-calculo_roi_franquiciado_2-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una hoja de cálculo con la proyección de retorno de quien compre tu franquicia, mostrando al menos 15% para el año 2 o 3, lista para incluir en el documento de divulgación de tu franquicia (Item 19 del FDD) si decides publicarla.",
+      "texto_nuevo": "Una hoja de cálculo con la proyección de retorno de quien compre tu franquicia para el año 2 o 3, que te muestre si llega al menos al 15%. Es para tu propio análisis: solo puedes mostrar proyecciones a un candidato si las presentas como corresponde en el Item 19 del FDD.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "708",
+        "frase": "disclosure laws prohibit projections of profitability unless presented properly in Item 19"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro advierte que la ley prohíbe proyecciones salvo que se presenten como corresponde en el Item 19.; El libro no da la proyección por lista para el Item 19: es análisis del franquiciador y el 15% es la meta a comprobar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

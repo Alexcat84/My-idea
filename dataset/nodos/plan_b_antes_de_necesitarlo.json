@@ -9,7 +9,7 @@
     "Para cada riesgo grave, escribe qué harás concretamente si se vuelve realidad.",
     "Identifica qué necesitas preparar de antemano para que ese plan B sea posible.",
     "Prepara esas piezas ahora: un contacto, un proveedor alterno, una copia de respaldo.",
-    "Guarda tus planes B donde puedas encontrarlos rápido en plena crisis."
+    "Guarda tus planes B donde puedas encontrarlos rápido en plena crisis, y ensaya los de los riesgos más graves."
   ],
   "entregable_esperado": "Un plan B escrito por cada riesgo grave, con las piezas que hay que preparar de antemano ya listas.",
   "nodos_previos": [
@@ -60,6 +60,23 @@
         "motivo": "El plan B general se concreta en la cadena de suministro con stock de seguridad y proveedores duplicados, y además la candidata ya se activa cuando dependes de algo sin reemplazo."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-090-plan_b_antes_de_necesitarlo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Guarda tus planes B donde puedas encontrarlos rápido en plena crisis.",
+      "texto_nuevo": "Guarda tus planes B donde puedas encontrarlos rápido en plena crisis, y ensaya los de los riesgos más graves.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "6066",
+        "frase": "appropriate emergency response and recovery plans and procedures should be in place and rehearsed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Para los riesgos altos el libro pide que los planes de respuesta estén en su lugar y ensayados, no solo guardados.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

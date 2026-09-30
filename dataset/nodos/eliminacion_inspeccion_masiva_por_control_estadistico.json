@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sustitución de la Inspección Masiva por Control Estadístico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La inspección al 100% de un producto (como el caso de discos de freno inspeccionados en su totalidad) es innecesaria y costosa cuando el proceso está bajo control estadístico demostrado mediante cartas de control; en ese caso basta con muestreo periódico. Insistir en inspección total ignora la evidencia estadística y desperdicia recursos, además de no mejorar la calidad, solo detecta defectos ya producidos.",
+  "resumen_teorico": "La inspección al 100% de un producto (como en un caso de discos de freno) es innecesaria y costosa cuando el proceso está bajo control estadístico demostrado mediante cartas de control y su proporción de defectos es menor que el punto de equilibrio de costos k1/k2; en ese caso basta con muestreo periódico. Insistir en inspección total ignora la evidencia estadística y desperdicia recursos, además de no mejorar la calidad, solo detecta defectos ya producidos.",
   "pasos_accionables": [
     "Establecer cartas de control para verificar la estabilidad del proceso",
     "Demostrar mediante datos que el proceso está bajo control estadístico",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Confía en el Control Estadístico",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-093-eliminacion_inspeccion_masiva_por_control_estadistico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La inspección al 100% de un producto (como el caso de discos de freno inspeccionados en su totalidad) es innecesaria y costosa cuando el proceso está bajo control estadístico demostrado mediante cartas de control; en ese caso basta con muestreo periódico. Insistir en inspección total ignora la evidencia estadística y desperdicia recursos, además de no mejorar la calidad, solo detecta defectos ya producidos.",
+      "texto_nuevo": "La inspección al 100% de un producto (como en un caso de discos de freno) es innecesaria y costosa cuando el proceso está bajo control estadístico demostrado mediante cartas de control y su proporción de defectos es menor que el punto de equilibrio de costos k1/k2; en ese caso basta con muestreo periódico. Insistir en inspección total ignora la evidencia estadística y desperdicia recursos, además de no mejorar la calidad, solo detecta defectos ya producidos.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "715",
+        "frase": "realization of minimum total cost may call for 100 percent inspection of some items"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con el proceso en control, la inspección al 100% es la regla de menor costo si la proporción de defectos supera k1/k2.; Mismo defecto: estar en control no basta por sí solo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
