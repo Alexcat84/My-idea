@@ -4,13 +4,13 @@
   "dominio": "environmental",
   "titulo_concepto": "Cinco Pasos hacia la Eco-Efectividad",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Marco de transición gradual para que empresas con infraestructura y cultura establecidas (como Ford en River Rouge) evolucionen hacia la eco-efectividad sin desechar de golpe sus procesos. El cambio empieza con un producto o problema específico y crece incrementalmente. El marco incluye pasos progresivos, comenzando por eliminar sustancias dañinas conocidas y avanzando hacia preferencias informadas, siendo un proceso de transformación cultural y técnica dentro de la organización.",
+  "resumen_teorico": "Marco de transición gradual para que empresas con infraestructura y cultura establecidas (como Ford en River Rouge) evolucionen hacia la eco-efectividad sin desechar de golpe sus procesos. El cambio suele empezar con un producto, sistema o problema específico y crece incrementalmente. El marco tiene cinco pasos progresivos: eliminar sustancias dañinas conocidas, seguir preferencias informadas, inventariar las sustancias para crear una lista positiva, rediseñar desde cero con ella y reinventar, siendo un proceso de transformación cultural y técnica dentro de la organización.",
   "pasos_accionables": [
     "Crear un espacio físico o virtual (tipo 'Rouge Room') donde equipos multidisciplinarios visualicen metas y avances",
     "Involucrar a representantes de todos los sectores de la empresa además de expertos externos (químicos, biólogos, reguladores)",
     "Definir métricas de éxito social, económico y ecológico visibles para toda la organización",
     "Aceptar resistencia interna como parte natural del proceso de cambio",
-    "Avanzar de forma incremental: comenzar por un producto o sitio piloto antes de escalar"
+    "Avanzar de forma incremental: comenzar por un producto o sitio piloto antes de escalar, adaptando las soluciones a las circunstancias de cada lugar"
   ],
   "entregable_esperado": "Plan de transición organizacional con espacio de colaboración definido, métricas mixtas y un piloto inicial identificado",
   "nodos_previos": [
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Transita hacia la Eco-Efectividad",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-098-cinco_pasos_eco_efectividad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marco de transición gradual para que empresas con infraestructura y cultura establecidas (como Ford en River Rouge) evolucionen hacia la eco-efectividad sin desechar de golpe sus procesos. El cambio empieza con un producto o problema específico y crece incrementalmente. El marco incluye pasos progresivos, comenzando por eliminar sustancias dañinas conocidas y avanzando hacia preferencias informadas, siendo un proceso de transformación cultural y técnica dentro de la organización.",
+      "texto_nuevo": "Marco de transición gradual para que empresas con infraestructura y cultura establecidas (como Ford en River Rouge) evolucionen hacia la eco-efectividad sin desechar de golpe sus procesos. El cambio suele empezar con un producto, sistema o problema específico y crece incrementalmente. El marco tiene cinco pasos progresivos: eliminar sustancias dañinas conocidas, seguir preferencias informadas, inventariar las sustancias para crear una lista positiva, rediseñar desde cero con ella y reinventar, siendo un proceso de transformación cultural y técnica dentro de la organización.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "930",
+        "frase": "in most cases change begins with a specific product, system, or problem"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que el cambio empieza así en la mayoría de los casos.; La enumeración se queda en 2 de los 5 pasos y omite los que hacen el diseño eco-efectivo.; Mismo defecto que la marca 1: faltan los pasos 3 a 5.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-098-cinco_pasos_eco_efectividad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Avanzar de forma incremental: comenzar por un producto o sitio piloto antes de escalar",
+      "texto_nuevo": "Avanzar de forma incremental: comenzar por un producto o sitio piloto antes de escalar, adaptando las soluciones a las circunstancias de cada lugar",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "924",
+        "frase": "The specific solutions must grow out of and respond to local circumstances, however."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el piloto: las soluciones responden a lo local y se adaptan al llevarlas a otros sitios.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

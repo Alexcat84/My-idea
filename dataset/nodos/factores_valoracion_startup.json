@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Qué determina cuánto vale tu empresa para un inversionista",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuánto te ofrece un inversionista no es una ciencia exacta. Se mezcla lo medible con lo que no lo es: en qué etapa estás, cuánta competencia hay entre quienes quieren financiarte, la experiencia de tu equipo, el tamaño y la tendencia de tu mercado, el momento en que entra cada inversionista, tus números (ingresos, ganancia operativa, cuánto dinero quemas al mes) y el clima económico general. Concéntrate en lo que sí puedes controlar: generar competencia real entre los interesados.",
+  "resumen_teorico": "Cuánto te ofrece un inversionista no es una ciencia exacta. Se mezcla lo medible con lo que no lo es: en qué etapa estás, cuánta competencia hay entre quienes quieren financiarte, la experiencia de tu equipo, el tamaño y la tendencia de tu mercado, el rango de valoración en el que suele invertir cada inversionista, tus números (ingresos, ganancia operativa, cuánto dinero quemas al mes) y el clima económico general. Concéntrate en lo que sí puedes controlar: generar competencia real entre los interesados.",
   "pasos_accionables": [
     "Fortalece lo que depende de ti: la experiencia de tu equipo, la tracción de tu negocio, tus métricas.",
     "Habla con varios inversionistas al mismo tiempo para generar interés genuino: cuando hay más de uno interesado, tu posición para negociar mejora.",
-    "Nunca finjas más competencia entre inversionistas de la que realmente existe: si se nota que no es real, pierdes credibilidad y fuerza para negociar.",
-    "No te lo tomes personal cuando te ofrezcan un número. Es una cifra negociada según lo que le conviene al inversionista, no un juicio sobre ti."
+    "Nunca finjas más competencia entre inversionistas de la que realmente existe: si se nota que no es real, pierdes credibilidad y fuerza para negociar, y puedes perder al inversionista que ya tienes en la mesa.",
+    "No te lo tomes personal cuando te ofrezcan un número. Es una estimación influida por muchos factores, y cada parte la mira desde su propia perspectiva; no es un juicio sobre ti."
   ],
   "entregable_esperado": "Una estrategia para conseguir inversión hablando con varios inversionistas en paralelo, con métricas de negocio claras que sustenten el valor que pides.",
   "nodos_previos": [
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Conoce tu Valoración Real",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-factores_valoracion_startup-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuánto te ofrece un inversionista no es una ciencia exacta. Se mezcla lo medible con lo que no lo es: en qué etapa estás, cuánta competencia hay entre quienes quieren financiarte, la experiencia de tu equipo, el tamaño y la tendencia de tu mercado, el momento en que entra cada inversionista, tus números (ingresos, ganancia operativa, cuánto dinero quemas al mes) y el clima económico general. Concéntrate en lo que sí puedes controlar: generar competencia real entre los interesados.",
+      "texto_nuevo": "Cuánto te ofrece un inversionista no es una ciencia exacta. Se mezcla lo medible con lo que no lo es: en qué etapa estás, cuánta competencia hay entre quienes quieren financiarte, la experiencia de tu equipo, el tamaño y la tendencia de tu mercado, el rango de valoración en el que suele invertir cada inversionista, tus números (ingresos, ganancia operativa, cuánto dinero quemas al mes) y el clima económico general. Concéntrate en lo que sí puedes controlar: generar competencia real entre los interesados.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "897",
+        "frase": "Some VCs are early stage investors and will invest only at low price points."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El factor del libro es el punto de entrada natural en precio, no el momento en que entra.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-factores_valoracion_startup-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No te lo tomes personal cuando te ofrezcan un número. Es una cifra negociada según lo que le conviene al inversionista, no un juicio sobre ti.",
+      "texto_nuevo": "No te lo tomes personal cuando te ofrezcan un número. Es una estimación influida por muchos factores, y cada parte la mira desde su propia perspectiva; no es un juicio sobre ti.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "907",
+        "frase": "recognize that it's a guess influenced by multiple factors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que es una conjetura influida por varios factores y vista desde perspectivas distintas, no según la conveniencia del inversionista.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-factores_valoracion_startup-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Nunca finjas más competencia entre inversionistas de la que realmente existe: si se nota que no es real, pierdes credibilidad y fuerza para negociar.",
+      "texto_nuevo": "Nunca finjas más competencia entre inversionistas de la que realmente existe: si se nota que no es real, pierdes credibilidad y fuerza para negociar, y puedes perder al inversionista que ya tienes en la mesa.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "891",
+        "frase": "potentially lose the existing investor that you have at the table"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae una consecuencia de la lista del libro: perder al inversionista que ya tienes.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

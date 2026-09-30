@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Realiza una sesión de alineación con la junta y tu equipo sobre la diferencia entre buscar un modelo de negocio y ejecutar uno ya validado",
     "Acuerda el uso del Business Model Canvas y define el Market Type inicial (Existente, Resegmentado, Nuevo o Clon)",
-    "Acuerda con la junta cuántos pivots financiados tienes disponibles antes de quedarte sin efectivo",
-    "Define los criterios de salida (exit criteria) para las fases de Discovery y Validation"
+    "Acuerda con la junta cuántos pivots financiados tienes disponibles antes de quedarte sin efectivo y comprueba si alcanza para 2 a 3 pivots en Discovery y Validation",
+    "Acuerda el tiempo aproximado de las fases de Discovery y Validation y define sus criterios de salida (exit criteria)"
   ],
   "entregable_esperado": "Checklist firmado de buy-in de junta y equipo fundador, incluyendo el tipo de mercado inicial, número de pivots financiados y criterios de salida por fase.",
   "nodos_previos": [
@@ -44,5 +44,41 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-100-buyin_customer_development-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Acuerda con la junta cuántos pivots financiados tienes disponibles antes de quedarte sin efectivo",
+      "texto_nuevo": "Acuerda con la junta cuántos pivots financiados tienes disponibles antes de quedarte sin efectivo y comprueba si alcanza para 2 a 3 pivots en Discovery y Validation",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "4468",
+        "frase": "Is there is enough funding for 2 to 3 Pivots in Discovery and Validation?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La checklist pide comprobar si hay fondos para 2 a 3 pivots en Discovery y Validation.; Mismo defecto: se cae la vara de 2 a 3 pivots financiados.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-100-buyin_customer_development-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define los criterios de salida (exit criteria) para las fases de Discovery y Validation",
+      "texto_nuevo": "Acuerda el tiempo aproximado de las fases de Discovery y Validation y define sus criterios de salida (exit criteria)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "4478-4484",
+        "frase": "Agree on Customer Development Time Frame. Approximate time for Discovery and Validation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La checklist incluye acordar el tiempo aproximado de Discovery y Validation junto a los criterios de salida.; Mismo defecto: falta acordar el marco de tiempo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

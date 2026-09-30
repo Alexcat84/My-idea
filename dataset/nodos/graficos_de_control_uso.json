@@ -7,7 +7,7 @@
   "resumen_teorico": "Los gráficos de control tienen dos aplicaciones: (1) como juicio retrospectivo, para determinar si un lote pasado estuvo en control estadístico; y (2) como operación continua, para mantener el proceso en control durante la producción, extendiendo los límites hacia el futuro y graficando puntos en tiempo real.",
   "pasos_accionables": [
     "Definir si el gráfico se usará para evaluar un lote pasado o para monitoreo continuo",
-    "Si es monitoreo continuo, extender los límites de control calculados hacia adelante",
+    "Si es monitoreo continuo y el proceso ya está en control estadístico (o casi), extender los límites de control calculados hacia adelante",
     "Capacitar al operario para ignorar fluctuaciones normales y reaccionar solo ante señales reales (puntos fuera de límite o corridas)",
     "Revisar periódicamente la vigencia y utilidad de cada gráfico (evitar proliferación sin propósito)"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Usa tus Gráficos con Propósito",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-099-graficos_de_control_uso-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es monitoreo continuo, extender los límites de control calculados hacia adelante",
+      "texto_nuevo": "Si es monitoreo continuo y el proceso ya está en control estadístico (o casi), extender los límites de control calculados hacia adelante",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7782",
+        "frase": "Here the process has already been brought into statistical control (or nearly so"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro extiende los límites al futuro solo cuando el proceso ya está en control estadístico o casi.; Misma condición perdida.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

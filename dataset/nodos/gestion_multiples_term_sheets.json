@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de Múltiples Term Sheets Simultáneos",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Al negociar una ronda de financiamiento, es estratégicamente ventajoso lograr que varios VCs entreguen sus term sheets en el mismo marco temporal, generando competencia genuina. Esto requiere pacing cuidadoso (acelerar a unos, ralentizar a otros) sin nunca revelar con quién más se está hablando ni mostrar los term sheets reales de otros inversores, ya que esto puede provocar que los VCs se coordinen entre sí y se elimine la competencia.",
+  "resumen_teorico": "Al negociar una ronda de financiamiento, es estratégicamente ventajoso lograr que varios VCs entreguen sus term sheets en el mismo marco temporal, generando competencia genuina. Esto requiere pacing cuidadoso (acelerar a unos, ralentizar a otros) sin nunca revelar con quién más se está hablando ni mostrar los term sheets reales de otros inversores, ya que esto puede provocar que los VCs se coordinen entre sí y se elimine la competencia, salvo que precisamente quieras que se unan en un sindicato.",
   "pasos_accionables": [
     "Identificar a todos los VCs objetivo antes de iniciar conversaciones formales",
     "Coordinar el ritmo de las conversaciones para que avancen en paralelo",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Genera Competencia entre Inversionistas",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-gestion_multiples_term_sheets-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al negociar una ronda de financiamiento, es estratégicamente ventajoso lograr que varios VCs entreguen sus term sheets en el mismo marco temporal, generando competencia genuina. Esto requiere pacing cuidadoso (acelerar a unos, ralentizar a otros) sin nunca revelar con quién más se está hablando ni mostrar los term sheets reales de otros inversores, ya que esto puede provocar que los VCs se coordinen entre sí y se elimine la competencia.",
+      "texto_nuevo": "Al negociar una ronda de financiamiento, es estratégicamente ventajoso lograr que varios VCs entreguen sus term sheets en el mismo marco temporal, generando competencia genuina. Esto requiere pacing cuidadoso (acelerar a unos, ralentizar a otros) sin nunca revelar con quién más se está hablando ni mostrar los term sheets reales de otros inversores, ya que esto puede provocar que los VCs se coordinen entre sí y se elimine la competencia, salvo que precisamente quieras que se unan en un sindicato.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3623",
+        "frase": "The exception, of course, is when you want them to team up"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se cae la excepción del libro: revelar nombres sí tiene sentido si quieres que formen un sindicato.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

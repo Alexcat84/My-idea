@@ -10,7 +10,7 @@
     "Establecer categorías de requisitos (negocio, stakeholder, calidad, etc.)",
     "Determinar el enfoque de priorización (must have, should have, nice to have)",
     "Definir métricas para medir el cumplimiento de cada requisito",
-    "Establecer la estructura de trazabilidad y el proceso de validación"
+    "Establecer la estructura de trazabilidad, el proceso de validación, cómo se dará seguimiento e informe a los requisitos y cómo se controlan y autorizan sus cambios"
   ],
   "entregable_esperado": "Un documento con el proceso completo de gestión de requisitos, desde la recolección hasta la validación final.",
   "nodos_previos": [
@@ -44,6 +44,23 @@
         "motivo": "Orden invertido: el plan de gestion de requisitos es de planificacion temprana y no sigue al cronograma."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-098-requirements_management_plan-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer la estructura de trazabilidad y el proceso de validación",
+      "texto_nuevo": "Establecer la estructura de trazabilidad, el proceso de validación, cómo se dará seguimiento e informe a los requisitos y cómo se controlan y autorizan sus cambios",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "763-769",
+        "frase": "the change management process, and the authorization levels needed to approve changes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El plan del libro incluye la gestión de configuración: control de cambios y niveles de autorización, ausentes en los pasos.; Mismo defecto, y además faltan el seguimiento y los informes de requisitos que el libro enumera.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

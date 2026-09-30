@@ -10,7 +10,7 @@
     "Cuestionar si esos indicadores solo miden actividad económica sin distinguir su calidad",
     "Identificar si alguno podría aumentar artificialmente por eventos negativos como accidentes o remediaciones",
     "Evaluar el verdadero costo beneficio de la actividad económica que estás generando",
-    "Proponer métricas complementarias que capturen salud ecológica, cultural y social",
+    "Proponer métricas complementarias que capturen salud ecológica, cultural y social, y los efectos a largo plazo",
     "Rediseñar tu cuadro de indicadores para evitar incentivos perversos"
   ],
   "entregable_esperado": "Cuadro de métricas de éxito ampliado que incluya indicadores no financieros de impacto ambiental y social",
@@ -47,5 +47,24 @@
   ],
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-098-critica_del_pib_como_metrica_de_progreso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proponer métricas complementarias que capturen salud ecológica, cultural y social",
+      "texto_nuevo": "Proponer métricas complementarias que capturen salud ecológica, cultural y social, y los efectos a largo plazo",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "229",
+        "frase": "social activity, ecological impact, cultural activity, and long-term effects can be overlooked"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro de lo que se pasa por alto incluye los efectos a largo plazo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

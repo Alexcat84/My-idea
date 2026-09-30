@@ -9,7 +9,7 @@
     "Comunica el mensaje de calidad a todas las personas que trabajan contigo, sin excepción",
     "Registra y muestra las mediciones actuales desde el inicio del programa",
     "Deja que las personas participen de manera activa en el proceso",
-    "Evita usar amenazas o castigos para comunicar esto"
+    "Evita usar amenazas o castigos para comunicar esto, y no intentes engañar a nadie"
   ],
   "entregable_esperado": "Registro inicial de mediciones de calidad que compartes con todo tu equipo como punto de partida.",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Comunica la Calidad con Datos",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-099-quality_awareness_crosby-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita usar amenazas o castigos para comunicar esto",
+      "texto_nuevo": "Evita usar amenazas o castigos para comunicar esto, y no intentes engañar a nadie",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3587",
+        "frase": "give them the message, let them participate, and not try to fool them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el tercer elemento del libro: no intentar engañar a las personas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

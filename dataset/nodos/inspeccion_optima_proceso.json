@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Optimización del Punto y Tipo de Inspección",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico y no solo criterios tradicionales como los estándares militares (Mil-Std 105D).",
+  "resumen_teorico": "La inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico, no planes de muestreo tradicionales como los estándares militares (Mil-Std 105D), que solo aumentan los costos.",
   "pasos_accionables": [
     "Mapear todos los puntos de inspección actuales (materiales entrantes, proceso, producto final)",
     "Calcular el costo total asociado a cada punto de inspección versus el costo de no inspeccionar",
     "Solicitar evidencia de control estadístico a proveedores para reducir inspección de entrada",
-    "Eliminar inspecciones en puntos donde no se generan registros ni se usan los datos"
+    "En los puntos donde no se generan registros ni se usan los datos, empezar a registrar (en gráficos de control o de corrida) o eliminar la inspección"
   ],
   "entregable_esperado": "Mapa de puntos de inspección optimizados con justificación de costo-beneficio",
   "nodos_previos": [
@@ -36,6 +36,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-024 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-099-inspeccion_optima_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico y no solo criterios tradicionales como los estándares militares (Mil-Std 105D).",
+      "texto_nuevo": "La inspección debe ubicarse donde minimice el costo total: en algunos puntos no debería haber inspección alguna, y en otros debería ser inspección al 100%. La decisión requiere evidencia de control estadístico, no planes de muestreo tradicionales como los estándares militares (Mil-Std 105D), que solo aumentan los costos.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2877",
+        "frase": "Such plans can only increase costs, as will be clear from Chapter 16."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no los trata como criterio insuficiente sino como planes que solo aumentan costos y deben abandonarse.; Mismo defecto: el 'no solo' deja válidos unos planes que el libro da por terminados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-inspeccion_optima_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Eliminar inspecciones en puntos donde no se generan registros ni se usan los datos",
+      "texto_nuevo": "En los puntos donde no se generan registros ni se usan los datos, empezar a registrar (en gráficos de control o de corrida) o eliminar la inspección",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3560-3566",
+        "frase": "In the form of control charts or run charts? If not, why not?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pregunta primero por qué no se llevan registros en gráficos de control o de corrida; el paso deja solo la opción de cortar la inspección.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

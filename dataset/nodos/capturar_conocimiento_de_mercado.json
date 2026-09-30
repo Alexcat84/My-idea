@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Capturar Conocimiento de Mercado (Análisis de Tráfico y Competencia)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Una vez entendido el cliente, hay que entender el mercado completo: tendencias, jugadores clave, necesidades no resueltas e innovadores. Para canales físicos esto implica reunirse con actores de mercados adyacentes, analistas y asistir a ferias. Para web/mobile, se usan herramientas de medición de tráfico (por ejemplo, AdRoll o Adbeat), tiendas de apps y sitios como Quora para mapear competencia y posicionarse mediante una grilla competitiva y un mapa de mercado.",
+  "resumen_teorico": "Una vez entendido el cliente, hay que entender el mercado completo: tendencias, jugadores clave, necesidades no resueltas e innovadores. Para canales físicos esto implica reunirse con actores de mercados adyacentes, analistas y asistir a ferias. Para web/mobile, se usan herramientas gratuitas de medición de tráfico, tiendas de apps y sitios como Quora para mapear competencia y posicionarse mediante una grilla competitiva y un mapa de mercado.",
   "pasos_accionables": [
     "Reunirse con pares de mercados adyacentes, analistas y periodistas del sector",
     "Investigar tendencias, jugadores clave y modelos de negocio",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Analiza Tráfico y Competencia",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-100-capturar_conocimiento_de_mercado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una vez entendido el cliente, hay que entender el mercado completo: tendencias, jugadores clave, necesidades no resueltas e innovadores. Para canales físicos esto implica reunirse con actores de mercados adyacentes, analistas y asistir a ferias. Para web/mobile, se usan herramientas de medición de tráfico (por ejemplo, AdRoll o Adbeat), tiendas de apps y sitios como Quora para mapear competencia y posicionarse mediante una grilla competitiva y un mapa de mercado.",
+      "texto_nuevo": "Una vez entendido el cliente, hay que entender el mercado completo: tendencias, jugadores clave, necesidades no resueltas e innovadores. Para canales físicos esto implica reunirse con actores de mercados adyacentes, analistas y asistir a ferias. Para web/mobile, se usan herramientas gratuitas de medición de tráfico, tiendas de apps y sitios como Quora para mapear competencia y posicionarse mediante una grilla competitiva y un mapa de mercado.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8522",
+        "frase": "Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): AdRoll y Adbeat no aparecen en el libro, que habla de herramientas gratuitas de medición de tráfico.; Mismo defecto: herramientas añadidas que el libro no menciona.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

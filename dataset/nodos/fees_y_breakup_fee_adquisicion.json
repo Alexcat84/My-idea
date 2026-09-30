@@ -7,8 +7,8 @@
   "resumen_teorico": "En la carta de intención (LOI) deja claro quién paga los costos de la transacción, como abogados y asesores. Las comisiones por cancelación (breakup fees), que compensan a una parte si el trato no se cierra, son poco comunes cuando vendes a un fondo de capital de riesgo, aunque sí se usan entre empresas públicas. Normalmente no te conviene aceptarlas, salvo que tengas un riesgo reputacional alto o un impacto grande en clientes o empleados.",
   "pasos_accionables": [
     "Deja claro en la carta de intención (LOI) quién paga los costos legales y de asesoría.",
-    "Evalúa si te conviene pedir una comisión por cancelación (breakup fee) según el riesgo de la venta.",
-    "Usa la cláusula de exclusividad (no-shop) como opción preferida en lugar de una comisión por cancelación."
+    "Pide una comisión por cancelación (breakup fee) solo en casos raros: si el comprador es un competidor y temes que solo busque información, o si entrar en la venta te expone a un riesgo enorme con clientes o empleados.",
+    "Si el comprador te pide una comisión por cancelación (breakup fee), resístete y propón que se apoye en la cláusula de exclusividad (no-shop) en su lugar."
   ],
   "entregable_esperado": "La sección de costos y, si aplica, la comisión por cancelación acordada en tu carta de intención.",
   "nodos_previos": [
@@ -24,5 +24,41 @@
   "etiqueta_arbol": "Define Quién Paga los Costos",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-fees_y_breakup_fee_adquisicion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa si te conviene pedir una comisión por cancelación (breakup fee) según el riesgo de la venta.",
+      "texto_nuevo": "Pide una comisión por cancelación (breakup fee) solo en casos raros: si el comprador es un competidor y temes que solo busque información, o si entrar en la venta te expone a un riesgo enorme con clientes o empleados.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4338",
+        "frase": "rare circumstances in which a seller can reasonably ask for a breakup fee"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita la petición a casos raros y nombra dos condiciones concretas.; Mismo defecto que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-fees_y_breakup_fee_adquisicion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa la cláusula de exclusividad (no-shop) como opción preferida en lugar de una comisión por cancelación.",
+      "texto_nuevo": "Si el comprador te pide una comisión por cancelación (breakup fee), resístete y propón que se apoye en la cláusula de exclusividad (no-shop) en su lugar.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4329",
+        "frase": "resist any request of a buyer to institute a breakup fee"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición: la no-shop es lo que se ofrece al comprador cuando él pide la comisión.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

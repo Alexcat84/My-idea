@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Paso 12: Reconocimiento",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Duodécimo paso del programa de catorce pasos de Crosby. Su propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, y deben tener voz en cómo se eligen esos premios.",
+  "resumen_teorico": "Duodécimo paso del programa de catorce pasos. Su propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, que deben poder ayudar a elegir, y deben tener voz en cómo se eligen esos premios.",
   "pasos_accionables": [
-    "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre las ideas de mejora que te compartan, y trata todos los problemas reportados de manera equitativa",
+    "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre los problemas que te reporten, y trata todos los problemas reportados de manera equitativa",
     "Define una frecuencia: reconocimiento individual cada trimestre, logros grupales cada mes, y sorteos de vez en cuando",
     "Si trabajas con colaboradores o freelancers, decide junto con ellos cómo se elige el premio, en lugar de imponerlo tú solo, y adapta el reconocimiento a la forma de trabajar que tienes con tu gente",
     "Cuida que la entrega sea digna y visible, más que el valor económico del premio",
-    "No reduzcas el reconocimiento a bonos o dinero; prioriza la ceremonia y el aprecio genuino"
+    "No uses bonos ni dinero como premio; prioriza la ceremonia y el aprecio genuino"
   ],
   "entregable_esperado": "Un sistema simple de reconocimiento documentado, con tipos de premio, frecuencia, forma de elegirlos entre los involucrados y protocolo de entrega pública",
   "nodos_previos": [
@@ -48,5 +48,57 @@
   ],
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-099-reconocimiento_al_desempeno-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre las ideas de mejora que te compartan, y trata todos los problemas reportados de manera equitativa",
+      "texto_nuevo": "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre los problemas que te reporten, y trata todos los problemas reportados de manera equitativa",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3361",
+        "frase": "individuals making outstanding contributions, and random drawings of ECRs submitted"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Los sorteos del libro son entre los reportes de problemas (ECR), que recalca que no son sugerencias; el nodo los vuelve ideas de mejora.; Mismo defecto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-reconocimiento_al_desempeno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Duodécimo paso del programa de catorce pasos de Crosby. Su propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, y deben tener voz en cómo se eligen esos premios.",
+      "texto_nuevo": "Duodécimo paso del programa de catorce pasos. Su propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, que deben poder ayudar a elegir, y deben tener voz en cómo se eligen esos premios.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3341",
+        "frase": "the employees must have the opportunity to help select the goals"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que las personas deben poder ayudar a elegir las metas por las que se las reconoce.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-reconocimiento_al_desempeno-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No reduzcas el reconocimiento a bonos o dinero; prioriza la ceremonia y el aprecio genuino",
+      "texto_nuevo": "No uses bonos ni dinero como premio; prioriza la ceremonia y el aprecio genuino",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1637",
+        "frase": "The prizes or awards should not be financial."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que los premios no deben ser económicos; 'no reduzcas a dinero' deja abierta la vía monetaria.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

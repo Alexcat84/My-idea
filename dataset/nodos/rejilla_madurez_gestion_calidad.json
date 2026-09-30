@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Rejilla de Madurez de Gestión de Calidad (Quality Management Maturity Grid)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "La Quality Management Maturity Grid te permite ubicar el estado de la gestión de calidad de tu negocio sin necesidad de ser experto. Distingue cinco etapas: Incertidumbre (culpas al área de calidad y vives en el presente sin prevención), Despertar (reconoces el problema pero no inviertes porque no ves relación entre gasto y ahorro), Iluminación (formas equipos que reducen la tensión), Sabiduría (participación activa y sostenida en prevención) y Certeza (prevención total, los defectos son anomalías sorprendentes). Se evalúa a través de seis categorías de gestión, entre ellas el costo de calidad como porcentaje de ventas. Sirve para planificar el avance a la siguiente etapa y también para leer hacia atrás cuando un programa se deteriora, identificando el último punto donde funcionaba bien.",
+  "resumen_teorico": "La Quality Management Maturity Grid te permite ubicar el estado de la gestión de calidad de tu negocio sin necesidad de ser experto. Distingue cinco etapas: Incertidumbre (culpas al área de calidad y vives en el presente sin prevención), Despertar (reconoces el problema pero no inviertes porque no ves relación entre gasto y ahorro), Iluminación (admites que necesitas mejorar, baja la tensión y formas un equipo con todas las áreas), Sabiduría (participación activa y sostenida en prevención) y Certeza (prevención total, los defectos son anomalías sorprendentes). Se evalúa a través de seis categorías de gestión, entre ellas el costo de calidad como porcentaje de ventas. Sirve para planificar el avance a la siguiente etapa y también para leer hacia atrás cuando un programa se deteriora, identificando el último punto donde funcionaba bien.",
   "pasos_accionables": [
     "Reúne información objetiva sobre el estado actual de la gestión de calidad en tu negocio",
     "Ubica tu negocio en una de las cinco etapas de madurez usando las seis categorías de gestión",
@@ -141,6 +141,22 @@
         "evidencia": "F19-007: Diagnostica la madurez de la gestión de calidad de un negocio en marcha y planea su mejora, que es mejorar lo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-099-rejilla_madurez_gestion_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La Quality Management Maturity Grid te permite ubicar el estado de la gestión de calidad de tu negocio sin necesidad de ser experto. Distingue cinco etapas: Incertidumbre (culpas al área de calidad y vives en el presente sin prevención), Despertar (reconoces el problema pero no inviertes porque no ves relación entre gasto y ahorro), Iluminación (formas equipos que reducen la tensión), Sabiduría (participación activa y sostenida en prevención) y Certeza (prevención total, los defectos son anomalías sorprendentes). Se evalúa a través de seis categorías de gestión, entre ellas el costo de calidad como porcentaje de ventas. Sirve para planificar el avance a la siguiente etapa y también para leer hacia atrás cuando un programa se deteriora, identificando el último punto donde funcionaba bien.",
+      "texto_nuevo": "La Quality Management Maturity Grid te permite ubicar el estado de la gestión de calidad de tu negocio sin necesidad de ser experto. Distingue cinco etapas: Incertidumbre (culpas al área de calidad y vives en el presente sin prevención), Despertar (reconoces el problema pero no inviertes porque no ves relación entre gasto y ahorro), Iluminación (admites que necesitas mejorar, baja la tensión y formas un equipo con todas las áreas), Sabiduría (participación activa y sostenida en prevención) y Certeza (prevención total, los defectos son anomalías sorprendentes). Se evalúa a través de seis categorías de gestión, entre ellas el costo de calidad como porcentaje de ventas. Sirve para planificar el avance a la siguiente etapa y también para leer hacia atrás cuando un programa se deteriora, identificando el último punto donde funcionaba bien.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "613",
+        "frase": "This comes about primarily because they have admitted to themselves"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la tensión baja sobre todo porque se admite la necesidad de mejorar; atribuirla a los equipos es una causa añadida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tu última revisión antes de apostar todo (best bets)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de comprometerte a ejecutar, revisa con método si elegiste la mejor propuesta de valor, el momento óptimo para entregarla, y el modelo de ingresos y costos más eficiente. Busca cambios de juego (game changers) o patrones de negocio poco obvios, como convertir una venta basada en funciones en una experiencia de marca, o pasar de vender unidades sueltas a un modelo con efectos de red.",
+  "resumen_teorico": "Antes de comprometerte a ejecutar, revisa con método si elegiste la mejor propuesta de valor y el modelo de ingresos y costos más eficiente, y si tu calendario de entrega te permite cumplir lo que ya vendiste tal como lo prometiste. Busca cambios de juego (game changers) o patrones de negocio poco obvios, como convertir una venta basada en funciones en una experiencia de marca, o pasar de vender unidades sueltas a un modelo con efectos de red.",
   "pasos_accionables": [
     "Pregúntate si tu propuesta de valor tiene demasiadas funciones, o muy pocas",
     "Evalúa si bajar el precio te traería más ventas o un menor costo de conseguir clientes",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Verifica tus Mejores Apuestas",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-100-checklist_mejores_apuestas_modelo_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de comprometerte a ejecutar, revisa con método si elegiste la mejor propuesta de valor, el momento óptimo para entregarla, y el modelo de ingresos y costos más eficiente. Busca cambios de juego (game changers) o patrones de negocio poco obvios, como convertir una venta basada en funciones en una experiencia de marca, o pasar de vender unidades sueltas a un modelo con efectos de red.",
+      "texto_nuevo": "Antes de comprometerte a ejecutar, revisa con método si elegiste la mejor propuesta de valor y el modelo de ingresos y costos más eficiente, y si tu calendario de entrega te permite cumplir lo que ya vendiste tal como lo prometiste. Busca cambios de juego (game changers) o patrones de negocio poco obvios, como convertir una venta basada en funciones en una experiencia de marca, o pasar de vender unidades sueltas a un modelo con efectos de red.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2806",
+        "frase": "Can the company still deliver what was just sold and do so as promised"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no habla de un momento óptimo sino de comprobar si el calendario permite entregar lo vendido como se prometió.; Mismo defecto: se pierde la comprobación de entregar lo ya vendido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

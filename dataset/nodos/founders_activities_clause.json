@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La cláusula que te exige dedicar todo tu tiempo a tu empresa (Founders' Activities)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Esta cláusula te exige dedicar el 100% de tu tiempo profesional a tu empresa: necesitas aprobación de la junta directiva para cualquier otra actividad profesional. Que el inversor la incluya puede significar que ya tiene alguna duda sobre tu compromiso, o simplemente que es una práctica estándar. Es una situación delicada: si no cuentas las otras actividades que tienes, rompes el acuerdo; pero si las cuentas o rechazas la cláusula, puedes generar sospechas.",
+  "resumen_teorico": "Esta cláusula te exige dedicar el 100% de tu tiempo profesional a tu empresa: necesitas aprobación de la junta directiva para cualquier otra actividad profesional. Que el inversor la incluya puede significar que ya tiene alguna duda sobre tu compromiso, o que la pone para ver si te opones. Es una situación delicada: si no cuentas las otras actividades que tienes, rompes el acuerdo; pero si las cuentas o rechazas la cláusula, puedes generar sospechas.",
   "pasos_accionables": [
     "Acepta la cláusula si no tienes compromisos externos: es estándar en el financiamiento profesional de inversores de riesgo (VC)",
     "Sé transparente desde el inicio del proceso si tienes otros compromisos u obligaciones",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Exige Dedicación Total a Fundadores",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-founders_activities_clause-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta cláusula te exige dedicar el 100% de tu tiempo profesional a tu empresa: necesitas aprobación de la junta directiva para cualquier otra actividad profesional. Que el inversor la incluya puede significar que ya tiene alguna duda sobre tu compromiso, o simplemente que es una práctica estándar. Es una situación delicada: si no cuentas las otras actividades que tienes, rompes el acuerdo; pero si las cuentas o rechazas la cláusula, puedes generar sospechas.",
+      "texto_nuevo": "Esta cláusula te exige dedicar el 100% de tu tiempo profesional a tu empresa: necesitas aprobación de la junta directiva para cualquier otra actividad profesional. Que el inversor la incluya puede significar que ya tiene alguna duda sobre tu compromiso, o que la pone para ver si te opones. Es una situación delicada: si no cuentas las otras actividades que tienes, rompes el acuerdo; pero si las cuentas o rechazas la cláusula, puedes generar sospechas.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1999",
+        "frase": "we just put it in to see if anyone pushes back on it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da la práctica estándar como motivo; la alternativa es ponerla para ver si alguien se opone.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

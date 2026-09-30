@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Reporte de Estado del Miembro del Equipo",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo y cronograma. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto, así que entre más completo y honesto sea, mejor reflejará la realidad de tu avance.",
+  "resumen_teorico": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
   "pasos_accionables": [
     "Listar las actividades planeadas, completadas y no logradas en el periodo",
     "Registrar los fondos gastados versus lo planeado",
-    "Identificar las causas raíz de las variaciones en actividades y costos",
+    "Identificar las causas raíz de las variaciones en actividades, costos y calidad",
     "Documentar las acciones correctivas o preventivas que vas a aplicar",
-    "Reportar los nuevos riesgos e issues que detectaste",
+    "Reportar los nuevos riesgos e issues que detectaste y anotarlos también en el registro de riesgos y en el registro de issues",
     "Planificar las actividades y costos para el siguiente periodo"
   ],
   "entregable_esperado": "Un reporte de estado individual que completas periódicamente para dejar registro de tu avance.",
@@ -41,5 +41,57 @@
   ],
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-098-reporte_estado_miembro_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo y cronograma. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto, así que entre más completo y honesto sea, mejor reflejará la realidad de tu avance.",
+      "texto_nuevo": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3914",
+        "frase": "Root causes of quality variances identified in the current reporting period"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro incluye las causas raíz de las variaciones de calidad del periodo.; El libro solo dice que el gerente compila esta información; el efecto de la completitud y honestidad es añadido.; Mismo defecto que la marca 0: faltan las variaciones de calidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-098-reporte_estado_miembro_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar las causas raíz de las variaciones en actividades y costos",
+      "texto_nuevo": "Identificar las causas raíz de las variaciones en actividades, costos y calidad",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3914, 3952",
+        "frase": "Identify any product performance or quality variances."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también identificar las variaciones de calidad del periodo.; Mismo defecto: se omiten las variaciones de calidad o desempeño del producto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-098-reporte_estado_miembro_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reportar los nuevos riesgos e issues que detectaste",
+      "texto_nuevo": "Reportar los nuevos riesgos e issues que detectaste y anotarlos también en el registro de riesgos y en el registro de issues",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3960-3962",
+        "frase": "New risks should be recorded in the Risk Register as well."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro indica anotar los riesgos nuevos en el registro de riesgos y los issues en el registro de issues.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

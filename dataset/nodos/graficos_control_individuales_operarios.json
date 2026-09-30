@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Gráficos de Control Individuales para Retroalimentación al Trabajador",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Proveer a cada operario su propio gráfico de control permite que perciba semana a semana su desempeño real, motivando la mejora personal y revelando problemas ocultos (como deficiencias visuales o falta de capacitación) que antes no se detectaban. Este mecanismo, ilustrado en el caso de la fábrica de medias, generó mejoras dramáticas sin nuevo equipo ni personal adicional.",
+  "resumen_teorico": "Proveer a cada operario su propio gráfico de control permite que perciba semana a semana su desempeño real, motivando la mejora personal y revelando problemas ocultos (como deficiencias visuales o falta de capacitación) que antes no se detectaban. Este mecanismo formó parte del programa que, en el caso de la fábrica de medias, logró mejoras dramáticas sin nuevo equipo ni personal adicional.",
   "pasos_accionables": [
     "Establecer un sistema de inspección diario o periódico por trabajador",
     "Calcular y graficar el porcentaje de defectos por trabajador a lo largo del tiempo",
     "Entregar el gráfico individual a cada trabajador junto con explicación de su significado",
-    "Investigar casos atípicos (mejores y peores desempeños) para identificar causas específicas (visión, capacitación, técnica)",
-    "Aplicar correctivos individuales (revisión médica, entrenamiento) cuando corresponda",
+    "Investigar casos atípicos (mejores y peores desempeños) para identificar causas específicas (visión, capacitación, técnica) y estudiar los métodos de quienes rinden mejor para que los demás puedan aprenderlos",
+    "Aplicar correctivos individuales (revisión médica, entrenamiento) cuando corresponda, y pensar si lo que revela un caso pide una política para todos (por ejemplo, examen de vista periódico)",
     "Dar seguimiento continuo y documentar la mejora en el tiempo"
   ],
   "entregable_esperado": "Sistema de gráficos de control individuales implementado, con seguimiento de mejora continua y hallazgos documentados",
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Muestra a Cada Operario su Avance",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-099-graficos_control_individuales_operarios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proveer a cada operario su propio gráfico de control permite que perciba semana a semana su desempeño real, motivando la mejora personal y revelando problemas ocultos (como deficiencias visuales o falta de capacitación) que antes no se detectaban. Este mecanismo, ilustrado en el caso de la fábrica de medias, generó mejoras dramáticas sin nuevo equipo ni personal adicional.",
+      "texto_nuevo": "Proveer a cada operario su propio gráfico de control permite que perciba semana a semana su desempeño real, motivando la mejora personal y revelando problemas ocultos (como deficiencias visuales o falta de capacitación) que antes no se detectaban. Este mecanismo formó parte del programa que, en el caso de la fábrica de medias, logró mejoras dramáticas sin nuevo equipo ni personal adicional.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8737",
+        "frase": "The next step was to provide every looper with her own control chart"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye la mejora al programa completo del departamento; los gráficos individuales fueron uno de sus pasos.; Mismo defecto: la mejora dramática es del programa entero, no del gráfico solo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-graficos_control_individuales_operarios-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investigar casos atípicos (mejores y peores desempeños) para identificar causas específicas (visión, capacitación, técnica)",
+      "texto_nuevo": "Investigar casos atípicos (mejores y peores desempeños) para identificar causas específicas (visión, capacitación, técnica) y estudiar los métodos de quienes rinden mejor para que los demás puedan aprenderlos",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6097",
+        "frase": "He may use methods or motions that other people could learn"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En los mejores desempeños el libro estudia sus métodos para que los demás los aprendan, no solo causas individuales.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-graficos_control_individuales_operarios-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar correctivos individuales (revisión médica, entrenamiento) cuando corresponda",
+      "texto_nuevo": "Aplicar correctivos individuales (revisión médica, entrenamiento) cuando corresponda, y pensar si lo que revela un caso pide una política para todos (por ejemplo, examen de vista periódico)",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8753",
+        "frase": "The new policy was to examine all loopers for eyesight"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro el caso individual llevó a revisar la política para todos (examen de vista a todas y reexamen regular); el paso se queda en lo individual.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Importancia y Límites de la Capacitación",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando un trabajo alcanza estado de control estadístico, continuar entrenando de la misma manera no aporta beneficios adicionales; el trabajador ha completado su curva de aprendizaje para esa tarea. Sin embargo, si el trabajo aún no está en control estadístico, más entrenamiento sí ayuda. Es más económico reasignar a un trabajador en control pero con desempeño insatisfactorio a otro puesto con nueva capacitación, que intentar reentrenarlo en la misma tarea.",
+  "resumen_teorico": "Cuando un trabajo alcanza estado de control estadístico, continuar entrenando de la misma manera no aporta beneficios adicionales; el trabajador ha completado su curva de aprendizaje para esa tarea, haya sido bien o mal entrenado, por eso importa tanto entrenar bien a quien empieza. Sin embargo, si el trabajo aún no está en control estadístico, más entrenamiento sí ayuda. Reentrenar de la misma manera a un trabajador en control con desempeño insatisfactorio no es económico; con buena capacitación, puede aprender muy bien otro trabajo.",
   "pasos_accionables": [
     "Usar gráficos de control (X-barra y R) para determinar si el trabajador alcanzó control estadístico",
     "Si no ha alcanzado control, continuar y reforzar la capacitación",
     "Si alcanzó control pero el desempeño es insatisfactorio, considerar reasignación a otra tarea con nueva capacitación",
-    "Evitar gastar recursos en reentrenar a alguien que ya está en control estadístico en su tarea actual"
+    "Evitar gastar recursos en reentrenar por el mismo método a alguien que ya está en control estadístico en su tarea actual"
   ],
   "entregable_esperado": "Un plan de capacitación basado en el estado de control estadístico del trabajador, con decisiones de reasignación cuando corresponda",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Sabe Cuándo Dejar de Entrenar",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-099-importancia_de_la_capacitacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un trabajo alcanza estado de control estadístico, continuar entrenando de la misma manera no aporta beneficios adicionales; el trabajador ha completado su curva de aprendizaje para esa tarea. Sin embargo, si el trabajo aún no está en control estadístico, más entrenamiento sí ayuda. Es más económico reasignar a un trabajador en control pero con desempeño insatisfactorio a otro puesto con nueva capacitación, que intentar reentrenarlo en la misma tarea.",
+      "texto_nuevo": "Cuando un trabajo alcanza estado de control estadístico, continuar entrenando de la misma manera no aporta beneficios adicionales; el trabajador ha completado su curva de aprendizaje para esa tarea, haya sido bien o mal entrenado, por eso importa tanto entrenar bien a quien empieza. Sin embargo, si el trabajo aún no está en control estadístico, más entrenamiento sí ayuda. Reentrenar de la misma manera a un trabajador en control con desempeño insatisfactorio no es económico; con buena capacitación, puede aprender muy bien otro trabajo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6054",
+        "frase": "It is not economical to try to provide further training of the same kind."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que no es económico reentrenar de la misma manera y que la persona puede aprender otro trabajo; no compara costos ni afirma que reasignar sea más económico.; Se cae que el estancamiento ocurre haya sido bien o mal entrenado, de donde el libro saca la suma importancia de entrenar bien a los nuevos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-importancia_de_la_capacitacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar gastar recursos en reentrenar a alguien que ya está en control estadístico en su tarea actual",
+      "texto_nuevo": "Evitar gastar recursos en reentrenar por el mismo método a alguien que ya está en control estadístico en su tarea actual",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6056",
+        "frase": "continuation of training by the same method will accomplish nothing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita la inutilidad al entrenamiento por el mismo método; el paso la extiende a cualquier reentrenamiento.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

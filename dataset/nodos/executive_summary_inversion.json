@@ -9,7 +9,7 @@
     "Definir el problema que se resuelve y su importancia",
     "Explicar por qué el producto es superior a alternativas existentes",
     "Justificar por qué el equipo es el adecuado para ejecutar la idea",
-    "Incluir datos financieros de alto nivel con expectativas realistas",
+    "Incluir datos financieros de alto nivel con expectativas agresivas pero sensatas",
     "Hacer revisar el documento por alguien externo a la empresa para pulir la redacción",
     "Enviarlo el mismo día que un VC lo solicite"
   ],
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Redacta tu Resumen Ejecutivo",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-executive_summary_inversion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir datos financieros de alto nivel con expectativas realistas",
+      "texto_nuevo": "Incluir datos financieros de alto nivel con expectativas agresivas pero sensatas",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "445",
+        "frase": "show that you have aggressive but sensible expectations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide expectativas agresivas pero sensatas; 'realistas' pierde la parte ambiciosa.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

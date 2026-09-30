@@ -9,8 +9,8 @@
     "Identificar la metodología de programación (ruta crítica, cadena crítica, etc.)",
     "Seleccionar herramientas de programación",
     "Definir nivel de precisión y unidades de medida para estimaciones",
-    "Establecer umbrales de varianza para determinar acciones correctivas",
-    "Documentar procesos para identificar, secuenciar y estimar actividades"
+    "Establecer umbrales de varianza para determinar si algo va a tiempo, requiere acción preventiva o va tarde y requiere acción correctiva",
+    "Documentar procesos para identificar, secuenciar y estimar actividades, la información de reporte y el proceso para actualizar y controlar el cronograma y su línea base"
   ],
   "entregable_esperado": "Plan de gestión del cronograma documentado con metodología y herramientas definidas",
   "nodos_previos": [
@@ -32,5 +32,41 @@
   "etiqueta_arbol": "Planifica Tu Cronograma",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-098-schedule_management_plan-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer umbrales de varianza para determinar acciones correctivas",
+      "texto_nuevo": "Establecer umbrales de varianza para determinar si algo va a tiempo, requiere acción preventiva o va tarde y requiere acción correctiva",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1390",
+        "frase": "on time, requires preventive action, or is late and requires corrective action"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El umbral del libro distingue a tiempo, acción preventiva y acción correctiva; el paso deja solo la correctiva.; Mismo defecto: se cae el nivel de acción preventiva.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-098-schedule_management_plan-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar procesos para identificar, secuenciar y estimar actividades",
+      "texto_nuevo": "Documentar procesos para identificar, secuenciar y estimar actividades, la información de reporte y el proceso para actualizar y controlar el cronograma y su línea base",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1402",
+        "frase": "Document the process for updating the schedule, including update frequency, permissions, and version control"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El plan del libro incluye la información de reporte y el proceso para actualizar y controlar el cronograma, que ningún paso recoge.; Mismo defecto: falta el proceso de actualización y control con su línea base.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

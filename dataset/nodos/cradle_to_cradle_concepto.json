@@ -4,10 +4,10 @@
   "dominio": "environmental",
   "titulo_concepto": "Cradle to Cradle: Diseño Regenerativo",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Ya mapeaste el recorrido completo de tu producto. Ahora viene la distinción que cambia todo: en la naturaleza no existe el residuo, solo el nutriente. Hay dos ciclos que nunca se mezclan, el biológico y el técnico, y la diferencia entre reducir el daño que haces y diseñar para que ese daño no exista no es de grado, es de clase. Entender esto es la puerta de este tema: te dice a qué ciclo pertenece lo que haces y hacia dónde profundizar después.",
+  "resumen_teorico": "Ya mapeaste el recorrido completo de tu producto. Ahora viene la distinción que cambia todo: en la naturaleza no existe el residuo, solo el nutriente. Hay dos ciclos que no deben mezclarse, el biológico y el técnico, y la diferencia entre reducir el daño que haces y diseñar para que ese daño no exista no es de grado, es de clase. Entender esto es la puerta de este tema: te dice a qué ciclo pertenece lo que haces y hacia dónde profundizar después.",
   "pasos_accionables": [
     "Reconoce si lo que haces hoy reduce el daño o si de verdad elimina la existencia del residuo",
-    "Decide a cuál de los dos ciclos, el biológico o el técnico, pertenece lo principal de lo que vendes",
+    "Decide a cuál de los dos ciclos, el biológico o el técnico, pertenece lo principal de lo que vendes y, si combina ambos, cómo desmontarlo para que cada parte vuelva a su ciclo",
     "Decide si este cambio de marco va a atravesar tu negocio entero o si por ahora se queda como una prueba aislada",
     "Escribe esa decisión en una frase clara que puedas usar para orientar cualquier rediseño futuro"
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Diseña sin Generar Residuos",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-098-cradle_to_cradle_concepto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ya mapeaste el recorrido completo de tu producto. Ahora viene la distinción que cambia todo: en la naturaleza no existe el residuo, solo el nutriente. Hay dos ciclos que nunca se mezclan, el biológico y el técnico, y la diferencia entre reducir el daño que haces y diseñar para que ese daño no exista no es de grado, es de clase. Entender esto es la puerta de este tema: te dice a qué ciclo pertenece lo que haces y hacia dónde profundizar después.",
+      "texto_nuevo": "Ya mapeaste el recorrido completo de tu producto. Ahora viene la distinción que cambia todo: en la naturaleza no existe el residuo, solo el nutriente. Hay dos ciclos que no deben mezclarse, el biológico y el técnico, y la diferencia entre reducir el daño que haces y diseñar para que ese daño no exista no es de grado, es de clase. Entender esto es la puerta de este tema: te dice a qué ciclo pertenece lo que haces y hacia dónde profundizar después.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "634",
+        "frase": "great care must be taken to avoid contaminating one with the other"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Convierte en hecho lo que el libro plantea como cuidado de diseño; hoy muchos productos los mezclan.; Mismo defecto: el libro pide evitar que un ciclo contamine al otro, no afirma que nunca se mezclen.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-098-cradle_to_cradle_concepto-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide a cuál de los dos ciclos, el biológico o el técnico, pertenece lo principal de lo que vendes",
+      "texto_nuevo": "Decide a cuál de los dos ciclos, el biológico o el técnico, pertenece lo principal de lo que vendes y, si combina ambos, cómo desmontarlo para que cada parte vuelva a su ciclo",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "680-684",
+        "frase": "designed for easy disassembly in order to be safely recirculated in both cycles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite productos que tocan ambos ciclos si se diseñan para desmontarse y recircular cada parte.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

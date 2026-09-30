@@ -7,7 +7,7 @@
   "resumen_teorico": "El precio 'de titular' en una LOI raramente es el precio real final. Factores como el escrow (retención de fondos por reclamos futuros), ajustes de capital de trabajo, earn-outs (pagos condicionados a metas futuras) y pools de retención gerencial reducen sustancialmente el valor efectivo recibido por los vendedores. Entender estos componentes es crítico para evaluar el verdadero valor de una oferta de adquisición.",
   "pasos_accionables": [
     "Desglosar el precio anunciado en sus componentes: efectivo al cierre, escrow, working capital, earn-out y pool de retención",
-    "Negociar un escrow razonable de 12 a 18 meses respaldando las representaciones y garantías",
+    "Estar dispuesto a respaldar las representaciones y garantías con un escrow razonable de 12 a 18 meses como mínimo; si no lo aceptas, parecerá que ocultas algo",
     "Negociar que el requisito de working capital sea cero o bidireccional",
     "Evaluar críticamente los earn-outs como mecanismo que permite al comprador pagar menos al cierre",
     "Clarificar si el pool de retención gerencial está incluido o es adicional al precio de compra"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Desglosa el Precio de Venta",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-estructura_precio_adquisicion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar un escrow razonable de 12 a 18 meses respaldando las representaciones y garantías",
+      "texto_nuevo": "Estar dispuesto a respaldar las representaciones y garantías con un escrow razonable de 12 a 18 meses como mínimo; si no lo aceptas, parecerá que ocultas algo",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4023",
+        "frase": "a reasonable 12- to 18-month escrow at a minimum"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da los 12 a 18 meses como mínimo que debes aceptar; 'negociar' lo deja leer como tope.; Mismo defecto que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

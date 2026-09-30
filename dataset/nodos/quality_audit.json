@@ -7,7 +7,7 @@
   "resumen_teorico": "Revisión estructurada e independiente de procesos, documentos o productos del proyecto para verificar cumplimiento de políticas y plan de calidad, identificando buenas prácticas y áreas de mejora.",
   "pasos_accionables": [
     "Seleccionar el área o proceso a auditar",
-    "Documentar buenas prácticas identificadas",
+    "Documentar buenas prácticas identificadas y áreas de mejora, con las mejoras o mediciones concretas a lograr",
     "Registrar deficiencias con acción correctiva, responsable y fecha límite",
     "Generar Change Request si se requiere acción correctiva"
   ],
@@ -51,6 +51,23 @@
         "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-098-quality_audit-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar buenas prácticas identificadas",
+      "texto_nuevo": "Documentar buenas prácticas identificadas y áreas de mejora, con las mejoras o mediciones concretas a lograr",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "4316",
+        "frase": "Describe any areas that need improvement and the specific improvements or measurements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro registra también las áreas de mejora con las mejoras o mediciones a lograr.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Exercise Period de Opciones",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, porque en Estados Unidos una opción ISO solo conserva su ventaja fiscal si se ejerce dentro de los 3 meses siguientes a tu salida (1 año si sales por incapacidad); el plan puede darte más tiempo, pero lo que ejerzas después tributa como opción no calificada (NSO), aunque algunas empresas han extendido este período hasta 10 años desde la concesión (el máximo legal para las opciones ISO en Estados Unidos, 5 años si tienes más del 10 % del voto; para las opciones no calificadas, los 10 años son la práctica habitual, no un límite legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "resumen_teorico": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, aunque algunas empresas han extendido este período hasta 10 años desde la concesión, el máximo legal en Estados Unidos; extenderlo resta poder de retención a las opciones y puede desequilibrar el reparto entre quienes se van pronto y quienes se quedan. Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
   "pasos_accionables": [
-    "Definir el período de ejercicio estándar (90 días) o evaluar extensión a mayor plazo",
+    "Definir el período de ejercicio estándar (90 días) o evaluar extensión a mayor plazo, sabiendo que extenderlo resta poder de retención a las opciones y puede desequilibrar el reparto entre quienes se van pronto y quienes se quedan",
     "Considerar el impacto fiscal de ejercer opciones tempranamente (capital gains vs ordinary income)",
     "Evaluar caso por caso si se extiende el exercise period para empleados que se retiran en buenos términos"
   ],
@@ -37,6 +37,39 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Se verificó el texto de 26 U.S.C. 422 en el PDF oficial de govinfo (GPO), generado el 24 feb 2026; no hay reformas posteriores de este punto. uscode.house.gov no respondió (ECONNREFUSED) y ecfr.gov redirigió a una página de desbloqueo. El nodo es de clase B y el plazo es estadounidense, así que el t | La cifra de 10 años sigue vigente, pero el fragmento la presenta como máximo legal general. Solo lo es para las ISO. Omite la excepción de 5 años para quien tiene más del 10 % del voto y no dice que las NSO no tienen tope en esta norma. Verificado en el mismo PDF oficial de govinfo, 26 U.S.C. 422.",
       "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "final-e1-101-exercise_period_opciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, porque en Estados Unidos una opción ISO solo conserva su ventaja fiscal si se ejerce dentro de los 3 meses siguientes a tu salida (1 año si sales por incapacidad); el plan puede darte más tiempo, pero lo que ejerzas después tributa como opción no calificada (NSO), aunque algunas empresas han extendido este período hasta 10 años desde la concesión (el máximo legal para las opciones ISO en Estados Unidos, 5 años si tienes más del 10 % del voto; para las opciones no calificadas, los 10 años son la práctica habitual, no un límite legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "texto_nuevo": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, aunque algunas empresas han extendido este período hasta 10 años desde la concesión, el máximo legal en Estados Unidos; extenderlo resta poder de retención a las opciones y puede desequilibrar el reparto entre quienes se van pronto y quienes se quedan. Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1234",
+        "frase": "the maximum legal amount, which is 10 years from the date of grant"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no explica los 90 días por reglas fiscales de ISO ni da los plazos de 3 meses, 1 año o 5 años.; Mismo defecto; además el libro llama a los 10 años máximo legal sin distinguir ISO y NSO.; Se cae la reserva del libro: extender el plazo resta retención y desequilibra el reparto entre empleados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-exercise_period_opciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir el período de ejercicio estándar (90 días) o evaluar extensión a mayor plazo",
+      "texto_nuevo": "Definir el período de ejercicio estándar (90 días) o evaluar extensión a mayor plazo, sabiendo que extenderlo resta poder de retención a las opciones y puede desequilibrar el reparto entre quienes se van pronto y quienes se quedan",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1236",
+        "frase": "undermining the retention benefits of options"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso presenta la extensión como opción neutra y omite los costos que el libro le señala.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

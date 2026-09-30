@@ -9,7 +9,7 @@
     "Eliminar el uso de niveles de calidad aceptables como estándar de desempeño",
     "Comunicar con claridad que el estándar es hacerlo bien la primera vez",
     "Marcar un día concreto para lanzar este compromiso, aunque sea contigo mismo o con quien te ayude en el negocio",
-    "Poner por escrito un compromiso entre tú y la persona que te ayuda"
+    "Poner por escrito un compromiso entre tú y la persona que te ayuda, tras explicarle bien el concepto; firmarlo es voluntario"
   ],
   "entregable_esperado": "Un día de lanzamiento del compromiso realizado, con el acuerdo de cero defectos puesto por escrito entre tú y quienes trabajan contigo.",
   "nodos_previos": [
@@ -44,6 +44,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U3-021 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-099-zero_defects_concepto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Poner por escrito un compromiso entre tú y la persona que te ayuda",
+      "texto_nuevo": "Poner por escrito un compromiso entre tú y la persona que te ayuda, tras explicarle bien el concepto; firmarlo es voluntario",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3013",
+        "frase": "Signing the pledge is, of course, a voluntary thing."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que firmar el compromiso es voluntario, tras explicarlo bien; eso cambia cómo se pide.; Mismo matiz perdido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

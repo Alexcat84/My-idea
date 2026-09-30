@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de Inversionistas Ángeles",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Los angel investors son inversionistas individuales activos en rondas tempranas, con perfiles muy diversos (profesionales, super angels, amigos y familia). No todos tienen la misma sofisticación ni compromiso a largo plazo, y su participación en rondas futuras no está garantizada. Es importante estructurar bien su participación para evitar problemas de gobernanza y comunicación excesiva.",
+  "resumen_teorico": "Los angel investors son inversionistas individuales activos en rondas tempranas, con perfiles muy diversos (profesionales, super angels, amigos y familia). No todos tienen la misma sofisticación ni compromiso a largo plazo, y su participación en rondas futuras no está garantizada. Es importante estructurar bien su participación para evitar problemas de gobernanza y comunicación excesiva, y validar con tu abogado que cada uno sea inversionista acreditado o exento.",
   "pasos_accionables": [
     "Clasificar a los ángeles según su perfil (profesional, super angel, amigos/familia)",
     "Considerar crear un vehículo de propósito especial (SPV) para consolidar inversionistas pequeños y dispersos",
-    "Establecer expectativas claras con amigos y familia sobre el riesgo de la inversión",
+    "Establecer expectativas claras con amigos y familia: que vean su inversión como un boleto de lotería y que cada fiesta o cumpleaños no es una reunión con inversionistas",
     "Evitar 'party rounds' con demasiados inversionistas pequeños sin compromiso real"
   ],
   "entregable_esperado": "Estructura de cap table organizada con vehículos de inversión adecuados para grupos de ángeles pequeños",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Gestiona a tus Inversionistas Ángeles",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-gestion_angel_investors-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer expectativas claras con amigos y familia sobre el riesgo de la inversión",
+      "texto_nuevo": "Establecer expectativas claras con amigos y familia: que vean su inversión como un boleto de lotería y que cada fiesta o cumpleaños no es una reunión con inversionistas",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "172",
+        "frase": "every holiday or birthday party is not an investor relations meeting"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide aclarar dos cosas y el paso pierde la segunda.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-gestion_angel_investors-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los angel investors son inversionistas individuales activos en rondas tempranas, con perfiles muy diversos (profesionales, super angels, amigos y familia). No todos tienen la misma sofisticación ni compromiso a largo plazo, y su participación en rondas futuras no está garantizada. Es importante estructurar bien su participación para evitar problemas de gobernanza y comunicación excesiva.",
+      "texto_nuevo": "Los angel investors son inversionistas individuales activos en rondas tempranas, con perfiles muy diversos (profesionales, super angels, amigos y familia). No todos tienen la misma sofisticación ni compromiso a largo plazo, y su participación en rondas futuras no está garantizada. Es importante estructurar bien su participación para evitar problemas de gobernanza y comunicación excesiva, y validar con tu abogado que cada uno sea inversionista acreditado o exento.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "155",
+        "frase": "make sure that each of your angel investors qualifies as an accredited investor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el límite legal del libro: cada ángel debe ser inversionista acreditado o tener una exención.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

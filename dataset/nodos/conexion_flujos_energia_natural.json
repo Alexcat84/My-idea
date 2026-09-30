@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Conexión con Flujos de Energía Natural",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "La revolución industrial desconectó a las construcciones modernas de las fuerzas naturales (sol, viento) mediante el uso de combustibles fósiles y diseños herméticos. El diseño eco-efectivo busca revertir esto, reconectando la arquitectura con el sol (orientación solar) y el viento (torres de viento) tal como lo hacían las arquitecturas vernáculas antiguas, sin necesariamente desconectarse por completo de la red eléctrica actual (sistemas híbridos).",
+  "resumen_teorico": "La revolución industrial desconectó a las construcciones modernas de las fuerzas naturales (sol, viento) mediante el uso de combustibles fósiles y diseños herméticos. El diseño eco-efectivo busca revertir esto, reconectando la arquitectura con el sol (orientación solar) y el viento (torres de viento) tal como lo hacían las arquitecturas vernáculas antiguas, sin desconectarse de la red eléctrica actual: la reconexión es gradual y los sistemas híbridos son una transición sensata.",
   "pasos_accionables": [
     "Determinar la orientación solar verdadera (sur solar) del terreno antes de diseñar la estructura.",
     "Estudiar soluciones vernáculas de climatización pasiva (torres de viento, masa térmica) aplicables al clima del proyecto.",
-    "Diseñar sistemas híbridos que utilicen energía renovable local como complemento (no reemplazo total) de la red existente.",
+    "Diseñar sistemas híbridos que utilicen energía renovable local como complemento (no reemplazo total) de la red existente, como transición mientras se desarrollan soluciones más optimizadas.",
     "Evaluar el uso de vegetación estratégica (árboles de sombra) para regular la temperatura estacionalmente."
   ],
   "entregable_esperado": "Un esquema de diseño bioclimático que detalle la orientación, ventilación y estrategias pasivas de climatización del edificio.",
@@ -39,6 +39,39 @@
         "evidencia": "F20-012: Su entregable es un esquema de diseno bioclimatico del edificio al iniciar el proyecto arquitectonico; es diseno, no exploracion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-098-conexion_flujos_energia_natural-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar sistemas híbridos que utilicen energía renovable local como complemento (no reemplazo total) de la red existente.",
+      "texto_nuevo": "Diseñar sistemas híbridos que utilicen energía renovable local como complemento (no reemplazo total) de la red existente, como transición mientras se desarrollan soluciones más optimizadas.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "765",
+        "frase": "while more optimized solutions are being developed and implemented"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea el sistema híbrido como transición mientras se desarrollan soluciones mejores.; Mismo defecto: se pierde el carácter transitorio del híbrido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-098-conexion_flujos_energia_natural-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La revolución industrial desconectó a las construcciones modernas de las fuerzas naturales (sol, viento) mediante el uso de combustibles fósiles y diseños herméticos. El diseño eco-efectivo busca revertir esto, reconectando la arquitectura con el sol (orientación solar) y el viento (torres de viento) tal como lo hacían las arquitecturas vernáculas antiguas, sin necesariamente desconectarse por completo de la red eléctrica actual (sistemas híbridos).",
+      "texto_nuevo": "La revolución industrial desconectó a las construcciones modernas de las fuerzas naturales (sol, viento) mediante el uso de combustibles fósiles y diseños herméticos. El diseño eco-efectivo busca revertir esto, reconectando la arquitectura con el sol (orientación solar) y el viento (torres de viento) tal como lo hacían las arquitecturas vernáculas antiguas, sin desconectarse de la red eléctrica actual: la reconexión es gradual y los sistemas híbridos son una transición sensata.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "765",
+        "frase": "a renewed connection to natural flows will of necessity be gradual"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro descarta la desconexión de la red como meta y presenta la reconexión como gradual; el nodo la deja abierta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

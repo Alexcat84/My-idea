@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Estructura Típica de un Fondo de Venture Capital",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Un fondo de VC típico está compuesto por tres entidades separadas: la management company (que emplea al personal y cobra fees), el vehículo de limited partnership o LP (donde están los inversionistas del fondo), y la entidad de general partnership o GP (que actúa legalmente como socio general). Estas entidades tienen intereses y motivaciones distintas, especialmente cuando managing directors se unen o dejan la firma. Entender esta estructura ayuda al emprendedor a comprender por qué el nombre en el term sheet puede diferir del nombre de la firma que conoce, y por qué los intereses de su contacto pueden estar alineados de forma compleja.",
+  "resumen_teorico": "Un fondo de VC típico está compuesto por tres entidades separadas: la management company (que emplea al personal y cobra fees), el vehículo de limited partnership o LP (donde están los inversionistas del fondo), y la entidad de general partnership o GP (que actúa legalmente como socio general). Estas entidades a menudo tienen intereses y motivaciones distintas, especialmente cuando managing directors se unen o dejan la firma. Entender esta estructura ayuda al emprendedor a comprender por qué el nombre en el term sheet puede diferir del nombre de la firma que conoce, y por qué los intereses de su contacto pueden estar alineados de forma compleja.",
   "pasos_accionables": [
     "Investigar la estructura legal de la firma de VC con la que negocias (management company vs. fund LP)",
-    "Identificar quién es realmente el general partner responsable de las decisiones de inversión",
+    "Identificar qué entidad actúa como general partner del fondo y qué managing directors son sus dueños",
     "Preguntar directamente sobre la antigüedad del fondo específico que invertirá en tu empresa"
   ],
   "entregable_esperado": "Mapa claro de las entidades legales involucradas en el fondo VC con el que se negocia",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Conoce tu Fondo de Inversión",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-estructura_fondo_vc-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un fondo de VC típico está compuesto por tres entidades separadas: la management company (que emplea al personal y cobra fees), el vehículo de limited partnership o LP (donde están los inversionistas del fondo), y la entidad de general partnership o GP (que actúa legalmente como socio general). Estas entidades tienen intereses y motivaciones distintas, especialmente cuando managing directors se unen o dejan la firma. Entender esta estructura ayuda al emprendedor a comprender por qué el nombre en el term sheet puede diferir del nombre de la firma que conoce, y por qué los intereses de su contacto pueden estar alineados de forma compleja.",
+      "texto_nuevo": "Un fondo de VC típico está compuesto por tres entidades separadas: la management company (que emplea al personal y cobra fees), el vehículo de limited partnership o LP (donde están los inversionistas del fondo), y la entidad de general partnership o GP (que actúa legalmente como socio general). Estas entidades a menudo tienen intereses y motivaciones distintas, especialmente cuando managing directors se unen o dejan la firma. Entender esta estructura ayuda al emprendedor a comprender por qué el nombre en el term sheet puede diferir del nombre de la firma que conoce, y por qué los intereses de su contacto pueden estar alineados de forma compleja.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3067",
+        "frase": "These distinct entities will often have divergent interests and motivations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'a menudo'; el nodo lo endurece a regla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-estructura_fondo_vc-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar quién es realmente el general partner responsable de las decisiones de inversión",
+      "texto_nuevo": "Identificar qué entidad actúa como general partner del fondo y qué managing directors son sus dueños",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3057",
+        "frase": "the legal entity for serving as the actual general partner to the fund"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe al GP como la entidad legal que actúa como socio general, no como responsable de las decisiones de inversión.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

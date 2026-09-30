@@ -3,14 +3,14 @@
   "dominio": "core",
   "titulo_concepto": "Cómo te pagan cuando venden tu empresa (efectivo vs. acciones)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando te llega una oferta de compra (carta de intención o LOI), el valor real de lo que vas a recibir depende de la forma en que te paguen: efectivo, acciones comunes o acciones preferentes de una empresa pública o privada. El efectivo es la forma más clara y más valiosa. Cualquier otra forma te obliga a mirar con lupa cómo está armado el capital de quien te compra, porque recibir acciones comunes de una empresa privada muy endeudada, con preferencias de liquidación que cobran antes que tú, puede significar que el valor real que recibes sea mucho menor al precio que te anunciaron.",
+  "resumen_teorico": "Cuando te llega una oferta de compra (carta de intención o LOI), el valor real de lo que vas a recibir depende de la forma en que te paguen: efectivo, acciones comunes o acciones preferentes de una empresa pública o privada. El efectivo es la forma más clara y más valiosa. Cualquier otra forma te obliga a mirar con lupa cómo está armado el capital de quien te compra, porque recibir acciones comunes de una empresa privada que ya levantó mucho capital, con preferencias de liquidación que cobran antes que tú, puede significar que el valor real que recibes sea mucho menor al precio que te anunciaron.",
   "pasos_accionables": [
     "Determina si la oferta que te hacen es en efectivo, en acciones de una empresa pública o en acciones de una empresa privada",
     "Si te pagan en acciones, investiga toda la estructura de capital de quien te compra, incluyendo cuánto dinero ha levantado y qué preferencias de liquidación ya existen",
     "Verifica si las acciones que te ofrecen son comunes o preferentes, si son participantes, y en qué lugar quedan frente a otras preferencias de liquidación ya existentes",
-    "Si las acciones son de una empresa pública, verifica si se pueden vender libremente, si están registradas o si tienen un periodo en el que no puedes venderlas (lock-up)",
+    "Si las acciones son de una empresa pública, verifica si se pueden vender libremente, si están registradas o si tienen un periodo en el que no puedes venderlas (lock-up); si son de libre venta, si quedarás como insider con restricciones para venderlas, y si no lo son, qué derechos de registro tendrás",
     "Pide una valoración independiente de lo que te ofrecen antes de aceptar, si no es efectivo",
-    "No confundas el precio que te anuncian con el valor real que vas a recibir"
+    "No confundas el precio que te anuncian con el valor real que vas a recibir, y no te comprometas con un precio al principio de la negociación hasta entender en qué forma te van a pagar"
   ],
   "entregable_esperado": "Una valoración independiente de lo que te están ofreciendo (efectivo, acciones comunes o preferentes), ajustada según cómo está armado realmente el capital de quien te compra",
   "condiciones_activacion": [
@@ -36,5 +36,57 @@
   "etiqueta_arbol": "Elige Cómo Cobrar la Venta",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-101-forma_de_contraprestacion_en_adquisicion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando te llega una oferta de compra (carta de intención o LOI), el valor real de lo que vas a recibir depende de la forma en que te paguen: efectivo, acciones comunes o acciones preferentes de una empresa pública o privada. El efectivo es la forma más clara y más valiosa. Cualquier otra forma te obliga a mirar con lupa cómo está armado el capital de quien te compra, porque recibir acciones comunes de una empresa privada muy endeudada, con preferencias de liquidación que cobran antes que tú, puede significar que el valor real que recibes sea mucho menor al precio que te anunciaron.",
+      "texto_nuevo": "Cuando te llega una oferta de compra (carta de intención o LOI), el valor real de lo que vas a recibir depende de la forma en que te paguen: efectivo, acciones comunes o acciones preferentes de una empresa pública o privada. El efectivo es la forma más clara y más valiosa. Cualquier otra forma te obliga a mirar con lupa cómo está armado el capital de quien te compra, porque recibir acciones comunes de una empresa privada que ya levantó mucho capital, con preferencias de liquidación que cobran antes que tú, puede significar que el valor real que recibes sea mucho menor al precio que te anunciaron.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4120",
+        "frase": "a private company that is sitting under $110 million of liquidation preferences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de preferencias de liquidación acumuladas, no de deuda del comprador.; Misma invención: 'muy endeudada' no está en el pasaje.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-forma_de_contraprestacion_en_adquisicion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si las acciones son de una empresa pública, verifica si se pueden vender libremente, si están registradas o si tienen un periodo en el que no puedes venderlas (lock-up)",
+      "texto_nuevo": "Si las acciones son de una empresa pública, verifica si se pueden vender libremente, si están registradas o si tienen un periodo en el que no puedes venderlas (lock-up); si son de libre venta, si quedarás como insider con restricciones para venderlas, y si no lo son, qué derechos de registro tendrás",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4124",
+        "frase": "will you be considered an insider after the transaction and have any selling restrictions?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se caen dos preguntas del libro que afectan el valor: restricciones como insider y derechos de registro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-101-forma_de_contraprestacion_en_adquisicion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No confundas el precio que te anuncian con el valor real que vas a recibir",
+      "texto_nuevo": "No confundas el precio que te anuncian con el valor real que vas a recibir, y no te comprometas con un precio al principio de la negociación hasta entender en qué forma te van a pagar",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4126",
+        "frase": "Don't let yourself be locked into a price early in the negotiation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el consejo del libro de no fijar un precio temprano hasta entender la forma de pago.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

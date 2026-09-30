@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gráfico de Corrida (Run Chart) como Herramienta de Diagnóstico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un gráfico de corrida consiste en graficar puntos de datos en el orden en que fueron producidos (temporal o secuencial), a diferencia de un histograma que solo muestra la distribución acumulada sin considerar el orden. Esta herramienta es esencial porque una distribución estadística (media, desviación estándar) solo tiene valor predictivo si los datos provienen de un proceso estable. Si al graficar en orden de producción se observa una tendencia (por ejemplo, decreciente), esto indica que el proceso NO es estable y cualquier cálculo estadístico basado en la distribución sería engañoso e inútil.",
+  "resumen_teorico": "Un gráfico de corrida consiste en graficar puntos de datos en el orden en que fueron producidos (temporal o secuencial), a diferencia de un histograma que solo muestra la distribución acumulada sin considerar el orden. Esta herramienta es esencial porque una distribución estadística (media, desviación estándar) solo tiene valor predictivo si los datos provienen de un proceso estable. Si al graficar en orden de producción se observa una tendencia (por ejemplo, decreciente), esto indica que algo anda mal en el proceso o en el instrumento de medición, que el proceso NO es estable y que cualquier cálculo estadístico basado en la distribución sería engañoso e inútil.",
   "pasos_accionables": [
     "Registrar cada medición junto con su orden secuencial de producción",
     "Graficar los puntos en el eje temporal/secuencial, no solo tabular la distribución",
@@ -40,5 +40,23 @@
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-099-grafico_de_corrida_run_chart-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un gráfico de corrida consiste en graficar puntos de datos en el orden en que fueron producidos (temporal o secuencial), a diferencia de un histograma que solo muestra la distribución acumulada sin considerar el orden. Esta herramienta es esencial porque una distribución estadística (media, desviación estándar) solo tiene valor predictivo si los datos provienen de un proceso estable. Si al graficar en orden de producción se observa una tendencia (por ejemplo, decreciente), esto indica que el proceso NO es estable y cualquier cálculo estadístico basado en la distribución sería engañoso e inútil.",
+      "texto_nuevo": "Un gráfico de corrida consiste en graficar puntos de datos en el orden en que fueron producidos (temporal o secuencial), a diferencia de un histograma que solo muestra la distribución acumulada sin considerar el orden. Esta herramienta es esencial porque una distribución estadística (media, desviación estándar) solo tiene valor predictivo si los datos provienen de un proceso estable. Si al graficar en orden de producción se observa una tendencia (por ejemplo, decreciente), esto indica que algo anda mal en el proceso o en el instrumento de medición, que el proceso NO es estable y que cualquier cálculo estadístico basado en la distribución sería engañoso e inútil.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7244",
+        "frase": "Something is wrong with the process of manufacture, or with the measuring instrument."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la tendencia indica un fallo en el proceso o en el instrumento de medición; perder lo segundo cambia dónde buscar la causa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Registro de Riesgos",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es una lista donde anotas y sigues los riesgos de tu proyecto durante todo el camino: qué es cada riesgo, qué tan probable es que pase, qué tan grave sería, cómo piensas responder, quién se encarga y en qué estado está. Es la herramienta central para no perder de vista los riesgos mientras avanzas.",
+  "resumen_teorico": "Es una lista donde anotas y sigues los riesgos de tu proyecto durante todo el camino: qué es cada riesgo, qué tan probable es que pase, qué tan grave sería, cómo piensas responder, quién se encarga y en qué estado está. Es la herramienta central para no perder de vista los riesgos mientras avanzas. No todo proyecto necesita tanto detalle: ajústalo al tuyo.",
   "pasos_accionables": [
     "Ponle un identificador único a cada riesgo que anotes",
     "Escribe qué es el riesgo: qué podría pasar, por qué y qué efecto tendría",
@@ -32,5 +32,23 @@
   "etiqueta_arbol": "Lleva un Registro de Riesgos",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-098-registro_de_riesgos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una lista donde anotas y sigues los riesgos de tu proyecto durante todo el camino: qué es cada riesgo, qué tan probable es que pase, qué tan grave sería, cómo piensas responder, quién se encarga y en qué estado está. Es la herramienta central para no perder de vista los riesgos mientras avanzas.",
+      "texto_nuevo": "Es una lista donde anotas y sigues los riesgos de tu proyecto durante todo el camino: qué es cada riesgo, qué tan probable es que pase, qué tan grave sería, cómo piensas responder, quién se encarga y en qué estado está. Es la herramienta central para no perder de vista los riesgos mientras avanzas. No todo proyecto necesita tanto detalle: ajústalo al tuyo.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3192-3194",
+        "frase": "Not all projects need this level of detail."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no todo proyecto necesita ese nivel de detalle y que el registro se adapta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

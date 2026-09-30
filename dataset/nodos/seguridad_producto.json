@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Seguridad del Producto",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "La seguridad de tu producto se previene con revisiones de diseño planificadas, pruebas antes de lanzar y control de calidad. Todo problema de seguridad tiene como causa raíz una falta de integridad en tu propio juicio, usualmente por buscar resultados rápidos cortando esquinas. Es un problema ético, no legal.",
+  "resumen_teorico": "La seguridad de tu producto se previene con revisiones de diseño planificadas, pruebas antes de lanzar y control de calidad. No se conoce un solo problema de seguridad cuya causa raíz no fuera una falta de integridad en el juicio de quien dirige, usualmente por buscar resultados rápidos cortando esquinas. Es un problema ético, no legal.",
   "pasos_accionables": [
     "Revisa el diseño enfocándote en riesgos de seguridad antes de lanzar",
     "Pon a prueba el producto contra condiciones reales de uso antes de liberarlo",
@@ -81,6 +81,22 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-099-seguridad_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La seguridad de tu producto se previene con revisiones de diseño planificadas, pruebas antes de lanzar y control de calidad. Todo problema de seguridad tiene como causa raíz una falta de integridad en tu propio juicio, usualmente por buscar resultados rápidos cortando esquinas. Es un problema ético, no legal.",
+      "texto_nuevo": "La seguridad de tu producto se previene con revisiones de diseño planificadas, pruebas antes de lanzar y control de calidad. No se conoce un solo problema de seguridad cuya causa raíz no fuera una falta de integridad en el juicio de quien dirige, usualmente por buscar resultados rápidos cortando esquinas. Es un problema ético, no legal.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "879",
+        "frase": "I do not know of a single product safety problem where the basic cause"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que no conoce un solo caso con otra causa, y la falta es de alguien de la dirección; 'todo problema' lo vuelve ley universal.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

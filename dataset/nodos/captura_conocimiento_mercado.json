@@ -7,7 +7,7 @@
   "resumen_teorico": "Proceso sistemático de investigación externa para entender el panorama completo del mercado: competidores, tendencias de la industria, analistas clave, y ecosistema. Se logra mediante reuniones con jugadores adyacentes, investigación online profunda, reportes de analistas de Wall Street, y asistencia a conferencias/ferias del sector.",
   "pasos_accionables": [
     "Identificar y reunirse con empresas de mercados adyacentes e influenciadores clave de la industria",
-    "Googlear el problema y leer cientos de resultados relevantes con términos de búsqueda específicos",
+    "Googlear el problema y leer quizá los primeros cientos de resultados, con términos de búsqueda específicos",
     "Investigar en profundidad a cada competidor: qué dicen de sí mismos y qué dicen otros de ellos",
     "Obtener y leer reportes de analistas de Wall Street sobre el mercado",
     "Asistir a al menos dos conferencias o ferias clave de la industria",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Investiga a Fondo el Mercado",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-100-captura_conocimiento_mercado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Googlear el problema y leer cientos de resultados relevantes con términos de búsqueda específicos",
+      "texto_nuevo": "Googlear el problema y leer quizá los primeros cientos de resultados, con términos de búsqueda específicos",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8610",
+        "frase": "Start by Googling the problem and reading perhaps the first few hundred links."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece una aproximación cautelosa del libro (quizá los primeros cientos de enlaces).",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

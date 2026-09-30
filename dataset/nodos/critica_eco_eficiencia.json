@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Por qué 'Ser Menos Malo' No Es Suficiente (Crítica a la Eco-Eficiencia)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave').",
+  "resumen_teorico": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave'); la eficiencia vale como herramienta de un sistema eficaz o como transición.",
   "pasos_accionables": [
-    "Identificar las estrategias actuales de sostenibilidad de la organización (reducción, reciclaje, compensación)",
+    "Identificar las estrategias actuales de sostenibilidad de la organización (reducción, reutilización, reciclaje)",
     "Evaluar si estas estrategias abordan la causa raíz o solo mitigan síntomas",
     "Cuestionar métricas como el PIB o el conteo de emisiones reducidas como indicadores de verdadero progreso",
     "Plantear la pregunta: ¿qué pasaría si hiciéramos esto perfectamente eficiente? ¿seguiría siendo dañino?",
@@ -68,6 +68,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U3-002 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-098-critica_eco_eficiencia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave').",
+      "texto_nuevo": "La eco-eficiencia (reducir, reutilizar, minimizar) es la estrategia dominante en sostenibilidad corporativa, pero solo ralentiza el daño ambiental sin eliminarlo. Un sistema fundamentalmente destructivo, hecho más eficiente, sigue siendo destructivo, solo que más lento. La verdadera solución requiere un rediseño radical, no una optimización incremental de un modelo defectuoso ('cradle to grave'); la eficiencia vale como herramienta de un sistema eficaz o como transición.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "394",
+        "frase": "This is not to condemn all efficiency."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el libro aclara que no condena toda eficiencia.; Se cae la excepción del libro: la eficiencia vale como herramienta dentro de un sistema eficaz o como transición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-098-critica_eco_eficiencia-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar las estrategias actuales de sostenibilidad de la organización (reducción, reciclaje, compensación)",
+      "texto_nuevo": "Identificar las estrategias actuales de sostenibilidad de la organización (reducción, reutilización, reciclaje)",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "318-320",
+        "frase": "reduction is a central tenet of eco-efficiency"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La compensación no figura entre las estrategias de eco-eficiencia que el libro examina.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

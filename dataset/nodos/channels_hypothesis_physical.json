@@ -9,7 +9,7 @@
     "Evaluar si existen hábitos de compra establecidos para la categoría de producto",
     "Determinar si el canal fortalece el proceso de venta y a qué costo",
     "Analizar precio y complejidad del producto frente al canal elegido",
-    "Elegir un solo canal con mayor potencial hasta completar la validación de clientes",
+    "Elegir un solo canal con mayor potencial hasta completar la validación de clientes; la excepción es apoyar un lanzamiento en canal físico con marketing web (y a veces ventas) al mismo tiempo",
     "Revisar el modelo de ingresos según los costos de ese canal"
   ],
   "entregable_esperado": "Selección de canal físico principal con análisis de costos directos e indirectos",
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Define tu Canal Físico",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-100-channels_hypothesis_physical-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir un solo canal con mayor potencial hasta completar la validación de clientes",
+      "texto_nuevo": "Elegir un solo canal con mayor potencial hasta completar la validación de clientes; la excepción es apoyar un lanzamiento en canal físico con marketing web (y a veces ventas) al mismo tiempo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5996",
+        "frase": "physical-channel launches with simultaneous web-marketing (and sometimes sales) support"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa los lanzamientos en canal físico con apoyo simultáneo de marketing web y a veces de ventas.; Mismo defecto: se cae la excepción.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

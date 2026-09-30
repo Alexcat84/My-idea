@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Formación de Grupos de Mejora entre las Personas que Supervisan tu Negocio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, después de darles alguna formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que generó compromiso y mejoras sostenidas en el caso de una fábrica de medias.",
+  "resumen_teorico": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, después de darles alguna formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
   "pasos_accionables": [
     "Capacita a las personas que supervisan tus áreas en métodos estadísticos y en la filosofía de mejora continua",
     "Establece reuniones periódicas, por ejemplo semanales, entre ellas para compartir problemas y soluciones",
     "Pide que apliquen lo aprendido y cuenten los resultados en esas reuniones",
-    "Elige un área piloto con mayor probabilidad de éxito para empezar la mejora",
+    "Elige un área piloto para empezar la mejora donde parezca haber problemas y cuya persona a cargo haya aprendido la filosofía y trabaje bien con los demás",
     "Documenta y comparte los resultados obtenidos para reforzar la cultura de mejora"
   ],
   "entregable_esperado": "Un grupo de personas capacitado y reuniéndose con regularidad, con un caso piloto de mejora documentado",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Reúne a tus Supervisores a Mejorar",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-099-gestion_participativa_qc_circle_supervisores-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige un área piloto con mayor probabilidad de éxito para empezar la mejora",
+      "texto_nuevo": "Elige un área piloto para empezar la mejora donde parezca haber problemas y cuya persona a cargo haya aprendido la filosofía y trabaje bien con los demás",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8711",
+        "frase": "there appeared to be problems there; (2) the supervisor had learned the philosophy"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro elige el piloto primero porque allí parecía haber problemas; 'mayor probabilidad de éxito' pierde ese criterio y cambia la elección.; Mismo defecto: se caen los criterios de elección del libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-gestion_participativa_qc_circle_supervisores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, después de darles alguna formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que generó compromiso y mejoras sostenidas en el caso de una fábrica de medias.",
+      "texto_nuevo": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, después de darles alguna formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8707",
+        "frase": "They developed teamwork and interest that had been totally lacking heretofore."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye a las reuniones trabajo en equipo e interés; las mejoras vinieron del estudio posterior del departamento.; Mismo defecto: 'mejoras sostenidas' no se atribuye a las reuniones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

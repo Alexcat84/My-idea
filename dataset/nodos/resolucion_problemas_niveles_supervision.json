@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Resolución de Problemas por Alcance (Regla 85-13-2)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% necesita que intervengan varias personas o un experto externo. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+  "resumen_teorico": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
   "pasos_accionables": [
     "Clasificar cada problema que detectas según cuánta ayuda realmente necesita para resolverse",
     "Resolver tú mismo, sin pedir ayuda, el 85% de los problemas que puedes atender donde los notas",
     "Coordinarte con otra persona (proveedor, socio o colaborador) para el 13% de problemas que necesitan ese apoyo",
-    "Buscar ayuda experta o de varias personas solo para el 2% de casos verdaderamente complejos"
+    "Sumar a varias personas o áreas, hasta tres, solo para el 2% de casos verdaderamente complejos"
   ],
-  "entregable_esperado": "Un criterio propio para decidir cuándo resolver un problema de calidad tú mismo, cuándo coordinar con alguien más y cuándo pedir ayuda experta.",
+  "entregable_esperado": "Un criterio propio para decidir cuándo resolver un problema de calidad tú mismo, cuándo coordinar con alguien más y cuándo sumar a varias personas o áreas.",
   "nodos_previos": [
     "manejo_problemas"
   ],
@@ -39,6 +39,55 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-099-resolucion_problemas_niveles_supervision-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% necesita que intervengan varias personas o un experto externo. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+      "texto_nuevo": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "943",
+        "frase": "The remaining 2 percent might require as many as three operations or levels"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que ese 2% podría requerir hasta tres operaciones o niveles; el experto externo es añadido y 'necesita' endurece el 'might'.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-resolucion_problemas_niveles_supervision-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar ayuda experta o de varias personas solo para el 2% de casos verdaderamente complejos",
+      "texto_nuevo": "Sumar a varias personas o áreas, hasta tres, solo para el 2% de casos verdaderamente complejos",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "943",
+        "frase": "The remaining 2 percent might require as many as three operations or levels"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona ayuda experta para el 2%: habla de hasta tres operaciones o niveles.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-099-resolucion_problemas_niveles_supervision-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un criterio propio para decidir cuándo resolver un problema de calidad tú mismo, cuándo coordinar con alguien más y cuándo pedir ayuda experta.",
+      "texto_nuevo": "Un criterio propio para decidir cuándo resolver un problema de calidad tú mismo, cuándo coordinar con alguien más y cuándo sumar a varias personas o áreas.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "943",
+        "frase": "The remaining 2 percent might require as many as three operations or levels"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La tercera franja del libro es la intervención de hasta tres áreas o niveles, no la ayuda experta.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

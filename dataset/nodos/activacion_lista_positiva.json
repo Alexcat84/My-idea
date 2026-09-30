@@ -9,7 +9,7 @@
     "Rediseñar el producto utilizando únicamente materiales de la Lista Positiva (P), asegurando compatibilidad biológica o técnica.",
     "Diseñar el producto para desensamblaje, facilitando la recuperación de nutrientes técnicos o biológicos al final de su vida útil.",
     "Crear un sistema de documentación ('pasaporte de materiales') que registre todos los ingredientes del producto y su ciclo de reutilización.",
-    "Validar que el producto cumple funciones equivalentes o superiores al modelo anterior antes de su lanzamiento."
+    "Sugerencia de My Idea: validar que el producto cumple funciones equivalentes o superiores al modelo anterior antes de su lanzamiento."
   ],
   "entregable_esperado": "Prototipo o especificación técnica de producto rediseñado con materiales 100% de Lista Positiva y sistema de desensamblaje/documentación.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Rediseña con Materiales Positivos",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-098-activacion_lista_positiva-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar que el producto cumple funciones equivalentes o superiores al modelo anterior antes de su lanzamiento.",
+      "texto_nuevo": "Sugerencia de My Idea: validar que el producto cumple funciones equivalentes o superiores al modelo anterior antes de su lanzamiento.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "1006",
+        "frase": "you've thrown the recipe out the window and are starting from scratch"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no plantea validar funciones equivalentes o superiores en este paso; queda como sugerencia de la casa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
