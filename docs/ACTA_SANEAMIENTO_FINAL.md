@@ -587,8 +587,21 @@ cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de conta
 - **Incidencia de forma:** la lectura 102a salió como JSON inválido (rutas de Windows sin escapar). Se reparó solo el
   escape de las rutas, sin tocar el contenido, y el original queda en la cuarentena de claves. Desde el lote 106 la
   consigna del lector pide rutas escapadas.
-- **Consecuencia, por la regla fijada antes:** pareja mixta desde el lote 106, con el lector A en Opus y el lector B
-  en Sonnet. Los árbitros, el agente principal y la muestra de parada siguen en Opus. Los lectores B de los lotes 106
+- ~~**Consecuencia, por la regla fijada antes:** pareja mixta desde el lote 106, con el lector A en Opus y el lector B
+  en Sonnet.~~ *Superado por la decisión del fundador del 30 sep 2026, abajo.* Los árbitros, el agente principal y la muestra de parada siguen en Opus. Los lectores B de los lotes 106
   a 117 se lanzaron en Sonnet mientras se arbitraba el piloto, porque ambos resultados posibles ponían un Sonnet en
   ese puesto.
 - **Sexta y séptima tandas:** los arbitrajes 62 a 66 y 67 a 74, incluido el piloto.
+
+**Decisión del fundador (30 sep 2026): Sonnet queda fuera de la etapa 1, sin pareja mixta.**
+- **Motivo:** Sonnet caza las trampas, pero el árbitro solo confirma el 59 % de los hallazgos esperados. Para un
+  saneamiento que tiene que certificar, un lector que deja pasar cuatro de cada diez defectos reales no sirve, ni
+  siquiera como segundo lector.
+- **Configuración:** todos los lectores, los árbitros y la muestra de parada, en Opus 5.5.
+- **Lotes 96 a 105 (el piloto):** se releen con dos lectores Opus y se arbitran.
+  - Las correcciones del piloto ya aplicadas en la séptima tanda se conservan; se añaden las que falten.
+  - El paquete de cada lote se rehace sobre el texto VIGENTE, con la misma trampa sin marca: el fragmento plantado sigue
+    presente en los 10 nodos. El orden del paquete sale de la misma semilla. Los paquetes del piloto quedan en las claves.
+- **Lotes 106 a 117:** las lecturas B en Sonnet no cuentan como lectura. Cada lote lleva sus dos lectores Opus.
+- **Qué pasa con las 32 lecturas Sonnet** (96 a 105 A y B; 106 a 117 B): salen del circuito, se guardan fuera del repo
+  y no entran en ninguna tanda ni paquete. Sus trabajos vuelven a la cola.
