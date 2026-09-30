@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Comprensión de la Información No Clasificada Controlada (CUI)",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Incluye información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
+  "resumen_teorico": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Cuando se entrega como parte de un contrato gubernamental, incluye por ejemplo información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
   "pasos_accionables": [
     "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de CUI",
     "Contactar al oficial de contratos para confirmar qué información específica es CUI",
@@ -84,6 +84,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-076-que_es_cui-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Incluye información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
+      "texto_nuevo": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Cuando se entrega como parte de un contrato gubernamental, incluye por ejemplo información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "29-35",
+        "frase": "When provided as part of a government contract, examples include"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da esas categorías como ejemplos de CUI cuando se entregan como parte de un contrato gubernamental; sin la condición parece que toda información propietaria es CUI.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Da a los clientes una caja de cartón y pide que diseñen el producto que comprarían.",
     "Pide que incluyan mensajes de marketing, características principales y beneficios clave.",
     "Simula ser un cliente escéptico y pide que te vendan la caja.",
-    "Observa y anota qué mensajes y beneficios destacan durante el pitch."
+    "Observa y anota qué mensajes, características y beneficios ponen en la caja y cuáles destacan durante el pitch, e identifica sus jobs, pains y gains."
   ],
   "entregable_esperado": "Una caja de producto diseñada por el cliente junto con notas de observación sobre jobs, pains y gains revelados.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Diseña la Caja del Producto",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-079-product_box_game-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Observa y anota qué mensajes y beneficios destacan durante el pitch.",
+      "texto_nuevo": "Observa y anota qué mensajes, características y beneficios ponen en la caja y cuáles destacan durante el pitch, e identifica sus jobs, pains y gains.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8915",
+        "frase": "Observe and note which messages, features, and benefits customers mention on the box"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide anotar mensajes, características y beneficios de la caja y lo destacado en el pitch, e identificar jobs, pains y gains; el paso deja fuera parte de eso.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

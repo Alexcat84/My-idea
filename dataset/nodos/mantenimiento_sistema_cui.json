@@ -6,12 +6,12 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
   "pasos_accionables": [
-    "Identificar las herramientas usadas para diagnóstico y reparación del sistema",
+    "Identificar las herramientas usadas para diagnóstico y reparación del sistema, y las personas u organizaciones autorizadas para darle mantenimiento, considerando credenciales temporales para externos",
     "Determinar un cronograma regular de mantenimiento, verificar su cumplimiento y registrar el mantenimiento programado y las reparaciones de emergencia",
     "Habilitar actualizaciones automáticas donde sea apropiado",
     "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
     "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
-    "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones."
+    "Evitar que salga de las instalaciones equipo de mantenimiento con CUI: sanitizarlo, destruirlo o retenerlo dentro de las instalaciones."
   ],
   "entregable_esperado": "Plan de mantenimiento documentado con cronograma, herramientas autorizadas y procedimientos para mantenimiento remoto seguro",
   "nodos_previos": [
@@ -87,6 +87,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que la sesión remota se establezca con un proveedor autorizado; el paso lo omite.",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-mantenimiento_sistema_cui-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar las herramientas usadas para diagnóstico y reparación del sistema",
+      "texto_nuevo": "Identificar las herramientas usadas para diagnóstico y reparación del sistema, y las personas u organizaciones autorizadas para darle mantenimiento, considerando credenciales temporales para externos",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "487-489",
+        "frase": "Identify the individuals or organizations who are authorized to perform hardware or software maintenance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además identificar a las personas u organizaciones autorizadas para el mantenimiento, con credenciales temporales para externos como opción.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-mantenimiento_sistema_cui-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.",
+      "texto_nuevo": "Evitar que salga de las instalaciones equipo de mantenimiento con CUI: sanitizarlo, destruirlo o retenerlo dentro de las instalaciones.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "491-493",
+        "frase": "sanitizing or destroying the equipment or retaining the equipment within the facility"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro se refiere al equipo de mantenimiento y admite una tercera vía, retenerlo dentro de la instalación, que el paso omite.",
+      "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

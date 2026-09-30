@@ -4,12 +4,12 @@
   "dominio": "risk_management",
   "titulo_concepto": "Protocolo de Equipo de Gestión de Crisis",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para responder efectivamente cuando ocurre un evento de riesgo, se necesita un protocolo claro: definir qué constituye una crisis para la organización, exigir comunicación rápida (ej. dentro de 30 minutos), asegurar que ninguna persona decida sola ('dos personas en la caja'), hacer preguntas simples para determinar qué se sabe y qué falta saber, ejecutar decisiones rápidamente, reagrupar al equipo periódicamente y hacer un debrief final documentando todo lo ocurrido.",
+  "resumen_teorico": "Para responder efectivamente cuando ocurre un evento de riesgo, se necesita un protocolo claro: definir qué constituye una crisis para la organización, exigir comunicación rápida (ej. dentro de 30 minutos), asegurar que ninguna persona decida sola ('dos personas en la caja'), hacer preguntas simples para determinar qué se sabe y qué falta saber, ejecutar decisiones rápidamente, reagrupar al equipo periódicamente, documentar todo durante el evento con sus tiempos y fuentes, y hacer un debrief final.",
   "pasos_accionables": [
     "Definir explícitamente qué constituye una situación de crisis para la organización.",
-    "Establecer un tiempo máximo de comunicación al equipo de crisis (ej. 30 minutos).",
+    "Establecer un tiempo máximo de comunicación al equipo de crisis (ej. 30 minutos), sin esperar a investigar ni a reunir todos los hechos.",
     "Implementar la regla de 'dos personas en la caja' para decisiones críticas y agradecer a quien escala una alerta, aunque resulte falsa, sin castigar nunca al mensajero.",
-    "Usar preguntas guía: qué sabemos, qué no sabemos, quién obtendrá esa información y cuándo.",
+    "Usar preguntas guía: qué sabemos, qué no sabemos, quién obtendrá esa información y cuándo, y cuál es una explicación razonable de lo ocurrido; si un dato clave falta o no encaja, seguir indagando, y repetir hasta tener información suficiente para decidir.",
     "Documentar todo evento de crisis con tiempos y fuentes de información.",
     "Realizar un debrief posterior para capturar lecciones aprendidas."
   ],
@@ -83,6 +83,56 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición de la que depende la regla: agradecer a quien escala una alerta, aunque sea falsa, y no castigar al mensajero.",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-equipo_de_gestion_de_crisis-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar preguntas guía: qué sabemos, qué no sabemos, quién obtendrá esa información y cuándo.",
+      "texto_nuevo": "Usar preguntas guía: qué sabemos, qué no sabemos, quién obtendrá esa información y cuándo, y cuál es una explicación razonable de lo ocurrido; si un dato clave falta o no encaja, seguir indagando, y repetir hasta tener información suficiente para decidir.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12395-12405",
+        "frase": "Repeat until we have enough information to make a good decision."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan dos pasos del procedimiento del libro: buscar una explicación razonable (indagar si un dato clave falta o no encaja) y repetir hasta tener información suficiente.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-equipo_de_gestion_de_crisis-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para responder efectivamente cuando ocurre un evento de riesgo, se necesita un protocolo claro: definir qué constituye una crisis para la organización, exigir comunicación rápida (ej. dentro de 30 minutos), asegurar que ninguna persona decida sola ('dos personas en la caja'), hacer preguntas simples para determinar qué se sabe y qué falta saber, ejecutar decisiones rápidamente, reagrupar al equipo periódicamente y hacer un debrief final documentando todo lo ocurrido.",
+      "texto_nuevo": "Para responder efectivamente cuando ocurre un evento de riesgo, se necesita un protocolo claro: definir qué constituye una crisis para la organización, exigir comunicación rápida (ej. dentro de 30 minutos), asegurar que ninguna persona decida sola ('dos personas en la caja'), hacer preguntas simples para determinar qué se sabe y qué falta saber, ejecutar decisiones rápidamente, reagrupar al equipo periódicamente, documentar todo durante el evento con sus tiempos y fuentes, y hacer un debrief final.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12413-12415",
+        "frase": "It is absolutely critical to document everything during a crisis event"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide documentar todo durante el evento, con tiempo y fuente, porque en el momento se olvida; el resumen deja la documentación para el final.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-equipo_de_gestion_de_crisis-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un tiempo máximo de comunicación al equipo de crisis (ej. 30 minutos).",
+      "texto_nuevo": "Establecer un tiempo máximo de comunicación al equipo de crisis (ej. 30 minutos), sin esperar a investigar ni a reunir todos los hechos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12391",
+        "frase": "As soon as a crisis event is identified it is communicated."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que el aviso no espera a investigar ni a reunir todos los hechos: se comunica en cuanto se identifica el evento.",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

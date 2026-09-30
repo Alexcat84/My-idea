@@ -7,7 +7,7 @@
   "resumen_teorico": "En el encuentro de servicio, tres factores son clave para la calidad de la transacción: la selección adecuada del empleado de contacto directo, su capacitación, y su empoderamiento para actuar según el juicio propio ante situaciones no cubiertas por procedimientos estándar. El empoderamiento minimiza el uso del manual de reglas y maximiza el conocimiento, iniciativa y juicio del empleado para satisfacer al cliente en el momento.",
   "pasos_accionables": [
     "Identificar las características personales requeridas para el puesto consultando a empleados experimentados",
-    "Usar múltiples entrevistas y capacitar a los gerentes en procedimientos de entrevista",
+    "Usar múltiples entrevistas, capacitar a los gerentes en procedimientos de entrevista, buscar candidatos entre los empleados actuales y pedirles recomendaciones",
     "Invertir entre 1% y 5% de las horas laborales en capacitación continua",
     "Incluir role playing para manejar transacciones problemáticas y clientes molestos",
     "Otorgar autoridad a empleados para resolver situaciones inusuales sin escalar a un supervisor"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Empodera a tu Personal Frontal",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-076-empoderamiento_personal_frontline-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar múltiples entrevistas y capacitar a los gerentes en procedimientos de entrevista",
+      "texto_nuevo": "Usar múltiples entrevistas, capacitar a los gerentes en procedimientos de entrevista, buscar candidatos entre los empleados actuales y pedirles recomendaciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21868",
+        "frase": "identify nominees among present employees, and ask for recommendations from present employees"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La selección del libro incluye buscar candidatos entre los empleados actuales y pedirles recomendaciones, y el paso lo pierde.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

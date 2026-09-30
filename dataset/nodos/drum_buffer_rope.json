@@ -7,7 +7,7 @@
   "resumen_teorico": "Modelo que sincroniza toda la cadena de suministro como una sola entidad, alineada al ritmo real de la demanda del mercado (el 'tambor'). Cada empresa gestiona la incertidumbre mediante buffers de inventario o capacidad productiva, y comparten datos de demanda (la 'cuerda') que los mantiene sincronizados, minimizando el efecto látigo (bullwhip effect).",
   "pasos_accionables": [
     "Identificar la demanda del mercado como el 'tambor' que marca el ritmo de toda la cadena",
-    "Determinar buffers de inventario o capacidad en cada eslabón según el nivel de incertidumbre",
+    "Determinar buffers de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
     "Compartir datos de demanda real (ventas POS) entre los participantes de la cadena para reducir la incertidumbre",
     "Monitorear la reducción de las olas de demanda (bullwhip effect) tras la sincronización"
   ],
@@ -43,6 +43,23 @@
         "evidencia": "D-02: Sincronizar toda una cadena de suministro con tambor, buffers y cuerda es técnica avanzada de logística que solo usa quien gestiona inventario entre varias empresas. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-075-drum_buffer_rope-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar buffers de inventario o capacidad en cada eslabón según el nivel de incertidumbre",
+      "texto_nuevo": "Determinar buffers de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3648",
+        "frase": "determined by the degree of uncertainty about future market demand and the service levels"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dimensiona los buffers también por el nivel de servicio que exige el mercado.; Mismo defecto, más el criterio del libro de elegir inventario o capacidad según lo más económico.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

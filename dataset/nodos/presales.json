@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Presales (Preventas)",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "A diferencia de las mock sales, en las presales el cliente sabe que la propuesta de valor aún no existe completamente pero hace un compromiso de compra real (ej. Kickstarter). Si no hay suficiente interés, la venta se cancela y se reembolsa al cliente.",
+  "resumen_teorico": "A diferencia de las mock sales, en las presales el cliente sabe que la propuesta de valor aún no existe completamente pero hace un compromiso de compra real (ej. Kickstarter); el objetivo es explorar su interés, no es vender. Si no hay suficiente interés, la venta se cancela y se reembolsa al cliente.",
   "pasos_accionables": [
     "Publica el proyecto en una plataforma de crowdfunding o crea tu propio proceso de preventa.",
     "Define una meta de financiamiento; los fondos solo se liberan si se alcanza.",
     "En contexto B2B, recolecta cartas de intención o compromisos de compra no vinculantes.",
-    "Analiza el nivel de fondos/compromisos alcanzados como indicador de interés real."
+    "Analiza el nivel de fondos/compromisos alcanzados como indicador de interés real, recordando que una preventa exitosa es solo un indicador y no garantiza una base amplia de clientes ni un modelo de negocio escalable."
   ],
   "entregable_esperado": "Campaña de preventa con monto recaudado o compromisos firmados como evidencia de demanda.",
   "nodos_previos": [
@@ -57,6 +57,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-079-presales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analiza el nivel de fondos/compromisos alcanzados como indicador de interés real.",
+      "texto_nuevo": "Analiza el nivel de fondos/compromisos alcanzados como indicador de interés real, recordando que una preventa exitosa es solo un indicador y no garantiza una base amplia de clientes ni un modelo de negocio escalable.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "9056-9059",
+        "frase": "Remember that successful presales are only an indicator."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que una preventa exitosa es solo un indicador y no asegura una base amplia de clientes ni un modelo escalable.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-079-presales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de las mock sales, en las presales el cliente sabe que la propuesta de valor aún no existe completamente pero hace un compromiso de compra real (ej. Kickstarter). Si no hay suficiente interés, la venta se cancela y se reembolsa al cliente.",
+      "texto_nuevo": "A diferencia de las mock sales, en las presales el cliente sabe que la propuesta de valor aún no existe completamente pero hace un compromiso de compra real (ej. Kickstarter); el objetivo es explorar su interés, no es vender. Si no hay suficiente interés, la venta se cancela y se reembolsa al cliente.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "9068",
+        "frase": "The main objective of this type of presales is to explore customer interest"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el objetivo principal de estas preventas es explorar el interés del cliente, no vender, y el resumen lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

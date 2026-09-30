@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Motivaciones Intangibles para Sumar Cofundadores",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Además de las razones tangibles de capital, existen motivaciones psicológicas para sumar cofundadores: preferencias de tareas (delegar lo que no se disfruta hacer), estilo colaborativo de trabajo (mejorar la idea mediante discusión), y necesidad de apoyo/validación emocional durante el 'roller coaster' del emprendimiento. Estas razones pueden pesar tanto como las tangibles, pero también pueden llevar a decisiones apresuradas de sumar cofundadores innecesarios.",
+  "resumen_teorico": "Además de las razones tangibles de capital, existen motivaciones psicológicas para sumar cofundadores: preferencias de tareas (delegar lo que no se disfruta hacer), estilo colaborativo de trabajo (mejorar la idea mediante discusión), y necesidad de apoyo/validación emocional durante el 'roller coaster' del emprendimiento. Estas razones pueden pesar incluso más que las tangibles, pero también pueden llevar a decisiones apresuradas de sumar cofundadores innecesarios.",
   "pasos_accionables": [
     "Reflexionar honestamente sobre qué tareas disfrutas y cuáles delegarías.",
     "Evaluar tu estilo de trabajo: ¿prefieres decidir solo o discutir ideas con otros?",
-    "Considerar tu resiliencia emocional ante la incertidumbre y el estrés del emprendimiento.",
+    "Considerar tu resiliencia emocional ante la incertidumbre y el estrés del emprendimiento; si dudas de aguantar la presión, considerar en serio un cofundador que te dé apoyo y además sume capacidades al equipo.",
     "Distinguir entre necesidad real de apoyo y deseo de compañía que no aporta valor al negocio."
   ],
   "entregable_esperado": "Autoevaluación escrita de necesidades psicológicas y de estilo de trabajo que justifiquen (o no) sumar un cofundador.",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Busca Cofundadores por Razones Profundas",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-077-motivaciones_psicologicas_cofundadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Además de las razones tangibles de capital, existen motivaciones psicológicas para sumar cofundadores: preferencias de tareas (delegar lo que no se disfruta hacer), estilo colaborativo de trabajo (mejorar la idea mediante discusión), y necesidad de apoyo/validación emocional durante el 'roller coaster' del emprendimiento. Estas razones pueden pesar tanto como las tangibles, pero también pueden llevar a decisiones apresuradas de sumar cofundadores innecesarios.",
+      "texto_nuevo": "Además de las razones tangibles de capital, existen motivaciones psicológicas para sumar cofundadores: preferencias de tareas (delegar lo que no se disfruta hacer), estilo colaborativo de trabajo (mejorar la idea mediante discusión), y necesidad de apoyo/validación emocional durante el 'roller coaster' del emprendimiento. Estas razones pueden pesar incluso más que las tangibles, pero también pueden llevar a decisiones apresuradas de sumar cofundadores innecesarios.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "837",
+        "frase": "psychological needs that lead core founders to choose cofounders can outweigh the tangible factors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que estas razones pueden pesar más que las tangibles, no solo lo mismo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-077-motivaciones_psicologicas_cofundadores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar tu resiliencia emocional ante la incertidumbre y el estrés del emprendimiento.",
+      "texto_nuevo": "Considerar tu resiliencia emocional ante la incertidumbre y el estrés del emprendimiento; si dudas de aguantar la presión, considerar en serio un cofundador que te dé apoyo y además sume capacidades al equipo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "845",
+        "frase": "seriously consider attracting cofounders who can both provide support and enhance the team’s capabilities"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro saca la consecuencia: si dudas de aguantar la presión, busca cofundadores que den apoyo y sumen capacidades.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

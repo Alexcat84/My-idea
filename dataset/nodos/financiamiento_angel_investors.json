@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Inversionistas ángeles (angel investors)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Los inversionistas ángeles son personas que ponen su propio dinero en tu negocio, casi siempre sin conocerte de antes, y funcionan como puente entre el dinero de amigos y familia y el capital de los fondos de capital de riesgo (VCs). Te ofrecen montos mayores que amigos y familia (pregunta el rango típico en tu mercado), llegan de sectores diversos y a veces suman mentoría o contactos de la industria. Pero su experiencia varía mucho de uno a otro, y si son muchos y poco sofisticados, gestionarlos se puede complicar.",
+  "resumen_teorico": "Los inversionistas ángeles son personas que ponen su propio dinero en tu negocio, casi siempre sin conocerte de antes, y funcionan como puente entre el dinero de amigos y familia y el capital de los fondos de capital de riesgo (VCs). Te ofrecen montos mayores que amigos y familia (pregunta el rango típico en tu mercado), invierten en sectores más diversos que los fondos de capital de riesgo y a veces suman mentoría o contactos de la industria. Pero su experiencia varía mucho de uno a otro, y si son muchos y poco sofisticados, gestionarlos se puede complicar.",
   "pasos_accionables": [
     "Busca redes de inversionistas ángeles (angel forums) que conozcan tu industria",
     "Consigue que alguien te presente: la mayoría de los accesos exitosos llegan por una referencia en común (58%)",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Atrae a Inversionistas Ángeles",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-079-financiamiento_angel_investors-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los inversionistas ángeles son personas que ponen su propio dinero en tu negocio, casi siempre sin conocerte de antes, y funcionan como puente entre el dinero de amigos y familia y el capital de los fondos de capital de riesgo (VCs). Te ofrecen montos mayores que amigos y familia (pregunta el rango típico en tu mercado), llegan de sectores diversos y a veces suman mentoría o contactos de la industria. Pero su experiencia varía mucho de uno a otro, y si son muchos y poco sofisticados, gestionarlos se puede complicar.",
+      "texto_nuevo": "Los inversionistas ángeles son personas que ponen su propio dinero en tu negocio, casi siempre sin conocerte de antes, y funcionan como puente entre el dinero de amigos y familia y el capital de los fondos de capital de riesgo (VCs). Te ofrecen montos mayores que amigos y familia (pregunta el rango típico en tu mercado), invierten en sectores más diversos que los fondos de capital de riesgo y a veces suman mentoría o contactos de la industria. Pero su experiencia varía mucho de uno a otro, y si son muchos y poco sofisticados, gestionarlos se puede complicar.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2739",
+        "frase": "One advantage of angel investors is the diversity of industries in which they invest."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla del origen de los ángeles sino de que invierten en una variedad de sectores mayor que los fondos de capital de riesgo.; Mismo defecto que la marca 0: el nodo cambia la diversidad de sectores en que invierten por la de su procedencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

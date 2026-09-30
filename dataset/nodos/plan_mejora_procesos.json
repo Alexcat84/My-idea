@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Plan de Mejora de Procesos",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Detalla los pasos para analizar procesos de gestión de proyecto, desarrollo de producto u organizacionales para identificar actividades que mejoren su valor. Incluye descripción del proceso 'as-is', flujo con entradas/salidas, métricas actuales, objetivos de mejora ('to-be') y el enfoque para lograrlos.",
+  "resumen_teorico": "Detalla los pasos para analizar procesos de gestión de proyecto, desarrollo de producto u organizacionales para identificar actividades que mejoren su valor. Puede incluir descripción del proceso 'as-is', flujo con entradas/salidas, métricas actuales, objetivos de mejora ('to-be') y el enfoque para lograrlos.",
   "pasos_accionables": [
     "Documentar el proceso actual (as-is) incluyendo pasos, entradas y salidas",
     "Identificar el punto de inicio y fin del proceso",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Mejora tus Procesos Internos",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-075-plan_mejora_procesos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detalla los pasos para analizar procesos de gestión de proyecto, desarrollo de producto u organizacionales para identificar actividades que mejoren su valor. Incluye descripción del proceso 'as-is', flujo con entradas/salidas, métricas actuales, objetivos de mejora ('to-be') y el enfoque para lograrlos.",
+      "texto_nuevo": "Detalla los pasos para analizar procesos de gestión de proyecto, desarrollo de producto u organizacionales para identificar actividades que mejoren su valor. Puede incluir descripción del proceso 'as-is', flujo con entradas/salidas, métricas actuales, objetivos de mejora ('to-be') y el enfoque para lograrlos.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2574",
+        "frase": "The Process Improvement Plan can include"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el plan puede incluir esos elementos; el nodo lo endurece a contenido fijo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

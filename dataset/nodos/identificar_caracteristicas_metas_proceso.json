@@ -10,7 +10,7 @@
     "Clasificar cada característica en procedimientos, métodos, equipos y suministros, materiales, personas, entrenamiento, otros recursos o procesos de apoyo",
     "Organizar las características y metas en una hoja de cálculo de diseño de proceso",
     "Verificar que cada característica del producto sea alcanzada por al menos una característica del proceso y eliminar redundancias",
-    "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas"
+    "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas y, si no lo son, mejorarlos dentro del diseño o reemplazarlos por otra vía"
   ],
   "entregable_esperado": "Hoja de cálculo de diseño de proceso con características, metas y verificación de cobertura completa de necesidades del producto",
   "nodos_previos": [
@@ -74,6 +74,23 @@
         "frase": "Most process features fall into one of the following categories"
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista omite los procesos de apoyo, que el libro incluye como categoría.; Se cae la categoría de procesos de apoyo y el libro dice que la mayoría, no todas, caen en esas categorías.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-075-identificar_caracteristicas_metas_proceso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas",
+      "texto_nuevo": "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas y, si no lo son, mejorarlos dentro del diseño o reemplazarlos por otra vía",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4600",
+        "frase": "improved as part of the process design, or they will need to be replaced"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae lo que el libro manda si no son capaces: mejorarlos dentro del diseño o reemplazarlos.",
+      "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

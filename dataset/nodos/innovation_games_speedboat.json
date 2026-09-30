@@ -7,7 +7,7 @@
   "resumen_teorico": "Juego colaborativo que usa la metáfora de un barco frenado por anclas para identificar los dolores (pains) más extremos que impiden a los clientes completar sus trabajos (jobs to be done). Cuanto más abajo se coloca el ancla, más extremo es el dolor.",
   "pasos_accionables": [
     "Prepara un póster grande con un barco flotando en el mar.",
-    "Invita a los clientes a identificar problemas y obstáculos, cada uno en un post-it.",
+    "Invita a los clientes a identificar problemas, obstáculos y riesgos, cada uno en un post-it.",
     "Pide que coloquen cada post-it como ancla, ubicando más abajo los dolores más extremos.",
     "Compara los resultados con tu entendimiento previo de los pains del cliente."
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Identifica los Frenos del Cliente",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-079-innovation_games_speedboat-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Invita a los clientes a identificar problemas y obstáculos, cada uno en un post-it.",
+      "texto_nuevo": "Invita a los clientes a identificar problemas, obstáculos y riesgos, cada uno en un post-it.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8843",
+        "frase": "identify the problems, obstacles, and risks that are preventing them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro es problemas, obstáculos y riesgos; el paso deja fuera los riesgos.; Mismo defecto que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

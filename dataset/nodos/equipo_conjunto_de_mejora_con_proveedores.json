@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Formar un equipo multifuncional con representantes del comprador y del proveedor",
     "Alinear objetivos y analizar el proceso de negocio de la cadena de suministro",
-    "Establecer la 'prueba de la necesidad' con datos concretos (ej. costos de garantía)",
+    "Establecer la 'prueba de la necesidad' con datos concretos (ej. costos de garantía) y aplicar un análisis de Pareto para identificar los pocos problemas vitales",
     "Fijar metas conjuntas de mejora (ej. reducción de costos en X%)",
     "Proveer entrenamiento y asistencia técnica al proveedor",
     "Realizar reuniones de seguimiento entre equipos directivos de ambas partes",
-    "Establecer reconocimientos para proveedores destacados"
+    "Establecer reconocimientos para proveedores destacados y ajustar las prácticas de compra para trasladar negocio a los mejores proveedores"
   ],
   "entregable_esperado": "Plan de mejora conjunta documentado con metas, roles y mecanismos de seguimiento entre comprador y proveedor",
   "nodos_previos": [
@@ -102,6 +102,40 @@
         "frase": "Sometimes upper management must provide the leadership in obtaining action from suppliers."
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a veces la alta gerencia debe liderar; el nodo lo endurece a requisito.; Mismo endurecimiento: 'sometimes' pasa a requisito general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-equipo_conjunto_de_mejora_con_proveedores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer la 'prueba de la necesidad' con datos concretos (ej. costos de garantía)",
+      "texto_nuevo": "Establecer la 'prueba de la necesidad' con datos concretos (ej. costos de garantía) y aplicar un análisis de Pareto para identificar los pocos problemas vitales",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24123",
+        "frase": "the application of Pareto analysis to identify the vital few problems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro une a la prueba de la necesidad el análisis de Pareto para identificar los pocos problemas vitales, y el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-equipo_conjunto_de_mejora_con_proveedores-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer reconocimientos para proveedores destacados",
+      "texto_nuevo": "Establecer reconocimientos para proveedores destacados y ajustar las prácticas de compra para trasladar negocio a los mejores proveedores",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24129",
+        "frase": "purchasing practices were changed to transfer business to the best suppliers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el caso del libro, junto a los reconocimientos se cambiaron las prácticas de compra para trasladar negocio a los mejores proveedores, y el paso lo pierde.",
+      "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

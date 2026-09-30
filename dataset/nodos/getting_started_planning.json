@@ -7,7 +7,7 @@
   "resumen_teorico": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
   "pasos_accionables": [
     "Definir componentes del sistema y tipos de información procesada, almacenada y transmitida.",
-    "Describir amenazas específicas al sistema y su entorno operativo.",
+    "Describir amenazas específicas al sistema y su entorno operativo, incluidas sus dependencias o conexiones con otros sistemas o componentes.",
     "Detallar requisitos de seguridad y las salvaguardas implementadas o planeadas.",
     "Identificar individuos con roles y responsabilidades en el sistema.",
     "Establecer reglas de comportamiento para el uso del sistema y protección de CUI.",
@@ -44,6 +44,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-076-getting_started_planning-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Describir amenazas específicas al sistema y su entorno operativo.",
+      "texto_nuevo": "Describir amenazas específicas al sistema y su entorno operativo, incluidas sus dependencias o conexiones con otros sistemas o componentes.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "735",
+        "frase": "any dependencies on or connections to other systems or system components"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El plan del libro describe también las dependencias o conexiones del sistema con otros sistemas o componentes, y el paso lo pierde.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

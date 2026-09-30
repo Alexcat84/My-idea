@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El histograma es un gráfico de barras verticales de una distribución de frecuencia que resalta el centro y la cantidad de variación en una muestra de datos. Su simplicidad de construcción e interpretación lo convierte en una herramienta efectiva para el análisis elemental de datos y para evaluar si un proceso puede cumplir con los límites de especificación.",
   "pasos_accionables": [
-    "Construir la distribución de frecuencia previa a partir de los datos",
+    "Construir la distribución de frecuencia previa a partir de los datos, en general con al menos 40 mediciones para que se vea el patrón de variación",
     "Graficar las barras verticales según las frecuencias de cada celda",
     "Agregar los límites de especificación al gráfico",
-    "Evaluar el centrado, ancho y forma del histograma para determinar capacidad del proceso"
+    "Evaluar el centrado, ancho y forma del histograma y combinarlo con lo que sabes del proceso para determinar su capacidad, sabiendo que el histograma no muestra el orden de producción y el proceso pudo haberse desplazado"
   ],
   "entregable_esperado": "Histograma graficado con límites de especificación y análisis de capacidad del proceso",
   "nodos_previos": [
@@ -24,5 +24,41 @@
   "etiqueta_arbol": "Usa el Histograma para Analizar",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-075-histograma_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar el centrado, ancho y forma del histograma para determinar capacidad del proceso",
+      "texto_nuevo": "Evaluar el centrado, ancho y forma del histograma y combinarlo con lo que sabes del proceso para determinar su capacidad, sabiendo que el histograma no muestra el orden de producción y el proceso pudo haberse desplazado",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11836, 11866",
+        "frase": "Knowledge of the production process is then combined with insights provided by the histogram"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concluye sobre la capacidad combinando el histograma con el conocimiento del proceso.; Mismo defecto: falta el conocimiento del proceso de producción.; Se cae el límite del libro: el histograma no muestra el orden de producción y su centro puede engañar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-075-histograma_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construir la distribución de frecuencia previa a partir de los datos",
+      "texto_nuevo": "Construir la distribución de frecuencia previa a partir de los datos, en general con al menos 40 mediciones para que se vea el patrón de variación",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11864",
+        "frase": "As a general rule, at least 40 measurements are needed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, como regla general, al menos 40 mediciones para que el patrón no quede incompleto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

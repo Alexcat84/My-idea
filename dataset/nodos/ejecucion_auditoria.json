@@ -7,8 +7,8 @@
   "resumen_teorico": "Cuando estás revisando algo por dentro, no anotes un problema sin confirmarlo antes con la persona responsable de esa parte del negocio. Verifica cada hallazgo con ella antes de ponerlo en el reporte. Decide también si tú vas a investigar por qué pasó el problema o si eso queda en manos de quien maneja esa área. En general puedes proponer mejoras, pero evita diseñar tú mismo la solución exacta.",
   "pasos_accionables": [
     "Confirma cada hallazgo con la persona responsable de esa área antes de escribirlo en el reporte",
-    "Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio",
-    "Propón mejoras, pero evita diseñar tú mismo la solución final",
+    "Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio; en ese caso, incluye en tus recomendaciones la propuesta de esa investigación",
+    "Propón mejoras, pero evita diseñar tú mismo la solución final, y da seguimiento a cada recomendación hasta que se acepte o se considere y se rechace",
     "Mantén al cliente clave al tanto de cómo va avanzando la revisión"
   ],
   "entregable_esperado": "Lista de hallazgos verificados y acordados con la persona del área revisada",
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Verifica los Hechos, no Supongas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-076-ejecucion_auditoria-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Propón mejoras, pero evita diseñar tú mismo la solución final",
+      "texto_nuevo": "Propón mejoras, pero evita diseñar tú mismo la solución final, y da seguimiento a cada recomendación hasta que se acepte o se considere y se rechace",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10175",
+        "frase": "auditors are expected to follow up recommendations to ensure that something specific is done"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro espera que el auditor dé seguimiento a cada recomendación hasta que se acepte o se considere y se rechace, y el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-ejecucion_auditoria-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio",
+      "texto_nuevo": "Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio; en ese caso, incluye en tus recomendaciones la propuesta de esa investigación",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10164-10166",
+        "frase": "audit recommendations will then include proposals for such investigations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro indica que, si la investigación queda en manos del área, tus recomendaciones incluyen la propuesta de esa investigación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

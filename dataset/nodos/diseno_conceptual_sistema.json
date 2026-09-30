@@ -6,7 +6,7 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Es el esbozo de alto nivel de un sistema (o conjunto de sistemas) que expresa la estrategia para lograr las metas del negocio. Se construye primero desde los procesos de negocio, luego se agregan los flujos de datos (volumen, frecuencia, origen/destino) y se define qué operaciones serán automatizadas, manuales o mixtas, priorizando que la tecnología empodere a las personas en tareas de decisión y resolución de problemas.",
   "pasos_accionables": [
-    "Bocetar los procesos de negocio y las operaciones que se realizan",
+    "Generar varios diseños conceptuales distintos y, en cada uno, bocetar los procesos de negocio y las operaciones que se realizan",
     "Definir los flujos de datos entrando y saliendo de cada operación (volumen, frecuencia, origen, destino)",
     "Definir qué tipo de personas y cuántas se requieren para cada operación, y sus niveles de habilidad",
     "Decidir qué operaciones serán automatizadas, manuales o híbridas",
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Esboza tu Sistema Ideal",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-075-diseno_conceptual_sistema-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Bocetar los procesos de negocio y las operaciones que se realizan",
+      "texto_nuevo": "Generar varios diseños conceptuales distintos y, en cada uno, bocetar los procesos de negocio y las operaciones que se realizan",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4462, 4486",
+        "frase": "Generate several different conceptual designs for systems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide generar varios diseños conceptuales distintos para luego elegir el mejor con la retroalimentación.; Mismo defecto: se pierden los diseños alternativos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

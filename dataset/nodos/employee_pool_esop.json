@@ -9,7 +9,7 @@
     "Negocia el tamaño de la reserva de acciones para empleados como porcentaje de tu tabla de capital después de la inversión.",
     "Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.",
     "Calcula cómo esa dilución afecta el precio por acción que te queda a ti como fundador.",
-    "Planea cómo vas a repartir esa reserva según a quién piensas contratar más adelante."
+    "Arma un presupuesto de opciones con a quién piensas contratar hasta la próxima ronda y cuántas opciones necesitaría cada persona, y llévalo a la negociación: acepta una reserva algo mayor, pero no por mucho margen."
   ],
   "entregable_esperado": "El tamaño de la reserva de acciones para empleados acordado y reflejado en tu tabla de capital antes de cerrar la ronda.",
   "nodos_previos": [
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Reserva Opciones para tu Equipo",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-077-employee_pool_esop-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planea cómo vas a repartir esa reserva según a quién piensas contratar más adelante.",
+      "texto_nuevo": "Arma un presupuesto de opciones con a quién piensas contratar hasta la próxima ronda y cuántas opciones necesitaría cada persona, y llévalo a la negociación: acepta una reserva algo mayor, pero no por mucho margen.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "854",
+        "frase": "List out all of the hires you plan on making between today and your next"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro usa ese plan como presupuesto de opciones hasta la próxima ronda para negociar el tamaño de la reserva, aceptando algo más pero no mucho.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

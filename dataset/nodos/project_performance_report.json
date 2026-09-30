@@ -6,7 +6,7 @@
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Reporte resumen elaborado por el project manager para el sponsor y otros stakeholders, consolidando información de los Team Member Status Reports, mostrando logros, variaciones de cronograma y presupuesto, y nuevos riesgos/issues.",
   "pasos_accionables": [
-    "Consolidar logros y pendientes del periodo",
+    "Consolidar logros y pendientes del periodo, y los logros y costos planeados para el siguiente",
     "Analizar causas raíz de variaciones de cronograma y presupuesto",
     "Identificar impacto en hitos y presupuesto general",
     "Planificar acciones correctivas y reportar nuevos riesgos/issues"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Reporta el Desempeño del Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-075-project_performance_report-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consolidar logros y pendientes del periodo",
+      "texto_nuevo": "Consolidar logros y pendientes del periodo, y los logros y costos planeados para el siguiente",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "4762, 4782-4784",
+        "frase": "Accomplishments planned for the next reporting period"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El reporte incluye los logros y costos planeados para el siguiente periodo, y ningún paso los recoge.; Mismo defecto: se caen los logros y costos planeados para el siguiente periodo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

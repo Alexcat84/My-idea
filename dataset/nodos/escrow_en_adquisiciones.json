@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir en el LOI el porcentaje del precio de compra que irá a escrow.",
     "Negociar la duración del escrow (lo habitual es entre 12 y 24 meses).",
-    "Establecer los carve-outs (fraude, impuestos, IP, capitalización) y su tope máximo.",
+    "Establecer los carve-outs (fraude, impuestos, IP, capitalización) y su tope máximo, que no debería superar el valor total de la operación.",
     "Evaluar la forma del escrow (cash vs stock) y su riesgo si es en acciones volátiles.",
     "Evitar aceptar cláusulas vagas como 'términos estándar de escrow'."
   ],
@@ -43,6 +43,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe 12 a 24 meses como lo habitual, no como lo ideal.; Mismo defecto.",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-077-escrow_en_adquisiciones-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer los carve-outs (fraude, impuestos, IP, capitalización) y su tope máximo.",
+      "texto_nuevo": "Establecer los carve-outs (fraude, impuestos, IP, capitalización) y su tope máximo, que no debería superar el valor total de la operación.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4236",
+        "frase": "the maximum of the carve-out should be the aggregate deal value"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija el tope de los carve-outs en el valor total de la operación; el paso lo deja abierto.; Mismo defecto: el tope queda sin la referencia que da el libro.",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

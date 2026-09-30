@@ -9,7 +9,7 @@
     "Realizar auditorías o autoevaluaciones (o contratar terceros) de los requisitos de seguridad.",
     "Desarrollar un POAM detallando debilidades, responsables, recursos y fechas de mitigación.",
     "Establecer un programa de monitoreo continuo con frecuencia adecuada según el tipo de requisito.",
-    "Utilizar herramientas comerciales o proveedores externos para apoyar el monitoreo continuo."
+    "Considerar herramientas comerciales o proveedores externos que pueden apoyar el monitoreo continuo."
   ],
   "entregable_esperado": "Plan de Acción y Cronograma (POAM) documentado y estrategia de monitoreo continuo implementada.",
   "nodos_previos": [
@@ -39,6 +39,23 @@
         "evidencia": "F03-008: Las auditorías periódicas, el POAM y el monitoreo continuo de seguridad son control operativo de un sistema que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-076-getting_started_security_assessment_monitoring-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Utilizar herramientas comerciales o proveedores externos para apoyar el monitoreo continuo.",
+      "texto_nuevo": "Considerar herramientas comerciales o proveedores externos que pueden apoyar el monitoreo continuo.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "645",
+        "frase": "There are commercially available tools to help businesses achieve continuous monitoring"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece en instrucción lo que el libro presenta como opción disponible (existen herramientas y terceros que pueden apoyar).",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

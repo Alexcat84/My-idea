@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Sistema de Banderas Rojas (Red Flags) para Detectar Proyectos en Problemas",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "En vez de esperar a la siguiente revisión programada (gate) para actuar ante un problema, usa un sistema de banderas rojas: una señal que lanzas de inmediato cuando ocurre algo crítico. Por ejemplo, un retraso de más de 30 días en el cronograma, un cambio de más del 20% en las ventas o costos esperados frente a tu caso de negocio, un obstáculo técnico que aumenta el tiempo o el costo más del 10%, o el incumplimiento de recursos que te habían prometido. Cualquiera de estas señales puede llevar a una reunión de emergencia con quienes deciden el futuro del proyecto, para corregir el rumbo, redirigirlo o detenerlo sin demora.",
+  "resumen_teorico": "En vez de esperar a la siguiente revisión programada (gate) para actuar ante un problema, usa un sistema de banderas rojas: una señal que lanzas de inmediato cuando ocurre algo crítico. Por ejemplo, un retraso de más de 30 días en el cronograma, un cambio en las ventas o costos esperados que altere tu caso de negocio en más del 20%, un obstáculo técnico que aumenta el tiempo o el costo más del 10%, o el incumplimiento de recursos que te habían prometido. Cualquiera de estas señales puede llevar a una reunión de emergencia con quienes deciden el futuro del proyecto, para corregir el rumbo, redirigirlo o detenerlo sin demora.",
   "pasos_accionables": [
-    "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos.",
+    "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos y cambios en las especificaciones del producto que afecten lo que el cliente necesita.",
     "Aprende a reconocer estas señales tú mismo y repórtalas de inmediato, sin esperar a nadie.",
     "Ten pensado de antemano cómo convocar una reunión de emergencia con las personas que deciden sobre el proyecto.",
     "Toma la acción que corresponda, corregir, redirigir o cerrar el proyecto, sin esperar a la próxima revisión formal."
@@ -43,6 +43,39 @@
         "frase": "They alert the gatekeepers, and an emergency gate meeting may be scheduled."
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que se avisa a quienes deciden y que una reunión de emergencia puede convocarse; el nodo la vuelve automática.; Mismo defecto: 'may be scheduled' se endurece a 'activa'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-078-red_flags_proyectos_en_problemas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En vez de esperar a la siguiente revisión programada (gate) para actuar ante un problema, usa un sistema de banderas rojas: una señal que lanzas de inmediato cuando ocurre algo crítico. Por ejemplo, un retraso de más de 30 días en el cronograma, un cambio de más del 20% en las ventas o costos esperados frente a tu caso de negocio, un obstáculo técnico que aumenta el tiempo o el costo más del 10%, o el incumplimiento de recursos que te habían prometido. Cualquiera de estas señales puede llevar a una reunión de emergencia con quienes deciden el futuro del proyecto, para corregir el rumbo, redirigirlo o detenerlo sin demora.",
+      "texto_nuevo": "En vez de esperar a la siguiente revisión programada (gate) para actuar ante un problema, usa un sistema de banderas rojas: una señal que lanzas de inmediato cuando ocurre algo crítico. Por ejemplo, un retraso de más de 30 días en el cronograma, un cambio en las ventas o costos esperados que altere tu caso de negocio en más del 20%, un obstáculo técnico que aumenta el tiempo o el costo más del 10%, o el incumplimiento de recursos que te habían prometido. Cualquiera de estas señales puede llevar a una reunión de emergencia con quienes deciden el futuro del proyecto, para corregir el rumbo, redirigirlo o detenerlo sin demora.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7497",
+        "frase": "that impacts on the Business Case by more than 20 percent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El 20% del libro es el impacto sobre el caso de negocio, no el tamaño del cambio en ventas o costos.; Mismo defecto sobre la condición del umbral del 20%.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-078-red_flags_proyectos_en_problemas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos.",
+      "texto_nuevo": "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos y cambios en las especificaciones del producto que afecten lo que el cliente necesita.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7491-7495",
+        "frase": "revised or relaxed in a way that impacts negatively on meeting a customer need"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de disparadores omite los obstáculos técnicos y los cambios de especificaciones que afectan la necesidad del cliente.",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Adquisición de Sistemas y Servicios",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+  "resumen_teorico": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos, cuyo riesgo sigue siendo tuyo.",
   "pasos_accionables": [
     "Identificar componentes de sistema sin soporte (sin parches, actualizaciones o mantenimiento).",
     "Establecer procedimientos para reemplazo o uso continuado justificado de componentes no soportados.",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de criterios del libro para los SLA incluye una descripción de resultados medibles que el paso omite.; Mismo defecto: falta el criterio de resultados medibles.",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-getting_started_system_services_acquisition-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos.",
+      "texto_nuevo": "Evalúa la seguridad de sistemas y servicios antes de su adquisición y durante su ciclo de vida operativo, gestionando componentes no soportados y estableciendo acuerdos claros con proveedores de servicios externos, cuyo riesgo sigue siendo tuyo.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "775",
+        "frase": "The responsibility for managing risks from the use of external system services remains"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que la responsabilidad por los riesgos de los servicios externos sigue siendo de quien protege el CUI; el acuerdo no la traslada al proveedor.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

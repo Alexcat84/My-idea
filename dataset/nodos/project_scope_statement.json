@@ -6,9 +6,9 @@
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Documento que detalla el alcance del proyecto, incluyendo la descripción del producto, entregables, criterios de aceptación, exclusiones, restricciones y supuestos. Es la base para desglosar el trabajo del proyecto y sirve como referencia para evaluar si un cambio o trabajo adicional cae dentro o fuera del proyecto.",
   "pasos_accionables": [
-    "Documentar la descripción del alcance del producto basándose en el project charter",
+    "Documentar la descripción del alcance del producto basándose en el project charter y en la documentación de requisitos",
     "Listar todos los entregables únicos y verificables del proyecto",
-    "Definir criterios de aceptación para cada entregable",
+    "Definir criterios de aceptación para el proyecto entero o para cada entregable",
     "Especificar qué queda fuera del alcance del proyecto",
     "Identificar restricciones como presupuesto fijo o fechas límite",
     "Documentar supuestos sobre recursos, estimaciones y otros aspectos"
@@ -52,6 +52,40 @@
         "frase": "provides a basis for evaluating whether requests for changes or additional work are contained"
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro le da la función de evaluar si cambios o trabajo adicional caen dentro o fuera de los límites, no la de validar el alcance completado.; Mismo defecto: la función que el libro le da es servir de base para evaluar cambios o trabajo adicional.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-075-project_scope_statement-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar la descripción del alcance del producto basándose en el project charter",
+      "texto_nuevo": "Documentar la descripción del alcance del producto basándose en el project charter y en la documentación de requisitos",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1026",
+        "frase": "project charter and the requirements in the requirements documentation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro elabora la descripción desde el acta y también desde la documentación de requisitos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-075-project_scope_statement-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir criterios de aceptación para cada entregable",
+      "texto_nuevo": "Definir criterios de aceptación para el proyecto entero o para cada entregable",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1030",
+        "frase": "Acceptance criteria can be developed for the entire project or for each component"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite criterios para el proyecto entero o por componente; el paso deja solo una opción.; No añade nada que el libro no diga: pierde la opción de fijar criterios para el proyecto entero.",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

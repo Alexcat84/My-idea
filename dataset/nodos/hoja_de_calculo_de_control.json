@@ -9,7 +9,7 @@
     "Listar todos los sujetos de control identificados en el mapa de proceso",
     "Definir para cada uno: unidad de medida, sensor, meta, frecuencia y tamaño de muestra",
     "Establecer criterios de decisión y responsable de cada decisión",
-    "Complementar con una hoja de 'quién hace qué' para aclarar roles en la estación de control"
+    "Si en la estación de control participan varias personas, complementar con una hoja de 'quién hace qué', acordada con ellas, para aclarar roles"
   ],
   "entregable_esperado": "Hoja de cálculo de control completa con todos los sujetos de control y responsabilidades asignadas",
   "nodos_previos": [
@@ -43,6 +43,23 @@
         "frase": "usually summarized on a control spreadsheet. This spreadsheet is a major planning tool."
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): 'A major planning tool' no es 'la herramienta principal'.; El libro la llama una herramienta importante que suele resumir el trabajo; el nodo la vuelve la principal y categórica.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-075-hoja_de_calculo_de_control-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Complementar con una hoja de 'quién hace qué' para aclarar roles en la estación de control",
+      "texto_nuevo": "Si en la estación de control participan varias personas, complementar con una hoja de 'quién hace qué', acordada con ellas, para aclarar roles",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7807-7809",
+        "frase": "In such cases it is necessary to agree on who should make which decisions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea esa hoja cuando varias personas pueden hacer las tareas, con el reparto acordado conversando.",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

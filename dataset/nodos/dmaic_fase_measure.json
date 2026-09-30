@@ -9,12 +9,12 @@
     "Mapear el proceso en detalle mediante diagramas de flujo",
     "Medir el desempeño base (Ys) usando análisis Pareto",
     "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs)",
-    "Evaluar la capacidad del sistema de medición (Gage R&R)",
+    "Evaluar la capacidad del sistema de medición (Gage R&R) y, si no es capaz, corregirlo antes de seguir",
     "Determinar si el proceso está en control estadístico; si no lo está, eliminar las causas especiales de variación antes de medir su capacidad a corto plazo",
     "Confirmar o modificar el objetivo del proyecto según los datos obtenidos",
     "Generar una lista priorizada de teorías de causa raíz usando diagramas causa-efecto"
   ],
-  "entregable_esperado": "Métricas de línea base, FMEA completado, capacidad del sistema de medición validada y lista de teorías de causa priorizada",
+  "entregable_esperado": "Métricas de línea base, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
   "nodos_previos": [
     "dmaic_fase_define"
   ],
@@ -62,6 +62,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta eliminar las causas especiales antes de medir la capacidad.; Se pierde la condición: si el proceso no está en control, primero se eliminan las causas especiales.",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-dmaic_fase_measure-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar la capacidad del sistema de medición (Gage R&R)",
+      "texto_nuevo": "Evaluar la capacidad del sistema de medición (Gage R&R) y, si no es capaz, corregirlo antes de seguir",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14421-14427",
+        "frase": "If the measurement system is found to be not capable, take corrective action"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el avance: si el sistema de medición no es capaz, se corrige antes de seguir.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-076-dmaic_fase_measure-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Métricas de línea base, FMEA completado, capacidad del sistema de medición validada y lista de teorías de causa priorizada",
+      "texto_nuevo": "Métricas de línea base, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14497-14511",
+        "frase": "Data collection plan, including sampling plan"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de entregables del libro incluye además el plan de recolección de datos con su muestreo, la capacidad medida del proceso y el objetivo confirmado o modificado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]

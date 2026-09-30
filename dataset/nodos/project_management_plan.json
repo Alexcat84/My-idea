@@ -9,7 +9,7 @@
     "Seleccionar el ciclo de vida del proyecto y las fases correspondientes",
     "Definir qué procesos de gestión se usarán y cómo se adaptarán (tailoring)",
     "Determinar las herramientas y técnicas específicas para cada proceso",
-    "Establecer umbrales de variación para alcance, cronograma y costo",
+    "Establecer umbrales de variación para alcance, cronograma y costo, y cómo responder a cada nivel de variación, incluido cuándo activar el control de cambios",
     "Consolidar todos los planes subsidiarios y líneas base en un documento único",
     "Definir el tipo y frecuencia de revisiones del proyecto"
   ],
@@ -32,5 +32,24 @@
   "etiqueta_arbol": "Integra tu Plan de Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-075-project_management_plan-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer umbrales de variación para alcance, cronograma y costo",
+      "texto_nuevo": "Establecer umbrales de variación para alcance, cronograma y costo, y cómo responder a cada nivel de variación, incluido cuándo activar el control de cambios",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "571-581",
+        "frase": "when the change control process would be enacted"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro acompaña cada umbral con la gestión de la línea base: respuesta a cada nivel y cuándo activar el control de cambios.; Mismo defecto: se cae la gestión de la línea base asociada a cada umbral.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

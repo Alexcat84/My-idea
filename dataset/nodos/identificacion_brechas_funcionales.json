@@ -6,7 +6,7 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "Cuando arrancas un negocio tienes que cubrir todas las funciones: producto, marketing, ventas, finanzas, gente. Si te faltan habilidades en alguna de esas áreas, un problema justo ahí te puede tomar por sorpresa y provocarte retrasos serios y decisiones tomadas a ciegas. Por ejemplo, si vienes del área comercial pero no tienes experiencia técnica para desarrollar software, ese hueco te puede complicar.",
   "pasos_accionables": [
-    "Anota todas las funciones que tu negocio necesita: producto, ventas, finanzas, operaciones",
+    "Anota todas las funciones que tu negocio necesita: producto, marketing, ventas, finanzas, gente, operaciones",
     "Revisa cuáles de esas funciones ya sabes hacer tú o tu socio",
     "Señala los huecos críticos que nadie en tu equipo cubre",
     "Decide cómo vas a cerrar esos huecos: contratando, sumando un socio, buscando quien te asesore o aprendiendo tú mismo"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Detecta tus Brechas Funcionales",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-077-identificacion_brechas_funcionales-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota todas las funciones que tu negocio necesita: producto, ventas, finanzas, operaciones",
+      "texto_nuevo": "Anota todas las funciones que tu negocio necesita: producto, marketing, ventas, finanzas, gente, operaciones",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "397",
+        "frase": "from product development to marketing to sales to finance to human resources"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye marketing y recursos humanos, que el paso omite aunque pide anotar todas las funciones.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

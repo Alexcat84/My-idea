@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo ganar poder de negociación (leverage) frente a los inversionistas",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Puedes aumentar tu poder de negociación frente a los inversionistas con unas pocas tácticas: espera a tener tracción (producto, ingresos, clientes) antes de salir a buscar capital, consigue varias propuestas de inversión (term sheets) en paralelo, busca ofertas de compra alternativas, y negocia con tiempo antes de quedarte sin efectivo.",
+  "resumen_teorico": "Puedes aumentar tu poder de negociación frente a los inversionistas con unas pocas tácticas: espera a tener tracción (producto, ingresos, clientes) antes de buscar capital, reparte la ronda entre dos firmas para que ninguna controle la junta, consigue varias propuestas de inversión (term sheets) en paralelo, busca ofertas de compra alternativas, y negocia con tiempo antes de quedarte sin efectivo.",
   "pasos_accionables": [
     "Desarrolla tracción (producto, ingresos, contratos) antes de acercarte a los inversionistas",
     "Busca varias propuestas de inversión (term sheets) al mismo tiempo, de distintos inversionistas",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Gana Poder frente a Inversionistas",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-077-leverage_en_negociacion_con_vcs-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Puedes aumentar tu poder de negociación frente a los inversionistas con unas pocas tácticas: espera a tener tracción (producto, ingresos, clientes) antes de salir a buscar capital, consigue varias propuestas de inversión (term sheets) en paralelo, busca ofertas de compra alternativas, y negocia con tiempo antes de quedarte sin efectivo.",
+      "texto_nuevo": "Puedes aumentar tu poder de negociación frente a los inversionistas con unas pocas tácticas: espera a tener tracción (producto, ingresos, clientes) antes de buscar capital, reparte la ronda entre dos firmas para que ninguna controle la junta, consigue varias propuestas de inversión (term sheets) en paralelo, busca ofertas de compra alternativas, y negocia con tiempo antes de quedarte sin efectivo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3003",
+        "frase": "he split the first round between two VC firms"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera entre las estrategias repartir la primera ronda entre dos firmas para que ninguna controle la junta; el resumen la omite.; Señala la misma táctica omitida de repartir la ronda entre dos firmas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

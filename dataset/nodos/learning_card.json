@@ -9,10 +9,10 @@
     "Registrar la hipótesis testeada y los datos/resultados obtenidos",
     "Evaluar la fiabilidad de los datos",
     "Definir las conclusiones e insights derivados",
-    "Determinar la magnitud de la acción requerida (pivote leve o drástico)",
-    "Decidir la acción concreta: pivotar, confirmar con más pruebas, profundizar, avanzar o ejecutar"
+    "Determinar qué tan drásticas son las acciones requeridas según lo aprendido",
+    "Decidir la acción concreta: pivotar si la hipótesis se invalidó; confirmar con más pruebas si pocos datos sugieren acciones drásticas; profundizar para entender por qué ocurre algo; avanzar o ejecutar cuando los insights y la fiabilidad de los datos te satisfagan"
   ],
-  "entregable_esperado": "Learning Card completo por cada experimento, con decisión clara sobre próximos pasos",
+  "entregable_esperado": "Learning Card completo por cada experimento o grupo de experimentos, con decisión clara sobre próximos pasos",
   "nodos_previos": [
     "test_card",
     "build_measure_learn"
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Registra lo que Aprendiste",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-079-learning_card-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar la magnitud de la acción requerida (pivote leve o drástico)",
+      "texto_nuevo": "Determinar qué tan drásticas son las acciones requeridas según lo aprendido",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7645",
+        "frase": "Highlight how dramatic the actions required are based on what you learned."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide señalar qué tan drásticas son las acciones requeridas en general; el paso las reduce a un pivote.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-079-learning_card-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir la acción concreta: pivotar, confirmar con más pruebas, profundizar, avanzar o ejecutar",
+      "texto_nuevo": "Decidir la acción concreta: pivotar si la hipótesis se invalidó; confirmar con más pruebas si pocos datos sugieren acciones drásticas; profundizar para entender por qué ocurre algo; avanzar o ejecutar cuando los insights y la fiabilidad de los datos te satisfagan",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7666-7709",
+        "frase": "when you are satisfied with your insights and the data reliability"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro liga cada acción a una condición (hipótesis invalidada, pocos datos que piden acciones drásticas, datos fiables) y el paso las presenta como opciones libres.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-079-learning_card-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Learning Card completo por cada experimento, con decisión clara sobre próximos pasos",
+      "texto_nuevo": "Learning Card completo por cada experimento o grupo de experimentos, con decisión clara sobre próximos pasos",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7635",
+        "frase": "A Learning Card may aggregate the observations from several Test Cards."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro permite que una Learning Card reúna las observaciones de varias Test Cards; el entregable exige una por experimento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

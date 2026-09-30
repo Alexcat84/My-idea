@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ranking de Proyectos por NPV (Valor Presente Neto)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Método financiero simple que calcula el NPV de cada proyecto (ingresos futuros descontados menos costos de desarrollo y comercialización) para tomar decisiones Go/Kill en gates y priorizar proyectos en revisiones de portafolio. Se complementa con el IRR (tasa interna de retorno) y el Payback Period (periodo de recuperación) para capturar rentabilidad y riesgo.",
+  "resumen_teorico": "Método financiero simple que calcula el NPV de cada proyecto (ingresos futuros descontados menos costos de desarrollo y comercialización) para tomar decisiones Go/Kill en gates y priorizar proyectos en revisiones de portafolio. Se complementa con el IRR (tasa interna de retorno) y el Payback Period (periodo de recuperación) para capturar rentabilidad y riesgo. Supone proyecciones exactas, a menudo poco fiables en gates tempranos.",
   "pasos_accionables": [
     "Calcular el flujo de caja proyectado año a año para cada proyecto",
     "Aplicar una tasa de descuento ajustada al riesgo (hurdle rate) para obtener el NPV",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Prioriza Proyectos según su Valor",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-078-ranking_proyectos_por_npv-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Método financiero simple que calcula el NPV de cada proyecto (ingresos futuros descontados menos costos de desarrollo y comercialización) para tomar decisiones Go/Kill en gates y priorizar proyectos en revisiones de portafolio. Se complementa con el IRR (tasa interna de retorno) y el Payback Period (periodo de recuperación) para capturar rentabilidad y riesgo.",
+      "texto_nuevo": "Método financiero simple que calcula el NPV de cada proyecto (ingresos futuros descontados menos costos de desarrollo y comercialización) para tomar decisiones Go/Kill en gates y priorizar proyectos en revisiones de portafolio. Se complementa con el IRR (tasa interna de retorno) y el Payback Period (periodo de recuperación) para capturar rentabilidad y riesgo. Supone proyecciones exactas, a menudo poco fiables en gates tempranos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6162",
+        "frase": "the NPV method assumes that financial projections are accurate. This is a bad assumption"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el método supone proyecciones exactas, usualmente poco fiables, sobre todo en los primeros gates; el resumen lo omite.; Mismo defecto: se cae el límite de las proyecciones poco confiables en las decisiones tempranas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
