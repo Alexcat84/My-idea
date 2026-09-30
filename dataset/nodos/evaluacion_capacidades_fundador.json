@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de Capacidades del Fundador frente a la Oportunidad",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Una misma oportunidad de negocio debe evaluarse de forma diferente según las capacidades, habilidades y capital acumulado (humano, social, financiero) de la persona específica que la persigue. Un fundador bien preparado tiene más probabilidades de crear rápidamente un producto valioso y convencer a clientes potenciales que uno que no ha acumulado los 'capitales' correctos.",
+  "resumen_teorico": "Una misma oportunidad de negocio debe evaluarse de forma diferente según las capacidades, habilidades y capital acumulado (humano, social, financiero) de la persona específica que la persigue. Un fundador bien preparado debería tener más confianza en su capacidad de crear rápidamente un producto valioso y de identificar y convencer a clientes potenciales que uno que no ha acumulado los 'capitales' correctos.",
   "pasos_accionables": [
     "Listar el capital humano acumulado (habilidades técnicas, gerenciales, de industria)",
     "Listar el capital social (contactos, red de referencias, reputación)",
@@ -43,6 +43,22 @@
         "motivo": "Filtrar gerentes en una entrevista por su tipo de ambicion no lleva a evaluar si las capacidades del propio fundador encajan con la oportunidad. Son temas distintos, y la correccion (motivacion principal frente a unica) es irrelevante aqui."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-126-evaluacion_capacidades_fundador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una misma oportunidad de negocio debe evaluarse de forma diferente según las capacidades, habilidades y capital acumulado (humano, social, financiero) de la persona específica que la persigue. Un fundador bien preparado tiene más probabilidades de crear rápidamente un producto valioso y convencer a clientes potenciales que uno que no ha acumulado los 'capitales' correctos.",
+      "texto_nuevo": "Una misma oportunidad de negocio debe evaluarse de forma diferente según las capacidades, habilidades y capital acumulado (humano, social, financiero) de la persona específica que la persigue. Un fundador bien preparado debería tener más confianza en su capacidad de crear rápidamente un producto valioso y de identificar y convencer a clientes potenciales que uno que no ha acumulado los 'capitales' correctos.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "605",
+        "frase": "a well-prepared founder should have more confidence in his or her ability to quickly create"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de más confianza en la propia capacidad, no de más probabilidades de lograrlo.; Mismo defecto: convierte la confianza en un resultado más probable.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

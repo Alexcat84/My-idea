@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "El Emprendedor como Título de Trabajo Formal",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.",
+  "resumen_teorico": "Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que no tenga que irse de tu negocio para recibir la recompensa de lo que sabe hacer ni fingir que encaja en jerarquías rígidas.",
   "pasos_accionables": [
     "Crea un puesto real de Emprendedor Interno dentro de tu equipo o negocio.",
     "Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.",
-    "Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.",
-    "Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe."
+    "Cuando el producto pase a un equipo más grande para crecer, deja que esa persona lo lidere al principio y entrene a los nuevos miembros; después, deja que elija si sigue con el producto o vuelve a incubar una idea nueva, según su temperamento y sus habilidades.",
+    "Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe, y antes de cada ampliación valora si el equipo puede defenderse políticamente dentro de la organización."
   ],
   "entregable_esperado": "Una manera clara de reconocer el rol de emprendedor dentro de tu negocio, con su propia forma de medir resultados y su propio camino de crecimiento.",
   "nodos_previos": [
@@ -29,5 +29,57 @@
   "etiqueta_arbol": "Haz del Emprendimiento tu Carrera",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-130-emprendedor_como_puesto_de_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe.",
+      "texto_nuevo": "Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe, y antes de cada ampliación valora si el equipo puede defenderse políticamente dentro de la organización.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3222",
+        "frase": "consider whether the teams working in the sandbox can fend for themselves politically"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la ampliación del sandbox a valorar si el equipo puede defenderse políticamente.; Misma condición perdida; el pasaje está en la línea 3222.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-130-emprendedor_como_puesto_de_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.",
+      "texto_nuevo": "Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que no tenga que irse de tu negocio para recibir la recompensa de lo que sabe hacer ni fingir que encaja en jerarquías rígidas.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3218",
+        "frase": "should not have to leave the company to reap the rewards of their skills"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da otro por qué al título: no tener que irse ni fingir encajar en jerarquías rígidas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-130-emprendedor_como_puesto_de_trabajo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.",
+      "texto_nuevo": "Cuando el producto pase a un equipo más grande para crecer, deja que esa persona lo lidere al principio y entrene a los nuevos miembros; después, deja que elija si sigue con el producto o vuelve a incubar una idea nueva, según su temperamento y sus habilidades.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3214-3220",
+        "frase": "choose to move with the product as part of the handoff or stay behind"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja a la persona elegir entre seguir con el producto o empezar algo nuevo, y la pone a liderar al principio.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

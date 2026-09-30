@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Diseño de Procesos Basado en Características y Metas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El diseño de procesos organiza las características y metas del proceso (materiales, personas, entrenamiento, recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las metas del producto sean alcanzables y que no existan características de proceso redundantes o innecesarias.",
+  "resumen_teorico": "El diseño de procesos organiza las características y metas del proceso (procedimientos, métodos, equipo y suministros, materiales, personas, entrenamiento, otros recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las metas del producto sean alcanzables y que no existan características de proceso redundantes o innecesarias.",
   "pasos_accionables": [
-    "Identificar los recursos necesarios: materiales, personas, entrenamiento, otros recursos y procesos de soporte.",
+    "Identificar las características de proceso necesarias: procedimientos, métodos, equipo y suministros, materiales, personas, entrenamiento, otros recursos y procesos de soporte.",
     "Construir una hoja de cálculo de diseño de proceso vinculando características de proceso con metas de producto.",
     "Verificar que cada meta de producto sea alcanzada por al menos una característica de proceso.",
     "Verificar que cada característica de proceso sea necesaria para al menos una meta de producto.",
-    "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso."
+    "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega."
   ],
   "entregable_esperado": "Hoja de cálculo de diseño de proceso completa, verificada y sin redundancias.",
   "nodos_previos": [
@@ -45,6 +45,56 @@
         "motivo": "El diseno de procesos de calidad (vincular caracteristicas del proceso con las del producto) no continua el diseno del equipo segun el flujo de informacion y decisiones."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-127-diseno_de_procesos_por_caracteristicas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El diseño de procesos organiza las características y metas del proceso (materiales, personas, entrenamiento, recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las metas del producto sean alcanzables y que no existan características de proceso redundantes o innecesarias.",
+      "texto_nuevo": "El diseño de procesos organiza las características y metas del proceso (procedimientos, métodos, equipo y suministros, materiales, personas, entrenamiento, otros recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las metas del producto sean alcanzables y que no existan características de proceso redundantes o innecesarias.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4574-4590",
+        "frase": "Most process features fall into one of the following categories"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración pierde procedimientos, métodos y equipo y suministros, tres de las ocho categorías del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-127-diseno_de_procesos_por_caracteristicas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar los recursos necesarios: materiales, personas, entrenamiento, otros recursos y procesos de soporte.",
+      "texto_nuevo": "Identificar las características de proceso necesarias: procedimientos, métodos, equipo y suministros, materiales, personas, entrenamiento, otros recursos y procesos de soporte.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4574-4590",
+        "frase": "Most process features fall into one of the following categories"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan procedimientos, métodos y equipo y suministros de las categorías del libro.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-127-diseno_de_procesos_por_caracteristicas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso.",
+      "texto_nuevo": "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4600",
+        "frase": "the macro processes will need to be improved as part of the process design"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice qué hacer si no son capaces: mejorarlos en el diseño o reemplazarlos por otra forma de entrega.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

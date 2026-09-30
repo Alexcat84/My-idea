@@ -6,12 +6,12 @@
   "fuente": "Traction - Gabriel Weinberg",
   "resumen_teorico": "Dado que la mayoría de los acuerdos de BD no se concretan, es esencial mantener una lista extensa y organizada de socios potenciales, categorizados por tipo, tamaño, relevancia y prioridad. Esto permite trabajar múltiples oportunidades en paralelo y no depender de un solo prospecto.",
   "pasos_accionables": [
-    "Crear una hoja de cálculo con: empresa, tipo de partner, contacto, tamaño, relevancia y prioridad",
+    "Crear una hoja de cálculo con: empresa, tipo de partner, contacto, tamaño, relevancia, facilidad de uso y prioridad",
     "Listar entre 50 y 100 potenciales socios, no solo los más conocidos",
     "Categorizar partners por atributos (ej. rango de ingresos, tipo de rol) en lugar de solo por nombre de marca",
     "Solicitar introducciones cálidas a través de inversionistas, amigos o advisors",
     "Seleccionar 10-20 partners prioritarios para enfocar el esfuerzo de BD",
-    "Identificar qué tipo de alianza resuelve tu cuello de botella actual (marca, distribución o inventario)",
+    "Identificar qué tipo de alianza resuelve tu cuello de botella actual (mejora conjunta de productos, empresa conjunta, marca, distribución o inventario)",
     "Evaluar si necesitas licensing para usar contenido/marca de terceros",
     "Buscar socios de distribución que ya tengan acceso a tu cliente objetivo",
     "Asegurar supply partnerships si tu negocio depende de inventario o insumos críticos"
@@ -30,5 +30,41 @@
   "etiqueta_arbol": "Organiza tu Pipeline de Alianzas",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-132-pipeline_alianzas_bd-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear una hoja de cálculo con: empresa, tipo de partner, contacto, tamaño, relevancia y prioridad",
+      "texto_nuevo": "Crear una hoja de cálculo con: empresa, tipo de partner, contacto, tamaño, relevancia, facilidad de uso y prioridad",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "2466",
+        "frase": "Size, Relevance, Ease of Use, and then a subjective priority score"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La hoja del libro incluye la facilidad de uso antes de la prioridad; se cae un criterio.; Mismo defecto: falta la columna de facilidad.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-132-pipeline_alianzas_bd-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar qué tipo de alianza resuelve tu cuello de botella actual (marca, distribución o inventario)",
+      "texto_nuevo": "Identificar qué tipo de alianza resuelve tu cuello de botella actual (mejora conjunta de productos, empresa conjunta, marca, distribución o inventario)",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "2426-2436",
+        "frase": "Here are the major types of business development partnerships"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera cinco tipos de alianza; faltan la alianza estándar para mejorar productos y la empresa conjunta.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El Ciclo de la Culpa (Blame Cycle)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces cometen los peores errores en las circunstancias equivocadas es el punto de partida para romperlo.",
+  "resumen_teorico": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces pueden a veces cometer los peores errores es el punto de partida para romperlo.",
   "pasos_accionables": [
     "Reconocer que las acciones humanas están casi siempre limitadas por factores fuera del control inmediato de la persona",
     "Evitar usar sanciones o advertencias como única respuesta a errores recurrentes, identificando los patrones repetitivos de 'culpar y entrenar' tras incidentes",
@@ -61,5 +61,23 @@
   ],
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-128-ciclo_de_culpa_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces cometen los peores errores en las circunstancias equivocadas es el punto de partida para romperlo.",
+      "texto_nuevo": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces pueden a veces cometer los peores errores es el punto de partida para romperlo.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2924",
+        "frase": "the best people can sometimes make the worst errors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las mejores personas pueden a veces cometer los peores errores; el nodo lo vuelve firme y añade una condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

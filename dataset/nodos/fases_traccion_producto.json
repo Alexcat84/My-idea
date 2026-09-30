@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Las Tres Fases de Tracción (Leaky Bucket)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Todo negocio pasa por tres fases: Fase I (crear algo que la gente quiera, con máximo de 'fugas' en el producto), Fase II (comercializar lo que la gente quiere, una vez alcanzado el ajuste producto-mercado) y Fase III (escalar el negocio ya establecido). La metáfora del 'balde con fugas' ilustra cómo en fase I no tiene sentido escalar marketing porque el producto aún pierde clientes; primero hay que tapar los agujeros.",
+  "resumen_teorico": "Puedes pensar tu negocio en tres fases: Fase I (crear algo que la gente quiera, con máximo de 'fugas' en el producto), Fase II (comercializar lo que la gente quiere, una vez alcanzado el ajuste producto-mercado) y Fase III (escalar el negocio ya establecido). La metáfora del 'balde con fugas' ilustra cómo en fase I no tiene sentido escalar marketing porque el producto aún pierde clientes; aun así, conviene pasar un flujo pequeño de clientes para ver los agujeros y taparlos.",
   "pasos_accionables": [
     "Identifica en qué fase se encuentra tu startup actualmente",
     "En fase I, envía un flujo pequeño y constante de clientes para detectar fugas en el producto",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Cruza las Tres Fases Clave",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-132-fases_traccion_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo negocio pasa por tres fases: Fase I (crear algo que la gente quiera, con máximo de 'fugas' en el producto), Fase II (comercializar lo que la gente quiere, una vez alcanzado el ajuste producto-mercado) y Fase III (escalar el negocio ya establecido). La metáfora del 'balde con fugas' ilustra cómo en fase I no tiene sentido escalar marketing porque el producto aún pierde clientes; primero hay que tapar los agujeros.",
+      "texto_nuevo": "Puedes pensar tu negocio en tres fases: Fase I (crear algo que la gente quiera, con máximo de 'fugas' en el producto), Fase II (comercializar lo que la gente quiere, una vez alcanzado el ajuste producto-mercado) y Fase III (escalar el negocio ya establecido). La metáfora del 'balde con fugas' ilustra cómo en fase I no tiene sentido escalar marketing porque el producto aún pierde clientes; aun así, conviene pasar un flujo pequeño de clientes para ver los agujeros y taparlos.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "276-284",
+        "frase": "you can think about working on a product or service in three phases"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro insiste en que en fase I sigue siendo importante pasar un flujo pequeño de clientes para ver los agujeros; el resumen lo omite.; El libro ofrece las fases como una forma de pensar el trabajo desde la tracción, no como ley universal.; Mismo defecto: convierte un marco en afirmación universal.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

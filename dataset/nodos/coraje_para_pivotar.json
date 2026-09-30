@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Coraje para Pivotar frente al Miedo y las Métricas de Vanidad",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Muchos emprendedores retrasan un pivote necesario por tres razones: (1) las métricas de vanidad les hacen vivir en una realidad falsa, (2) hipótesis poco claras impiden experimentar un fracaso completo que impulse el cambio, y (3) el miedo a que su visión sea juzgada sin haber tenido una oportunidad real de probarse. Enfrentar el fracaso públicamente y escuchar al cliente, en lugar de a la prensa o a las expectativas externas, es clave para pivotar a tiempo.",
+  "resumen_teorico": "Muchos emprendedores retrasan un pivote necesario por tres razones: (1) las métricas de vanidad pueden llevarlos a conclusiones falsas y a vivir en su propia realidad, (2) hipótesis poco claras impiden experimentar un fracaso completo que impulse el cambio, y (3) el miedo a que su visión sea juzgada sin haber tenido una oportunidad real de probarse. Enfrentar el fracaso públicamente y escuchar al cliente, en lugar de a la prensa o a las expectativas externas, es clave para pivotar a tiempo.",
   "pasos_accionables": [
     "Identificar si el equipo está usando métricas de vanidad para evitar enfrentar el fracaso",
     "Definir hipótesis claras desde el inicio para poder reconocer el fracaso sin ambigüedad",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Ten el Coraje de Pivotar",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-130-coraje_para_pivotar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos emprendedores retrasan un pivote necesario por tres razones: (1) las métricas de vanidad les hacen vivir en una realidad falsa, (2) hipótesis poco claras impiden experimentar un fracaso completo que impulse el cambio, y (3) el miedo a que su visión sea juzgada sin haber tenido una oportunidad real de probarse. Enfrentar el fracaso públicamente y escuchar al cliente, en lugar de a la prensa o a las expectativas externas, es clave para pivotar a tiempo.",
+      "texto_nuevo": "Muchos emprendedores retrasan un pivote necesario por tres razones: (1) las métricas de vanidad pueden llevarlos a conclusiones falsas y a vivir en su propia realidad, (2) hipótesis poco claras impiden experimentar un fracaso completo que impulse el cambio, y (3) el miedo a que su visión sea juzgada sin haber tenido una oportunidad real de probarse. Enfrentar el fracaso públicamente y escuchar al cliente, en lugar de a la prensa o a las expectativas externas, es clave para pivotar a tiempo.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1845",
+        "frase": "vanity metrics can allow entrepreneurs to form false conclusions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las métricas de vanidad pueden permitir conclusiones falsas, no que siempre lo hagan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

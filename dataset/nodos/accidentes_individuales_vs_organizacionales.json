@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Distinción entre Accidentes Individuales y Organizacionales",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona es tanto el agente como la víctima, con causas y consecuencias localizadas (por ejemplo resbalones o caídas) y efectos limitados; y los organizacionales, un fenómeno moderno, raro pero catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que afecta a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
+  "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona o un grupo suele ser a la vez el agente y la víctima, con consecuencias que pueden ser grandes pero de alcance limitado (por ejemplo resbalones o caídas); y los organizacionales, un fenómeno moderno, relativamente raro pero a menudo catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que puede afectar a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
   "pasos_accionables": [
     "Sugerencia de My Idea: clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
     "Identificar si el enfoque actual de gestión de riesgos se centra solo en errores individuales, ignorando causas sistémicas.",
@@ -68,6 +68,22 @@
         "evidencia": "F27-016: Clasifica los incidentes historicos y ajusta la gestion de riesgos de una organizacion que ya opera tecnologia peligrosa; es gestion operativa de seguridad. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-128-accidentes_individuales_vs_organizacionales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos tipos de accidentes: los individuales, donde una persona es tanto el agente como la víctima, con causas y consecuencias localizadas (por ejemplo resbalones o caídas) y efectos limitados; y los organizacionales, un fenómeno moderno, raro pero catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que afecta a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
+      "texto_nuevo": "Existen dos tipos de accidentes: los individuales, donde una persona o un grupo suele ser a la vez el agente y la víctima, con consecuencias que pueden ser grandes pero de alcance limitado (por ejemplo resbalones o caídas); y los organizacionales, un fenómeno moderno, relativamente raro pero a menudo catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que puede afectar a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "29-31",
+        "frase": "a specific person or group is often both the agent and the victim"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice a menudo catastróficos y que pueden tener efectos devastadores sobre terceros.; El libro dice que una persona o un grupo es a menudo agente y víctima, no siempre una persona.; El libro dice relativamente raros pero a menudo catastróficos, no siempre.; El libro limita el alcance de las consecuencias, no dice que las causas sean localizadas; suelen tener origen organizacional.; Mismo defecto que la marca 1: las causas no se dicen localizadas.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Medición Integrada de Desempeño: Cronograma, Costo y Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Los supervisores deben monitorear tres características amplias e interrelacionadas de su operación: cronograma (schedule), costo y calidad. Factores como el ausentismo o la escasez de partes afectan simultáneamente a las tres dimensiones. Sin medición constante y comprensión de estas interrelaciones (tendencias), los problemas se detectan tarde, cuando ya es más difícil y costoso corregirlos.",
+  "resumen_teorico": "Los supervisores deben monitorear tres características amplias e interrelacionadas de su operación: cronograma (schedule), costo y calidad. Algunos factores, como el ausentismo, afectan a la vez a las tres dimensiones. Sin medición constante y comprensión de estas interrelaciones (tendencias), los problemas se detectan tarde, cuando ya es más difícil y costoso corregirlos.",
   "pasos_accionables": [
     "Identificar los indicadores que afectan cronograma, costo y calidad en la operación (ausentismo, escasez de partes, entrenamiento, etc.)",
     "Determinar qué factores tienen impacto múltiple (dual o triple) sobre las tres dimensiones",
@@ -39,6 +39,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U3-020 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-128-medicion_desempeno_integrado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los supervisores deben monitorear tres características amplias e interrelacionadas de su operación: cronograma (schedule), costo y calidad. Factores como el ausentismo o la escasez de partes afectan simultáneamente a las tres dimensiones. Sin medición constante y comprensión de estas interrelaciones (tendencias), los problemas se detectan tarde, cuando ya es más difícil y costoso corregirlos.",
+      "texto_nuevo": "Los supervisores deben monitorear tres características amplias e interrelacionadas de su operación: cronograma (schedule), costo y calidad. Algunos factores, como el ausentismo, afectan a la vez a las tres dimensiones. Sin medición constante y comprensión de estas interrelaciones (tendencias), los problemas se detectan tarde, cuando ya es más difícil y costoso corregirlos.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1105-1111",
+        "frase": "Absenteeism, for instance, affects schedule by reducing the amount of work"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el ausentismo como ejemplo de efecto triple; la escasez de partes solo la liga al cronograma.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

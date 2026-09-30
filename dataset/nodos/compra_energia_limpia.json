@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Compra de Energía Limpia (Renovable)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde, cogeneración usando residuos orgánicos como combustible, y compra a través de brokers energéticos.",
+  "resumen_teorico": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y comprar a través de brokers energéticos.",
   "pasos_accionables": [
     "Evaluar contratos de compra de energía (PPA) con empresas de energía renovable",
     "Explorar opciones de cogeneración usando residuos del proceso productivo",
-    "Considerar contratar un broker energético para comprar energía renovable al por mayor",
+    "Si tu empresa es grande, considerar contratar un broker energético para comprar energía renovable al por mayor",
     "Negociar tarifas fijas a largo plazo para protegerse de volatilidad de precios",
     "Evaluar venta de excedente energético a la red local"
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Compra Energía Limpia",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-129-compra_energia_limpia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde, cogeneración usando residuos orgánicos como combustible, y compra a través de brokers energéticos.",
+      "texto_nuevo": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y comprar a través de brokers energéticos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2823-2825",
+        "frase": "For many manufacturing companies, an investment in cogeneration... may make sense."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El defecto existe, pero decir 'sin inversión' de lo que el libro llama una inversión es lo opuesto, no un añadido.; El libro presenta la cogeneración como una inversión; el nodo la pone entre los modelos sin inversión de capital.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-129-compra_energia_limpia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar contratar un broker energético para comprar energía renovable al por mayor",
+      "texto_nuevo": "Si tu empresa es grande, considerar contratar un broker energético para comprar energía renovable al por mayor",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2827",
+        "frase": "For large companies another alternative is to use an energy broker"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea el broker como alternativa para empresas grandes; el paso pierde la condición.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

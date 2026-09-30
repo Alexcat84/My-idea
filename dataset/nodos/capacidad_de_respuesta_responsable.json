@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Prepararse para responder (responsabilidad como capacidad de respuesta)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Responsabilidad viene del latín 'responsus': la capacidad de responder ante lo inesperado. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) es más difícil de controlar y más peligroso; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
+  "resumen_teorico": "Responsabilidad viene del latín 'responsus': la capacidad de responder ante lo inesperado. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) puede ser más difícil de controlar y causar más daño; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
   "pasos_accionables": [
     "Mira la velocidad y el alcance de lo que estás construyendo: ¿qué tan rápido se propaga o crece?",
     "Diseña frenos o mecanismos que te permitan desacelerar y limitar el daño si algo se viraliza de forma no deseada.",
@@ -42,6 +42,22 @@
         "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "final-e1-127-capacidad_de_respuesta_responsable-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Responsabilidad viene del latín 'responsus': la capacidad de responder ante lo inesperado. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) es más difícil de controlar y más peligroso; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
+      "texto_nuevo": "Responsabilidad viene del latín 'responsus': la capacidad de responder ante lo inesperado. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) puede ser más difícil de controlar y causar más daño; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4465, 4479",
+        "frase": "Fast things can cause more damage; slow things can be easier to respond to."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que lo rápido puede causar más daño y lo grande puede ser más difícil de controlar; el nodo lo afirma sin cautela.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

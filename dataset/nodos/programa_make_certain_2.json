@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Informar al staff de dirección sobre el concepto e intención del programa y designar coordinadores por departamento.",
     "Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
-    "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida).",
+    "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida); luego elegir las mejores acciones, pedir a todos cómo medirlas y anotar esas medidas como base de la medición posterior.",
     "Convertir esas respuestas negativas en sugerencias positivas de cómo 'hacer cierto' que el cliente reciba lo prometido.",
     "Registrar y medir las sugerencias entregadas, entregar reconocimiento (badge) y publicar los avances en carteleras.",
-    "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado.",
+    "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos.",
     "Realizar cuenta regresiva pública antes del cierre del programa y agradecer formalmente a todos los participantes al finalizar.",
     "Implementar tantas sugerencias como sea posible y reportar su seguimiento durante varios meses."
   ],
@@ -46,6 +46,40 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-029 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-128-programa_make_certain_2-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida).",
+      "texto_nuevo": "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida); luego elegir las mejores acciones, pedir a todos cómo medirlas y anotar esas medidas como base de la medición posterior.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3809-3813",
+        "frase": "Select the best actions and discuss them. Then ask everyone to suggest how"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La discusión del libro sigue con elegir las mejores acciones, pedir cómo medirlas y anotar esas medidas.; Misma parte del procedimiento omitida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-128-programa_make_certain_2-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado.",
+      "texto_nuevo": "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3823",
+        "frase": "remember that the idea of the program is to instill the attitude of defect prevention"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte junto a esa medición que la idea es instalar la actitud de prevención.; Mismo límite perdido.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

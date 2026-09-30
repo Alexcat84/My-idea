@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Compromiso del Cliente en Sostenibilidad mediante TI",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, generando lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.",
+  "resumen_teorico": "El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, y puede ayudar a generar lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.",
   "pasos_accionables": [
     "Identificar plataformas sociales relevantes para el público objetivo de la empresa.",
     "Diseñar campañas que vinculen la interacción del cliente con acciones ambientales concretas (donaciones, compensaciones de carbono).",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Involucra al Cliente en Sostenibilidad",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-129-compromiso_cliente_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, generando lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.",
+      "texto_nuevo": "El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, y puede ayudar a generar lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3469",
+        "frase": "social media can help companies highlight their sustainability efforts and build customer loyalty"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que involucrar por redes puede ayudar a construir lealtad, no que la genere.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Las cadenas que te atan a tu trabajo (esposas de oro)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Cuanto más tiempo lleves en un empleo, más se fortalecen las cadenas que te atan a tu jefe: las psicológicas (el estatus, el título), las doradas (el salario alto, las acciones pendientes de consolidar o vesting) y las legales (acuerdos de no competencia, propiedad intelectual). Estas cadenas reducen la probabilidad de que dés el salto a emprender, aunque sigas acumulando más experiencia y más contactos.",
+  "resumen_teorico": "Cuanto más tiempo lleves en un empleo, más suelen fortalecerse las cadenas que te atan a tu jefe: las psicológicas (el estatus, el título), las doradas (el salario alto, las acciones pendientes de consolidar o vesting) y las legales (acuerdos de no competencia, propiedad intelectual). Estas cadenas reducen la probabilidad de que dés el salto a emprender, aunque sigas acumulando más experiencia y más contactos.",
   "pasos_accionables": [
     "Revisa tu contrato laboral actual en busca de cláusulas de no competencia o de propiedad intelectual que puedan limitar tu idea de negocio",
     "Calcula el costo real de dejar tu salario y tus beneficios actuales (acciones pendientes de consolidar, bonos)",
     "Identifica qué cadenas psicológicas, como el estatus o el título, están influyendo en que todavía no emprendas",
     "Evalúa si hay algún evento externo, como un cambio de estrategia en tu empresa o un despido, que pueda facilitarte el salto"
   ],
-  "entregable_esperado": "Tu propio análisis de las restricciones legales y psicológicas que hoy afectan tu decisión de fundar",
+  "entregable_esperado": "Tu propio análisis de las restricciones legales, económicas (las cadenas doradas) y psicológicas que hoy afectan tu decisión de fundar",
   "nodos_previos": [
     "dilema_riqueza_vs_control"
   ],
@@ -24,5 +24,39 @@
   "etiqueta_arbol": "Cuidado con las Esposas Doradas",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-esposas_doradas_carrera-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuanto más tiempo lleves en un empleo, más se fortalecen las cadenas que te atan a tu jefe: las psicológicas (el estatus, el título), las doradas (el salario alto, las acciones pendientes de consolidar o vesting) y las legales (acuerdos de no competencia, propiedad intelectual). Estas cadenas reducen la probabilidad de que dés el salto a emprender, aunque sigas acumulando más experiencia y más contactos.",
+      "texto_nuevo": "Cuanto más tiempo lleves en un empleo, más suelen fortalecerse las cadenas que te atan a tu jefe: las psicológicas (el estatus, el título), las doradas (el salario alto, las acciones pendientes de consolidar o vesting) y las legales (acuerdos de no competencia, propiedad intelectual). Estas cadenas reducen la probabilidad de que dés el salto a emprender, aunque sigas acumulando más experiencia y más contactos.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "524",
+        "frase": "career handcuffs, golden handcuffs, and family handcuffs tend to get stronger as time passes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que los años de empleo pueden fortalecer y suelen fortalecer estas cadenas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-esposas_doradas_carrera-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu propio análisis de las restricciones legales y psicológicas que hoy afectan tu decisión de fundar",
+      "texto_nuevo": "Tu propio análisis de las restricciones legales, económicas (las cadenas doradas) y psicológicas que hoy afectan tu decisión de fundar",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "483",
+        "frase": "and “golden” handcuffs, such as a high salary or a vesting schedule"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El entregable pierde las cadenas doradas (salario, vesting), uno de los tres tipos del libro.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

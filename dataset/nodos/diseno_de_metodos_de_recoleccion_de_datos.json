@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Antes de recolectar datos, diseña, prepara y prueba tus métodos, formularios e instrucciones de recolección. Identifica quién puede darte los datos, cómo recolectarlos con el mínimo esfuerzo y error, y qué información adicional necesitas capturar para poder rastrear todo más adelante. Revisa tu proceso de recolección y valida los resultados antes de pasar al análisis.",
   "pasos_accionables": [
-    "Identifica las fuentes y quién puede darte los datos",
+    "Identifica las fuentes y quién puede darte los datos, y elige y capacita a recolectores sin sesgo",
     "Diseña formularios e instrucciones de recolección que minimicen esfuerzo y errores",
     "Determina qué información adicional necesitas para poder rastrear o analizar más adelante",
     "Haz un análisis del sistema de medición (MSA) para confirmar que tus mediciones son precisas",
@@ -32,5 +32,24 @@
   "etiqueta_arbol": "Prueba Antes de Recolectar Datos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-127-diseno_de_metodos_de_recoleccion_de_datos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica las fuentes y quién puede darte los datos",
+      "texto_nuevo": "Identifica las fuentes y quién puede darte los datos, y elige y capacita a recolectores sin sesgo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19082-19086",
+        "frase": "Select and train unbiased collectors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el mismo punto el libro pide elegir y capacitar recolectores sin sesgo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

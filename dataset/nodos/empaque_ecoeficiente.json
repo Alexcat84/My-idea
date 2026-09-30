@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Empaque Eco-Eficiente y Optimización de Carga",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Reducir el exceso de empaque y mejorar el 'load factor' (porcentaje de capacidad utilizada de un vehículo o contenedor) disminuye costos de combustible y emisiones. Estrategias incluyen eliminar elementos innecesarios en el envío, rediseñar empaques para optimizar el apilamiento, cambiar a materiales reutilizables/reciclables, y usar software de planificación de carga.",
+  "resumen_teorico": "Reducir el exceso de empaque (cuidando lo frágil o peligroso) y mejorar el 'load factor' (porcentaje de capacidad utilizada de un vehículo o contenedor) disminuye costos de combustible y emisiones. Estrategias incluyen eliminar elementos innecesarios en el envío, rediseñar empaques para optimizar el apilamiento, cambiar a materiales reutilizables/reciclables, usar software de planificación de carga y consolidar cargas por volumen y peso.",
   "pasos_accionables": [
     "Auditar el contenido de los envíos para eliminar elementos innecesarios (manuales, cables duplicados, cajas extra).",
     "Rediseñar el empaque para mejorar el apilamiento y aumentar el 'load factor' por pallet o contenedor.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Optimiza tu Empaque y Carga",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-129-empaque_ecoeficiente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reducir el exceso de empaque y mejorar el 'load factor' (porcentaje de capacidad utilizada de un vehículo o contenedor) disminuye costos de combustible y emisiones. Estrategias incluyen eliminar elementos innecesarios en el envío, rediseñar empaques para optimizar el apilamiento, cambiar a materiales reutilizables/reciclables, y usar software de planificación de carga.",
+      "texto_nuevo": "Reducir el exceso de empaque (cuidando lo frágil o peligroso) y mejorar el 'load factor' (porcentaje de capacidad utilizada de un vehículo o contenedor) disminuye costos de combustible y emisiones. Estrategias incluyen eliminar elementos innecesarios en el envío, rediseñar empaques para optimizar el apilamiento, cambiar a materiales reutilizables/reciclables, usar software de planificación de carga y consolidar cargas por volumen y peso.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4886-4892",
+        "frase": "Sometimes a lot of packaging is required to protect especially fragile or hazardous materials"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que lo frágil o peligroso a veces necesita mucho empaque y que recortarlo falló; el nodo no pone ese límite.; El libro incluye consolidar cargas llenando volumen y peso, palanca central del 'load factor' que el nodo omite.; Mismo defecto que la marca 0: se pierde el límite de proteger lo frágil o peligroso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

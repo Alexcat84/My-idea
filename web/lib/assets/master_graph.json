@@ -507,7 +507,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Distinción entre Accidentes Individuales y Organizacionales",
-      "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona es tanto el agente como la víctima, con causas y consecuencias localizadas (por ejemplo resbalones o caídas) y efectos limitados; y los organizacionales, un fenómeno moderno, raro pero catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que afecta a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
+      "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona o un grupo suele ser a la vez el agente y la víctima, con consecuencias que pueden ser grandes pero de alcance limitado (por ejemplo resbalones o caídas); y los organizacionales, un fenómeno moderno, relativamente raro pero a menudo catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que puede afectar a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
       "pasos_accionables": [
         "Sugerencia de My Idea: clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
         "Identificar si el enfoque actual de gestión de riesgos se centra solo en errores individuales, ignorando causas sistémicas.",
@@ -3947,7 +3947,7 @@
         "Identificar y excluir desempeño anormal (outliers) para calcular la capacidad base",
         "Calcular el promedio de errores por unidad de trabajo excluyendo anomalías",
         "Comparar la capacidad estimada con el desempeño actual/original",
-        "Determinar si la causa raíz es variabilidad o errores/equivocaciones humanas"
+        "Determinar si la causa raíz es variabilidad o errores/equivocaciones"
       ],
       "entregable_esperado": "Matriz de errores documentada con cálculo de capacidad de proceso basada en atributos y clasificación de causas (variabilidad vs errores)",
       "nodos_previos": [
@@ -4477,8 +4477,8 @@
       "pasos_accionables": [
         "Elaborar diagrama de flujo del proceso completo",
         "Dividir el flujo en estaciones de trabajo lógicas",
-        "Documentar para cada estación las operaciones, secuencia, instrumentos y condiciones de proceso",
-        "Usar el documento como base para auditorías y control por parte de inspectores"
+        "Documentar para cada estación las operaciones, secuencia, instalaciones, instrumentos y condiciones de proceso",
+        "Usar el documento como el plan que ejecutan supervisores y personal de producción, y como base para el control de los inspectores y las auditorías del proceso"
       ],
       "entregable_esperado": "Diagrama de flujo de proceso con documentación formal por estación de trabajo",
       "nodos_previos": [
@@ -4791,7 +4791,7 @@
         "Ajustar un modelo de regresión lineal (Y = b0 + b1X)",
         "Calcular el coeficiente de determinación R² para evaluar el ajuste del modelo",
         "Calcular el coeficiente de correlación r para medir la fuerza de la relación",
-        "Evitar hacer predicciones fuera del rango de los datos muestreados",
+        "Tener extrema cautela al predecir fuera del rango de los datos muestreados: esas predicciones son frágiles hasta confirmarlas con observaciones",
         "Considerar regresión múltiple si hay más de una variable independiente"
       ],
       "entregable_esperado": "Ecuación de regresión validada con R² y análisis de correlación para predecir o explicar una variable de calidad",
@@ -4932,7 +4932,7 @@
       "resumen_teorico": "Calcula el costo incremental de características específicas del producto y el costo de satisfacer necesidades particulares del cliente, comparando diseños alternativos. Ayuda a evitar sobrecargar el producto con funciones secundarias a expensas de la funcionalidad fundamental.",
       "pasos_accionables": [
         "Elaborar una hoja de cálculo que relacione costos con necesidades del cliente por prioridad",
-        "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas",
+        "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas, o incluso no atenderlas si el producto es muy sensible al precio",
         "Verificar que las necesidades de alta prioridad reciban recursos suficientes",
         "Evitar el uso de recursos en funciones de bajo valor en detrimento de las funciones esenciales"
       ],
@@ -6150,7 +6150,7 @@
         "Verificar consumo de sustancias no autorizadas al momento del acto",
         "Determinar si hubo violación consciente de procedimientos existentes y adecuados",
         "Aplicar la prueba de sustitución con un jurado de pares",
-        "Revisar historial previo de actos inseguros de la persona",
+        "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva",
         "Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), posible violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa"
       ],
       "entregable_esperado": "Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión",
@@ -7247,8 +7247,8 @@
       "resumen_teorico": "Chopra y Meindl definieron seis atributos clave para entender qué necesita un mercado de su cadena de suministro: cantidad de producto por lote, tiempo de respuesta tolerado, variedad de productos requerida, nivel de servicio esperado, sensibilidad al precio, y tasa de innovación deseada del producto. Responder estas preguntas permite decidir si la cadena debe priorizar responsividad o eficiencia.",
       "pasos_accionables": [
         "Entrevistar o encuestar clientes sobre cada uno de los 6 atributos",
-        "Comparar tus resultados con los de competidores en el mismo mercado",
-        "Clasificar tu segmento como orientado a responsividad o a eficiencia"
+        "Sugerencia de My Idea: comparar tus resultados con los de competidores en el mismo mercado",
+        "Clasificar cada segmento que sirves como orientado a responsividad o a eficiencia, sabiendo que distintos mercados pueden tener requisitos distintos"
       ],
       "entregable_esperado": "Perfil de requerimientos del mercado documentado con los 6 atributos evaluados",
       "nodos_previos": [
@@ -7941,12 +7941,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Supervisión de Primera Línea con Autonomía (Auftragssystem)",
-      "resumen_teorico": "Inspirado en el concepto militar alemán Auftragssystem, este enfoque consiste en preparar a la persona que supervisa el trabajo en el terreno hasta que pueda lograr los objetivos de seguridad y producción sin necesitar un procedimiento operativo estándar para cada situación. Requiere que esa persona conozca a fondo el trabajo y los peligros del lugar, y que tenga autoridad real, ganada por el respeto del equipo y respaldada por ti.",
+      "resumen_teorico": "Inspirado en el concepto militar alemán Auftragssystem, este enfoque consiste en preparar a la persona que supervisa el trabajo en el terreno hasta que pueda lograr los objetivos de seguridad y producción sin necesitar un procedimiento operativo estándar para cada situación. Requiere que conozca a fondo el trabajo y los peligros del lugar, y que tenga autoridad real, ganada por el respeto del equipo y respaldada por ti. Su éxito depende de una cultura jerárquica previa, fuerte y disciplinada.",
       "pasos_accionables": [
         "Elegir a la persona que supervisa el trabajo por su experiencia amplia y su conocimiento profundo de los riesgos del lugar",
         "Formarla para tomar decisiones autónomas alineadas con tus objetivos, no solo para seguir reglas",
         "Darle tu respaldo explícito para reforzar su autoridad frente al equipo",
-        "Complementar la formación inicial con acompañamiento continuo en el terreno para consolidar los comportamientos correctos"
+        "Apoyarte en esa persona para que, con su guía en el terreno, consolide la formación inicial del equipo y corrija los comportamientos incorrectos que ya se volvieron hábito"
       ],
       "entregable_esperado": "Programa de desarrollo para la persona que supervisa el trabajo en el terreno, con criterios de autonomía y tu respaldo documentado",
       "nodos_previos": [
@@ -9181,7 +9181,7 @@
         "Construir modelos de machine learning para pronóstico de demanda y detección de anomalías",
         "Implementar dashboards con KPIs visibles para toda la organización",
         "Formar un equipo de ciencia de datos que colabore con expertos funcionales (compras, manufactura, atención al cliente)",
-        "Fomentar una cultura de 'aprenderlo todo' con transparencia, participación y recompensas alineadas al cambio"
+        "Fomentar una cultura de 'aprenderlo todo' con claridad de propósito y metas, transparencia, participación y recompensas alineadas al cambio"
       ],
       "entregable_esperado": "Un pipeline de datos con al menos un modelo predictivo activo y un dashboard de KPIs de cadena de suministro",
       "nodos_previos": [
@@ -9898,13 +9898,13 @@
       "titulo_concepto": "Bucle de Retroalimentación Autoajustable en la Cadena de Suministro",
       "resumen_teorico": "Un mecanismo donde el sistema compara continuamente su estado actual con el objetivo deseado y toma acciones correctivas para minimizar la diferencia, como un termostato o el control de crucero de un auto. Aplicado a cadenas de suministro, permite que empresas y sus socios ajusten su comportamiento en tiempo real (hora a hora) para mantenerse alineados con metas de desempeño, controlando efectos como el 'bullwhip effect' y generando eficiencias acumulativas similares al interés compuesto.",
       "pasos_accionables": [
-        "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos",
+        "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos, fijado por la empresa dominante o negociado entre los socios, de modo que todos lo crean alcanzable",
         "Establecer mecanismos de medición continua del estado actual vs. el deseado",
-        "Diseñar reglas de acción correctiva automática o semi-automática ante desviaciones, y no solo periódicamente",
+        "Hacer que la corrección ante desviaciones sea continua, y no solo periódica, dando a cada actor en tiempo real los datos que necesita para dirigirse a su meta",
         "Compartir datos en tiempo real entre los actores de la cadena para habilitar el ajuste colectivo",
         "Establecer recompensas o incentivos ligados al cumplimiento de esas metas."
       ],
-      "entregable_esperado": "Un sistema de monitoreo con indicadores en tiempo real y reglas de ajuste automático definidas para al menos un proceso clave de la cadena de suministro",
+      "entregable_esperado": "Un sistema de monitoreo con indicadores en tiempo real, metas de desempeño acordadas y recompensas ligadas a ellas para al menos un proceso clave de la cadena de suministro",
       "nodos_previos": [
         "definicion_alineacion_cadena_suministro",
         "gestion_beneficios_alianza_sostenible",
@@ -10115,16 +10115,16 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Bullseye Framework (Diana de Tracción)",
-      "resumen_teorico": "Bullseye es un proceso de tres pasos para que encuentres, tú solo, el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, concentras todo tu esfuerzo en el único canal que mostró mejores resultados, tu canal núcleo, para exprimir su máximo potencial. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
+      "resumen_teorico": "Bullseye es un proceso de tres pasos para que encuentres el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, concentras todo tu esfuerzo en el único canal que mostró mejores resultados, tu canal núcleo, para exprimir su máximo potencial. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
       "pasos_accionables": [
         "Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.",
         "Selecciona los pocos canales más prometedores según tu contexto, industria y modelo de negocio, y deja de sumar cuando el entusiasmo caiga claramente, lo que suele pasar hacia el tercer canal.",
-        "Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
+        "Diseña experimentos baratos, de como máximo 1000 dólares y un mes de duración en la etapa inicial (a menudo menos; más adelante pueden ser mayores y más largos), para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
         "Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.",
         "Elige el canal con mejores resultados como tu canal núcleo y dirige ahí todos tus esfuerzos y recursos. Es el paso previo para pasar a las pruebas del anillo interno",
-        "Si ningún canal funciona, repite el proceso o revisa tu producto.",
+        "Si ningún canal funciona, repite el proceso apoyándote en los datos de las pruebas; si tras varias vueltas ninguno promete, revisa tu producto.",
         "Haz una lista de los 19 canales de tracción posibles para tu negocio",
-        "Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
+        "Diseña una prueba barata y corta para cada uno de los pocos canales más prometedores que elegiste, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
         "Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas",
         "Compara los resultados entre canales y elige el que más prometa como tu canal núcleo para dirigirle todos tus recursos",
         "Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos",
@@ -10993,7 +10993,7 @@
       "pasos_accionables": [
         "Realizar pronósticos simplificados de demanda basados en riesgo geográfico y población",
         "Preposicionar inventario estratégico ('surge capacity') en ubicaciones clave",
-        "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia",
+        "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia, sabiendo que quizá no puedan entregar grandes cantidades de golpe y que a menudo habrá que sumar proveedores nuevos",
         "Diseñar y ejecutar simulaciones de entrenamiento colaborativo entre organizaciones participantes",
         "Establecer una plataforma común de datos (basada en mapas) para coordinación en tiempo real"
       ],
@@ -12115,7 +12115,7 @@
       "resumen_teorico": "Existen 19 canales distintos por los cuales un startup puede obtener tracción: blogs objetivo, publicidad tradicional (PR), PR no convencional, marketing en motores de búsqueda (SEM), anuncios sociales y display, anuncios offline, SEO, marketing de contenidos, email marketing, ingeniería como marketing, marketing viral, desarrollo de negocios (BD), ventas, programas de afiliados, plataformas existentes, ferias comerciales, eventos offline, conferencias/speaking, y construcción de comunidad. La mayoría de founders solo consideran los canales que ya conocen, ignorando los que podrían ser más efectivos para su negocio específico.",
       "pasos_accionables": [
         "Revisa la lista completa de los 19 canales sin descartar ninguno de antemano por familiaridad o prejuicio.",
-        "Evalúa cada canal según el tipo de negocio (B2B/B2C, ticket alto/bajo, online/offline).",
+        "Evalúa cada canal pensando en cómo podría funcionar para tu negocio, sin descartarlo por el tipo de producto o empresa que tienes.",
         "Identifica los canales menos utilizados por tu competencia directa como oportunidad de diferenciación."
       ],
       "entregable_esperado": "Lista priorizada de canales de tracción candidatos con una breve justificación de por qué podrían funcionar para el negocio específico.",
@@ -12169,7 +12169,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Comunidades de Link-Sharing para Lanzamiento",
-      "resumen_teorico": "Comunidades como Hacker News, Reddit y Product Hunt concentran audiencias que comparten y votan contenido relevante en nichos tecnológicos. Publicar demos, videos o posts ahí puede generar oleadas masivas de tráfico y señales sociales que después son recogidas por medios más grandes, funcionando como un canal de tracción de bajo costo y alto impacto si el producto encaja con la comunidad.",
+      "resumen_teorico": "Comunidades como Hacker News, Reddit y Product Hunt concentran audiencias que comparten y votan contenido relevante en nichos tecnológicos. Publicar demos, videos o posts ahí puede generar oleadas masivas de tráfico y señales sociales que después son recogidas por medios más grandes, y puede ser una buena forma de conseguir tu primera ola de clientes si el producto encaja con la comunidad.",
       "pasos_accionables": [
         "Identificar la comunidad de link-sharing más afín al producto (Hacker News, Reddit, Product Hunt, foros de nicho)",
         "Preparar un demo o video simple y auténtico, evitando un tono de venta excesivo",
@@ -12326,7 +12326,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Prepararse para responder (responsabilidad como capacidad de respuesta)",
-      "resumen_teorico": "Responsabilidad viene del latín 'responsus': la capacidad de responder ante lo inesperado. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) es más difícil de controlar y más peligroso; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
+      "resumen_teorico": "Responsabilidad viene del latín 'responsus': la capacidad de responder ante lo inesperado. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) puede ser más difícil de controlar y causar más daño; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
       "pasos_accionables": [
         "Mira la velocidad y el alcance de lo que estás construyendo: ¿qué tan rápido se propaga o crece?",
         "Diseña frenos o mecanismos que te permitan desacelerar y limitar el daño si algo se viraliza de forma no deseada.",
@@ -12773,7 +12773,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Identificación de Pasos de Tarea Propensos a la Omisión",
-      "resumen_teorico": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional del paso (no está señalado por la acción anterior), ocurrencia después de alcanzado el objetivo principal, cercanía al final de la tarea, ocultamiento del ítem, cambios recientes de práctica, instalación de múltiples ítems similares, y dependencia de condiciones previas. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
+      "resumen_teorico": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional (no lo señala la acción anterior), ocurrir después de alcanzado el objetivo principal, cercanía al final, ítem oculto, acciones o ítems no requeridos en tareas muy parecidas, cambios recientes de práctica, repetición de acciones según condiciones locales, instalación de varios ítems similares, dependencia de condiciones previas y pasos no siempre requeridos. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
       "pasos_accionables": [
         "Desglosar cada tarea de mantenimiento en sus pasos discretos",
         "Evaluar cada paso contra la lista de características omission-prone (aislamiento funcional, cercanía al final, ocultamiento, etc.)",
@@ -14853,7 +14853,7 @@
       "pasos_accionables": [
         "Definir con claridad quién es responsable de la agenda de sostenibilidad en tu negocio",
         "Sumar personas de distintas áreas o funciones para que colaboren en el tema",
-        "Asegurarte de que esa persona te informe directamente a ti sobre los avances",
+        "Sugerencia de My Idea: acuerda con esa persona cómo te va a informar sobre los avances",
         "Impulsar que cada área incorpore la sostenibilidad en su trabajo diario"
       ],
       "entregable_esperado": "Un responsable de sostenibilidad definido, con apoyo de otras personas y una forma clara de coordinarse entre áreas",
@@ -14901,7 +14901,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "El Ciclo Circunstancias-Sentimientos-Ideas",
-      "resumen_teorico": "Las circunstancias que se diseñan (tecnologías, espacios, medios, interfaces) generan sentimientos y reacciones emocionales en las personas que los usan; esos sentimientos alimentan nuevas ideas y comportamientos, que a su vez generan nuevas circunstancias diseñadas, cerrando un ciclo continuo (circunstancias, sentimientos, ideas, nuevas circunstancias). Este ciclo explica por qué tecnologías creadas con intenciones neutras (como conectar información) terminan generando efectos emocionales masivos y no planeados, como polarización, ansiedad o adicción. Reconocer el ciclo permite anticipar y decidir intencionalmente qué emociones se quiere que provoque un producto o servicio, en vez de dejar que surjan como efecto colateral no planeado.",
+      "resumen_teorico": "Las circunstancias que se diseñan (tecnologías, espacios, medios, interfaces) generan sentimientos y reacciones emocionales en las personas que los usan; esos sentimientos alimentan nuevas ideas y comportamientos, que a su vez generan nuevas circunstancias diseñadas, cerrando un ciclo continuo (circunstancias, sentimientos, ideas, nuevas circunstancias). Este ciclo explica por qué tecnologías creadas con intenciones neutras (como conectar información) terminan generando efectos emocionales masivos y no planeados, como polarización o ansiedad. Reconocer el ciclo permite anticipar y decidir intencionalmente qué emociones se quiere que provoque un producto o servicio, en vez de dejar que surjan como efecto colateral no planeado.",
       "pasos_accionables": [
         "Antes de diseñar, preguntar explícitamente: ¿qué se quiere que la gente sienta al usar esto?",
         "Identificar una circunstancia de diseño existente (un producto, interfaz o espacio) y observar qué reacciones físicas y emocionales provoca en las personas (ansiedad, calma, pertenencia, etc.)",
@@ -15068,7 +15068,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "El Ciclo de la Culpa (Blame Cycle)",
-      "resumen_teorico": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces cometen los peores errores en las circunstancias equivocadas es el punto de partida para romperlo.",
+      "resumen_teorico": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces pueden a veces cometer los peores errores es el punto de partida para romperlo.",
       "pasos_accionables": [
         "Reconocer que las acciones humanas están casi siempre limitadas por factores fuera del control inmediato de la persona",
         "Evitar usar sanciones o advertencias como única respuesta a errores recurrentes, identificando los patrones repetitivos de 'culpar y entrenar' tras incidentes",
@@ -15720,8 +15720,8 @@
       "titulo_concepto": "Los Cinco Pasos de Enfoque para Gestionar Restricciones",
       "resumen_teorico": "Metodología práctica derivada de la Teoría de Restricciones para identificar y gestionar los cuellos de botella de un sistema (fábrica o cadena de suministro) de forma iterativa: identificar, explotar, subordinar, elevar y repetir el ciclo cuando la restricción se traslada.",
       "pasos_accionables": [
-        "Identificar el o los cuellos de botella del sistema trazando los flujos de trabajo",
-        "Decidir cómo explotar al máximo esos cuellos de botella (asegurar que operen a máxima capacidad)",
+        "Con la meta definida y acordado cómo medir el avance hacia ella, identificar el o los cuellos de botella del sistema trazando los flujos de trabajo",
+        "Decidir cómo explotar al máximo esos cuellos de botella (asegurar que operen a máxima capacidad, dándoles inventario suficiente para seguir operando aunque haya demoras en otras partes)",
         "Subordinar todas las demás operaciones al ritmo del cuello de botella",
         "Elevar la capacidad del cuello de botella (invertir en mejorarlo)",
         "Si el cuello de botella se rompe, volver al paso 1 para identificar la nueva restricción"
@@ -16737,7 +16737,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Co-creación de la Estrategia de Engagement Interno",
-      "resumen_teorico": "Ningún ejecutivo puede imponer un cambio de mentalidad hacia la sostenibilidad. La mejor manera de construir apoyo es invitar a stakeholders internos clave, especialmente mandos medios, a participar en el proceso de refinar la visión y dar forma al plan, en lugar de presentarles un plan ya terminado. Invertir tiempo en consulta genuina y diálogo aumenta drásticamente las probabilidades de éxito a largo plazo y evita confusiones o retrasos costosos.",
+      "resumen_teorico": "Ningún ejecutivo puede imponer un cambio de mentalidad hacia la sostenibilidad. La mejor manera de construir apoyo es invitar a stakeholders internos clave, especialmente mandos medios, a participar en el proceso de refinar la visión y dar forma al plan, en lugar de presentarles un plan ya terminado. Invertir tiempo en consulta genuina y diálogo aumenta drásticamente las probabilidades de éxito a largo plazo y ayuda a evitar confusiones o retrasos costosos.",
       "pasos_accionables": [
         "Crear un equipo multifuncional encargado de desarrollar y supervisar la estrategia de engagement",
         "Organizar reuniones especiales (retiros) donde empleados diversos reaccionen al pensamiento inicial",
@@ -16908,8 +16908,8 @@
       "titulo_concepto": "Código de Conducta para Proveedores",
       "resumen_teorico": "Un código de conducta especifica las prácticas y requisitos ambientales, laborales y éticos que un proveedor debe cumplir para hacer negocios con la empresa. Suele abarcar manejo de residuos peligrosos, emisiones, condiciones laborales, y mecanismos de cumplimiento como líneas de denuncia y auditorías. Empresas como Apple, Home Depot y Tesco han desarrollado códigos robustos con métricas específicas.",
       "pasos_accionables": [
-        "Definir estándares mínimos en manejo de residuos, emisiones, condiciones laborales y ética",
-        "Establecer mecanismos de reporte de incumplimiento (ej. línea de denuncia)",
+        "Definir estándares mínimos en manejo de residuos, emisiones, condiciones laborales, ética, permisos y cumplimiento normativo, e incluso derechos humanos",
+        "Establecer mecanismos para asegurar el cumplimiento, como una línea de denuncia de incumplimientos y auditorías anunciadas o sin aviso",
         "Exigir a proveedores reportar cambios operativos que afecten cumplimiento",
         "Comunicar el código formalmente a toda la red de proveedores"
       ],
@@ -17092,7 +17092,7 @@
       "resumen_teorico": "El primer paso para reducir el efecto látigo es medirlo dentro de la propia empresa, comparando el volumen y frecuencia de pedidos recibidos de clientes contra los pedidos realizados a proveedores. Compartir datos de inventario y demanda con socios comerciales (como hacen Walmart, Dell y P&G) permite decisiones más eficientes en toda la cadena, en lugar de que cada empresa optimice de forma aislada.",
       "pasos_accionables": [
         "Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)",
-        "Graficar la divergencia entre demanda de clientes y órdenes a proveedores",
+        "Graficar la divergencia entre demanda de clientes y órdenes a proveedores y, con esa magnitud, estimar cuánto le cuesta a la empresa (producción, transporte, inventario, ventas perdidas) como base para decidir cuánto vale corregirla",
         "Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)",
         "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave",
         "Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado"
@@ -17512,7 +17512,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Fomento de Conmutación y Teletrabajo Sostenible",
-      "resumen_teorico": "El traslado diario de empleados (commuting) representa una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling, y habilitar el teletrabajo reducen tanto emisiones como costos de oficina, mejorando además la productividad y satisfacción laboral, como demuestran casos de Deloitte, Intel y Accenture.",
+      "resumen_teorico": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y hay estudios que muestran que aumenta la productividad.",
       "pasos_accionables": [
         "Evaluar la ubicación de oficinas priorizando acceso a transporte público",
         "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de parking gratuito)",
@@ -18099,11 +18099,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Compra de Energía Limpia (Renovable)",
-      "resumen_teorico": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde, cogeneración usando residuos orgánicos como combustible, y compra a través de brokers energéticos.",
+      "resumen_teorico": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y comprar a través de brokers energéticos.",
       "pasos_accionables": [
         "Evaluar contratos de compra de energía (PPA) con empresas de energía renovable",
         "Explorar opciones de cogeneración usando residuos del proceso productivo",
-        "Considerar contratar un broker energético para comprar energía renovable al por mayor",
+        "Si tu empresa es grande, considerar contratar un broker energético para comprar energía renovable al por mayor",
         "Negociar tarifas fijas a largo plazo para protegerse de volatilidad de precios",
         "Evaluar venta de excedente energético a la red local"
       ],
@@ -18153,7 +18153,7 @@
         "Determinar qué porcentaje de emisiones no puede reducirse internamente.",
         "Investigar proveedores certificados de offsets de carbono.",
         "Verificar la validez y trazabilidad de los proyectos de compensación.",
-        "Combinar la compra de offsets con metas de reducción interna real. El plan de reducción se establece antes de recurrir a compensaciones",
+        "Combinar la compra de offsets con metas de reducción interna real.",
         "Comunicar de forma transparente el uso de offsets como parte de la estrategia climática. Se comunica igualmente el alcance real de la declaración de neutralidad",
         "Definir qué alcances de emisiones se incluirán en la meta de neutralidad"
       ],
@@ -18500,7 +18500,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Compromiso del Cliente en Sostenibilidad mediante TI",
-      "resumen_teorico": "El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, generando lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.",
+      "resumen_teorico": "El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, y puede ayudar a generar lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.",
       "pasos_accionables": [
         "Identificar plataformas sociales relevantes para el público objetivo de la empresa.",
         "Diseñar campañas que vinculen la interacción del cliente con acciones ambientales concretas (donaciones, compensaciones de carbono).",
@@ -18585,7 +18585,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Compromiso con Línea de Tiempo de Compra",
-      "resumen_teorico": "Técnica de cierre de ventas que consiste en establecer explícitamente con el prospecto un cronograma de acciones (ej. piloto de 2 semanas) y solicitar un compromiso binario (sí/no) sobre la compra al finalizar dicho periodo. Esto evita ambigüedad, permite enfocar el tiempo del equipo de ventas en deals que realmente van a cerrar y descarta rápidamente a los que no están listos para comprar.",
+      "resumen_teorico": "Técnica de cierre de ventas que consiste en establecer explícitamente con el prospecto un cronograma de acciones (ej. piloto de 2 semanas) y solicitar un compromiso binario (sí/no) sobre la compra al finalizar dicho periodo. Esto evita ambigüedad, permite enfocar el tiempo del equipo de ventas en deals que probablemente cierren y descarta rápidamente a los que no están listos para comprar.",
       "pasos_accionables": [
         "Definir un plan de acción claro para el prospecto (ej. pilot de X semanas)",
         "Comunicar explícitamente el cronograma y las condiciones de decisión",
@@ -19165,7 +19165,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "La Comunidad como Activo Estratégico (Producto, Contenido y Talento)",
-      "resumen_teorico": "Una comunidad bien gestionada se convierte en un activo esencial para la empresa: genera el producto mismo (reseñas de Yelp, lecciones de Codecademy, código abierto en GitHub), y sirve como cantera de talento, ya que los mejores empleados suelen surgir de miembros comprometidos de la comunidad que ya creen en la misión (caso DuckDuckGo). Abrir el código o el contenido también genera publicidad gratuita y goodwill.",
+      "resumen_teorico": "Una comunidad que mantiene su calidad puede convertirse en un activo esencial para la empresa: genera el producto mismo (reseñas de Yelp, lecciones de Codecademy, código abierto en GitHub), y sirve como cantera de talento, ya que quienes contratas desde la comunidad ya creen en la misión (caso DuckDuckGo). Abrir el código también genera publicidad gratuita y goodwill.",
       "pasos_accionables": [
         "Diseñar mecanismos para que los usuarios contribuyan directamente al producto o contenido (reseñas, ediciones, lecciones).",
         "Evaluar si abrir código o contenido (open source) puede generar adopción temprana y goodwill.",
@@ -20745,7 +20745,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Consecuencias No Intencionadas en Sistemas Interconectados",
-      "resumen_teorico": "El caso de Baxter Street (una app de navegación creó un atajo peligroso que se convirtió en rampa viral para saltos de autos gracias a algoritmos de video) ilustra cómo el diseño de un sistema (ruteo de tráfico) interactúa con otro (algoritmos de atención en redes sociales) generando consecuencias imprevistas y en cascada. Los diseñadores deben anticipar cómo su solución puede interactuar con otros sistemas externos (redes sociales, comportamiento humano, infraestructura) de maneras no previstas.",
+      "resumen_teorico": "El caso de Baxter Street (una app de navegación volvió atajo una calle muy empinada; la ciudad la hizo de un solo sentido y, sin querer, la convirtió en rampa, que se hizo viral para saltos de autos gracias a algoritmos de video) ilustra cómo el diseño de un sistema (ruteo de tráfico) interactúa con otro (algoritmos de atención en redes sociales) generando consecuencias imprevistas y en cascada. Los diseñadores deben anticipar cómo su solución puede interactuar con otros sistemas externos (redes sociales, comportamiento humano, infraestructura) de maneras no previstas.",
       "pasos_accionables": [
         "Identifica otros sistemas externos que podrían interactuar con tu solución (redes sociales, otras apps, comportamiento social).",
         "Simula o investiga escenarios de uso indebido o inesperado de tu producto.",
@@ -22282,7 +22282,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Contabilidad de la Innovación (Innovation Accounting)",
-      "resumen_teorico": "Sistema de medición pensado específicamente para proyectos que operan bajo incertidumbre extrema, que reemplaza a la contabilidad tradicional (diseñada para negocios con un historial estable). Permite demostrar de forma objetiva y cuantitativa si se está generando aprendizaje real y progreso genuino, en vez de depender de narrativas subjetivas u optimismo sin sustento. Funciona en tres pasos: convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo; usar un producto mínimo viable para establecer una línea base con datos reales, no proyecciones; y diseñar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio, evaluando si el cambio produce una mejora real y no solo una coincidencia. El sistema también ayuda a distinguir el crecimiento que crea valor genuino del crecimiento aparente sin sustancia (métricas que suben sin que el negocio mejore de verdad).",
+      "resumen_teorico": "Sistema de medición pensado específicamente para proyectos que operan bajo incertidumbre extrema, que reemplaza a la contabilidad tradicional (diseñada para negocios con un historial estable). Permite demostrar de forma objetiva y cuantitativa si se está generando aprendizaje real y progreso genuino, en vez de depender de narrativas subjetivas u optimismo sin sustento. Parte de convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo, y luego funciona en tres pasos: usar un producto mínimo viable para establecer una línea base con datos reales, no proyecciones; diseñar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio, evaluando si el cambio produce una mejora real y no solo una coincidencia; y decidir si pivotar o perseverar. El sistema también ayuda a distinguir el crecimiento que crea valor genuino del crecimiento aparente sin sustancia (métricas que suben sin que el negocio mejore de verdad).",
       "pasos_accionables": [
         "Convertir las suposiciones de salto de fe del modelo de negocio en un modelo financiero cuantitativo que describa cómo será el negocio en un punto de éxito futuro, aunque al inicio sea intuitivo",
         "Usar un producto mínimo viable para establecer datos reales de partida, no proyecciones",
@@ -22330,7 +22330,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Contabilidad de Innovación Orientada al Largo Plazo",
-      "resumen_teorico": "Las presiones de los mercados públicos por resultados trimestrales de corto plazo desincentivan la inversión constante en innovación dentro de las empresas establecidas. Esto es consecuencia de métodos contables centrados en métricas de vanidad. Una salida (en la línea del Long-Term Stock Exchange) es que las organizaciones reporten, además de utilidades trimestrales, indicadores de 'contabilidad de innovación' sobre sus esfuerzos internos de emprendimiento, como el porcentaje de ingresos proveniente de productos que no existían hace pocos años, ligando la compensación ejecutiva al desempeño de largo plazo.",
+      "resumen_teorico": "Las presiones de los mercados públicos por resultados trimestrales de corto plazo desincentivan la inversión constante en innovación dentro de las empresas establecidas. Esto es, en gran parte, consecuencia de métodos contables centrados en métricas de vanidad. Una salida (en la línea del Long-Term Stock Exchange) es que las organizaciones reporten, además de utilidades trimestrales, indicadores de 'contabilidad de innovación' sobre sus esfuerzos internos de emprendimiento, como el porcentaje de ingresos proveniente de productos que no existían hace pocos años, ligando la compensación ejecutiva al desempeño de largo plazo.",
       "pasos_accionables": [
         "Definir métricas internas de innovación (ej: % de ingresos de productos nuevos) además de las métricas financieras tradicionales",
         "Establecer un horizonte de evaluación de largo plazo para los proyectos de innovación, no solo trimestral",
@@ -22602,7 +22602,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Marketing de Contenidos como Canal de Tracción",
-      "resumen_teorico": "Un blog corporativo bien ejecutado puede convertirse en el principal canal de adquisición de clientes, como demostraron Unbounce (blogueando desde antes de tener producto) y OkCupid (iniciando 5 años después de lanzar). El contenido de calidad genera tráfico orgánico indefinido, a diferencia de la publicidad pagada cuyo efecto termina al dejar de pagar. La clave es escribir sobre los problemas reales de tu audiencia objetivo, mostrando problemas que no sabían que tenían.",
+      "resumen_teorico": "Un blog corporativo bien ejecutado puede convertirse en el principal canal de adquisición de clientes, como demostraron Unbounce (blogueando desde antes de tener producto) y OkCupid (iniciando 5 años después de lanzar). El contenido de calidad sigue generando tráfico orgánico casi indefinidamente, a diferencia de la publicidad pagada cuyo efecto termina al dejar de pagar. La clave es escribir sobre los problemas reales de tu audiencia objetivo, mostrando problemas que no sabían que tenían.",
       "pasos_accionables": [
         "Definir los problemas centrales que enfrenta tu cliente objetivo",
         "Establecer un calendario de publicación consistente (ej. quincenal)",
@@ -24561,7 +24561,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Coraje para Pivotar frente al Miedo y las Métricas de Vanidad",
-      "resumen_teorico": "Muchos emprendedores retrasan un pivote necesario por tres razones: (1) las métricas de vanidad les hacen vivir en una realidad falsa, (2) hipótesis poco claras impiden experimentar un fracaso completo que impulse el cambio, y (3) el miedo a que su visión sea juzgada sin haber tenido una oportunidad real de probarse. Enfrentar el fracaso públicamente y escuchar al cliente, en lugar de a la prensa o a las expectativas externas, es clave para pivotar a tiempo.",
+      "resumen_teorico": "Muchos emprendedores retrasan un pivote necesario por tres razones: (1) las métricas de vanidad pueden llevarlos a conclusiones falsas y a vivir en su propia realidad, (2) hipótesis poco claras impiden experimentar un fracaso completo que impulse el cambio, y (3) el miedo a que su visión sea juzgada sin haber tenido una oportunidad real de probarse. Enfrentar el fracaso públicamente y escuchar al cliente, en lugar de a la prensa o a las expectativas externas, es clave para pivotar a tiempo.",
       "pasos_accionables": [
         "Identificar si el equipo está usando métricas de vanidad para evitar enfrentar el fracaso",
         "Definir hipótesis claras desde el inicio para poder reconocer el fracaso sin ambigüedad",
@@ -29328,10 +29328,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Evitar la Maldición de las Cinco Culpas (Five Blames)",
-      "resumen_teorico": "Riesgo psicológico frecuente al aplicar los Cinco Porqués: en lugar de buscar causas sistémicas, el equipo cae en señalar culpables individuales, generando frustración y daño a la confianza del equipo. El principio guía es que los problemas crónicos son causados por procesos deficientes, no por personas defectuosas ('si alguien cometió un error, es porque el sistema lo permitió fácilmente'). Requiere disciplina de liderazgo para mantener el enfoque en sistemas, no en personas.",
+      "resumen_teorico": "Riesgo psicológico frecuente al aplicar los Cinco Porqués: en lugar de buscar causas sistémicas, el equipo, llevado por la frustración, cae en señalar culpables individuales. El principio guía es que los problemas crónicos son causados por procesos deficientes, no por personas defectuosas ('si alguien cometió un error, es porque el sistema lo permitió fácilmente'). Requiere disciplina de liderazgo para mantener el enfoque en sistemas, no en personas.",
       "pasos_accionables": [
         "Asegurar que todas las personas afectadas y conectadas al problema estén presentes en la sesión, incluyendo líderes senior si corresponde",
-        "Establecer como mantra de la sesión: 'si un error ocurrió, es porque hicimos fácil que sucediera'",
+        "Establecer como mantra de la sesión, que las personas de mayor rango repiten cuando surgen culpas: 'si un error ocurrió, es porque hicimos fácil que sucediera'",
         "Detener cualquier intento de señalar culpables individuales y redirigir la conversación a fallas de proceso",
         "Explicar el propósito y funcionamiento de los Cinco Porqués al inicio de cada sesión, especialmente si hay participantes nuevos"
       ],
@@ -34499,7 +34499,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Herramientas + Tiempo = Poder Creativo",
-      "resumen_teorico": "El acceso a herramientas de creación (cámaras, procesadores, impresoras 3D) se ha democratizado, permitiendo que cualquier persona sea creadora, como ocurrió con el hip-hop tras el apagón de Nueva York en 1977, o con la música electrónica de Bon Iver. Sin embargo, la verdadera brecha ahora no es solo de herramientas sino de TIEMPO disponible para usarlas: una brecha de equidad tan relevante como la brecha digital.",
+      "resumen_teorico": "El acceso a herramientas de creación (cámaras, procesadores, impresoras 3D) se ha democratizado, permitiendo que cualquier persona sea creadora, como cuenta una leyenda sobre el hip-hop tras el apagón de Nueva York en 1977, o como muestra la música electrónica de Bon Iver. Sin embargo, pronto la gran pregunta podría no ser quién tiene las herramientas sino quién tiene TIEMPO para usarlas: una brecha de equidad tan relevante como la brecha digital.",
       "pasos_accionables": [
         "Identifica qué herramientas de bajo costo están disponibles para tu comunidad objetivo.",
         "Evalúa si el tiempo disponible (no solo el acceso a herramientas) es una barrera para la innovación en tu contexto.",
@@ -36570,12 +36570,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Despliegue Continuo (Continuous Deployment)",
-      "resumen_teorico": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. Empresas como IMVU realizaban en promedio cincuenta cambios diarios a su producto usando esta técnica, incluso en industrias reguladas como servicios financieros (Wealthfront).",
+      "resumen_teorico": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. IMVU realizaba en promedio cincuenta cambios diarios a su producto usando esta técnica, y Wealthfront, en un sector regulado como los servicios financieros, más de una docena de lanzamientos diarios.",
       "pasos_accionables": [
         "Establecer un pipeline de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
         "Liberar cada cambio individual al producto en cuanto esté listo, sin esperar a acumular un lote grande",
         "Monitorear el impacto de cada despliegue en tiempo real",
-        "Implementar mecanismos de reversión automática si se detecta un problema"
+        "Implementar mecanismos de reversión automática si se detecta un problema, avisar al equipo y bloquear nuevos cambios hasta encontrar y corregir la causa raíz"
       ],
       "entregable_esperado": "Un sistema de despliegue automatizado que permite lanzar cambios pequeños al producto de forma frecuente y segura",
       "nodos_previos": [
@@ -37862,7 +37862,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "El Diagrama de Eames y la Intersección de Posibilidad",
-      "resumen_teorico": "El diagrama de Eames plantea que el trabajo del diseñador ocurre en la superposición entre sus propios intereses, los del cliente y las necesidades de la sociedad. Una versión ampliada de este diagrama clásico añade la naturaleza, los descendientes futuros y el tiempo como actores con 'silla en la mesa'. La 'intersección de posibilidad' es el punto donde todos estos círculos se solapan, y desde ahí se puede preguntar qué entidad (negocio, gobierno, organización) comparte esos mismos deseos y podría ser socio, financiador o defensor del proyecto.",
+      "resumen_teorico": "El diagrama de Eames plantea que el trabajo del diseñador ocurre en la superposición entre sus propios intereses, los del cliente y las necesidades de la sociedad. Una versión ampliada de este diagrama clásico cruza el talento del diseñador con las tecnologías, añade la naturaleza, los descendientes futuros y el tiempo como actores con 'silla en la mesa', y no le da al cliente un círculo propio. La 'intersección de posibilidad' es el punto donde todos estos círculos se solapan, y desde ahí se puede preguntar qué entidad (negocio, gobierno, organización) comparte esos mismos deseos y podría ser socio, financiador o defensor del proyecto.",
       "pasos_accionables": [
         "Dibuja un círculo con tu talento y pasiones, y otro con las tecnologías/recursos disponibles.",
         "Dibuja un círculo con las necesidades de la sociedad, otro con las de la naturaleza y otro con las de las futuras generaciones.",
@@ -38259,7 +38259,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Diferencia entre ISO 9001 e ISO 9004 (Aseguramiento vs Excelencia Organizacional)",
-      "resumen_teorico": "ISO 9001 es un sistema de aseguramiento enfocado únicamente en procesos que garantizan cumplir los requisitos del cliente (efectividad). ISO 9004, en cambio, es un modelo de excelencia organizacional similar a premios nacionales de calidad, enfocado tanto en efectividad como en eficiencia, incluyendo planificación, control y mejora en todos los procesos de la empresa. Las organizaciones que usan ISO 9004 como base logran mejores resultados que quienes solo certifican ISO 9001.",
+      "resumen_teorico": "ISO 9001 es un sistema de aseguramiento enfocado únicamente en procesos que garantizan cumplir los requisitos del cliente (efectividad). ISO 9004, en cambio, es un modelo de excelencia organizacional similar a premios nacionales de calidad, enfocado tanto en efectividad como en eficiencia, incluyendo planificación, control y mejora en todos los procesos de la empresa. Las organizaciones a las que ISO 9004 les funcionó la usaron como base de un sistema mejor y llenaron por su cuenta los vacíos que la norma no cubre.",
       "pasos_accionables": [
         "Evaluar si el objetivo es solo certificación de cumplimiento (ISO 9001) o excelencia integral (ISO 9004)",
         "Usar ISO 9004 como marco complementario para llenar brechas de gestión no cubiertas por ISO 9001",
@@ -39005,7 +39005,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Diseñar los Detalles, No lo Inevitable",
-      "resumen_teorico": "Kevin Kelly plantea que muchas tecnologías (como internet o la IA) son inevitables en su llegada, pero sus características específicas —si son abiertas o cerradas, con o sin fines de lucro, transparentes u opacas— sí son elegibles por quienes las diseñan. El poder real del diseñador no está en detener lo inevitable, sino en decidir la forma particular en que se manifiesta.",
+      "resumen_teorico": "Kevin Kelly plantea que muchas tecnologías (como internet) son inevitables en su llegada, pero sus características específicas (si son abiertas o cerradas, con o sin fines de lucro, transparentes u opacas) sí son elegibles por quienes las diseñan. El poder real del diseñador no está en detener lo inevitable, sino en decidir la forma particular en que se manifiesta.",
       "pasos_accionables": [
         "Identificar qué aspectos de tu proyecto son tendencias inevitables del mercado/tecnología y cuáles son decisiones de diseño abiertas.",
         "Listar las opciones de diseño disponibles dentro de esa tendencia inevitable (abierto/cerrado, público/privado, con o sin fines de lucro).",
@@ -39030,18 +39030,18 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Diseñar para la Sanación (Design for Healing)",
-      "resumen_teorico": "Todo lo que se diseña eventualmente 'rompe algo': genera efectos secundarios negativos que no pueden preverse del todo, así que el bien y el mal en el diseño no son binarios ni fácilmente predecibles. Diseñar para la sanación significa incorporar desde el inicio una intención de reparación, en lugar de limitarse a optimizar la funcionalidad: por un lado, hacia adelante, aceptando con humildad las consecuencias imprevistas y construyendo mecanismos de reversibilidad, retroalimentación y mitigación de daños en sistemas críticos (como inteligencia artificial o datos personales); por otro lado, hacia atrás, reparando y restaurando el daño ya acumulado (desigualdad, deterioro ambiental, fragmentación social) en lugar de solo crear cosas nuevas encima de él. El proceso de creación puede ser en sí mismo un acto de sanación comunitaria cuando involucra a las comunidades afectadas como co-creadoras y hace visible la reparación -como en la técnica japonesa del kintsugi, donde las grietas reparadas se valoran como belleza- en vez de ocultarla.",
+      "resumen_teorico": "Todo lo que se diseña eventualmente 'rompe algo': genera efectos secundarios negativos que no pueden preverse del todo, así que el bien y el mal en el diseño no son binarios ni fácilmente predecibles. Diseñar para la sanación significa incorporar desde el inicio una intención de reparación, en lugar de limitarse a optimizar la funcionalidad: por un lado, hacia adelante, aceptando con humildad las consecuencias imprevistas y construyendo frenos de velocidad, fragilidad a propósito y revisiones que ayuden a responder cuando lo que se hace falla; por otro lado, hacia atrás, reparando y restaurando el daño ya acumulado (desigualdad, deterioro ambiental, fragmentación social) en lugar de solo crear cosas nuevas encima de él. El proceso de creación puede ser en sí mismo un acto de sanación comunitaria cuando involucra a las comunidades afectadas como co-creadoras y hace visible la reparación -como en la técnica japonesa del kintsugi, donde las grietas reparadas se valoran como belleza- en vez de ocultarla.",
       "pasos_accionables": [
         "En la planificación, preguntar explícitamente: '¿qué se rompe con esta solución y cómo lo reparamos?'",
         "Mapear qué ha 'roto' la industria, comunidad o sistema en el que se va a intervenir, antes de proponer algo nuevo",
         "Incluir en la hoja de ruta del producto mecanismos de retroalimentación para detectar daños colaterales",
-        "Diseñar funciones de reversibilidad o mitigación en los sistemas críticos (por ejemplo, inteligencia artificial o datos personales)",
+        "Diseñar frenos de velocidad y fragilidad a propósito que ayuden a responder cuando lo que se hace falla",
         "Involucrar a las comunidades afectadas en el proceso de creación, no solo como usuarios finales sino como co-creadoras de la reparación",
         "Priorizar la reutilización de estructuras existentes (físicas, sociales, tecnológicas) sobre la demolición y reconstrucción total",
         "Diseñar procesos o rituales que hagan visible la reparación en vez de ocultarla",
         "Evaluar el proyecto no solo por su éxito comercial, sino por su huella en el sistema donde se inserta"
       ],
-      "entregable_esperado": "Una sección del plan de negocio o brief de diseño dedicada a los riesgos éticos y sistémicos del proyecto, con una narrativa del daño previo a reparar, mecanismos de mitigación y reversibilidad, y un plan de co-creación con la comunidad afectada",
+      "entregable_esperado": "Una sección del plan de negocio o brief de diseño dedicada a los riesgos éticos y sistémicos del proyecto, con una narrativa del daño previo a reparar, mecanismos de mitigación y respuesta, y un plan de co-creación con la comunidad afectada",
       "condiciones_activacion": [
         "Cuando el producto tiene potencial de escala masiva o afecta a poblaciones vulnerables",
         "Si el equipo quiere incorporar principios de sostenibilidad o ética desde el diseño",
@@ -39132,7 +39132,7 @@
         "Para cada elemento clave de lo que estás creando, pregunta: ¿qué acción humana estoy habilitando o dificultando con esta decisión?",
         "Anota los efectos que no se ven a simple vista de tu diseño: conversaciones, hábitos, personas que quedan afuera, no solo la función evidente.",
         "Revisa las decisiones que parecen neutras (tamaños, materiales, forma de acceder a algo) buscando el efecto en el comportamiento que esconden.",
-        "Ajusta tu diseño priorizando el comportamiento que quieres provocar por encima de la estética o la función aislada del objeto."
+        "Ajusta tu diseño pensando en el comportamiento que quieres provocar, no solo en la estética o la función aislada del objeto."
       ],
       "entregable_esperado": "Una lista de comportamientos que quieres provocar, cada uno vinculado a una decisión concreta de forma o producto, que usas como criterio para evaluar tus prototipos.",
       "nodos_previos": [
@@ -39424,10 +39424,10 @@
       "resumen_teorico": "En la fase de control, el equipo diseña y documenta los controles necesarios para sostener las ganancias de la mejora. Esto incluye actualizar el FMEA, aplicar técnicas de a prueba de errores (mistake-proofing), establecer estándares de control basados en el desempeño real del nuevo proceso, y garantizar el autocontrol de los individuos mediante retroalimentación oportuna y autoridad para ajustar el proceso.",
       "pasos_accionables": [
         "Actualizar el FMEA para identificar controles necesarios",
-        "Aplicar técnicas de mistake-proofing en las mejoras",
+        "Aplicar técnicas de mistake-proofing en las mejoras, si es posible",
         "Diseñar controles de calidad de proceso para Xs y Ys",
         "Establecer estándares de control basados en el desempeño real",
-        "Determinar cómo se comparará el desempeño real con el estándar (SPC)",
+        "Determinar cómo se comparará el desempeño real con el estándar (SPC) y diseñar acciones para regular el desempeño si no lo cumple",
         "Establecer el autocontrol para los individuos responsables del proceso"
       ],
       "entregable_esperado": "Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y mistake-proofing",
@@ -39674,7 +39674,7 @@
         "Determinar los recursos necesarios (personas, dinero, tiempo, materiales)",
         "Especificar procedimientos y cambios requeridos",
         "Evaluar necesidades de capacitación",
-        "Planificar el manejo de la resistencia cultural"
+        "Verificar que el diseño de la mejora cumple las necesidades de estos clientes y planificar el manejo de la resistencia cultural"
       ],
       "entregable_esperado": "Diseño de mejora validado con plan de implementación y gestión del cambio",
       "nodos_previos": [
@@ -39695,7 +39695,7 @@
       "titulo_concepto": "Diseño y Prueba de Métodos de Recolección de Datos",
       "resumen_teorico": "Antes de recolectar datos, diseña, prepara y prueba tus métodos, formularios e instrucciones de recolección. Identifica quién puede darte los datos, cómo recolectarlos con el mínimo esfuerzo y error, y qué información adicional necesitas capturar para poder rastrear todo más adelante. Revisa tu proceso de recolección y valida los resultados antes de pasar al análisis.",
       "pasos_accionables": [
-        "Identifica las fuentes y quién puede darte los datos",
+        "Identifica las fuentes y quién puede darte los datos, y elige y capacita a recolectores sin sesgo",
         "Diseña formularios e instrucciones de recolección que minimicen esfuerzo y errores",
         "Determina qué información adicional necesitas para poder rastrear o analizar más adelante",
         "Haz un análisis del sistema de medición (MSA) para confirmar que tus mediciones son precisas",
@@ -39725,13 +39725,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Diseño de Procesos Basado en Características y Metas",
-      "resumen_teorico": "El diseño de procesos organiza las características y metas del proceso (materiales, personas, entrenamiento, recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las metas del producto sean alcanzables y que no existan características de proceso redundantes o innecesarias.",
+      "resumen_teorico": "El diseño de procesos organiza las características y metas del proceso (procedimientos, métodos, equipo y suministros, materiales, personas, entrenamiento, otros recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las metas del producto sean alcanzables y que no existan características de proceso redundantes o innecesarias.",
       "pasos_accionables": [
-        "Identificar los recursos necesarios: materiales, personas, entrenamiento, otros recursos y procesos de soporte.",
+        "Identificar las características de proceso necesarias: procedimientos, métodos, equipo y suministros, materiales, personas, entrenamiento, otros recursos y procesos de soporte.",
         "Construir una hoja de cálculo de diseño de proceso vinculando características de proceso con metas de producto.",
         "Verificar que cada meta de producto sea alcanzada por al menos una característica de proceso.",
         "Verificar que cada característica de proceso sea necesaria para al menos una meta de producto.",
-        "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso."
+        "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega."
       ],
       "entregable_esperado": "Hoja de cálculo de diseño de proceso completa, verificada y sin redundancias.",
       "nodos_previos": [
@@ -40001,13 +40001,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Diseño de Experimentos (DOE) en la Fase de Mejora",
-      "resumen_teorico": "En la fase de mejora de Six Sigma, el equipo utiliza Diseños de Experimentos (DOE) para cuantificar la relación causa-efecto entre las variables de entrada (Xs) y salida (Ys). Se emplean experimentos de cribado (factoriales fraccionados) para identificar los 'pocos vitales', seguidos de experimentos factoriales 2k para construir modelos matemáticos predictivos, y si es necesario, experimentos factoriales completos, RSM o EVOP para optimizar el rendimiento del proceso.",
+      "resumen_teorico": "En la fase de mejora de Six Sigma, el equipo puede usar Diseños de Experimentos (DOE), si aplican al proyecto, para cuantificar la relación causa-efecto entre las variables de entrada (Xs) y salida (Ys). Se emplean experimentos de cribado (factoriales fraccionados) para identificar los 'pocos vitales', seguidos de experimentos factoriales 2k para construir modelos matemáticos predictivos, y si es necesario, experimentos factoriales completos, RSM o EVOP para optimizar el rendimiento del proceso.",
       "pasos_accionables": [
         "Planificar los experimentos diseñados requeridos por el proyecto",
         "Realizar experimentos de cribado factorial fraccionado para reducir la lista de Xs",
         "Ejecutar experimentos factoriales 2k para construir el modelo matemático",
         "Realizar experimentos factoriales completos si se requiere más información",
-        "Aplicar RSM o EVOP para optimizar los parámetros del proceso",
+        "Si es necesario, aplicar RSM o EVOP para optimizar los parámetros del proceso",
         "Derivar el modelo matemático final y establecer ajustes óptimos de los parámetros"
       ],
       "entregable_esperado": "Modelo matemático de predicción del proceso y configuración óptima de parámetros de proceso (Xs)",
@@ -40150,11 +40150,11 @@
       "titulo_concepto": "Diseño e Implementación del Remedio",
       "resumen_teorico": "Proceso de cuatro pasos para diseñar la solución elegida: verificar que cumple lo que buscabas, determinar los recursos que necesitas, especificar los procedimientos y cambios necesarios, y evaluar si necesitas capacitarte o capacitar a alguien. Incluye también diseñar la solución a prueba de errores antes de ponerla en marcha de forma definitiva.",
       "pasos_accionables": [
-        "Verifica que la solución cumple con lo que buscabas lograr.",
+        "Verifica que la solución cumple con lo que buscabas lograr y que todos los involucrados están de acuerdo en ello.",
         "Determina los recursos necesarios (personas, dinero, tiempo, materiales).",
-        "Especifica qué procedimientos, formas de trabajar o sistemas debes modificar.",
+        "Especifica qué políticas, procedimientos, formas de trabajar, sistemas o relaciones de reporte debes modificar, para evitar sorpresas que saboteen la solución.",
         "Evalúa si necesitas capacitarte tú o capacitar a quien te ayuda.",
-        "Aplica técnicas de prueba de errores para que la solución sea a prueba de fallos.",
+        "Aplica técnicas de prueba de errores para evitar, prevenir o reducir los errores involuntarios que puedan ocurrir aun con la solución.",
         "Implementa la solución siguiendo un plan claro si es algo complejo."
       ],
       "entregable_esperado": "Solución diseñada, documentada e implementada, con procedimientos actualizados y con la capacitación necesaria cubierta.",
@@ -40912,12 +40912,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Cálculo de Disponibilidad del Producto",
-      "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+      "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
       "pasos_accionables": [
         "Determinar el MTBF del producto o sistema",
         "Determinar el MTTR (tiempo medio de reparación) o MDT (tiempo medio de inactividad)",
         "Calcular la disponibilidad usando la fórmula de estado estable A = MTBF/(MTBF+MDT)",
-        "Verificar que se cumplan los supuestos de tasa de fallo y reparación constantes",
+        "Verificar que se cumplan los supuestos, que no siempre se dan: tasa de fallo y de reparación constantes, que buscar fallas no cambie la tasa de fallo, que no haya crecimiento de confiabilidad y que el mantenimiento preventivo quede fuera del periodo calculado; si no se cumplen, usar fórmulas más precisas",
         "Diferenciar entre disponibilidad operacional e intrínseca según el análisis requerido"
       ],
       "entregable_esperado": "Cálculo documentado de disponibilidad del producto con supuestos verificados",
@@ -43771,7 +43771,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Eficiencia Hídrica en Edificios",
-      "resumen_teorico": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises reduce la dependencia del suministro municipal hasta en un 50-74%, con ahorros adicionales en energía asociada al calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
+      "resumen_teorico": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises alivia la presión sobre el suministro municipal y te da una reserva de agua, y el reciclaje puede ahorrar además energía de calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
       "pasos_accionables": [
         "Reduce la temperatura del calentador de agua de 140°F a 120°F",
         "Repara fugas de tuberías y establece mantenimiento preventivo regular",
@@ -46217,7 +46217,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Empaque Eco-Eficiente y Optimización de Carga",
-      "resumen_teorico": "Reducir el exceso de empaque y mejorar el 'load factor' (porcentaje de capacidad utilizada de un vehículo o contenedor) disminuye costos de combustible y emisiones. Estrategias incluyen eliminar elementos innecesarios en el envío, rediseñar empaques para optimizar el apilamiento, cambiar a materiales reutilizables/reciclables, y usar software de planificación de carga.",
+      "resumen_teorico": "Reducir el exceso de empaque (cuidando lo frágil o peligroso) y mejorar el 'load factor' (porcentaje de capacidad utilizada de un vehículo o contenedor) disminuye costos de combustible y emisiones. Estrategias incluyen eliminar elementos innecesarios en el envío, rediseñar empaques para optimizar el apilamiento, cambiar a materiales reutilizables/reciclables, usar software de planificación de carga y consolidar cargas por volumen y peso.",
       "pasos_accionables": [
         "Auditar el contenido de los envíos para eliminar elementos innecesarios (manuales, cables duplicados, cajas extra).",
         "Rediseñar el empaque para mejorar el apilamiento y aumentar el 'load factor' por pallet o contenedor.",
@@ -46536,12 +46536,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "El Emprendedor como Título de Trabajo Formal",
-      "resumen_teorico": "Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.",
+      "resumen_teorico": "Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que no tenga que irse de tu negocio para recibir la recompensa de lo que sabe hacer ni fingir que encaja en jerarquías rígidas.",
       "pasos_accionables": [
         "Crea un puesto real de Emprendedor Interno dentro de tu equipo o negocio.",
         "Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.",
-        "Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.",
-        "Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe."
+        "Cuando el producto pase a un equipo más grande para crecer, deja que esa persona lo lidere al principio y entrene a los nuevos miembros; después, deja que elija si sigue con el producto o vuelve a incubar una idea nueva, según su temperamento y sus habilidades.",
+        "Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe, y antes de cada ampliación valora si el equipo puede defenderse políticamente dentro de la organización."
       ],
       "entregable_esperado": "Una manera clara de reconocer el rol de emprendedor dentro de tu negocio, con su propia forma de medir resultados y su propio camino de crecimiento.",
       "nodos_previos": [
@@ -46595,7 +46595,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Lo que aprendes al emprender más de una vez",
-      "resumen_teorico": "Si ya fundaste un negocio antes, cada nuevo intento te acerca más a lo que buscas: quedarte con más control y más ganancia. Esto pasa porque acumulas conocimiento, tienes más recursos y ya conoces gente que invierte. Por eso, quien repite suele quedarse con una porción más grande del negocio y dura más tiempo como líder que alguien que emprende por primera vez.",
+      "resumen_teorico": "Si ya fundaste un negocio antes, aunque a menudo los primeros intentos no te dan lo que buscas, con el tiempo te acercas más en los siguientes: quedarte con más control y más ganancia. Esto pasa porque acumulas conocimiento, tienes más recursos y ya conoces gente que invierte. Por eso, quien repite suele quedarse con una porción más grande del negocio y dura más tiempo como líder que alguien que emprende por primera vez.",
       "pasos_accionables": [
         "Anota las lecciones de tu negocio anterior: qué roles funcionaron, cómo repartiste el porcentaje del negocio, a quién contrataste y cómo negociaste con quien invirtió",
         "Usa los contactos que ya tienes con inversionistas para negociar mejores condiciones esta vez",
@@ -47298,7 +47298,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Enfócate en un Solo Motor de Crecimiento",
-      "resumen_teorico": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero la experiencia muestra que los negocios que despegan de verdad se concentran en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, terminas confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
+      "resumen_teorico": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero la experiencia muestra que los negocios que despegan de verdad se concentran en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, lo más probable es que termines confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
       "pasos_accionables": [
         "Identifica cuál es tu apuesta de fe (leap of faith): el motor de crecimiento en el que más confías para tu producto",
         "Si no tienes claro qué motor perseguir, sal a hablar directamente con tus clientes",
@@ -48948,13 +48948,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Equipos Multifuncionales para el Diseño Sostenible",
-      "resumen_teorico": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por teléfono, perspectivas de distintas áreas: técnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revisión critica y honesta, contigo mismo o con colaboradores externos, que te permita detectar problemas de diseno antes de lanzarlo al mercado, evitando errores costosos y perdida de valor percibida por el cliente en calidad, servicio o precio. Además, busca sumar a tu proyecto personas con actitud pragmática y resiliente ante la adversidad, y evita tomar decisiones de rediseno sin consultar otras miradas.",
+      "resumen_teorico": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por teléfono, perspectivas de distintas áreas: técnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revisión crítica y honesta, pidiendo a colaboradores externos o a críticos que te hablen con franqueza, que te permita detectar problemas de diseño antes de lanzarlo al mercado, evitando errores costosos y pérdida de valor percibida por el cliente en calidad, servicio o precio. Además, busca sumar a tu proyecto personas con actitud pragmática y resiliente ante la adversidad, y evita tomar decisiones de rediseño sin consultar otras miradas.",
       "pasos_accionables": [
         "Contacta o incorpora al proyecto a personas con perspectiva técnica, creativa, de marketing y de cadena de suministro.",
-        "Establece un proceso propio de revisión crítica y honesta antes de lanzar el rediseño.",
+        "Establece un proceso de revisión crítica y honesta antes de lanzar el rediseño, pidiendo a otras personas que te señalen los problemas con franqueza.",
         "Consulta con distintas áreas o contactos antes de tomar decisiones para evitar el aislamiento.",
-        "Verifica que el rediseño no sacrifique calidad, servicio o precio percibido por el cliente.",
-        "Suma colaboradores con actitud pragmática y resiliente ante la adversidad."
+        "Verifica que el rediseño no sacrifique la calidad ni el servicio percibidos por el cliente, ni suba el precio sin que mejores resultados lo justifiquen.",
+        "Suma colaboradores con actitud pragmática y resiliente ante la adversidad, apasionados por el proyecto pero sin fanatismo."
       ],
       "entregable_esperado": "Red de colaboradores conformada con roles definidos y protocolo de revisión de diseño establecido para tu proyecto de rediseño sostenible.",
       "nodos_previos": [
@@ -50242,14 +50242,14 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Las cadenas que te atan a tu trabajo (esposas de oro)",
-      "resumen_teorico": "Cuanto más tiempo lleves en un empleo, más se fortalecen las cadenas que te atan a tu jefe: las psicológicas (el estatus, el título), las doradas (el salario alto, las acciones pendientes de consolidar o vesting) y las legales (acuerdos de no competencia, propiedad intelectual). Estas cadenas reducen la probabilidad de que dés el salto a emprender, aunque sigas acumulando más experiencia y más contactos.",
+      "resumen_teorico": "Cuanto más tiempo lleves en un empleo, más suelen fortalecerse las cadenas que te atan a tu jefe: las psicológicas (el estatus, el título), las doradas (el salario alto, las acciones pendientes de consolidar o vesting) y las legales (acuerdos de no competencia, propiedad intelectual). Estas cadenas reducen la probabilidad de que dés el salto a emprender, aunque sigas acumulando más experiencia y más contactos.",
       "pasos_accionables": [
         "Revisa tu contrato laboral actual en busca de cláusulas de no competencia o de propiedad intelectual que puedan limitar tu idea de negocio",
         "Calcula el costo real de dejar tu salario y tus beneficios actuales (acciones pendientes de consolidar, bonos)",
         "Identifica qué cadenas psicológicas, como el estatus o el título, están influyendo en que todavía no emprendas",
         "Evalúa si hay algún evento externo, como un cambio de estrategia en tu empresa o un despido, que pueda facilitarte el salto"
       ],
-      "entregable_esperado": "Tu propio análisis de las restricciones legales y psicológicas que hoy afectan tu decisión de fundar",
+      "entregable_esperado": "Tu propio análisis de las restricciones legales, económicas (las cadenas doradas) y psicológicas que hoy afectan tu decisión de fundar",
       "nodos_previos": [
         "dilema_riqueza_vs_control"
       ],
@@ -50266,7 +50266,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Esposas Familiares y Alineación con la Pareja",
-      "resumen_teorico": "Las responsabilidades familiares (cónyuge, hijos, obligaciones de cuidado) actúan como restricciones ('handcuffs') que condicionan cuándo y cómo se funda un startup. El apoyo pleno del cónyuge, negociado con expectativas realistas de tiempo y sacrificio, es crucial; la falta de alineación genera estrés que puede hacer fracasar tanto la relación como el startup.",
+      "resumen_teorico": "Las responsabilidades familiares (cónyuge, hijos, obligaciones de cuidado) actúan como restricciones ('handcuffs') que condicionan cuándo y cómo se funda un startup. El apoyo pleno del cónyuge, negociado con expectativas realistas de tiempo y sacrificio, es crucial; la falta de alineación genera estrés en la relación y hace aún más difícil sacar adelante el startup.",
       "pasos_accionables": [
         "Tener una conversación explícita y realista con la pareja sobre plazos, sacrificios económicos y de tiempo esperados",
         "Negociar un plazo concreto de prueba (ej. 6-12 meses) acordado con la familia antes de lanzar",
@@ -50694,12 +50694,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Establecer Metas de Reducción de Emisiones",
-      "resumen_teorico": "Una vez que identifiques el origen de tus emisiones, tienes que fijar objetivos concretos de reducción. Las metas apropiadas varían según tu industria, tu capacidad y tu posición en el mercado. Ejemplos reales incluyen a USG (20% para 2020), MillerCoors (15% de reducción de energía para 2015) y Panasonic e Intel, que superaron ampliamente sus objetivos iniciales. Es importante que fijes metas públicas realistas pero ambiciosas a corto plazo, y que reserves los objetivos más transformadores para tu uso interno, ya que si no cumples una meta pública vas a tener que dar explicaciones y eso puede afectar tu reputación.",
+      "resumen_teorico": "Una vez que identifiques el origen de tus emisiones, tienes que fijar objetivos concretos de reducción. Las metas apropiadas varían según tu industria, tu capacidad y tu posición en el mercado. Ejemplos reales incluyen a USG (20% para 2020), MillerCoors (15% de reducción de energía para 2015) y Panasonic e Intel, que superaron ampliamente sus objetivos iniciales. Es importante que fijes metas públicas realistas pero ambiciosas a corto plazo; los objetivos más transformadores quizá convenga reservarlos para tu uso interno. Si no cumples una meta pública, no tiene por qué ser una crisis, pero tendrás que explicar con franqueza qué salió mal.",
       "pasos_accionables": [
         "Analiza el inventario de emisiones que ya tienes.",
         "Define un año base para la comparación.",
         "Establece metas de reducción a corto y largo plazo.",
-        "Comunica públicamente las metas alcanzables, y guarda para ti las más ambiciosas.",
+        "Comunica públicamente las metas alcanzables; las más ambiciosas, de largo plazo, quizá convenga guardarlas para ti.",
         "Prepara explicaciones para posibles incumplimientos."
       ],
       "entregable_esperado": "Un documento con metas cuantificables y con plazos definidos de reducción de emisiones.",
@@ -50989,7 +50989,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Publicación de Metas y Objetivos de Sostenibilidad",
-      "resumen_teorico": "Publicar métricas de desempeño ya no alcanza; quienes te siguen esperan conocer tus planes futuros para abordar los impactos críticos de tu negocio. Una vez que haces públicas tus metas, dejan de ser voluntarias: se vigilará su cumplimiento, pero explicar con honestidad los déficits te da ventaja frente a ocultar resultados o no fijar metas.",
+      "resumen_teorico": "Publicar métricas de desempeño ya no alcanza; quienes te siguen esperan conocer tus planes futuros para abordar los impactos críticos de tu negocio. Una vez que haces públicas tus metas, dejan de ser voluntarias: los críticos serán duros contigo si te quedas corto, así que publícalas con cuidado; aun así, explicar con honestidad los déficits te da ventaja frente a ocultar resultados o no fijar metas.",
       "pasos_accionables": [
         "Define metas de sostenibilidad medibles y con plazos claros",
         "Publica las metas junto con tu progreso actual",
@@ -51279,7 +51279,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Estandarización de Metodologías de LCA entre Empresas",
-      "resumen_teorico": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y otras 50 empresas) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. El objetivo es permitir comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores.",
+      "resumen_teorico": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y otras 50 empresas) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. La esperanza es que algún día permitan comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores, aunque el resultado es incierto y hay escépticos.",
       "pasos_accionables": [
         "Investigar y unirse a iniciativas colectivas de estandarización relevantes para el sector (ej. Sustainability Consortium)",
         "Adoptar protocolos reconocidos como el GHG Protocol o BSI PAS 2050 cuando sea posible",
@@ -51327,7 +51327,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Otorgar el Título de 'Fundador' de Forma Estratégica",
-      "resumen_teorico": "El título de 'fundador' puede ser objetivo (basado en fecha de inicio, aporte de idea, rol inicial) o simbólico, otorgado a contrataciones tempranas para incentivar compromiso sin ceder salario o efectivo. Sin embargo, otorgar este título con facilidad conlleva riesgos: puede generar sentido de derecho a posiciones senior que la persona podría no sostener en etapas posteriores (metáfora de 'jungla, camino de tierra y autopista').",
+      "resumen_teorico": "El título de 'fundador' puede ser objetivo (basado en fecha de inicio, aporte de idea, rol inicial) o simbólico, otorgado a contrataciones tempranas para incentivar compromiso sin ceder participación, que es escasa, ni efectivo. Sin embargo, otorgar este título con facilidad conlleva riesgos: puede generar sentido de derecho a posiciones senior que la persona podría no sostener en etapas posteriores (metáfora de 'jungla, camino de tierra y autopista').",
       "pasos_accionables": [
         "Definir criterios claros y objetivos para otorgar el título de fundador (fecha de inicio, aporte de propiedad intelectual, rol inicial, equity).",
         "Evaluar si otorgar el título simbólicamente a una contratación temprana ayuda a solidificar su compromiso.",
@@ -51759,7 +51759,7 @@
       "resumen_teorico": "Consiste en definir la narrativa central de sostenibilidad de la empresa, enmarcar el mensaje de forma auténtica para distintas audiencias, y usar múltiples canales (carteles, intranet, redes sociales, reuniones cara a cara) en un flujo de comunicación bidireccional que permita escuchar tanto como transmitir.",
       "pasos_accionables": [
         "Definir los grandes conceptos y la narrativa de sostenibilidad de la empresa",
-        "Adaptar el mensaje ('framing') según audiencia, cultura y contexto",
+        "Adaptar el mensaje ('framing') según audiencia, cultura y contexto, sin suponer qué funcionará: involucrar a la audiencia y probar los supuestos en la práctica",
         "Usar una estrategia de medios mixta: física (posters, stickers) y digital (intranets, blogs, redes sociales)",
         "Establecer canales de escucha bidireccional (foros, encuestas)"
       ],
@@ -52219,7 +52219,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Estrategia Híbrida: Combinar Control y Riqueza en Etapas",
-      "resumen_teorico": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Sin embargo, esta estrategia aumenta el riesgo de terminar 'atascado en el medio' y fracasar si no se ejecuta con claridad temporal.",
+      "resumen_teorico": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Sin embargo, esta estrategia puede aumentar el riesgo de terminar 'atascado en el medio' y fracasar.",
       "pasos_accionables": [
         "Definir una fase inicial de control absoluto para validar producto y alcanzar métricas clave sin diluir equity.",
         "Establecer criterios claros (hitos, tiempo, tracción) que determinen el momento de transición hacia decisiones de riqueza.",
@@ -52899,10 +52899,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Cómo estructurar la venta: cobrar todo de una vez (cash-only) o cobrar por metas cumplidas (earn-out)",
-      "resumen_teorico": "Cuando negocias la venta de tu negocio, tienes que elegir (o negociar) entre dos formas de cobrar: todo en efectivo de una vez por tus acciones, o en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
+      "resumen_teorico": "Cuando negocias la venta de tu negocio, tienes que elegir (o negociar) entre dos formas de cobrar: todo en efectivo de una vez por tus acciones, o una parte al momento y otra parte importante en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
       "pasos_accionables": [
         "Pregúntate qué tan seguro estás del desempeño futuro de tu negocio",
-        "Decide si quieres o puedes comprometerte a seguir trabajando ahí de 1 a 3 años más",
+        "Decide si quieres o puedes comprometerte a seguir trabajando ahí durante los años que dure el earn-out",
         "Compara las ofertas: dinero inmediato contra dinero condicionado a cumplir metas",
         "Revisa cuánto control vas a mantener sobre las decisiones que afectan esas metas",
         "Negocia condiciones de earn-out realistas, con supuestos conservadores"
@@ -54005,7 +54005,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Evaluación de Capacidades del Fundador frente a la Oportunidad",
-      "resumen_teorico": "Una misma oportunidad de negocio debe evaluarse de forma diferente según las capacidades, habilidades y capital acumulado (humano, social, financiero) de la persona específica que la persigue. Un fundador bien preparado tiene más probabilidades de crear rápidamente un producto valioso y convencer a clientes potenciales que uno que no ha acumulado los 'capitales' correctos.",
+      "resumen_teorico": "Una misma oportunidad de negocio debe evaluarse de forma diferente según las capacidades, habilidades y capital acumulado (humano, social, financiero) de la persona específica que la persigue. Un fundador bien preparado debería tener más confianza en su capacidad de crear rápidamente un producto valioso y de identificar y convencer a clientes potenciales que uno que no ha acumulado los 'capitales' correctos.",
       "pasos_accionables": [
         "Listar el capital humano acumulado (habilidades técnicas, gerenciales, de industria)",
         "Listar el capital social (contactos, red de referencias, reputación)",
@@ -54066,7 +54066,7 @@
         "Listar las habilidades técnicas, comerciales y de gestión que requiere el proyecto.",
         "Evaluar tus contactos y redes actuales (clientes potenciales, inversores, talento).",
         "Determinar el capital financiero disponible versus el necesario.",
-        "Identificar las brechas específicas y buscar cofundadores que las llenen, no personas redundantes."
+        "Identificar las brechas específicas y decidir si sumar cofundadores que las llenen, no personas redundantes, o seguir solo; algunas brechas pueden cubrirse subcontratando, con asesores o con alianzas, aunque a menudo eso no basta."
       ],
       "entregable_esperado": "Una matriz de brechas de capital humano, social y financiero, con perfil ideal de cofundador(es) necesario(s).",
       "nodos_previos": [
@@ -54170,7 +54170,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Cuánto conoces la industria en la que vas a fundar",
-      "resumen_teorico": "Cuánto conoces la industria en la que vas a fundar tu negocio pesa en tus probabilidades de éxito: si nunca trabajaste en ella, es probable que consigas menos capital, que tu negocio crezca menos en empleo y que la chance de fracasar sea mayor, aunque más de la mitad de quienes emprenden lo hacen en industrias distintas a las que trabajaron antes. La 'ventaja de la ignorancia' (pensar sin los prejuicios del sector) casi nunca te compensa las desventajas de no conocer el terreno, sobre todo si lo que aprendiste en otra industria no se traduce bien a esta nueva.",
+      "resumen_teorico": "Cuánto conoces la industria en la que vas a fundar tu negocio pesa en tus probabilidades de éxito: si nunca trabajaste en ella, es probable que consigas menos capital, que tu negocio crezca menos en empleo y que la chance de fracasar sea mayor, aunque más de la mitad de quienes emprenden lo hacen en industrias distintas a las que trabajaron antes. La 'ventaja de la ignorancia' (pensar sin los prejuicios del sector) puede ser real, pero a menudo la superan con facilidad las desventajas de no conocer el terreno, sobre todo si lo que aprendiste en otra industria no se traduce bien a esta nueva.",
       "pasos_accionables": [
         "Escribe tu experiencia previa en la industria donde vas a fundar tu negocio",
         "Identifica qué supuestos o formas de pensar de industrias anteriores podrían no funcionarte en este nuevo terreno",
@@ -54352,7 +54352,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Buscar un sucesor distinto a ti, no un parecido (complementariedad de habilidades)",
-      "resumen_teorico": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas o en gestión operativa. Cuanto más diferente sea ese perfil del tuyo, más fácil te resulta aceptar un rol secundario, aunque esto también aumenta la probabilidad de que termines saliendo por completo del negocio.",
+      "resumen_teorico": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas. Te resulta más fácil aceptar un rol secundario si quien llega tiene claramente más experiencia, al menos en algo crucial; aun así, cuanto más distinto sea su perfil del tuyo, más probable es que termines saliendo por completo del negocio.",
       "pasos_accionables": [
         "Identifica con claridad tus propias brechas como fundador: qué se te da mal, dónde falta experiencia (ventas, escalar, poner procesos).",
         "Busca candidatos cuyo perfil cubra esas brechas de forma clara e innegable.",
@@ -54378,10 +54378,10 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Evaluación Objetiva de la Idea de Negocio",
-      "resumen_teorico": "Muchos fundadores se enamoran de su idea sin evaluarla objetivamente, lo que puede llevarlos a lanzarse sin la preparación adecuada. Es crucial separar la pasión personal por la idea de un análisis riguroso de su viabilidad de mercado, para evitar el fracaso destructivo que ocurre cuando se salta demasiado pronto sin validación. Este análisis debe combinarse con la evaluación de tus factores personales y de carrera.",
+      "resumen_teorico": "Muchos fundadores se enamoran de su idea sin evaluarla objetivamente, lo que puede llevarlos a lanzarse sin la preparación adecuada. Es crucial separar la pasión personal por la idea de un análisis riguroso de su viabilidad de mercado, porque la pasión y el exceso de confianza pueden llevarte a saltar antes de tiempo y aumentar tus probabilidades de fracasar. Este análisis debe combinarse con la evaluación de tus factores personales y de carrera.",
       "pasos_accionables": [
         "Someter la idea a la crítica de personas ajenas a tu círculo de apoyo emocional",
-        "Buscar evidencia de mercado que confirme o refute la necesidad que la idea pretende resolver",
+        "Buscar evidencia de mercado que confirme o refute la necesidad que la idea pretende resolver, y revisar también cuánta competencia hay y si un reloj corriendo te obliga a moverte rápido",
         "Diferenciar entre la pasión por la idea y la evidencia objetiva de su potencial de éxito"
       ],
       "entregable_esperado": "Informe de validación preliminar de la idea, separando entusiasmo personal de evidencia objetiva de mercado",
@@ -55627,14 +55627,14 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Eventos presenciales para conseguir tus primeros clientes (canal de tracción)",
-      "resumen_teorico": "Los eventos presenciales, como conferencias, encuentros o fiestas, son una forma poderosa de conseguir clientes, sobre todo si vendes a otras empresas (B2B) o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca y crean vínculos que los canales digitales masivos no logran. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
+      "resumen_teorico": "Los eventos presenciales, como conferencias, encuentros o fiestas, pueden ser una forma poderosa de conseguir clientes, sobre todo si tu ciclo de venta es largo, como suele pasar en software para empresas, o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca, y son especialmente útiles si tus clientes no responden a anuncios en línea ni se reúnen en internet. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
       "pasos_accionables": [
         "Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad",
         "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día, que además te sirve para probar si tu audiencia quiere un evento más grande; pregunta el precio en tu mercado",
         "Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas",
-        "Busca un espacio accesible, como una universidad, para reducir gastos",
+        "Busca un espacio accesible, como una universidad, para reducir gastos; suelen prestarlo si el evento tiene fin educativo y participan algunos de sus profesores o estudiantes",
         "Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes",
-        "Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado",
+        "Mantén el precio de entrada relativamente alto para que sea más probable que asistan personas con negocios ya exitosos y la calidad del público se mantenga alta",
         "Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación",
         "Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).",
         "Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.",
@@ -58671,7 +58671,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Las Tres Fases de Tracción (Leaky Bucket)",
-      "resumen_teorico": "Todo negocio pasa por tres fases: Fase I (crear algo que la gente quiera, con máximo de 'fugas' en el producto), Fase II (comercializar lo que la gente quiere, una vez alcanzado el ajuste producto-mercado) y Fase III (escalar el negocio ya establecido). La metáfora del 'balde con fugas' ilustra cómo en fase I no tiene sentido escalar marketing porque el producto aún pierde clientes; primero hay que tapar los agujeros.",
+      "resumen_teorico": "Puedes pensar tu negocio en tres fases: Fase I (crear algo que la gente quiera, con máximo de 'fugas' en el producto), Fase II (comercializar lo que la gente quiere, una vez alcanzado el ajuste producto-mercado) y Fase III (escalar el negocio ya establecido). La metáfora del 'balde con fugas' ilustra cómo en fase I no tiene sentido escalar marketing porque el producto aún pierde clientes; aun así, conviene pasar un flujo pequeño de clientes para ver los agujeros y taparlos.",
       "pasos_accionables": [
         "Identifica en qué fase se encuentra tu startup actualmente",
         "En fase I, envía un flujo pequeño y constante de clientes para detectar fugas en el producto",
@@ -65076,10 +65076,10 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Embudo de 'Get Customers' (Awareness-Interest-Consideration-Purchase)",
-      "resumen_teorico": "El proceso de generación de demanda en canal físico tiene cuatro etapas: Awareness (conocimiento del producto), Interest (el mensaje ya no se ignora), Consideration (el cliente evalúa seriamente comprar) y Purchase (compra real). Las primeras tres etapas ocurren en la mente del consumidor y están fuera de control directo hasta que el cliente se autoidentifica ante un canal (retail, vendedor, web).",
+      "resumen_teorico": "El proceso de generación de demanda en canal físico tiene cuatro etapas: Awareness (conocimiento del producto), Interest (el mensaje ya no se ignora), Consideration (el cliente evalúa seriamente comprar) y Purchase (compra real). Las primeras tres ocurren en la mente del consumidor; las dos primeras están fuera de tu control hasta que el cliente se autoidentifica ante un canal (retail, vendedor, web), que desde ahí se encarga de la consideración y la compra.",
       "pasos_accionables": [
-        "Diseñar experimentos pequeños y económicos para cada etapa del embudo",
-        "Definir métricas pass/fail para cada test (ej: 1 llamada de venta por cada 30 llamadas a prospectos)",
+        "Diseñar experimentos pequeños y económicos para cada etapa del embudo, incluyendo tácticas web y móviles, porque los clientes empiezan su búsqueda en internet",
+        "Definir métricas pass/fail para cada test (ej: 1 llamada de venta por cada 30 llamadas a prospectos) y cómo mejorar el resultado si el test no funciona",
         "Medir el costo de adquisición de cliente (CAC) y compararlo con el margen de ganancia por venta",
         "Documentar resultados en una hoja de cálculo de hipótesis de gasto"
       ],
@@ -65101,14 +65101,14 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Embudo de Adquisición y Activación Web/Mobile",
-      "resumen_teorico": "En canales web/mobile, el proceso de 'Get Customers' tiene dos pasos: adquisición, que equivale a las etapas de awareness, interés y consideración del canal físico, llevando la mayor cantidad de tráfico a la landing page o 'puerta de entrada'; y activación, donde el cliente muestra interés real mediante descarga, registro, prueba, solicitud de información o compra, y se considera activado si tienes suficiente información para recontactarlo. A diferencia del canal físico, el objetivo es atraer (pull) al cliente en lugar de empujarle el producto, y el proceso puede escalar más rápido y barato, incluyendo un loop viral donde los clientes invitan a otros. Participar en las comunidades donde está tu audiencia refuerza esta atracción.",
+      "resumen_teorico": "En canales web/mobile, el proceso de 'Get Customers' tiene dos pasos: adquisición, que equivale a las etapas de awareness, interés y consideración del canal físico, llevando la mayor cantidad de tráfico a la landing page o 'puerta de entrada'; y activación, donde el cliente muestra interés real mediante descarga, registro, prueba, solicitud de información o compra, y se considera activado si tienes suficiente información para recontactarlo y su permiso explícito para hacerlo. A diferencia del canal físico, el objetivo es atraer (pull) al cliente en lugar de empujarle el producto, y el proceso puede escalar más rápido y barato, incluyendo un loop viral donde los clientes invitan a otros. Participar en las comunidades donde está tu audiencia refuerza esta atracción.",
       "pasos_accionables": [
         "Determinar quién es tu audiencia objetivo y dónde pasa tiempo en la web",
         "Crear contenido atractivo y adaptado al formato de cada plataforma (video, blog, FAQ, redes sociales)",
         "Participar activamente en las comunidades donde está tu audiencia",
-        "Probar primero tácticas de adquisición gratuitas: PR, SEO, redes sociales, marketing viral",
+        "Probar primero tácticas de adquisición gratuitas: PR sobre el problema (todavía no sobre el producto), SEO, redes sociales y marketing viral, que solo puede arrancar cuando ya hay una base de clientes",
         "Probar tácticas de adquisición pagadas a pequeña escala: PPC, afiliados, email marketing, publicidad online",
-        "Medir la tasa de activación (registro, descarga o compra) de cada táctica y descartar las que no generen suficiente respuesta"
+        "Medir la tasa de activación (registro, descarga o compra) de cada táctica, descartar las que no generen suficiente respuesta y refinar y volver a probar las mejores"
       ],
       "entregable_esperado": "Un plan de pruebas de adquisición y activación en spreadsheet con actividades, costos, metas y resultados de cada táctica",
       "nodos_previos": [
@@ -65144,12 +65144,12 @@
       "pasos_accionables": [
         "Define pruebas claras de si funciona o no basadas en tus hipótesis de negocio (por ejemplo, cuántas ventas cierras)",
         "Vende a tus primeros clientes convencidos (earlyvangelists) a un precio cercano al completo, evitando descuentos excesivos",
-        "Cuando te pidan personalizaciones, evalúa si son características reales que necesitas agregar o si te arrastran a convertir tu negocio en algo hecho a medida para un solo cliente",
-        "Evita comprometerte sin pensarlo bien con exclusividades o con cláusulas que te obliguen a darle siempre las mejores condiciones a un cliente",
+        "Cuando te pidan personalizaciones, evalúa si son características reales que necesitas agregar (si suficientes clientes piden lo mismo, lo son) o si te arrastran a convertir tu negocio en algo hecho a medida para un solo cliente",
+        "Ve con mucho cuidado con las exclusividades o con cláusulas que te obliguen a darle siempre las mejores condiciones a un cliente, y no renuncies a tu derecho de venderles a otros clientes",
         "Registra de forma consistente lo que aprendes en cada llamada de venta, usando el mismo formato cada vez",
         "Decide junto con quien te acompaña en decisiones importantes cuántos pedidos necesitas para considerar validado tu modelo"
       ],
-      "entregable_esperado": "Pedidos de compra reales o compromisos firmes, y un pronóstico de ventas ajustado según la probabilidad de cierre",
+      "entregable_esperado": "Pedidos de compra reales o compromisos firmes, un pronóstico de ventas ajustado según la probabilidad de cierre y un resumen de ventas ganadas y perdidas con el porqué de cada no",
       "nodos_previos": [
         "identificar_earlyvangelists",
         "formalizar_junta_asesora",
@@ -65563,7 +65563,7 @@
       "titulo_concepto": "Máximo Global vs Máximo Local en Pruebas",
       "resumen_teorico": "Al ejecutar experimentos, existe el riesgo de detenerse prematuramente al ver buenos resultados iniciales (máximo local) sin dar tiempo suficiente para descubrir el verdadero potencial máximo (máximo global). Es necesario equilibrar la velocidad del testeo con dar suficiente margen temporal para captar el resultado real.",
       "pasos_accionables": [
-        "No detener un experimento apenas se vean buenos resultados iniciales",
+        "No detener un experimento apenas se vean buenos resultados iniciales, salvo que la señal sea muy fuerte (por ejemplo, que cuatro de tus primeros diez clientes lo quieran ya), en cuyo caso puedes darlo por exitoso",
         "Definir de antemano un periodo mínimo razonable de prueba",
         "Comparar resultados a lo largo de varios días o ciclos antes de concluir",
         "Usar experiencia y juicio para decidir cuándo se ha alcanzado un resultado representativo"
@@ -67137,7 +67137,7 @@
       "titulo_concepto": "Herramientas Online para Canales de Distribución Física",
       "resumen_teorico": "Incluso los productos vendidos exclusivamente en canales físicos requieren presencia online (sitio web, redes sociales, email marketing) porque los clientes buscan información en internet antes de comprar. El marketing moderno combina 'push' (empujar el producto al cliente) y 'pull' (atraer al cliente mediante interés genuino).",
       "pasos_accionables": [
-        "Crear un sitio web que comunique claramente la visión y el problema que resuelve el producto",
+        "Crear un sitio web que comunique claramente la visión y el problema que resuelve el producto, que invite a los interesados a contactar a la empresa o los lleve al canal físico y que no les dé razones para no comprar (como el precio o los requisitos de instalación)",
         "Establecer presencia en redes sociales (Facebook, Twitter) para generar boca a boca",
         "Diseñar campañas de email personalizadas y multi-etapa",
         "Balancear estrategias de push (venta directa) y pull (atracción orgánica)"
@@ -67188,12 +67188,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Hipótesis de Canales de Distribución",
-      "resumen_teorico": "El canal describe cómo el producto llega de la empresa al cliente. Existen canales físicos (con costos e intermediarios significativos) y canales web/móvil (venta directa online). La mayoría de empresas usan ambos. Es crucial elegir un canal enfocado durante la validación de clientes en lugar de dispersar esfuerzos en múltiples canales simultáneamente.",
+      "resumen_teorico": "El canal describe cómo el producto llega de la empresa al cliente. Existen canales físicos (con costos e intermediarios significativos) y canales web/móvil (venta directa online). La mayoría de empresas usan ambos. Es crucial elegir un canal enfocado durante la validación de clientes en lugar de dispersar esfuerzos en múltiples canales, salvo un lanzamiento en canal físico con apoyo web simultáneo de marketing.",
       "pasos_accionables": [
         "Determinar si el producto se ajusta mejor a canal físico, digital o híbrido",
         "Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)",
         "Calcular todos los costos del canal (descuentos, promoción, devoluciones)",
-        "Seleccionar UN canal principal para enfocar los esfuerzos iniciales",
+        "Seleccionar UN canal principal para enfocar los esfuerzos iniciales (si es un canal físico, puede ir acompañado de apoyo web simultáneo)",
         "Recalcular el modelo de ingresos neto tras costos de canal"
       ],
       "entregable_esperado": "Hipótesis de canal seleccionado con diagrama de distribución y cálculo de ingresos netos tras costos de canal",
@@ -67218,13 +67218,13 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Cuánto puede crecer tu mercado (TAM, SAM, mercado objetivo)",
-      "resumen_teorico": "Antes de invertir años de trabajo en tu proyecto, conviene que estimes el tamaño real de la oportunidad en tres niveles: el mercado total que existe (TAM), la parte de ese mercado que puedes alcanzar de verdad según tu canal de ventas (SAM) y los compradores más probables al inicio (mercado objetivo). Construye tu estimación desde abajo hacia arriba, con datos concretos, en vez de apoyarte solo en reportes de firmas externas, que suelen ser mejores prediciendo el pasado que el futuro. Considera también mercados cercanos al tuyo y el costo que tendría para tus clientes actuales cambiarse, y proyecta el crecimiento a 3-5 años.",
+      "resumen_teorico": "Antes de invertir años de trabajo en tu proyecto, conviene que estimes el tamaño real de la oportunidad en tres niveles: el mercado total que existe (TAM), la parte de ese mercado que puedes alcanzar de verdad según tu canal de ventas (SAM) y los compradores más probables al inicio (mercado objetivo). Construye tu estimación desde abajo hacia arriba, con datos concretos, en vez de apoyarte solo en reportes de firmas externas, que suelen ser mejores prediciendo el pasado que el futuro. Si tu mercado ya existe, considera los mercados cercanos de los que podrían cambiarse clientes hacia ti y cuenta solo a quienes de verdad pueden hacerlo; si es nuevo, estímalo con mercados cercanos y empresas comparables. Proyecta el crecimiento a 3-5 años.",
       "pasos_accionables": [
-        "Estima el mercado total (TAM) usando reportes de la industria y comparándolo con tus competidores",
+        "Estima el mercado total (TAM) usando reportes de la industria, comparándolo con tus competidores y conversando con inversionistas y clientes",
         "Redúcelo al mercado disponible (SAM) considerando límites de canal, idioma o plataforma",
         "Define tu mercado objetivo: quiénes son los compradores más probables al inicio",
         "Haz una estimación de abajo hacia arriba, basada en datos reales de uso o demografía, en vez de depender solo de reportes externos",
-        "Considera mercados cercanos al tuyo y el costo que tendría para tus clientes actuales cambiarse",
+        "Si tu mercado ya existe, considera los mercados cercanos de los que podrían cambiarse clientes hacia ti y cuenta solo a quienes de verdad pueden hacerlo (ojo con contratos largos y costos ya invertidos, que a menudo frenan el cambio)",
         "Proyecta el crecimiento de tu mercado a 3-5 años"
       ],
       "entregable_esperado": "Un documento con tu estimación de mercado total, mercado disponible y mercado objetivo, con el método de abajo hacia arriba explicado y las señales de éxito y fracaso identificadas",
@@ -67254,7 +67254,7 @@
       "resumen_teorico": "Documenta tu propuesta de valor en tres partes: tu Visión de Producto (a dónde quieres llegar a largo plazo), las Características y Beneficios (qué hace tu producto y por qué la gente lo compraría, distinguiendo entre lo que construyes -features- y el problema que le resuelves al cliente -benefits-), y tu producto mínimo viable. Escríbelo en viñetas, no en párrafos largos.",
       "pasos_accionables": [
         "Escribe tu visión a 3-5 años en viñetas cortas",
-        "Haz una lista de máximo 10 características principales de tu producto y marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
+        "Haz una lista de máximo 10 características principales de tu producto y, partiendo de qué necesitas aprender y de quién, marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
         "Traduce cada característica en un beneficio visto con los ojos de tu cliente",
         "Escribe una historia breve explicando qué trabajo hará tu producto y qué problema resuelve",
         "Piensa aspectos clave: si hay efectos de red, cómo vas a cobrar, qué tan atado se queda el cliente contigo, cuánto te queda de margen, si la gente lo recomienda sola"
@@ -67281,13 +67281,13 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Hipótesis de Relación con Clientes (Get, Keep, Grow) para Web/Mobile",
-      "resumen_teorico": "Describe cómo la startup atraerá clientes a su sitio web o app (Get), los retendrá (Keep) y generará ingresos adicionales de ellos con el tiempo (Grow). En web/mobile el embudo es más simple que en canal físico, con solo dos pasos principales: adquisición y activación, además de un 'viral loop' donde clientes invitan a otros.",
+      "resumen_teorico": "Describe cómo la startup atraerá clientes a su sitio web o app (Get), los retendrá (Keep) y generará ingresos adicionales de ellos con el tiempo (Grow). En web/mobile, obtener clientes es más simple que en canal físico, con solo dos pasos principales: adquisición y activación, además de un 'viral loop' donde clientes invitan a otros.",
       "pasos_accionables": [
         "Diseñar el embudo de adquisición: cómo llevar tráfico a la landing page",
         "Definir el paso de activación: cuándo se considera un cliente 'activado' (descarga, registro, permiso de recontacto)",
-        "Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores",
+        "Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores, y casi siempre enfocar primero el esfuerzo en conseguir usuarios",
         "Probar tácticas a pequeña escala (cientos de usuarios) con un MVP de baja fidelidad",
-        "Mapear el customer journey: descubrimiento de necesidad, búsqueda, y decisión rápida (primera página de resultados)"
+        "Mapear el customer journey: descubrimiento de necesidad, búsqueda, decisión rápida (primera página de resultados) y llegada a donde lo invitan, lo entretienen o lo informan"
       ],
       "entregable_esperado": "Embudo Get-Keep-Grow documentado con tácticas específicas para cada etapa y plan de prueba a pequeña escala",
       "nodos_previos": [
@@ -67375,7 +67375,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Contratar un Chief de Analítica de Datos",
-      "resumen_teorico": "Una vez definidas las métricas clave, el startup necesita una persona dedicada (fundador o contratado) responsable de la 'mejora continua' basada en datos: optimizar campañas, gestionar reportes de comportamiento del cliente, y tener el 'clout' para impulsar pivotes cuando los datos lo indiquen. Debe integrarse al equipo directivo senior y participar en el diseño del dashboard.",
+      "resumen_teorico": "Una vez definidas las métricas clave de adquisición y activación, una startup web o móvil necesita una persona dedicada (fundador o contratado) responsable de la 'mejora continua' basada en datos: optimizar campañas, gestionar reportes de comportamiento del cliente, y tener el 'clout' para impulsar pivotes cuando los datos lo indiquen. Debe integrarse al equipo directivo senior e, idealmente, llegar a tiempo para participar en el diseño del dashboard.",
       "pasos_accionables": [
         "Definir si un fundador asumirá el rol o se contratará externamente",
         "Evaluar candidatos por agilidad numérica, curiosidad innata, creatividad y capacidad de colaboración",
@@ -71560,7 +71560,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Que Anuncios Corre tu Competencia, y Donde",
-      "resumen_teorico": "Los anuncios que tu competencia paga son información publica, y son la única pista gratis de que le esta funcionando a alguien que vende a tu mismo cliente. Se pueden ver con herramientas de inteligencia publicitaria, que dicen que anuncios corre cada empresa y en que sitios los coloca. La lectura no termina en el anuncio: hay que mirar el perfil de audiencia de esos sitios y preguntarse si esa gente es de verdad tu cliente, porque un buen sitio para el competidor puede ser un mal sitio para ti. Y lo que sale de ahí no es una conclusión sino una lista de hipótesis: los ángulos y los mensajes que la competencia ya paga se convierten en tus propias pruebas A/B, en vez de inventarlas desde cero.",
+      "resumen_teorico": "Los anuncios que tu competencia paga son información pública, y son una pista de qué le está funcionando a alguien que vende a tu mismo cliente. Se pueden ver con herramientas de inteligencia publicitaria, que dicen qué anuncios corre cada empresa y en qué sitios los coloca. La lectura no termina en el anuncio: hay que mirar el perfil de audiencia de esos sitios y preguntarse si esa gente es de verdad tu cliente, porque un buen sitio para el competidor puede ser un mal sitio para ti. Y lo que sale de ahí no es una conclusión sino una lista de hipótesis: los ángulos y los mensajes que la competencia ya paga se convierten en tus propias pruebas A/B, en vez de inventarlas desde cero.",
       "pasos_accionables": [
         "Usar MixRank o Adbeat para identificar qué anuncios corren tus competidores y en qué sitios",
         "Analizar con Alexa o Quantcast el perfil de audiencia de esos sitios",
@@ -74142,11 +74142,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Ley de los Shitty Click-Throughs",
-      "resumen_teorico": "Concepto que establece que con el tiempo todas las estrategias de marketing se saturan y sus tasas de respuesta (click-through) se deterioran a medida que más competidores las adoptan. La única defensa sostenible es buscar constantemente canales o tácticas no explotadas antes de que se vuelvan comunes y costosas.",
+      "resumen_teorico": "Concepto que establece que con el tiempo todas las estrategias de marketing se saturan y sus tasas de respuesta (click-through) se deterioran a medida que más competidores las adoptan. La defensa es buscar constantemente canales o tácticas no explotadas antes de que se vuelvan comunes y costosas, sabiendo que la ventaja dura meses o años, hasta que también se saturan.",
       "pasos_accionables": [
         "Monitorea el rendimiento histórico de tus canales de marketing para detectar señales de saturación",
         "Dedica tiempo recurrente a experimentar con plataformas o tácticas emergentes poco usadas por competidores",
-        "Prioriza probar canales nuevos o en etapas tempranas de adopción (ej. nuevas redes sociales)",
+        "Prueba canales nuevos o en etapas tempranas de adopción (ej. nuevas redes sociales), y también algo distinto dentro de un canal ya establecido o el uso de otros canales para alimentar tu canal principal",
         "Evita depender de una sola táctica que ya sea ampliamente utilizada por la competencia"
       ],
       "entregable_esperado": "Lista actualizada de canales/tácticas emergentes en evaluación junto con métricas de rendimiento decreciente en canales actuales",
@@ -78767,7 +78767,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Medición Integrada de Desempeño: Cronograma, Costo y Calidad",
-      "resumen_teorico": "Los supervisores deben monitorear tres características amplias e interrelacionadas de su operación: cronograma (schedule), costo y calidad. Factores como el ausentismo o la escasez de partes afectan simultáneamente a las tres dimensiones. Sin medición constante y comprensión de estas interrelaciones (tendencias), los problemas se detectan tarde, cuando ya es más difícil y costoso corregirlos.",
+      "resumen_teorico": "Los supervisores deben monitorear tres características amplias e interrelacionadas de su operación: cronograma (schedule), costo y calidad. Algunos factores, como el ausentismo, afectan a la vez a las tres dimensiones. Sin medición constante y comprensión de estas interrelaciones (tendencias), los problemas se detectan tarde, cuando ya es más difícil y costoso corregirlos.",
       "pasos_accionables": [
         "Identificar los indicadores que afectan cronograma, costo y calidad en la operación (ausentismo, escasez de partes, entrenamiento, etc.)",
         "Determinar qué factores tienen impacto múltiple (dual o triple) sobre las tres dimensiones",
@@ -89442,12 +89442,12 @@
       "titulo_concepto": "Construcción de un Pipeline de Alianzas",
       "resumen_teorico": "Dado que la mayoría de los acuerdos de BD no se concretan, es esencial mantener una lista extensa y organizada de socios potenciales, categorizados por tipo, tamaño, relevancia y prioridad. Esto permite trabajar múltiples oportunidades en paralelo y no depender de un solo prospecto.",
       "pasos_accionables": [
-        "Crear una hoja de cálculo con: empresa, tipo de partner, contacto, tamaño, relevancia y prioridad",
+        "Crear una hoja de cálculo con: empresa, tipo de partner, contacto, tamaño, relevancia, facilidad de uso y prioridad",
         "Listar entre 50 y 100 potenciales socios, no solo los más conocidos",
         "Categorizar partners por atributos (ej. rango de ingresos, tipo de rol) en lugar de solo por nombre de marca",
         "Solicitar introducciones cálidas a través de inversionistas, amigos o advisors",
         "Seleccionar 10-20 partners prioritarios para enfocar el esfuerzo de BD",
-        "Identificar qué tipo de alianza resuelve tu cuello de botella actual (marca, distribución o inventario)",
+        "Identificar qué tipo de alianza resuelve tu cuello de botella actual (mejora conjunta de productos, empresa conjunta, marca, distribución o inventario)",
         "Evaluar si necesitas licensing para usar contenido/marca de terceros",
         "Buscar socios de distribución que ya tengan acceso a tu cliente objetivo",
         "Asegurar supply partnerships si tu negocio depende de inventario o insumos críticos"
@@ -90985,7 +90985,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Planificación de la Calidad en tu Negocio",
-      "resumen_teorico": "Un área de calidad bien pensada se paga sola con el tiempo, aunque al principio cueste. Por eso la planificación debe ser el centro de cómo manejas la calidad. Todo lo que pase en tu sistema de calidad debe salir de un plan, no de una reacción improvisada. Cada tarea debe quedar anotada y con una línea de acción clara, incluso si esa línea es decidir que no vas a hacer nada al respecto.",
+      "resumen_teorico": "Un área de calidad bien pensada se paga sola con el tiempo, aunque al principio cueste. Por eso la planificación debe ser una parte clave de cómo manejas la calidad. Todo lo que pase en tu sistema de calidad debe salir de un plan, no de una reacción improvisada. Cada tarea debe quedar anotada y con una línea de acción clara, incluso si esa línea es decidir que no vas a hacer nada al respecto.",
       "pasos_accionables": [
         "Anota todas las actividades de calidad que existen en tu negocio, incluidas las que parecen extra, como programas de mejora",
         "Define una línea de acción clara para cada tarea que identifiques",
@@ -91018,7 +91018,7 @@
         "Definir la política de reconocimiento para el desempeño mejorado",
         "Establecer un cronograma y ensayar a quienes participarán en el evento",
         "Planificar el programa de eliminación de causas de error (error-cause-removal) como continuación",
-        "Incluir representación sindical en la planificación desde el inicio"
+        "Hacer al sindicato parte de la planificación, ya sea con un representante en el equipo o manteniéndolo informado, sin descuidarlo"
       ],
       "entregable_esperado": "Cronograma completo de actividades previas al Día ZD, materiales de comunicación (carta y compromiso/pledge) y plan de involucramiento sindical",
       "nodos_previos": [
@@ -91948,8 +91948,8 @@
         "Redactar una política de calidad simple, breve y completa que cubra toda la operación de calidad.",
         "Establecer que el gerente general debe acordar con el director corporativo de calidad el grado de función de calidad necesario.",
         "Especificar que el jefe de calidad debe reportar directamente al gerente general, al mismo nivel que las áreas que evalúa.",
-        "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos, acción correctiva, planificación, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
-        "Difundir la política a todos los empleados y verificar su comprensión."
+        "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos y reporte de estado, acción correctiva, planificación, aprobación de la calificación de productos, procesos y procedimientos, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
+        "Difundir la política a todos los empleados y asegurarte de que entiendan que consiste en cumplir exactamente el requisito o hacer que se cambie oficialmente a lo que tú y tu cliente de verdad necesitan."
       ],
       "entregable_esperado": "Documento formal de política de calidad firmado por la dirección, con objetivos, nivel de reporte y responsabilidades definidas.",
       "nodos_previos": [
@@ -92451,7 +92451,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "PR No Convencional: Publicity Stunts",
-      "resumen_teorico": "Los stunts publicitarios son acciones diseñadas deliberadamente para generar cobertura mediática mediante sorpresa, humor o controversia. A diferencia del PR tradicional, este canal está menos saturado porque pocas empresas se atreven a ejecutar acciones creativas y arriesgadas. Ejemplos: renombrar un pueblo (Half.com), bloque de hielo en conferencia de competidor (WePay), videos virales (Blendtec, Dollar Shave Club).",
+      "resumen_teorico": "Los stunts publicitarios son acciones diseñadas deliberadamente para generar cobertura mediática mediante sorpresa, humor o controversia. A diferencia del PR tradicional, este canal está menos saturado porque pocas empresas se enfocan en acciones de este tipo, aunque su éxito es impredecible y no toda idea funciona. Ejemplos: renombrar un pueblo (Half.com), bloque de hielo en conferencia de competidor (WePay), videos virales (Blendtec, Dollar Shave Club).",
       "pasos_accionables": [
         "Brainstormear ideas disruptivas y visualmente memorables relacionadas con el producto o lanzamiento",
         "Evaluar el stunt por su potencial de generar historia emocional y compartible",
@@ -94592,7 +94592,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Prevención como Filosofía Central de Gestión de Calidad",
-      "resumen_teorico": "La gestión de calidad es una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra por qué quien gestiona debe estar cerca y jugarse por los resultados, no manejar todo a distancia.",
+      "resumen_teorico": "La gestión de calidad es una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra que cuando se gestiona a distancia hace falta que cada plan y cada control se pruebe, se controle y se audite.",
       "pasos_accionables": [
         "Destina tiempo y presupuesto propios a actividades preventivas: pruebas, capacitación, inspecciones",
         "Establece controles y revisiones en cada etapa de tu proceso antes de que aparezcan las fallas",
@@ -94684,9 +94684,9 @@
       "resumen_teorico": "Términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Conviene eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Es como la diferencia entre un policía, que controla, y un abogado, que previene; y prevenir suele generar más valor y más reconocimiento que solo controlar.",
       "pasos_accionables": [
         "Replantea cómo entiendes la calidad en tu negocio: no se trata solo de revisar o auditar, sino de prevenir.",
-        "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, cámbialas por algo que hable de prevenir.",
+        "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, quítalas: la palabra 'calidad' basta sola.",
         "Entrena tu mirada para detectar riesgos antes de que se conviertan en errores, en vez de solo corregir después.",
-        "Mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste."
+        "Sugerencia de My Idea: mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste."
       ],
       "entregable_esperado": "Una forma clara de entender y trabajar la calidad en tu negocio, enfocada en prevenir, que puedas escribir como tu propia política de calidad.",
       "nodos_previos": [
@@ -96999,7 +96999,7 @@
       "titulo_concepto": "Programas de Afiliados como Canal de Tracción",
       "resumen_teorico": "Un programa de afiliados consiste en pagar a terceros (personas o empresas) por generar ventas o leads calificados, típicamente mediante comisión por venta o por acción. Es un canal de bajo riesgo para el anunciante porque solo se paga cuando ocurre la conversión (a diferencia de PPC). Es especialmente eficaz en retail, productos de información y generación de leads en sectores de alto valor (seguros, finanzas, legal).",
       "pasos_accionables": [
-        "Decidir si usar una red de afiliados existente (CJ, ShareASale, ClickBank) o construir un programa propio",
+        "Decidir si usar una red de afiliados existente (CJ, ShareASale, ClickBank) o construir un programa propio; para empezar conviene probar con una red existente, que ya tiene afiliados y te deja arrancar de inmediato, mientras que reclutarlos por tu cuenta toma tiempo y dinero",
         "Definir estructura de pago simple inicial (comisión fija o porcentaje) por debajo del costo de adquisición aceptable",
         "Reclutar primero afiliados entre la base de clientes actuales",
         "Expandir reclutamiento a creadores de contenido (bloggers, influencers, listas de email) relacionados con el nicho",
@@ -97093,7 +97093,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Programa de Cero Defectos (Zero Defects) como Prevención",
-      "resumen_teorico": "Cero Defectos es una manera de pensar y de trabajar que busca eliminar la idea de que los errores son inevitables, apostando por prevenir en lugar de detectar y corregir después. Se basa en que si identificas y controlas las causas raíz de los defectos (mirando datos y tendencias), puedes reducir drásticamente o eliminar los defectos, evitando que se encadenen con otros problemas como ausentismo, sobrecostos y retrasos.",
+      "resumen_teorico": "Cero Defectos es una manera de pensar y de trabajar que busca eliminar la idea de que los errores son inevitables, apostando por prevenir en lugar de detectar y corregir después. Se basa en que si identificas y controlas las causas raíz de los defectos (mirando datos y tendencias), quizás puedas eliminar los defectos o al menos acercarte a eso, evitando que se encadenen con otros problemas como ausentismo, sobrecostos y retrasos.",
       "pasos_accionables": [
         "Tener claro, y transmitirlo a quien trabaje contigo, que los defectos no son algo que simplemente hay que aceptar.",
         "Usar datos de tendencias para detectar señales tempranas de que los defectos están subiendo.",
@@ -97358,9 +97358,9 @@
         "Identificar tasas de repetición de trabajo (rework) en áreas administrativas y de papeleo",
         "Diseñar el programa de cinco semanas enfocado en detectar y prevenir errores de oficina",
         "Lanzar el programa como parte de la etapa de concientización de calidad",
-        "Medir el impacto en costo de calidad antes y después de la implementación"
+        "Medir las sugerencias por las horas de trabajo que ya no hay que gastar al hacer las cosas bien, multiplicadas por el salario promedio cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos"
       ],
-      "entregable_esperado": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con métricas de rework antes/después",
+      "entregable_esperado": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con la medición de las sugerencias en horas de trabajo ahorradas",
       "nodos_previos": [
         "reinicio_programa_calidad",
         "costo_de_mala_calidad_copq",
@@ -97386,10 +97386,10 @@
       "pasos_accionables": [
         "Informar al staff de dirección sobre el concepto e intención del programa y designar coordinadores por departamento.",
         "Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
-        "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida).",
+        "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida); luego elegir las mejores acciones, pedir a todos cómo medirlas y anotar esas medidas como base de la medición posterior.",
         "Convertir esas respuestas negativas en sugerencias positivas de cómo 'hacer cierto' que el cliente reciba lo prometido.",
         "Registrar y medir las sugerencias entregadas, entregar reconocimiento (badge) y publicar los avances en carteleras.",
-        "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado.",
+        "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos.",
         "Realizar cuenta regresiva pública antes del cierre del programa y agradecer formalmente a todos los participantes al finalizar.",
         "Implementar tantas sugerencias como sea posible y reportar su seguimiento durante varios meses."
       ],
@@ -99747,7 +99747,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Acciones de impacto para llamar la atención (publicity stunts)",
-      "resumen_teorico": "Una acción de impacto es algo que diseñas a propósito para generar mucha cobertura mediática y atención con una inversión relativamente baja. Casos como Grasshopper.com (langostas de chocolate), Chargify (el toro verde en SXSW) o Hipmunk (concurso de fotos 'chipmunked') muestran que una idea creativa, original y barata puede generar millones de impresiones, cobertura en medios importantes y un crecimiento enorme de seguidores. Es un canal de tracción impredecible: necesitas pensar ideas de forma constante y aceptar que la mayoría fallarán, pero una sola que funcione puede cambiar el rumbo de tu negocio.",
+      "resumen_teorico": "Una acción de impacto es algo que diseñas a propósito para generar mucha cobertura mediática y atención con una inversión relativamente baja. Casos como Grasshopper.com (langostas de chocolate), Chargify (el toro verde en SXSW) o Hipmunk (concurso de fotos 'chipmunked') muestran que una idea creativa, original y barata puede generar millones de impresiones, cobertura en medios importantes y un crecimiento enorme de seguidores. Es un canal de tracción impredecible: necesitas pensar ideas de forma constante y aceptar que no todas funcionarán, pero una sola que funcione puede cambiar el rumbo de tu negocio.",
       "pasos_accionables": [
         "Dedica tiempo de forma recurrente a pensar ideas creativas y de bajo costo para llamar la atención",
         "Define un presupuesto experimental pequeño, acorde a tu mercado, para probar tus ideas",
@@ -101593,7 +101593,7 @@
         "Reconstruir qué señales/cues recibieron y en qué orden temporal",
         "Identificar las metas que perseguían sin saber el resultado final",
         "Usar el timeline construido para modelar la evolución incompleta e incierta de su comprensión situacional",
-        "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real, y sin presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
+        "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después), agrupar fragmentos sueltos que parecen probar una condición vista solo en retrospectiva y presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
         "Identificar qué señales se contradecían entre sí en el momento"
       ],
       "entregable_esperado": "Narrativa reconstruida desde la perspectiva de los actores en el momento, sin conocimiento del resultado final",
@@ -104924,7 +104924,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Sistema de Reporte Confidencial de Seguridad",
-      "resumen_teorico": "Un sistema de reporte confidencial (distinto de anónimo) permite conocer detalles críticos de eventos que no aparecen en reportes formales dirigidos a supervisores. Mientras el reporte formal suele ser escueto y técnico, el reporte confidencial revela las presiones, distracciones y decisiones reales que llevaron al evento, brindando información accionable para mejorar el diseño de procedimientos, cartas de procedimiento, gestión de carga de trabajo y coordinación de equipos.",
+      "resumen_teorico": "Un sistema de reporte confidencial (distinto de anónimo) puede ayudarte a conocer detalles críticos de eventos que no aparecen en reportes formales dirigidos a supervisores. Mientras el reporte formal puede quedarse escueto y técnico, el reporte confidencial puede revelar las presiones, distracciones y decisiones reales que llevaron al evento, brindando información accionable para mejorar el diseño de procedimientos, cartas de procedimiento, gestión de carga de trabajo y coordinación de equipos.",
       "pasos_accionables": [
         "Establecer un canal de reporte confidencial gestionado solo por personal de seguridad (no supervisores directos)",
         "Comparar los reportes formales con los confidenciales para identificar brechas de información",
@@ -106259,13 +106259,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "De culpar por lo que ya pasó a responsabilizarte de lo que sigue",
-      "resumen_teorico": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso o la forma en que explicas las cosas necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
+      "resumen_teorico": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso, la parte técnica, la forma en que explicas las cosas o incluso lo político necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
       "pasos_accionables": [
         "Cuando revises un problema, en vez de preguntar quién falló, pregunta qué necesitas cambiar",
         "Asigna quién va a poner en marcha esos cambios, no quién va a recibir el castigo",
         "Define cómo vas a comprobar si los cambios que hiciste realmente funcionan",
         "Cuéntale a las personas con las que trabajas que la idea es mejorar, no castigar",
-        "Comparte lo que contó la persona involucrada (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
+        "Si la persona involucrada está de acuerdo, comparte lo que contó (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
         "Da apoyo a quien vivió el incidente de cerca, porque también carga con el golpe"
       ],
       "entregable_esperado": "Un plan con los cambios que vas a hacer y quién se encarga de ponerlos en marcha, sin apuntar a sanciones",
@@ -106296,7 +106296,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Enfoque Sistémico de la Responsabilidad (Systems Approach)",
-      "resumen_teorico": "Un enfoque sistémico entiende que cada componente de una organización tiene responsabilidades específicas para lograr los objetivos generales del sistema, y estas no pueden trasladarse a otros. La evidencia sobre 'segundas víctimas' (practicantes que sienten culpa profunda tras un incidente) demuestra que este enfoque no diluye la responsabilidad personal; de hecho, la gente sigue sintiéndose responsable incluso cuando el contexto explica el error. El problema de 'manzana podrida', cuando existe, es un problema y responsabilidad del sistema.",
+      "resumen_teorico": "Un enfoque sistémico entiende que cada componente de una organización tiene responsabilidades específicas para lograr los objetivos generales del sistema, y estas no pueden trasladarse a otros. No hay evidencia de que este enfoque diluya la responsabilidad personal: la evidencia sobre 'segundas víctimas' (practicantes que sienten culpa profunda tras un incidente) muestra que la gente sigue sintiéndose responsable incluso cuando el contexto explica el error. El problema de 'manzana podrida', cuando existe, es un problema y responsabilidad del sistema.",
       "pasos_accionables": [
         "Mapear las responsabilidades de todos los actores del sistema (no solo del individuo involucrado en el incidente)",
         "Evaluar si existieron fallas de recursos, entrenamiento o supervisión que contribuyeron al evento",
@@ -108299,7 +108299,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Riesgos de Enfocar la Seguridad Solo en el 'Error Humano'",
-      "resumen_teorico": "Centrar la seguridad de tu negocio en el 'error humano' te lleva a hacer casi todo mal: conviertes a las personas en el blanco de la intervención sin eliminar las condiciones de fondo que generan el problema. El enfoque se autoalimenta con nuevas etiquetas (perdida de conciencia situacional, actos inseguros, falta de atención) que en el fondo siguen culpando al individuo. Además requiere un estándar que solo aparece en retrospectiva, reduce fenómenos complejos a estadísticas simplistas ('el 85% de los incidentes son por error humano') e ignora que, la mayoría de las veces, las personas contribuyen a que las cosas salgan bien a pesar de recursos limitados y objetivos que se contradicen entre si.",
+      "resumen_teorico": "Centrar la seguridad de tu negocio en el 'error humano' te lleva a hacer casi todo mal: conviertes a las personas en el blanco de la intervención sin eliminar las condiciones de fondo que generan el problema. El enfoque se autoalimenta con nuevas etiquetas (perdida de conciencia situacional, actos inseguros, falta de atención) que en el fondo siguen culpando al individuo. Además requiere un estándar que a menudo solo aparece en retrospectiva, reduce fenómenos complejos a estadísticas simplistas ('el 85% de los incidentes son por error humano') e ignora que, la mayoría de las veces, las personas contribuyen a que las cosas salgan bien a pesar de recursos limitados y objetivos que se contradicen entre si.",
       "pasos_accionables": [
         "Revisa el lenguaje que usas en tus reportes de incidentes para detectar eufemismos de 'error humano' como falta de atención, no priorizar la seguridad o actos inseguros.",
         "Cuestiona cualquier estadística del tipo 'X% de los incidentes son por error humano' y pide que te expliquen qué condiciones de fondo la explican.",
@@ -109553,7 +109553,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Safety I versus Safety II",
-      "resumen_teorico": "Distinción de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahí vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingeniería de resiliencia para anticiparte al éxito operacional, no solo reaccionar al fallo.",
+      "resumen_teorico": "Distinción entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por qué las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque en un sistema que ya es seguro ahí se gesta el riesgo de un fallo mayor.",
       "pasos_accionables": [
         "Evalúa si tu forma de gestionar la seguridad se centra solo en incidentes (Safety I) o también en el trabajo normal (Safety II)",
         "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por qué haces las cosas como las haces, no para corregirte de inmediato",
@@ -112933,7 +112933,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Sesgo Retrospectivo (Hindsight Bias) y Sesgo de Resultado",
-      "resumen_teorico": "El sesgo retrospectivo hace que, al conocer el resultado de un evento, se sobreestime la capacidad de haberlo predicho o prevenido, simplificando la historia en una secuencia lineal e inevitable. El sesgo de resultado hace que se juzgue más duramente una decisión si el resultado fue malo, aunque el proceso de decisión haya sido razonable. Ambos sesgos generan la 'ilusión de equivalencia causa-consecuencia', creyendo que consecuencias graves solo pueden derivar de causas igualmente graves.",
+      "resumen_teorico": "El sesgo retrospectivo hace que, al conocer el resultado de un evento, se sobreestime la capacidad de haberlo predicho o prevenido, simplificando la historia en una secuencia lineal e inevitable. El sesgo de resultado hace que se juzgue más duramente una decisión si el resultado fue malo, aunque el proceso de decisión haya sido razonable. A esto se suma la 'ilusión de equivalencia causa-consecuencia': creer que consecuencias graves solo pueden derivar de causas igualmente graves.",
       "pasos_accionables": [
         "Reconocer que como investigador se tiene acceso a información que los actores no tenían al momento del evento",
         "Evitar simplificar la secuencia de eventos en una historia lineal y predecible",

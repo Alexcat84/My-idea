@@ -6,11 +6,11 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Proceso de cuatro pasos para diseñar la solución elegida: verificar que cumple lo que buscabas, determinar los recursos que necesitas, especificar los procedimientos y cambios necesarios, y evaluar si necesitas capacitarte o capacitar a alguien. Incluye también diseñar la solución a prueba de errores antes de ponerla en marcha de forma definitiva.",
   "pasos_accionables": [
-    "Verifica que la solución cumple con lo que buscabas lograr.",
+    "Verifica que la solución cumple con lo que buscabas lograr y que todos los involucrados están de acuerdo en ello.",
     "Determina los recursos necesarios (personas, dinero, tiempo, materiales).",
-    "Especifica qué procedimientos, formas de trabajar o sistemas debes modificar.",
+    "Especifica qué políticas, procedimientos, formas de trabajar, sistemas o relaciones de reporte debes modificar, para evitar sorpresas que saboteen la solución.",
     "Evalúa si necesitas capacitarte tú o capacitar a quien te ayuda.",
-    "Aplica técnicas de prueba de errores para que la solución sea a prueba de fallos.",
+    "Aplica técnicas de prueba de errores para evitar, prevenir o reducir los errores involuntarios que puedan ocurrir aun con la solución.",
     "Implementa la solución siguiendo un plan claro si es algo complejo."
   ],
   "entregable_esperado": "Solución diseñada, documentada e implementada, con procedimientos actualizados y con la capacitación necesaria cubierta.",
@@ -58,6 +58,57 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-127-diseno_implementacion_remedio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que la solución cumple con lo que buscabas lograr.",
+      "texto_nuevo": "Verifica que la solución cumple con lo que buscabas lograr y que todos los involucrados están de acuerdo en ello.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15475",
+        "frase": "the remedy will achieve the desired results and that all involved are in agreement"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en este chequeo final que todos los involucrados estén de acuerdo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-127-diseno_implementacion_remedio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplica técnicas de prueba de errores para que la solución sea a prueba de fallos.",
+      "texto_nuevo": "Aplica técnicas de prueba de errores para evitar, prevenir o reducir los errores involuntarios que puedan ocurrir aun con la solución.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15485",
+        "frase": "avoid, prevent, or reduce inadvertent errors that may occur even with the improved process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro busca evitar, prevenir o reducir errores involuntarios, no garantizar que la solución no falle.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-127-diseno_implementacion_remedio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Especifica qué procedimientos, formas de trabajar o sistemas debes modificar.",
+      "texto_nuevo": "Especifica qué políticas, procedimientos, formas de trabajar, sistemas o relaciones de reporte debes modificar, para evitar sorpresas que saboteen la solución.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15479",
+        "frase": "Any surprises down the line may sabotage the remedy."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye políticas y relaciones de reporte y advierte que las sorpresas pueden sabotear la solución.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

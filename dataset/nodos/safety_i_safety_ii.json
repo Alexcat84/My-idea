@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Safety I versus Safety II",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Distinción de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahí vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingeniería de resiliencia para anticiparte al éxito operacional, no solo reaccionar al fallo.",
+  "resumen_teorico": "Distinción entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por qué las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque en un sistema que ya es seguro ahí se gesta el riesgo de un fallo mayor.",
   "pasos_accionables": [
     "Evalúa si tu forma de gestionar la seguridad se centra solo en incidentes (Safety I) o también en el trabajo normal (Safety II)",
     "Observa tu propio trabajo, o el de la persona que te ayuda, para entender por qué haces las cosas como las haces, no para corregirte de inmediato",
@@ -165,6 +165,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-128-safety_i_safety_ii-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distinción de Erik Hollnagel entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por que las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque ahí vive el riesgo latente. Incorpora ideas de organizaciones de alta confiabilidad e ingeniería de resiliencia para anticiparte al éxito operacional, no solo reaccionar al fallo.",
+      "texto_nuevo": "Distinción entre dos formas de entender la seguridad. Safety I la define como ausencia de eventos negativos, y se enfoca en reducir errores y variabilidad humana contando incidentes después de que ya ocurrieron. Safety II la define como la presencia de capacidades positivas: la habilidad de reconocer, adaptarse y absorber disrupciones, viendo la variabilidad humana como fuente de flexibilidad y resiliencia frente a lo esperado y lo inesperado. En lugar de solo contar fallos, Safety II estudia por qué las cosas salen bien la mayoría del tiempo, observando el trabajo diario normal, sus ajustes informales y frustraciones no reportadas, porque en un sistema que ya es seguro ahí se gesta el riesgo de un fallo mayor.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2978",
+        "frase": "In an already safe system, this is where the risk for bigger failure brews"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no dice que Safety II incorpore ideas de alta confiabilidad ni habla de anticiparse al éxito operacional.; El libro sitúa ese riesgo en un sistema que ya es seguro.; Misma condición perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

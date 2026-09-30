@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación Objetiva de la Idea de Negocio",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Muchos fundadores se enamoran de su idea sin evaluarla objetivamente, lo que puede llevarlos a lanzarse sin la preparación adecuada. Es crucial separar la pasión personal por la idea de un análisis riguroso de su viabilidad de mercado, para evitar el fracaso destructivo que ocurre cuando se salta demasiado pronto sin validación. Este análisis debe combinarse con la evaluación de tus factores personales y de carrera.",
+  "resumen_teorico": "Muchos fundadores se enamoran de su idea sin evaluarla objetivamente, lo que puede llevarlos a lanzarse sin la preparación adecuada. Es crucial separar la pasión personal por la idea de un análisis riguroso de su viabilidad de mercado, porque la pasión y el exceso de confianza pueden llevarte a saltar antes de tiempo y aumentar tus probabilidades de fracasar. Este análisis debe combinarse con la evaluación de tus factores personales y de carrera.",
   "pasos_accionables": [
     "Someter la idea a la crítica de personas ajenas a tu círculo de apoyo emocional",
-    "Buscar evidencia de mercado que confirme o refute la necesidad que la idea pretende resolver",
+    "Buscar evidencia de mercado que confirme o refute la necesidad que la idea pretende resolver, y revisar también cuánta competencia hay y si un reloj corriendo te obliga a moverte rápido",
     "Diferenciar entre la pasión por la idea y la evidencia objetiva de su potencial de éxito"
   ],
   "entregable_esperado": "Informe de validación preliminar de la idea, separando entusiasmo personal de evidencia objetiva de mercado",
@@ -41,6 +41,39 @@
       },
       "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-126-evaluacion_dispassionate_idea-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos fundadores se enamoran de su idea sin evaluarla objetivamente, lo que puede llevarlos a lanzarse sin la preparación adecuada. Es crucial separar la pasión personal por la idea de un análisis riguroso de su viabilidad de mercado, para evitar el fracaso destructivo que ocurre cuando se salta demasiado pronto sin validación. Este análisis debe combinarse con la evaluación de tus factores personales y de carrera.",
+      "texto_nuevo": "Muchos fundadores se enamoran de su idea sin evaluarla objetivamente, lo que puede llevarlos a lanzarse sin la preparación adecuada. Es crucial separar la pasión personal por la idea de un análisis riguroso de su viabilidad de mercado, porque la pasión y el exceso de confianza pueden llevarte a saltar antes de tiempo y aumentar tus probabilidades de fracasar. Este análisis debe combinarse con la evaluación de tus factores personales y de carrera.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "582",
+        "frase": "passion and confidence can prevent an objective evaluation and set up the founder to fail"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la pasión y el exceso de confianza pueden impedir evaluar y aumentan las probabilidades de fracaso; el 'fracaso destructivo que ocurre' es tajante y añadido.; Mismo defecto: endurece a certeza lo que el libro plantea como riesgo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-evaluacion_dispassionate_idea-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar evidencia de mercado que confirme o refute la necesidad que la idea pretende resolver",
+      "texto_nuevo": "Buscar evidencia de mercado que confirme o refute la necesidad que la idea pretende resolver, y revisar también cuánta competencia hay y si un reloj corriendo te obliga a moverte rápido",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "599-601",
+        "frase": "Is there a ticking clock that requires me to move quickly to pursue my idea?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las preguntas del libro sobre la ventana de mercado se caen el panorama competitivo y el reloj corriendo.; Mismo defecto: el paso se queda solo con la necesidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

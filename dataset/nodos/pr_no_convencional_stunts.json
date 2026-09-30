@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "PR No Convencional: Publicity Stunts",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Los stunts publicitarios son acciones diseñadas deliberadamente para generar cobertura mediática mediante sorpresa, humor o controversia. A diferencia del PR tradicional, este canal está menos saturado porque pocas empresas se atreven a ejecutar acciones creativas y arriesgadas. Ejemplos: renombrar un pueblo (Half.com), bloque de hielo en conferencia de competidor (WePay), videos virales (Blendtec, Dollar Shave Club).",
+  "resumen_teorico": "Los stunts publicitarios son acciones diseñadas deliberadamente para generar cobertura mediática mediante sorpresa, humor o controversia. A diferencia del PR tradicional, este canal está menos saturado porque pocas empresas se enfocan en acciones de este tipo, aunque su éxito es impredecible y no toda idea funciona. Ejemplos: renombrar un pueblo (Half.com), bloque de hielo en conferencia de competidor (WePay), videos virales (Blendtec, Dollar Shave Club).",
   "pasos_accionables": [
     "Brainstormear ideas disruptivas y visualmente memorables relacionadas con el producto o lanzamiento",
     "Evaluar el stunt por su potencial de generar historia emocional y compartible",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Sorprende con Publicity Stunts",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-132-pr_no_convencional_stunts-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los stunts publicitarios son acciones diseñadas deliberadamente para generar cobertura mediática mediante sorpresa, humor o controversia. A diferencia del PR tradicional, este canal está menos saturado porque pocas empresas se atreven a ejecutar acciones creativas y arriesgadas. Ejemplos: renombrar un pueblo (Half.com), bloque de hielo en conferencia de competidor (WePay), videos virales (Blendtec, Dollar Shave Club).",
+      "texto_nuevo": "Los stunts publicitarios son acciones diseñadas deliberadamente para generar cobertura mediática mediante sorpresa, humor o controversia. A diferencia del PR tradicional, este canal está menos saturado porque pocas empresas se enfocan en acciones de este tipo, aunque su éxito es impredecible y no toda idea funciona. Ejemplos: renombrar un pueblo (Half.com), bloque de hielo en conferencia de competidor (WePay), videos virales (Blendtec, Dollar Shave Club).",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1062",
+        "frase": "few companies focus on stunts and other unconventional ways to get buzz"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro solo dice que pocas empresas se enfocan en estas acciones; el atrevimiento y el riesgo son causa añadida.; Mismo defecto que la marca 0: causa añadida.; Mismo defecto que la marca 1: se pierde la imprevisibilidad del canal.; Se cae el límite que el libro pone al canal: su éxito es impredecible y no toda idea funciona.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

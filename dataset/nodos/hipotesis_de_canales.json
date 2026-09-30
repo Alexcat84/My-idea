@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Hipótesis de Canales de Distribución",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "El canal describe cómo el producto llega de la empresa al cliente. Existen canales físicos (con costos e intermediarios significativos) y canales web/móvil (venta directa online). La mayoría de empresas usan ambos. Es crucial elegir un canal enfocado durante la validación de clientes en lugar de dispersar esfuerzos en múltiples canales simultáneamente.",
+  "resumen_teorico": "El canal describe cómo el producto llega de la empresa al cliente. Existen canales físicos (con costos e intermediarios significativos) y canales web/móvil (venta directa online). La mayoría de empresas usan ambos. Es crucial elegir un canal enfocado durante la validación de clientes en lugar de dispersar esfuerzos en múltiples canales, salvo un lanzamiento en canal físico con apoyo web simultáneo de marketing.",
   "pasos_accionables": [
     "Determinar si el producto se ajusta mejor a canal físico, digital o híbrido",
     "Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)",
     "Calcular todos los costos del canal (descuentos, promoción, devoluciones)",
-    "Seleccionar UN canal principal para enfocar los esfuerzos iniciales",
+    "Seleccionar UN canal principal para enfocar los esfuerzos iniciales (si es un canal físico, puede ir acompañado de apoyo web simultáneo)",
     "Recalcular el modelo de ingresos neto tras costos de canal"
   ],
   "entregable_esperado": "Hipótesis de canal seleccionado con diagrama de distribución y cálculo de ingresos netos tras costos de canal",
@@ -31,5 +31,40 @@
   "etiqueta_arbol": "Elige tus Canales de Venta",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-131-hipotesis_de_canales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El canal describe cómo el producto llega de la empresa al cliente. Existen canales físicos (con costos e intermediarios significativos) y canales web/móvil (venta directa online). La mayoría de empresas usan ambos. Es crucial elegir un canal enfocado durante la validación de clientes en lugar de dispersar esfuerzos en múltiples canales simultáneamente.",
+      "texto_nuevo": "El canal describe cómo el producto llega de la empresa al cliente. Existen canales físicos (con costos e intermediarios significativos) y canales web/móvil (venta directa online). La mayoría de empresas usan ambos. Es crucial elegir un canal enfocado durante la validación de clientes en lugar de dispersar esfuerzos en múltiples canales, salvo un lanzamiento en canal físico con apoyo web simultáneo de marketing.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5996",
+        "frase": "The big exception, of course: physical-channel launches with simultaneous web-marketing (and sometimes sales) support."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma excepción caída.; Se pierde la excepción del libro: lanzamiento físico con apoyo web simultáneo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-131-hipotesis_de_canales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar UN canal principal para enfocar los esfuerzos iniciales",
+      "texto_nuevo": "Seleccionar UN canal principal para enfocar los esfuerzos iniciales (si es un canal físico, puede ir acompañado de apoyo web simultáneo)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5996",
+        "frase": "The big exception, of course: physical-channel launches with simultaneous web-marketing (and sometimes sales) support."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la excepción del libro: lanzamiento físico con apoyo web simultáneo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

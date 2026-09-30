@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "De culpar por lo que ya pasó a responsabilizarte de lo que sigue",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso o la forma en que explicas las cosas necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
+  "resumen_teorico": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso, la parte técnica, la forma en que explicas las cosas o incluso lo político necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
   "pasos_accionables": [
     "Cuando revises un problema, en vez de preguntar quién falló, pregunta qué necesitas cambiar",
     "Asigna quién va a poner en marcha esos cambios, no quién va a recibir el castigo",
     "Define cómo vas a comprobar si los cambios que hiciste realmente funcionan",
     "Cuéntale a las personas con las que trabajas que la idea es mejorar, no castigar",
-    "Comparte lo que contó la persona involucrada (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
+    "Si la persona involucrada está de acuerdo, comparte lo que contó (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
     "Da apoyo a quien vivió el incidente de cerca, porque también carga con el golpe"
   ],
   "entregable_esperado": "Un plan con los cambios que vas a hacer y quién se encarga de ponerlos en marcha, sin apuntar a sanciones",
@@ -88,6 +88,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-128-responsabilidad_prospectiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso o la forma en que explicas las cosas necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
+      "texto_nuevo": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso, la parte técnica, la forma en que explicas las cosas o incluso lo político necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "654",
+        "frase": "an organizational, operational, technical, educational or political issue"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye lo técnico y lo político, que el nodo omite.; Misma omisión.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-128-responsabilidad_prospectiva-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparte lo que contó la persona involucrada (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
+      "texto_nuevo": "Si la persona involucrada está de acuerdo, comparte lo que contó (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "572",
+        "frase": "If the person would go along with this"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro publica el relato solo si la persona está de acuerdo.; Mismo consentimiento perdido.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

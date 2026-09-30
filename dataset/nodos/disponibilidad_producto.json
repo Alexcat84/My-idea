@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Cálculo de Disponibilidad del Producto",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+  "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
   "pasos_accionables": [
     "Determinar el MTBF del producto o sistema",
     "Determinar el MTTR (tiempo medio de reparación) o MDT (tiempo medio de inactividad)",
     "Calcular la disponibilidad usando la fórmula de estado estable A = MTBF/(MTBF+MDT)",
-    "Verificar que se cumplan los supuestos de tasa de fallo y reparación constantes",
+    "Verificar que se cumplan los supuestos, que no siempre se dan: tasa de fallo y de reparación constantes, que buscar fallas no cambie la tasa de fallo, que no haya crecimiento de confiabilidad y que el mantenimiento preventivo quede fuera del periodo calculado; si no se cumplen, usar fórmulas más precisas",
     "Diferenciar entre disponibilidad operacional e intrínseca según el análisis requerido"
   ],
   "entregable_esperado": "Cálculo documentado de disponibilidad del producto con supuestos verificados",
@@ -23,5 +23,40 @@
   "etiqueta_arbol": "Calcula la Disponibilidad del Producto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-127-disponibilidad_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+      "texto_nuevo": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20356",
+        "frase": "Idle time, during which the product is not needed, is excluded."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro excluye explícitamente el tiempo ocioso, lo que cambia la cifra.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-127-disponibilidad_producto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que se cumplan los supuestos de tasa de fallo y reparación constantes",
+      "texto_nuevo": "Verificar que se cumplan los supuestos, que no siempre se dan: tasa de fallo y de reparación constantes, que buscar fallas no cambie la tasa de fallo, que no haya crecimiento de confiabilidad y que el mantenimiento preventivo quede fuera del periodo calculado; si no se cumplen, usar fórmulas más precisas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20372-20386",
+        "frase": "based on several assumptions that are not always met in the real world"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera cinco supuestos que no siempre se cumplen; el paso trae dos y pierde la alternativa de fórmulas más precisas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

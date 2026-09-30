@@ -10,7 +10,7 @@
     "Reconstruir qué señales/cues recibieron y en qué orden temporal",
     "Identificar las metas que perseguían sin saber el resultado final",
     "Usar el timeline construido para modelar la evolución incompleta e incierta de su comprensión situacional",
-    "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real, y sin presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
+    "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después), agrupar fragmentos sueltos que parecen probar una condición vista solo en retrospectiva y presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
     "Identificar qué señales se contradecían entre sí en el momento"
   ],
   "entregable_esperado": "Narrativa reconstruida desde la perspectiva de los actores en el momento, sin conocimiento del resultado final",
@@ -52,5 +52,24 @@
   ],
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-128-reconstruccion_contexto_situacional-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real, y sin presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
+      "texto_nuevo": "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después), agrupar fragmentos sueltos que parecen probar una condición vista solo en retrospectiva y presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1685-1704",
+        "frase": "micro-matching fragments of behavior with these various standards explains nothing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro enumera tres formas de sacar los datos de contexto; falta la selección de fragmentos a conveniencia.; El libro no admite esos marcos aun verificados: compararlos no explica nada, solo juzga.; Misma omisión que la marca 0.; Misma salvedad añadida.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

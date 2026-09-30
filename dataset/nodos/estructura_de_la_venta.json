@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Cómo estructurar la venta: cobrar todo de una vez (cash-only) o cobrar por metas cumplidas (earn-out)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Cuando negocias la venta de tu negocio, tienes que elegir (o negociar) entre dos formas de cobrar: todo en efectivo de una vez por tus acciones, o en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
+  "resumen_teorico": "Cuando negocias la venta de tu negocio, tienes que elegir (o negociar) entre dos formas de cobrar: todo en efectivo de una vez por tus acciones, o una parte al momento y otra parte importante en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
   "pasos_accionables": [
     "Pregúntate qué tan seguro estás del desempeño futuro de tu negocio",
-    "Decide si quieres o puedes comprometerte a seguir trabajando ahí de 1 a 3 años más",
+    "Decide si quieres o puedes comprometerte a seguir trabajando ahí durante los años que dure el earn-out",
     "Compara las ofertas: dinero inmediato contra dinero condicionado a cumplir metas",
     "Revisa cuánto control vas a mantener sobre las decisiones que afectan esas metas",
     "Negocia condiciones de earn-out realistas, con supuestos conservadores"
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Negocia Pago Diferido o Inmediato",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-estructura_de_la_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando negocias la venta de tu negocio, tienes que elegir (o negociar) entre dos formas de cobrar: todo en efectivo de una vez por tus acciones, o en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
+      "texto_nuevo": "Cuando negocias la venta de tu negocio, tienes que elegir (o negociar) entre dos formas de cobrar: todo en efectivo de una vez por tus acciones, o una parte al momento y otra parte importante en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "4002",
+        "frase": "benefit from the acquisition right away (from the non-earn-out part of the offer)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro el earn-out combina una parte que se cobra al momento con una parte importante condicionada a metas.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-estructura_de_la_venta-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide si quieres o puedes comprometerte a seguir trabajando ahí de 1 a 3 años más",
+      "texto_nuevo": "Decide si quieres o puedes comprometerte a seguir trabajando ahí durante los años que dure el earn-out",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "4004",
+        "frase": "The founders would remain working for those two years, focused on achieving those milestones."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El rango de 1 a 3 años es una cifra que el libro no da; sus casos son de dos y tres años.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

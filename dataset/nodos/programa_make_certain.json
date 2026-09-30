@@ -9,9 +9,9 @@
     "Identificar tasas de repetición de trabajo (rework) en áreas administrativas y de papeleo",
     "Diseñar el programa de cinco semanas enfocado en detectar y prevenir errores de oficina",
     "Lanzar el programa como parte de la etapa de concientización de calidad",
-    "Medir el impacto en costo de calidad antes y después de la implementación"
+    "Medir las sugerencias por las horas de trabajo que ya no hay que gastar al hacer las cosas bien, multiplicadas por el salario promedio cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos"
   ],
-  "entregable_esperado": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con métricas de rework antes/después",
+  "entregable_esperado": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con la medición de las sugerencias en horas de trabajo ahorradas",
   "nodos_previos": [
     "reinicio_programa_calidad",
     "costo_de_mala_calidad_copq",
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Asegura la Calidad Administrativa",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-128-programa_make_certain-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir el impacto en costo de calidad antes y después de la implementación",
+      "texto_nuevo": "Medir las sugerencias por las horas de trabajo que ya no hay que gastar al hacer las cosas bien, multiplicadas por el salario promedio cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3823",
+        "frase": "Multiply the hours by the loaded average wage to get a dollar figure."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro mide las sugerencias por horas no gastadas por el salario cargado, no un costo de calidad antes y después.; Mismo defecto; el libro añade que el fin es la actitud de prevención.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-128-programa_make_certain-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con métricas de rework antes/después",
+      "texto_nuevo": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con la medición de las sugerencias en horas de trabajo ahorradas",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3823",
+        "frase": "how many hours of work do not have to be spent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La medición antes y después del rework no está; el libro mide horas ahorradas por las sugerencias.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

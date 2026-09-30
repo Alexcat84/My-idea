@@ -4,16 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Bullseye Framework (Diana de Tracción)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Bullseye es un proceso de tres pasos para que encuentres, tú solo, el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, concentras todo tu esfuerzo en el único canal que mostró mejores resultados, tu canal núcleo, para exprimir su máximo potencial. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
+  "resumen_teorico": "Bullseye es un proceso de tres pasos para que encuentres el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, concentras todo tu esfuerzo en el único canal que mostró mejores resultados, tu canal núcleo, para exprimir su máximo potencial. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
   "pasos_accionables": [
     "Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.",
     "Selecciona los pocos canales más prometedores según tu contexto, industria y modelo de negocio, y deja de sumar cuando el entusiasmo caiga claramente, lo que suele pasar hacia el tercer canal.",
-    "Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
+    "Diseña experimentos baratos, de como máximo 1000 dólares y un mes de duración en la etapa inicial (a menudo menos; más adelante pueden ser mayores y más largos), para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
     "Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.",
     "Elige el canal con mejores resultados como tu canal núcleo y dirige ahí todos tus esfuerzos y recursos. Es el paso previo para pasar a las pruebas del anillo interno",
-    "Si ningún canal funciona, repite el proceso o revisa tu producto.",
+    "Si ningún canal funciona, repite el proceso apoyándote en los datos de las pruebas; si tras varias vueltas ninguno promete, revisa tu producto.",
     "Haz una lista de los 19 canales de tracción posibles para tu negocio",
-    "Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
+    "Diseña una prueba barata y corta para cada uno de los pocos canales más prometedores que elegiste, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
     "Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas",
     "Compara los resultados entre canales y elige el que más prometa como tu canal núcleo para dirigirle todos tus recursos",
     "Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos",
@@ -127,6 +127,73 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la cifra de 3 a 5 canales que corrige C104-093. El libro pone el corte hacia el tercer canal, cuando el entusiasmo cae (L407-L411).",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C104-093"
+    },
+    {
+      "id": "final-e1-132-bullseye_framework-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Bullseye es un proceso de tres pasos para que encuentres, tú solo, el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, concentras todo tu esfuerzo en el único canal que mostró mejores resultados, tu canal núcleo, para exprimir su máximo potencial. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
+      "texto_nuevo": "Bullseye es un proceso de tres pasos para que encuentres el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, concentras todo tu esfuerzo en el único canal que mostró mejores resultados, tu canal núcleo, para exprimir su máximo potencial. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "766",
+        "frase": "Good mentors can also help you here by helping you brainstorm"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro recomienda apoyarse en mentores para generar y ordenar las ideas; 'tú solo' es añadido.; Mismo defecto: el libro sugiere apoyarse en mentores y fundadores con experiencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-132-bullseye_framework-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
+      "texto_nuevo": "Diseña experimentos baratos, de como máximo 1000 dólares y un mes de duración en la etapa inicial (a menudo menos; más adelante pueden ser mayores y más largos), para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "427, 542",
+        "frase": "in phases II and III, channel tests may be bigger and longer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Los mil dólares y un mes son un máximo de la fase I, a menudo menos; en fases posteriores las pruebas pueden ser mayores.; Mismo defecto: el tope vale para la etapa inicial.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-132-bullseye_framework-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si ningún canal funciona, repite el proceso o revisa tu producto.",
+      "texto_nuevo": "Si ningún canal funciona, repite el proceso apoyándote en los datos de las pruebas; si tras varias vueltas ninguno promete, revisa tu producto.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "452",
+        "frase": "If you go through the process several times and no traction channel seems promising"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro manda repetir el proceso y solo tras varias vueltas sin canal prometedor apunta al producto.; Mismo defecto: revisar el producto no es alternativa inmediata.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-132-bullseye_framework-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
+      "texto_nuevo": "Diseña una prueba barata y corta para cada uno de los pocos canales más prometedores que elegiste, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "409-413",
+        "frase": "doing too many things in parallel leads to errors from lack of focus"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita las pruebas a los pocos canales del anillo medio, porque demasiadas en paralelo restan foco.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

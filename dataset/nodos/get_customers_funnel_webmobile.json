@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Embudo de Adquisición y Activación Web/Mobile",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "En canales web/mobile, el proceso de 'Get Customers' tiene dos pasos: adquisición, que equivale a las etapas de awareness, interés y consideración del canal físico, llevando la mayor cantidad de tráfico a la landing page o 'puerta de entrada'; y activación, donde el cliente muestra interés real mediante descarga, registro, prueba, solicitud de información o compra, y se considera activado si tienes suficiente información para recontactarlo. A diferencia del canal físico, el objetivo es atraer (pull) al cliente en lugar de empujarle el producto, y el proceso puede escalar más rápido y barato, incluyendo un loop viral donde los clientes invitan a otros. Participar en las comunidades donde está tu audiencia refuerza esta atracción.",
+  "resumen_teorico": "En canales web/mobile, el proceso de 'Get Customers' tiene dos pasos: adquisición, que equivale a las etapas de awareness, interés y consideración del canal físico, llevando la mayor cantidad de tráfico a la landing page o 'puerta de entrada'; y activación, donde el cliente muestra interés real mediante descarga, registro, prueba, solicitud de información o compra, y se considera activado si tienes suficiente información para recontactarlo y su permiso explícito para hacerlo. A diferencia del canal físico, el objetivo es atraer (pull) al cliente en lugar de empujarle el producto, y el proceso puede escalar más rápido y barato, incluyendo un loop viral donde los clientes invitan a otros. Participar en las comunidades donde está tu audiencia refuerza esta atracción.",
   "pasos_accionables": [
     "Determinar quién es tu audiencia objetivo y dónde pasa tiempo en la web",
     "Crear contenido atractivo y adaptado al formato de cada plataforma (video, blog, FAQ, redes sociales)",
     "Participar activamente en las comunidades donde está tu audiencia",
-    "Probar primero tácticas de adquisición gratuitas: PR, SEO, redes sociales, marketing viral",
+    "Probar primero tácticas de adquisición gratuitas: PR sobre el problema (todavía no sobre el producto), SEO, redes sociales y marketing viral, que solo puede arrancar cuando ya hay una base de clientes",
     "Probar tácticas de adquisición pagadas a pequeña escala: PPC, afiliados, email marketing, publicidad online",
-    "Medir la tasa de activación (registro, descarga o compra) de cada táctica y descartar las que no generen suficiente respuesta"
+    "Medir la tasa de activación (registro, descarga o compra) de cada táctica, descartar las que no generen suficiente respuesta y refinar y volver a probar las mejores"
   ],
   "entregable_esperado": "Un plan de pruebas de adquisición y activación en spreadsheet con actividades, costos, metas y resultados de cada táctica",
   "nodos_previos": [
@@ -99,6 +99,56 @@
         "motivo": "Referencia de un nodo vivo a comunicacion_aprendizaje_startup, deprecado; su superviviente es comunicacion_aprendizaje_continuo."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-131-get_customers_funnel_webmobile-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En canales web/mobile, el proceso de 'Get Customers' tiene dos pasos: adquisición, que equivale a las etapas de awareness, interés y consideración del canal físico, llevando la mayor cantidad de tráfico a la landing page o 'puerta de entrada'; y activación, donde el cliente muestra interés real mediante descarga, registro, prueba, solicitud de información o compra, y se considera activado si tienes suficiente información para recontactarlo. A diferencia del canal físico, el objetivo es atraer (pull) al cliente en lugar de empujarle el producto, y el proceso puede escalar más rápido y barato, incluyendo un loop viral donde los clientes invitan a otros. Participar en las comunidades donde está tu audiencia refuerza esta atracción.",
+      "texto_nuevo": "En canales web/mobile, el proceso de 'Get Customers' tiene dos pasos: adquisición, que equivale a las etapas de awareness, interés y consideración del canal físico, llevando la mayor cantidad de tráfico a la landing page o 'puerta de entrada'; y activación, donde el cliente muestra interés real mediante descarga, registro, prueba, solicitud de información o compra, y se considera activado si tienes suficiente información para recontactarlo y su permiso explícito para hacerlo. A diferencia del canal físico, el objetivo es atraer (pull) al cliente en lugar de empujarle el producto, y el proceso puede escalar más rápido y barato, incluyendo un loop viral donde los clientes invitan a otros. Participar en las comunidades donde está tu audiencia refuerza esta atracción.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6460",
+        "frase": "enough information to re-contact him"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige además el permiso explícito para recontactar.; Misma condición caída: el permiso explícito.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-131-get_customers_funnel_webmobile-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Probar primero tácticas de adquisición gratuitas: PR, SEO, redes sociales, marketing viral",
+      "texto_nuevo": "Probar primero tácticas de adquisición gratuitas: PR sobre el problema (todavía no sobre el producto), SEO, redes sociales y marketing viral, que solo puede arrancar cuando ya hay una base de clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6526, 6584",
+        "frase": "news and feature coverage about the problem (not the product itself)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se caen dos límites: la PR habla del problema y no del producto, y lo viral necesita una base de clientes.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-131-get_customers_funnel_webmobile-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir la tasa de activación (registro, descarga o compra) de cada táctica y descartar las que no generen suficiente respuesta",
+      "texto_nuevo": "Medir la tasa de activación (registro, descarga o compra) de cada táctica, descartar las que no generen suficiente respuesta y refinar y volver a probar las mejores",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6572, 6651",
+        "frase": "Drop ineffective ones and refine the best"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también refinar las mejores y volver a probar si el resultado no satisface.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

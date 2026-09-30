@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Buscar un sucesor distinto a ti, no un parecido (complementariedad de habilidades)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas o en gestión operativa. Cuanto más diferente sea ese perfil del tuyo, más fácil te resulta aceptar un rol secundario, aunque esto también aumenta la probabilidad de que termines saliendo por completo del negocio.",
+  "resumen_teorico": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas. Te resulta más fácil aceptar un rol secundario si quien llega tiene claramente más experiencia, al menos en algo crucial; aun así, cuanto más distinto sea su perfil del tuyo, más probable es que termines saliendo por completo del negocio.",
   "pasos_accionables": [
     "Identifica con claridad tus propias brechas como fundador: qué se te da mal, dónde falta experiencia (ventas, escalar, poner procesos).",
     "Busca candidatos cuyo perfil cubra esas brechas de forma clara e innegable.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Busca un Sucesor Complementario",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-evaluacion_disimilitud_sucesor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas o en gestión operativa. Cuanto más diferente sea ese perfil del tuyo, más fácil te resulta aceptar un rol secundario, aunque esto también aumenta la probabilidad de que termines saliendo por completo del negocio.",
+      "texto_nuevo": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas. Te resulta más fácil aceptar un rol secundario si quien llega tiene claramente más experiencia, al menos en algo crucial; aun así, cuanto más distinto sea su perfil del tuyo, más probable es que termines saliendo por completo del negocio.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3226-3228",
+        "frase": "accept a position as a subordinate if the new boss is unambiguously more experienced"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga la facilidad de aceptar un puesto subordinado a que el sucesor tenga claramente más experiencia, no a que su perfil sea más distinto.; Los ejemplos del libro son ventas y más años de experiencia; la gestión operativa es añadida.; Mismo defecto que la marca 0: causa añadida.; Mismo defecto: ejemplo añadido a la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

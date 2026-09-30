@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia Híbrida: Combinar Control y Riqueza en Etapas",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Sin embargo, esta estrategia aumenta el riesgo de terminar 'atascado en el medio' y fracasar si no se ejecuta con claridad temporal.",
+  "resumen_teorico": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Sin embargo, esta estrategia puede aumentar el riesgo de terminar 'atascado en el medio' y fracasar.",
   "pasos_accionables": [
     "Definir una fase inicial de control absoluto para validar producto y alcanzar métricas clave sin diluir equity.",
     "Establecer criterios claros (hitos, tiempo, tracción) que determinen el momento de transición hacia decisiones de riqueza.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Combina Control y Riqueza",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-estrategia_hibrida_control_riqueza-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Sin embargo, esta estrategia aumenta el riesgo de terminar 'atascado en el medio' y fracasar si no se ejecuta con claridad temporal.",
+      "texto_nuevo": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Sin embargo, esta estrategia puede aumentar el riesgo de terminar 'atascado en el medio' y fracasar.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3495",
+        "frase": "they may also increase the probability of ending up Failures"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye el riesgo de quedar atascado en el medio a la estrategia híbrida misma y con 'puede'; la condición de ejecución es añadida.; Mismo defecto: sugiere que el riesgo se evita ejecutándola bien.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

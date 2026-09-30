@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Elaborar diagrama de flujo del proceso completo",
     "Dividir el flujo en estaciones de trabajo lógicas",
-    "Documentar para cada estación las operaciones, secuencia, instrumentos y condiciones de proceso",
-    "Usar el documento como base para auditorías y control por parte de inspectores"
+    "Documentar para cada estación las operaciones, secuencia, instalaciones, instrumentos y condiciones de proceso",
+    "Usar el documento como el plan que ejecutan supervisores y personal de producción, y como base para el control de los inspectores y las auditorías del proceso"
   ],
   "entregable_esperado": "Diagrama de flujo de proceso con documentación formal por estación de trabajo",
   "nodos_previos": [
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Traza el Flujo de tu Proceso",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-analisis_flujo_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el documento como base para auditorías y control por parte de inspectores",
+      "texto_nuevo": "Usar el documento como el plan que ejecutan supervisores y personal de producción, y como base para el control de los inspectores y las auditorías del proceso",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22413",
+        "frase": "document becomes the plan to be carried out by the production supervisors and workforce"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da como primer uso del documento ser el plan que ejecutan supervisores y personal de producción.; Mismo defecto: se pierde ese primer uso.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-analisis_flujo_proceso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar para cada estación las operaciones, secuencia, instrumentos y condiciones de proceso",
+      "texto_nuevo": "Documentar para cada estación las operaciones, secuencia, instalaciones, instrumentos y condiciones de proceso",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22413",
+        "frase": "operations to be performed, sequence of operations, facilities and instruments to be employed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye las instalaciones a emplear en cada estación, que el paso omite.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

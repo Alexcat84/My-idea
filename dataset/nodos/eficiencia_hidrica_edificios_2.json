@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Eficiencia Hídrica en Edificios",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises reduce la dependencia del suministro municipal hasta en un 50-74%, con ahorros adicionales en energía asociada al calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
+  "resumen_teorico": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises alivia la presión sobre el suministro municipal y te da una reserva de agua, y el reciclaje puede ahorrar además energía de calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
   "pasos_accionables": [
     "Reduce la temperatura del calentador de agua de 140°F a 120°F",
     "Repara fugas de tuberías y establece mantenimiento preventivo regular",
@@ -41,5 +41,23 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-129-eficiencia_hidrica_edificios_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises reduce la dependencia del suministro municipal hasta en un 50-74%, con ahorros adicionales en energía asociada al calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
+      "texto_nuevo": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises alivia la presión sobre el suministro municipal y te da una reserva de agua, y el reciclaje puede ahorrar además energía de calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2772",
+        "frase": "a rainwater collection system relieves pressure from municipal water systems and ensures a backup supply"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da dos casos distintos (estadio 50% de agua municipal, lavandería 74% menos agua); el rango general 50-74% es una cifra que el libro no afirma.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

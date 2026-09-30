@@ -6,8 +6,8 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Un código de conducta especifica las prácticas y requisitos ambientales, laborales y éticos que un proveedor debe cumplir para hacer negocios con la empresa. Suele abarcar manejo de residuos peligrosos, emisiones, condiciones laborales, y mecanismos de cumplimiento como líneas de denuncia y auditorías. Empresas como Apple, Home Depot y Tesco han desarrollado códigos robustos con métricas específicas.",
   "pasos_accionables": [
-    "Definir estándares mínimos en manejo de residuos, emisiones, condiciones laborales y ética",
-    "Establecer mecanismos de reporte de incumplimiento (ej. línea de denuncia)",
+    "Definir estándares mínimos en manejo de residuos, emisiones, condiciones laborales, ética, permisos y cumplimiento normativo, e incluso derechos humanos",
+    "Establecer mecanismos para asegurar el cumplimiento, como una línea de denuncia de incumplimientos y auditorías anunciadas o sin aviso",
     "Exigir a proveedores reportar cambios operativos que afecten cumplimiento",
     "Comunicar el código formalmente a toda la red de proveedores"
   ],
@@ -29,5 +29,41 @@
   "etiqueta_arbol": "Exige un Código a tus Proveedores",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-129-codigo_conducta_proveedores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir estándares mínimos en manejo de residuos, emisiones, condiciones laborales y ética",
+      "texto_nuevo": "Definir estándares mínimos en manejo de residuos, emisiones, condiciones laborales, ética, permisos y cumplimiento normativo, e incluso derechos humanos",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4075",
+        "frase": "supplier ethics, labor practices, environmental management, permitting and compliance, and even human rights"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye permisos y cumplimiento normativo e incluso derechos humanos, que el paso omite.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-129-codigo_conducta_proveedores-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer mecanismos de reporte de incumplimiento (ej. línea de denuncia)",
+      "texto_nuevo": "Establecer mecanismos para asegurar el cumplimiento, como una línea de denuncia de incumplimientos y auditorías anunciadas o sin aviso",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4077",
+        "frase": "Simply having a code of conduct doesn't get the job done."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro insiste en asegurar el cumplimiento y propone auditorías anunciadas y sin aviso, que los pasos pierden.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

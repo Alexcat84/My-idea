@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Despliegue Continuo (Continuous Deployment)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. Empresas como IMVU realizaban en promedio cincuenta cambios diarios a su producto usando esta técnica, incluso en industrias reguladas como servicios financieros (Wealthfront).",
+  "resumen_teorico": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. IMVU realizaba en promedio cincuenta cambios diarios a su producto usando esta técnica, y Wealthfront, en un sector regulado como los servicios financieros, más de una docena de lanzamientos diarios.",
   "pasos_accionables": [
     "Establecer un pipeline de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
     "Liberar cada cambio individual al producto en cuanto esté listo, sin esperar a acumular un lote grande",
     "Monitorear el impacto de cada despliegue en tiempo real",
-    "Implementar mecanismos de reversión automática si se detecta un problema"
+    "Implementar mecanismos de reversión automática si se detecta un problema, avisar al equipo y bloquear nuevos cambios hasta encontrar y corregir la causa raíz"
   ],
   "entregable_esperado": "Un sistema de despliegue automatizado que permite lanzar cambios pequeños al producto de forma frecuente y segura",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Lanza Cambios Pequeños y Rápidos",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-130-despliegue_continuo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. Empresas como IMVU realizaban en promedio cincuenta cambios diarios a su producto usando esta técnica, incluso en industrias reguladas como servicios financieros (Wealthfront).",
+      "texto_nuevo": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. IMVU realizaba en promedio cincuenta cambios diarios a su producto usando esta técnica, y Wealthfront, en un sector regulado como los servicios financieros, más de una docena de lanzamientos diarios.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2205",
+        "frase": "more than a dozen releases to customers every day—in an SEC-regulated environment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La frase extiende la cifra de cincuenta diarios a Wealthfront, que en el libro hace más de una docena.; Misma atribución de la cifra de IMVU a Wealthfront.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-130-despliegue_continuo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar mecanismos de reversión automática si se detecta un problema",
+      "texto_nuevo": "Implementar mecanismos de reversión automática si se detecta un problema, avisar al equipo y bloquear nuevos cambios hasta encontrar y corregir la causa raíz",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2193-2201",
+        "frase": "The team is blocked from introducing any further changes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las cuatro respuestas del libro solo queda retirar el cambio; faltan avisar y bloquear hasta corregir la causa raíz.; Misma parte del procedimiento perdida.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

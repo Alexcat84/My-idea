@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Consecuencias No Intencionadas en Sistemas Interconectados",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "El caso de Baxter Street (una app de navegación creó un atajo peligroso que se convirtió en rampa viral para saltos de autos gracias a algoritmos de video) ilustra cómo el diseño de un sistema (ruteo de tráfico) interactúa con otro (algoritmos de atención en redes sociales) generando consecuencias imprevistas y en cascada. Los diseñadores deben anticipar cómo su solución puede interactuar con otros sistemas externos (redes sociales, comportamiento humano, infraestructura) de maneras no previstas.",
+  "resumen_teorico": "El caso de Baxter Street (una app de navegación volvió atajo una calle muy empinada; la ciudad la hizo de un solo sentido y, sin querer, la convirtió en rampa, que se hizo viral para saltos de autos gracias a algoritmos de video) ilustra cómo el diseño de un sistema (ruteo de tráfico) interactúa con otro (algoritmos de atención en redes sociales) generando consecuencias imprevistas y en cascada. Los diseñadores deben anticipar cómo su solución puede interactuar con otros sistemas externos (redes sociales, comportamiento humano, infraestructura) de maneras no previstas.",
   "pasos_accionables": [
     "Identifica otros sistemas externos que podrían interactuar con tu solución (redes sociales, otras apps, comportamiento social).",
     "Simula o investiga escenarios de uso indebido o inesperado de tu producto.",
@@ -42,6 +42,22 @@
         "evidencia": "F19-031: Anticipar interacciones con sistemas externos y diseñar salvaguardas y planes de mitigación es análisis de riesgos del diseño, no prueba con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-127-consecuencias_no_intencionadas_sistemicas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El caso de Baxter Street (una app de navegación creó un atajo peligroso que se convirtió en rampa viral para saltos de autos gracias a algoritmos de video) ilustra cómo el diseño de un sistema (ruteo de tráfico) interactúa con otro (algoritmos de atención en redes sociales) generando consecuencias imprevistas y en cascada. Los diseñadores deben anticipar cómo su solución puede interactuar con otros sistemas externos (redes sociales, comportamiento humano, infraestructura) de maneras no previstas.",
+      "texto_nuevo": "El caso de Baxter Street (una app de navegación volvió atajo una calle muy empinada; la ciudad la hizo de un solo sentido y, sin querer, la convirtió en rampa, que se hizo viral para saltos de autos gracias a algoritmos de video) ilustra cómo el diseño de un sistema (ruteo de tráfico) interactúa con otro (algoritmos de atención en redes sociales) generando consecuencias imprevistas y en cascada. Los diseñadores deben anticipar cómo su solución puede interactuar con otros sistemas externos (redes sociales, comportamiento humano, infraestructura) de maneras no previstas.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "917-919",
+        "frase": "That curbed the cut-through, but inadvertently made the street into a perfect one-way ramp"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro atribuye la rampa a la respuesta de la ciudad (volverla de un solo sentido), eslabón de la cascada que se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

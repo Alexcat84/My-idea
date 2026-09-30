@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Esposas Familiares y Alineación con la Pareja",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Las responsabilidades familiares (cónyuge, hijos, obligaciones de cuidado) actúan como restricciones ('handcuffs') que condicionan cuándo y cómo se funda un startup. El apoyo pleno del cónyuge, negociado con expectativas realistas de tiempo y sacrificio, es crucial; la falta de alineación genera estrés que puede hacer fracasar tanto la relación como el startup.",
+  "resumen_teorico": "Las responsabilidades familiares (cónyuge, hijos, obligaciones de cuidado) actúan como restricciones ('handcuffs') que condicionan cuándo y cómo se funda un startup. El apoyo pleno del cónyuge, negociado con expectativas realistas de tiempo y sacrificio, es crucial; la falta de alineación genera estrés en la relación y hace aún más difícil sacar adelante el startup.",
   "pasos_accionables": [
     "Tener una conversación explícita y realista con la pareja sobre plazos, sacrificios económicos y de tiempo esperados",
     "Negociar un plazo concreto de prueba (ej. 6-12 meses) acordado con la familia antes de lanzar",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Alinea a tu Familia y Empresa",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-esposas_familiares_founder-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las responsabilidades familiares (cónyuge, hijos, obligaciones de cuidado) actúan como restricciones ('handcuffs') que condicionan cuándo y cómo se funda un startup. El apoyo pleno del cónyuge, negociado con expectativas realistas de tiempo y sacrificio, es crucial; la falta de alineación genera estrés que puede hacer fracasar tanto la relación como el startup.",
+      "texto_nuevo": "Las responsabilidades familiares (cónyuge, hijos, obligaciones de cuidado) actúan como restricciones ('handcuffs') que condicionan cuándo y cómo se funda un startup. El apoyo pleno del cónyuge, negociado con expectativas realistas de tiempo y sacrificio, es crucial; la falta de alineación genera estrés en la relación y hace aún más difícil sacar adelante el startup.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "511",
+        "frase": "Their lack of support made an already difficult situation even harder."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la falta de apoyo genera estrés y hace más difícil la situación del startup, no que haga fracasar la relación.; Mismo defecto: efecto añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

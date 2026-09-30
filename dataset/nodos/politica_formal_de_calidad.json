@@ -9,8 +9,8 @@
     "Redactar una política de calidad simple, breve y completa que cubra toda la operación de calidad.",
     "Establecer que el gerente general debe acordar con el director corporativo de calidad el grado de función de calidad necesario.",
     "Especificar que el jefe de calidad debe reportar directamente al gerente general, al mismo nivel que las áreas que evalúa.",
-    "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos, acción correctiva, planificación, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
-    "Difundir la política a todos los empleados y verificar su comprensión."
+    "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos y reporte de estado, acción correctiva, planificación, aprobación de la calificación de productos, procesos y procedimientos, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
+    "Difundir la política a todos los empleados y asegurarte de que entiendan que consiste en cumplir exactamente el requisito o hacer que se cambie oficialmente a lo que tú y tu cliente de verdad necesitan."
   ],
   "entregable_esperado": "Documento formal de política de calidad firmado por la dirección, con objetivos, nivel de reporte y responsabilidades definidas.",
   "nodos_previos": [
@@ -43,6 +43,40 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-026 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-128-politica_formal_de_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos, acción correctiva, planificación, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
+      "texto_nuevo": "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos y reporte de estado, acción correctiva, planificación, aprobación de la calificación de productos, procesos y procedimientos, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "741",
+        "frase": "Data analysis and status reporting Corrective action Planning Qualification approval of products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye calificación y aprobación de productos, procesos y procedimientos, y el reporte de estado.; Mismas omisiones.; Omite la aprobación de la calificación, que el libro incluye.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-128-politica_formal_de_calidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Difundir la política a todos los empleados y verificar su comprensión.",
+      "texto_nuevo": "Difundir la política a todos los empleados y asegurarte de que entiendan que consiste en cumplir exactamente el requisito o hacer que se cambie oficialmente a lo que tú y tu cliente de verdad necesitan.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "735",
+        "frase": "perform exactly like the requirement or cause the requirement to be officially changed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa qué deben entender: cumplir exactamente el requisito o hacer que se cambie oficialmente.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

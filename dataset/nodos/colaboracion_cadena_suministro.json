@@ -7,7 +7,7 @@
   "resumen_teorico": "El primer paso para reducir el efecto látigo es medirlo dentro de la propia empresa, comparando el volumen y frecuencia de pedidos recibidos de clientes contra los pedidos realizados a proveedores. Compartir datos de inventario y demanda con socios comerciales (como hacen Walmart, Dell y P&G) permite decisiones más eficientes en toda la cadena, en lugar de que cada empresa optimice de forma aislada.",
   "pasos_accionables": [
     "Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)",
-    "Graficar la divergencia entre demanda de clientes y órdenes a proveedores",
+    "Graficar la divergencia entre demanda de clientes y órdenes a proveedores y, con esa magnitud, estimar cuánto le cuesta a la empresa (producción, transporte, inventario, ventas perdidas) como base para decidir cuánto vale corregirla",
     "Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)",
     "Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave",
     "Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado"
@@ -77,6 +77,23 @@
         "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en coordinacion_colaboracion_cadena_suministro."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "final-e1-126-colaboracion_cadena_suministro-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Graficar la divergencia entre demanda de clientes y órdenes a proveedores",
+      "texto_nuevo": "Graficar la divergencia entre demanda de clientes y órdenes a proveedores y, con esa magnitud, estimar cuánto le cuesta a la empresa (producción, transporte, inventario, ventas perdidas) como base para decidir cuánto vale corregirla",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3815",
+        "frase": "These estimates show the cost to the company of dealing with demand fluctuations."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se cae la estimación del costo de la variabilidad que sigue a la medición.; Tras medir la magnitud, el libro pide estimar su costo en producción, transporte, inventario y ventas perdidas como base para decidir cuánto vale corregirlo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

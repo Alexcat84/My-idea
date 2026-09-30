@@ -6,7 +6,7 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Al ejecutar experimentos, existe el riesgo de detenerse prematuramente al ver buenos resultados iniciales (máximo local) sin dar tiempo suficiente para descubrir el verdadero potencial máximo (máximo global). Es necesario equilibrar la velocidad del testeo con dar suficiente margen temporal para captar el resultado real.",
   "pasos_accionables": [
-    "No detener un experimento apenas se vean buenos resultados iniciales",
+    "No detener un experimento apenas se vean buenos resultados iniciales, salvo que la señal sea muy fuerte (por ejemplo, que cuatro de tus primeros diez clientes lo quieran ya), en cuyo caso puedes darlo por exitoso",
     "Definir de antemano un periodo mínimo razonable de prueba",
     "Comparar resultados a lo largo de varios días o ciclos antes de concluir",
     "Usar experiencia y juicio para decidir cuándo se ha alcanzado un resultado representativo"
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Busca el Máximo Real",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-131-global_vs_local_maximum-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No detener un experimento apenas se vean buenos resultados iniciales",
+      "texto_nuevo": "No detener un experimento apenas se vean buenos resultados iniciales, salvo que la señal sea muy fuerte (por ejemplo, que cuatro de tus primeros diez clientes lo quieran ya), en cuyo caso puedes darlo por exitoso",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8020",
+        "frase": "it’s OK to stop the test and declare it a success"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite detener la prueba y darla por exitosa ante una señal muy fuerte.; Misma excepción caída.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -10,7 +10,7 @@
     "Ajustar un modelo de regresión lineal (Y = b0 + b1X)",
     "Calcular el coeficiente de determinación R² para evaluar el ajuste del modelo",
     "Calcular el coeficiente de correlación r para medir la fuerza de la relación",
-    "Evitar hacer predicciones fuera del rango de los datos muestreados",
+    "Tener extrema cautela al predecir fuera del rango de los datos muestreados: esas predicciones son frágiles hasta confirmarlas con observaciones",
     "Considerar regresión múltiple si hay más de una variable independiente"
   ],
   "entregable_esperado": "Ecuación de regresión validada con R² y análisis de correlación para predecir o explicar una variable de calidad",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Relaciona tus Variables Clave",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-analisis_regresion_correlacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar hacer predicciones fuera del rango de los datos muestreados",
+      "texto_nuevo": "Tener extrema cautela al predecir fuera del rango de los datos muestreados: esas predicciones son frágiles hasta confirmarlas con observaciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19857",
+        "frase": "Extreme caution should be used in making predictions outside the actual sample space"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no prohíbe esas predicciones, pide extrema cautela; convertirlo en 'evitar' endurece, que es invención.; Endurece la cautela del libro en prohibición.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

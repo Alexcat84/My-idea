@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Supervisión de Primera Línea con Autonomía (Auftragssystem)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Inspirado en el concepto militar alemán Auftragssystem, este enfoque consiste en preparar a la persona que supervisa el trabajo en el terreno hasta que pueda lograr los objetivos de seguridad y producción sin necesitar un procedimiento operativo estándar para cada situación. Requiere que esa persona conozca a fondo el trabajo y los peligros del lugar, y que tenga autoridad real, ganada por el respeto del equipo y respaldada por ti.",
+  "resumen_teorico": "Inspirado en el concepto militar alemán Auftragssystem, este enfoque consiste en preparar a la persona que supervisa el trabajo en el terreno hasta que pueda lograr los objetivos de seguridad y producción sin necesitar un procedimiento operativo estándar para cada situación. Requiere que conozca a fondo el trabajo y los peligros del lugar, y que tenga autoridad real, ganada por el respeto del equipo y respaldada por ti. Su éxito depende de una cultura jerárquica previa, fuerte y disciplinada.",
   "pasos_accionables": [
     "Elegir a la persona que supervisa el trabajo por su experiencia amplia y su conocimiento profundo de los riesgos del lugar",
     "Formarla para tomar decisiones autónomas alineadas con tus objetivos, no solo para seguir reglas",
     "Darle tu respaldo explícito para reforzar su autoridad frente al equipo",
-    "Complementar la formación inicial con acompañamiento continuo en el terreno para consolidar los comportamientos correctos"
+    "Apoyarte en esa persona para que, con su guía en el terreno, consolide la formación inicial del equipo y corrija los comportamientos incorrectos que ya se volvieron hábito"
   ],
   "entregable_esperado": "Programa de desarrollo para la persona que supervisa el trabajo en el terreno, con criterios de autonomía y tu respaldo documentado",
   "nodos_previos": [
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Da Autonomía a tus Supervisores",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-128-auftragssystem_supervision_autonoma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inspirado en el concepto militar alemán Auftragssystem, este enfoque consiste en preparar a la persona que supervisa el trabajo en el terreno hasta que pueda lograr los objetivos de seguridad y producción sin necesitar un procedimiento operativo estándar para cada situación. Requiere que esa persona conozca a fondo el trabajo y los peligros del lugar, y que tenga autoridad real, ganada por el respeto del equipo y respaldada por ti.",
+      "texto_nuevo": "Inspirado en el concepto militar alemán Auftragssystem, este enfoque consiste en preparar a la persona que supervisa el trabajo en el terreno hasta que pueda lograr los objetivos de seguridad y producción sin necesitar un procedimiento operativo estándar para cada situación. Requiere que conozca a fondo el trabajo y los peligros del lugar, y que tenga autoridad real, ganada por el respeto del equipo y respaldada por ti. Su éxito depende de una cultura jerárquica previa, fuerte y disciplinada.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5208",
+        "frase": "depends on the prior establishment of a strong and disciplined hierarchical culture"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como condición del éxito una cultura jerárquica fuerte y disciplinada establecida antes.; Misma condición perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-128-auftragssystem_supervision_autonoma-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Complementar la formación inicial con acompañamiento continuo en el terreno para consolidar los comportamientos correctos",
+      "texto_nuevo": "Apoyarte en esa persona para que, con su guía en el terreno, consolide la formación inicial del equipo y corrija los comportamientos incorrectos que ya se volvieron hábito",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5206",
+        "frase": "consolidated and extended by on-the-spot supervisory guidance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro es el supervisor quien, con su guía en el terreno, consolida la formación de los trabajadores; no se habla de acompañar al supervisor.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

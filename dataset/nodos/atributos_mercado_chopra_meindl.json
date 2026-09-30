@@ -7,8 +7,8 @@
   "resumen_teorico": "Chopra y Meindl definieron seis atributos clave para entender qué necesita un mercado de su cadena de suministro: cantidad de producto por lote, tiempo de respuesta tolerado, variedad de productos requerida, nivel de servicio esperado, sensibilidad al precio, y tasa de innovación deseada del producto. Responder estas preguntas permite decidir si la cadena debe priorizar responsividad o eficiencia.",
   "pasos_accionables": [
     "Entrevistar o encuestar clientes sobre cada uno de los 6 atributos",
-    "Comparar tus resultados con los de competidores en el mismo mercado",
-    "Clasificar tu segmento como orientado a responsividad o a eficiencia"
+    "Sugerencia de My Idea: comparar tus resultados con los de competidores en el mismo mercado",
+    "Clasificar cada segmento que sirves como orientado a responsividad o a eficiencia, sabiendo que distintos mercados pueden tener requisitos distintos"
   ],
   "entregable_esperado": "Perfil de requerimientos del mercado documentado con los 6 atributos evaluados",
   "nodos_previos": [
@@ -23,5 +23,41 @@
   "etiqueta_arbol": "Define lo que tu Mercado Exige",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-atributos_mercado_chopra_meindl-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar tus resultados con los de competidores en el mismo mercado",
+      "texto_nuevo": "Sugerencia de My Idea: comparar tus resultados con los de competidores en el mismo mercado",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "400",
+        "frase": "Begin by asking questions about your customers."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo pide preguntar por los clientes y sus atributos; la comparación con competidores es añadida y queda como sugerencia.; Mismo defecto: paso ausente del libro, útil como sugerencia práctica sin afirmar hechos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-atributos_mercado_chopra_meindl-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar tu segmento como orientado a responsividad o a eficiencia",
+      "texto_nuevo": "Clasificar cada segmento que sirves como orientado a responsividad o a eficiencia, sabiendo que distintos mercados pueden tener requisitos distintos",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "427",
+        "frase": "These two different markets have different requirements as measured by the above customer attributes."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la empresa puede servir varios mercados con requisitos distintos según estos atributos; el paso supone un solo segmento.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

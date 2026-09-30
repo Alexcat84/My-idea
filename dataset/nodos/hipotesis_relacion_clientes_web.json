@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Hipótesis de Relación con Clientes (Get, Keep, Grow) para Web/Mobile",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Describe cómo la startup atraerá clientes a su sitio web o app (Get), los retendrá (Keep) y generará ingresos adicionales de ellos con el tiempo (Grow). En web/mobile el embudo es más simple que en canal físico, con solo dos pasos principales: adquisición y activación, además de un 'viral loop' donde clientes invitan a otros.",
+  "resumen_teorico": "Describe cómo la startup atraerá clientes a su sitio web o app (Get), los retendrá (Keep) y generará ingresos adicionales de ellos con el tiempo (Grow). En web/mobile, obtener clientes es más simple que en canal físico, con solo dos pasos principales: adquisición y activación, además de un 'viral loop' donde clientes invitan a otros.",
   "pasos_accionables": [
     "Diseñar el embudo de adquisición: cómo llevar tráfico a la landing page",
     "Definir el paso de activación: cuándo se considera un cliente 'activado' (descarga, registro, permiso de recontacto)",
-    "Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores",
+    "Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores, y casi siempre enfocar primero el esfuerzo en conseguir usuarios",
     "Probar tácticas a pequeña escala (cientos de usuarios) con un MVP de baja fidelidad",
-    "Mapear el customer journey: descubrimiento de necesidad, búsqueda, y decisión rápida (primera página de resultados)"
+    "Mapear el customer journey: descubrimiento de necesidad, búsqueda, decisión rápida (primera página de resultados) y llegada a donde lo invitan, lo entretienen o lo informan"
   ],
   "entregable_esperado": "Embudo Get-Keep-Grow documentado con tácticas específicas para cada etapa y plan de prueba a pequeña escala",
   "nodos_previos": [
@@ -30,5 +30,57 @@
   "etiqueta_arbol": "Formula tu Hipótesis de Funnel",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-131-hipotesis_relacion_clientes_web-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores",
+      "texto_nuevo": "Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores, y casi siempre enfocar primero el esfuerzo en conseguir usuarios",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6418",
+        "frase": "Almost universally, multi-sided marketers focus first on efforts to get users."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que casi siempre el esfuerzo va primero a conseguir usuarios.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-131-hipotesis_relacion_clientes_web-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mapear el customer journey: descubrimiento de necesidad, búsqueda, y decisión rápida (primera página de resultados)",
+      "texto_nuevo": "Mapear el customer journey: descubrimiento de necesidad, búsqueda, decisión rápida (primera página de resultados) y llegada a donde lo invitan, lo entretienen o lo informan",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6479-6487",
+        "frase": "Step four: They go where they’re invited, entertained or informed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el cuarto paso del libro: la gente va adonde la invitan, entretienen o informan.; Mismo cuarto paso caído de la enumeración.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-131-hipotesis_relacion_clientes_web-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Describe cómo la startup atraerá clientes a su sitio web o app (Get), los retendrá (Keep) y generará ingresos adicionales de ellos con el tiempo (Grow). En web/mobile el embudo es más simple que en canal físico, con solo dos pasos principales: adquisición y activación, además de un 'viral loop' donde clientes invitan a otros.",
+      "texto_nuevo": "Describe cómo la startup atraerá clientes a su sitio web o app (Get), los retendrá (Keep) y generará ingresos adicionales de ellos con el tiempo (Grow). En web/mobile, obtener clientes es más simple que en canal físico, con solo dos pasos principales: adquisición y activación, además de un 'viral loop' donde clientes invitan a otros.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6402",
+        "frase": "Getting customers here is simpler, having only two steps."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que obtener clientes tiene solo dos pasos, no el embudo entero.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

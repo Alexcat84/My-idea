@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Realizar pronósticos simplificados de demanda basados en riesgo geográfico y población",
     "Preposicionar inventario estratégico ('surge capacity') en ubicaciones clave",
-    "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia",
+    "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia, sabiendo que quizá no puedan entregar grandes cantidades de golpe y que a menudo habrá que sumar proveedores nuevos",
     "Diseñar y ejecutar simulaciones de entrenamiento colaborativo entre organizaciones participantes",
     "Establecer una plataforma común de datos (basada en mapas) para coordinación en tiempo real"
   ],
@@ -66,6 +66,23 @@
         "motivo": "Quien trabaja la colaboracion en tiempo real entre actores que actuan sin una autoridad central llega de forma natural al caso extremo de la respuesta a desastres, donde organizaciones diversas tienen que coordinarse sin un mando claro."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    },
+    {
+      "id": "final-e1-126-cadena_suministro_respuesta_desastres-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia",
+      "texto_nuevo": "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia, sabiendo que quizá no puedan entregar grandes cantidades de golpe y que a menudo habrá que sumar proveedores nuevos",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1650",
+        "frase": "previously selected suppliers may not always be able to deliver more of their products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los proveedores preseleccionados pueden no entregar de golpe grandes cantidades y que a menudo hay que buscar proveedores nuevos.; Mismo defecto: se pierde el límite de la preselección de proveedores.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

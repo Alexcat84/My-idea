@@ -6,13 +6,13 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Un mecanismo donde el sistema compara continuamente su estado actual con el objetivo deseado y toma acciones correctivas para minimizar la diferencia, como un termostato o el control de crucero de un auto. Aplicado a cadenas de suministro, permite que empresas y sus socios ajusten su comportamiento en tiempo real (hora a hora) para mantenerse alineados con metas de desempeño, controlando efectos como el 'bullwhip effect' y generando eficiencias acumulativas similares al interés compuesto.",
   "pasos_accionables": [
-    "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos",
+    "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos, fijado por la empresa dominante o negociado entre los socios, de modo que todos lo crean alcanzable",
     "Establecer mecanismos de medición continua del estado actual vs. el deseado",
-    "Diseñar reglas de acción correctiva automática o semi-automática ante desviaciones, y no solo periódicamente",
+    "Hacer que la corrección ante desviaciones sea continua, y no solo periódica, dando a cada actor en tiempo real los datos que necesita para dirigirse a su meta",
     "Compartir datos en tiempo real entre los actores de la cadena para habilitar el ajuste colectivo",
     "Establecer recompensas o incentivos ligados al cumplimiento de esas metas."
   ],
-  "entregable_esperado": "Un sistema de monitoreo con indicadores en tiempo real y reglas de ajuste automático definidas para al menos un proceso clave de la cadena de suministro",
+  "entregable_esperado": "Un sistema de monitoreo con indicadores en tiempo real, metas de desempeño acordadas y recompensas ligadas a ellas para al menos un proceso clave de la cadena de suministro",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro",
     "gestion_beneficios_alianza_sostenible",
@@ -44,5 +44,57 @@
   ],
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-bucle_retroalimentacion_autoajustable-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos",
+      "texto_nuevo": "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos, fijado por la empresa dominante o negociado entre los socios, de modo que todos lo crean alcanzable",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5507",
+        "frase": "Either one dominant company can set the performance targets or groups of companies can negotiate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone que la meta la fija una empresa dominante o se negocia entre las empresas y que todas la crean alcanzable.; Mismo defecto: se pierde quién fija la meta y la condición de que todos la crean alcanzable.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-bucle_retroalimentacion_autoajustable-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar reglas de acción correctiva automática o semi-automática ante desviaciones, y no solo periódicamente",
+      "texto_nuevo": "Hacer que la corrección ante desviaciones sea continua, y no solo periódica, dando a cada actor en tiempo real los datos que necesita para dirigirse a su meta",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5509",
+        "frase": "have real-time access to the data they need, then they will steer toward their targets"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro la corrección la hacen las personas que ven los datos en tiempo real y buscan la recompensa; las reglas automáticas son un mecanismo añadido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-bucle_retroalimentacion_autoajustable-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un sistema de monitoreo con indicadores en tiempo real y reglas de ajuste automático definidas para al menos un proceso clave de la cadena de suministro",
+      "texto_nuevo": "Un sistema de monitoreo con indicadores en tiempo real, metas de desempeño acordadas y recompensas ligadas a ellas para al menos un proceso clave de la cadena de suministro",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5507",
+        "frase": "believe the targets are achievable and that when they are achieved, there will be rewards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El mecanismo del libro son metas alcanzables acordadas, datos visibles y recompensas, no reglas de ajuste automático.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

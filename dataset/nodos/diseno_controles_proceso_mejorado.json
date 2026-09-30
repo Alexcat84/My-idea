@@ -7,10 +7,10 @@
   "resumen_teorico": "En la fase de control, el equipo diseña y documenta los controles necesarios para sostener las ganancias de la mejora. Esto incluye actualizar el FMEA, aplicar técnicas de a prueba de errores (mistake-proofing), establecer estándares de control basados en el desempeño real del nuevo proceso, y garantizar el autocontrol de los individuos mediante retroalimentación oportuna y autoridad para ajustar el proceso.",
   "pasos_accionables": [
     "Actualizar el FMEA para identificar controles necesarios",
-    "Aplicar técnicas de mistake-proofing en las mejoras",
+    "Aplicar técnicas de mistake-proofing en las mejoras, si es posible",
     "Diseñar controles de calidad de proceso para Xs y Ys",
     "Establecer estándares de control basados en el desempeño real",
-    "Determinar cómo se comparará el desempeño real con el estándar (SPC)",
+    "Determinar cómo se comparará el desempeño real con el estándar (SPC) y diseñar acciones para regular el desempeño si no lo cumple",
     "Establecer el autocontrol para los individuos responsables del proceso"
   ],
   "entregable_esperado": "Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y mistake-proofing",
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Diseña Controles para Sostener la Mejora",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-127-diseno_controles_proceso_mejorado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar técnicas de mistake-proofing en las mejoras",
+      "texto_nuevo": "Aplicar técnicas de mistake-proofing en las mejoras, si es posible",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14807",
+        "frase": "Mistake-proof the improvement(s), if possible."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide hacerlo a prueba de errores si es posible.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-127-diseno_controles_proceso_mejorado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar cómo se comparará el desempeño real con el estándar (SPC)",
+      "texto_nuevo": "Determinar cómo se comparará el desempeño real con el estándar (SPC) y diseñar acciones para regular el desempeño si no lo cumple",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14835-14839",
+        "frase": "Design actions to regulate performance if it does not meet the standard."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el diseño de acciones para regular el desempeño cuando no cumple el estándar.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

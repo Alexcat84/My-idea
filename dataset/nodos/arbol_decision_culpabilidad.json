@@ -10,7 +10,7 @@
     "Verificar consumo de sustancias no autorizadas al momento del acto",
     "Determinar si hubo violación consciente de procedimientos existentes y adecuados",
     "Aplicar la prueba de sustitución con un jurado de pares",
-    "Revisar historial previo de actos inseguros de la persona",
+    "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva",
     "Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), posible violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa"
   ],
   "entregable_esperado": "Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión",
@@ -42,6 +42,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Materia legal: la clasificación de culpabilidad (y dónde cae la sanción) se reemplaza por las categorías del árbol de Reason; el libro aplica la mitigación al abuso de sustancias, no a las violaciones (L5063: \"Between 'substance abuse with mitigation' and 'possible negligent error' lies a grey area\"), y habla de violación temeraria en sentido legal (L5055) y de error sin culpa e inducido por el sistema (L5057). El \"sabotaje/criminal\" del resumen_teorico no se toca: el libro lo respalda (L5043: \"we are likely to be in the realm of criminal behaviour\").",
       "indice": 5,
       "auditoria": "muestreo A11"
+    },
+    {
+      "id": "final-e1-128-arbol_decision_culpabilidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar historial previo de actos inseguros de la persona",
+      "texto_nuevo": "Revisar historial previo de actos inseguros de la persona, sabiendo que no necesariamente cambia la culpabilidad de este acto, pero sí indica la necesidad de formación correctiva",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5061",
+        "frase": "it does not necessarily bear upon the culpability of the error committed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que el historial no necesariamente pesa en la culpabilidad del acto, pero indica formación correctiva.; Misma condición perdida.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

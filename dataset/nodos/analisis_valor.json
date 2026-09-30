@@ -7,7 +7,7 @@
   "resumen_teorico": "Calcula el costo incremental de características específicas del producto y el costo de satisfacer necesidades particulares del cliente, comparando diseños alternativos. Ayuda a evitar sobrecargar el producto con funciones secundarias a expensas de la funcionalidad fundamental.",
   "pasos_accionables": [
     "Elaborar una hoja de cálculo que relacione costos con necesidades del cliente por prioridad",
-    "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas",
+    "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas, o incluso no atenderlas si el producto es muy sensible al precio",
     "Verificar que las necesidades de alta prioridad reciban recursos suficientes",
     "Evitar el uso de recursos en funciones de bajo valor en detrimento de las funciones esenciales"
   ],
@@ -39,6 +39,23 @@
         "evidencia": "F18-011: Comparar diseños alternativos de producto según su costo por necesidad y repartir recursos es diseño y planificación, no prueba con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-126-analisis_valor-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas",
+      "texto_nuevo": "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas, o incluso no atenderlas si el producto es muy sensible al precio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4321",
+        "frase": "even consider not addressing them at all if the product is highly price sensitive"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade la opción de no atender esas necesidades si el producto es muy sensible al precio.; Mismo defecto: se cae esa segunda salida.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

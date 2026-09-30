@@ -7,7 +7,7 @@
   "resumen_teorico": "Existen 19 canales distintos por los cuales un startup puede obtener tracción: blogs objetivo, publicidad tradicional (PR), PR no convencional, marketing en motores de búsqueda (SEM), anuncios sociales y display, anuncios offline, SEO, marketing de contenidos, email marketing, ingeniería como marketing, marketing viral, desarrollo de negocios (BD), ventas, programas de afiliados, plataformas existentes, ferias comerciales, eventos offline, conferencias/speaking, y construcción de comunidad. La mayoría de founders solo consideran los canales que ya conocen, ignorando los que podrían ser más efectivos para su negocio específico.",
   "pasos_accionables": [
     "Revisa la lista completa de los 19 canales sin descartar ninguno de antemano por familiaridad o prejuicio.",
-    "Evalúa cada canal según el tipo de negocio (B2B/B2C, ticket alto/bajo, online/offline).",
+    "Evalúa cada canal pensando en cómo podría funcionar para tu negocio, sin descartarlo por el tipo de producto o empresa que tienes.",
     "Identifica los canales menos utilizados por tu competencia directa como oportunidad de diferenciación."
   ],
   "entregable_esperado": "Lista priorizada de canales de tracción candidatos con una breve justificación de por qué podrían funcionar para el negocio específico.",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Explora los Diecinueve Canales",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-132-canales_de_traccion_19-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa cada canal según el tipo de negocio (B2B/B2C, ticket alto/bajo, online/offline).",
+      "texto_nuevo": "Evalúa cada canal pensando en cómo podría funcionar para tu negocio, sin descartarlo por el tipo de producto o empresa que tienes.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "100, 110",
+        "frase": "try your best not to dismiss them as irrelevant for your company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un filtro por tipo de negocio que el libro presenta justo como el sesgo que hace ignorar canales prometedores.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

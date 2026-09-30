@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Eventos presenciales para conseguir tus primeros clientes (canal de tracción)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Los eventos presenciales, como conferencias, encuentros o fiestas, son una forma poderosa de conseguir clientes, sobre todo si vendes a otras empresas (B2B) o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca y crean vínculos que los canales digitales masivos no logran. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
+  "resumen_teorico": "Los eventos presenciales, como conferencias, encuentros o fiestas, pueden ser una forma poderosa de conseguir clientes, sobre todo si tu ciclo de venta es largo, como suele pasar en software para empresas, o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca, y son especialmente útiles si tus clientes no responden a anuncios en línea ni se reúnen en internet. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
   "pasos_accionables": [
     "Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad",
     "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día, que además te sirve para probar si tu audiencia quiere un evento más grande; pregunta el precio en tu mercado",
     "Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas",
-    "Busca un espacio accesible, como una universidad, para reducir gastos",
+    "Busca un espacio accesible, como una universidad, para reducir gastos; suelen prestarlo si el evento tiene fin educativo y participan algunos de sus profesores o estudiantes",
     "Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes",
-    "Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado",
+    "Mantén el precio de entrada relativamente alto para que sea más probable que asistan personas con negocios ya exitosos y la calidad del público se mantenga alta",
     "Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación",
     "Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).",
     "Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.",
@@ -68,6 +68,56 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En OFFLINE EVENT TACTICS el libro manda arrancar con una mini conferencia de un día, barata, que sirve para probar si tu audiencia quiere un evento mayor (L3224). Solo después se escala: \"If your first event is a success, consider scaling up to larger events.\" (L3230). TARGETS lo repite: \"Test this channel first. Attend a couple conferences or host a few smaller meetups or a one-day mini-conference.\" (L3253). El evento lujoso de varios días de Enservio (L3181-L3185) es otro caso de éxito del libro y no una forma de arrancar. Por eso se quita del paso 1 la alternativa lujosa, que además traía \"",
       "indice": 1,
       "auditoria": "SANEAMIENTO pasada K, ficha C17 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "final-e1-132-eventos_offline_como_canal_traccion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado",
+      "texto_nuevo": "Mantén el precio de entrada relativamente alto para que sea más probable que asistan personas con negocios ya exitosos y la calidad del público se mantenga alta",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "3232",
+        "frase": "make the ticket price relatively high, so that individuals with successful businesses are more likely"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro sube el precio para que sea más probable que asistan personas con negocios exitosos y cuidar la calidad del público, no para asegurar interés.; Mismo defecto: cambia el porqué y lo endurece a 'asegurar'.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-132-eventos_offline_como_canal_traccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los eventos presenciales, como conferencias, encuentros o fiestas, son una forma poderosa de conseguir clientes, sobre todo si vendes a otras empresas (B2B) o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca y crean vínculos que los canales digitales masivos no logran. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
+      "texto_nuevo": "Los eventos presenciales, como conferencias, encuentros o fiestas, pueden ser una forma poderosa de conseguir clientes, sobre todo si tu ciclo de venta es largo, como suele pasar en software para empresas, o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca, y son especialmente útiles si tus clientes no responden a anuncios en línea ni se reúnen en internet. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "3148-3152",
+        "frase": "especially important when your target customers do not respond well to online advertising"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que los eventos pueden ser una vía principal de tracción; el nodo lo afirma sin cautela.; El libro los hace especialmente eficaces con ciclos de venta largos, frecuentes en software empresarial, no por vender a empresas sin más.; La superioridad general sobre lo digital no está en el libro; solo dice que importan cuando el cliente no responde a anuncios en línea ni se reúne en línea.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-132-eventos_offline_como_canal_traccion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca un espacio accesible, como una universidad, para reducir gastos",
+      "texto_nuevo": "Busca un espacio accesible, como una universidad, para reducir gastos; suelen prestarlo si el evento tiene fin educativo y participan algunos de sus profesores o estudiantes",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "3228",
+        "frase": "universities are willing to open their facilities if it's for an educational purpose"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición: las universidades suelen prestar el espacio si el fin es educativo y participan profesores o estudiantes.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Publicación de Metas y Objetivos de Sostenibilidad",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Publicar métricas de desempeño ya no alcanza; quienes te siguen esperan conocer tus planes futuros para abordar los impactos críticos de tu negocio. Una vez que haces públicas tus metas, dejan de ser voluntarias: se vigilará su cumplimiento, pero explicar con honestidad los déficits te da ventaja frente a ocultar resultados o no fijar metas.",
+  "resumen_teorico": "Publicar métricas de desempeño ya no alcanza; quienes te siguen esperan conocer tus planes futuros para abordar los impactos críticos de tu negocio. Una vez que haces públicas tus metas, dejan de ser voluntarias: los críticos serán duros contigo si te quedas corto, así que publícalas con cuidado; aun así, explicar con honestidad los déficits te da ventaja frente a ocultar resultados o no fijar metas.",
   "pasos_accionables": [
     "Define metas de sostenibilidad medibles y con plazos claros",
     "Publica las metas junto con tu progreso actual",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Publica tus Metas de Sostenibilidad",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-129-establecimiento_metas_publicas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Publicar métricas de desempeño ya no alcanza; quienes te siguen esperan conocer tus planes futuros para abordar los impactos críticos de tu negocio. Una vez que haces públicas tus metas, dejan de ser voluntarias: se vigilará su cumplimiento, pero explicar con honestidad los déficits te da ventaja frente a ocultar resultados o no fijar metas.",
+      "texto_nuevo": "Publicar métricas de desempeño ya no alcanza; quienes te siguen esperan conocer tus planes futuros para abordar los impactos críticos de tu negocio. Una vez que haces públicas tus metas, dejan de ser voluntarias: los críticos serán duros contigo si te quedas corto, así que publícalas con cuidado; aun así, explicar con honestidad los déficits te da ventaja frente a ocultar resultados o no fijar metas.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7251-7253",
+        "frase": "NGOs and other critics will come down hard on companies that fall short"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los críticos serán duros con quien no cumpla, de ahí publicar con cuidado; 'se vigilará' pierde esa consecuencia.; Mismo defecto: se pierde que los críticos castigarán el incumplimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

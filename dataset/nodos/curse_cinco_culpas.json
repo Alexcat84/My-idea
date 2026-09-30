@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Evitar la Maldición de las Cinco Culpas (Five Blames)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Riesgo psicológico frecuente al aplicar los Cinco Porqués: en lugar de buscar causas sistémicas, el equipo cae en señalar culpables individuales, generando frustración y daño a la confianza del equipo. El principio guía es que los problemas crónicos son causados por procesos deficientes, no por personas defectuosas ('si alguien cometió un error, es porque el sistema lo permitió fácilmente'). Requiere disciplina de liderazgo para mantener el enfoque en sistemas, no en personas.",
+  "resumen_teorico": "Riesgo psicológico frecuente al aplicar los Cinco Porqués: en lugar de buscar causas sistémicas, el equipo, llevado por la frustración, cae en señalar culpables individuales. El principio guía es que los problemas crónicos son causados por procesos deficientes, no por personas defectuosas ('si alguien cometió un error, es porque el sistema lo permitió fácilmente'). Requiere disciplina de liderazgo para mantener el enfoque en sistemas, no en personas.",
   "pasos_accionables": [
     "Asegurar que todas las personas afectadas y conectadas al problema estén presentes en la sesión, incluyendo líderes senior si corresponde",
-    "Establecer como mantra de la sesión: 'si un error ocurrió, es porque hicimos fácil que sucediera'",
+    "Establecer como mantra de la sesión, que las personas de mayor rango repiten cuando surgen culpas: 'si un error ocurrió, es porque hicimos fácil que sucediera'",
     "Detener cualquier intento de señalar culpables individuales y redirigir la conversación a fallas de proceso",
     "Explicar el propósito y funcionamiento de los Cinco Porqués al inicio de cada sesión, especialmente si hay participantes nuevos"
   ],
@@ -41,6 +41,39 @@
         "motivo": "Quien ha visto que los Cinco Porques pueden acabar buscando culpables y danando la confianza pasa de forma natural a este sistema de dos reglas, pensado para equipos donde todavia falta confianza."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-130-curse_cinco_culpas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Riesgo psicológico frecuente al aplicar los Cinco Porqués: en lugar de buscar causas sistémicas, el equipo cae en señalar culpables individuales, generando frustración y daño a la confianza del equipo. El principio guía es que los problemas crónicos son causados por procesos deficientes, no por personas defectuosas ('si alguien cometió un error, es porque el sistema lo permitió fácilmente'). Requiere disciplina de liderazgo para mantener el enfoque en sistemas, no en personas.",
+      "texto_nuevo": "Riesgo psicológico frecuente al aplicar los Cinco Porqués: en lugar de buscar causas sistémicas, el equipo, llevado por la frustración, cae en señalar culpables individuales. El principio guía es que los problemas crónicos son causados por procesos deficientes, no por personas defectuosas ('si alguien cometió un error, es porque el sistema lo permitió fácilmente'). Requiere disciplina de liderazgo para mantener el enfoque en sistemas, no en personas.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2745",
+        "frase": "frustrated teammates start pointing fingers at each other, trying to decide who is at fault"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El daño a la confianza es un efecto que el libro no afirma, y la frustración es causa, no efecto.; En el libro la frustración lleva a señalar culpables; el nodo la pone como efecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-130-curse_cinco_culpas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer como mantra de la sesión: 'si un error ocurrió, es porque hicimos fácil que sucediera'",
+      "texto_nuevo": "Establecer como mantra de la sesión, que las personas de mayor rango repiten cuando surgen culpas: 'si un error ocurrió, es porque hicimos fácil que sucediera'",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2751",
+        "frase": "When blame inevitably arises, the most senior people in the room should repeat this mantra"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice quién repite el mantra (los de mayor rango) y cuándo (cuando surge la culpa).; Misma pérdida de quién y cuándo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

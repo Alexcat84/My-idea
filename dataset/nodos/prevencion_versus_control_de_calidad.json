@@ -7,9 +7,9 @@
   "resumen_teorico": "Términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Conviene eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Es como la diferencia entre un policía, que controla, y un abogado, que previene; y prevenir suele generar más valor y más reconocimiento que solo controlar.",
   "pasos_accionables": [
     "Replantea cómo entiendes la calidad en tu negocio: no se trata solo de revisar o auditar, sino de prevenir.",
-    "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, cámbialas por algo que hable de prevenir.",
+    "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, quítalas: la palabra 'calidad' basta sola.",
     "Entrena tu mirada para detectar riesgos antes de que se conviertan en errores, en vez de solo corregir después.",
-    "Mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste."
+    "Sugerencia de My Idea: mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste."
   ],
   "entregable_esperado": "Una forma clara de entender y trabajar la calidad en tu negocio, enfocada en prevenir, que puedas escribir como tu propia política de calidad.",
   "nodos_previos": [
@@ -52,6 +52,40 @@
         "evidencia": "F20-018: Reorienta la forma de gestionar la calidad del negocio en marcha hacia la prevencion y mide los errores evitados; es ejecucion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-128-prevencion_versus_control_de_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, cámbialas por algo que hable de prevenir.",
+      "texto_nuevo": "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, quítalas: la palabra 'calidad' basta sola.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "751",
+        "frase": "The word \"quality\" is good enough to stand by itself."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide eliminar los modificadores porque 'calidad' basta sola, no sustituirlos.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-128-prevencion_versus_control_de_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste.",
+      "texto_nuevo": "Sugerencia de My Idea: mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "755",
+        "frase": "You can get rich by preventing defects."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no da ese criterio de medición; queda como sugerencia de la casa.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

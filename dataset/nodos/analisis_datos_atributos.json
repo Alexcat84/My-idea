@@ -10,7 +10,7 @@
     "Identificar y excluir desempeño anormal (outliers) para calcular la capacidad base",
     "Calcular el promedio de errores por unidad de trabajo excluyendo anomalías",
     "Comparar la capacidad estimada con el desempeño actual/original",
-    "Determinar si la causa raíz es variabilidad o errores/equivocaciones humanas"
+    "Determinar si la causa raíz es variabilidad o errores/equivocaciones"
   ],
   "entregable_esperado": "Matriz de errores documentada con cálculo de capacidad de proceso basada en atributos y clasificación de causas (variabilidad vs errores)",
   "nodos_previos": [
@@ -51,6 +51,23 @@
         "evidencia": "F01-002: Calcular la capacidad de un proceso en marcha con datos de defectos es control y mejora de la operacion, no prueba con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-126-analisis_datos_atributos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si la causa raíz es variabilidad o errores/equivocaciones humanas",
+      "texto_nuevo": "Determinar si la causa raíz es variabilidad o errores/equivocaciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21037",
+        "frase": "nonconforming product can be caused by excessive variability or by mistakes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro contrapone variabilidad y equivocaciones (partes faltantes, información errónea, errores de proceso) sin decir que sean humanas.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

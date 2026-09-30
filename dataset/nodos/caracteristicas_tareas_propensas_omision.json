@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Pasos de Tarea Propensos a la Omisión",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional del paso (no está señalado por la acción anterior), ocurrencia después de alcanzado el objetivo principal, cercanía al final de la tarea, ocultamiento del ítem, cambios recientes de práctica, instalación de múltiples ítems similares, y dependencia de condiciones previas. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
+  "resumen_teorico": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional (no lo señala la acción anterior), ocurrir después de alcanzado el objetivo principal, cercanía al final, ítem oculto, acciones o ítems no requeridos en tareas muy parecidas, cambios recientes de práctica, repetición de acciones según condiciones locales, instalación de varios ítems similares, dependencia de condiciones previas y pasos no siempre requeridos. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
   "pasos_accionables": [
     "Desglosar cada tarea de mantenimiento en sus pasos discretos",
     "Evaluar cada paso contra la lista de características omission-prone (aislamiento funcional, cercanía al final, ocultamiento, etc.)",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Detecta Pasos Fáciles de Omitir",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-128-caracteristicas_tareas_propensas_omision-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional del paso (no está señalado por la acción anterior), ocurrencia después de alcanzado el objetivo principal, cercanía al final de la tarea, ocultamiento del ítem, cambios recientes de práctica, instalación de múltiples ítems similares, y dependencia de condiciones previas. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
+      "texto_nuevo": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional (no lo señala la acción anterior), ocurrir después de alcanzado el objetivo principal, cercanía al final, ítem oculto, acciones o ítems no requeridos en tareas muy parecidas, cambios recientes de práctica, repetición de acciones según condiciones locales, instalación de varios ítems similares, dependencia de condiciones previas y pasos no siempre requeridos. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2226-2248",
+        "frase": "Steps that are not always required in the performance of this particular task."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade tres rasgos más que la lista del nodo omite y que amplían los pasos a evaluar.; Misma omisión: faltan tres de las diez características que da el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

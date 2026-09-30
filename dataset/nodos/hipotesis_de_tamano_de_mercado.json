@@ -3,13 +3,13 @@
   "dominio": "core",
   "titulo_concepto": "Cuánto puede crecer tu mercado (TAM, SAM, mercado objetivo)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de invertir años de trabajo en tu proyecto, conviene que estimes el tamaño real de la oportunidad en tres niveles: el mercado total que existe (TAM), la parte de ese mercado que puedes alcanzar de verdad según tu canal de ventas (SAM) y los compradores más probables al inicio (mercado objetivo). Construye tu estimación desde abajo hacia arriba, con datos concretos, en vez de apoyarte solo en reportes de firmas externas, que suelen ser mejores prediciendo el pasado que el futuro. Considera también mercados cercanos al tuyo y el costo que tendría para tus clientes actuales cambiarse, y proyecta el crecimiento a 3-5 años.",
+  "resumen_teorico": "Antes de invertir años de trabajo en tu proyecto, conviene que estimes el tamaño real de la oportunidad en tres niveles: el mercado total que existe (TAM), la parte de ese mercado que puedes alcanzar de verdad según tu canal de ventas (SAM) y los compradores más probables al inicio (mercado objetivo). Construye tu estimación desde abajo hacia arriba, con datos concretos, en vez de apoyarte solo en reportes de firmas externas, que suelen ser mejores prediciendo el pasado que el futuro. Si tu mercado ya existe, considera los mercados cercanos de los que podrían cambiarse clientes hacia ti y cuenta solo a quienes de verdad pueden hacerlo; si es nuevo, estímalo con mercados cercanos y empresas comparables. Proyecta el crecimiento a 3-5 años.",
   "pasos_accionables": [
-    "Estima el mercado total (TAM) usando reportes de la industria y comparándolo con tus competidores",
+    "Estima el mercado total (TAM) usando reportes de la industria, comparándolo con tus competidores y conversando con inversionistas y clientes",
     "Redúcelo al mercado disponible (SAM) considerando límites de canal, idioma o plataforma",
     "Define tu mercado objetivo: quiénes son los compradores más probables al inicio",
     "Haz una estimación de abajo hacia arriba, basada en datos reales de uso o demografía, en vez de depender solo de reportes externos",
-    "Considera mercados cercanos al tuyo y el costo que tendría para tus clientes actuales cambiarse",
+    "Si tu mercado ya existe, considera los mercados cercanos de los que podrían cambiarse clientes hacia ti y cuenta solo a quienes de verdad pueden hacerlo (ojo con contratos largos y costos ya invertidos, que a menudo frenan el cambio)",
     "Proyecta el crecimiento de tu mercado a 3-5 años"
   ],
   "entregable_esperado": "Un documento con tu estimación de mercado total, mercado disponible y mercado objetivo, con el método de abajo hacia arriba explicado y las señales de éxito y fracaso identificadas",
@@ -32,5 +32,57 @@
   "etiqueta_arbol": "Calcula el Tamaño de Mercado",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-131-hipotesis_de_tamano_de_mercado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Antes de invertir años de trabajo en tu proyecto, conviene que estimes el tamaño real de la oportunidad en tres niveles: el mercado total que existe (TAM), la parte de ese mercado que puedes alcanzar de verdad según tu canal de ventas (SAM) y los compradores más probables al inicio (mercado objetivo). Construye tu estimación desde abajo hacia arriba, con datos concretos, en vez de apoyarte solo en reportes de firmas externas, que suelen ser mejores prediciendo el pasado que el futuro. Considera también mercados cercanos al tuyo y el costo que tendría para tus clientes actuales cambiarse, y proyecta el crecimiento a 3-5 años.",
+      "texto_nuevo": "Antes de invertir años de trabajo en tu proyecto, conviene que estimes el tamaño real de la oportunidad en tres niveles: el mercado total que existe (TAM), la parte de ese mercado que puedes alcanzar de verdad según tu canal de ventas (SAM) y los compradores más probables al inicio (mercado objetivo). Construye tu estimación desde abajo hacia arriba, con datos concretos, en vez de apoyarte solo en reportes de firmas externas, que suelen ser mejores prediciendo el pasado que el futuro. Si tu mercado ya existe, considera los mercados cercanos de los que podrían cambiarse clientes hacia ti y cuenta solo a quienes de verdad pueden hacerlo; si es nuevo, estímalo con mercados cercanos y empresas comparables. Proyecta el crecimiento a 3-5 años.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5024-5026",
+        "frase": "be sure to consider the adjacent markets that customers might switch from"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, matiz; doble lectura ciega y arbitro): El libro habla de clientes de mercados cercanos que podrían cambiarse hacia ti, no de que tus clientes actuales se vayan.; El libro separa el mercado existente del nuevo, que se estima con referencias, mercados cercanos y empresas comparables.; Se pierde que solo cuenta el subconjunto que de verdad puede cambiarse, con las barreras ocultas al cambio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-131-hipotesis_de_tamano_de_mercado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Considera mercados cercanos al tuyo y el costo que tendría para tus clientes actuales cambiarse",
+      "texto_nuevo": "Si tu mercado ya existe, considera los mercados cercanos de los que podrían cambiarse clientes hacia ti y cuenta solo a quienes de verdad pueden hacerlo (ojo con contratos largos y costos ya invertidos, que a menudo frenan el cambio)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5024, 5098-5102",
+        "frase": "Count only the switchable subset and beware of long-term contracts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, matiz; doble lectura ciega y arbitro): El cambio que el libro pide mirar es el de clientes de mercados cercanos hacia tu producto, no el de tus clientes actuales.; Se pierde la condición de mercado existente y el límite de contar solo a quienes pueden cambiarse.; Se pierde que solo cuenta quien de verdad puede cambiarse, cuidando contratos largos y costos ya invertidos.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-131-hipotesis_de_tamano_de_mercado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estima el mercado total (TAM) usando reportes de la industria y comparándolo con tus competidores",
+      "texto_nuevo": "Estima el mercado total (TAM) usando reportes de la industria, comparándolo con tus competidores y conversando con inversionistas y clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5010, 5096",
+        "frase": "discussions with investors and customers to “size” the overall market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro para dimensionar el mercado incluye conversar con inversionistas y clientes.; Mismo elemento de la lista caído: conversar con inversionistas y clientes.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

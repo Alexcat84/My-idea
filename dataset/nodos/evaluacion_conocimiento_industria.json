@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cuánto conoces la industria en la que vas a fundar",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Cuánto conoces la industria en la que vas a fundar tu negocio pesa en tus probabilidades de éxito: si nunca trabajaste en ella, es probable que consigas menos capital, que tu negocio crezca menos en empleo y que la chance de fracasar sea mayor, aunque más de la mitad de quienes emprenden lo hacen en industrias distintas a las que trabajaron antes. La 'ventaja de la ignorancia' (pensar sin los prejuicios del sector) casi nunca te compensa las desventajas de no conocer el terreno, sobre todo si lo que aprendiste en otra industria no se traduce bien a esta nueva.",
+  "resumen_teorico": "Cuánto conoces la industria en la que vas a fundar tu negocio pesa en tus probabilidades de éxito: si nunca trabajaste en ella, es probable que consigas menos capital, que tu negocio crezca menos en empleo y que la chance de fracasar sea mayor, aunque más de la mitad de quienes emprenden lo hacen en industrias distintas a las que trabajaron antes. La 'ventaja de la ignorancia' (pensar sin los prejuicios del sector) puede ser real, pero a menudo la superan con facilidad las desventajas de no conocer el terreno, sobre todo si lo que aprendiste en otra industria no se traduce bien a esta nueva.",
   "pasos_accionables": [
     "Escribe tu experiencia previa en la industria donde vas a fundar tu negocio",
     "Identifica qué supuestos o formas de pensar de industrias anteriores podrían no funcionarte en este nuevo terreno",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Mide tu Conocimiento del Rubro",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-126-evaluacion_conocimiento_industria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuánto conoces la industria en la que vas a fundar tu negocio pesa en tus probabilidades de éxito: si nunca trabajaste en ella, es probable que consigas menos capital, que tu negocio crezca menos en empleo y que la chance de fracasar sea mayor, aunque más de la mitad de quienes emprenden lo hacen en industrias distintas a las que trabajaron antes. La 'ventaja de la ignorancia' (pensar sin los prejuicios del sector) casi nunca te compensa las desventajas de no conocer el terreno, sobre todo si lo que aprendiste en otra industria no se traduce bien a esta nueva.",
+      "texto_nuevo": "Cuánto conoces la industria en la que vas a fundar tu negocio pesa en tus probabilidades de éxito: si nunca trabajaste en ella, es probable que consigas menos capital, que tu negocio crezca menos en empleo y que la chance de fracasar sea mayor, aunque más de la mitad de quienes emprenden lo hacen en industrias distintas a las que trabajaron antes. La 'ventaja de la ignorancia' (pensar sin los prejuicios del sector) puede ser real, pero a menudo la superan con facilidad las desventajas de no conocer el terreno, sobre todo si lo que aprendiste en otra industria no se traduce bien a esta nueva.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "414",
+        "frase": "This can be true, but the advantages of ignorance are often easily outweighed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro admite que la ventaja puede ser real y dice que a menudo la superan las desventajas.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

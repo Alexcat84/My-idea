@@ -6,8 +6,8 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Metodología práctica derivada de la Teoría de Restricciones para identificar y gestionar los cuellos de botella de un sistema (fábrica o cadena de suministro) de forma iterativa: identificar, explotar, subordinar, elevar y repetir el ciclo cuando la restricción se traslada.",
   "pasos_accionables": [
-    "Identificar el o los cuellos de botella del sistema trazando los flujos de trabajo",
-    "Decidir cómo explotar al máximo esos cuellos de botella (asegurar que operen a máxima capacidad)",
+    "Con la meta definida y acordado cómo medir el avance hacia ella, identificar el o los cuellos de botella del sistema trazando los flujos de trabajo",
+    "Decidir cómo explotar al máximo esos cuellos de botella (asegurar que operen a máxima capacidad, dándoles inventario suficiente para seguir operando aunque haya demoras en otras partes)",
     "Subordinar todas las demás operaciones al ritmo del cuello de botella",
     "Elevar la capacidad del cuello de botella (invertir en mejorarlo)",
     "Si el cuello de botella se rompe, volver al paso 1 para identificar la nueva restricción"
@@ -55,6 +55,40 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-126-cinco_pasos_enfoque_restricciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar el o los cuellos de botella del sistema trazando los flujos de trabajo",
+      "texto_nuevo": "Con la meta definida y acordado cómo medir el avance hacia ella, identificar el o los cuellos de botella del sistema trazando los flujos de trabajo",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3608",
+        "frase": "Once a goal has been defined and there is agreement on how to measure progress"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona los cinco pasos a haber definido la meta y acordado cómo medir el avance.; Mismo defecto: se cae la condición previa de meta y medición acordadas.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-126-cinco_pasos_enfoque_restricciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir cómo explotar al máximo esos cuellos de botella (asegurar que operen a máxima capacidad)",
+      "texto_nuevo": "Decidir cómo explotar al máximo esos cuellos de botella (asegurar que operen a máxima capacidad, dándoles inventario suficiente para seguir operando aunque haya demoras en otras partes)",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3614",
+        "frase": "providing them with enough inventory so that they can continue to operate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice cómo asegurar la máxima capacidad: dándoles inventario suficiente para seguir operando ante retrasos en otra parte.; Mismo defecto: se pierde el cómo que da el libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }
