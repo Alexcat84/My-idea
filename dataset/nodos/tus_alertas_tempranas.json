@@ -6,7 +6,7 @@
   "fuente": "DeMarco y Lister, Waltzing with Bears",
   "resumen_teorico": "Hay un momento en que un riesgo deja de ser posibilidad y se vuelve problema: es la transición. Muchas veces esa transición es invisible cuando ocurre, así que necesitas una señal que te avise que empezó, un indicador de alerta temprana. Para cada riesgo que decidas manejar, busca la señal más temprana y práctica de que se está materializando: un cliente que tarda más en pagar, un proveedor que empieza a fallar entregas chicas, tu propia energía que baja semana a semana. Cuando esa alerta se enciende, ejecutas el plan que ya tenías listo. Sin indicadores, te enteras del incendio cuando ya no hay nada que salvar. Para el emprendedor solo, definir sus alertas tempranas es como poner detectores de humo en cada riesgo importante.",
   "pasos_accionables": [
-    "De cada riesgo que vas a manejar, define la señal más temprana de que está empezando.",
+    "De cada riesgo que vas a manejar, define la señal más temprana y práctica de que está empezando, sopesando qué tan urgente es actuar contra lo que te costaría una falsa alarma.",
     "Elige señales que puedas ver de verdad, no cosas que solo notarías cuando ya es tarde.",
     "Anota junto a cada alerta qué harás en cuanto se encienda.",
     "Vigila esas señales de forma continua, sin bajar la guardia, para activar tu plan de contingencia a tiempo si se encienden."
@@ -42,6 +42,23 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro fija el ritmo de vigilancia de los indicadores: 'like a hawk' (L624) y 'continuous monitoring of transition indicators' (L1160). El paso da otro valor para ese mismo dato, la frecuencia de revision del proyecto, que puede ser mucho menor. Busque en todo el libro (weekly, periodic, monthly, status meeting, risk review, regularly) y ningun pasaje ata la vigilancia de indicadores a la revision del proyecto. Como el libro da otro valor para la misma frecuencia, por la vara es CONTRARIO y no ANADIDO.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-023"
+    },
+    {
+      "id": "final-e1-109-tus_alertas_tempranas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "De cada riesgo que vas a manejar, define la señal más temprana de que está empezando.",
+      "texto_nuevo": "De cada riesgo que vas a manejar, define la señal más temprana y práctica de que está empezando, sopesando qué tan urgente es actuar contra lo que te costaría una falsa alarma.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "626-634",
+        "frase": "a thoughtful assessment of urgency and of the cost of false-positive triggering"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la señal más temprana puede dar falsas alarmas y pide sopesar urgencia contra ese costo.; Mismo matiz que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

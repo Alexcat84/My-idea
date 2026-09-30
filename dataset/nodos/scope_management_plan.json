@@ -9,7 +9,7 @@
     "Definir cómo se desarrollará el Project Scope Statement (entrevistas, análisis, investigación)",
     "Establecer la estructura del WBS (por fases, geografía, entregables)",
     "Determinar los campos y nivel de detalle del WBS Dictionary",
-    "Diferenciar qué constituye un cambio de alcance versus una revisión menor",
+    "Diferenciar qué constituye un cambio de alcance versus una revisión menor, y definir qué cambios de alcance deben pasar por el proceso formal de control de cambios y cómo se gestionarán",
     "Definir cómo se validará y aceptará cada entregable"
   ],
   "entregable_esperado": "Un documento que establece las reglas y procesos para gestionar el alcance durante todo el proyecto.",
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Define y Controla el Alcance",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-scope_management_plan-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diferenciar qué constituye un cambio de alcance versus una revisión menor",
+      "texto_nuevo": "Diferenciar qué constituye un cambio de alcance versus una revisión menor, y definir qué cambios de alcance deben pasar por el proceso formal de control de cambios y cómo se gestionarán",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "610, 660-662",
+        "frase": "how scope changes will be managed through the formal change control process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro une la distinción con cómo se gestionan los cambios de alcance por el proceso formal de control de cambios; eso se cae.; Mismo defecto: el plan también identifica qué cambios de alcance pasan por el control formal de cambios.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

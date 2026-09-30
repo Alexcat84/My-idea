@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Brief de Diseño como Marco Creativo",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo garantiza resultados incrementales y mediocres. El arte está en balancear libertad y restricción.",
+  "resumen_teorico": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo casi garantiza resultados incrementales y, muy probablemente, mediocres. El arte está en balancear libertad y restricción.",
   "pasos_accionables": [
     "Definir objetivos claros pero no sobreespecificados (evitar dictar la solución final)",
     "Incluir restricciones de precio, tecnología, y segmento de mercado sin cerrar el espacio de exploración",
@@ -45,6 +45,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-108-brief_de_diseno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo garantiza resultados incrementales y mediocres. El arte está en balancear libertad y restricción.",
+      "texto_nuevo": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo casi garantiza resultados incrementales y, muy probablemente, mediocres. El arte está en balancear libertad y restricción.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "237",
+        "frase": "almost guarantees that the outcome will be incremental and, most likely, mediocre"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que casi garantiza un resultado incremental y muy probablemente mediocre; el nodo lo vuelve certeza.; Mismo defecto: se endurece 'almost guarantees' y 'most likely' a garantía.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,13 +4,13 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Registro de Riesgos como Documento Vivo",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste como pequeños crecen sin que te des cuenta, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control, y eso es más peligroso que no tener lista: te confías justo donde deberías estar mirando con más atención.",
+  "resumen_teorico": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste pueden acercarse a volverse un problema real, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control sin protegerte de verdad: te confías justo donde deberías estar mirando con más atención.",
   "pasos_accionables": [
     "Antes de marcar un riesgo como cerrado, pregúntate si de verdad ya no puede afectarte; si todavía puede, aunque sea menos probable, déjalo abierto.",
     "Revisa uno por uno los riesgos abiertos y pregúntate cuáles se hicieron más graves o más probables desde que los anotaste.",
     "Piensa qué cosas cambiaron en el proyecto desde la última revisión y qué riesgos nuevos aparecieron por esos cambios, aunque no existieran al principio.",
     "Incorpora esos riesgos nuevos al registro con el mismo detalle que los demás, en vez de guardarlos aparte o dejarlos en tu cabeza.",
-    "Si en una revisión no cierras nada, no cambias nada y no agregas nada, tómalo como señal de que estás mirando por encima, no de que todo sigue igual."
+    "Sugerencia de My Idea: si en una revisión no cierras nada, no cambias nada y no agregas nada, pregúntate si de verdad miraste a fondo o solo por encima."
   ],
   "entregable_esperado": "El mismo registro de riesgos, pero con los cierres justificados por el criterio de que ya no pueden afectarte, los riesgos que crecieron señalados como tales, y los riesgos nuevos incorporados con el mismo detalle que los originales.",
   "nodos_previos": [
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Mantén Viva tu Lista de Riesgos",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-109-manten_viva_tu_lista_de_riesgos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste como pequeños crecen sin que te des cuenta, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control, y eso es más peligroso que no tener lista: te confías justo donde deberías estar mirando con más atención.",
+      "texto_nuevo": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste pueden acercarse a volverse un problema real, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control sin protegerte de verdad: te confías justo donde deberías estar mirando con más atención.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1160, 1632",
+        "frase": "It lets you feel good in the short term but provides no long-term protection"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la lista sin evidencia da tranquilidad sin protección, no que sea más peligrosa que no tener lista.; El libro pide vigilar los riesgos que se acercan a volverse problema; no afirma que los pequeños crezcan sin que lo notes.; Misma comparación inventada que la marca 0: el libro no la hace.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-manten_viva_tu_lista_de_riesgos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si en una revisión no cierras nada, no cambias nada y no agregas nada, tómalo como señal de que estás mirando por encima, no de que todo sigue igual.",
+      "texto_nuevo": "Sugerencia de My Idea: si en una revisión no cierras nada, no cambias nada y no agregas nada, pregúntate si de verdad miraste a fondo o solo por encima.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1114",
+        "frase": "The risk-discovery process should not happen just once, at the beginning of the project"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese diagnóstico sobre una revisión sin cambios; queda como sugerencia de la casa.; Mismo defecto: convierte en regla segura algo que el libro no dice.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

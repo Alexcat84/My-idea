@@ -4,12 +4,12 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Censo de Riesgos",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. El valor no está en la lista que sale de esa primera sesión, sino en aprender a distinguir qué entra al registro y qué se queda fuera sin culpa.",
+  "resumen_teorico": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. De esa sesión sale la lista, y con el criterio distingues qué entra al registro y qué se queda fuera sin culpa. Esa primera sesión no es la última: sigue buscando riesgos nuevos mientras el proyecto avanza.",
   "pasos_accionables": [
     "Ponte un tiempo fijo y dedícalo solo a nombrar amenazas, sin evaluarlas todavía ni buscarles solución.",
     "Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.",
-    "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo.",
-    "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto.",
+    "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo; desconfía de la probabilidad baja que le pongas a algo que te preocupó lo bastante para nombrarlo.",
+    "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto, y como mínimo su señal de alerta, lo que harás antes de que ocurra y cuánto pesa frente a los demás.",
     "Sugerencia de My Idea: de los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya."
   ],
   "entregable_esperado": "La lista inicial de riesgos nombrados sin filtro, separada en dos grupos: los que pasan al registro para atenderse y los que se dejan marcados como observados.",
@@ -61,6 +61,56 @@
         "evidencia": "F13-014: Construye el registro inicial de riesgos del proyecto y decide cuales atender; es planificacion de riesgos, no prueba con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-109-haz_tu_lista_de_lo_que_puede_fallar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. El valor no está en la lista que sale de esa primera sesión, sino en aprender a distinguir qué entra al registro y qué se queda fuera sin culpa.",
+      "texto_nuevo": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. De esa sesión sale la lista, y con el criterio distingues qué entra al registro y qué se queda fuera sin culpa. Esa primera sesión no es la última: sigue buscando riesgos nuevos mientras el proyecto avanza.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "142-148, 1114",
+        "frase": "The risk-discovery process should not happen just once, at the beginning of the project"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no dice dónde está el valor; llama a la lista del censo la lista definitiva de riesgos a preparar.; Mismo juicio de valor inventado que la marca 0.; Mismo matiz que la marca 1: la sesión inicial no basta.; Se pierde que el descubrimiento de riesgos no termina en la primera sesión y debe seguir todo el proyecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-haz_tu_lista_de_lo_que_puede_fallar-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo.",
+      "texto_nuevo": "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo; desconfía de la probabilidad baja que le pongas a algo que te preocupó lo bastante para nombrarlo.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1130",
+        "frase": "Be suspicious, though, of the low probability that the group may attach"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide desconfiar de la baja probabilidad que se le pone a un riesgo que alguien consideró digno de nombrar.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-haz_tu_lista_de_lo_que_puede_fallar-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto.",
+      "texto_nuevo": "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto, y como mínimo su señal de alerta, lo que harás antes de que ocurra y cuánto pesa frente a los demás.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "146",
+        "frase": "For those you elect to manage, you will need, at the very least"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz que la marca 0.; Para los riesgos que se gestionan, el libro pide como mínimo señal de transición, mitigación previa y exposición.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

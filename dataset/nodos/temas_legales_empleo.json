@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Cómo protegerte de riesgos legales con tus empleados",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Las demandas más comunes que vas a enfrentar como emprendedor son de tipo laboral. Por eso es clave que contrates a todas las personas bajo la modalidad de empleo libre (conocida como at-will), para no quedar atrapado en leyes complicadas de tu país o región sobre despidos. También conviene que definas de antemano los términos de indemnización (severance) en las cartas de oferta, para evitar conflictos cuando alguien se va.",
+  "resumen_teorico": "Las demandas más comunes que vas a enfrentar como emprendedor son de tipo laboral. Por eso es clave que contrates a todas las personas bajo la modalidad de empleo libre (conocida como at-will), para no quedar atrapado en leyes complicadas de tu país o región sobre despidos. También considera si te conviene definir de antemano los términos de indemnización (severance) en las cartas de oferta: evita reclamos cuando alguien se va, pero limita tu flexibilidad si necesitas despedir para reducir gastos.",
   "pasos_accionables": [
     "Incluye la cláusula de empleo libre (at-will employment) en todas las cartas de oferta que entregues",
-    "Decide si vas a definir de antemano los términos de indemnización (severance) en esas ofertas",
-    "Ten a mano un abogado laboral de confianza para cuando tengas que despedir a un fundador o ejecutivo",
+    "Decide si vas a definir de antemano los términos de indemnización (severance) en esas ofertas: evita reclamos a la salida, pero limita tu flexibilidad si necesitas despedir para reducir gastos",
+    "Ten a mano un abogado laboral de confianza e involúcralo siempre que un fundador o ejecutivo deje la empresa, aunque la salida sea en buenos términos",
     "Documenta formalmente cómo quedan resueltos el equity y la propiedad intelectual (IP) cuando alguien deja la empresa"
   ],
-  "entregable_esperado": "Cartas de oferta con las cláusulas de empleo libre y de indemnización bien definidas",
+  "entregable_esperado": "Cartas de oferta con la cláusula de empleo libre y una decisión tomada sobre si incluir términos de indemnización",
   "nodos_previos": [
     "marcas_registradas"
   ],
@@ -24,5 +24,73 @@
   "etiqueta_arbol": "Gestiona tus Riesgos Laborales",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-111-temas_legales_empleo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las demandas más comunes que vas a enfrentar como emprendedor son de tipo laboral. Por eso es clave que contrates a todas las personas bajo la modalidad de empleo libre (conocida como at-will), para no quedar atrapado en leyes complicadas de tu país o región sobre despidos. También conviene que definas de antemano los términos de indemnización (severance) en las cartas de oferta, para evitar conflictos cuando alguien se va.",
+      "texto_nuevo": "Las demandas más comunes que vas a enfrentar como emprendedor son de tipo laboral. Por eso es clave que contrates a todas las personas bajo la modalidad de empleo libre (conocida como at-will), para no quedar atrapado en leyes complicadas de tu país o región sobre despidos. También considera si te conviene definir de antemano los términos de indemnización (severance) en las cartas de oferta: evita reclamos cuando alguien se va, pero limita tu flexibilidad si necesitas despedir para reducir gastos.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4640",
+        "frase": "consider whether you want to prebake severance terms into an offer letter"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro solo invita a considerar si pactar la indemnización de antemano, no lo recomienda.; Mismo defecto que la marca 0: convierte en recomendación lo que el libro deja como decisión a considerar.; Se cae la desventaja que el libro señala: limita la flexibilidad cuando hay que despedir para reducir gastos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-111-temas_legales_empleo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ten a mano un abogado laboral de confianza para cuando tengas que despedir a un fundador o ejecutivo",
+      "texto_nuevo": "Ten a mano un abogado laboral de confianza e involúcralo siempre que un fundador o ejecutivo deje la empresa, aunque la salida sea en buenos términos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4642",
+        "frase": "it's mandatory to get a lawyer involved when a founder or executive leaves"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige un abogado siempre que un fundador o ejecutivo se va, aunque sea en buenos términos, no solo al despedirlo.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-111-temas_legales_empleo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cartas de oferta con las cláusulas de empleo libre y de indemnización bien definidas",
+      "texto_nuevo": "Cartas de oferta con la cláusula de empleo libre y una decisión tomada sobre si incluir términos de indemnización",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4640",
+        "frase": "consider whether you want to prebake severance terms into an offer letter"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro deja abierta la decisión de pactar la indemnización; el entregable la da por incluida.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-111-temas_legales_empleo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide si vas a definir de antemano los términos de indemnización (severance) en esas ofertas",
+      "texto_nuevo": "Decide si vas a definir de antemano los términos de indemnización (severance) en esas ofertas: evita reclamos a la salida, pero limita tu flexibilidad si necesitas despedir para reducir gastos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4640",
+        "frase": "the downside to it is that it limits your flexibility"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la desventaja que el libro pone para decidir: limita la flexibilidad si hay que despedir para reducir gastos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -6,12 +6,12 @@
   "fuente": "DeMarco y Lister, Waltzing with Bears",
   "resumen_teorico": "No todas tus incertidumbres pesan igual. De todas las cosas que no sabes, unas pocas deciden el resultado y el resto casi no importa. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: preguntas cuál de tus supuestos, si cambia, mueve más el resultado final, y ahí concentras tu atención, tu medición y tu esfuerzo por reducir la incertidumbre. Sin esto, es fácil perder semanas afinando un número que no cambia nada mientras ignoras el que lo decide todo. Para el emprendedor con tiempo y dinero limitados, saber qué mueve la aguja es lo que separa el esfuerzo útil del desperdiciado: mide primero lo que más incertidumbre le quita a tu decisión.",
   "pasos_accionables": [
-    "Lista los supuestos inciertos detrás de tu decisión o tu proyección.",
-    "Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.",
-    "Marca los pocos que más mueven la aguja y concentra en ellos tu atención.",
-    "Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos."
+    "Divide tu proyecto en sus piezas principales y asigna a cada una su costo estimado.",
+    "Estima el valor que aporta cada pieza y calcula su proporción valor/costo; si no logras cifras, al menos ordénalas por valor.",
+    "Marca las piezas de mayor proporción valor/costo y planea entregarlas primero.",
+    "Considera recortar las piezas de proporción baja: hacer menos puede ahorrarte tiempo y dinero más que en proporción."
   ],
-  "entregable_esperado": "Tus supuestos ordenados por cuánto mueven el resultado, con los pocos decisivos marcados para medir primero.",
+  "entregable_esperado": "Las piezas de tu proyecto ordenadas por su proporción valor/costo, con las más altas marcadas para entregar primero y las más bajas como candidatas a recorte.",
   "nodos_previos": [
     "nombra_tus_suposiciones_fragiles",
     "calibra_tu_propio_ojo",
@@ -60,6 +60,90 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la cifra 'dos o tres', ANADIDO de cifra que el libro no fija; se reemplaza por 'los pocos', como en el paso corregido.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-006"
+    },
+    {
+      "id": "final-e1-109-mide_lo_que_de_verdad_mueve_la_aguja-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista los supuestos inciertos detrás de tu decisión o tu proyección.",
+      "texto_nuevo": "Divide tu proyecto en sus piezas principales y asigna a cada una su costo estimado.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1484",
+        "frase": "Once we divide a system up into pieces"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro parte de dividir el proyecto en piezas y asignarles costo, no de listar supuestos inciertos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-mide_lo_que_de_verdad_mueve_la_aguja-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.",
+      "texto_nuevo": "Estima el valor que aporta cada pieza y calcula su proporción valor/costo; si no logras cifras, al menos ordénalas por valor.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1486, 1496",
+        "frase": "wouldn't you settle for the rank-ordering, instead?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide estimar el valor de cada pieza y su proporción valor/costo, no cuánto cambia el resultado si falla un supuesto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-mide_lo_que_de_verdad_mueve_la_aguja-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marca los pocos que más mueven la aguja y concentra en ellos tu atención.",
+      "texto_nuevo": "Marca las piezas de mayor proporción valor/costo y planea entregarlas primero.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1490",
+        "frase": "those would be candidates for early delivery"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro se marcan las piezas de mayor proporción valor/costo para entregarlas primero.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-mide_lo_que_de_verdad_mueve_la_aguja-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos.",
+      "texto_nuevo": "Considera recortar las piezas de proporción baja: hacer menos puede ahorrarte tiempo y dinero más que en proporción.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1494",
+        "frase": "decreasing product size offers the possibility of more-than-proportional savings"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de medir para reducir incertidumbre; propone recortar las piezas de proporción baja.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-mide_lo_que_de_verdad_mueve_la_aguja-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tus supuestos ordenados por cuánto mueven el resultado, con los pocos decisivos marcados para medir primero.",
+      "texto_nuevo": "Las piezas de tu proyecto ordenadas por su proporción valor/costo, con las más altas marcadas para entregar primero y las más bajas como candidatas a recorte.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1490, 1496",
+        "frase": "it allows you to rank-order components for inclusion in the versions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El resultado del ejercicio en el libro son piezas ordenadas por valor/costo para planear las entregas, no supuestos para medir.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

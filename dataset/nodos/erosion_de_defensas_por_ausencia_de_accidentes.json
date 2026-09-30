@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Erosión de Defensas por Períodos sin Accidentes",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Un largo período sin accidentes graves tiende a erosionar la protección porque las demandas productivas (crecimiento, ganancias, participación de mercado) toman prioridad. La inversión en protección declina y el mantenimiento de las defensas existentes se descuida, aumentando el riesgo de un accidente catastrófico futuro. Este fenómeno se conoce como el peligro del 'bote que no se mece'.",
+  "resumen_teorico": "Un largo período sin accidentes graves puede erosionar la protección porque las demandas productivas (crecimiento, ganancias, participación de mercado) toman prioridad. La inversión en protección declina, el mantenimiento de las defensas existentes se descuida y la producción crece sin defensas nuevas o ampliadas, aumentando el riesgo de un accidente catastrófico futuro. Este fenómeno se conoce como el peligro del 'bote que no se mece'.",
   "pasos_accionables": [
     "Auditar la inversión en mantenimiento de seguridad durante los últimos períodos sin incidentes.",
     "Implementar revisiones periódicas obligatorias de defensas independientemente del historial de accidentes.",
@@ -38,6 +38,22 @@
         "evidencia": "F15-018: Mantener las defensas de seguridad tras largos periodos sin accidentes es gestión operativa de una organización en marcha, no validación con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-110-erosion_de_defensas_por_ausencia_de_accidentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un largo período sin accidentes graves tiende a erosionar la protección porque las demandas productivas (crecimiento, ganancias, participación de mercado) toman prioridad. La inversión en protección declina y el mantenimiento de las defensas existentes se descuida, aumentando el riesgo de un accidente catastrófico futuro. Este fenómeno se conoce como el peligro del 'bote que no se mece'.",
+      "texto_nuevo": "Un largo período sin accidentes graves puede erosionar la protección porque las demandas productivas (crecimiento, ganancias, participación de mercado) toman prioridad. La inversión en protección declina, el mantenimiento de las defensas existentes se descuida y la producción crece sin defensas nuevas o ampliadas, aumentando el riesgo de un accidente catastrófico futuro. Este fenómeno se conoce como el peligro del 'bote que no se mece'.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "105",
+        "frase": "a lengthy period without a serious accident can lead to the steady erosion of protection"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que un largo período sin accidentes puede llevar a la erosión, no que tienda a ello.; Mismo endurecimiento de 'can lead to'.; Mismo segundo proceso omitido.; Se pierde el segundo proceso del libro: aumentar la producción sin defensas nuevas también erosiona los márgenes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "CTQ - Características Críticas para la Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las CTQ son la traducción técnica y medible de lo que tu cliente te pide. Te sirven como objetivos concretos a la hora de diseñar y como criterio de decisión durante todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.",
+  "resumen_teorico": "Las CTQ son la traducción técnica y medible de lo que tu cliente te pide, más lo que sumas comparándote con tu competencia y de tu propio desarrollo. Te sirven como objetivos al diseñar y como criterio de decisión en todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.",
   "pasos_accionables": [
     "Recoge la voz de tu cliente (VOC) con entrevistas, encuestas u observación directa",
     "Traduce lo que te dice tu cliente a términos técnicos y medibles",
@@ -41,6 +41,22 @@
         "evidencia": "F01-031: Traducir la voz del cliente a especificaciones medibles para decidir el diseno es diseno del producto, no prueba con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-109-ctq_caracteristicas_criticas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las CTQ son la traducción técnica y medible de lo que tu cliente te pide. Te sirven como objetivos concretos a la hora de diseñar y como criterio de decisión durante todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.",
+      "texto_nuevo": "Las CTQ son la traducción técnica y medible de lo que tu cliente te pide, más lo que sumas comparándote con tu competencia y de tu propio desarrollo. Te sirven como objetivos al diseñar y como criterio de decisión en todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "16209",
+        "frase": "Competitive benchmarking and creative internal development are two additional sources to generate CTQs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade como fuentes de CTQ la comparación con la competencia y el desarrollo interno, con requisitos que el cliente no expresa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Codificar la Innovación en el ADN de la Organización",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Basado en el caso de IDEO 'dando la red, no solo el pez', este concepto sostiene que entrenar a un pequeño grupo de empleados en design thinking (talleres aislados) no genera impacto sostenible. Para lograr una transformación real, la innovación debe integrarse estructuralmente: liderazgo dedicado, espacios físicos dedicados (como el P&G Innovation Gym), equipos interdisciplinarios permanentes y métricas de impacto.",
+  "resumen_teorico": "Basado en el caso de IDEO 'dando la red, no solo el pez', este concepto sostiene que entrenar a un pequeño grupo de empleados en design thinking (talleres aislados) no es la forma más efectiva de avanzar y tiene un impacto limitado. Para lograr una transformación real, la innovación debe integrarse estructuralmente: liderazgo dedicado, espacios físicos dedicados (como el P&G Innovation Gym), equipos interdisciplinarios y métricas de impacto.",
   "pasos_accionables": [
     "Designar un líder o Chief Innovation Officer que dé permiso organizacional para experimentar.",
     "Ejecutar proyectos piloto que sirvan como prueba de concepto interna.",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Integra la Innovación en Cultura",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-adn_de_innovacion_organizacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Basado en el caso de IDEO 'dando la red, no solo el pez', este concepto sostiene que entrenar a un pequeño grupo de empleados en design thinking (talleres aislados) no genera impacto sostenible. Para lograr una transformación real, la innovación debe integrarse estructuralmente: liderazgo dedicado, espacios físicos dedicados (como el P&G Innovation Gym), equipos interdisciplinarios permanentes y métricas de impacto.",
+      "texto_nuevo": "Basado en el caso de IDEO 'dando la red, no solo el pez', este concepto sostiene que entrenar a un pequeño grupo de empleados en design thinking (talleres aislados) no es la forma más efectiva de avanzar y tiene un impacto limitado. Para lograr una transformación real, la innovación debe integrarse estructuralmente: liderazgo dedicado, espacios físicos dedicados (como el P&G Innovation Gym), equipos interdisciplinarios y métricas de impacto.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1051-1053, 1067",
+        "frase": "the impact of a stand-alone workshop will be limited"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que no es la forma más efectiva y que el impacto de un taller aislado es limitado; el nodo lo endurece a que no genera impacto sostenible.; El libro pide reunir equipos interdisciplinarios para dar base amplia al esfuerzo; no dice que sean permanentes.; Mismo defecto que la marca 0: 'permanentes' no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

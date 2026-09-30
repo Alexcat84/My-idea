@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Listar las condiciones de trabajo presentes en la tarea evaluada",
     "Comparar dichas condiciones contra la lista rankeada de EPCs",
-    "Seleccionar los factores EPC más relevantes y su peso multiplicador",
+    "Seleccionar los factores EPC más relevantes y multiplicar la probabilidad nominal de error de la tarea por una proporción juzgada de su peso multiplicador",
     "Priorizar la remediación de los EPCs con mayor impacto (ej: falta de familiaridad, escasez de tiempo)"
   ],
   "entregable_esperado": "Lista priorizada de EPCs presentes en el entorno laboral con sus factores multiplicadores de riesgo",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Identifica lo que Provoca Errores",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-110-epc_condiciones_productoras_error-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar los factores EPC más relevantes y su peso multiplicador",
+      "texto_nuevo": "Seleccionar los factores EPC más relevantes y multiplicar la probabilidad nominal de error de la tarea por una proporción juzgada de su peso multiplicador",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3393-3395",
+        "frase": "nominal error probability is multiplied by a suitably judged proportion of the appropriate EPC factor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no aplica el factor entero: multiplica la probabilidad nominal de la tarea por una proporción juzgada del factor.; Mismo defecto: se pierden la probabilidad nominal de partida y el ajuste por proporción juzgada.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

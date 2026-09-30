@@ -11,7 +11,7 @@
     "Implementa muestreo aleatorio con números aleatorios en lugar de inspección exhaustiva",
     "Rediseña tu proceso de producción para construir calidad desde el origen",
     "Reduce gradualmente la inspección masiva a medida que tu proceso demuestre estar en control estadístico",
-    "Reserva la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico"
+    "Reserva la inspección al 100% para casos excepcionales: bajo rendimiento, errores inevitables pero intolerables (como cálculos bancarios) o cuando da el menor costo total"
   ],
   "entregable_esperado": "Plan de transición de inspección masiva a inspección por muestreo aleatorio y control estadístico de proceso, con métricas de reducción de costos e incremento de calidad",
   "nodos_previos": [
@@ -43,5 +43,24 @@
   ],
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-112-abolir_inspeccion_masiva-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reserva la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico",
+      "texto_nuevo": "Reserva la inspección al 100% para casos excepcionales: bajo rendimiento, errores inevitables pero intolerables (como cálculos bancarios) o cuando da el menor costo total",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "677, 715-717",
+        "frase": "circumstances in which mistakes and duds are inevitable but intolerable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite también la inspección al 100% ante errores inevitables pero intolerables y cuando da el costo total mínimo.; Mismo defecto: se caen dos excepciones del libro.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Enfoques para Definir el Riesgo Aceptable (ALARP y Alternativas)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Cada organización o sociedad debe elegir el marco que mejor se adapte a su contexto tecnológico, económico y cultural, entendiendo que la definición de 'seguridad suficiente' es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa.",
+  "resumen_teorico": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Lo que la tecnología o la sociedad considera 'seguridad suficiente' influye en cómo se reducen los accidentes y sus consecuencias, y es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa, salvo interrupciones en épocas de crisis económica o alto desempleo.",
   "pasos_accionables": [
     "Determinar qué enfoque de riesgo aceptable aplica al contexto regulatorio o industrial de la organización",
     "Justificar la elección del enfoque frente a partes interesadas y reguladores",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Define tu Riesgo Aceptable",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-110-enfoques_definicion_riesgo_aceptable-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Cada organización o sociedad debe elegir el marco que mejor se adapte a su contexto tecnológico, económico y cultural, entendiendo que la definición de 'seguridad suficiente' es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa.",
+      "texto_nuevo": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Lo que la tecnología o la sociedad considera 'seguridad suficiente' influye en cómo se reducen los accidentes y sus consecuencias, y es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa, salvo interrupciones en épocas de crisis económica o alto desempleo.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4296",
+        "frase": "a target moving continuously towards zero risk, except for interruptions during times of economic distress"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no prescribe elegir el marco según el contexto tecnológico, económico y cultural; solo dice que lo que se considera suficientemente seguro influye en ambas funciones.; Misma excepción omitida.; Misma prescripción añadida.; Se cae la excepción del libro: el avance hacia el riesgo cero se interrumpe en crisis económica o alto desempleo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

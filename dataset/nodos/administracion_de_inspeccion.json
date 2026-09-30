@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Administración de la Inspección para Alta Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "En procesos donde un defecto puede ser grave (como en seguridad automotriz o cálculos bancarios), puede requerirse inspección al 100%. Sin embargo, la inspección duplicada debe evitar interacción entre el trabajo original y la revisión (por ejemplo, haciendo que dos personas trabajen de forma independiente desde el documento original) para minimizar la probabilidad de que un error pase inadvertido en ambas verificaciones.",
+  "resumen_teorico": "En procesos donde un defecto puede ser grave (como en seguridad automotriz o cálculos bancarios), puede requerirse inspección al 100%, aunque es mejor lograr control estadístico con la variación muy dentro de los requisitos. La inspección duplicada debe evitar interacción entre el trabajo original y la revisión (por ejemplo, haciendo que dos personas trabajen de forma independiente desde el documento original) para minimizar la probabilidad de que un error pase inadvertido en ambas verificaciones.",
   "pasos_accionables": [
     "Determinar si el proceso requiere inspección al 100% por razones de seguridad o costo total mínimo",
     "Asegurar que los revisores trabajen de manera independiente desde el documento original, sin ver el trabajo del otro",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Gestiona tu Inspección de Calidad",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-112-administracion_de_inspeccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En procesos donde un defecto puede ser grave (como en seguridad automotriz o cálculos bancarios), puede requerirse inspección al 100%. Sin embargo, la inspección duplicada debe evitar interacción entre el trabajo original y la revisión (por ejemplo, haciendo que dos personas trabajen de forma independiente desde el documento original) para minimizar la probabilidad de que un error pase inadvertido en ambas verificaciones.",
+      "texto_nuevo": "En procesos donde un defecto puede ser grave (como en seguridad automotriz o cálculos bancarios), puede requerirse inspección al 100%, aunque es mejor lograr control estadístico con la variación muy dentro de los requisitos. La inspección duplicada debe evitar interacción entre el trabajo original y la revisión (por ejemplo, haciendo que dos personas trabajen de forma independiente desde el documento original) para minimizar la probabilidad de que un error pase inadvertido en ambas verificaciones.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6296",
+        "frase": "A better plan would be to achieve statistical control of the production"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto; la cifra de recuperación en 6 meses de la propuesta no está en el libro y no entra.; Se cae que el libro considera mejor plan lograr control estadístico con la variación muy dentro de los requisitos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

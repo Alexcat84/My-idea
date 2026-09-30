@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Bucle de Adherencia (Adherence Loop)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Marco de tres fases autoreforzantes para diseñar experiencias que requieren compromiso continuo del usuario: comprensión del problema, aceptación de la necesidad de acción, y ejecución de la acción. Aplicado originalmente a adherencia a tratamientos médicos, es útil para cualquier producto/servicio que dependa de un compromiso sostenido en el tiempo.",
+  "resumen_teorico": "Marco de tres fases autoreforzantes para diseñar experiencias que requieren compromiso continuo del usuario: comprensión del problema, aceptación de la necesidad de acción, y ejecución de la acción. Se plantea para la adherencia a tratamientos médicos, como ejemplo de diseño de experiencias que se despliegan en el tiempo.",
   "pasos_accionables": [
     "Identificar las tres fases: entender, aceptar, actuar",
     "Diseñar puntos de refuerzo positivo en cada fase del recorrido",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Diseña el Compromiso del Usuario",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-adherence_loop_diseno_temporal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marco de tres fases autoreforzantes para diseñar experiencias que requieren compromiso continuo del usuario: comprensión del problema, aceptación de la necesidad de acción, y ejecución de la acción. Aplicado originalmente a adherencia a tratamientos médicos, es útil para cualquier producto/servicio que dependa de un compromiso sostenido en el tiempo.",
+      "texto_nuevo": "Marco de tres fases autoreforzantes para diseñar experiencias que requieren compromiso continuo del usuario: comprensión del problema, aceptación de la necesidad de acción, y ejecución de la acción. Se plantea para la adherencia a tratamientos médicos, como ejemplo de diseño de experiencias que se despliegan en el tiempo.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "868-874",
+        "frase": "There are three self-reinforcing phases of medical treatment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea el bucle para la adherencia a tratamientos médicos; no afirma que sirva para cualquier producto o servicio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

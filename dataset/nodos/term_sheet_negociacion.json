@@ -7,7 +7,7 @@
   "resumen_teorico": "El term sheet es el documento que resume los términos económicos y de control de una ronda de inversión: precio por acción, valuación pre/post-money, preferencia de liquidación, derechos de conversión, antidilución, derechos de voto y composición del board. Entender cada cláusula (participación en liquidación, ratchet completo vs. promedio ponderado, conversión automática en IPO calificado, derechos de redención) es esencial para que el fundador negocie términos justos y entienda las implicaciones de control y económicas de cada elección.",
   "pasos_accionables": [
     "Revisar cada sección del term sheet (dividendos, liquidación, conversión, antidilución, voto, board) con un abogado",
-    "Comparar los términos propuestos con estándares de mercado (ej. preferencia de liquidación 1x no participante)",
+    "Comparar los términos propuestos con los habituales del mercado (ej. preferencia de liquidación 1x)",
     "Negociar la composición del board para mantener balance de poder adecuado",
     "Evaluar el impacto de las cláusulas de antidilución en futuras rondas",
     "Firmar el term sheet solo después de validar todos los términos con asesoría legal"
@@ -71,5 +71,24 @@
   "etiqueta_arbol": "Negocia los Términos de Inversión",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-111-term_sheet_negociacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar los términos propuestos con estándares de mercado (ej. preferencia de liquidación 1x no participante)",
+      "texto_nuevo": "Comparar los términos propuestos con los habituales del mercado (ej. preferencia de liquidación 1x)",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "937, 1090",
+        "frase": "Participating preferred deals have become an unfortunate standard over the years"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la preferencia participante se volvió el estándar; lo no participante como estándar de mercado no lo sostiene.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

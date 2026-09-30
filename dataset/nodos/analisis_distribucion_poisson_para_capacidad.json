@@ -9,7 +9,7 @@
     "Recolectar el número de eventos (emergencias, averías) por día durante varias semanas",
     "Calcular el promedio diario de eventos",
     "Calcular la desviación estándar como raíz cuadrada del promedio (supuesto Poisson)",
-    "Establecer límites superiores (ej. promedio + 2 o 3 sigma) para dimensionar recursos",
+    "Establecer límites superiores (ej. promedio + 3 sigma, o + 2 sigma si aceptas quedarte corto de vez en cuando) para dimensionar recursos, sabiendo que el límite es sensible al promedio, a los ciclos y a las tendencias",
     "Graficar los datos reales en un gráfico de corridas para confirmar aleatoriedad y ajustar el modelo si es necesario"
   ],
   "entregable_esperado": "Estimación de capacidad de recursos (personal, equipo) basada en análisis estadístico de frecuencia de eventos, con gráfico de verificación",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Planifica Capacidad ante lo Aleatorio",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-112-analisis_distribucion_poisson_para_capacidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer límites superiores (ej. promedio + 2 o 3 sigma) para dimensionar recursos",
+      "texto_nuevo": "Establecer límites superiores (ej. promedio + 3 sigma, o + 2 sigma si aceptas quedarte corto de vez en cuando) para dimensionar recursos, sabiendo que el límite es sensible al promedio, a los ciclos y a las tendencias",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8665-8673",
+        "frase": "If he is willing to get caught short only now and then"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro usa 3 sigma y deja 2 sigma solo si aceptas quedarte corto a veces, y advierte la sensibilidad al promedio, ciclos y tendencias.; Mismo defecto: se caen la condición de los 2 sigma y la advertencia de sensibilidad.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

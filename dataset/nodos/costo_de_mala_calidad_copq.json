@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+  "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa los costos que desaparecerían si no existieran fallos, como retrabajo, reclamos y garantías. Los costos de calidad se clasifican en prevención, evaluación, fallas internas y fallas externas; en sentido estricto el COPQ son solo las fallas, y la evaluación y la prevención se ven como inversiones para lograr la calidad. Las fallas son la mayor parte del total y la prevención una parte pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), y en la mayoría de los negocios puede superar la utilidad anual; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
   "pasos_accionables": [
     "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad",
     "Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
-    "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real",
+    "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real, tomándolos solo como referencia aproximada: hay pocos datos confiables y cada empresa define el COPQ a su manera",
     "Identifica los pocos procesos o productos que concentran la mayor parte del costo",
     "Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio",
     "Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia"
@@ -256,6 +256,39 @@
         "motivo": "Referencia de un nodo vivo a costo_de_calidad_2, deprecado; su superviviente es costo_de_calidad_3."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-109-costo_de_mala_calidad_copq-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+      "texto_nuevo": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa los costos que desaparecerían si no existieran fallos, como retrabajo, reclamos y garantías. Los costos de calidad se clasifican en prevención, evaluación, fallas internas y fallas externas; en sentido estricto el COPQ son solo las fallas, y la evaluación y la prevención se ven como inversiones para lograr la calidad. Las fallas son la mayor parte del total y la prevención una parte pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), y en la mayoría de los negocios puede superar la utilidad anual; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "25548, 25732",
+        "frase": "appraisal and prevention categories are viewed as investments to achieve quality objectives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro dice que el COPQ son las fallas internas y externas, y que evaluación y prevención son inversiones, no costos que desaparecerían.; El libro dice que en la mayoría de las organizaciones puede superar las utilidades; el nodo lo afirma como hecho.; El libro dice que las fallas en conjunto son la mayor parte, no las externas en particular.; Mismo contrario que la marca 0 sobre la prevención.; Mismo defecto que la marca 1.; Mismo endurecimiento que la marca 2.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-costo_de_mala_calidad_copq-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real",
+      "texto_nuevo": "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real, tomándolos solo como referencia aproximada: hay pocos datos confiables y cada empresa define el COPQ a su manera",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "25849",
+        "frase": "few credible data are available because (1) companies almost never publish such data"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que hay pocos datos creíbles para comparar y que cada empresa define el COPQ distinto.; Mismo matiz que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

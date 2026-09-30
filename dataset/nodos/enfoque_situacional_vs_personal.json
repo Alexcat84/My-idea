@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Enfoque Situacional vs. Personal en la Gestión de Errores",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Ante un error, la pregunta es qué resulta más fácil de remediar: la persona o la situación. El sentido común y la práctica en profesiones que valoran la responsabilidad personal (médicos, pilotos, ingenieros) sugieren cambiar a la persona mediante reentrenamiento, disciplina o advertencias. Sin embargo, la evidencia científica favorece el enfoque situacional: la falibilidad humana no puede eliminarse del todo y las sanciones o amenazas tienen efectividad limitada. Los errores surgen de una cadena causal donde los factores psicológicos inmediatos son los eslabones menos gestionables. Por eso, dentro de una fuerza laboral capacitada y bien intencionada, es más eficaz y sostenible corregir las condiciones de trabajo, procesos y tareas que producen errores, en lugar de enfocarse solo en corregir a las personas.",
+  "resumen_teorico": "Ante un error, la pregunta es qué resulta más fácil de remediar: la persona o la situación. El sentido común y la práctica en profesiones que valoran la responsabilidad personal (médicos, pilotos, ingenieros) sugieren cambiar a la persona mediante reentrenamiento, disciplina o advertencias. Sin embargo, la evidencia científica favorece el enfoque situacional: la falibilidad humana no puede eliminarse del todo y las sanciones o amenazas tienen efectividad limitada. Los errores surgen de una cadena causal donde los factores psicológicos inmediatos suelen ser los últimos eslabones y los menos gestionables. Por eso, dentro de una fuerza laboral capacitada y bien intencionada, es más fácil mejorar las condiciones de trabajo, procesos y tareas que producen errores que enfocarse solo en corregir a las personas.",
   "pasos_accionables": [
     "Analiza la cadena causal completa detrás de cada error antes de decidir cómo responder",
     "Prioriza el rediseño de la tarea, herramientas o procedimiento como primera línea de intervención",
@@ -78,6 +78,22 @@
         "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-110-enfoque_situacional_vs_personal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante un error, la pregunta es qué resulta más fácil de remediar: la persona o la situación. El sentido común y la práctica en profesiones que valoran la responsabilidad personal (médicos, pilotos, ingenieros) sugieren cambiar a la persona mediante reentrenamiento, disciplina o advertencias. Sin embargo, la evidencia científica favorece el enfoque situacional: la falibilidad humana no puede eliminarse del todo y las sanciones o amenazas tienen efectividad limitada. Los errores surgen de una cadena causal donde los factores psicológicos inmediatos son los eslabones menos gestionables. Por eso, dentro de una fuerza laboral capacitada y bien intencionada, es más eficaz y sostenible corregir las condiciones de trabajo, procesos y tareas que producen errores, en lugar de enfocarse solo en corregir a las personas.",
+      "texto_nuevo": "Ante un error, la pregunta es qué resulta más fácil de remediar: la persona o la situación. El sentido común y la práctica en profesiones que valoran la responsabilidad personal (médicos, pilotos, ingenieros) sugieren cambiar a la persona mediante reentrenamiento, disciplina o advertencias. Sin embargo, la evidencia científica favorece el enfoque situacional: la falibilidad humana no puede eliminarse del todo y las sanciones o amenazas tienen efectividad limitada. Los errores surgen de una cadena causal donde los factores psicológicos inmediatos suelen ser los últimos eslabones y los menos gestionables. Por eso, dentro de una fuerza laboral capacitada y bien intencionada, es más fácil mejorar las condiciones de trabajo, procesos y tareas que producen errores que enfocarse solo en corregir a las personas.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2981",
+        "frase": "are often the last and least manageable links in the chain"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos factores a menudo son los últimos y menos gestionables eslabones; el nodo lo vuelve absoluto.; El libro dice que las situaciones son más fáciles de mejorar que las personas; 'eficaz y sostenible' añade un efecto que no afirma.; Mismo endurecimiento de 'often'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

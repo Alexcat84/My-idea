@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Falla Sistémica versus Error Individual",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Principio central en el análisis de accidentes organizacionales (Challenger, Dryden, Piper Alpha): los grandes desastres rara vez se explican por el error de una sola persona en el momento del incidente. En cambio, resultan de una cadena de factores latentes a nivel organizacional y regulatorio —recursos, procedimientos, comunicación, cultura— que crean las condiciones para que un error activo tenga consecuencias catastróficas.",
+  "resumen_teorico": "Principio central en el análisis de accidentes organizacionales (Challenger, Dryden, Piper Alpha): los grandes desastres rara vez se explican por el error de una sola persona en el momento del incidente. En cambio, resultan de una cadena de factores latentes a nivel organizacional y regulatorio (recursos, procedimientos, comunicación, cultura) que crean las condiciones para que un error activo tenga consecuencias catastróficas, y que a veces bastan por sí solos para que fallen las defensas, como en Challenger.",
   "pasos_accionables": [
     "Al investigar un incidente, mapear factores organizacionales y regulatorios previos, no solo la acción del operador en el momento del evento",
     "Usar un modelo de causalidad de accidentes (ej. modelo de Reason) para clasificar fallas activas vs latentes",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Busca la Falla del Sistema",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-110-falla_sistemica_vs_error_individual-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Principio central en el análisis de accidentes organizacionales (Challenger, Dryden, Piper Alpha): los grandes desastres rara vez se explican por el error de una sola persona en el momento del incidente. En cambio, resultan de una cadena de factores latentes a nivel organizacional y regulatorio —recursos, procedimientos, comunicación, cultura— que crean las condiciones para que un error activo tenga consecuencias catastróficas.",
+      "texto_nuevo": "Principio central en el análisis de accidentes organizacionales (Challenger, Dryden, Piper Alpha): los grandes desastres rara vez se explican por el error de una sola persona en el momento del incidente. En cambio, resultan de una cadena de factores latentes a nivel organizacional y regulatorio (recursos, procedimientos, comunicación, cultura) que crean las condiciones para que un error activo tenga consecuencias catastróficas, y que a veces bastan por sí solos para que fallen las defensas, como en Challenger.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "291",
+        "frase": "On some occasions, the defences fail simply as the result of latent conditions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que el acto inseguro no es condición necesaria: en Challenger las defensas fallaron solo por condiciones latentes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Identifica a todas las personas involucradas en el sistema y qué objetivo parece tener cada una, no solo a quien usa el servicio",
     "Busca el objetivo compartido que hay debajo, entre los grupos que parecen tener intereses opuestos",
-    "Cambia cómo planteas el problema para reflejar esa alineación (por ejemplo, pasar de 'detectar objetos' a 'detectar intención hostil')",
+    "Cambia cómo planteas el problema para reflejar esa alineación (por ejemplo, pasar de '¿cómo reconfiguro el punto de control?' a '¿cómo genero empatía entre las personas de ambos lados?')",
     "Diseña intervenciones que reduzcan el estrés y la fricción entre las personas que usan el sistema, en lugar de imponer una regla desde arriba",
-    "Rediseña el recorrido y el espacio físico para darle más información a cada participante."
+    "Rediseña el recorrido y el espacio físico para darle más información a cada participante y, a la par, forma a quienes operan el sistema para que actúen con criterio propio en vez de seguir un guion."
   ],
   "entregable_esperado": "Un mapa de las personas involucradas con sus objetivos alineados y una nueva forma de plantear el problema",
   "nodos_previos": [
@@ -43,5 +43,41 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-alineacion_de_objetivos_en_sistemas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cambia cómo planteas el problema para reflejar esa alineación (por ejemplo, pasar de 'detectar objetos' a 'detectar intención hostil')",
+      "texto_nuevo": "Cambia cómo planteas el problema para reflejar esa alineación (por ejemplo, pasar de '¿cómo reconfiguro el punto de control?' a '¿cómo genero empatía entre las personas de ambos lados?')",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1134-1138",
+        "frase": "How might we instill a feeling of empathy in participants on both sides"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el paso de detectar objetos a detectar intención hostil era la estrategia que la agencia ya buscaba; el replanteo que refleja la alineación fue pasar de reconfigurar el control a generar empatía entre ambos lados.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-108-alineacion_de_objetivos_en_sistemas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rediseña el recorrido y el espacio físico para darle más información a cada participante.",
+      "texto_nuevo": "Rediseña el recorrido y el espacio físico para darle más información a cada participante y, a la par, forma a quienes operan el sistema para que actúen con criterio propio en vez de seguir un guion.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1140",
+        "frase": "a broadening out from rote-based procedures to a more flexible yet rigorous reliance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro trabaja en dos líneas paralelas, el espacio y la información y la formación de quienes operan el sistema para actuar con criterio; la segunda se cae.; Mismo defecto que la marca 0.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

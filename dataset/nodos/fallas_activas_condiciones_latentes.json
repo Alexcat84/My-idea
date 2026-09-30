@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Fallas Activas y Condiciones Latentes",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las fallas activas son errores o violaciones cometidos por quien está en primera línea, con efecto inmediato y de corta duración. Las condiciones latentes son como patógenos residentes: decisiones de niveles superiores (presupuesto, capacitación, diseño, procedimientos) que quedan dormidas por años hasta combinarse con circunstancias locales y fallas activas para atravesar las defensas del sistema. Cuando ambas se alinean, se abre una ventana de oportunidad para el accidente. Las condiciones latentes suelen originarse en decisiones ajenas al momento del incidente y pueden contribuir a varios accidentes si no se detectan a tiempo, por lo que corregirlas tiene más impacto que enfocarse solo en el error humano visible.",
+  "resumen_teorico": "Las fallas activas son errores o violaciones cometidos por quien está en primera línea, cuyo efecto suele ser inmediato y de corta duración. Las condiciones latentes son como patógenos residentes: decisiones de niveles superiores (presupuesto, capacitación, diseño, procedimientos) que pueden quedar dormidas por años hasta combinarse con circunstancias locales y fallas activas para atravesar las defensas del sistema. Cuando ambas se alinean, se abre una ventana de oportunidad para el accidente, aunque a veces las condiciones latentes bastan por sí solas para que fallen las defensas. Las condiciones latentes suelen originarse en decisiones ajenas al momento del incidente y pueden contribuir a varios accidentes si no se detectan a tiempo, por lo que corregirlas tiene más impacto que enfocarse solo en el error humano visible.",
   "pasos_accionables": [
     "Identificar los actos inseguros (errores o violaciones) cometidos en el momento del incidente",
     "Buscar las decisiones previas (presupuesto, capacitación, dotación, diseño) que crearon condiciones latentes",
@@ -70,6 +70,22 @@
         "evidencia": "F25-026: Analizar incidentes ya ocurridos y monitorear condiciones latentes es control operativo de un sistema en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-110-fallas_activas_condiciones_latentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las fallas activas son errores o violaciones cometidos por quien está en primera línea, con efecto inmediato y de corta duración. Las condiciones latentes son como patógenos residentes: decisiones de niveles superiores (presupuesto, capacitación, diseño, procedimientos) que quedan dormidas por años hasta combinarse con circunstancias locales y fallas activas para atravesar las defensas del sistema. Cuando ambas se alinean, se abre una ventana de oportunidad para el accidente. Las condiciones latentes suelen originarse en decisiones ajenas al momento del incidente y pueden contribuir a varios accidentes si no se detectan a tiempo, por lo que corregirlas tiene más impacto que enfocarse solo en el error humano visible.",
+      "texto_nuevo": "Las fallas activas son errores o violaciones cometidos por quien está en primera línea, cuyo efecto suele ser inmediato y de corta duración. Las condiciones latentes son como patógenos residentes: decisiones de niveles superiores (presupuesto, capacitación, diseño, procedimientos) que pueden quedar dormidas por años hasta combinarse con circunstancias locales y fallas activas para atravesar las defensas del sistema. Cuando ambas se alinean, se abre una ventana de oportunidad para el accidente, aunque a veces las condiciones latentes bastan por sí solas para que fallen las defensas. Las condiciones latentes suelen originarse en decisiones ajenas al momento del incidente y pueden contribuir a varios accidentes si no se detectan a tiempo, por lo que corregirlas tiene más impacto que enfocarse solo en el error humano visible.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "202",
+        "frase": "Active failures usually have immediate and relatively shortlived effects"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que las condiciones latentes pueden estar presentes muchos años, no que siempre lo estén.; El libro dice que las fallas activas suelen tener efectos inmediatos y breves, no siempre.; El libro precisa que los actos inseguros no son condición necesaria: a veces las defensas fallan solo por condiciones latentes.; Mismo endurecimiento de 'may be present for many years'.; Mismo endurecimiento de 'usually'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Inversionistas sofisticados pueden solicitar términos adicionales en la deuda convertible, como derechos de pro rata (incluso 'super pro rata') para participar en futuras rondas, o preferencias de liquidación que les garantizan recuperar su inversión (o un múltiplo) antes que otros accionistas en caso de liquidación.",
   "pasos_accionables": [
-    "Evaluar solicitudes de pro rata rights y su impacto en la dilución futura de la empresa.",
+    "Evaluar solicitudes de pro rata rights, que son bastante habituales.",
     "Ser cauteloso con solicitudes de 'super pro rata rights' que limiten opciones futuras de financiamiento.",
     "Considerar si se otorgará preferencia de liquidación en el contrato de deuda convertible (bridge loan).",
     "Negociar el múltiplo de preferencia de liquidación si aplica."
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Revisa Términos de Deuda Convertible",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-111-terminos_adicionales_deuda_convertible-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar solicitudes de pro rata rights y su impacto en la dilución futura de la empresa.",
+      "texto_nuevo": "Evaluar solicitudes de pro rata rights, que son bastante habituales.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2355",
+        "frase": "While pro rata rights are pretty typical"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye al pro rata un impacto en la dilución; lo llama bastante típico y reserva la cautela para el super pro rata.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

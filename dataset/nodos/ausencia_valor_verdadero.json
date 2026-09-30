@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ausencia de Valor Verdadero en Mediciones",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
+  "resumen_teorico": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto, aunque los expertos pueden preferir uno por dar resultados más cercanos a lo que se necesita. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
   "pasos_accionables": [
     "Reconocer que cualquier especificación de calidad que uses depende del método de medición que elijas.",
     "Documentar de forma explícita el método que usaste para cada medición que reportes.",
@@ -41,6 +41,22 @@
         "evidencia": "F11-010: Acordar con clientes o proveedores el metodo de medicion de referencia es gestion de calidad de un negocio en operacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-112-ausencia_valor_verdadero-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
+      "texto_nuevo": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto, aunque los expertos pueden preferir uno por dar resultados más cercanos a lo que se necesita. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6647-6649",
+        "frase": "The experts in the subject matter may have a preference, however, for Method A"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que, aunque ningún método es correcto ni incorrecto, los expertos pueden preferir uno por acercarse más a lo que se necesita.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

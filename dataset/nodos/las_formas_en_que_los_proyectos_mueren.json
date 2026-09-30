@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Los Riesgos Nucleares de Todo Proyecto",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Hay unas pocas formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y a veces mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco no dependen de cuánto te esfuerces ni de qué tan listo seas: son inevitables. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+  "resumen_teorico": "Hay cinco formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
   "pasos_accionables": [
     "Revisa tu plan contra las cinco formas típicas de morir y anota cuál te amenaza más.",
     "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (cuándo lo quieren para).",
@@ -41,6 +41,22 @@
         "evidencia": "F04-011: Revisar el plan, el plazo y el alcance contra los riesgos tipicos y reservar margen es planificacion, no validacion con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-109-las_formas_en_que_los_proyectos_mueren-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hay unas pocas formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y a veces mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco no dependen de cuánto te esfuerces ni de qué tan listo seas: son inevitables. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+      "texto_nuevo": "Hay cinco formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "930, 942, 1018",
+        "frase": "The other four are almost totally independent of how hard you work"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que esas cuatro son casi totalmente independientes del esfuerzo y la competencia, no que sean inevitables.; El libro dice que la ruptura del acuerdo, cuando ocurre, casi siempre es fatal; el 'a veces' le quita gravedad.; El libro elige cinco de veinte o treinta problemas comunes porque explican la mayor parte del desvío, y advierte que no son los únicos riesgos.; Mismo matiz que la marca 1: casi siempre fatal, no a veces.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

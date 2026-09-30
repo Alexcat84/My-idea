@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar si la negociación actual es de una sola ronda o multi-ronda (relación continua)",
     "Si es multi-ronda (ej. financiamiento con VC que estará en tu board), priorizar la reputación y evitar tácticas que generen represalias futuras",
-    "Si es de una sola ronda (ej. litigio, venta final de empresa), enfocarse en maximizar el resultado inmediato",
+    "Si es de una sola ronda (ej. litigio), enfocarse en maximizar el resultado inmediato; en la venta de la empresa, recordar que también hay una parte en la que todos ganan, porque el equipo suele seguir trabajando para el comprador",
     "Preguntar directamente a la contraparte cuáles son sus 3 términos más importantes antes de iniciar la negociación formal"
   ],
   "entregable_esperado": "Un mapa claro de qué tipo de juego se está jugando y una lista de los 3 términos prioritarios propios y de la contraparte",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Aplica Teoría de Juegos",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-111-teoria_de_juegos_en_negociacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es de una sola ronda (ej. litigio, venta final de empresa), enfocarse en maximizar el resultado inmediato",
+      "texto_nuevo": "Si es de una sola ronda (ej. litigio), enfocarse en maximizar el resultado inmediato; en la venta de la empresa, recordar que también hay una parte en la que todos ganan, porque el equipo suele seguir trabajando para el comprador",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3487",
+        "frase": "the vast majority of management teams work for their acquirer after the deal is done"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la venta de la empresa también tiene una parte en la que todos ganan, porque el equipo suele seguir con el comprador.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

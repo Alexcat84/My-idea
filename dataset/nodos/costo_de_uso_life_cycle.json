@@ -9,7 +9,7 @@
     "Calcular el costo total de propiedad del producto/servicio a lo largo de su vida útil",
     "Incluir costos de operación, mantenimiento, downtime y depreciación en el análisis",
     "Comparar el costo de ciclo de vida contra el precio de compra inicial",
-    "Comunicar el análisis de costo de ciclo de vida como ventaja competitiva ante el cliente"
+    "Sugerencia de My Idea: comunicar al cliente el análisis de costo de ciclo de vida, para mostrar el costo combinado y no solo el precio de compra"
   ],
   "entregable_esperado": "Modelo de costeo de ciclo de vida (life-cycle costing) para el producto/servicio evaluado",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Mira Más Allá del Precio",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-109-costo_de_uso_life_cycle-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar el análisis de costo de ciclo de vida como ventaja competitiva ante el cliente",
+      "texto_nuevo": "Sugerencia de My Idea: comunicar al cliente el análisis de costo de ciclo de vida, para mostrar el costo combinado y no solo el precio de compra",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "748-752",
+        "frase": "suppliers optimize their costs rather than the combined costs of suppliers and customers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta el costeo de ciclo de vida como solución a la suboptimización, no como ventaja competitiva.; Mismo resultado no afirmado por el libro que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

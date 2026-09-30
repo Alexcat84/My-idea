@@ -200,7 +200,7 @@
         "Implementa muestreo aleatorio con números aleatorios en lugar de inspección exhaustiva",
         "Rediseña tu proceso de producción para construir calidad desde el origen",
         "Reduce gradualmente la inspección masiva a medida que tu proceso demuestre estar en control estadístico",
-        "Reserva la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico"
+        "Reserva la inspección al 100% para casos excepcionales: bajo rendimiento, errores inevitables pero intolerables (como cálculos bancarios) o cuando da el menor costo total"
       ],
       "entregable_esperado": "Plan de transición de inspección masiva a inspección por muestreo aleatorio y control estadístico de proceso, con métricas de reducción de costos e incremento de calidad",
       "nodos_previos": [
@@ -1780,11 +1780,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Adaptación de los 14 Puntos de Deming al Servicio Médico",
-      "resumen_teorico": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación demuestra que los principios de gestión de calidad son universales y aplicables a cualquier tipo de servicio, incluyendo los de alta complejidad como la salud.",
+      "resumen_teorico": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación es un ejemplo de que los 14 puntos se aplican a una organización de servicio con poca modificación.",
       "pasos_accionables": [
         "Definir en términos operacionales qué significa 'servicio al paciente' para la institución",
         "Establecer estándares de servicio a corto y largo plazo",
-        "Implementar evidencia estadística de calidad para insumos médicos y procesos internos",
+        "Exigir evidencia estadística de calidad para los insumos médicos y aplicar acción correctiva, donde haga falta, en los procesos internos",
         "Eliminar el miedo entre distintos niveles jerárquicos del personal médico y no médico",
         "Crear una estructura de liderazgo responsable de impulsar los 14 puntos diariamente"
       ],
@@ -2025,7 +2025,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "El Bucle de Adherencia (Adherence Loop)",
-      "resumen_teorico": "Marco de tres fases autoreforzantes para diseñar experiencias que requieren compromiso continuo del usuario: comprensión del problema, aceptación de la necesidad de acción, y ejecución de la acción. Aplicado originalmente a adherencia a tratamientos médicos, es útil para cualquier producto/servicio que dependa de un compromiso sostenido en el tiempo.",
+      "resumen_teorico": "Marco de tres fases autoreforzantes para diseñar experiencias que requieren compromiso continuo del usuario: comprensión del problema, aceptación de la necesidad de acción, y ejecución de la acción. Se plantea para la adherencia a tratamientos médicos, como ejemplo de diseño de experiencias que se despliegan en el tiempo.",
       "pasos_accionables": [
         "Identificar las tres fases: entender, aceptar, actuar",
         "Diseñar puntos de refuerzo positivo en cada fase del recorrido",
@@ -2053,7 +2053,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Administración de la Inspección para Alta Calidad",
-      "resumen_teorico": "En procesos donde un defecto puede ser grave (como en seguridad automotriz o cálculos bancarios), puede requerirse inspección al 100%. Sin embargo, la inspección duplicada debe evitar interacción entre el trabajo original y la revisión (por ejemplo, haciendo que dos personas trabajen de forma independiente desde el documento original) para minimizar la probabilidad de que un error pase inadvertido en ambas verificaciones.",
+      "resumen_teorico": "En procesos donde un defecto puede ser grave (como en seguridad automotriz o cálculos bancarios), puede requerirse inspección al 100%, aunque es mejor lograr control estadístico con la variación muy dentro de los requisitos. La inspección duplicada debe evitar interacción entre el trabajo original y la revisión (por ejemplo, haciendo que dos personas trabajen de forma independiente desde el documento original) para minimizar la probabilidad de que un error pase inadvertido en ambas verificaciones.",
       "pasos_accionables": [
         "Determinar si el proceso requiere inspección al 100% por razones de seguridad o costo total mínimo",
         "Asegurar que los revisores trabajen de manera independiente desde el documento original, sin ver el trabajo del otro",
@@ -2172,7 +2172,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Codificar la Innovación en el ADN de la Organización",
-      "resumen_teorico": "Basado en el caso de IDEO 'dando la red, no solo el pez', este concepto sostiene que entrenar a un pequeño grupo de empleados en design thinking (talleres aislados) no genera impacto sostenible. Para lograr una transformación real, la innovación debe integrarse estructuralmente: liderazgo dedicado, espacios físicos dedicados (como el P&G Innovation Gym), equipos interdisciplinarios permanentes y métricas de impacto.",
+      "resumen_teorico": "Basado en el caso de IDEO 'dando la red, no solo el pez', este concepto sostiene que entrenar a un pequeño grupo de empleados en design thinking (talleres aislados) no es la forma más efectiva de avanzar y tiene un impacto limitado. Para lograr una transformación real, la innovación debe integrarse estructuralmente: liderazgo dedicado, espacios físicos dedicados (como el P&G Innovation Gym), equipos interdisciplinarios y métricas de impacto.",
       "pasos_accionables": [
         "Designar un líder o Chief Innovation Officer que dé permiso organizacional para experimentar.",
         "Ejecutar proyectos piloto que sirvan como prueba de concepto interna.",
@@ -2200,9 +2200,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Adoptar e Instituir el Liderazgo (Punto 7)",
-      "resumen_teorico": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar solo por números (metas, cuotas, cero errores). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
+      "resumen_teorico": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar por números (metas, cuotas, cero errores). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
       "pasos_accionables": [
-        "Dejar de evaluar el trabajo, propio o de quien te ayuda, solo con metas numéricas, cuotas o cifras frías",
+        "Dejar de evaluar el trabajo, propio o de quien te ayuda, con metas numéricas, cuotas o cifras frías",
         "Aprender a fondo el trabajo real antes de dirigirlo o delegarlo",
         "Escuchar y corregir las condiciones que dificultan el trabajo, como herramientas, materiales o criterios de calidad poco claros",
         "Usar datos para identificar qué está realmente fuera de línea, no solo quién quedó bajo el promedio"
@@ -2593,7 +2593,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Objetivo del Liderazgo (Deming)",
-      "resumen_teorico": "Liderar no es andar buscando y anotando errores de las personas que trabajan contigo, sino eliminar las causas que provocan esos errores para que puedan trabajar mejor y con menos esfuerzo. Así mejoras el desempeño de las personas y de los procesos, la calidad y el orgullo por el trabajo bien hecho. Tienes tres responsabilidades: identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño; mejorar el sistema de forma continua para todos; y lograr mayor consistencia reduciendo las diferencias aparentes entre personas. Esto significa diseñar formas de ayuda individual o de reconocimiento según el caso, en lugar de limitarte a corregir a cada persona por separado.",
+      "resumen_teorico": "Liderar no es solo buscar y anotar errores de las personas que trabajan contigo, sino eliminar las causas que provocan esos errores para que puedan trabajar mejor y con menos esfuerzo. Así mejoras el desempeño de las personas y de los procesos, la calidad y el orgullo por el trabajo bien hecho. Tienes tres responsabilidades: identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño; mejorar el sistema de forma continua para todos; y lograr mayor consistencia reduciendo las diferencias aparentes entre personas. Esto significa diseñar formas de ayuda individual o de reconocimiento según el caso, en lugar de limitarte a corregir a cada persona por separado.",
       "pasos_accionables": [
         "Identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño",
         "Investigar las causas de raíz del sistema que afectan el desempeño general",
@@ -2932,9 +2932,9 @@
       "pasos_accionables": [
         "Identifica a todas las personas involucradas en el sistema y qué objetivo parece tener cada una, no solo a quien usa el servicio",
         "Busca el objetivo compartido que hay debajo, entre los grupos que parecen tener intereses opuestos",
-        "Cambia cómo planteas el problema para reflejar esa alineación (por ejemplo, pasar de 'detectar objetos' a 'detectar intención hostil')",
+        "Cambia cómo planteas el problema para reflejar esa alineación (por ejemplo, pasar de '¿cómo reconfiguro el punto de control?' a '¿cómo genero empatía entre las personas de ambos lados?')",
         "Diseña intervenciones que reduzcan el estrés y la fricción entre las personas que usan el sistema, en lugar de imponer una regla desde arriba",
-        "Rediseña el recorrido y el espacio físico para darle más información a cada participante."
+        "Rediseña el recorrido y el espacio físico para darle más información a cada participante y, a la par, forma a quienes operan el sistema para que actúen con criterio propio en vez de seguir un guion."
       ],
       "entregable_esperado": "Un mapa de las personas involucradas con sus objetivos alineados y una nueva forma de plantear el problema",
       "nodos_previos": [
@@ -4326,7 +4326,7 @@
         "Recolectar el número de eventos (emergencias, averías) por día durante varias semanas",
         "Calcular el promedio diario de eventos",
         "Calcular la desviación estándar como raíz cuadrada del promedio (supuesto Poisson)",
-        "Establecer límites superiores (ej. promedio + 2 o 3 sigma) para dimensionar recursos",
+        "Establecer límites superiores (ej. promedio + 3 sigma, o + 2 sigma si aceptas quedarte corto de vez en cuando) para dimensionar recursos, sabiendo que el límite es sensible al promedio, a los ciclos y a las tendencias",
         "Graficar los datos reales en un gráfico de corridas para confirmar aleatoriedad y ajustar el modelo si es necesario"
       ],
       "entregable_esperado": "Estimación de capacidad de recursos (personal, equipo) basada en análisis estadístico de frecuencia de eventos, con gráfico de verificación",
@@ -6531,7 +6531,7 @@
         "Define hitos flexibles en lugar de un presupuesto fijo para todo el año.",
         "Decide cuándo liberar más dinero según el progreso real que ves, no según el calendario fiscal.",
         "Acepta y avisa que las reglas del presupuesto van a cambiar varias veces mientras dure el proyecto.",
-        "Libera los fondos poco a poco, según vayas cumpliendo hitos de aprendizaje, no solo metas financieras.",
+        "Libera los fondos poco a poco, a medida que el proyecto alcanza sus hitos.",
         "Confía en tu criterio, o en el de la persona que te acompaña, para decidir la financiación, en vez de seguir una fórmula rígida."
       ],
       "entregable_esperado": "Un modelo de financiamiento por hitos, con criterios de revisión flexibles que tú mismo defines y usas.",
@@ -7968,7 +7968,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Ausencia de Valor Verdadero en Mediciones",
-      "resumen_teorico": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
+      "resumen_teorico": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto, aunque los expertos pueden preferir uno por dar resultados más cercanos a lo que se necesita. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
       "pasos_accionables": [
         "Reconocer que cualquier especificación de calidad que uses depende del método de medición que elijas.",
         "Documentar de forma explícita el método que usaste para cada medición que reportes.",
@@ -9839,7 +9839,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "El Brief de Diseño como Marco Creativo",
-      "resumen_teorico": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo garantiza resultados incrementales y mediocres. El arte está en balancear libertad y restricción.",
+      "resumen_teorico": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo casi garantiza resultados incrementales y, muy probablemente, mediocres. El arte está en balancear libertad y restricción.",
       "pasos_accionables": [
         "Definir objetivos claros pero no sobreespecificados (evitar dictar la solución final)",
         "Incluir restricciones de precio, tecnología, y segmento de mercado sin cerrar el espacio de exploración",
@@ -17113,7 +17113,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Codiseño: Colaboración entre Creadores y Consumidores",
-      "resumen_teorico": "El diseño está migrando de 'diseñar para la gente' a 'diseñar con la gente' e incluso 'la gente diseñando por sí misma' (contenido generado por usuarios, open-source). El diseñador deja de ser el experto objetivo externo y se convierte en colaborador ('nosotros con ellos'). Técnicas como los 'cultural probes', el trabajo con jóvenes codesarrolladores, y el 'unfocus group' (reunir individuos únicos y expertos en vez de un grupo focal promedio) permiten esta colaboración activa.",
+      "resumen_teorico": "El diseño está migrando de 'diseñar para la gente' a 'diseñar con la gente' e incluso 'la gente diseñando por sí misma' (contenido generado por usuarios, open-source), aunque esto último dista de probar ideas de ruptura y hoy la mayor oportunidad es colaborar. El diseñador deja de ser el experto objetivo externo y se convierte en colaborador ('nosotros con ellos'). Técnicas como los 'cultural probes', el trabajo con jóvenes codesarrolladores, y el 'unfocus group' (reunir individuos únicos y expertos en vez de un grupo focal promedio) permiten esta colaboración activa.",
       "pasos_accionables": [
         "Diseñar herramientas de 'cultural probe' (diarios, cámaras) para que los usuarios documenten su propia vida",
         "Reemplazar el focus group tradicional por un 'unfocus group' con perfiles diversos y extremos",
@@ -20718,9 +20718,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Usa lo que la gente del lugar ya sabe (conocimiento local)",
-      "resumen_teorico": "Ninguna idea tuya, por buena que te parezca, sirve de nada si las personas que la van a usar no pueden sostenerla en su día a día real. Cuando trabajas en un contexto que no es el tuyo, apóyate en quienes ya conocen ese terreno: vecinos, organizaciones locales, otros emprendedores del lugar. Un equipo que hizo esto encontró ideas que jamás se le hubieran ocurrido desde afuera, como pagos por celular, marcar los vehículos de reparto o usar depósitos comunitarios, porque esas ideas nacieron de la gente que vive ahí, no de una oficina externa.",
+      "resumen_teorico": "Ninguna idea tuya, por buena que te parezca, vale mucho si las personas que la van a usar no pueden sostenerla en su día a día real. Cuando trabajas en un contexto que no es el tuyo, apóyate en quienes ya conocen ese terreno: organizaciones locales y otros emprendedores del lugar. Un equipo que hizo esto encontró muchas ideas adecuadas a la cultura del lugar, como pagos por celular, marcar los vehículos de reparto o usar depósitos comunitarios.",
       "pasos_accionables": [
-        "Busca y acércate a organizaciones, emprendedores y personas con influencia en la comunidad donde vas a implementar tu idea, antes de cerrar el diseño final",
+        "Busca y acércate a organizaciones y emprendedores de la comunidad donde vas a implementar tu idea, antes de cerrar el diseño final",
         "Crea junto con ellos las decisiones concretas de implementación: cómo se paga, cómo se distribuye, cómo se presenta tu marca",
         "Pregúntate si tu solución puede sostenerse sola, sin que dependa de que tú sigas metiendo recursos desde afuera",
         "Ajusta tu diseño según lo que te devuelve la gente que conoce el contexto real"
@@ -25334,11 +25334,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)",
-      "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+      "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa los costos que desaparecerían si no existieran fallos, como retrabajo, reclamos y garantías. Los costos de calidad se clasifican en prevención, evaluación, fallas internas y fallas externas; en sentido estricto el COPQ son solo las fallas, y la evaluación y la prevención se ven como inversiones para lograr la calidad. Las fallas son la mayor parte del total y la prevención una parte pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), y en la mayoría de los negocios puede superar la utilidad anual; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
       "pasos_accionables": [
         "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad",
         "Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
-        "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real",
+        "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real, tomándolos solo como referencia aproximada: hay pocos datos confiables y cada empresa define el COPQ a su manera",
         "Identifica los pocos procesos o productos que concentran la mayor parte del costo",
         "Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio",
         "Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia"
@@ -25534,7 +25534,7 @@
         "Calcular el costo total de propiedad del producto/servicio a lo largo de su vida útil",
         "Incluir costos de operación, mantenimiento, downtime y depreciación en el análisis",
         "Comparar el costo de ciclo de vida contra el precio de compra inicial",
-        "Comunicar el análisis de costo de ciclo de vida como ventaja competitiva ante el cliente"
+        "Sugerencia de My Idea: comunicar al cliente el análisis de costo de ciclo de vida, para mostrar el costo combinado y no solo el precio de compra"
       ],
       "entregable_esperado": "Modelo de costeo de ciclo de vida (life-cycle costing) para el producto/servicio evaluado",
       "nodos_previos": [
@@ -26039,7 +26039,7 @@
       "resumen_teorico": "Este principio del modelo Shingo, clasificado en la categoría de resultados, sostiene que el valor debe determinarse desde la perspectiva de lo que el cliente quiere y está dispuesto a pagar. Se enfatiza que los resultados deben considerarse tanto en términos de desempeño como de impactos (directos e indirectos, intencionados o no) que se extienden más allá de los beneficiarios inmediatos, hacia toda la cadena de partes interesadas.",
       "pasos_accionables": [
         "Identificar necesidades y expectativas reales del cliente mediante investigación directa",
-        "Definir medidas que reflejen tanto desempeño como impactos secundarios",
+        "Definir medidas que reflejen tanto desempeño como impactos secundarios, e identificar las relaciones de causa y efecto entre ambos",
         "Evaluar consecuencias éticas y sistémicas de las decisiones sobre stakeholders extendidos",
         "Alinear comportamientos organizacionales con la entrega efectiva de valor al cliente"
       ],
@@ -26729,10 +26729,10 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Criterios de Selección de Proyectos de Calidad",
-      "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, las organizaciones deben evaluar sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+      "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, la mayoría de las organizaciones evalúa sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
       "pasos_accionables": [
         "Listar todas las nominaciones de proyectos disponibles desde todas las fuentes posibles (datos, encuestas, empleados, clientes)",
-        "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio, y también según factibilidad, significancia, medibilidad",
+        "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio; para los primeros proyectos, exigir además que ataquen un problema crónico, sean factibles en pocos meses, significativos y medibles, y que sean ganadores",
         "Construir una matriz de evaluación compuesta para comparar nominaciones",
         "Presentar el listado priorizado al consejo de calidad para decisión final",
         "Delegar el filtrado inicial a una secretaría o departamento de calidad",
@@ -27595,7 +27595,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "CTQ - Características Críticas para la Calidad",
-      "resumen_teorico": "Las CTQ son la traducción técnica y medible de lo que tu cliente te pide. Te sirven como objetivos concretos a la hora de diseñar y como criterio de decisión durante todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.",
+      "resumen_teorico": "Las CTQ son la traducción técnica y medible de lo que tu cliente te pide, más lo que sumas comparándote con tu competencia y de tu propio desarrollo. Te sirven como objetivos al diseñar y como criterio de decisión en todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.",
       "pasos_accionables": [
         "Recoge la voz de tu cliente (VOC) con entrevistas, encuestas u observación directa",
         "Traduce lo que te dice tu cliente a términos técnicos y medibles",
@@ -28541,7 +28541,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Cultura de Optimismo como Base de la Innovación",
-      "resumen_teorico": "La curiosidad y la experimentación no prosperan en organizaciones cínicas. El optimismo —la creencia de que las cosas pueden mejorar— es indispensable para que las personas se atrevan a proponer ideas y asumir riesgos. Esto requiere confianza mutua entre liderazgo y equipos, y evidencia observable (desorden creativo, risas, energía) de que la organización tolera el riesgo.",
+      "resumen_teorico": "La curiosidad y la experimentación no prosperan en organizaciones cínicas. El optimismo (la creencia de que las cosas pueden mejorar) es indispensable para que las personas se atrevan a proponer ideas y asumir riesgos. Esto requiere confianza mutua entre liderazgo y equipos. Para saber si una organización es optimista y está atenta al riesgo, usa los sentidos: busca desorden creativo, risas y energía.",
       "pasos_accionables": [
         "Evaluar el 'clima' de la oficina: buscar desorden creativo, risas y conversaciones animadas como señales de una cultura sana.",
         "Como líder, dar una escucha justa a las ideas del equipo antes de descartarlas, generando confianza.",
@@ -29382,12 +29382,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Curva de la Bañera y Periodos de Fallo",
-      "resumen_teorico": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por defectos de diseño o fabricación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño o accidentes de uso) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+      "resumen_teorico": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por errores de diseño o fabricación, mal uso o mala aplicación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño, cambios del entorno o accidentes de uso o mantenimiento) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
       "pasos_accionables": [
         "Recolectar datos de tiempos de fallo del producto en campo o pruebas",
         "Graficar la tasa de fallo en el tiempo para identificar en qué periodo se encuentra el producto",
         "Aplicar pruebas de burn-in o screening ambiental para depurar fallos de mortalidad infantil",
-        "Implementar control de procedimientos operativos y de mantenimiento para el periodo de tasa constante",
+        "Implementar control de procedimientos operativos y de mantenimiento para contener los accidentes en el periodo de tasa constante, sabiendo que reducir esa tasa de fallo requiere un rediseño básico",
         "Establecer reemplazo preventivo de componentes antes de la fase de desgaste"
       ],
       "entregable_esperado": "Diagrama de la curva de bañera del producto con acciones de mitigación específicas para cada periodo identificado",
@@ -31194,7 +31194,7 @@
         "Determinar cuánto tiempo requiere la fase de exploración antes de necesitar dirección",
         "Establecer un deadline claro y comunicado a todo el equipo",
         "Usar el deadline como punto de evaluación final, no como presión diaria",
-        "Ajustar la duración con criterio, según cuándo aportará más la revisión de la dirección (ni una fecha límite cada día ni estirarla seis meses)"
+        "Ajustar la duración con criterio, según cuándo aportará más la revisión de la dirección (ni una fecha límite cada día, al menos en las primeras fases, ni estirarla seis meses)"
       ],
       "entregable_esperado": "Un calendario de hitos con deadlines definidos que marquen transiciones entre divergencia y convergencia",
       "nodos_previos": [
@@ -32702,7 +32702,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Deep Dive (Taller Intensivo de Design Thinking)",
-      "resumen_teorico": "Un taller intensivo donde te juntas con quien diseña el producto, el espacio y con quien conoce el problema de primera mano (médicos, enfermeras, pacientes) para explorar juntos una idea, armar prototipos y probarlos en un formato corto y acelerado. Si tienes menos tiempo, puedes hacer una versión más ligera, llamada 'Skinny Dip'.",
+      "resumen_teorico": "Un taller intensivo donde te juntas con quien diseña el producto, el espacio y con quien conoce el problema de primera mano (médicos, enfermeras, pacientes) para explorar juntos una idea, armar prototipos y probarlos en un formato corto y acelerado. También existe una versión más ligera, llamada 'Skinny Dip'.",
       "pasos_accionables": [
         "Reúne un equipo con quienes diseñan y quienes conocen el problema o lo viven de cerca, en un mismo espacio físico",
         "Define la pregunta central en formato '¿Cómo podríamos...?'",
@@ -32710,7 +32710,7 @@
         "Arma prototipos físicos o de proceso durante el taller, y que sean de baja fidelidad",
         "Prueba los resultados con las personas presentes y ajusta en el momento"
       ],
-      "entregable_esperado": "Prototipos probados y validados por usuarios o expertos reales en poco tiempo",
+      "entregable_esperado": "Prototipos probados y evaluados con usuarios o expertos reales en poco tiempo",
       "nodos_previos": [
         "practica_de_observacion_atenta",
         "ways_to_grow_matrix",
@@ -36169,7 +36169,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Tríada Deseabilidad-Factibilidad-Viabilidad",
-      "resumen_teorico": "Marco central del design thinking que evalúa cualquier solución desde tres ángulos: deseabilidad (¿la gente lo quiere?), factibilidad (¿es técnicamente posible?) y viabilidad (¿es sostenible como negocio?). Diferentes empresas parten de ángulos distintos: startups tecnológicas suelen empezar por factibilidad y ajustar los otros factores; empresas grandes con activos existentes (marca, clientes, distribución) tienden a innovar mejor desde la deseabilidad.",
+      "resumen_teorico": "Marco central del design thinking que evalúa cualquier solución desde tres ángulos: deseabilidad (¿la gente lo quiere?), factibilidad (¿es técnicamente posible?) y viabilidad (¿es sostenible como negocio?). Diferentes empresas parten de ángulos distintos: startups tecnológicas suelen empezar por factibilidad y ajustar los otros factores; a las empresas grandes con activos existentes (marca, clientes, distribución) puede convenirles más innovar desde la deseabilidad.",
       "pasos_accionables": [
         "Evaluar cada idea de innovación en los tres ejes simultáneamente: ¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?",
         "Identificar desde qué ángulo natural parte la organización (tecnología, mercado o negocio)",
@@ -47446,7 +47446,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Enfoque Situacional vs. Personal en la Gestión de Errores",
-      "resumen_teorico": "Ante un error, la pregunta es qué resulta más fácil de remediar: la persona o la situación. El sentido común y la práctica en profesiones que valoran la responsabilidad personal (médicos, pilotos, ingenieros) sugieren cambiar a la persona mediante reentrenamiento, disciplina o advertencias. Sin embargo, la evidencia científica favorece el enfoque situacional: la falibilidad humana no puede eliminarse del todo y las sanciones o amenazas tienen efectividad limitada. Los errores surgen de una cadena causal donde los factores psicológicos inmediatos son los eslabones menos gestionables. Por eso, dentro de una fuerza laboral capacitada y bien intencionada, es más eficaz y sostenible corregir las condiciones de trabajo, procesos y tareas que producen errores, en lugar de enfocarse solo en corregir a las personas.",
+      "resumen_teorico": "Ante un error, la pregunta es qué resulta más fácil de remediar: la persona o la situación. El sentido común y la práctica en profesiones que valoran la responsabilidad personal (médicos, pilotos, ingenieros) sugieren cambiar a la persona mediante reentrenamiento, disciplina o advertencias. Sin embargo, la evidencia científica favorece el enfoque situacional: la falibilidad humana no puede eliminarse del todo y las sanciones o amenazas tienen efectividad limitada. Los errores surgen de una cadena causal donde los factores psicológicos inmediatos suelen ser los últimos eslabones y los menos gestionables. Por eso, dentro de una fuerza laboral capacitada y bien intencionada, es más fácil mejorar las condiciones de trabajo, procesos y tareas que producen errores que enfocarse solo en corregir a las personas.",
       "pasos_accionables": [
         "Analiza la cadena causal completa detrás de cada error antes de decidir cómo responder",
         "Prioriza el rediseño de la tarea, herramientas o procedimiento como primera línea de intervención",
@@ -47507,7 +47507,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Enfoques para Definir el Riesgo Aceptable (ALARP y Alternativas)",
-      "resumen_teorico": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Cada organización o sociedad debe elegir el marco que mejor se adapte a su contexto tecnológico, económico y cultural, entendiendo que la definición de 'seguridad suficiente' es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa.",
+      "resumen_teorico": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Lo que la tecnología o la sociedad considera 'seguridad suficiente' influye en cómo se reducen los accidentes y sus consecuencias, y es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa, salvo interrupciones en épocas de crisis económica o alto desempleo.",
       "pasos_accionables": [
         "Determinar qué enfoque de riesgo aceptable aplica al contexto regulatorio o industrial de la organización",
         "Justificar la elección del enfoque frente a partes interesadas y reguladores",
@@ -48246,7 +48246,7 @@
       "pasos_accionables": [
         "Listar las condiciones de trabajo presentes en la tarea evaluada",
         "Comparar dichas condiciones contra la lista rankeada de EPCs",
-        "Seleccionar los factores EPC más relevantes y su peso multiplicador",
+        "Seleccionar los factores EPC más relevantes y multiplicar la probabilidad nominal de error de la tarea por una proporción juzgada de su peso multiplicador",
         "Priorizar la remediación de los EPCs con mayor impacto (ej: falta de familiaridad, escasez de tiempo)"
       ],
       "entregable_esperado": "Lista priorizada de EPCs presentes en el entorno laboral con sus factores multiplicadores de riesgo",
@@ -49153,7 +49153,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Erosión de Defensas por Períodos sin Accidentes",
-      "resumen_teorico": "Un largo período sin accidentes graves tiende a erosionar la protección porque las demandas productivas (crecimiento, ganancias, participación de mercado) toman prioridad. La inversión en protección declina y el mantenimiento de las defensas existentes se descuida, aumentando el riesgo de un accidente catastrófico futuro. Este fenómeno se conoce como el peligro del 'bote que no se mece'.",
+      "resumen_teorico": "Un largo período sin accidentes graves puede erosionar la protección porque las demandas productivas (crecimiento, ganancias, participación de mercado) toman prioridad. La inversión en protección declina, el mantenimiento de las defensas existentes se descuida y la producción crece sin defensas nuevas o ampliadas, aumentando el riesgo de un accidente catastrófico futuro. Este fenómeno se conoce como el peligro del 'bote que no se mece'.",
       "pasos_accionables": [
         "Auditar la inversión en mantenimiento de seguridad durante los últimos períodos sin incidentes.",
         "Implementar revisiones periódicas obligatorias de defensas independientemente del historial de accidentes.",
@@ -54196,13 +54196,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Evaluación de la Cultura de Seguridad Más Allá de sus Componentes",
-      "resumen_teorico": "Tener los elementos 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía supervisora, mejoras implementadas) no equivale a tener una cultura de seguridad real. La cultura es algo que la organización 'es' más que algo que 'tiene', pero para llegar a ese estado primero debe poseer los componentes esenciales. Se sugiere una serie de preguntas críticas sobre responsabilidad en el consejo directivo, presupuesto y jerarquía del área de seguridad, y tratamiento de la información organizacional.",
+      "resumen_teorico": "Tener los elementos 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía supervisora, mejoras implementadas) no equivale a tener una cultura de seguridad real. La cultura es algo que la organización 'es' más que algo que 'tiene', pero para llegar a ese estado primero debe poseer los componentes esenciales. Se sugiere una serie de preguntas críticas sobre responsabilidad en el consejo directivo, presupuesto y jerarquía del área de seguridad, tratamiento de la información organizacional, costeo de las pérdidas por incidentes y número de especialistas en factores humanos y organizacionales.",
       "pasos_accionables": [
         "Responder honestamente las preguntas clave: ¿quién en la junta directiva es responsable de la seguridad organizacional?, ¿se discute en reuniones regulares de alto nivel?",
         "Evaluar el presupuesto, personal y nivel jerárquico del área que recopila y analiza información de seguridad",
         "Determinar si un puesto relacionado con seguridad es visto como un ascenso o un destierro profesional",
         "Revisar si existen procedimientos de apelación y participación de pares en decisiones disciplinarias",
-        "Reconocer que alcanzar una cultura de seguridad plena es un proceso continuo, nunca un estado logrado definitivamente"
+        "Reconocer que alcanzar una cultura de seguridad plena es un proceso continuo, algo que se persigue y rara vez se logra"
       ],
       "entregable_esperado": "Informe de autodiagnóstico organizacional respondiendo el checklist de preguntas críticas sobre cultura de seguridad",
       "nodos_previos": [
@@ -57494,7 +57494,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Falla Sistémica versus Error Individual",
-      "resumen_teorico": "Principio central en el análisis de accidentes organizacionales (Challenger, Dryden, Piper Alpha): los grandes desastres rara vez se explican por el error de una sola persona en el momento del incidente. En cambio, resultan de una cadena de factores latentes a nivel organizacional y regulatorio —recursos, procedimientos, comunicación, cultura— que crean las condiciones para que un error activo tenga consecuencias catastróficas.",
+      "resumen_teorico": "Principio central en el análisis de accidentes organizacionales (Challenger, Dryden, Piper Alpha): los grandes desastres rara vez se explican por el error de una sola persona en el momento del incidente. En cambio, resultan de una cadena de factores latentes a nivel organizacional y regulatorio (recursos, procedimientos, comunicación, cultura) que crean las condiciones para que un error activo tenga consecuencias catastróficas, y que a veces bastan por sí solos para que fallen las defensas, como en Challenger.",
       "pasos_accionables": [
         "Al investigar un incidente, mapear factores organizacionales y regulatorios previos, no solo la acción del operador en el momento del evento",
         "Usar un modelo de causalidad de accidentes (ej. modelo de Reason) para clasificar fallas activas vs latentes",
@@ -57544,7 +57544,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Fallas Activas y Condiciones Latentes",
-      "resumen_teorico": "Las fallas activas son errores o violaciones cometidos por quien está en primera línea, con efecto inmediato y de corta duración. Las condiciones latentes son como patógenos residentes: decisiones de niveles superiores (presupuesto, capacitación, diseño, procedimientos) que quedan dormidas por años hasta combinarse con circunstancias locales y fallas activas para atravesar las defensas del sistema. Cuando ambas se alinean, se abre una ventana de oportunidad para el accidente. Las condiciones latentes suelen originarse en decisiones ajenas al momento del incidente y pueden contribuir a varios accidentes si no se detectan a tiempo, por lo que corregirlas tiene más impacto que enfocarse solo en el error humano visible.",
+      "resumen_teorico": "Las fallas activas son errores o violaciones cometidos por quien está en primera línea, cuyo efecto suele ser inmediato y de corta duración. Las condiciones latentes son como patógenos residentes: decisiones de niveles superiores (presupuesto, capacitación, diseño, procedimientos) que pueden quedar dormidas por años hasta combinarse con circunstancias locales y fallas activas para atravesar las defensas del sistema. Cuando ambas se alinean, se abre una ventana de oportunidad para el accidente, aunque a veces las condiciones latentes bastan por sí solas para que fallen las defensas. Las condiciones latentes suelen originarse en decisiones ajenas al momento del incidente y pueden contribuir a varios accidentes si no se detectan a tiempo, por lo que corregirlas tiene más impacto que enfocarse solo en el error humano visible.",
       "pasos_accionables": [
         "Identificar los actos inseguros (errores o violaciones) cometidos en el momento del incidente",
         "Buscar las decisiones previas (presupuesto, capacitación, dotación, diseño) que crearon condiciones latentes",
@@ -59071,7 +59071,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "El Riesgo de las 'Soluciones' que Causan el Próximo Accidente",
-      "resumen_teorico": "Las medidas correctivas diseñadas tras un accidente (fixes de ingeniería o regulación) pueden, sin quererlo, sembrar las condiciones para un accidente futuro distinto. Ejemplos históricos incluyen el monitor de despegue que falló mecánicamente causando un accidente, y la regla post-TMI de no reducir la inyección de agua a alta presión, que en Ginna prolongó una emergencia porque esa acción sí era la correcta en ese contexto. Esto demuestra que los reguladores y diseñadores no pueden prever todos los escenarios de falla en sistemas complejos y fuertemente acoplados.",
+      "resumen_teorico": "Las medidas correctivas diseñadas tras un accidente (fixes de ingeniería o regulación) pueden, sin quererlo, sembrar las condiciones para un accidente futuro distinto. Ejemplos históricos incluyen el monitor de despegue que falló mecánicamente causando un accidente, y la regla post-TMI de no reducir la inyección de agua a alta presión, que en Ginna prolongó una emergencia porque esa acción sí era la correcta en ese contexto. Esto muestra dos problemas: las defensas de ingeniería nuevas añaden complejidad y componentes que también pueden fallar, y los reguladores y diseñadores no pueden prever todos los escenarios de falla en sistemas complejos y fuertemente acoplados.",
       "pasos_accionables": [
         "Antes de implementar una nueva regla o dispositivo tras un incidente, evaluar escenarios alternativos donde la nueva regla podría ser contraproducente",
         "Sugerencia de My Idea: realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
@@ -63334,7 +63334,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Gestión de Errores (Error Management - EM)",
-      "resumen_teorico": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema y hacer visibles las condiciones latentes. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
+      "resumen_teorico": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema, hacer visibles las condiciones latentes y mejorar la resistencia intrínseca de la organización a la falibilidad humana. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
       "pasos_accionables": [
         "Diseñar medidas de reducción de errores (mejorar diseño de tareas, información, entrenamiento)",
         "Diseñar medidas de contención de errores (detección temprana, barreras, tolerancia del sistema)",
@@ -66294,9 +66294,9 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "La Reserva de Contingencia",
-      "resumen_teorico": "Cuando conoces tus riesgos, sabes cuánto margen guardar para protegerte: eso es la reserva de contingencia, tiempo y dinero apartados para cuando un riesgo pegue. La reserva es, por definición, algo que quizá no uses; por eso cuesta disciplina reservarla, y por eso quien no la tiene termina pagando mucho más caro cuando el riesgo se vuelve realidad. Lo importante es que su tamaño no sea un número al azar ni un diez por ciento de manual, sino que salga del riesgo real que mediste: mientras más grande e incierto el riesgo, mayor el colchón. La reserva incluye lo que gastarás en prepararte y lo que guardas para apagar incendios. Para el emprendedor, un colchón bien dimensionado es lo que le permite sobrevivir al golpe que a otros los saca del juego.",
+      "resumen_teorico": "Cuando conoces tus riesgos, sabes cuánto margen guardar para protegerte: eso es la reserva de contingencia, tiempo y dinero apartados para cuando un riesgo pegue. La reserva es, por definición, algo que quizá no uses; por eso cuesta disciplina reservarla, y por eso quien no la tiene termina pagando mucho más caro cuando el riesgo se vuelve realidad. Lo importante es que su tamaño no sea un número al azar, sino que salga del riesgo real que mediste: mientras más grande e incierto el riesgo, mayor el colchón. La reserva incluye lo que gastarás en prepararte y lo que guardas para apagar incendios. Para el emprendedor, un colchón bien dimensionado es la protección más barata ante los riesgos que sí se materializan, y en promedio alcanza para pagarlos.",
       "pasos_accionables": [
-        "Suma el impacto probable (probabilidad por costo) de todos tus riesgos para estimar cuánto colchón necesitas.",
+        "Suma el impacto probable (probabilidad por costo) de todos tus riesgos para estimar cuánto colchón necesitas; una reserva igual a esa suma alcanza en promedio, así que a veces faltará y a veces sobrará, y puedes apartar más si quieres ir a la defensiva.",
         "Aparta tiempo y dinero de reserva proporcional a ese riesgo, no un porcentaje al azar.",
         "Separa la reserva del presupuesto normal: es para emergencias, no para gasto corriente.",
         "Revisa el tamaño del colchón cada vez que tus riesgos crezcan o se reduzcan."
@@ -66773,12 +66773,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "El Censo de Riesgos",
-      "resumen_teorico": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. El valor no está en la lista que sale de esa primera sesión, sino en aprender a distinguir qué entra al registro y qué se queda fuera sin culpa.",
+      "resumen_teorico": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. De esa sesión sale la lista, y con el criterio distingues qué entra al registro y qué se queda fuera sin culpa. Esa primera sesión no es la última: sigue buscando riesgos nuevos mientras el proyecto avanza.",
       "pasos_accionables": [
         "Ponte un tiempo fijo y dedícalo solo a nombrar amenazas, sin evaluarlas todavía ni buscarles solución.",
         "Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.",
-        "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo.",
-        "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto.",
+        "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo; desconfía de la probabilidad baja que le pongas a algo que te preocupó lo bastante para nombrarlo.",
+        "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto, y como mínimo su señal de alerta, lo que harás antes de que ocurra y cuánto pesa frente a los demás.",
         "Sugerencia de My Idea: de los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya."
       ],
       "entregable_esperado": "La lista inicial de riesgos nombrados sin filtro, separada en dos grupos: los que pasan al registro para atenderse y los que se dejan marcados como observados.",
@@ -74062,7 +74062,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "Los Riesgos Nucleares de Todo Proyecto",
-      "resumen_teorico": "Hay unas pocas formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y a veces mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco no dependen de cuánto te esfuerces ni de qué tan listo seas: son inevitables. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+      "resumen_teorico": "Hay cinco formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
       "pasos_accionables": [
         "Revisa tu plan contra las cinco formas típicas de morir y anota cuál te amenaza más.",
         "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (cuándo lo quieren para).",
@@ -76743,13 +76743,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "risk_management",
       "titulo_concepto": "El Registro de Riesgos como Documento Vivo",
-      "resumen_teorico": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste como pequeños crecen sin que te des cuenta, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control, y eso es más peligroso que no tener lista: te confías justo donde deberías estar mirando con más atención.",
+      "resumen_teorico": "Tu lista de riesgos no vale por lo que escribiste al inicio, sino por si sigue reflejando lo que de verdad puede pasarte. Un riesgo se cierra cuando ya no puede afectarte, no cuando te cansaste de mirarlo o el plazo que le pusiste venció. Mientras el proyecto avanza, algunos riesgos que anotaste pueden acercarse a volverse un problema real, y aparecen otros que ni existían cuando armaste la lista por primera vez. Una lista congelada te da la sensación de que tienes todo bajo control sin protegerte de verdad: te confías justo donde deberías estar mirando con más atención.",
       "pasos_accionables": [
         "Antes de marcar un riesgo como cerrado, pregúntate si de verdad ya no puede afectarte; si todavía puede, aunque sea menos probable, déjalo abierto.",
         "Revisa uno por uno los riesgos abiertos y pregúntate cuáles se hicieron más graves o más probables desde que los anotaste.",
         "Piensa qué cosas cambiaron en el proyecto desde la última revisión y qué riesgos nuevos aparecieron por esos cambios, aunque no existieran al principio.",
         "Incorpora esos riesgos nuevos al registro con el mismo detalle que los demás, en vez de guardarlos aparte o dejarlos en tu cabeza.",
-        "Si en una revisión no cierras nada, no cambias nada y no agregas nada, tómalo como señal de que estás mirando por encima, no de que todo sigue igual."
+        "Sugerencia de My Idea: si en una revisión no cierras nada, no cambias nada y no agregas nada, pregúntate si de verdad miraste a fondo o solo por encima."
       ],
       "entregable_esperado": "El mismo registro de riesgos, pero con los cierres justificados por el criterio de que ya no pueden afectarte, los riesgos que crecieron señalados como tales, y los riesgos nuevos incorporados con el mismo detalle que los originales.",
       "nodos_previos": [
@@ -81221,12 +81221,12 @@
       "titulo_concepto": "Análisis de Sensibilidad",
       "resumen_teorico": "No todas tus incertidumbres pesan igual. De todas las cosas que no sabes, unas pocas deciden el resultado y el resto casi no importa. El análisis de sensibilidad es el ejercicio de encontrar esas pocas: preguntas cuál de tus supuestos, si cambia, mueve más el resultado final, y ahí concentras tu atención, tu medición y tu esfuerzo por reducir la incertidumbre. Sin esto, es fácil perder semanas afinando un número que no cambia nada mientras ignoras el que lo decide todo. Para el emprendedor con tiempo y dinero limitados, saber qué mueve la aguja es lo que separa el esfuerzo útil del desperdiciado: mide primero lo que más incertidumbre le quita a tu decisión.",
       "pasos_accionables": [
-        "Lista los supuestos inciertos detrás de tu decisión o tu proyección.",
-        "Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.",
-        "Marca los pocos que más mueven la aguja y concentra en ellos tu atención.",
-        "Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos."
+        "Divide tu proyecto en sus piezas principales y asigna a cada una su costo estimado.",
+        "Estima el valor que aporta cada pieza y calcula su proporción valor/costo; si no logras cifras, al menos ordénalas por valor.",
+        "Marca las piezas de mayor proporción valor/costo y planea entregarlas primero.",
+        "Considera recortar las piezas de proporción baja: hacer menos puede ahorrarte tiempo y dinero más que en proporción."
       ],
-      "entregable_esperado": "Tus supuestos ordenados por cuánto mueven el resultado, con los pocos decisivos marcados para medir primero.",
+      "entregable_esperado": "Las piezas de tu proyecto ordenadas por su proporción valor/costo, con las más altas marcadas para entregar primero y las más bajas como candidatas a recorte.",
       "nodos_previos": [
         "nombra_tus_suposiciones_fragiles",
         "calibra_tu_propio_ojo",
@@ -84963,12 +84963,12 @@
       "fase_proyecto": "validacion",
       "dominio": "risk_management",
       "titulo_concepto": "Las Fuentes de Incertidumbre del Proyecto",
-      "resumen_teorico": "Todo plan se apoya en suposiciones, y el riesgo vive donde una suposición se quiebra. Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Para un emprendedor solo el ejercicio clave es sacar a la luz los supuestos callados de su plan, esos que da por ciertos sin haberlos comprobado, porque son las grietas por donde el proyecto se puede colar.",
+      "resumen_teorico": "Todo plan se apoya en suposiciones, y el riesgo vive donde una suposición se quiebra. Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si terceros cumplirán, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Para un emprendedor solo el ejercicio clave es sacar a la luz los supuestos callados de su plan, esos que da por ciertos sin haberlos comprobado, porque son las grietas por donde el proyecto se puede colar.",
       "pasos_accionables": [
         "Escribe todas las suposiciones sobre las que se sostiene tu plan.",
         "Marca cuáles has comprobado de verdad y cuáles solo estás dando por ciertas.",
         "De las no comprobadas, elige la más peligrosa: la que, si es falsa, tumba el plan.",
-        "Define una forma barata de poner a prueba esa suposición antes de apostarlo todo a ella."
+        "Sugerencia de My Idea: define una forma barata de poner a prueba esa suposición antes de apostarlo todo a ella."
       ],
       "entregable_esperado": "Las suposiciones clave de tu plan, marcadas como comprobadas o sin comprobar, con una prueba barata para la más peligrosa.",
       "nodos_previos": [
@@ -106899,7 +106899,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Retroalimentación Disruptiva para Romper el Pensamiento Complaciente",
-      "resumen_teorico": "Ciertos maestros usan frases o comentarios inesperados (como 'una excelente pieza de prosa de Cuarto Grado' dirigida a un alumno de Quinto que se sentía orgulloso) para provocar un 'shock' psicológico que revela al pensador que su trabajo, aunque técnicamente correcto, carece de originalidad genuina. Este tipo de retroalimentación personal e individualizada puede cambiar hábitos de pensamiento arraigados al hacer consciente una limitación que antes pasaba desapercibida. Es una técnica pedagógica que puede trasladarse a la mentoría de emprendedores: señalar con precisión (no con sarcasmo genérico) el punto exacto donde el pensamiento se ha vuelto mecánico o derivativo.",
+      "resumen_teorico": "Ciertos maestros usan frases o comentarios inesperados (como 'una excelente pieza de prosa de Cuarto Grado' dirigida a un alumno de Quinto que se sentía orgulloso) para provocar un 'shock' psicológico que revela al pensador que su trabajo, aunque técnicamente correcto, carece de originalidad genuina. Este tipo de retroalimentación personal e individualizada puede cambiar hábitos de pensamiento arraigados al hacer consciente una limitación que antes pasaba desapercibida. Su eficacia es local, cuesta trasladarla de un maestro a otro y rinde a solas: en grupo suena sarcástica y humilla. En la mentoría de emprendedores, sirve para señalar con precisión (no con sarcasmo genérico) el punto exacto donde el pensamiento se ha vuelto mecánico o derivativo.",
       "pasos_accionables": [
         "Identificar el patrón de pensamiento 'seguro' o mecánico en el trabajo de un mentee/equipo (ideas que replican fórmulas conocidas sin aporte propio)",
         "Dar retroalimentación individual y específica (no en grupo) que contraste la ejecución técnica correcta con la ausencia de aporte original",
@@ -109876,7 +109876,7 @@
         "Definir cómo se desarrollará el Project Scope Statement (entrevistas, análisis, investigación)",
         "Establecer la estructura del WBS (por fases, geografía, entregables)",
         "Determinar los campos y nivel de detalle del WBS Dictionary",
-        "Diferenciar qué constituye un cambio de alcance versus una revisión menor",
+        "Diferenciar qué constituye un cambio de alcance versus una revisión menor, y definir qué cambios de alcance deben pasar por el proceso formal de control de cambios y cómo se gestionarán",
         "Definir cómo se validará y aceptará cada entregable"
       ],
       "entregable_esperado": "Un documento que establece las reglas y procesos para gestionar el alcance durante todo el proyecto.",
@@ -110233,11 +110233,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Segundo Aliento (Second Wind) en el Esfuerzo Intelectual",
-      "resumen_teorico": "Existe una diferencia crucial entre la fatiga primaria (la sensación inicial de cansancio al esforzarse intelectualmente) y el 'segundo aliento', un estado de energía mental sostenida que aparece cuando se persiste más allá de esa fatiga inicial. Muchas personas y organizaciones se rinden ante la primera señal de fatiga sin descubrir nunca esta capacidad de energía prolongada, limitando su potencial de trabajo profundo y creativo.",
+      "resumen_teorico": "Existe una diferencia crucial entre la fatiga primaria (la sensación inicial de cansancio al esforzarse intelectualmente) y el 'segundo aliento', un estado de energía mental sostenida que puede aparecer cuando se persiste más allá de esa fatiga inicial. Muchas personas y organizaciones se rinden ante la primera señal de fatiga sin descubrir nunca esta capacidad de energía prolongada, limitando su potencial de trabajo profundo y creativo.",
       "pasos_accionables": [
         "Identificar el momento de fatiga primaria durante una sesión de trabajo intenso",
         "Practicar la persistencia consciente más allá de esa fatiga inicial, en un ambiente seguro y sin presión excesiva",
-        "Distinguir el 'segundo aliento' (energía renovada) del 'staleness' (agotamiento patológico) para evitar el sobreesfuerzo dañino",
+        "Distinguir la fatiga primaria, que se puede aguantar hasta que llegue el 'segundo aliento', del 'staleness' o agotamiento, que si se ignora lleva al sobreesfuerzo patológico",
         "Documentar en qué condiciones el equipo o el individuo logra alcanzar este estado de energía sostenida"
       ],
       "entregable_esperado": "Un protocolo personal o de equipo para gestionar sesiones de trabajo profundo que reconozca y aproveche el 'segundo aliento' sin caer en el sobreesfuerzo.",
@@ -111700,10 +111700,10 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Selección de Estructura Corporativa (C Corp, S Corp, LLC)",
-      "resumen_teorico": "La forma legal que le das a tu negocio (en Estados Unidos existen figuras como la C Corp, la S Corp o la LLC) determina impuestos, responsabilidad y tu capacidad de recibir inversión externa. Si piensas levantar capital de fondos o inversionistas, necesitas una estructura que permita emitir distintas clases de acciones y diferir impuestos mientras el negocio todavía pierde dinero, como la C Corp en ese país. Otras figuras, como la S Corp, dan beneficios fiscales de tipo sociedad con responsabilidad limitada, y son razonables si no buscarás ese capital. Una LLC ofrece beneficios similares, pero complica dar participación a quien trabaja contigo mediante opciones sobre acciones. Averigua cuál es la forma legal equivalente en tu país y consulta el costo y los requisitos en tu mercado.",
+      "resumen_teorico": "La forma legal que le das a tu negocio (en Estados Unidos existen figuras como la C Corp, la S Corp o la LLC) determina impuestos, responsabilidad y tu capacidad de recibir inversión externa. Si piensas levantar capital de fondos o inversionistas, necesitas una estructura que permita emitir distintas clases de acciones, como la C Corp en ese país; como el negocio suele perder dinero un tiempo, el impuesto sobre utilidades a nivel de empresa se posterga. Otras figuras, como la S Corp, dan beneficios fiscales de tipo sociedad con responsabilidad limitada, y son razonables si no buscarás ese capital. Una LLC ofrece beneficios similares, pero complica dar participación a quien trabaja contigo mediante opciones sobre acciones. Averigua cuál es la forma legal equivalente en tu país y consulta el costo y los requisitos en tu mercado.",
       "pasos_accionables": [
         "Determina si piensas levantar capital de riesgo o de inversionistas a mediano plazo",
-        "Si buscarás ese tipo de capital, constituye tu negocio desde el inicio bajo una estructura que permita múltiples clases de acciones, como la C Corp en Estados Unidos, o su equivalente en tu país",
+        "Si buscarás ese tipo de capital, constituye tu negocio, o conviértelo antes de acercarte a inversionistas, bajo una estructura que permita múltiples clases de acciones, como la C Corp en Estados Unidos, o su equivalente en tu país",
         "Si no buscarás ese capital y hay pocos dueños, evalúa figuras como la S Corp o la LLC por sus beneficios fiscales",
         "Consulta con un abogado en tu país para formalizar la estructura elegida y documentarla en los estatutos de tu negocio"
       ],
@@ -112040,7 +112040,7 @@
       "resumen_teorico": "Al negociar deuda de riesgo, existe una tensión entre optimizar cada término del contrato y construir una relación de largo plazo con el prestamista. Un enfoque puramente transaccional (bake-off entre múltiples prestamistas) puede lograr mejores términos iniciales, pero puede resultar en una relación más rígida durante restructuraciones futuras. La industria de venture capital es altamente relacional y de largo plazo, por lo que la reputación y flexibilidad del prestamista deben pesar en la decisión.",
       "pasos_accionables": [
         "Determinar si la prioridad es maximizar términos de precio (deal-focused) o construir una relación de largo plazo (relationship-focused).",
-        "Si se opta por un enfoque transaccional, organizar un 'bake off' recolectando term sheets de múltiples prestamistas.",
+        "Si se opta por un enfoque transaccional, organizar un 'bake off' recolectando term sheets de múltiples prestamistas, midiendo el tiempo que exige frente a la mejora esperada; muchas veces no hace falta, sobre todo si los inversionistas tienen una relación profunda con un prestamista.",
         "Estar atento a señales de 'deal term drift' (cambios de términos críticos entre el term sheet y el documento final) como indicador de comportamiento oportunista.",
         "Consultar con los inversionistas existentes sobre relaciones previas con prestamistas potenciales."
       ],
@@ -112543,7 +112543,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "El Sentido del Humor como Ruptura de Barreras Cognitivas",
-      "resumen_teorico": "El sentido del humor, descrito como una 'súbita gloria', es un mecanismo psicológico que rompe censuras internas de costumbre, moral o autoestima, generando una irrupción hacia una nueva cadena de asociación de pensamiento. Hay casos históricos, como el de Galileo, donde el humor ayudó a superar obstáculos mentales heredados de la tradición y permitió avances de pensamiento. No es solo entretenimiento: es una herramienta que escritores, organizadores, educadores e innovadores pueden cultivar deliberadamente para liberarse de lealtades y solemnidades obsoletas, y para desafiar supuestos arraigados en un problema o industria que bloquean nuevas ideas.",
+      "resumen_teorico": "El sentido del humor, descrito como una 'súbita gloria', es un mecanismo psicológico que rompe censuras internas de costumbre, moral o autoestima, generando una irrupción hacia una nueva cadena de asociación de pensamiento. Hay casos históricos, como el de Galileo, donde el humor ayudó a superar obstáculos mentales heredados de la tradición y permitió avances de pensamiento. No es solo entretenimiento: es una herramienta que escritores, organizadores y educadores pueden cultivar deliberadamente para liberarse de lealtades y solemnidades obsoletas, y para desafiar supuestos arraigados en un problema o industria que bloquean nuevas ideas. Pero el humor sin el esfuerzo paciente de explorar con sistema puede engañar tanto como ese esfuerzo sin humor.",
       "pasos_accionables": [
         "Identifica los supuestos 'sagrados' o intocables del problema que estás resolviendo.",
         "Sugerencia de My Idea: imagina la situación desde un ángulo absurdo o ridículo y anota lo que surge.",
@@ -113135,7 +113135,7 @@
       "pasos_accionables": [
         "Negociar en el acuerdo de fusión un fondo (pool) de dinero destinado a que el representante pueda contratar profesionales",
         "Evitar designar como shareholder rep a alguien que seguirá trabajando para el comprador post-transacción",
-        "Evaluar si un VC involucrado es la mejor opción, considerando su disponibilidad y comprensión de dinámicas legales",
+        "Desconfiar de dejar el rol a un VC involucrado, porque puede no darle la atención que exige ni entender bien sus dinámicas legales",
         "Considerar contratar un servicio profesional especializado (ej. SRS Acquiom) en lugar de asignar el rol a un individuo interno",
         "Establecer un escrow separado exclusivamente para cubrir gastos del representante"
       ],
@@ -114953,8 +114953,8 @@
         "Identifica quién solicita el cambio y asígnale un número identificador",
         "Categoriza el tipo de cambio propuesto",
         "Describe detalladamente el cambio y su justificación",
-        "Evalúa el impacto en alcance, calidad, costo, cronograma y documentos del proyecto",
-        "Revisa la solicitud y registra la disposición final con su justificación: aprobado, diferido o rechazado"
+        "Evalúa el impacto en alcance, calidad, requisitos, costo, cronograma y documentos del proyecto",
+        "Entrega la solicitud al comité de control de cambios u otra autoridad similar para que la revise, y registra la disposición final que decida, con su justificación: aprobado, diferido o rechazado"
       ],
       "entregable_esperado": "Un formulario de solicitud de cambio completo, con la disposición final registrada.",
       "nodos_previos": [
@@ -115792,7 +115792,7 @@
         "Registra la posición, el rol, el contacto y lo que cada una necesita",
         "Escribe qué espera cada persona de tu proyecto o producto",
         "Marca cuánta influencia tiene cada una: alta, media o baja",
-        "Clasifícalas según su postura hacia ti (a favor, neutral, en contra) para saber cómo tratarlas",
+        "Clasifícalas de la forma que sirva a tu proyecto, por ejemplo según su postura hacia ti (a favor, neutral, en contra) o según su impacto (alto, medio o bajo), para saber cómo tratarlas",
         "Actualiza esta lista a medida que conoces más sobre cada persona"
       ],
       "entregable_esperado": "Una tabla que armas tú mismo con el listado completo de personas involucradas, su rol, contacto, lo que necesitan, lo que esperan, su nivel de influencia y cómo las clasificas.",
@@ -116347,11 +116347,11 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Superación de la Accidia (Fatiga y Bloqueo Creativo)",
-      "resumen_teorico": "La 'Accidia' es un estado de indiferencia y falta de interés que surge tras el esfuerzo sostenido de concentración, descrito históricamente por los monjes del desierto como 'la maldición especial de la vida monástica'. Se manifiesta como disgusto hacia el trabajo actual, deseo de estar en otro lugar haciendo algo 'más útil', y una sensación de que el esfuerzo no está dando frutos. Este estado, paralelo al agotamiento creativo o bloqueo mental en cualquier trabajo intelectual sostenido, requiere reconocimiento y estrategias específicas de manejo, no solo fuerza de voluntad.",
+      "resumen_teorico": "La 'Accidia' es un estado de indiferencia y falta de interés que surge tras el esfuerzo sostenido de concentración, descrito históricamente por los monjes del desierto como 'la maldición especial de la vida monástica'. Se manifiesta como disgusto hacia el trabajo actual, deseo de estar en otro lugar haciendo algo 'más útil', y una sensación de que el esfuerzo no está dando frutos.",
       "pasos_accionables": [
         "Reconoce la Accidia como una fase normal y predecible del trabajo creativo sostenido, no como fracaso personal.",
         "Cuando sientas indiferencia hacia tu proyecto o deseo de abandonar la tarea actual por 'algo más útil', identifica si es una señal genuina de pivote o simplemente fatiga mental temporal.",
-        "Introduce un cambio de actividad física o mental (labor manual, ejercicio) como método probado para romper el estado de estancamiento, en vez de forzar más horas de la misma tarea."
+        "Sugerencia de My Idea: introduce un cambio de actividad física o mental (labor manual, ejercicio) para intentar salir del estancamiento, en vez de forzar más horas de la misma tarea."
       ],
       "entregable_esperado": "Un protocolo personal para identificar y responder a señales de fatiga creativa antes de tomar decisiones importantes de pivote o abandono.",
       "nodos_previos": [
@@ -117145,7 +117145,7 @@
       "resumen_teorico": "Evalúa el desempeño técnico e interpersonal del equipo como conjunto, incluyendo moral y cohesión, para identificar áreas de mejora que ayuden a lograr los objetivos del proyecto.",
       "pasos_accionables": [
         "Calificar desempeño técnico en alcance, calidad, cronograma y costo",
-        "Evaluar competencias interpersonales: comunicación, colaboración, manejo de conflictos",
+        "Evaluar competencias interpersonales: comunicación, colaboración, manejo de conflictos y toma de decisiones",
         "Documentar moral del equipo y áreas de desarrollo",
         "Definir enfoque de desarrollo (entrenamiento, mentoría, coaching)"
       ],
@@ -117234,7 +117234,7 @@
       "titulo_concepto": "Anclaje en Negociación de Términos",
       "resumen_teorico": "El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, que deben ser razonables y conservar un pequeño margen de flexibilidad. Es una técnica efectiva para acercarse a lo que realmente importa al emprendedor, siempre que esté dispuesto a ceder en los puntos menos importantes.",
       "pasos_accionables": [
-        "Antes de negociar, identificar los 2-3 términos verdaderamente críticos para el negocio",
+        "Antes de negociar, identificar los pocos términos verdaderamente críticos para el negocio",
         "Definir posiciones razonables pero con margen de flexibilidad en esos puntos",
         "Comunicar estas posiciones de forma clara y consistente",
         "Estar dispuesto a ceder en puntos secundarios para proteger los términos anclados"
@@ -117570,14 +117570,14 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Cómo protegerte de riesgos legales con tus empleados",
-      "resumen_teorico": "Las demandas más comunes que vas a enfrentar como emprendedor son de tipo laboral. Por eso es clave que contrates a todas las personas bajo la modalidad de empleo libre (conocida como at-will), para no quedar atrapado en leyes complicadas de tu país o región sobre despidos. También conviene que definas de antemano los términos de indemnización (severance) en las cartas de oferta, para evitar conflictos cuando alguien se va.",
+      "resumen_teorico": "Las demandas más comunes que vas a enfrentar como emprendedor son de tipo laboral. Por eso es clave que contrates a todas las personas bajo la modalidad de empleo libre (conocida como at-will), para no quedar atrapado en leyes complicadas de tu país o región sobre despidos. También considera si te conviene definir de antemano los términos de indemnización (severance) en las cartas de oferta: evita reclamos cuando alguien se va, pero limita tu flexibilidad si necesitas despedir para reducir gastos.",
       "pasos_accionables": [
         "Incluye la cláusula de empleo libre (at-will employment) en todas las cartas de oferta que entregues",
-        "Decide si vas a definir de antemano los términos de indemnización (severance) en esas ofertas",
-        "Ten a mano un abogado laboral de confianza para cuando tengas que despedir a un fundador o ejecutivo",
+        "Decide si vas a definir de antemano los términos de indemnización (severance) en esas ofertas: evita reclamos a la salida, pero limita tu flexibilidad si necesitas despedir para reducir gastos",
+        "Ten a mano un abogado laboral de confianza e involúcralo siempre que un fundador o ejecutivo deje la empresa, aunque la salida sea en buenos términos",
         "Documenta formalmente cómo quedan resueltos el equity y la propiedad intelectual (IP) cuando alguien deja la empresa"
       ],
-      "entregable_esperado": "Cartas de oferta con las cláusulas de empleo libre y de indemnización bien definidas",
+      "entregable_esperado": "Cartas de oferta con la cláusula de empleo libre y una decisión tomada sobre si incluir términos de indemnización",
       "nodos_previos": [
         "marcas_registradas"
       ],
@@ -117699,7 +117699,7 @@
       "pasos_accionables": [
         "Identificar si la negociación actual es de una sola ronda o multi-ronda (relación continua)",
         "Si es multi-ronda (ej. financiamiento con VC que estará en tu board), priorizar la reputación y evitar tácticas que generen represalias futuras",
-        "Si es de una sola ronda (ej. litigio, venta final de empresa), enfocarse en maximizar el resultado inmediato",
+        "Si es de una sola ronda (ej. litigio), enfocarse en maximizar el resultado inmediato; en la venta de la empresa, recordar que también hay una parte en la que todos ganan, porque el equipo suele seguir trabajando para el comprador",
         "Preguntar directamente a la contraparte cuáles son sus 3 términos más importantes antes de iniciar la negociación formal"
       ],
       "entregable_esperado": "Un mapa claro de qué tipo de juego se está jugando y una lista de los 3 términos prioritarios propios y de la contraparte",
@@ -117883,11 +117883,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Disposiciones Vinculantes en Cartas de Intención (Term Sheets)",
-      "resumen_teorico": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen confidencialidad, costos compartidos, ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
+      "resumen_teorico": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen exclusividad, a veces una penalidad por romper el trato, confidencialidad, costos (cada parte asume los suyos), ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
       "pasos_accionables": [
         "Identificar qué secciones del term sheet son 'Binding Provisions' vs. no vinculantes",
         "Negociar cláusulas de confidencialidad para evitar filtraciones sobre la transacción",
-        "Definir cómo se dividirán costos legales y de filing (ej. HSR Act) entre comprador y vendedor",
+        "Definir quién paga qué: cada parte asume sus propios costos legales, y se acuerda cómo dividir tasas de filing como la del HSR Act entre comprador y vendedor",
         "Establecer fecha de terminación automática del acuerdo si no se cierra la transacción",
         "Confirmar que no existe obligación legal de cerrar el trato hasta firmar el acuerdo definitivo"
       ],
@@ -117914,7 +117914,7 @@
       "resumen_teorico": "El term sheet es el documento que resume los términos económicos y de control de una ronda de inversión: precio por acción, valuación pre/post-money, preferencia de liquidación, derechos de conversión, antidilución, derechos de voto y composición del board. Entender cada cláusula (participación en liquidación, ratchet completo vs. promedio ponderado, conversión automática en IPO calificado, derechos de redención) es esencial para que el fundador negocie términos justos y entienda las implicaciones de control y económicas de cada elección.",
       "pasos_accionables": [
         "Revisar cada sección del term sheet (dividendos, liquidación, conversión, antidilución, voto, board) con un abogado",
-        "Comparar los términos propuestos con estándares de mercado (ej. preferencia de liquidación 1x no participante)",
+        "Comparar los términos propuestos con los habituales del mercado (ej. preferencia de liquidación 1x)",
         "Negociar la composición del board para mantener balance de poder adecuado",
         "Evaluar el impacto de las cláusulas de antidilución en futuras rondas",
         "Firmar el term sheet solo después de validar todos los términos con asesoría legal"
@@ -118057,7 +118057,7 @@
       "titulo_concepto": "Términos Adicionales en Deuda Convertible (Pro Rata y Liquidation Preference)",
       "resumen_teorico": "Inversionistas sofisticados pueden solicitar términos adicionales en la deuda convertible, como derechos de pro rata (incluso 'super pro rata') para participar en futuras rondas, o preferencias de liquidación que les garantizan recuperar su inversión (o un múltiplo) antes que otros accionistas en caso de liquidación.",
       "pasos_accionables": [
-        "Evaluar solicitudes de pro rata rights y su impacto en la dilución futura de la empresa.",
+        "Evaluar solicitudes de pro rata rights, que son bastante habituales.",
         "Ser cauteloso con solicitudes de 'super pro rata rights' que limiten opciones futuras de financiamiento.",
         "Considerar si se otorgará preferencia de liquidación en el contrato de deuda convertible (bridge loan).",
         "Negociar el múltiplo de preferencia de liquidación si aplica."
@@ -120868,7 +120868,7 @@
       "titulo_concepto": "Indicadores de Transición del Riesgo",
       "resumen_teorico": "Hay un momento en que un riesgo deja de ser posibilidad y se vuelve problema: es la transición. Muchas veces esa transición es invisible cuando ocurre, así que necesitas una señal que te avise que empezó, un indicador de alerta temprana. Para cada riesgo que decidas manejar, busca la señal más temprana y práctica de que se está materializando: un cliente que tarda más en pagar, un proveedor que empieza a fallar entregas chicas, tu propia energía que baja semana a semana. Cuando esa alerta se enciende, ejecutas el plan que ya tenías listo. Sin indicadores, te enteras del incendio cuando ya no hay nada que salvar. Para el emprendedor solo, definir sus alertas tempranas es como poner detectores de humo en cada riesgo importante.",
       "pasos_accionables": [
-        "De cada riesgo que vas a manejar, define la señal más temprana de que está empezando.",
+        "De cada riesgo que vas a manejar, define la señal más temprana y práctica de que está empezando, sopesando qué tan urgente es actuar contra lo que te costaría una falsa alarma.",
         "Elige señales que puedas ver de verdad, no cosas que solo notarías cuando ya es tarde.",
         "Anota junto a cada alerta qué harás en cuanto se encienda.",
         "Vigila esas señales de forma continua, sin bajar la guardia, para activar tu plan de contingencia a tiempo si se encienden."
@@ -124695,7 +124695,7 @@
         "Alternar entre varios problemas en desarrollo en vez de agotar cada uno de una sola vez.",
         "Programar tiempo de relajación mental real (caminatas, ejercicio, descanso) sin lectura ni estímulos que ocupen la mente.",
         "Evitar saturar la agenda con tareas administrativas rutinarias que impidan la incubación.",
-        "Confiar en que la 'inactividad' aparente es parte productiva del proceso creativo.",
+        "Confiar en que la 'inactividad' aparente es parte productiva del proceso creativo, sin confundirla con la procrastinación: sin trabajo intenso de preparación y verificación no hay gran resultado.",
         "Registrar en qué momentos de descanso o distracción surgen ideas nuevas para identificar patrones personales de incubación"
       ],
       "entregable_esperado": "Un plan de trabajo que incluya bloques explícitos de descanso o cambio de tarea después de sesiones de trabajo profundo.",
@@ -124751,7 +124751,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Etapa de Verificación",
-      "resumen_teorico": "La Verificación es la etapa final y plenamente consciente en la que la idea surgida en la Iluminación se pone a prueba y se reduce a una forma exacta y comunicable. Poincaré subraya que el trabajo inconsciente nunca entrega un resultado terminado y listo para aplicar reglas fijas: solo ofrece un punto de partida que debe desarrollarse mediante cálculo, disciplina, atención y trabajo consciente riguroso, análogo al proceso de Preparación pero aplicado a validar (no generar) la idea.",
+      "resumen_teorico": "La Verificación es la etapa final, normalmente plenamente consciente, en la que la idea surgida en la Iluminación se pone a prueba y se reduce a una forma exacta y comunicable. Poincaré subraya que el trabajo inconsciente nunca entrega un resultado terminado y listo para aplicar reglas fijas: solo ofrece un punto de partida que debe desarrollarse mediante cálculo, disciplina, atención y trabajo consciente riguroso, análogo al proceso de Preparación pero aplicado a validar (no generar) la idea.",
       "pasos_accionables": [
         "Someter la idea surgida a pruebas lógicas, cálculos o experimentos rigurosos.",
         "Documentar la idea en una forma exacta, clara y comunicable a terceros.",
@@ -124786,8 +124786,8 @@
       "resumen_teorico": "La 'Intimación' describe el momento en que la conciencia periférica ('fringe-consciousness') indica que una solución se aproxima, aunque aún no se sepa cuál será. A diferencia del 'flash' instantáneo de Iluminación, la Intimación puede durar un tiempo apreciable y ser objeto de atención voluntaria: se puede intentar inhibir, prolongar o desviar la línea de pensamiento que la genera, e incluso sostenerla deliberadamente cuando parece prometedora aunque el cerebro no la empuje automáticamente hacia el 'flash'.",
       "pasos_accionables": [
         "Entrenar la atención para notar sensaciones sutiles de 'algo se está gestando' antes de una idea clara.",
-        "Cuando se detecte esta sensación, dedicar un momento de atención voluntaria en vez de ignorarla.",
-        "Intentar sostener o prolongar deliberadamente una línea de pensamiento que genera esta sensación de aproximación.",
+        "Cuando se detecte esta sensación, dedicar un momento de atención voluntaria en vez de ignorarla y protegerla de interrupciones (por ejemplo, levantar la vista si se está leyendo), sabiendo que el propio esfuerzo de atención a veces la estorba.",
+        "Intentar sostener o prolongar deliberadamente una línea de pensamiento que genera esta sensación de aproximación, con delicadeza, porque el propio esfuerzo de atención o ponerla en palabras antes de tiempo puede interrumpirla.",
         "Registrar estas sensaciones como señales tempranas útiles para la gestión del proceso creativo personal o de equipo.",
         "Practicar la inhibición de la tendencia natural a enfocar de inmediato cualquier estímulo interesante"
       ],
@@ -124831,7 +124831,7 @@
         "Convertir el problema general en una pregunta específica y verificable.",
         "Diseñar un método sistemático de exploración del problema (por categorías, por orden lógico, por eliminación).",
         "Adoptar deliberadamente una postura de 'caso a probar o refutar' para filtrar información relevante.",
-        "Usar el método del diálogo interno: sostener dos proposiciones contradictorias hasta identificar cuál es falsa."
+        "Usar el método del diálogo interno: cuando la mente esté confusa, seguir las implicaciones de dos proposiciones que se daban por verdaderas hasta descubrir cuál de ellas es falsa."
       ],
       "entregable_esperado": "Una pregunta de investigación o hipótesis de trabajo claramente formulada, junto con un método de exploración sistemático.",
       "nodos_previos": [

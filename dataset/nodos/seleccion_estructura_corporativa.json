@@ -3,10 +3,10 @@
   "dominio": "core",
   "titulo_concepto": "Selección de Estructura Corporativa (C Corp, S Corp, LLC)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La forma legal que le das a tu negocio (en Estados Unidos existen figuras como la C Corp, la S Corp o la LLC) determina impuestos, responsabilidad y tu capacidad de recibir inversión externa. Si piensas levantar capital de fondos o inversionistas, necesitas una estructura que permita emitir distintas clases de acciones y diferir impuestos mientras el negocio todavía pierde dinero, como la C Corp en ese país. Otras figuras, como la S Corp, dan beneficios fiscales de tipo sociedad con responsabilidad limitada, y son razonables si no buscarás ese capital. Una LLC ofrece beneficios similares, pero complica dar participación a quien trabaja contigo mediante opciones sobre acciones. Averigua cuál es la forma legal equivalente en tu país y consulta el costo y los requisitos en tu mercado.",
+  "resumen_teorico": "La forma legal que le das a tu negocio (en Estados Unidos existen figuras como la C Corp, la S Corp o la LLC) determina impuestos, responsabilidad y tu capacidad de recibir inversión externa. Si piensas levantar capital de fondos o inversionistas, necesitas una estructura que permita emitir distintas clases de acciones, como la C Corp en ese país; como el negocio suele perder dinero un tiempo, el impuesto sobre utilidades a nivel de empresa se posterga. Otras figuras, como la S Corp, dan beneficios fiscales de tipo sociedad con responsabilidad limitada, y son razonables si no buscarás ese capital. Una LLC ofrece beneficios similares, pero complica dar participación a quien trabaja contigo mediante opciones sobre acciones. Averigua cuál es la forma legal equivalente en tu país y consulta el costo y los requisitos en tu mercado.",
   "pasos_accionables": [
     "Determina si piensas levantar capital de riesgo o de inversionistas a mediano plazo",
-    "Si buscarás ese tipo de capital, constituye tu negocio desde el inicio bajo una estructura que permita múltiples clases de acciones, como la C Corp en Estados Unidos, o su equivalente en tu país",
+    "Si buscarás ese tipo de capital, constituye tu negocio, o conviértelo antes de acercarte a inversionistas, bajo una estructura que permita múltiples clases de acciones, como la C Corp en Estados Unidos, o su equivalente en tu país",
     "Si no buscarás ese capital y hay pocos dueños, evalúa figuras como la S Corp o la LLC por sus beneficios fiscales",
     "Consulta con un abogado en tu país para formalizar la estructura elegida y documentarla en los estatutos de tu negocio"
   ],
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Elige Tu Estructura Legal",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-111-seleccion_estructura_corporativa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si buscarás ese tipo de capital, constituye tu negocio desde el inicio bajo una estructura que permita múltiples clases de acciones, como la C Corp en Estados Unidos, o su equivalente en tu país",
+      "texto_nuevo": "Si buscarás ese tipo de capital, constituye tu negocio, o conviértelo antes de acercarte a inversionistas, bajo una estructura que permita múltiples clases de acciones, como la C Corp en Estados Unidos, o su equivalente en tu país",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "329",
+        "frase": "consult counsel to convert into C Corp status in advance of approaching investors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no exige hacerlo desde el inicio: admite convertir a C Corp antes de acercarse a inversionistas.; Mismo defecto que la marca 0; la conversión previa está en la línea 329, no en la 324.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-111-seleccion_estructura_corporativa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La forma legal que le das a tu negocio (en Estados Unidos existen figuras como la C Corp, la S Corp o la LLC) determina impuestos, responsabilidad y tu capacidad de recibir inversión externa. Si piensas levantar capital de fondos o inversionistas, necesitas una estructura que permita emitir distintas clases de acciones y diferir impuestos mientras el negocio todavía pierde dinero, como la C Corp en ese país. Otras figuras, como la S Corp, dan beneficios fiscales de tipo sociedad con responsabilidad limitada, y son razonables si no buscarás ese capital. Una LLC ofrece beneficios similares, pero complica dar participación a quien trabaja contigo mediante opciones sobre acciones. Averigua cuál es la forma legal equivalente en tu país y consulta el costo y los requisitos en tu mercado.",
+      "texto_nuevo": "La forma legal que le das a tu negocio (en Estados Unidos existen figuras como la C Corp, la S Corp o la LLC) determina impuestos, responsabilidad y tu capacidad de recibir inversión externa. Si piensas levantar capital de fondos o inversionistas, necesitas una estructura que permita emitir distintas clases de acciones, como la C Corp en ese país; como el negocio suele perder dinero un tiempo, el impuesto sobre utilidades a nivel de empresa se posterga. Otras figuras, como la S Corp, dan beneficios fiscales de tipo sociedad con responsabilidad limitada, y son razonables si no buscarás ese capital. Una LLC ofrece beneficios similares, pero complica dar participación a quien trabaja contigo mediante opciones sobre acciones. Averigua cuál es la forma legal equivalente en tu país y consulta el costo y los requisitos en tu mercado.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4657",
+        "frase": "the issue of being taxed at a corporate level on your profits will be deferred"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Atribuye a la estructura la capacidad de diferir impuestos; en el libro se posterga porque el negocio pierde dinero.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

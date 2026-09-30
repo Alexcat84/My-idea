@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Criterios de Selección de Proyectos de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, las organizaciones deben evaluar sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+  "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, la mayoría de las organizaciones evalúa sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
   "pasos_accionables": [
     "Listar todas las nominaciones de proyectos disponibles desde todas las fuentes posibles (datos, encuestas, empleados, clientes)",
-    "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio, y también según factibilidad, significancia, medibilidad",
+    "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio; para los primeros proyectos, exigir además que ataquen un problema crónico, sean factibles en pocos meses, significativos y medibles, y que sean ganadores",
     "Construir una matriz de evaluación compuesta para comparar nominaciones",
     "Presentar el listado priorizado al consejo de calidad para decisión final",
     "Delegar el filtrado inicial a una secretaría o departamento de calidad",
@@ -43,5 +43,40 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-109-criterios_seleccion_proyectos_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para priorizar proyectos de mejora entre múltiples nominaciones, las organizaciones deben evaluar sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+      "texto_nuevo": "Para priorizar proyectos de mejora entre múltiples nominaciones, la mayoría de las organizaciones evalúa sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6676",
+        "frase": "Most organizations use a systematic approach to evaluate nominations relative to these criteria"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe que la mayoría de las organizaciones usa un enfoque sistemático; no lo plantea como obligación.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-criterios_seleccion_proyectos_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio, y también según factibilidad, significancia, medibilidad",
+      "texto_nuevo": "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio; para los primeros proyectos, exigir además que ataquen un problema crónico, sean factibles en pocos meses, significativos y medibles, y que sean ganadores",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6637-6660",
+        "frase": "Criteria for choosing the first projects to be tackled by any of the project teams"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reserva factibilidad, significancia y medibilidad para los primeros proyectos, junto con problema crónico y éxito asegurado.; Mismo matiz que la marca 0, con los dos criterios omitidos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

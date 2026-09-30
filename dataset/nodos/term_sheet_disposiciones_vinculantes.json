@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Disposiciones Vinculantes en Cartas de Intención (Term Sheets)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen confidencialidad, costos compartidos, ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
+  "resumen_teorico": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen exclusividad, a veces una penalidad por romper el trato, confidencialidad, costos (cada parte asume los suyos), ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
   "pasos_accionables": [
     "Identificar qué secciones del term sheet son 'Binding Provisions' vs. no vinculantes",
     "Negociar cláusulas de confidencialidad para evitar filtraciones sobre la transacción",
-    "Definir cómo se dividirán costos legales y de filing (ej. HSR Act) entre comprador y vendedor",
+    "Definir quién paga qué: cada parte asume sus propios costos legales, y se acuerda cómo dividir tasas de filing como la del HSR Act entre comprador y vendedor",
     "Establecer fecha de terminación automática del acuerdo si no se cierra la transacción",
     "Confirmar que no existe obligación legal de cerrar el trato hasta firmar el acuerdo definitivo"
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Identifica Cláusulas Vinculantes Clave",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-111-term_sheet_disposiciones_vinculantes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen confidencialidad, costos compartidos, ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
+      "texto_nuevo": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen exclusividad, a veces una penalidad por romper el trato, confidencialidad, costos (cada parte asume los suyos), ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "5342",
+        "frase": "each Seller will be responsible for and bear all of its own costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, matiz; doble lectura ciega y arbitro): En el libro cada parte asume sus propios costos; solo la tasa HSR se divide.; La lista omite la exclusividad y la penalidad por ruptura, que el libro pone entre las cláusulas vinculantes.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-111-term_sheet_disposiciones_vinculantes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Definir cómo se dividirán costos legales y de filing (ej. HSR Act) entre comprador y vendedor",
+      "texto_nuevo": "Definir quién paga qué: cada parte asume sus propios costos legales, y se acuerda cómo dividir tasas de filing como la del HSR Act entre comprador y vendedor",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "5342",
+        "frase": "the Buyer will pay one-half and the Sellers will pay one-half of the HSR"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Los costos legales no se dividen: cada parte paga los suyos y solo la tasa de filing HSR va a medias.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

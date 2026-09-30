@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Usa lo que la gente del lugar ya sabe (conocimiento local)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Ninguna idea tuya, por buena que te parezca, sirve de nada si las personas que la van a usar no pueden sostenerla en su día a día real. Cuando trabajas en un contexto que no es el tuyo, apóyate en quienes ya conocen ese terreno: vecinos, organizaciones locales, otros emprendedores del lugar. Un equipo que hizo esto encontró ideas que jamás se le hubieran ocurrido desde afuera, como pagos por celular, marcar los vehículos de reparto o usar depósitos comunitarios, porque esas ideas nacieron de la gente que vive ahí, no de una oficina externa.",
+  "resumen_teorico": "Ninguna idea tuya, por buena que te parezca, vale mucho si las personas que la van a usar no pueden sostenerla en su día a día real. Cuando trabajas en un contexto que no es el tuyo, apóyate en quienes ya conocen ese terreno: organizaciones locales y otros emprendedores del lugar. Un equipo que hizo esto encontró muchas ideas adecuadas a la cultura del lugar, como pagos por celular, marcar los vehículos de reparto o usar depósitos comunitarios.",
   "pasos_accionables": [
-    "Busca y acércate a organizaciones, emprendedores y personas con influencia en la comunidad donde vas a implementar tu idea, antes de cerrar el diseño final",
+    "Busca y acércate a organizaciones y emprendedores de la comunidad donde vas a implementar tu idea, antes de cerrar el diseño final",
     "Crea junto con ellos las decisiones concretas de implementación: cómo se paga, cómo se distribuye, cómo se presenta tu marca",
     "Pregúntate si tu solución puede sostenerse sola, sin que dependa de que tú sigas metiendo recursos desde afuera",
     "Ajusta tu diseño según lo que te devuelve la gente que conoce el contexto real"
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Usa el Conocimiento Local",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-conocimiento_local_colaboracion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ninguna idea tuya, por buena que te parezca, sirve de nada si las personas que la van a usar no pueden sostenerla en su día a día real. Cuando trabajas en un contexto que no es el tuyo, apóyate en quienes ya conocen ese terreno: vecinos, organizaciones locales, otros emprendedores del lugar. Un equipo que hizo esto encontró ideas que jamás se le hubieran ocurrido desde afuera, como pagos por celular, marcar los vehículos de reparto o usar depósitos comunitarios, porque esas ideas nacieron de la gente que vive ahí, no de una oficina externa.",
+      "texto_nuevo": "Ninguna idea tuya, por buena que te parezca, vale mucho si las personas que la van a usar no pueden sostenerla en su día a día real. Cuando trabajas en un contexto que no es el tuyo, apóyate en quienes ya conocen ese terreno: organizaciones locales y otros emprendedores del lugar. Un equipo que hizo esto encontró muchas ideas adecuadas a la cultura del lugar, como pagos por celular, marcar los vehículos de reparto o usar depósitos comunitarios.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1281",
+        "frase": "it is of little value if it cannot be sustained by its intended customers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que una idea así vale poco; 'no sirve de nada' lo endurece.; El libro nombra el conocimiento local de ONG y emprendedores del terreno; los vecinos son añadidos.; El libro solo dice que salieron muchas ideas culturalmente apropiadas; que jamás se hubieran ocurrido desde afuera y que nacieran de los residentes es añadido.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-108-conocimiento_local_colaboracion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca y acércate a organizaciones, emprendedores y personas con influencia en la comunidad donde vas a implementar tu idea, antes de cerrar el diseño final",
+      "texto_nuevo": "Busca y acércate a organizaciones y emprendedores de la comunidad donde vas a implementar tu idea, antes de cerrar el diseño final",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1281",
+        "frase": "the “local knowledge” of NGOs and entrepreneurs in the field"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro se apoya en ONG y emprendedores del terreno; las personas con influencia en la comunidad son un añadido a la lista.; Mismo defecto que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

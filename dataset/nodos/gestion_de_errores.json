@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Gestión de Errores (Error Management - EM)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema y hacer visibles las condiciones latentes. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
+  "resumen_teorico": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema, hacer visibles las condiciones latentes y mejorar la resistencia intrínseca de la organización a la falibilidad humana. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
   "pasos_accionables": [
     "Diseñar medidas de reducción de errores (mejorar diseño de tareas, información, entrenamiento)",
     "Diseñar medidas de contención de errores (detección temprana, barreras, tolerancia del sistema)",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Reduce y Contén tus Errores",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-110-gestion_de_errores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema y hacer visibles las condiciones latentes. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
+      "texto_nuevo": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema, hacer visibles las condiciones latentes y mejorar la resistencia intrínseca de la organización a la falibilidad humana. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2825-2857",
+        "frase": "Measures to improve the organization’s intrinsic resistance to human fallibility."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro tiene una octava medida, mejorar la resistencia intrínseca de la organización a la falibilidad humana.; Mismo elemento omitido de la lista de ocho medidas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

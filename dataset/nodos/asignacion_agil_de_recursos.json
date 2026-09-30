@@ -10,7 +10,7 @@
     "Define hitos flexibles en lugar de un presupuesto fijo para todo el año.",
     "Decide cuándo liberar más dinero según el progreso real que ves, no según el calendario fiscal.",
     "Acepta y avisa que las reglas del presupuesto van a cambiar varias veces mientras dure el proyecto.",
-    "Libera los fondos poco a poco, según vayas cumpliendo hitos de aprendizaje, no solo metas financieras.",
+    "Libera los fondos poco a poco, a medida que el proyecto alcanza sus hitos.",
     "Confía en tu criterio, o en el de la persona que te acompaña, para decidir la financiación, en vez de seguir una fórmula rígida."
   ],
   "entregable_esperado": "Un modelo de financiamiento por hitos, con criterios de revisión flexibles que tú mismo defines y usas.",
@@ -41,5 +41,24 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-asignacion_agil_de_recursos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Libera los fondos poco a poco, según vayas cumpliendo hitos de aprendizaje, no solo metas financieras.",
+      "texto_nuevo": "Libera los fondos poco a poco, a medida que el proyecto alcanza sus hitos.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1402",
+        "frase": "release funding as projects reach certain milestones"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de liberar fondos cuando los proyectos alcanzan ciertos hitos; la distinción entre hitos de aprendizaje y metas financieras es añadida.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

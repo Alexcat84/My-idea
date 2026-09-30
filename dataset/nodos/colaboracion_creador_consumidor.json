@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Codiseño: Colaboración entre Creadores y Consumidores",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "El diseño está migrando de 'diseñar para la gente' a 'diseñar con la gente' e incluso 'la gente diseñando por sí misma' (contenido generado por usuarios, open-source). El diseñador deja de ser el experto objetivo externo y se convierte en colaborador ('nosotros con ellos'). Técnicas como los 'cultural probes', el trabajo con jóvenes codesarrolladores, y el 'unfocus group' (reunir individuos únicos y expertos en vez de un grupo focal promedio) permiten esta colaboración activa.",
+  "resumen_teorico": "El diseño está migrando de 'diseñar para la gente' a 'diseñar con la gente' e incluso 'la gente diseñando por sí misma' (contenido generado por usuarios, open-source), aunque esto último dista de probar ideas de ruptura y hoy la mayor oportunidad es colaborar. El diseñador deja de ser el experto objetivo externo y se convierte en colaborador ('nosotros con ellos'). Técnicas como los 'cultural probes', el trabajo con jóvenes codesarrolladores, y el 'unfocus group' (reunir individuos únicos y expertos en vez de un grupo focal promedio) permiten esta colaboración activa.",
   "pasos_accionables": [
     "Diseñar herramientas de 'cultural probe' (diarios, cámaras) para que los usuarios documenten su propia vida",
     "Reemplazar el focus group tradicional por un 'unfocus group' con perfiles diversos y extremos",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Diseña Junto a tus Consumidores",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-colaboracion_creador_consumidor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El diseño está migrando de 'diseñar para la gente' a 'diseñar con la gente' e incluso 'la gente diseñando por sí misma' (contenido generado por usuarios, open-source). El diseñador deja de ser el experto objetivo externo y se convierte en colaborador ('nosotros con ellos'). Técnicas como los 'cultural probes', el trabajo con jóvenes codesarrolladores, y el 'unfocus group' (reunir individuos únicos y expertos en vez de un grupo focal promedio) permiten esta colaboración activa.",
+      "texto_nuevo": "El diseño está migrando de 'diseñar para la gente' a 'diseñar con la gente' e incluso 'la gente diseñando por sí misma' (contenido generado por usuarios, open-source), aunque esto último dista de probar ideas de ruptura y hoy la mayor oportunidad es colaborar. El diseñador deja de ser el experto objetivo externo y se convierte en colaborador ('nosotros con ellos'). Técnicas como los 'cultural probes', el trabajo con jóvenes codesarrolladores, y el 'unfocus group' (reunir individuos únicos y expertos en vez de un grupo focal promedio) permiten esta colaboración activa.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "422-426",
+        "frase": "the ability of consumers to generate breakthrough ideas on their own"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la capacidad de la gente de crear ideas de ruptura por sí sola está lejos de probarse y que hoy la mayor oportunidad está en la colaboración intermedia.; Mismo defecto; se descarta de ambas propuestas la frase final sobre duplicar el margen, que el libro no dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

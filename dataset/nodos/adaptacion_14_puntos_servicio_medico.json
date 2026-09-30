@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Adaptación de los 14 Puntos de Deming al Servicio Médico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación demuestra que los principios de gestión de calidad son universales y aplicables a cualquier tipo de servicio, incluyendo los de alta complejidad como la salud.",
+  "resumen_teorico": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación es un ejemplo de que los 14 puntos se aplican a una organización de servicio con poca modificación.",
   "pasos_accionables": [
     "Definir en términos operacionales qué significa 'servicio al paciente' para la institución",
     "Establecer estándares de servicio a corto y largo plazo",
-    "Implementar evidencia estadística de calidad para insumos médicos y procesos internos",
+    "Exigir evidencia estadística de calidad para los insumos médicos y aplicar acción correctiva, donde haga falta, en los procesos internos",
     "Eliminar el miedo entre distintos niveles jerárquicos del personal médico y no médico",
     "Crear una estructura de liderazgo responsable de impulsar los 14 puntos diariamente"
   ],
@@ -41,6 +41,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-008 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-112-adaptacion_14_puntos_servicio_medico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación demuestra que los principios de gestión de calidad son universales y aplicables a cualquier tipo de servicio, incluyendo los de alta complejidad como la salud.",
+      "texto_nuevo": "Los 14 puntos de Deming se han adaptado específicamente para organizaciones de salud, cubriendo desde la constancia de propósito hacia el servicio al paciente, la adopción de una nueva filosofía de calidad, hasta la eliminación del miedo y la creación de una estructura de liderazgo para la mejora continua. Esta adaptación es un ejemplo de que los 14 puntos se aplican a una organización de servicio con poca modificación.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4416-4418",
+        "frase": "The 14 points of Chapter 2 apply to a service organization with little modification."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que los 14 puntos se aplican a una organización de servicio con poca modificación; la universalidad y la alta complejidad son añadidas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-112-adaptacion_14_puntos_servicio_medico-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar evidencia estadística de calidad para insumos médicos y procesos internos",
+      "texto_nuevo": "Exigir evidencia estadística de calidad para los insumos médicos y aplicar acción correctiva, donde haga falta, en los procesos internos",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4445",
+        "frase": "Require statistical evidence of quality of incoming materials, such as pharmaceuticals, serums, and equipment."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide evidencia estadística solo para los insumos; para las tareas internas pide acción correctiva donde haga falta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

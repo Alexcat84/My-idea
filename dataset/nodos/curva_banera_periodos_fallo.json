@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Curva de la Bañera y Periodos de Fallo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por defectos de diseño o fabricación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño o accidentes de uso) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+  "resumen_teorico": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por errores de diseño o fabricación, mal uso o mala aplicación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño, cambios del entorno o accidentes de uso o mantenimiento) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
   "pasos_accionables": [
     "Recolectar datos de tiempos de fallo del producto en campo o pruebas",
     "Graficar la tasa de fallo en el tiempo para identificar en qué periodo se encuentra el producto",
     "Aplicar pruebas de burn-in o screening ambiental para depurar fallos de mortalidad infantil",
-    "Implementar control de procedimientos operativos y de mantenimiento para el periodo de tasa constante",
+    "Implementar control de procedimientos operativos y de mantenimiento para contener los accidentes en el periodo de tasa constante, sabiendo que reducir esa tasa de fallo requiere un rediseño básico",
     "Establecer reemplazo preventivo de componentes antes de la fase de desgaste"
   ],
   "entregable_esperado": "Diagrama de la curva de bañera del producto con acciones de mitigación específicas para cada periodo identificado",
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Conoce los Periodos de Fallo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-109-curva_banera_periodos_fallo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar control de procedimientos operativos y de mantenimiento para el periodo de tasa constante",
+      "texto_nuevo": "Implementar control de procedimientos operativos y de mantenimiento para contener los accidentes en el periodo de tasa constante, sabiendo que reducir esa tasa de fallo requiere un rediseño básico",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20119",
+        "frase": "However, a reduction in the failure rate requires basic redesign."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que ese control solo contiene los accidentes y que bajar la tasa de fallo exige un rediseño básico.; Mismo matiz que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-109-curva_banera_periodos_fallo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por defectos de diseño o fabricación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño o accidentes de uso) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+      "texto_nuevo": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por errores de diseño o fabricación, mal uso o mala aplicación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño, cambios del entorno o accidentes de uso o mantenimiento) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20117-20119",
+        "frase": "these failures are the result of blunders in design or manufacture, misuse, or misapplication"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las listas de causas pierden el mal uso y la mala aplicación, y los cambios del entorno y los accidentes de mantenimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

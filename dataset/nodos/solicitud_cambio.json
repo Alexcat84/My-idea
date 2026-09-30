@@ -9,8 +9,8 @@
     "Identifica quién solicita el cambio y asígnale un número identificador",
     "Categoriza el tipo de cambio propuesto",
     "Describe detalladamente el cambio y su justificación",
-    "Evalúa el impacto en alcance, calidad, costo, cronograma y documentos del proyecto",
-    "Revisa la solicitud y registra la disposición final con su justificación: aprobado, diferido o rechazado"
+    "Evalúa el impacto en alcance, calidad, requisitos, costo, cronograma y documentos del proyecto",
+    "Entrega la solicitud al comité de control de cambios u otra autoridad similar para que la revise, y registra la disposición final que decida, con su justificación: aprobado, diferido o rechazado"
   ],
   "entregable_esperado": "Un formulario de solicitud de cambio completo, con la disposición final registrada.",
   "nodos_previos": [
@@ -39,5 +39,41 @@
   ],
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-108-solicitud_cambio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa la solicitud y registra la disposición final con su justificación: aprobado, diferido o rechazado",
+      "texto_nuevo": "Entrega la solicitud al comité de control de cambios u otra autoridad similar para que la revise, y registra la disposición final que decida, con su justificación: aprobado, diferido o rechazado",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3993, 4147-4149",
+        "frase": "Change Control Board (or other authority) determines whether the change is approved, deferred, or rejected"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la solicitud va al comité de control de cambios u otra autoridad, que decide y justifica la disposición; el paso lo omite.; Mismo defecto: quien decide y justifica la disposición es el comité u otra autoridad, no quien pide el cambio.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-108-solicitud_cambio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa el impacto en alcance, calidad, costo, cronograma y documentos del proyecto",
+      "texto_nuevo": "Evalúa el impacto en alcance, calidad, requisitos, costo, cronograma y documentos del proyecto",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "4005-4015, 4137",
+        "frase": "Describe the impact of the proposed change on the project or product requirements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de impactos del libro incluye los requisitos, que el paso omite.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

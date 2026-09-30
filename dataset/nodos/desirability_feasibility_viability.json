@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tríada Deseabilidad-Factibilidad-Viabilidad",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Marco central del design thinking que evalúa cualquier solución desde tres ángulos: deseabilidad (¿la gente lo quiere?), factibilidad (¿es técnicamente posible?) y viabilidad (¿es sostenible como negocio?). Diferentes empresas parten de ángulos distintos: startups tecnológicas suelen empezar por factibilidad y ajustar los otros factores; empresas grandes con activos existentes (marca, clientes, distribución) tienden a innovar mejor desde la deseabilidad.",
+  "resumen_teorico": "Marco central del design thinking que evalúa cualquier solución desde tres ángulos: deseabilidad (¿la gente lo quiere?), factibilidad (¿es técnicamente posible?) y viabilidad (¿es sostenible como negocio?). Diferentes empresas parten de ángulos distintos: startups tecnológicas suelen empezar por factibilidad y ajustar los otros factores; a las empresas grandes con activos existentes (marca, clientes, distribución) puede convenirles más innovar desde la deseabilidad.",
   "pasos_accionables": [
     "Evaluar cada idea de innovación en los tres ejes simultáneamente: ¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?",
     "Identificar desde qué ángulo natural parte la organización (tecnología, mercado o negocio)",
@@ -44,5 +44,23 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-112-desirability_feasibility_viability-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marco central del design thinking que evalúa cualquier solución desde tres ángulos: deseabilidad (¿la gente lo quiere?), factibilidad (¿es técnicamente posible?) y viabilidad (¿es sostenible como negocio?). Diferentes empresas parten de ángulos distintos: startups tecnológicas suelen empezar por factibilidad y ajustar los otros factores; empresas grandes con activos existentes (marca, clientes, distribución) tienden a innovar mejor desde la deseabilidad.",
+      "texto_nuevo": "Marco central del design thinking que evalúa cualquier solución desde tres ángulos: deseabilidad (¿la gente lo quiere?), factibilidad (¿es técnicamente posible?) y viabilidad (¿es sostenible como negocio?). Diferentes empresas parten de ángulos distintos: startups tecnológicas suelen empezar por factibilidad y ajustar los otros factores; a las empresas grandes con activos existentes (marca, clientes, distribución) puede convenirles más innovar desde la deseabilidad.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "999",
+        "frase": "It may make better sense to drive innovation from a consumer-centered perspective"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice con cautela que puede tener más sentido innovar desde el consumidor; el nodo lo endurece a una tendencia de resultado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
