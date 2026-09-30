@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gráficos de Control para Datos de Atributos (p, np, c, u)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
+  "resumen_teorico": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante o casi constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
   "pasos_accionables": [
     "Determinar si se cuenta unidades defectuosas o número de defectos",
     "Seleccionar el tipo de gráfico apropiado (p, np, c o u) según el tipo de conteo y tamaño de muestra",
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige para el gráfico u, como para el np, un número de unidades aproximadamente constante.; Mismo defecto: se cae la condición del número de unidades constante del gráfico u.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-039-graficos_control_atributos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
+      "texto_nuevo": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante o casi constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18747",
+        "frase": "should only be used when the number of units sampled is constant (or nearly so)"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro admite para el gráfico np un tamaño de muestra constante o casi constante; el nodo pierde esa tolerancia.; Mismo defecto: se cae el 'o casi' del libro y la condición queda más estricta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

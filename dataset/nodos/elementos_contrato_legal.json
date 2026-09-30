@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Elementos Fundamentales de un Contrato Válido",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+  "resumen_teorico": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas. Las leyes de fraude en muchos estados exigen que ciertos tipos de contratos (entre ellos, los acuerdos prenupciales) se pongan por escrito. Para evitar que un acuerdo resulte inaplicable, conviene poner por escrito cualquier contrato que pueda tardar más de un año en cumplirse.",
   "pasos_accionables": [
     "Identificar todos los acuerdos verbales existentes entre cofundadores, empleados clave o socios.",
     "Formalizar por escrito cualquier acuerdo que pueda tardar más de un año en cumplirse.",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que con esos tres elementos un contrato 'can be found' establecido, y que cada estado decide; el nodo lo endurece.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-039-elementos_contrato_legal-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+      "texto_nuevo": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas. Las leyes de fraude en muchos estados exigen que ciertos tipos de contratos (entre ellos, los acuerdos prenupciales) se pongan por escrito. Para evitar que un acuerdo resulte inaplicable, conviene poner por escrito cualquier contrato que pueda tardar más de un año en cumplirse.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "4836",
+        "frase": "require certain types of contracts (including, interestingly, marital prenuptial agreements) to be put in writing"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro menciona juntas la dificultad de los acuerdos orales y las leyes de fraude ('At the same time'), sin relación causal; el 'por lo que' inventa la causa.; El libro no atribuye la regla del año a esas leyes ni cita ningún código: da como ejemplo los acuerdos prenupciales y aconseja aparte poner por escrito lo que pueda tardar más de un año.; Mismo defecto que la marca 0: causa inventada entre ambas afirmaciones.; Mismo defecto que la marca 1: norma y cita de código que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

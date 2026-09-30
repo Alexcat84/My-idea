@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Derivar la lista de características de calidad a partir de las especificaciones del producto.",
     "Elaborar la lista de defectos observados en manufactura y en campo.",
-    "Clasificar ambas listas por gravedad, normalmente con un mismo sistema, y compararlas para identificar diferencias relevantes.",
+    "Clasificar ambas listas por gravedad, normalmente con un mismo sistema.",
     "Usar la clasificación para priorizar esfuerzos de inspección."
   ],
   "entregable_esperado": "Documento con listas clasificadas de características de calidad y defectos asociados.",
@@ -60,6 +60,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso central: clasificar ambas listas por gravedad; el paso siguiente usa una clasificación que nunca se hace.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-039-clasificacion_caracteristicas_calidad-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar ambas listas por gravedad, normalmente con un mismo sistema, y compararlas para identificar diferencias relevantes.",
+      "texto_nuevo": "Clasificar ambas listas por gravedad, normalmente con un mismo sistema.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24654-24656",
+        "frase": "Normally, it is feasible to make one system of classification applicable to both lists."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro señala que las listas se parecen y difieren y conviene publicarlas por separado, pero no aconseja compararlas; basta con quitar la acción añadida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Patrimonio de los Propietarios (Owners' Equity)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "El patrimonio es lo que queda después de restar pasivos de activos; representa el capital aportado por dueños e inversionistas más las utilidades retenidas, aunque casi nunca coincide con su valor de mercado. Incluye acciones preferentes (con dividendos prioritarios, normalmente fijos, y en su mayoría sin voto), acciones comunes (por lo general con voto), capital adicional pagado, y utilidades retenidas. Es crucial para entender cómo se financia la empresa y qué implica para futuras decisiones de deuda vs equity.",
+  "resumen_teorico": "El patrimonio es lo que queda después de restar pasivos de activos; representa el capital aportado por dueños e inversionistas más las utilidades retenidas, aunque casi nunca coincide con su valor de mercado. Puede incluir acciones preferentes (con dividendos prioritarios, normalmente fijos, y en su mayoría sin voto), acciones comunes (por lo general con voto), capital adicional pagado, y utilidades retenidas. Es crucial para entender cómo se financia la empresa y qué implica para futuras decisiones de deuda vs equity.",
   "pasos_accionables": [
     "Diferenciar entre acciones preferentes y comunes al estructurar inversión.",
     "Calcular el valor nominal (par value) vs capital adicional pagado por cada ronda de inversión.",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte expresamente que el patrimonio contable casi nunca coincide con el valor de mercado, justo la lectura que invita 'lo que queda'.; El libro dice que las comunes usualmente tienen voto, no siempre.; Endurece: el libro dice que las preferentes típicamente tienen dividendo fijo y la mayoría no vota, y que las comunes suelen votar.; Mismo endurecimiento sobre las preferentes.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-patrimonio_de_los_propietarios-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El patrimonio es lo que queda después de restar pasivos de activos; representa el capital aportado por dueños e inversionistas más las utilidades retenidas, aunque casi nunca coincide con su valor de mercado. Incluye acciones preferentes (con dividendos prioritarios, normalmente fijos, y en su mayoría sin voto), acciones comunes (por lo general con voto), capital adicional pagado, y utilidades retenidas. Es crucial para entender cómo se financia la empresa y qué implica para futuras decisiones de deuda vs equity.",
+      "texto_nuevo": "El patrimonio es lo que queda después de restar pasivos de activos; representa el capital aportado por dueños e inversionistas más las utilidades retenidas, aunque casi nunca coincide con su valor de mercado. Puede incluir acciones preferentes (con dividendos prioritarios, normalmente fijos, y en su mayoría sin voto), acciones comunes (por lo general con voto), capital adicional pagado, y utilidades retenidas. Es crucial para entender cómo se financia la empresa y qué implica para futuras decisiones de deuda vs equity.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "1426",
+        "frase": "They may include the following categories."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las partidas de patrimonio de algunas empresas pueden incluir esas categorías, no que siempre las incluyan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

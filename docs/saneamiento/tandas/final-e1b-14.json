@@ -1,0 +1,492 @@
+[
+ {
+  "id": "final-e1b-038-sales_operations_planning-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "sales_operations_planning",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+  "texto_nuevo": "El S&OP es un proceso de negocio cross-funcional (gerencia general, ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "3728",
+   "frase": "S&OP is cross functional, involving General Management, Sales, Operations, Finance, and Product Development."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de funciones del libro incluye a la gerencia general y el resumen la omite.; Mismo defecto: se cae la gerencia general de la enumeración de áreas que participan.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-038-ratios_liquidez-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "ratios_liquidez",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verificar que el current ratio esté bien por encima de 1, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y que el quick ratio esté por encima de 1, especialmente en periodos de alto crecimiento",
+  "texto_nuevo": "Verificar que el current ratio esté bien por encima de 1, especialmente en periodos de alto crecimiento, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y, si tienes mucho efectivo atado en inventario, que el quick ratio esté, en la mayoría de los casos, por encima de 1",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "2675-2692",
+   "frase": "that they will be expecting it (in most cases) to be above 1"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro espera el quick ratio sobre 1 en la mayoría de los casos y para negocios con mucho efectivo en inventario, y la atención al alto crecimiento la pone en el current ratio.; Se caen la condición del inventario y el 'en la mayoría de los casos' que el libro pone al quick ratio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-038-tasa_interna_retorno_irr-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "tasa_interna_retorno_irr",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usar el IRR en conjunto con el NPV, nunca de forma aislada, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV",
+  "texto_nuevo": "Usar el IRR en conjunto con el NPV, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3133",
+   "frase": "it may make sense to use both IRR and NPV"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro dice que cuando lo que está en juego es grande puede tener sentido usar ambos; no prohíbe usar el IRR solo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-038-punto_equilibrio_unidades-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "punto_equilibrio_unidades",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los costos de tu negocio se dividen en variables (los que cambian con el volumen producido, como materiales y mano de obra directa, que suelen estar en COGS) y fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, que suelen estar en gastos operativos). Ojo: COGS no equivale sin más a costos variables ni los gastos operativos a fijos; el sueldo de un supervisor dentro de COGS es fijo a corto plazo, y las comisiones de venta dentro de gastos operativos son en parte variables. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+  "texto_nuevo": "Los costos de tu negocio se dividen en variables (los que cambian con el volumen producido, como materiales, que suelen estar en COGS) y fijos (los que no cambian con el volumen, como renta o salarios administrativos, que suelen estar en gastos operativos). Ojo: COGS no equivale sin más a costos variables ni los gastos operativos a fijos; el sueldo de un supervisor dentro de COGS es fijo a corto plazo, y las comisiones de venta dentro de gastos operativos son en parte variables. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "756-762",
+   "frase": "Materials, for example, are a variable cost"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo pone los materiales como costo variable y el sueldo administrativo como fijo; la mano de obra directa y las herramientas no las clasifica.; Mismo defecto: clasificaciones de mano de obra directa y herramientas que el libro no hace.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-038-patrimonio_de_los_propietarios-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "patrimonio_de_los_propietarios",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El patrimonio es lo que queda después de restar pasivos de activos; representa el capital aportado por dueños e inversionistas más las utilidades retenidas, aunque casi nunca coincide con su valor de mercado. Incluye acciones preferentes (con dividendos prioritarios, normalmente fijos, y en su mayoría sin voto), acciones comunes (por lo general con voto), capital adicional pagado, y utilidades retenidas. Es crucial para entender cómo se financia la empresa y qué implica para futuras decisiones de deuda vs equity.",
+  "texto_nuevo": "El patrimonio es lo que queda después de restar pasivos de activos; representa el capital aportado por dueños e inversionistas más las utilidades retenidas, aunque casi nunca coincide con su valor de mercado. Puede incluir acciones preferentes (con dividendos prioritarios, normalmente fijos, y en su mayoría sin voto), acciones comunes (por lo general con voto), capital adicional pagado, y utilidades retenidas. Es crucial para entender cómo se financia la empresa y qué implica para futuras decisiones de deuda vs equity.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "1426",
+   "frase": "They may include the following categories."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las partidas de patrimonio de algunas empresas pueden incluir esas categorías, no que siempre las incluyan.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-038-preparacion_para_salida_a_bolsa-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "preparacion_para_salida_a_bolsa",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Salir a bolsa significa vender acciones de tu negocio a inversionistas del público, y puede traer grandes recompensas para ti y para quienes invirtieron temprano. Pero exige prepararte desde el principio: llevar tu negocio como si ya fuera público, separar por completo tus finanzas personales de las del negocio, tener estados financieros auditados cada año y conocer las normas de gobierno corporativo que existan en tu país, como la Sarbanes-Oxley en Estados Unidos. Llevarlo así probablemente tenga un costo significativo. Los negocios que suelen encajar en este camino son startups con alto potencial de crecimiento o negocios ya establecidos con un crecimiento rápido y estable. Los detalles legales y fiscales cambian según donde vivas, así que verifícalos con quien te asesore en tu país antes de avanzar.",
+  "texto_nuevo": "Salir a bolsa significa vender acciones de tu negocio a inversionistas del público, y puede traer grandes recompensas para ti y para quienes invirtieron temprano. Pero exige prepararte desde el principio: llevar tu negocio como si ya fuera público, buscar contadores y asesores financieros con experiencia en empresas que van hacia una salida a bolsa, separar por completo tus finanzas personales de las del negocio, tener estados financieros auditados cada año y conocer las normas de gobierno corporativo que existan en tu país, como la Sarbanes-Oxley en Estados Unidos. Llevarlo así probablemente tenga un costo significativo. Los negocios que suelen encajar en este camino son startups con alto potencial de crecimiento o negocios ya establecidos con un crecimiento rápido y estable. Los detalles legales y fiscales cambian según donde vivas, así que verifícalos con quien te asesore en tu país antes de avanzar.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3699",
+   "frase": "You will want to find accountants and financial advisers"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de preparativos del libro incluye buscar contadores y asesores con experiencia en salidas a bolsa, y el resumen la omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-038-tres_palancas_rentabilidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "tres_palancas_rentabilidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo). Enfocarse solo en recortes probablemente solo pospone el problema de fondo.",
+  "texto_nuevo": "Cuando la utilidad neta es baja, solo hay tres soluciones legítimas: aumentar ventas rentables (requiere tiempo, nuevos mercados), reducir costos de producción/COGS (requiere estudiar el proceso productivo), o reducir gastos operativos, usualmente vía recorte de personal (solución rápida pero riesgosa para la moral y el largo plazo).",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "929-931",
+   "frase": "Of course, layoffs can backfire. Morale suffers."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que los despidos pueden salir mal por la moral y la fuga de buena gente, no que los recortes pospongan el problema de fondo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-038-calibra_tu_propio_ojo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "calibra_tu_propio_ojo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
+  "texto_nuevo": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si prefieres ganar dinero sacando una canica de una bolsa que gana nueve de cada diez veces antes que apostando a tu rango, tu noventa por ciento original no era real. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse mejora de forma medible su capacidad de estimar probabilidades.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "3912, 3929-3941",
+   "frase": "you prefer to draw from the bag instead of betting on your answer"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la calibración mejora de forma medible la estimación y que no todos llegan a calibrarse; no promete estimaciones confiables.; Mismo defecto: falta la comparación con la apuesta equivalente de nueve entre diez.; Se cae la comparación que define la prueba, apostar a tu rango frente a una bolsa que gana nueve de cada diez, y la señal es preferir la bolsa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-038-piensa_en_rangos_no_en_numeros_unicos-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "piensa_en_rangos_no_en_numeros_unicos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango. Casi todos damos rangos demasiado estrechos, así que revisa que sea lo bastante ancho.",
+  "texto_nuevo": "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango. La mayoría de nosotros damos rangos demasiado estrechos, así que revisa que sea lo bastante ancho.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "3916, 3941",
+   "frase": "For an overconfident person (i.e., most of us)"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de la mayoría de nosotros, no de casi todos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-038-la_matriz_de_colores_te_engana-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "la_matriz_de_colores_te_engana",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y, si pasa, entre cuánto y cuánto perderías en dinero o tiempo.",
+  "texto_nuevo": "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable es en un plazo dado y, si pasa, entre cuánto y cuánto dinero perderías, con noventa por ciento de confianza.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "944, 967-971",
+   "frase": "Estimate a 90 percent confidence interval for a monetized loss"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide la probabilidad en un periodo dado y un rango de pérdida monetaria con noventa por ciento de confianza; el paso pierde plazo y confianza y abre la pérdida al tiempo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-038-empieza_con_lo_que_ya_funciona-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "empieza_con_lo_que_ya_funciona",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Empieza por una lista viva de riesgos, con la probabilidad de cada uno y su posible pérdida como rango, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
+  "texto_nuevo": "Empieza por una lista viva de riesgos, con la probabilidad de cada uno en un plazo dado y su posible pérdida como rango con noventa por ciento de confianza, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "967-971",
+   "frase": "Define a specific period of time over which the risk events could materialize."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro fija un plazo para la probabilidad y pide el rango de pérdida con noventa por ciento de confianza; el paso deja caer ambas condiciones.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-039-hojas_de_verificacion-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "hojas_de_verificacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Lista las subcategorías o ítems que vas a contar",
+  "texto_nuevo": "Lista las subcategorías o ítems que vas a contar; si analizas más de una parte, crea secciones separadas, cada una con su encabezado",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18159",
+   "frase": "If more than one part is being analyzed, create separate sections with individual headers."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso 4 del libro incluye crear secciones separadas con encabezado si se analiza más de una parte, y el nodo lo pierde.; Mismo defecto: se cae la parte del procedimiento sobre secciones separadas con su encabezado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-039-graficos_control_atributos-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "graficos_control_atributos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
+  "texto_nuevo": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante o casi constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18747",
+   "frase": "should only be used when the number of units sampled is constant (or nearly so)"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro admite para el gráfico np un tamaño de muestra constante o casi constante; el nodo pierde esa tolerancia.; Mismo defecto: se cae el 'o casi' del libro y la condición queda más estricta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-gobierno_corporativo_y_calidad-pasos_accionables-5",
+  "fecha": "2026-09-30",
+  "node_id": "gobierno_corporativo_y_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Considera armar un consejo asesor con personas independientes y objetivas que sepan cuestionarte, o un consejo familiar si tu negocio es familiar",
+  "texto_nuevo": "Considera armar un consejo asesor con personas independientes y objetivas que sepan cuestionarte y, si tu negocio es familiar, además un consejo familiar",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10709-10718",
+   "frase": "in addition to a board of directors, a family council that represents the family's shareholders"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no dice lo opuesto: pone el consejo familiar además del consejo, y el 'o' lo vuelve alternativa; se pierde esa condición, no se invierte el consejo.; El libro presenta el consejo familiar en adición al consejo, no en su lugar; el 'o' pierde esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 5
+ },
+ {
+  "id": "final-e1b-039-catch_ball_comunicacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "catch_ball_comunicacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo puede repetirse varias veces hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
+  "texto_nuevo": "Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo puede repetirse varias veces hasta llegar a un acuerdo. La experiencia de quienes lo usan sugiere que supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9059",
+   "frase": "Feedback from organizations using catch ball suggests that it outperforms"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo dice que la experiencia de quienes lo usan sugiere que rinde más que fijar metas en un solo sentido; el nodo lo afirma como hecho.; Mismo defecto: el 'suggests' del libro pasa a afirmación sin matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-clasificacion_benchmarking-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "clasificacion_benchmarking",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar el nivel de control, costo y tiempo disponible, la apertura y confidencialidad posibles y el potencial de aprendizaje para el tipo de benchmarking elegido",
+  "texto_nuevo": "Evaluar la similitud entre los participantes en lo que se va a comparar, el nivel de control, costo y tiempo disponible, la apertura y confidencialidad posibles y el potencial de aprendizaje para el tipo de benchmarking elegido",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17065-17075",
+   "frase": "the similarity between the participants in terms of the subjects to be benchmarked"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los cinco factores del libro, el paso pierde el primero: la similitud entre los participantes en lo que se compara.; Mismo defecto: se cae un elemento de la enumeración del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-039-carryover_fallas_producto-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "carryover_fallas_producto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: suele haber presión por sumar algo nuevo, y crear lo nuevo da más prestigio que corregir algo viejo. Resolverlo exige que tú, como responsable del negocio, lo pongas como prioridad explícita.",
+  "texto_nuevo": "Un negocio puede perder terreno frente a la competencia si repite en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: suele haber presión por sumar algo nuevo, y crear lo nuevo da más prestigio que corregir algo viejo. Al parecer, resolverlo exige que tú, como responsable del negocio, lo pongas como prioridad explícita.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "414-424",
+   "frase": "Market leadership can be lost by perpetuating failure-prone features of predecessor models."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el liderazgo de mercado puede perderse al perpetuar fallas; el nodo lo da como hecho que les ocurre a muchos negocios.; El libro matiza con 'seemingly' que solo la intervención de la dirección rompe el atasco; el nodo lo da por seguro.; Mismo defecto que la marca 0: el 'can be lost' pasa a hecho.; Mismo defecto que la marca 1: se cae el 'seemingly'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-certificacion_profesional_calidad-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "certificacion_profesional_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+  "texto_nuevo": "Sugerencia de My Idea: evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "15050-15058",
+   "frase": "One project is not enough to make someone an expert"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro advierte que un proyecto no basta y que un examen sin supervisión no garantiza nada, pero no aconseja combinar ambos; es consejo de la casa sin etiqueta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-039-clasificacion_caracteristicas_calidad-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "clasificacion_caracteristicas_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Clasificar ambas listas por gravedad, normalmente con un mismo sistema, y compararlas para identificar diferencias relevantes.",
+  "texto_nuevo": "Clasificar ambas listas por gravedad, normalmente con un mismo sistema.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24654-24656",
+   "frase": "Normally, it is feasible to make one system of classification applicable to both lists."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro señala que las listas se parecen y difieren y conviene publicarlas por separado, pero no aconseja compararlas; basta con quitar la acción añadida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-039-elementos_contrato_legal-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "elementos_contrato_legal",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+  "texto_nuevo": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas. Las leyes de fraude en muchos estados exigen que ciertos tipos de contratos (entre ellos, los acuerdos prenupciales) se pongan por escrito. Para evitar que un acuerdo resulte inaplicable, conviene poner por escrito cualquier contrato que pueda tardar más de un año en cumplirse.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "4836",
+   "frase": "require certain types of contracts (including, interestingly, marital prenuptial agreements) to be put in writing"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro menciona juntas la dificultad de los acuerdos orales y las leyes de fraude ('At the same time'), sin relación causal; el 'por lo que' inventa la causa.; El libro no atribuye la regla del año a esas leyes ni cita ningún código: da como ejemplo los acuerdos prenupciales y aconseja aparte poner por escrito lo que pueda tardar más de un año.; Mismo defecto que la marca 0: causa inventada entre ambas afirmaciones.; Mismo defecto que la marca 1: norma y cita de código que el libro no da.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-dilema_riqueza_vs_control-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "dilema_riqueza_vs_control",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es una de las tensiones centrales que vas a enfrentar como fundador: elegir entre maximizar el valor financiero de tu empresa (volverte rico) o mantener el control absoluto sobre las decisiones (ser rey). Estas dos motivaciones suelen ser excluyentes: las decisiones que tomas a lo largo de la vida de tu negocio, como buscar capital externo, contratar ejecutivos con experiencia o acelerar el crecimiento, suelen aumentar el valor de tu empresa pero diluyen tu control, empujándote hacia uno de los dos extremos; muy pocos fundadores logran ambas cosas a la vez. Estructuras híbridas, como las franquicias, donde cedes parte del control y las ganancias a cambio de crecer con menos capital propio, podrían ser una vía hacia puntos intermedios.",
+  "texto_nuevo": "Es una de las tensiones centrales que vas a enfrentar como fundador: elegir entre maximizar el valor financiero de tu empresa (volverte rico) o mantener el control absoluto sobre las decisiones (ser rey). Estas dos motivaciones suelen ser excluyentes: las decisiones que tomas a lo largo de la vida de tu negocio, como buscar capital externo, contratar ejecutivos con experiencia o acelerar el crecimiento, suelen aumentar el valor de tu empresa pero diluyen tu control, empujándote hacia uno de los dos extremos; muy pocos fundadores logran ambas cosas a la vez. Algunos fundadores siguen un camino híbrido, una mezcla de decisiones de control y de riqueza, con la esperanza de lograr ambas cosas, aunque eso también puede aumentar la probabilidad de fracasar.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "3489-3495",
+   "frase": "they may also increase the probability of ending up Failures"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no presenta la franquicia como camino híbrido ni dice que en ella cedas control y ganancias; la trata como forma de crecer sin capital externo.; Mismo defecto que la marca 0: el camino híbrido del libro es una mezcla de decisiones de control y de riqueza, no la franquicia.; Se cae la advertencia del libro: los caminos híbridos también pueden aumentar la probabilidad de fracasar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-programacion_cultura_empresarial-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "programacion_cultura_empresarial",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La cultura no consiste en perks (yoga, mascotas en la oficina) sino en mecanismos de diseño que distinguen a la empresa, preservan valores operativos críticos y ayudan a identificar empleados afines a la misión. Los mejores mecanismos culturales son triviales de implementar pero tienen consecuencias conductuales de largo alcance, usando el 'valor de shock' para generar conversación y cambio de comportamiento (ej. escritorios de puertas en Amazon, multas por tardanza en a16z, 'Move fast and break things' en Facebook). Aun así, sin un producto mucho mejor y sin quedarse con el mercado, la cultura no importa.",
+  "texto_nuevo": "La cultura no consiste en perks (yoga, mascotas en la oficina) sino en mecanismos de diseño que distinguen a la empresa, preservan valores operativos críticos y ayudan a identificar empleados afines a la misión. Los mejores mecanismos culturales son triviales de implementar pero tienen consecuencias conductuales de largo alcance, usando el 'valor de shock' para generar conversación y cambio de comportamiento (ej. escritorios de puertas en Amazon, multas por tardanza en a16z, 'Move fast and break things' en Facebook). Aun así, sin un producto al menos diez veces mejor y sin quedarse con el mercado, la cultura no importa.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "2235-2237",
+   "frase": "build a product that's at least ten times better at doing something"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija el umbral en al menos diez veces mejor y descarta dos o tres veces; 'mucho mejor' pierde ese límite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-reuniones_uno_a_uno-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reuniones_uno_a_uno",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las reuniones uno a uno son una herramienta clave para que la información y las ideas fluyan desde la persona que trabaja contigo hacia ti. La clave de un buen 1:1 es entender que es la reunión de esa persona, no la tuya: ella debe fijar la agenda y hablar el 90% del tiempo, mientras tú escuchas y haces preguntas que saquen a la luz problemas, ideas y frustraciones que no encajan en reportes formales.",
+  "texto_nuevo": "En la mayoría de los casos, las reuniones uno a uno son una herramienta excelente para que la información y las ideas fluyan desde la persona que trabaja contigo hacia ti. La clave de un buen 1:1 es entender que es la reunión de esa persona, no la tuya: si te gustan las agendas estructuradas, ella debe fijar la agenda, y ella habla el 90% del tiempo, mientras tú escuchas y haces preguntas que saquen a la luz problemas, ideas y frustraciones que no encajan en reportes formales.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "2192-2198",
+   "frase": "If you like structured agendas, then the employee should set the agenda."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona que la persona fije la agenda a que te gusten las agendas estructuradas; el nodo lo vuelve obligatorio.; El libro dice que en la mayoría de los casos son un mecanismo excelente y que es posible comunicarse bien sin ellas; el nodo lo afirma sin matiz.; Mismo defecto que la marca 0: se cae la condición de las agendas estructuradas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-tipos_adquisiciones_tecnologia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "tipos_adquisiciones_tecnologia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando alguien quiere comprarte, hay tres lógicas distintas de valor: (1) te compran por el equipo o la tecnología (suelen ser tratos de entre 5 y 50 millones de dólares); (2) te compran el producto para venderlo con su propia fuerza comercial (precio mayor que el anterior); (3) te compran el negocio completo, con sus ingresos y ganancias, valorado al menos en parte por métricas financieras. Distinguir cuál de las tres te están ofreciendo te ayuda a pensar si te conviene vender.",
+  "texto_nuevo": "Cuando alguien quiere comprarte, hay tres lógicas distintas de valor: (1) te compran por el equipo o la tecnología (suelen ser tratos de entre 5 y 50 millones de dólares); (2) te compran el producto para venderlo con su propia fuerza comercial (suelen ser tratos de entre 25 y 250 millones de dólares); (3) te compran el negocio completo, con sus ingresos y ganancias, valorado al menos en parte por métricas financieras. Distinguir cuál de las tres te están ofreciendo te ayuda a pensar si te conviene vender.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "3266",
+   "frase": "These kinds of deals typically range between $25 million and $250 million."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da para la compra de producto un rango típico de 25 a 250 millones de dólares, que se solapa con el anterior; 'mayor' pierde la cifra y el solapamiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-039-proceso_despidos_responsables-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "proceso_despidos_responsables",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de ejecutar el despido, dirigirse a toda la empresa para explicar lo sucedido de forma clara y honesta y dar contexto y respaldo a los gerentes; después, mantenerse visible y presente, hablar con la gente y agradecer su esfuerzo a quienes se van",
+  "texto_nuevo": "Antes de ejecutar el despido, dirigirse a toda la empresa para explicar lo sucedido de forma clara y honesta y dar contexto y respaldo a los gerentes, recordando que el mensaje es para quienes se quedan y cuidando de no disculparse demasiado; después, mantenerse visible y presente, hablar con la gente y agradecer su esfuerzo a quienes se van",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "891",
+   "frase": "Still, the company must move forward, so be careful not to apologize too much."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se caen dos límites del paso del libro: el mensaje es para quienes se quedan y hay que cuidar de no disculparse demasiado porque la empresa debe seguir.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-040-optimizacion_embudo_get_customers-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "optimizacion_embudo_get_customers",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcular LTV con un horizonte razonable, no demasiado largo, y compararlo con CAQ antes de escalar inversión en adquisición",
+  "texto_nuevo": "Calcular LTV con un horizonte razonable, no demasiado largo, y compararlo con CAQ",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "11514-11522",
+   "frase": "Always keep lifetime value in mind."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro pide tener siempre presente el valor de vida del cliente; el momento 'antes de escalar inversión en adquisición' no aparece en el libro y acota el consejo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-040-key_resources_hypothesis-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "key_resources_hypothesis",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
+  "texto_nuevo": "Busca de dónde puede venir el dinero: amigos y familia, financiamiento colectivo (crowdfunding), inversionistas ángel, inversión de capital de riesgo (VC), socios corporativos, subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring), arrendamiento de equipo (leasing) o financiamiento de proveedores, y calcula cuánto hace falta en efectivo, líneas de crédito",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "7367-7375",
+   "frase": "Friends and family, crowd funding, angels, venture capital and corporate partners are the usual suspects."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye amigos y familia, financiamiento colectivo, ángeles, socios corporativos y, para productos físicos, financiamiento de proveedores; el paso los omite y reduce las opciones a dos.; Mismo defecto: se cae parte de la lista de fuentes de dinero que da el libro, incluida la financiación de proveedores.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-040-key_resources_hypothesis-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "key_resources_hypothesis",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define qué talento necesitas ahora y cuál vas a necesitar más adelante",
+  "texto_nuevo": "Define qué talento necesitas ahora y cuál vas a necesitar dentro de dos o tres años",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "7390",
+   "frase": "needs are now and what they will be two to three years later"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija un horizonte concreto de dos a tres años para prever el talento; 'más adelante' lo deja indefinido.; Mismo defecto: se pierde el horizonte de dos a tres años que da el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ }
+]

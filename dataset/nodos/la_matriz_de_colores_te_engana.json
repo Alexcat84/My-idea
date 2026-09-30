@@ -7,7 +7,7 @@
   "resumen_teorico": "La herramienta más popular para calificar riesgos, la matriz de colores que multiplica una probabilidad alta-media-baja por un impacto alto-medio-bajo y pinta el resultado de rojo, amarillo o verde, es peor que inútil. El problema de fondo es que trata escalas de orden como si fueran números reales: un impacto de tres no es el triple de uno, igual que una película de tres estrellas no es el triple de buena que una de una estrella, pero la matriz los multiplica igual. Encima, las etiquetas como media significan cosas muy distintas para cada persona, y esconde el exceso de confianza con que todos estimamos. El resultado no es solo que no ayuda: agrega su propio error y puede dejarte peor que tu simple intuición. La sensación de control que da es un placebo.",
   "pasos_accionables": [
     "Si usas una matriz de colores, deja de multiplicar sus casillas como si fueran números.",
-    "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y, si pasa, entre cuánto y cuánto perderías en dinero o tiempo.",
+    "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable es en un plazo dado y, si pasa, entre cuánto y cuánto dinero perderías, con noventa por ciento de confianza.",
     "No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.",
     "Prefiere una estimación imperfecta pero honesta a un tablero de colores que aparenta rigor."
   ],
@@ -91,6 +91,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide el impacto como rango de pérdida, no como un solo valor.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-la_matriz_de_colores_te_engana-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y, si pasa, entre cuánto y cuánto perderías en dinero o tiempo.",
+      "texto_nuevo": "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable es en un plazo dado y, si pasa, entre cuánto y cuánto dinero perderías, con noventa por ciento de confianza.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "944, 967-971",
+        "frase": "Estimate a 90 percent confidence interval for a monetized loss"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide la probabilidad en un periodo dado y un rango de pérdida monetaria con noventa por ciento de confianza; el paso pierde plazo y confianza y abre la pérdida al tiempo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

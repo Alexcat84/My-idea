@@ -7,8 +7,8 @@
   "resumen_teorico": "Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado), dónde conseguirlo y cómo asegurarlo, el riesgo de que falte y tus alternativas, y revisa qué dependencias externas escapan a tu control.",
   "pasos_accionables": [
     "Lista los recursos físicos que necesitas: instalaciones, insumos, equipo, redes de distribución",
-    "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
-    "Define qué talento necesitas ahora y cuál vas a necesitar más adelante",
+    "Busca de dónde puede venir el dinero: amigos y familia, financiamiento colectivo (crowdfunding), inversionistas ángel, inversión de capital de riesgo (VC), socios corporativos, subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring), arrendamiento de equipo (leasing) o financiamiento de proveedores, y calcula cuánto hace falta en efectivo, líneas de crédito",
+    "Define qué talento necesitas ahora y cuál vas a necesitar dentro de dos o tres años",
     "Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual: marca, patentes, bases de datos, saber hacer",
     "Revisa qué dependes de otros que está fuera de tu control: qué tiene que pasar, cuándo, qué harás si no pasa y qué señales usarás para medir si está ocurriendo"
   ],
@@ -112,6 +112,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también identificar el riesgo de que cada recurso falte y las alternativas que reducen el impacto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-040-key_resources_hypothesis-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
+      "texto_nuevo": "Busca de dónde puede venir el dinero: amigos y familia, financiamiento colectivo (crowdfunding), inversionistas ángel, inversión de capital de riesgo (VC), socios corporativos, subsidios o fondos no reembolsables (grants) y, si vendes productos físicos, también venta de facturas (factoring), arrendamiento de equipo (leasing) o financiamiento de proveedores, y calcula cuánto hace falta en efectivo, líneas de crédito",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7367-7375",
+        "frase": "Friends and family, crowd funding, angels, venture capital and corporate partners are the usual suspects."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye amigos y familia, financiamiento colectivo, ángeles, socios corporativos y, para productos físicos, financiamiento de proveedores; el paso los omite y reduce las opciones a dos.; Mismo defecto: se cae parte de la lista de fuentes de dinero que da el libro, incluida la financiación de proveedores.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-040-key_resources_hypothesis-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define qué talento necesitas ahora y cuál vas a necesitar más adelante",
+      "texto_nuevo": "Define qué talento necesitas ahora y cuál vas a necesitar dentro de dos o tres años",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7390",
+        "frase": "needs are now and what they will be two to three years later"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija un horizonte concreto de dos a tres años para prever el talento; 'más adelante' lo deja indefinido.; Mismo defecto: se pierde el horizonte de dos a tres años que da el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

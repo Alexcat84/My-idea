@@ -9,7 +9,7 @@
     "Titula la hoja con el nombre del ítem o proceso que estás analizando",
     "Decide si necesitas observar durante un periodo continuo o hacer un análisis inmediato, y registra ese periodo de tiempo",
     "Añade quién hace el análisis, cuándo, dónde y por qué lo estás haciendo",
-    "Lista las subcategorías o ítems que vas a contar",
+    "Lista las subcategorías o ítems que vas a contar; si analizas más de una parte, crea secciones separadas, cada una con su encabezado",
     "Registra la información en bloques de conteo (por ejemplo, de a cinco marcas)"
   ],
   "entregable_esperado": "Hoja de verificación completa con conteos organizados por categoría",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Registra y Verifica tus Datos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-039-hojas_de_verificacion-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista las subcategorías o ítems que vas a contar",
+      "texto_nuevo": "Lista las subcategorías o ítems que vas a contar; si analizas más de una parte, crea secciones separadas, cada una con su encabezado",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18159",
+        "frase": "If more than one part is being analyzed, create separate sections with individual headers."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso 4 del libro incluye crear secciones separadas con encabezado si se analiza más de una parte, y el nodo lo pierde.; Mismo defecto: se cae la parte del procedimiento sobre secciones separadas con su encabezado.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

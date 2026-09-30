@@ -7,7 +7,7 @@
   "resumen_teorico": "Mejorar cómo manejas el riesgo no exige un modelo vistoso ni complicado: empieza con lo simple y probado, no con lo que impresiona. Muchos abandonan la buena gestión de riesgo porque creen que necesitan matemáticas pesadas o software caro; en realidad, unos pocos hábitos sencillos y bien fundados (una lista viva, pensar en rangos, calibrar tu juicio, comparar predicciones con la realidad) rinden más que cualquier tablero elaborado que nadie comprueba. Lo probado le gana a lo aparente. La regla es arrancar con lo mínimo que de verdad funciona y sofisticar solo cuando el tamaño de la decisión lo justifique. Para el emprendedor con poco tiempo, esto es liberador: no necesita volverse experto en estadística, solo adoptar unas cuantas prácticas honestas y constantes.",
   "pasos_accionables": [
     "Elige dos o tres prácticas simples y probadas en vez de un modelo complicado.",
-    "Empieza por una lista viva de riesgos, con la probabilidad de cada uno y su posible pérdida como rango, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
+    "Empieza por una lista viva de riesgos, con la probabilidad de cada uno en un plazo dado y su posible pérdida como rango con noventa por ciento de confianza, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
     "No inviertas en herramientas caras hasta que el tamaño de tus decisiones lo justifique.",
     "Sofistica el método solo cuando lo simple se te quede corto, no antes."
   ],
@@ -73,6 +73,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no promete resultados desde el primer día; dice que hasta lo más simple puede traer beneficios.; El punto de partida simple del libro incluye probabilidades explícitas y hacer la cuenta en una hoja de cálculo.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-empieza_con_lo_que_ya_funciona-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Empieza por una lista viva de riesgos, con la probabilidad de cada uno y su posible pérdida como rango, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
+      "texto_nuevo": "Empieza por una lista viva de riesgos, con la probabilidad de cada uno en un plazo dado y su posible pérdida como rango con noventa por ciento de confianza, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "967-971",
+        "frase": "Define a specific period of time over which the risk events could materialize."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro fija un plazo para la probabilidad y pide el rango de pérdida con noventa por ciento de confianza; el paso deja caer ambas condiciones.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

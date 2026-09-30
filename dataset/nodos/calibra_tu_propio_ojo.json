@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Calibración del Juicio",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
+  "resumen_teorico": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si prefieres ganar dinero sacando una canica de una bolsa que gana nueve de cada diez veces antes que apostando a tu rango, tu noventa por ciento original no era real. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse mejora de forma medible su capacidad de estimar probabilidades.",
   "pasos_accionables": [
     "En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.",
     "Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.",
@@ -77,6 +77,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el mecanismo de la prueba: comparar con una rifa del noventa por ciento y ajustar hasta la indiferencia.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-calibra_tu_propio_ojo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
+      "texto_nuevo": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si prefieres ganar dinero sacando una canica de una bolsa que gana nueve de cada diez veces antes que apostando a tu rango, tu noventa por ciento original no era real. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse mejora de forma medible su capacidad de estimar probabilidades.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "3912, 3929-3941",
+        "frase": "you prefer to draw from the bag instead of betting on your answer"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la calibración mejora de forma medible la estimación y que no todos llegan a calibrarse; no promete estimaciones confiables.; Mismo defecto: falta la comparación con la apuesta equivalente de nueve entre diez.; Se cae la comparación que define la prueba, apostar a tu rango frente a una bolsa que gana nueve de cada diez, y la señal es preferir la bolsa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

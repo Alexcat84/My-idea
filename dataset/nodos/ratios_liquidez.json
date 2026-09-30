@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcular activos corrientes divididos entre pasivos corrientes (current ratio)",
     "Calcular (activos corrientes - inventario) dividido entre pasivos corrientes (quick ratio)",
-    "Verificar que el current ratio esté bien por encima de 1, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y que el quick ratio esté por encima de 1, especialmente en periodos de alto crecimiento",
+    "Verificar que el current ratio esté bien por encima de 1, especialmente en periodos de alto crecimiento, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y, si tienes mucho efectivo atado en inventario, que el quick ratio esté, en la mayoría de los casos, por encima de 1",
     "Comparar con estándares de la industria para determinar si hay exceso de efectivo ocioso o riesgo de falta de liquidez"
   ],
   "entregable_esperado": "Reporte de liquidez con current ratio y quick ratio calculados y análisis de suficiencia de caja",
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo límite perdido: el current ratio debe quedar bien por encima de 1.; Para el current ratio, el libro dice que acercarse a 1 ya es demasiado bajo en la mayoría de las industrias.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-ratios_liquidez-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que el current ratio esté bien por encima de 1, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y que el quick ratio esté por encima de 1, especialmente en periodos de alto crecimiento",
+      "texto_nuevo": "Verificar que el current ratio esté bien por encima de 1, especialmente en periodos de alto crecimiento, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y, si tienes mucho efectivo atado en inventario, que el quick ratio esté, en la mayoría de los casos, por encima de 1",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2675-2692",
+        "frase": "that they will be expecting it (in most cases) to be above 1"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro espera el quick ratio sobre 1 en la mayoría de los casos y para negocios con mucho efectivo en inventario, y la atención al alto crecimiento la pone en el current ratio.; Se caen la condición del inventario y el 'en la mayoría de los casos' que el libro pone al quick ratio.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

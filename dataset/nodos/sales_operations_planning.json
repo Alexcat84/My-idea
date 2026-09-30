@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Planificación de Ventas y Operaciones (S&OP)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+  "resumen_teorico": "El S&OP es un proceso de negocio cross-funcional (gerencia general, ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
   "pasos_accionables": [
     "Establecer un ciclo mensual de revisión de demanda y oferta a nivel agregado",
     "Involucrar a Gerencia General, Ventas, Operaciones, Finanzas y Desarrollo de Producto en el proceso",
@@ -77,6 +77,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan los socios en la lista de factores externos que el libro manda considerar primero.; Se sostiene por los socios omitidos; 'mercado' es un factor externo genérico coherente con el pasaje y no cambia el consejo.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-sales_operations_planning-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+      "texto_nuevo": "El S&OP es un proceso de negocio cross-funcional (gerencia general, ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores externos (clientes, socios, competidores) antes de ajustar planes internos, y vincula el plan estratégico con la ejecución diaria.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3728",
+        "frase": "S&OP is cross functional, involving General Management, Sales, Operations, Finance, and Product Development."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de funciones del libro incluye a la gerencia general y el resumen la omite.; Mismo defecto: se cae la gerencia general de la enumeración de áreas que participan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -8,7 +8,7 @@
     "Proyectar los flujos de efectivo futuros de la inversión",
     "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el NPV sea igual a cero",
     "Comparar esa tasa con el hurdle rate (tasa de retorno requerida) de la empresa",
-    "Usar el IRR en conjunto con el NPV, nunca de forma aislada, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV"
+    "Usar el IRR en conjunto con el NPV, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV"
   ],
   "entregable_esperado": "Cálculo de la Tasa Interna de Retorno del proyecto, comparado explícitamente contra el hurdle rate de la empresa",
   "condiciones_activacion": [
@@ -62,6 +62,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que siempre conviene decidir con el NPV; la condición del paso deja entender que fuera de esos casos basta el IRR. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-tasa_interna_retorno_irr-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el IRR en conjunto con el NPV, nunca de forma aislada, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV",
+      "texto_nuevo": "Usar el IRR en conjunto con el NPV, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3133",
+        "frase": "it may make sense to use both IRR and NPV"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro dice que cuando lo que está en juego es grande puede tener sentido usar ambos; no prohíbe usar el IRR solo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

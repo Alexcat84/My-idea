@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación del Carryover de Características Propensas a Fallas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: suele haber presión por sumar algo nuevo, y crear lo nuevo da más prestigio que corregir algo viejo. Resolverlo exige que tú, como responsable del negocio, lo pongas como prioridad explícita.",
+  "resumen_teorico": "Un negocio puede perder terreno frente a la competencia si repite en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: suele haber presión por sumar algo nuevo, y crear lo nuevo da más prestigio que corregir algo viejo. Al parecer, resolverlo exige que tú, como responsable del negocio, lo pongas como prioridad explícita.",
   "pasos_accionables": [
     "Haz un listado histórico de las fallas que se repiten en cada versión de tu producto o servicio",
     "Revisa si esas fallas se han colado como un costo más dentro de tu presupuesto habitual, sin que nadie las cuestione",
@@ -95,6 +95,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que suele haber presión por lo nuevo y que lo nuevo da más prestigio; 'siempre' endurece.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-039-carryover_fallas_producto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: suele haber presión por sumar algo nuevo, y crear lo nuevo da más prestigio que corregir algo viejo. Resolverlo exige que tú, como responsable del negocio, lo pongas como prioridad explícita.",
+      "texto_nuevo": "Un negocio puede perder terreno frente a la competencia si repite en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: suele haber presión por sumar algo nuevo, y crear lo nuevo da más prestigio que corregir algo viejo. Al parecer, resolverlo exige que tú, como responsable del negocio, lo pongas como prioridad explícita.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "414-424",
+        "frase": "Market leadership can be lost by perpetuating failure-prone features of predecessor models."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el liderazgo de mercado puede perderse al perpetuar fallas; el nodo lo da como hecho que les ocurre a muchos negocios.; El libro matiza con 'seemingly' que solo la intervención de la dirección rompe el atasco; el nodo lo da por seguro.; Mismo defecto que la marca 0: el 'can be lost' pasa a hecho.; Mismo defecto que la marca 1: se cae el 'seemingly'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

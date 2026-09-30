@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Punto de Equilibrio y Margen de Contribución (Break-Even Point & Contribution Margin)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Los costos de tu negocio se dividen en variables (los que cambian con el volumen producido, como materiales y mano de obra directa, que suelen estar en COGS) y fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, que suelen estar en gastos operativos). Ojo: COGS no equivale sin más a costos variables ni los gastos operativos a fijos; el sueldo de un supervisor dentro de COGS es fijo a corto plazo, y las comisiones de venta dentro de gastos operativos son en parte variables. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+  "resumen_teorico": "Los costos de tu negocio se dividen en variables (los que cambian con el volumen producido, como materiales, que suelen estar en COGS) y fijos (los que no cambian con el volumen, como renta o salarios administrativos, que suelen estar en gastos operativos). Ojo: COGS no equivale sin más a costos variables ni los gastos operativos a fijos; el sueldo de un supervisor dentro de COGS es fijo a corto plazo, y las comisiones de venta dentro de gastos operativos son en parte variables. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
   "pasos_accionables": [
     "Clasificar cada costo del proyecto como variable (cambia con las unidades producidas: materiales, tiempo de producción) o fijo (no cambia: renta, herramientas, salarios administrativos)",
     "Sugerencia de My Idea: calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad",
@@ -199,6 +199,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte que hay costos fijos dentro de COGS (supervisores) y variables dentro de gastos operativos (comisiones).; El libro no define margen de contribución ni punto de equilibrio ni promete ganancia por encima de él; el cálculo ya figura como Sugerencia de My Idea en los pasos.; Los ejemplos del nodo son ciertos, pero se cae la advertencia del libro de que COGS no equivale a costos variables ni los gastos operativos a fijos; es excepción perdida, no lo opuesto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-038-punto_equilibrio_unidades-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los costos de tu negocio se dividen en variables (los que cambian con el volumen producido, como materiales y mano de obra directa, que suelen estar en COGS) y fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, que suelen estar en gastos operativos). Ojo: COGS no equivale sin más a costos variables ni los gastos operativos a fijos; el sueldo de un supervisor dentro de COGS es fijo a corto plazo, y las comisiones de venta dentro de gastos operativos son en parte variables. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+      "texto_nuevo": "Los costos de tu negocio se dividen en variables (los que cambian con el volumen producido, como materiales, que suelen estar en COGS) y fijos (los que no cambian con el volumen, como renta o salarios administrativos, que suelen estar en gastos operativos). Ojo: COGS no equivale sin más a costos variables ni los gastos operativos a fijos; el sueldo de un supervisor dentro de COGS es fijo a corto plazo, y las comisiones de venta dentro de gastos operativos son en parte variables. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "756-762",
+        "frase": "Materials, for example, are a variable cost"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo pone los materiales como costo variable y el sueldo administrativo como fijo; la mano de obra directa y las herramientas no las clasifica.; Mismo defecto: clasificaciones de mano de obra directa y herramientas que el libro no hace.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [
