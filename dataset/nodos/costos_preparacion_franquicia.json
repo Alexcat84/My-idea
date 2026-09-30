@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Costos de preparación para armar tu nueva franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Además de los costos de desarrollo, legales, de marketing y de personal, tienes que contar los costos de preparación para armar formalmente tu nuevo negocio de franquicia. Esto incluye crear una nueva empresa, hacer una auditoría de apertura del balance, duplicar tus materiales (folletos, videos, papelería), registrar las marcas adicionales que necesites, cubrir los viajes de la persona que te asesora, y conseguir equipo y mobiliario nuevo. Pregunta el costo aproximado en tu mercado, porque varía según la escala del esfuerzo.",
+  "resumen_teorico": "Además de los costos de desarrollo, legales, de marketing y de personal, tienes que contar los costos de preparación para armar formalmente tu nuevo negocio de franquicia. Esto incluye crear una nueva empresa (si decides crearla), hacer una auditoría de apertura del balance, duplicar tus materiales (folletos, videos, papelería), registrar las marcas adicionales que necesites, cubrir los viajes de la persona que te asesora, y conseguir equipo y mobiliario nuevo. Pregunta el costo aproximado en tu mercado, porque varía según la escala del esfuerzo.",
   "pasos_accionables": [
     "Decide si vas a crear una nueva empresa para operar tu franquicia y, si la creas, presupuesta la auditoría de apertura de su balance",
     "Presupuesta la duplicación de tus materiales de marketing y piezas de apoyo",
@@ -60,6 +60,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone los costos legales como partida propia antes de los de preparación; el resumen la omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-064-costos_preparacion_franquicia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Además de los costos de desarrollo, legales, de marketing y de personal, tienes que contar los costos de preparación para armar formalmente tu nuevo negocio de franquicia. Esto incluye crear una nueva empresa, hacer una auditoría de apertura del balance, duplicar tus materiales (folletos, videos, papelería), registrar las marcas adicionales que necesites, cubrir los viajes de la persona que te asesora, y conseguir equipo y mobiliario nuevo. Pregunta el costo aproximado en tu mercado, porque varía según la escala del esfuerzo.",
+      "texto_nuevo": "Además de los costos de desarrollo, legales, de marketing y de personal, tienes que contar los costos de preparación para armar formalmente tu nuevo negocio de franquicia. Esto incluye crear una nueva empresa (si decides crearla), hacer una auditoría de apertura del balance, duplicar tus materiales (folletos, videos, papelería), registrar las marcas adicionales que necesites, cubrir los viajes de la persona que te asesora, y conseguir equipo y mobiliario nuevo. Pregunta el costo aproximado en tu mercado, porque varía según la escala del esfuerzo.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5689-5691",
+        "frase": "Creating a new franchise entity (if you choose to create a new corporation)"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la nueva empresa como condicional (si decides crear una nueva sociedad); el resumen la da como costo obligado.; Mismo defecto: se cae la condición 'si decides crearla' que el libro pone a la nueva empresa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

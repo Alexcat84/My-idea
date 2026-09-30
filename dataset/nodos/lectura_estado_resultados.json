@@ -9,7 +9,7 @@
     "Identificar las líneas principales: ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta",
     "Comparar el layout del estado financiero para entender cómo está organizado",
     "Reconocer que diferentes empresas usan distintos términos para el mismo concepto financiero",
-    "Verificar qué abarca (toda la empresa, una división, una unidad o un local), el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, mira también el real)"
+    "Verificar qué abarca (toda la empresa, una división, una unidad o un local), el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, la mayoría de las veces conviene mirar también el real)"
   ],
   "entregable_esperado": "Capacidad de identificar y ubicar las líneas clave en cualquier estado de resultados de una empresa real",
   "nodos_previos": [
@@ -80,6 +80,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide ver primero qué mide el estado (empresa, división, unidad o local) antes del periodo y las unidades. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-064-lectura_estado_resultados-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar qué abarca (toda la empresa, una división, una unidad o un local), el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, mira también el real)",
+      "texto_nuevo": "Verificar qué abarca (toda la empresa, una división, una unidad o un local), el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, la mayoría de las veces conviene mirar también el real)",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "484",
+        "frase": "Most of the time, you want to look at the actuals"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro aconseja mirar también los reales solo 'la mayoría de las veces' (most of the time); el paso lo da como orden sin matiz.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

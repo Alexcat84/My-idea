@@ -816,4 +816,15 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
 
 - **Fallos de método del pase:** cuatro lotes, 052, 076, 129 y 176. Dos son la inversión "antes de / después de". Los
   otros dos son la caída de una condición que acota a quién o cuándo aplica el consejo.
-- **Control del verificador ciego:** rechazó las 29 correcciones falsas de los paquetes v07 a v35.
+- **Control del verificador ciego:** rechazó las 32 correcciones falsas de los paquetes v07 a v38.
+- **Correcciones aplicadas:** tandas `final-e1b-01` a `final-e1b-24`, con 747 correcciones en 679 nodos, todas por la
+  tubería de siempre (GATE 0, etiquetas, preparación de planes y copia web) y con las dos suites en verde.
+- **FUERA del pase (7):** son correcciones que no entraron.
+  - Cuatro dejaban una baranda de la casa (voz de libro o residuo corporativo).
+  - Una metía contenido de país en un nodo sin clase de jurisdicción.
+  - Una no la sostuvo el verificador.
+  - Una traía una cita incompleta.
+
+  Sus elementos siguen con el texto vigente, que el pase no pudo corregir de forma segura. La muestra de cierre los
+  mide como a cualquier otro nodo. Están listados en `e1b_aplicados.json`, en las claves, para el método FUERA si la
+  muestra lo pide.

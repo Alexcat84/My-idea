@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Generar ideas tecnológicas mediante prospección científica o mapeo de rutas tecnológicas",
     "Realizar un primer filtro cualitativo (Idea Screen) basado en potencial estratégico y viabilidad técnica",
-    "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes y alternativas competidoras) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
+    "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes, alternativas competidoras e identificación de brechas de recursos) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad técnica en condiciones ideales",
     "Profundizar en una investigación detallada si los resultados son prometedores",
     "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en las gates del proceso e incluyendo transferencia de personal clave"
   ],
@@ -65,6 +65,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que la gente de la unidad de negocio esté desde temprano en las gates para comprometerse antes de la transferencia.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-065-stage_gate_td_tecnologia-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes y alternativas competidoras) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
+      "texto_nuevo": "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes, alternativas competidoras e identificación de brechas de recursos) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad técnica en condiciones ideales",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3695-3699",
+        "frase": "assessment of competitive alternatives, identification of resource gaps, and a preliminary technical assessment"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita la evaluación técnica a demostrar factibilidad técnica en condiciones ideales; probarla queda para la investigación detallada.; La lista del trabajo de alcance del libro incluye la identificación de brechas de recursos, que el paso omite.; Mismo defecto que la marca 0: se cae la identificación de brechas de recursos de la lista del libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
