@@ -9,7 +9,7 @@
     "Definir checklist de arranque (setup) con criterios de verificación previos al inicio",
     "Establecer el bucle de control en marcha para decisiones de continuar/detener",
     "Diseñar el control de producto terminado con responsables idealmente independientes de sesgos",
-    "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan",
+    "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan, y además mejorar la gestión de repuestos críticos, estandarizar las tareas y la frecuencia del mantenimiento preventivo de los equipos, optimizar la eficiencia del personal y la organización de mantenimiento, y aumentar la interacción de quien opera con el equipo",
     "Auditar de forma independiente el cumplimiento del calendario de mantenimiento"
   ],
   "entregable_esperado": "Procedimientos documentados para cada etapa de control (arranque, marcha, producto, instalaciones)",
@@ -45,6 +45,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye capacitar al personal de mantenimiento, que además señala como punto débil con tecnología nueva.; La lista del libro incluye también la capacitación y un responsable claro del cumplimiento del calendario.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-etapas_de_control_operativo-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan",
+      "texto_nuevo": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan, y además mejorar la gestión de repuestos críticos, estandarizar las tareas y la frecuencia del mantenimiento preventivo de los equipos, optimizar la eficiencia del personal y la organización de mantenimiento, y aumentar la interacción de quien opera con el equipo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7895-7909",
+        "frase": "Standardize preventive maintenance tasks and frequency on equipment"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro para el control de instalaciones tiene ocho elementos y el paso solo trae cuatro.; Mismo defecto: se caen repuestos críticos, estandarizar tareas y frecuencia, eficiencia del personal y participación del operador.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

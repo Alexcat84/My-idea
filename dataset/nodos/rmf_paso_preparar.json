@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Paso Preparar del RMF",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo y determinar el alcance del sistema a proteger. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
+  "resumen_teorico": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo, determinar el alcance del sistema a proteger y evaluar regularmente los riesgos a nivel organizacional y de sistema. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
   "pasos_accionables": [
     "Designar a un individuo o equipo responsable de ejecutar el RMF, que puede ser interno o externo a la organización (Tarea P-1).",
     "Crear una estrategia de gestión de riesgo que exprese la tolerancia al riesgo (Tarea P-2).",
@@ -64,6 +64,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro anota que los roles pueden asignarse a personas internas o externas, lo que cambia el consejo para una empresa pequeña.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-rmf_paso_preparar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo y determinar el alcance del sistema a proteger. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
+      "texto_nuevo": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo, determinar el alcance del sistema a proteger y evaluar regularmente los riesgos a nivel organizacional y de sistema. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "83-99",
+        "frase": "Regularly assess the security and privacy risks at the organization level and system level"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración omite la quinta tarea fundacional del paso: evaluar regularmente los riesgos a nivel de organización y de sistema.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

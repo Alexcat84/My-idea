@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+  "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. Con requisitos extremos de confiabilidad, la única forma posible de saber qué está pasando es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa.",
   "pasos_accionables": [
     "Determina si la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos).",
     "Reemplaza la inspección masiva del producto terminado por mediciones continuas durante el proceso.",
@@ -87,6 +87,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro manda retener la tanda de producto hasta hallar la causa, no detener la producción.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-deteccion_defectos_raros_control_estadistico-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. La única forma efectiva de conocer y controlar la calidad en estos casos es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa. Esto aplica especialmente cuando tienes requisitos extremos de confiabilidad.",
+      "texto_nuevo": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. Con requisitos extremos de confiabilidad, la única forma posible de saber qué está pasando es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9789",
+        "frase": "The only possible way to know what is happening under extreme requirements"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro reserva la única forma posible (cartas de control) a los requisitos extremos; el resumen la extiende a cualquier fracción de 1 en 5000 o menos y deja lo extremo como un especialmente.; Es el mismo defecto: lo que se cae es la condición de requisitos extremos a la que el libro ata la única forma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

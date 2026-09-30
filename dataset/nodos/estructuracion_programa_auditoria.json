@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Cómo armar tus reglas de auditoría",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa puede fallar porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque quien está a cargo de lo revisado no hace caso a los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+  "resumen_teorico": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre las reglas y los propósitos de las auditorías. Sin ese acuerdo, el programa puede fallar porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque quien está a cargo de lo revisado no hace caso a los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
   "pasos_accionables": [
     "Reúnete con las tres partes (quien es auditado, quien audita y tú) para acordar reglas y propósito",
-    "Escribe un documento con las políticas, el alcance y los métodos que vas a usar en tus auditorías",
+    "Escribe un documento con los propósitos, las políticas, el alcance y los métodos de tus auditorías",
     "Decide si tus auditorías serán avisadas con anticipación o sorpresa (se recomienda avisarlas: sin sorpresas, sin secretos)",
     "Define el flujo del proceso: planeación, reunión de apertura, ejecución, reporte, seguimiento y cierre"
   ],
@@ -43,6 +43,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro dice que sin esos acuerdos el programa puede fallar ('may fail').; En el libro quienes no atienden los reportes son los responsables de lo auditado, no la dirección que preside ambas partes (el 'tú' del resumen).; Mismo endurecimiento de 'may fail'.; Mismo sujeto invertido: el que ignora los reportes es el responsable del área auditada.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-estructuracion_programa_auditoria-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre tres cosas: quién está a cargo de lo que se revisa, quién hace la revisión, y tú, quien decide. Sin ese acuerdo, el programa puede fallar porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque quien está a cargo de lo revisado no hace caso a los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+      "texto_nuevo": "Armar un programa de auditoría funciona cuando tú te pones de acuerdo con quien revisa y con quien es revisado sobre las reglas y los propósitos de las auditorías. Sin ese acuerdo, el programa puede fallar porque la relación entre quien revisa y quien es revisado se vuelve tensa, o porque quien está a cargo de lo revisado no hace caso a los reportes. Un documento con las reglas del juego le da legitimidad a tus auditorías y te deja claro qué puedes esperar.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10035-10043",
+        "frase": "Reaching agreement on these rules and purposes requires collaboration among three essential participating groups"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro acuerda entre las tres partes las reglas y los propósitos de las auditorías; el resumen convierte a las partes en el objeto del acuerdo y pierde qué se acuerda.; Mismo defecto: se cae lo que se acuerda (reglas y propósitos) y las tres partes pasan a ser el tema del acuerdo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-029-estructuracion_programa_auditoria-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe un documento con las políticas, el alcance y los métodos que vas a usar en tus auditorías",
+      "texto_nuevo": "Escribe un documento con los propósitos, las políticas, el alcance y los métodos de tus auditorías",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10045",
+        "frase": "A published statement of purposes, policies, and methods becomes the charter"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El documento del libro recoge propósitos, políticas y métodos; el paso deja fuera los propósitos.; Mismo defecto: faltan los propósitos en el documento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

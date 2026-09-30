@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Fundamentos de la Gestión de Riesgo (Frame, Assess, Respond, Monitor)",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
+  "resumen_teorico": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar, priorizar y estimar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar que las respuestas planificadas se implementaron, determinar su efectividad continua y monitorear el riesgo de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
   "pasos_accionables": [
     "Definir el contexto de riesgo de la organización (misión, activos, entorno).",
     "Establecer la tolerancia al riesgo organizacional.",
@@ -125,6 +125,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone las restricciones junto a tolerancia y supuestos en la estrategia; el entregable las omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-fundamentos_gestion_riesgo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
+      "texto_nuevo": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar, priorizar y estimar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar que las respuestas planificadas se implementaron, determinar su efectividad continua y monitorear el riesgo de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "19-27",
+        "frase": "Verify planned risk response measures are implemented, determine the ongoing effectiveness"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta un proceso integral de cuatro actividades y no dice que las cuatro sean continuas.; En el libro evaluar es identificar, priorizar y estimar los impactos; se cae estimar.; Mismo defecto: se cae estimar de la evaluación.; Monitorear en el libro incluye verificar que las respuestas se implementaron y monitorear el riesgo de forma continua; se caen ambas partes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

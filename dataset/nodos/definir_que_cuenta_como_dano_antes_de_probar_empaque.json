@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Definir qué cuenta como daño antes de probar el empaque",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecerá grave o insignificante según el animo del día, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+  "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir dos cosas: qué cuenta como falla del producto y del empaque, y qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
   "pasos_accionables": [
     "Decide antes de la prueba qué tipo de daño en el producto es inaceptable.",
-    "Decide qué nivel de daño superficial en la caja toleras sin considerarlo falla, si es que toleras alguno.",
+    "Decide qué nivel de daño toleras sin considerarlo falla, si es que toleras alguno.",
     "Anota el estado del producto y del empaque antes de enviarlo o probarlo.",
     "Compara ese registro contra el estado final para saber si hubo una falla real.",
     "Sugerencia de My Idea: ajusta tu empaque cuando el daño supere el límite que tú mismo definiste."
@@ -158,6 +158,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da regla sobre cuándo ajustar el empaque; es consejo de la casa.; Mismo defecto: la regla de decisión es añadida.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-028-definir_que_cuenta_como_dano_antes_de_probar_empaque-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación que vas a considerar una falla. Sin ese criterio previo, cualquier golpe o rayon te parecerá grave o insignificante según el animo del día, y no podras comparar resultados entre pruebas. El criterio debe cubrir dos cosas: que nivel de daño en el producto es inaceptable y que nivel de daño en la caja o el empaque exterior si toleras, como rayones leves que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+      "texto_nuevo": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir dos cosas: qué cuenta como falla del producto y del empaque, y qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "193-195",
+        "frase": "failure of the product and packaging • What damage tolerance level is allowable, if any"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide definir la falla del producto y del empaque, y la tolerancia de daño si es que hay alguna; el nodo pierde ambas cosas.; La consecuencia (juicio según el ánimo, pruebas no comparables) no está en el libro, que solo pide definir la falla antes de probar.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-028-definir_que_cuenta_como_dano_antes_de_probar_empaque-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide qué nivel de daño superficial en la caja toleras sin considerarlo falla, si es que toleras alguno.",
+      "texto_nuevo": "Decide qué nivel de daño toleras sin considerarlo falla, si es que toleras alguno.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "195",
+        "frase": "What damage tolerance level is allowable, if any"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pide fijar el nivel de daño tolerable en general, no solo el superficial de la caja.; Mismo defecto: la tolerancia del libro no se limita a la superficie de la caja.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

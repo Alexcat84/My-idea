@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Outsourcing de Operaciones de Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La presión sobre los márgenes de utilidad impulsa el outsourcing de operaciones que no son núcleo competitivo de una empresa. Actividades como crédito y cobranzas, diseño de producto o gestión de pedidos pueden no ser competencia central de ningún participante tradicional (productores, distribuidores, minoristas), lo que abre oportunidades a proveedores especializados que aportan eficiencia y que pueden realizarlas a un costo menor que el de hacerlas internamente.",
+  "resumen_teorico": "La presión sobre los márgenes de utilidad impulsa el outsourcing de operaciones que no son núcleo competitivo de una empresa. Actividades como crédito y cobranzas, diseño de producto o gestión de pedidos pueden no ser competencia central de ningún participante tradicional (productores, proveedores de logística, distribuidores, minoristas), lo que abre oportunidades a proveedores especializados que aportan eficiencia y que pueden realizarlas a un costo menor que el de hacerlas internamente.",
   "pasos_accionables": [
     "Listar todas las operaciones de la cadena de suministro actualmente realizadas internamente",
     "Clasificar cada operación según si es núcleo competitivo o no",
@@ -56,6 +56,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el proveedor especializado puede ofrecer el servicio más barato que hacerlo en casa, no que siempre lo haga.; Mismo endurecimiento: el menor costo es una posibilidad en el libro, no un hecho.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-028-outsourcing_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La presión sobre los márgenes de utilidad impulsa el outsourcing de operaciones que no son núcleo competitivo de una empresa. Actividades como crédito y cobranzas, diseño de producto o gestión de pedidos pueden no ser competencia central de ningún participante tradicional (productores, distribuidores, minoristas), lo que abre oportunidades a proveedores especializados que aportan eficiencia y que pueden realizarlas a un costo menor que el de hacerlas internamente.",
+      "texto_nuevo": "La presión sobre los márgenes de utilidad impulsa el outsourcing de operaciones que no son núcleo competitivo de una empresa. Actividades como crédito y cobranzas, diseño de producto o gestión de pedidos pueden no ser competencia central de ningún participante tradicional (productores, proveedores de logística, distribuidores, minoristas), lo que abre oportunidades a proveedores especializados que aportan eficiencia y que pueden realizarlas a un costo menor que el de hacerlas internamente.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1751",
+        "frase": "The traditional participants in supply chains are producers, logistics providers, distributors, and retailers."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro incluye a los proveedores de logística entre los participantes tradicionales.; Mismo defecto: falta proveedores de logística en la lista.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Preparar un cuestionario o un plan de visita que cubra gestión, diseño, manufactura, inspección y resultados",
     "Si puedes, llevar contigo o consultar a alguien con mirada distinta a la tuya (por ejemplo alguien que entienda de producción o de diseño) para no evaluar solo desde un ángulo",
     "Dar más peso a lo que más te importa a ti en esa compra al momento de valorar lo que ves",
-    "Anotar tanto los hechos concretos como tu propia impresión sobre si ese proveedor te va a sostener en el tiempo, y cuánta ayuda necesitaría para cumplir tus requisitos",
+    "Anotar los hechos concretos sobre sus instalaciones, tu juicio sobre qué tan eficaces son sus operaciones, cuánta ayuda necesitaría para cumplir tus requisitos y tu propia impresión de si te entregaría un buen producto si le das el contrato",
     "Revisar si el proveedor ya tiene una certificación reconocida en tu mercado, para no repetir evaluaciones que ya alguien mas hizo"
   ],
   "entregable_esperado": "Un informe simple con tu evaluación del proveedor y tu recomendación de si aprobarlo o no",
@@ -118,6 +118,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De los cuatro hallazgos del informe se cae el juicio sobre cuánta ayuda necesitaría el proveedor.; Mismo hallazgo perdido.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-evaluacion_encuesta_calidad_proveedor-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anotar tanto los hechos concretos como tu propia impresión sobre si ese proveedor te va a sostener en el tiempo, y cuánta ayuda necesitaría para cumplir tus requisitos",
+      "texto_nuevo": "Anotar los hechos concretos sobre sus instalaciones, tu juicio sobre qué tan eficaces son sus operaciones, cuánta ayuda necesitaría para cumplir tus requisitos y tu propia impresión de si te entregaría un buen producto si le das el contrato",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23748",
+        "frase": "a highly subjective prediction whether the supplier will deliver a good product"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta uno de los cuatro hallazgos y cambia el objeto de la predicción.; Se cae el juicio sobre la eficacia de sus operaciones y la predicción del libro (si entregará un buen producto con el contrato) pasa a ser si te sostendrá en el tiempo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

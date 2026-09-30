@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Detectar señales de un empaque poco rígido",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque es poco rígido. Los protocolos de prueba profesionales describen las señales de un empaque no rígido: un exterior que protege poco contra golpes leves concentrados en un punto, caras muy grandes sin soporte interno, uso de envoltura plástica estirable o termoencogible como única protección, cartón de calibre delgado o simple papel envolviendo el producto, o que la pared de la caja toque directamente el producto sin ningún relleno de por medio. Basta una de estas señales para que el empaque cuente como no rígido. Revisa tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar.",
+  "resumen_teorico": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque es poco rígido. Los protocolos de prueba profesionales describen las señales de un empaque no rígido: un exterior que protege poco contra golpes leves concentrados en un punto, caras muy grandes sin soporte interno, uso de envoltura plástica estirable o termoencogible como única protección, cartón de calibre delgado, simple papel u otro material ligero similar envolviendo el producto, o que la pared de la caja toque directamente el producto sin ningún relleno de por medio. Basta una de estas señales para que el empaque cuente como no rígido. Revisa tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar.",
   "pasos_accionables": [
     "Revisa si alguna cara de tu caja es grande y no tiene refuerzo ni soporte interno.",
     "Verifica que el producto nunca toque directamente la pared de la caja.",
@@ -145,6 +145,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no prescribe el cambio y cuenta el corrugado delgado o liviano como no rígido.; Mismo defecto: remedio no dicho por el libro; queda como sugerencia precisando el calibre.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-028-detectar_empaque_poco_rigido-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque es poco rígido. Los protocolos de prueba profesionales describen las señales de un empaque no rígido: un exterior que protege poco contra golpes leves concentrados en un punto, caras muy grandes sin soporte interno, uso de envoltura plástica estirable o termoencogible como única protección, cartón de calibre delgado o simple papel envolviendo el producto, o que la pared de la caja toque directamente el producto sin ningún relleno de por medio. Basta una de estas señales para que el empaque cuente como no rígido. Revisa tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar.",
+      "texto_nuevo": "Antes de mandar un solo paquete a prueba, puedes revisar con tus propios ojos si tu empaque es poco rígido. Los protocolos de prueba profesionales describen las señales de un empaque no rígido: un exterior que protege poco contra golpes leves concentrados en un punto, caras muy grandes sin soporte interno, uso de envoltura plástica estirable o termoencogible como única protección, cartón de calibre delgado, simple papel u otro material ligero similar envolviendo el producto, o que la pared de la caja toque directamente el producto sin ningún relleno de por medio. Basta una de estas señales para que el empaque cuente como no rígido. Revisa tu empaque contra esta lista antes de comprarlo en volumen o de mandarlo a probar.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "121",
+        "frase": "a paper wrap or similar lightweight material only"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro cierra esa señal con papel u otro material ligero similar; el nodo deja la lista cerrada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

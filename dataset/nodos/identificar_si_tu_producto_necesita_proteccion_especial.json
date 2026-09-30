@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Identificar si tu producto necesita protección especial",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente al caer sin un empaque que lo proteja (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+  "resumen_teorico": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente al caer sin un empaque que lo proteja (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma del producto ya empacado (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
   "pasos_accionables": [
     "Revisa si tu producto, sin empaque protector, se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
     "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
@@ -258,6 +258,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del libro: la fragilidad se juzga sin empaque protector. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-028-identificar_si_tu_producto_necesita_proteccion_especial-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente al caer sin un empaque que lo proteja (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma física del producto (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+      "texto_nuevo": "Antes de decidir cómo vas a empacar y probar tus envíos, necesitas saber a qué categoría pertenece tu producto. Si se rompe fácilmente al caer sin un empaque que lo proteja (vidrio, cerámica, electrónica) se considera frágil; si es líquido o semilíquido, o puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse desde su envase, se considera líquido. Estas dos categorías exigen más cuidado que un producto sólido y resistente, y por su variabilidad conviene probar más de una unidad, no solo una, antes de confiar en el empaque. Además, la forma del producto ya empacado (si es plano, alargado, pequeño o de forma estándar) determina qué tipo de prueba de caída le corresponde, así que clasificarlo bien evita pruebas incorrectas o insuficientes.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "81-87",
+        "frase": "FLAT packaged-products are those samples where all of the following conditions are met"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro clasifica en plano, alargado, pequeño o estándar el producto ya empacado por sus medidas exteriores, no el producto solo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,13 +4,13 @@
   "dominio": "entrega",
   "titulo_concepto": "Simular los riesgos del tránsito antes de enviar",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Cuando diseñas o cambias tu empaque, existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia lógica, y tú puedes copiar esa lógica de forma casera como una aproximación. Primero se acondiciona el paquete 72 horas a temperatura y humedad controladas, luego se somete a caídas desde distintas alturas según su peso, después a vibración simulando el traqueteo del transporte, con y sin peso encima, y a otra serie de caídas que incluye una sobre un obstáculo; si es plano o alargado, también a caídas sobre un borde y a impactos, y si el contenido es líquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos golpes parecidos a los que tu paquete puede recibir entre tu mesa de trabajo y la puerta del cliente.",
+  "resumen_teorico": "Cuando diseñas o cambias tu empaque, existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia lógica, y tú puedes copiar esa lógica de forma casera como una aproximación. Primero se acondiciona el paquete 72 horas a temperatura y humedad controladas, luego se somete a caídas desde distintas alturas según su peso, después a vibración simulando el traqueteo del transporte, con y sin peso encima, y a otra serie de caídas que incluye una sobre un obstáculo; si es plano o alargado, también a caídas sobre un borde, a una caída rotacional completa en plano y a impactos, y si el contenido es líquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos golpes parecidos a los que tu paquete puede recibir entre tu mesa de trabajo y la puerta del cliente.",
   "pasos_accionables": [
     "Suelta tu paquete cerrado diez veces sobre una superficie dura, desde una altura que depende de su peso.",
     "Sugerencia de My Idea: agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
-    "Si tu paquete es plano o alargado, déjalo caer sobre un borde desde unos 200 mm para probar el punto más débil del empaque.",
+    "Si tu paquete es plano o alargado, déjalo caer sobre un borde desde unos 200 mm.",
     "Si envías líquidos, deja el paquete cerrado ocho horas y revisa si hay fugas.",
-    "Registra el estado del producto y del empaque antes de probar, y abre el paquete después de cada prueba para registrar qué se rompió o se movió."
+    "Registra el estado del producto y del empaque antes de probar, y abre el paquete después de la prueba para registrar qué se rompió o se movió."
   ],
   "entregable_esperado": "Un registro casero de qué tan bien resistió tu empaque cada tipo de golpe, antes de despachar en volumen.",
   "nodos_previos": [
@@ -223,6 +223,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide determinar el estado antes y después de la prueba; falta el registro previo.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-028-simular_riesgos_transito_antes_de_enviar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando diseñas o cambias tu empaque, existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia lógica, y tú puedes copiar esa lógica de forma casera como una aproximación. Primero se acondiciona el paquete 72 horas a temperatura y humedad controladas, luego se somete a caídas desde distintas alturas según su peso, después a vibración simulando el traqueteo del transporte, con y sin peso encima, y a otra serie de caídas que incluye una sobre un obstáculo; si es plano o alargado, también a caídas sobre un borde y a impactos, y si el contenido es líquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos golpes parecidos a los que tu paquete puede recibir entre tu mesa de trabajo y la puerta del cliente.",
+      "texto_nuevo": "Cuando diseñas o cambias tu empaque, existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia lógica, y tú puedes copiar esa lógica de forma casera como una aproximación. Primero se acondiciona el paquete 72 horas a temperatura y humedad controladas, luego se somete a caídas desde distintas alturas según su peso, después a vibración simulando el traqueteo del transporte, con y sin peso encima, y a otra serie de caídas que incluye una sobre un obstáculo; si es plano o alargado, también a caídas sobre un borde, a una caída rotacional completa en plano y a impactos, y si el contenido es líquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos golpes parecidos a los que tu paquete puede recibir entre tu mesa de trabajo y la puerta del cliente.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "245-273",
+        "frase": "Full Rotational Flat Drop Varies with packaged- dimensions"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige a planos y alargados también la caída rotacional completa en plano (bloque 7), que se cae de la secuencia.; Mismo defecto: falta la caída rotacional completa en plano.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-028-simular_riesgos_transito_antes_de_enviar-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu paquete es plano o alargado, déjalo caer sobre un borde desde unos 200 mm para probar el punto más débil del empaque.",
+      "texto_nuevo": "Si tu paquete es plano o alargado, déjalo caer sobre un borde desde unos 200 mm.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "241-243",
+        "frase": "Rotational Edge Drop 200 mm (8 in.) Required for FLAT and ELONGATED"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo exige la caída sobre borde de 200 mm a planos y alargados; no dice que el borde sea el punto más débil.; Mismo defecto: la finalidad del punto más débil no está en el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-028-simular_riesgos_transito_antes_de_enviar-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registra el estado del producto y del empaque antes de probar, y abre el paquete después de cada prueba para registrar qué se rompió o se movió.",
+      "texto_nuevo": "Registra el estado del producto y del empaque antes de probar, y abre el paquete después de la prueba para registrar qué se rompió o se movió.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "195",
+        "frase": "How to determine product and package condition before and after the test"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide determinar el estado antes y después de la prueba; abrir el paquete tras cada prueba es una norma que no da y altera la muestra de la secuencia.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

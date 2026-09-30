@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisa cada riesgo que identificaste y decide qué tan grave sería y qué tan probable es que pase, usando categorías simples como alto, medio o bajo.",
     "Piensa también en qué tan rápido te golpearía, cuánto molestaría a tus clientes, qué tan complicado es de manejar, cuánto alcance tiene y cuánta incertidumbre hay alrededor.",
-    "Dale a cada factor un valor (1 bajo, 2 medio, 3 alto) y combínalos: multiplica los valores o, si incluyes más factores que gravedad y probabilidad, súmalos, para tener una idea clara de qué tan urgente es cada riesgo.",
+    "Dale a cada factor un valor (1 bajo, 2 medio, 3 alto) y combínalos: multiplica los valores o, si incluyes más factores que gravedad y probabilidad, puede ser mejor sumarlos, para tener una idea clara de qué tan urgente es cada riesgo.",
     "Ordena tus riesgos del más urgente al menos urgente para saber dónde poner tu atención primero."
   ],
   "entregable_esperado": "Una lista de tus riesgos, ordenada del más urgente al menos urgente, con una nota breve de por qué cada uno quedó en ese lugar.",
@@ -99,6 +99,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro asigna un valor 1, 2 o 3 a cada factor y los multiplica, o los suma si hay más factores; 'juntar impresiones' pierde ese procedimiento.; Mismo procedimiento de puntaje perdido.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-evaluacion_de_factores_de_riesgo-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dale a cada factor un valor (1 bajo, 2 medio, 3 alto) y combínalos: multiplica los valores o, si incluyes más factores que gravedad y probabilidad, súmalos, para tener una idea clara de qué tan urgente es cada riesgo.",
+      "texto_nuevo": "Dale a cada factor un valor (1 bajo, 2 medio, 3 alto) y combínalos: multiplica los valores o, si incluyes más factores que gravedad y probabilidad, puede ser mejor sumarlos, para tener una idea clara de qué tan urgente es cada riesgo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12236",
+        "frase": "it may be better to add the values assigned to each risk rather than multiply"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que con más factores puede ser mejor sumar; el paso lo da como orden.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

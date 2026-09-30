@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Detección de Trabajadores Fuera del Sistema (Líderes y Rezagados)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Los demás son el sistema: no se clasifican y solo mejoran si cambia el sistema. Ejemplos: soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
+  "resumen_teorico": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Los demás son el sistema: no se clasifican y solo mejoran si cambia el sistema. Ejemplos: soldadores con más fallas que el resto o trabajadoras que colocan páginas en casilleros con tasas de error inusuales.",
   "pasos_accionables": [
     "Recolectar datos comparables de desempeño de todos los miembros del grupo",
     "Graficar los datos en un gráfico de control con límites superior e inferior",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro revisa primero si el flujo de trabajo que recibe la persona es más difícil, y en ese caso no necesita más atención.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-deteccion_de_lideres_y_rezagados-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Los demás son el sistema: no se clasifican y solo mejoran si cambia el sistema. Ejemplos: soldadores con más fallas que el resto o inspectoras con tasas de error inusuales.",
+      "texto_nuevo": "Usando gráficos de control se puede identificar quién dentro de un grupo de trabajadores se encuentra fuera de los límites de control, ya sea por desempeño deficiente (necesita ayuda individual) o por desempeño excepcional (merece reconocimiento y estudio de sus métodos). Los demás son el sistema: no se clasifican y solo mejoran si cambia el sistema. Ejemplos: soldadores con más fallas que el resto o trabajadoras que colocan páginas en casilleros con tasas de error inusuales.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6257-6262",
+        "frase": "The job is to put a page into the right pigeonhole."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el ejemplo del libro las trabajadoras colocan páginas en casilleros y su trabajo es el inspeccionado; no son inspectoras.; Mismo defecto: el ejemplo no es de inspectoras.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

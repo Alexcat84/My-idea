@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Estrategias de Estimación de Costos: Recursos Totales vs. Costo Unitario",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario suele ser el más apropiado cuando las deficiencias son raras pero costosas, complejas, o tan rutinarias que su impacto acumulado no es evidente.",
+  "resumen_teorico": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario suele ser el más apropiado cuando las deficiencias son raras pero pueden ser costosas, cuando son complejas, o cuando son tan rutinarias que su impacto acumulado no es evidente.",
   "pasos_accionables": [
     "Determinar si la actividad a medir es mejor evaluada por recursos totales, por costo unitario o por las dos estrategias juntas",
     "Para recursos totales: identificar el costo total de la categoría y estimar el porcentaje atribuible a mala calidad",
     "Para costo unitario: estimar el costo de corregir una ocurrencia promedio y multiplicarlo por la frecuencia anual",
     "Usar fuentes de datos como sistemas de reporte de tiempo, contabilidad de costos, o juicio informado de supervisores",
-    "Incluir en el cálculo beneficios, salarios, costos de capital asignado, penalizaciones o descuentos mal aprovechados por pagos tardíos y sobreprecios pagados por pedidos o envíos urgentes"
+    "Incluir en el cálculo beneficios, salarios, costos de capital asignado a equipos e instalaciones importantes (en muchas actividades es menor y puedes ignorarlo, pero en algunas es vital), penalizaciones o descuentos mal aprovechados por pagos tardíos y sobreprecios pagados por pedidos o envíos urgentes"
   ],
   "entregable_esperado": "Una estimación documentada y justificada del costo de cada actividad de mala calidad identificada",
   "nodos_previos": [
@@ -77,6 +77,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae también los descuentos mal aprovechados por pagos tardíos y los sobreprecios por pedidos o envíos urgentes.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-029-estrategias_estimacion_costos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario suele ser el más apropiado cuando las deficiencias son raras pero costosas, complejas, o tan rutinarias que su impacto acumulado no es evidente.",
+      "texto_nuevo": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario suele ser el más apropiado cuando las deficiencias son raras pero pueden ser costosas, cuando son complejas, o cuando son tan rutinarias que su impacto acumulado no es evidente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6150",
+        "frase": "when deficiencies occur rarely and may be costly"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las deficiencias raras pueden ser costosas; el resumen lo da por hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-029-estrategias_estimacion_costos-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir en el cálculo beneficios, salarios, costos de capital asignado, penalizaciones o descuentos mal aprovechados por pagos tardíos y sobreprecios pagados por pedidos o envíos urgentes",
+      "texto_nuevo": "Incluir en el cálculo beneficios, salarios, costos de capital asignado a equipos e instalaciones importantes (en muchas actividades es menor y puedes ignorarlo, pero en algunas es vital), penalizaciones o descuentos mal aprovechados por pagos tardíos y sobreprecios pagados por pedidos o envíos urgentes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6196",
+        "frase": "While this is a minor consideration for many activities that can be safely ignored"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita el capital asignado a equipos e instalaciones importantes y dice que en muchas actividades se puede ignorar; el paso lo pide siempre.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

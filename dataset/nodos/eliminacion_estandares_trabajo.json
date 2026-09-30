@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación de Estándares de Trabajo Numéricos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Los estándares de trabajo basados en números (cuotas de producción, medición de jornada) deben ser reemplazados por conocimiento competente y liderazgo. Estos estándares fijan un límite artificial que no fomenta la mejora continua y no distingue entre variación del sistema y del individuo.",
+  "resumen_teorico": "Los estándares de trabajo basados en números (cuotas de producción, medición de jornada) deben ser reemplazados por conocimiento competente y liderazgo. Estos estándares fijan un límite artificial que no fomenta la mejora continua y quitan el orgullo por el trabajo bien hecho.",
   "pasos_accionables": [
     "Identificar todos los estándares numéricos de trabajo vigentes en la planta",
     "Sustituir dichos estándares por criterios de liderazgo basados en conocimiento del proceso",
@@ -38,6 +38,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-027 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1b-029-eliminacion_estandares_trabajo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los estándares de trabajo basados en números (cuotas de producción, medición de jornada) deben ser reemplazados por conocimiento competente y liderazgo. Estos estándares fijan un límite artificial que no fomenta la mejora continua y no distingue entre variación del sistema y del individuo.",
+      "texto_nuevo": "Los estándares de trabajo basados en números (cuotas de producción, medición de jornada) deben ser reemplazados por conocimiento competente y liderazgo. Estos estándares fijan un límite artificial que no fomenta la mejora continua y quitan el orgullo por el trabajo bien hecho.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1494",
+        "frase": "to double the cost of the operation and to stifle pride of workmanship"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El pasaje sobre estándares de trabajo no da esa causa; los critica por frenar la mejora, duplicar el costo y quitar el orgullo por el trabajo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

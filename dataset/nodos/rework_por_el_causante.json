@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Corrige tú mismo el error que causaste",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Si algo sale mal en lo que produces, corrígelo tú mismo en lugar de mandarlo a que otro lo arregle. Esto te da retroalimentación directa e inmediata sobre lo que hiciste mal, es una buena acción correctiva, es bueno para el ánimo y refuerza tu responsabilidad por la calidad de tu propio trabajo, lo que acelera tu aprendizaje y reduce errores futuros.",
+  "resumen_teorico": "Si algo sale mal en lo que produces, corrígelo tú mismo en lugar de mandarlo a que otro lo arregle. Esto te da retroalimentación directa sobre lo que hiciste mal, parece ser una buena acción correctiva y bueno para el ánimo, y es una forma de reducir tus defectos, porque sabrás mejor qué problemas te estás creando tú mismo.",
   "pasos_accionables": [
     "Revisa en qué partes de tu trabajo la corrección de errores la hace otra persona distinta de quien los causó",
     "Cambia el flujo para que seas tú quien recibe y corrige lo que hiciste mal",
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que es buena acción correctiva y bueno para el ánimo; no sentirse señalado es un efecto añadido.; Mismo efecto añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-030-rework_por_el_causante-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si algo sale mal en lo que produces, corrígelo tú mismo en lugar de mandarlo a que otro lo arregle. Esto te da retroalimentación directa e inmediata sobre lo que hiciste mal, es una buena acción correctiva, es bueno para el ánimo y refuerza tu responsabilidad por la calidad de tu propio trabajo, lo que acelera tu aprendizaje y reduce errores futuros.",
+      "texto_nuevo": "Si algo sale mal en lo que produces, corrígelo tú mismo en lugar de mandarlo a que otro lo arregle. Esto te da retroalimentación directa sobre lo que hiciste mal, parece ser una buena acción correctiva y bueno para el ánimo, y es una forma de reducir tus defectos, porque sabrás mejor qué problemas te estás creando tú mismo.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2809, 2853",
+        "frase": "seems not only to be a good corrective action but is also good for morale"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que parece ('seems') una buena acción correctiva y buena para el ánimo, como impresión temprana del programa.; El libro no afirma que refuerce la responsabilidad ni que acelere el aprendizaje.; La inmediatez, el refuerzo de la responsabilidad y el aprendizaje acelerado no están en el libro; solo dice que así sabes qué va mal y que es una forma de bajar los defectos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
