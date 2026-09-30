@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Confusión de Modos en Sistemas Automatizados",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Los sistemas de control automatizados, diseñados para eliminar errores humanos de bajo nivel (deslices, lapsus), pueden en cambio generar errores de nivel superior más graves. La confusión de modos ocurre cuando el operador evalúa erróneamente el modo activo del sistema o no percibe una transición de modo. Woods y Sarter identificaron que estos sistemas aumentan la carga de memoria, dificultan compartir la conciencia situacional en equipos, y pueden ocultar eventos importantes debido a su complejidad y múltiples modos operativos.",
+  "resumen_teorico": "Los sistemas de control automatizados, diseñados para eliminar errores humanos de bajo nivel (deslices, lapsus), pueden en cambio generar errores de nivel superior más graves. La confusión de modos ocurre cuando el operador evalúa erróneamente el modo activo del sistema o no percibe una transición de modo. Estos sistemas pueden aumentar la carga de memoria, dificultar compartir la conciencia situacional en equipos y ocultar eventos importantes debido a su complejidad y múltiples modos operativos.",
   "pasos_accionables": [
     "Auditar los sistemas automatizados críticos identificando cuántos modos operativos posee cada uno",
     "Evaluar si el diseño de la interfaz permite detectar fácilmente transiciones de modo",
@@ -38,5 +38,23 @@
   ],
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-105-confusion_de_modos_automatizacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los sistemas de control automatizados, diseñados para eliminar errores humanos de bajo nivel (deslices, lapsus), pueden en cambio generar errores de nivel superior más graves. La confusión de modos ocurre cuando el operador evalúa erróneamente el modo activo del sistema o no percibe una transición de modo. Woods y Sarter identificaron que estos sistemas aumentan la carga de memoria, dificultan compartir la conciencia situacional en equipos, y pueden ocultar eventos importantes debido a su complejidad y múltiples modos operativos.",
+      "texto_nuevo": "Los sistemas de control automatizados, diseñados para eliminar errores humanos de bajo nivel (deslices, lapsus), pueden en cambio generar errores de nivel superior más graves. La confusión de modos ocurre cuando el operador evalúa erróneamente el modo activo del sistema o no percibe una transición de modo. Estos sistemas pueden aumentar la carga de memoria, dificultar compartir la conciencia situacional en equipos y ocultar eventos importantes debido a su complejidad y múltiples modos operativos.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "874-888",
+        "frase": "Automated systems can: increase demands on users' memory"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los sistemas automatizados pueden aumentar la carga de memoria y dificultar la conciencia compartida, no que lo hagan siempre.; Mismo defecto: endurece un 'pueden' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Metodología de análisis basada en el caso Amazon.com (2005-2006) donde se identifican fortalezas (alcance de clientes, infraestructura de fulfillment) y debilidades (bajos márgenes) del modelo actual para diseñar nuevas iniciativas de crecimiento. Los nuevos negocios deben: (1) atacar mercados desatendidos, (2) ser escalables con potencial de crecimiento significativo, y (3) apalancar capacidades existentes para generar diferenciación frente al cliente.",
   "pasos_accionables": [
     "Identificar las fortalezas core del modelo de negocio actual (qué hace excepcionalmente bien)",
-    "Identificar las debilidades estructurales (ej: márgenes bajos, dependencia de un segmento)",
+    "Identificar las debilidades estructurales (ej: márgenes bajos)",
     "Buscar mercados desatendidos donde las fortalezas actuales generen ventaja",
     "Validar que la nueva iniciativa sea escalable",
     "Confirmar que aprovecha capacidades existentes para diferenciarse",
@@ -44,6 +44,23 @@
         "evidencia": "F03-029: Analizar fortalezas y debilidades de un negocio maduro para diseñar una nueva iniciativa de crecimiento es estrategia; el entregable es un plan. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-105-evaluacion_amazon_case-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar las debilidades estructurales (ej: márgenes bajos, dependencia de un segmento)",
+      "texto_nuevo": "Identificar las debilidades estructurales (ej: márgenes bajos)",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "3801",
+        "frase": "The key weakness of Amazon.com's business model was weak margins"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El caso solo identifica márgenes bajos como debilidad; la dependencia de un segmento es un ejemplo añadido.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

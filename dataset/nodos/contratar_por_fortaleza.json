@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Antes de entrevistar, define con precisión qué fortaleza específica es crítica para el puesto, no una lista genérica de cualidades.",
     "Durante la entrevista, haz preguntas que revelen si el expertise es real y profundo, no solo un discurso superficial.",
-    "No descartes a un candidato por debilidades superficiales (apariencia, forma de comunicar, contactos) si tiene la fortaleza crítica que buscas.",
+    "No descartes a un candidato por debilidades superficiales (apariencia, forma de comunicar, la escuela de la que viene) si tiene la fortaleza crítica que buscas.",
     "Revisa referencias a fondo enfocándote en validar esa fortaleza específica, no solo si 'encaja' en general.",
     "Prepárate para defender tu decisión si esa persona genera resistencia por no encajar en el perfil esperado.",
     "Define la razón concreta y específica por la que necesitas experiencia senior, no una razón abstracta.",
@@ -37,5 +37,24 @@
   "etiqueta_arbol": "Contrata por Fortaleza, no Perfección",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-contratar_por_fortaleza-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No descartes a un candidato por debilidades superficiales (apariencia, forma de comunicar, contactos) si tiene la fortaleza crítica que buscas.",
+      "texto_nuevo": "No descartes a un candidato por debilidades superficiales (apariencia, forma de comunicar, la escuela de la que viene) si tiene la fortaleza crítica que buscas.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1193",
+        "frase": "Mark went to Southern Utah. Mark made people feel uncomfortable."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Las debilidades del libro son la escuela, la incomodidad y el aspecto; 'contactos' no aparece.; Mismo defecto: 'contactos' no está entre las debilidades que cita el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

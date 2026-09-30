@@ -6,8 +6,8 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "El transporte mas barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, es mayor que la diferencia de precio entre un envio rápido y uno lento, conviene pagar mas por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperara mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuanto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder mas dinero del que ahorras en el flete.",
   "pasos_accionables": [
-    "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar.",
-    "Compara ese costo contra la diferencia de precio entre el envío rápido y el barato.",
+    "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
+    "Compara esos costos, lo que pierdes sin stock y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
     "Elige el envío rápido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
     "Revisa esta decisión cada vez que cambien tus proveedores de envío o tus márgenes."
   ],
@@ -110,6 +110,40 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-106-pagar_mas_por_velocidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara ese costo contra la diferencia de precio entre el envío rápido y el barato.",
+      "texto_nuevo": "Compara esos costos, lo que pierdes sin stock y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "14298",
+        "frase": "the additional transport costs can be offset against inventory savings/stock availability"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro compensa el flete rápido también con el ahorro de inventario, no solo con la disponibilidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-106-pagar_mas_por_velocidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar.",
+      "texto_nuevo": "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "14048-14050, 14298",
+        "frase": "the resultant saving in inventory-holding costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta también el ahorro de inventario de recibir más rápido; el paso solo cuenta la venta perdida.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

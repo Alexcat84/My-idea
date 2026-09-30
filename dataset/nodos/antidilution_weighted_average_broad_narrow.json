@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Antidilución: Weighted Average (Broad-Based vs Narrow-Based)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Las provisiones de antidilución protegen a los inversionistas de rondas 'down round' ajustando el precio de conversión de sus acciones preferentes. El cálculo se hace sobre base 'as-if-converted' a common stock, no emitiendo más acciones sino ajustando el precio de conversión. La diferencia entre broad-based y narrow-based radica en la definición de 'common stock outstanding' (CSO): broad-based incluye todas las opciones, warrants y valores convertibles (incluyendo opciones de empleados), mientras narrow-based solo cuenta acciones actualmente en circulación. Esta definición afecta significativamente el nivel de dilución resultante.",
+  "resumen_teorico": "Las provisiones de antidilución protegen a los inversionistas de rondas 'down round' ajustando el precio de conversión de sus acciones preferentes. El cálculo se hace sobre base 'as-if-converted' a common stock y, por lo general, no se emiten más acciones sino que se ajusta el precio de conversión. La diferencia entre broad-based y narrow-based radica en la definición de 'common stock outstanding' (CSO): broad-based incluye todas las opciones, warrants y valores convertibles (incluyendo opciones de empleados), mientras narrow-based solo cuenta acciones actualmente en circulación. Esta definición afecta significativamente el nivel de dilución resultante.",
   "pasos_accionables": [
     "Identificar si el term sheet usa weighted average broad-based o narrow-based",
     "Verificar la definición exacta de CSO (common stock outstanding) en el documento legal",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Ajusta el Precio en una Baja",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-antidilution_weighted_average_broad_narrow-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las provisiones de antidilución protegen a los inversionistas de rondas 'down round' ajustando el precio de conversión de sus acciones preferentes. El cálculo se hace sobre base 'as-if-converted' a common stock, no emitiendo más acciones sino ajustando el precio de conversión. La diferencia entre broad-based y narrow-based radica en la definición de 'common stock outstanding' (CSO): broad-based incluye todas las opciones, warrants y valores convertibles (incluyendo opciones de empleados), mientras narrow-based solo cuenta acciones actualmente en circulación. Esta definición afecta significativamente el nivel de dilución resultante.",
+      "texto_nuevo": "Las provisiones de antidilución protegen a los inversionistas de rondas 'down round' ajustando el precio de conversión de sus acciones preferentes. El cálculo se hace sobre base 'as-if-converted' a common stock y, por lo general, no se emiten más acciones sino que se ajusta el precio de conversión. La diferencia entre broad-based y narrow-based radica en la definición de 'common stock outstanding' (CSO): broad-based incluye todas las opciones, warrants y valores convertibles (incluyendo opciones de empleados), mientras narrow-based solo cuenta acciones actualmente en circulación. Esta definición afecta significativamente el nivel de dilución resultante.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1283",
+        "frase": "Consequently, antidilution provisions usually generate a conversion price adjustment."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que por lo general se ajusta el precio de conversión, pero que también pueden emitirse más acciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Escenarios para Guiar el Diseño del Modelo de Negocio",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Los escenarios son historias concretas que hacen tangible el contexto de diseño, ya sea describiendo situaciones específicas de clientes (cómo usan el producto, sus preocupaciones y objetivos) o imaginando futuros entornos competitivos posibles. Van más allá de los insights sueltos al convertirlos en imágenes específicas que guían decisiones sobre canales, relaciones con clientes y propuestas de valor. No buscan predecir el futuro, sino reflexionar sobre cómo debería evolucionar tu modelo de negocio bajo distintas condiciones. Cada escenario debe cerrar con preguntas abiertas sobre value proposition, canales, relaciones y disposición a pagar. También sirven para evaluar si un único modelo de negocio puede servir a varios segmentos o si necesitas adaptarlo, y para preparar tu proyecto frente a cambios del entorno.",
+  "resumen_teorico": "Los escenarios son historias concretas que hacen tangible el contexto de diseño, ya sea describiendo situaciones específicas de clientes (cómo usan el producto, sus preocupaciones y objetivos) o imaginando futuros entornos competitivos posibles. Van más allá de los insights sueltos al convertirlos en imágenes específicas que guían decisiones sobre canales, relaciones con clientes y propuestas de valor. No buscan predecir el futuro, sino reflexionar sobre cómo debería evolucionar tu modelo de negocio bajo distintas condiciones. Pueden dejarse abiertos a propósito para plantear preguntas sobre value proposition, canales, relaciones y disposición a pagar. También sirven para evaluar si un único modelo de negocio puede servir a varios segmentos o si necesitas adaptarlo, y para preparar tu proyecto frente a cambios del entorno.",
   "pasos_accionables": [
     "Define el tipo de escenario que vas a construir: de cliente (uso, contexto, deseos) o de entorno futuro (competencia, tecnología, sociedad)",
     "Identifica los segmentos de clientes relevantes para tu innovación",
@@ -13,7 +13,7 @@
     "Evalúa si un solo modelo de negocio sirve para todos los escenarios o si necesitas adaptarlo por segmento",
     "Usa los escenarios de entorno futuro para anticipar cómo debería evolucionar tu modelo actual"
   ],
-  "entregable_esperado": "Un set de 2 a 3 escenarios narrativos, de cliente y/o de entorno futuro, con preguntas de diseño asociadas a cada bloque del Business Model Canvas.",
+  "entregable_esperado": "Un set de escenarios narrativos, de cliente y/o de entorno futuro, con preguntas de diseño asociadas a cada bloque del Business Model Canvas.",
   "nodos_previos": [
     "customer_insights_design",
     "empathy_map",
@@ -60,6 +60,38 @@
         "evidencia": "F23-029: Usa escenarios para tomar decisiones sobre canales, relaciones y propuesta de valor en cada bloque del Business Model Canvas, lo que es disenar el modelo de negocio. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-105-escenarios_diseno_modelo_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los escenarios son historias concretas que hacen tangible el contexto de diseño, ya sea describiendo situaciones específicas de clientes (cómo usan el producto, sus preocupaciones y objetivos) o imaginando futuros entornos competitivos posibles. Van más allá de los insights sueltos al convertirlos en imágenes específicas que guían decisiones sobre canales, relaciones con clientes y propuestas de valor. No buscan predecir el futuro, sino reflexionar sobre cómo debería evolucionar tu modelo de negocio bajo distintas condiciones. Cada escenario debe cerrar con preguntas abiertas sobre value proposition, canales, relaciones y disposición a pagar. También sirven para evaluar si un único modelo de negocio puede servir a varios segmentos o si necesitas adaptarlo, y para preparar tu proyecto frente a cambios del entorno.",
+      "texto_nuevo": "Los escenarios son historias concretas que hacen tangible el contexto de diseño, ya sea describiendo situaciones específicas de clientes (cómo usan el producto, sus preocupaciones y objetivos) o imaginando futuros entornos competitivos posibles. Van más allá de los insights sueltos al convertirlos en imágenes específicas que guían decisiones sobre canales, relaciones con clientes y propuestas de valor. No buscan predecir el futuro, sino reflexionar sobre cómo debería evolucionar tu modelo de negocio bajo distintas condiciones. Pueden dejarse abiertos a propósito para plantear preguntas sobre value proposition, canales, relaciones y disposición a pagar. También sirven para evaluar si un único modelo de negocio puede servir a varios segmentos o si necesitas adaptarlo, y para preparar tu proyecto frente a cambios del entorno.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2859",
+        "frase": "deliberately left open to allow for specific questions around the Value Proposition"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe sus ejemplos como escenarios dejados abiertos a propósito para permitir preguntas; el resumen lo endurece a obligación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-105-escenarios_diseno_modelo_negocio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un set de 2 a 3 escenarios narrativos, de cliente y/o de entorno futuro, con preguntas de diseño asociadas a cada bloque del Business Model Canvas.",
+      "texto_nuevo": "Un set de escenarios narrativos, de cliente y/o de entorno futuro, con preguntas de diseño asociadas a cada bloque del Business Model Canvas.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2995",
+        "frase": "Ideally you should develop between two and four different scenarios"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La cifra de 2 a 3 no está en el libro, que solo recomienda idealmente de dos a cuatro para escenarios de futuro.; Mismo defecto: fija una cantidad que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

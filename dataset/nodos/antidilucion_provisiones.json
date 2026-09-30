@@ -3,9 +3,9 @@
   "dominio": "core",
   "titulo_concepto": "Provisiones de Antidilución (Full Ratchet vs Weighted Average)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Las provisiones de antidilución protegen a los inversionistas preferentes de la dilución de su porcentaje de propiedad cuando la empresa emite nuevas acciones a un precio menor que en rondas anteriores (una ronda a la baja o 'down round'), ajustando el precio de conversión de sus acciones preferentes. Existen dos mecanismos principales: 'full ratchet' (repriza toda la ronda anterior al nuevo precio más bajo; muy agresivo) y 'weighted average' o promedio ponderado (considera tanto el precio como la magnitud de la nueva emisión; es el estándar más común y equilibrado del mercado). Se excluyen de este ajuste ciertas emisiones ('excluded issuances' o carve-outs), como las opciones para el pool de empleados o fusiones aprobadas por la junta directiva.",
+  "resumen_teorico": "Las provisiones de antidilución protegen a los inversionistas preferentes de la dilución de su porcentaje de propiedad cuando la empresa emite nuevas acciones a un precio menor que en rondas anteriores (una ronda a la baja o 'down round'), ajustando el precio de conversión de sus acciones preferentes. Existen dos mecanismos principales: 'full ratchet' (repriza toda la ronda anterior al nuevo precio más bajo; muy agresivo) y 'weighted average' o promedio ponderado (considera tanto el precio como la magnitud de la nueva emisión; es el más común en el mercado). Se excluyen de este ajuste ciertas emisiones ('excluded issuances' o carve-outs), como las opciones para el pool de empleados o fusiones aprobadas por la junta directiva.",
   "pasos_accionables": [
-    "Negociar antidilución basada en weighted average (broad-based), el estándar más equilibrado del mercado; evitar full ratchet salvo en negociaciones muy específicas o desfavorables",
+    "Negociar antidilución basada en weighted average (broad-based), la más común en el mercado, en lugar de full ratchet",
     "Identificar y listar las excepciones (carve-outs o 'excluded issuances') que no disparan el ajuste, como el pool de opciones para empleados o fusiones aprobadas por la junta",
     "Negociar una cláusula de renuncia (waiver) por mayoría de la Serie A, para los casos en que la mayoría de inversionistas acuerde financiar una ronda futura a un precio menor",
     "Negociar si el ajuste también aplica a splits de acciones, dividendos en acciones y recapitalizaciones",
@@ -34,5 +34,40 @@
   "etiqueta_arbol": "Protege tu Porcentaje de Dueño",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-antidilucion_provisiones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las provisiones de antidilución protegen a los inversionistas preferentes de la dilución de su porcentaje de propiedad cuando la empresa emite nuevas acciones a un precio menor que en rondas anteriores (una ronda a la baja o 'down round'), ajustando el precio de conversión de sus acciones preferentes. Existen dos mecanismos principales: 'full ratchet' (repriza toda la ronda anterior al nuevo precio más bajo; muy agresivo) y 'weighted average' o promedio ponderado (considera tanto el precio como la magnitud de la nueva emisión; es el estándar más común y equilibrado del mercado). Se excluyen de este ajuste ciertas emisiones ('excluded issuances' o carve-outs), como las opciones para el pool de empleados o fusiones aprobadas por la junta directiva.",
+      "texto_nuevo": "Las provisiones de antidilución protegen a los inversionistas preferentes de la dilución de su porcentaje de propiedad cuando la empresa emite nuevas acciones a un precio menor que en rondas anteriores (una ronda a la baja o 'down round'), ajustando el precio de conversión de sus acciones preferentes. Existen dos mecanismos principales: 'full ratchet' (repriza toda la ronda anterior al nuevo precio más bajo; muy agresivo) y 'weighted average' o promedio ponderado (considera tanto el precio como la magnitud de la nueva emisión; es el más común en el mercado). Se excluyen de este ajuste ciertas emisiones ('excluded issuances' o carve-outs), como las opciones para el pool de empleados o fusiones aprobadas por la junta directiva.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1259",
+        "frase": "the most common antidilution provision is based on the weighted average concept"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el promedio ponderado es el más común; 'equilibrado' es una valoración añadida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-antidilucion_provisiones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar antidilución basada en weighted average (broad-based), el estándar más equilibrado del mercado; evitar full ratchet salvo en negociaciones muy específicas o desfavorables",
+      "texto_nuevo": "Negociar antidilución basada en weighted average (broad-based), la más común en el mercado, en lugar de full ratchet",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1257-1259",
+        "frase": "the most common antidilution provision is based on the weighted average concept"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no lo califica de más equilibrado ni da casos en que convenga aceptar full ratchet.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

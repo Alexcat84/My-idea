@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Construir una buena empresa como fin en sí mismo",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Más allá de los resultados financieros, esfuérzate por construir una 'buena empresa': un lugar donde las personas sientan que están viviendo una de las mejores experiencias laborales de su vida, incluso si el negocio fracasa. Esto genera lealtad, atrae talento y define tu legado como líder, como ejemplifica Bill Campbell en GO Corporation.",
+  "resumen_teorico": "Más allá de los resultados financieros, esfuérzate por construir una 'buena empresa': un lugar donde las personas sientan que están viviendo una de las mejores experiencias laborales de su vida, incluso si el negocio fracasa. Esto genera lealtad y define tu legado como líder, como ejemplifica Bill Campbell en GO Corporation.",
   "pasos_accionables": [
-    "Define qué significa 'buena empresa' para ti: cómo tratas a las personas, cómo las ayudas a crecer, qué propósito les das.",
+    "Define qué significa 'buena empresa': que cada persona sepa cuál es su trabajo, pueda concentrarse en él sin luchas internas ni procesos rotos, y confíe en que si lo cumple pasarán cosas buenas para la empresa y para ella.",
     "Prioriza el bienestar y el desarrollo de las personas incluso cuando el negocio esté en crisis o fracasando.",
     "Pregúntate con frecuencia si las personas que trabajan contigo considerarían su paso por tu empresa una experiencia valiosa, sin importar el resultado financiero."
   ],
@@ -41,6 +41,39 @@
         "motivo": "Las decisiones guiadas por valores que generan lealtad desembocan en la idea de construir una buena empresa como fin en sí mismo, con el mismo referente de Bill Campbell."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-107-cultura_de_buena_empresa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Más allá de los resultados financieros, esfuérzate por construir una 'buena empresa': un lugar donde las personas sientan que están viviendo una de las mejores experiencias laborales de su vida, incluso si el negocio fracasa. Esto genera lealtad, atrae talento y define tu legado como líder, como ejemplifica Bill Campbell en GO Corporation.",
+      "texto_nuevo": "Más allá de los resultados financieros, esfuérzate por construir una 'buena empresa': un lugar donde las personas sientan que están viviendo una de las mejores experiencias laborales de su vida, incluso si el negocio fracasa. Esto genera lealtad y define tu legado como líder, como ejemplifica Bill Campbell en GO Corporation.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1320-1352",
+        "frase": "it can be the difference between life and death when things go wrong."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de retener a la gente cuando las cosas van mal, no de atraer talento.; Mismo defecto: 'atrae talento' no está en el pasaje.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-cultura_de_buena_empresa-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define qué significa 'buena empresa' para ti: cómo tratas a las personas, cómo las ayudas a crecer, qué propósito les das.",
+      "texto_nuevo": "Define qué significa 'buena empresa': que cada persona sepa cuál es su trabajo, pueda concentrarse en él sin luchas internas ni procesos rotos, y confíe en que si lo cumple pasarán cosas buenas para la empresa y para ella.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1296-1298",
+        "frase": "In good organizations, people can focus on their work and have confidence"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define la buena empresa por foco en el trabajo, confianza en que cumplir trae cosas buenas y ausencia de luchas internas y procesos rotos; el trato, el crecimiento y el propósito no son su definición.; Mismo defecto: la lista del paso sustituye la definición del libro por elementos que el libro no pone.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

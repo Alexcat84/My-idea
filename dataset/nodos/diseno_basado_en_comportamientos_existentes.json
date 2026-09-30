@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diseño Basado en Comportamientos Existentes",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "En lugar de intentar cambiar el comportamiento de las personas mediante educación o persuasión (lo cual es extremadamente difícil), el diseño efectivo identifica comportamientos inconscientes ya existentes y construye sobre ellos. El caso de 'Keep the Change' de Bank of America ilustra cómo observar hábitos naturales (como redondear pagos) puede inspirar servicios que se sienten familiares pero innovadores.",
+  "resumen_teorico": "En lugar de intentar cambiar el comportamiento de las personas mediante educación o persuasión (lo cual es extremadamente difícil), una forma de lograr que prueben algo nuevo es identificar comportamientos inconscientes ya existentes y construir sobre ellos. El caso de 'Keep the Change' de Bank of America ilustra cómo observar hábitos naturales (como redondear pagos) puede inspirar servicios que se sienten familiares pero innovadores.",
   "pasos_accionables": [
     "Realizar investigación etnográfica de campo para observar comportamientos no conscientes de los usuarios",
     "Identificar patrones o 'pistas conductuales' que sugieran una necesidad no satisfecha",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Diseña Sobre Hábitos Existentes",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-105-diseno_basado_en_comportamientos_existentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de intentar cambiar el comportamiento de las personas mediante educación o persuasión (lo cual es extremadamente difícil), el diseño efectivo identifica comportamientos inconscientes ya existentes y construye sobre ellos. El caso de 'Keep the Change' de Bank of America ilustra cómo observar hábitos naturales (como redondear pagos) puede inspirar servicios que se sienten familiares pero innovadores.",
+      "texto_nuevo": "En lugar de intentar cambiar el comportamiento de las personas mediante educación o persuasión (lo cual es extremadamente difícil), una forma de lograr que prueben algo nuevo es identificar comportamientos inconscientes ya existentes y construir sobre ellos. El caso de 'Keep the Change' de Bank of America ilustra cómo observar hábitos naturales (como redondear pagos) puede inspirar servicios que se sienten familiares pero innovadores.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "773-775",
+        "frase": "One way to get people to try something new is to build on behaviors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta construir sobre comportamientos familiares como una forma de lograr que la gente pruebe algo nuevo, no como lo que hace el diseño efectivo en general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

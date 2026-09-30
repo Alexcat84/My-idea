@@ -10,7 +10,7 @@
     "Negociar el carve-out de renuncia por mayoría de Serie A para futuras rondas down",
     "Asegurar que planes de opciones para empleados estén exentos de antidilución"
   ],
-  "entregable_esperado": "Lista de carve-outs negociados e incluidos en el certificado de incorporación",
+  "entregable_esperado": "Lista de carve-outs negociados e incluidos en el term sheet",
   "nodos_previos": [
     "antidilution_weighted_average_broad_narrow",
     "antidilucion_provisiones"
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Conoce las Excepciones a la Regla",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-antidilution_carve_outs-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista de carve-outs negociados e incluidos en el certificado de incorporación",
+      "texto_nuevo": "Lista de carve-outs negociados e incluidos en el term sheet",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1247-1249",
+        "frase": "A typical antidilution clause in a term sheet follows"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la cláusula y sus carve-outs en el term sheet; el certificado de incorporación como destino no aparece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

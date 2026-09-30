@@ -6,13 +6,13 @@
   "fuente": "Max Muller, Essentials of Inventory Management",
   "resumen_teorico": "El inventario que no se vende no es gratis, aunque ya lo hayas pagado: sigue costando espacio, tiempo y dinero cada día que se queda contigo. Para convencerte a ti mismo, o a quien decide, de deshacerte de mercancía muerta, no digas que ocupa espacio: calcula cuántos metros ocupa, cuánto pagas de renta o de tiempo de manejo por ese espacio al mes, y cuánto te cuesta cada peso invertido en esa mercancía por año simplemente por tenerla guardada. Sumado a lo largo del tiempo, ese costo de mantener puede superar lo que ganarías si la vendieras con descuento hoy. Traducir el problema a números concretos, en vez de quedarte en generalidades, es lo que te permite decidir liquidar a tiempo en lugar de esperar a que la mercancía valga menos.",
   "pasos_accionables": [
-    "Mide cuánto espacio ocupa la mercancía que no se mueve, en metros o en estantes.",
+    "Mide cuánto espacio ocupa la mercancía que no se mueve, en metros o en estantes, sin contar los repuestos de equipos que siguen en uso.",
     "Pregunta cuánto pagas por ese espacio al mes, en renta o en tiempo de tu gente moviéndola.",
     "Calcula qué porcentaje de esa inversión te cuesta mantenerla guardada cada año.",
-    "Compara ese costo acumulado contra lo que recuperarías si la vendes con descuento ahora.",
+    "Compara ese costo acumulado contra lo que recuperarías si la vendes con descuento ahora o le das otra salida, como devolverla al proveedor, subastarla o donarla.",
     "Decide una fecha límite para liquidar si el costo de mantener supera lo que puedes recuperar."
   ],
-  "entregable_esperado": "Un cálculo simple del costo de mantener el inventario muerto, en dinero y espacio.",
+  "entregable_esperado": "Un cálculo del costo de mantener el inventario muerto, en dinero y espacio, con la lista de los productos muertos y sus montos.",
   "nodos_previos": [
     "conoce_insumos_vitales"
   ],
@@ -41,6 +41,56 @@
         "motivo": "Después de ver en dinero lo que cuesta el stock muerto, clasificar el inventario y fijarle una meta es el paso lógico para liberar capital sin repetir el problema."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-106-traduce_stock_muerto_numeros-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide cuánto espacio ocupa la mercancía que no se mueve, en metros o en estantes.",
+      "texto_nuevo": "Mide cuánto espacio ocupa la mercancía que no se mueve, en metros o en estantes, sin contar los repuestos de equipos que siguen en uso.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "480",
+        "frase": "these items should not be included in calculating dead stock levels"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro excluye del cálculo de stock muerto los repuestos de equipos que siguen en servicio.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-106-traduce_stock_muerto_numeros-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un cálculo simple del costo de mantener el inventario muerto, en dinero y espacio.",
+      "texto_nuevo": "Un cálculo del costo de mantener el inventario muerto, en dinero y espacio, con la lista de los productos muertos y sus montos.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "1526",
+        "frase": "always more convincing to a decision maker if you use actual lists and dollar amounts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide listas reales de artículos muertos con sus montos, no una generalidad, para convencer a quien decide.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-106-traduce_stock_muerto_numeros-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara ese costo acumulado contra lo que recuperarías si la vendes con descuento ahora.",
+      "texto_nuevo": "Compara ese costo acumulado contra lo que recuperarías si la vendes con descuento ahora o le das otra salida, como devolverla al proveedor, subastarla o donarla.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "1566-1580",
+        "frase": "Discount the price; Return to vendor; Donate it; Write it off; Auction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera otras salidas además del descuento, como devolver al proveedor, subastar o donar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Four Actions Framework: Impacto en el Cliente",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) para analizar el impacto de cambios en la Propuesta de Valor sobre los bloques del lado del cliente en el Business Model Canvas: Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite entender cómo las innovaciones en valor afectan la experiencia y economía del cliente.",
+  "resumen_teorico": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) para analizar el impacto de cambios en la Propuesta de Valor sobre los bloques del lado del cliente en el Business Model Canvas: Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
   "pasos_accionables": [
     "Para cada bloque (Canales, Relaciones, Ingresos) pregunta qué elementos eliminar, reducir, aumentar o crear",
     "Identifica qué nuevos Segmentos de Clientes podrían atenderse o cuáles reducir",
@@ -12,7 +12,7 @@
     "Determina cómo prefieren ser contactados y qué tipo de relación esperan",
     "Calcula las implicaciones de costo de servir a estos nuevos segmentos"
   ],
-  "entregable_esperado": "Análisis documentado del impacto de la nueva Propuesta de Valor en Canales, Relaciones y Segmentos de Clientes, con implicaciones de costos",
+  "entregable_esperado": "Análisis documentado del impacto de la nueva Propuesta de Valor en Canales, Relaciones, Fuentes de Ingresos y Segmentos de Clientes, con implicaciones de costos",
   "nodos_previos": [
     "fit_value_proposition",
     "analisis_y_sintesis"
@@ -51,6 +51,38 @@
         "evidencia": "F27-014: Analiza el efecto de la nueva propuesta de valor sobre canales, relaciones, segmentos y costos; es diseno del modelo de negocio. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-105-four_actions_framework_lado_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) para analizar el impacto de cambios en la Propuesta de Valor sobre los bloques del lado del cliente en el Business Model Canvas: Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite entender cómo las innovaciones en valor afectan la experiencia y economía del cliente.",
+      "texto_nuevo": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) para analizar el impacto de cambios en la Propuesta de Valor sobre los bloques del lado del cliente en el Business Model Canvas: Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "3985",
+        "frase": "Analyze what happens to the cost side if you eliminate, reduce, raise, or create"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide analizar qué pasa en el lado de los costos al mover elementos del lado del valor; el resumen lo cambia por la economía del cliente.; Mismo defecto: se pierde el análisis del lado de los costos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-105-four_actions_framework_lado_cliente-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Análisis documentado del impacto de la nueva Propuesta de Valor en Canales, Relaciones y Segmentos de Clientes, con implicaciones de costos",
+      "texto_nuevo": "Análisis documentado del impacto de la nueva Propuesta de Valor en Canales, Relaciones, Fuentes de Ingresos y Segmentos de Clientes, con implicaciones de costos",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "3985",
+        "frase": "customer side of the Canvas: Channels, Relationships, and Revenue Streams"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Omite las Fuentes de Ingresos, uno de los tres bloques del lado del cliente que el libro manda revisar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

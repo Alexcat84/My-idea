@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Compensación de Riesgo (Risk Homeostasis)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las mejoras en protección introducidas tras un accidente suelen convertirse, con el tiempo, en ventajas productivas (mayor velocidad, más producción, menos precaución), anulando el beneficio de seguridad original. Ejemplos históricos incluyen la lámpara Davy en minería y el radar marino, que permitieron operar en condiciones más riesgosas que antes. Este fenómeno se conoce como 'compensación de riesgo' u 'homeostasis de riesgo'.",
+  "resumen_teorico": "Las mejoras en protección introducidas tras un accidente suelen convertirse, con el tiempo, en ventajas productivas (mayor velocidad, más producción, menos precaución), anulando el beneficio de seguridad original o dejando una situación incluso peor que la anterior. Ejemplos históricos incluyen la lámpara Davy en minería y el radar marino, que permitieron operar en condiciones más riesgosas que antes. Este fenómeno se conoce como 'compensación de riesgo' u 'homeostasis de riesgo'.",
   "pasos_accionables": [
     "Revisar si las mejoras de seguridad implementadas han sido aprovechadas para aumentar la producción o velocidad de operación.",
     "Establecer políticas que impidan que las ganancias de protección se traduzcan en mayor exposición al riesgo.",
@@ -37,6 +37,22 @@
         "evidencia": "F07-004: Auditar y vigilar como se aprovechan las mejoras de seguridad ya implantadas es control operativo de un negocio en marcha, no validacion con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-105-compensacion_de_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las mejoras en protección introducidas tras un accidente suelen convertirse, con el tiempo, en ventajas productivas (mayor velocidad, más producción, menos precaución), anulando el beneficio de seguridad original. Ejemplos históricos incluyen la lámpara Davy en minería y el radar marino, que permitieron operar en condiciones más riesgosas que antes. Este fenómeno se conoce como 'compensación de riesgo' u 'homeostasis de riesgo'.",
+      "texto_nuevo": "Las mejoras en protección introducidas tras un accidente suelen convertirse, con el tiempo, en ventajas productivas (mayor velocidad, más producción, menos precaución), anulando el beneficio de seguridad original o dejando una situación incluso peor que la anterior. Ejemplos históricos incluyen la lámpara Davy en minería y el radar marino, que permitieron operar en condiciones más riesgosas que antes. Este fenómeno se conoce como 'compensación de riesgo' u 'homeostasis de riesgo'.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "96",
+        "frase": "the same inadequate protection that prevailed before the event or with something even worse"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la organización puede quedar con la misma protección insuficiente o con algo peor; el resumen lo reduce a anular el beneficio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

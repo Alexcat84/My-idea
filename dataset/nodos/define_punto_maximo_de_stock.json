@@ -9,7 +9,7 @@
     "Calcula cuánto vendes o usas de ese producto en una semana normal.",
     "Pregunta a tu proveedor cuánto tarda en llegar un pedido desde que lo haces.",
     "Multiplica tu uso semanal por el tiempo de entrega para saber tu reserva de trabajo.",
-    "Añade un colchón de seguridad, una porción extra de esa reserva, para cubrir retrasos o defectos.",
+    "Añade un colchón de seguridad, como guía la mitad de esa reserva, ajustada luego según tu experiencia, para cubrir retrasos o defectos.",
     "Suma reserva más colchón para obtener tu punto de reorden, y anótalo junto al producto.",
     "Decide cada cuánto revisarás y pedirás (tu ciclo de revisión) y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor."
   ],
@@ -69,6 +69,23 @@
         "motivo": "Del mismo mundo de compras: una vez equilibrados el costo de mantener y el de reponer, el paso siguiente es fijar el punto de reorden, el máximo y cada cuánto revisarlos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-106-define_punto_maximo_de_stock-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Añade un colchón de seguridad, una porción extra de esa reserva, para cubrir retrasos o defectos.",
+      "texto_nuevo": "Añade un colchón de seguridad, como guía la mitad de esa reserva, ajustada luego según tu experiencia, para cubrir retrasos o defectos.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "3906-3936",
+        "frase": "use 50 percent of working reserve as a guideline"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la mitad de la reserva de trabajo como guía para el colchón, ajustada según la experiencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

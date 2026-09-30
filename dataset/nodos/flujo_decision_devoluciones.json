@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Tener un flujo de decisión para cada devolución",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "Cuando te devuelven un producto, la peor decisión es dejarlo acumulado sin decidir qué hacer con él. Las devoluciones llegan por motivos distintos: no le quedó bien al cliente, hubo un error al empacar, llegó dañado, tiene un defecto de fábrica o simplemente terminó su vida útil. Cada motivo pide un destino distinto: revenderlo como nuevo, repararlo, reciclarlo, devolverlo al proveedor o desecharlo. Decidir rápido evita que el espacio y el dinero queden atrapados en mercancía que no genera ingresos mientras nadie decide qué hacer con ella. Tener un criterio previo, aunque sea simple, para clasificar cada devolución en el momento en que llega te ahorra semanas de indecisión y una bodega llena de cosas sin destino claro.",
+  "resumen_teorico": "Cuando te devuelven un producto, la peor decisión es dejarlo acumulado sin decidir qué hacer con él. Las devoluciones llegan por motivos distintos: no le quedó bien al cliente, hubo un error al empacar, llegó dañado, tiene un defecto de fábrica o simplemente terminó su vida útil. Cada motivo pide un destino distinto: revenderlo como nuevo, venderlo por otro canal o en una tienda outlet, venderlo a un comerciante, repararlo, donarlo, reciclarlo, devolverlo al proveedor o desecharlo. Decidir rápido evita que el espacio y el dinero queden atrapados en mercancía que no genera ingresos mientras nadie decide qué hacer con ella. Tener un criterio previo, aunque sea simple, para clasificar cada devolución en el momento en que llega te ahorra semanas de indecisión y una bodega llena de cosas sin destino claro.",
   "pasos_accionables": [
     "Anota los tres o cuatro motivos de devolución más comunes en tu negocio.",
-    "Define para cada motivo un destino por defecto: revender, reparar, reciclar o devolver al proveedor.",
+    "Define para cada motivo un destino por defecto: revender, vender por otro canal, en outlet o a un comerciante, reparar, donar, reciclar, devolver al proveedor o desechar.",
     "Al recibir una devolución, revísala y asígnale destino cuanto antes, para que no se acumule.",
     "Separa físicamente lo que ya tiene destino decidido de lo que sigue en evaluación.",
     "Sugerencia de My Idea: revisa cada mes si algún motivo de devolución se repite demasiado y ataca la causa raíz."
@@ -58,6 +58,39 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro no fija revision mensual de motivos de devolucion.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-111"
+    },
+    {
+      "id": "final-e1-106-flujo_decision_devoluciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando te devuelven un producto, la peor decisión es dejarlo acumulado sin decidir qué hacer con él. Las devoluciones llegan por motivos distintos: no le quedó bien al cliente, hubo un error al empacar, llegó dañado, tiene un defecto de fábrica o simplemente terminó su vida útil. Cada motivo pide un destino distinto: revenderlo como nuevo, repararlo, reciclarlo, devolverlo al proveedor o desecharlo. Decidir rápido evita que el espacio y el dinero queden atrapados en mercancía que no genera ingresos mientras nadie decide qué hacer con ella. Tener un criterio previo, aunque sea simple, para clasificar cada devolución en el momento en que llega te ahorra semanas de indecisión y una bodega llena de cosas sin destino claro.",
+      "texto_nuevo": "Cuando te devuelven un producto, la peor decisión es dejarlo acumulado sin decidir qué hacer con él. Las devoluciones llegan por motivos distintos: no le quedó bien al cliente, hubo un error al empacar, llegó dañado, tiene un defecto de fábrica o simplemente terminó su vida útil. Cada motivo pide un destino distinto: revenderlo como nuevo, venderlo por otro canal o en una tienda outlet, venderlo a un comerciante, repararlo, donarlo, reciclarlo, devolverlo al proveedor o desecharlo. Decidir rápido evita que el espacio y el dinero queden atrapados en mercancía que no genera ingresos mientras nadie decide qué hacer con ella. Tener un criterio previo, aunque sea simple, para clasificar cada devolución en el momento en que llega te ahorra semanas de indecisión y una bodega llena de cosas sin destino claro.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "12261",
+        "frase": "sell through another channel or outlet store, sell to a merchant, pass to a charity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan destinos del libro: vender por otro canal u outlet, a un comerciante o donar.; Mismo defecto: faltan otro canal o tienda de saldos y la donación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-106-flujo_decision_devoluciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define para cada motivo un destino por defecto: revender, reparar, reciclar o devolver al proveedor.",
+      "texto_nuevo": "Define para cada motivo un destino por defecto: revender, vender por otro canal, en outlet o a un comerciante, reparar, donar, reciclar, devolver al proveedor o desechar.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "12261",
+        "frase": "sell through another channel or outlet store, sell to a merchant, pass to a charity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan destinos del libro: otro canal u outlet, comerciante, donar y desechar.; Mismo defecto: faltan otro canal, donar y desechar.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

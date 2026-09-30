@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Ingeniería de una Cultura de Reporte",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Una cultura de reporte es un clima organizacional en el que las personas están dispuestas a reportar sus propios errores y cuasi-accidentes (near-misses). Basado en programas exitosos como el ASRS de NASA y BASIS de British Airways, se identifican cinco factores clave para lograrlo: (1) indemnidad contra procesos disciplinarios, (2) confidencialidad o des-identificación, (3) separación entre la agencia que recolecta reportes y quienes tienen autoridad disciplinaria, (4) retroalimentación rápida, útil y accesible a la comunidad reportante, y (5) facilidad para hacer el reporte. La confianza es el fundamento más importante de un programa de reporte exitoso.",
+  "resumen_teorico": "Una cultura de reporte es un clima organizacional en el que las personas están dispuestas a reportar sus propios errores y cuasi-accidentes (near-misses). Basado en programas exitosos como el ASRS de NASA y BASIS de British Airways, se identifican cinco factores clave para lograrlo: (1) indemnidad contra procesos disciplinarios, en la medida de lo practicable y con límites, (2) confidencialidad o des-identificación, (3) separación entre la agencia que recolecta reportes y quienes tienen autoridad disciplinaria, (4) retroalimentación rápida, útil y accesible a la comunidad reportante, y (5) facilidad para hacer el reporte. La confianza es el fundamento más importante de un programa de reporte exitoso.",
   "pasos_accionables": [
     "Diseñar un sistema de indemnidad ante sanciones disciplinarias para reportes honestos",
     "Establecer protocolos de confidencialidad o des-identificación de los reportes",
     "Separar organizacionalmente el área que recibe reportes de la que aplica sanciones",
     "Crear canales de retroalimentación rápida y accesible hacia los reportantes",
-    "Diseñar formularios de reporte fáciles de completar, con preguntas abiertas cuando sea posible",
+    "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y más análisis)",
     "Comunicar claramente los criterios de qué constituye un incidente reportable"
   ],
   "entregable_esperado": "Sistema de reporte de incidentes implementado con políticas de confidencialidad, indemnidad y retroalimentación documentadas",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Fomenta que Reporten los Errores",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-105-cultura_de_reporte-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una cultura de reporte es un clima organizacional en el que las personas están dispuestas a reportar sus propios errores y cuasi-accidentes (near-misses). Basado en programas exitosos como el ASRS de NASA y BASIS de British Airways, se identifican cinco factores clave para lograrlo: (1) indemnidad contra procesos disciplinarios, (2) confidencialidad o des-identificación, (3) separación entre la agencia que recolecta reportes y quienes tienen autoridad disciplinaria, (4) retroalimentación rápida, útil y accesible a la comunidad reportante, y (5) facilidad para hacer el reporte. La confianza es el fundamento más importante de un programa de reporte exitoso.",
+      "texto_nuevo": "Una cultura de reporte es un clima organizacional en el que las personas están dispuestas a reportar sus propios errores y cuasi-accidentes (near-misses). Basado en programas exitosos como el ASRS de NASA y BASIS de British Airways, se identifican cinco factores clave para lograrlo: (1) indemnidad contra procesos disciplinarios, en la medida de lo practicable y con límites, (2) confidencialidad o des-identificación, (3) separación entre la agencia que recolecta reportes y quienes tienen autoridad disciplinaria, (4) retroalimentación rápida, útil y accesible a la comunidad reportante, y (5) facilidad para hacer el reporte. La confianza es el fundamento más importante de un programa de reporte exitoso.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4798, 4824",
+        "frase": "Indemnity against disciplinary proceedings, as far as it is practicable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide la indemnidad en la medida de lo practicable y dice que tendrá límites.; Mismo defecto: se pierde el límite de la indemnidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-105-cultura_de_reporte-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar formularios de reporte fáciles de completar, con preguntas abiertas cuando sea posible",
+      "texto_nuevo": "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y más análisis)",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4948",
+        "frase": "the more specific the questions, the easier it is to complete the questionnaire"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se pierde la disyuntiva entre preguntas específicas y abiertas.; Se pierde el equilibrio del libro: las preguntas específicas facilitan el llenado pero limitan la información, y las abiertas toman más tiempo y análisis.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

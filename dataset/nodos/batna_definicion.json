@@ -3,15 +3,15 @@
   "dominio": "core",
   "titulo_concepto": "Tu mejor alternativa si la negociación no se cierra (BATNA)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Tu BATNA (Best Alternative To a Negotiated Agreement, o mejor alternativa a un acuerdo negociado) es tu plan de respaldo si la negociación actual se cae. Si lo tienes claro antes de sentarte a negociar, puedes fijar un punto de retirada racional, sin dejarte llevar por la presión del momento ni ceder más de lo debido. Cuando negocias financiamiento, esto significa mantener conversaciones abiertas con varios inversionistas a la vez: mientras más alternativas reales tengas, mejor posición tienes frente a cualquiera de ellos por separado.",
+  "resumen_teorico": "Tu BATNA (Best Alternative To a Negotiated Agreement, o mejor alternativa a un acuerdo negociado) es tu plan de respaldo si la negociación actual se cae. Si lo tienes claro antes de sentarte a negociar, puedes fijar un punto de retirada racional, sin dejarte llevar por la presión del momento ni ceder más de lo debido. Cuando negocias financiamiento, tu alternativa puede ser la oferta de otro inversionista o seguir sin financiamiento externo; por eso conviene mantener conversaciones abiertas con varios inversionistas a la vez: mientras más alternativas reales tengas, mejor posición tienes frente a cualquiera de ellos por separado.",
   "pasos_accionables": [
-    "Antes de negociar, identifica cuál es tu plan B, tu plan C y tu plan D",
+    "Antes de negociar, identifica cuál es tu plan B",
     "Define con claridad tus límites en cada punto clave y el momento exacto en el que estás dispuesto a retirarte",
     "Mantén conversaciones activas con varios inversionistas potenciales antes y durante la negociación principal, dedicando tiempo real a fortalecer esas alternativas",
     "Usa la existencia de alternativas reales, sin exagerarlas, como palanca en la negociación",
     "Nunca amenaces con levantarte de la mesa si no estás dispuesto a hacerlo de verdad"
   ],
-  "entregable_esperado": "Un documento tuyo, que no compartes con nadie más, donde defines tu BATNA, tus límites para cada punto de la negociación y llevas el registro de al menos dos o tres inversionistas con los que estás hablando al mismo tiempo",
+  "entregable_esperado": "Un documento tuyo, que no compartes con nadie más, donde defines tu BATNA, tus límites para cada punto de la negociación y llevas el registro de los inversionistas con los que estás hablando al mismo tiempo",
   "condiciones_activacion": [
     "Estás a punto de negociar términos con un inversionista, un socio o un comprador",
     "Sientes presión emocional en medio de una negociación en curso",
@@ -29,5 +29,56 @@
   "etiqueta_arbol": "Define tu Plan B Antes",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-batna_definicion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu BATNA (Best Alternative To a Negotiated Agreement, o mejor alternativa a un acuerdo negociado) es tu plan de respaldo si la negociación actual se cae. Si lo tienes claro antes de sentarte a negociar, puedes fijar un punto de retirada racional, sin dejarte llevar por la presión del momento ni ceder más de lo debido. Cuando negocias financiamiento, esto significa mantener conversaciones abiertas con varios inversionistas a la vez: mientras más alternativas reales tengas, mejor posición tienes frente a cualquiera de ellos por separado.",
+      "texto_nuevo": "Tu BATNA (Best Alternative To a Negotiated Agreement, o mejor alternativa a un acuerdo negociado) es tu plan de respaldo si la negociación actual se cae. Si lo tienes claro antes de sentarte a negociar, puedes fijar un punto de retirada racional, sin dejarte llevar por la presión del momento ni ceder más de lo debido. Cuando negocias financiamiento, tu alternativa puede ser la oferta de otro inversionista o seguir sin financiamiento externo; por eso conviene mantener conversaciones abiertas con varios inversionistas a la vez: mientras más alternativas reales tengas, mejor posición tienes frente a cualquiera de ellos por separado.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3589",
+        "frase": "It could mean bootstrapping your company and forgoing a financing."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da como alternativa en una ronda tanto otra hoja de términos como seguir sin financiamiento externo.; Mismo defecto: el resumen reduce la alternativa a otros inversionistas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-batna_definicion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de negociar, identifica cuál es tu plan B, tu plan C y tu plan D",
+      "texto_nuevo": "Antes de negociar, identifica cuál es tu plan B",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "878",
+        "frase": "The best Plan A has a great Plan B standing behind it."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide un buen plan B detrás del plan A; los planes C y D son una cantidad añadida.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-batna_definicion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un documento tuyo, que no compartes con nadie más, donde defines tu BATNA, tus límites para cada punto de la negociación y llevas el registro de al menos dos o tres inversionistas con los que estás hablando al mismo tiempo",
+      "texto_nuevo": "Un documento tuyo, que no compartes con nadie más, donde defines tu BATNA, tus límites para cada punto de la negociación y llevas el registro de los inversionistas con los que estás hablando al mismo tiempo",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "878",
+        "frase": "The more potential investors you have interested in investing in your company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija un mínimo de inversionistas; solo dice que más interesados mejoran tu posición.; Mismo defecto: la cifra 'dos o tres' no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

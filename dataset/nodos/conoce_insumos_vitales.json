@@ -4,12 +4,12 @@
   "dominio": "compras",
   "titulo_concepto": "Conoce tus insumos vitales",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo barato y fácil de reponer, mientras un insumo critico y económico se queda sin control hasta que un día falta y detiene tu operación. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo caro y fácil de reponer, mientras un insumo critico y económico se queda sin control hasta que un día falta y detiene tu operación. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
   "pasos_accionables": [
     "Haz una lista de los insumos que compras regularmente.",
     "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
     "Marca por separado cuáles, si faltan, detienen tu operación o tus ventas de inmediato.",
-    "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor.",
+    "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor, sabiendo que ambos reducen el riesgo a cambio de un costo mayor.",
     "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar."
   ],
   "entregable_esperado": "Una lista de insumos marcados por valor y por cuán crítico es que no falten, con una decisión de qué hacer con cada grupo.",
@@ -154,6 +154,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-106-conoce_insumos_vitales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo barato y fácil de reponer, mientras un insumo critico y económico se queda sin control hasta que un día falta y detiene tu operación. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+      "texto_nuevo": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo caro y fácil de reponer, mientras un insumo critico y económico se queda sin control hasta que un día falta y detiene tu operación. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "5523",
+        "frase": "if you use dollar value alone, a number of high-dollar items"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El error del libro es priorizar lo caro por su valor en dinero; el nodo dice que se vigila lo barato.; Mismo defecto: donde el nodo dice barato, el libro habla de artículos de alto valor.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-106-conoce_insumos_vitales-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor.",
+      "texto_nuevo": "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor, sabiendo que ambos reducen el riesgo a cambio de un costo mayor.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "6477",
+        "frase": "More buffer stock, less risk but at a higher cost"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta ambas protecciones como un intercambio con costo mayor.; Mismo límite: más stock de seguridad y proveedor alterno reducen el riesgo a mayor costo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

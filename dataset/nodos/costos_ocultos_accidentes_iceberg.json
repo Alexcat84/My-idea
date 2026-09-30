@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El Modelo del Iceberg de Costos Ocultos de los Accidentes",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Los costos visibles de un accidente (recuperables por seguro) representan solo una fracción del costo real: por cada libra recuperada del seguro, entre 5 y 50 libras adicionales se pierden en costos indirectos no asegurados (daño a productos, planta, equipos, costos legales, retrasos de producción, horas extra, tiempo de investigación, y daño reputacional/moral). Grandes eventos en la industria petroquímica (Piper Alpha, Exxon Valdez) han costado miles de millones de dólares. Esto refuerza que la gestión de seguridad no es un costo sino una inversión que previene pérdidas catastróficas para tu negocio.",
+  "resumen_teorico": "Los costos visibles de un accidente (recuperables por seguro) representan solo una fracción del costo real: por cada libra recuperada del seguro, entre 5 y 50 libras adicionales se pierden en costos indirectos no asegurados (daño a productos, planta, equipos, costos legales, retrasos de producción, horas extra, tiempo de investigación, y daño reputacional/moral). Grandes eventos en la industria petroquímica (Piper Alpha, Exxon Valdez) han costado miles de millones de dólares. Esto refuerza que la gestión de seguridad no es un costo sino una inversión que reduce la probabilidad de pérdidas catastróficas; como pueden ocurrir aun en los sistemas mejor gestionados, también conviene planear la recuperación del negocio.",
   "pasos_accionables": [
     "Calcular el costo total estimado de incidentes pasados incluyendo costos indirectos (no solo lo cubierto por seguro)",
     "Tener claro un análisis costo-beneficio de la inversión en prevención frente al costo potencial de un accidente mayor, antes de decidir",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Mira lo Oculto del Accidente",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-105-costos_ocultos_accidentes_iceberg-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los costos visibles de un accidente (recuperables por seguro) representan solo una fracción del costo real: por cada libra recuperada del seguro, entre 5 y 50 libras adicionales se pierden en costos indirectos no asegurados (daño a productos, planta, equipos, costos legales, retrasos de producción, horas extra, tiempo de investigación, y daño reputacional/moral). Grandes eventos en la industria petroquímica (Piper Alpha, Exxon Valdez) han costado miles de millones de dólares. Esto refuerza que la gestión de seguridad no es un costo sino una inversión que previene pérdidas catastróficas para tu negocio.",
+      "texto_nuevo": "Los costos visibles de un accidente (recuperables por seguro) representan solo una fracción del costo real: por cada libra recuperada del seguro, entre 5 y 50 libras adicionales se pierden en costos indirectos no asegurados (daño a productos, planta, equipos, costos legales, retrasos de producción, horas extra, tiempo de investigación, y daño reputacional/moral). Grandes eventos en la industria petroquímica (Piper Alpha, Exxon Valdez) han costado miles de millones de dólares. Esto refuerza que la gestión de seguridad no es un costo sino una inversión que reduce la probabilidad de pérdidas catastróficas; como pueden ocurrir aun en los sistemas mejor gestionados, también conviene planear la recuperación del negocio.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5894",
+        "frase": "such accidents can afflict even the best run systems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de reducir la probabilidad de estos accidentes, no de prevenirlos.; Se pierde que estos accidentes pueden ocurrir incluso en los sistemas mejor gestionados y que hay que planear la recuperación del negocio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

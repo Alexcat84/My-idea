@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Deuda de Gestión (Management Debt)",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Análoga a la deuda técnica, la deuda de gestión ocurre cuando se toma una decisión de management expedita y de corto plazo que tiene un costo alto a largo plazo. Ejemplos comunes: poner 'dos personas en la misma caja' organizacional, sobrecompensar a un empleado clave por una oferta externa, o no tener proceso de feedback/performance. Si no se contabiliza, se llega a la 'bancarrota de gestión'.",
+  "resumen_teorico": "Análoga a la deuda técnica, la deuda de gestión ocurre cuando se toma una decisión de management expedita y de corto plazo que tiene un costo alto a largo plazo. A veces ese intercambio tiene sentido, pero a menudo no. Ejemplos comunes: poner 'dos personas en la misma caja' organizacional, sobrecompensar a un empleado clave por una oferta externa, o no tener proceso de feedback/performance. Si no se contabiliza, se llega a la 'bancarrota de gestión'.",
   "pasos_accionables": [
     "Identifica decisiones de management tomadas por conveniencia de corto plazo (evitar decisión difícil, evitar conflicto)",
     "Evalúa el costo de interés: pérdida de accountability, rumores internos, comportamiento perverso en el equipo",
     "Si tienes 'dos personas en la misma caja' organizacional, resuelve el problema estructural en vez de parchar con reuniones extra",
     "Evita sobrecompensar a un empleado por amenaza de renuncia sin arreglar la inequidad salarial estructural",
     "Implementa un proceso formal de performance management desde etapas tempranas, aunque se sienta 'de empresa grande'",
-    "Como CEO/líder, opta siempre por la respuesta difícil en vez de la fácil para evitar acumular esta deuda"
+    "Como CEO/líder, inclínate por la respuesta difícil en vez de la fácil ante los problemas organizacionales para evitar acumular esta deuda"
   ],
   "entregable_esperado": "Auditoría de decisiones organizacionales pendientes de resolver (deuda de gestión) con plan de pago/resolución",
   "nodos_previos": [
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Evita tu Deuda de Gestión",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-deuda_de_gestion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Análoga a la deuda técnica, la deuda de gestión ocurre cuando se toma una decisión de management expedita y de corto plazo que tiene un costo alto a largo plazo. Ejemplos comunes: poner 'dos personas en la misma caja' organizacional, sobrecompensar a un empleado clave por una oferta externa, o no tener proceso de feedback/performance. Si no se contabiliza, se llega a la 'bancarrota de gestión'.",
+      "texto_nuevo": "Análoga a la deuda técnica, la deuda de gestión ocurre cuando se toma una decisión de management expedita y de corto plazo que tiene un costo alto a largo plazo. A veces ese intercambio tiene sentido, pero a menudo no. Ejemplos comunes: poner 'dos personas en la misma caja' organizacional, sobrecompensar a un empleado clave por una oferta externa, o no tener proceso de feedback/performance. Si no se contabiliza, se llega a la 'bancarrota de gestión'.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1704",
+        "frase": "Like technical debt, the trade-off sometimes makes sense, but often does not."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el intercambio a veces tiene sentido pero a menudo no, y el resumen lo omite.; Mismo defecto: se cae que el intercambio a veces tiene sentido, aunque a menudo no.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-deuda_de_gestion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Como CEO/líder, opta siempre por la respuesta difícil en vez de la fácil para evitar acumular esta deuda",
+      "texto_nuevo": "Como CEO/líder, inclínate por la respuesta difícil en vez de la fácil ante los problemas organizacionales para evitar acumular esta deuda",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1746",
+        "frase": "They tend to opt for the hard answer to organizational issues."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los buenos CEO tienden a optar por la respuesta difícil; 'siempre' endurece.; Mismo endurecimiento de 'tend to' a 'siempre'.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

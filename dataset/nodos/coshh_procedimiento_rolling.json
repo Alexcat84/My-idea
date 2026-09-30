@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Elaborar una lista de todas las sustancias peligrosas presentes, identificando puntos de uso",
     "Realizar evaluaciones de riesgo, contratando expertos externos si es necesario",
-    "Controlar la exposición mediante ventilación, instalaciones de higiene y sustitución por sustancias menos peligrosas",
+    "Controlar la exposición mediante ventilación, instalaciones de higiene y, donde sea posible, sustitución por sustancias menos peligrosas",
     "Probar periódicamente equipos de protección respiratoria y ventilación, registrando los resultados",
     "Monitorear la exposición mediante técnicas válidas de higiene ocupacional",
     "Realizar vigilancia de salud a empleados expuestos a riesgo",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Controla Sustancias Peligrosas Siempre",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-105-coshh_procedimiento_rolling-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Controlar la exposición mediante ventilación, instalaciones de higiene y sustitución por sustancias menos peligrosas",
+      "texto_nuevo": "Controlar la exposición mediante ventilación, instalaciones de higiene y, donde sea posible, sustitución por sustancias menos peligrosas",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4368",
+        "frase": "using less hazardous substances where possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide usar sustancias menos peligrosas donde sea posible; el paso quita esa condición.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

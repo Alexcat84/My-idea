@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Tratamiento de Stock Options en una Adquisición",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Durante una fusión o adquisición, el destino de las opciones sobre acciones de los empleados puede variar: asunción automática por el comprador, sustitución por RSUs, vesting acelerado, o incluso 're-vesting' donde los empleados deben cumplir nuevamente un período de vesting. Estas decisiones afectan significativamente el valor percibido por los empleados y pueden generar fricciones internas si no se manejan con cuidado y transparencia.",
+  "resumen_teorico": "Durante una fusión o adquisición, el destino de las opciones sobre acciones de los empleados puede variar: asunción automática por el comprador, sustitución por RSUs, vesting acelerado, o incluso 're-vesting' donde los empleados deben cumplir nuevamente un período de vesting. Estas decisiones afectan significativamente el valor percibido por los empleados, y acelerar el vesting de todos puede generar fricciones internas entre quienes llevan más y menos tiempo en la empresa.",
   "pasos_accionables": [
     "Revisar el plan de opciones existente y sus cláusulas de asunción/sustitución en caso de M&A.",
     "Negociar explícitamente en el LOI qué pasará con las opciones vested y unvested.",
-    "Considerar el impacto del strike price (barter element) en el valor neto de las opciones.",
+    "Considerar el impacto del strike price (barter element) en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
     "Comunicar con transparencia a los empleados el tratamiento de sus opciones antes del cierre.",
     "Evaluar el riesgo de fricción interna si hay diferencias grandes entre empleados con distinto tiempo de vesting."
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Decide el Destino de las Opciones",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-asuncion_stock_options_adquisicion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Durante una fusión o adquisición, el destino de las opciones sobre acciones de los empleados puede variar: asunción automática por el comprador, sustitución por RSUs, vesting acelerado, o incluso 're-vesting' donde los empleados deben cumplir nuevamente un período de vesting. Estas decisiones afectan significativamente el valor percibido por los empleados y pueden generar fricciones internas si no se manejan con cuidado y transparencia.",
+      "texto_nuevo": "Durante una fusión o adquisición, el destino de las opciones sobre acciones de los empleados puede variar: asunción automática por el comprador, sustitución por RSUs, vesting acelerado, o incluso 're-vesting' donde los empleados deben cumplir nuevamente un período de vesting. Estas decisiones afectan significativamente el valor percibido por los empleados, y acelerar el vesting de todos puede generar fricciones internas entre quienes llevan más y menos tiempo en la empresa.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4143",
+        "frase": "While that sounds employee-friendly (it is), it can cause significant friction among employees."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye la fricción a la aceleración de todas las opciones, no a la falta de cuidado o transparencia.; Mismo defecto: la causa 'falta de cuidado y transparencia' no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-asuncion_stock_options_adquisicion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar el impacto del strike price (barter element) en el valor neto de las opciones.",
+      "texto_nuevo": "Considerar el impacto del strike price (barter element) en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4153-4155",
+        "frase": "Many sellers forget to try to recapture the value of the barter element"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja recuperar en el precio de compra el valor del barter element en vez de contar las opciones por su valor bruto.; Mismo defecto, incluidas las opciones no consolidadas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

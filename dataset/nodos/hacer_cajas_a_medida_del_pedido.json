@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Hacer cajas a medida del pedido",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "El empaque no es un accesorio: es la forma física con la que tu producto realmente viaja y se almacena. Una caja que ajusta perfecto al contenido no deja espacio para protegerlo con relleno, y una caja demasiado grande desperdicia espacio, encarece el transporte por peso volumétrico y permite que el producto se mueva durante el trayecto. El tamaño correcto equilibra protección, facilidad de manejo y costo, y las formas cúbicas suelen aprovechar mejor el espacio que las cilíndricas. Pensar la caja como parte del producto que se mueve, y no como un detalle final, ayuda a calcular el tamaño adecuado para cada pedido en vez de usar siempre el mismo empaque.",
+  "resumen_teorico": "El empaque no es un accesorio: es la forma física con la que tu producto realmente viaja y se almacena. Una caja ajustada al pedido reduce el volumen, el costo de transporte y el relleno necesario, mientras que una caja demasiado grande desperdicia espacio, encarece el transporte por peso volumétrico y permite que el producto se mueva durante el trayecto. El tamaño correcto equilibra protección, facilidad de manejo y costo, y las formas cúbicas suelen aprovechar mejor el espacio que las cilíndricas. Pensar la caja como parte del producto que se mueve, y no como un detalle final, ayuda a calcular el tamaño adecuado para cada pedido en vez de usar siempre el mismo empaque.",
   "pasos_accionables": [
     "Mide las tres dimensiones del producto antes de elegir la caja.",
     "Deja espacio por lado para el relleno protector, sin sobredimensionar la caja.",
@@ -78,6 +78,22 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Es la misma cifra de tamaños de caja que corrige C131-110 (ANADIDO de cifra): el libro habla de tener varios tamaños de caja, pero no fija cuántos. El entregable repite un número concreto, así que se corrige igual que el paso.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-110"
+    },
+    {
+      "id": "final-e1-106-hacer_cajas_a_medida_del_pedido-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El empaque no es un accesorio: es la forma física con la que tu producto realmente viaja y se almacena. Una caja que ajusta perfecto al contenido no deja espacio para protegerlo con relleno, y una caja demasiado grande desperdicia espacio, encarece el transporte por peso volumétrico y permite que el producto se mueva durante el trayecto. El tamaño correcto equilibra protección, facilidad de manejo y costo, y las formas cúbicas suelen aprovechar mejor el espacio que las cilíndricas. Pensar la caja como parte del producto que se mueve, y no como un detalle final, ayuda a calcular el tamaño adecuado para cada pedido en vez de usar siempre el mismo empaque.",
+      "texto_nuevo": "El empaque no es un accesorio: es la forma física con la que tu producto realmente viaja y se almacena. Una caja ajustada al pedido reduce el volumen, el costo de transporte y el relleno necesario, mientras que una caja demasiado grande desperdicia espacio, encarece el transporte por peso volumétrico y permite que el producto se mueva durante el trayecto. El tamaño correcto equilibra protección, facilidad de manejo y costo, y las formas cúbicas suelen aprovechar mejor el espacio que las cilíndricas. Pensar la caja como parte del producto que se mueve, y no como un detalle final, ayuda a calcular el tamaño adecuado para cada pedido en vez de usar siempre el mismo empaque.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "12107",
+        "frase": "minimizing the cubic measurements of the cartons, thus reducing transport costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro presenta la caja hecha a la medida del pedido como ventaja: menos volumen, flete y relleno.; Mismo defecto: el nodo convierte en problema lo que el libro presenta como ventaja.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

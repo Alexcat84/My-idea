@@ -6,9 +6,9 @@
   "fuente": "Max Muller, Essentials of Inventory Management",
   "resumen_teorico": "Cada producto guardado te cuesta dinero solo por estar ahí: espacio, seguro, deterioro y el efectivo que tienes inmovilizado en el. A esto se le llama costo de mantener. Cada pedido que haces también te cuesta tiempo y esfuerzo en armarlo, negociarlo y recibirlo: es el costo de reponer. Si compras poco y muy seguido, el costo de reponer se dispara. Si compras mucho de una vez, el costo de mantener se dispara. El punto optimo esta en el equilibrio entre ambos: ni tanto stock que se te muera en la bodega, ni tan poco que compres todos los días. Calcula cuanto te cuesta cada peso de inventario guardado por año y usa ese numero para decidir cuanto pedir cada vez que reabastezcas.",
   "pasos_accionables": [
-    "Suma cuánto gastas al año en espacio, seguro, deterioro y dinero inmovilizado por tener inventario guardado.",
+    "Suma cuánto gastas al año en espacio, impuestos, seguro, deterioro o pérdidas, manejo del material y dinero inmovilizado por tener inventario guardado.",
     "Divide ese total entre el valor de tu inventario promedio para sacar tu porcentaje de costo de mantener por año.",
-    "Calcula cuánto te cuesta en tiempo y gestión cada pedido que haces a un proveedor.",
+    "Calcula cuánto te cuesta en tiempo y gestión cada producto que incluyes en un pedido a un proveedor, porque ese costo se repite por cada línea del pedido.",
     "Compara pedir poco y seguido contra pedir mucho y espaciado, usando ambos costos, y ajusta tu cantidad de pedido hacia el punto donde ambos costos se equilibran.",
     "Revisa este cálculo cada vez que cambien tus volúmenes de venta o tus condiciones con el proveedor."
   ],
@@ -98,6 +98,40 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-106-calcula_costo_de_mantener_contra_costo_de_reponer-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Suma cuánto gastas al año en espacio, seguro, deterioro y dinero inmovilizado por tener inventario guardado.",
+      "texto_nuevo": "Suma cuánto gastas al año en espacio, impuestos, seguro, deterioro o pérdidas, manejo del material y dinero inmovilizado por tener inventario guardado.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "1533-1545",
+        "frase": "Warehouse Space, Taxes, Insurance, Obsolescence/Shrinkage, Material Handling, Cost of Money Invested"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La tabla del costo de mantener incluye impuestos y manejo del material; sin ellos el porcentaje sale bajo.; Mismo defecto: faltan impuestos y manejo del material, que el libro cuenta como componente importante.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-106-calcula_costo_de_mantener_contra_costo_de_reponer-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto te cuesta en tiempo y gestión cada pedido que haces a un proveedor.",
+      "texto_nuevo": "Calcula cuánto te cuesta en tiempo y gestión cada producto que incluyes en un pedido a un proveedor, porque ese costo se repite por cada línea del pedido.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "3752",
+        "frase": "The cost of replenishment is calculated on a per item, per order basis."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro calcula el costo de reponer por producto y por pedido, lo que cambia la cuenta en pedidos de varias líneas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

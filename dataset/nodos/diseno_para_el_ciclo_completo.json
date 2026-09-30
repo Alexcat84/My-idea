@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Diseñar para el Ciclo Completo del Proyecto",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Los proyectos de diseño, sobre todo los disruptivos, suelen durar más que los ciclos de rotación de personal habituales en las organizaciones (por ejemplo, 18 meses). Cuando los miembros clave del equipo no acompañan el proyecto de principio a fin, la idea original se diluye, se pierde el aprendizaje acumulado y aparece frustración. Completar el ciclo entero es una experiencia valiosa tanto para el proyecto como para las personas involucradas. Por eso conviene anticipar este desajuste entre tiempos de rotación y tiempos del proyecto, negociando permanencia cuando sea posible y documentando el conocimiento generado para no perderlo si la rotación resulta inevitable.",
+  "resumen_teorico": "Los proyectos de diseño, sobre todo los disruptivos, suelen durar más que los ciclos de rotación de personal habituales en las organizaciones (por ejemplo, 18 meses). Cuando los miembros clave del equipo no acompañan el proyecto de principio a fin, es probable que la idea original se diluya, las personas sienten que su aprendizaje se desperdició y pueden quedar con frustración. Completar el ciclo entero es una experiencia valiosa tanto para el proyecto como para las personas involucradas. Por eso conviene anticipar este desajuste entre tiempos de rotación y tiempos del proyecto, negociando permanencia cuando sea posible.",
   "pasos_accionables": [
     "Evaluar la duración estimada del ciclo completo del proyecto frente a los ciclos habituales de rotación de personal.",
     "Negociar directamente con quien decide la rotación la permanencia del equipo clave hasta el cierre del proyecto.",
-    "Documentar los aprendizajes intermedios del equipo para mitigar pérdidas si ocurre una rotación inevitable.",
+    "Sugerencia de My Idea: documentar los aprendizajes intermedios del equipo para mitigar pérdidas si ocurre una rotación inevitable.",
     "Priorizar la retención del equipo fundador o core por encima de la política estándar de rotación."
   ],
   "entregable_esperado": "Un plan de continuidad de equipo alineado a los hitos y a la duración completa del proyecto.",
@@ -36,5 +36,40 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-105-diseno_para_el_ciclo_completo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los proyectos de diseño, sobre todo los disruptivos, suelen durar más que los ciclos de rotación de personal habituales en las organizaciones (por ejemplo, 18 meses). Cuando los miembros clave del equipo no acompañan el proyecto de principio a fin, la idea original se diluye, se pierde el aprendizaje acumulado y aparece frustración. Completar el ciclo entero es una experiencia valiosa tanto para el proyecto como para las personas involucradas. Por eso conviene anticipar este desajuste entre tiempos de rotación y tiempos del proyecto, negociando permanencia cuando sea posible y documentando el conocimiento generado para no perderlo si la rotación resulta inevitable.",
+      "texto_nuevo": "Los proyectos de diseño, sobre todo los disruptivos, suelen durar más que los ciclos de rotación de personal habituales en las organizaciones (por ejemplo, 18 meses). Cuando los miembros clave del equipo no acompañan el proyecto de principio a fin, es probable que la idea original se diluya, las personas sienten que su aprendizaje se desperdició y pueden quedar con frustración. Completar el ciclo entero es una experiencia valiosa tanto para el proyecto como para las personas involucradas. Por eso conviene anticipar este desajuste entre tiempos de rotación y tiempos del proyecto, negociando permanencia cuando sea posible.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1412",
+        "frase": "The guiding idea behind a project is likely to be diluted, attenuated, or lost"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la idea probablemente se diluya y que la frustración puede quedar; el resumen lo da por seguro.; El libro no propone documentar el conocimiento como remedio a la rotación.; Mismo defecto que la marca 0: certeza donde el libro dice probable y puede.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-105-diseno_para_el_ciclo_completo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar los aprendizajes intermedios del equipo para mitigar pérdidas si ocurre una rotación inevitable.",
+      "texto_nuevo": "Sugerencia de My Idea: documentar los aprendizajes intermedios del equipo para mitigar pérdidas si ocurre una rotación inevitable.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1410-1412",
+        "frase": "When core team members are not able to follow a project through"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La documentación como mitigación no está en el libro; queda como sugerencia de la casa.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

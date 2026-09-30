@@ -6,9 +6,9 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Los términos de amortización son más críticos que el precio para alinear la deuda con la estrategia de capital de la empresa. El 'draw period' es el tiempo durante el cual se pueden solicitar desembolsos; el 'interest-only (I/O) period' es el tiempo en que solo se pagan intereses sin amortizar principal, impactando directamente el cash burn y el runway. Negociar estos periodos (típicamente 6-12 meses) es esencial para maximizar el tiempo antes de que el pago de principal comience.",
   "pasos_accionables": [
-    "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo.",
-    "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo.",
-    "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones).",
+    "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+    "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
+    "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
     "Calcular el impacto de la amortización lineal (straight-line) sobre el flujo de caja mensual proyectado."
   ],
   "entregable_esperado": "Cronograma de amortización del préstamo con draw period, I/O period y pagos mensuales de principal calculados.",
@@ -24,5 +24,58 @@
   "etiqueta_arbol": "Define tus Plazos de Pago",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-107-amortizacion_y_periodo_de_gracia-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo.",
+      "texto_nuevo": "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2885",
+        "frase": "not all term loans allow for delayed draws"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae que no todos los préstamos permiten desembolso diferido y que puede cobrarse una comisión por el compromiso no usado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-amortizacion_y_periodo_de_gracia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo.",
+      "texto_nuevo": "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2887",
+        "frase": "I/O periods are usually linked to the cost of the loan and the warrant pricing."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae que la duración del I/O suele ir ligada al costo del préstamo y al precio del warrant.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-107-amortizacion_y_periodo_de_gracia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones).",
+      "texto_nuevo": "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2889",
+        "frase": "the downside when performance milestones are not met may be significant"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae la advertencia de complejidad e incertidumbre y del golpe a la caja si no se cumple el hito.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

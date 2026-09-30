@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Bloque de Estructura de Costos",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Describe todos los costos incurridos para operar el modelo de negocio. Se distingue entre modelos dirigidos por costo (cost-driven, minimizando gastos) y dirigidos por valor (value-driven, priorizando la propuesta premium). También se clasifican en costos fijos, variables, economías de escala y economías de alcance.",
+  "resumen_teorico": "Describe todos los costos incurridos para operar el modelo de negocio. Se distingue entre modelos dirigidos por costo (cost-driven, minimizando gastos) y dirigidos por valor (value-driven, priorizando la propuesta premium), y muchos modelos quedan entre esos dos extremos. También se clasifican en costos fijos, variables, economías de escala y economías de alcance.",
   "pasos_accionables": [
     "Calcular los costos derivados de recursos clave, actividades clave y asociaciones",
-    "Determinar si el modelo debe ser cost-driven o value-driven",
+    "Determinar si el modelo debe ser cost-driven, value-driven o ubicarse entre ambos extremos",
     "Clasificar costos en fijos vs variables",
     "Identificar oportunidades de economías de escala o alcance"
   ],
@@ -45,6 +45,39 @@
         "motivo": "El bloque de estructura de costos del modelo de negocio no sigue con modelar entidades de una cadena de suministro."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-105-estructura_de_costos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Describe todos los costos incurridos para operar el modelo de negocio. Se distingue entre modelos dirigidos por costo (cost-driven, minimizando gastos) y dirigidos por valor (value-driven, priorizando la propuesta premium). También se clasifican en costos fijos, variables, economías de escala y economías de alcance.",
+      "texto_nuevo": "Describe todos los costos incurridos para operar el modelo de negocio. Se distingue entre modelos dirigidos por costo (cost-driven, minimizando gastos) y dirigidos por valor (value-driven, priorizando la propuesta premium), y muchos modelos quedan entre esos dos extremos. También se clasifican en costos fijos, variables, economías de escala y economías de alcance.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "763",
+        "frase": "many business models fall in between these two extremes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que muchos modelos de negocio quedan entre los dos extremos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-105-estructura_de_costos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si el modelo debe ser cost-driven o value-driven",
+      "texto_nuevo": "Determinar si el modelo debe ser cost-driven, value-driven o ubicarse entre ambos extremos",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "763",
+        "frase": "many business models fall in between these two extremes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: elección binaria sin el punto intermedio.; Plantea una disyuntiva cerrada cuando el libro aclara que muchos modelos están entre ambos extremos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

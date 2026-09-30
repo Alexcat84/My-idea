@@ -4,9 +4,9 @@
   "dominio": "compras",
   "titulo_concepto": "Clasifica tu inventario y define qué meta persigues",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorías sin distinción hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuantos días de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decisión de compra es a ciegas.",
+  "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, reserva de seguridad para cubrir imprevistos, stock comprado para una temporada que viene y mercadería en tránsito. Antes de decidir cuánto comprar o cuándo reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuántos días de stock quieres mantener, cuántas veces al año quieres rotar el inventario, o qué nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta, te será difícil eliminar el inventario que sobra.",
   "pasos_accionables": [
-    "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas o consumibles de operación.",
+    "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas, consumibles de operación o stock comprado para una temporada que viene.",
     "Identifica cuánto de ese stock es reserva de seguridad y cuánto es exceso sin propósito claro.",
     "Decide una meta concreta: días de stock, número de rotaciones al año, o nivel de disponibilidad para tus clientes.",
     "Sugerencia de My Idea: revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta."
@@ -152,6 +152,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-106-clasifica_tu_inventario-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, y reserva de seguridad para cubrir imprevistos. Mezclar estas categorías sin distinción hace que sea imposible saber si tu inventario esta bien dimensionado o si es dinero inmovilizado sin motivo. Antes de decidir cuanto comprar o cuando reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuantos días de stock quieres mantener, cuantas veces al ano quieres rotar el inventario, o que nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta escrita, cualquier decisión de compra es a ciegas.",
+      "texto_nuevo": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, reserva de seguridad para cubrir imprevistos, stock comprado para una temporada que viene y mercadería en tránsito. Antes de decidir cuánto comprar o cuándo reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuántos días de stock quieres mantener, cuántas veces al año quieres rotar el inventario, o qué nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta, te será difícil eliminar el inventario que sobra.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "4422",
+        "frase": "it will be difficult to get everyone within the organization to work toward"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no afirma que mezclar las categorías impida saber si el inventario está bien dimensionado.; Endurece: el libro dice que sin la meta será difícil eliminar el inventario innecesario, no que toda compra sea a ciegas.; La lista del libro incluye el stock de temporada y el inventario en tránsito, cada uno con su riesgo propio.; Mismo añadido que la marca 0: consecuencia tajante que el libro no da.; Mismo endurecimiento que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-106-clasifica_tu_inventario-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas o consumibles de operación.",
+      "texto_nuevo": "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas, consumibles de operación o stock comprado para una temporada que viene.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "488",
+        "frase": "This is inventory produced in anticipation of an upcoming season"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el stock de anticipación de temporada, que el paso siguiente contaría como exceso.; Se sostiene por el stock de temporada; el tránsito no se añade porque no está en bodega.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [
