@@ -828,3 +828,45 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   Sus elementos siguen con el texto vigente, que el pase no pudo corregir de forma segura. La muestra de cierre los
   mide como a cualquier otro nodo. Están listados en `e1b_aplicados.json`, en las claves, para el método FUERA si la
   muestra lo pide.
+
+**Muestra de cierre de la etapa 1 (semilla 20271001), 30 sep 2026: NO CIERRA; aplica la regla de parada.**
+
+- **Diseño:** el mismo de la muestra de parada. Son 150 nodos en 15 lotes, con 8 por espacio y el resto por
+  tamaño. Hay una trampa por lote:
+  - Las de matiz quitan una condición real, que confirmó antes un validador aparte (3 de 3 confirmadas).
+  - El lote 4 no tenía condición que quitar y pasó al siguiente tipo.
+  - Quedaron 5 de cifra, 4 contrarios, 4 de certeza endurecida y 2 de matiz.
+  - Código: `cierre_e1.py`, en las claves.
+- **Lectura:** dos lectores Opus por lote, con las instrucciones v3. **Las 15 trampas las cazaron los dos lectores de
+  cada lote (30 de 30)**, así que no hizo falta ningún tercero.
+- **Árbitro (v3):** confirmó 194 marcas y rechazó 11, en 133 elementos. 83 de los 150 nodos tienen al menos un
+  defecto confirmado.
+
+| Clase (R7) | Defectos (elemento) | Nodos | Por nodo | Umbral | Resultado |
+|---|---|---|---|---|---|
+| Contrario | 2 | 2 | | 0 | **sobre umbral** |
+| Invención dura | 13 | 12 | | 0 | **sobre umbral** |
+| Paso sin etiqueta | 40 | 29 | 0,267 | 0,1 | **sobre umbral** |
+| Matiz (con certeza endurecida) | 71 | 53 | 0,473 | 0,2 | **sobre umbral** |
+
+- **Los dos contrarios son de orden temporal:** una carta de crédito que se revisa "antes" de lo que dice el libro, y
+  una clasificación de paquete puesta antes de empacar. Es el mismo punto ciego de los fallos de método del pase.
+- **Comparación con la muestra de parada, con cautela porque las clases cambiaron:**
+  - Invenciones: pasan de 39 elementos en 34 nodos a 13 invenciones duras en 12 nodos, más 40 pasos sin etiqueta,
+    que antes contaban dentro de las invenciones.
+  - Matiz por nodo: baja de 0,553 a 0,473.
+  - Nodos con algún defecto: bajan de 88 a 83.
+- **Riesgo residual estimado (Wilson 95 %, sobre los 3.169 nodos vivos fuera del mundo 11):**
+
+  | Clase | Tasa | IC 95 % | Nodos estimados |
+  |---|---|---|---|
+  | Contrario | 1,3 % | 0,4 a 4,7 % | 12 a 150 |
+  | Invención dura | 8,0 % | 4,6 a 13,5 % | 147 a 427 |
+  | Paso sin etiqueta | 19,3 % | 13,8 a 26,4 % | 438 a 836 |
+  | Matiz | 35,3 % | 28,1 a 43,3 % | 892 a 1.371 |
+
+- **Lo que manda la regla (9.7):** se corrigen los defectos de la muestra, se relee la vecindad de cada contrario e
+  invención dura, y la etapa se cierra declarando el riesgo residual, sin un tercer pase completo.
+  - La vecindad es el mismo libro y el mismo campo: 423 pares nodo-campo en 8 libros.
+  - Antes de cerrar va el barrido de puntos ciegos que decidió el fundador el 30 sep, tras el informe: construcciones
+    "antes de / después de" y condiciones que acotan a quién o cuándo aplica el consejo.
