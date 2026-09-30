@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis e Identificación de Mejores Prácticas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+  "resumen_teorico": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo, e identificar en lo posible las razones de esas brechas. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
   "pasos_accionables": [
     "Recolectar y consolidar los datos de desempeño y normalización de todos los participantes",
     "Aplicar pruebas de significancia estadística a las comparaciones",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Identifica las Mejores Prácticas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-057-analisis_identificacion_mejores_practicas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+      "texto_nuevo": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo, e identificar en lo posible las razones de esas brechas. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17451",
+        "frase": "identify as far as possible the reasons for these gaps"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide además identificar, en lo posible, las razones de las brechas; el nodo lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

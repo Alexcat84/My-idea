@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Fitness for Purpose vs Conformance to Specification",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "A veces hay una diferencia crítica entre cómo los clientes definen calidad (fitness for purpose: características que responden a sus necesidades, incluyendo ausencia de fallas y buen servicio) y cómo durante años la definieron muchos proveedores (conformance to specification: cumplir especificaciones en la prueba final). Esta brecha ignora factores como empaque, transporte, instalación, confiabilidad y mantenibilidad.",
+  "resumen_teorico": "A veces hay una diferencia crítica entre cómo los clientes definen calidad (fitness for purpose: características que responden a sus necesidades, incluyendo ausencia de fallas y buen servicio) y cómo durante años la definieron muchos proveedores (conformance to specification: cumplir especificaciones en la prueba final). Esta brecha ignora factores como empaque, almacenamiento, transporte, instalación, confiabilidad, mantenibilidad y servicio al cliente.",
   "pasos_accionables": [
     "Mapear la definición de calidad del cliente versus la definición interna de la organización",
     "Identificar factores post-venta no cubiertos por especificaciones técnicas (transporte, instalación, mantenimiento)",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que clientes y proveedores a veces difieren y que durante años muchos proveedores, no todos, usaron la conformidad.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-057-fitness_for_purpose_vs_conformance-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A veces hay una diferencia crítica entre cómo los clientes definen calidad (fitness for purpose: características que responden a sus necesidades, incluyendo ausencia de fallas y buen servicio) y cómo durante años la definieron muchos proveedores (conformance to specification: cumplir especificaciones en la prueba final). Esta brecha ignora factores como empaque, transporte, instalación, confiabilidad y mantenibilidad.",
+      "texto_nuevo": "A veces hay una diferencia crítica entre cómo los clientes definen calidad (fitness for purpose: características que responden a sus necesidades, incluyendo ausencia de fallas y buen servicio) y cómo durante años la definieron muchos proveedores (conformance to specification: cumplir especificaciones en la prueba final). Esta brecha ignora factores como empaque, almacenamiento, transporte, instalación, confiabilidad, mantenibilidad y servicio al cliente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "731",
+        "frase": "packaging, storage, transport, installation, reliability, maintainability, customer service, and so on"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye almacenamiento y servicio al cliente, este último parte de la propia definición del cliente; el nodo los omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

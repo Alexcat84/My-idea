@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Ofrece valor no económico cuando el precio se estanca",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+  "resumen_teorico": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio, o pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
   "pasos_accionables": [
     "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho.",
     "Cuando el precio se estanque, pregunta qué otro factor haría que el trato funcione para el otro.",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Ofrece algo más que precio",
   "fuentes_internas": [
     "Chris Voss, Rompe la barrera del no"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-056-ofrece_valor_no_economico-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+      "texto_nuevo": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio, o pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "2695-2699, 5424",
+        "frase": "puedes pedir algo en términos no económicos que sea más importante para ti"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro plantea el pivote en dos sentidos, ofrecer lo que al otro le importa o pedir algo no económico más importante para ti, y prepara la lista de lo no económico que tiene la otra parte; el resumen solo trae ofrecer.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

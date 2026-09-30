@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Los Tres Espacios de Innovación y el Rol del Prototipado",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "El prototipado cumple funciones distintas según la etapa del proyecto: en el espacio de 'inspiración' inspira nuevas ideas (rápido, numeroso y poco pulido); en 'ideación' refina las ideas incorporando elementos funcionales y emocionales (menos prototipos, mayor resolución); y en 'implementación' valida que la idea funcione en el mercado real (prototipos más completos, probablemente costosos, que pueden llegar a ser indistinguibles del producto final). Un indicador clave de una organización innovadora es su 'tiempo hasta el primer prototipo'.",
+  "resumen_teorico": "El prototipado cumple funciones distintas según la etapa del proyecto: en el espacio de 'inspiración' inspira nuevas ideas (rápido, numeroso y poco pulido); en 'ideación' refina las ideas incorporando elementos funcionales y emocionales (menos prototipos, mayor resolución); y en 'implementación' comunica la idea con la claridad suficiente para que la organización la acepte, la prueba y valida que funcione en el mercado real (prototipos más completos, probablemente costosos, que pueden llegar a ser indistinguibles del producto final). Un indicador clave de una organización innovadora es su 'tiempo hasta el primer prototipo'.",
   "pasos_accionables": [
     "Definir en qué espacio de innovación se encuentra el proyecto (inspiración, ideación o implementación).",
     "Establecer la meta de tener un primer prototipo listo en el primer día o semana del proyecto.",
@@ -58,6 +58,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que en implementación los prototipos probablemente serán costosos y pueden ser indistinguibles del real; el resumen lo afirma como rasgo fijo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-056-tres_espacios_innovacion_prototipado-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El prototipado cumple funciones distintas según la etapa del proyecto: en el espacio de 'inspiración' inspira nuevas ideas (rápido, numeroso y poco pulido); en 'ideación' refina las ideas incorporando elementos funcionales y emocionales (menos prototipos, mayor resolución); y en 'implementación' valida que la idea funcione en el mercado real (prototipos más completos, probablemente costosos, que pueden llegar a ser indistinguibles del producto final). Un indicador clave de una organización innovadora es su 'tiempo hasta el primer prototipo'.",
+      "texto_nuevo": "El prototipado cumple funciones distintas según la etapa del proyecto: en el espacio de 'inspiración' inspira nuevas ideas (rápido, numeroso y poco pulido); en 'ideación' refina las ideas incorporando elementos funcionales y emocionales (menos prototipos, mayor resolución); y en 'implementación' comunica la idea con la claridad suficiente para que la organización la acepte, la prueba y valida que funcione en el mercado real (prototipos más completos, probablemente costosos, que pueden llegar a ser indistinguibles del producto final). Un indicador clave de una organización innovadora es su 'tiempo hasta el primer prototipo'.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "702",
+        "frase": "communicating an idea with sufficient clarity to gain acceptance across the organization, proving it"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro define la implementación como comunicar la idea con claridad para que la organización la acepte, probarla y mostrar que funciona en su mercado; el resumen deja solo lo último.; Mismo defecto: se caen comunicar la idea para lograr su aceptación y probarla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -959,7 +959,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Aceptar la falla como parte necesaria del sistema",
-      "resumen_teorico": "La perfección no es posible ni te la puedes costear; incluso los mejores sistemas de calidad (Six Sigma) permiten una tasa de defectos que nunca llega a cero. Todo sistema hecho por personas falla eventualmente, y si tu negocio no muestra fallas, puede ser señal de que las estás ocultando o no las estás detectando bien. Acepta que la falla es inevitable: haz lo posible por anticiparla y prevenirla, y construye además formas de detectarla y gestionarla rápido para minimizar la pérdida.",
+      "resumen_teorico": "La perfección no es posible ni te la puedes costear; incluso los mejores sistemas de calidad (Six Sigma) permiten una tasa de defectos que nunca llega a cero. Todo sistema hecho por personas falla eventualmente, y si tu negocio no muestra fallas, probablemente no te estás esforzando lo suficiente, o puede ser señal de que las estás ocultando o no las estás detectando bien. Acepta que la falla es inevitable: haz lo posible por anticiparla y prevenirla, y construye además formas de detectarla y gestionarla rápido para minimizar la pérdida.",
       "pasos_accionables": [
         "Decide qué tasa de falla puedes costear comparando el costo de que algo falle contra el costo de prevenirlo.",
         "Revisa si la ausencia de fallas reportadas significa que tu sistema es robusto o que hay fallas escondidas.",
@@ -1939,7 +1939,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Adaptaciones Sectoriales de ISO 9000 (cGMP y ISO/TS 16949)",
-      "resumen_teorico": "Si tu negocio opera en una industria regulada, ISO 9001 general puede no bastarte: existen extensiones específicas. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseño, producción e instalación de productos automotrices, y reemplazó al antiguo estándar QS-9000; desde entonces las empresas pueden elegir entre ISO 9001 o ISO/TS 16949.",
+      "resumen_teorico": "Si tu negocio opera en una industria regulada, ISO 9001 general puede no bastarte: existen extensiones específicas. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia, calidad y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseño y desarrollo, producción y, cuando corresponda, instalación y servicio de productos automotrices, y reemplazó al antiguo estándar QS-9000; desde entonces las empresas pueden elegir entre ISO 9001 o ISO/TS 16949.",
       "pasos_accionables": [
         "Identifica la norma sectorial específica que te aplica (cGMP, ISO/TS 16949 u otra según tu mercado)",
         "Mapea los requisitos sectoriales adicionales sobre la base de ISO 9001",
@@ -3630,7 +3630,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Análisis de Capacidad de Proceso mediante Histogramas",
-      "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
+      "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Como regla general, para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
       "pasos_accionables": [
         "Seleccionar una muestra aleatoria de al menos 40 mediciones del proceso",
         "Construir el histograma con los límites de especificación superpuestos",
@@ -4181,7 +4181,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Análisis de Sistemas de Medición (MSA)",
-      "resumen_teorico": "El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación para garantizar decisiones correctas sobre productos y procesos. Los estudios de Gauge R&R permiten separar la variación debida al instrumento (repetibilidad) de la debida a los operarios (reproducibilidad).",
+      "resumen_teorico": "El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación. Los estudios de Gauge R&R permiten separar la variación debida al instrumento (repetibilidad) de la debida a los operarios (reproducibilidad).",
       "pasos_accionables": [
         "Definir el método de prueba con procedimiento paso a paso, equipo y condiciones",
         "Identificar el sistema de causas de variabilidad (material, analistas, aparatos, días)",
@@ -4529,7 +4529,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Análisis e Identificación de Mejores Prácticas",
-      "resumen_teorico": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+      "resumen_teorico": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo, e identificar en lo posible las razones de esas brechas. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
       "pasos_accionables": [
         "Recolectar y consolidar los datos de desempeño y normalización de todos los participantes",
         "Aplicar pruebas de significancia estadística a las comparaciones",
@@ -4814,7 +4814,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Análisis y Reporte de Hallazgos de Benchmarking",
-      "resumen_teorico": "El análisis debe ser imparcial, objetivo y alineado con los objetivos del benchmarking, identificando fortalezas, debilidades y brechas cuantificadas frente a los líderes. Las comparaciones cuantitativas suelen hacerse respecto al top quartile, el mejor de la clase, o el promedio poblacional, cada uno con ventajas y riesgos distintos. El reporte debe presentarse de forma clara, usando gráficos y tablas, y debe equilibrar la confidencialidad con el potencial de aprendizaje, cumpliendo siempre con la legislación antitrust.",
+      "resumen_teorico": "El análisis debe ser imparcial, objetivo y alineado con los objetivos del benchmarking, identificando fortalezas, debilidades y brechas frente a los líderes, cuantificadas cuando sea posible, y en lo posible las razones de esas brechas. Las comparaciones cuantitativas suelen hacerse respecto al top quartile, el mejor de la clase, o el promedio poblacional, cada uno con ventajas y riesgos distintos. El reporte debe presentarse de forma clara, usando gráficos y tablas, y debe equilibrar la confidencialidad con el potencial de aprendizaje, cumpliendo siempre con la legislación antitrust.",
       "pasos_accionables": [
         "Analizar los datos de desempeño y normalización para determinar brechas entre participantes",
         "Verificar la significancia estadística de las comparaciones realizadas",
@@ -8046,7 +8046,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Acúsate tú mismo antes de dar una mala noticia",
-      "resumen_teorico": "Cuando tengas que comunicarle a un proveedor algo que no le va a gustar, como reducir el pedido o pedir un precio más bajo, dile primero en voz alta todo lo negativo que podría pensar de ti antes de que lo piense. Nombrar el miedo o la queja antes de que aparezca le quita fuerza y evita que la conversación se ponga defensiva. Esta técnica funciona porque reconoce lo que la otra persona siente sin que tengas que pedir disculpas de más ni ceder de más. Como vas a seguir comprándole a este proveedor, la meta es conseguir lo que necesitas y, a la vez, evitar que la relación se rompa por una mala noticia mal dada.",
+      "resumen_teorico": "Cuando tengas que comunicarle a un proveedor algo que no le va a gustar, como reducir el pedido o pedir un precio más bajo, dile primero en voz alta todo lo negativo que podría pensar de ti antes de que lo piense. Nombrar el miedo o la queja antes de que aparezca le quita fuerza y evita que la conversación se ponga defensiva. Esta técnica funciona porque reconoce lo que la otra persona siente. Como vas a seguir comprándole a este proveedor, la meta es conseguir lo que necesitas y, a la vez, evitar que la relación se rompa por una mala noticia mal dada.",
       "pasos_accionables": [
         "Antes de la llamada o el mensaje, escribe todo lo malo que el proveedor podría pensar de tu propuesta y ensaya en voz alta cómo vas a decirlo.",
         "Empieza la conversación diciendo en voz alta esas quejas antes de que él las mencione.",
@@ -36623,7 +36623,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Destraba una negociación que se quedó estancada",
-      "resumen_teorico": "Cuando un proveedor deja de responder o actúa de forma que no tiene sentido, casi nunca es porque esté loco o de mala fe. Casi siempre hay una de tres razones: le falta información correcta, tiene una limitación que no puede revelar (un consejo legal, una promesa previa, no tener poder para cerrar), o persigue un interés oculto. Un correo corto y directo puede sacar del silencio a alguien que evita hablar, porque juega con el miedo a perder el trato. Sin embargo, lo que de verdad destraba un bloqueo es verse cara a cara, porque el correo permite esconderse detrás de la pantalla. Indagar con calma en sus restricciones, sin acusarlo, es la forma de buscar la razón oculta que estaba frenando todo el proceso.",
+      "resumen_teorico": "Cuando un proveedor deja de responder o actúa de forma que no tiene sentido, casi nunca es porque esté loco o de mala fe. Casi siempre hay una de tres razones: le falta información correcta, tiene una limitación que no puede revelar (un consejo legal, una promesa previa, evitar crear un precedente, no tener poder para cerrar), o persigue un interés oculto. Un correo corto y directo puede sacar del silencio a alguien que evita hablar, porque juega con el miedo a perder el trato. Sin embargo, lo que de verdad destraba un bloqueo es verse cara a cara, porque el correo permite esconderse detrás de la pantalla. Indagar con calma en sus restricciones, sin acusarlo, es la forma de buscar la razón oculta que estaba frenando todo el proceso.",
       "pasos_accionables": [
         "Si el proveedor deja de responder, envía un mensaje corto preguntando si abandonó la idea de cerrar el trato.",
         "Piensa si el silencio se debe a falta de información, una limitación no confesada, o un interés oculto.",
@@ -51736,7 +51736,7 @@
       "pasos_accionables": [
         "Planea tu ronda con al menos 3 a 6 meses de anticipación.",
         "Sincroniza tus conversaciones con varios inversores para que las ofertas (term sheets) te lleguen en fechas cercanas.",
-        "No reveles con qué otros inversores estás hablando, salvo que sean colaboradores conocidos entre ellos, aunque sí conviene decirles que tienes interés real de otras firmas.",
+        "Al principio no reveles con qué otros inversores estás hablando; solo conecta a firmas que son colaboradoras conocidas entre ellas cuando empiecen a llegar las ofertas (term sheets), aunque sí conviene decirles que tienes interés real de otras firmas.",
         "Pide feedback concreto si un inversor decide no invertir."
       ],
       "entregable_esperado": "Un calendario de tu ronda con varios inversores avanzando en etapas de negociación sincronizadas.",
@@ -53702,7 +53702,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Etiqueta lo que crees que piensa el otro para sacarle información",
-      "resumen_teorico": "Etiquetar consiste en nombrar en voz alta lo que crees que siente o piensa la otra parte, usando frases como 'parece que...' o 'da la sensación de que...'. Esta técnica no es una acusación sino una invitación a que el proveedor confirme o corrija tu percepción, y lo habitual es que responda con algo más que un sí o un no, revelando en el proceso información que no habría dado si se lo preguntabas directamente. Funciona porque baja la guardia de quien te escucha: se siente comprendido, no atacado. Después de etiquetar, haz una pausa y deja que la otra persona llene el silencio con detalles. Esa información nueva, sobre su verdadero límite o su verdadera prioridad, te sirve para ajustar tu siguiente oferta o pregunta.",
+      "resumen_teorico": "Etiquetar consiste en nombrar en voz alta lo que crees que siente o piensa la otra parte, usando frases como 'parece que...' o 'da la sensación de que...'. Esta técnica no es una acusación sino una invitación a que el proveedor confirme o corrija tu percepción, y lo habitual es que responda con algo más que un sí o un no. Funciona porque baja la guardia de quien te escucha: se siente comprendido, no atacado. Después de etiquetar, haz una pausa y deja que la otra persona llene el silencio con detalles. Esa información nueva, sobre su verdadero límite o su verdadera prioridad, te sirve para ajustar tu siguiente oferta o pregunta.",
       "pasos_accionables": [
         "Antes de hablar de precio o condiciones, fíjate en sus palabras, su tono y su lenguaje corporal, y di en voz alta lo que crees que siente o piensa el proveedor.",
         "Empieza la frase con 'parece que...' o 'da la sensación de que...' para suavizar la afirmación.",
@@ -57262,7 +57262,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Qué determina cuánto vale tu empresa para un inversionista",
-      "resumen_teorico": "Cuánto te ofrece un inversionista no es una ciencia exacta. Se mezcla lo medible con lo que no lo es: en qué etapa estás, cuánta competencia hay entre quienes quieren financiarte, la experiencia de tu equipo, el tamaño y la tendencia de tu mercado, el rango de valoración en el que suele invertir cada inversionista, tus números (ingresos, ganancia operativa, cuánto dinero quemas al mes) y el clima económico general. Concéntrate en lo que sí puedes controlar: generar competencia real entre los interesados.",
+      "resumen_teorico": "Cuánto te ofrece un inversionista no es una ciencia exacta. Se mezcla lo medible con lo que no lo es: en qué etapa estás, cuánta competencia hay entre quienes quieren financiarte, la experiencia de tu equipo, el tamaño y la tendencia de tu mercado, el rango de valoración en el que suele invertir cada inversionista, tus números (ingresos, ganancia operativa, cuánto dinero quemas al mes) y el clima económico general. Concéntrate en lo que sí puedes controlar y en lograr que varios inversionistas se interesen en tu ronda.",
       "pasos_accionables": [
         "Fortalece lo que depende de ti: la experiencia de tu equipo, la tracción de tu negocio, tus métricas.",
         "Habla con varios inversionistas al mismo tiempo para generar interés genuino: cuando hay más de uno interesado, tu posición para negociar mejora.",
@@ -59948,7 +59948,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Fitness for Purpose vs Conformance to Specification",
-      "resumen_teorico": "A veces hay una diferencia crítica entre cómo los clientes definen calidad (fitness for purpose: características que responden a sus necesidades, incluyendo ausencia de fallas y buen servicio) y cómo durante años la definieron muchos proveedores (conformance to specification: cumplir especificaciones en la prueba final). Esta brecha ignora factores como empaque, transporte, instalación, confiabilidad y mantenibilidad.",
+      "resumen_teorico": "A veces hay una diferencia crítica entre cómo los clientes definen calidad (fitness for purpose: características que responden a sus necesidades, incluyendo ausencia de fallas y buen servicio) y cómo durante años la definieron muchos proveedores (conformance to specification: cumplir especificaciones en la prueba final). Esta brecha ignora factores como empaque, almacenamiento, transporte, instalación, confiabilidad, mantenibilidad y servicio al cliente.",
       "pasos_accionables": [
         "Mapear la definición de calidad del cliente versus la definición interna de la organización",
         "Identificar factores post-venta no cubiertos por especificaciones técnicas (transporte, instalación, mantenimiento)",
@@ -62886,7 +62886,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Benchmarking Genérico",
-      "resumen_teorico": "El benchmarking genérico considera todos los procesos de negocio necesarios para alcanzar un nivel de desempeño determinado en un área específica, enfocándose en el resultado y en lo que se requiere para lograrlo, con énfasis en el detalle de las prácticas de trabajo. Permite comparar prácticas entre industrias distintas cuando el objetivo compartido (por ejemplo, reducir tiempos de espera) es común, independientemente del sector.",
+      "resumen_teorico": "El benchmarking genérico considera todos los procesos de negocio necesarios para alcanzar un nivel de desempeño determinado en un área específica, enfocándose en el resultado y en lo que se requiere para lograrlo, a menudo con mayor énfasis en el detalle de las prácticas de trabajo. Permite comparar prácticas entre industrias distintas cuando el objetivo compartido (por ejemplo, reducir tiempos de espera) es común, independientemente del sector.",
       "pasos_accionables": [
         "Identificar el resultado de desempeño que se desea mejorar (ej. tiempo de espera, satisfacción del cliente).",
         "Buscar organizaciones de cualquier industria reconocidas por sobresalir en ese resultado específico.",
@@ -64562,7 +64562,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Cómo manejar la resistencia al cambio en las personas",
-      "resumen_teorico": "La resistencia al cambio aparece por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades, rechazo a soluciones de afuera, no ver el problema, fracasos previos o el costo. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa la fuerza de cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo, no cargues tu propuesta con lo innecesario, trátalas con dignidad, ponte en su lugar y enfrenta la resistencia de forma directa.",
+      "resumen_teorico": "La resistencia al cambio suele aparecer por miedo a lo desconocido, apego a las rutinas, falta de nuevas habilidades, rechazo a soluciones de afuera, no ver el problema, fracasos previos o el costo. Para superarla, identifica qué frena el cambio y qué lo facilita, evalúa la fuerza de cada barrera y cada apoyo, y aplica formas de vencer la resistencia: haz participar a las personas, dales tiempo, no cargues tu propuesta con lo innecesario, trátalas con dignidad, ponte en su lugar y enfrenta la resistencia de forma directa.",
       "pasos_accionables": [
         "Identifica qué frena el cambio (las barreras) y qué lo facilita (los apoyos)",
         "Evalúa qué tan fuerte es cada barrera y cada apoyo",
@@ -76477,12 +76477,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Manejo de Quejas entre Ejecutivos",
-      "resumen_teorico": "El CEO debe distinguir entre quejas sobre el comportamiento de un ejecutivo y quejas sobre su competencia/desempeño. Las primeras se resuelven mejor reuniendo a ambas partes en la misma sala. Las segundas son más graves: si el CEO ya sabía del problema, debe actuar rápido (usualmente despido); si es información nueva, debe detener la conversación inmediatamente para no convertirla en profecía autocumplida, reevaluar en privado, y actuar según los hechos encontrados.",
+      "resumen_teorico": "El CEO debe distinguir entre quejas sobre el comportamiento de un ejecutivo y quejas sobre su competencia/desempeño. Las primeras se resuelven mejor reuniendo a ambas partes en la misma sala. Las segundas son más graves: si el CEO ya sabía del problema, debe actuar rápido (usualmente despido); si es información nueva, debe detener la conversación inmediatamente y dejar claro que de ningún modo comparte esa valoración, para no convertirla en profecía autocumplida, reevaluar en privado, y actuar según los hechos encontrados.",
       "pasos_accionables": [
         "Clasificar la queja recibida: ¿es sobre comportamiento o sobre competencia?",
         "Para quejas de comportamiento, convocar una reunión conjunta entre ambos ejecutivos, nunca resolver unilateralmente.",
         "Para quejas de competencia que ya conocías, actuar con rapidez (generalmente removiendo al ejecutivo) porque la organización ya perdió confianza en él.",
-        "Para quejas de competencia que son noticia nueva, detener la conversación, no mostrar acuerdo y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo."
+        "Para quejas de competencia que son noticia nueva, detener la conversación, dejar claro a quien se queja que de ningún modo compartes su valoración y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo."
       ],
       "entregable_esperado": "Protocolo interno de manejo de conflictos y quejas entre miembros del equipo ejecutivo.",
       "nodos_previos": [
@@ -78273,7 +78273,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Quién hace qué en cada tarea (matriz RACI)",
-      "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
+      "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una según lo que necesite tu proyecto; algunos comunes son quién la hace, quién la aprueba, a quién consultas, quién aporta recursos, a quién informas y quién firma. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
       "pasos_accionables": [
         "Haz una lista de las tareas o actividades del proyecto",
         "Haz una lista de las personas o grupos involucrados",
@@ -81357,7 +81357,7 @@
         "Identificar las áreas de mayor riesgo político: compensación, diseño organizacional, promociones.",
         "Diseñar un proceso formal, regular y visible para revisiones de desempeño y compensación, idealmente involucrando al directorio en el caso de ejecutivos.",
         "Ante solicitudes de expansión de responsabilidades, evitar dar señales o reacciones que puedan filtrarse; evaluar y decidir en privado, luego ejecutar rápidamente sin dejar tiempo para lobbying.",
-        "Crear un proceso de promoción formal, visible y defendible que involucre a varios gerentes familiarizados con el trabajo del empleado y, en el caso de los ejecutivos, al directorio.",
+        "Crear un proceso de promoción formal, visible y defendible, que puede involucrar a varios gerentes familiarizados con el trabajo del empleado; en el caso de los ejecutivos, debe incluir al directorio.",
         "Nunca ceder a solicitudes de aumento o promoción fuera de ciclo sin pasar por el proceso establecido."
       ],
       "entregable_esperado": "Documento de políticas formales de compensación, diseño organizacional y promociones, comunicado a todo el equipo directivo.",
@@ -84913,7 +84913,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "A Nadie le Importa, Solo Dirige tu Empresa",
-      "resumen_teorico": "Basado en la anécdota de Bill Parcells y Al Davis, este concepto establece que cuando las cosas van mal en una empresa, las circunstancias externas (mercado, competencia, mala suerte) no importan a inversores, empleados o medios. Las excusas —por muy válidas que sean— no salvan a la empresa. La energía mental debe enfocarse completamente en encontrar soluciones hacia adelante, no en justificar el fracaso o lamentar el pasado.",
+      "resumen_teorico": "Basado en la anécdota de Bill Parcells y Al Davis, este concepto establece que cuando las cosas van mal en una empresa, las circunstancias externas (mercado, competencia, mala suerte) no importan a inversores, junta directiva, empleados o medios. Las excusas, por muy válidas que sean, no salvan a la empresa. La energía mental debe enfocarse completamente en encontrar soluciones hacia adelante, no en justificar el fracaso o lamentar el pasado.",
       "pasos_accionables": [
         "Cuando enfrentes una crisis, evita gastar energía mental explicando por qué las circunstancias son injustas o difíciles.",
         "Redirige el 100% del esfuerzo mental hacia encontrar la salida posible, por improbable que parezca.",
@@ -85882,7 +85882,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Ofrece valor no económico cuando el precio se estanca",
-      "resumen_teorico": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+      "resumen_teorico": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio, o pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
       "pasos_accionables": [
         "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho.",
         "Cuando el precio se estanque, pregunta qué otro factor haría que el trato funcione para el otro.",
@@ -90640,7 +90640,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Plan de Gestión de Cambios",
-      "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides y le das seguimiento hasta que se aprueba, se aplaza o se descarta.",
+      "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides, le das seguimiento y la revisas, hasta que se aprueba, se aplaza o se descarta.",
       "pasos_accionables": [
         "Decide qué tan estricto va a ser tu control de cambios y cómo se conecta con el resto de tu manejo del proyecto",
         "Aclara qué cuenta como cambio en las fechas, el presupuesto, el alcance o los documentos del proyecto",
@@ -90729,7 +90729,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Plan para relacionarte con las personas interesadas en tu proyecto",
-      "resumen_teorico": "Aquí defines cómo te vas a relacionar con cada persona que tiene algo que ver con tu proyecto: en qué nivel de compromiso está ahora, en qué nivel te gustaría que estuviera, qué necesita saber de ti y cómo la vas acercando al nivel que buscas.",
+      "resumen_teorico": "Aquí defines cómo te vas a relacionar con cada persona que tiene algo que ver con tu proyecto: en qué nivel de compromiso está ahora, en qué nivel te gustaría que estuviera, qué necesita saber de ti, cómo se relacionan entre sí los grupos y cómo la vas acercando al nivel que buscas.",
       "pasos_accionables": [
         "Anota el nivel de compromiso actual y el nivel que te gustaría lograr con cada persona interesada",
         "Ubica a cada una según cómo se relaciona con tu proyecto: si no lo conoce, si se resiste, si es neutral, si lo apoya o si ya lo defiende",
@@ -90785,7 +90785,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Cómo vas a manejar los riesgos del proyecto (Plan de Gestión de Riesgos)",
-      "resumen_teorico": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo.",
+      "resumen_teorico": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo. No todos los proyectos necesitan este nivel de detalle.",
       "pasos_accionables": [
         "Elige el método y las herramientas que vas a usar para manejar los riesgos",
         "Define quién se encarga de qué en el manejo de riesgos",
@@ -91618,7 +91618,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Plantea tu oferta como un rango o con una cifra precisa, no redonda",
-      "resumen_teorico": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales y deja menos margen para que te empujen hacia abajo. Esto sirve sobre todo cuando te exigen dar tu precio primero.",
+      "resumen_teorico": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda, aunque mencionar un rango, sobre todo al alza, consigue considerablemente más que una cifra exacta. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales y deja menos margen para que te empujen hacia abajo. Esto sirve sobre todo cuando te exigen dar tu precio primero.",
       "pasos_accionables": [
         "Antes de dar tu precio, calcula un rango donde el número más bajo sea la cifra que de verdad quieres conseguir, y apóyalo en lo que se paga en otros lugares por algo parecido.",
         "Si prefieres dar una sola cifra, hazla específica y no redonda, aunque pedir un rango al alza suele conseguir bastante más que pedir una cifra exacta.",
@@ -103034,7 +103034,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Reformular el Problema en su Contexto Más Amplio",
-      "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+      "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios y cómo nos movemos juntos) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno, el entorno en el plano de la ciudad') es la esencia del pensamiento de diseño maduro.",
       "pasos_accionables": [
         "Identificar el producto o solución que se está diseñando y preguntar '¿qué problema real resuelve esto?'",
         "Ampliar el marco: pensar en el sistema, contexto o comportamiento humano detrás del producto",
@@ -120468,7 +120468,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Los Tres Espacios de Innovación y el Rol del Prototipado",
-      "resumen_teorico": "El prototipado cumple funciones distintas según la etapa del proyecto: en el espacio de 'inspiración' inspira nuevas ideas (rápido, numeroso y poco pulido); en 'ideación' refina las ideas incorporando elementos funcionales y emocionales (menos prototipos, mayor resolución); y en 'implementación' valida que la idea funcione en el mercado real (prototipos más completos, probablemente costosos, que pueden llegar a ser indistinguibles del producto final). Un indicador clave de una organización innovadora es su 'tiempo hasta el primer prototipo'.",
+      "resumen_teorico": "El prototipado cumple funciones distintas según la etapa del proyecto: en el espacio de 'inspiración' inspira nuevas ideas (rápido, numeroso y poco pulido); en 'ideación' refina las ideas incorporando elementos funcionales y emocionales (menos prototipos, mayor resolución); y en 'implementación' comunica la idea con la claridad suficiente para que la organización la acepte, la prueba y valida que funcione en el mercado real (prototipos más completos, probablemente costosos, que pueden llegar a ser indistinguibles del producto final). Un indicador clave de una organización innovadora es su 'tiempo hasta el primer prototipo'.",
       "pasos_accionables": [
         "Definir en qué espacio de innovación se encuentra el proyecto (inspiración, ideación o implementación).",
         "Establecer la meta de tener un primer prototipo listo en el primer día o semana del proyecto.",
@@ -121060,7 +121060,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Unique Link Tracking",
-      "resumen_teorico": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace puede indicar el interés real.",
+      "resumen_teorico": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión, una entrevista o una llamada. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace puede indicar el interés real.",
       "pasos_accionables": [
         "Crea un enlace único y rastreable (ej. con goo.gl) hacia información detallada.",
         "Presenta tu idea al cliente y comparte el enlace durante o después de la reunión.",
@@ -125110,7 +125110,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Matriz 'Ways to Grow' (Gestión de Portafolio de Innovación)",
-      "resumen_teorico": "Herramienta desarrollada en IDEO para evaluar el balance de los esfuerzos de innovación de una organización. Cruza dos ejes: ofertas (existentes a nuevas) y usuarios (existentes a nuevos), generando cuatro cuadrantes: innovación incremental (base existente-usuarios existentes), evolutiva (extensión en un eje) y revolucionaria (nuevo producto-nuevo usuario, la más riesgosa pero de mayor impacto, aunque rara vez se logra).",
+      "resumen_teorico": "Herramienta desarrollada en IDEO para evaluar el balance de los esfuerzos de innovación de una organización. Cruza dos ejes: ofertas (existentes a nuevas) y usuarios (existentes a nuevos), generando cuatro cuadrantes: innovación incremental (base existente-usuarios existentes), evolutiva (extensión en un eje) y revolucionaria (nuevo producto-nuevo usuario, la más riesgosa, aunque rara vez se logra).",
       "pasos_accionables": [
         "Mapear todos los proyectos de innovación actuales de la organización en la matriz",
         "Clasificar cada proyecto según su posición en los ejes oferta/usuario",

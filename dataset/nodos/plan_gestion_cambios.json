@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Plan de Gestión de Cambios",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides y le das seguimiento hasta que se aprueba, se aplaza o se descarta.",
+  "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides, le das seguimiento y la revisas, hasta que se aprueba, se aplaza o se descarta.",
   "pasos_accionables": [
     "Decide qué tan estricto va a ser tu control de cambios y cómo se conecta con el resto de tu manejo del proyecto",
     "Aclara qué cuenta como cambio en las fechas, el presupuesto, el alcance o los documentos del proyecto",
@@ -61,6 +61,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye el seguimiento de la solicitud hasta su desenlace y admite aplazarla; ambos se caen.; Mismo defecto: faltan el seguimiento y el desenlace de aplazar.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-056-plan_gestion_cambios-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides y le das seguimiento hasta que se aprueba, se aplaza o se descarta.",
+      "texto_nuevo": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides, le das seguimiento y la revisas, hasta que se aprueba, se aplaza o se descarta.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3745-3751, 3795-3801",
+        "frase": "Change request review Describe the process used to review change requests"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro tiene cuatro etapas y el resumen, que lo llama completo, omite la revisión de la solicitud.; Mismo defecto: falta la etapa de revisión de la solicitud, donde se analiza su impacto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

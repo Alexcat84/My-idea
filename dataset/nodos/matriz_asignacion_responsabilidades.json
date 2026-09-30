@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Quién hace qué en cada tarea (matriz RACI)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
+  "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una según lo que necesite tu proyecto; algunos comunes son quién la hace, quién la aprueba, a quién consultas, quién aporta recursos, a quién informas y quién firma. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
   "pasos_accionables": [
     "Haz una lista de las tareas o actividades del proyecto",
     "Haz una lista de las personas o grupos involucrados",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo muestra la tabla RACI como ejemplo; la frecuencia de uso es añadida.; Mismo defecto: la RACI es el ejemplo que da el libro, no el formato más usado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-056-matriz_asignacion_responsabilidades-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
+      "texto_nuevo": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una según lo que necesite tu proyecto; algunos comunes son quién la hace, quién la aprueba, a quién consultas, quién aporta recursos, a quién informas y quién firma. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2747-2763",
+        "frase": "RAMs can indicate different types of participation depending on the needs of the project."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los tipos de participación dependen de las necesidades del proyecto y trae además recurso y firma; el resumen cierra la lista en cuatro.; Mismo defecto: la lista queda cerrada en cuatro niveles cuando el libro la hace depender del proyecto y trae seis tipos comunes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

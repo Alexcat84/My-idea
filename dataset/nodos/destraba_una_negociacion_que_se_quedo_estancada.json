@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Destraba una negociación que se quedó estancada",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Cuando un proveedor deja de responder o actúa de forma que no tiene sentido, casi nunca es porque esté loco o de mala fe. Casi siempre hay una de tres razones: le falta información correcta, tiene una limitación que no puede revelar (un consejo legal, una promesa previa, no tener poder para cerrar), o persigue un interés oculto. Un correo corto y directo puede sacar del silencio a alguien que evita hablar, porque juega con el miedo a perder el trato. Sin embargo, lo que de verdad destraba un bloqueo es verse cara a cara, porque el correo permite esconderse detrás de la pantalla. Indagar con calma en sus restricciones, sin acusarlo, es la forma de buscar la razón oculta que estaba frenando todo el proceso.",
+  "resumen_teorico": "Cuando un proveedor deja de responder o actúa de forma que no tiene sentido, casi nunca es porque esté loco o de mala fe. Casi siempre hay una de tres razones: le falta información correcta, tiene una limitación que no puede revelar (un consejo legal, una promesa previa, evitar crear un precedente, no tener poder para cerrar), o persigue un interés oculto. Un correo corto y directo puede sacar del silencio a alguien que evita hablar, porque juega con el miedo a perder el trato. Sin embargo, lo que de verdad destraba un bloqueo es verse cara a cara, porque el correo permite esconderse detrás de la pantalla. Indagar con calma en sus restricciones, sin acusarlo, es la forma de buscar la razón oculta que estaba frenando todo el proceso.",
   "pasos_accionables": [
     "Si el proveedor deja de responder, envía un mensaje corto preguntando si abandonó la idea de cerrar el trato.",
     "Piensa si el silencio se debe a falta de información, una limitación no confesada, o un interés oculto.",
@@ -61,6 +61,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro insiste en verse cara a cara, mejor en momentos informales como una comida; poner la llamada como equivalente pierde ese límite.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-056-destraba_una_negociacion_que_se_quedo_estancada-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un proveedor deja de responder o actúa de forma que no tiene sentido, casi nunca es porque esté loco o de mala fe. Casi siempre hay una de tres razones: le falta información correcta, tiene una limitación que no puede revelar (un consejo legal, una promesa previa, no tener poder para cerrar), o persigue un interés oculto. Un correo corto y directo puede sacar del silencio a alguien que evita hablar, porque juega con el miedo a perder el trato. Sin embargo, lo que de verdad destraba un bloqueo es verse cara a cara, porque el correo permite esconderse detrás de la pantalla. Indagar con calma en sus restricciones, sin acusarlo, es la forma de buscar la razón oculta que estaba frenando todo el proceso.",
+      "texto_nuevo": "Cuando un proveedor deja de responder o actúa de forma que no tiene sentido, casi nunca es porque esté loco o de mala fe. Casi siempre hay una de tres razones: le falta información correcta, tiene una limitación que no puede revelar (un consejo legal, una promesa previa, evitar crear un precedente, no tener poder para cerrar), o persigue un interés oculto. Un correo corto y directo puede sacar del silencio a alguien que evita hablar, porque juega con el miedo a perder el trato. Sin embargo, lo que de verdad destraba un bloqueo es verse cara a cara, porque el correo permite esconderse detrás de la pantalla. Indagar con calma en sus restricciones, sin acusarlo, es la forma de buscar la razón oculta que estaba frenando todo el proceso.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4900-4902",
+        "frase": "por consejo legal, o a causa de promesas previas, o incluso para evitar crear precedentes"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de limitaciones del libro incluye evitar crear precedentes, que el resumen omite.; Mismo defecto: falta evitar crear precedentes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

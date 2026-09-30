@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Benchmarking Genérico",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El benchmarking genérico considera todos los procesos de negocio necesarios para alcanzar un nivel de desempeño determinado en un área específica, enfocándose en el resultado y en lo que se requiere para lograrlo, con énfasis en el detalle de las prácticas de trabajo. Permite comparar prácticas entre industrias distintas cuando el objetivo compartido (por ejemplo, reducir tiempos de espera) es común, independientemente del sector.",
+  "resumen_teorico": "El benchmarking genérico considera todos los procesos de negocio necesarios para alcanzar un nivel de desempeño determinado en un área específica, enfocándose en el resultado y en lo que se requiere para lograrlo, a menudo con mayor énfasis en el detalle de las prácticas de trabajo. Permite comparar prácticas entre industrias distintas cuando el objetivo compartido (por ejemplo, reducir tiempos de espera) es común, independientemente del sector.",
   "pasos_accionables": [
     "Identificar el resultado de desempeño que se desea mejorar (ej. tiempo de espera, satisfacción del cliente).",
     "Buscar organizaciones de cualquier industria reconocidas por sobresalir en ese resultado específico.",
@@ -56,6 +56,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro pone el foco en el resultado y en lo que se requiere para lograrlo, con mayor énfasis en las prácticas de trabajo; el nodo le resta peso al proceso.; Mismo defecto invertido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-057-generic_benchmarking-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El benchmarking genérico considera todos los procesos de negocio necesarios para alcanzar un nivel de desempeño determinado en un área específica, enfocándose en el resultado y en lo que se requiere para lograrlo, con énfasis en el detalle de las prácticas de trabajo. Permite comparar prácticas entre industrias distintas cuando el objetivo compartido (por ejemplo, reducir tiempos de espera) es común, independientemente del sector.",
+      "texto_nuevo": "El benchmarking genérico considera todos los procesos de negocio necesarios para alcanzar un nivel de desempeño determinado en un área específica, enfocándose en el resultado y en lo que se requiere para lograrlo, a menudo con mayor énfasis en el detalle de las prácticas de trabajo. Permite comparar prácticas entre industrias distintas cuando el objetivo compartido (por ejemplo, reducir tiempos de espera) es común, independientemente del sector.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17033",
+        "frase": "there is often less emphasis on gap analysis and greater emphasis upon"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que a menudo hay mayor énfasis en las prácticas de trabajo; el nodo lo da como rasgo fijo.; Mismo defecto: el 'often' del libro se pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

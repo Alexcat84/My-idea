@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Reformular el Problema en su Contexto Más Amplio",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+  "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios y cómo nos movemos juntos) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno, el entorno en el plano de la ciudad') es la esencia del pensamiento de diseño maduro.",
   "pasos_accionables": [
     "Identificar el producto o solución que se está diseñando y preguntar '¿qué problema real resuelve esto?'",
     "Ampliar el marco: pensar en el sistema, contexto o comportamiento humano detrás del producto",
@@ -63,6 +63,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da al prototipo el propósito de iniciar conversaciones con posibles socios, no el de validar la dirección.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-056-reformular_problema_mas_alla_del_producto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+      "texto_nuevo": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios y cómo nos movemos juntos) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno, el entorno en el plano de la ciudad') es la esencia del pensamiento de diseño maduro.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1531, 1575",
+        "frase": "move people, move things, move spaces, and move together"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La cita entrecomillada se trunca y pierde su último eslabón, el entorno en el plano de la ciudad, justo el nivel urbano del que habla el resumen.; La enumeración del libro tiene un cuarto elemento, moverse juntos, que el resumen omite al decir qué es repensar la movilidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

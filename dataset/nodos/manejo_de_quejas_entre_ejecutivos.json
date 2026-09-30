@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Manejo de Quejas entre Ejecutivos",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "El CEO debe distinguir entre quejas sobre el comportamiento de un ejecutivo y quejas sobre su competencia/desempeño. Las primeras se resuelven mejor reuniendo a ambas partes en la misma sala. Las segundas son más graves: si el CEO ya sabía del problema, debe actuar rápido (usualmente despido); si es información nueva, debe detener la conversación inmediatamente para no convertirla en profecía autocumplida, reevaluar en privado, y actuar según los hechos encontrados.",
+  "resumen_teorico": "El CEO debe distinguir entre quejas sobre el comportamiento de un ejecutivo y quejas sobre su competencia/desempeño. Las primeras se resuelven mejor reuniendo a ambas partes en la misma sala. Las segundas son más graves: si el CEO ya sabía del problema, debe actuar rápido (usualmente despido); si es información nueva, debe detener la conversación inmediatamente y dejar claro que de ningún modo comparte esa valoración, para no convertirla en profecía autocumplida, reevaluar en privado, y actuar según los hechos encontrados.",
   "pasos_accionables": [
     "Clasificar la queja recibida: ¿es sobre comportamiento o sobre competencia?",
     "Para quejas de comportamiento, convocar una reunión conjunta entre ambos ejecutivos, nunca resolver unilateralmente.",
     "Para quejas de competencia que ya conocías, actuar con rapidez (generalmente removiendo al ejecutivo) porque la organización ya perdió confianza en él.",
-    "Para quejas de competencia que son noticia nueva, detener la conversación, no mostrar acuerdo y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo."
+    "Para quejas de competencia que son noticia nueva, detener la conversación, dejar claro a quien se queja que de ningún modo compartes su valoración y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo."
   ],
   "entregable_esperado": "Protocolo interno de manejo de conflictos y quejas entre miembros del equipo ejecutivo.",
   "nodos_previos": [
@@ -42,6 +42,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide reevaluar rápido y dice qué hacer después según el desempeño encontrado; el paso lo pierde.; Mismo defecto: se caen la rapidez y la resolución de los motivos de quien se quejó.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-057-manejo_de_quejas_entre_ejecutivos-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para quejas de competencia que son noticia nueva, detener la conversación, no mostrar acuerdo y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo.",
+      "texto_nuevo": "Para quejas de competencia que son noticia nueva, detener la conversación, dejar claro a quien se queja que de ningún modo compartes su valoración y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1965",
+        "frase": "make clear to the complaining executive that you in no way agree with their assessment"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide dejar claro a quien se queja que de ningún modo compartes su valoración; no mostrar acuerdo se queda corto.; Mismo defecto: se pierde el dejar claro el desacuerdo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-057-manejo_de_quejas_entre_ejecutivos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El CEO debe distinguir entre quejas sobre el comportamiento de un ejecutivo y quejas sobre su competencia/desempeño. Las primeras se resuelven mejor reuniendo a ambas partes en la misma sala. Las segundas son más graves: si el CEO ya sabía del problema, debe actuar rápido (usualmente despido); si es información nueva, debe detener la conversación inmediatamente para no convertirla en profecía autocumplida, reevaluar en privado, y actuar según los hechos encontrados.",
+      "texto_nuevo": "El CEO debe distinguir entre quejas sobre el comportamiento de un ejecutivo y quejas sobre su competencia/desempeño. Las primeras se resuelven mejor reuniendo a ambas partes en la misma sala. Las segundas son más graves: si el CEO ya sabía del problema, debe actuar rápido (usualmente despido); si es información nueva, debe detener la conversación inmediatamente y dejar claro que de ningún modo comparte esa valoración, para no convertirla en profecía autocumplida, reevaluar en privado, y actuar según los hechos encontrados.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1965",
+        "frase": "make clear to the complaining executive that you in no way agree with their assessment"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide además dejar claro a quien se queja que no se comparte su valoración, para evitar la profecía autocumplida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

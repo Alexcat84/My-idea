@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Sistemas de Medición (MSA)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación para garantizar decisiones correctas sobre productos y procesos. Los estudios de Gauge R&R permiten separar la variación debida al instrumento (repetibilidad) de la debida a los operarios (reproducibilidad).",
+  "resumen_teorico": "El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación. Los estudios de Gauge R&R permiten separar la variación debida al instrumento (repetibilidad) de la debida a los operarios (reproducibilidad).",
   "pasos_accionables": [
     "Definir el método de prueba con procedimiento paso a paso, equipo y condiciones",
     "Identificar el sistema de causas de variabilidad (material, analistas, aparatos, días)",
@@ -40,5 +40,23 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-057-analisis_de_sistemas_de_medicion_msa-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación para garantizar decisiones correctas sobre productos y procesos. Los estudios de Gauge R&R permiten separar la variación debida al instrumento (repetibilidad) de la debida a los operarios (reproducibilidad).",
+      "texto_nuevo": "El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación. Los estudios de Gauge R&R permiten separar la variación debida al instrumento (repetibilidad) de la debida a los operarios (reproducibilidad).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19228",
+        "frase": "all require accurate measurement of both the desired results and the contributing factors"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que controlar y diseñar requieren medición exacta; la garantía de decisiones correctas es un resultado que el libro no promete.; Mismo defecto: resultado prometido que el libro no dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

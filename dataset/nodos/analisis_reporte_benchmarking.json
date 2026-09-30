@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis y Reporte de Hallazgos de Benchmarking",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El análisis debe ser imparcial, objetivo y alineado con los objetivos del benchmarking, identificando fortalezas, debilidades y brechas cuantificadas frente a los líderes. Las comparaciones cuantitativas suelen hacerse respecto al top quartile, el mejor de la clase, o el promedio poblacional, cada uno con ventajas y riesgos distintos. El reporte debe presentarse de forma clara, usando gráficos y tablas, y debe equilibrar la confidencialidad con el potencial de aprendizaje, cumpliendo siempre con la legislación antitrust.",
+  "resumen_teorico": "El análisis debe ser imparcial, objetivo y alineado con los objetivos del benchmarking, identificando fortalezas, debilidades y brechas frente a los líderes, cuantificadas cuando sea posible, y en lo posible las razones de esas brechas. Las comparaciones cuantitativas suelen hacerse respecto al top quartile, el mejor de la clase, o el promedio poblacional, cada uno con ventajas y riesgos distintos. El reporte debe presentarse de forma clara, usando gráficos y tablas, y debe equilibrar la confidencialidad con el potencial de aprendizaje, cumpliendo siempre con la legislación antitrust.",
   "pasos_accionables": [
     "Analizar los datos de desempeño y normalización para determinar brechas entre participantes",
     "Verificar la significancia estadística de las comparaciones realizadas",
@@ -58,6 +58,22 @@
         "motivo": "Tiene razon B: disenar dashboards internos por nivel no lleva naturalmente a analizar los datos de un estudio de benchmarking (normalizacion, significancia, cuartiles, antitrust); el lazo por indicadores y graficos es de palabras, y el salto exige explicacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1b-057-analisis_reporte_benchmarking-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El análisis debe ser imparcial, objetivo y alineado con los objetivos del benchmarking, identificando fortalezas, debilidades y brechas cuantificadas frente a los líderes. Las comparaciones cuantitativas suelen hacerse respecto al top quartile, el mejor de la clase, o el promedio poblacional, cada uno con ventajas y riesgos distintos. El reporte debe presentarse de forma clara, usando gráficos y tablas, y debe equilibrar la confidencialidad con el potencial de aprendizaje, cumpliendo siempre con la legislación antitrust.",
+      "texto_nuevo": "El análisis debe ser imparcial, objetivo y alineado con los objetivos del benchmarking, identificando fortalezas, debilidades y brechas frente a los líderes, cuantificadas cuando sea posible, y en lo posible las razones de esas brechas. Las comparaciones cuantitativas suelen hacerse respecto al top quartile, el mejor de la clase, o el promedio poblacional, cada uno con ventajas y riesgos distintos. El reporte debe presentarse de forma clara, usando gráficos y tablas, y debe equilibrar la confidencialidad con el potencial de aprendizaje, cumpliendo siempre con la legislación antitrust.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17451",
+        "frase": "where possible quantify, the gaps to the leading performers, and identify as far as possible"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide además identificar, en lo posible, las razones de las brechas; el nodo lo omite.; El libro pide cuantificar las brechas donde sea posible; el nodo da la cuantificación por hecha.; Mismo defecto que la marca 0: se cae la condición 'where possible', es un matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo vas a manejar los riesgos del proyecto (Plan de Gestión de Riesgos)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo.",
+  "resumen_teorico": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo. No todos los proyectos necesitan este nivel de detalle.",
   "pasos_accionables": [
     "Elige el método y las herramientas que vas a usar para manejar los riesgos",
     "Define quién se encarga de qué en el manejo de riesgos",
@@ -85,6 +85,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide definir las escalas de probabilidad e impacto con el significado de cada nivel, no valorar cada riesgo.; Mismo defecto: se pierde la escala con la definición de cada nivel.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-056-plan_gestion_riesgos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo.",
+      "texto_nuevo": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo. No todos los proyectos necesitan este nivel de detalle.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3025-3051",
+        "frase": "Not all projects need this level of detail."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que no todos los proyectos necesitan este nivel de detalle y que el formato se adapta; el resumen presenta la lista entera como obligatoria.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
