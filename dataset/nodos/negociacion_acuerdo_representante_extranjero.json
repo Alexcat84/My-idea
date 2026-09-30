@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Negociación del Acuerdo con el Representante Extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, confidencialidad y la ley aplicable en caso de disputa; también puede convenir incluir requisitos de desempeño (volumen mínimo de ventas). Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "El acuerdo formal con un representante o distribuidor extranjero debe definir la ley aplicable en caso de disputa y puede cubrir aspectos como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión y confidencialidad; también puede convenir incluir requisitos de desempeño (volumen mínimo de ventas). Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar la cláusula de salida y otras disposiciones que protegen a tu empresa. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Definir estructura de precios, comisiones y términos de pago",
     "Establecer si se otorgará exclusividad y por cuánto tiempo; lo recomendable es no otorgarla hasta que el representante demuestre su capacidad, o darla por un plazo limitado, como un año, con posibilidad de renovación",
@@ -131,6 +131,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la advertencia del libro: aunque elijas otra ley, la del país del representante puede prevalecer.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-018-negociacion_acuerdo_representante_extranjero-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El acuerdo formal con un representante o distribuidor extranjero debe cubrir aspectos clave como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión, confidencialidad y la ley aplicable en caso de disputa; también puede convenir incluir requisitos de desempeño (volumen mínimo de ventas). Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar las condiciones de terminación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "El acuerdo formal con un representante o distribuidor extranjero debe definir la ley aplicable en caso de disputa y puede cubrir aspectos como estructura de precios, términos de pago, exclusividad, territorio, cláusulas de rescisión y confidencialidad; también puede convenir incluir requisitos de desempeño (volumen mínimo de ventas). Es fundamental incluir una cláusula de salida clara y buscar asesoría legal especializada en el país del representante, dado que las leyes locales pueden limitar la cláusula de salida y otras disposiciones que protegen a tu empresa. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1971, 1983, 1999",
+        "frase": "escape clauses and other provisions to safeguard your company may be limited by the laws"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la ley local puede limitar la cláusula de salida y las demás disposiciones que protegen a la empresa, no solo la terminación.; El libro solo exige definir la ley aplicable (y la cláusula de salida); confidencialidad, territorio y demás son provisiones que el acuerdo puede contener.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

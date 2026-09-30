@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cuenta Abierta (Open Account)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que puede dificultar el cobro legal en caso de impago. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo de impago puede mitigarse mediante seguro de crédito a la exportación o factoring, y el financiamiento de capital de trabajo para exportación te da acceso a fondos mientras esperas el pago.",
+  "resumen_teorico": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que puede dificultar el cobro legal en caso de impago, obligarte a cobrar en el extranjero, algo difícil y costoso, y dificultar financiar tus cuentas por cobrar. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo de impago puede mitigarse mediante seguro de crédito a la exportación o factoring, y el financiamiento de capital de trabajo para exportación te da acceso a fondos mientras esperas el pago.",
   "pasos_accionables": [
     "Evaluar exhaustivamente la solvencia y el historial de pago del comprador, y los riesgos políticos y económicos del país, antes de ofrecer cuenta abierta",
     "Definir términos de pago claros (plazo, moneda) en el contrato",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide examinar los riesgos políticos, económicos y comerciales; el paso deja solo el del comprador.; Mismo defecto: falta el riesgo político y económico.; Mismo defecto: la evaluación se reduce al comprador.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-018-open_account-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que puede dificultar el cobro legal en caso de impago. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo de impago puede mitigarse mediante seguro de crédito a la exportación o factoring, y el financiamiento de capital de trabajo para exportación te da acceso a fondos mientras esperas el pago.",
+      "texto_nuevo": "En una cuenta abierta, el exportador factura al comprador y espera el pago en una fecha futura acordada, sin garantías documentales ni bancarias. Es ventajoso para el comprador pero riesgoso para el exportador, ya que puede dificultar el cobro legal en caso de impago, obligarte a cobrar en el extranjero, algo difícil y costoso, y dificultar financiar tus cuentas por cobrar. Es común en mercados competitivos donde los compradores exigen flexibilidad. El riesgo de impago puede mitigarse mediante seguro de crédito a la exportación o factoring, y el financiamiento de capital de trabajo para exportación te da acceso a fondos mientras esperas el pago.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4125",
+        "frase": "The exporter might also have to pursue collection abroad, which can be difficult and costly"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera tres riesgos de la cuenta abierta; el nodo deja uno y pierde el cobro en el extranjero y la dificultad de financiar las cuentas por cobrar.; Mismo defecto: se caen dos de los tres riesgos del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

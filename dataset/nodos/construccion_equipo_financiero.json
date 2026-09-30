@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Construcción del Equipo Financiero",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "A medida que una empresa crece, su estructura financiera pasa de un bookkeeper de medio tiempo a uno de tiempo completo y un contador, lo que a muchas les basta; solo si crece mucho más suma un Chief Financial Officer (CFO), un Treasurer y un Controller. El CFO define estrategia financiera y financiamiento; el Treasurer gestiona relaciones externas (bancos, inversionistas); el Controller asegura reportes financieros precisos y controles internos. Sin datos confiables del Controller, ni el CFO ni el Treasurer pueden operar bien.",
+  "resumen_teorico": "A medida que una empresa crece, puede necesitar un bookkeeper de tiempo completo en lugar de uno de medio tiempo, y también necesitará un contador, lo que a muchas les basta; solo si crece mucho más suma un Chief Financial Officer (CFO), un Treasurer y un Controller. El CFO define estrategia financiera y financiamiento; el Treasurer gestiona relaciones externas (bancos, inversionistas); el Controller asegura reportes financieros precisos y controles internos. Sin datos confiables del Controller, ni el CFO ni el Treasurer pueden operar bien.",
   "pasos_accionables": [
     "Determinar el tamaño actual de la empresa y sus necesidades de reporte financiero",
     "Contratar o delegar funciones de bookkeeping/contabilidad según la etapa",
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el libro dice que para muchas empresas basta el bookkeeper y el contador.; Se cae la etapa del contador, que para muchas empresas basta, y que los tres puestos separados son solo si crece mucho más.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-018-construccion_equipo_financiero-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que una empresa crece, su estructura financiera pasa de un bookkeeper de medio tiempo a uno de tiempo completo y un contador, lo que a muchas les basta; solo si crece mucho más suma un Chief Financial Officer (CFO), un Treasurer y un Controller. El CFO define estrategia financiera y financiamiento; el Treasurer gestiona relaciones externas (bancos, inversionistas); el Controller asegura reportes financieros precisos y controles internos. Sin datos confiables del Controller, ni el CFO ni el Treasurer pueden operar bien.",
+      "texto_nuevo": "A medida que una empresa crece, puede necesitar un bookkeeper de tiempo completo en lugar de uno de medio tiempo, y también necesitará un contador, lo que a muchas les basta; solo si crece mucho más suma un Chief Financial Officer (CFO), un Treasurer y un Controller. El CFO define estrategia financiera y financiamiento; el Treasurer gestiona relaciones externas (bancos, inversionistas); el Controller asegura reportes financieros precisos y controles internos. Sin datos confiables del Controller, ni el CFO ni el Treasurer pueden operar bien.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "303",
+        "frase": "you may need a full-time bookkeeper... and you will also need an accountant"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que al crecer 'puedes necesitar' un bookkeeper de tiempo completo; el nodo lo da como paso seguro.; Mismo defecto: el 'may need' del libro se vuelve un paso que siempre ocurre.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Seguimiento de Tendencias Futuras",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios económicos y productivos, cambios en la población, normas sociales que cambian, diferencias entre generaciones, presión ambiental por el clima, avances tecnológicos, tensión política y más regulación. En vez de una predicción única, puede servirte construir varios escenarios de futuro.",
+  "resumen_teorico": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios económicos y productivos, cambios en la población, normas sociales que cambian, diferencias entre generaciones, presión ambiental por el clima, avances tecnológicos, tensión política, umbrales críticos que, si se alcanzan, podrían cambiar la percepción del tema, y más regulación. En vez de una predicción única, puede servirte construir varios escenarios de futuro.",
   "pasos_accionables": [
-    "Identifica los factores de cambio que te afectan: ciencia, economía y producción, demografía, normas sociales, diferencias entre generaciones, presión de la naturaleza, tecnología, política, regulación",
+    "Identifica los factores de cambio que te afectan: ciencia, economía y producción, demografía, normas sociales, diferencias entre generaciones, presión de la naturaleza, tecnología, política, umbrales críticos, regulación",
     "Evalúa qué tan incierta es cada tendencia y en qué punto se vuelve crítica",
     "Construye varios escenarios alternativos de futuro (siguiendo el modelo de Shell)",
     "Usa herramientas como el Mapa de Fuerzas Futuras que Afectan la Sostenibilidad (Map of Future Forces Affecting Sustainability) de GEMI",
@@ -74,6 +74,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso omite factores de la lista del libro: la presión de la naturaleza, el reordenamiento económico y productivo y la divergencia entre generaciones.; Mismo defecto: faltan la presión de la naturaleza y el reordenamiento económico y productivo.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-019-seguimiento_tendencias_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios económicos y productivos, cambios en la población, normas sociales que cambian, diferencias entre generaciones, presión ambiental por el clima, avances tecnológicos, tensión política y más regulación. En vez de una predicción única, puede servirte construir varios escenarios de futuro.",
+      "texto_nuevo": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios económicos y productivos, cambios en la población, normas sociales que cambian, diferencias entre generaciones, presión ambiental por el clima, avances tecnológicos, tensión política, umbrales críticos que, si se alcanzan, podrían cambiar la percepción del tema, y más regulación. En vez de una predicción única, puede servirte construir varios escenarios de futuro.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1418",
+        "frase": "Presence of critical “thresholds”—which, if reached, could change issue perceptions."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae uno de los diez factores del libro: los umbrales críticos que, si se alcanzan, podrían cambiar la percepción de un tema.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-019-seguimiento_tendencias_sostenibilidad-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los factores de cambio que te afectan: ciencia, economía y producción, demografía, normas sociales, diferencias entre generaciones, presión de la naturaleza, tecnología, política, regulación",
+      "texto_nuevo": "Identifica los factores de cambio que te afectan: ciencia, economía y producción, demografía, normas sociales, diferencias entre generaciones, presión de la naturaleza, tecnología, política, umbrales críticos, regulación",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1418",
+        "frase": "Presence of critical “thresholds”—which, if reached, could change issue perceptions."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del paso omite los umbrales críticos, uno de los diez factores que el libro pide considerar.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

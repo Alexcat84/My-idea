@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Código de Conducta y Ética Orientado al Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un código de conducta orientado al cliente establece normas de comportamiento esperadas para todos los miembros de la organización, incluidos los directivos. Debe ser publicado, enseñado en la inducción de nuevos empleados, y considerado en evaluaciones de desempeño y distribución de recompensas. Su efectividad depende de su aplicación consistente; si se ignora, se convierte en una herramienta de engaño que los clientes y empleados eventualmente detectan, dañando la credibilidad organizacional.",
+  "resumen_teorico": "Un código de conducta orientado al cliente establece normas de comportamiento esperadas para todos los miembros de la organización, incluidos los directivos. Debe ser publicado, enseñado en la inducción de nuevos empleados, y considerado en evaluaciones de desempeño y distribución de recompensas. Su efectividad depende de su aplicación consistente; si se ignora, pierde su valor, salvo quizá como forma de engañar por poco tiempo a clientes y empleados, que pronto lo detectan, dañando la credibilidad organizacional.",
   "pasos_accionables": [
     "Redactar un código de conducta y ética centrado en el cliente",
     "Publicarlo y enseñarlo en la orientación de nuevos empleados",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Define tu Código Ético al Cliente",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-018-codigo_conducta_orientado_cliente-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un código de conducta orientado al cliente establece normas de comportamiento esperadas para todos los miembros de la organización, incluidos los directivos. Debe ser publicado, enseñado en la inducción de nuevos empleados, y considerado en evaluaciones de desempeño y distribución de recompensas. Su efectividad depende de su aplicación consistente; si se ignora, se convierte en una herramienta de engaño que los clientes y empleados eventualmente detectan, dañando la credibilidad organizacional.",
+      "texto_nuevo": "Un código de conducta orientado al cliente establece normas de comportamiento esperadas para todos los miembros de la organización, incluidos los directivos. Debe ser publicado, enseñado en la inducción de nuevos empleados, y considerado en evaluaciones de desempeño y distribución de recompensas. Su efectividad depende de su aplicación consistente; si se ignora, pierde su valor, salvo quizá como forma de engañar por poco tiempo a clientes y empleados, que pronto lo detectan, dañando la credibilidad organizacional.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2037",
+        "frase": "it becomes worthless, except perhaps as a means of deceiving customers and employees"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que lo ignorado pierde su valor, salvo quizá como engaño a corto plazo; el nodo afirma sin matiz que se vuelve herramienta de engaño.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

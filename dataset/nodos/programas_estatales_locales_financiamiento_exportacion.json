@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas Estatales y Locales de Financiamiento de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un beneficio estadounidense, no algo que exista igual en otros países. Varios estados y ciudades de EE.UU. tienen programas propios para ayudarte a exportar: préstamos de capital de trabajo antes y después de embarcar, financiamiento sobre tus cuentas por cobrar y seguros de exportación. También puede haber en tu estado subvenciones de contrapartida del programa STEP de la SBA, que pueden usarse, por ejemplo, para participar en ferias comerciales internacionales.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un beneficio estadounidense, no algo que exista igual en otros países. Varios estados y ciudades de EE.UU. tienen programas propios para ayudarte a exportar: préstamos y garantías de capital de trabajo antes y después de embarcar, financiamiento sobre tus cuentas por cobrar y seguros de exportación. También puede haber en tu estado subvenciones de contrapartida del programa STEP de la SBA, que pueden usarse, por ejemplo, para participar en ferias comerciales internacionales.",
   "pasos_accionables": [
     "Pregunta en la agencia de desarrollo económico de tu estado qué programas de financiamiento a la exportación tienen disponibles",
     "Revisa los requisitos: en general, que la venta se haga con carta de crédito o con seguro de crédito, y si te exigen usar puertos o instalaciones del estado, o algún requisito de contenido local",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se cae el requisito que el libro pone primero: en general, la venta con carta de crédito o con seguro de crédito.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-018-programas_estatales_locales_financiamiento_exportacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un beneficio estadounidense, no algo que exista igual en otros países. Varios estados y ciudades de EE.UU. tienen programas propios para ayudarte a exportar: préstamos de capital de trabajo antes y después de embarcar, financiamiento sobre tus cuentas por cobrar y seguros de exportación. También puede haber en tu estado subvenciones de contrapartida del programa STEP de la SBA, que pueden usarse, por ejemplo, para participar en ferias comerciales internacionales.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un beneficio estadounidense, no algo que exista igual en otros países. Varios estados y ciudades de EE.UU. tienen programas propios para ayudarte a exportar: préstamos y garantías de capital de trabajo antes y después de embarcar, financiamiento sobre tus cuentas por cobrar y seguros de exportación. También puede haber en tu estado subvenciones de contrapartida del programa STEP de la SBA, que pueden usarse, por ejemplo, para participar en ferias comerciales internacionales.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4449",
+        "frase": "including preshipment and postshipment working capital loans and guarantees, accounts receivable financing"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera préstamos y garantías de capital de trabajo; el nodo pierde las garantías.; Mismo defecto: se cae la garantía de capital de trabajo de la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

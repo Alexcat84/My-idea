@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Benchmarking de Consorcio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+  "resumen_teorico": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación, la naturaleza del análisis, los informes y los entregables, y el cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
   "pasos_accionables": [
     "Identificar organizaciones interesadas en formar un consorcio de benchmarking sobre un tema común.",
     "Acordar colectivamente el alcance, métricas, definiciones y cronograma del estudio.",
@@ -61,6 +61,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de un facilitador externo que suele apoyar, aunque no siempre; el interno y la designación obligada son añadidos.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-018-consortium_benchmarking-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+      "texto_nuevo": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación, la naturaleza del análisis, los informes y los entregables, y el cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17189",
+        "frase": "the validation criteria; the nature of the analysis, reporting, and deliverables; and the time scales"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de lo que acuerda el consorcio pierde la naturaleza del análisis, los informes y los entregables.; Mismo defecto: se cae un elemento de la enumeración del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
