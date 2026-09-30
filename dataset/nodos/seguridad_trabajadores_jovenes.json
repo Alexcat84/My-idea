@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguridad de Trabajadores Jóvenes",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos, debido a su falta de experiencia y a que les cuesta más hacer preguntas. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas, límites para conducir por trabajo), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
+  "resumen_teorico": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas, límites para conducir por trabajo), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
   "pasos_accionables": [
     "Verificar el cumplimiento de las leyes locales de trabajo infantil según la edad de cada persona",
     "Confirmar que los menores de 18 no operen equipos peligrosos que estén prohibidos para ellos",
@@ -77,6 +77,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye los casi accidentes entre lo que se reporta sin castigo.",
       "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-010-seguridad_trabajadores_jovenes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos, debido a su falta de experiencia y a que les cuesta más hacer preguntas. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas, límites para conducir por trabajo), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
+      "texto_nuevo": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas, límites para conducir por trabajo), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1715",
+        "frase": "Young workers may also be reluctant to ask questions or make demands"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro dice que puede ser su primer trabajo y que pueden dudar en preguntar, sin darlo como la causa del doble de riesgo; el nodo lo afirma como causa segura.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

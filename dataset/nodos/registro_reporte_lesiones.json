@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Registro y Reporte de Lesiones y Enfermedades Ocupacionales",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Si tienes trabajadores, en muchos mercados existe la obligación de llevar registro de lesiones y enfermedades laborales mediante formularios específicos: un registro general, un reporte por incidente y un resumen anual. Según el tamaño de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo mas para hospitalizaciones, amputaciones o perdida de un ojo (24 en Estados Unidos). Conviene preguntar cuales son las reglas exactas en tu mercado.",
+  "resumen_teorico": "Si tienes trabajadores, en muchos mercados existe la obligación de llevar registro de lesiones y enfermedades laborales, salvo las lesiones menores que solo requieren primeros auxilios, mediante formularios específicos: un registro general, un reporte por incidente y un resumen anual. Según el tamaño de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o pérdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo más para hospitalizaciones, amputaciones o pérdida de un ojo (24 en Estados Unidos). Conviene preguntar cuáles son las reglas exactas en tu mercado.",
   "pasos_accionables": [
     "Averigua si tu negocio está exento o no de los requisitos de registro según su tamaño y su actividad",
     "Registra cada lesión o enfermedad laboral que deba quedar registrada en tu formulario correspondiente",
@@ -188,6 +188,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1b-010-registro_reporte_lesiones-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tienes trabajadores, en muchos mercados existe la obligación de llevar registro de lesiones y enfermedades laborales mediante formularios específicos: un registro general, un reporte por incidente y un resumen anual. Según el tamaño de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo mas para hospitalizaciones, amputaciones o perdida de un ojo (24 en Estados Unidos). Conviene preguntar cuales son las reglas exactas en tu mercado.",
+      "texto_nuevo": "Si tienes trabajadores, en muchos mercados existe la obligación de llevar registro de lesiones y enfermedades laborales, salvo las lesiones menores que solo requieren primeros auxilios, mediante formularios específicos: un registro general, un reporte por incidente y un resumen anual. Según el tamaño de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o pérdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo más para hospitalizaciones, amputaciones o pérdida de un ojo (24 en Estados Unidos). Conviene preguntar cuáles son las reglas exactas en tu mercado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "245",
+        "frase": "except minor injuries requiring only first aid"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro excluye del registro las lesiones menores que solo requieren primeros auxilios; el nodo pierde esa excepción.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

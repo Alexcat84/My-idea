@@ -13,7 +13,7 @@
     "Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar",
     "Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?",
     "Probar la repetibilidad del proceso de ventas o adquisición de usuarios",
-    "Si en tu modelo quien usa es quien paga, buscar suficientes pedidos u órdenes reales a precio completo como prueba de validación",
+    "Si en tu modelo quien usa es quien paga, buscar suficientes pedidos u órdenes reales a precio completo como la única prueba aceptable de que tu venta se repite",
     "Probar canales de ventas y distribución",
     "Escuchar activamente a los clientes para identificar pivotes necesarios",
     "Posicionar correctamente el producto y la empresa"
@@ -135,6 +135,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige órdenes a precio completo como única prueba cuando el modelo es de un solo lado; el paso pierde esa condición.",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-011-customer_validation-pasos_accionables-7",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si en tu modelo quien usa es quien paga, buscar suficientes pedidos u órdenes reales a precio completo como prueba de validación",
+      "texto_nuevo": "Si en tu modelo quien usa es quien paga, buscar suficientes pedidos u órdenes reales a precio completo como la única prueba aceptable de que tu venta se repite",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1837",
+        "frase": "the only acceptable proof is enough full-price orders"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los pedidos a precio completo son la única prueba aceptable de que la venta se repite; el paso pierde ese límite.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

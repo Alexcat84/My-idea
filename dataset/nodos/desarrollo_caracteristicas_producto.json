@@ -11,7 +11,7 @@
     "Aplicar técnicas creativas (cambio de palabras clave, asociación aleatoria, ponerse en el lugar del otro) para generar alternativas",
     "Verificar cumplimiento de estándares, regulaciones y políticas aplicables",
     "Seleccionar características de alto nivel usando criterios explícitos de diseño",
-    "Desarrollar características y metas detalladas para cada componente, y luego optimizarlas y publicar el diseño final"
+    "Desarrollar características y metas detalladas, por componente si el producto es grande y muy complejo, preparar con ellas un diseño preliminar con especificaciones detalladas, y luego optimizarlas y publicar el diseño final"
   ],
   "entregable_esperado": "Diseño de características de producto/servicio de alto nivel y detallado, validado contra estándares y necesidades del cliente",
   "nodos_previos": [
@@ -60,6 +60,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro sigue con optimizar características y metas y publicar el diseño final; los pasos se detienen antes.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-desarrollo_caracteristicas_producto-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar características y metas detalladas para cada componente, y luego optimizarlas y publicar el diseño final",
+      "texto_nuevo": "Desarrollar características y metas detalladas, por componente si el producto es grande y muy complejo, preparar con ellas un diseño preliminar con especificaciones detalladas, y luego optimizarlas y publicar el diseño final",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4200-4210",
+        "frase": "the technical designers will prepare a preliminary design, with detailed specifications"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro divide en componentes solo los productos grandes y muy complejos; el paso lo da como regla general.; Mismo defecto que la marca 0.; Se cae el diseño preliminar con especificaciones detalladas, que el libro llama paso necesario antes de optimizar.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

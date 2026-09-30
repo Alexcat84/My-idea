@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sistemas contra incendios: alarmas y rociadores",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y encargar las pruebas y el mantenimiento de los rociadores a un trabajador calificado o a un contratista de rociadores. Deja un espacio libre de al menos 18 pulgadas bajo los rociadores y protege los cabezales para que no se golpeen ni se dañen.",
+  "resumen_teorico": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y encargar las pruebas y el mantenimiento de los rociadores a un trabajador calificado o a un contratista de rociadores. Deja un espacio libre de al menos 18 pulgadas bajo los rociadores y protege con guardas metálicas los cabezales expuestos a posible daño físico.",
   "pasos_accionables": [
     "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
     "Encarga las pruebas y el mantenimiento de los rociadores automáticos a un trabajador calificado o a un contratista de rociadores",
@@ -107,6 +107,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite un trabajador calificado o un contratista y abarca pruebas y mantenimiento.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-010-sistemas_de_extincion_de_incendios-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y encargar las pruebas y el mantenimiento de los rociadores a un trabajador calificado o a un contratista de rociadores. Deja un espacio libre de al menos 18 pulgadas bajo los rociadores y protege los cabezales para que no se golpeen ni se dañen.",
+      "texto_nuevo": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y encargar las pruebas y el mantenimiento de los rociadores a un trabajador calificado o a un contratista de rociadores. Deja un espacio libre de al menos 18 pulgadas bajo los rociadores y protege con guardas metálicas los cabezales expuestos a posible daño físico.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "587",
+        "frase": "Sprinkler heads subject to potential physical damage are protected by metal guards."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide guardas metálicas solo para los cabezales expuestos a posible daño físico; el nodo pierde la condición y el medio.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

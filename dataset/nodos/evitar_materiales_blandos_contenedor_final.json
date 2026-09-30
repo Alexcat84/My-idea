@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Evitar materiales blandos como contenedor final",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "No todo lo que envuelve un producto sirve como contenedor final de envío. En envíos regulados, como muestras clínicas o mercancías que necesitan trato especial, las bolsas plásticas, los sobres de papel y las cajas de cartón delgado no se aceptan como empaque exterior, sin importar cuán bien esté acolchado el contenido por dentro: la norma exige un contenedor rígido de cartón corrugado, madera, metal o plástico resistente, capaz de soportar la vibración y los cambios de temperatura, humedad y presión del trayecto. En envíos comunes, una caja de cartón delgado, como la de un regalo o de zapatos, va dentro de una caja exterior de cartón corrugado. La lección práctica es simple: lo blando puede ir adentro como protección, pero cuando la norma lo exige, lo que toca el exterior del envío tiene que ser rígido, o el paquete se puede quedar sin recoger.",
+  "resumen_teorico": "No todo lo que envuelve un producto sirve como contenedor final de envío. En envíos regulados, como muestras clínicas, las bolsas plásticas, los sobres de papel y las cajas de cartón delgado no se aceptan como empaque exterior, sin importar cuán bien esté acolchado el contenido por dentro: la norma exige un contenedor rígido de cartón corrugado, madera, metal, plástico u otro material igual de resistente, capaz de soportar la vibración y los cambios de temperatura, humedad y presión del trayecto. En envíos comunes, una caja de cartón delgado, como la de un regalo o de zapatos, va dentro de una caja exterior de cartón corrugado. La lección práctica es simple: lo blando puede ir adentro como protección, pero cuando la norma lo exige, lo que toca el exterior del envío tiene que ser rígido, o el paquete se puede quedar sin recoger.",
   "pasos_accionables": [
     "Revisa si tu contenedor final es rígido antes de despachar, no solo si el producto está protegido por dentro.",
     "En envíos regulados, como muestras clínicas, descarta bolsas plásticas, sobres de papel o cartón delgado como empaque exterior; en envíos comunes, mete el cartón delgado dentro de una caja de cartón corrugado.",
@@ -173,6 +173,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El defecto existe, pero es una condición perdida (en envíos regulados), no un añadido.; Se cae la condición: la prohibición es para envíos regulados; en envíos comunes el cartón delgado va dentro de una caja corrugada.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-evitar_materiales_blandos_contenedor_final-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todo lo que envuelve un producto sirve como contenedor final de envío. En envíos regulados, como muestras clínicas o mercancías que necesitan trato especial, las bolsas plásticas, los sobres de papel y las cajas de cartón delgado no se aceptan como empaque exterior, sin importar cuán bien esté acolchado el contenido por dentro: la norma exige un contenedor rígido de cartón corrugado, madera, metal o plástico resistente, capaz de soportar la vibración y los cambios de temperatura, humedad y presión del trayecto. En envíos comunes, una caja de cartón delgado, como la de un regalo o de zapatos, va dentro de una caja exterior de cartón corrugado. La lección práctica es simple: lo blando puede ir adentro como protección, pero cuando la norma lo exige, lo que toca el exterior del envío tiene que ser rígido, o el paquete se puede quedar sin recoger.",
+      "texto_nuevo": "No todo lo que envuelve un producto sirve como contenedor final de envío. En envíos regulados, como muestras clínicas, las bolsas plásticas, los sobres de papel y las cajas de cartón delgado no se aceptan como empaque exterior, sin importar cuán bien esté acolchado el contenido por dentro: la norma exige un contenedor rígido de cartón corrugado, madera, metal, plástico u otro material igual de resistente, capaz de soportar la vibración y los cambios de temperatura, humedad y presión del trayecto. En envíos comunes, una caja de cartón delgado, como la de un regalo o de zapatos, va dentro de una caja exterior de cartón corrugado. La lección práctica es simple: lo blando puede ir adentro como protección, pero cuando la norma lo exige, lo que toca el exterior del envío tiene que ser rígido, o el paquete se puede quedar sin recoger.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "949, 1087",
+        "frase": "corrugated fiberboard, wood, metal, plastic, or other equally strong material"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da la prohibición para muestras clínicas y sustancias biológicas de categoría B, no para toda mercancía de trato especial.; El libro deja la lista abierta con 'otro material igual de resistente'; el nodo la cierra en cuatro materiales.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Desplegar Metas a Través de la Organización (Hoshin/Deployment)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El despliegue convierte las metas de largo y corto plazo en planes operativos y proyectos, subdividiendo objetivos y asignándolos a niveles inferiores. Requiere definir acciones, responsables, recursos y cronogramas, y establecer una infraestructura para gestionar el plan. Dado que muchos procesos son multifuncionales, el despliegue se hace a equipos multifuncionales que luego designan un 'dueño' del proceso.",
+  "resumen_teorico": "El despliegue convierte las metas de largo y corto plazo en planes operativos y proyectos, subdividiendo objetivos y asignándolos a niveles inferiores. Requiere definir acciones, responsables, recursos y cronogramas, y establecer una infraestructura para gestionar el plan. Dado que muchos procesos son multifuncionales, el despliegue se hace a equipos multifuncionales y, al concluir el proyecto del equipo, se identifica un 'dueño' del proceso.",
   "pasos_accionables": [
     "Subdividir las metas estratégicas en sub-metas específicas y accionables",
     "Asignar responsabilidad de cada sub-meta a equipos multifuncionales o individuos",
@@ -45,6 +45,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el despliegue exitoso requiere una infraestructura para gestionar el plan, y eso se pierde.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-desplegar_metas_organizacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El despliegue convierte las metas de largo y corto plazo en planes operativos y proyectos, subdividiendo objetivos y asignándolos a niveles inferiores. Requiere definir acciones, responsables, recursos y cronogramas, y establecer una infraestructura para gestionar el plan. Dado que muchos procesos son multifuncionales, el despliegue se hace a equipos multifuncionales que luego designan un 'dueño' del proceso.",
+      "texto_nuevo": "El despliegue convierte las metas de largo y corto plazo en planes operativos y proyectos, subdividiendo objetivos y asignándolos a niveles inferiores. Requiere definir acciones, responsables, recursos y cronogramas, y establecer una infraestructura para gestionar el plan. Dado que muchos procesos son multifuncionales, el despliegue se hace a equipos multifuncionales y, al concluir el proyecto del equipo, se identifica un 'dueño' del proceso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9040",
+        "frase": "At the conclusion of the team project, an owner is identified."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que al concluir el proyecto del equipo se identifica un dueño, sin atribuir la designación a los equipos.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

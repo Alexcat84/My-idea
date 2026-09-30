@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Soporte de Publicidad y Marketing para Franquiciados",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El franquiciante debe controlar y desarrollar el mensaje publicitario nacional, regional y local, ya que los franquiciados pagan por explotar la identidad de marca. Esto incluye supervisar gastos publicitarios y aprobar materiales de marketing local antes de su uso.",
+  "resumen_teorico": "El franquiciante debe controlar y desarrollar el mensaje publicitario nacional, regional y local, ya que los franquiciados pagan por explotar la identidad de marca. Esto incluye supervisar los gastos de publicidad nacional y exigir que la publicidad local use materiales creados por el franquiciante o se apruebe antes.",
   "pasos_accionables": [
     "Desarrollar materiales publicitarios estandarizados a nivel nacional",
     "Establecer proceso de aprobación previa para publicidad local de franquiciados",
@@ -22,5 +22,23 @@
   "etiqueta_arbol": "Cuida el Mensaje de Marca",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-009-soporte_publicidad_marketing-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El franquiciante debe controlar y desarrollar el mensaje publicitario nacional, regional y local, ya que los franquiciados pagan por explotar la identidad de marca. Esto incluye supervisar gastos publicitarios y aprobar materiales de marketing local antes de su uso.",
+      "texto_nuevo": "El franquiciante debe controlar y desarrollar el mensaje publicitario nacional, regional y local, ya que los franquiciados pagan por explotar la identidad de marca. Esto incluye supervisar los gastos de publicidad nacional y exigir que la publicidad local use materiales creados por el franquiciante o se apruebe antes.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2906",
+        "frase": "will need to use franchisor-created advertising materials or will need to be approved in advance"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos vías para la publicidad local: usar materiales creados por el franquiciante o aprobarla antes; el nodo deja solo la aprobación.; El libro limita la supervisión de gastos a la publicidad nacional; el nodo la extiende a todo gasto publicitario.; Mismo defecto que la marca 0: se cae la vía de usar materiales creados por el franquiciante.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

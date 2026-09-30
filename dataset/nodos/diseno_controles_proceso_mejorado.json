@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diseño de Controles del Proceso Mejorado",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "En la fase de control, tu equipo diseña y documenta los controles para sostener las ganancias de la mejora: actualizar el FMEA, aplicar técnicas a prueba de errores (mistake-proofing), fijar estándares de control según el desempeño real del nuevo proceso y garantizar el autocontrol de los individuos: que conozcan exactamente los estándares de producto y de proceso, reciban retroalimentación oportuna y tengan un proceso capaz, los medios necesarios y autoridad para ajustarlo.",
+  "resumen_teorico": "En la fase de control, tu equipo diseña y documenta los controles para sostener las ganancias de la mejora: actualizar el FMEA, aplicar, si es posible, técnicas a prueba de errores (mistake-proofing), fijar estándares de control según el desempeño real del nuevo proceso y garantizar el autocontrol de los individuos: que conozcan exactamente los estándares de producto y de proceso, reciban retroalimentación oportuna y tengan un proceso capaz, los medios necesarios y autoridad para ajustarlo.",
   "pasos_accionables": [
     "Actualizar el FMEA para identificar controles necesarios",
     "Aplicar técnicas de mistake-proofing en las mejoras, si es posible",
@@ -78,6 +78,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El autocontrol del libro exige además saber qué se espera y tener un proceso capaz y los medios necesarios. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-diseno_controles_proceso_mejorado-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En la fase de control, tu equipo diseña y documenta los controles para sostener las ganancias de la mejora: actualizar el FMEA, aplicar técnicas a prueba de errores (mistake-proofing), fijar estándares de control según el desempeño real del nuevo proceso y garantizar el autocontrol de los individuos: que conozcan exactamente los estándares de producto y de proceso, reciban retroalimentación oportuna y tengan un proceso capaz, los medios necesarios y autoridad para ajustarlo.",
+      "texto_nuevo": "En la fase de control, tu equipo diseña y documenta los controles para sostener las ganancias de la mejora: actualizar el FMEA, aplicar, si es posible, técnicas a prueba de errores (mistake-proofing), fijar estándares de control según el desempeño real del nuevo proceso y garantizar el autocontrol de los individuos: que conozcan exactamente los estándares de producto y de proceso, reciban retroalimentación oportuna y tengan un proceso capaz, los medios necesarios y autoridad para ajustarlo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14807",
+        "frase": "Mistake-proof the improvement(s), if possible."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la condición 'si es posible' a la prueba de errores y el resumen la omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

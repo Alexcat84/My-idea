@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Hard Fixes: soluciones organizacionales profundas",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "A diferencia de los arreglos rápidos, los 'hard fixes' cambian algo fundamental en la organización. Implican tomar en serio la sorpresa del fallo, revisando trade-offs entre seguridad y producción, el drift del sistema hacia los límites de rendimiento seguro, las estructuras de incentivos, las prioridades de los empleados como reflejo de lo que valora la organización, la atención gerencial a la seguridad y los modelos organizacionales sobre el riesgo. El fallo puede abrir una ventana temporal de apertura al aprendizaje que debe aprovecharse antes de que se cierre por demandas de rendición de cuentas.",
+  "resumen_teorico": "A diferencia de los arreglos rápidos, los 'hard fixes' cambian algo fundamental en la organización. Implican tomar en serio la sorpresa del fallo, revisando trade-offs entre seguridad y producción, el drift del sistema hacia los límites de rendimiento seguro, las estructuras de incentivos, las prioridades de los empleados como reflejo de lo que valora la organización, la atención gerencial a la seguridad y los modelos organizacionales sobre el riesgo. El fallo puede abrir una ventana temporal de apertura al aprendizaje.",
   "pasos_accionables": [
     "Examinar los trade-offs legítimos entre seguridad y metas de producción/eficiencia",
     "Evaluar si el sistema ha derivado (drifted) hacia los límites de operación segura",
@@ -44,6 +44,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae uno de los seis frentes del libro: las prioridades de los empleados como reflejo de lo que valora la organización.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-010-hard_fixes_organizacionales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de los arreglos rápidos, los 'hard fixes' cambian algo fundamental en la organización. Implican tomar en serio la sorpresa del fallo, revisando trade-offs entre seguridad y producción, el drift del sistema hacia los límites de rendimiento seguro, las estructuras de incentivos, las prioridades de los empleados como reflejo de lo que valora la organización, la atención gerencial a la seguridad y los modelos organizacionales sobre el riesgo. El fallo puede abrir una ventana temporal de apertura al aprendizaje que debe aprovecharse antes de que se cierre por demandas de rendición de cuentas.",
+      "texto_nuevo": "A diferencia de los arreglos rápidos, los 'hard fixes' cambian algo fundamental en la organización. Implican tomar en serio la sorpresa del fallo, revisando trade-offs entre seguridad y producción, el drift del sistema hacia los límites de rendimiento seguro, las estructuras de incentivos, las prioridades de los empleados como reflejo de lo que valora la organización, la atención gerencial a la seguridad y los modelos organizacionales sobre el riesgo. El fallo puede abrir una ventana temporal de apertura al aprendizaje.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3981-3991",
+        "frase": "can quickly become compromised by calls for accountability"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro dice que esa apertura puede verse comprometida rápidamente por las demandas de rendición de cuentas; el nodo da por seguro que se cerrará.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

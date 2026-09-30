@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Protección a quien denuncia irregularidades de seguridad",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro o una lesión o enfermedad laboral, presenta una queja, pide una inspección de seguridad o participa en ella. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
+  "resumen_teorico": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro o una lesión o enfermedad laboral, presenta una queja, pide una inspección de seguridad, participa en ella o participa o testifica en un procedimiento relacionado con una inspección. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
   "pasos_accionables": [
     "Define una política interna que prohíba represalias contra quien denuncia un problema de seguridad",
     "Cuéntale a las personas que trabajan contigo cuál es este derecho y cómo usarlo",
@@ -108,6 +108,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro protege también a quien reporta una lesión o enfermedad laboral y a quien pide una inspección.; Mismo defecto: falta reportar una lesión o enfermedad laboral entre los derechos protegidos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-010-programa_proteccion_denunciantes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro o una lesión o enfermedad laboral, presenta una queja, pide una inspección de seguridad o participa en ella. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
+      "texto_nuevo": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro o una lesión o enfermedad laboral, presenta una queja, pide una inspección de seguridad, participa en ella o participa o testifica en un procedimiento relacionado con una inspección. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1855",
+        "frase": "participating or testifying in any proceeding related to an OSHA inspection"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro protege también a quien participa o testifica en un procedimiento relacionado con una inspección; el nodo lo deja fuera de la enumeración.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

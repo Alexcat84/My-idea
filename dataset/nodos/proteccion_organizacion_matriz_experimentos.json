@@ -7,7 +7,7 @@
   "resumen_teorico": "Se suele pensar que hay que proteger tu idea nueva de que el negocio de siempre la aplaste. Pero es igual o más importante cuidar al negocio de siempre de los riesgos que trae tu experimento. Si otra parte de tu negocio (por ejemplo quien vende a empresas) teme que un precio más bajo al consumidor final le quite ventas, ese miedo es razonable y puede hacer que te frenen, te saboteen o te pongan trabas. Por eso necesitas reglas claras, medir algo que se pueda interpretar sin dudas, y mantener el riesgo bajo control.",
   "pasos_accionables": [
     "Piensa qué parte de tu negocio podría sentirse amenazada por lo que quieres probar",
-    "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada, con un tiempo máximo y un tope de clientes afectados, y vigila las métricas y las reacciones de los clientes para detenerla si algo sale muy mal",
+    "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada, con un tiempo máximo y un tope de clientes afectados, que un solo equipo la lleve de principio a fin, y vigila las métricas y las reacciones de los clientes para detenerla si algo sale muy mal",
     "Elige un reporte estándar de cinco a diez métricas accionables, el mismo para todas tus pruebas, que cualquiera pueda leer de la misma manera antes de sentarte a decidir",
     "Define de antemano quién decide con esos resultados y con qué criterio",
     "Deja claro desde el inicio que el objetivo es aprender, no lanzar algo a medias"
@@ -80,6 +80,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide un único reporte estándar de cinco a diez métricas accionables, el mismo para todos, no una sola métrica.; Mismo defecto: una métrica en lugar del reporte estándar de cinco a diez métricas.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-011-proteccion_organizacion_matriz_experimentos-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada, con un tiempo máximo y un tope de clientes afectados, y vigila las métricas y las reacciones de los clientes para detenerla si algo sale muy mal",
+      "texto_nuevo": "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada, con un tiempo máximo y un tope de clientes afectados, que un solo equipo la lleve de principio a fin, y vigila las métricas y las reacciones de los clientes para detenerla si algo sale muy mal",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3149",
+        "frase": "One team must see the whole experiment through from end to end."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso reconstruye las reglas del procedimiento del libro y se salta la de que un solo equipo lleve la prueba de principio a fin.; Misma omisión de la regla del equipo único que señala la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

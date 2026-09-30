@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Comprobar el dinero y el crédito del candidato",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "La falta de capital es quizás la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
+  "resumen_teorico": "La falta de capital es quizás la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga, o tenga acceso a, fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
   "pasos_accionables": [
     "Pide al candidato su estado de patrimonio neto personal",
     "Confirma los fondos directamente con su banco",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide fijar ese estándar de forma conservadora y alejarse de los candidatos demasiado apalancados.; Mismo defecto: sin el criterio conservador el paso queda abierto a aceptar deuda excesiva.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-verificacion_capitalizacion_credito-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La falta de capital es quizás la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
+      "texto_nuevo": "La falta de capital es quizás la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga, o tenga acceso a, fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4283",
+        "frase": "Your new franchisee must have—or have access to—the necessary funds"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro acepta que el candidato tenga los fondos o acceso a ellos; el nodo exige que los tenga.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

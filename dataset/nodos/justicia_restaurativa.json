@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Justicia Restaurativa vs. Justicia Retributiva",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "La justicia retributiva busca castigar a quien cometió el error, asumiendo que si el daño fue real, la respuesta debe doler también. La justicia restaurativa, en cambio, busca sanar: reconoce múltiples perspectivas sobre lo ocurrido, asume que las personas no van a trabajar con la intención de hacer mal su trabajo, y fomenta el diálogo entre el implicado y la comunidad en lugar de romper relaciones mediante sanciones.",
+  "resumen_teorico": "La justicia retributiva busca castigar a quien cometió el error, asumiendo que si el error dañó o pudo dañar a alguien, la respuesta debe doler también. La justicia restaurativa, en cambio, busca sanar: reconoce múltiples perspectivas sobre lo ocurrido, asume que las personas no van a trabajar con la intención de hacer mal su trabajo, y fomenta el diálogo entre el implicado y la comunidad en lugar de romper relaciones mediante sanciones.",
   "pasos_accionables": [
     "Diseñar procesos de respuesta a incidentes centrados en el diálogo y la reparación",
     "Fomentar espacios donde el trabajador afectado pueda contar su versión sin temor a represalias",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Sana en Vez de Castigar",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-010-justicia_restaurativa-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La justicia retributiva busca castigar a quien cometió el error, asumiendo que si el daño fue real, la respuesta debe doler también. La justicia restaurativa, en cambio, busca sanar: reconoce múltiples perspectivas sobre lo ocurrido, asume que las personas no van a trabajar con la intención de hacer mal su trabajo, y fomenta el diálogo entre el implicado y la comunidad en lugar de romper relaciones mediante sanciones.",
+      "texto_nuevo": "La justicia retributiva busca castigar a quien cometió el error, asumiendo que si el error dañó o pudo dañar a alguien, la respuesta debe doler también. La justicia restaurativa, en cambio, busca sanar: reconoce múltiples perspectivas sobre lo ocurrido, asume que las personas no van a trabajar con la intención de hacer mal su trabajo, y fomenta el diálogo entre el implicado y la comunidad en lugar de romper relaciones mediante sanciones.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "650",
+        "frase": "if the error or violation (potentially) hurt someone, then the response should hurt"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro aplica la lógica retributiva también al daño potencial; el nodo la limita al daño real.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Consulta en Sitio de OSHA (On-Site Consultation)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros, te asesora sobre qué exige la norma y te ayuda a armar un programa de seguridad. Si usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros y cómo corregirlos, te asesora sobre qué exige la norma, capacita y educa a tus trabajadores y te ayuda a armar un programa de seguridad. Si tu negocio es pequeño, usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
   "pasos_accionables": [
     "Pide una visita de consulta al programa estatal de On-Site Consultation",
     "Decide junto al consultor qué necesitas: resolver un problema puntual o una evaluación completa",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Exención en vez del aplazamiento limitado a la vigencia de la designación que da el libro.; Mismo defecto: convertir un aplazamiento temporal en exención endurece lo que dice el libro.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-010-programa_consulta_osha_onsite-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros, te asesora sobre qué exige la norma y te ayuda a armar un programa de seguridad. Si usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros y cómo corregirlos, te asesora sobre qué exige la norma, capacita y educa a tus trabajadores y te ayuda a armar un programa de seguridad. Si tu negocio es pequeño, usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1783-1791",
+        "frase": "SHARP recognizes small business employers who have used consultation services"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera también que el consultor indica cómo corregir los peligros y capacita y educa a los trabajadores; el nodo omite esas partes.; El libro reserva SHARP a pequeños negocios, y el resumen, que habla de pequeños y medianos, lo deja abierto a ambos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

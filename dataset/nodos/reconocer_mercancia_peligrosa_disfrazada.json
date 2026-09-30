@@ -6,7 +6,7 @@
   "fuente": "Guia de empaque para envios (FedEx)",
   "resumen_teorico": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque, en algunas circunstancias, pueden dañar a personas, bienes o el ambiente durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envío o, peor, que provoque un incidente en tránsito. Cada tipo de mercancía peligrosa tiene un número y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto y preparar bien cada envío, desde el primero, es un paso que no se puede saltar.",
   "pasos_accionables": [
-    "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos o encendedores.",
+    "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos, encendedores, munición o material radiactivo.",
     "Busca en la normativa de IATA y OACI la clasificación oficial de ese tipo de producto (número UN, nombre de envío, clase de peligro y, si aplica, riesgo secundario y grupo de embalaje).",
     "Pregunta a tu courier si acepta ese producto y bajo qué condiciones de empaque.",
     "Capacítate y certifícate antes de despachar el primer envío de este tipo.",
@@ -276,6 +276,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye gases, combustibles, pirotecnia, fósforos y encendedores.; Mismo defecto: faltan gases y combustibles.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos o encendedores.",
+      "texto_nuevo": "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos, encendedores, munición o material radiactivo.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1757-1781",
+        "frase": "Common Dangerous Goods ... Ammunition ... Radioactive materials"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso deja fuera munición y materiales radiactivos, que el libro pone entre las mercancías peligrosas comunes.; La lista común del libro incluye munición y materiales radiactivos, que ninguna categoría del paso cubre; el resto de lo citado cabe en las categorías del paso.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

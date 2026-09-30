@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programas Cooperativos de OSHA (Asociaciones Estratégicas, Alianzas, VPP)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones y enfermedades por debajo del promedio nacional de su industria.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones y enfermedades por debajo del promedio nacional de su industria. Para participar en VPP debes presentar una solicitud a OSHA y pasar una evaluación rigurosa en el lugar de trabajo.",
   "pasos_accionables": [
     "Revisa si tu negocio cumple los criterios para participar en VPP",
     "Contacta la Oficina de Área o Regional de OSHA que corresponda a tu zona para explorar una Asociación Estratégica",
@@ -90,6 +90,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro compara con el promedio nacional de la industria respectiva, no con el promedio general.; Mismo defecto: el promedio es el de la propia industria, y cuenta lesiones y enfermedades.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-010-programas_cooperativos_osha-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones y enfermedades por debajo del promedio nacional de su industria.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones y enfermedades por debajo del promedio nacional de su industria. Para participar en VPP debes presentar una solicitud a OSHA y pasar una evaluación rigurosa en el lugar de trabajo.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1851",
+        "frase": "employers must submit an application to OSHA and undergo a rigorous onsite evaluation"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone como condición para participar en VPP presentar una solicitud a OSHA y pasar una evaluación rigurosa en el lugar; el resumen la omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

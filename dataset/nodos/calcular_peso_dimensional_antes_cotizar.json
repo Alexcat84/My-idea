@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Calcular el peso dimensional antes de cotizar",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Cuando un courier cotiza tu envío, no siempre cobra por el peso real de la báscula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un número fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese cálculo puede darte un peso mayor al real, y el courier siempre te cobra por el más alto de los dos. Como el divisor lo define cada courier, no sirve memorizar un número: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este cálculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas más ajustadas al tamaño real de tu producto.",
+  "resumen_teorico": "Cuando un courier cotiza tu envío, no siempre cobra por el peso real de la báscula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un número fijo, llamado divisor. Si tu caja es grande pero liviana, ese cálculo puede darte un peso mayor al real, y el courier siempre te cobra por el más alto de los dos. Conocer este cálculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas más ajustadas al tamaño real de tu producto.",
   "pasos_accionables": [
     "Mide el largo, ancho y alto de tu caja en las unidades que use tu courier.",
     "Pregunta a tu courier cuál es su divisor de peso dimensional actual.",
@@ -131,6 +131,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da un único divisor para EE.UU., Puerto Rico e internacional y nada de cambios anuales.; Mismo hecho añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-calcular_peso_dimensional_antes_cotizar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un courier cotiza tu envío, no siempre cobra por el peso real de la báscula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un número fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese cálculo puede darte un peso mayor al real, y el courier siempre te cobra por el más alto de los dos. Como el divisor lo define cada courier, no sirve memorizar un número: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este cálculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas más ajustadas al tamaño real de tu producto.",
+      "texto_nuevo": "Cuando un courier cotiza tu envío, no siempre cobra por el peso real de la báscula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un número fijo, llamado divisor. Si tu caja es grande pero liviana, ese cálculo puede darte un peso mayor al real, y el courier siempre te cobra por el más alto de los dos. Conocer este cálculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas más ajustadas al tamaño real de tu producto.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "83-87",
+        "frase": "Divide by 139 for U.S., Puerto Rico, and international shipments."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro da un divisor fijo (139, con medidas en pulgadas) y no dice que cada transportista defina el suyo.; Mismo defecto: que no sirva conocer el número no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,9 +4,9 @@
   "dominio": "health_safety",
   "titulo_concepto": "Señalización y Marcado de Salidas (Means of Egress)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Las rutas de egreso deben tener suficientes salidas para permitir escape rápido, señalizadas con letreros iluminados de 'EXIT' con letras de al menos 6 pulgadas. Puertas o pasillos que puedan confundirse con salidas deben marcarse claramente como 'NOT AN EXIT'. La iluminación de emergencia debe probarse mensual y anualmente.",
+  "resumen_teorico": "Las rutas de egreso deben tener suficientes salidas para permitir escape rápido, señalizadas con letreros iluminados de 'EXIT' con letras de al menos 6 pulgadas. Puertas, pasillos o escaleras que puedan confundirse con salidas deben marcarse claramente como 'NOT AN EXIT'. La iluminación de emergencia, donde la haya, debe probarse mensual y anualmente.",
   "pasos_accionables": [
-    "Determinar número adecuado de salidas según carga de ocupantes, con al menos dos salidas en plataformas elevadas, fosos y cuartos con sustancias calientes, tóxicas, corrosivas, asfixiantes, inflamables o explosivas",
+    "Determinar número adecuado de salidas según carga de ocupantes, con al menos dos salidas en plataformas elevadas, fosos y cuartos donde la falta de una segunda salida aumentaría el riesgo de lesión por sustancias calientes, tóxicas, corrosivas, asfixiantes, inflamables o explosivas",
     "Instalar señalización iluminada de 'EXIT' en todas las rutas",
     "Marcar puertas/pasillos que no son salidas para evitar confusión",
     "Probar la iluminación de emergencia mensualmente (30 seg) y anualmente (90 min)"
@@ -43,6 +43,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige al menos dos salidas en plataformas, fosos y cuartos con sustancias peligrosas, al margen de la carga de ocupantes.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-010-senalizacion_de_salidas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las rutas de egreso deben tener suficientes salidas para permitir escape rápido, señalizadas con letreros iluminados de 'EXIT' con letras de al menos 6 pulgadas. Puertas o pasillos que puedan confundirse con salidas deben marcarse claramente como 'NOT AN EXIT'. La iluminación de emergencia debe probarse mensual y anualmente.",
+      "texto_nuevo": "Las rutas de egreso deben tener suficientes salidas para permitir escape rápido, señalizadas con letreros iluminados de 'EXIT' con letras de al menos 6 pulgadas. Puertas, pasillos o escaleras que puedan confundirse con salidas deben marcarse claramente como 'NOT AN EXIT'. La iluminación de emergencia, donde la haya, debe probarse mensual y anualmente.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "521-523",
+        "frase": "Emergency lighting, where provided, is tested for 30 seconds each month"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye las escaleras entre lo que debe marcarse si puede confundirse con una salida; el nodo las deja fuera.; El libro pide probar la iluminación de emergencia donde exista; el nodo la vuelve obligación general.; Mismo defecto que la marca 0: se cae la condición where provided.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-010-senalizacion_de_salidas-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar número adecuado de salidas según carga de ocupantes, con al menos dos salidas en plataformas elevadas, fosos y cuartos con sustancias calientes, tóxicas, corrosivas, asfixiantes, inflamables o explosivas",
+      "texto_nuevo": "Determinar número adecuado de salidas según carga de ocupantes, con al menos dos salidas en plataformas elevadas, fosos y cuartos donde la falta de una segunda salida aumentaría el riesgo de lesión por sustancias calientes, tóxicas, corrosivas, asfixiantes, inflamables o explosivas",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "513",
+        "frase": "rooms where the absence of a second exit would increase the risk of injury"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige la segunda salida solo donde su ausencia aumentaría el riesgo de lesión por esas sustancias; el nodo la exige en todo cuarto que las tenga.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Colocar y usar etiquetas de manejo correctamente",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Dónde y cómo pegas la etiqueta principal influye en que el paquete viaje en la posición preferida y se escanee sin problemas. La regla común es ponerla plana, sobre la cara más grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envío anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envío aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+  "resumen_teorico": "Dónde y cómo pegas la etiqueta principal influye en que el paquete viaje en la posición preferida y se escanee sin problemas. La regla común es ponerla plana, sobre la cara más grande de la caja, sin cinta encima, para evitar problemas de escaneo. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envío anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envío aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
   "pasos_accionables": [
     "Pega la etiqueta de envío en la cara más grande y plana de la caja.",
     "Deja la etiqueta completamente visible, sin cinta ni papeles encima.",
@@ -147,6 +147,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que colocar bien la etiqueta aumenta la probabilidad de la orientación preferida y evita problemas de escaneo, no que lo decida.; Mismo endurecimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-colocar_etiquetas_de_manejo_correctamente-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dónde y cómo pegas la etiqueta principal influye en que el paquete viaje en la posición preferida y se escanee sin problemas. La regla común es ponerla plana, sobre la cara más grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envío anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envío aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+      "texto_nuevo": "Dónde y cómo pegas la etiqueta principal influye en que el paquete viaje en la posición preferida y se escanee sin problemas. La regla común es ponerla plana, sobre la cara más grande de la caja, sin cinta encima, para evitar problemas de escaneo. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envío anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envío aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "203",
+        "frase": "To avoid scanning issues, do not apply tape over the shipping label."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo pide no poner cinta sobre la etiqueta para evitar problemas de escaneo; el papel, el atraso y la bodega son añadidos.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

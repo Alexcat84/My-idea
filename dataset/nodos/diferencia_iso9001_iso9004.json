@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diferencia entre ISO 9001 e ISO 9004 (Aseguramiento vs Excelencia Organizacional)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "ISO 9001 es un sistema de aseguramiento enfocado únicamente en procesos que garantizan cumplir los requisitos del cliente (efectividad). ISO 9004, en cambio, es un modelo de excelencia organizacional similar a premios nacionales de calidad, enfocado tanto en efectividad como en eficiencia, incluyendo planificación, control y mejora en todos los procesos de la empresa. Las organizaciones a las que ISO 9004 les funcionó la usaron como base de un sistema mejor y llenaron por su cuenta los vacíos que la norma no cubre.",
+  "resumen_teorico": "ISO 9001 es un sistema de aseguramiento enfocado únicamente en procesos que inciden en que se cumplan los requisitos del cliente (efectividad). ISO 9004, en cambio, es un modelo de excelencia organizacional similar a premios nacionales de calidad. Las organizaciones a las que ISO 9004 les funcionó la usaron como base de un sistema mejor y llenaron por su cuenta los vacíos que la norma no cubre.",
   "pasos_accionables": [
     "Evaluar si el objetivo es solo certificación de cumplimiento (ISO 9001) o excelencia integral (ISO 9004)",
     "Usar ISO 9004 como marco complementario para llenar brechas de gestión no cubiertas por ISO 9001",
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no compara resultados; dice que a quienes les funcionó la usaron como base y llenaron sus vacíos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-009-diferencia_iso9001_iso9004-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "ISO 9001 es un sistema de aseguramiento enfocado únicamente en procesos que garantizan cumplir los requisitos del cliente (efectividad). ISO 9004, en cambio, es un modelo de excelencia organizacional similar a premios nacionales de calidad, enfocado tanto en efectividad como en eficiencia, incluyendo planificación, control y mejora en todos los procesos de la empresa. Las organizaciones a las que ISO 9004 les funcionó la usaron como base de un sistema mejor y llenaron por su cuenta los vacíos que la norma no cubre.",
+      "texto_nuevo": "ISO 9001 es un sistema de aseguramiento enfocado únicamente en procesos que inciden en que se cumplan los requisitos del cliente (efectividad). ISO 9004, en cambio, es un modelo de excelencia organizacional similar a premios nacionales de calidad. Las organizaciones a las que ISO 9004 les funcionó la usaron como base de un sistema mejor y llenaron por su cuenta los vacíos que la norma no cubre.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11188-11192",
+        "frase": "an assurance system focused on processes that only impact customer requirements being met"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro atribuye efectividad y eficiencia a los premios y sistemas de excelencia, y dice que ISO 9000 se enfoca en efectividad; no se lo atribuye a ISO 9004.; El libro habla de procesos que solo inciden en que se cumplan los requisitos del cliente, no que lo garanticen.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
