@@ -4,13 +4,13 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir resistencia de caja según peso del contenido",
   "fuente": "DHL Express, Guia de empaque",
-  "resumen_teorico": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Usar una caja por debajo de su capacidad real termina en cajas que se aplastan o revientan en tránsito, mientras que sobredimensionar la resistencia solo cuesta dinero de más sin necesidad real. La clave es mirar el sello del fabricante en la caja y hacerlo coincidir con el peso real de lo que va adentro.",
+  "resumen_teorico": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
   "pasos_accionables": [
     "Pesa el contenido completo, incluyendo el relleno que vas a usar.",
     "Busca el sello del fabricante en la caja: te dice su resistencia y tipo de pared.",
-    "Si tu contenido pesa cerca del límite de una pared simple, sube a pared doble.",
+    "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble.",
     "Pregunta a tu proveedor de cajas cuál es el límite de peso exacto para cada tipo que vende.",
-    "Nunca reutilices una caja que ya perdió rigidez, aunque el peso a enviar sea bajo."
+    "Evita reutilizar cajas viejas, aunque el peso a enviar sea bajo, porque pueden haber perdido parte de su rigidez."
   ],
   "entregable_esperado": "Una tabla propia de peso del pedido y el tipo de caja a usar, según lo que ofrece tu proveedor local.",
   "nodos_previos": [
@@ -30,5 +30,57 @@
   "etiqueta_arbol": "Combina resistencia de caja con peso",
   "fuentes_internas": [
     "DHL Express, Guia de empaque"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-145-elegir_resistencia_caja_peso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Usar una caja por debajo de su capacidad real termina en cajas que se aplastan o revientan en tránsito, mientras que sobredimensionar la resistencia solo cuesta dinero de más sin necesidad real. La clave es mirar el sello del fabricante en la caja y hacerlo coincidir con el peso real de lo que va adentro.",
+      "texto_nuevo": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "39, 119-131",
+        "frase": "An appropriate box should be able to securely hold the weight"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no habla del costo de sobredimensionar ni atribuye el aplastamiento a la falta de resistencia; solo pide que la caja sostenga con seguridad el peso.; Mismo añadido: el libro liga colapso y reventón al llenado, con 'puede', y no menciona el costo de sobredimensionar.; Mismos cortes y tope perdidos.; Se pierden los cortes de referencia del libro y el tope: por encima de 25 kg hace falta un método especializado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-elegir_resistencia_caja_peso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Nunca reutilices una caja que ya perdió rigidez, aunque el peso a enviar sea bajo.",
+      "texto_nuevo": "Evita reutilizar cajas viejas, aunque el peso a enviar sea bajo, porque pueden haber perdido parte de su rigidez.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "93",
+        "frase": "Avoid reusing old boxes as they may have lost some of their rigidity."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro desaconseja reutilizar cajas viejas en general porque pueden haber perdido rigidez; el paso solo excluye las que ya se ven débiles.; Mismo defecto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-elegir_resistencia_caja_peso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu contenido pesa cerca del límite de una pared simple, sube a pared doble.",
+      "texto_nuevo": "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "91, 121-123",
+        "frase": "For fragile or heavy items, double-wall or tri-wall"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el corte del libro (pared simple hasta 10 kg) y que lo frágil pide doble o triple pared.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

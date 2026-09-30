@@ -9,7 +9,7 @@
     "Haz una lista de todas las restricciones reales de tu proyecto: costo, tamaño, tiempo, materiales, impacto ambiental.",
     "En lugar de intentar eliminarlas, busca una respuesta elegante para cada una.",
     "Decide qué restricciones éticas quieres imponerte tú mismo, aunque nadie te las exija, por ejemplo durabilidad, inclusión o cuidado de la salud.",
-    "Revisa si estás pasando por alto restricciones naturales que más adelante te van a costar caro."
+    "Revisa si estás pasando por alto restricciones naturales que tardan en mostrarse y cuyos problemas terminas empujando a otros lugares o hacia más adelante."
   ],
   "entregable_esperado": "Tu lista de restricciones, las que te vienen dadas y las que eliges tú, con la respuesta de diseño que le diste a cada una.",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Aprende a Amar tus Restricciones",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-145-amar_las_restricciones-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si estás pasando por alto restricciones naturales que más adelante te van a costar caro.",
+      "texto_nuevo": "Revisa si estás pasando por alto restricciones naturales que tardan en mostrarse y cuyos problemas terminas empujando a otros lugares o hacia más adelante.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4440-4442",
+        "frase": "Natural constraints that are slow to reveal themselves just don’t guide and nudge"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las restricciones naturales tardan en mostrarse y que al ignorarlas empujamos los problemas a otros lugares y al futuro; no promete que te vayan a costar caro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -9,7 +9,7 @@
     "Rediseñar métodos de put-away para maximizar el uso vertical y horizontal del espacio de almacenamiento.",
     "Implementar un Warehouse Management System con códigos de barra o RFID para trazabilidad.",
     "Optimizar estrategias de picking almacenando productos de alta rotación cerca del punto de recolección.",
-    "Evaluar la incorporación de equipos alimentados por energía limpia (montacargas de hidrógeno, paneles solares, LED).",
+    "Evaluar la incorporación de equipos alimentados por energía limpia (montacargas de hidrógeno, paneles solares, LED), sabiendo que la inversión puede tardar en recuperarse.",
     "Automatizar procesos de clasificación y almacenamiento donde el volumen de operación lo justifique."
   ],
   "entregable_esperado": "Plan de rediseño operativo del almacén con métricas de reducción de espacio, energía y tiempo de procesamiento de pedidos.",
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Organiza tus Almacenes Eficientemente",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-147-optimizacion_almacenes_distribucion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar la incorporación de equipos alimentados por energía limpia (montacargas de hidrógeno, paneles solares, LED).",
+      "texto_nuevo": "Evaluar la incorporación de equipos alimentados por energía limpia (montacargas de hidrógeno, paneles solares, LED), sabiendo que la inversión puede tardar en recuperarse.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4995",
+        "frase": "While payback periods may be long, some companies have chosen to invest"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el periodo de recuperación de estas inversiones puede ser largo y el paso lo omite.; Misma advertencia del libro sobre la recuperación lenta de la inversión, perdida en el paso.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

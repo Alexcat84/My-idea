@@ -4,13 +4,13 @@
   "dominio": "entrega",
   "titulo_concepto": "Revisar necesidades de empaque antes de comprar materiales",
   "fuente": "DHL Express, Guia de empaque",
-  "resumen_teorico": "Antes de comprar cajas, sobres o material de relleno, conviene revisar de forma ordenada las caracteristicas de lo que vas a enviar: cuanto pesa, que tan frágil es, si tiene forma irregular, si es liquido o polvo, cual es su valor y si su uso final exige algo especial. También hay que revisar si el producto cae dentro de alguna categoría regulada, como perfumes, baterías o químicos, que exigen empaque especifico. Esta evaluación previa evita comprar el tipo de caja equivocado o descubrir demasiado tarde que el material elegido no protege lo que necesitas proteger. Cada factor apunta a un tipo distinto de solución, por lo que revisarlos todos antes de comprar ahorra dinero y devoluciones.",
+  "resumen_teorico": "Antes de comprar cajas, sobres o material de relleno, conviene revisar de forma ordenada las características de lo que vas a enviar: cuánto pesa, qué tamaño tiene (el contenido no debe tocar las paredes de la caja), qué tan frágil es, si tiene forma irregular, si es líquido o polvo, cuál es su valor y si su uso final exige algo especial. También hay que revisar si el producto cae dentro de alguna categoría regulada, como perfumes, químicos o equipos electrónicos, que pueden requerir empaque específico. Esta evaluación previa evita comprar el tipo de caja equivocado o descubrir demasiado tarde que el material elegido no protege lo que necesitas proteger. Cada factor apunta a un tipo distinto de solución, por lo que conviene revisarlos todos antes de comprar.",
   "pasos_accionables": [
     "Antes de comprar cajas o bolsas, anota el peso y la fragilidad de lo que vas a enviar.",
-    "Pregunta si el contenido es líquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+    "Pregunta si el contenido es líquido o en polvo, porque pide materiales y técnicas especiales, o de forma irregular, porque puede necesitar atención extra.",
     "Sugerencia de My Idea: verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
-    "Revisa si tu producto entra en alguna categoría regulada, como baterías, perfumes o químicos, antes de despacharlo.",
-    "Con esa información decide si necesitas caja simple, de doble pared o bolsa plástica."
+    "Revisa si tu producto entra en alguna categoría regulada, como perfumes, químicos o equipos electrónicos, antes de despacharlo.",
+    "Con esa información decide si necesitas caja simple, de doble o triple pared, bolsa plástica, caja dentro de caja o un empaque especial."
   ],
   "entregable_esperado": "Una lista de requisitos de empaque específicos para tu producto, lista antes de comprar materiales.",
   "nodos_previos": [
@@ -172,6 +172,73 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-145-revisar_necesidades_de_empaque-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de comprar cajas, sobres o material de relleno, conviene revisar de forma ordenada las caracteristicas de lo que vas a enviar: cuanto pesa, que tan frágil es, si tiene forma irregular, si es liquido o polvo, cual es su valor y si su uso final exige algo especial. También hay que revisar si el producto cae dentro de alguna categoría regulada, como perfumes, baterías o químicos, que exigen empaque especifico. Esta evaluación previa evita comprar el tipo de caja equivocado o descubrir demasiado tarde que el material elegido no protege lo que necesitas proteger. Cada factor apunta a un tipo distinto de solución, por lo que revisarlos todos antes de comprar ahorra dinero y devoluciones.",
+      "texto_nuevo": "Antes de comprar cajas, sobres o material de relleno, conviene revisar de forma ordenada las características de lo que vas a enviar: cuánto pesa, qué tamaño tiene (el contenido no debe tocar las paredes de la caja), qué tan frágil es, si tiene forma irregular, si es líquido o polvo, cuál es su valor y si su uso final exige algo especial. También hay que revisar si el producto cae dentro de alguna categoría regulada, como perfumes, químicos o equipos electrónicos, que pueden requerir empaque específico. Esta evaluación previa evita comprar el tipo de caja equivocado o descubrir demasiado tarde que el material elegido no protege lo que necesitas proteger. Cada factor apunta a un tipo distinto de solución, por lo que conviene revisarlos todos antes de comprar.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "67-69",
+        "frase": "Some regulated items may require specialist packaging"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no promete ahorro de dinero ni de devoluciones.; Endurece: el libro dice que algunos artículos regulados pueden requerir empaque especializado.; Falta el tamaño, factor del libro junto con la forma: el contenido no debe tocar las paredes de la caja.; Las baterías no están entre los ejemplos del libro (saborizantes, perfumes, químicos y equipos electrónicos).; Mismo añadido de las baterías.; Mismo endurecimiento de 'may require' a 'exigen'.; Mismo resultado prometido que el libro no afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-revisar_necesidades_de_empaque-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si tu producto entra en alguna categoría regulada, como baterías, perfumes o químicos, antes de despacharlo.",
+      "texto_nuevo": "Revisa si tu producto entra en alguna categoría regulada, como perfumes, químicos o equipos electrónicos, antes de despacharlo.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "69",
+        "frase": "food flavoring, perfumes, chemicals and electronic equipment can be classified as dangerous goods"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Las baterías no están entre los ejemplos del libro.; Mismo añadido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-revisar_necesidades_de_empaque-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pregunta si el contenido es líquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+      "texto_nuevo": "Pregunta si el contenido es líquido o en polvo, porque pide materiales y técnicas especiales, o de forma irregular, porque puede necesitar atención extra.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "43-47",
+        "frase": "Odd-shaped or rounded packaging may need extra attention"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Para la forma irregular el libro dice que puede necesitar atención extra, no que pida un empaque distinto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-revisar_necesidades_de_empaque-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Con esa información decide si necesitas caja simple, de doble pared o bolsa plástica.",
+      "texto_nuevo": "Con esa información decide si necesitas caja simple, de doble o triple pared, bolsa plástica, caja dentro de caja o un empaque especial.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "321",
+        "frase": "The most suitable packing method to use will depend upon the assessment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro abre más opciones según la evaluación: triple pared, caja dentro de caja y empaque especial para líquidos, polvos y regulados.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

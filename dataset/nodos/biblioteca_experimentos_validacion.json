@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Formula una hipótesis clara y específica para cada prueba (por ejemplo, 'los padres menos preocupados adoptarán un rastreador sin alarma')",
     "Define una métrica de éxito medible antes de hacer la prueba",
-    "Diseña el experimento más barato y rápido que puedas: una página de aterrizaje, un video que muestre el producto, una entrevista en el punto de venta",
+    "Mientras la incertidumbre sea alta, diseña el experimento más barato y rápido que puedas: una página de aterrizaje, un video que muestre el producto, una entrevista en el punto de venta; a medida que ganes certeza, invierte en pruebas más fiables",
     "Recoge datos concretos: vistas, veces que se comparte, porcentaje de gente que lo adopta, comentarios positivos",
     "Decide si tu hipótesis se confirmó o se cayó según el umbral que definiste antes",
     "Anota el tiempo y el costo de cada prueba para aprovechar mejor tus recursos la próxima vez"
@@ -33,5 +33,24 @@
   "etiqueta_arbol": "Diseña tus Experimentos de Validación",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-147-biblioteca_experimentos_validacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña el experimento más barato y rápido que puedas: una página de aterrizaje, un video que muestre el producto, una entrevista en el punto de venta",
+      "texto_nuevo": "Mientras la incertidumbre sea alta, diseña el experimento más barato y rápido que puedas: una página de aterrizaje, un video que muestre el producto, una entrevista en el punto de venta; a medida que ganes certeza, invierte en pruebas más fiables",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7915-7917",
+        "frase": "start cheap when uncertainty is high and increase your spending on experiments with increasing certainty"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita lo barato al momento de alta incertidumbre y pide aumentar la inversión a medida que crece la certeza.; Mismo límite perdido: el paso lo deja como regla sin condición.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

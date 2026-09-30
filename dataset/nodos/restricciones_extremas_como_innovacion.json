@@ -9,7 +9,7 @@
     "Definir el costo máximo que el usuario final puede/debe pagar y diseñar hacia atrás desde ese límite",
     "Cuestionar supuestos de calidad/durabilidad importados de mercados desarrollados que no aplican al contexto",
     "Diseñar procesos operativos (ej. tipo línea de ensamblaje) que maximicen eficiencia y volumen sin sacrificar el estándar mínimo aceptable",
-    "Calcular el retorno de inversión esperado para el usuario en el corto plazo (ej. una temporada de cultivo)"
+    "Calcular el retorno de inversión esperado para el usuario en el corto plazo y exigir que recupere varias veces lo invertido en ese plazo (ej. una sola temporada de cultivo)"
   ],
   "entregable_esperado": "Modelo de costos y de retorno de inversión rápido validado con el usuario final, junto con un proceso operativo eficiente",
   "nodos_previos": [
@@ -66,6 +66,23 @@
         "evidencia": "F04-013: Tiene razon el lector B: los pasos y el entregable disenan el modelo (costo maximo hacia atras, modelo de costos y de retorno de la inversion, proceso operativo). No hay descubrimiento del problema ni de la oportunidad, asi que ideacion no se sostiene. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-145-restricciones_extremas_como_innovacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el retorno de inversión esperado para el usuario en el corto plazo (ej. una temporada de cultivo)",
+      "texto_nuevo": "Calcular el retorno de inversión esperado para el usuario en el corto plazo y exigir que recupere varias veces lo invertido en ese plazo (ej. una sola temporada de cultivo)",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1265",
+        "frase": "investment made by a farmer be repaid many times over in just one growing season"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que toda inversión del agricultor se recupere varias veces en una sola temporada; el paso solo pide calcularla.; Mismo criterio perdido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

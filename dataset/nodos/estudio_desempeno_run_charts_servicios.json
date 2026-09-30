@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Uso de Gráficos de Corrida (Run Charts) para Estudiar Desempeño en Servicios",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Conviene usar de forma sistemática gráficos de corrida (run charts) y distribuciones estadísticas para monitorear variables clave de desempeño en organizaciones de servicio (hospitales, aerolíneas, hoteles). Este enfoque permite detectar causas especiales de variación, medir el impacto de mejoras al sistema, y dirigir la capacitación y el reentrenamiento hacia áreas específicas que lo requieran, evitando decisiones basadas en anécdotas o percepciones subjetivas.",
+  "resumen_teorico": "Conviene usar de forma sistemática gráficos de corrida (run charts) y distribuciones estadísticas para monitorear variables clave de desempeño en organizaciones de servicio (hospitales, aerolíneas, hoteles). Este enfoque permite detectar causas especiales de variación, medir el impacto de mejoras al sistema, y dirigir la capacitación y el reentrenamiento hacia áreas específicas que lo requieran.",
   "pasos_accionables": [
     "Identificar las variables críticas de desempeño del servicio (errores, tiempos, quejas, reprocesos)",
     "Recolectar datos de forma sistemática y periódica (semanal, mensual) para cada variable",
@@ -37,6 +37,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U2-027 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-146-estudio_desempeno_run_charts_servicios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conviene usar de forma sistemática gráficos de corrida (run charts) y distribuciones estadísticas para monitorear variables clave de desempeño en organizaciones de servicio (hospitales, aerolíneas, hoteles). Este enfoque permite detectar causas especiales de variación, medir el impacto de mejoras al sistema, y dirigir la capacitación y el reentrenamiento hacia áreas específicas que lo requieran, evitando decisiones basadas en anécdotas o percepciones subjetivas.",
+      "texto_nuevo": "Conviene usar de forma sistemática gráficos de corrida (run charts) y distribuciones estadísticas para monitorear variables clave de desempeño en organizaciones de servicio (hospitales, aerolíneas, hoteles). Este enfoque permite detectar causas especiales de variación, medir el impacto de mejoras al sistema, y dirigir la capacitación y el reentrenamiento hacia áreas específicas que lo requieran.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4511",
+        "frase": "will show management where retraining and special help are needed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un beneficio que el libro no afirma; solo dice que detecta causas especiales, mide cambios y muestra dónde reentrenar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

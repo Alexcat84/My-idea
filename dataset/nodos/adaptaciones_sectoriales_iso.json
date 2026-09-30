@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Adaptaciones Sectoriales de ISO 9000 (cGMP y ISO/TS 16949)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Si tu negocio opera en una industria regulada, no te basta con ISO 9001 general: existen extensiones especificas que debes cumplir. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseno, producción e instalación de productos automotrices, y reemplazo al antiguo estándar QS-9000.",
+  "resumen_teorico": "Si tu negocio opera en una industria regulada, ISO 9001 general puede no bastarte: existen extensiones específicas. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseño, producción e instalación de productos automotrices, y reemplazó al antiguo estándar QS-9000; desde entonces las empresas pueden elegir entre ISO 9001 o ISO/TS 16949.",
   "pasos_accionables": [
     "Identifica la norma sectorial específica que te aplica (cGMP, ISO/TS 16949 u otra según tu mercado)",
     "Mapea los requisitos sectoriales adicionales sobre la base de ISO 9001",
@@ -151,6 +151,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-146-adaptaciones_sectoriales_iso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu negocio opera en una industria regulada, no te basta con ISO 9001 general: existen extensiones especificas que debes cumplir. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseno, producción e instalación de productos automotrices, y reemplazo al antiguo estándar QS-9000.",
+      "texto_nuevo": "Si tu negocio opera en una industria regulada, ISO 9001 general puede no bastarte: existen extensiones específicas. En dispositivos médicos y farmacéuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos específicos para diseño, producción e instalación de productos automotrices, y reemplazó al antiguo estándar QS-9000; desde entonces las empresas pueden elegir entre ISO 9001 o ISO/TS 16949.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11399",
+        "frase": "businesses had a choice between either ISO 9001 or TS 16949"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece para la automoción: tras retirar QS-9000 el libro dice que las empresas podían elegir entre ISO 9001 o ISO/TS 16949.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

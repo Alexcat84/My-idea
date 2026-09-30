@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Reúne al equipo y define explícitamente las Metas normales del proyecto",
     "Define las No-metas: qué está fuera de alcance intencionalmente",
-    "Define las Antimetas: qué te comprometes activamente a NO hacer (ej. no excluir usuarios, no engañar al cliente)",
-    "Define Salvaguardas: mecanismos concretos para detectar y corregir cuando el proyecto se desvía hacia una antimeta",
+    "Define las Antimetas: qué te comprometes activamente a NO hacer, lo bastante amplias para honrar tus valores y lo bastante concretas para saber cuándo las cumples (ej. no excluir usuarios, no confundir al cliente con opciones que no le sirven)",
+    "Define Salvaguardas: mecanismos concretos para asegurarte de que las cosas no salgan mal, incluido que el proyecto no se desvíe hacia una antimeta",
     "Revisita estas 4 listas periódicamente conforme el proyecto evoluciona",
     "Comparte la lista con el equipo para que también puedan rally alrededor de los antigoals, no solo de las metas"
   ],
@@ -68,6 +68,40 @@
         "motivo": "El marco de antimetas de Tragic Design no tiene que ver con la busqueda del modelo de negocio."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-145-antigoals_framework-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define las Antimetas: qué te comprometes activamente a NO hacer (ej. no excluir usuarios, no engañar al cliente)",
+      "texto_nuevo": "Define las Antimetas: qué te comprometes activamente a NO hacer, lo bastante amplias para honrar tus valores y lo bastante concretas para saber cuándo las cumples (ej. no excluir usuarios, no confundir al cliente con opciones que no le sirven)",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3688",
+        "frase": "broad enough to honor your values and purpose, but specific enough"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El ejemplo del libro es no confundir al cliente con opciones erróneas; engañarlo es otro ejemplo que el libro no da.; El libro pide que las antimetas sean lo bastante amplias para honrar tus valores y lo bastante concretas para saber cuándo se cumplen; el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-antigoals_framework-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define Salvaguardas: mecanismos concretos para detectar y corregir cuando el proyecto se desvía hacia una antimeta",
+      "texto_nuevo": "Define Salvaguardas: mecanismos concretos para asegurarte de que las cosas no salgan mal, incluido que el proyecto no se desvíe hacia una antimeta",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3682",
+        "frase": "Safeguards: how you will make sure things don’t go wrong."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro las salvaguardas son cómo te aseguras de que las cosas no salgan mal; el paso las reduce a detectar y corregir desvíos hacia una antimeta.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

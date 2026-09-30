@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando el producto final es una mezcla de varias líneas, máquinas u operadores, estudiar solo la mezcla combinada puede ocultar oportunidades de mejora. Aunque cada fuente esté en control estadístico individualmente, sus medias pueden diferir ampliamente, ampliando la varianza total de la mezcla. La búsqueda 'aguas arriba' (en cada fuente individual) ofrece un apalancamiento poderoso para la mejora.",
   "pasos_accionables": [
     "Identificar todas las fuentes individuales (máquinas, operadores, líneas) que alimentan un proceso combinado",
-    "Generar cartas de control individuales para cada fuente, no solo para la mezcla total",
+    "Generar cartas de control individuales para cada fuente, no solo para la mezcla total, empezando por llevar cada fuente a control estadístico",
     "Comparar los niveles medios y variabilidad entre las fuentes",
     "Priorizar la intervención en las fuentes con mayor variación o desviación del nivel deseado",
     "Buscar traer todas las fuentes a un mismo nivel y reducir su variación individual"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Analiza cada Fuente por Separado",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-146-estudio_mezclas_multiples_fuentes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Generar cartas de control individuales para cada fuente, no solo para la mezcla total",
+      "texto_nuevo": "Generar cartas de control individuales para cada fuente, no solo para la mezcla total, empezando por llevar cada fuente a control estadístico",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8140",
+        "frase": "Start this study by bringing every source into statistical control."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide empezar el estudio llevando cada fuente a control estadístico; el paso solo pide graficarlas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

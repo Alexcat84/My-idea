@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Costo de Oportunidad",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Representa el beneficio potencial que se pierde al no elegir la alternativa financieramente óptima. En negocios, ayuda a decidir entre diferentes usos posibles del efectivo limitado de la empresa, comparando el retorno de una inversión con lo que se podría obtener en otra alternativa de riesgo similar.",
+  "resumen_teorico": "En negocios, a menudo representa el beneficio potencial que se pierde al no elegir la alternativa financieramente óptima. Ayuda a decidir entre diferentes usos posibles del efectivo limitado de la empresa, comparando el retorno de una inversión con lo que se podría obtener en otra alternativa de riesgo similar.",
   "pasos_accionables": [
     "Identificar todas las alternativas posibles de uso del capital disponible",
     "Comparar el retorno esperado de cada alternativa considerando su nivel de riesgo",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Piensa lo que Dejas Ganar",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-146-costo_de_oportunidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Representa el beneficio potencial que se pierde al no elegir la alternativa financieramente óptima. En negocios, ayuda a decidir entre diferentes usos posibles del efectivo limitado de la empresa, comparando el retorno de una inversión con lo que se podría obtener en otra alternativa de riesgo similar.",
+      "texto_nuevo": "En negocios, a menudo representa el beneficio potencial que se pierde al no elegir la alternativa financieramente óptima. Ayuda a decidir entre diferentes usos posibles del efectivo limitado de la empresa, comparando el retorno de una inversión con lo que se podría obtener en otra alternativa de riesgo similar.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2969",
+        "frase": "In business, opportunity cost often means the potential benefit forgone"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que en negocios el término a menudo significa eso; el nodo lo da como definición absoluta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

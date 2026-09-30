@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Estimar los costos únicos de implementación",
     "Estimar los costos operativos anuales adicionales",
-    "Estimar los ahorros anuales esperados",
+    "Estimar los ahorros anuales esperados y, si es posible, cuánto del problema eliminaría cada alternativa; si no, ordenar las alternativas por su impacto",
     "Evaluar el impacto en la satisfacción del cliente, descartando alternativas que la reduzcan",
     "Calcular el costo neto operativo anual y el costo anualizado de inversiones únicas",
     "Sumar ambos para obtener el costo total anual y clasificar las alternativas"
@@ -40,6 +40,23 @@
         "evidencia": "F18-031: Elegir la solución más rentable a un problema de calidad del proceso es mejorar la operación en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-146-analisis_beneficio_costo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estimar los ahorros anuales esperados",
+      "texto_nuevo": "Estimar los ahorros anuales esperados y, si es posible, cuánto del problema eliminaría cada alternativa; si no, ordenar las alternativas por su impacto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17997",
+        "frase": "If possible, calculate how much of the problem is likely to be eliminated"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso 4 del procedimiento: estimar cuánto del problema elimina cada remedio o, si no, ordenar su impacto.; Mismo defecto, misma evidencia.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

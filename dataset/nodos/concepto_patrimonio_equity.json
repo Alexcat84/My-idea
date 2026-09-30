@@ -9,7 +9,7 @@
     "Calcular el patrimonio como activos totales menos pasivos totales",
     "Revisar la línea de utilidades retenidas para ver la acumulación histórica de ganancias o pérdidas",
     "Entender que las utilidades de cada periodo afectan el patrimonio acumulado",
-    "Comparar el patrimonio actual con periodos anteriores para medir crecimiento del valor del negocio"
+    "Comparar el patrimonio actual con periodos anteriores para ver si se mueve en la dirección correcta, revisando si sube por nuevos aportes de capital o por utilidades, y recordando que es un valor contable, no lo que un comprador pagaría por el negocio"
   ],
   "entregable_esperado": "Cálculo documentado del patrimonio actual de la empresa y su evolución en los últimos periodos",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Entiende tu Patrimonio Real",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-146-concepto_patrimonio_equity-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Comparar el patrimonio actual con periodos anteriores para medir crecimiento del valor del negocio",
+      "texto_nuevo": "Comparar el patrimonio actual con periodos anteriores para ver si se mueve en la dirección correcta, revisando si sube por nuevos aportes de capital o por utilidades, y recordando que es un valor contable, no lo que un comprador pagaría por el negocio",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "1488",
+        "frase": "the market value of a company almost never matches its equity or book value"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, matiz; doble lectura ciega y arbitro): El libro niega expresamente que el patrimonio contable sea lo que vale el negocio; el paso lo usa para medir ese valor.; El libro pide revisar si el patrimonio sube por aportes de capital o porque la empresa gana dinero.; Es el mismo defecto de la marca 0: el nodo afirma lo que el libro niega, no solo pierde una advertencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -10,7 +10,7 @@
     "Recolectar datos confiables sobre estos factores (ej. costo de reclutamiento, retención).",
     "Calcular el NPV del proyecto incorporando estos factores.",
     "Ser selectivo: priorizar precisión sobre exhaustividad.",
-    "Probar y documentar los supuestos utilizados para resistir escrutinio."
+    "Probar y documentar los supuestos utilizados para resistir escrutinio, y evaluar los riesgos a la baja, su probabilidad y cómo mitigarlos."
   ],
   "entregable_esperado": "Un cálculo de NPV documentado con supuestos claros, listo para presentar a tomadores de decisión financiera.",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Traduce tu Impacto en Dinero",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-147-monetizacion_npv_caso_negocio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Probar y documentar los supuestos utilizados para resistir escrutinio.",
+      "texto_nuevo": "Probar y documentar los supuestos utilizados para resistir escrutinio, y evaluar los riesgos a la baja, su probabilidad y cómo mitigarlos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "761",
+        "frase": "Carefully assess the potential for downside risks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, junto a probar los supuestos, evaluar los riesgos a la baja con su probabilidad y su mitigación.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

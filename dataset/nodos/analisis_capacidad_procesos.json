@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Capacidad de Proceso mediante Histogramas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
+  "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
   "pasos_accionables": [
     "Seleccionar una muestra aleatoria de al menos 40 mediciones del proceso",
     "Construir el histograma con los límites de especificación superpuestos",
@@ -53,6 +53,22 @@
         "evidencia": "F19-020: Evaluar la capacidad de un proceso productivo con mediciones y acciones correctivas es control de calidad de la operación, no validación con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-146-analisis_capacidad_procesos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
+      "texto_nuevo": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11866",
+        "frase": "the seeming central tendency of a histogram may be illusory"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto, misma evidencia.; Se cae la limitación del libro: el histograma no muestra el orden de producción y su centrado puede ser ilusorio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

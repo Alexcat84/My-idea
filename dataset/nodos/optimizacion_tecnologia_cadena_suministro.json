@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Optimización de la Cadena de Suministro con Tecnología",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las nuevas tecnologías permiten a las empresas tener una visión integrada de los impactos de la cadena de suministro. El software de análisis de ciclo de vida y los dashboards permiten comparar el desempeño de proveedores a lo largo del tiempo sin necesidad de recolectar información directamente. Aberdeen Group identifica cuatro áreas clave: dashboards verdes basados en roles, activos sostenibles/eficientes, seguimiento de residuos y transporte/logística sostenible.",
+  "resumen_teorico": "Las nuevas tecnologías permiten a las empresas tener una visión integrada de los impactos de la cadena de suministro. El software permite reunir información de proveedores y comparar su desempeño a lo largo del tiempo o entre cadenas de valor, y el de análisis de ciclo de vida permite conocer el impacto de productos y procesos sin recolectar información directamente del proveedor. Aberdeen Group identifica cuatro áreas clave: dashboards verdes basados en roles, activos sostenibles/eficientes, seguimiento de residuos y transporte/logística sostenible.",
   "pasos_accionables": [
     "Evaluar herramientas de software de análisis de ciclo de vida disponibles en el mercado",
     "Implementar dashboards para monitorear desempeño ambiental de proveedores por rol",
@@ -80,6 +80,22 @@
         "motivo": "arista entre dos mundos (environmental -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-147-optimizacion_tecnologia_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Las nuevas tecnologías permiten a las empresas tener una visión integrada de los impactos de la cadena de suministro. El software de análisis de ciclo de vida y los dashboards permiten comparar el desempeño de proveedores a lo largo del tiempo sin necesidad de recolectar información directamente. Aberdeen Group identifica cuatro áreas clave: dashboards verdes basados en roles, activos sostenibles/eficientes, seguimiento de residuos y transporte/logística sostenible.",
+      "texto_nuevo": "Las nuevas tecnologías permiten a las empresas tener una visión integrada de los impactos de la cadena de suministro. El software permite reunir información de proveedores y comparar su desempeño a lo largo del tiempo o entre cadenas de valor, y el de análisis de ciclo de vida permite conocer el impacto de productos y procesos sin recolectar información directamente del proveedor. Aberdeen Group identifica cuatro áreas clave: dashboards verdes basados en roles, activos sostenibles/eficientes, seguimiento de residuos y transporte/logística sostenible.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4149",
+        "frase": "companies can use sophisticated software to gather information about suppliers and compare performance over time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El defecto existe, pero invierte lo que dice el libro (reunir información para comparar), así que es un contrario.; El libro dice que el software reúne información de proveedores para comparar su desempeño; el nodo dice que se compara sin recolectarla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

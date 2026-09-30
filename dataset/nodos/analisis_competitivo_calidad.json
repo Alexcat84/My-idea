@@ -9,7 +9,7 @@
     "Recolecta datos de los productos competidores con pruebas de laboratorio, pruebas de campo o entrevistas a clientes",
     "Compara tu producto característica por característica contra los de la competencia",
     "Identifica en qué puntos tu diseño es más débil y en cuáles tiene ventaja",
-    "Decide si vale la pena mejorar tu producto según lo que encontraste, apoyándote en un análisis de valor"
+    "Decide si vale la pena mejorar tu producto según lo que encontraste; para algunas de estas decisiones puede hacerte falta un análisis de valor"
   ],
   "entregable_esperado": "Un cuadro comparativo de características entre tu producto y los de la competencia, con las decisiones de mejora que identificaste",
   "nodos_previos": [
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Compara tu Producto Directamente",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-146-analisis_competitivo_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide si vale la pena mejorar tu producto según lo que encontraste, apoyándote en un análisis de valor",
+      "texto_nuevo": "Decide si vale la pena mejorar tu producto según lo que encontraste; para algunas de estas decisiones puede hacerte falta un análisis de valor",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4311",
+        "frase": "The team may need to apply a value analysis to make some of these choices"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que el equipo puede necesitar un análisis de valor para algunas decisiones.; Mismo defecto, misma evidencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

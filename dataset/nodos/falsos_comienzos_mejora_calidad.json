@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Falsos comienzos en programas de mejora de calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Los 'falsos comienzos' son iniciativas de calidad que te entusiasman al principio pero terminan en frustración y abandono. Ejemplos: enseñar estadística sin que nadie la entienda de verdad, mantener controles que ya no usas correctamente, sistemas de evaluación forzados, o imponer círculos de calidad sin un compromiso genuino de tu parte. Suelen ser síntoma de que delegas tu responsabilidad en vez de asumirla.",
+  "resumen_teorico": "Los 'falsos comienzos' son iniciativas de calidad que te entusiasman al principio pero terminan en frustración y abandono. Ejemplos: suponer que enseñar estadística en masa a quienes producen bastará para cambiar las cosas, mantener controles que ya no usas correctamente, sistemas de evaluación forzados, o imponer círculos de calidad sin un compromiso genuino de tu parte. Suelen ser síntoma de que delegas tu responsabilidad en vez de asumirla.",
   "pasos_accionables": [
     "Revisa las iniciativas de calidad que ya tienes para verificar si realmente las usas y si generan valor (por ejemplo, si tus controles están bien calculados y se aplican)",
     "Evita imponer soluciones superficiales, como reglas sin conexión clara con el desempeño real",
@@ -109,6 +109,22 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-146-falsos_comienzos_mejora_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los 'falsos comienzos' son iniciativas de calidad que te entusiasman al principio pero terminan en frustración y abandono. Ejemplos: enseñar estadística sin que nadie la entienda de verdad, mantener controles que ya no usas correctamente, sistemas de evaluación forzados, o imponer círculos de calidad sin un compromiso genuino de tu parte. Suelen ser síntoma de que delegas tu responsabilidad en vez de asumirla.",
+      "texto_nuevo": "Los 'falsos comienzos' son iniciativas de calidad que te entusiasman al principio pero terminan en frustración y abandono. Ejemplos: suponer que enseñar estadística en masa a quienes producen bastará para cambiar las cosas, mantener controles que ya no usas correctamente, sistemas de evaluación forzados, o imponer círculos de calidad sin un compromiso genuino de tu parte. Suelen ser síntoma de que delegas tu responsabilidad en vez de asumirla.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2928",
+        "frase": "wholesale teaching of statistical methods to enough people in production will turn things around"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye el falso comienzo a la falta de comprensión, sino a suponer que enseñar estadística en masa en producción basta.; El nodo pone una causa que el libro no da; es invención, no un matiz perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

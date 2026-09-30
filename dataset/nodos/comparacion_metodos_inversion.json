@@ -6,7 +6,7 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Los tres métodos principales de evaluación de inversiones -payback, NPV e IRR- pueden llevar a decisiones distintas según cuál se use. El payback prioriza la rapidez de recuperación, IRR prioriza el porcentaje de retorno, y NPV prioriza el valor total generado considerando tiempo y escala. Cuando entran en conflicto, NPV debe prevalecer como criterio de decisión final.",
   "pasos_accionables": [
-    "Calcular payback, NPV e IRR para cada proyecto alternativo",
+    "Calcular payback, NPV e IRR para cada proyecto alternativo, revisando antes las estimaciones de flujo de caja; a menudo conviene comprobar si la inversión sigue teniendo sentido con flujos del 80 % o 90 % de lo proyectado",
     "Identificar si los tres métodos coinciden en su recomendación",
     "Si hay conflicto, dar prioridad a la decisión indicada por NPV",
     "Documentar por qué se eligió un método sobre otro para efectos de comunicación"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Compara Métodos de Inversión",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-146-comparacion_metodos_inversion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular payback, NPV e IRR para cada proyecto alternativo",
+      "texto_nuevo": "Calcular payback, NPV e IRR para cada proyecto alternativo, revisando antes las estimaciones de flujo de caja; a menudo conviene comprobar si la inversión sigue teniendo sentido con flujos del 80 % o 90 % de lo proyectado",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3190",
+        "frase": "the most important step a business owner can take when analyzing capital expenditures"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro llama paso más importante a revisar las estimaciones de flujo de caja y a menudo probarlas con flujos menores.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -11,7 +11,7 @@
     "Evaluar el trade-off entre maximizar el DPO y mantener buenas relaciones con los proveedores",
     "Identificar en qué punto del ciclo se puede acelerar el retorno de efectivo (reducir DSO, reducir inventario, aumentar DPO razonablemente)",
     "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones",
-    "Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, facturación lenta"
+    "Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, falta de seguimiento cuando la factura vence, facturación lenta"
   ],
   "entregable_esperado": "Cálculo del ciclo de conversión de efectivo, con diagrama de DPO, DSO y DII integrados, y un plan de acción para optimizarlo",
   "condiciones_activacion": [
@@ -51,5 +51,24 @@
   ],
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-146-ciclo_de_conversion_de_efectivo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, facturación lenta",
+      "texto_nuevo": "Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, falta de seguimiento cuando la factura vence, facturación lenta",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2752",
+        "frase": "Are they not following up with customers when an invoice hits its term"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera también no dar seguimiento al cliente cuando la factura vence, y el paso lo omite.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

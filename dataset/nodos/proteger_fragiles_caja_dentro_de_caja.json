@@ -4,11 +4,11 @@
   "dominio": "entrega",
   "titulo_concepto": "Proteger frágiles con el método caja dentro de caja",
   "fuente": "DHL Express, Guia de empaque",
-  "resumen_teorico": "Para artículos frágiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Este doble amortiguamiento absorbe golpes que una sola caja no aguanta, y es la técnica recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+  "resumen_teorico": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
   "pasos_accionables": [
-    "Acolchona el producto y colócalo dentro de una caja interna resistente.",
-    "Elige una caja externa varios centímetros más grande en cada dimensión que la interna.",
-    "Pon relleno en el fondo de la caja externa antes de meter la caja interna.",
+    "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, sin espacios vacíos.",
+    "Elige una caja externa al menos 14 centímetros más grande en cada dimensión que la interna, de preferencia de doble pared (o simple si aguanta el peso del contenido).",
+    "Pon unos 6 centímetros de relleno en el fondo de la caja externa antes de meter la caja interna.",
     "Centra la caja interna dentro de la externa y rellena todos los espacios vacíos alrededor.",
     "Sella ambas cajas con el método de cinta en H antes de despachar."
   ],
@@ -42,6 +42,73 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R032-028 (CONTRARIO, lector y verificador de acuerdo): Cambia un umbral mínimo (al menos 14 cm) por un rango con techo de 15 cm que la guía no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R032-028"
+    },
+    {
+      "id": "final-e1-145-proteger_fragiles_caja_dentro_de_caja-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para artículos frágiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Este doble amortiguamiento absorbe golpes que una sola caja no aguanta, y es la técnica recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+      "texto_nuevo": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "325",
+        "frase": "utilizes a second outer box to offer additional protection"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro indica el método para lo más frágil, lo filoso o la caja interna que irá a la venta; para el alto valor solo pide más acolchado.; El libro solo dice que la segunda caja da protección adicional; que una sola no baste y el mecanismo del impacto directo son añadidos.; Mismo añadido del alto valor como caso del método.; Mismo porqué añadido del impacto directo y de los golpes que una sola caja no aguanta.; Se pierde el otro uso del método en el libro: cuando la caja interna se usará para la venta al público.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-proteger_fragiles_caja_dentro_de_caja-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige una caja externa varios centímetros más grande en cada dimensión que la interna.",
+      "texto_nuevo": "Elige una caja externa al menos 14 centímetros más grande en cada dimensión que la interna, de preferencia de doble pared (o simple si aguanta el peso del contenido).",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "329",
+        "frase": "The outer box should be at least 14cm larger in all dimensions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija un mínimo de 14 cm más por dimensión; 'varios centímetros' lo deja caer.; Mismo límite perdido.; Se pierde la recomendación de caja externa de doble pared, o simple solo si aguanta el peso.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-proteger_fragiles_caja_dentro_de_caja-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Acolchona el producto y colócalo dentro de una caja interna resistente.",
+      "texto_nuevo": "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, sin espacios vacíos.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "329",
+        "frase": "We recommend using the original manufacturer's packaging as the inner box where possible."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que el libro recomienda usar el empaque original del fabricante como caja interna cuando se pueda y, si no, empacarla centrada y sin huecos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-145-proteger_fragiles_caja_dentro_de_caja-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pon relleno en el fondo de la caja externa antes de meter la caja interna.",
+      "texto_nuevo": "Pon unos 6 centímetros de relleno en el fondo de la caja externa antes de meter la caja interna.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "329",
+        "frase": "Place approximately 6cm of void fill in the base of the outer box"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro indica unos 6 cm de relleno en la base; el paso deja caer la cantidad.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

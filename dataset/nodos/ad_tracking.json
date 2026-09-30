@@ -9,7 +9,7 @@
     "Selecciona términos de búsqueda que representen el job/pain/gain a testear.",
     "Diseña un anuncio con titular, blurb y enlace a landing page.",
     "Define presupuesto y lanza la campaña, pagando solo por clics.",
-    "Mide el número de clics para interpretar el nivel de interés."
+    "Mide el número de clics para interpretar el nivel de interés; ten en cuenta que pocos clics pueden deberse a que es un mercado nuevo donde la gente todavía no busca, no a falta de interés."
   ],
   "entregable_esperado": "Reporte de campaña publicitaria con tasa de clics (CTR) como métrica de interés.",
   "nodos_previos": [
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Prueba Interés con Anuncios",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-147-ad_tracking-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide el número de clics para interpretar el nivel de interés.",
+      "texto_nuevo": "Mide el número de clics para interpretar el nivel de interés; ten en cuenta que pocos clics pueden deberse a que es un mercado nuevo donde la gente todavía no busca, no a falta de interés.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7823",
+        "frase": "the reason people didn’t search was because it was a new market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que pocos clics pueden deberse a un mercado nuevo donde aún no se busca, no a falta de interés.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

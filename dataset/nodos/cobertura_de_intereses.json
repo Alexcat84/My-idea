@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Cobertura de Intereses (Interest Coverage)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "La cobertura de intereses mide la capacidad de una empresa para pagar los intereses de su deuda con sus ganancias operativas (EBIT, ganancias antes de intereses e impuestos, dividido entre gastos de interés). Un ratio cercano a 1 es una señal de alarma, pues indica que casi toda la ganancia operativa se destina a pagar intereses; un ratio alto sugiere que la empresa puede permitirse asumir más deuda sin poner en riesgo su capacidad de pago.",
+  "resumen_teorico": "La cobertura de intereses mide la capacidad de una empresa para pagar los intereses de su deuda con sus ganancias operativas (EBIT, ganancias antes de intereses e impuestos, dividido entre gastos de interés). Un ratio cercano a 1 es una señal de alarma, pues indica que casi toda la ganancia operativa se destina a pagar intereses; un ratio alto suele indicar que la empresa puede permitirse asumir más deuda, o al menos que puede cubrir sus pagos.",
   "pasos_accionables": [
     "Calcular: Ganancia Operativa (EBIT) dividida entre Gastos por Intereses",
     "Monitorear la tendencia del ratio a lo largo del tiempo",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Calcula tu Cobertura de Intereses",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-146-cobertura_de_intereses-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La cobertura de intereses mide la capacidad de una empresa para pagar los intereses de su deuda con sus ganancias operativas (EBIT, ganancias antes de intereses e impuestos, dividido entre gastos de interés). Un ratio cercano a 1 es una señal de alarma, pues indica que casi toda la ganancia operativa se destina a pagar intereses; un ratio alto sugiere que la empresa puede permitirse asumir más deuda sin poner en riesgo su capacidad de pago.",
+      "texto_nuevo": "La cobertura de intereses mide la capacidad de una empresa para pagar los intereses de su deuda con sus ganancias operativas (EBIT, ganancias antes de intereses e impuestos, dividido entre gastos de interés). Un ratio cercano a 1 es una señal de alarma, pues indica que casi toda la ganancia operativa se destina a pagar intereses; un ratio alto suele indicar que la empresa puede permitirse asumir más deuda, o al menos que puede cubrir sus pagos.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2638",
+        "frase": "can afford to take on more debt—or at least that it can make the payments"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que un ratio alto suele indicar que puede asumir más deuda o al menos cubrir los pagos; lo de sin riesgo lo añade el nodo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

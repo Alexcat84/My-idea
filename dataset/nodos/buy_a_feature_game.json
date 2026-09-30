@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Innovation Game: Buy a Feature",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Juego sofisticado donde los clientes reciben dinero de juego para 'comprar' características predefinidas (aún no existentes) de la propuesta de valor, priorizando así qué features son más valoradas según su precio real de desarrollo.",
+  "resumen_teorico": "Juego sofisticado donde los clientes reciben un presupuesto limitado de dinero de juego para 'comprar' características predefinidas (aún no existentes) de la propuesta de valor, priorizando las más valoradas según precios fijados con factores reales, como el costo de desarrollo.",
   "pasos_accionables": [
-    "Selecciona las características a testear y asígnales un precio basado en costo de desarrollo.",
-    "Define un presupuesto grupal e individual para los participantes.",
+    "Selecciona las características a testear y asígnales un precio basado en costo de desarrollo, precio de mercado u otros factores que te importen.",
+    "Define un presupuesto grupal e individual para los participantes, de modo que el individual los obligue a juntar recursos y el total a elegir con dureza entre las características.",
     "Invita a los participantes a asignar su presupuesto colaborando entre ellos.",
     "Analiza qué características obtuvieron más tracción y cuáles no."
   ],
@@ -24,5 +24,57 @@
   "etiqueta_arbol": "Deja que Compren Funciones",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-147-buy_a_feature_game-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Juego sofisticado donde los clientes reciben dinero de juego para 'comprar' características predefinidas (aún no existentes) de la propuesta de valor, priorizando así qué features son más valoradas según su precio real de desarrollo.",
+      "texto_nuevo": "Juego sofisticado donde los clientes reciben un presupuesto limitado de dinero de juego para 'comprar' características predefinidas (aún no existentes) de la propuesta de valor, priorizando las más valoradas según precios fijados con factores reales, como el costo de desarrollo.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8924",
+        "frase": "Customers get a limited budget of play money to buy their preferred features"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija los precios por factores reales (costo de desarrollo, precio de mercado u otros); el nodo lo reduce al costo.; Se reduce el precio al costo de desarrollo y se pierde que el presupuesto de juego es limitado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-147-buy_a_feature_game-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Selecciona las características a testear y asígnales un precio basado en costo de desarrollo.",
+      "texto_nuevo": "Selecciona las características a testear y asígnales un precio basado en costo de desarrollo, precio de mercado u otros factores que te importen.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8937",
+        "frase": "based on development cost, market price, or other factors that are important to you"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite costo de desarrollo, precio de mercado u otros factores; el paso deja solo el primero.; Misma reducción de las bases de precio a una sola.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-147-buy_a_feature_game-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define un presupuesto grupal e individual para los participantes.",
+      "texto_nuevo": "Define un presupuesto grupal e individual para los participantes, de modo que el individual los obligue a juntar recursos y el total a elegir con dureza entre las características.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8950",
+        "frase": "Make sure the personal budget forces participants to pool resources"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma condición perdida, que es la que hace funcionar el juego.; Se pierde la condición de diseño: el presupuesto personal obliga a juntar recursos y el total a elegir con dureza.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

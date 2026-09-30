@@ -7,10 +7,10 @@
   "resumen_teorico": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras reducen drásticamente el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
   "pasos_accionables": [
     "Auditar la utilización real de almacenamiento y servidores para identificar excedentes.",
-    "Implementar virtualización de almacenamiento y deduplicación de datos.",
+    "Implementar virtualización de servidores y de almacenamiento, y deduplicación de datos.",
     "Actualizar servidores y fuentes de poder cada pocos años para mayor eficiencia energética.",
     "Rediseñar el flujo de aire y aplicar contención de pasillos fríos/calientes.",
-    "Ajustar los rangos de temperatura y humedad según recomendaciones del fabricante.",
+    "Ampliar los rangos de humedad según recomendaciones del fabricante y subir con cuidado la temperatura de los pasillos fríos, teniendo en cuenta el menor margen de seguridad ante una falla de refrigeración.",
     "Evaluar el uso de economizadores de aire o agua y sistemas de enfriamiento líquido.",
     "Considerar la ubicación geográfica del centro de datos según fuentes de energía limpias."
   ],
@@ -31,5 +31,41 @@
   "etiqueta_arbol": "Haz Verde tu Centro de Datos",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-147-optimizacion_centro_datos_verde-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar virtualización de almacenamiento y deduplicación de datos.",
+      "texto_nuevo": "Implementar virtualización de servidores y de almacenamiento, y deduplicación de datos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3342-3354",
+        "frase": "Employ server virtualization technology."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la virtualización de servidores como palanca propia y ningún paso la recoge.; Falta la virtualización de servidores, consejo explícito del libro para consolidar servidores subutilizados.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-147-optimizacion_centro_datos_verde-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajustar los rangos de temperatura y humedad según recomendaciones del fabricante.",
+      "texto_nuevo": "Ampliar los rangos de humedad según recomendaciones del fabricante y subir con cuidado la temperatura de los pasillos fríos, teniendo en cuenta el menor margen de seguridad ante una falla de refrigeración.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3362-3366",
+        "frase": "this has to be done carefully, with a view to the reduced temperature safety margin"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide subir la temperatura con cuidado por el menor margen ante una falla de refrigeración; la cautela se pierde.; Se pierden la dirección del ajuste (subir temperatura, ampliar humedad) y la cautela del libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
