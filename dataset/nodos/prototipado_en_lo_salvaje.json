@@ -9,7 +9,7 @@
     "Identificar el aspecto social/relacional del servicio que no puede probarse en un entorno controlado.",
     "Cargar prototipos funcionales (aunque imperfectos) en dispositivos o plataformas reales.",
     "Distribuirlos a grupos pequeños de usuarios reales en su contexto natural.",
-    "Observar durante un periodo corto (1-2 semanas) cuál variante genera más uso y compromiso genuino.",
+    "Observar hasta que quede claro cuál variante genera más uso y compromiso genuino.",
     "Estar dispuesto a descartar la hipótesis favorita del equipo si la evidencia real dice lo contrario."
   ],
   "entregable_esperado": "Evidencia empírica de uso real que indique qué variante del servicio es más efectiva y por qué, basada en comportamiento genuino de usuarios.",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Prueba tu Prototipo en Real",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-prototipado_en_lo_salvaje-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Observar durante un periodo corto (1-2 semanas) cuál variante genera más uso y compromiso genuino.",
+      "texto_nuevo": "Observar hasta que quede claro cuál variante genera más uso y compromiso genuino.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "656",
+        "frase": "In less than two weeks it was clear which of the two prototypes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no prescribe una duración: en el caso, el resultado quedó claro en menos de dos semanas.; Mismo defecto: convierte el resultado de un caso en un plazo fijo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

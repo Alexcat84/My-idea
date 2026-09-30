@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diseñar una versión 3D o digital simplificada del concepto (producto, espacio o marca).",
     "Publicarla en una plataforma virtual accesible al público objetivo.",
-    "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' durante varios meses.",
+    "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' hasta reunir suficiente retroalimentación.",
     "Iterar el diseño virtual en función del feedback antes de construir la versión física.",
     "Evaluar críticamente la representatividad de los usuarios virtuales frente al público real."
   ],
@@ -57,6 +57,23 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R030-041 (CONTRARIO, arbitro): Tenía razón el lector B. Busqué en todo el libro (cheap, inexpensive, low cost) apoyo al bajo costo del prototipo virtual: el \"fast, rough, and cheap\" de L616 se refiere a los prototipos tempranos en general con materiales como cartón y espuma, no al prototipo virtual, que el libro califica de caro en L658. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R030-041"
+    },
+    {
+      "id": "final-e1-170-prototipado_virtual_mundos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' durante varios meses.",
+      "texto_nuevo": "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' hasta reunir suficiente retroalimentación.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "658",
+        "frase": "When enough feedback had been collected, Starwood shut down the virtual hotel"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija un plazo: el caso duró nueve meses y se cerró cuando hubo suficiente retroalimentación.; Mismo defecto: convierte la duración de un caso en un plazo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

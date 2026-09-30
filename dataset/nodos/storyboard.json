@@ -7,9 +7,9 @@
   "resumen_teorico": "Prototipo rápido y de baja resolución que visualiza el concepto de principio a fin mediante viñetas tipo cómic. Ayuda a refinar la idea y a entender quién la usará, dónde y cómo, sin requerir habilidad artística, ya que el objetivo es pensar la idea a fondo, no crear arte.",
   "pasos_accionables": [
     "Determinar qué parte de la idea se quiere representar en el storyboard",
-    "Dedicar 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
+    "Dedicar no más de 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
     "No preocuparse por la calidad del dibujo, priorizar la claridad de la narrativa",
-    "Actuar o presentar el storyboard al equipo para recibir feedback, y compartirlo con usuarios o el equipo para retroalimentación",
+    "Actuar o presentar el storyboard al equipo para recibir feedback",
     "Dividir la idea en escenas o momentos clave",
     "Titular cada escena y describir qué está pasando"
   ],
@@ -42,5 +42,41 @@
   ],
   "fuentes_internas": [
     "The field guide to human-centered design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-storyboard-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Actuar o presentar el storyboard al equipo para recibir feedback, y compartirlo con usuarios o el equipo para retroalimentación",
+      "texto_nuevo": "Actuar o presentar el storyboard al equipo para recibir feedback",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "5139",
+        "frase": "Once you’re done, act out the Storyboard to your team for feedback."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo pide actuarlo ante el equipo para recibir feedback; compartirlo con usuarios no está.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-173-storyboard-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dedicar 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
+      "texto_nuevo": "Dedicar no más de 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "5129",
+        "frase": "Spend no more than 30-45 minutes drawing how your ideas work."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija 30-45 minutos como tope, no como duración a dedicar.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

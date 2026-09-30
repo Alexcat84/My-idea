@@ -4,14 +4,14 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Fundamentos de la Gestión de Riesgo (Frame, Assess, Respond, Monitor)",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Estas actividades forman la base conceptual sobre la cual se construye el Risk Management Framework (RMF) de NIST.",
+  "resumen_teorico": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
   "pasos_accionables": [
     "Definir el contexto de riesgo de la organización (misión, activos, entorno).",
     "Establecer la tolerancia al riesgo organizacional.",
     "Documentar cómo se evaluará, responderá y monitoreará el riesgo.",
     "Revisar periódicamente estas cuatro actividades como ciclo continuo."
   ],
-  "entregable_esperado": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos y enfoque general para evaluar, responder y monitorear riesgos.",
+  "entregable_esperado": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos, restricciones y enfoque general para evaluar, responder y monitorear riesgos.",
   "nodos_previos": [
     "reglas_gestion_riesgo_gambling",
     "analisis_de_sensibilidad_riesgo"
@@ -93,6 +93,38 @@
         "motivo": "Quien ya identifico y cuantifico los riesgos clave de su proyecto al variar supuestos criticos sigue naturalmente con el ciclo completo de enmarcar, evaluar, responder y monitorear el riesgo."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2."
+    },
+    {
+      "id": "final-e1-172-fundamentos_gestion_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Estas actividades forman la base conceptual sobre la cual se construye el Risk Management Framework (RMF) de NIST.",
+      "texto_nuevo": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "19",
+        "frase": "Before we explore the RMF in detail, let's take a moment to understand"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo pide entender la gestión de riesgo antes de explorar el RMF; no dice que el RMF se construya sobre ella.; Mismo defecto: relación de fundamento que el libro no afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-172-fundamentos_gestion_riesgo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos y enfoque general para evaluar, responder y monitorear riesgos.",
+      "texto_nuevo": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos, restricciones y enfoque general para evaluar, responder y monitorear riesgos.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "21",
+        "frase": "addresses risk tolerance, assumptions and constraints, and how the organization intends to assess"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone las restricciones junto a tolerancia y supuestos en la estrategia; el entregable las omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

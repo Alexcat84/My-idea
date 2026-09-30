@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Actualización Iterativa del Business Model Canvas ('Tune-up')",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
+  "resumen_teorico": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado; ese hallazgo afecta también tus hipótesis de ingresos, que ajustas según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
   "pasos_accionables": [
     "Revisa tu propuesta de valor a la luz del feedback de clientes recibido",
     "Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto",
@@ -50,5 +50,23 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-actualizar_business_model_canvas_tuneup-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
+      "texto_nuevo": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado; ese hallazgo afecta también tus hipótesis de ingresos, que ajustas según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9206",
+        "frase": "that discovery will affect the revenue stream hypothesis as well"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga el ajuste de ingresos al entusiasmo de solo un subconjunto, no a que falle cualquier hipótesis.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

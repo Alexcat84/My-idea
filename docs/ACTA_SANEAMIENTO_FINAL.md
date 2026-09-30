@@ -605,3 +605,33 @@ cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de conta
 - **Lotes 106 a 117:** las lecturas B en Sonnet no cuentan como lectura. Cada lote lleva sus dos lectores Opus.
 - **Qué pasa con las 32 lecturas Sonnet** (96 a 105 A y B; 106 a 117 B): salen del circuito, se guardan fuera del repo
   y no entran en ninguna tanda ni paquete. Sus trabajos vuelven a la cola.
+
+**Etapa 1, cierre de la lectura (30 sep 2026), fijado ANTES de sortear la muestra de parada:**
+- **Fallo de método declarado (regla de relectura, 9.4):** en 10 lotes ninguno de los tres lectores cazó la trampa
+  sin marca: 128, 149, 175, 181, 189, 197, 228, 240, 241 y 268. Nueve son del tipo contrario y casi todos cambian
+  "antes de" por "después de" (la 175 dejó además una frase agramatical); la 228 es de matiz. El patrón se anota para
+  la medida 2: el cambio de orden temporal es el punto ciego de la lectura contra el libro.
+- **Correcciones FUERA:** el árbitro las confirmó, pero su texto no pasó los filtros de la tanda (una baranda nueva,
+  contenido de país en un nodo sin clase de jurisdicción, el largo del resumen o la cita). El hallazgo no se reabre:
+  - Un reescritor Opus recibe el texto vigente, el del árbitro, las razones confirmadas, la cita, la regla que no
+    pasa y el fragmento que la dispara. Escribe un texto que conserve el arreglo y cumpla la regla, o lo deja en null
+    con su motivo.
+  - Su texto vuelve a pasar los mismos filtros (`tanda_e1.py`) y se aplica en una tanda `final-e1-fuera` con las
+    marcas del árbitro original.
+- **Detalle del sorteo de la muestra de parada (semilla 20261001, regla de 9.4):**
+  - **Universo:** los 3.169 nodos vivos fuera del mundo 11, con el texto que quede tras la tanda FUERA.
+  - **Reparto:** 8 por espacio y los 70 restantes en proporción al tamaño del espacio, por restos mayores. Sale: core
+    39, quality 23, environmental 14, health_safety 14, franquicias 12, exportacion 11, entrega 10, risk_management 9,
+    compras 9 y seguridad_digital 9.
+  - **Sorteo:** espacios en orden de tamaño descendente (empate por nombre); dentro de cada uno, ids en orden
+    alfabético y `random.Random(20261001 + índice del espacio)`.
+  - **Lotes:** los 150 se barajan con `random.Random(20261001)` y se parten en 15 lotes de 10. Un lote mezcla libros;
+    cada nodo trae sus ficheros.
+  - **Trampas:** una por lote, con el mismo plantado v2 de la etapa. El nodo sale de `random.Random(20261001 + 1000 +
+    L)` y el tipo va por turnos (contrario, cifra, endurecer, matiz); si ningún nodo lo admite, pasa al siguiente.
+  - **Lectura:** dos lectores Opus con las instrucciones de la etapa, un tercero si ninguno caza la trampa, y árbitro
+    Opus.
+  - **La cuenta:** un defecto es un elemento (resumen, paso o entregable) con al menos una marca confirmada o
+    reclasificada de ese tipo. PASA con 0 contrarios, 0 invenciones, matiz ≤ 0,2 por nodo (30 en 150) y todas las
+    trampas de matiz cazadas.
+  - **Código:** `parada_e1.py`, en las claves del remedio.

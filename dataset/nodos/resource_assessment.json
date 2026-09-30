@@ -6,7 +6,7 @@
   "fuente": "The field guide to human-centered design",
   "resumen_teorico": "Herramienta para planificar la implementación de una solución evaluando distribución, actividades necesarias, capacidades existentes y responsabilidades. Ayuda a identificar quién ejecutará cada tarea (equipo de diseño, organización implementadora, financiador o externo) y qué recursos faltan todavía.",
   "pasos_accionables": [
-    "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales",
+    "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales; si se consideran varios modelos, hacer una evaluación por cada uno para compararlos",
     "Listar las actividades requeridas para que la idea funcione",
     "Evaluar las capacidades ya existentes en la organización",
     "Asignar responsabilidades por actividad (equipo de diseño, organización, financiador, externo)",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Evalúa tus Recursos Disponibles",
   "fuentes_internas": [
     "The field guide to human-centered design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-resource_assessment-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales",
+      "texto_nuevo": "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales; si se consideran varios modelos, hacer una evaluación por cada uno para compararlos",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "6246-6248",
+        "frase": "Fill out a Resource Assessment worksheet for each model to compare."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el libro pide una hoja de evaluación por modelo para comparar.; Se cae que, con varios modelos de distribución, se hace una evaluación por cada uno para compararlos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

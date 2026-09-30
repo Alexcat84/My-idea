@@ -10,7 +10,7 @@
     "Cruza ambas escalas para cada riesgo que tengas identificado",
     "Decide qué combinaciones consideras riesgo alto, medio o bajo, según lo que estés dispuesto a aceptar",
     "Ubica cada riesgo de tu lista según su probabilidad y su impacto",
-    "Define cómo vas a responder a cada riesgo según qué tan urgente y grave sea"
+    "Define cómo vas a responder a cada riesgo según el nivel (alto, medio o bajo) que le asignaste en la matriz"
   ],
   "entregable_esperado": "Una lista de tus riesgos ordenados según probabilidad e impacto, con el nivel de prioridad que le asignaste a cada uno.",
   "nodos_previos": [
@@ -83,6 +83,23 @@
         "motivo": "matriz_probabilidad_impacto ya anclaba 2 puentes en seguridad digital; el reanclaje de fundamentos_gestion_riesgo pasa a analisis_de_sensibilidad_riesgo."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2."
+    },
+    {
+      "id": "final-e1-170-matriz_probabilidad_impacto-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define cómo vas a responder a cada riesgo según qué tan urgente y grave sea",
+      "texto_nuevo": "Define cómo vas a responder a cada riesgo según el nivel (alto, medio o bajo) que le asignaste en la matriz",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3318",
+        "frase": "may use the relative risk rankings to specify what type risk response should be taken"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga el tipo de respuesta a la clasificación relativa del riesgo en la matriz; la urgencia solo aparece como variable opcional de algunas escalas, no como criterio de respuesta.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

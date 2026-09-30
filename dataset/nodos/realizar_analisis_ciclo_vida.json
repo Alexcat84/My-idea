@@ -4,14 +4,14 @@
   "dominio": "environmental",
   "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Pasos de Aplicación",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. Sigue estándares ISO 14040/14044 con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que los mayores impactos suelen estar en etapas inesperadas de la cadena.",
+  "resumen_teorico": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. La mayoría de los estudios se basa en los estándares ISO 14040/14044, con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que un LCA puede revelar impactos importantes en etapas inesperadas de la cadena.",
   "pasos_accionables": [
     "Definir claramente el objetivo del LCA: qué pregunta de negocio se busca responder",
     "Elegir el alcance del ciclo de vida (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle)",
     "Seleccionar el tipo de impacto a medir (carbono, agua, toxicidad, ecosistemas)",
     "Aplicar el marco ISO 14040/14044 en sus cuatro fases",
     "Elegir herramienta adecuada según presupuesto y nivel de rigor necesario (desde hojas de cálculo hasta software especializado)",
-    "Documentar todos los supuestos y límites del sistema para permitir comparabilidad"
+    "Documentar todos los supuestos y límites del sistema, para poder compartir la metodología si comunicas los resultados hacia afuera"
   ],
   "entregable_esperado": "Estudio de análisis de ciclo de vida de un producto/servicio con identificación de los principales puntos de impacto ambiental",
   "nodos_previos": [
@@ -40,6 +40,39 @@
         "evidencia": "F08-012: Mide los impactos ambientales de un producto existente a lo largo de su ciclo de vida; es un analisis tecnico de producto, no una prueba con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-172-realizar_analisis_ciclo_vida-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. Sigue estándares ISO 14040/14044 con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que los mayores impactos suelen estar en etapas inesperadas de la cadena.",
+      "texto_nuevo": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. La mayoría de los estudios se basa en los estándares ISO 14040/14044, con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que un LCA puede revelar impactos importantes en etapas inesperadas de la cadena.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1866",
+        "frase": "a unifying framework on which most LCAs build: ISO 14040 and ISO 14044"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la mayoría de los LCA se basa en ISO 14040/14044, no que todos lo sigan.; El libro presenta casos sin afirmar frecuencia; el 'suelen' del nodo generaliza.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-172-realizar_analisis_ciclo_vida-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar todos los supuestos y límites del sistema para permitir comparabilidad",
+      "texto_nuevo": "Documentar todos los supuestos y límites del sistema, para poder compartir la metodología si comunicas los resultados hacia afuera",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1846",
+        "frase": "invest in rigorous analytical efforts and be ready to share the methodologies behind them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro advierte que comparar entre empresas tiene poco sentido; documentar sirve para compartir la metodología al comunicar resultados.; Mismo defecto: el porqué de la comparabilidad no está en el libro.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

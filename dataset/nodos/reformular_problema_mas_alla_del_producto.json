@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Reformular el Problema en su Contexto Más Amplio",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma —cómo se mueven las personas, las cosas, los espacios— dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo de Eero Saarinen de considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+  "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
   "pasos_accionables": [
     "Identificar el producto o solución que se está diseñando y preguntar '¿qué problema real resuelve esto?'",
     "Ampliar el marco: pensar en el sistema, contexto o comportamiento humano detrás del producto",
@@ -12,7 +12,7 @@
     "Desarrollar escenarios conjeturales que exploren posibilidades dentro de ese marco ampliado",
     "Construir prototipos (físicos, digitales o experienciales) que sirvan para iniciar conversaciones con socios potenciales"
   ],
-  "entregable_esperado": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para validar la dirección",
+  "entregable_esperado": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para iniciar conversaciones con socios potenciales",
   "nodos_previos": [
     "investigacion_etnografica_ideacion",
     "analisis_y_sintesis"
@@ -30,5 +30,39 @@
   "etiqueta_arbol": "Piensa Más Allá del Producto",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-reformular_problema_mas_alla_del_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma —cómo se mueven las personas, las cosas, los espacios— dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo de Eero Saarinen de considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+      "texto_nuevo": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1575",
+        "frase": "recalled the advice given to him by his father"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye el consejo al padre de Eero Saarinen, que se lo dio a él; la autoría del consejo es añadida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-170-reformular_problema_mas_alla_del_producto-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para validar la dirección",
+      "texto_nuevo": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para iniciar conversaciones con socios potenciales",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1531",
+        "frase": "used to initiate conversations with potentially interested partners"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da al prototipo el propósito de iniciar conversaciones con posibles socios, no el de validar la dirección.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

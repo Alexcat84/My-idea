@@ -9,7 +9,7 @@
     "Reúnete con tu equipo cercano y, si tienes, con quienes invierten en tu negocio para hacer esta revisión juntos",
     "Dibuja el mapa de cómo tu cliente resuelve hoy el problema, con y sin tu producto",
     "Evalúa qué tan bien lo que ofreces resuelve realmente ese problema",
-    "Revisa tu lista de funcionalidades y elimina las que no importan de verdad",
+    "Revisa tu lista de funcionalidades, ordénalas por su importancia para tus clientes y elimina o pospón las que no importan de verdad",
     "Actualiza tu lienzo de modelo de negocio y tu plan de entrega a 18 meses",
     "Decide con claridad: cambias de rumbo o sigues adelante"
   ],
@@ -39,5 +39,24 @@
   "etiqueta_arbol": "Decide Pivotar o Continuar",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-actualizar_modelo_de_negocio_pivot_o_proceed-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa tu lista de funcionalidades y elimina las que no importan de verdad",
+      "texto_nuevo": "Revisa tu lista de funcionalidades, ordénalas por su importancia para tus clientes y elimina o pospón las que no importan de verdad",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8732",
+        "frase": "Can any features on the product spec be deleted or deferred?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro prioriza por importancia para el cliente y contempla borrar o posponer; se cae posponer.; Se caen la priorización por importancia para el cliente y la opción de posponer.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

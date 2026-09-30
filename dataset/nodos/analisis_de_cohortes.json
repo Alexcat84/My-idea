@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Cohortes para Retención",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo, como ocurre al comparar clientes en prueba gratis versus quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
+  "resumen_teorico": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo; por ejemplo, puedes comprobar si quienes empiezan con una prueba gratis se van antes que quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
   "pasos_accionables": [
     "Agrupa tus usuarios según un atributo relevante: fuente de referencia, fecha de activación o tipo de oferta aceptada",
     "Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto, y también registro, activación, retención, conversión",
@@ -100,6 +100,22 @@
         "evidencia": "F22-014: Exige miles de clientes y busca mejorar la retencion de una base existente; es mejora de lo que ya opera. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-173-analisis_de_cohortes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo, como ocurre al comparar clientes en prueba gratis versus quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
+      "texto_nuevo": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo; por ejemplo, puedes comprobar si quienes empiezan con una prueba gratis se van antes que quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12084",
+        "frase": "Do customers who first accept a free trial leave more quickly"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo plantea como pregunta; el nodo lo da como hecho.; Mismo defecto: presenta como resultado lo que el libro solo pregunta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

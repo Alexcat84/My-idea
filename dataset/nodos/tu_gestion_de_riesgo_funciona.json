@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Auditar y Mejorar el Método de Riesgo",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. La única forma seria de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
+  "resumen_teorico": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. Una forma esencial de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
   "pasos_accionables": [
     "Pregúntate con franqueza si tu método reduce sorpresas o solo te da calma.",
     "Compara tus predicciones de riesgo pasadas con lo que de verdad ocurrió.",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "¿Tu Gestión de Riesgo Funciona?",
   "fuentes_internas": [
     "Hubbard, The Failure of Risk Management"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-171-tu_gestion_de_riesgo_funciona-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. La única forma seria de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
+      "texto_nuevo": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. Una forma esencial de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "699-711, 4768",
+        "frase": "Constantly testing your model by seeing how well it matches history is absolutely essential."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro llama esencial al contraste con la historia pero da otras formas objetivas de medir.; Mismo endurecimiento a forma única.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Gestión Forestal Regenerativa (Modelo Menominee)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito.",
+  "resumen_teorico": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando a menudo solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito. No es un método universal: al restaurar un monocultivo, la tala rasa puede servir.",
   "pasos_accionables": [
     "Evaluar el estado actual del recurso natural que se explota (stock, diversidad, salud)",
     "Diseñar un plan de extracción selectivo que preserve la estructura ecológica clave",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Cosecha Sin Agotar el Bosque",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-171-gestion_forestal_regenerativa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito.",
+      "texto_nuevo": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando a menudo solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito. No es un método universal: al restaurar un monocultivo, la tala rasa puede servir.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "537",
+        "frase": "The Menominee often cut only the weaker trees, leaving the strong mother trees"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte que este método no es universal y que a veces la tala rasa funciona.; El libro dice que a menudo cortan solo los más débiles; el nodo lo vuelve regla.; Misma advertencia perdida sobre que no hay absolutos en el método.; Mismo endurecimiento del 'often' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

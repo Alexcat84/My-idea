@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcular el TCO estimado: costos de adopción, capacitación, infraestructura necesaria",
     "Preparar un ROI hipotético antes de las reuniones iniciales con clientes corporativos",
-    "Comparar el ROI del producto contra la solución actual del cliente",
+    "Comparar el ROI del producto contra la solución actual del cliente: si no devuelve un múltiplo significativo de la inversión, la venta puede ser difícil",
     "Usar el análisis como material de apoyo (white paper) en el proceso de venta"
   ],
   "entregable_esperado": "Documento o white paper con análisis de TCO y ROI para clientes B2B",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Calcula el Valor para tu Cliente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-analisis_tco_roi_b2b-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar el ROI del producto contra la solución actual del cliente",
+      "texto_nuevo": "Comparar el ROI del producto contra la solución actual del cliente: si no devuelve un múltiplo significativo de la inversión, la venta puede ser difícil",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7764",
+        "frase": "If the solution doesn’t return a meaningful multiple ROI, sales may be difficult."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el criterio del libro: sin un múltiplo significativo de ROI la venta puede ser difícil.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

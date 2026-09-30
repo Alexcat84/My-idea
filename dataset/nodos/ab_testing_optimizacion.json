@@ -6,9 +6,9 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "El A/B testing es el método más usado para optimizar actividades de 'get, keep and grow' en negocios web y móviles. Consiste en comparar dos versiones de una página web (o elemento) para determinar cuál produce mejores resultados, mostrando la versión 'A' a la mitad de los visitantes y la versión 'B' a la otra mitad, de forma alternada y secuencial.",
   "pasos_accionables": [
-    "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.",
+    "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro).",
     "Sugerencia de My Idea: Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.",
-    "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba el tiempo suficiente para alcanzar su máximo, enfocándose en una sola métrica a la vez.",
+    "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico).",
     "Medir resultados de conversión/activación para cada versión",
     "Sugerencia de My Idea: Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas."
   ],
@@ -109,6 +109,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-173-ab_testing_optimizacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.",
+      "texto_nuevo": "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro).",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "11603",
+        "frase": "Which headline, picture, or product offer generated more sign-ups, sales or abandons?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no enumera la prueba social ni el número de campos de formulario entre los elementos a probar.; La lista añadida (ubicación de CTA, prueba social, campos) no está en el libro; elegir antes la métrica es operativo y se conserva.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-173-ab_testing_optimizacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba el tiempo suficiente para alcanzar su máximo, enfocándose en una sola métrica a la vez.",
+      "texto_nuevo": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico).",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "11613",
+        "frase": "Many testers drive 80% of the traffic to one alternative, and 20% to the other"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide probar de forma cuidadosa, justa y secuencial con grupo de control; no habla de alcanzar un máximo ni de una sola métrica.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

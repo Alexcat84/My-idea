@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Herramienta del Fractal y Triple Top Line",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, generando valor genuino en las tres áreas simultáneamente.",
+  "resumen_teorico": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que en la práctica a menudo trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, lo que permite crear valor en las tres áreas.",
   "pasos_accionables": [
-    "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Equidad, Equidad/Ecología, Ecología/Ecología, Ecología/Economía",
+    "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Economía, Equidad/Equidad, Equidad/Ecología, Ecología/Equidad, Ecología/Ecología, Ecología/Economía, Economía/Ecología",
     "Formular preguntas específicas en cada sector (ej: ¿Es rentable? ¿Es un salario digno? ¿Es justo exponer a toxinas? ¿Obedece las leyes de la naturaleza?)",
     "Diseñar el producto o sistema abordando las tres dimensiones desde el inicio (top line), no como añadidos posteriores",
     "Verificar que ningún sector se convierta en un 'ismo' extremo que desestabilice el conjunto"
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Equilibra Economía, Equidad y Ecología",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-171-herramienta_fractal_triple_top_line-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, generando valor genuino en las tres áreas simultáneamente.",
+      "texto_nuevo": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que en la práctica a menudo trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, lo que permite crear valor en las tres áreas.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "871-873",
+        "frase": "in practice we find that it often appears to center only on economic considerations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que en la práctica a menudo parece centrarse en lo económico; el nodo lo da como definición.; El libro dice que la herramienta permite crear valor; el nodo lo promete como resultado.; Mismo endurecimiento del 'often appears' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-171-herramienta_fractal_triple_top_line-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Equidad, Equidad/Ecología, Ecología/Ecología, Ecología/Economía",
+      "texto_nuevo": "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Economía, Equidad/Equidad, Equidad/Ecología, Ecología/Equidad, Ecología/Ecología, Ecología/Economía, Economía/Ecología",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "859-867",
+        "frase": "Finally, Economy/Ecology: this is where eco-efficiency is coming from"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El recorrido del libro incluye además Equidad/Economía, Ecología/Equidad y Economía/Ecología.; Misma enumeración incompleta del recorrido.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

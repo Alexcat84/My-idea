@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir claramente qué se quiere aprender antes de construir el prototipo",
     "Limitar la resolución del prototipo a solo lo necesario para responder esa pregunta",
-    "Evitar el uso de tecnología de alta fidelidad (impresión 3D, CAD) en etapas tempranas",
+    "Evitar usar tecnología de alta fidelidad (impresión 3D, CAD) para hacer prototipos demasiado refinados y detallados en etapas tempranas",
     "Aumentar gradualmente la fidelidad solo cuando se necesite feedback de usuarios finales sobre superficie/detalles"
   ],
   "entregable_esperado": "Un prototipo con el nivel de fidelidad justo y necesario para la pregunta de aprendizaje específica de esa etapa",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Basta con Suficiente Prototipo",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-principio_enough_is_enough-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar el uso de tecnología de alta fidelidad (impresión 3D, CAD) en etapas tempranas",
+      "texto_nuevo": "Evitar usar tecnología de alta fidelidad (impresión 3D, CAD) para hacer prototipos demasiado refinados y detallados en etapas tempranas",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "622",
+        "frase": "if it is used to create prototypes too refined, too detailed, and too early"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no desaconseja la herramienta; advierte contra usarla para prototipos demasiado refinados, detallados y tempranos.; Mismo defecto.; Mismo defecto: endurece la advertencia a evitar la tecnología.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

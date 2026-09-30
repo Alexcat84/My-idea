@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Deconstrucción de Flujos mediante Propósito, Partes, Lugar y Ritmo",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema antes de que el 'runaway design' (diseño fuera de control) tome el mando.",
+  "resumen_teorico": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema.",
   "pasos_accionables": [
     "Selecciona un flujo relevante para tu proyecto (de información, personas o recursos).",
     "Identifica explícitamente su propósito: ¿por qué existe y a quién sirve?",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Analiza Propósito, Partes y Lugar",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-framework_flujos_de_datos_ppp-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema antes de que el 'runaway design' (diseño fuera de control) tome el mando.",
+      "texto_nuevo": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "1088-1097",
+        "frase": "Each component part is something you can critique, nudge, shift, or change."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un plazo y un por qué; en el libro el diseño desbocado ya está en marcha y la descomposición sirve para criticar o cambiar cada parte.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

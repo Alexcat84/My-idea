@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Mapeo de Flujos Invisibles (Data como Sistema)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible se convierte en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que 'los patrones se convierten en conocimiento, y el conocimiento en poder' (Zuboff). Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
+  "resumen_teorico": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible puede convertirse en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que los datos crean patrones, los patrones se convierten en conocimiento y el conocimiento en poder. Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
   "pasos_accionables": [
     "Identifica qué datos genera tu producto/servicio y quién los recolecta.",
     "Traza el recorrido del dato: de la persona, al sistema, a quién lo posee y qué poder obtiene.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Mapea tus Flujos de Datos",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-mapeo_flujos_invisibles_datos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible se convierte en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que 'los patrones se convierten en conocimiento, y el conocimiento en poder' (Zuboff). Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
+      "texto_nuevo": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible puede convertirse en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que los datos crean patrones, los patrones se convierten en conocimiento y el conocimiento en poder. Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "1003-1007",
+        "frase": "Anything measurable can become data."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que todo lo medible puede convertirse en dato, no que siempre se convierta.; La frase es del propio texto, no de la persona a quien el nodo la atribuye; la atribución es añadida.; Mismo defecto que la marca 0: endurece 'puede convertirse' a un hecho seguro.; Mismo defecto que la marca 1: atribución añadida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

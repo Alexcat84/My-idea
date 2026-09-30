@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Cuál Es tu Mayor Riesgo y Cómo lo Sabes",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Casi nadie se las hace, y menos la segunda. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
+  "resumen_teorico": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Todo intento de manejar riesgos debería responderlas. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
   "pasos_accionables": [
     "Escribe, sin pensarlo mucho, cuál crees que es el mayor riesgo de tu proyecto.",
     "Debajo, escribe con honestidad cómo lo sabes: qué evidencia tienes o si es solo corazonada.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Cuál Es tu Mayor Riesgo",
   "fuentes_internas": [
     "Hubbard, The Failure of Risk Management"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-171-cual_es_tu_mayor_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Casi nadie se las hace, y menos la segunda. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
+      "texto_nuevo": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Todo intento de manejar riesgos debería responderlas. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "28",
+        "frase": "Any attempt to manage risk in these organizations should involve answering these questions."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no afirma que casi nadie se las haga; dice que todo intento de gestión debería responderlas.; Mismo dato de frecuencia inventado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

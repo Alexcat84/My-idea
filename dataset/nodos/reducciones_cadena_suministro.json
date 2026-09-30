@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Buscar Reducciones de Emisiones en la Cadena de Suministro",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Trabajar con los proveedores (no contra ellos) y enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales, es una estrategia efectiva. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+  "resumen_teorico": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
   "pasos_accionables": [
     "Realizar un análisis de ciclo de vida para identificar impactos en la cadena de valor.",
     "Identificar proveedores clave con mayor impacto de emisiones.",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Revisa tu Cadena de Suministro",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-172-reducciones_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Trabajar con los proveedores (no contra ellos) y enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales, es una estrategia efectiva. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+      "texto_nuevo": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6364",
+        "frase": "It may be sensible to start with a limited focus"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede ser sensato empezar con un foco limitado, no que sea una estrategia efectiva.; Mismo defecto: endurece la cautela del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

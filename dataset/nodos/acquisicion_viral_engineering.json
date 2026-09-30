@@ -11,7 +11,7 @@
     "Crear widgets simples de 'like' o compartir en redes sociales",
     "Aplicar el test de recomendación (Net Promoter Score simplificado) a clientes tempranos",
     "Considerar recompensas para quienes refieran el producto",
-    "Crear contenido no genérico (sitios, blogs) relacionado al problema que resuelve el producto, como videos o demostraciones",
+    "Considerar crear contenido aparte y sin la marca del producto (sitios, blogs) dedicado al problema que resuelve el producto, como videos o demostraciones",
     "Anima a tus primeros clientes a que lo promuevan activamente"
   ],
   "entregable_esperado": "Componentes virales integrados en el producto y una métrica de recomendación (score 1-10) de clientes tempranos",
@@ -43,5 +43,24 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-acquisicion_viral_engineering-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Crear contenido no genérico (sitios, blogs) relacionado al problema que resuelve el producto, como videos o demostraciones",
+      "texto_nuevo": "Considerar crear contenido aparte y sin la marca del producto (sitios, blogs) dedicado al problema que resuelve el producto, como videos o demostraciones",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "10563",
+        "frase": "consider creating separate, unbranded experiences (sites, blogs) that are specifically geared toward the problem"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro lo propone como algo a considerar, no como paso obligado.; El libro pide experiencias aparte y sin marca; 'no genérico' dice lo opuesto.; Mismo endurecimiento: 'might also want to consider' pasa a instrucción.; Más que un matiz perdido, 'no genérico' invierte 'unbranded'.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

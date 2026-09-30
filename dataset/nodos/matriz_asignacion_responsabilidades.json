@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Quién hace qué en cada tarea (matriz RACI)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. El formato más usado para esto es la tabla RACI.",
+  "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
   "pasos_accionables": [
     "Haz una lista de las tareas o actividades del proyecto",
     "Haz una lista de las personas o grupos involucrados",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Asigna Responsabilidades con Matriz",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-matriz_asignacion_responsabilidades-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. El formato más usado para esto es la tabla RACI.",
+      "texto_nuevo": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2763",
+        "frase": "An example follows using a RACI chart"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo muestra la tabla RACI como ejemplo; la frecuencia de uso es añadida.; Mismo defecto: la RACI es el ejemplo que da el libro, no el formato más usado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

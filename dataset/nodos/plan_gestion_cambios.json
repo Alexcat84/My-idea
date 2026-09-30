@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Plan de Gestión de Cambios",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides hasta que se aprueba o se descarta.",
+  "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides y le das seguimiento hasta que se aprueba, se aplaza o se descarta.",
   "pasos_accionables": [
     "Decide qué tan estricto va a ser tu control de cambios y cómo se conecta con el resto de tu manejo del proyecto",
     "Aclara qué cuenta como cambio en las fechas, el presupuesto, el alcance o los documentos del proyecto",
     "Forma el grupo que va a revisar y aprobar los cambios, con roles claros y quién tiene la última palabra",
-    "Define el camino que sigue un cambio: desde que se pide, se revisa, hasta que se aprueba o se rechaza"
+    "Define el camino que sigue un cambio: desde que se pide, se le da seguimiento y se revisa, hasta que se aprueba, se aplaza o se rechaza"
   ],
   "entregable_esperado": "Un plan de gestión de cambios con el grupo revisor definido y un proceso claro de pedido, revisión y decisión.",
   "nodos_previos": [
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Gestiona los Cambios del Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-plan_gestion_cambios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides hasta que se aprueba o se descarta.",
+      "texto_nuevo": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides y le das seguimiento hasta que se aprueba, se aplaza o se descarta.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3797-3801",
+        "frase": "Describe the possible outcomes such as accept, defer, or reject."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da tres desenlaces posibles (aceptar, aplazar o rechazar) y el nodo pierde el aplazamiento.; Mismo defecto: se cae el tercer desenlace, aplazar la solicitud.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-170-plan_gestion_cambios-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define el camino que sigue un cambio: desde que se pide, se revisa, hasta que se aprueba o se rechaza",
+      "texto_nuevo": "Define el camino que sigue un cambio: desde que se pide, se le da seguimiento y se revisa, hasta que se aprueba, se aplaza o se rechaza",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3795-3801",
+        "frase": "Describe the process for tracking change requests from submittal to final disposition."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye el seguimiento de la solicitud hasta su desenlace y admite aplazarla; ambos se caen.; Mismo defecto: faltan el seguimiento y el desenlace de aplazar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Plan de Gestión de Calidad",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Incluye roles y responsabilidades, y enfoques de aseguramiento, control y mejora de calidad, así como herramientas, procesos y políticas relacionadas.",
+  "resumen_teorico": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Puede incluir roles y responsabilidades, y los enfoques de aseguramiento, control y mejora de calidad; también puede definir las herramientas, procesos y políticas que se usarán para aplicar el plan.",
   "pasos_accionables": [
     "Definir roles y responsabilidades de calidad",
     "Documentar el enfoque de planificación de calidad y herramientas a usar",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Asegura la Calidad del Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-plan_gestion_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Incluye roles y responsabilidades, y enfoques de aseguramiento, control y mejora de calidad, así como herramientas, procesos y políticas relacionadas.",
+      "texto_nuevo": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Puede incluir roles y responsabilidades, y los enfoques de aseguramiento, control y mejora de calidad; también puede definir las herramientas, procesos y políticas que se usarán para aplicar el plan.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "2448-2460",
+        "frase": "Information in the Quality Management Plan can include"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el plan puede incluir esos elementos y que también puede definir herramientas y políticas; el nodo lo da como contenido fijo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

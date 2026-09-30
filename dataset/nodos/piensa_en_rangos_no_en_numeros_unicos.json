@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Expresar la Incertidumbre como Rango",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen y ganar credibilidad. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
+  "resumen_teorico": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
   "pasos_accionables": [
     "Toma tu próximo estimado importante de plazo, costo o ventas.",
     "En vez de un número, escribe un rango: de tal a tal.",
-    "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango.",
+    "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango. Casi todos damos rangos demasiado estrechos, así que revisa que sea lo bastante ancho.",
     "Comunica el rango a tu cliente o a ti mismo, en vez de una cifra falsamente exacta."
   ],
   "entregable_esperado": "Tus estimados clave reescritos como rangos con una confianza declarada, en lugar de números únicos.",
@@ -41,6 +41,39 @@
         "evidencia": "F15-001: Trata de cómo estimar plazos, costos y ventas con rangos para planear con margen, no de probar la idea con clientes ni con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-171-piensa_en_rangos_no_en_numeros_unicos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen y ganar credibilidad. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
+      "texto_nuevo": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "3478",
+        "frase": "A range has a chance of being right whereas a point estimate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye al rango ganar credibilidad.; Mismo efecto añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-171-piensa_en_rangos_no_en_numeros_unicos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango.",
+      "texto_nuevo": "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango. Casi todos damos rangos demasiado estrechos, así que revisa que sea lo bastante ancho.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "2074-2078",
+        "frase": "most participants get about 30 percent to 60 percent of the answers within"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que la mayoría da rangos del noventa por ciento demasiado estrechos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

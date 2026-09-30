@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar los sistemas que componen la organización (ej. dispositivo médico, proceso de manejo de información confidencial).",
     "Trazar el límite o alcance de cada sistema a proteger.",
-    "Documentar los límites de autorización en contratos con proveedores externos.",
+    "Documentar en los contratos con proveedores externos los límites de autorización y el alcance de su responsabilidad.",
     "Usar el límite definido como base para categorizar riesgos y seleccionar controles."
   ],
   "entregable_esperado": "Un diagrama o documento que defina claramente el alcance (boundary) de cada sistema crítico de la organización.",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Define los Límites de tu Sistema",
   "fuentes_internas": [
     "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-172-limites_autorizacion_sistema-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar los límites de autorización en contratos con proveedores externos.",
+      "texto_nuevo": "Documentar en los contratos con proveedores externos los límites de autorización y el alcance de su responsabilidad.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "115",
+        "frase": "contracts with vendors will need to document authorization boundaries and accountability"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que los contratos documenten límites y responsabilidad del proveedor; el paso omite la responsabilidad.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

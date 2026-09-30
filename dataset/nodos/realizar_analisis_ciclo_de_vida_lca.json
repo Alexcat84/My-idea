@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Metodología por Etapas",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+  "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Suele bastar una estimación aproximada; comunicar resultados hacia afuera exige rigor y compartir la metodología. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
   "pasos_accionables": [
     "Definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
     "Identificar todos los inputs y outputs relevantes en cada etapa del ciclo de vida del producto",
-    "Recolectar datos primarios propios o usar datos secundarios de sector cuando no sea posible obtener datos propios",
+    "Decidir si generar datos primarios propios, más costosos, o usar datos públicos promedio del sector",
     "Documentar explícitamente los supuestos utilizados (uso del consumidor, ponderaciones de impacto, etc.)",
     "Evitar comparar resultados con competidores salvo que los productos de ambos estén verificados por la misma agencia certificadora de terceros"
   ],
@@ -88,6 +88,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-172-realizar_analisis_ciclo_de_vida_lca-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+      "texto_nuevo": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Suele bastar una estimación aproximada; comunicar resultados hacia afuera exige rigor y compartir la metodología. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1846",
+        "frase": "simple tools that produce rough estimates will likely suffice"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta el límite sobre cuándo basta una estimación aproximada.; Se pierde el límite del libro: a la mayoría le basta una estimación aproximada, salvo para comunicar resultados, que exige rigor y compartir la metodología.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-172-realizar_analisis_ciclo_de_vida_lca-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recolectar datos primarios propios o usar datos secundarios de sector cuando no sea posible obtener datos propios",
+      "texto_nuevo": "Decidir si generar datos primarios propios, más costosos, o usar datos públicos promedio del sector",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1878",
+        "frase": "Company A spends tens of thousands of dollars to generate its own primary data"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta datos primarios propios y promedios públicos del sector como opciones, sin jerarquía.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Costo de Entrada a Mercado Existente",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Basado en reglas de investigación de operaciones militares, este análisis usa el porcentaje de participación de mercado del líder para determinar si es viable atacar frontalmente o si conviene re-segmentar. Umbrales clave: 74% = monopolio efectivo (inatacable), 41% = líder de mercado (difícil), 26% = mercado inestable (hay oportunidad), menos de 26% = mercado fácil de penetrar.",
+  "resumen_teorico": "Basado en reglas de investigación de operaciones militares, este análisis usa la participación de mercado del líder para decidir si atacar de frente o re-segmentar. Umbrales: 74% = monopolio efectivo (inatacable); dos primeros con más de 74% y el primero con menos de 1,7 veces el segundo = duopolio (inatacable); 41% y al menos 1,7 veces el siguiente = líder (difícil); 26% = inestable (puede haber oportunidades); menos de 26% = fácil de penetrar.",
   "pasos_accionables": [
     "Investigar el market share del jugador dominante en el mercado objetivo",
     "Aplicar las reglas de umbral (74%, 41%, 26%) para clasificar el nivel de dificultad",
     "Si hay un dominante con +74%, descartar ataque frontal y considerar re-segmentación",
-    "Calcular el presupuesto necesario: 3x el del competidor dominante o 1.7x en mercados fragmentados",
+    "Calcular el presupuesto necesario: 3x el presupuesto combinado de ventas y marketing del competidor dominante, o 1.7x el de la empresa que vas a atacar en mercados con varios participantes",
     "Decidir si la startup tiene recursos para competir o debe buscar un nicho"
   ],
   "entregable_esperado": "Reporte de viabilidad de entrada a mercado con cálculo de presupuesto competitivo necesario",
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Calcula el Costo de Entrar",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-analisis_costo_entrada_mercado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Basado en reglas de investigación de operaciones militares, este análisis usa el porcentaje de participación de mercado del líder para determinar si es viable atacar frontalmente o si conviene re-segmentar. Umbrales clave: 74% = monopolio efectivo (inatacable), 41% = líder de mercado (difícil), 26% = mercado inestable (hay oportunidad), menos de 26% = mercado fácil de penetrar.",
+      "texto_nuevo": "Basado en reglas de investigación de operaciones militares, este análisis usa la participación de mercado del líder para decidir si atacar de frente o re-segmentar. Umbrales: 74% = monopolio efectivo (inatacable); dos primeros con más de 74% y el primero con menos de 1,7 veces el segundo = duopolio (inatacable); 41% y al menos 1,7 veces el siguiente = líder (difícil); 26% = inestable (puede haber oportunidades); menos de 26% = fácil de penetrar.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6062-6074",
+        "frase": "a duopoly commands the market. Its position is impervious to attack by a startup."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que ahí puede haber algunas oportunidades, no que las haya.; El libro solo considera líder al 41% con al menos 1,7 veces la cuota del siguiente.; Endurece 'may be some opportunities' a una oportunidad que existe.; Faltan la regla del duopolio y la condición de 1,7 veces la cuota del segundo para el líder del 41%.; Se cae el duopolio (dos primeros con más de 74%), igual de inatacable para una startup.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-173-analisis_costo_entrada_mercado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el presupuesto necesario: 3x el del competidor dominante o 1.7x en mercados fragmentados",
+      "texto_nuevo": "Calcular el presupuesto necesario: 3x el presupuesto combinado de ventas y marketing del competidor dominante, o 1.7x el de la empresa que vas a atacar en mercados con varios participantes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6078-6080",
+        "frase": "spend three times the combined sales and marketing budget of that dominant player"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro mide contra el presupuesto combinado de ventas y marketing, y el 1.7x contra la empresa que atacas.; Mismo defecto: se cae que la vara es el presupuesto de ventas y marketing del competidor.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

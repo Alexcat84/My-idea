@@ -7,7 +7,7 @@
   "resumen_teorico": "Tu sitio web tiene que ser tu herramienta número uno para comunicar sostenibilidad. En vez de imprimir reportes anuales largos (algo que contradice la idea misma de reducir tu impacto ambiental), publica tu reporte de forma digital. Así puedes actualizarlo todo el tiempo y quien lo lee puede navegar directo a lo que le interesa, sin tener que revisar todo el documento.",
   "pasos_accionables": [
     "Diseña tu sitio con una navegación clara para que cada persona llegue directo al tema de sostenibilidad que le interesa",
-    "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual",
+    "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual, y revísala a fondo antes de publicarla: toda afirmación discutible debe llevar su justificación",
     "En algunos casos, imprime unos pocos cientos de copias para visitantes o para quien prefiera tenerlo en papel",
     "Cuida que las imágenes y el tono de tu sitio estén alineados con la historia de sostenibilidad que quieres contar"
   ],
@@ -43,6 +43,23 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el LECTOR B. El libro fija la cantidad en unos pocos cientos de copias impresas y solo para algunos casos. El paso la cambia a solo unas pocas copias. Una cantidad cambiada respecto al libro cuenta como CONTRARIO aunque la idea general de imprimir poco sea correcta. Busque en todo el libro un apoyo a imprimir solo unas pocas copias y no hay ninguno: la unica cifra de tiraje es la de L7237.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C065-100"
+    },
+    {
+      "id": "final-e1-172-reporte_sostenibilidad_digital-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual",
+      "texto_nuevo": "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual, y revísala a fondo antes de publicarla: toda afirmación discutible debe llevar su justificación",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7241",
+        "frase": "Triple check any sustainability information. Any claims that might be disputed should include justifications"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la revisión y la justificación de afirmaciones discutibles.; Se pierde la advertencia del libro: todo en el sitio se escruta, así que se revisa a fondo y lo discutible lleva justificación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

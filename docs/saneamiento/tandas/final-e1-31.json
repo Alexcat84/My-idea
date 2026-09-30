@@ -1,0 +1,1664 @@
+[
+ {
+  "id": "final-e1-170-plan_gestion_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "plan_gestion_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Incluye roles y responsabilidades, y enfoques de aseguramiento, control y mejora de calidad, así como herramientas, procesos y políticas relacionadas.",
+  "texto_nuevo": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Puede incluir roles y responsabilidades, y los enfoques de aseguramiento, control y mejora de calidad; también puede definir las herramientas, procesos y políticas que se usarán para aplicar el plan.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "2448-2460",
+   "frase": "Information in the Quality Management Plan can include"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el plan puede incluir esos elementos y que también puede definir herramientas y políticas; el nodo lo da como contenido fijo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-plan_gestion_cambios-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "plan_gestion_cambios",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides hasta que se aprueba o se descarta.",
+  "texto_nuevo": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides y le das seguimiento hasta que se aprueba, se aplaza o se descarta.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "3797-3801",
+   "frase": "Describe the possible outcomes such as accept, defer, or reject."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da tres desenlaces posibles (aceptar, aplazar o rechazar) y el nodo pierde el aplazamiento.; Mismo defecto: se cae el tercer desenlace, aplazar la solicitud.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-plan_gestion_cambios-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "plan_gestion_cambios",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define el camino que sigue un cambio: desde que se pide, se revisa, hasta que se aprueba o se rechaza",
+  "texto_nuevo": "Define el camino que sigue un cambio: desde que se pide, se le da seguimiento y se revisa, hasta que se aprueba, se aplaza o se rechaza",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "3795-3801",
+   "frase": "Describe the process for tracking change requests from submittal to final disposition."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye el seguimiento de la solicitud hasta su desenlace y admite aplazarla; ambos se caen.; Mismo defecto: faltan el seguimiento y el desenlace de aplazar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-170-linea_base_costos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "linea_base_costos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Presupuesto distribuido en el tiempo utilizado para medir, monitorear y controlar el desempeño de costos del proyecto. Se desarrolla sumando los costos por período de tiempo y creando una curva de costo acumulado, usada como referencia para comparar desempeño real vs. planificado (medición de valor ganado).",
+  "texto_nuevo": "Presupuesto distribuido en el tiempo utilizado para medir, monitorear y controlar el desempeño de costos del proyecto. Se desarrolla sumando los costos por período y creando una curva de costo acumulado, que sirve para seguir el desempeño real, el planificado y los fondos gastados. Con valor ganado, puede llamarse línea base de medición del desempeño.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "2407-2409",
+   "frase": "When earned value measurements are being used, the baseline may be called"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro liga el valor ganado a una condición (cuando se usa, la línea base puede llamarse de medición del desempeño) y la curva sigue también los fondos gastados; el nodo lo da como uso general.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-matriz_asignacion_responsabilidades-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "matriz_asignacion_responsabilidades",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. El formato más usado para esto es la tabla RACI.",
+  "texto_nuevo": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "2763",
+   "frase": "An example follows using a RACI chart"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo muestra la tabla RACI como ejemplo; la frecuencia de uso es añadida.; Mismo defecto: la RACI es el ejemplo que da el libro, no el formato más usado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-plan_gestion_comunicaciones-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "plan_gestion_comunicaciones",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es el documento donde defines cómo vas a generar, juntar, enviar y guardar la información de tu proyecto entre las personas involucradas. Ahí dejas claro quién recibe qué información, cómo la vas a mandar, con qué frecuencia y quién es el responsable de enviarla, para que la comunicación sostenga una buena relación con cada uno de ellos.",
+  "texto_nuevo": "Es el documento donde defines las necesidades de comunicación de tu proyecto con las personas involucradas. Ahí dejas claro quién recibe qué información, cómo la vas a mandar, con qué frecuencia y quién es el responsable de enviarla, para que la comunicación sostenga una buena relación con cada uno de ellos.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "2964",
+   "frase": "It describes the communication needs of the project including audiences, messages, methods"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe las necesidades de comunicación (audiencias, mensajes, métodos); generar, juntar y guardar la información son funciones que no menciona.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-matriz_probabilidad_impacto-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "matriz_probabilidad_impacto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define cómo vas a responder a cada riesgo según qué tan urgente y grave sea",
+  "texto_nuevo": "Define cómo vas a responder a cada riesgo según el nivel (alto, medio o bajo) que le asignaste en la matriz",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "3318",
+   "frase": "may use the relative risk rankings to specify what type risk response should be taken"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga el tipo de respuesta a la clasificación relativa del riesgo en la matriz; la urgencia solo aparece como variable opcional de algunas escalas, no como criterio de respuesta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-170-gestion_decisiones_bajo_carga_emocional-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_decisiones_bajo_carga_emocional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En esos momentos críticos, diseña pausas, simplifica o reduce las opciones que ofreces.",
+  "texto_nuevo": "Sugerencia de My Idea: en esos momentos críticos, diseña pausas, simplifica o reduce las opciones que ofreces.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "1226-1228",
+   "frase": "as you create, aim to do it from a place of calm"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone pausas ni menos opciones para quien usa el producto; sus remedios son para la calma de quien crea. Queda como sugerencia de la casa.; Mismo defecto: el remedio para el usuario no está en el libro; queda como sugerencia de la casa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-170-indice_de_reparabilidad-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "indice_de_reparabilidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide qué tan disponibles van a estar los repuestos o el soporte a largo plazo, y pregunta el precio en tu mercado.",
+  "texto_nuevo": "Decide qué tan disponibles van a estar los repuestos o el soporte a largo plazo, y cuánto cuestan los repuestos en relación con el precio de tu producto.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "4330-4332",
+   "frase": "How expensive are the parts relative to the overall product price?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro mide el costo de los repuestos en relación con el precio total del producto; ese criterio se pierde.; Mismo defecto: se pierde la comparación con el precio total del producto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-170-mapeo_de_patrones-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "mapeo_de_patrones",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un conjunto de 2-3 mapas visuales distintos del mismo problema/mercado, con patrones identificados y documentados.",
+  "texto_nuevo": "Un conjunto de varios mapas visuales distintos del mismo problema/mercado, con patrones identificados y documentados.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "3372-3374",
+   "frase": "Investigate twenty, thirty, forty maps of a place"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija un número de mapas; propone muchos mapas del mismo territorio, como un atlas.; Mismo defecto: la cifra de 2-3 mapas no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-mapeo_flujos_invisibles_datos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "mapeo_flujos_invisibles_datos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible se convierte en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que 'los patrones se convierten en conocimiento, y el conocimiento en poder' (Zuboff). Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
+  "texto_nuevo": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible puede convertirse en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que los datos crean patrones, los patrones se convierten en conocimiento y el conocimiento en poder. Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "1003-1007",
+   "frase": "Anything measurable can become data."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que todo lo medible puede convertirse en dato, no que siempre se convierta.; La frase es del propio texto, no de la persona a quien el nodo la atribuye; la atribución es añadida.; Mismo defecto que la marca 0: endurece 'puede convertirse' a un hecho seguro.; Mismo defecto que la marca 1: atribución añadida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-indice_de_reparabilidad-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "indice_de_reparabilidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad y publícalo con claridad.",
+  "texto_nuevo": "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante, y publícalo con claridad.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "4336",
+   "frase": "Scores on the French index are currently calculated by manufacturers themselves."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el puntaje lo calculan los propios fabricantes y pregunta por los límites de la confianza; el paso presenta ambas vías como equivalentes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-170-framework_flujos_de_datos_ppp-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "framework_flujos_de_datos_ppp",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema antes de que el 'runaway design' (diseño fuera de control) tome el mando.",
+  "texto_nuevo": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "1088-1097",
+   "frase": "Each component part is something you can critique, nudge, shift, or change."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un plazo y un por qué; en el libro el diseño desbocado ya está en marcha y la descomposición sirve para criticar o cambiar cada parte.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-portafolio_innovacion_diversificado-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "portafolio_innovacion_diversificado",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Es necesario gestionar un portafolio diversificado que abarque desde ideas incrementales de corto plazo (mejorar el producto actual) hasta ideas revolucionarias de largo plazo, aceptando que la mayoría del esfuerzo estará en lo incremental, pero sin dejar de invertir en lo disruptivo para evitar ser sorprendidos por la competencia.",
+  "texto_nuevo": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Gestiona un portafolio diversificado, con enfoques que aprovechen mejor tus fortalezas, desde ideas incrementales de corto plazo (mejorar el producto actual) hasta revolucionarias de largo plazo. La mayoría del esfuerzo estará en lo incremental, pero invierte también en lo disruptivo para evitar sorpresas de la competencia; quizá lleguen menos de ellos al mercado, pero los que lleguen suelen tener impacto duradero.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "1394",
+   "frase": "you may see fewer of these projects going to market"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se cae el límite del libro: pueden llegar menos proyectos revolucionarios al mercado, aunque los que llegan suelen tener impacto duradero.; Se cae la condición del libro de elegir los enfoques que mejor aprovechen las fortalezas de la organización.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-portafolio_innovacion_diversificado-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "portafolio_innovacion_diversificado",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar métricas de éxito distintas para cada tipo de proyecto (no medir lo disruptivo con reglas de lo incremental).",
+  "texto_nuevo": "Sugerencia de My Idea: evaluar cada tipo de proyecto con métricas de éxito distintas (no medir lo disruptivo con reglas de lo incremental).",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "1396",
+   "frase": "Most organizations have metrics that measure the effectiveness of a division on its own terms."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone métricas distintas por tipo de proyecto; solo critica las métricas que miden cada división por su cuenta. Queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia práctica.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-170-prototipado_organizacional_estrategico-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "prototipado_organizacional_estrategico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El pensamiento de diseño y el prototipado no se limitan a objetos físicos: también pueden aplicarse a ideas abstractas como estrategias de negocio o el rediseño de una organización completa. Crear representaciones tangibles (mock-ups, recorridos físicos, mapas de ruta) de una estrategia ayuda a que toda la organización la entienda y se comprometa con ella, como hizo HBO al construir un recorrido físico de futuras experiencias de contenido.",
+  "texto_nuevo": "El pensamiento de diseño y el prototipado no se limitan a objetos físicos: también pueden aplicarse a ideas abstractas como estrategias de negocio o el rediseño de una organización completa, aunque es difícil: todo está conectado y con personas hay menos margen de error. Crear representaciones tangibles (mock-ups, recorridos físicos, mapas de ruta) de una estrategia puede ayudar a que toda la organización la entienda y se comprometa con ella, como hizo HBO al construir un recorrido físico de futuras experiencias de contenido.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "664-678",
+   "frase": "Prototypes may bring an abstract idea to life"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que los prototipos pueden dar vida a la idea para que la organización la entienda; el nodo lo da como efecto seguro.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae el límite del libro: prototipar una organización es difícil porque todo está interconectado y con personas hay menos tolerancia al error.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-propagacion_de_ideas_meme-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "propagacion_de_ideas_meme",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Cuando la gente tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional deja de funcionar. En su lugar, tienes que convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
+  "texto_nuevo": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Como cada vez menos gente consume los medios tradicionales y tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional pierde eficacia. Aún tiene un papel, pero menos para lanzar mensajes y más para convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "908-910",
+   "frase": "There is still a role for advertising, but less as a medium for blasting messages"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la publicidad aún tiene un papel, menos para lanzar mensajes y más para convertir a la audiencia en narradora; el nodo la presenta como reemplazada.; El libro habla de un declive de eficacia con varias causas; el nodo dice que deja de funcionar y le da una sola causa.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae la causa más simple que da el libro: cada vez menos gente consume los medios tradicionales.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-propagacion_de_ideas_meme-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "propagacion_de_ideas_meme",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio",
+  "texto_nuevo": "Sugerencia de My Idea: mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "912",
+   "frase": "they also got people talking, and that became part of the story"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone un criterio de medición del éxito; solo cuenta que la campaña hizo hablar a la gente. Queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia práctica.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-170-prototipado_virtual_mundos-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "prototipado_virtual_mundos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' durante varios meses.",
+  "texto_nuevo": "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' hasta reunir suficiente retroalimentación.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "658",
+   "frase": "When enough feedback had been collected, Starwood shut down the virtual hotel"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija un plazo: el caso duró nueve meses y se cerró cuando hubo suficiente retroalimentación.; Mismo defecto: convierte la duración de un caso en un plazo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-170-prototipado_en_lo_salvaje-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "prototipado_en_lo_salvaje",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Observar durante un periodo corto (1-2 semanas) cuál variante genera más uso y compromiso genuino.",
+  "texto_nuevo": "Observar hasta que quede claro cuál variante genera más uso y compromiso genuino.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "656",
+   "frase": "In less than two weeks it was clear which of the two prototypes"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no prescribe una duración: en el caso, el resultado quedó claro en menos de dos semanas.; Mismo defecto: convierte el resultado de un caso en un plazo fijo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-170-reformular_problema_mas_alla_del_producto-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "reformular_problema_mas_alla_del_producto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma —cómo se mueven las personas, las cosas, los espacios— dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo de Eero Saarinen de considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+  "texto_nuevo": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "1575",
+   "frase": "recalled the advice given to him by his father"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye el consejo al padre de Eero Saarinen, que se lo dio a él; la autoría del consejo es añadida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-reformular_problema_mas_alla_del_producto-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "reformular_problema_mas_alla_del_producto",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para validar la dirección",
+  "texto_nuevo": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para iniciar conversaciones con socios potenciales",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "1531",
+   "frase": "used to initiate conversations with potentially interested partners"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da al prototipo el propósito de iniciar conversaciones con posibles socios, no el de validar la dirección.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-170-principio_enough_is_enough-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "principio_enough_is_enough",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evitar el uso de tecnología de alta fidelidad (impresión 3D, CAD) en etapas tempranas",
+  "texto_nuevo": "Evitar usar tecnología de alta fidelidad (impresión 3D, CAD) para hacer prototipos demasiado refinados y detallados en etapas tempranas",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "622",
+   "frase": "if it is used to create prototypes too refined, too detailed, and too early"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no desaconseja la herramienta; advierte contra usarla para prototipos demasiado refinados, detallados y tempranos.; Mismo defecto.; Mismo defecto: endurece la advertencia a evitar la tecnología.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-171-gestion_forestal_regenerativa-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_forestal_regenerativa",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito.",
+  "texto_nuevo": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando a menudo solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito. No es un método universal: al restaurar un monocultivo, la tala rasa puede servir.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "537",
+   "frase": "The Menominee often cut only the weaker trees, leaving the strong mother trees"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte que este método no es universal y que a veces la tala rasa funciona.; El libro dice que a menudo cortan solo los más débiles; el nodo lo vuelve regla.; Misma advertencia perdida sobre que no hay absolutos en el método.; Mismo endurecimiento del 'often' del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-feedforward_diseno-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "feedforward_diseno",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (décadas o siglos) al diseñar productos y sistemas.",
+  "texto_nuevo": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (diez o incluso cien años) al diseñar productos y sistemas.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "829",
+   "frase": "a sustaining global commerce look like ten, or even a hundred, years from now"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de diez o hasta cien años, no de siglos.; Mismo horizonte ampliado más allá del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-estrategias_seleccion_preferencial-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "estrategias_seleccion_preferencial",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
+  "texto_nuevo": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero probablemente mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "952-956",
+   "frase": "the results will probably be better than had we not thought about the issue"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el resultado probablemente será mejor; el nodo lo da por seguro.; Mismo endurecimiento del 'probably' del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-energia_eolica_distribuida-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "energia_eolica_distribuida",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas más pequeñas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
+  "texto_nuevo": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "791-793",
+   "frase": "imagine one of the new windmills distributed on every few family farms"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro distribuye los molinos nuevos en granjas; no dice que sean más pequeños.; Mismo añadido de turbinas más pequeñas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-licencia_para_danar-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "licencia_para_danar",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "A la luz de la distinción entre 'guardián' (gobierno) y 'comercio' (industria), la regulación ambiental, aunque bien intencionada, es en realidad una señal de fracaso de diseño. Las regulaciones son un permiso gubernamental para que la industria dañe a una tasa 'aceptable', en lugar de resolver el problema de diseño de raíz. Un buen diseño no debería requerir regulación alguna.",
+  "texto_nuevo": "A la luz de la distinción entre 'guardián' (gobierno) y 'comercio' (industria), la regulación ambiental, aunque bien intencionada y capaz de reducir daños inmediatos mientras los diseños sean destructivos, es en realidad una señal de fracaso de diseño. Las regulaciones son un permiso gubernamental para que la industria dañe a una tasa 'aceptable', en lugar de resolver el problema de diseño de raíz. Un buen diseño puede no requerir regulación alguna.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "354",
+   "frase": "regulations can reduce immediate deleterious effects. But ultimately a regulation is a signal"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que un buen diseño puede no requerir regulación; el nodo lo vuelve deber.; Mismo endurecimiento del 'can' del libro.; Mismo matiz perdido sobre los daños inmediatos.; Se pierde que la regulación reduce daños inmediatos mientras los diseños sean destructivos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-fase_de_eliminacion_de_no_comercializables-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "fase_de_eliminacion_de_no_comercializables",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los 'unmarketables' son materiales peligrosos que no encajan en ningún metabolismo (biológico o técnico) hasta que se desarrollen tecnologías de detoxificación (ej. PVC, residuos nucleares, antimonio en PET). Deben almacenarse en 'parking lots' seguros mientras se desarrollan soluciones, y las empresas pueden iniciar un 'waste phaseout' para retirarlos proactivamente del flujo de residuos actual.",
+  "texto_nuevo": "Los 'unmarketables' son materiales peligrosos que no encajan en ningún metabolismo (biológico o técnico) hasta que se desarrollen formas de detoxificarlos o de prescindir de ellos (ej. PVC, residuos nucleares, antimonio en PET). Pueden almacenarse en 'parking lots' seguros mientras se desarrollan soluciones, y las empresas pueden iniciar un 'waste phaseout' para retirarlos proactivamente del flujo de residuos actual.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "686",
+   "frase": "until technological ways of detoxifying them, or doing without them, have been developed"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da dos salidas, detoxificarlos o prescindir de ellos; se pierde la segunda.; El libro dice que pueden almacenarse en depósitos seguros, no que deban.; Mismo endurecimiento del 'can' del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-fase_de_eliminacion_de_no_comercializables-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "fase_de_eliminacion_de_no_comercializables",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Iniciar un programa de retiro progresivo (waste phaseout) de estos materiales del mercado",
+  "texto_nuevo": "Iniciar un programa de retiro progresivo (waste phaseout) de estos materiales del flujo de residuos actual",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "688",
+   "frase": "unmarketables, problematic wastes and nutrients, are removed from the current waste stream"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el phaseout los retira del flujo de residuos actual, no del mercado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-171-manejo_de_hibridos_monstruosos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "manejo_de_hibridos_monstruosos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, requieren ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
+  "texto_nuevo": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, pueden requerir ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "684",
+   "frase": "it may take extra ingenuity to design and market it"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede hacer falta ingenio adicional; el nodo lo vuelve requisito.; Mismo endurecimiento del 'may' del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-manejo_de_hibridos_monstruosos-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "manejo_de_hibridos_monstruosos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales",
+  "texto_nuevo": "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "684",
+   "frase": "Running shoes can be redesigned so that their soles are biological nutrients"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro separa por metabolismo y facilita el desensamble; no plantea pasar a un solo material.; Misma estrategia de mono-materiales ausente del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-171-herramienta_fractal_triple_top_line-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "herramienta_fractal_triple_top_line",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, generando valor genuino en las tres áreas simultáneamente.",
+  "texto_nuevo": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que en la práctica a menudo trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, lo que permite crear valor en las tres áreas.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "871-873",
+   "frase": "in practice we find that it often appears to center only on economic considerations"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que en la práctica a menudo parece centrarse en lo económico; el nodo lo da como definición.; El libro dice que la herramienta permite crear valor; el nodo lo promete como resultado.; Mismo endurecimiento del 'often appears' del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-herramienta_fractal_triple_top_line-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "herramienta_fractal_triple_top_line",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Equidad, Equidad/Ecología, Ecología/Ecología, Ecología/Economía",
+  "texto_nuevo": "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Economía, Equidad/Equidad, Equidad/Ecología, Ecología/Equidad, Ecología/Ecología, Ecología/Economía, Economía/Ecología",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "859-867",
+   "frase": "Finally, Economy/Ecology: this is where eco-efficiency is coming from"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El recorrido del libro incluye además Equidad/Economía, Ecología/Equidad y Economía/Ecología.; Misma enumeración incompleta del recorrido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-171-gestion_de_aguas_pluviales_con_techos_verdes-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_de_aguas_pluviales_con_techos_verdes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat.",
+  "texto_nuevo": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat. Depende del lugar: lo que funciona en un clima puede no funcionar en otro.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "924",
+   "frase": "A green roof might work in St. Petersburg, Florida, but not in St. Petersburg, Russia."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que las soluciones responden a lo local y un techo verde puede no servir en otro clima.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-cual_es_tu_mayor_riesgo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cual_es_tu_mayor_riesgo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Casi nadie se las hace, y menos la segunda. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
+  "texto_nuevo": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Todo intento de manejar riesgos debería responderlas. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "28",
+   "frase": "Any attempt to manage risk in these organizations should involve answering these questions."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no afirma que casi nadie se las haga; dice que todo intento de gestión debería responderlas.; Mismo dato de frecuencia inventado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-como_sabes_que_tu_metodo_sirve-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "como_sabes_que_tu_metodo_sirve",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y jamás comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si lo que llamaste probable ocurre seguido y lo improbable casi nunca, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+  "texto_nuevo": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "4784-4790",
+   "frase": "things should be about as frequent as we estimate"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El criterio del libro es que las cosas ocurran con la frecuencia asignada, no solo lo probable seguido.; El libro dice que casi nunca se mide y que la mayoría ni lo intenta, no que jamás.; Mismo criterio de calibración perdido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-como_sabes_que_tu_metodo_sirve-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "como_sabes_que_tu_metodo_sirve",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pregunta: lo que llamé probable ocurrió seguido, y lo improbable casi nunca.",
+  "texto_nuevo": "Pregunta: ¿lo que predije ocurrió más o menos con la frecuencia que le di? Lo que llamé diez por ciento debió pasar cerca de una de cada diez veces.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "4784",
+   "frase": "of all the times we said some event was about 10 percent likely"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La prueba del libro compara la frecuencia real con la probabilidad asignada.; Mismo criterio de calibración perdido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-171-tu_gestion_de_riesgo_funciona-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "tu_gestion_de_riesgo_funciona",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. La única forma seria de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
+  "texto_nuevo": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. Una forma esencial de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "699-711, 4768",
+   "frase": "Constantly testing your model by seeing how well it matches history is absolutely essential."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro llama esencial al contraste con la historia pero da otras formas objetivas de medir.; Mismo endurecimiento a forma única.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-escepticismo_sano_ante_el_riesgo-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "escepticismo_sano_ante_el_riesgo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de adoptar una plantilla ajena, busca evidencia de que a alguien le funcionó de verdad.",
+  "texto_nuevo": "Antes de adoptar una plantilla ajena, busca evidencia medida de que funciona; que otros la usen y digan que les sirvió no es prueba.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "676",
+   "frase": "then the testimonial is not evidence of effectiveness"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la prueba testimonial no es evidencia; hace falta una medida objetiva.; Mismo límite perdido sobre la prueba testimonial.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-171-piensa_en_rangos_no_en_numeros_unicos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "piensa_en_rangos_no_en_numeros_unicos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen y ganar credibilidad. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
+  "texto_nuevo": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "3478",
+   "frase": "A range has a chance of being right whereas a point estimate"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye al rango ganar credibilidad.; Mismo efecto añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-cuidado_con_la_falsa_precision-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cuidado_con_la_falsa_precision",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pasar a los números no te salva solo. Hasta las cuentas más sofisticadas engañan cuando arrancan de datos inventados o de supuestos frágiles: un resultado con muchos decimales parece riguroso y por eso da una confianza que no merece. La falsa precisión es peligrosa justo porque tranquiliza. Un cálculo solo vale lo que valen sus insumos: si metiste una probabilidad que sacaste de la manga, la respuesta exacta que salga sigue siendo un invento con apariencia de ciencia. Para el emprendedor, la lección no es huir de los números, sino usarlos con honestidad: reconoce de dónde salió cada dato, prefiere un rango honesto a un decimal falso, y desconfía de cualquier resultado que se vea más seguro que la información con que lo hiciste.",
+  "texto_nuevo": "Pasar a los números no te salva solo. Hasta las cuentas más sofisticadas engañan cuando arrancan de datos inventados o de supuestos frágiles: un resultado con muchos decimales parece riguroso y por eso da una confianza que no merece. La falsa precisión es peligrosa justo porque tranquiliza. Un cálculo solo vale lo que valen sus insumos: si metiste una probabilidad que sacaste de la manga, la respuesta exacta que salga sigue siendo un invento con apariencia de ciencia. Para el emprendedor, la lección no es huir de los números, sino usarlos con honestidad: reconoce de dónde salió cada dato, calibra tus estimaciones, prefiere un rango honesto a un decimal falso, compara después tus cálculos con lo que de verdad pasó, y desconfía de cualquier resultado que se vea más seguro que la información con que lo hiciste.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "3385-3388, 3588",
+   "frase": "Models have to be tested empirically, regardless of how advanced they appear to be."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el remedio del libro: calibrar las estimaciones y contrastar los pronósticos con la realidad.; Se pierde que todo modelo debe probarse contra lo que realmente pasó.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-calibra_tu_propio_ojo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "calibra_tu_propio_ojo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta sesenta, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
+  "texto_nuevo": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "2130",
+   "frase": "On average, they are getting only 53 percent of the answers within their ranges."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La cifra del libro antes del entrenamiento es un promedio de 53 por ciento, no sesenta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-calibra_tu_propio_ojo-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "calibra_tu_propio_ojo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho.",
+  "texto_nuevo": "Usa la prueba de la apuesta: compara apostar a tu rango con una rifa que gana nueve de cada diez veces; si prefieres la rifa, tu rango era muy estrecho, y ajústalo hasta que te dé igual.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "3929-3941",
+   "frase": "increasing the width of the range until options A and B are considered equivalent"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el mecanismo de la prueba: comparar con una rifa del noventa por ciento y ajustar hasta la indiferencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-171-cuanto_sabes_y_cuanto_solo_crees-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cuanto_sabes_y_cuanto_solo_crees",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso en dos días distintos, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+  "texto_nuevo": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "2216-2220",
+   "frase": "I had duplicated two of the projects in the list"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro repitió el caso dentro de la misma lista y sesión, no en días distintos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-171-empieza_con_lo_que_ya_funciona-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "empieza_con_lo_que_ya_funciona",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Empieza por una lista viva de riesgos y por pensar en rangos: rinden desde el primer día.",
+  "texto_nuevo": "Empieza por una lista viva de riesgos, con la probabilidad de cada uno y su posible pérdida como rango, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "909-948",
+   "frase": "using a simple Monte Carlo simulation done in a spreadsheet"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no promete resultados desde el primer día; dice que hasta lo más simple puede traer beneficios.; El punto de partida simple del libro incluye probabilidades explícitas y hacer la cuenta en una hoja de cálculo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-171-piensa_en_rangos_no_en_numeros_unicos-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "piensa_en_rangos_no_en_numeros_unicos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango.",
+  "texto_nuevo": "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango. Casi todos damos rangos demasiado estrechos, así que revisa que sea lo bastante ancho.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "2074-2078",
+   "frase": "most participants get about 30 percent to 60 percent of the answers within"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que la mayoría da rangos del noventa por ciento demasiado estrechos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-171-la_matriz_de_colores_te_engana-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "la_matriz_de_colores_te_engana",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y cuánto en dinero o tiempo.",
+  "texto_nuevo": "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y, si pasa, entre cuánto y cuánto perderías en dinero o tiempo.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "944, 2619",
+   "frase": "Estimate a 90 percent confidence interval for a monetized loss"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide el impacto como rango de pérdida, no como un solo valor.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-172-rmf_paso_preparar-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "rmf_paso_preparar",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo y determinar el alcance del sistema a proteger. Es el punto de partida obligatorio para toda implementación inicial del RMF.",
+  "texto_nuevo": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo y determinar el alcance del sistema a proteger. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "61",
+   "frase": "Everyone should start with this step and run through the process sequentially for initial implementation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que todos deberían empezar por este paso, no que sea obligatorio.; Mismo defecto: 'should' convertido en obligación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-fundamentos_gestion_riesgo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "fundamentos_gestion_riesgo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Estas actividades forman la base conceptual sobre la cual se construye el Risk Management Framework (RMF) de NIST.",
+  "texto_nuevo": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "19",
+   "frase": "Before we explore the RMF in detail, let's take a moment to understand"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo pide entender la gestión de riesgo antes de explorar el RMF; no dice que el RMF se construya sobre ella.; Mismo defecto: relación de fundamento que el libro no afirma.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-fundamentos_gestion_riesgo-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "fundamentos_gestion_riesgo",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos y enfoque general para evaluar, responder y monitorear riesgos.",
+  "texto_nuevo": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos, restricciones y enfoque general para evaluar, responder y monitorear riesgos.",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "21",
+   "frase": "addresses risk tolerance, assumptions and constraints, and how the organization intends to assess"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone las restricciones junto a tolerancia y supuestos en la estrategia; el entregable las omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-evaluar_controles-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "evaluar_controles",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La evaluación determina si los controles implementados funcionan correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
+  "texto_nuevo": "La evaluación determina si los controles están implementados correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "193",
+   "frase": "ASSESS if the controls selected are implemented correctly, operating as intended"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide comprobar si los controles están implementados correctamente; 'funcionan' pierde ese criterio.; Mismo defecto: se pierde el criterio de implementación correcta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-seleccion_controles-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_controles",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Desarrollar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5).",
+  "texto_nuevo": "Desarrollar e implementar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5).",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "131",
+   "frase": "Develop and implement a system-level strategy for monitoring control effectiveness"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide desarrollar e implementar la estrategia (S-5); el paso se queda en desarrollarla.; Mismo defecto: se cae la implementación de la estrategia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-172-monitoreo_continuo-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "monitoreo_continuo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar y de tu plan de acción y cronograma (POA&M) (tarea M-3).",
+  "texto_nuevo": "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M) (tarea M-3).",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "217",
+   "frase": "Using the results of the ongoing monitoring activities, risk assessments, and outstanding items"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone tres insumos para decidir la respuesta (M-3); el paso omite las evaluaciones de riesgo.; Mismo defecto: falta el insumo de las evaluaciones de riesgo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-172-estrategia_gestion_riesgo_tolerancia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "estrategia_gestion_riesgo_tolerancia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que depende de la cultura organizacional y puede variar según el tipo de pérdida.",
+  "texto_nuevo": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que suele basarse en la cultura organizacional, puede variar según el tipo de pérdida y puede estar influido por la tolerancia al riesgo de quienes dirigen.",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "113",
+   "frase": "can be influenced by risk tolerance of executives"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro añade que la tolerancia puede estar influida por la de los directivos; el resumen lo omite.; El libro dice que la tolerancia se basa generalmente en la cultura; 'depende' lo vuelve tajante.; Mismo defecto que la marca 0: falta la influencia de quienes dirigen.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-rmf_paso_preparar-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "rmf_paso_preparar",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Designar a un individuo o equipo responsable de ejecutar el RMF (Tarea P-1).",
+  "texto_nuevo": "Designar a un individuo o equipo responsable de ejecutar el RMF, que puede ser interno o externo a la organización (Tarea P-1).",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "83",
+   "frase": "Roles and responsibilities may be assigned to personnel internal or external to your organization"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro anota que los roles pueden asignarse a personas internas o externas, lo que cambia el consejo para una empresa pequeña.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-172-limites_autorizacion_sistema-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "limites_autorizacion_sistema",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Documentar los límites de autorización en contratos con proveedores externos.",
+  "texto_nuevo": "Documentar en los contratos con proveedores externos los límites de autorización y el alcance de su responsabilidad.",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "115",
+   "frase": "contracts with vendors will need to document authorization boundaries and accountability"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que los contratos documenten límites y responsabilidad del proveedor; el paso omite la responsabilidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-172-seleccion_controles-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_controles",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Seleccionar un baseline de controles apropiado según la categorización del sistema (Tarea S-1).",
+  "texto_nuevo": "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de un baseline predefinido o elegir controles propios (Tarea S-1).",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "139",
+   "frase": "use a baseline (pre-defined) control selection approach, or should we select our own controls"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja abierta la elección entre un baseline predefinido y controles propios; el paso da el baseline como única vía.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-172-proceso_rmf_siete_pasos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "proceso_rmf_siete_pasos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos (Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear) para gestionar el riesgo de seguridad de la información y privacidad. Aunque los pasos van en orden, tras la implementación inicial las organizaciones pueden moverse entre pasos según sea necesario. Es aplicable a sistemas nuevos y existentes, de cualquier tecnología y tamaño de organización.",
+  "texto_nuevo": "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos (Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear) para gestionar el riesgo de seguridad de la información y privacidad. Los siete pasos son necesarios para ejecutarlo con éxito; aunque van en orden, tras la implementación inicial las organizaciones pueden moverse entre pasos según sea necesario. Es aplicable a sistemas nuevos y existentes, de cualquier tecnología y tamaño de organización.",
+  "cita": {
+   "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+   "lineas": "39",
+   "frase": "All seven steps are required for successful execution of the RMF"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los siete pasos son necesarios; sin ese límite la flexibilidad de orden puede leerse como permiso para saltarlos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-realizar_analisis_ciclo_de_vida_lca-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "realizar_analisis_ciclo_de_vida_lca",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+  "texto_nuevo": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Suele bastar una estimación aproximada; comunicar resultados hacia afuera exige rigor y compartir la metodología. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "1846",
+   "frase": "simple tools that produce rough estimates will likely suffice"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta el límite sobre cuándo basta una estimación aproximada.; Se pierde el límite del libro: a la mayoría le basta una estimación aproximada, salvo para comunicar resultados, que exige rigor y compartir la metodología.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-relocalizacion_clustering_logistico-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "relocalizacion_clustering_logistico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Acercar geográficamente almacenes, proveedores y clientes reduce significativamente el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
+  "texto_nuevo": "Acercar geográficamente almacenes, proveedores y clientes puede reducir el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "5003",
+   "frase": "Companies can reduce fuel use by shortening distances between suppliers, warehouses, and customers"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que acortar distancias puede reducir el combustible; 'significativamente' y el efecto seguro son añadidos.; Mismo defecto: endurece 'can reduce' y añade 'significativamente'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-resolver_problemas_climaticos_clientes-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "resolver_problemas_climaticos_clientes",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comunicar el valor ambiental añadido a los clientes para generar lealtad de marca.",
+  "texto_nuevo": "Comunicar a los clientes el valor ambiental añadido, sabiendo que resolver su problema climático puede sumarles valor y generar lealtad de marca.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "6412",
+   "frase": "can also add value from a customer's perspective and generate brand loyalty"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye el posible valor y la lealtad a resolver el problema climático del cliente, no a comunicarlo, y como posibilidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-172-reducciones_cadena_suministro-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "reducciones_cadena_suministro",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Trabajar con los proveedores (no contra ellos) y enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales, es una estrategia efectiva. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+  "texto_nuevo": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "6364",
+   "frase": "It may be sensible to start with a limited focus"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede ser sensato empezar con un foco limitado, no que sea una estrategia efectiva.; Mismo defecto: endurece la cautela del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-realizar_analisis_ciclo_vida-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "realizar_analisis_ciclo_vida",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. Sigue estándares ISO 14040/14044 con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que los mayores impactos suelen estar en etapas inesperadas de la cadena.",
+  "texto_nuevo": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. La mayoría de los estudios se basa en los estándares ISO 14040/14044, con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que un LCA puede revelar impactos importantes en etapas inesperadas de la cadena.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "1866",
+   "frase": "a unifying framework on which most LCAs build: ISO 14040 and ISO 14044"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la mayoría de los LCA se basa en ISO 14040/14044, no que todos lo sigan.; El libro presenta casos sin afirmar frecuencia; el 'suelen' del nodo generaliza.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-realizar_analisis_ciclo_vida-pasos_accionables-5",
+  "fecha": "2026-09-28",
+  "node_id": "realizar_analisis_ciclo_vida",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Documentar todos los supuestos y límites del sistema para permitir comparabilidad",
+  "texto_nuevo": "Documentar todos los supuestos y límites del sistema, para poder compartir la metodología si comunicas los resultados hacia afuera",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "1846",
+   "frase": "invest in rigorous analytical efforts and be ready to share the methodologies behind them"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro advierte que comparar entre empresas tiene poco sentido; documentar sirve para compartir la metodología al comunicar resultados.; Mismo defecto: el porqué de la comparabilidad no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-172-reporte_sostenibilidad_digital-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "reporte_sostenibilidad_digital",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual",
+  "texto_nuevo": "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual, y revísala a fondo antes de publicarla: toda afirmación discutible debe llevar su justificación",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "7241",
+   "frase": "Triple check any sustainability information. Any claims that might be disputed should include justifications"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la revisión y la justificación de afirmaciones discutibles.; Se pierde la advertencia del libro: todo en el sitio se escruta, así que se revisa a fondo y lo discutible lleva justificación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-172-responsabilidad_extendida_productor_2-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "responsabilidad_extendida_productor_2",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los fabricantes son cada vez más responsables por los impactos ambientales de sus productos en todo su ciclo de vida (extended producer responsibility). Regulaciones como WEEE en Europa y EWRA en California obligan a las empresas a gestionar el retorno y disposición de sus productos. El principio 'waste equals food' del enfoque Cradle to Cradle plantea que el desperdicio de un proceso debe ser insumo de otro, inspirado en los ciclos naturales, distinguiendo entre ciclos técnicos y biológicos.",
+  "texto_nuevo": "Los fabricantes son cada vez más responsables por los impactos ambientales de sus productos en todo su ciclo de vida (extended producer responsibility). En electrónicos, regulaciones como WEEE en Europa y EWRA en California obligan a los fabricantes a gestionar el retorno y disposición de sus productos. El principio 'waste equals food' del enfoque Cradle to Cradle plantea que el desperdicio de un proceso debe ser insumo de otro, inspirado en los ciclos naturales, distinguiendo entre ciclos técnicos y biológicos.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "3732",
+   "frase": "requires electronics manufacturers to take back their products from the public free of charge"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita WEEE y EWRA a productos electrónicos; el resumen las presenta como obligación general.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-reduccion_residuos_construccion-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "reduccion_residuos_construccion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Planificar integradamente demolición y construcción para minimizar desperdicio",
+  "texto_nuevo": "Sugerencia de My Idea: planificar en conjunto la demolición y la construcción para reducir el desperdicio",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2788",
+   "frase": "a lofty goal for its campus to reuse or recycle all of its construction waste"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona planificar juntas demolición y construcción; como consejo práctico queda como sugerencia.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-172-realizar_analisis_ciclo_de_vida_lca-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "realizar_analisis_ciclo_de_vida_lca",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Recolectar datos primarios propios o usar datos secundarios de sector cuando no sea posible obtener datos propios",
+  "texto_nuevo": "Decidir si generar datos primarios propios, más costosos, o usar datos públicos promedio del sector",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "1878",
+   "frase": "Company A spends tens of thousands of dollars to generate its own primary data"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta datos primarios propios y promedios públicos del sector como opciones, sin jerarquía.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-172-reduccion_cargas_regulatorias-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "reduccion_cargas_regulatorias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Estrategia intermedia que consiste en analizar las obligaciones de cumplimiento ambiental para identificar cuáles podrían eliminarse mediante el rediseño de productos o procesos de manufactura. Si un proceso usa materiales peligrosos no esenciales que requieren seguimiento regulatorio complejo, conviene rediseñarlo para eliminarlos, reduciendo así la carga regulatoria y el riesgo legal.",
+  "texto_nuevo": "Estrategia intermedia que consiste en analizar las obligaciones de cumplimiento ambiental para identificar cuáles podrían eliminarse mediante el rediseño de productos o procesos de manufactura. Si un proceso usa materiales peligrosos no esenciales que requieren seguimiento regulatorio complejo, conviene rediseñarlo para eliminarlos, reduciendo así la carga regulatoria.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "5584",
+   "frase": "which could eliminate the materials in question and thereby reduce your company's regulatory burden"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el rediseño reduce la carga regulatoria; la reducción del riesgo legal es añadida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-172-quimica_verde-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "quimica_verde",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Crea o adopta una lista de químicos aprobados y evita los que están en listas de sustancias prohibidas",
+  "texto_nuevo": "Crea o adopta una lista de químicos aprobados y, siempre que sea posible, evita los que están en listas de sustancias prohibidas en favor de alternativas más verdes",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "3708",
+   "frase": "steer clear of chemicals on black lists in favor of greener alternatives wherever possible"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide alejarse de las listas negras siempre que sea posible; el paso lo vuelve absoluto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-173-board_management_buyin-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "board_management_buyin",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Discutir y acordar el número de 'pivotes financiados' disponibles",
+  "texto_nuevo": "Discutir y acordar el número de 'pivotes financiados' disponibles, si alcanzan los fondos para 2 a 3 pivotes en Discovery y Validation, y cómo la junta y el equipo medirán el progreso de la empresa",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "4462-4468",
+   "frase": "Discuss number of “funded Pivots” available and how board and team will measure company progress"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro une los pivotes financiados a fondos para 2 a 3 pivotes y a cómo se medirá el progreso; el paso lo pierde.; Se cae el acuerdo sobre cómo la junta y el equipo medirán el progreso, que el libro pone en la misma línea.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-173-analisis_tco_roi_b2b-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_tco_roi_b2b",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comparar el ROI del producto contra la solución actual del cliente",
+  "texto_nuevo": "Comparar el ROI del producto contra la solución actual del cliente: si no devuelve un múltiplo significativo de la inversión, la venta puede ser difícil",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "7764",
+   "frase": "If the solution doesn’t return a meaningful multiple ROI, sales may be difficult."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el criterio del libro: sin un múltiplo significativo de ROI la venta puede ser difícil.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-173-actualizar_modelo_de_negocio_pivot_o_proceed-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "actualizar_modelo_de_negocio_pivot_o_proceed",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Revisa tu lista de funcionalidades y elimina las que no importan de verdad",
+  "texto_nuevo": "Revisa tu lista de funcionalidades, ordénalas por su importancia para tus clientes y elimina o pospón las que no importan de verdad",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "8732",
+   "frase": "Can any features on the product spec be deleted or deferred?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro prioriza por importancia para el cliente y contempla borrar o posponer; se cae posponer.; Se caen la priorización por importancia para el cliente y la opción de posponer.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-173-analisis_trafico_competitivo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_trafico_competitivo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Consiste en usar herramientas de medición de tráfico y tiendas de aplicaciones para entender cómo los competidores atraen y retienen usuarios, identificando tendencias, fuentes de tráfico y posicionamiento en el mercado.",
+  "texto_nuevo": "Consiste en usar herramientas de medición de tráfico y tiendas de aplicaciones para entender cuánto tráfico generan los competidores y cómo atraen usuarios, identificando tendencias, fuentes de tráfico, datos demográficos y posicionamiento en el mercado.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "8522-8524",
+   "frase": "compare and understand the traffic generated by each competitive product or website"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro mide tráfico, fuentes, tendencias y demografía; nada dice de cómo retienen usuarios.; Mismo añadido: la retención de usuarios no está en el pasaje.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-173-analisis_costo_entrada_mercado-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_costo_entrada_mercado",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Basado en reglas de investigación de operaciones militares, este análisis usa el porcentaje de participación de mercado del líder para determinar si es viable atacar frontalmente o si conviene re-segmentar. Umbrales clave: 74% = monopolio efectivo (inatacable), 41% = líder de mercado (difícil), 26% = mercado inestable (hay oportunidad), menos de 26% = mercado fácil de penetrar.",
+  "texto_nuevo": "Basado en reglas de investigación de operaciones militares, este análisis usa la participación de mercado del líder para decidir si atacar de frente o re-segmentar. Umbrales: 74% = monopolio efectivo (inatacable); dos primeros con más de 74% y el primero con menos de 1,7 veces el segundo = duopolio (inatacable); 41% y al menos 1,7 veces el siguiente = líder (difícil); 26% = inestable (puede haber oportunidades); menos de 26% = fácil de penetrar.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "6062-6074",
+   "frase": "a duopoly commands the market. Its position is impervious to attack by a startup."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que ahí puede haber algunas oportunidades, no que las haya.; El libro solo considera líder al 41% con al menos 1,7 veces la cuota del siguiente.; Endurece 'may be some opportunities' a una oportunidad que existe.; Faltan la regla del duopolio y la condición de 1,7 veces la cuota del segundo para el líder del 41%.; Se cae el duopolio (dos primeros con más de 74%), igual de inatacable para una startup.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-173-analisis_costo_entrada_mercado-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_costo_entrada_mercado",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcular el presupuesto necesario: 3x el del competidor dominante o 1.7x en mercados fragmentados",
+  "texto_nuevo": "Calcular el presupuesto necesario: 3x el presupuesto combinado de ventas y marketing del competidor dominante, o 1.7x el de la empresa que vas a atacar en mercados con varios participantes",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "6078-6080",
+   "frase": "spend three times the combined sales and marketing budget of that dominant player"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro mide contra el presupuesto combinado de ventas y marketing, y el 1.7x contra la empresa que atacas.; Mismo defecto: se cae que la vara es el presupuesto de ventas y marketing del competidor.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-173-auditoria_de_posicionamiento-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "auditoria_de_posicionamiento",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de definir el posicionamiento de producto y empresa, es necesario realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+  "texto_nuevo": "Antes de definir el posicionamiento de producto y empresa, conviene realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12420",
+   "frase": "Before the company spends time on positioning, it’s a good idea to air out"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro la presenta como buena idea; 'es necesario' endurece.; Mismo endurecimiento de 'it's a good idea' a necesidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-173-auditoria_de_posicionamiento-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "auditoria_de_posicionamiento",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas e influenciadores",
+  "texto_nuevo": "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas, influenciadores, competidores y otros conocedores de la industria",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12420",
+   "frase": "competitors and others who are knowledgeable about the industry or market"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La muestra externa del libro incluye competidores y otros conocedores de la industria o del mercado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-173-ab_testing_optimizacion-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "ab_testing_optimizacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.",
+  "texto_nuevo": "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro).",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "11603",
+   "frase": "Which headline, picture, or product offer generated more sign-ups, sales or abandons?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no enumera la prueba social ni el número de campos de formulario entre los elementos a probar.; La lista añadida (ubicación de CTA, prueba social, campos) no está en el libro; elegir antes la métrica es operativo y se conserva.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-173-analisis_de_cohortes-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_de_cohortes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo, como ocurre al comparar clientes en prueba gratis versus quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
+  "texto_nuevo": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo; por ejemplo, puedes comprobar si quienes empiezan con una prueba gratis se van antes que quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12084",
+   "frase": "Do customers who first accept a free trial leave more quickly"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo plantea como pregunta; el nodo lo da como hecho.; Mismo defecto: presenta como resultado lo que el libro solo pregunta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-173-acquisicion_viral_engineering-pasos_accionables-5",
+  "fecha": "2026-09-28",
+  "node_id": "acquisicion_viral_engineering",
+  "campo": "pasos_accionables",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Crear contenido no genérico (sitios, blogs) relacionado al problema que resuelve el producto, como videos o demostraciones",
+  "texto_nuevo": "Considerar crear contenido aparte y sin la marca del producto (sitios, blogs) dedicado al problema que resuelve el producto, como videos o demostraciones",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "10563",
+   "frase": "consider creating separate, unbranded experiences (sites, blogs) that are specifically geared toward the problem"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro lo propone como algo a considerar, no como paso obligado.; El libro pide experiencias aparte y sin marca; 'no genérico' dice lo opuesto.; Mismo endurecimiento: 'might also want to consider' pasa a instrucción.; Más que un matiz perdido, 'no genérico' invierte 'unbranded'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-173-actualizar_business_model_canvas_tuneup-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "actualizar_business_model_canvas_tuneup",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
+  "texto_nuevo": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado; ese hallazgo afecta también tus hipótesis de ingresos, que ajustas según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "9206",
+   "frase": "that discovery will affect the revenue stream hypothesis as well"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga el ajuste de ingresos al entusiasmo de solo un subconjunto, no a que falle cualquier hipótesis.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-173-ab_testing_optimizacion-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "ab_testing_optimizacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba el tiempo suficiente para alcanzar su máximo, enfocándose en una sola métrica a la vez.",
+  "texto_nuevo": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico).",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "11613",
+   "frase": "Many testers drive 80% of the traffic to one alternative, and 20% to the other"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide probar de forma cuidadosa, justa y secuencial con grupo de control; no habla de alcanzar un máximo ni de una sola métrica.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-173-role_playing-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "role_playing",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usar disfraces o props simples para hacer la escena más realista",
+  "texto_nuevo": "Considerar disfraces o props simples para hacer la escena más realista, sin dedicarles mucho tiempo: ayudan, pero no son imprescindibles",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "5396-5410",
+   "frase": "Don’t spend ages on them, but consider making your prototype that much more realistic."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: los disfraces ayudan pero no son del todo necesarios y no hay que dedicarles mucho tiempo.; Mismo endurecimiento de algo que el libro solo invita a considerar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-173-resource_assessment-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "resource_assessment",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales",
+  "texto_nuevo": "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales; si se consideran varios modelos, hacer una evaluación por cada uno para compararlos",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "6246-6248",
+   "frase": "Fill out a Resource Assessment worksheet for each model to compare."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el libro pide una hoja de evaluación por modelo para comparar.; Se cae que, con varios modelos de distribución, se hace una evaluación por cada uno para compararlos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-173-generar_insights_how_might_we-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "generar_insights_how_might_we",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Redactar insights concretos por cada tema y quedarse con 3 a 5 en total",
+  "texto_nuevo": "Redactar insights concretos por cada tema, descartar los que no se relacionan directamente con el reto de diseño y quedarse con 3 a 5 en total",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "3445-3451",
+   "frase": "discard the ones that don’t directly relate to your challenge"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta descartar los insights ajenos al reto de diseño.; Se cae el criterio para quedarse con 3 a 5: descartar los que no se relacionan con el reto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-173-gut_check-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gut_check",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación prioriza la cantidad y creatividad sobre la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
+  "texto_nuevo": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación busca la cantidad y la creatividad, a menudo con menos énfasis en la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "4933",
+   "frase": "often with less emphasis on plausibility or implementation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la ideación a menudo pone menos énfasis en la viabilidad; el nodo lo vuelve regla.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-173-storyboard-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "storyboard",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Actuar o presentar el storyboard al equipo para recibir feedback, y compartirlo con usuarios o el equipo para retroalimentación",
+  "texto_nuevo": "Actuar o presentar el storyboard al equipo para recibir feedback",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "5139",
+   "frase": "Once you’re done, act out the Storyboard to your team for feedback."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo pide actuarlo ante el equipo para recibir feedback; compartirlo con usuarios no está.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-173-ways_to_grow_framework-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "ways_to_grow_framework",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ubicar la iniciativa actual en el cuadrante correspondiente (nueva/existente, incremental/revolucionaria)",
+  "texto_nuevo": "Ubicar cada una de las soluciones que barajas en el cuadrante correspondiente (oferta nueva/existente, usuarios actuales/nuevos) para verlas en relación unas con otras",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "6516-6526",
+   "frase": "vertical axis represents the novelty of your offering and the horizontal axis represents its users"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro ubica todas las soluciones para verlas unas en relación con otras, no una sola iniciativa.; Pone incremental/revolucionaria como eje, cuando en el libro es el resultado de la posición.; Se pierde el eje de usuarios actuales o nuevos, que el libro pone como segundo eje.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-173-ways_to_grow_framework-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "ways_to_grow_framework",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decidir la estrategia de crecimiento según los recursos y objetivos de la organización",
+  "texto_nuevo": "Decidir la estrategia de crecimiento según lo que la organización puede lograr de forma realista y lo que más beneficia a las personas a las que sirve, sabiendo que a menudo el cambio incremental o evolutivo puede tener más probabilidad de gran impacto",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "6540-6542",
+   "frase": "often, incremental and evolutionary change can have the greatest chance for big impact"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se cae la advertencia sobre lo incremental y evolutivo.; Se pierde la advertencia de que a menudo lo incremental y evolutivo tiene más opción de gran impacto, y el beneficio para quienes se sirve.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-173-mash_ups-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "mash_ups",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ejercicio de pensamiento que combina dos marcas o conceptos existentes para explorar ideas nuevas de forma acelerada. Consiste en aislar una cualidad deseada (ej. eficiencia, exclusividad) y preguntarse qué marca o servicio real encarna esa cualidad, para luego aplicar esa lógica al reto de diseño propio (ej. '¿Cuál sería la versión Facebook de una cuenta de ahorros?').",
+  "texto_nuevo": "Ejercicio de pensamiento que combina dos marcas o conceptos existentes para explorar ideas nuevas de forma acelerada. Consiste en aislar una cualidad deseada (ej. eficiencia, velocidad) y preguntarse qué marca o servicio real encarna esa cualidad, para luego aplicar esa lógica al reto de diseño propio (ej. '¿Cuál sería la versión Facebook de una cuenta de ahorros?').",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "4631-4633",
+   "frase": "Is it efficiency, speed, cleanliness, glamour?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro ejemplifica con eficiencia, velocidad, limpieza y glamour; 'exclusividad' no está.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-173-gut_check-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "gut_check",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones",
+  "texto_nuevo": "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones, conservando su núcleo",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "4957",
+   "frase": "How can you keep the core of your idea"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide evolucionar la idea conservando su núcleo; el paso lo pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-173-storyboard-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "storyboard",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dedicar 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
+  "texto_nuevo": "Dedicar no más de 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "5129",
+   "frase": "Spend no more than 30-45 minutes drawing how your ideas work."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija 30-45 minutos como tope, no como duración a dedicar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-173-ways_to_grow_framework-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "ways_to_grow_framework",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas",
+  "texto_nuevo": "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas, revisando si hay huecos en el conjunto de soluciones y si conviene cubrir los cuatro cuadrantes",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "6536-6538",
+   "frase": "Are there gaps in your portfolio of solutions?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide mirar la distribución, buscar huecos y decidir si cubrir los cuatro cuadrantes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ }
+]

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Vigila tu sistema y su entorno de operación para detectar cambios relevantes (tarea M-1).",
     "Evalúa tus controles de forma continua, según la estrategia de vigilancia que definiste (tarea M-2).",
-    "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar y de tu plan de acción y cronograma (POA&M) (tarea M-3).",
+    "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M) (tarea M-3).",
     "Cuéntale de forma continua a quien decide contigo cómo está tu seguridad y privacidad (tarea M-5)."
   ],
   "entregable_esperado": "Un reporte periódico sobre el estado de tu seguridad y privacidad, junto con un registro actualizado de cambios y respuestas de riesgo.",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Vigila tu Seguridad Constantemente",
   "fuentes_internas": [
     "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-172-monitoreo_continuo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar y de tu plan de acción y cronograma (POA&M) (tarea M-3).",
+      "texto_nuevo": "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M) (tarea M-3).",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "217",
+        "frase": "Using the results of the ongoing monitoring activities, risk assessments, and outstanding items"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone tres insumos para decidir la respuesta (M-3); el paso omite las evaluaciones de riesgo.; Mismo defecto: falta el insumo de las evaluaciones de riesgo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

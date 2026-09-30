@@ -6,10 +6,10 @@
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
   "resumen_teorico": "Tras categorizar el sistema, se selecciona un conjunto inicial de controles (baseline) para proteger la confidencialidad, integridad y disponibilidad, usando catálogos como NIST SP 800-53. Luego, estos controles se adaptan (tailoring) a los requisitos específicos de seguridad y privacidad de la organización, guiados por evaluaciones de riesgo. Los controles seleccionados y adaptados se documentan en un plan de seguridad y/o privacidad.",
   "pasos_accionables": [
-    "Seleccionar un baseline de controles apropiado según la categorización del sistema (Tarea S-1).",
+    "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de un baseline predefinido o elegir controles propios (Tarea S-1).",
     "Adaptar (tailor) los controles a los riesgos y necesidades específicas de la organización (Tarea S-2).",
     "Documentar los controles seleccionados y adaptados en un plan de seguridad/privacidad.",
-    "Desarrollar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5)."
+    "Desarrollar e implementar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5)."
   ],
   "entregable_esperado": "Un plan de seguridad y privacidad que documente los controles seleccionados, adaptados y justificados por el nivel de riesgo.",
   "nodos_previos": [
@@ -41,6 +41,40 @@
         "evidencia": "Q008-010: Seleccionar y adaptar controles y documentarlos en un plan de seguridad es diseno del plan de salvaguardas, planificacion, igual que el paso previo de categorizar. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-172-seleccion_controles-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5).",
+      "texto_nuevo": "Desarrollar e implementar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5).",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "131",
+        "frase": "Develop and implement a system-level strategy for monitoring control effectiveness"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide desarrollar e implementar la estrategia (S-5); el paso se queda en desarrollarla.; Mismo defecto: se cae la implementación de la estrategia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-172-seleccion_controles-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar un baseline de controles apropiado según la categorización del sistema (Tarea S-1).",
+      "texto_nuevo": "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de un baseline predefinido o elegir controles propios (Tarea S-1).",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "139",
+        "frase": "use a baseline (pre-defined) control selection approach, or should we select our own controls"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja abierta la elección entre un baseline predefinido y controles propios; el paso da el baseline como única vía.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

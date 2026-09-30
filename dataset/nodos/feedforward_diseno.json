@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Feedforward: Diseño Orientado al Futuro",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (décadas o siglos) al diseñar productos y sistemas.",
+  "resumen_teorico": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (diez o incluso cien años) al diseñar productos y sistemas.",
   "pasos_accionables": [
     "Definir una visión a largo plazo (10-100 años) del impacto deseado del producto o sistema",
     "Preguntar explícitamente qué necesita el ecosistema receptor del producto (ej: '¿qué jabón quiere el río?')",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Diseña Pensando en el Futuro",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-171-feedforward_diseno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (décadas o siglos) al diseñar productos y sistemas.",
+      "texto_nuevo": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (diez o incluso cien años) al diseñar productos y sistemas.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "829",
+        "frase": "a sustaining global commerce look like ten, or even a hundred, years from now"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de diez o hasta cien años, no de siglos.; Mismo horizonte ampliado más allá del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

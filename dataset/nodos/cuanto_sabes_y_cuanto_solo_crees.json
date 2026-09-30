@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Los Límites del Conocimiento Experto",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso en dos días distintos, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+  "resumen_teorico": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
   "pasos_accionables": [
     "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación clara de tus errores pasados.",
     "Separa lo que sabes con datos de lo que solo crees por intuición.",
@@ -55,6 +55,22 @@
         "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-171-cuanto_sabes_y_cuanto_solo_crees-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso en dos días distintos, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+      "texto_nuevo": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "2216-2220",
+        "frase": "I had duplicated two of the projects in the list"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro repitió el caso dentro de la misma lista y sesión, no en días distintos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

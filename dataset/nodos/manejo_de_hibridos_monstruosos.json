@@ -4,10 +4,10 @@
   "dominio": "environmental",
   "titulo_concepto": "Híbridos Monstruosos y su Rediseño",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, requieren ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
+  "resumen_teorico": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, pueden requerir ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
   "pasos_accionables": [
     "Identificar productos actuales que mezclan materiales biológicos y técnicos sin separación posible",
-    "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales",
+    "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica",
     "Facilitar el desensamble para reciclar cada componente en su metabolismo correspondiente",
     "Comunicar y capitalizar (marketing) la recuperación de materiales como ventaja competitiva",
     "Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente"
@@ -39,5 +39,40 @@
   ],
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-171-manejo_de_hibridos_monstruosos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, requieren ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
+      "texto_nuevo": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, pueden requerir ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "684",
+        "frase": "it may take extra ingenuity to design and market it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede hacer falta ingenio adicional; el nodo lo vuelve requisito.; Mismo endurecimiento del 'may' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-171-manejo_de_hibridos_monstruosos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales",
+      "texto_nuevo": "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "684",
+        "frase": "Running shoes can be redesigned so that their soles are biological nutrients"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro separa por metabolismo y facilita el desensamble; no plantea pasar a un solo material.; Misma estrategia de mono-materiales ausente del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

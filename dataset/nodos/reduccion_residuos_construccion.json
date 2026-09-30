@@ -7,7 +7,7 @@
   "resumen_teorico": "Reducir residuos no se limita a reciclaje, sino a eliminar ineficiencias en el uso de materiales de construcción y operaciones de instalaciones. Casos como el Masdar Institute demuestran que es posible alcanzar tasas de desvío de residuos de construcción de hasta 99% mediante planificación integrada de demolición y construcción.",
   "pasos_accionables": [
     "Establecer metas de reutilización/reciclaje de residuos de construcción",
-    "Planificar integradamente demolición y construcción para minimizar desperdicio",
+    "Sugerencia de My Idea: planificar en conjunto la demolición y la construcción para reducir el desperdicio",
     "Convertir residuos de madera en mulch u otros usos",
     "Monitorear y reportar tasas de desvío de residuos de vertederos"
   ],
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Reduce Residuos en tu Construcción",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-172-reduccion_residuos_construccion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planificar integradamente demolición y construcción para minimizar desperdicio",
+      "texto_nuevo": "Sugerencia de My Idea: planificar en conjunto la demolición y la construcción para reducir el desperdicio",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2788",
+        "frase": "a lofty goal for its campus to reuse or recycle all of its construction waste"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona planificar juntas demolición y construcción; como consejo práctico queda como sugerencia.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

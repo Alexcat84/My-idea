@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Haz que tu idea se contagie sola (efecto meme)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Cuando la gente tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional deja de funcionar. En su lugar, tienes que convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
+  "resumen_teorico": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Como cada vez menos gente consume los medios tradicionales y tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional pierde eficacia. Aún tiene un papel, pero menos para lanzar mensajes y más para convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
   "pasos_accionables": [
     "Define la idea central (el 'meme') que quieres que se propague",
     "Produce contenido visual o narrativo de bajo costo pero alto impacto, como videos o escenarios que muestren el futuro",
     "Diseña tu campaña para que quien la vea deje de ser espectador y se convierta en alguien que la cuenta y la comparte",
     "Aprovecha canales digitales como YouTube y redes para que el alcance crezca de forma orgánica",
-    "Mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio"
+    "Sugerencia de My Idea: mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio"
   ],
   "entregable_esperado": "Una pieza narrativa (video, campaña, evento) pensada para que la gente la comparta y la repita por su cuenta.",
   "nodos_previos": [
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Convierte tu Idea en Meme",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-propagacion_de_ideas_meme-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Cuando la gente tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional deja de funcionar. En su lugar, tienes que convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
+      "texto_nuevo": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Como cada vez menos gente consume los medios tradicionales y tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional pierde eficacia. Aún tiene un papel, pero menos para lanzar mensajes y más para convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "908-910",
+        "frase": "There is still a role for advertising, but less as a medium for blasting messages"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la publicidad aún tiene un papel, menos para lanzar mensajes y más para convertir a la audiencia en narradora; el nodo la presenta como reemplazada.; El libro habla de un declive de eficacia con varias causas; el nodo dice que deja de funcionar y le da una sola causa.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae la causa más simple que da el libro: cada vez menos gente consume los medios tradicionales.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-170-propagacion_de_ideas_meme-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio",
+      "texto_nuevo": "Sugerencia de My Idea: mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "912",
+        "frase": "they also got people talking, and that became part of the story"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone un criterio de medición del éxito; solo cuenta que la campaña hizo hablar a la gente. Queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia práctica.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

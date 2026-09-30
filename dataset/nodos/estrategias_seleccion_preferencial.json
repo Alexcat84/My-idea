@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Preferencias de Selección Consciente (Inteligencia Ecológica, Respeto y Deleite)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
+  "resumen_teorico": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero probablemente mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
   "pasos_accionables": [
     "Evaluar si un material o producto contiene sustancias reconocidas como dañinas (ej. PVC, metales pesados) y preferir alternativas certificadas (ej. sello FSC).",
     "Investigar las condiciones de fabricación, transporte y manejo del producto, priorizando el respeto a trabajadores y comunidades.",
@@ -40,6 +40,22 @@
         "evidencia": "F16-007: Trata de criterios para elegir materiales y proveedores, una decision de diseno y recursos, no una prueba con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-171-estrategias_seleccion_preferencial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
+      "texto_nuevo": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero probablemente mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "952-956",
+        "frase": "the results will probably be better than had we not thought about the issue"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el resultado probablemente será mejor; el nodo lo da por seguro.; Mismo endurecimiento del 'probably' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Portafolio Diversificado de Innovación (Silver Buckshot)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Es necesario gestionar un portafolio diversificado que abarque desde ideas incrementales de corto plazo (mejorar el producto actual) hasta ideas revolucionarias de largo plazo, aceptando que la mayoría del esfuerzo estará en lo incremental, pero sin dejar de invertir en lo disruptivo para evitar ser sorprendidos por la competencia.",
+  "resumen_teorico": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Gestiona un portafolio diversificado, con enfoques que aprovechen mejor tus fortalezas, desde ideas incrementales de corto plazo (mejorar el producto actual) hasta revolucionarias de largo plazo. La mayoría del esfuerzo estará en lo incremental, pero invierte también en lo disruptivo para evitar sorpresas de la competencia; quizá lleguen menos de ellos al mercado, pero los que lleguen suelen tener impacto duradero.",
   "pasos_accionables": [
     "Clasificar los proyectos de innovación en 'incrementales' y 'revolucionarios/disruptivos'.",
     "Asignar la mayoría de los recursos a proyectos incrementales que mejoren ofertas existentes.",
     "Reservar un porcentaje del presupuesto/tiempo para proyectos disruptivos de alto riesgo/alto impacto.",
-    "Evaluar métricas de éxito distintas para cada tipo de proyecto (no medir lo disruptivo con reglas de lo incremental)."
+    "Sugerencia de My Idea: evaluar cada tipo de proyecto con métricas de éxito distintas (no medir lo disruptivo con reglas de lo incremental)."
   ],
   "entregable_esperado": "Una matriz de proyectos clasificados por horizonte de tiempo e impacto (incremental vs. disruptivo).",
   "nodos_previos": [
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Diversifica tu Portafolio de Innovación",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-170-portafolio_innovacion_diversificado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Es necesario gestionar un portafolio diversificado que abarque desde ideas incrementales de corto plazo (mejorar el producto actual) hasta ideas revolucionarias de largo plazo, aceptando que la mayoría del esfuerzo estará en lo incremental, pero sin dejar de invertir en lo disruptivo para evitar ser sorprendidos por la competencia.",
+      "texto_nuevo": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Gestiona un portafolio diversificado, con enfoques que aprovechen mejor tus fortalezas, desde ideas incrementales de corto plazo (mejorar el producto actual) hasta revolucionarias de largo plazo. La mayoría del esfuerzo estará en lo incremental, pero invierte también en lo disruptivo para evitar sorpresas de la competencia; quizá lleguen menos de ellos al mercado, pero los que lleguen suelen tener impacto duradero.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1394",
+        "frase": "you may see fewer of these projects going to market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se cae el límite del libro: pueden llegar menos proyectos revolucionarios al mercado, aunque los que llegan suelen tener impacto duradero.; Se cae la condición del libro de elegir los enfoques que mejor aprovechen las fortalezas de la organización.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-170-portafolio_innovacion_diversificado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar métricas de éxito distintas para cada tipo de proyecto (no medir lo disruptivo con reglas de lo incremental).",
+      "texto_nuevo": "Sugerencia de My Idea: evaluar cada tipo de proyecto con métricas de éxito distintas (no medir lo disruptivo con reglas de lo incremental).",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1396",
+        "frase": "Most organizations have metrics that measure the effectiveness of a division on its own terms."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone métricas distintas por tipo de proyecto; solo critica las métricas que miden cada división por su cuenta. Queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia de la casa.; Mismo defecto; queda como sugerencia práctica.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

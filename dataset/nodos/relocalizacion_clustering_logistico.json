@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Relocalización y Clustering Logístico para Reducir Distancias de Transporte",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Acercar geográficamente almacenes, proveedores y clientes reduce significativamente el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
+  "resumen_teorico": "Acercar geográficamente almacenes, proveedores y clientes puede reducir el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
   "pasos_accionables": [
     "Mapear la ubicación actual de proveedores, almacenes y clientes principales.",
     "Identificar oportunidades de relocalización de centros de distribución cerca de mercados clave.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Acerca tu Logística al Cliente",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-172-relocalizacion_clustering_logistico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Acercar geográficamente almacenes, proveedores y clientes reduce significativamente el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
+      "texto_nuevo": "Acercar geográficamente almacenes, proveedores y clientes puede reducir el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5003",
+        "frase": "Companies can reduce fuel use by shortening distances between suppliers, warehouses, and customers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que acortar distancias puede reducir el combustible; 'significativamente' y el efecto seguro son añadidos.; Mismo defecto: endurece 'can reduce' y añade 'significativamente'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

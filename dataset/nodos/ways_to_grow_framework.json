@@ -6,9 +6,9 @@
   "fuente": "The field guide to human-centered design",
   "resumen_teorico": "Framework que ayuda a posicionar iniciativas según dos ejes: si son ofertas nuevas o existentes, y si se dirigen a los usuarios actuales o a un grupo nuevo, lo que muestra si son incrementales, evolutivas o revolucionarias. Permite a los equipos decidir estratégicamente qué tipo de innovación perseguir para hacer crecer su impacto u organización.",
   "pasos_accionables": [
-    "Ubicar la iniciativa actual en el cuadrante correspondiente (nueva/existente, incremental/revolucionaria)",
-    "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas",
-    "Decidir la estrategia de crecimiento según los recursos y objetivos de la organización"
+    "Ubicar cada una de las soluciones que barajas en el cuadrante correspondiente (oferta nueva/existente, usuarios actuales/nuevos) para verlas en relación unas con otras",
+    "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas, revisando si hay huecos en el conjunto de soluciones y si conviene cubrir los cuatro cuadrantes",
+    "Decidir la estrategia de crecimiento según lo que la organización puede lograr de forma realista y lo que más beneficia a las personas a las que sirve, sabiendo que a menudo el cambio incremental o evolutivo puede tener más probabilidad de gran impacto"
   ],
   "entregable_esperado": "Posicionamiento claro de la iniciativa en el cuadrante de crecimiento y decisión estratégica de expansión",
   "nodos_previos": [
@@ -38,6 +38,57 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R066-005 (CONTRARIO, arbitro): Tiene razón el lector A. El libro fija de forma explícita los ejes (L6518-L6526: novedad de la oferta y usuarios, con los usuarios nuevos a la derecha y los existentes a la izquierda), y en la hoja de trabajo (L6630-L6652, L8130-L8146) incremental y revolucionario aparecen como gradiente diagonal entre cuadrantes. Busqué en todo el libro pasajes que traten incremental/revolucionario como eje y no hay ninguno: el campo sustituye el eje de usuarios por otro que el libro no define, lo que cambia la estructura que el libro da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R066-005"
+    },
+    {
+      "id": "final-e1-173-ways_to_grow_framework-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ubicar la iniciativa actual en el cuadrante correspondiente (nueva/existente, incremental/revolucionaria)",
+      "texto_nuevo": "Ubicar cada una de las soluciones que barajas en el cuadrante correspondiente (oferta nueva/existente, usuarios actuales/nuevos) para verlas en relación unas con otras",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "6516-6526",
+        "frase": "vertical axis represents the novelty of your offering and the horizontal axis represents its users"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro ubica todas las soluciones para verlas unas en relación con otras, no una sola iniciativa.; Pone incremental/revolucionaria como eje, cuando en el libro es el resultado de la posición.; Se pierde el eje de usuarios actuales o nuevos, que el libro pone como segundo eje.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-173-ways_to_grow_framework-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir la estrategia de crecimiento según los recursos y objetivos de la organización",
+      "texto_nuevo": "Decidir la estrategia de crecimiento según lo que la organización puede lograr de forma realista y lo que más beneficia a las personas a las que sirve, sabiendo que a menudo el cambio incremental o evolutivo puede tener más probabilidad de gran impacto",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "6540-6542",
+        "frase": "often, incremental and evolutionary change can have the greatest chance for big impact"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se cae la advertencia sobre lo incremental y evolutivo.; Se pierde la advertencia de que a menudo lo incremental y evolutivo tiene más opción de gran impacto, y el beneficio para quienes se sirve.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-173-ways_to_grow_framework-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas",
+      "texto_nuevo": "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas, revisando si hay huecos en el conjunto de soluciones y si conviene cubrir los cuatro cuadrantes",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "6536-6538",
+        "frase": "Are there gaps in your portfolio of solutions?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide mirar la distribución, buscar huecos y decidir si cubrir los cuatro cuadrantes.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

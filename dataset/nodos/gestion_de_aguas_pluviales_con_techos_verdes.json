@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Techos Verdes y Gestión Integral de Aguas Pluviales",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat.",
+  "resumen_teorico": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat. Depende del lugar: lo que funciona en un clima puede no funcionar en otro.",
   "pasos_accionables": [
     "Evaluar la viabilidad estructural de instalar un techo verde en el edificio",
     "Seleccionar especies vegetales nativas o adaptadas al clima local",
@@ -41,6 +41,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Añadido práctico de ejecución técnica: el libro describe el techo solo como \"a light layer of soil, a growing matrix, covered with plants\" (L509) y no nombra impermeabilización ni drenaje. No es cifra ni norma: es un detalle constructivo útil, así que se reescribe como sugerencia de My Idea sin atribuirlo al autor, en vez de borrar la impermeabilización y el drenaje, que en la práctica son necesarios. No se repite en resumen_teorico ni entregable.",
       "indice": 2,
       "auditoria": "muestreo A8"
+    },
+    {
+      "id": "final-e1-171-gestion_de_aguas_pluviales_con_techos_verdes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat.",
+      "texto_nuevo": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat. Depende del lugar: lo que funciona en un clima puede no funcionar en otro.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "924",
+        "frase": "A green roof might work in St. Petersburg, Florida, but not in St. Petersburg, Russia."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que las soluciones responden a lo local y un techo verde puede no servir en otro clima.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

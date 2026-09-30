@@ -7,7 +7,7 @@
   "resumen_teorico": "Proceso de síntesis que convierte hallazgos de investigación en insights organizados por tema, y luego transforma cada insight en una pregunta 'How Might We' (Cómo podríamos) que abre el espacio para la ideación. Este puente entre investigación e ideación es clave en el proceso de diseño centrado en humanos.",
   "pasos_accionables": [
     "Agrupar hallazgos de investigación en temas",
-    "Redactar insights concretos por cada tema y quedarse con 3 a 5 en total",
+    "Redactar insights concretos por cada tema, descartar los que no se relacionan directamente con el reto de diseño y quedarse con 3 a 5 en total",
     "Convertir cada insight en una pregunta 'How Might We' abierta y accionable",
     "Usar las preguntas HMW como punto de partida para sesiones de brainstorming"
   ],
@@ -44,6 +44,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tenia razon B. Busque con Grep 'two', 'three', '2' y '3' junto a 'insight' y 'theme' en todo el libro. Hay tres cifras. El texto del metodo pide pasar cada tema a una frase corta y quedarse con tres a cinco insights en total (L3419, L3435-L3451). La hoja de la p. 176 (L7838-L7870) deja tres huecos numerados por tema. El ejemplo de Eram (L3539-L3585) pone tres insights en cada tema. El rango '2-3 por tema' no aparece en el libro, y en concreto el minimo de dos no esta en ningun sitio. A lo marca CONTRARIO, pero la hoja y el ejemplo apoyan redactar varios insights por tema, hasta tres. El paso cae dentro de ese margen y no lo invierte. Como hay pasajes que lo apoyan, no puede ser CONTRARIO. La cifra concreta no esta respaldada, asi que es ANADIDO, y como el dato es una cifra, el tipo es LEGAL_CIFRA.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C130-048"
+    },
+    {
+      "id": "final-e1-173-generar_insights_how_might_we-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redactar insights concretos por cada tema y quedarse con 3 a 5 en total",
+      "texto_nuevo": "Redactar insights concretos por cada tema, descartar los que no se relacionan directamente con el reto de diseño y quedarse con 3 a 5 en total",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "3445-3451",
+        "frase": "discard the ones that don’t directly relate to your challenge"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta descartar los insights ajenos al reto de diseño.; Se cae el criterio para quedarse con 3 a 5: descartar los que no se relacionan con el reto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

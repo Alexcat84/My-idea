@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Estrategia de Gestión de Riesgo y Tolerancia al Riesgo",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que depende de la cultura organizacional y puede variar según el tipo de pérdida.",
+  "resumen_teorico": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que suele basarse en la cultura organizacional, puede variar según el tipo de pérdida y puede estar influido por la tolerancia al riesgo de quienes dirigen.",
   "pasos_accionables": [
     "Documentar supuestos, restricciones, prioridades y compensaciones de riesgo.",
     "Definir explícitamente el nivel de tolerancia al riesgo de la organización.",
@@ -95,6 +95,22 @@
         "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en matriz_probabilidad_impacto."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "final-e1-172-estrategia_gestion_riesgo_tolerancia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que depende de la cultura organizacional y puede variar según el tipo de pérdida.",
+      "texto_nuevo": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que suele basarse en la cultura organizacional, puede variar según el tipo de pérdida y puede estar influido por la tolerancia al riesgo de quienes dirigen.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "113",
+        "frase": "can be influenced by risk tolerance of executives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro añade que la tolerancia puede estar influida por la de los directivos; el resumen lo omite.; El libro dice que la tolerancia se basa generalmente en la cultura; 'depende' lo vuelve tajante.; Mismo defecto que la marca 0: falta la influencia de quienes dirigen.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

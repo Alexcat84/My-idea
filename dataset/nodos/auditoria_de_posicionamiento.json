@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Auditoría de Posicionamiento (Positioning Audit)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de definir el posicionamiento de producto y empresa, es necesario realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+  "resumen_teorico": "Antes de definir el posicionamiento de producto y empresa, conviene realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
   "pasos_accionables": [
-    "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas e influenciadores",
+    "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas, influenciadores, competidores y otros conocedores de la industria",
     "Entrevistar una muestra representativa que conozca y no conozca la empresa",
     "Realizar las primeras 5-10 llamadas personalmente con el equipo fundador",
     "Aplicar el mismo cuestionario internamente al equipo ejecutivo y la junta directiva",
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Audita cómo te Perciben Realmente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-auditoria_de_posicionamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de definir el posicionamiento de producto y empresa, es necesario realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+      "texto_nuevo": "Antes de definir el posicionamiento de producto y empresa, conviene realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12420",
+        "frase": "Before the company spends time on positioning, it’s a good idea to air out"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro la presenta como buena idea; 'es necesario' endurece.; Mismo endurecimiento de 'it's a good idea' a necesidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-173-auditoria_de_posicionamiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas e influenciadores",
+      "texto_nuevo": "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas, influenciadores, competidores y otros conocedores de la industria",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12420",
+        "frase": "competitors and others who are knowledgeable about the industry or market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La muestra externa del libro incluye competidores y otros conocedores de la industria o del mercado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

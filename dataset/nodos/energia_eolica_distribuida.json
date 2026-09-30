@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Energía Eólica Distribuida Eco-Efectiva",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas más pequeñas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
+  "resumen_teorico": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
   "pasos_accionables": [
     "Evaluar el potencial eólico local en pequeña escala en lugar de solo grandes instalaciones centralizadas",
     "Diseñar turbinas con materiales que puedan reincorporarse como nutrientes técnicos al final de su vida útil",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Distribuye tu Energía Eólica",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-171-energia_eolica_distribuida-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas más pequeñas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
+      "texto_nuevo": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "791-793",
+        "frase": "imagine one of the new windmills distributed on every few family farms"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro distribuye los molinos nuevos en granjas; no dice que sean más pequeños.; Mismo añadido de turbinas más pequeñas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

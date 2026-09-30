@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Gut Check (Evaluación Crítica de Ideas)",
   "fuente": "The field guide to human-centered design",
-  "resumen_teorico": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación prioriza la cantidad y creatividad sobre la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
+  "resumen_teorico": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación busca la cantidad y la creatividad, a menudo con menos énfasis en la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
   "pasos_accionables": [
     "Destilar las ideas más prometedoras a su esencia central",
     "Listar todas las restricciones y barreras que enfrenta cada idea en post-its",
-    "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones",
+    "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones, conservando su núcleo",
     "Estar dispuesto a descartar ideas que no superen la evaluación crítica"
   ],
   "entregable_esperado": "Una lista depurada de ideas viables con sus restricciones identificadas",
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Filtra tus Ideas con Honestidad",
   "fuentes_internas": [
     "The field guide to human-centered design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-173-gut_check-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación prioriza la cantidad y creatividad sobre la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
+      "texto_nuevo": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación busca la cantidad y la creatividad, a menudo con menos énfasis en la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "4933",
+        "frase": "often with less emphasis on plausibility or implementation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la ideación a menudo pone menos énfasis en la viabilidad; el nodo lo vuelve regla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-173-gut_check-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones",
+      "texto_nuevo": "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones, conservando su núcleo",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "txt/The field guide to human-center - Unknown.txt",
+        "lineas": "4957",
+        "frase": "How can you keep the core of your idea"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide evolucionar la idea conservando su núcleo; el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

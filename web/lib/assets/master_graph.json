@@ -70,9 +70,9 @@
       "titulo_concepto": "A/B Testing para Optimización Web/Mobile",
       "resumen_teorico": "El A/B testing es el método más usado para optimizar actividades de 'get, keep and grow' en negocios web y móviles. Consiste en comparar dos versiones de una página web (o elemento) para determinar cuál produce mejores resultados, mostrando la versión 'A' a la mitad de los visitantes y la versión 'B' a la otra mitad, de forma alternada y secuencial.",
       "pasos_accionables": [
-        "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.",
+        "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro).",
         "Sugerencia de My Idea: Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.",
-        "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba el tiempo suficiente para alcanzar su máximo, enfocándose en una sola métrica a la vez.",
+        "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico).",
         "Medir resultados de conversión/activación para cada versión",
         "Sugerencia de My Idea: Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas."
       ],
@@ -1106,7 +1106,7 @@
         "Crear widgets simples de 'like' o compartir en redes sociales",
         "Aplicar el test de recomendación (Net Promoter Score simplificado) a clientes tempranos",
         "Considerar recompensas para quienes refieran el producto",
-        "Crear contenido no genérico (sitios, blogs) relacionado al problema que resuelve el producto, como videos o demostraciones",
+        "Considerar crear contenido aparte y sin la marca del producto (sitios, blogs) dedicado al problema que resuelve el producto, como videos o demostraciones",
         "Anima a tus primeros clientes a que lo promuevan activamente"
       ],
       "entregable_esperado": "Componentes virales integrados en el producto y una métrica de recomendación (score 1-10) de clientes tempranos",
@@ -1523,7 +1523,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Actualización Iterativa del Business Model Canvas ('Tune-up')",
-      "resumen_teorico": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
+      "resumen_teorico": "El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado; ese hallazgo afecta también tus hipótesis de ingresos, que ajustas según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.",
       "pasos_accionables": [
         "Revisa tu propuesta de valor a la luz del feedback de clientes recibido",
         "Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto",
@@ -1571,7 +1571,7 @@
         "Reúnete con tu equipo cercano y, si tienes, con quienes invierten en tu negocio para hacer esta revisión juntos",
         "Dibuja el mapa de cómo tu cliente resuelve hoy el problema, con y sin tu producto",
         "Evalúa qué tan bien lo que ofreces resuelve realmente ese problema",
-        "Revisa tu lista de funcionalidades y elimina las que no importan de verdad",
+        "Revisa tu lista de funcionalidades, ordénalas por su importancia para tus clientes y elimina o pospón las que no importan de verdad",
         "Actualiza tu lienzo de modelo de negocio y tu plan de entrega a 18 meses",
         "Decide con claridad: cambias de rumbo o sigues adelante"
       ],
@@ -3913,12 +3913,12 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Análisis de Costo de Entrada a Mercado Existente",
-      "resumen_teorico": "Basado en reglas de investigación de operaciones militares, este análisis usa el porcentaje de participación de mercado del líder para determinar si es viable atacar frontalmente o si conviene re-segmentar. Umbrales clave: 74% = monopolio efectivo (inatacable), 41% = líder de mercado (difícil), 26% = mercado inestable (hay oportunidad), menos de 26% = mercado fácil de penetrar.",
+      "resumen_teorico": "Basado en reglas de investigación de operaciones militares, este análisis usa la participación de mercado del líder para decidir si atacar de frente o re-segmentar. Umbrales: 74% = monopolio efectivo (inatacable); dos primeros con más de 74% y el primero con menos de 1,7 veces el segundo = duopolio (inatacable); 41% y al menos 1,7 veces el siguiente = líder (difícil); 26% = inestable (puede haber oportunidades); menos de 26% = fácil de penetrar.",
       "pasos_accionables": [
         "Investigar el market share del jugador dominante en el mercado objetivo",
         "Aplicar las reglas de umbral (74%, 41%, 26%) para clasificar el nivel de dificultad",
         "Si hay un dominante con +74%, descartar ataque frontal y considerar re-segmentación",
-        "Calcular el presupuesto necesario: 3x el del competidor dominante o 1.7x en mercados fragmentados",
+        "Calcular el presupuesto necesario: 3x el presupuesto combinado de ventas y marketing del competidor dominante, o 1.7x el de la empresa que vas a atacar en mercados con varios participantes",
         "Decidir si la startup tiene recursos para competir o debe buscar un nicho"
       ],
       "entregable_esperado": "Reporte de viabilidad de entrada a mercado con cálculo de presupuesto competitivo necesario",
@@ -4027,7 +4027,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Análisis de Cohortes para Retención",
-      "resumen_teorico": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo, como ocurre al comparar clientes en prueba gratis versus quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
+      "resumen_teorico": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo; por ejemplo, puedes comprobar si quienes empiezan con una prueba gratis se van antes que quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
       "pasos_accionables": [
         "Agrupa tus usuarios según un atributo relevante: fuente de referencia, fecha de activación o tipo de oferta aceptada",
         "Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto, y también registro, activación, retención, conversión",
@@ -4880,7 +4880,7 @@
       "pasos_accionables": [
         "Calcular el TCO estimado: costos de adopción, capacitación, infraestructura necesaria",
         "Preparar un ROI hipotético antes de las reuniones iniciales con clientes corporativos",
-        "Comparar el ROI del producto contra la solución actual del cliente",
+        "Comparar el ROI del producto contra la solución actual del cliente: si no devuelve un múltiplo significativo de la inversión, la venta puede ser difícil",
         "Usar el análisis como material de apoyo (white paper) en el proceso de venta"
       ],
       "entregable_esperado": "Documento o white paper con análisis de TCO y ROI para clientes B2B",
@@ -4902,7 +4902,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Análisis de Tráfico y Competencia (Web/Mobile)",
-      "resumen_teorico": "Consiste en usar herramientas de medición de tráfico y tiendas de aplicaciones para entender cómo los competidores atraen y retienen usuarios, identificando tendencias, fuentes de tráfico y posicionamiento en el mercado.",
+      "resumen_teorico": "Consiste en usar herramientas de medición de tráfico y tiendas de aplicaciones para entender cuánto tráfico generan los competidores y cómo atraen usuarios, identificando tendencias, fuentes de tráfico, datos demográficos y posicionamiento en el mercado.",
       "pasos_accionables": [
         "Buscar y comparar el tráfico de los competidores con herramientas gratuitas de medición de tráfico",
         "Revisar rankings y reseñas en tiendas de apps",
@@ -7441,9 +7441,9 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Auditoría de Posicionamiento (Positioning Audit)",
-      "resumen_teorico": "Antes de definir el posicionamiento de producto y empresa, es necesario realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+      "resumen_teorico": "Antes de definir el posicionamiento de producto y empresa, conviene realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
       "pasos_accionables": [
-        "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas e influenciadores",
+        "Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas, influenciadores, competidores y otros conocedores de la industria",
         "Entrevistar una muestra representativa que conozca y no conozca la empresa",
         "Realizar las primeras 5-10 llamadas personalmente con el equipo fundador",
         "Aplicar el mismo cuestionario internamente al equipo ejecutivo y la junta directiva",
@@ -9448,7 +9448,7 @@
       "resumen_teorico": "Checklist inicial para asegurar que inversionistas, fundadores y equipo estén de acuerdo en usar el proceso de Customer Development en lugar de un plan de negocio tradicional. Incluye acordar el Market Type, el número de pivotes financiables, y los criterios de salida para Discovery y Validation.",
       "pasos_accionables": [
         "Explicar a la junta la diferencia entre Product Development y Customer Development",
-        "Discutir y acordar el número de 'pivotes financiados' disponibles",
+        "Discutir y acordar el número de 'pivotes financiados' disponibles, si alcanzan los fondos para 2 a 3 pivotes en Discovery y Validation, y cómo la junta y el equipo medirán el progreso de la empresa",
         "Realizar una primera aproximación al Market Type: Existente, Resegmentado, Nuevo o Clon",
         "Acordar el marco temporal aproximado para Discovery y Validation"
       ],
@@ -11292,12 +11292,12 @@
       "fase_proyecto": "validacion",
       "dominio": "risk_management",
       "titulo_concepto": "Calibración del Juicio",
-      "resumen_teorico": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta sesenta, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
+      "resumen_teorico": "Tu ojo para estimar se puede entrenar como cualquier otra habilidad. Una persona calibrada es la que, cuando dice estar noventa por ciento segura, acierta de verdad nueve de cada diez veces; la mayoría de la gente sin entrenar dice noventa y acierta apenas la mitad de las veces, porque estima con exceso de confianza. Calibrarse es practicar estimaciones con rangos y revisar después qué tan seguido la respuesta real cayó dentro. Un truco útil es la prueba de la apuesta: si te ofrecieran ganar dinero por acertar, ampliarías tu rango, señal de que tu noventa por ciento original era falso. Para el emprendedor que decide mucho basándose en su propio juicio, calibrarse convierte las corazonadas en estimaciones en las que sí puede confiar.",
       "pasos_accionables": [
         "En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.",
         "Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.",
         "Si aciertas menos de siete de diez, amplía tus rangos: probablemente estás sobreconfiado.",
-        "Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho."
+        "Usa la prueba de la apuesta: compara apostar a tu rango con una rifa que gana nueve de cada diez veces; si prefieres la rifa, tu rango era muy estrecho, y ajústalo hasta que te dé igual."
       ],
       "entregable_esperado": "Un registro de tus estimaciones con rango y su resultado real, que muestra qué tan calibrado estás.",
       "nodos_previos": [
@@ -17564,11 +17564,11 @@
       "fase_proyecto": "validacion",
       "dominio": "risk_management",
       "titulo_concepto": "Medir si el Método de Riesgo Funciona",
-      "resumen_teorico": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y jamás comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si lo que llamaste probable ocurre seguido y lo improbable casi nunca, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+      "resumen_teorico": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
       "pasos_accionables": [
         "Escribe hoy tus predicciones de riesgo, con probabilidad, y guárdalas con fecha.",
         "Cuando pase el tiempo, compara lo que predijiste con lo que de verdad ocurrió.",
-        "Pregunta: lo que llamé probable ocurrió seguido, y lo improbable casi nunca.",
+        "Pregunta: ¿lo que predije ocurrió más o menos con la frecuencia que le di? Lo que llamé diez por ciento debió pasar cerca de una de cada diez veces.",
         "Si no acierta, cambia de método en vez de repetir uno que solo te da calma."
       ],
       "entregable_esperado": "Un registro fechado de tus predicciones de riesgo para contrastarlo después contra lo que realmente pasó.",
@@ -27622,7 +27622,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "risk_management",
       "titulo_concepto": "Cuál Es tu Mayor Riesgo y Cómo lo Sabes",
-      "resumen_teorico": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Casi nadie se las hace, y menos la segunda. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
+      "resumen_teorico": "Dos preguntas simples ordenan todo lo demás: cuál es tu mayor riesgo, y cómo lo sabes. Todo intento de manejar riesgos debería responderlas. Es fácil señalar un riesgo cualquiera; lo difícil es sostener con qué evidencia crees que ese es el que más te puede hundir. Muchos emprendedores viven atendiendo los riesgos que saben manejar y dejan crecer, sin mirarlo, al que de verdad los amenaza. Responder con honestidad estas dos preguntas te obliga a mirar tu proyecto completo, no solo la parte que dominas. Y ojo con una respuesta incómoda: a veces tu mayor riesgo es no tener ninguna forma seria de saber cuáles son tus riesgos.",
       "pasos_accionables": [
         "Escribe, sin pensarlo mucho, cuál crees que es el mayor riesgo de tu proyecto.",
         "Debajo, escribe con honestidad cómo lo sabes: qué evidencia tienes o si es solo corazonada.",
@@ -27734,7 +27734,7 @@
       "fase_proyecto": "validacion",
       "dominio": "risk_management",
       "titulo_concepto": "Los Límites del Conocimiento Experto",
-      "resumen_teorico": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso en dos días distintos, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+      "resumen_teorico": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
       "pasos_accionables": [
         "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación clara de tus errores pasados.",
         "Separa lo que sabes con datos de lo que solo crees por intuición.",
@@ -28150,7 +28150,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "Errores en los Métodos Cuantitativos",
-      "resumen_teorico": "Pasar a los números no te salva solo. Hasta las cuentas más sofisticadas engañan cuando arrancan de datos inventados o de supuestos frágiles: un resultado con muchos decimales parece riguroso y por eso da una confianza que no merece. La falsa precisión es peligrosa justo porque tranquiliza. Un cálculo solo vale lo que valen sus insumos: si metiste una probabilidad que sacaste de la manga, la respuesta exacta que salga sigue siendo un invento con apariencia de ciencia. Para el emprendedor, la lección no es huir de los números, sino usarlos con honestidad: reconoce de dónde salió cada dato, prefiere un rango honesto a un decimal falso, y desconfía de cualquier resultado que se vea más seguro que la información con que lo hiciste.",
+      "resumen_teorico": "Pasar a los números no te salva solo. Hasta las cuentas más sofisticadas engañan cuando arrancan de datos inventados o de supuestos frágiles: un resultado con muchos decimales parece riguroso y por eso da una confianza que no merece. La falsa precisión es peligrosa justo porque tranquiliza. Un cálculo solo vale lo que valen sus insumos: si metiste una probabilidad que sacaste de la manga, la respuesta exacta que salga sigue siendo un invento con apariencia de ciencia. Para el emprendedor, la lección no es huir de los números, sino usarlos con honestidad: reconoce de dónde salió cada dato, calibra tus estimaciones, prefiere un rango honesto a un decimal falso, compara después tus cálculos con lo que de verdad pasó, y desconfía de cualquier resultado que se vea más seguro que la información con que lo hiciste.",
       "pasos_accionables": [
         "De cualquier cálculo de riesgo, rastrea de dónde salió cada número que metiste.",
         "Marca los datos que en realidad inventaste o supusiste sin base.",
@@ -46379,7 +46379,7 @@
       "resumen_teorico": "Mejorar cómo manejas el riesgo no exige un modelo vistoso ni complicado: empieza con lo simple y probado, no con lo que impresiona. Muchos abandonan la buena gestión de riesgo porque creen que necesitan matemáticas pesadas o software caro; en realidad, unos pocos hábitos sencillos y bien fundados (una lista viva, pensar en rangos, calibrar tu juicio, comparar predicciones con la realidad) rinden más que cualquier tablero elaborado que nadie comprueba. Lo probado le gana a lo aparente. La regla es arrancar con lo mínimo que de verdad funciona y sofisticar solo cuando el tamaño de la decisión lo justifique. Para el emprendedor con poco tiempo, esto es liberador: no necesita volverse experto en estadística, solo adoptar unas cuantas prácticas honestas y constantes.",
       "pasos_accionables": [
         "Elige dos o tres prácticas simples y probadas en vez de un modelo complicado.",
-        "Empieza por una lista viva de riesgos y por pensar en rangos: rinden desde el primer día.",
+        "Empieza por una lista viva de riesgos, con la probabilidad de cada uno y su posible pérdida como rango, y haz la cuenta con una simulación sencilla en hoja de cálculo.",
         "No inviertas en herramientas caras hasta que el tamaño de tus decisiones lo justifique.",
         "Sofistica el método solo cuando lo simple se te quede corto, no antes."
       ],
@@ -46927,7 +46927,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "environmental",
       "titulo_concepto": "Energía Eólica Distribuida Eco-Efectiva",
-      "resumen_teorico": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas más pequeñas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
+      "resumen_teorico": "En lugar de concentrar la energía eólica en enormes parques centralizados que requieren nuevas líneas de transmisión y alteran el paisaje, el diseño eco-efectivo propone distribuir turbinas a escala local (como los molinos holandeses tradicionales), integradas en granjas familiares y comunidades. Esto optimiza la infraestructura eléctrica existente, genera ingresos complementarios para propietarios de tierra y respeta la escala del paisaje, además de usar materiales que sean nutrientes técnicos seguros.",
       "pasos_accionables": [
         "Evaluar el potencial eólico local en pequeña escala en lugar de solo grandes instalaciones centralizadas",
         "Diseñar turbinas con materiales que puedan reincorporarse como nutrientes técnicos al final de su vida útil",
@@ -49738,7 +49738,7 @@
       "pasos_accionables": [
         "De cualquier método de riesgo que uses, pregúntate cómo sabrías si de verdad te está ayudando.",
         "Desconfía de la calma: que te sientas seguro no es prueba de que estás seguro.",
-        "Antes de adoptar una plantilla ajena, busca evidencia de que a alguien le funcionó de verdad.",
+        "Antes de adoptar una plantilla ajena, busca evidencia medida de que funciona; que otros la usen y digan que les sirvió no es prueba.",
         "Prefiere una nota simple y honesta a un tablero vistoso que no puedas comprobar."
       ],
       "entregable_esperado": "Una revisión de tu método de riesgo actual que responde, por escrito, cómo sabrías si de verdad está funcionando.",
@@ -52157,7 +52157,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Estrategia de Gestión de Riesgo y Tolerancia al Riesgo",
-      "resumen_teorico": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que depende de la cultura organizacional y puede variar según el tipo de pérdida.",
+      "resumen_teorico": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que suele basarse en la cultura organizacional, puede variar según el tipo de pérdida y puede estar influido por la tolerancia al riesgo de quienes dirigen.",
       "pasos_accionables": [
         "Documentar supuestos, restricciones, prioridades y compensaciones de riesgo.",
         "Definir explícitamente el nivel de tolerancia al riesgo de la organización.",
@@ -52755,7 +52755,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Preferencias de Selección Consciente (Inteligencia Ecológica, Respeto y Deleite)",
-      "resumen_teorico": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
+      "resumen_teorico": "Cuando el rediseño total aún no es posible, se pueden aplicar tres criterios de preferencia para elegir materiales y productos existentes: (1) Inteligencia ecológica: evitar sustancias comprobadamente dañinas para la salud humana y ambiental, aunque no se tenga información perfecta; (2) Respeto: considerar a quienes fabrican, transportan y usan el producto, así como a las comunidades cercanas a su producción; (3) Deleite y celebración: los productos ecológicamente inteligentes deben aportar placer y expresión creativa, no solo culpa o sacrificio. Estas preferencias no garantizan la solución óptima, pero probablemente mejoran las decisiones frente a la ambigüedad de opciones imperfectas.",
       "pasos_accionables": [
         "Evaluar si un material o producto contiene sustancias reconocidas como dañinas (ej. PVC, metales pesados) y preferir alternativas certificadas (ej. sello FSC).",
         "Investigar las condiciones de fabricación, transporte y manejo del producto, priorizando el respeto a trabajadores y comunidades.",
@@ -55295,7 +55295,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Evaluación de Controles Implementados",
-      "resumen_teorico": "La evaluación determina si los controles implementados funcionan correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
+      "resumen_teorico": "La evaluación determina si los controles están implementados correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
       "pasos_accionables": [
         "Seleccionar un individuo o equipo responsable de la evaluación de controles (Tarea A-1).",
         "Desarrollar, revisar y aprobar planes de evaluación (Tarea A-2).",
@@ -58405,11 +58405,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Fase de Eliminación de No Comercializables (Unmarketables)",
-      "resumen_teorico": "Los 'unmarketables' son materiales peligrosos que no encajan en ningún metabolismo (biológico o técnico) hasta que se desarrollen tecnologías de detoxificación (ej. PVC, residuos nucleares, antimonio en PET). Deben almacenarse en 'parking lots' seguros mientras se desarrollan soluciones, y las empresas pueden iniciar un 'waste phaseout' para retirarlos proactivamente del flujo de residuos actual.",
+      "resumen_teorico": "Los 'unmarketables' son materiales peligrosos que no encajan en ningún metabolismo (biológico o técnico) hasta que se desarrollen formas de detoxificarlos o de prescindir de ellos (ej. PVC, residuos nucleares, antimonio en PET). Pueden almacenarse en 'parking lots' seguros mientras se desarrollan soluciones, y las empresas pueden iniciar un 'waste phaseout' para retirarlos proactivamente del flujo de residuos actual.",
       "pasos_accionables": [
         "Identificar los materiales peligrosos o no clasificables presentes en los productos actuales",
         "Establecer sistemas de almacenamiento seguro ('parking lots') para estos materiales",
-        "Iniciar un programa de retiro progresivo (waste phaseout) de estos materiales del mercado",
+        "Iniciar un programa de retiro progresivo (waste phaseout) de estos materiales del flujo de residuos actual",
         "Investigar o invertir en tecnologías de detoxificación para eventualmente recuperar estos materiales"
       ],
       "entregable_esperado": "Inventario de materiales no comercializables de la empresa con plan de almacenamiento seguro y hoja de ruta de detoxificación",
@@ -58780,7 +58780,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Feedforward: Diseño Orientado al Futuro",
-      "resumen_teorico": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (décadas o siglos) al diseñar productos y sistemas.",
+      "resumen_teorico": "En lugar de basar las decisiones de diseño únicamente en retroalimentación pasada (qué funcionó antes) o en la competencia actual, el concepto de 'feedforward' propone preguntarse qué funcionará en el futuro y qué mundo se quiere crear. Esto implica ampliar el marco temporal y considerar impactos ecológicos y sociales a largo plazo (diez o incluso cien años) al diseñar productos y sistemas.",
       "pasos_accionables": [
         "Definir una visión a largo plazo (10-100 años) del impacto deseado del producto o sistema",
         "Preguntar explícitamente qué necesita el ecosistema receptor del producto (ej: '¿qué jabón quiere el río?')",
@@ -61176,7 +61176,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Deconstrucción de Flujos mediante Propósito, Partes, Lugar y Ritmo",
-      "resumen_teorico": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema antes de que el 'runaway design' (diseño fuera de control) tome el mando.",
+      "resumen_teorico": "Todo flujo de datos o proceso (desde un commute hasta un algoritmo de IA) puede analizarse deconstruyéndolo en cuatro componentes: propósito (para qué se recolecta o mueve), partes (los elementos discretos que lo componen), lugar (dónde ocurre física o digitalmente, lo cual tiene implicaciones energéticas y de poder) y ritmo (la velocidad a la que ocurre). Cada componente es un punto de intervención donde el diseñador puede criticar, ajustar o rediseñar el sistema.",
       "pasos_accionables": [
         "Selecciona un flujo relevante para tu proyecto (de información, personas o recursos).",
         "Identifica explícitamente su propósito: ¿por qué existe y a quién sirve?",
@@ -62112,14 +62112,14 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Fundamentos de la Gestión de Riesgo (Frame, Assess, Respond, Monitor)",
-      "resumen_teorico": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Estas actividades forman la base conceptual sobre la cual se construye el Risk Management Framework (RMF) de NIST.",
+      "resumen_teorico": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades continuas: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar y priorizar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar la efectividad de las respuestas de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
       "pasos_accionables": [
         "Definir el contexto de riesgo de la organización (misión, activos, entorno).",
         "Establecer la tolerancia al riesgo organizacional.",
         "Documentar cómo se evaluará, responderá y monitoreará el riesgo.",
         "Revisar periódicamente estas cuatro actividades como ciclo continuo."
       ],
-      "entregable_esperado": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos y enfoque general para evaluar, responder y monitorear riesgos.",
+      "entregable_esperado": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos, restricciones y enfoque general para evaluar, responder y monitorear riesgos.",
       "nodos_previos": [
         "reglas_gestion_riesgo_gambling",
         "analisis_de_sensibilidad_riesgo"
@@ -62834,7 +62834,7 @@
       "resumen_teorico": "Proceso de síntesis que convierte hallazgos de investigación en insights organizados por tema, y luego transforma cada insight en una pregunta 'How Might We' (Cómo podríamos) que abre el espacio para la ideación. Este puente entre investigación e ideación es clave en el proceso de diseño centrado en humanos.",
       "pasos_accionables": [
         "Agrupar hallazgos de investigación en temas",
-        "Redactar insights concretos por cada tema y quedarse con 3 a 5 en total",
+        "Redactar insights concretos por cada tema, descartar los que no se relacionan directamente con el reto de diseño y quedarse con 3 a 5 en total",
         "Convertir cada insight en una pregunta 'How Might We' abierta y accionable",
         "Usar las preguntas HMW como punto de partida para sesiones de brainstorming"
       ],
@@ -63281,7 +63281,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Techos Verdes y Gestión Integral de Aguas Pluviales",
-      "resumen_teorico": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat.",
+      "resumen_teorico": "Los techos verdes son una solución multifuncional que reemplaza las superficies impermeables tradicionales. Aportan aislamiento térmico, capturan agua de lluvia, producen oxígeno, reducen partículas contaminantes y ofrecen hábitat a especies urbanas. A diferencia de soluciones fragmentadas (como estanques de retención o aire acondicionado adicional), este enfoque resuelve múltiples problemas simultáneamente: inundaciones, calor urbano y pérdida de hábitat. Depende del lugar: lo que funciona en un clima puede no funcionar en otro.",
       "pasos_accionables": [
         "Evaluar la viabilidad estructural de instalar un techo verde en el edificio",
         "Seleccionar especies vegetales nativas o adaptadas al clima local",
@@ -63569,7 +63569,7 @@
       "pasos_accionables": [
         "Reconoce que las decisiones de quien usa tu producto, y también las tuyas, están fuertemente influenciadas por el estado emocional, no solo por la lógica.",
         "Identifica en tu producto o proceso los momentos donde la persona tiene la mente saturada y podría tomar decisiones impulsivas.",
-        "En esos momentos críticos, diseña pausas, simplifica o reduce las opciones que ofreces.",
+        "Sugerencia de My Idea: en esos momentos críticos, diseña pausas, simplifica o reduce las opciones que ofreces.",
         "Antes de tomar decisiones importantes de diseño, cuida tu propio estado: duerme bien, respira, muévete.",
         "Al evaluar un prototipo, piensa en qué estado emocional o mental estará la persona cuando interactúe con él."
       ],
@@ -63990,7 +63990,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Gestión Forestal Regenerativa (Modelo Menominee)",
-      "resumen_teorico": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito.",
+      "resumen_teorico": "Ejemplo práctico de crecimiento regenerativo aplicado a la explotación de recursos naturales. La tribu Menominee de Wisconsin ha talado bosques por generaciones sin agotar su capital natural, cortando a menudo solo árboles débiles y preservando el dosel superior para la fauna. Esto demuestra que es posible obtener beneficios comerciales sostenidos mientras el ecosistema se mantiene o incluso mejora con el tiempo, en contraste con la tala convencional de un solo propósito. No es un método universal: al restaurar un monocultivo, la tala rasa puede servir.",
       "pasos_accionables": [
         "Evaluar el estado actual del recurso natural que se explota (stock, diversidad, salud)",
         "Diseñar un plan de extracción selectivo que preserve la estructura ecológica clave",
@@ -66433,11 +66433,11 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Gut Check (Evaluación Crítica de Ideas)",
-      "resumen_teorico": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación prioriza la cantidad y creatividad sobre la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
+      "resumen_teorico": "Ejercicio para revisar críticamente las ideas generadas en la fase de ideación y decidir cuáles perseguir, evolucionar o descartar. Dado que la ideación busca la cantidad y la creatividad, a menudo con menos énfasis en la viabilidad, el Gut Check ayuda a aplicar una lente más realista antes de invertir más esfuerzo.",
       "pasos_accionables": [
         "Destilar las ideas más prometedoras a su esencia central",
         "Listar todas las restricciones y barreras que enfrenta cada idea en post-its",
-        "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones",
+        "Hacer un brainstorm rápido sobre cómo evolucionar la idea dentro de esas restricciones, conservando su núcleo",
         "Estar dispuesto a descartar ideas que no superen la evaluación crítica"
       ],
       "entregable_esperado": "Una lista depurada de ideas viables con sus restricciones identificadas",
@@ -66892,9 +66892,9 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Herramienta del Fractal y Triple Top Line",
-      "resumen_teorico": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, generando valor genuino en las tres áreas simultáneamente.",
+      "resumen_teorico": "Herramienta de visualización basada en un tile fractal que permite examinar un diseño en relación a tres sectores interrelacionados: Economía, Equidad y Ecología, moviéndose entre sus intersecciones (Economía/Equidad, Equidad/Ecología, Ecología/Economía, etc.). A diferencia del 'triple bottom line' tradicional (que en la práctica a menudo trata la economía como base y lo social/ecológico como añadidos), el 'triple top line' aborda las tres dimensiones desde el inicio del diseño con igual peso, lo que permite crear valor en las tres áreas.",
       "pasos_accionables": [
-        "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Equidad, Equidad/Ecología, Ecología/Ecología, Ecología/Economía",
+        "Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Economía, Equidad/Equidad, Equidad/Ecología, Ecología/Equidad, Ecología/Ecología, Ecología/Economía, Economía/Ecología",
         "Formular preguntas específicas en cada sector (ej: ¿Es rentable? ¿Es un salario digno? ¿Es justo exponer a toxinas? ¿Obedece las leyes de la naturaleza?)",
         "Diseñar el producto o sistema abordando las tres dimensiones desde el inicio (top line), no como añadidos posteriores",
         "Verificar que ningún sector se convierta en un 'ismo' extremo que desestabilice el conjunto"
@@ -70264,8 +70264,8 @@
         "Decide qué de esos cinco puntos (documentación, desarmado, repuestos, costo, particularidades) le aplica a tu producto.",
         "Revisa si tienes documentación técnica disponible para quien lo use o lo repare.",
         "Piensa el diseño de tu producto considerando cómo se desarma y se arregla, no solo cómo se arma.",
-        "Decide qué tan disponibles van a estar los repuestos o el soporte a largo plazo, y pregunta el precio en tu mercado.",
-        "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad y publícalo con claridad.",
+        "Decide qué tan disponibles van a estar los repuestos o el soporte a largo plazo, y cuánto cuestan los repuestos en relación con el precio de tu producto.",
+        "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante, y publícalo con claridad.",
         "Compara tu enfoque contra dejar que el producto simplemente se rompa y se deseche, y ajusta tu modelo si hace falta."
       ],
       "entregable_esperado": "Una ficha propia con los cinco puntos evaluados, un puntaje y un plan de soporte o mejora hasta que el producto termine su vida útil.",
@@ -73955,7 +73955,7 @@
       "resumen_teorico": "La herramienta más popular para calificar riesgos, la matriz de colores que multiplica una probabilidad alta-media-baja por un impacto alto-medio-bajo y pinta el resultado de rojo, amarillo o verde, es peor que inútil. El problema de fondo es que trata escalas de orden como si fueran números reales: un impacto de tres no es el triple de uno, igual que una película de tres estrellas no es el triple de buena que una de una estrella, pero la matriz los multiplica igual. Encima, las etiquetas como media significan cosas muy distintas para cada persona, y esconde el exceso de confianza con que todos estimamos. El resultado no es solo que no ayuda: agrega su propio error y puede dejarte peor que tu simple intuición. La sensación de control que da es un placebo.",
       "pasos_accionables": [
         "Si usas una matriz de colores, deja de multiplicar sus casillas como si fueran números.",
-        "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y cuánto en dinero o tiempo.",
+        "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y, si pasa, entre cuánto y cuánto perderías en dinero o tiempo.",
         "No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.",
         "Prefiere una estimación imperfecta pero honesta a un tablero de colores que aparenta rigor."
       ],
@@ -74898,7 +74898,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "environmental",
       "titulo_concepto": "Regulación como 'Licencia para Dañar'",
-      "resumen_teorico": "A la luz de la distinción entre 'guardián' (gobierno) y 'comercio' (industria), la regulación ambiental, aunque bien intencionada, es en realidad una señal de fracaso de diseño. Las regulaciones son un permiso gubernamental para que la industria dañe a una tasa 'aceptable', en lugar de resolver el problema de diseño de raíz. Un buen diseño no debería requerir regulación alguna.",
+      "resumen_teorico": "A la luz de la distinción entre 'guardián' (gobierno) y 'comercio' (industria), la regulación ambiental, aunque bien intencionada y capaz de reducir daños inmediatos mientras los diseños sean destructivos, es en realidad una señal de fracaso de diseño. Las regulaciones son un permiso gubernamental para que la industria dañe a una tasa 'aceptable', en lugar de resolver el problema de diseño de raíz. Un buen diseño puede no requerir regulación alguna.",
       "pasos_accionables": [
         "Identificar qué regulaciones ambientales cumple actualmente tu empresa",
         "Preguntar: ¿esta regulación existe porque el diseño del producto/proceso es inherentemente dañino?",
@@ -75496,7 +75496,7 @@
       "pasos_accionables": [
         "Identificar los sistemas que componen la organización (ej. dispositivo médico, proceso de manejo de información confidencial).",
         "Trazar el límite o alcance de cada sistema a proteger.",
-        "Documentar los límites de autorización en contratos con proveedores externos.",
+        "Documentar en los contratos con proveedores externos los límites de autorización y el alcance de su responsabilidad.",
         "Usar el límite definido como base para categorizar riesgos y seleccionar controles."
       ],
       "entregable_esperado": "Un diagrama o documento que defina claramente el alcance (boundary) de cada sistema crítico de la organización.",
@@ -75730,7 +75730,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Línea Base de Costos (Cost Baseline)",
-      "resumen_teorico": "Presupuesto distribuido en el tiempo utilizado para medir, monitorear y controlar el desempeño de costos del proyecto. Se desarrolla sumando los costos por período de tiempo y creando una curva de costo acumulado, usada como referencia para comparar desempeño real vs. planificado (medición de valor ganado).",
+      "resumen_teorico": "Presupuesto distribuido en el tiempo utilizado para medir, monitorear y controlar el desempeño de costos del proyecto. Se desarrolla sumando los costos por período y creando una curva de costo acumulado, que sirve para seguir el desempeño real, el planificado y los fondos gastados. Con valor ganado, puede llamarse línea base de medición del desempeño.",
       "pasos_accionables": [
         "Sumar los costos estimados de todas las actividades por período de tiempo",
         "Desarrollar una curva de costo acumulado",
@@ -76417,10 +76417,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Híbridos Monstruosos y su Rediseño",
-      "resumen_teorico": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, requieren ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
+      "resumen_teorico": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, pueden requerir ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
       "pasos_accionables": [
         "Identificar productos actuales que mezclan materiales biológicos y técnicos sin separación posible",
-        "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales",
+        "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica",
         "Facilitar el desensamble para reciclar cada componente en su metabolismo correspondiente",
         "Comunicar y capitalizar (marketing) la recuperación de materiales como ventaja competitiva",
         "Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente"
@@ -77447,7 +77447,7 @@
         "Compara los mapas para identificar patrones, superposiciones o vacíos no evidentes en un solo enfoque.",
         "Usa estos patrones como base para generar nuevas oportunidades de diseño."
       ],
-      "entregable_esperado": "Un conjunto de 2-3 mapas visuales distintos del mismo problema/mercado, con patrones identificados y documentados.",
+      "entregable_esperado": "Un conjunto de varios mapas visuales distintos del mismo problema/mercado, con patrones identificados y documentados.",
       "nodos_previos": [
         "investigacion_analoga",
         "metaforas_para_pensar"
@@ -77540,7 +77540,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Mapeo de Flujos Invisibles (Data como Sistema)",
-      "resumen_teorico": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible se convierte en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que 'los patrones se convierten en conocimiento, y el conocimiento en poder' (Zuboff). Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
+      "resumen_teorico": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible puede convertirse en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que los datos crean patrones, los patrones se convierten en conocimiento y el conocimiento en poder. Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
       "pasos_accionables": [
         "Identifica qué datos genera tu producto/servicio y quién los recolecta.",
         "Traza el recorrido del dato: de la persona, al sistema, a quién lo posee y qué poder obtiene.",
@@ -78141,7 +78141,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Mash-Ups (Combinación de Conceptos)",
-      "resumen_teorico": "Ejercicio de pensamiento que combina dos marcas o conceptos existentes para explorar ideas nuevas de forma acelerada. Consiste en aislar una cualidad deseada (ej. eficiencia, exclusividad) y preguntarse qué marca o servicio real encarna esa cualidad, para luego aplicar esa lógica al reto de diseño propio (ej. '¿Cuál sería la versión Facebook de una cuenta de ahorros?').",
+      "resumen_teorico": "Ejercicio de pensamiento que combina dos marcas o conceptos existentes para explorar ideas nuevas de forma acelerada. Consiste en aislar una cualidad deseada (ej. eficiencia, velocidad) y preguntarse qué marca o servicio real encarna esa cualidad, para luego aplicar esa lógica al reto de diseño propio (ej. '¿Cuál sería la versión Facebook de una cuenta de ahorros?').",
       "pasos_accionables": [
         "Identificar la cualidad específica que se busca incorporar a la solución (velocidad, glamour, limpieza, etc.)",
         "Hacer brainstorming de marcas o servicios reales que encarnen esa cualidad",
@@ -78273,7 +78273,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Quién hace qué en cada tarea (matriz RACI)",
-      "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. El formato más usado para esto es la tabla RACI.",
+      "resumen_teorico": "Es una tabla que cruza cada tarea de tu proyecto con las personas que participan en ella, mostrando el nivel de participación de cada una: quién es responsable de hacerla, quién la aprueba, a quién debes consultar y a quién solo informar. Un ejemplo de formato para esto es la tabla RACI, con una leyenda que explique cada nivel.",
       "pasos_accionables": [
         "Haz una lista de las tareas o actividades del proyecto",
         "Haz una lista de las personas o grupos involucrados",
@@ -78393,7 +78393,7 @@
         "Cruza ambas escalas para cada riesgo que tengas identificado",
         "Decide qué combinaciones consideras riesgo alto, medio o bajo, según lo que estés dispuesto a aceptar",
         "Ubica cada riesgo de tu lista según su probabilidad y su impacto",
-        "Define cómo vas a responder a cada riesgo según qué tan urgente y grave sea"
+        "Define cómo vas a responder a cada riesgo según el nivel (alto, medio o bajo) que le asignaste en la matriz"
       ],
       "entregable_esperado": "Una lista de tus riesgos ordenados según probabilidad e impacto, con el nivel de prioridad que le asignaste a cada uno.",
       "nodos_previos": [
@@ -82780,7 +82780,7 @@
       "pasos_accionables": [
         "Vigila tu sistema y su entorno de operación para detectar cambios relevantes (tarea M-1).",
         "Evalúa tus controles de forma continua, según la estrategia de vigilancia que definiste (tarea M-2).",
-        "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar y de tu plan de acción y cronograma (POA&M) (tarea M-3).",
+        "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M) (tarea M-3).",
         "Cuéntale de forma continua a quien decide contigo cómo está tu seguridad y privacidad (tarea M-5)."
       ],
       "entregable_esperado": "Un reporte periódico sobre el estado de tu seguridad y privacidad, junto con un registro actualizado de cambios y respuestas de riesgo.",
@@ -89339,11 +89339,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "Expresar la Incertidumbre como Rango",
-      "resumen_teorico": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen y ganar credibilidad. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
+      "resumen_teorico": "Cuando algo es incierto, dar un solo número es mentir con precisión. Lo honesto es dar un rango: entre tanto y tanto, con una confianza declarada. En vez de prometer que tu producto estará listo el veinte de marzo, dices que con noventa por ciento de confianza estará entre el veinte de marzo y el quince de mayo. El rango no es debilidad, es información: le dice a ti y a quien te escucha cuánto no sabes todavía. Un número único disfraza la incertidumbre y te ata a una promesa que probablemente romperás; un rango honesto te permite planear con margen. Para el emprendedor, pensar en rangos cambia cómo hablas de plazos, costos y ventas: dejas de fingir certeza que no tienes.",
       "pasos_accionables": [
         "Toma tu próximo estimado importante de plazo, costo o ventas.",
         "En vez de un número, escribe un rango: de tal a tal.",
-        "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango.",
+        "Ponle una confianza: estoy noventa por ciento seguro de que cae dentro de ese rango. Casi todos damos rangos demasiado estrechos, así que revisa que sea lo bastante ancho.",
         "Comunica el rango a tu cliente o a ti mismo, en vez de una cifra falsamente exacta."
       ],
       "entregable_esperado": "Tus estimados clave reescritos como rangos con una confianza declarada, en lugar de números únicos.",
@@ -90611,7 +90611,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Plan de Gestión de Calidad",
-      "resumen_teorico": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Incluye roles y responsabilidades, y enfoques de aseguramiento, control y mejora de calidad, así como herramientas, procesos y políticas relacionadas.",
+      "resumen_teorico": "Componente del plan de gestión del proyecto que describe cómo se cumplirán los requisitos de calidad. Puede incluir roles y responsabilidades, y los enfoques de aseguramiento, control y mejora de calidad; también puede definir las herramientas, procesos y políticas que se usarán para aplicar el plan.",
       "pasos_accionables": [
         "Definir roles y responsabilidades de calidad",
         "Documentar el enfoque de planificación de calidad y herramientas a usar",
@@ -90640,12 +90640,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Plan de Gestión de Cambios",
-      "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides hasta que se aprueba o se descarta.",
+      "resumen_teorico": "Define cómo vas a manejar los cambios en tu proyecto: quién decide si un cambio se aprueba o no, qué cuenta realmente como cambio (de fechas, de dinero, de alcance o de documentos) y el camino completo que sigue una solicitud, desde que la pides y le das seguimiento hasta que se aprueba, se aplaza o se descarta.",
       "pasos_accionables": [
         "Decide qué tan estricto va a ser tu control de cambios y cómo se conecta con el resto de tu manejo del proyecto",
         "Aclara qué cuenta como cambio en las fechas, el presupuesto, el alcance o los documentos del proyecto",
         "Forma el grupo que va a revisar y aprobar los cambios, con roles claros y quién tiene la última palabra",
-        "Define el camino que sigue un cambio: desde que se pide, se revisa, hasta que se aprueba o se rechaza"
+        "Define el camino que sigue un cambio: desde que se pide, se le da seguimiento y se revisa, hasta que se aprueba, se aplaza o se rechaza"
       ],
       "entregable_esperado": "Un plan de gestión de cambios con el grupo revisor definido y un proceso claro de pedido, revisión y decisión.",
       "nodos_previos": [
@@ -90667,7 +90667,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Plan de comunicación con las personas que te importan en el proyecto",
-      "resumen_teorico": "Es el documento donde defines cómo vas a generar, juntar, enviar y guardar la información de tu proyecto entre las personas involucradas. Ahí dejas claro quién recibe qué información, cómo la vas a mandar, con qué frecuencia y quién es el responsable de enviarla, para que la comunicación sostenga una buena relación con cada uno de ellos.",
+      "resumen_teorico": "Es el documento donde defines las necesidades de comunicación de tu proyecto con las personas involucradas. Ahí dejas claro quién recibe qué información, cómo la vas a mandar, con qué frecuencia y quién es el responsable de enviarla, para que la comunicación sostenga una buena relación con cada uno de ellos.",
       "pasos_accionables": [
         "Haz una lista de las personas o grupos que necesitan recibir información de tu proyecto",
         "Describe qué tipo de información vas a comunicar a cada uno (reportes de avance, actas, actualizaciones)",
@@ -92124,12 +92124,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Portafolio Diversificado de Innovación (Silver Buckshot)",
-      "resumen_teorico": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Es necesario gestionar un portafolio diversificado que abarque desde ideas incrementales de corto plazo (mejorar el producto actual) hasta ideas revolucionarias de largo plazo, aceptando que la mayoría del esfuerzo estará en lo incremental, pero sin dejar de invertir en lo disruptivo para evitar ser sorprendidos por la competencia.",
+      "resumen_teorico": "No existe una bala de plata para la innovación; se necesita 'munición de plata' (silver buckshot). Gestiona un portafolio diversificado, con enfoques que aprovechen mejor tus fortalezas, desde ideas incrementales de corto plazo (mejorar el producto actual) hasta revolucionarias de largo plazo. La mayoría del esfuerzo estará en lo incremental, pero invierte también en lo disruptivo para evitar sorpresas de la competencia; quizá lleguen menos de ellos al mercado, pero los que lleguen suelen tener impacto duradero.",
       "pasos_accionables": [
         "Clasificar los proyectos de innovación en 'incrementales' y 'revolucionarios/disruptivos'.",
         "Asignar la mayoría de los recursos a proyectos incrementales que mejoren ofertas existentes.",
         "Reservar un porcentaje del presupuesto/tiempo para proyectos disruptivos de alto riesgo/alto impacto.",
-        "Evaluar métricas de éxito distintas para cada tipo de proyecto (no medir lo disruptivo con reglas de lo incremental)."
+        "Sugerencia de My Idea: evaluar cada tipo de proyecto con métricas de éxito distintas (no medir lo disruptivo con reglas de lo incremental)."
       ],
       "entregable_esperado": "Una matriz de proyectos clasificados por horizonte de tiempo e impacto (incremental vs. disruptivo).",
       "nodos_previos": [
@@ -94922,7 +94922,7 @@
       "pasos_accionables": [
         "Definir claramente qué se quiere aprender antes de construir el prototipo",
         "Limitar la resolución del prototipo a solo lo necesario para responder esa pregunta",
-        "Evitar el uso de tecnología de alta fidelidad (impresión 3D, CAD) en etapas tempranas",
+        "Evitar usar tecnología de alta fidelidad (impresión 3D, CAD) para hacer prototipos demasiado refinados y detallados en etapas tempranas",
         "Aumentar gradualmente la fidelidad solo cuando se necesite feedback de usuarios finales sobre superficie/detalles"
       ],
       "entregable_esperado": "Un prototipo con el nivel de fidelidad justo y necesario para la pregunta de aprendizaje específica de esa etapa",
@@ -96229,7 +96229,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "El Proceso de Siete Pasos del RMF",
-      "resumen_teorico": "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos (Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear) para gestionar el riesgo de seguridad de la información y privacidad. Aunque los pasos van en orden, tras la implementación inicial las organizaciones pueden moverse entre pasos según sea necesario. Es aplicable a sistemas nuevos y existentes, de cualquier tecnología y tamaño de organización.",
+      "resumen_teorico": "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos (Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear) para gestionar el riesgo de seguridad de la información y privacidad. Los siete pasos son necesarios para ejecutarlo con éxito; aunque van en orden, tras la implementación inicial las organizaciones pueden moverse entre pasos según sea necesario. Es aplicable a sistemas nuevos y existentes, de cualquier tecnología y tamaño de organización.",
       "pasos_accionables": [
         "Familiarizarse con los siete pasos del RMF: Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear.",
         "Asignar responsables para la ejecución de cada paso.",
@@ -98425,13 +98425,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Haz que tu idea se contagie sola (efecto meme)",
-      "resumen_teorico": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Cuando la gente tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional deja de funcionar. En su lugar, tienes que convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
+      "resumen_teorico": "A veces el producto final es la historia misma: una idea (un 'meme') que se contagia sola y cambia cómo piensa o actúa la gente. Como cada vez menos gente consume los medios tradicionales y tiene demasiadas opciones para elegir (la paradoja de la elección), la publicidad tradicional pierde eficacia. Aún tiene un papel, pero menos para lanzar mensajes y más para convertir a quien te escucha en alguien que cuenta tu historia por su cuenta, como hizo Intel con 'Future Visión' o BMW con el MINI Cooper.",
       "pasos_accionables": [
         "Define la idea central (el 'meme') que quieres que se propague",
         "Produce contenido visual o narrativo de bajo costo pero alto impacto, como videos o escenarios que muestren el futuro",
         "Diseña tu campaña para que quien la vea deje de ser espectador y se convierta en alguien que la cuenta y la comparte",
         "Aprovecha canales digitales como YouTube y redes para que el alcance crezca de forma orgánica",
-        "Mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio"
+        "Sugerencia de My Idea: mide el éxito por cuánta conversación generas, no solo por cuánta gente la vio"
       ],
       "entregable_esperado": "Una pieza narrativa (video, campaña, evento) pensada para que la gente la comparta y la repita por su cuenta.",
       "nodos_previos": [
@@ -99033,7 +99033,7 @@
         "Identificar el aspecto social/relacional del servicio que no puede probarse en un entorno controlado.",
         "Cargar prototipos funcionales (aunque imperfectos) en dispositivos o plataformas reales.",
         "Distribuirlos a grupos pequeños de usuarios reales en su contexto natural.",
-        "Observar durante un periodo corto (1-2 semanas) cuál variante genera más uso y compromiso genuino.",
+        "Observar hasta que quede claro cuál variante genera más uso y compromiso genuino.",
         "Estar dispuesto a descartar la hipótesis favorita del equipo si la evidencia real dice lo contrario."
       ],
       "entregable_esperado": "Evidencia empírica de uso real que indique qué variante del servicio es más efectiva y por qué, basada en comportamiento genuino de usuarios.",
@@ -99126,7 +99126,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Prototipado de Estrategias y Organizaciones",
-      "resumen_teorico": "El pensamiento de diseño y el prototipado no se limitan a objetos físicos: también pueden aplicarse a ideas abstractas como estrategias de negocio o el rediseño de una organización completa. Crear representaciones tangibles (mock-ups, recorridos físicos, mapas de ruta) de una estrategia ayuda a que toda la organización la entienda y se comprometa con ella, como hizo HBO al construir un recorrido físico de futuras experiencias de contenido.",
+      "resumen_teorico": "El pensamiento de diseño y el prototipado no se limitan a objetos físicos: también pueden aplicarse a ideas abstractas como estrategias de negocio o el rediseño de una organización completa, aunque es difícil: todo está conectado y con personas hay menos margen de error. Crear representaciones tangibles (mock-ups, recorridos físicos, mapas de ruta) de una estrategia puede ayudar a que toda la organización la entienda y se comprometa con ella, como hizo HBO al construir un recorrido físico de futuras experiencias de contenido.",
       "pasos_accionables": [
         "Realizar investigación profunda sobre el problema estratégico (observación de consumidores, análisis de tendencias).",
         "Construir un prototipo tangible de la estrategia (ej: un recorrido físico, un mapa de ruta en una pared).",
@@ -99218,7 +99218,7 @@
       "pasos_accionables": [
         "Diseñar una versión 3D o digital simplificada del concepto (producto, espacio o marca).",
         "Publicarla en una plataforma virtual accesible al público objetivo.",
-        "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' durante varios meses.",
+        "Recolectar sugerencias y comportamientos de los 'visitantes virtuales' hasta reunir suficiente retroalimentación.",
         "Iterar el diseño virtual en función del feedback antes de construir la versión física.",
         "Evaluar críticamente la representatividad de los usuarios virtuales frente al público real."
       ],
@@ -100531,7 +100531,7 @@
       "resumen_teorico": "La química verde busca repensar el uso de químicos para limitar el daño ambiental y a la salud humana, siguiendo los 12 principios de Anastas y Warner (prevenir desperdicio, diseñar químicos más seguros, usar materias primas renovables, entre otros). Puedes usar listas de químicos preferidos ('greenlists') y evitar los que están en listas de sustancias tóxicas ('blacklists'), sustituyendo ingredientes tóxicos por alternativas más seguras y diseñando tu producto por adelantado a la regulación que exista en tu mercado.",
       "pasos_accionables": [
         "Aplica los 12 principios de química verde al diseñar tu producto",
-        "Crea o adopta una lista de químicos aprobados y evita los que están en listas de sustancias prohibidas",
+        "Crea o adopta una lista de químicos aprobados y, siempre que sea posible, evita los que están en listas de sustancias prohibidas en favor de alternativas más verdes",
         "Sustituye ingredientes tóxicos por alternativas no tóxicas cuando sea posible",
         "Anticípate a las regulaciones químicas de tu mercado reformulando tu producto antes de que te obliguen a hacerlo",
         "Revisa si existe una certificación ambiental para productos de limpieza en tu mercado y considera obtenerla"
@@ -100797,11 +100797,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Metodología por Etapas",
-      "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+      "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Suele bastar una estimación aproximada; comunicar resultados hacia afuera exige rigor y compartir la metodología. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
       "pasos_accionables": [
         "Definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
         "Identificar todos los inputs y outputs relevantes en cada etapa del ciclo de vida del producto",
-        "Recolectar datos primarios propios o usar datos secundarios de sector cuando no sea posible obtener datos propios",
+        "Decidir si generar datos primarios propios, más costosos, o usar datos públicos promedio del sector",
         "Documentar explícitamente los supuestos utilizados (uso del consumidor, ponderaciones de impacto, etc.)",
         "Evitar comparar resultados con competidores salvo que los productos de ambos estén verificados por la misma agencia certificadora de terceros"
       ],
@@ -100827,14 +100827,14 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Pasos de Aplicación",
-      "resumen_teorico": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. Sigue estándares ISO 14040/14044 con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que los mayores impactos suelen estar en etapas inesperadas de la cadena.",
+      "resumen_teorico": "El Life Cycle Assessment (LCA) evalúa impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materia prima, manufactura, uso y disposición final. La mayoría de los estudios se basa en los estándares ISO 14040/14044, con cuatro fases. Puede enfocarse en distintos límites (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle) y distintos tipos de impacto (carbono, agua, toxicidad, ecosistemas). Casos como Timberland (metano del ganado), Levi's (secado eléctrico de jeans) y Tropicana (fertilizantes) muestran que un LCA puede revelar impactos importantes en etapas inesperadas de la cadena.",
       "pasos_accionables": [
         "Definir claramente el objetivo del LCA: qué pregunta de negocio se busca responder",
         "Elegir el alcance del ciclo de vida (cradle-to-grave, cradle-to-gate, gate-to-gate, cradle-to-cradle)",
         "Seleccionar el tipo de impacto a medir (carbono, agua, toxicidad, ecosistemas)",
         "Aplicar el marco ISO 14040/14044 en sus cuatro fases",
         "Elegir herramienta adecuada según presupuesto y nivel de rigor necesario (desde hojas de cálculo hasta software especializado)",
-        "Documentar todos los supuestos y límites del sistema para permitir comparabilidad"
+        "Documentar todos los supuestos y límites del sistema, para poder compartir la metodología si comunicas los resultados hacia afuera"
       ],
       "entregable_esperado": "Estudio de análisis de ciclo de vida de un producto/servicio con identificación de los principales puntos de impacto ambiental",
       "nodos_previos": [
@@ -102457,7 +102457,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Reducción de Cargas de Cumplimiento mediante Rediseño",
-      "resumen_teorico": "Estrategia intermedia que consiste en analizar las obligaciones de cumplimiento ambiental para identificar cuáles podrían eliminarse mediante el rediseño de productos o procesos de manufactura. Si un proceso usa materiales peligrosos no esenciales que requieren seguimiento regulatorio complejo, conviene rediseñarlo para eliminarlos, reduciendo así la carga regulatoria y el riesgo legal.",
+      "resumen_teorico": "Estrategia intermedia que consiste en analizar las obligaciones de cumplimiento ambiental para identificar cuáles podrían eliminarse mediante el rediseño de productos o procesos de manufactura. Si un proceso usa materiales peligrosos no esenciales que requieren seguimiento regulatorio complejo, conviene rediseñarlo para eliminarlos, reduciendo así la carga regulatoria.",
       "pasos_accionables": [
         "Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y también en los procesos de manufactura",
         "Clasificar materias primas según su impacto en salud y ambiente (ej. escala 0-3 tipo 'green list')",
@@ -102538,7 +102538,7 @@
       "resumen_teorico": "Reducir residuos no se limita a reciclaje, sino a eliminar ineficiencias en el uso de materiales de construcción y operaciones de instalaciones. Casos como el Masdar Institute demuestran que es posible alcanzar tasas de desvío de residuos de construcción de hasta 99% mediante planificación integrada de demolición y construcción.",
       "pasos_accionables": [
         "Establecer metas de reutilización/reciclaje de residuos de construcción",
-        "Planificar integradamente demolición y construcción para minimizar desperdicio",
+        "Sugerencia de My Idea: planificar en conjunto la demolición y la construcción para reducir el desperdicio",
         "Convertir residuos de madera en mulch u otros usos",
         "Monitorear y reportar tasas de desvío de residuos de vertederos"
       ],
@@ -102724,7 +102724,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Buscar Reducciones de Emisiones en la Cadena de Suministro",
-      "resumen_teorico": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Trabajar con los proveedores (no contra ellos) y enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales, es una estrategia efectiva. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+      "resumen_teorico": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
       "pasos_accionables": [
         "Realizar un análisis de ciclo de vida para identificar impactos en la cadena de valor.",
         "Identificar proveedores clave con mayor impacto de emisiones.",
@@ -103034,7 +103034,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Reformular el Problema en su Contexto Más Amplio",
-      "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma —cómo se mueven las personas, las cosas, los espacios— dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo de Eero Saarinen de considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
+      "resumen_teorico": "En lugar de diseñar un producto aislado, los diseñadores deben preguntarse qué problema más amplio resuelve ese producto. El ejemplo del automóvil autónomo ilustra esto: no se trata de diseñar 'un coche sin conductor', sino de repensar la movilidad misma (cómo se mueven las personas, las cosas, los espacios) dentro del sistema urbano completo. Esta ampliación del marco de referencia (siguiendo el consejo que Eero Saarinen recibió de su padre: considerar 'la silla en el cuarto, el cuarto en la casa, la casa en el entorno') es la esencia del pensamiento de diseño maduro.",
       "pasos_accionables": [
         "Identificar el producto o solución que se está diseñando y preguntar '¿qué problema real resuelve esto?'",
         "Ampliar el marco: pensar en el sistema, contexto o comportamiento humano detrás del producto",
@@ -103042,7 +103042,7 @@
         "Desarrollar escenarios conjeturales que exploren posibilidades dentro de ese marco ampliado",
         "Construir prototipos (físicos, digitales o experienciales) que sirvan para iniciar conversaciones con socios potenciales"
       ],
-      "entregable_esperado": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para validar la dirección",
+      "entregable_esperado": "Un documento de reformulación del problema que traduzca la pregunta original de producto en una pregunta de sistema/experiencia, junto con al menos un prototipo conjetural para iniciar conversaciones con socios potenciales",
       "nodos_previos": [
         "investigacion_etnografica_ideacion",
         "analisis_y_sintesis"
@@ -104303,7 +104303,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Relocalización y Clustering Logístico para Reducir Distancias de Transporte",
-      "resumen_teorico": "Acercar geográficamente almacenes, proveedores y clientes reduce significativamente el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
+      "resumen_teorico": "Acercar geográficamente almacenes, proveedores y clientes puede reducir el consumo de combustible y las emisiones de CO2 asociadas al transporte. Estrategias como la creación de 'Logical Business Units' (clusters de plantas y clientes dentro de un radio determinado) permiten optimizar rutas de distribución y reducir kilometraje total recorrido.",
       "pasos_accionables": [
         "Mapear la ubicación actual de proveedores, almacenes y clientes principales.",
         "Identificar oportunidades de relocalización de centros de distribución cerca de mercados clave.",
@@ -105014,7 +105014,7 @@
       "resumen_teorico": "Tu sitio web tiene que ser tu herramienta número uno para comunicar sostenibilidad. En vez de imprimir reportes anuales largos (algo que contradice la idea misma de reducir tu impacto ambiental), publica tu reporte de forma digital. Así puedes actualizarlo todo el tiempo y quien lo lee puede navegar directo a lo que le interesa, sin tener que revisar todo el documento.",
       "pasos_accionables": [
         "Diseña tu sitio con una navegación clara para que cada persona llegue directo al tema de sostenibilidad que le interesa",
-        "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual",
+        "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual, y revísala a fondo antes de publicarla: toda afirmación discutible debe llevar su justificación",
         "En algunos casos, imprime unos pocos cientos de copias para visitantes o para quien prefiera tenerlo en papel",
         "Cuida que las imágenes y el tono de tu sitio estén alineados con la historia de sostenibilidad que quieres contar"
       ],
@@ -105735,7 +105735,7 @@
         "Analizar el ciclo de vida completo del producto, incluyendo su uso por el cliente.",
         "Identificar innovaciones de producto que reduzcan el impacto ambiental en la fase de uso.",
         "Rediseñar productos para mayor durabilidad o eficiencia energética.",
-        "Comunicar el valor ambiental añadido a los clientes para generar lealtad de marca."
+        "Comunicar a los clientes el valor ambiental añadido, sabiendo que resolver su problema climático puede sumarles valor y generar lealtad de marca."
       ],
       "entregable_esperado": "Una propuesta de innovación de producto orientada a reducir el impacto climático en la fase de uso por el cliente.",
       "nodos_previos": [
@@ -105782,7 +105782,7 @@
       "titulo_concepto": "Evaluación de Recursos (Resource Assessment)",
       "resumen_teorico": "Herramienta para planificar la implementación de una solución evaluando distribución, actividades necesarias, capacidades existentes y responsabilidades. Ayuda a identificar quién ejecutará cada tarea (equipo de diseño, organización implementadora, financiador o externo) y qué recursos faltan todavía.",
       "pasos_accionables": [
-        "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales",
+        "Definir cómo se distribuirá el concepto al mundo y si hay múltiples canales; si se consideran varios modelos, hacer una evaluación por cada uno para compararlos",
         "Listar las actividades requeridas para que la idea funcione",
         "Evaluar las capacidades ya existentes en la organización",
         "Asignar responsabilidades por actividad (equipo de diseño, organización, financiador, externo)",
@@ -106129,7 +106129,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Responsabilidad extendida del productor y stewardship de producto",
-      "resumen_teorico": "Los fabricantes son cada vez más responsables por los impactos ambientales de sus productos en todo su ciclo de vida (extended producer responsibility). Regulaciones como WEEE en Europa y EWRA en California obligan a las empresas a gestionar el retorno y disposición de sus productos. El principio 'waste equals food' del enfoque Cradle to Cradle plantea que el desperdicio de un proceso debe ser insumo de otro, inspirado en los ciclos naturales, distinguiendo entre ciclos técnicos y biológicos.",
+      "resumen_teorico": "Los fabricantes son cada vez más responsables por los impactos ambientales de sus productos en todo su ciclo de vida (extended producer responsibility). En electrónicos, regulaciones como WEEE en Europa y EWRA en California obligan a los fabricantes a gestionar el retorno y disposición de sus productos. El principio 'waste equals food' del enfoque Cradle to Cradle plantea que el desperdicio de un proceso debe ser insumo de otro, inspirado en los ciclos naturales, distinguiendo entre ciclos técnicos y biológicos.",
       "pasos_accionables": [
         "Diseñar el producto pensando en su disposición final desde el inicio",
         "Evaluar el cumplimiento con regulaciones de responsabilidad extendida (WEEE, EWRA, etc.)",
@@ -108486,9 +108486,9 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Paso Preparar del RMF",
-      "resumen_teorico": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo y determinar el alcance del sistema a proteger. Es el punto de partida obligatorio para toda implementación inicial del RMF.",
+      "resumen_teorico": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo y determinar el alcance del sistema a proteger. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
       "pasos_accionables": [
-        "Designar a un individuo o equipo responsable de ejecutar el RMF (Tarea P-1).",
+        "Designar a un individuo o equipo responsable de ejecutar el RMF, que puede ser interno o externo a la organización (Tarea P-1).",
         "Crear una estrategia de gestión de riesgo que exprese la tolerancia al riesgo (Tarea P-2).",
         "Determinar el alcance de protección del sistema (Tarea P-11).",
         "Implementar una estrategia de monitoreo continuo (Tarea P-7).",
@@ -109039,7 +109039,7 @@
         "Decidir qué idea se quiere probar mediante juego de roles",
         "Asignar roles a los miembros del equipo",
         "Definir en 30 minutos qué se busca testear (interacción, producto, pitch de venta)",
-        "Usar disfraces o props simples para hacer la escena más realista"
+        "Considerar disfraces o props simples para hacer la escena más realista, sin dedicarles mucho tiempo: ayudan, pero no son imprescindibles"
       ],
       "entregable_esperado": "Una representación actuada de la idea con observaciones y feedback recogido del equipo o usuarios",
       "nodos_previos": [
@@ -111512,10 +111512,10 @@
       "titulo_concepto": "Selección y Adaptación (Tailoring) de Controles",
       "resumen_teorico": "Tras categorizar el sistema, se selecciona un conjunto inicial de controles (baseline) para proteger la confidencialidad, integridad y disponibilidad, usando catálogos como NIST SP 800-53. Luego, estos controles se adaptan (tailoring) a los requisitos específicos de seguridad y privacidad de la organización, guiados por evaluaciones de riesgo. Los controles seleccionados y adaptados se documentan en un plan de seguridad y/o privacidad.",
       "pasos_accionables": [
-        "Seleccionar un baseline de controles apropiado según la categorización del sistema (Tarea S-1).",
+        "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de un baseline predefinido o elegir controles propios (Tarea S-1).",
         "Adaptar (tailor) los controles a los riesgos y necesidades específicas de la organización (Tarea S-2).",
         "Documentar los controles seleccionados y adaptados en un plan de seguridad/privacidad.",
-        "Desarrollar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5)."
+        "Desarrollar e implementar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema (Tarea S-5)."
       ],
       "entregable_esperado": "Un plan de seguridad y privacidad que documente los controles seleccionados, adaptados y justificados por el nivel de riesgo.",
       "nodos_previos": [
@@ -115908,9 +115908,9 @@
       "resumen_teorico": "Prototipo rápido y de baja resolución que visualiza el concepto de principio a fin mediante viñetas tipo cómic. Ayuda a refinar la idea y a entender quién la usará, dónde y cómo, sin requerir habilidad artística, ya que el objetivo es pensar la idea a fondo, no crear arte.",
       "pasos_accionables": [
         "Determinar qué parte de la idea se quiere representar en el storyboard",
-        "Dedicar 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
+        "Dedicar no más de 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
         "No preocuparse por la calidad del dibujo, priorizar la claridad de la narrativa",
-        "Actuar o presentar el storyboard al equipo para recibir feedback, y compartirlo con usuarios o el equipo para retroalimentación",
+        "Actuar o presentar el storyboard al equipo para recibir feedback",
         "Dividir la idea en escenas o momentos clave",
         "Titular cada escena y describir qué está pasando"
       ],
@@ -120838,7 +120838,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "risk_management",
       "titulo_concepto": "Auditar y Mejorar el Método de Riesgo",
-      "resumen_teorico": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. La única forma seria de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
+      "resumen_teorico": "Tu forma de manejar el riesgo también hay que auditarla y mejorarla, o se vuelve un rito que da calma sin servir. Auditar es preguntar sin piedad: mi método reduce las sorpresas de verdad, o solo produce papeles y tranquilidad. Una forma esencial de saberlo es comparar lo que predijiste con lo que pasó, a lo largo del tiempo. Y mejorar es ajustar el método ciclo a ciclo: soltar lo que no atinó, reforzar lo que sí, calibrar mejor tu juicio. Ningún método nace perfecto; el bueno es el que aprende de su propio historial. Para el emprendedor, mirar su gestión de riesgo con el mismo ojo crítico con que mira su negocio es lo que la mantiene honesta y afilada, en vez de convertirse en una superstición reconfortante.",
       "pasos_accionables": [
         "Pregúntate con franqueza si tu método reduce sorpresas o solo te da calma.",
         "Compara tus predicciones de riesgo pasadas con lo que de verdad ocurrió.",
@@ -125088,9 +125088,9 @@
       "titulo_concepto": "Marco de Formas de Crecer (Ways to Grow Framework)",
       "resumen_teorico": "Framework que ayuda a posicionar iniciativas según dos ejes: si son ofertas nuevas o existentes, y si se dirigen a los usuarios actuales o a un grupo nuevo, lo que muestra si son incrementales, evolutivas o revolucionarias. Permite a los equipos decidir estratégicamente qué tipo de innovación perseguir para hacer crecer su impacto u organización.",
       "pasos_accionables": [
-        "Ubicar la iniciativa actual en el cuadrante correspondiente (nueva/existente, incremental/revolucionaria)",
-        "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas",
-        "Decidir la estrategia de crecimiento según los recursos y objetivos de la organización"
+        "Ubicar cada una de las soluciones que barajas en el cuadrante correspondiente (oferta nueva/existente, usuarios actuales/nuevos) para verlas en relación unas con otras",
+        "Evaluar si se busca crecimiento incremental sobre lo existente o innovación revolucionaria con nuevas ofertas, revisando si hay huecos en el conjunto de soluciones y si conviene cubrir los cuatro cuadrantes",
+        "Decidir la estrategia de crecimiento según lo que la organización puede lograr de forma realista y lo que más beneficia a las personas a las que sirve, sabiendo que a menudo el cambio incremental o evolutivo puede tener más probabilidad de gran impacto"
       ],
       "entregable_esperado": "Posicionamiento claro de la iniciativa en el cuadrante de crecimiento y decisión estratégica de expansión",
       "nodos_previos": [

@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Medir si el Método de Riesgo Funciona",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y jamás comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si lo que llamaste probable ocurre seguido y lo improbable casi nunca, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+  "resumen_teorico": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
   "pasos_accionables": [
     "Escribe hoy tus predicciones de riesgo, con probabilidad, y guárdalas con fecha.",
     "Cuando pase el tiempo, compara lo que predijiste con lo que de verdad ocurrió.",
-    "Pregunta: lo que llamé probable ocurrió seguido, y lo improbable casi nunca.",
+    "Pregunta: ¿lo que predije ocurrió más o menos con la frecuencia que le di? Lo que llamé diez por ciento debió pasar cerca de una de cada diez veces.",
     "Si no acierta, cambia de método en vez de repetir uno que solo te da calma."
   ],
   "entregable_esperado": "Un registro fechado de tus predicciones de riesgo para contrastarlo después contra lo que realmente pasó.",
@@ -57,6 +57,39 @@
         "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-171-como_sabes_que_tu_metodo_sirve-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y jamás comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si lo que llamaste probable ocurre seguido y lo improbable casi nunca, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+      "texto_nuevo": "La falla más grande de la gestión de riesgo es que casi nunca se mide a sí misma. Adoptamos un método, lo llamamos exitoso porque nos dio calma o porque ayudó a comunicar, y casi nunca comprobamos si de verdad redujo las sorpresas. Pero un método que no puedes evaluar no es serio: para un tema tan importante deberíamos exigir prueba de que sirve, no solo la ausencia de prueba de que no sirve. La forma de saberlo es sencilla en principio: guarda tus predicciones de riesgo y compáralas después con lo que realmente pasó. Si las cosas ocurren más o menos con la frecuencia que les diste, tu método funciona; si no, estás produciendo papeles. Para el emprendedor, medir su propio método lo protege del autoengaño.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "4784-4790",
+        "frase": "things should be about as frequent as we estimate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El criterio del libro es que las cosas ocurran con la frecuencia asignada, no solo lo probable seguido.; El libro dice que casi nunca se mide y que la mayoría ni lo intenta, no que jamás.; Mismo criterio de calibración perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-171-como_sabes_que_tu_metodo_sirve-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pregunta: lo que llamé probable ocurrió seguido, y lo improbable casi nunca.",
+      "texto_nuevo": "Pregunta: ¿lo que predije ocurrió más o menos con la frecuencia que le di? Lo que llamé diez por ciento debió pasar cerca de una de cada diez veces.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "4784",
+        "frase": "of all the times we said some event was about 10 percent likely"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La prueba del libro compara la frecuencia real con la probabilidad asignada.; Mismo criterio de calibración perdido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }
