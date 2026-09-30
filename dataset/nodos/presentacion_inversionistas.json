@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Presentación (Pitch Deck) para VCs",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Presentación visual de 10-20 diapositivas que comunica la misma información que el executive summary pero con más ejemplos y formato visual. Debe adaptarse a la audiencia (una persona, toda la partnership, evento de inversionistas) y cubrir: problema, tamaño de oportunidad, fortaleza del equipo, ventaja competitiva, plan de acción, estado actual, financieros resumidos e hitos. Idealmente en 10 diapositivas o menos.",
+  "resumen_teorico": "Presentación visual de 10-20 diapositivas que comunica la misma información que el executive summary pero con más ejemplos y formato visual. Debe adaptarse a la audiencia (una persona, toda la partnership, evento de inversionistas) y cubrir: problema, tamaño de oportunidad, fortaleza del equipo, ventaja competitiva, plan de acción, estado actual, financieros resumidos, uso de los fondos e hitos. Idealmente en 10 diapositivas o menos.",
   "pasos_accionables": [
-    "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamaño de la oportunidad, equipo, ventaja competitiva, plan, estado actual y financieros resumidos",
+    "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamaño de la oportunidad, equipo, ventaja competitiva, plan, estado actual, financieros resumidos, uso de los fondos e hitos",
     "Adaptar la duración y profundidad según la audiencia (3 min, 8 min, 30 min)",
     "Invertir en buen diseño visual, idealmente con ayuda de un diseñador",
     "Preparar una versión para enviar por email y otra para presentar en vivo si son distintas"
   ],
-  "entregable_esperado": "Pitch deck visualmente pulido de 10-20 slides, con versión para envío y versión para presentación en vivo",
+  "entregable_esperado": "Pitch deck visualmente pulido de 10-20 slides, con una versión para envío y otra para presentación en vivo si conviene que sean distintas",
   "nodos_previos": [
     "executive_summary_inversion",
     "preparacion_materiales_fundraising"
@@ -56,6 +56,55 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-169-presentacion_inversionistas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentación visual de 10-20 diapositivas que comunica la misma información que el executive summary pero con más ejemplos y formato visual. Debe adaptarse a la audiencia (una persona, toda la partnership, evento de inversionistas) y cubrir: problema, tamaño de oportunidad, fortaleza del equipo, ventaja competitiva, plan de acción, estado actual, financieros resumidos e hitos. Idealmente en 10 diapositivas o menos.",
+      "texto_nuevo": "Presentación visual de 10-20 diapositivas que comunica la misma información que el executive summary pero con más ejemplos y formato visual. Debe adaptarse a la audiencia (una persona, toda la partnership, evento de inversionistas) y cubrir: problema, tamaño de oportunidad, fortaleza del equipo, ventaja competitiva, plan de acción, estado actual, financieros resumidos, uso de los fondos e hitos. Idealmente en 10 diapositivas o menos.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "469",
+        "frase": "Summary financials, use of proceeds, and milestones are also important."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone el uso de los fondos junto a los financieros resumidos y los hitos como importantes.; Misma omisión del uso de los fondos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-presentacion_inversionistas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamaño de la oportunidad, equipo, ventaja competitiva, plan, estado actual y financieros resumidos",
+      "texto_nuevo": "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamaño de la oportunidad, equipo, ventaja competitiva, plan, estado actual, financieros resumidos, uso de los fondos e hitos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "469",
+        "frase": "Summary financials, use of proceeds, and milestones are also important."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso deja fuera el uso de los fondos y los hitos, que el libro también señala como importantes.; Misma omisión del uso de los fondos y los hitos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-presentacion_inversionistas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pitch deck visualmente pulido de 10-20 slides, con versión para envío y versión para presentación en vivo",
+      "texto_nuevo": "Pitch deck visualmente pulido de 10-20 slides, con una versión para envío y otra para presentación en vivo si conviene que sean distintas",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "458",
+        "frase": "The deck you email as an overview can be different from the one you present"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el deck que envías puede ser distinto del que presentas; el entregable vuelve obligatorias dos versiones.; Mismo endurecimiento: de 'puede ser distinto' a dos versiones obligatorias.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguridad en Soldadura, Corte y Bronceado",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Las operaciones de soldadura, corte y bronceado requieren trabajadores autorizados y capacitados, equipos aprobados, manejo seguro de cilindros de gas (separación de gases combustibles y oxígeno), código de colores en mangueras, control de voltaje en máquinas de soldar por arco, y medidas contra incendios como vigías de fuego y extintores disponibles.",
+  "resumen_teorico": "Las operaciones de soldadura, corte y bronceado requieren trabajadores autorizados y capacitados, equipos aprobados, manejo seguro de cilindros de gas (separación de gases combustibles y oxígeno), código de colores en mangueras, control de voltaje en máquinas de soldar por arco, ventilación adecuada, y medidas contra incendios como vigías de fuego y extintores disponibles.",
   "pasos_accionables": [
     "Capacitar y autorizar únicamente a trabajadores calificados para soldar/cortar",
-    "Almacenar cilindros de gas combustible separados de cilindros de oxígeno (20 pies o barrera de 5 pies)",
+    "Almacenar cilindros de gas combustible separados de cilindros de oxígeno (al menos 20 pies, o una barrera no combustible de al menos 5 pies de alto que resista el fuego al menos 30 minutos)",
     "Verificar que mangueras usen código de colores (rojo=acetileno, verde=oxígeno, negro=gas inerte)",
     "Asignar vigías de fuego en áreas de riesgo de incendio",
     "Proveer equipo extintor de incendios de fácil acceso",
-    "Limpiar contenedores usados de sustancias explosivas antes de trabajo en caliente",
+    "Limpiar contenedores usados de sustancias que puedan explotar, encenderse o producir vapores tóxicos antes de trabajo en caliente",
     "Proveer PPE apropiado (protección ocular, ropa protectora) contra rayos de arco"
   ],
   "entregable_esperado": "Procedimiento de seguridad para soldadura implementado con registros de capacitación y checklist de cumplimiento.",
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Protege a Tus Soldadores",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-168-seguridad_soldadura_corte_bronceado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Almacenar cilindros de gas combustible separados de cilindros de oxígeno (20 pies o barrera de 5 pies)",
+      "texto_nuevo": "Almacenar cilindros de gas combustible separados de cilindros de oxígeno (al menos 20 pies, o una barrera no combustible de al menos 5 pies de alto que resista el fuego al menos 30 minutos)",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1603",
+        "frase": "non-combustible barrier at least 5 feet (1. 5m) high"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige una barrera no combustible con resistencia al fuego de al menos 30 minutos.; Mismo defecto: se pierden las cualidades exigidas a la barrera.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-168-seguridad_soldadura_corte_bronceado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Limpiar contenedores usados de sustancias explosivas antes de trabajo en caliente",
+      "texto_nuevo": "Limpiar contenedores usados de sustancias que puedan explotar, encenderse o producir vapores tóxicos antes de trabajo en caliente",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1647",
+        "frase": "cleaned of substances that could explode, ignite, or produce toxic vapors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye sustancias que puedan encenderse o producir vapores tóxicos, no solo explosivas.; Mismo defecto: la lista del libro tiene tres tipos de sustancia.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-168-seguridad_soldadura_corte_bronceado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las operaciones de soldadura, corte y bronceado requieren trabajadores autorizados y capacitados, equipos aprobados, manejo seguro de cilindros de gas (separación de gases combustibles y oxígeno), código de colores en mangueras, control de voltaje en máquinas de soldar por arco, y medidas contra incendios como vigías de fuego y extintores disponibles.",
+      "texto_nuevo": "Las operaciones de soldadura, corte y bronceado requieren trabajadores autorizados y capacitados, equipos aprobados, manejo seguro de cilindros de gas (separación de gases combustibles y oxígeno), código de colores en mangueras, control de voltaje en máquinas de soldar por arco, ventilación adecuada, y medidas contra incendios como vigías de fuego y extintores disponibles.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1649",
+        "frase": "Adequate ventilation is provided in areas where welding or cutting is performed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración pierde la ventilación adecuada de las áreas de soldadura y corte que el libro incluye.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

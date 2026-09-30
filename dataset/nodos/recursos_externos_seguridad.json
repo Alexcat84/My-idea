@@ -6,9 +6,9 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Además de los organismos oficiales de seguridad laboral, puedes apoyarte en la aseguradora de compensación laboral, en asociaciones profesionales y gremiales de seguridad, en sindicatos u organizaciones de trabajadores, en centros de apoyo a pequeños negocios y en estándares de consenso voluntario que existan en tu mercado, para fortalecer la gestión de seguridad de tu negocio.",
   "pasos_accionables": [
-    "Contactar a tu aseguradora de compensación laboral para conocer si ofrece servicios de inspección",
+    "Contactar a tu aseguradora de compensación laboral, y a las de responsabilidad civil o de incendio, para conocer si ofrecen servicios de inspección",
     "Buscar y consultar asociaciones profesionales de seguridad relevantes para tu sector",
-    "Coordinar con sindicatos u organizaciones de trabajadores los temas de seguridad",
+    "Si las personas que trabajan contigo están organizadas, coordinar con su sindicato u organización de trabajadores los temas de seguridad",
     "Visitar un centro de apoyo a pequeños negocios de tu zona para pedir asistencia técnica",
     "Revisar los estándares de consenso voluntario que existan en tu mercado como buenas prácticas complementarias"
   ],
@@ -42,6 +42,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-168-recursos_externos_seguridad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Coordinar con sindicatos u organizaciones de trabajadores los temas de seguridad",
+      "texto_nuevo": "Si las personas que trabajan contigo están organizadas, coordinar con su sindicato u organización de trabajadores los temas de seguridad",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1967",
+        "frase": "If your workers are organized, set up communications"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la coordinación a que tu personal esté organizado.; Misma condición perdida: aplica si las personas que trabajan contigo están organizadas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-168-recursos_externos_seguridad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contactar a tu aseguradora de compensación laboral para conocer si ofrece servicios de inspección",
+      "texto_nuevo": "Contactar a tu aseguradora de compensación laboral, y a las de responsabilidad civil o de incendio, para conocer si ofrecen servicios de inspección",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1921",
+        "frase": "as well as liability and fire insurance companies, conduct periodic inspections"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye también a las aseguradoras de responsabilidad civil y de incendio entre quienes inspeccionan.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

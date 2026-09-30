@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ideación con IA dentro de la Sesión",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "La IA entra en la sesión de ideas como un participante más, no como sustituto del equipo. Su ventaja es el volumen y la variedad: produce lotes grandes y adopta estilos o puntos de vista que la sala no tiene. Su límite es el criterio, que sigue siendo humano: el lote se filtra después, y las ideas que sobreviven se cruzan entre sí para forzar híbridos que ninguna de las dos partes habría propuesto sola.",
+  "resumen_teorico": "La IA entra en la sesión de ideas como un participante más, no como sustituto del equipo. Su ventaja es el volumen y, si la empujas con el prompt, la variedad: produce lotes grandes y adopta estilos o puntos de vista que la sala no tiene, aunque por sí sola tiende a ideas promedio y parecidas. Su límite es el criterio, que sigue siendo humano: el lote se filtra después, y las ideas que sobreviven sirven de chispa para inspirar y recombinar.",
   "pasos_accionables": [
     "Usar la IA como un 'participante más' en sesiones de brainstorming, pidiéndole explícitamente ideas alternativas o inusuales.",
     "Solicitar a la IA que adopte personas o estilos distintos (ej. personajes, expertos, culturas) para forzar variedad de enfoques.",
@@ -22,5 +22,23 @@
   "etiqueta_arbol": "Suma la IA a tus Ideas",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-167-ideacion_con_ia_en_la_sesion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La IA entra en la sesión de ideas como un participante más, no como sustituto del equipo. Su ventaja es el volumen y la variedad: produce lotes grandes y adopta estilos o puntos de vista que la sala no tiene. Su límite es el criterio, que sigue siendo humano: el lote se filtra después, y las ideas que sobreviven se cruzan entre sí para forzar híbridos que ninguna de las dos partes habría propuesto sola.",
+      "texto_nuevo": "La IA entra en la sesión de ideas como un participante más, no como sustituto del equipo. Su ventaja es el volumen y, si la empujas con el prompt, la variedad: produce lotes grandes y adopta estilos o puntos de vista que la sala no tiene, aunque por sí sola tiende a ideas promedio y parecidas. Su límite es el criterio, que sigue siendo humano: el lote se filtra después, y las ideas que sobreviven sirven de chispa para inspirar y recombinar.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "867",
+        "frase": "The AI will not naturally deliver novelty"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que por sí sola la IA da la respuesta promedio; la variedad hay que empujarla con el prompt.; Los híbridos que nadie habría propuesto son un resultado prometido; el libro busca ideas que inspiren y se recombinen.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

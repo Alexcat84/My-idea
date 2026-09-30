@@ -6,7 +6,7 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es una ley estadounidense de 1996 que ayuda a los pequeños negocios a entender y cumplir las regulaciones de seguridad laboral de OSHA, y les da voz cuando se preparan normas nuevas. Gracias a esta ley, OSHA tiene que ofrecerte guías de cumplimiento pensadas para negocios pequeños, responder tus consultas, aplicar políticas de reducción de multas si tu empresa es chica, y dejarte participar antes de que una regla nueva se termine de definir.",
   "pasos_accionables": [
-    "Busca las Guías de Cumplimiento para Pequeñas Entidades (Small Entity Compliance Guides) de OSHA cuando tengas dudas sobre una norma",
+    "Cuando tengas dudas sobre una norma, busca si OSHA publicó para ella una Guía de Cumplimiento para Pequeñas Entidades (Small Entity Compliance Guide): solo existen para algunas normas",
     "Usa los canales de consulta de OSHA para resolver dudas específicas antes de que te citen por algo",
     "Si recibes una citación, pregunta por la política de reducción de penalidades para pequeños negocios: puede bajarte la multa",
     "Si una regla nueva te afecta de forma importante, puedes participar en los paneles de revisión donde se escucha a los pequeños negocios"
@@ -38,6 +38,23 @@
         "evidencia": "F15-008: Cumplir la normativa de OSHA y pedir reducción de multas tras una citación es gestión operativa de un negocio que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-168-sbrefa_cumplimiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca las Guías de Cumplimiento para Pequeñas Entidades (Small Entity Compliance Guides) de OSHA cuando tengas dudas sobre una norma",
+      "texto_nuevo": "Cuando tengas dudas sobre una norma, busca si OSHA publicó para ella una Guía de Cumplimiento para Pequeñas Entidades (Small Entity Compliance Guide): solo existen para algunas normas",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1987",
+        "frase": "Produce Small Entity Compliance Guides for some agency rules"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que solo hay guías para algunas normas; el paso supone que existe una para cualquiera.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

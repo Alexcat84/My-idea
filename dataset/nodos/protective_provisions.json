@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Cláusulas Protectoras (Protective Provisions)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando aceptas inversión de accionistas preferentes, ellos obtienen un conjunto de derechos de veto que les permite bloquear decisiones clave de tu negocio, como cambios en los derechos de esas acciones, emitir deuda por encima de cierto monto, cambios de control, modificar los estatutos o emitir criptomonedas o tokens. Esto le da a tus inversionistas un control real sobre tus decisiones estratégicas.",
+  "resumen_teorico": "Cuando aceptas inversión de accionistas preferentes, ellos obtienen un conjunto de derechos de veto que les permite bloquear decisiones clave de tu negocio, como cambios en los derechos de esas acciones, emitir deuda por encima de cierto monto, cambios de control, modificar los estatutos o emitir criptomonedas o tokens. Esto les da un control real sobre tus decisiones estratégicas, aunque no te impide actuar: exige su consentimiento, que dan si no ven mala la acción.",
   "pasos_accionables": [
     "Revisa la lista completa de acciones para las que vas a necesitar el consentimiento de tus inversionistas preferentes",
-    "Negocia el monto de deuda a partir del cual necesitarás su aprobación, preguntando cuál es la cifra que corresponde en tu negociación",
+    "Negocia el monto de deuda a partir del cual necesitarás su aprobación, preguntando cuál es la cifra que corresponde en tu negociación: subirlo suele aceptarse si tu negocio ya opera de verdad y no es una startup temprana, y también puedes pedir que se excluya el financiamiento de equipos del curso normal del negocio",
     "Piensa cuánta autonomía real te queda para operar tu negocio con estas restricciones",
     "Revisa si hay cláusulas específicas sobre tokens o criptomonedas si tu negocio los usa"
   ],
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Define tus Cláusulas de Veto",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-169-protective_provisions-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negocia el monto de deuda a partir del cual necesitarás su aprobación, preguntando cuál es la cifra que corresponde en tu negociación",
+      "texto_nuevo": "Negocia el monto de deuda a partir del cual necesitarás su aprobación, preguntando cuál es la cifra que corresponde en tu negociación: subirlo suele aceptarse si tu negocio ya opera de verdad y no es una startup temprana, y también puedes pedir que se excluya el financiamiento de equipos del curso normal del negocio",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1473, 1484",
+        "frase": "the company is a real operating business rather than an early stage startup"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que subir el umbral de deuda se acepta si la empresa ya opera de verdad y no es una startup temprana, y sugiere excluir el financiamiento de equipos.; Misma condición y misma exclusión perdidas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-protective_provisions-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando aceptas inversión de accionistas preferentes, ellos obtienen un conjunto de derechos de veto que les permite bloquear decisiones clave de tu negocio, como cambios en los derechos de esas acciones, emitir deuda por encima de cierto monto, cambios de control, modificar los estatutos o emitir criptomonedas o tokens. Esto le da a tus inversionistas un control real sobre tus decisiones estratégicas.",
+      "texto_nuevo": "Cuando aceptas inversión de accionistas preferentes, ellos obtienen un conjunto de derechos de veto que les permite bloquear decisiones clave de tu negocio, como cambios en los derechos de esas acciones, emitir deuda por encima de cierto monto, cambios de control, modificar los estatutos o emitir criptomonedas o tokens. Esto les da un control real sobre tus decisiones estratégicas, aunque no te impide actuar: exige su consentimiento, que dan si no ven mala la acción.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1475",
+        "frase": "they don't eliminate the ability to do these things, but simply require the consent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que estas cláusulas no impiden actuar: solo exigen el consentimiento de los inversionistas, que lo dan si la acción no les parece mala para la empresa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

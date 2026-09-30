@@ -3,16 +3,16 @@
   "dominio": "core",
   "titulo_concepto": "Preferencia de Liquidación (Liquidation Preference)",
   "fuente": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Cláusula que determina el orden y el monto que reciben los tenedores de acciones preferentes (los inversionistas) antes que los accionistas comunes en un evento de liquidez: fusión, adquisición, venta o cambio de control de la empresa. Típicamente es 1x el precio de compra más los dividendos declarados no pagados. Puede ser participante (el inversionista recibe la preferencia MÁS su parte proporcional como accionista común, un 'doble cobro') o no participante (elige recibir una u otra cosa, no ambas). Un 'Change in Control' se trata como evento de liquidación a estos efectos, pero una oferta pública inicial NO se considera evento de liquidación, ya que las acciones preferentes se convierten a comunes. El 'overhang' de la preferencia es el monto que debe devolverse a los inversionistas antes de que los accionistas comunes reciban cualquier proceso.",
+  "resumen_teorico": "Cláusula que determina el orden y el monto que reciben los tenedores de acciones preferentes (los inversionistas) antes que los accionistas comunes en un evento de liquidez: fusión, adquisición, venta o cambio de control de la empresa. Típicamente es 1x el precio de compra más los dividendos declarados no pagados. Puede ser participante (el inversionista recibe la preferencia MÁS su parte proporcional como accionista común, un 'doble cobro'), participante con tope (participa hasta alcanzar un múltiplo pactado del precio de compra) o no participante (elige recibir una u otra cosa, no ambas). Un 'Change in Control' se trata como evento de liquidación a estos efectos, pero una oferta pública inicial NO se considera evento de liquidación, ya que en casi todas las salidas a bolsa las acciones preferentes se convierten a comunes. El 'overhang' de la preferencia es el monto que debe devolverse a los inversionistas antes de que los accionistas comunes reciban cualquier proceso.",
   "pasos_accionables": [
     "Negociar una preferencia de liquidación simple (1x, no participante) en rondas iniciales; evitar múltiplos superiores a 1x, ya que son señal de alerta sobre el inversionista",
-    "Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común) y no participante (una u otra, no ambas)",
+    "Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común), participante con tope (participa hasta un múltiplo pactado) y no participante (una u otra, no ambas)",
     "Si se acepta participación, solicitar 'kick-outs' que la eliminen una vez el inversionista alcance un retorno de 2x-3x",
     "Definir con claridad qué eventos constituyen un 'Change in Control' que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación",
     "Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier proceso",
     "Modelar distintos escenarios de venta (bajo, medio, alto) para entender el impacto real en el retorno de fundadores, empleados e inversionistas (análisis de cascada o waterfall)",
     "Revisar cómo se tratan las contraprestaciones en garantía (escrow) o contingentes al calcular la distribución",
-    "Anticipar que un inversionista que percibe mayor riesgo (mercado incierto, competencia, condiciones de salida poco claras) tenderá a exigir términos más agresivos"
+    "Anticipar que los inversionistas piden estos términos para reducir sus riesgos y alinear tus incentivos con los suyos"
   ],
   "entregable_esperado": "Cláusula de liquidation preference definida en el term sheet (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)",
   "condiciones_activacion": [
@@ -55,5 +55,57 @@
   "fuentes_internas": [
     "Venture Deals - Brad Feld",
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-169-preferencia_de_liquidacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cláusula que determina el orden y el monto que reciben los tenedores de acciones preferentes (los inversionistas) antes que los accionistas comunes en un evento de liquidez: fusión, adquisición, venta o cambio de control de la empresa. Típicamente es 1x el precio de compra más los dividendos declarados no pagados. Puede ser participante (el inversionista recibe la preferencia MÁS su parte proporcional como accionista común, un 'doble cobro') o no participante (elige recibir una u otra cosa, no ambas). Un 'Change in Control' se trata como evento de liquidación a estos efectos, pero una oferta pública inicial NO se considera evento de liquidación, ya que las acciones preferentes se convierten a comunes. El 'overhang' de la preferencia es el monto que debe devolverse a los inversionistas antes de que los accionistas comunes reciban cualquier proceso.",
+      "texto_nuevo": "Cláusula que determina el orden y el monto que reciben los tenedores de acciones preferentes (los inversionistas) antes que los accionistas comunes en un evento de liquidez: fusión, adquisición, venta o cambio de control de la empresa. Típicamente es 1x el precio de compra más los dividendos declarados no pagados. Puede ser participante (el inversionista recibe la preferencia MÁS su parte proporcional como accionista común, un 'doble cobro'), participante con tope (participa hasta alcanzar un múltiplo pactado del precio de compra) o no participante (elige recibir una u otra cosa, no ambas). Un 'Change in Control' se trata como evento de liquidación a estos efectos, pero una oferta pública inicial NO se considera evento de liquidación, ya que en casi todas las salidas a bolsa las acciones preferentes se convierten a comunes. El 'overhang' de la preferencia es el monto que debe devolverse a los inversionistas antes de que los accionistas comunes reciban cualquier proceso.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "939-961, 1081",
+        "frase": "There are three varieties of participation: no participation, full participation, and capped participation."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la conversión a comunes ocurre en casi todas las salidas a bolsa; el resumen lo da como regla sin excepción.; El libro distingue tres variantes de participación y el resumen omite la participación con tope.; Misma omisión de la participación con tope.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-preferencia_de_liquidacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común) y no participante (una u otra, no ambas)",
+      "texto_nuevo": "Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común), participante con tope (participa hasta un múltiplo pactado) y no participante (una u otra, no ambas)",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "939-961",
+        "frase": "There are three varieties of participation: no participation, full participation, and capped participation."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la participación con tope, la tercera variante del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-preferencia_de_liquidacion-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipar que un inversionista que percibe mayor riesgo (mercado incierto, competencia, condiciones de salida poco claras) tenderá a exigir términos más agresivos",
+      "texto_nuevo": "Anticipar que los inversionistas piden estos términos para reducir sus riesgos y alinear tus incentivos con los suyos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2883",
+        "frase": "Investors require such terms so they can reduce their risks and align the founder's incentives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que los inversionistas piden estos términos para reducir riesgos y alinear incentivos; la lista de causas y la regla de endurecimiento son añadidas.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

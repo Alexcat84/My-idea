@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar si el inversionista solicita derechos pro rata estándar o 'super pro rata'",
     "Evaluar el impacto de otorgar un porcentaje fijo de la próxima ronda en la capacidad de levantar capital futuro",
-    "Negociar límites razonables (evitar múltiplos superiores a 1x salvo justificación clara)",
+    "Negociar límites razonables (evitar múltiplos superiores a 1x)",
     "Modelar escenarios de dilución futura antes de aceptar estos términos"
   ],
   "entregable_esperado": "Cláusula de pro rata rights negociada con límites claros documentados en el term sheet",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Negocia tus Derechos Pro Rata",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-169-pro_rata_rights_deuda_convertible-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar límites razonables (evitar múltiplos superiores a 1x salvo justificación clara)",
+      "texto_nuevo": "Negociar límites razonables (evitar múltiplos superiores a 1x)",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1883, 2355",
+        "frase": "a super pro rata right and is an excessive ask"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro trata el super pro rata como un pedido excesivo y pide cuidado, sin prever la salvedad que añade el paso.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

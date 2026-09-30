@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Alcance Profundo en la Cadena de Suministro (Tier 2/3)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Cuando gestionas proveedores de forma avanzada, tu responsabilidad no termina en quien te vende directamente (tier 1). También debes preocuparte por los proveedores de tus proveedores (tier 2 y 3), porque ahí pueden esconderse riesgos ambientales, de materiales peligrosos o reputacionales que tú no ves a simple vista. Logras este alcance incluyendo requisitos en los contratos con tus proveedores directos, exigiéndoles que trasladen tu código de conducta a quienes ellos les compran. Algunas empresas llegan a rastrear hasta el 4to o 5to nivel para verificar fórmulas químicas en los materiales que usan. Esto solo tiene sentido si ya tienes un programa maduro de gestión de proveedores y sospechas que el riesgo real está en niveles profundos de tu cadena.",
+  "resumen_teorico": "Cuando gestionas proveedores de forma avanzada, tu responsabilidad no termina en quien te vende directamente (tier 1). También debes preocuparte por la sostenibilidad de los proveedores de tus proveedores (tier 2 y 3). Logras este alcance incluyendo requisitos en los contratos con tus proveedores directos, exigiéndoles que trasladen tu código de conducta a quienes ellos les compran. Algunas empresas llegan a rastrear hasta el 4to o 5to nivel para verificar fórmulas químicas en los materiales que usan. Es una práctica propia de quienes ya tienen un programa avanzado de gestión de proveedores.",
   "pasos_accionables": [
     "Mapea tu cadena de suministro más allá del primer nivel, identificando quién le vende a tus proveedores directos",
     "Incluye en tus contratos con proveedores tier 1 la exigencia de que apliquen tu código de conducta a sus propios proveedores",
@@ -92,6 +92,22 @@
         "motivo": "arista entre dos mundos (environmental -> compras): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-169-alcance_profundo_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando gestionas proveedores de forma avanzada, tu responsabilidad no termina en quien te vende directamente (tier 1). También debes preocuparte por los proveedores de tus proveedores (tier 2 y 3), porque ahí pueden esconderse riesgos ambientales, de materiales peligrosos o reputacionales que tú no ves a simple vista. Logras este alcance incluyendo requisitos en los contratos con tus proveedores directos, exigiéndoles que trasladen tu código de conducta a quienes ellos les compran. Algunas empresas llegan a rastrear hasta el 4to o 5to nivel para verificar fórmulas químicas en los materiales que usan. Esto solo tiene sentido si ya tienes un programa maduro de gestión de proveedores y sospechas que el riesgo real está en niveles profundos de tu cadena.",
+      "texto_nuevo": "Cuando gestionas proveedores de forma avanzada, tu responsabilidad no termina en quien te vende directamente (tier 1). También debes preocuparte por la sostenibilidad de los proveedores de tus proveedores (tier 2 y 3). Logras este alcance incluyendo requisitos en los contratos con tus proveedores directos, exigiéndoles que trasladen tu código de conducta a quienes ellos les compran. Algunas empresas llegan a rastrear hasta el 4to o 5to nivel para verificar fórmulas químicas en los materiales que usan. Es una práctica propia de quienes ya tienen un programa avanzado de gestión de proveedores.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4143-4145",
+        "frase": "Companies with advanced supplier management programs care about the sustainability of their own suppliers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese porqué: solo dice que las empresas con programas avanzados se ocupan de la sostenibilidad de sus proveedores de segundo nivel.; El libro presenta la práctica como propia de programas avanzados; no dice que solo tenga sentido entonces ni la condiciona a sospechar riesgo profundo.; Misma causa añadida que la marca 0.; Mismo endurecimiento y condición añadida que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

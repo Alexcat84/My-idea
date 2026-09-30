@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Nueva Tecnología y Nuevas Rutas hacia el Error",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "La introducción de nueva tecnología en dominios de seguridad crítica no elimina el error, sino que lo transforma: incrementa demandas operativas al permitir operar más rápido/cerca de los límites, suele estar mal adaptada al trabajo real obligando a los usuarios a 'terminar el diseño' en la práctica, y exige nuevo conocimiento que abre nuevas vulnerabilidades. Problemas típicos incluyen: error de modo (mode error), pérdida en arquitecturas de pantalla, falta de coordinación de entradas entre operadores, sobrecarga de trabajo y de datos, y dificultad para notar cambios mediante valores digitales.",
+  "resumen_teorico": "La introducción de nueva tecnología en dominios de seguridad crítica no elimina el error, sino que lo transforma: puede incrementar demandas operativas al permitir operar más rápido/cerca de los límites, suele estar mal adaptada al trabajo real obligando a los usuarios a 'terminar el diseño' en la práctica, y exige nuevo conocimiento que abre nuevas vulnerabilidades. Problemas típicos incluyen: error de modo (mode error), pérdida en arquitecturas de pantalla, falta de coordinación de entradas entre operadores, sobrecarga de trabajo y de datos, y dificultad para notar cambios mediante valores digitales.",
   "pasos_accionables": [
     "Evaluar si la nueva tecnología permite operar el sistema más cerca de sus márgenes de seguridad",
     "Revisar si los operadores han tenido que adaptar/parchar la tecnología para que funcione en la práctica",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Tecnología que Cambia el Error",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-168-new_technology_error_pathways-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La introducción de nueva tecnología en dominios de seguridad crítica no elimina el error, sino que lo transforma: incrementa demandas operativas al permitir operar más rápido/cerca de los límites, suele estar mal adaptada al trabajo real obligando a los usuarios a 'terminar el diseño' en la práctica, y exige nuevo conocimiento que abre nuevas vulnerabilidades. Problemas típicos incluyen: error de modo (mode error), pérdida en arquitecturas de pantalla, falta de coordinación de entradas entre operadores, sobrecarga de trabajo y de datos, y dificultad para notar cambios mediante valores digitales.",
+      "texto_nuevo": "La introducción de nueva tecnología en dominios de seguridad crítica no elimina el error, sino que lo transforma: puede incrementar demandas operativas al permitir operar más rápido/cerca de los límites, suele estar mal adaptada al trabajo real obligando a los usuarios a 'terminar el diseño' en la práctica, y exige nuevo conocimiento que abre nuevas vulnerabilidades. Problemas típicos incluyen: error de modo (mode error), pérdida en arquitecturas de pantalla, falta de coordinación de entradas entre operadores, sobrecarga de trabajo y de datos, y dificultad para notar cambios mediante valores digitales.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2317",
+        "frase": "New technology can lead to an increase in operational demands"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la nueva tecnología puede llevar a más demandas operativas; el nodo lo vuelve seguro.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

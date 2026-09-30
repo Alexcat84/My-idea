@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Analizar la infraestructura y alianzas existentes para innovación resource-driven",
     "Explorar nuevas propuestas de valor que puedan transformar otros bloques (offer-driven)",
-    "Identificar necesidades no satisfechas de clientes para customer-driven innovation",
+    "Identificar necesidades no satisfechas de clientes, o formas de facilitarles el acceso o darles más conveniencia, para customer-driven innovation",
     "Repensar flujos de ingreso y estructura de costos para finance-driven innovation",
     "Combinar múltiples epicentros si es posible para mayor impacto"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Encuentra tu Epicentro de Innovación",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-167-epicentros_innovacion_modelo_negocio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar necesidades no satisfechas de clientes para customer-driven innovation",
+      "texto_nuevo": "Identificar necesidades no satisfechas de clientes, o formas de facilitarles el acceso o darles más conveniencia, para customer-driven innovation",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2081",
+        "frase": "CUSTOMER-DRIVEN INNOVATIONS ARE BASED ON CUSTOMER NEEDS, FACILITATED ACCESS, OR INCREASED CONVENIENCE."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro basa la innovación impulsada por el cliente también en acceso facilitado y mayor conveniencia.; Mismo defecto: se pierden dos de las tres bases.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Rutas de Salida y Planificación de Emergencias",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Diseña tus rutas de salida para que el camino de escape sea obvio, directo y esté libre de obstáculos, con puertas que se abran sin necesidad de llave ni herramienta especial mientras el lugar esté ocupado. Evita usar puertas giratorias, corredizas o elevadizas como salidas obligatorias, y garantiza mecanismos de apertura rápida (como el hardware de pánico) que funcionen incluso en cuartos fríos bloqueados desde afuera. Cuando planifiques tus emergencias, piensa también en poner barreras para que nadie salga directo al tráfico de vehículos.",
+  "resumen_teorico": "Diseña tus rutas de salida para que el camino de escape sea obvio, directo y esté libre de obstáculos, con puertas que se abran sin necesidad de llave ni herramienta especial mientras el lugar esté ocupado. Evita usar puertas giratorias, corredizas o elevadizas como salidas obligatorias; si una salida tiene hardware de pánico, que abra con poca fuerza, y da a los cuartos fríos un mecanismo de liberación interior que funcione aunque estén cerrados desde afuera. Cuando planifiques tus emergencias, piensa también en poner barreras para que nadie salga directo al tráfico de vehículos.",
   "pasos_accionables": [
     "Verifica que las puertas de salida no estén bloqueadas, cerradas con llave u obstruidas",
     "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral",
@@ -41,5 +41,23 @@
   ],
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-168-rutas_salida_planificacion_emergencias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña tus rutas de salida para que el camino de escape sea obvio, directo y esté libre de obstáculos, con puertas que se abran sin necesidad de llave ni herramienta especial mientras el lugar esté ocupado. Evita usar puertas giratorias, corredizas o elevadizas como salidas obligatorias, y garantiza mecanismos de apertura rápida (como el hardware de pánico) que funcionen incluso en cuartos fríos bloqueados desde afuera. Cuando planifiques tus emergencias, piensa también en poner barreras para que nadie salga directo al tráfico de vehículos.",
+      "texto_nuevo": "Diseña tus rutas de salida para que el camino de escape sea obvio, directo y esté libre de obstáculos, con puertas que se abran sin necesidad de llave ni herramienta especial mientras el lugar esté ocupado. Evita usar puertas giratorias, corredizas o elevadizas como salidas obligatorias; si una salida tiene hardware de pánico, que abra con poca fuerza, y da a los cuartos fríos un mecanismo de liberación interior que funcione aunque estén cerrados desde afuera. Cuando planifiques tus emergencias, piensa también en poner barreras para que nadie salga directo al tráfico de vehículos.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "421-423",
+        "frase": "inside release mechanism that releases the latch and open the door"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no exige mecanismos de apertura rápida en general: fija la poca fuerza del hardware de pánico donde exista y la liberación interior en cuartos fríos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

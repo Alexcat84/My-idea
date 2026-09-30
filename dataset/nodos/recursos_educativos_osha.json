@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Acceder a publicaciones gratuitas en osha.gov/publications",
     "Inscribirte en el boletín QuickTakes para mantenerte actualizado",
-    "Identificar cursos relevantes en los Centros de Educación del OSHA Training Institute",
+    "Identificar cursos relevantes en los Centros de Educación del OSHA Training Institute, sabiendo que cobran matrícula a quienes vienen del sector privado",
     "Coordinar capacitación Outreach de 10 o 30 horas para las personas que trabajan contigo",
     "Complementar la capacitación Outreach con el entrenamiento específico que exijan los estándares OSHA que te aplican"
   ],
@@ -58,6 +58,23 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R004-042 (CONTRARIO, lector y verificador de acuerdo): El libro dice que los Centros de Educacion no son gratuitos para el sector privado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R004-042"
+    },
+    {
+      "id": "final-e1-168-recursos_educativos_osha-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar cursos relevantes en los Centros de Educación del OSHA Training Institute",
+      "texto_nuevo": "Identificar cursos relevantes en los Centros de Educación del OSHA Training Institute, sabiendo que cobran matrícula a quienes vienen del sector privado",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1845",
+        "frase": "There are tuition fees for private sector students."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que estos centros cobran matrícula al sector privado, lo que pesa en la decisión.; Mismo defecto: costo de matrícula para el sector privado.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

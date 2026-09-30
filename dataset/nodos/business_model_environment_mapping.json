@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Analizar fuerzas de mercado: segmentos, necesidades, costos de cambio, atractivo de ingresos",
     "Analizar fuerzas de la industria: competidores incumbentes, nuevos entrantes, proveedores, productos sustitutos",
-    "Identificar tendencias clave (regulatorias, tecnológicas, sociales, culturales)",
-    "Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, infraestructura)",
+    "Identificar tendencias clave (regulatorias, tecnológicas, sociales y culturales, socioeconómicas)",
+    "Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, materias primas y otros recursos, infraestructura)",
     "Formular preguntas estratégicas por cada bloque del Canvas en base a los hallazgos",
     "Listar stakeholders clave y su nivel de influencia sobre el modelo"
   ],
@@ -53,5 +53,41 @@
   ],
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-167-business_model_environment_mapping-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar tendencias clave (regulatorias, tecnológicas, sociales, culturales)",
+      "texto_nuevo": "Identificar tendencias clave (regulatorias, tecnológicas, sociales y culturales, socioeconómicas)",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "3661-3667",
+        "frase": "Outlines major socioeconomic trends relevant to your business model"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro tiene cuatro tendencias clave y el paso omite las socioeconómicas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-167-business_model_environment_mapping-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, infraestructura)",
+      "texto_nuevo": "Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, materias primas y otros recursos, infraestructura)",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "3735-3741",
+        "frase": "Highlights current prices and price trends for resources required for your business model"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro tiene cuatro fuerzas macroeconómicas y el paso omite materias primas y otros recursos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

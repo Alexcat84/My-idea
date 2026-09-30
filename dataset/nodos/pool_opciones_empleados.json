@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Tamaño del Pool de Opciones para Empleados",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El tamaño del option pool (reserva de acciones para futuros empleados) afecta directamente la valuación pre-money efectiva. Los VCs suelen exigir que el aumento del pool ocurra antes de la financiación, diluyendo a los accionistas existentes en lugar de a los nuevos inversores. Un pool típico está entre 10% y 20%.",
+  "resumen_teorico": "El tamaño del option pool (reserva de acciones para futuros empleados) afecta directamente la valuación pre-money efectiva. Los VCs suelen exigir que el aumento del pool ocurra antes de la financiación, diluyendo a los accionistas existentes en lugar de a los nuevos inversores. En etapa temprana, un pool típico está entre 10% y 20%; después suele ser menor.",
   "pasos_accionables": [
     "Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.",
-    "Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC.",
+    "Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC, aceptando un pool algo mayor que tu presupuesto pero sin un margen enorme.",
     "Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.",
     "Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool)."
   ],
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Calcula tu Pool de Opciones",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-169-pool_opciones_empleados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tamaño del option pool (reserva de acciones para futuros empleados) afecta directamente la valuación pre-money efectiva. Los VCs suelen exigir que el aumento del pool ocurra antes de la financiación, diluyendo a los accionistas existentes en lugar de a los nuevos inversores. Un pool típico está entre 10% y 20%.",
+      "texto_nuevo": "El tamaño del option pool (reserva de acciones para futuros empleados) afecta directamente la valuación pre-money efectiva. Los VCs suelen exigir que el aumento del pool ocurra antes de la financiación, diluyendo a los accionistas existentes en lugar de a los nuevos inversores. En etapa temprana, un pool típico está entre 10% y 20%; después suele ser menor.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "811",
+        "frase": "with later stage companies having smaller option pools"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da el rango de 10% a 20% para empresas en etapa temprana y dice que en etapas posteriores el pool es menor.; Misma condición de etapa perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-pool_opciones_empleados-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC.",
+      "texto_nuevo": "Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC, aceptando un pool algo mayor que tu presupuesto pero sin un margen enorme.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "854",
+        "frase": "prepared to have an option pool with more options than your budget calls for"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que conviene aceptar un pool algo mayor que el presupuesto, aunque no por un gran margen.; Misma advertencia perdida.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

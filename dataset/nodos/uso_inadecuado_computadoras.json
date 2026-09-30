@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Uso inadecuado de computadoras en gestión de calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Las computadoras pueden ser una bendición o una maldición para tu negocio. Puedes acumular datos sin analizarlos con ningún propósito, o dejarte intimidar por la tecnología y aceptar sin cuestionar lo que el sistema te entrega, en lugar de pedir los datos y gráficos específicos que necesitas para entender la variación de tu proceso. Una sola cifra, como las ventas de ayer, sin el contexto de su variación, no te dice nada útil para decidir.",
+  "resumen_teorico": "Las computadoras pueden ser una bendición o una maldición para tu negocio. Puedes acumular datos sin analizarlos con ningún propósito, o dejarte intimidar por la tecnología y aceptar sin cuestionar lo que el sistema te entrega, en lugar de pedir los datos y gráficos específicos que necesitas para entender la variación de tu proceso. Una sola cifra, como las ventas de ayer, sin el contexto de su variación, te dice muy poco y se presta a un mal uso.",
   "pasos_accionables": [
     "Definir con claridad qué datos y en qué formato necesitas antes de generar reportes automáticos",
     "Pedir gráficos de variación en el tiempo en lugar de cifras aisladas",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "No Confíes Ciegamente en tus Datos",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-167-uso_inadecuado_computadoras-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las computadoras pueden ser una bendición o una maldición para tu negocio. Puedes acumular datos sin analizarlos con ningún propósito, o dejarte intimidar por la tecnología y aceptar sin cuestionar lo que el sistema te entrega, en lugar de pedir los datos y gráficos específicos que necesitas para entender la variación de tu proceso. Una sola cifra, como las ventas de ayer, sin el contexto de su variación, no te dice nada útil para decidir.",
+      "texto_nuevo": "Las computadoras pueden ser una bendición o una maldición para tu negocio. Puedes acumular datos sin analizarlos con ningún propósito, o dejarte intimidar por la tecnología y aceptar sin cuestionar lo que el sistema te entrega, en lugar de pedir los datos y gráficos específicos que necesitas para entender la variación de tu proceso. Una sola cifra, como las ventas de ayer, sin el contexto de su variación, te dice muy poco y se presta a un mal uso.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2990",
+        "frase": "by itself conveys little information. It is a candidate for misuse."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que una cifra aislada transmite poca información y se presta a mal uso, no que no diga nada.; Mismo defecto de grado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

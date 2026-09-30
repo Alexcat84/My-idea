@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Propósito de los Term Sheets: Alineación de Incentivos",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Aunque técnicamente no es obligatorio usar un term sheet (algunas negociaciones se cierran con un apretón de manos), estos documentos existen para alinear incentivos entre las partes y constreñir comportamientos indebidos. Un buen contrato busca que ambas partes actúen en beneficio mutuo, minimizando costos de transacción, costos de agencia y asimetrías de información.",
+  "resumen_teorico": "Aunque técnicamente no es obligatorio usar un term sheet (algunas negociaciones se acuerdan con un apretón de manos, aunque es la excepción y aun así hacen falta los documentos legales), estos documentos existen para alinear incentivos entre las partes y constreñir comportamientos indebidos. Un buen contrato busca que ambas partes actúen en beneficio mutuo, minimizando costos de transacción, costos de agencia y asimetrías de información.",
   "pasos_accionables": [
-    "Evaluar si la relación con el inversionista permite mayor flexibilidad (menos formalismo)",
+    "Evaluar si la relación con el inversionista permite mayor flexibilidad (menos formalismo), algo excepcional que funciona si tienes experiencia, ya trabajaste con ese inversionista o tus abogados lo conocen bien",
     "Analizar cada cláusula preguntando: ¿alinea incentivos o los divide?",
     "Usar el framework de costos de transacción, costos de agencia e información asimétrica para evaluar términos",
     "Negociar abiertamente cuando se detecte una cláusula que desalinee incentivos"
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Alinea Incentivos en tu Acuerdo",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-169-por_que_existen_los_term_sheets-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aunque técnicamente no es obligatorio usar un term sheet (algunas negociaciones se cierran con un apretón de manos), estos documentos existen para alinear incentivos entre las partes y constreñir comportamientos indebidos. Un buen contrato busca que ambas partes actúen en beneficio mutuo, minimizando costos de transacción, costos de agencia y asimetrías de información.",
+      "texto_nuevo": "Aunque técnicamente no es obligatorio usar un term sheet (algunas negociaciones se acuerdan con un apretón de manos, aunque es la excepción y aun así hacen falta los documentos legales), estos documentos existen para alinear incentivos entre las partes y constreñir comportamientos indebidos. Un buen contrato busca que ambas partes actúen en beneficio mutuo, minimizando costos de transacción, costos de agencia y asimetrías de información.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4482-4486",
+        "frase": "Regardless of whether a term sheet is drafted or not, a plethora of legal documents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro el apretón de manos solo acuerda los términos, es la excepción y los documentos legales se hacen igual.; Misma pérdida: excepción y documentos legales necesarios haya o no term sheet.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-por_que_existen_los_term_sheets-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si la relación con el inversionista permite mayor flexibilidad (menos formalismo)",
+      "texto_nuevo": "Evaluar si la relación con el inversionista permite mayor flexibilidad (menos formalismo), algo excepcional que funciona si tienes experiencia, ya trabajaste con ese inversionista o tus abogados lo conocen bien",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4484",
+        "frase": "this approach works if you are a sophisticated founder, have worked with us before"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro llama excepción al camino informal y lo limita a fundadores con experiencia, relación previa o abogados que conocen al inversionista.; Misma condición perdida.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

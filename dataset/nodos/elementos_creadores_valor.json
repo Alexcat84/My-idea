@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Elementos Creadores de Valor en la Propuesta",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Existen múltiples formas de crear valor para el cliente más allá de la novedad y el desempeño: diseño, marca/estatus, precio, reducción de costos, reducción de riesgo, accesibilidad y conveniencia/usabilidad. Cada uno representa una palanca distinta para diferenciar la Propuesta de Valor según el segmento de cliente.",
+  "resumen_teorico": "Existen múltiples formas de crear valor para el cliente más allá de la novedad y el desempeño, entre otras: personalización, resolverle una tarea, diseño, marca/estatus, precio, reducción de costos, reducción de riesgo, accesibilidad y conveniencia/usabilidad. Cada uno representa una palanca distinta para diferenciar la Propuesta de Valor según el segmento de cliente.",
   "pasos_accionables": [
-    "Identificar cuál de los 7 elementos (diseño, marca, precio, reducción de costo, reducción de riesgo, accesibilidad, conveniencia) es más relevante para tu segmento",
+    "Identificar cuál de estos elementos (personalización, ayudar a resolver una tarea, diseño, marca, precio, reducción de costo, reducción de riesgo, accesibilidad, conveniencia) es más relevante para tu segmento",
     "Analizar casos de referencia (Rolex-marca, Tata Nano-precio, Salesforce-reducción de costos, NetJets-accesibilidad, iPod-conveniencia)",
     "Seleccionar la mezcla de elementos que responda a las necesidades del segmento y diseñar la propuesta de valor alrededor de ella",
     "Validar con clientes reales si perciben ese valor diferencial"
@@ -71,6 +71,39 @@
         "motivo": "La apofenia y el sesgo de patrones al interpretar datos o diseñar futuros no preparan la selección de elementos de valor para la propuesta. Los dos nodos no tienen que ver."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-167-elementos_creadores_valor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen múltiples formas de crear valor para el cliente más allá de la novedad y el desempeño: diseño, marca/estatus, precio, reducción de costos, reducción de riesgo, accesibilidad y conveniencia/usabilidad. Cada uno representa una palanca distinta para diferenciar la Propuesta de Valor según el segmento de cliente.",
+      "texto_nuevo": "Existen múltiples formas de crear valor para el cliente más allá de la novedad y el desempeño, entre otras: personalización, resolverle una tarea, diseño, marca/estatus, precio, reducción de costos, reducción de riesgo, accesibilidad y conveniencia/usabilidad. Cada uno representa una palanca distinta para diferenciar la Propuesta de Valor según el segmento de cliente.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "431-447",
+        "frase": "Elements from the following non-exhaustive list can contribute to customer value creation."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye personalización y ayudar a resolver una tarea, y presenta la lista como no exhaustiva.; Mismo defecto: faltan personalización y ayudar a hacer un trabajo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-167-elementos_creadores_valor-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar cuál de los 7 elementos (diseño, marca, precio, reducción de costo, reducción de riesgo, accesibilidad, conveniencia) es más relevante para tu segmento",
+      "texto_nuevo": "Identificar cuál de estos elementos (personalización, ayudar a resolver una tarea, diseño, marca, precio, reducción de costo, reducción de riesgo, accesibilidad, conveniencia) es más relevante para tu segmento",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "441-447",
+        "frase": "Value can be created simply by helping a customer get certain jobs done."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Cerrar la elección en 7 elementos deja fuera personalización y ayudar a resolver una tarea, que el libro incluye.; Mismo defecto: lista cerrada que omite dos elementos del libro.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

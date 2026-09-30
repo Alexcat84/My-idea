@@ -4,13 +4,13 @@
   "dominio": "environmental",
   "titulo_concepto": "Aprender haciendo: prueba pequeña de rediseño ecológico",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Empieza con una prueba de meta modesta, baja inversión y retorno rápido: es la mejor forma de arrancar un proceso de rediseño ecológico, sobre todo si prefieres no arriesgar mucho de entrada. Examina los impactos ecológicos de tu negocio (desperdicio, toxicidad, uso de recursos escasos) para encontrar dónde el rediseño tiene más potencial. El éxito depende de que logres a la vez calidad, precio e impacto ambiental que tu cliente espera.",
+  "resumen_teorico": "Empieza con una prueba de meta modesta, baja inversión y retorno rápido: en muchas situaciones es la mejor forma de arrancar un proceso de rediseño ecológico, sobre todo si prefieres no arriesgar mucho de entrada; si aceptas más riesgo, cabe algo más ambicioso. Examina los impactos ecológicos de tu negocio (desperdicio, toxicidad, uso de recursos escasos) para encontrar dónde el rediseño tiene más potencial. El éxito depende de que logres a la vez calidad, precio e impacto ambiental que tu cliente espera.",
   "pasos_accionables": [
     "Examina los impactos ecológicos actuales de tu producto: desperdicio, toxicidad, uso de recursos escasos",
     "Elige una prueba piloto con meta modesta y retorno rápido",
     "Define metas que puedas medir y las métricas para seguir el progreso",
     "Documenta lo que aprendas para escalarlo a futuros proyectos",
-    "Para priorizar el rediseño, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control y qué resultados podrían escalarse"
+    "Para priorizar el rediseño, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control, si hay oportunidades de innovación de ruptura, de qué proyectos puede aprender más tu equipo, dónde ya tienes capacidad técnica y qué resultados podrían escalarse"
   ],
   "entregable_esperado": "Una prueba piloto de rediseño definida, con metas, métricas y un plan para documentar lo que aprendas",
   "nodos_previos": [
@@ -56,6 +56,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-169-aprender_haciendo_dfe-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Empieza con una prueba de meta modesta, baja inversión y retorno rápido: es la mejor forma de arrancar un proceso de rediseño ecológico, sobre todo si prefieres no arriesgar mucho de entrada. Examina los impactos ecológicos de tu negocio (desperdicio, toxicidad, uso de recursos escasos) para encontrar dónde el rediseño tiene más potencial. El éxito depende de que logres a la vez calidad, precio e impacto ambiental que tu cliente espera.",
+      "texto_nuevo": "Empieza con una prueba de meta modesta, baja inversión y retorno rápido: en muchas situaciones es la mejor forma de arrancar un proceso de rediseño ecológico, sobre todo si prefieres no arriesgar mucho de entrada; si aceptas más riesgo, cabe algo más ambicioso. Examina los impactos ecológicos de tu negocio (desperdicio, toxicidad, uso de recursos escasos) para encontrar dónde el rediseño tiene más potencial. El éxito depende de que logres a la vez calidad, precio e impacto ambiental que tu cliente espera.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3677",
+        "frase": "In many situations, a project with a modest goal, small investment, and quick payback"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la prueba modesta funciona mejor en muchas situaciones; el resumen la vuelve la mejor forma sin cautela.; Mismo endurecimiento: el libro lo limita a muchas situaciones y admite un proyecto más ambicioso en empresas abiertas al riesgo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-aprender_haciendo_dfe-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para priorizar el rediseño, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control y qué resultados podrían escalarse",
+      "texto_nuevo": "Para priorizar el rediseño, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control, si hay oportunidades de innovación de ruptura, de qué proyectos puede aprender más tu equipo, dónde ya tienes capacidad técnica y qué resultados podrían escalarse",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3683",
+        "frase": "Do breakout innovation opportunities exist? From which projects could the design team learn the most?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae ocho preguntas y el paso omite tres: innovación de ruptura, de qué proyectos aprender más y capacidad técnica existente.; Misma omisión de tres preguntas de la lista del libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

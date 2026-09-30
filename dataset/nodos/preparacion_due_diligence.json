@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Si tu negocio opera en Estados Unidos, convertirlo en C Corporation en Delaware; si estás en otro país, averiguar cuál es la forma legal equivalente",
     "Registrar tu negocio para operar legalmente en cada estado o región donde funciona, si corresponde",
-    "Crear un data site (Dropbox, Google Drive, Carta) con documentos organizacionales, cap table, contratos de empleo y financieros",
+    "Crear un data site (Dropbox, Google Drive, Carta) con documentos organizacionales, cap table, contratos de empleo, financieros, presupuestos y lista de clientes principales, y revisar al armarlo que cada documento esté debidamente firmado",
     "Revisar y actualizar el cap table con ayuda de la persona que te asesora legalmente"
   ],
   "entregable_esperado": "Data site completo y organizado listo para revisión de inversores",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Prepara tu Debida Diligencia",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-169-preparacion_due_diligence-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear un data site (Dropbox, Google Drive, Carta) con documentos organizacionales, cap table, contratos de empleo y financieros",
+      "texto_nuevo": "Crear un data site (Dropbox, Google Drive, Carta) con documentos organizacionales, cap table, contratos de empleo, financieros, presupuestos y lista de clientes principales, y revisar al armarlo que cada documento esté debidamente firmado",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "339",
+        "frase": "take the time to review these documents and ensure they are properly executed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide revisar al armar el data site que cada documento esté bien firmado, para corregirlo por adelantado.; La lista del libro incluye presupuestos y lista de clientes principales, que el paso omite.; Misma revisión de firmas perdida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

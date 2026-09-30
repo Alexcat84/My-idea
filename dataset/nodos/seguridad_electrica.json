@@ -11,7 +11,7 @@
     "Inspeccionar visualmente cables y equipos antes de cada uso",
     "Bloquear y etiquetar los circuitos desenergizados antes de intervenirlos",
     "Instalar interruptores de falla a tierra (GFCI) en circuitos temporales",
-    "Aprender RCP si tú o alguien de tu negocio está expuesto a la electricidad",
+    "Aprender RCP si tú o alguien de tu negocio trabaja con regularidad en equipos o líneas eléctricas energizadas o cerca de ellos",
     "Asegurar la conexión a tierra de herramientas y equipos eléctricos portátiles"
   ],
   "entregable_esperado": "Checklist de seguridad eléctrica completado y un plan para corregir las deficiencias detectadas en instalaciones o equipos.",
@@ -41,6 +41,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 5
+    },
+    {
+      "id": "final-e1-168-seguridad_electrica-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aprender RCP si tú o alguien de tu negocio está expuesto a la electricidad",
+      "texto_nuevo": "Aprender RCP si tú o alguien de tu negocio trabaja con regularidad en equipos o líneas eléctricas energizadas o cerca de ellos",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "319",
+        "frase": "regularly work on or around energized electrical equipment or lines"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita la RCP a quienes trabajan con regularidad en o cerca de equipos o líneas energizados.; Mismo límite perdido.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,15 +4,15 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguridad de Trabajadores Jóvenes",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos, debido a su falta de experiencia y a que les cuesta más hacer preguntas. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
+  "resumen_teorico": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos, debido a su falta de experiencia y a que les cuesta más hacer preguntas. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas, límites para conducir por trabajo), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
   "pasos_accionables": [
     "Verificar el cumplimiento de las leyes locales de trabajo infantil según la edad de cada persona",
     "Confirmar que los menores de 18 no operen equipos peligrosos que estén prohibidos para ellos",
     "Obtener los permisos de trabajo que exija la ley en tu país o región",
     "Aprender tú mismo, y explicar a quien te ayude, las leyes de trabajo infantil aplicables",
     "Dar capacitación específica sobre riesgos y prácticas seguras a los jóvenes que contrates",
-    "Reforzar la información de seguridad durante las primeras semanas de trabajo",
-    "Dejar claro que no habrá ningún tipo de represalia por reportar condiciones inseguras o lesiones",
+    "Reforzar la información de seguridad de forma constante y de varias maneras, sobre todo durante las primeras semanas de trabajo",
+    "Dejar claro que no habrá ningún tipo de represalia por reportar condiciones inseguras, lesiones o casi accidentes",
     "Fomentar que participen en capacitaciones formales de seguridad laboral cuando existan en tu mercado"
   ],
   "entregable_esperado": "Lista de verificación del cumplimiento de leyes de trabajo infantil y un plan de capacitación específico para los jóvenes que trabajen contigo.",
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Cuida a Tus Jóvenes Empleados",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-168-seguridad_trabajadores_jovenes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos, debido a su falta de experiencia y a que les cuesta más hacer preguntas. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
+      "texto_nuevo": "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos, debido a su falta de experiencia y a que les cuesta más hacer preguntas. Si contratas menores de edad debes cumplir las leyes de trabajo infantil de tu país o región (edad mínima, horas permitidas, tareas prohibidas, límites para conducir por trabajo), darles capacitación específica sobre los riesgos de su tarea, y crear un ambiente donde puedan reportar condiciones inseguras sin miedo a que los perjudique.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1721-1723",
+        "frase": "Workers under 17 do not drive for work."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye los límites para conducir por trabajo, que el paréntesis omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-168-seguridad_trabajadores_jovenes-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reforzar la información de seguridad durante las primeras semanas de trabajo",
+      "texto_nuevo": "Reforzar la información de seguridad de forma constante y de varias maneras, sobre todo durante las primeras semanas de trabajo",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1755",
+        "frase": "routinely reinforced in a variety of ways, especially over the first several weeks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide reforzar de forma rutinaria y de varias maneras, sobre todo en las primeras semanas, no solo en ellas.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-168-seguridad_trabajadores_jovenes-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dejar claro que no habrá ningún tipo de represalia por reportar condiciones inseguras o lesiones",
+      "texto_nuevo": "Dejar claro que no habrá ningún tipo de represalia por reportar condiciones inseguras, lesiones o casi accidentes",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1761",
+        "frase": "reporting an unsafe work condition, an injury or a \"near-miss.\""
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye los casi accidentes entre lo que se reporta sin castigo.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

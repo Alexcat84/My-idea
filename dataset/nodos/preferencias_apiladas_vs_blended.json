@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar qué enfoque (apilado o blended) se está proponiendo en el term sheet de la nueva ronda.",
     "Modelar el impacto de cada enfoque en escenarios de venta bajos donde la preferencia de liquidación domina la distribución.",
-    "Negociar considerando el poder relativo de negociación de cada serie de inversionistas y la estructura de capital existente."
+    "Negociar considerando el poder relativo de negociación de cada serie de inversionistas, la posibilidad de tu empresa de conseguir financiamiento en otro lado y la estructura de capital existente."
   ],
   "entregable_esperado": "Un modelo de cap table con escenarios de distribución de proceeds bajo enfoque apilado y bajo enfoque blended.",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Ordena tus Preferencias entre Rondas",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-169-preferencias_apiladas_vs_blended-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar considerando el poder relativo de negociación de cada serie de inversionistas y la estructura de capital existente.",
+      "texto_nuevo": "Negociar considerando el poder relativo de negociación de cada serie de inversionistas, la posibilidad de tu empresa de conseguir financiamiento en otro lado y la estructura de capital existente.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1057",
+        "frase": "ability of the company to go elsewhere for additional financing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye entre los factores la posibilidad de la empresa de conseguir financiamiento en otro lado.; Misma omisión de ese factor.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

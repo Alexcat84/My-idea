@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Actualización de Sistemas de Iluminación Eficiente",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales de EE.UU., y al menos el 50% de esa energía se desperdicia por mal diseño, mal mantenimiento o uso inadecuado. Actualizar a LED, sensores de ocupación y fotosensores ofrece uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
+  "resumen_teorico": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales de EE.UU., y al menos el 50% de esa energía se desperdicia por mal diseño, mal mantenimiento o uso inadecuado. Actualizar a LED, sensores de ocupación y fotosensores puede ofrecer uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
   "pasos_accionables": [
-    "Reemplazar iluminación incandescente/fluorescente por LED",
+    "Reemplazar iluminación incandescente/fluorescente por LED, sabiendo que en algunos casos la fluorescente con balastos electrónicos puede ser la mejor opción",
     "Instalar sensores de ocupación para apagado automático",
     "Instalar fotosensores que ajusten luz según disponibilidad de luz natural",
     "Calcular ROI de la retrofit de iluminación"
@@ -58,6 +58,39 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R053-032 (ANADIDO, lector y verificador de acuerdo): Cifra de antiguedad que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R053-032"
+    },
+    {
+      "id": "final-e1-169-actualizacion_iluminacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales de EE.UU., y al menos el 50% de esa energía se desperdicia por mal diseño, mal mantenimiento o uso inadecuado. Actualizar a LED, sensores de ocupación y fotosensores ofrece uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
+      "texto_nuevo": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales de EE.UU., y al menos el 50% de esa energía se desperdicia por mal diseño, mal mantenimiento o uso inadecuado. Actualizar a LED, sensores de ocupación y fotosensores puede ofrecer uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2740",
+        "frase": "can deliver some of the highest and fastest returns on investment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la actualización puede dar algunos de los retornos más altos y rápidos; el resumen lo afirma sin cautela.; Mismo endurecimiento del 'can deliver' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-actualizacion_iluminacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reemplazar iluminación incandescente/fluorescente por LED",
+      "texto_nuevo": "Reemplazar iluminación incandescente/fluorescente por LED, sabiendo que en algunos casos la fluorescente con balastos electrónicos puede ser la mejor opción",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2748-2750",
+        "frase": "In some cases fluorescent lamps and electronic ballast technologies may be your best option"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro prefiere el LED pero advierte que en algunos casos la fluorescente con balastos electrónicos puede ser la mejor opción.; Misma excepción perdida.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

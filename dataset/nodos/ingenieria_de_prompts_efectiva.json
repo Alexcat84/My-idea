@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ingeniería de Prompts como Habilidad Práctica",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "La ingeniería de prompts consiste en dar contexto, restricciones y una identidad clara a la IA para romper sus patrones genéricos de respuesta. Al tratar a la IA como una persona con un rol específico y proporcionar instrucciones claras y lógicas ('programar en prosa'), se obtienen resultados mucho más útiles e interesantes que con preguntas simples y directas.",
+  "resumen_teorico": "La ingeniería de prompts consiste en dar contexto, restricciones y una identidad clara a la IA para romper sus patrones genéricos de respuesta. Al tratar a la IA como una persona con un rol específico y proporcionar instrucciones claras y lógicas ('programar en prosa'), se pueden obtener resultados mucho más útiles e interesantes que con preguntas simples y directas.",
   "pasos_accionables": [
     "Definir qué 'tipo de persona' o rol debe adoptar la IA antes de hacer la solicitud (ej. 'actúa como director de marketing de una startup B2B')",
     "Proporcionar contexto específico sobre el objetivo de negocio o proyecto",
@@ -40,5 +40,23 @@
   ],
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-167-ingenieria_de_prompts_efectiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La ingeniería de prompts consiste en dar contexto, restricciones y una identidad clara a la IA para romper sus patrones genéricos de respuesta. Al tratar a la IA como una persona con un rol específico y proporcionar instrucciones claras y lógicas ('programar en prosa'), se obtienen resultados mucho más útiles e interesantes que con preguntas simples y directas.",
+      "texto_nuevo": "La ingeniería de prompts consiste en dar contexto, restricciones y una identidad clara a la IA para romper sus patrones genéricos de respuesta. Al tratar a la IA como una persona con un rol específico y proporcionar instrucciones claras y lógicas ('programar en prosa'), se pueden obtener resultados mucho más útiles e interesantes que con preguntas simples y directas.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1231",
+        "frase": "By breaking the pattern, you can get much more useful and interesting outputs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que así se pueden obtener resultados más útiles; el nodo lo da por seguro.; Mismo defecto: endurece un 'can get' a un resultado seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

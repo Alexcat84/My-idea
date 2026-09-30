@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Triángulo de Interacción de la Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La calidad no se determina solo por el producto en sí, sino por la interacción de tres vértices: (1) el producto, (2) el usuario y cómo lo usa/instala/cuida, y (3) las instrucciones, capacitación y servicio de soporte disponibles. Ningún vértice por sí solo define la calidad percibida.",
+  "resumen_teorico": "La calidad no se determina solo por el producto en sí, sino por la interacción de tres vértices: (1) el producto, (2) el usuario, cómo lo usa/instala/cuida y lo que le llevaron a esperar, y (3) las instrucciones, capacitación, servicio de soporte y repuestos disponibles. Ningún vértice por sí solo define la calidad percibida.",
   "pasos_accionables": [
     "Evaluar el producto en pruebas de laboratorio y campo",
-    "Estudiar cómo el usuario realmente instala, usa y mantiene el producto",
+    "Estudiar cómo el usuario realmente instala, usa y mantiene el producto, y qué le llevaron a esperar de él",
     "Revisar la calidad de las instrucciones, capacitación y servicio postventa disponible",
     "Analizar la interacción conjunta de los tres factores, no cada uno aisladamente"
   ],
@@ -40,6 +40,39 @@
         "evidencia": "F11-031: Diagnosticar quejas de calidad de un producto ya en el mercado mediante producto, uso y soporte es control y mejora de lo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-167-triangulo_de_interaccion_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La calidad no se determina solo por el producto en sí, sino por la interacción de tres vértices: (1) el producto, (2) el usuario y cómo lo usa/instala/cuida, y (3) las instrucciones, capacitación y servicio de soporte disponibles. Ningún vértice por sí solo define la calidad percibida.",
+      "texto_nuevo": "La calidad no se determina solo por el producto en sí, sino por la interacción de tres vértices: (1) el producto, (2) el usuario, cómo lo usa/instala/cuida y lo que le llevaron a esperar, y (3) las instrucciones, capacitación, servicio de soporte y repuestos disponibles. Ningún vértice por sí solo define la calidad percibida.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3871",
+        "frase": "what he was led (as by advertising) to expect"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Además del mismo defecto, el tercer vértice pierde la disponibilidad de repuestos.; El vértice del usuario incluye en el libro lo que le llevaron a esperar, por ejemplo con la publicidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-167-triangulo_de_interaccion_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estudiar cómo el usuario realmente instala, usa y mantiene el producto",
+      "texto_nuevo": "Estudiar cómo el usuario realmente instala, usa y mantiene el producto, y qué le llevaron a esperar de él",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3871",
+        "frase": "what he was led (as by advertising) to expect"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso omite lo que al usuario le llevaron a esperar, parte del vértice del usuario.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

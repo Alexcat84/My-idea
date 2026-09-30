@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Dificultad para Notar la Ausencia de Cambio (Non-Events)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "En sistemas automatizados, muchos accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque se abandonan bajo carga de trabajo alta. El resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
+  "resumen_teorico": "En sistemas automatizados, varios accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque se abandonan bajo carga de trabajo alta. A menudo el resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
   "pasos_accionables": [
     "Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado",
     "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
@@ -38,6 +38,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Herramienta añadida: el libro no propone alertas por ausencia de cambio. Dice que a las personas, y también a las máquinas, les cuesta notar los no-eventos (Dekker L2335-L2348: \"Something that is not happening is not a good trigger for human (or even machine) intervention.\"). También avisa de que los avisos automáticos saturan el puesto. Se reescribe como sugerencia de My Idea. El resumen_teorico no menciona alertas y no hay nada que quitar. El entregable ('Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos') repite la idea y, por la regla PRACTICO, se deja. Aviso para la sesión principal: el paso 0 del mismo nodo ('Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado') lleva la misma idea y no está en esta lista.",
       "indice": 2,
       "auditoria": "tramo1 DK3-088"
+    },
+    {
+      "id": "final-e1-168-noticing_non_events-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En sistemas automatizados, muchos accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque se abandonan bajo carga de trabajo alta. El resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
+      "texto_nuevo": "En sistemas automatizados, varios accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque se abandonan bajo carga de trabajo alta. A menudo el resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2342-2348",
+        "frase": "Automation surprises are often the end-result"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las sorpresas de automatización son a menudo el resultado, no siempre.; El libro habla de varios accidentes ('a number of'), no de muchos.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

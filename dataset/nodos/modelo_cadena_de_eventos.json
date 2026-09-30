@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Modelo de Cadena de Eventos (Chain of Events)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de eventos simultáneos, y asume que causas pequeñas producen efectos pequeños.",
+  "resumen_teorico": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó, a partir de reportes de supervisores, que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de otros eventos que pudieron influir, incapacidad para tratar eventos simultáneos, y asume que causas pequeñas producen efectos pequeños.",
   "pasos_accionables": [
     "Identificar la secuencia de eventos, evaluaciones y acciones que llevaron al resultado",
     "Reconocer los límites del modelo: la elección del punto de inicio de la cadena es arbitraria",
@@ -41,6 +41,22 @@
         "evidencia": "Q072-010: Reconstruir la secuencia de un accidente ya ocurrido es investigacion y control de la operacion en marcha, fase ejecucion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-168-modelo_cadena_de_eventos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de eventos simultáneos, y asume que causas pequeñas producen efectos pequeños.",
+      "texto_nuevo": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó, a partir de reportes de supervisores, que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de otros eventos que pudieron influir, incapacidad para tratar eventos simultáneos, y asume que causas pequeñas producen efectos pequeños.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2696",
+        "frase": "this was based on supervisor reports about those accidents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro separa excluir otros eventos que influyeron y no poder tratar eventos simultáneos; el nodo pierde lo primero.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae que la cifra salió de reportes de supervisores, salvedad con la que el libro la relativiza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

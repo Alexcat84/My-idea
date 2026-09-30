@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ventajas de la Estabilidad o Control Estadístico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un proceso estable te da ventajas concretas: identidad y capacidad de predecir lo que va a pasar, costos que puedes anticipar, regularidad en lo que entregas (la base de trabajar justo a tiempo), la máxima productividad posible con tu sistema actual, relaciones más simples con quienes te proveen, y la posibilidad de medir rápido el efecto de cualquier cambio que hagas.",
+  "resumen_teorico": "Un proceso estable te da ventajas concretas: identidad y capacidad de predecir lo que va a pasar, costos que puedes anticipar, regularidad en lo que entregas (la base de trabajar justo a tiempo), la máxima productividad posible con tu sistema actual, relaciones más simples con quienes te proveen cuando lo que te entregan también está en control estadístico, y la posibilidad de medir rápido el efecto de cualquier cambio que hagas.",
   "pasos_accionables": [
     "Documenta el estado de estabilidad de tu proceso mediante gráficos de control",
     "Tené claras las ventajas que puedes medir (costos, productividad, relación con proveedores) antes de decidir si vale la pena invertir en esto",
@@ -40,6 +40,22 @@
         "evidencia": "F05-012: El control estadístico de un proceso productivo en marcha, con gráficos de control y justo a tiempo, es operar y mejorar. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-167-ventajas_control_estadistico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un proceso estable te da ventajas concretas: identidad y capacidad de predecir lo que va a pasar, costos que puedes anticipar, regularidad en lo que entregas (la base de trabajar justo a tiempo), la máxima productividad posible con tu sistema actual, relaciones más simples con quienes te proveen, y la posibilidad de medir rápido el efecto de cualquier cambio que hagas.",
+      "texto_nuevo": "Un proceso estable te da ventajas concretas: identidad y capacidad de predecir lo que va a pasar, costos que puedes anticipar, regularidad en lo que entregas (la base de trabajar justo a tiempo), la máxima productividad posible con tu sistema actual, relaciones más simples con quienes te proveen cuando lo que te entregan también está en control estadístico, y la posibilidad de medir rápido el efecto de cualquier cambio que hagas.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7845",
+        "frase": "Relationships with the vendor who delivers material that is in statistical control are greatly simplified."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la simplificación a que el material del proveedor esté en control estadístico.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Inventariar todo el hardware de oficina y de centro de datos (computadoras, servidores, impresoras, etc.)",
     "Listar todo el software utilizado a nivel empresa e individual",
     "Medir consumo de papel usando contadores de dispositivos",
-    "Calcular consumo energético por componente de TI y por persona",
+    "Calcular consumo energético por componente de TI y por persona, y el de los equipos auxiliares del centro de datos (climatización, humidificación, UPS, transformadores y pérdidas de distribución)",
     "Utilizar herramientas como el 'Aberdeen/IBM Green IT Assessment Calculator' para benchmarking"
   ],
   "entregable_esperado": "Informe de auditoría de TI con inventario completo, métricas de consumo energético y de papel, y comparación con estándares best-in-class",
@@ -43,6 +43,23 @@
         "evidencia": "F21-006: Es un diagnostico interno de TI como base para disenar una estrategia de TI verde, no una prueba con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-169-auditoria_ti_verde-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular consumo energético por componente de TI y por persona",
+      "texto_nuevo": "Calcular consumo energético por componente de TI y por persona, y el de los equipos auxiliares del centro de datos (climatización, humidificación, UPS, transformadores y pérdidas de distribución)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3175-3181",
+        "frase": "Energy consumption of data center mechanical and electrical overheads, such as air-conditioning, humidification"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también el consumo de los equipos auxiliares del centro de datos para fijar cuánta energía consume la TI.; Misma omisión: faltan climatización, humidificación, UPS, transformadores y pérdidas de distribución del centro de datos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

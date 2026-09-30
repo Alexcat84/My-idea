@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Entender el Proceso de Decisión de un VC",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Los VCs pasan por un proceso interno de evaluación (due diligence informal) antes de decidir invertir, que incluye solicitar presentaciones, proyecciones, pipeline de clientes, plan de desarrollo, análisis competitivo y bios del equipo. Es clave identificar si el contacto es con un socio con poder de decisión (partner/managing director) o solo un asociado sin capacidad real de cerrar el trato, y estar atento a señales de alerta como VCs que piden proyecciones excesivas para etapas tempranas.",
+  "resumen_teorico": "Los VCs pasan por un proceso interno de evaluación (due diligence informal) antes de decidir invertir, que incluye solicitar presentaciones, proyecciones, pipeline de clientes, plan de desarrollo, análisis competitivo y bios del equipo. Es clave identificar si el contacto es con un socio con poder de decisión (partner/managing director) o con un asociado que probablemente no tiene peso real para cerrar el trato, y estar atento a señales de alerta como VCs que piden proyecciones excesivas para etapas tempranas.",
   "pasos_accionables": [
     "Identificar el rol de la persona de contacto en la firma (asociado vs. partner/managing director)",
     "Solicitar introducciones a otros founders que la firma haya respaldado, incluyendo casos fallidos",
     "Preparar de antemano documentos comúnmente solicitados: proyecciones, pipeline, plan de desarrollo, análisis competitivo, bios",
     "Detectar señales de alerta si el VC pide información desproporcionada para la etapa de la empresa",
-    "Solicitar y verificar referencias de otros emprendedores sobre el trato del VC en situaciones difíciles",
+    "Solicitar y verificar referencias de otros emprendedores sobre el trato del VC en situaciones difíciles, incluyendo founders que el VC no puso en su lista de referencias",
     "Preguntar directamente cuál es el proceso y los próximos pasos después de la segunda reunión."
   ],
   "entregable_esperado": "Evaluación documentada del proceso y comportamiento de cada VC en negociación, con referencias verificadas",
@@ -57,6 +57,39 @@
         "motivo": "Orden invertido: el proceso de decisión del VC (presentaciones, due diligence informal, identificar al socio que decide) ocurre antes del term sheet. La cláusula de exclusividad se firma con el term sheet, así que ese nodo la prepara y no la sigue."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-169-proceso_decision_vc-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los VCs pasan por un proceso interno de evaluación (due diligence informal) antes de decidir invertir, que incluye solicitar presentaciones, proyecciones, pipeline de clientes, plan de desarrollo, análisis competitivo y bios del equipo. Es clave identificar si el contacto es con un socio con poder de decisión (partner/managing director) o solo un asociado sin capacidad real de cerrar el trato, y estar atento a señales de alerta como VCs que piden proyecciones excesivas para etapas tempranas.",
+      "texto_nuevo": "Los VCs pasan por un proceso interno de evaluación (due diligence informal) antes de decidir invertir, que incluye solicitar presentaciones, proyecciones, pipeline de clientes, plan de desarrollo, análisis competitivo y bios del equipo. Es clave identificar si el contacto es con un socio con poder de decisión (partner/managing director) o con un asociado que probablemente no tiene peso real para cerrar el trato, y estar atento a señales de alerta como VCs que piden proyecciones excesivas para etapas tempranas.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "591",
+        "frase": "he probably doesn't have any real pull to get a deal done"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el asociado probablemente no tiene peso real para cerrar el trato; el resumen lo afirma como certeza.; Mismo endurecimiento del 'probably' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-169-proceso_decision_vc-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar y verificar referencias de otros emprendedores sobre el trato del VC en situaciones difíciles",
+      "texto_nuevo": "Solicitar y verificar referencias de otros emprendedores sobre el trato del VC en situaciones difíciles, incluyendo founders que el VC no puso en su lista de referencias",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "559",
+        "frase": "Ask for references from the VCs but also hunt down founders they didn't list"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además buscar founders que el VC no dio como referencias, para tener el cuadro completo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

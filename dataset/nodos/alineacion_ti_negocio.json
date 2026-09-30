@@ -7,9 +7,9 @@
   "resumen_teorico": "Cuando tus sistemas y herramientas tecnológicas están alineados con tu modelo de negocio, tienes más chances de que funcione. El lienzo de modelo de negocio (Business Model Canvas) te ayuda a entender rápido cómo funciona tu negocio sin perderte en detalles operativos, y sirve de puente entre tu visión de negocio, las aplicaciones que usas y la tecnología detrás (arquitectura empresarial). Usa el Canvas para definir primero tu visión de negocio y después alinea tus aplicaciones e infraestructura tecnológica en función de eso.",
   "pasos_accionables": [
     "Usa el Canvas para describir con claridad tu visión de negocio antes de definir qué necesitas de tecnología",
-    "Identifica qué aplicaciones necesitas para sostener partes clave de tu negocio, como gestión de clientes, gestión de recursos o manejo de proveedores",
+    "Identifica qué aplicaciones necesitas para sostener partes clave de tu negocio, como sistemas de recomendación o gestión de la cadena de suministro",
     "Identifica qué información necesitas manejar, como perfiles de clientes o dónde guardar tus datos",
-    "Define qué infraestructura tecnológica necesitas, como servidores, almacenamiento de datos y comunicaciones",
+    "Define qué infraestructura tecnológica necesitas, como servidores, almacenamiento de datos y comunicaciones, y cómo tus decisiones de arquitectura, estándares e interfaces pueden limitar o potenciar tu modelo",
     "Evalúa en qué partes de tu negocio la seguridad es crítica",
     "Decide si necesitas invertir en capacitación tecnológica o en investigación y desarrollo para mejorar tu modelo a futuro"
   ],
@@ -50,6 +50,40 @@
         "motivo": "Alinear la tecnologia con el Canvas no lleva de forma natural a simular operaciones de supply chain."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-167-alineacion_ti_negocio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica qué aplicaciones necesitas para sostener partes clave de tu negocio, como gestión de clientes, gestión de recursos o manejo de proveedores",
+      "texto_nuevo": "Identifica qué aplicaciones necesitas para sostener partes clave de tu negocio, como sistemas de recomendación o gestión de la cadena de suministro",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "4991",
+        "frase": "e.g. recommendation systems, supply chain management applications"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Los ejemplos de gestión de clientes y de recursos no están en el libro, que pone sistemas de recomendación y cadena de suministro.; Mismo defecto: ejemplos que el libro no nombra.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-167-alineacion_ti_negocio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define qué infraestructura tecnológica necesitas, como servidores, almacenamiento de datos y comunicaciones",
+      "texto_nuevo": "Define qué infraestructura tecnológica necesitas, como servidores, almacenamiento de datos y comunicaciones, y cómo tus decisiones de arquitectura, estándares e interfaces pueden limitar o potenciar tu modelo",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "5007",
+        "frase": "How will IT architecture, standards, and interface choices limit or leverage my business model?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Ningún paso recoge la pregunta del libro sobre cómo arquitectura, estándares e interfaces limitan o potencian el modelo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

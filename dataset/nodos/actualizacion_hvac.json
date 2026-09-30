@@ -9,7 +9,7 @@
     "Ajustar controles automáticos según ocupación real del edificio",
     "Reemplazar equipos HVAC obsoletos por alternativas eficientes",
     "Sellar ductos para reducir fugas de aire (hasta 80% menos fuga)",
-    "Explorar recuperación de calor residual de procesos industriales"
+    "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos industriales"
   ],
   "entregable_esperado": "Plan de modernización HVAC con estimación de ahorro energético",
   "nodos_previos": [
@@ -41,6 +41,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R053-016 (ANADIDO, lector y verificador de acuerdo): Cifra de antiguedad que el libro no da. La sesion compone el texto a mano porque el recorte automatico al fragmento dejo la frase mal construida; el contenido es el del texto fiel del verificador o del arbitro.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R053-016"
+    },
+    {
+      "id": "final-e1-169-actualizacion_hvac-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explorar recuperación de calor residual de procesos industriales",
+      "texto_nuevo": "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos industriales",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2758",
+        "frase": "As your strategy matures, explore options to capture and use excess waste heat"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja la recuperación de calor residual para cuando la estrategia madure, después de los ajustes y reemplazos.; Misma condición de momento perdida.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [
