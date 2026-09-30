@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría del Sistema de Control de Calidad (Verificación Periódica)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personas, cambios no anticipados y atajos que erosionan su efectividad. Revisar el sistema de forma periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Aunque no participes directamente en las operaciones diarias, tú decides que esta revisión se haga, para mantenerte informado sobre la salud del sistema. La revisión también exige clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando el producto está fuera de límites estadísticos pero aún dentro de tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
+  "resumen_teorico": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personas, cambios no anticipados y atajos que erosionan su efectividad. Revisar el sistema de forma periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Aunque no participes directamente en las operaciones diarias, tú decides que esta revisión se haga, para mantenerte informado sobre la salud del sistema. Además, te toca clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando los puntos están fuera de los límites estadísticos pero el producto aún cumple la tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
   "pasos_accionables": [
     "Establece un calendario de revisiones periódicas e independientes de tu sistema de control de calidad",
     "Define las preguntas clave de cada revisión: si el sistema sigue siendo adecuado y si se está siguiendo correctamente",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide aclarar quién es responsable de la acción correctiva cuando los puntos salen de los límites; el paso pierde la asignación de responsabilidad.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-005-auditoria_sistema_control_calidad_2-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personas, cambios no anticipados y atajos que erosionan su efectividad. Revisar el sistema de forma periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Aunque no participes directamente en las operaciones diarias, tú decides que esta revisión se haga, para mantenerte informado sobre la salud del sistema. La revisión también exige clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando el producto está fuera de límites estadísticos pero aún dentro de tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
+      "texto_nuevo": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personas, cambios no anticipados y atajos que erosionan su efectividad. Revisar el sistema de forma periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Aunque no participes directamente en las operaciones diarias, tú decides que esta revisión se haga, para mantenerte informado sobre la salud del sistema. Además, te toca clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando los puntos están fuera de los límites estadísticos pero el producto aún cumple la tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8443-8446",
+        "frase": "leaders should clarify the responsibility for corrective action on points outside the control limits"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone clarificar la responsabilidad y fijar las guías como tarea aparte de quien dirige, no como exigencia de la revisión, y las guías son para puntos fuera de límites con producto dentro de tolerancia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

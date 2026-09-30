@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Revisión independiente de tu producto terminado (auditoría de producto)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
+  "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas.",
   "pasos_accionables": [
     "Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita",
     "Elige en qué momento revisas: fábrica, distribuidor, servicio o ya en campo, según qué tan complejo sea tu producto",
@@ -239,6 +239,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro cada clase de gravedad lleva un peso en deméritos y la medida es deméritos por unidad; el paso pierde la ponderación.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-005-auditoria_de_producto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
+      "texto_nuevo": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10354-10356",
+        "frase": "The scope of some product audits completely misses the mark in measuring customer reaction."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo quitar; doble lectura ciega, arbitro): En el libro el 98% es la calificación que dio la propia auditoría de producto, cuyo alcance no medía la reacción del cliente; el nodo presenta la auditoría como lo que detecta ese número engañoso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

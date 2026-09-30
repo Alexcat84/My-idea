@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define de antemano el número o porcentaje de clientes que consideras suficiente para decir que la prueba funcionó",
     "Compara cuánto te cuesta conseguir un cliente contra el precio de tu producto",
-    "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden y cuántos se lo cuentan a otros, en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
+    "Manda invitaciones múltiples (por correo, anuncios) y mide, por separado entre quienes mostraron interés serio en el problema y quienes mostraron menos interés o ninguno, cuántos responden y cuántos se lo cuentan a otros (y a cuántos), en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
     "Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que lo entienden tras una larga explicación pero no se lanzan a comprarlo y los que no ven la necesidad"
   ],
   "entregable_esperado": "Un documento con tus criterios de pasa o no pasa, los resultados reales comparados, y tu decisión de seguir adelante o pivotar",
@@ -80,6 +80,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la tercera categoría del libro (lo entienden tras una larga explicación pero nadie se lanza a comprarlo), que el libro trata como señal de pivote.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-006-realizar_pruebas_pasa_no_pasa-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden y cuántos se lo cuentan a otros, en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
+      "texto_nuevo": "Manda invitaciones múltiples (por correo, anuncios) y mide, por separado entre quienes mostraron interés serio en el problema y quienes mostraron menos interés o ninguno, cuántos responden y cuántos se lo cuentan a otros (y a cuántos), en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9034-9040",
+        "frase": "how many will tell others, and how many will they tell?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro separa a los muy interesados de los poco o nada interesados y pide medir en cada grupo a cuántos se lo cuentan; el paso junta todo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

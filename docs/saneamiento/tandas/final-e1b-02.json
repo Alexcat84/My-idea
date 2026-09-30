@@ -1,0 +1,589 @@
+[
+ {
+  "id": "final-e1b-004-calculo_de_aranceles_importacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "calculo_de_aranceles_importacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los aranceles, tarifas portuarias e impuestos pueden ser altos, por lo que es muy importante considerar su efecto en el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "texto_nuevo": "Los aranceles, tarifas portuarias e impuestos pueden ser altos, por lo que es muy importante considerar su efecto en el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Puedes calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3681",
+   "frase": "You can calculate tariffs and taxes for most commodities to most countries"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que puedes calcular aranceles e impuestos con esa base de datos; el nodo lo vuelve esencial.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-autocertificacion_del_exportador-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "autocertificacion_del_exportador",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses); el formato de fecha lo fija el modelo que uses, no la norma",
+  "texto_nuevo": "Si es múltiple, indicar en la certificación el periodo que cubre, con fecha de inicio y de fin (máximo 12 meses)",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "5233-5235",
+   "frase": "Provide the blanket period in \"mm/dd/yyyy to mm/dd/yyyy\" format (12-month maximum)."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo da el formato de fecha en su ejemplo; no dice que lo fije el modelo y no la norma.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-004-barreras_comerciales_no_arancelarias-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "barreras_comerciales_no_arancelarias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud, exigencias ambientales, estándares eléctricos distintos, límites a bienes que vienen de ciertos países o llevan componentes de ellos, o restricciones culturales. En Estados Unidos, una oficina del gobierno ofrece un programa gratuito que ayuda a los exportadores con este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "texto_nuevo": "Cuando quieres vender en otro país, te puedes topar con reglas que no son aranceles pero igual frenan tu entrada: protección a la industria local, normas de salud y seguridad, exigencias ambientales, estándares eléctricos o de medición distintos, límites a bienes que vienen de ciertos países o llevan componentes de ellos, o restricciones culturales. En Estados Unidos, una oficina del gobierno ofrece un programa gratuito que ayuda a los exportadores con este tipo de trabas. Esto refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu propio mercado antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2539-2543",
+   "frase": "local requirements for electrical or measurement systems"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice proteger la salud y la seguridad; se cae la seguridad.; El libro habla de sistemas eléctricos o de medición; se cae la medición.; El libro nombra salud y seguridad, y sistemas eléctricos o de medición; el resumen pierde la seguridad y la medición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-adaptacion_producto_mercado_exterior-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "adaptacion_producto_mercado_exterior",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcula cuánto cuesta adaptar el producto contra cuánto más vas a ganar por hacerlo",
+  "texto_nuevo": "Calcula cuánto cuesta adaptar el producto contra cuántos ingresos adicionales esperas por hacerlo",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2557",
+   "frase": "should determine the increased revenues expected from adaptation"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide determinar los ingresos adicionales esperados; el paso da por hecho que vas a ganar más.; Mismo defecto: el libro habla de ingresos esperados, no seguros.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-004-disenar_los_detalles_no_lo_inevitable-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "disenar_los_detalles_no_lo_inevitable",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Kevin Kelly plantea que muchas tecnologías (como internet) son inevitables en su llegada, pero sus características específicas (si son abiertas o cerradas, con o sin fines de lucro, transparentes u opacas) sí son elegibles por quienes las diseñan. El poder real del diseñador no está en detener lo inevitable, sino en decidir la forma particular en que se manifiesta.",
+  "texto_nuevo": "Kevin Kelly plantea que muchas tecnologías (como internet) son inevitables en su llegada, pero sus características específicas (si son transparentes o abiertas, gubernamentales o sin fines de lucro) sí son elegibles por quienes las diseñan. El poder real del diseñador no está en detener lo inevitable, sino en decidir la forma particular en que se manifiesta.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "1503",
+   "frase": "whether it’s transparent or open, whether it’s government or non-profit"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La elección del libro es transparente o abierta, de gobierno o sin fines de lucro; el nodo pierde lo gubernamental y cambia la lista.; Mismo defecto: se cae 'de gobierno' y entra 'con fines de lucro'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-capacidad_de_respuesta_responsable-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "capacidad_de_respuesta_responsable",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Responsabilidad viene del latín 'responsus': la capacidad de responder ante lo inesperado. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) puede ser más difícil de controlar y causar más daño; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
+  "texto_nuevo": "Responsabilidad viene del latín 'responsus': la capacidad de responder. Necesitas confianza en ti mismo para actuar y humildad para corregir el rumbo. Lo que crece rápido y se vuelve viral (como en redes sociales) puede ser más difícil de controlar y causar más daño; frenar el ritmo a propósito y construir imperfecciones deliberadas (como los códigos genéticos a prueba de fallos) puede ser tu forma de protegerte con responsabilidad.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "4453",
+   "frase": "the Latin responsus, which roughly means “the ability to respond”"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro da el sentido latino como la capacidad de responder, con tendencia a lo verbal; 'ante lo inesperado' no es parte de la etimología.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-abrazar_la_incomodidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "abrazar_la_incomodidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La incomodidad o torpeza aparece cuando estás fuera de sincronía con normas sociales o con una situación nueva. En lugar de resolverla rápido, quédate en ese estado incómodo con curiosidad, porque así le abres espacio a descubrir algo nuevo. La paciencia prolongada al observar (como el ejercicio de mirar una obra de arte durante tres horas) te revela detalles que el acceso instantáneo no te deja ver. Acceso no es sinónimo de aprendizaje: necesitas tiempo y paciencia estratégica para convertir la observación en conocimiento genuino.",
+  "texto_nuevo": "La incomodidad o torpeza aparece cuando estás fuera de sincronía con las normas sociales, el ritmo y las reglas y dinámicas no dichas. En lugar de resolverla rápido, quédate en ese estado incómodo con curiosidad, porque así le abres espacio a descubrir algo nuevo. La paciencia prolongada al observar (como el ejercicio de mirar una obra de arte durante tres horas) te revela detalles que el acceso instantáneo no te deja ver. Acceso no es sinónimo de aprendizaje: necesitas tiempo y paciencia estratégica para convertir la observación en conocimiento genuino.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "2686",
+   "frase": "out of sync with social norms, pace, and unspoken rules and dynamics"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La definición del libro enumera normas sociales, ritmo y reglas y dinámicas no dichas; el nodo pierde dos partes y pone otra.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-barreras_entrada_competencia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "barreras_entrada_competencia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "A medida que un negocio franquiciado tiene éxito, atraerá imitadores. Los franquiciadores inteligentes deben anticipar esto estableciendo barreras de entrada tempranas (ser primero en el mercado, posición de marca dominante, patentes de procesos de negocio, recetas o productos únicos) y adaptarse continuamente al mercado cambiante, como hizo McDonald's evolucionando su menú y servicios a lo largo de décadas.",
+  "texto_nuevo": "A medida que un negocio franquiciado tiene éxito, atraerá imitadores. Los franquiciadores inteligentes deben anticipar esto estableciendo barreras de entrada tempranas (ser primero en el mercado, posición de marca dominante, patentes de procesos de negocio, recetas, productos únicos o una actitud) y adaptarse continuamente al mercado cambiante, como hizo McDonald's evolucionando su menú y servicios a lo largo de décadas.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "805",
+   "frase": "It can be a recipe, a product, or an attitude."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye una actitud; el nodo la deja fuera.; Mismo defecto: falta la actitud.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-autoresponders_drip_campaigns-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "autoresponders_drip_campaigns",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El internet genera un volumen masivo de leads no calificados que deben filtrarse eficientemente. Un sistema de mensajes automáticos personalizados según el perfil del prospecto (ej. capitalización) permite nutrir leads interesados y filtrar los no calificados sin desperdiciar tiempo del personal de ventas, aunque su conveniencia varía de un franquiciador a otro.",
+  "texto_nuevo": "El internet puede generar un volumen masivo de leads no calificados que deben filtrarse eficientemente. Un sistema de mensajes automáticos personalizados según el perfil del prospecto (ej. capitalización) permite nutrir leads interesados y filtrar los no calificados sin desperdiciar tiempo del personal de ventas, aunque su conveniencia varía de un franquiciador a otro.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3373",
+   "frase": "The internet can create a massive number of unqualified leads"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que internet puede crear ese volumen; el nodo lo afirma sin matiz.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-calificacion_prospectos_award-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "calificacion_prospectos_award",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las franquicias deben ser 'otorgadas' (awarded) a candidatos merecedores, no simplemente vendidas al primero que paga. El éxito del sistema depende más de la calidad de los franquiciados que del sistema mismo: un sistema mediocre con buenos franquiciados puede triunfar, mientras uno excelente con malos franquiciados fracasará. Un proceso de venta bien ejecutado que califica con rigor selecciona correctamente la mayoría de las veces; recortarlo lleva a fallas de calidad y disputas. Aceptar candidatos no calificados genera mayores costos de soporte, litigios, mala validación ante futuros prospectos y, si incluyes representaciones de desempeño financiero en el FDD, promedios más bajos en ellas.",
+  "texto_nuevo": "Las franquicias deben ser 'otorgadas' (awarded) a candidatos merecedores, no simplemente vendidas al primero que paga. El éxito del sistema depende más de la calidad de los franquiciados que del sistema mismo: un sistema mediocre con buenos franquiciados puede triunfar, mientras uno excelente con muchos franquiciados no calificados casi con seguridad fracasará. Un proceso de venta bien ejecutado que califica con rigor selecciona correctamente la mayoría de las veces; recortarlo lleva a fallas de calidad y disputas. Aceptar candidatos no calificados genera mayores costos de soporte, mucha más probabilidad de litigios, mala validación ante futuros prospectos y, si incluyes representaciones de desempeño financiero en el FDD, promedios más bajos en ellas.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4214-4245",
+   "frase": "A great system with many unqualified franchisees will almost certainly fail."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los franquiciados marginales tienen mucha más probabilidad de demandar; el nodo lo da como consecuencia segura.; El libro dice que un gran sistema con muchos franquiciados no calificados casi con seguridad fracasará; el nodo lo da por cierto.; Mismo defecto que la marca 0, con el 'muchos' que también se cae.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-calculo_roi_franquiciado_2-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "calculo_roi_franquiciado_2",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión, el mismo dato que declararás en el documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos).",
+  "texto_nuevo": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "716",
+   "frase": "This yields the total number required by Item 7 of an FDD"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo liga ese total al Item 7 del FDD de EE.UU.; el nodo afirma un documento de divulgación en el país de quien lee.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-calculo_roi_franquiciado_2-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "calculo_roi_franquiciado_2",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca) y los gastos únicos o de inversión, y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
+  "texto_nuevo": "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca), pero incluye los de constitución de la empresa y las licencias o fianzas que se exijan en su localidad; quita también los gastos únicos o de inversión y los gastos personales que usas para reducir impuestos (automóviles, entretenimiento, seguros por encima de lo normal del sector), y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "730-740",
+   "frase": "include the expenses of incorporation or any locally required licensing or bonding"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro, al quitar los gastos legales de marca, pide incluir los de constitución y las licencias o fianzas locales; se cae la excepción.; El procedimiento del libro pide no incluir estrategias personales para reducir impuestos; ningún paso lo recoge.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-004-alternativa_operaciones_propias-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "alternativa_operaciones_propias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Expandir mediante unidades de propiedad de la compañía usando capital propio o prestado permite conservar el 100% de las ganancias y mayor control operativo, crecer de forma más predecible sin aprender a franquiciar, y construir activos tangibles que pueden mejorar mucho la valuación al salir del negocio. Sin embargo, implica asumir el 100% del riesgo, mayor responsabilidad legal (laboral, ADA, EEOC) y mayores costos de cambios de concepto.",
+  "texto_nuevo": "Expandir mediante unidades de propiedad de la compañía usando capital propio, prestado o levantado de forma pública o privada permite conservar el 100% de las ganancias y mayor control operativo, crecer de forma más predecible sin aprender a franquiciar, y construir activos tangibles que pueden mejorar mucho la valuación al salir del negocio. Sin embargo, implica asumir el 100% del riesgo, mayor responsabilidad legal (laboral, ADA, EEOC) y mayores costos de cambios de concepto.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1145",
+   "frase": "internal or personally borrowed funds or capital raised publicly or privately"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye el capital levantado de forma pública o privada; el nodo lo deja fuera.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-brokers_lead_referral_networks-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "brokers_lead_referral_networks",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Asiste a convenciones y mantén comunicación constante para que tu marca esté siempre presente en la mente de esa red",
+  "texto_nuevo": "Si dependes mucho de los brokers, asiste a convenciones y mantén comunicación constante para que tu marca esté siempre presente en la mente de esa red",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3998",
+   "frase": "Franchisors who rely heavily on brokers will often spend money to attend"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro describe ese esfuerzo en quienes dependen mucho de los brokers; el paso pierde la condición.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-004-adaptabilidad_regional_concepto-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "adaptabilidad_regional_concepto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Algunos conceptos tienen variaciones regionales significativas en demanda debido a gusto, clima o regulación (ej. barbacoa, cuidado del césped, franquicias médicas sujetas a leyes estatales). Antes de expandir, el franquiciador debe evaluar qué factores hicieron exitoso el negocio en su mercado original y si estos son replicables en otras regiones, o si debe limitar su expansión geográfica.",
+  "texto_nuevo": "Algunos conceptos tienen variaciones regionales significativas en demanda debido a gusto, clima o regulación (ej. barbacoa, cuidado del césped, franquicias médicas sujetas a leyes estatales), pero pueden crecer si el modelo o una adaptación funciona financieramente. Antes de expandir, el franquiciador debe evaluar qué factores hicieron exitoso el negocio en su mercado original y si estos son replicables en otras regiones, o si debe limitar su expansión geográfica.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "669",
+   "frase": "can still be expanded through franchising as long as the business model"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que estos conceptos pueden expandirse igual si el modelo, o una adaptación, funciona en lo financiero; se cae esa condición.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-004-asistencia_apertura_franquicia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "asistencia_apertura_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El franquiciante debe definir su rol en decisiones críticas de apertura: selección de sitio, negociación de arrendamiento, diseño/construcción del local, y compra de equipo e inventario inicial. Si tu plan de crecimiento es agresivo, formalizarlas acelera las aperturas; poseer o subarrendar locales y buscar el sitio te exponen legalmente.",
+  "texto_nuevo": "El franquiciante debe definir su rol en decisiones críticas de apertura: selección de sitio, negociación de arrendamiento, diseño/construcción del local, y compra de equipo e inventario inicial. Si tu plan de crecimiento es agresivo, formalizarlas acelera las aperturas; poseer o subarrendar locales te expone si el franquiciado fracasa, y buscar el sitio puede traerte reclamos por el local.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2815-2817",
+   "frase": "substantial exposure should the franchisee fail"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que buscar el sitio podría traer reclamos después; el nodo lo afirma como seguro.; El libro liga la exposición de poseer o subarrendar a que el franquiciado fracase y dice que buscar el sitio podría traer reclamos; el nodo lo da por seguro.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.; Se cae la condición del libro: la exposición es si el franquiciado fracasa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-auditoria_sistema_control_calidad_2-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "auditoria_sistema_control_calidad_2",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personas, cambios no anticipados y atajos que erosionan su efectividad. Revisar el sistema de forma periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Aunque no participes directamente en las operaciones diarias, tú decides que esta revisión se haga, para mantenerte informado sobre la salud del sistema. La revisión también exige clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando el producto está fuera de límites estadísticos pero aún dentro de tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
+  "texto_nuevo": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personas, cambios no anticipados y atajos que erosionan su efectividad. Revisar el sistema de forma periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Aunque no participes directamente en las operaciones diarias, tú decides que esta revisión se haga, para mantenerte informado sobre la salud del sistema. Además, te toca clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando los puntos están fuera de los límites estadísticos pero el producto aún cumple la tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8443-8446",
+   "frase": "leaders should clarify the responsibility for corrective action on points outside the control limits"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone clarificar la responsabilidad y fijar las guías como tarea aparte de quien dirige, no como exigencia de la revisión, y las guías son para puntos fuera de límites con producto dentro de tolerancia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-auditorias_vigilancia_certificacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "auditorias_vigilancia_certificacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, a menudo cada seis meses, para confirmar que sigues cumpliendo. Estas revisiones pueden ser más cortas que la auditoría completa; si es así, la completa te toca cada pocos años. Este ciclo te obliga a mantener tu sistema de calidad funcionando de verdad y a seguir mejorándolo para cumplir tus propios objetivos de calidad.",
+  "texto_nuevo": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, a menudo cada seis meses, para confirmar que sigues cumpliendo. Estas revisiones pueden ser más cortas que la auditoría completa; si es así, la completa te toca cada pocos años. Este ciclo te da una motivación continua para mantener tu sistema de calidad funcionando de verdad y seguir mejorándolo para cumplir tus propios objetivos de calidad.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11084",
+   "frase": "provide continuing motivation for supplier organizations to maintain their quality systems in complete conformance"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las auditorías de seguimiento dan una motivación continua para mantener y mejorar el sistema, no que obliguen a ello.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-aspectos_legales_eticos_benchmarking-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "aspectos_legales_eticos_benchmarking",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El benchmarking está regido por leyes de competencia y de propiedad intelectual. Si aplicas información que otro participante compartió contigo, puedes infringir sus derechos de propiedad intelectual, y si comparas precios o costos con tu competencia, eso puede considerarse un comportamiento anticompetitivo. El Código de Conducta de Benchmarking (creado por APQC en 1992, con una versión europea en 1996) establece principios de legalidad, confidencialidad e intercambio de información, aunque no te obliga legalmente. Sea cual sea el nivel de confidencialidad, firma siempre un acuerdo de confidencialidad legalmente vinculante entre todas las partes.",
+  "texto_nuevo": "El benchmarking está regido por leyes de competencia y de propiedad intelectual. Si aplicas información que otro participante compartió contigo, puedes infringir sus derechos de propiedad intelectual, y si te comparas con tu competencia, ten especial cuidado con los precios y los secretos comerciales, aunque incluso evitándolos el ejercicio puede considerarse un comportamiento anticompetitivo. El Código de Conducta de Benchmarking (creado por APQC en 1992, con una versión europea en 1996) establece principios de legalidad, confidencialidad e intercambio de información, aunque no te obliga legalmente. Sea cual sea el nivel de confidencialidad, firma siempre un acuerdo de confidencialidad legalmente vinculante entre todas las partes.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17597-17598",
+   "frase": "nonetheless they may still be considered to constitute anticompetitive behavior"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que, aunque la mayoría de los ejercicios evita precios y secretos comerciales, aun así pueden considerarse anticompetitivos; el nodo reduce el riesgo a comparar precios o costos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-aprendizaje_institucionalizado_benchmarking-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "aprendizaje_institucionalizado_benchmarking",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es el séptimo paso del proceso de benchmarking, donde puede ser necesario que la organización enseñe o vuelva a enseñar las mejores prácticas identificadas para asegurar que se sostengan y evolucionen con el tiempo. Aunque puede parecer repetitivo, es esencial para que la organización se adapte y mejore continuamente por sí misma, cerrando el ciclo del benchmarking con acciones concretas de capacitación interna.",
+  "texto_nuevo": "Es el séptimo paso del proceso de benchmarking, donde puede ser necesario que la organización enseñe o vuelva a enseñar para lograr las mejores prácticas identificadas. Aunque puede parecer repetitivo, es esencial para que la organización se adapte y mejore continuamente por sí misma, cerrando el ciclo del benchmarking con acciones concretas de capacitación interna.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "26404-26407",
+   "frase": "there may be requirements to teach or reteach to achieve the best practices identified"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que se enseña o reenseña para lograr las mejores prácticas identificadas; el fin de asegurar que se sostengan y evolucionen es añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-auditoria_de_producto-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "auditoria_de_producto",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
+  "texto_nuevo": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10354-10356",
+   "frase": "The scope of some product audits completely misses the mark in measuring customer reaction."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo quitar; doble lectura ciega, arbitro): En el libro el 98% es la calificación que dio la propia auditoría de producto, cuyo alcance no medía la reacción del cliente; el nodo presenta la auditoría como lo que detecta ese número engañoso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-gestion_equilibrio_familia_startup-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "gestion_equilibrio_familia_startup",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si no tienes apoyo familiar, tu pareja le tiene miedo al riesgo o cargas con responsabilidades familiares pesadas, esto puede ser el obstáculo más difícil que enfrentes al fundar tu negocio. Hay cuatro mentiras que te dices: que lo haces por tu familia, que tu pareja entiende, que con un éxito podrás bajar el ritmo y que lo compensarás con tiempo de calidad. Una salida posible es trabajar a tiempo parcial como transición, aunque esto puede devolverte a las esposas de carrera y frenar tu avance.",
+  "texto_nuevo": "Si no tienes apoyo familiar, tu pareja le tiene miedo al riesgo o cargas con responsabilidades familiares pesadas, esto puede ser el obstáculo más difícil que enfrentes al fundar tu negocio. Hay cuatro mentiras que te dices: que lo haces por tu familia, que tu pareja entiende, que con un éxito podrás bajar el ritmo y que lo compensarás con tiempo de calidad. Una salida posible es trabajar a tiempo parcial como transición, aunque en algunos casos esto puede devolverte a las esposas de carrera, aumentar tus riesgos, frenar tu avance y dejar que se cierre la ventana del mercado.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "686",
+   "frase": "can actually increase risks, slowing down progress and letting the market window slam shut"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se caen dos de los riesgos que el libro da al tiempo parcial, aumentar los riesgos y dejar que se cierre la ventana del mercado, y la condición de que ocurre en algunos casos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-fuentes_contratacion_ejecutivos-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "fuentes_contratacion_ejecutivos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de levantar financiamiento externo, cerca de dos tercios de tus contrataciones ejecutivas salen de tu propia red personal, lo que produce equipos más coherentes y receptivos a tu forma de control. A medida que cierras rondas de financiamiento, esa proporción cae por debajo del 50% y los inversionistas ganan peso como fuente, sobre todo para el puesto de CFO, donde llegan a proponer alrededor de una cuarta parte de las contrataciones, lo que puede introducir hires más alineados con ellos que contigo. Los startups que priorizan la red del fundador tienden a recibir valoraciones más altas. Con el tiempo, a medida que tu red se agota, te toca sumar fuentes externas, como búsqueda ejecutiva y avisos de empleo, y también a otros ejecutivos, para llegar a los mejores candidatos.",
+  "texto_nuevo": "Antes de levantar financiamiento externo, cerca de dos tercios de tus contrataciones ejecutivas salen de tu propia red personal, lo que produce equipos más coherentes y receptivos a tu forma de control. A medida que cierras rondas de financiamiento, esa proporción cae por debajo del 50% y los inversionistas ganan peso como fuente, sobre todo para el puesto de CFO, donde llegan a proponer alrededor de una cuarta parte de las contrataciones, lo que puede introducir hires más alineados con ellos que contigo. Los startups que priorizan la red del fundador tienden a recibir valoraciones más altas. Te toca sumar fuentes externas, como búsqueda ejecutiva y avisos de empleo, y también a otros ejecutivos, para llegar a los mejores candidatos.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "2251",
+   "frase": "these weaker-tie sources of hires are important throughout all stages of startup evolution"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro dice que las fuentes externas son importantes en todas las etapas, no solo cuando la red del fundador se agota.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-005-fuentes_contratacion_ejecutivos-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "fuentes_contratacion_ejecutivos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Incorpora progresivamente fuentes externas, como firmas de búsqueda y avisos de empleo, cuando tu red se agote, sabiendo que con ellas cuesta más juzgar el encaje cultural y mantener baja la rotación",
+  "texto_nuevo": "Incorpora fuentes externas, como firmas de búsqueda y avisos de empleo, sabiendo que con ellas cuesta más juzgar el encaje cultural y mantener baja la rotación",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "2251",
+   "frase": "these weaker-tie sources of hires are important throughout all stages of startup evolution"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El paso deja las fuentes externas para cuando la red se agota; el libro dice que son importantes en todas las etapas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-005-founder_ceo_succession_process-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "founder_ceo_succession_process",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide de antemano qué rol tomarías si te reemplazan: puedes seguir como miembro de la junta, como presidente de la junta (chairman) o en otro cargo ejecutivo",
+  "texto_nuevo": "Decide de antemano qué rol tomarías si te reemplazan: puedes seguir como miembro de la junta, como presidente de la junta (chairman) o en otro cargo ejecutivo, aunque si el cambio lo inicia la junta y no tú, tus probabilidades de seguir en la junta o en un cargo de primer nivel bajan mucho",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "3263-3267",
+   "frase": "if the board initiates the change, the chance of receiving a C-level position plummets"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la condición del libro: si la junta inicia el cambio, la permanencia en la junta baja de 96% a 60% y la probabilidad de un cargo de primer nivel se desploma.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-006-segmentos_de_clientes_problema_necesidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "segmentos_de_clientes_problema_necesidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de vender, tienes que entender a fondo quien es tu cliente y que problema, necesidad o pasión tiene. Usa una escala de reconocimiento del problema (latente, pasivo, activo o urgente, o con una solución casera ya armada) para calibrar cuanto le duele. También identifica los distintos tipos de cliente que intervienen en la decisión: quien usa el producto, quien influye y quien lo recomienda, porque casi nunca es una sola persona la que decide.",
+  "texto_nuevo": "Antes de vender, tienes que entender a fondo quién es tu cliente y qué problema, necesidad o pasión tiene. Usa una escala de reconocimiento del problema (latente, pasivo, activo o urgente, o con una solución casera ya armada) para calibrar cuánto le duele. También identifica los distintos tipos de cliente que intervienen en la decisión: quien usa el producto, quien influye, quien lo recomienda, quien controla el presupuesto, quien tiene la decisión final y quien puede frenar la compra, porque casi nunca es una sola persona.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "5668-5690",
+   "frase": "often control or approve the purchase or budget"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera seis tipos de cliente (usuario, influenciador, recomendador, comprador económico, quien decide y saboteador) y el resumen deja solo tres, perdiendo a quien controla el presupuesto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-006-prueba_solucion_con_cliente-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "prueba_solucion_con_cliente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+  "texto_nuevo": "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, pregúntale cuánto más esperaría pagar por servicios profesionales (personalización e instalación), y después empuja hacia arriba preguntando si gastaría ese extra cada año o qué haría falta para que pagara el doble o el triple",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "20852-20862",
+   "frase": "How much more would you expect to pay for professional services"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Tras la primera cifra el libro pide preguntar cuánto más pagaría por servicios profesionales y si gastaría ese extra cada año; el paso lo omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-006-realizar_pruebas_pasa_no_pasa-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "realizar_pruebas_pasa_no_pasa",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden y cuántos se lo cuentan a otros, en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
+  "texto_nuevo": "Manda invitaciones múltiples (por correo, anuncios) y mide, por separado entre quienes mostraron interés serio en el problema y quienes mostraron menos interés o ninguno, cuántos responden y cuántos se lo cuentan a otros (y a cuántos), en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "9034-9040",
+   "frase": "how many will tell others, and how many will they tell?"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro separa a los muy interesados de los poco o nada interesados y pide medir en cada grupo a cuántos se lo cuentan; el paso junta todo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-006-targeting_blogs_traccion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "targeting_blogs_traccion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Estrategia de adquisición de clientes mediante el patrocinio directo de blogs pequeños y personales, especialmente aquellos con audiencias fieles pero sin monetización propia. Permite medir qué blogs funcionan mejor, entender el perfil de cliente más interesado y generar tracción temprana con bajo costo. Se complementa con partnerships de contenido con sitios más grandes.",
+  "texto_nuevo": "Estrategia de adquisición de clientes mediante el patrocinio directo de blogs pequeños y personales, especialmente aquellos con audiencias fieles pero sin monetización propia. Permite medir qué blogs funcionan mejor, entender el perfil de cliente más interesado y generar tracción temprana. Se complementa con partnerships de contenido con sitios más grandes.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "829",
+   "frase": "He simply sent them a message with “Can I send you $500?”"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no dice que patrocinar blogs sea de bajo costo; el ejemplo paga 500 dólares por blog.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-006-seleccion_plataforma_social_ads-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "seleccion_plataforma_social_ads",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cada red social (LinkedIn, Twitter, Facebook, StumbleUpon, Foursquare, Tumblr, reddit, YouTube) tiene características únicas de targeting, formato de anuncio y comportamiento de usuario. Elegir la plataforma correcta depende del tipo de audiencia (profesional, local, por intereses) y del objetivo de la campaña (awareness, engagement, conversión).",
+  "texto_nuevo": "Cada red social (LinkedIn, Twitter, Facebook, StumbleUpon, Foursquare, Tumblr, reddit, YouTube) tiene características únicas de targeting, formato de anuncio y comportamiento de usuario. Elegir la plataforma correcta depende del tipo de audiencia (profesional, local, por intereses). En todas, entiende a tu audiencia, experimenta con tu mensaje y llega a la gente de forma memorable.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "1419",
+   "frase": "understand your audience, experiment with your message, and reach people in a memorable way"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro describe cada red por su audiencia, su segmentación y su formato, pero no hace depender la elección del objetivo de la campaña.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-006-speaking_engagements_estrategia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "speaking_engagements_estrategia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dar charlas en eventos es un canal de tracción que puede construir credibilidad de industria rápidamente si das la charla adecuada al público adecuado. Requiere identificar el tipo de evento adecuado (premier, regional, local), preparar un número limitado de charlas bien pulidas con una historia central convincente, y usar tácticas como grabar las charlas y aprovechar redes sociales para amplificar el alcance más allá de la audiencia presencial.",
+  "texto_nuevo": "Dar charlas en eventos es un canal de tracción que puede construir credibilidad de industria rápidamente si das la charla adecuada, en el momento adecuado, al público adecuado. Requiere identificar el tipo de evento adecuado (premier, regional, local), preparar un número limitado de charlas bien pulidas con una historia central convincente, y usar tácticas como grabar las charlas y aprovechar redes sociales para amplificar el alcance más allá de la audiencia presencial.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "3349",
+   "frase": "If you give the right talk at the right time to the right people"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone tres condiciones (la charla, el momento y el público adecuados) y el resumen pierde la del momento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-006-retargeting_display-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "retargeting_display",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que a menudo genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o BuySellAds) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca, y conviene sumarlos cuando tu campaña SEM ya funciona con éxito.",
+  "texto_nuevo": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que a menudo genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o BuySellAds) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "1419",
+   "frase": "They can make sense at any product phase"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo sugiere el retargeting y la red de contenido como opción tras una campaña SEM exitosa, y dice que la publicidad display tiene sentido en cualquier fase; la norma para ambos canales es añadida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-006-traccion_como_metrica_clave-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "traccion_como_metrica_clave",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La tracción es la evidencia cuantitativa de que existe demanda real por tu producto: crecimiento en ventas, usuarios activos, descargas o ingresos. Es una señal de que un startup está funcionando, y facilita todo lo demás (inversión, contratación, prensa, alianzas). Un producto sin tracción, sin importar cuán bueno sea, es una señal de alarma temprana.",
+  "texto_nuevo": "La tracción es la evidencia cuantitativa de que existe demanda real por tu producto: crecimiento en ventas, usuarios activos, descargas o ingresos. Es una señal de que un startup está funcionando, y facilita todo lo demás (inversión, contratación, prensa, alianzas). Con tracción, los riesgos técnicos, de mercado y de equipo son más fáciles de atender.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "24-26",
+   "frase": "Technical, market, and team risks are easier to address with traction."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no dice que la falta de tracción sea una señal de alarma temprana.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-006-tacticas_negociacion_bd-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "tacticas_negociacion_bd",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Negociar un term sheet simple de una página cubriendo duración, exclusividad, pagos, nivel de compromiso, garantías y revenue sharing",
+  "texto_nuevo": "Negociar un term sheet simple cubriendo duración, exclusividad, pagos, nivel de compromiso, garantías y revenue sharing",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "2503",
+   "frase": "making the negotiation and term sheet as simple as possible—often just one page"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro pide el term sheet lo más simple posible y dice que a menudo cabe en una página; el paso fija la página como regla.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ }
+]

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Presenta tu solución a cada cliente calificado que escuchó tu presentación del problema y amplía tu lista con por lo menos 10 clientes potenciales nuevos si tu producto es complejo (más si es consumo)",
     "Usa preguntas de presupuesto: pregúntale '¿lo usarías si fuera gratis?' y '¿quién tiene el presupuesto?'",
-    "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+    "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, pregúntale cuánto más esperaría pagar por servicios profesionales (personalización e instalación), y después empuja hacia arriba preguntando si gastaría ese extra cada año o qué haría falta para que pagara el doble o el triple",
     "Pregunta qué canal de distribución prefiere: tienda física, en línea, directo o a través de un distribuidor",
     "Pregunta cómo es el proceso interno de aprobación de compra de quien te compra",
     "Anota cada entrevista en una ficha (report card) con el mismo formato para poder comparar"
@@ -99,6 +99,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la primera cifra suele ser el presupuesto inmediato o el precio de compra inicial.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-006-prueba_solucion_con_cliente-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+      "texto_nuevo": "Explora los límites de precio proponiendo una cifra muy alta, ten en cuenta que la primera cifra que te dé el cliente suele ser su presupuesto inmediato o su precio de compra inicial, pregúntale cuánto más esperaría pagar por servicios profesionales (personalización e instalación), y después empuja hacia arriba preguntando si gastaría ese extra cada año o qué haría falta para que pagara el doble o el triple",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20852-20862",
+        "frase": "How much more would you expect to pay for professional services"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Tras la primera cifra el libro pide preguntar cuánto más pagaría por servicios profesionales y si gastaría ese extra cada año; el paso lo omite.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

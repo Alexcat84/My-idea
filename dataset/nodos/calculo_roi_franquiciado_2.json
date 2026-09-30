@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Cuánto retorno gana quien compra tu franquicia (ROI cash on cash)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión, el mismo dato que declararás en el documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos).",
+  "resumen_teorico": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión.",
   "pasos_accionables": [
     "Calcula la inversión inicial total que necesita quien compre tu franquicia (equipo, obra, inventario, cuota de entrada, capital de trabajo) en valores actuales.",
     "Toma el estado de resultados de tu unidad más representativa del negocio actual.",
     "Ajusta el salario de gerencia o dueño a la tasa de mercado.",
-    "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca) y los gastos únicos o de inversión, y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
+    "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca), pero incluye los de constitución de la empresa y las licencias o fianzas que se exijan en su localidad; quita también los gastos únicos o de inversión y los gastos personales que usas para reducir impuestos (automóviles, entretenimiento, seguros por encima de lo normal del sector), y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
     "Quita los gastos financieros (intereses), los que no son en efectivo (depreciación y amortización) y los impuestos.",
     "Agrega la línea de regalías y aportes al fondo de marketing del sistema.",
     "Divide el flujo de caja ajustado entre la inversión total para obtener el retorno proyectado."
@@ -109,6 +109,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro advierte que la ley prohíbe proyecciones salvo que se presenten como corresponde en el Item 19.; El libro no da la proyección por lista para el Item 19: es análisis del franquiciador y el 15% es la meta a comprobar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-004-calculo_roi_franquiciado_2-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión, el mismo dato que declararás en el documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos).",
+      "texto_nuevo": "Antes de franquiciar tienes que demostrar que puedes ofrecer un retorno atractivo a quien compre tu franquicia. Calcula ese retorno sobre una base donde asumes que la persona paga todo en efectivo, sin financiamiento (cash on cash), y sin contar terreno ni construcción, depreciación, amortización, intereses ni impuestos. Para ser competitivo, un criterio habitual es buscar un retorno de al menos 15% para el segundo o tercer año de operación, y algo mayor si eres un franquiciador nuevo o apuntas a operadores de varias unidades. Obtienes este número dividiendo el flujo de caja ajustado entre el costo total de la inversión.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "716",
+        "frase": "This yields the total number required by Item 7 of an FDD"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo liga ese total al Item 7 del FDD de EE.UU.; el nodo afirma un documento de divulgación en el país de quien lee.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-004-calculo_roi_franquiciado_2-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca) y los gastos únicos o de inversión, y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
+      "texto_nuevo": "Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca), pero incluye los de constitución de la empresa y las licencias o fianzas que se exijan en su localidad; quita también los gastos únicos o de inversión y los gastos personales que usas para reducir impuestos (automóviles, entretenimiento, seguros por encima de lo normal del sector), y ajusta las partidas que para esa persona serán distintas (por ejemplo, si le vendes mercancía con margen o si paga otra renta).",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "730-740",
+        "frase": "include the expenses of incorporation or any locally required licensing or bonding"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro, al quitar los gastos legales de marca, pide incluir los de constitución y las licencias o fianzas locales; se cae la excepción.; El procedimiento del libro pide no incluir estrategias personales para reducir impuestos; ningún paso lo recoge.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Erigir Barreras de Entrada y Planificar el Cambio",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "A medida que un negocio franquiciado tiene éxito, atraerá imitadores. Los franquiciadores inteligentes deben anticipar esto estableciendo barreras de entrada tempranas (ser primero en el mercado, posición de marca dominante, patentes de procesos de negocio, recetas o productos únicos) y adaptarse continuamente al mercado cambiante, como hizo McDonald's evolucionando su menú y servicios a lo largo de décadas.",
+  "resumen_teorico": "A medida que un negocio franquiciado tiene éxito, atraerá imitadores. Los franquiciadores inteligentes deben anticipar esto estableciendo barreras de entrada tempranas (ser primero en el mercado, posición de marca dominante, patentes de procesos de negocio, recetas, productos únicos o una actitud) y adaptarse continuamente al mercado cambiante, como hizo McDonald's evolucionando su menú y servicios a lo largo de décadas.",
   "pasos_accionables": [
     "Identificar posibles barreras de entrada aplicables al negocio (marca, patente, receta, proceso).",
     "Evaluar si el producto/servicio actual está en riesgo de comoditizarse.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Bloquea la Entrada a Imitadores",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-004-barreras_entrada_competencia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que un negocio franquiciado tiene éxito, atraerá imitadores. Los franquiciadores inteligentes deben anticipar esto estableciendo barreras de entrada tempranas (ser primero en el mercado, posición de marca dominante, patentes de procesos de negocio, recetas o productos únicos) y adaptarse continuamente al mercado cambiante, como hizo McDonald's evolucionando su menú y servicios a lo largo de décadas.",
+      "texto_nuevo": "A medida que un negocio franquiciado tiene éxito, atraerá imitadores. Los franquiciadores inteligentes deben anticipar esto estableciendo barreras de entrada tempranas (ser primero en el mercado, posición de marca dominante, patentes de procesos de negocio, recetas, productos únicos o una actitud) y adaptarse continuamente al mercado cambiante, como hizo McDonald's evolucionando su menú y servicios a lo largo de décadas.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "805",
+        "frase": "It can be a recipe, a product, or an attitude."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye una actitud; el nodo la deja fuera.; Mismo defecto: falta la actitud.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

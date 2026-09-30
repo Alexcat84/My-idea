@@ -10,7 +10,7 @@
     "Averigua los gustos culturales, sensoriales y de tamaño corporal de la gente en ese mercado",
     "Revisa si tienes que convertir a sistema métrico o ajustar estándares eléctricos (voltaje, ciclos, fases)",
     "Adapta tu marca, etiquetas, empaque, colores e idioma según la norma y la cultura local",
-    "Calcula cuánto cuesta adaptar el producto contra cuánto más vas a ganar por hacerlo"
+    "Calcula cuánto cuesta adaptar el producto contra cuántos ingresos adicionales esperas por hacerlo"
   ],
   "entregable_esperado": "Tu producto adaptado (diseño, etiquetado, empaque) listo para el mercado que elegiste, con el cálculo de costo contra beneficio",
   "nodos_previos": [
@@ -47,6 +47,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de motivos del libro incluye el nivel de vida del mercado y la adaptación para facilitar el envío, que el resumen omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-004-adaptacion_producto_mercado_exterior-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto cuesta adaptar el producto contra cuánto más vas a ganar por hacerlo",
+      "texto_nuevo": "Calcula cuánto cuesta adaptar el producto contra cuántos ingresos adicionales esperas por hacerlo",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2557",
+        "frase": "should determine the increased revenues expected from adaptation"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide determinar los ingresos adicionales esperados; el paso da por hecho que vas a ganar más.; Mismo defecto: el libro habla de ingresos esperados, no seguros.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

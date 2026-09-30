@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Adaptabilidad Regional y Geográfica del Concepto",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Algunos conceptos tienen variaciones regionales significativas en demanda debido a gusto, clima o regulación (ej. barbacoa, cuidado del césped, franquicias médicas sujetas a leyes estatales). Antes de expandir, el franquiciador debe evaluar qué factores hicieron exitoso el negocio en su mercado original y si estos son replicables en otras regiones, o si debe limitar su expansión geográfica.",
+  "resumen_teorico": "Algunos conceptos tienen variaciones regionales significativas en demanda debido a gusto, clima o regulación (ej. barbacoa, cuidado del césped, franquicias médicas sujetas a leyes estatales), pero pueden crecer si el modelo o una adaptación funciona financieramente. Antes de expandir, el franquiciador debe evaluar qué factores hicieron exitoso el negocio en su mercado original y si estos son replicables en otras regiones, o si debe limitar su expansión geográfica.",
   "pasos_accionables": [
     "Identificar factores de éxito específicos del mercado original (ubicación, clima, regulación, gusto local)",
     "Determinar si el modelo de negocio funciona financieramente en otras regiones",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Evalúa las Diferencias Regionales",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-004-adaptabilidad_regional_concepto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Algunos conceptos tienen variaciones regionales significativas en demanda debido a gusto, clima o regulación (ej. barbacoa, cuidado del césped, franquicias médicas sujetas a leyes estatales). Antes de expandir, el franquiciador debe evaluar qué factores hicieron exitoso el negocio en su mercado original y si estos son replicables en otras regiones, o si debe limitar su expansión geográfica.",
+      "texto_nuevo": "Algunos conceptos tienen variaciones regionales significativas en demanda debido a gusto, clima o regulación (ej. barbacoa, cuidado del césped, franquicias médicas sujetas a leyes estatales), pero pueden crecer si el modelo o una adaptación funciona financieramente. Antes de expandir, el franquiciador debe evaluar qué factores hicieron exitoso el negocio en su mercado original y si estos son replicables en otras regiones, o si debe limitar su expansión geográfica.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "669",
+        "frase": "can still be expanded through franchising as long as the business model"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que estos conceptos pueden expandirse igual si el modelo, o una adaptación, funciona en lo financiero; se cae esa condición.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }
