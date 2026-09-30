@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Derecho a que te recompren las acciones (redemption rights)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. Le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
+  "resumen_teorico": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. En teoría le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa, aunque un negocio así por lo general no tiene el efectivo para pagarla. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
   "pasos_accionables": [
     "Revisa si la hoja de términos (term sheet) incluye una cláusula de redención estándar o una redención por cambio adverso, que debes evitar.",
     "Negocia que la redención necesite la aprobación conjunta de todas las clases de inversionistas preferentes, no solo de una clase minoritaria.",
@@ -54,6 +54,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1b-045-redemption_rights-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. Le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
+      "texto_nuevo": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. En teoría le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa, aunque un negocio así por lo general no tiene el efectivo para pagarla. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1692",
+        "frase": "generally won’t have the cash to pay out redemption rights"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que un negocio en esa situación por lo general no tendrá el efectivo para pagar la redención; sin ese límite la salida parece asegurada.; Mismo defecto: se cae la salvedad de que la salida es teórica porque falta el efectivo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

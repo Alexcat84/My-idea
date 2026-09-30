@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Pirámide de Control (Delegación de Responsabilidades)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras.",
+  "resumen_teorico": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras, dando a quien lo recibe las herramientas y la preparación necesarias.",
   "pasos_accionables": [
     "Identificar qué partes de tu negocio pueden automatizarse con tecnología",
     "Definir qué decisiones puede tomar por su cuenta la persona que te ayuda",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona delegar el control a cumplir los criterios de autocontrol; el nodo lo reduce a darle criterio propio.; El libro exceptúa el mantenimiento de las instalaciones y subraya que es crítico; el nodo lo borra. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-045-piramide_de_control-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras.",
+      "texto_nuevo": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras, dando a quien lo recibe las herramientas y la preparación necesarias.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7717",
+        "frase": "Delegate the rest under a decision-making process that provides the essential tools and training"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro delega el resto bajo un proceso que da las herramientas y la preparación esenciales; el resumen pierde esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

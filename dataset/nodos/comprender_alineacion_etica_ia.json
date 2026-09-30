@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Alineación y Ética de la IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
+  "resumen_teorico": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: a menudo los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
   "pasos_accionables": [
-    "Revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
+    "Sugerencia de My Idea: revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
     "Pon a prueba el modelo con casos reales de tu negocio buscando sesgos de género, raza o cultura",
-    "Anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
+    "Sugerencia de My Idea: anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
     "Pregunta en tu mercado qué implicaciones legales y regulatorias tiene usar IA en tu tipo de decisiones antes de avanzar"
   ],
   "entregable_esperado": "Un informe propio donde queden anotados los sesgos y riesgos éticos que encontraste al probar el modelo de IA que piensas usar en tu producto o negocio",
@@ -67,6 +67,56 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro dice que el RLHF vuelve el contenido menos sesgado aunque no elimine los sesgos; 'solo los esconde' niega esa reducción.; El libro no dice que la web esté dominada por esas perspectivas; el sesgo viene de que eligen los datos empresas sobre todo estadounidenses, de habla inglesa y dominadas por hombres.; Misma atribución del sesgo a la web que el libro no hace.; Negar la reducción que el libro afirma es decir lo opuesto, no añadir. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-044-comprender_alineacion_etica_ia-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
+      "texto_nuevo": "Sugerencia de My Idea: revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "309",
+        "frase": "introduces another set of risks: bias"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro explica el origen de los sesgos pero no aconseja revisar el modelo, sus datos ni su ajuste.; Mismo defecto: consejo práctico propio sin la etiqueta de la casa.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-044-comprender_alineacion_etica_ia-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
+      "texto_nuevo": "Sugerencia de My Idea: anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "317",
+        "frase": "AI companies have been trying to address this bias in a number of ways"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro describe lo que hacen las empresas de IA contra el sesgo, no un menú de correcciones para el usuario.; Mismo defecto: anotar y corregir sesgos con instrucciones, revisión o cambio de modelo no está en el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-044-comprender_alineacion_etica_ia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
+      "texto_nuevo": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: a menudo los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "313",
+        "frase": "the biases in advanced LLMs are often more subtle"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los sesgos a menudo son más sutiles; el nodo lo da como efecto seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

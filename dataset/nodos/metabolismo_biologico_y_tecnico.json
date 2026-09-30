@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Los Dos Metabolismos: Biosfera y Tecnosfera",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros de 8000 posibles. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
+  "resumen_teorico": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
   "pasos_accionables": [
     "Determina si cada material de tu producto pertenece al metabolismo biológico o técnico, y aparta los materiales peligrosos que no caben en ninguno para guardarlos de forma segura hasta que puedan desintoxicarse",
     "Audita los componentes biológicos para eliminar mutágenos, carcinógenos, tóxicos persistentes y bioacumulativos desde el diseño inicial",
@@ -79,6 +79,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que algunos materiales peligrosos no caben en ningún metabolismo y deben guardarse de forma segura hasta poder desintoxicarse.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-044-metabolismo_biologico_y_tecnico-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros de 8000 posibles. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
+      "texto_nuevo": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "650",
+        "frase": "We ended up selecting only thirty-eight of them"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): Los casi ocho mil químicos se descartaron; los 38 se buscaron después, no salieron de ese conjunto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

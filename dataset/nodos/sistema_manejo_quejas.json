@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema Organizado de Manejo de Quejas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, reduce su ansiedad.",
+  "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
   "pasos_accionables": [
     "Sugerencia de My Idea: define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
     "Crea una base de datos simple, aunque sea una hoja de cálculo, para registrar cada queja recibida",
@@ -124,6 +124,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que mantenerlos informados reduce la ansiedad; la confianza a largo plazo no está.; Que medir el impacto de las resoluciones fortalezca la confianza no lo dice el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-045-sistema_manejo_quejas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, reduce su ansiedad.",
+      "texto_nuevo": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3732",
+        "frase": "Yet they want to be kept informed as to the nature of the problem"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El enfoque organizado del libro incluye la solicitud activa de quejas para minimizar la pérdida futura de clientes y el resumen la omite.; El libro dice que los clientes quieren ser informados y que no hacerlo deteriora la imagen de calidad; no afirma que informar reduzca su ansiedad.; Mismo defecto que la marca 0: se cae la solicitud activa de quejas de la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

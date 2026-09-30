@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo.",
   "pasos_accionables": [
-    "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
+    "Selecciona el problema concreto que vas a resolver y lanza el proyecto.",
     "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
     "Mide la magnitud real de los síntomas con datos, no con impresiones.",
     "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",
@@ -227,6 +227,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no atribuye al método métricas en cada fase ni ese porqué.; Misma característica añadida.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-045-six_sigma_dmaic-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
+      "texto_nuevo": "Selecciona el problema concreto que vas a resolver y lanza el proyecto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5038",
+        "frase": "Select the problem and launch a project. (Management does this.)"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice seleccionar el problema y lanzar el proyecto; ponerse un plazo es un consejo que no da.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

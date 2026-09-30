@@ -17947,7 +17947,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Compensación de Proveedores de Servicios mediante Equity",
-      "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto, si el tipo de acción recibida los tiene, pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
       "pasos_accionables": [
         "Crear un equity incentive plan (option pool) con asesoría legal",
         "Decidir entre otorgar stock directo (con 83(b)) u options según implicaciones fiscales del receptor",
@@ -18057,7 +18057,7 @@
       "pasos_accionables": [
         "Definir el tamaño del board acorde a la etapa de la empresa (3-5 asientos en etapa temprana, creciendo a 7-9 en etapa madura)",
         "Negociar el balance de asientos entre Directores Preferentes (inversionistas), Comunes (fundadores) y Mutuos, y quién tiene derecho a designar cada uno",
-        "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto a inversionistas menores, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
+        "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
         "Buscar un miembro independiente con experiencia relevante en la industria; establecer su compensación (0.25%-0.5% en opciones, vesting de 2-4 años)",
         "Evaluar los costos de largo plazo de incluir a más de un cofundador en el board frente a los beneficios inmediatos de tener aliados dentro de él",
         "Ajustar la composición ideal del board (tamaño, frecuencia de reuniones, experiencia de sus miembros) al perfil del CEO, buscando directores experimentados como contrapeso si el CEO fundador tiene poca experiencia previa"
@@ -18204,11 +18204,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Alineación y Ética de la IA",
-      "resumen_teorico": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
+      "resumen_teorico": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: a menudo los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
       "pasos_accionables": [
-        "Revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
+        "Sugerencia de My Idea: revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
         "Pon a prueba el modelo con casos reales de tu negocio buscando sesgos de género, raza o cultura",
-        "Anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
+        "Sugerencia de My Idea: anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
         "Pregunta en tu mercado qué implicaciones legales y regulatorias tiene usar IA en tu tipo de decisiones antes de avanzar"
       ],
       "entregable_esperado": "Un informe propio donde queden anotados los sesgos y riesgos éticos que encontraste al probar el modelo de IA que piensas usar en tu producto o negocio",
@@ -24166,7 +24166,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Fundamentos de la Deuda Convertible (Convertible Debt)",
-      "resumen_teorico": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla; antes lo era también porque reducía la complejidad legal y los costos frente a una ronda de equity preferente, pero hoy esa diferencia pesa poco y lo que más impulsa su uso es evitar fijar la valuación. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+      "resumen_teorico": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla; antes lo era también porque reducía la complejidad legal y los costos frente a una ronda de equity preferente, pero hoy esa diferencia pesa poco. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
       "pasos_accionables": [
         "Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de una ronda de equity",
         "Definir el porcentaje de descuento que recibirán los inversionistas en la conversión (típicamente 10%-30%, siendo 20% el más común)",
@@ -34903,7 +34903,7 @@
         "Identifica las condiciones de operación del proceso: cómo entienden el trabajo quienes lo operan o lo usan, cómo se usa el proceso en la realidad y qué entorno puede afectar su desempeño",
         "Reúne información sobre los procesos alternativos que tienes disponibles",
         "Elige el diseño general del proceso usando diagramas de flujo de alto nivel",
-        "Identifica las características y metas detalladas del proceso, diséñalo para los factores críticos y el error humano, y optimízalas",
+        "Identifica las características y metas del proceso y después las detalladas, diséñalo para los factores críticos y el error humano, y optimízalas",
         "Establece la capacidad del proceso y publica el diseño final"
       ],
       "entregable_esperado": "El diseño final del proceso, publicado con su hoja de diseño y sus diagramas de flujo detallados, como resultado de las 11 actividades de desarrollo",
@@ -80064,7 +80064,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "environmental",
       "titulo_concepto": "Los Dos Metabolismos: Biosfera y Tecnosfera",
-      "resumen_teorico": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros de 8000 posibles. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
+      "resumen_teorico": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
       "pasos_accionables": [
         "Determina si cada material de tu producto pertenece al metabolismo biológico o técnico, y aparta los materiales peligrosos que no caben en ninguno para guardarlos de forma segura hasta que puedan desintoxicarse",
         "Audita los componentes biológicos para eliminar mutágenos, carcinógenos, tóxicos persistentes y bioacumulativos desde el diseño inicial",
@@ -89470,7 +89470,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Pirámide de Control (Delegación de Responsabilidades)",
-      "resumen_teorico": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras.",
+      "resumen_teorico": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras, dando a quien lo recibe las herramientas y la preparación necesarias.",
       "pasos_accionables": [
         "Identificar qué partes de tu negocio pueden automatizarse con tecnología",
         "Definir qué decisiones puede tomar por su cuenta la persona que te ayuda",
@@ -96098,7 +96098,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Proceso de Ideación de Modelos de Negocio",
-      "resumen_teorico": "Proceso estructurado en cinco fases para generar y filtrar ideas de modelo de negocio, explorando sistemáticamente nuevas combinaciones de los nueve bloques del lienzo de modelo de negocio para descubrir modelos nuevos, disruptivos o que amplíen el modelo actual: composición de un equipo diverso en antigüedad, experiencia y conocimiento del cliente; inmersión, investigando clientes, tecnologías y modelos existentes; expansión, generando la mayor cantidad de ideas posible por cada bloque del lienzo sin criticar todavía, priorizando cantidad sobre calidad; definición de criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.); y prototipado, reduciendo a entre tres y cinco ideas y esbozándolas en el lienzo. El proceso distingue claramente la fase de generación (cantidad) de la fase de síntesis (calidad).",
+      "resumen_teorico": "Proceso estructurado en cinco fases para generar y filtrar ideas de modelo de negocio, explorando sistemáticamente nuevas combinaciones de los nueve bloques del lienzo de modelo de negocio para descubrir modelos nuevos, disruptivos o que amplíen el modelo actual: composición de un equipo diverso en antigüedad, edad, experiencia, unidad de negocio, conocimiento del cliente y especialidad profesional; inmersión, investigando clientes, tecnologías y modelos existentes; expansión, generando la mayor cantidad de ideas posible por cada bloque del lienzo sin criticar todavía, priorizando cantidad sobre calidad; definición de criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.); y prototipado, reduciendo a entre tres y cinco ideas y esbozándolas en el lienzo. El proceso distingue claramente la fase de generación (cantidad) de la fase de síntesis (calidad).",
       "pasos_accionables": [
         "Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente",
         "Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes",
@@ -99085,10 +99085,10 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Prototipado de Modelos de Negocio",
-      "resumen_teorico": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
+      "resumen_teorico": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (añadir otro segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
       "pasos_accionables": [
         "Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso",
-        "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, estimando el potencial de mercado, con una verificación básica de los hechos",
+        "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, pensando la lógica del negocio, estimando el potencial de mercado, con una verificación básica de los hechos",
         "Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios",
         "Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos",
         "Una vez decidido un modelo potencial y con un caso de negocio bien justificado, realizar una prueba de campo con clientes reales o potenciales para validar la propuesta de valor, los canales y los mecanismos de precio",
@@ -102279,7 +102279,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Derecho a que te recompren las acciones (redemption rights)",
-      "resumen_teorico": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. Le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
+      "resumen_teorico": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. En teoría le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa, aunque un negocio así por lo general no tiene el efectivo para pagarla. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
       "pasos_accionables": [
         "Revisa si la hoja de términos (term sheet) incluye una cláusula de redención estándar o una redención por cambio adverso, que debes evitar.",
         "Negocia que la redención necesite la aprobación conjunta de todas las clases de inversionistas preferentes, no solo de una clase minoritaria.",
@@ -114099,7 +114099,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Sistema Organizado de Manejo de Quejas",
-      "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, reduce su ansiedad.",
+      "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
       "pasos_accionables": [
         "Sugerencia de My Idea: define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
         "Crea una base de datos simple, aunque sea una hoja de cálculo, para registrar cada queja recibida",
@@ -114172,7 +114172,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Sistemas Pull versus Push en Producción",
-      "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en la demanda, ignorando las restricciones o cuellos de botella de tu proceso, lo que puede causar un flujo desbalanceado e inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según el consumo real.",
+      "resumen_teorico": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en la demanda, ignorando las restricciones o cuellos de botella de tu proceso, lo que puede causar un flujo desbalanceado e inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según el consumo real.",
       "pasos_accionables": [
         "Evaluar si tu operación actual funciona bajo un esquema push o pull",
         "Identificar los cuellos de botella que el sistema push está ignorando en tu proceso",
@@ -114764,7 +114764,7 @@
       "titulo_concepto": "Modelo Six Sigma DMAIC",
       "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo.",
       "pasos_accionables": [
-        "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
+        "Selecciona el problema concreto que vas a resolver y lanza el proyecto.",
         "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
         "Mide la magnitud real de los síntomas con datos, no con impresiones.",
         "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",

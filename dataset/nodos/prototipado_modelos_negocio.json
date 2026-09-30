@@ -3,10 +3,10 @@
   "dominio": "core",
   "titulo_concepto": "Prototipado de Modelos de Negocio",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
+  "resumen_teorico": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (añadir otro segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
   "pasos_accionables": [
     "Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso",
-    "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, estimando el potencial de mercado, con una verificación básica de los hechos",
+    "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, pensando la lógica del negocio, estimando el potencial de mercado, con una verificación básica de los hechos",
     "Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios",
     "Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos",
     "Una vez decidido un modelo potencial y con un caso de negocio bien justificado, realizar una prueba de campo con clientes reales o potenciales para validar la propuesta de valor, los canales y los mecanismos de precio",
@@ -124,6 +124,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El mínimo de tres no es regla del libro, que habla de múltiples prototipos; el tres es la consigna de un ejercicio.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-044-prototipado_modelos_negocio-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
+      "texto_nuevo": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (añadir otro segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2435",
+        "frase": "What does it mean for the model if we add another client segment?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro plantea añadir otro segmento de cliente; el nodo lo invierte a eliminarlo.; Mismo defecto: el escenario del libro es añadir un segmento, no eliminarlo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-044-prototipado_modelos_negocio-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, estimando el potencial de mercado, con una verificación básica de los hechos",
+      "texto_nuevo": "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, pensando la lógica del negocio, estimando el potencial de mercado, con una verificación básica de los hechos",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2485-2489",
+        "frase": "Think through your business logic"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los cinco puntos del lienzo elaborado se cae pensar la lógica del negocio.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

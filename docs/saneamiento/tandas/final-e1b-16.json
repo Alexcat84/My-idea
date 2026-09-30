@@ -1,0 +1,280 @@
+[
+ {
+  "id": "final-e1b-044-prototipado_modelos_negocio-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "prototipado_modelos_negocio",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
+  "texto_nuevo": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (añadir otro segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "2435",
+   "frase": "What does it mean for the model if we add another client segment?"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro plantea añadir otro segmento de cliente; el nodo lo invierte a eliminarlo.; Mismo defecto: el escenario del libro es añadir un segmento, no eliminarlo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-044-proceso_ideacion_modelo_negocio-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "proceso_ideacion_modelo_negocio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Proceso estructurado en cinco fases para generar y filtrar ideas de modelo de negocio, explorando sistemáticamente nuevas combinaciones de los nueve bloques del lienzo de modelo de negocio para descubrir modelos nuevos, disruptivos o que amplíen el modelo actual: composición de un equipo diverso en antigüedad, experiencia y conocimiento del cliente; inmersión, investigando clientes, tecnologías y modelos existentes; expansión, generando la mayor cantidad de ideas posible por cada bloque del lienzo sin criticar todavía, priorizando cantidad sobre calidad; definición de criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.); y prototipado, reduciendo a entre tres y cinco ideas y esbozándolas en el lienzo. El proceso distingue claramente la fase de generación (cantidad) de la fase de síntesis (calidad).",
+  "texto_nuevo": "Proceso estructurado en cinco fases para generar y filtrar ideas de modelo de negocio, explorando sistemáticamente nuevas combinaciones de los nueve bloques del lienzo de modelo de negocio para descubrir modelos nuevos, disruptivos o que amplíen el modelo actual: composición de un equipo diverso en antigüedad, edad, experiencia, unidad de negocio, conocimiento del cliente y especialidad profesional; inmersión, investigando clientes, tecnologías y modelos existentes; expansión, generando la mayor cantidad de ideas posible por cada bloque del lienzo sin criticar todavía, priorizando cantidad sobre calidad; definición de criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.); y prototipado, reduciendo a entre tres y cinco ideas y esbozándolas en el lienzo. El proceso distingue claramente la fase de generación (cantidad) de la fase de síntesis (calidad).",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "2131",
+   "frase": "seniority, age, experience level, business unit represented, customer knowledge, and professional expertise"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide diversidad en seis ejes y el nodo omite edad, unidad de negocio y especialidad profesional.; Mismo defecto: se caen tres de los seis ejes de diversidad del equipo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-044-prototipado_modelos_negocio-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "prototipado_modelos_negocio",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, estimando el potencial de mercado, con una verificación básica de los hechos",
+  "texto_nuevo": "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, pensando la lógica del negocio, estimando el potencial de mercado, con una verificación básica de los hechos",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "2485-2489",
+   "frase": "Think through your business logic"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los cinco puntos del lienzo elaborado se cae pensar la lógica del negocio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-044-comprender_alineacion_etica_ia-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "comprender_alineacion_etica_ia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
+  "texto_nuevo": "Sugerencia de My Idea: revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "309",
+   "frase": "introduces another set of risks: bias"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro explica el origen de los sesgos pero no aconseja revisar el modelo, sus datos ni su ajuste.; Mismo defecto: consejo práctico propio sin la etiqueta de la casa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-044-comprender_alineacion_etica_ia-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "comprender_alineacion_etica_ia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
+  "texto_nuevo": "Sugerencia de My Idea: anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "317",
+   "frase": "AI companies have been trying to address this bias in a number of ways"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro describe lo que hacen las empresas de IA contra el sesgo, no un menú de correcciones para el usuario.; Mismo defecto: anotar y corregir sesgos con instrucciones, revisión o cambio de modelo no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-044-comprender_alineacion_etica_ia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "comprender_alineacion_etica_ia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
+  "texto_nuevo": "Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en buena parte web abierta, elegida por empresas de IA sobre todo de un mismo país, de habla inglesa y dominadas por hombres) y que el ajuste posterior que se les hace (conocido como RLHF) los reduce pero no los elimina del todo: a menudo los vuelve más sutiles y puede sumar sesgos nuevos. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.",
+  "cita": {
+   "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+   "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+   "lineas": "313",
+   "frase": "the biases in advanced LLMs are often more subtle"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los sesgos a menudo son más sutiles; el nodo lo da como efecto seguro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-044-metabolismo_biologico_y_tecnico-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "metabolismo_biologico_y_tecnico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros de 8000 posibles. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
+  "texto_nuevo": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "650",
+   "frase": "We ended up selecting only thirty-eight of them"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): Los casi ocho mil químicos se descartaron; los 38 se buscaron después, no salieron de ese conjunto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-045-desarrollar_caracteristicas_proceso_2-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "desarrollar_caracteristicas_proceso_2",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identifica las características y metas detalladas del proceso, diséñalo para los factores críticos y el error humano, y optimízalas",
+  "texto_nuevo": "Identifica las características y metas del proceso y después las detalladas, diséñalo para los factores críticos y el error humano, y optimízalas",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4363-4365",
+   "frase": "Identify process features and goals. Identify detailed process features and goals."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro lista como actividades separadas identificar las características y metas del proceso y luego las detalladas; el paso omite la primera.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-045-sistema_manejo_quejas-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "sistema_manejo_quejas",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, reduce su ansiedad.",
+  "texto_nuevo": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3732",
+   "frase": "Yet they want to be kept informed as to the nature of the problem"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El enfoque organizado del libro incluye la solicitud activa de quejas para minimizar la pérdida futura de clientes y el resumen la omite.; El libro dice que los clientes quieren ser informados y que no hacerlo deteriora la imagen de calidad; no afirma que informar reduzca su ansiedad.; Mismo defecto que la marca 0: se cae la solicitud activa de quejas de la enumeración.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-045-sistema_pull_push-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "sistema_pull_push",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en la demanda, ignorando las restricciones o cuellos de botella de tu proceso, lo que puede causar un flujo desbalanceado e inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operación. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según el consumo real.",
+  "texto_nuevo": "Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basándose en la demanda, ignorando las restricciones o cuellos de botella de tu proceso, lo que puede causar un flujo desbalanceado e inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza según su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la producción según el consumo real.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "13295",
+   "frase": "This approach ignores constraints or bottlenecks within the process and can cause unbalanced flow"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro solo dice que el push ignora las restricciones; el orden de identificarlas antes de rediseñar es un consejo propio sin etiqueta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-045-six_sigma_dmaic-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "six_sigma_dmaic",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
+  "texto_nuevo": "Selecciona el problema concreto que vas a resolver y lanza el proyecto.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "5038",
+   "frase": "Select the problem and launch a project. (Management does this.)"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice seleccionar el problema y lanzar el proyecto; ponerse un plazo es un consejo que no da.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-045-piramide_de_control-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "piramide_de_control",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras.",
+  "texto_nuevo": "Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin intervención salvo el mantenimiento, que es crítico; lo que puede autocontrolar la persona que te ayuda, si sabe qué tiene que lograr, conoce su resultado a tiempo y tiene cómo corregirlo; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras, dando a quien lo recibe las herramientas y la preparación necesarias.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7717",
+   "frase": "Delegate the rest under a decision-making process that provides the essential tools and training"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro delega el resto bajo un proceso que da las herramientas y la preparación esenciales; el resumen pierde esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-045-convertible_debt_fundamentos-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "convertible_debt_fundamentos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla; antes lo era también porque reducía la complejidad legal y los costos frente a una ronda de equity preferente, pero hoy esa diferencia pesa poco y lo que más impulsa su uso es evitar fijar la valuación. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+  "texto_nuevo": "La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla; antes lo era también porque reducía la complejidad legal y los costos frente a una ronda de equity preferente, pero hoy esa diferencia pesa poco. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "2147",
+   "frase": "Since no valuation is being set for the company, you get to avoid that part"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro enumera los argumentos a favor sin decir cuál impulsa más su uso.; El libro recomienda proponer las tasas federales un poco más altas, pero no dice que el rango típico de 5% a 12% esté cerca de ellas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-045-compensacion_service_providers-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "compensacion_service_providers",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "texto_nuevo": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options) bajo un plan de incentivos de equity (equity incentive plan / option pool). El stock otorga derechos de voto, si el tipo de acción recibida los tiene, pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4743",
+   "frase": "assuming that the individual receives a type of stock that has voting rights"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona el voto a que el receptor reciba un tipo de acción con derecho a voto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-045-composicion_board_directors-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "composicion_board_directors",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto a inversionistas menores, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
+  "texto_nuevo": "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "1355",
+   "frase": "VCs will often want to include a board observer as part of the agreement"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): Ninguno de los dos libros liga el observador a inversionistas menores: lo piden los VCs y otros inversionistas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-045-redemption_rights-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "redemption_rights",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. Le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
+  "texto_nuevo": "Es una cláusula que le da a quien invierte con acciones preferentes el poder de exigirte que le recompres sus acciones después de cierto tiempo, usualmente cinco años. En teoría le da una salida garantizada si tu negocio no llega a venderse ni a salir a bolsa (IPO), pero tampoco fracasa, aunque un negocio así por lo general no tiene el efectivo para pagarla. Existe una versión peligrosa llamada redención por cambio adverso (adverse change redemption) que debes evitar, porque es vaga y le da demasiado control al inversionista.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "1692",
+   "frase": "generally won’t have the cash to pay out redemption rights"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que un negocio en esa situación por lo general no tendrá el efectivo para pagar la redención; sin ese límite la salida parece asegurada.; Mismo defecto: se cae la salvedad de que la salida es teórica porque falta el efectivo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ }
+]
