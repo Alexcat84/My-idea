@@ -7,7 +7,7 @@
   "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
   "pasos_accionables": [
     "Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad",
-    "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, pruebas, auditorías, cambios de ingeniería, cambios en órdenes de compra, atención al consumidor y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, incluyendo tu tiempo o salario, sin minimizar cifras",
+    "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, incluyendo tu tiempo o salario, sin minimizar cifras",
     "Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%",
     "Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección",
     "Establece una meta de reducción progresiva del costo de calidad",
@@ -110,6 +110,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no divide las fallas en internas y externas; sus categorías son prevención, evaluación y fallas.; La lista del libro trae además pruebas, cambios en órdenes de compra, atención al consumidor y otros costos de hacer las cosas mal.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-008-costo_de_calidad_3-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, pruebas, auditorías, cambios de ingeniería, cambios en órdenes de compra, atención al consumidor y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, incluyendo tu tiempo o salario, sin minimizar cifras",
+      "texto_nuevo": "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, incluyendo tu tiempo o salario, sin minimizar cifras",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2635-2651",
+        "frase": "Audit Acceptance equipment"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso pide sumar todos los componentes pero pierde tres de la lista del libro: mano de obra de control de calidad, corrección de software y equipo de aceptación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

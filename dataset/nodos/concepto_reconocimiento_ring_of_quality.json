@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema de Reconocimiento (Ring of Quality)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El reconocimiento es el cuarto pilar del programa de calidad y a menudo se pasa por alto o se hace mal. En ITT se implementó el 'Ring of Quality', un premio nominado por pares (no por subordinados ni por jefes) para reconocer contribuciones sobresalientes y sostenidas a la calidad. La reacción a estos premios dejó claro que el reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) funciona mejor que las recompensas monetarias, que no son lo bastante personales para reconocer de verdad.",
+  "resumen_teorico": "El reconocimiento es el cuarto pilar del programa de calidad y a menudo se pasa por alto o se hace mal. En ITT se implementó el 'Ring of Quality', un premio nominado por pares (no por subordinados) para reconocer a quienes dieron un apoyo sobresaliente a la calidad durante cinco años o lograron un acto sensacional, específico y único. La reacción a estos premios dejó claro que el reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) funciona mejor que las recompensas monetarias, que no son lo bastante personales para reconocer de verdad.",
   "pasos_accionables": [
     "Diseñar un sistema de nominación entre pares, excluyendo nominaciones de subordinados hacia superiores.",
     "Definir criterios claros: apoyo sostenido durante años o un logro específico y sobresaliente.",
@@ -54,6 +54,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El efecto de generar compromiso duradero no está en el libro, que habla de reconocimiento personal.; El libro dice que a menudo se pasa por alto o se hace mal; no lo compara con los otros pilares.; El libro solo dice que el dinero no es lo bastante personal para reconocer; el compromiso duradero es añadido.; Misma comparación añadida: el libro no dice que sea el pilar más descuidado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-008-concepto_reconocimiento_ring_of_quality-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El reconocimiento es el cuarto pilar del programa de calidad y a menudo se pasa por alto o se hace mal. En ITT se implementó el 'Ring of Quality', un premio nominado por pares (no por subordinados ni por jefes) para reconocer contribuciones sobresalientes y sostenidas a la calidad. La reacción a estos premios dejó claro que el reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) funciona mejor que las recompensas monetarias, que no son lo bastante personales para reconocer de verdad.",
+      "texto_nuevo": "El reconocimiento es el cuarto pilar del programa de calidad y a menudo se pasa por alto o se hace mal. En ITT se implementó el 'Ring of Quality', un premio nominado por pares (no por subordinados) para reconocer a quienes dieron un apoyo sobresaliente a la calidad durante cinco años o lograron un acto sensacional, específico y único. La reacción a estos premios dejó claro que el reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) funciona mejor que las recompensas monetarias, que no son lo bastante personales para reconocer de verdad.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "115",
+        "frase": "for a period of five years, or had accomplished one sensational, specific, and unique act"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos vías alternativas (cinco años de apoyo sobresaliente o un solo acto sensacional); el nodo pierde la segunda.; El libro solo descarta las nominaciones de subordinados; la exclusión de los jefes no aparece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

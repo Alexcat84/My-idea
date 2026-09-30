@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Conoce tus insumos vitales",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla.",
   "pasos_accionables": [
     "Haz una lista de los insumos que compras regularmente.",
     "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
@@ -220,6 +220,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que clasificar por un único criterio como el dinero no refleja todo el inventario; los errores comunes y el paro de la operación son añadidos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-008-conoce_insumos_vitales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rápido ni proveedor alterno cercano. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atención, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
+      "texto_nuevo": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "4925",
+        "frase": "but when they are needed they are needed immediately."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro y verificador ciego): El libro solo dice que lo crítico se necesita de inmediato; el paro total y su causa (sin sustituto ni proveedor cercano) no están.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

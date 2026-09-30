@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Deadlines como Punto Fijo de Convergencia",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Las fechas límite no son solo restricciones de tiempo sino herramientas deliberadas que un líder de proyecto experimentado usa para forzar la transición de la fase divergente (generación de opciones) a la fase convergente (toma de decisiones). Deben calibrarse: ni tan frecuentes que impidan la exploración, ni tan distantes que permitan divergencia infinita.",
+  "resumen_teorico": "Las fechas límite no son solo restricciones de tiempo sino herramientas deliberadas que un líder de proyecto experimentado usa para forzar la transición de la fase divergente (generación de opciones) a la fase convergente (toma de decisiones). Deben calibrarse: ni tan frecuentes que impidan la exploración, al menos en las primeras fases del proyecto, ni tan distantes que permitan divergencia infinita.",
   "pasos_accionables": [
     "Determinar cuánto tiempo requiere la fase de exploración antes de necesitar dirección",
     "Establecer un deadline claro y comunicado a todo el equipo",
     "Usar el deadline como punto de evaluación final, no como presión diaria",
-    "Ajustar la duración con criterio, según cuándo aportará más la revisión de la dirección (ni una fecha límite cada día, al menos en las primeras fases, ni estirarla seis meses)"
+    "Ajustar la duración con criterio, según cuándo aportarán más la opinión de la dirección, la reflexión, el cambio de rumbo y la selección (ni una fecha límite cada día, al menos en las primeras fases, ni estirarla seis meses)"
   ],
   "entregable_esperado": "Un calendario de hitos con deadlines definidos que marquen transiciones entre divergencia y convergencia",
   "nodos_previos": [
@@ -59,6 +59,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro desaconseja el plazo diario al menos en las fases iniciales; el nodo lo vuelve regla general.; Mismo defecto: se cae la condición de las fases tempranas del proyecto.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-007-deadlines_como_herramienta_convergencia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las fechas límite no son solo restricciones de tiempo sino herramientas deliberadas que un líder de proyecto experimentado usa para forzar la transición de la fase divergente (generación de opciones) a la fase convergente (toma de decisiones). Deben calibrarse: ni tan frecuentes que impidan la exploración, ni tan distantes que permitan divergencia infinita.",
+      "texto_nuevo": "Las fechas límite no son solo restricciones de tiempo sino herramientas deliberadas que un líder de proyecto experimentado usa para forzar la transición de la fase divergente (generación de opciones) a la fase convergente (toma de decisiones). Deben calibrarse: ni tan frecuentes que impidan la exploración, al menos en las primeras fases del proyecto, ni tan distantes que permitan divergencia infinita.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "575",
+        "frase": "It’s unwise to have a deadline every day, at least in the earlier phases"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita lo de no poner una fecha límite diaria a las primeras fases del proyecto; esa condición se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-007-deadlines_como_herramienta_convergencia-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajustar la duración con criterio, según cuándo aportará más la revisión de la dirección (ni una fecha límite cada día, al menos en las primeras fases, ni estirarla seis meses)",
+      "texto_nuevo": "Ajustar la duración con criterio, según cuándo aportarán más la opinión de la dirección, la reflexión, el cambio de rumbo y la selección (ni una fecha límite cada día, al menos en las primeras fases, ni estirarla seis meses)",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "575",
+        "frase": "management input, reflection, redirection, and selection are most likely to be valuable"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera opinión de la dirección, reflexión, cambio de rumbo y selección; el paso deja solo la primera.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

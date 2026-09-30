@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Deep Dive (Taller Intensivo de Design Thinking)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Un taller intensivo donde te juntas con quien diseña el producto, el espacio y con quien conoce el problema de primera mano (médicos, enfermeras, pacientes) para explorar juntos una idea, armar prototipos y probarlos en un formato corto y acelerado. También existe una versión más ligera, llamada 'Skinny Dip'.",
+  "resumen_teorico": "Un taller intensivo donde te juntas con quien diseña el producto, el espacio y con quien conoce el problema de primera mano (médicos, enfermeras, pacientes) para explorar juntos un problema, armar prototipos de posibles soluciones y evaluar los resultados. También existe una versión más ligera, llamada 'Skinny Dip'.",
   "pasos_accionables": [
     "Reúne un equipo con quienes diseñan y quienes conocen el problema o lo viven de cerca, en un mismo espacio físico",
     "Define la pregunta central en formato '¿Cómo podríamos...?'",
@@ -12,7 +12,7 @@
     "Arma prototipos físicos o de proceso durante el taller, y que sean de baja fidelidad",
     "Prueba los resultados con las personas presentes y ajusta en el momento"
   ],
-  "entregable_esperado": "Prototipos probados y evaluados con usuarios o expertos reales en poco tiempo",
+  "entregable_esperado": "Prototipos probados y evaluados con usuarios o expertos reales",
   "nodos_previos": [
     "practica_de_observacion_atenta",
     "ways_to_grow_matrix",
@@ -89,6 +89,38 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que en el taller se evalúan resultados; que salgan validados es un resultado prometido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-007-deep_dive_workshop-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un taller intensivo donde te juntas con quien diseña el producto, el espacio y con quien conoce el problema de primera mano (médicos, enfermeras, pacientes) para explorar juntos una idea, armar prototipos y probarlos en un formato corto y acelerado. También existe una versión más ligera, llamada 'Skinny Dip'.",
+      "texto_nuevo": "Un taller intensivo donde te juntas con quien diseña el producto, el espacio y con quien conoce el problema de primera mano (médicos, enfermeras, pacientes) para explorar juntos un problema, armar prototipos de posibles soluciones y evaluar los resultados. También existe una versión más ligera, llamada 'Skinny Dip'.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1037",
+        "frase": "to explore a problem, prototype possible solutions, and evaluate results"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro lo llama taller intensivo y nombra versiones más ligeras, pero no dice que sea corto ni acelerado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-007-deep_dive_workshop-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prototipos probados y evaluados con usuarios o expertos reales en poco tiempo",
+      "texto_nuevo": "Prototipos probados y evaluados con usuarios o expertos reales",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "1037",
+        "frase": "explore a problem, prototype possible solutions, and evaluate results"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no atribuye al taller ningún plazo; 'en poco tiempo' es un resultado añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

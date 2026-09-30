@@ -4,9 +4,9 @@
   "dominio": "compras",
   "titulo_concepto": "Clasifica tu inventario y define qué meta persigues",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, reserva de seguridad para cubrir imprevistos, stock comprado para una temporada que viene y mercadería en tránsito. Antes de decidir cuánto comprar o cuándo reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuántos días de stock quieres mantener, cuántas veces al año quieres rotar el inventario, o qué nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta, te será difícil eliminar el inventario que sobra.",
+  "resumen_teorico": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, producto en proceso, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, reserva de seguridad para cubrir imprevistos, stock comprado para una temporada que viene y mercadería en tránsito. Antes de decidir cuánto comprar o cuándo reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuántos días de stock quieres mantener, cuántas veces al año quieres rotar el inventario, o qué nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta, te será difícil eliminar el inventario que sobra.",
   "pasos_accionables": [
-    "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas, consumibles de operación o stock comprado para una temporada que viene.",
+    "Separa lo que tienes en bodega según su función: para vender, para producir, producto en proceso, para reponer piezas, consumibles de operación o stock comprado para una temporada que viene.",
     "Identifica cuánto de ese stock es reserva de seguridad y cuánto es exceso sin propósito claro.",
     "Decide una meta concreta: días de stock, número de rotaciones al año, o nivel de disponibilidad para tus clientes.",
     "Sugerencia de My Idea: revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta."
@@ -185,6 +185,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el stock de anticipación de temporada, que el paso siguiente contaría como exceso.; Se sostiene por el stock de temporada; el tránsito no se añade porque no está en bodega.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-008-clasifica_tu_inventario-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, reserva de seguridad para cubrir imprevistos, stock comprado para una temporada que viene y mercadería en tránsito. Antes de decidir cuánto comprar o cuándo reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuántos días de stock quieres mantener, cuántas veces al año quieres rotar el inventario, o qué nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta, te será difícil eliminar el inventario que sobra.",
+      "texto_nuevo": "No todo lo que tienes guardado sirve para lo mismo. Hay mercadería lista para vender, insumos para producir, producto en proceso, piezas de repuesto para reparar algo que ya vendiste, consumibles de operación diaria, reserva de seguridad para cubrir imprevistos, stock comprado para una temporada que viene y mercadería en tránsito. Antes de decidir cuánto comprar o cuándo reponer, separa lo que tienes según su función real y define una meta concreta para ti mismo: cuántos días de stock quieres mantener, cuántas veces al año quieres rotar el inventario, o qué nivel de disponibilidad le quieres garantizar a tus clientes. Sin esa meta, te será difícil eliminar el inventario que sobra.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "464-470",
+        "frase": "Inventory is basically divided into raw materials, finished goods, and work-in-process."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista omite el trabajo en proceso, uno de los tres tipos básicos del libro, que además pide mantenerlo al mínimo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-008-clasifica_tu_inventario-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Separa lo que tienes en bodega según su función: para vender, para producir, para reponer piezas, consumibles de operación o stock comprado para una temporada que viene.",
+      "texto_nuevo": "Separa lo que tienes en bodega según su función: para vender, para producir, producto en proceso, para reponer piezas, consumibles de operación o stock comprado para una temporada que viene.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "464-470",
+        "frase": "Inventory is basically divided into raw materials, finished goods, and work-in-process."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La separación por función omite el trabajo en proceso, uno de los tres tipos básicos que el libro enumera.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [
