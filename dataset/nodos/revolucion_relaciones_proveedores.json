@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Las compras representan más del 60% de las ventas en muchas empresas y son fuente de más de la mitad de los problemas de calidad. El concepto tradicional de proveedor evolucionó hacia el de cadena de suministro (supply chain), que incluye todas las tareas, procesos e interacciones entre proveedores y usuarios finales. La relación pasó de ser adversarial a una de alianza y asociación (partnership), especialmente relevante bajo esquemas de inventario justo a tiempo (JIT), donde no hay inventario de respaldo que oculte problemas de calidad del proveedor.",
   "pasos_accionables": [
-    "Mapear la cadena de suministro completa, incluyendo todos los niveles de proveedores",
+    "Mapear la cadena de suministro completa de los insumos de importancia estratégica, incluyendo todos los niveles de proveedores",
     "Evaluar el nivel de dependencia entre comprador y proveedor",
     "Transformar la relación de adversarial a colaborativa/partnership",
     "Evaluar el impacto de la implementación de JIT en los requisitos de calidad del proveedor",
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Repiensa tu Cadena de Proveedores",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-102-revolucion_relaciones_proveedores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mapear la cadena de suministro completa, incluyendo todos los niveles de proveedores",
+      "texto_nuevo": "Mapear la cadena de suministro completa de los insumos de importancia estratégica, incluyendo todos los niveles de proveedores",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23529",
+        "frase": "Supply chain management is reserved for items that are of strategic importance to an organization."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reserva la gestión de la cadena de suministro para los artículos de importancia estratégica.; Mismo defecto que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

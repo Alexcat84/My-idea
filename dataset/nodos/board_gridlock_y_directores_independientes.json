@@ -7,7 +7,7 @@
   "resumen_teorico": "Muchos boards de startups tienen número par de miembros divididos equitativamente entre fundadores e inversionistas, lo que genera riesgo de bloqueo en decisiones (gridlock). Una solución común es incluir un director independiente que actúe como voto decisivo, aunque quién lo nomina se convierte en punto crítico de negociación.",
   "pasos_accionables": [
     "Evaluar si el board tiene número par de miembros y riesgo de empate",
-    "Negociar la inclusión de un director independiente neutral",
+    "Negociar la inclusión de un director independiente (que no sea inversionista principal, ejecutivo ni fundador)",
     "Definir en el term sheet quién tiene derecho a nominar a ese director"
   ],
   "entregable_esperado": "Acuerdo formal sobre estructura del board que evite bloqueos en decisiones críticas",
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Rompe el Bloqueo de tu Junta",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-104-board_gridlock_y_directores_independientes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar la inclusión de un director independiente neutral",
+      "texto_nuevo": "Negociar la inclusión de un director independiente (que no sea inversionista principal, ejecutivo ni fundador)",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2932",
+        "frase": "a director who is not a major investor, current executive, or founder"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que el independiente sea neutral: se alinea con quien lo nomina.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

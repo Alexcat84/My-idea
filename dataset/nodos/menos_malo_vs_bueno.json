@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Crítica al Paradigma de 'Ser Menos Malo'",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Cabe cuestionar el enfoque ambiental convencional centrado en reducir, minimizar y evitar (eco-eficiencia), ya que esto solo hace que los procesos dañinos sean 'menos malos' pero no los transforma en positivos. Ejemplos como fotocopiadoras más rápidas que aún no son compostables, o neumáticos con partículas más pequeñas pero más tóxicas, ilustran que optimizar los parámetros equivocados no resuelve el problema de fondo. Una alternativa es reemplazar el lenguaje de culpa y minimización por un enfoque de diseño positivo, 'eco-efectivo', que busca ser genuinamente beneficioso.",
+  "resumen_teorico": "Cabe cuestionar el enfoque ambiental convencional centrado en reducir, minimizar y evitar (eco-eficiencia), ya que esto solo hace que los procesos dañinos sean 'menos malos' pero no los transforma en positivos. Ejemplos como fotocopiadoras más rápidas cuyo papel aún no es compostable, o neumáticos con partículas de látex más finas que probablemente enferman a más gente, ilustran que optimizar los parámetros equivocados no resuelve el problema de fondo. La eficiencia sí sirve dentro de un sistema con fines positivos o como transición. Una alternativa es reemplazar el lenguaje de culpa y minimización por un enfoque de diseño positivo, 'eco-efectivo', que busca ser genuinamente beneficioso.",
   "pasos_accionables": [
     "Evaluar si las mejoras actuales del producto son solo reducciones de daño o transformaciones reales",
     "Identificar métricas de 'eficiencia' que puedan estar optimizando el aspecto equivocado del problema",
@@ -55,6 +55,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-004 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-102-menos_malo_vs_bueno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cabe cuestionar el enfoque ambiental convencional centrado en reducir, minimizar y evitar (eco-eficiencia), ya que esto solo hace que los procesos dañinos sean 'menos malos' pero no los transforma en positivos. Ejemplos como fotocopiadoras más rápidas que aún no son compostables, o neumáticos con partículas más pequeñas pero más tóxicas, ilustran que optimizar los parámetros equivocados no resuelve el problema de fondo. Una alternativa es reemplazar el lenguaje de culpa y minimización por un enfoque de diseño positivo, 'eco-efectivo', que busca ser genuinamente beneficioso.",
+      "texto_nuevo": "Cabe cuestionar el enfoque ambiental convencional centrado en reducir, minimizar y evitar (eco-eficiencia), ya que esto solo hace que los procesos dañinos sean 'menos malos' pero no los transforma en positivos. Ejemplos como fotocopiadoras más rápidas cuyo papel aún no es compostable, o neumáticos con partículas de látex más finas que probablemente enferman a más gente, ilustran que optimizar los parámetros equivocados no resuelve el problema de fondo. La eficiencia sí sirve dentro de un sistema con fines positivos o como transición. Una alternativa es reemplazar el lenguaje de culpa y minimización por un enfoque de diseño positivo, 'eco-efectivo', que busca ser genuinamente beneficioso.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "16-18, 394",
+        "frase": "Now we can make better tires but as a result probably more people are unwell"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro aclara que no condena toda eficiencia: vale como herramienta dentro de un sistema eficaz o como estrategia de transición.; El libro dice que lo que no se podía compostar era el papel, no la fotocopiadora.; El libro no dice que las partículas sean más tóxicas: son de látex, que provoca asma, y probablemente enferman a más gente.; Mismo defecto que la marca 0: lo no compostable era el papel.; Mismo defecto que la marca 1: la toxicidad mayor no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

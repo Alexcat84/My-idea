@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Requisitos Numéricos de Calidad y Confiabilidad para Lotes",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, generando confusión en discusiones de responsabilidad del producto.",
+  "resumen_teorico": "Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, y los criterios también pueden generar confusión en discusiones de responsabilidad del producto.",
   "pasos_accionables": [
     "Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)",
     "Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas",
@@ -49,6 +49,22 @@
         "evidencia": "F28-023: El muestreo de aceptación de lotes con el proveedor es control operativo de calidad, no validación con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-102-requisitos_numericos_calidad_lotes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, generando confusión en discusiones de responsabilidad del producto.",
+      "texto_nuevo": "Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, y los criterios también pueden generar confusión en discusiones de responsabilidad del producto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23598",
+        "frase": "These criteria can also be a source of confusion in product liability discussions."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los criterios pueden ser fuente de confusión en discusiones de responsabilidad; el nodo lo vuelve efecto seguro de la mala interpretación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

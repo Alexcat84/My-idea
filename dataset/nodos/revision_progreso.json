@@ -12,7 +12,7 @@
     "Asignar responsabilidad y autoridad clara para actuar sobre las brechas identificadas",
     "Documentar y comunicar resultados de forma gráfica y periódica",
     "Crear un formato simple y estándar para reportar cada proyecto",
-    "Reunir en ese formato el costo, la inversión y el ahorro neto de cada proyecto",
+    "Reunir en ese formato el costo estimado del desperdicio, la reducción de costos estimada y la realmente lograda, la inversión y el ahorro neto de cada proyecto",
     "Revisar este proceso de seguimiento como parte de tu control de calidad general"
   ],
   "entregable_esperado": "Un calendario de revisiones con actas que documenten brechas identificadas y acciones correctivas asignadas",
@@ -44,5 +44,24 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-102-revision_progreso-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reunir en ese formato el costo, la inversión y el ahorro neto de cada proyecto",
+      "texto_nuevo": "Reunir en ese formato el costo estimado del desperdicio, la reducción de costos estimada y la realmente lograda, la inversión y el ahorro neto de cada proyecto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7222-7232",
+        "frase": "The original estimated reduction in cost if the project were to be successful"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El formato del libro incluye la reducción de costos estimada al inicio y la realmente lograda.; Mismo defecto que la marca 0.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

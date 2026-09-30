@@ -10,7 +10,7 @@
     "Construir un gráfico de control para identificar si el proceso está en control estadístico.",
     "Separar las causas especiales (ej. averías) de la variación normal del sistema.",
     "Calcular el límite superior de tiempo esperado bajo control estadístico.",
-    "Ajustar los niveles de inventario o buffer con base en ese límite, y monitorear ahorros resultantes."
+    "Ajustar los niveles de inventario o buffer con base en ese límite, cubrir las averías con un envío rápido de reposición en lugar de inventario extra, y monitorear ahorros resultantes."
   ],
   "entregable_esperado": "Un gráfico de control de tiempos de proceso con límites calculados estadísticamente y una política de inventario ajustada que documente el ahorro esperado.",
   "nodos_previos": [
@@ -44,6 +44,23 @@
       },
       "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-103-control_estadistico_de_inventario_en_transito-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajustar los niveles de inventario o buffer con base en ese límite, y monitorear ahorros resultantes.",
+      "texto_nuevo": "Ajustar los niveles de inventario o buffer con base en ese límite, cubrir las averías con un envío rápido de reposición en lugar de inventario extra, y monitorear ahorros resultantes.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4762-4768",
+        "frase": "Inventory sufficient to cover shortage that arises from breakdowns en route is costly."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El límite deja fuera las averías; el libro advierte que cubrirlas con inventario es costoso y propone reponer rápido.; Mismo defecto: se pierde la reposición rápida ante averías en lugar de inventario extra.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

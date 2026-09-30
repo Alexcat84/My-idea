@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Comparación de Costos Entre Métodos de Inspección (Tabla 2x2)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+  "resumen_teorico": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Si la prueba no es destructiva, se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
   "pasos_accionables": [
-    "Seleccionar una muestra de al menos 200 piezas para probar con ambos métodos de inspección.",
+    "Si la prueba no destruye las piezas, seleccionar una muestra de al menos 200 piezas para probar con ambos métodos de inspección.",
     "Construir una tabla 2x2 registrando acuerdos y desacuerdos entre el método maestro y el método barato.",
     "Calcular el costo del ahorro neto usando la fórmula S = M - C - (n12*k2 + n21*u).",
-    "Si el resultado es dudoso, aumentar el tamaño de la muestra (400+ piezas) para mayor precisión.",
+    "Si el resultado es dudoso, aumentar el tamaño de la muestra (400+ piezas) para mayor precisión; si la duda persiste, quedarse con el método maestro.",
     "Verificar que ambos métodos de prueba estén en control estadístico antes de sacar conclusiones."
   ],
   "entregable_esperado": "Análisis de costo-beneficio documentado que determine si el método de inspección barato debe reemplazar al método maestro.",
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Compara Costos de Inspección",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-103-comparacion_metodos_inspeccion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar una muestra de al menos 200 piezas para probar con ambos métodos de inspección.",
+      "texto_nuevo": "Si la prueba no destruye las piezas, seleccionar una muestra de al menos 200 piezas para probar con ambos métodos de inspección.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9811",
+        "frase": "What one can do on a nondestructive test is to subject 200 items"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea pasar las mismas piezas por ambos métodos solo en una prueba no destructiva.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-103-comparacion_metodos_inspeccion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el resultado es dudoso, aumentar el tamaño de la muestra (400+ piezas) para mayor precisión.",
+      "texto_nuevo": "Si el resultado es dudoso, aumentar el tamaño de la muestra (400+ piezas) para mayor precisión; si la duda persiste, quedarse con el método maestro.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9823",
+        "frase": "If there still be doubt, my advice would be to stay with the master method"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se pierde la regla de quedarse con el método maestro si persiste la duda.; Se cae la regla de decisión: si tras ampliar la muestra sigue la duda, quedarse con el método maestro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-103-comparacion_metodos_inspeccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+      "texto_nuevo": "Antes de reemplazar un método de inspección costoso (maestro) por uno más barato, es necesario verificar estadísticamente si el método barato realmente reduce el costo total. Si la prueba no es destructiva, se somete una muestra (ej. 200 piezas) a ambos métodos y se construye una tabla 2x2 de resultados. Los desacuerdos (falsos positivos y falsos negativos) tienen costos asociados que deben calcularse para determinar el ahorro real (S). Ambos métodos deben estar en control estadístico para que la comparación sea válida.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9811",
+        "frase": "What one can do on a nondestructive test is to subject 200 items"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro es para pruebas no destructivas, donde la misma pieza pasa por ambos métodos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

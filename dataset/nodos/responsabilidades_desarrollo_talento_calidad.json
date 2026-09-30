@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Responsabilidades Compartidas en el Desarrollo de Talento de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Formar gente que domine la calidad depende de tres funciones que alguien tiene que cubrir: la visión estratégica (que cultura de calidad quieres construir), el diseno practico de la formación (como se entrena a la gente) y el conocimiento técnico de calidad (que se enseña en concreto). Separar estas funciones evita que la calidad quede aislada del trabajo real del negocio, superando la vieja idea de calidad versus trabajo real.",
+  "resumen_teorico": "Formar gente que domine la calidad depende de tres funciones que alguien tiene que cubrir: la visión estratégica (qué cultura de calidad quieres construir), el diseño práctico de la formación (cómo se entrena a la gente) y el conocimiento técnico de calidad (qué se enseña en concreto). Que estas funciones colaboren y la formación en calidad se integre al resto, en vez de darse aparte, evita que la calidad quede aislada del trabajo real del negocio, superando la vieja idea de calidad versus trabajo real.",
   "pasos_accionables": [
     "Define tu visión estratégica: qué quieres lograr con la formación en calidad",
-    "Diseña e implementa el entrenamiento, ya sea tú mismo o la persona que te ayude con eso",
+    "Diseña e implementa el entrenamiento con una forma de evaluarlo, ya sea tú mismo o la persona que te ayude con eso",
     "Consigue o desarrolla el conocimiento técnico de calidad para dar contenido sólido",
     "Integra el contenido de calidad al desarrollo profesional general, no como algo aparte"
   ],
@@ -96,6 +96,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-102-responsabilidades_desarrollo_talento_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Formar gente que domine la calidad depende de tres funciones que alguien tiene que cubrir: la visión estratégica (que cultura de calidad quieres construir), el diseno practico de la formación (como se entrena a la gente) y el conocimiento técnico de calidad (que se enseña en concreto). Separar estas funciones evita que la calidad quede aislada del trabajo real del negocio, superando la vieja idea de calidad versus trabajo real.",
+      "texto_nuevo": "Formar gente que domine la calidad depende de tres funciones que alguien tiene que cubrir: la visión estratégica (qué cultura de calidad quieres construir), el diseño práctico de la formación (cómo se entrena a la gente) y el conocimiento técnico de calidad (qué se enseña en concreto). Que estas funciones colaboren y la formación en calidad se integre al resto, en vez de darse aparte, evita que la calidad quede aislada del trabajo real del negocio, superando la vieja idea de calidad versus trabajo real.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3022-3024",
+        "frase": "separate from the training department. This created barriers in the implementation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro atribuye el dilema de calidad versus trabajo real a dar la formación de calidad por separado; lo evita la colaboración y la integración.; Existe, pero es un contrario: el libro dice que la separación creó el aislamiento, no que lo evite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-102-responsabilidades_desarrollo_talento_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña e implementa el entrenamiento, ya sea tú mismo o la persona que te ayude con eso",
+      "texto_nuevo": "Diseña e implementa el entrenamiento con una forma de evaluarlo, ya sea tú mismo o la persona que te ayude con eso",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3022",
+        "frase": "training design and delivery, and establishing an evaluation process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en la implementación establecer un proceso de evaluación de la formación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

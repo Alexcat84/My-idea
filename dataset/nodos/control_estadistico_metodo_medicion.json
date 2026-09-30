@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Control Estadístico del Método de Medición (Condición de Validez)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Ninguna medición, visual, manual o instrumental, puede considerarse confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+  "resumen_teorico": "Ninguna medición, visual, manual o instrumental, puede considerarse confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir precisión, buena o mala, a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
   "pasos_accionables": [
     "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.",
-    "Verifica que el rango de variación se mantenga dentro de límites de control estadístico.",
+    "Verifica que el rango de variación se mantenga dentro de límites de control estadístico y que su nivel no sea tan grande que la precisión no alcance para el uso.",
     "Compara resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.",
     "Compara resultados entre diferentes instrumentos usados por el mismo operador.",
     "Establece criterios de reproducibilidad aceptable antes de iniciar las pruebas.",
@@ -57,6 +57,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-017 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-103-control_estadistico_metodo_medicion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ninguna medición, visual, manual o instrumental, puede considerarse confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir exactitud a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+      "texto_nuevo": "Ninguna medición, visual, manual o instrumental, puede considerarse confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir precisión, buena o mala, a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6443",
+        "frase": "No precision, good or bad, can be ascribed to a test method"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de precisión, buena o mala, no de exactitud, que distingue como otra propiedad.; Mismo defecto: el libro dice que no se puede atribuir precisión, no exactitud.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-103-control_estadistico_metodo_medicion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que el rango de variación se mantenga dentro de límites de control estadístico.",
+      "texto_nuevo": "Verifica que el rango de variación se mantenga dentro de límites de control estadístico y que su nivel no sea tan grande que la precisión no alcance para el uso.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6441",
+        "frase": "This characteristic alone is of course not sufficient."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el control estadístico solo no basta: el nivel del R-chart no debe ser demasiado grande.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

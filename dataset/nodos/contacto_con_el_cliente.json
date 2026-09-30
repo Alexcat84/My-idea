@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gestión del Contacto con el Cliente en Organizaciones de Servicio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Por eso, la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son ellos quienes sostienen el negocio.",
+  "resumen_teorico": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Por eso, la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son los clientes quienes sostienen el negocio.",
   "pasos_accionables": [
     "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tú mismo",
     "Priorizar en la contratación la capacidad de trato y servicio al cliente",
@@ -111,6 +111,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-103-contacto_con_el_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Por eso, la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son ellos quienes sostienen el negocio.",
+      "texto_nuevo": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Por eso, la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son los clientes quienes sostienen el negocio.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4247",
+        "frase": "It is customers that keep a company in business"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que son los clientes quienes mantienen a la empresa en el negocio, no el personal de contacto.; Mismo defecto: cambia a quién atribuye el libro sostener el negocio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

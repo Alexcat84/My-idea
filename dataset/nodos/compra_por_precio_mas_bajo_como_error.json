@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Riesgo de comprar solo por el precio más bajo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Elegir siempre al proveedor más barato es un riesgo que muchas veces no se ve a tiempo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. Un precio inicial bajo no garantiza calidad y puede esconder costos ocultos mucho mayores que aparecen después, en producción, ensamblaje o servicio.",
+  "resumen_teorico": "Elegir siempre al proveedor más barato es un riesgo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. El precio no significa nada sin una medida de la calidad que compras: sin ella, terminas con baja calidad y alto costo, con costos ocultos que aparecen después, en producción, ensamblaje o servicio.",
   "pasos_accionables": [
     "Deja de usar el precio más bajo como el único criterio para decidir a quién le compras",
     "Calcula el costo total: lo que te cuesta rehacer trabajo, el tiempo perdido y las fallas",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "No Elijas Solo por Precio",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-103-compra_por_precio_mas_bajo_como_error-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir siempre al proveedor más barato es un riesgo que muchas veces no se ve a tiempo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. Un precio inicial bajo no garantiza calidad y puede esconder costos ocultos mucho mayores que aparecen después, en producción, ensamblaje o servicio.",
+      "texto_nuevo": "Elegir siempre al proveedor más barato es un riesgo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. El precio no significa nada sin una medida de la calidad que compras: sin ella, terminas con baja calidad y alto costo, con costos ocultos que aparecen después, en producción, ensamblaje o servicio.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "728",
+        "frase": "Price has no meaning without a measure of the quality being purchased."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no dice nada sobre si el riesgo se ve a tiempo o no.; Se cae la condición central: sin una medida de la calidad, el precio no significa nada y el resultado es baja calidad y alto costo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

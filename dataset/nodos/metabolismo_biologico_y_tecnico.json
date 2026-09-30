@@ -6,7 +6,7 @@
   "fuente": "Cradle to Cradle - Michael Braungart",
   "resumen_teorico": "Marco que divide los flujos de materiales del planeta en dos metabolismos separados: el biológico (biosfera), donde los nutrientes regresan a la naturaleza sin dañarla, y el técnico (tecnosfera), donde los materiales industriales circulan en bucles cerrados sin perder calidad. Un nutriente biológico debe estar libre de mutágenos, carcinógenos, tóxicos persistentes y sustancias bioacumulativas, y aplica sobre todo a empaques, textiles y productos de consumo rápido, como el caso de un textil formulado con solo 38 químicos seguros de 8000 posibles. Un nutriente técnico son metales o plásticos de alta calidad que deben mantenerse separados por tipo para evitar el downcycling y lograr upcycling. Para que ambos sistemas funcionen sanos, no deben mezclarse en híbridos monstruosos imposibles de separar al final de la vida útil.",
   "pasos_accionables": [
-    "Determina si cada material de tu producto pertenece al metabolismo biológico o técnico",
+    "Determina si cada material de tu producto pertenece al metabolismo biológico o técnico, y aparta los materiales peligrosos que no caben en ninguno para guardarlos de forma segura hasta que puedan desintoxicarse",
     "Audita los componentes biológicos para eliminar mutágenos, carcinógenos, tóxicos persistentes y bioacumulativos desde el diseño inicial",
     "Clasifica los componentes técnicos (metales, plásticos, aleaciones) evitando mezclarlos con materiales incompatibles",
     "Diseña el producto para que sus partes se separen fácilmente al final de su vida útil, evitando híbridos monstruosos",
@@ -62,6 +62,23 @@
         "evidencia": "F25-009: Tiene razon B: los pasos y el entregable son la especificacion tecnica de materiales del producto con sus rutas de retorno, es decir, diseno del producto y no exploracion de la idea. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-102-metabolismo_biologico_y_tecnico-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determina si cada material de tu producto pertenece al metabolismo biológico o técnico",
+      "texto_nuevo": "Determina si cada material de tu producto pertenece al metabolismo biológico o técnico, y aparta los materiales peligrosos que no caben en ninguno para guardarlos de forma segura hasta que puedan desintoxicarse",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "680, 686",
+        "frase": "Some materials do not fit into either the organic or technical metabolism"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que algunos materiales peligrosos no caben en ningún metabolismo y deben guardarse de forma segura hasta poder desintoxicarse.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

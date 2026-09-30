@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Resistencia al Cambio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Fenómeno natural en el que los miembros de una organización se oponen a cambios técnicos o sociales por temor a perder estatus, comodidad o capacidad de desempeño bajo el nuevo sistema. Incluso cambios beneficiosos generan resistencia porque alteran el patrón cultural establecido. Ejemplos históricos incluyen la resistencia a las teorías heliocéntricas y a la diesel-ización de las locomotoras.",
+  "resumen_teorico": "Fenómeno natural en el que los miembros de una organización se oponen a cambios técnicos o sociales por temor a perder estatus, comodidad o capacidad de desempeño bajo el nuevo sistema. Incluso cambios beneficiosos a menudo generan resistencia porque alteran el patrón cultural establecido. Ejemplos históricos incluyen la resistencia a las teorías heliocéntricas y a la diesel-ización de las locomotoras.",
   "pasos_accionables": [
     "Identificar los grupos y roles cuyo estatus podría verse afectado por el cambio propuesto",
     "Comunicar de forma anticipada y transparente los beneficios y el impacto del cambio",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Anticipa la Resistencia al Cambio",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-102-resistencia_al_cambio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fenómeno natural en el que los miembros de una organización se oponen a cambios técnicos o sociales por temor a perder estatus, comodidad o capacidad de desempeño bajo el nuevo sistema. Incluso cambios beneficiosos generan resistencia porque alteran el patrón cultural establecido. Ejemplos históricos incluyen la resistencia a las teorías heliocéntricas y a la diesel-ización de las locomotoras.",
+      "texto_nuevo": "Fenómeno natural en el que los miembros de una organización se oponen a cambios técnicos o sociales por temor a perder estatus, comodidad o capacidad de desempeño bajo el nuevo sistema. Incluso cambios beneficiosos a menudo generan resistencia porque alteran el patrón cultural establecido. Ejemplos históricos incluyen la resistencia a las teorías heliocéntricas y a la diesel-ización de las locomotoras.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1991",
+        "frase": "change, even beneficial change, will often be resisted"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que incluso el cambio beneficioso a menudo encuentra resistencia.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

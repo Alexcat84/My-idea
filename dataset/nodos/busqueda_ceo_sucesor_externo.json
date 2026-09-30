@@ -9,8 +9,8 @@
     "Definir con claridad qué cambios estratégicos, culturales o de equipo se esperan del nuevo CEO antes de iniciar la búsqueda",
     "Iniciar una búsqueda externa mediante firmas de reclutamiento especializadas, explorando también la red de contactos propia y de los inversionistas",
     "Buscar candidatos con experiencia en gestión multifuncional y operaciones, no solo expertise técnico, y con reputación comprobada",
-    "Involucrar al fundador en el proceso de selección (entrevistas junto con miembros clave del consejo) para asegurar una transición más cooperativa",
-    "Negociar el rol futuro del fundador (chairman, CTO, asesor) como parte de la contratación del nuevo CEO"
+    "Involucrar al fundador en el proceso de selección (entrevistas junto con miembros clave del consejo) para intentar ganar su apoyo a la transición, definiendo cuánto decide, porque si sus motivaciones chocan con las de los inversionistas puede traer riesgos y demoras",
+    "Negociar el rol futuro del fundador (chairman, CTO u otro puesto ejecutivo) como parte de la contratación del nuevo CEO, sabiendo que mantenerlo como chairman puede chocar con la autoridad del nuevo CEO"
   ],
   "entregable_esperado": "Perfil de candidato CEO definido, lista corta de candidatos externos evaluados por el consejo y el fundador, y acuerdo sobre el rol futuro del fundador tras la sucesión",
   "condiciones_activacion": [
@@ -35,5 +35,41 @@
   "etiqueta_arbol": "Busca un CEO Externo",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-104-busqueda_ceo_sucesor_externo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Involucrar al fundador en el proceso de selección (entrevistas junto con miembros clave del consejo) para asegurar una transición más cooperativa",
+      "texto_nuevo": "Involucrar al fundador en el proceso de selección (entrevistas junto con miembros clave del consejo) para intentar ganar su apoyo a la transición, definiendo cuánto decide, porque si sus motivaciones chocan con las de los inversionistas puede traer riesgos y demoras",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3211",
+        "frase": "to help gain the support of the replaced CEO"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de un intento de ganar el apoyo del fundador, no de asegurarlo.; Mismo defecto: 'asegurar' endurece un intento.; Mismo defecto: la junta debe sopesar cuánto involucrarlo.; Se cae que involucrarlo puede traer riesgos y demoras si sus motivaciones chocan con las de los inversionistas.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-104-busqueda_ceo_sucesor_externo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar el rol futuro del fundador (chairman, CTO, asesor) como parte de la contratación del nuevo CEO",
+      "texto_nuevo": "Negociar el rol futuro del fundador (chairman, CTO u otro puesto ejecutivo) como parte de la contratación del nuevo CEO, sabiendo que mantenerlo como chairman puede chocar con la autoridad del nuevo CEO",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3265",
+        "frase": "Clearly, this can cause problems for the incoming CEO"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no trae el rol de asesor entre los destinos del fundador reemplazado.; Se cae que dejarlo como chairman puede estorbar al nuevo CEO, que puede exigir que lo deje.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

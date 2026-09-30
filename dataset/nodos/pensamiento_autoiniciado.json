@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Pensamiento Autoiniciado sin Estímulo Externo",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "El pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular). La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes, sino que puede cultivarse deliberadamente como una actividad mental autónoma.",
+  "resumen_teorico": "El pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular), aunque ese ciclo suele recorrerse con más vigor y facilidad. La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes.",
   "pasos_accionables": [
     "Reservar tiempo regular para pensar deliberadamente sobre un problema, sin esperar a que surja un estímulo externo o una necesidad urgente.",
     "No descartar procesos de pensamiento que no producen un resultado visible inmediato; permitir periodos de reflexión sin output tangible.",
-    "Practicar sesiones de pensamiento 'puro' (sin libros, sin pantallas, sin estímulos externos) para fortalecer la capacidad de iniciar pensamiento de forma autónoma."
+    "Sugerencia de My Idea: practicar sesiones de pensamiento 'puro' (sin libros, sin pantallas, sin estímulos externos)."
   ],
   "entregable_esperado": "Un hábito o rutina de 'tiempo de pensamiento deliberado' incorporado a la práctica creativa del usuario, con registro de ideas surgidas sin estímulo externo directo.",
   "nodos_previos": [
@@ -38,6 +38,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-007 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-103-pensamiento_autoiniciado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular). La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes, sino que puede cultivarse deliberadamente como una actividad mental autónoma.",
+      "texto_nuevo": "El pensamiento no siempre requiere un ciclo 'primitivo' completo (estímulo sensorial → impulso instintivo → pensamiento → acción muscular), aunque ese ciclo suele recorrerse con más vigor y facilidad. La corteza cerebral puede iniciar el proceso de pensamiento por sí misma, por su propia necesidad de actividad, sin esperar una sensación externa o un impulso instintivo previo, y puede concluir sin producir ningún resultado muscular u observable inmediato (como ilustra el ejemplo de Arquímedes pensando durante meses antes de su famoso 'Eureka'). Esto es clave para entender que la generación de ideas no depende únicamente de estímulos externos o de necesidades urgentes.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "203",
+        "frase": "carried through with greater vigour and ease than any less primitive course"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no afirma que ese pensamiento pueda cultivarse deliberadamente.; Mismo matiz.; Se cae que el ciclo primitivo se recorre con más vigor y facilidad, aunque no sea el único posible.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-103-pensamiento_autoiniciado-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Practicar sesiones de pensamiento 'puro' (sin libros, sin pantallas, sin estímulos externos) para fortalecer la capacidad de iniciar pensamiento de forma autónoma.",
+      "texto_nuevo": "Sugerencia de My Idea: practicar sesiones de pensamiento 'puro' (sin libros, sin pantallas, sin estímulos externos).",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "203-205",
+        "frase": "start the process of thought without waiting for the primitive stimulus of a sensation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo defecto.; Promete un efecto (fortalecer esa capacidad) que el libro no dice.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

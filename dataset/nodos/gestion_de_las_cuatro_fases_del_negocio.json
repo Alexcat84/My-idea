@@ -7,7 +7,7 @@
   "resumen_teorico": "Toda empresa gestiona simultáneamente cuatro tipos de trabajo: (1) creación de nuevos productos (I+D/startup), (2) crecimiento y expansión hacia el mercado masivo, (3) optimización y excelencia operativa para combatir la comoditización, y (4) gestión de productos legado con foco en reducción de costos. El problema común es que los creadores de un producto suelen quedarse atrapados gestionando su crecimiento y optimización en lugar de seguir innovando, lo que reduce la capacidad creativa disponible para nuevas ideas.",
   "pasos_accionables": [
     "Identificar en qué fase se encuentra cada producto o iniciativa de la empresa.",
-    "Asignar equipos y perfiles de gestión distintos según la fase (creativos para I+D, optimizadores para crecimiento/eficiencia).",
+    "Asignar equipos y perfiles de gestión distintos según la fase (creativos para I+D, optimizadores para la fase de optimización y eficiencia).",
     "Permitir que los innovadores decidan si quieren moverse con el producto a la siguiente fase o quedarse creando algo nuevo.",
     "Diseñar rutas de carrera para que 'emprendedor' sea un puesto de trabajo formal dentro de la empresa."
   ],
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Gestiona tus Cuatro Frentes",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-104-gestion_de_las_cuatro_fases_del_negocio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asignar equipos y perfiles de gestión distintos según la fase (creativos para I+D, optimizadores para crecimiento/eficiencia).",
+      "texto_nuevo": "Asignar equipos y perfiles de gestión distintos según la fase (creativos para I+D, optimizadores para la fase de optimización y eficiencia).",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3197",
+        "frase": "This may require a different type of manager: one who excels in optimization"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro asigna el perfil optimizador a la fase de optimización, no a la de crecimiento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

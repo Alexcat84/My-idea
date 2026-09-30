@@ -7,13 +7,13 @@
   "resumen_teorico": "Principio del Sistema de Producción Toyota que significa 'ir y ver por uno mismo'. Establece que las decisiones estratégicas deben basarse en conocimiento directo y firsthand de los clientes, no en reportes de terceros ni suposiciones de escritorio. En el mundo de las startups se popularizó como 'get out of the building': los hechos sobre clientes, mercados, proveedores y canales solo existen fuera de la oficina.",
   "pasos_accionables": [
     "Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio",
-    "Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building",
+    "Salir a hablar con clientes potenciales reales, lo que se llama get out of the building",
     "Observar el comportamiento real de los usuarios en su contexto natural",
     "Evitar tomar decisiones basadas únicamente en reportes de segunda mano",
     "Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales",
     "Usar estas observaciones para ajustar el diseño del producto o servicio"
   ],
-  "entregable_esperado": "Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio",
+  "entregable_esperado": "Registro de conversaciones y observaciones directas con clientes potenciales que aclare a grandes rasgos qué hipótesis iniciales del negocio se sostienen y cuáles necesitan probarse con más urgencia",
   "nodos_previos": [
     "hipotesis_valor_crecimiento",
     "actualizar_business_model_canvas_tuneup",
@@ -58,6 +58,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-015 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-104-genchi_gembutsu_salir_del_edificio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building",
+      "texto_nuevo": "Salir a hablar con clientes potenciales reales, lo que se llama get out of the building",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "980",
+        "frase": "get out of your chair and get to know them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no exige presencia física ni descarta el contacto a distancia: su ejemplo son llamadas telefónicas.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-104-genchi_gembutsu_salir_del_edificio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio",
+      "texto_nuevo": "Registro de conversaciones y observaciones directas con clientes potenciales que aclare a grandes rasgos qué hipótesis iniciales del negocio se sostienen y cuáles necesitan probarse con más urgencia",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "969",
+        "frase": "merely reveals what assumptions require the most urgent testing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El contacto temprano no da respuestas definitivas; revela sobre todo qué suposiciones probar con más urgencia.; El libro sí admite una validación temprana a grandes rasgos, así que lo perdido es el límite de no ser definitiva, no un añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

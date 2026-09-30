@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Los Cinco Porqués con Inversión Proporcional",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Técnica de análisis de causa raíz donde cada 'porqué' identificado recibe una inversión de corrección proporcional a su impacto, evitando tanto la sobre-ingeniería como la subinversión. El objetivo es que cada nivel de causa reciba una solución adecuada a su magnitud, generando dos resultados: aprendizaje organizacional y acciones concretas (doing). Aplicado repetidamente, fortalece el 'sistema inmune' del equipo frente a errores recurrentes.",
+  "resumen_teorico": "Técnica de análisis de causa raíz donde cada 'porqué' identificado recibe una inversión de corrección proporcional a la gravedad del síntoma (pequeña si es menor, mayor si es más doloroso), evitando tanto la sobre-ingeniería como la subinversión. El objetivo es que cada nivel de causa reciba una solución adecuada a esa magnitud, generando dos resultados: aprendizaje organizacional y acciones concretas (doing). Aplicado repetidamente, fortalece el 'sistema inmune' del equipo frente a errores recurrentes.",
   "pasos_accionables": [
-    "Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (mínimo 5 veces)",
+    "Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (cinco veces)",
     "Para cada respuesta, asignar una persona responsable y una acción proporcional al nivel del problema",
     "Documentar tanto el aprendizaje obtenido como las acciones correctivas tomadas",
     "Evitar culpar a individuos; enfocar el análisis en procesos y sistemas",
     "Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones",
-    "Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución",
+    "Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución, a quienes trabajaron en las partes afectadas y, si el problema escaló, a quienes decidieron en esa escalada",
     "Identificar en cada nivel si la causa es técnica o humana/organizacional"
   ],
   "entregable_esperado": "Documento de sesión Five Whys con cadena de causas, responsables asignados y acciones proporcionales implementadas",
@@ -78,6 +78,56 @@
         "motivo": "La entrada elegida en E-16 formaba un par de ida y vuelta con regla_simplificada_tolerancia_errores -> five_whys_inversion_proporcional: la regla simplificada va antes del proceso completo, no despues."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-104-five_whys_inversion_proporcional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica de análisis de causa raíz donde cada 'porqué' identificado recibe una inversión de corrección proporcional a su impacto, evitando tanto la sobre-ingeniería como la subinversión. El objetivo es que cada nivel de causa reciba una solución adecuada a su magnitud, generando dos resultados: aprendizaje organizacional y acciones concretas (doing). Aplicado repetidamente, fortalece el 'sistema inmune' del equipo frente a errores recurrentes.",
+      "texto_nuevo": "Técnica de análisis de causa raíz donde cada 'porqué' identificado recibe una inversión de corrección proporcional a la gravedad del síntoma (pequeña si es menor, mayor si es más doloroso), evitando tanto la sobre-ingeniería como la subinversión. El objetivo es que cada nivel de causa reciba una solución adecuada a esa magnitud, generando dos resultados: aprendizaje organizacional y acciones concretas (doing). Aplicado repetidamente, fortalece el 'sistema inmune' del equipo frente a errores recurrentes.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2713",
+        "frase": "the investment should be smaller when the symptom is minor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La inversión se mide por la gravedad del síntoma, no por el impacto de cada porqué.; Mismo defecto: se pierde la referencia a la gravedad del síntoma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-104-five_whys_inversion_proporcional-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (mínimo 5 veces)",
+      "texto_nuevo": "Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (cinco veces)",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2684",
+        "frase": "By asking and answering “why” five times, we can get to the real cause"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de preguntar por qué cinco veces; 'mínimo' añade una exigencia.; Mismo defecto sobre 'mínimo'.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-104-five_whys_inversion_proporcional-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución",
+      "texto_nuevo": "Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución, a quienes trabajaron en las partes afectadas y, si el problema escaló, a quienes decidieron en esa escalada",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2747",
+        "frase": "anyone who worked on the subsystems or features involved"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro también pide a quienes trabajaron en los subsistemas implicados y a quienes decidieron en la escalada.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

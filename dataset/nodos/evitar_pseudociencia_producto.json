@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evitar la Pseudociencia en el Desarrollo de Producto",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Muchos equipos de innovación caen en 'teatro del éxito': seleccionan datos que apoyan su visión en lugar de exponerla a experimentos verdaderos, o se refugian en modo sigiloso para crear una zona libre de datos donde experimentan sin retroalimentación real de clientes. Cualquier intento de demostrar causa y efecto resaltando puntos en un gráfico de métricas brutas, o de justificar fracasos apelando al 'aprendizaje' sin evidencia, constituye pseudociencia. El aprendizaje real solo se demuestra convirtiéndolo en aprendizaje validado en el siguiente ciclo, mediante un modelo de comportamiento del cliente que se pone a prueba y se modifica con evidencia.",
+  "resumen_teorico": "Muchos equipos de innovación caen en 'teatro del éxito': seleccionan datos que apoyan su visión en lugar de exponerla a experimentos verdaderos, o se refugian en modo sigiloso para crear una zona libre de datos donde experimentan sin retroalimentación real de clientes. Cualquier intento de demostrar causa y efecto resaltando puntos en un gráfico de métricas brutas, o de justificar fracasos apelando al 'aprendizaje' sin evidencia, constituye pseudociencia. El aprendizaje real se demuestra convirtiéndolo en aprendizaje validado en el siguiente ciclo, y solo construyendo un modelo de comportamiento del cliente y mostrando que con tu producto o servicio logras cambiarlo con el tiempo estableces hechos reales sobre tu visión.",
   "pasos_accionables": [
     "Revisar si las métricas usadas para justificar decisiones son métricas de vanidad o métricas accionables con relación causa-efecto clara",
     "Preguntar explícitamente: '¿Cómo sabemos que la causa y efecto propuestos son verdaderos?'",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Evita la Pseudociencia de Producto",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-104-evitar_pseudociencia_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos equipos de innovación caen en 'teatro del éxito': seleccionan datos que apoyan su visión en lugar de exponerla a experimentos verdaderos, o se refugian en modo sigiloso para crear una zona libre de datos donde experimentan sin retroalimentación real de clientes. Cualquier intento de demostrar causa y efecto resaltando puntos en un gráfico de métricas brutas, o de justificar fracasos apelando al 'aprendizaje' sin evidencia, constituye pseudociencia. El aprendizaje real solo se demuestra convirtiéndolo en aprendizaje validado en el siguiente ciclo, mediante un modelo de comportamiento del cliente que se pone a prueba y se modifica con evidencia.",
+      "texto_nuevo": "Muchos equipos de innovación caen en 'teatro del éxito': seleccionan datos que apoyan su visión en lugar de exponerla a experimentos verdaderos, o se refugian en modo sigiloso para crear una zona libre de datos donde experimentan sin retroalimentación real de clientes. Cualquier intento de demostrar causa y efecto resaltando puntos en un gráfico de métricas brutas, o de justificar fracasos apelando al 'aprendizaje' sin evidencia, constituye pseudociencia. El aprendizaje real se demuestra convirtiéndolo en aprendizaje validado en el siguiente ciclo, y solo construyendo un modelo de comportamiento del cliente y mostrando que con tu producto o servicio logras cambiarlo con el tiempo estableces hechos reales sobre tu visión.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3339",
+        "frase": "showing our ability to use our product or service to change it over time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el nodo cambia cambiar el comportamiento por modificar el modelo.; Se pierde lo que el libro exige: mostrar que con el producto logras cambiar ese comportamiento con el tiempo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Materiales Cíclicos Infinitamente Reciclables (Upcycling)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Consiste en diseñar productos con materiales (como polímeros) que puedan reciclarse infinitamente sin perder calidad, en contraste con el 'downcycling' tradicional donde el material se degrada en cada ciclo. Un libro hecho de polímero en vez de papel ilustra cómo un producto puede ser diseñado desde el inicio pensando en su próxima vida útil, eliminando la necesidad de talar árboles o usar químicos tóxicos, y permitiendo que tintas y materiales se separen y reutilicen fácilmente.",
+  "resumen_teorico": "Consiste en diseñar productos con materiales (como polímeros) pensados para reciclarse infinitamente sin perder calidad, en contraste con el 'downcycling' tradicional donde el material se degrada en cada ciclo, aunque todavía no está probado que lo logren. Un libro imaginado de polímero en vez de papel ilustra cómo un producto puede ser diseñado desde el inicio pensando en su próxima vida útil, eliminando la necesidad de talar árboles o usar químicos tóxicos, y permitiendo que tintas y materiales se separen y reutilicen fácilmente.",
   "pasos_accionables": [
     "Identificar los materiales actuales del producto y su potencial de reciclaje real (up/downcycling)",
     "Investigar alternativas de materiales técnicos (polímeros, metales) diseñados para ciclos cerrados",
@@ -40,6 +40,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-022 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-102-materiales_ciclicos_infinitamente_reciclables-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en diseñar productos con materiales (como polímeros) que puedan reciclarse infinitamente sin perder calidad, en contraste con el 'downcycling' tradicional donde el material se degrada en cada ciclo. Un libro hecho de polímero en vez de papel ilustra cómo un producto puede ser diseñado desde el inicio pensando en su próxima vida útil, eliminando la necesidad de talar árboles o usar químicos tóxicos, y permitiendo que tintas y materiales se separen y reutilicen fácilmente.",
+      "texto_nuevo": "Consiste en diseñar productos con materiales (como polímeros) pensados para reciclarse infinitamente sin perder calidad, en contraste con el 'downcycling' tradicional donde el material se degrada en cada ciclo, aunque todavía no está probado que lo logren. Un libro imaginado de polímero en vez de papel ilustra cómo un producto puede ser diseñado desde el inicio pensando en su próxima vida útil, eliminando la necesidad de talar árboles o usar químicos tóxicos, y permitiendo que tintas y materiales se separen y reutilicen fácilmente.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "24, 431",
+        "frase": "Our materials systems are not yet proven to be infinite"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro de polímero es una propuesta imaginada y el propio texto advierte que los sistemas de materiales aún no están probados como infinitos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

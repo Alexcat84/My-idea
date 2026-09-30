@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Revisión de Diseño (Design Review)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Reúne a las personas que van a usar tu producto o que se verán afectadas por él para que revisen el diseño mientras todavía puedes cambiarlo. Su experiencia te ayuda a detectar problemas a tiempo, conseguir datos para mejorar y poner a prueba tus teorías y supuestos. Programa estos encuentros con anticipación, con una agenda y criterios claros, aunque la decisión final la tomas tú.",
+  "resumen_teorico": "Reúne a las personas que van a usar tu producto o que se verán afectadas por él, incluidos especialistas ajenos a quienes lo diseñaron, para que revisen el diseño mientras todavía puedes cambiarlo. Su experiencia te ayuda a detectar problemas a tiempo, conseguir datos para mejorar y poner a prueba tus teorías y supuestos. Programa estos encuentros con anticipación, con una agenda y criterios claros, aunque la decisión final la tomas tú.",
   "pasos_accionables": [
     "Programa encuentros con agenda y documentos preparados con anticipación",
-    "Deja claro cómo se va a desarrollar el encuentro y qué esperas de cada persona que participa",
+    "Deja claro cómo se va a desarrollar el encuentro y qué esperas de cada persona que participa, con énfasis en aportes constructivos y no críticos",
     "Anticipa posibles conflictos de intereses entre quienes van a revisar el diseño",
-    "Enfoca la conversación en las ideas de diseño que aún no están probadas, sin comparar con la competencia en ese momento",
+    "Enfoca la conversación en las ideas de diseño que aún no están probadas, sin ponerte a proponer diseños rivales durante la revisión",
     "Asegúrate de dirigir bien la revisión y de contar con los recursos y las habilidades que necesitas"
   ],
   "entregable_esperado": "Un registro de la revisión con los hallazgos, las alertas tempranas de problemas y las decisiones que tomaste",
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Revisa el Diseño con Afectados",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-102-revision_diseno-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfoca la conversación en las ideas de diseño que aún no están probadas, sin comparar con la competencia en ese momento",
+      "texto_nuevo": "Enfoca la conversación en las ideas de diseño que aún no están probadas, sin ponerte a proponer diseños rivales durante la revisión",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4259-4265",
+        "frase": "Avoidance of competitive design during review"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide evitar el diseño en competencia durante la revisión, no la comparación con la competencia.; Mismo defecto que la marca 0.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-102-revision_diseno-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Deja claro cómo se va a desarrollar el encuentro y qué esperas de cada persona que participa",
+      "texto_nuevo": "Deja claro cómo se va a desarrollar el encuentro y qué esperas de cada persona que participa, con énfasis en aportes constructivos y no críticos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4253-4257",
+        "frase": "Emphasis on constructive, not critical, inputs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se pierde la regla del libro de poner el énfasis en aportes constructivos, no críticos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-102-revision_diseno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reúne a las personas que van a usar tu producto o que se verán afectadas por él para que revisen el diseño mientras todavía puedes cambiarlo. Su experiencia te ayuda a detectar problemas a tiempo, conseguir datos para mejorar y poner a prueba tus teorías y supuestos. Programa estos encuentros con anticipación, con una agenda y criterios claros, aunque la decisión final la tomas tú.",
+      "texto_nuevo": "Reúne a las personas que van a usar tu producto o que se verán afectadas por él, incluidos especialistas ajenos a quienes lo diseñaron, para que revisen el diseño mientras todavía puedes cambiarlo. Su experiencia te ayuda a detectar problemas a tiempo, conseguir datos para mejorar y poner a prueba tus teorías y supuestos. Programa estos encuentros con anticipación, con una agenda y criterios claros, aunque la decisión final la tomas tú.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4227, 4239",
+        "frase": "Reviews are conducted by specialists, external to the design team."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala que la revisión la hacen especialistas ajenos al equipo de diseño; el resumen solo nombra a los afectados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

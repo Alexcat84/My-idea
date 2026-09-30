@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Estructura para Equipos de Innovación Interna (Portfolio Thinking)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Para que equipos de innovación dentro de organizaciones grandes (o startups independientes) tengan éxito, requieren tres atributos estructurales: recursos escasos pero seguros (un presupuesto pequeño pero intocable), autoridad de desarrollo independiente (capacidad de crear y lanzar productos reales sin aprobaciones excesivas), y una participación personal en el resultado (stake financiero o de reconocimiento). La estructura correcta no garantiza el éxito, pero su ausencia casi garantiza el fracaso.",
+  "resumen_teorico": "Para que equipos de innovación dentro de organizaciones grandes (o startups independientes) tengan éxito, requieren tres atributos estructurales: recursos escasos pero seguros (un presupuesto pequeño pero intocable), autoridad de desarrollo independiente (capacidad de crear y lanzar productos reales sin aprobaciones excesivas), y una participación personal en el resultado (stake financiero o de reconocimiento). La estructura correcta no garantiza el éxito, pero equivocarse en ella puede llevar a un fracaso casi seguro.",
   "pasos_accionables": [
     "Asignar un presupuesto pequeño pero completamente protegido de recortes políticos",
     "Formar un equipo multifuncional de tiempo completo con representación de todas las áreas necesarias",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Arma tu Equipo de Innovación",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-104-estructura_equipos_innovacion_interna-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para que equipos de innovación dentro de organizaciones grandes (o startups independientes) tengan éxito, requieren tres atributos estructurales: recursos escasos pero seguros (un presupuesto pequeño pero intocable), autoridad de desarrollo independiente (capacidad de crear y lanzar productos reales sin aprobaciones excesivas), y una participación personal en el resultado (stake financiero o de reconocimiento). La estructura correcta no garantiza el éxito, pero su ausencia casi garantiza el fracaso.",
+      "texto_nuevo": "Para que equipos de innovación dentro de organizaciones grandes (o startups independientes) tengan éxito, requieren tres atributos estructurales: recursos escasos pero seguros (un presupuesto pequeño pero intocable), autoridad de desarrollo independiente (capacidad de crear y lanzar productos reales sin aprobaciones excesivas), y una participación personal en el resultado (stake financiero o de reconocimiento). La estructura correcta no garantiza el éxito, pero equivocarse en ella puede llevar a un fracaso casi seguro.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3029",
+        "frase": "getting the structure wrong can lead to almost certain failure"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que equivocarse en la estructura puede llevar a un fracaso casi seguro; el nodo quita el 'puede'.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

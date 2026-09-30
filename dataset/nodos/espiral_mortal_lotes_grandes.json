@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La Espiral Mortal de los Lotes Grandes",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Fenómeno donde los lotes de trabajo tienden a crecer indefinidamente porque mover el lote hacia adelante genera trabajo adicional, retrabajo y retrasos, incentivando a todos a trabajar en lotes aún más grandes para minimizar esa sobrecarga. A diferencia de la manufactura física, no hay límite natural al tamaño del lote en trabajo intangible (software, diseño), lo que puede llevar a que un proyecto se convierta en una apuesta 'todo o nada' que nunca se lanza por miedo a no cubrir todos los casos.",
+  "resumen_teorico": "Fenómeno donde los lotes de trabajo tienden a crecer indefinidamente porque mover el lote hacia adelante suele generar trabajo adicional, retrabajo y retrasos, incentivando a todos a trabajar en lotes aún más grandes para minimizar esa sobrecarga. A diferencia de la manufactura física, no hay límite natural al tamaño del lote en trabajo intangible (software, diseño), lo que puede llevar a que un proyecto se convierta en una apuesta 'todo o nada' que nunca se lanza por miedo a no cubrir todos los casos.",
   "pasos_accionables": [
     "Detectar señales de alerta: fechas de lanzamiento que se posponen repetidamente",
     "Auditar si el equipo está agregando features/arreglos 'de último momento' antes de cada release",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Frena la Espiral de Lotes",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-104-espiral_mortal_lotes_grandes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Fenómeno donde los lotes de trabajo tienden a crecer indefinidamente porque mover el lote hacia adelante genera trabajo adicional, retrabajo y retrasos, incentivando a todos a trabajar en lotes aún más grandes para minimizar esa sobrecarga. A diferencia de la manufactura física, no hay límite natural al tamaño del lote en trabajo intangible (software, diseño), lo que puede llevar a que un proyecto se convierta en una apuesta 'todo o nada' que nunca se lanza por miedo a no cubrir todos los casos.",
+      "texto_nuevo": "Fenómeno donde los lotes de trabajo tienden a crecer indefinidamente porque mover el lote hacia adelante suele generar trabajo adicional, retrabajo y retrasos, incentivando a todos a trabajar en lotes aún más grandes para minimizar esa sobrecarga. A diferencia de la manufactura física, no hay límite natural al tamaño del lote en trabajo intangible (software, diseño), lo que puede llevar a que un proyecto se convierta en una apuesta 'todo o nada' que nunca se lanza por miedo a no cubrir todos los casos.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2297",
+        "frase": "moving the batch forward often results in additional work, rework, delays"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que mover el lote a menudo genera esa sobrecarga; el nodo lo vuelve seguro.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

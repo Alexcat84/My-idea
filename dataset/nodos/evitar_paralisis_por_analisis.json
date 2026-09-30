@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evitar la Parálisis por Análisis vs. Just-Do-It",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Existen dos peligros opuestos al investigar mercado y clientes: actuar impulsivamente sin análisis suficiente (just-do-it), asumiendo erróneamente que se conoce el camino correcto tras pocas conversaciones; o caer en parálisis por análisis, refinando planes indefinidamente sin actuar. El problema real de la mayoría de los planes no es la falta de principios estratégicos sólidos, sino que los hechos en que se basan son incorrectos, y estos errores solo se detectan mediante interacción real producto-cliente, no en el pizarrón.",
+  "resumen_teorico": "Existen dos peligros opuestos al investigar mercado y clientes: actuar impulsivamente sin análisis suficiente (just-do-it), asumiendo erróneamente que se conoce el camino correcto tras pocas conversaciones; o caer en parálisis por análisis, refinando planes indefinidamente sin actuar. El problema real de la mayoría de los planes no es la falta de principios estratégicos sólidos, sino que los hechos en que se basan son incorrectos, y la mayoría de estos errores no se detectan en el pizarrón porque dependen de la interacción real producto-cliente.",
   "pasos_accionables": [
     "Reconocer si el equipo tiende a actuar sin suficiente validación o si tiende a sobre-analizar sin actuar",
     "Establecer un límite de tiempo/alcance para la fase de análisis antes de pasar a construir un MVP",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Equilibra Análisis y Acción",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-104-evitar_paralisis_por_analisis-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos peligros opuestos al investigar mercado y clientes: actuar impulsivamente sin análisis suficiente (just-do-it), asumiendo erróneamente que se conoce el camino correcto tras pocas conversaciones; o caer en parálisis por análisis, refinando planes indefinidamente sin actuar. El problema real de la mayoría de los planes no es la falta de principios estratégicos sólidos, sino que los hechos en que se basan son incorrectos, y estos errores solo se detectan mediante interacción real producto-cliente, no en el pizarrón.",
+      "texto_nuevo": "Existen dos peligros opuestos al investigar mercado y clientes: actuar impulsivamente sin análisis suficiente (just-do-it), asumiendo erróneamente que se conoce el camino correcto tras pocas conversaciones; o caer en parálisis por análisis, refinando planes indefinidamente sin actuar. El problema real de la mayoría de los planes no es la falta de principios estratégicos sólidos, sino que los hechos en que se basan son incorrectos, y la mayoría de estos errores no se detectan en el pizarrón porque dependen de la interacción real producto-cliente.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1010",
+        "frase": "most of these errors cannot be detected at the whiteboard"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la mayoría de estos errores no se detectan en el pizarrón; el nodo lo vuelve absoluto.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

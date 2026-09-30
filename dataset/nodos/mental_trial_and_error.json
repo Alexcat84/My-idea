@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Ensayo y Error Mental (Mental Trial and Error)",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Concepto derivado de las observaciones de Varendonck, describe un proceso automático de la mente en el que se imaginan sucesivamente distintas soluciones a un problema, cada una evaluada y aceptada o rechazada ('forma de diálogo': hipótesis y objeciones, preguntas y respuestas) hasta que se encuentra una solución contra la cual no surge ninguna objeción válida. Es el equivalente mental al proceso físico de prueba y error, y culmina naturalmente en el 'click' de reconocimiento de éxito.",
+  "resumen_teorico": "Describe un proceso automático de la mente, observado en ensoñaciones, en el que se imaginan sucesivamente distintas soluciones a un problema, cada una evaluada y aceptada o rechazada ('forma de diálogo': hipótesis y objeciones, preguntas y respuestas) hasta que se encuentra una solución contra la cual no surge ninguna objeción válida. Es el equivalente mental al proceso físico de prueba y error, y culmina naturalmente en el 'click' de reconocimiento de éxito.",
   "pasos_accionables": [
     "Ante un problema de diseño o negocio, genera deliberadamente múltiples soluciones alternativas sin descartarlas prematuramente.",
     "Somete cada alternativa a un 'diálogo' interno o grupal de objeciones y respuestas antes de comprometerte con una.",
-    "Registra tanto las soluciones rechazadas como las razones de rechazo; esto documenta el espacio de exploración y evita repetir errores."
+    "Registra tanto las soluciones rechazadas como las razones de rechazo."
   ],
   "entregable_esperado": "Una lista de alternativas de solución evaluadas con sus respectivas objeciones y la solución final seleccionada, justificando por qué sobrevivió al proceso de ensayo mental.",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Prueba Soluciones en tu Mente",
   "fuentes_internas": [
     "The Art of Thought - Wallas, Graham"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-103-mental_trial_and_error-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Registra tanto las soluciones rechazadas como las razones de rechazo; esto documenta el espacio de exploración y evita repetir errores.",
+      "texto_nuevo": "Registra tanto las soluciones rechazadas como las razones de rechazo.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "269",
+        "frase": "successive proposed solutions presented themselves, and were met by successive objections"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un efecto prometido (evitar repetir errores) que el libro no dice.; Mismo defecto: añade un efecto que el libro no afirma.; Mismo defecto: añade un porqué que el libro no dice.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-103-mental_trial_and_error-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concepto derivado de las observaciones de Varendonck, describe un proceso automático de la mente en el que se imaginan sucesivamente distintas soluciones a un problema, cada una evaluada y aceptada o rechazada ('forma de diálogo': hipótesis y objeciones, preguntas y respuestas) hasta que se encuentra una solución contra la cual no surge ninguna objeción válida. Es el equivalente mental al proceso físico de prueba y error, y culmina naturalmente en el 'click' de reconocimiento de éxito.",
+      "texto_nuevo": "Describe un proceso automático de la mente, observado en ensoñaciones, en el que se imaginan sucesivamente distintas soluciones a un problema, cada una evaluada y aceptada o rechazada ('forma de diálogo': hipótesis y objeciones, preguntas y respuestas) hasta que se encuentra una solución contra la cual no surge ninguna objeción válida. Es el equivalente mental al proceso físico de prueba y error, y culmina naturalmente en el 'click' de reconocimiento de éxito.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "267",
+        "frase": "belonged to the type which is often called 'mental trial and error'"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta el tipo como algo que suele llamarse ensayo y error mental y usa las ensoñaciones observadas como caso, no como origen del concepto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

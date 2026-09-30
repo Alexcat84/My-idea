@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Quién lidera la implementación de Six Sigma en tu negocio (el Black Belt)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El Black Belt es la persona que dedicas de tiempo completo a llevar Six Sigma al día a día de tu negocio. Le das una capacitación profunda en la filosofía, la teoría, la estrategia, las tácticas y las herramientas de Six Sigma, y la pones a liderar equipos de distintas áreas para mejorar procesos. Te asesora directamente en las decisiones clave, y cada proyecto que dirige debe generar un retorno mínimo de $250,000. Maneja entre 3 y 6 proyectos al año, dedicándose por completo a esto tras una capacitación rigurosa, normalmente 4 semanas repartidas en intervalos de 4 a 5 semanas.",
+  "resumen_teorico": "El Black Belt es la persona que dedicas de tiempo completo a llevar Six Sigma al día a día de tu negocio. Le das una capacitación profunda en la filosofía, la teoría, la estrategia, las tácticas y las herramientas de Six Sigma, y la pones a liderar equipos de distintas áreas para mejorar procesos. Te asesora en los asuntos de Six Sigma, como priorizar, planificar y lanzar proyectos, y cada proyecto que dirige tiene como meta un retorno mínimo de $250,000. Maneja entre 3 y 6 proyectos al año, dedicándose por completo a esto tras una capacitación rigurosa, normalmente 4 semanas repartidas en intervalos de 4 a 5 semanas.",
   "pasos_accionables": [
     "Elige a alguien con potencial de liderazgo y conocimiento técnico para que asuma el rol de Black Belt",
     "Dale una capacitación intensiva en 4 sesiones de una semana completa cada una, con intervalos de 4 a 5 semanas entre ellas para que aplique lo aprendido en la práctica",
@@ -59,6 +59,22 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR A. El libro dice cuatro sesiones de una semana entera, separadas por intervalos de 4 a 5 semanas. En espanol, 'sesiones semanales' se lee como una sesion por semana: cambia la duracion de cada sesion y el ritmo de la formacion. Busque en todo el libro algo que apoye sesiones con frecuencia semanal y no hay nada. L7264 habla de hasta seis semanas de formacion, y L14213 de un periodo de practica entre las semanas de formacion, lo que respalda 'para que aplique lo aprendido' pero no la frecuencia semanal. Segun la vara, un plazo cambiado respecto al libro es CONTRARIO.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C055-070"
+    },
+    {
+      "id": "final-e1-102-rol_black_belt_six_sigma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Black Belt es la persona que dedicas de tiempo completo a llevar Six Sigma al día a día de tu negocio. Le das una capacitación profunda en la filosofía, la teoría, la estrategia, las tácticas y las herramientas de Six Sigma, y la pones a liderar equipos de distintas áreas para mejorar procesos. Te asesora directamente en las decisiones clave, y cada proyecto que dirige debe generar un retorno mínimo de $250,000. Maneja entre 3 y 6 proyectos al año, dedicándose por completo a esto tras una capacitación rigurosa, normalmente 4 semanas repartidas en intervalos de 4 a 5 semanas.",
+      "texto_nuevo": "El Black Belt es la persona que dedicas de tiempo completo a llevar Six Sigma al día a día de tu negocio. Le das una capacitación profunda en la filosofía, la teoría, la estrategia, las tácticas y las herramientas de Six Sigma, y la pones a liderar equipos de distintas áreas para mejorar procesos. Te asesora en los asuntos de Six Sigma, como priorizar, planificar y lanzar proyectos, y cada proyecto que dirige tiene como meta un retorno mínimo de $250,000. Maneja entre 3 y 6 proyectos al año, dedicándose por completo a esto tras una capacitación rigurosa, normalmente 4 semanas repartidas en intervalos de 4 a 5 semanas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14072, 14082",
+        "frase": "Each project is targeted to save at least $250,000 ROI per project."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro limita la asesoría a los asuntos de Six Sigma, como priorizar, planificar y lanzar proyectos.; Endurece: el libro fija los 250,000 dólares como meta de ahorro por proyecto, no como obligación.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [
