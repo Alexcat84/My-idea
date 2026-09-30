@@ -4,9 +4,9 @@
   "dominio": "health_safety",
   "titulo_concepto": "Autoinspección del Lugar de Trabajo",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "La autoinspección consiste en que tú, junto con las personas con más experiencia en tu negocio, realices inspecciones rutinarias de seguridad y salud para identificar peligros, controlarlos y comprobar si esos controles funcionan de verdad. Es la única manera confiable de saber si existen peligros potenciales, porque implica observar directamente cómo se trabaja. En muchos países existen programas de asesoría gratuita en seguridad laboral, conviene que lo investigues en tu mercado.",
+  "resumen_teorico": "La autoinspección consiste en que tú, junto con las personas con más experiencia en tu negocio, realices inspecciones rutinarias de seguridad y salud para identificar peligros, controlarlos y comprobar si esos controles funcionan de verdad. Es la única manera confiable de saber si existen peligros potenciales, porque implica observar directamente cómo se trabaja. Puede haber programas de asesoría gratuita en seguridad laboral en tu mercado, conviene que lo investigues.",
   "pasos_accionables": [
-    "Elegir listas de verificación relevantes para las áreas críticas de tu negocio",
+    "Empezar por las listas de verificación relevantes para las áreas críticas de tu negocio y ampliarlas con el tiempo a todas las áreas que te apliquen, agregando o quitando puntos según tus procesos",
     "Realizar inspecciones rutinarias junto con personas capacitadas de tu equipo",
     "Documentar los hallazgos usando checklists basados en estándares de seguridad reconocidos en tu sector",
     "Cruzar la información de esos checklists con registros de lesiones, capacitaciones y mantenimiento de equipos",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Inspecciona tu Propio Lugar de Trabajo",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-082-autoinspeccion_lugar_de_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La autoinspección consiste en que tú, junto con las personas con más experiencia en tu negocio, realices inspecciones rutinarias de seguridad y salud para identificar peligros, controlarlos y comprobar si esos controles funcionan de verdad. Es la única manera confiable de saber si existen peligros potenciales, porque implica observar directamente cómo se trabaja. En muchos países existen programas de asesoría gratuita en seguridad laboral, conviene que lo investigues en tu mercado.",
+      "texto_nuevo": "La autoinspección consiste en que tú, junto con las personas con más experiencia en tu negocio, realices inspecciones rutinarias de seguridad y salud para identificar peligros, controlarlos y comprobar si esos controles funcionan de verdad. Es la única manera confiable de saber si existen peligros potenciales, porque implica observar directamente cómo se trabaja. Puede haber programas de asesoría gratuita en seguridad laboral en tu mercado, conviene que lo investigues.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "85",
+        "frase": "can help small business employers with this process at no cost."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo describe la asesoría gratuita de un país concreto; afirmar que existe en muchos países es un hecho añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-082-autoinspeccion_lugar_de_trabajo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir listas de verificación relevantes para las áreas críticas de tu negocio",
+      "texto_nuevo": "Empezar por las listas de verificación relevantes para las áreas críticas de tu negocio y ampliarlas con el tiempo a todas las áreas que te apliquen, agregando o quitando puntos según tus procesos",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "93",
+        "frase": "then expanding your checklists over time to cover all areas that pertain to your business"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro propone empezar por las áreas críticas y ampliar luego las listas a todas las áreas; el paso se queda solo en las críticas.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

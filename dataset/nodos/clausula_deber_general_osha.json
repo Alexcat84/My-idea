@@ -4,10 +4,10 @@
   "dominio": "health_safety",
   "titulo_concepto": "Cláusula de Deber General (General Duty Clause)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "En muchas legislaciones existe una obligación general de mantener tu lugar de trabajo libre de peligros reconocidos que puedan causar la muerte o un daño físico grave, incluso si no hay una norma específica para ese peligro. Un peligro reconocido es el que la industria, tú mismo o el sentido común identifican como tal. Esta obligación aplica cuando no existe una norma puntual que cubra el peligro, o cuando la que existe no lo resuelve bien. Conviene que verifiques cómo se llama y qué exige exactamente en tu propio mercado.",
+  "resumen_teorico": "Tu legislación puede imponerte una obligación general de mantener tu lugar de trabajo libre de peligros reconocidos que puedan causar la muerte o un daño físico grave, incluso si no hay una norma específica para ese peligro. Un peligro reconocido es el que la industria, tú mismo o el sentido común identifican como tal. Esta obligación aplica cuando no existe una norma puntual que cubra el peligro, o cuando sabes que la que existe no lo resuelve bien. Conviene que verifiques cómo se llama y qué exige exactamente en tu propio mercado.",
   "pasos_accionables": [
     "Identifica peligros en tu lugar de trabajo que no estén cubiertos por una norma específica de tu país",
-    "Evalúa si el peligro es reconocido por la industria o por el sentido común",
+    "Evalúa si el peligro es reconocido por la industria, por ti mismo o por el sentido común",
     "Implementa medidas de control aunque no exista una norma específica que te obligue",
     "Documenta las acciones tomadas para demostrar que actuaste con diligencia"
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Cumple tu Deber General de Seguridad",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-082-clausula_deber_general_osha-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En muchas legislaciones existe una obligación general de mantener tu lugar de trabajo libre de peligros reconocidos que puedan causar la muerte o un daño físico grave, incluso si no hay una norma específica para ese peligro. Un peligro reconocido es el que la industria, tú mismo o el sentido común identifican como tal. Esta obligación aplica cuando no existe una norma puntual que cubra el peligro, o cuando la que existe no lo resuelve bien. Conviene que verifiques cómo se llama y qué exige exactamente en tu propio mercado.",
+      "texto_nuevo": "Tu legislación puede imponerte una obligación general de mantener tu lugar de trabajo libre de peligros reconocidos que puedan causar la muerte o un daño físico grave, incluso si no hay una norma específica para ese peligro. Un peligro reconocido es el que la industria, tú mismo o el sentido común identifican como tal. Esta obligación aplica cuando no existe una norma puntual que cubra el peligro, o cuando sabes que la que existe no lo resuelve bien. Conviene que verifiques cómo se llama y qué exige exactamente en tu propio mercado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1829-1833",
+        "frase": "unless the employer knows that the standard does not adequately address the hazard"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro describe la obligación en la ley de un solo país; que exista en muchas legislaciones es un hecho añadido.; El libro limita la excepción al caso en que el empleador sabe que la norma no cubre bien el peligro.; Mismo defecto: se pierde la condición de que el empleador lo sepa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-082-clausula_deber_general_osha-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa si el peligro es reconocido por la industria o por el sentido común",
+      "texto_nuevo": "Evalúa si el peligro es reconocido por la industria, por ti mismo o por el sentido común",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1833",
+        "frase": "by the employer's industry or industry in general, by the employer, or by common sense"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta también el peligro que reconoce el propio empleador; el paso lo quita de la lista.; Mismo defecto: falta el empleador como fuente de reconocimiento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

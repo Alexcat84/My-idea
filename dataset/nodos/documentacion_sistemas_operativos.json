@@ -4,13 +4,13 @@
   "dominio": "franquicias",
   "titulo_concepto": "Documentación de Sistemas Operativos (Cloneabilidad)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Para que un negocio sea 'clonable', todos los sistemas operativos deben estar documentados de forma que puedan enseñarse a un franquiciado de competencia promedio en 3 meses o menos. Esto incluye manual de operaciones, políticas, procedimientos, formularios, estándares de desempeño, checklists de cumplimiento y mejores prácticas. Sin esta documentación es imposible entrenar consistentemente o hacer cumplir estándares legalmente.",
+  "resumen_teorico": "Para que un negocio sea 'clonable', todos los sistemas operativos deben estar documentados de forma que puedan enseñarse a un franquiciado de competencia promedio, idealmente en 3 meses o menos (si toma más, franquiciar puede costarte, aunque hay excepciones). Esto incluye manual de operaciones, políticas, procedimientos, formularios, estándares de desempeño, checklists de cumplimiento y mejores prácticas. Sin esta documentación es imposible entrenar consistentemente o hacer cumplir estándares legalmente.",
   "pasos_accionables": [
     "Mapear todos los procesos operativos actuales del negocio",
     "Escribir un manual de operaciones con políticas, procedimientos y checklists",
-    "Desarrollar programas de entrenamiento formal (videos, train-the-trainer, LMS)",
-    "Simplificar el negocio si es demasiado complejo (reducir menú, tercerizar producción, dividir responsabilidades)",
-    "Validar con un profesional legal que la documentación es ejecutable en el contrato de franquicia"
+    "Si buscas crecer de forma más agresiva, desarrollar programas de entrenamiento formal (videos, train-the-trainer, LMS)",
+    "Si el negocio es demasiado complejo, simplificarlo (reducir menú, tercerizar producción, dividir responsabilidades) o dirigirse solo a franquiciados ya formados en el oficio, aunque eso reduce mucho el grupo de candidatos",
+    "Hacer que un profesional prepare o revise la documentación, por los riesgos de responsabilidad legal que implica"
   ],
   "entregable_esperado": "Manual de operaciones completo y sistema de entrenamiento documentado",
   "nodos_previos": [
@@ -28,5 +28,74 @@
   "etiqueta_arbol": "Documenta tus Sistemas Operativos",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-080-documentacion_sistemas_operativos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para que un negocio sea 'clonable', todos los sistemas operativos deben estar documentados de forma que puedan enseñarse a un franquiciado de competencia promedio en 3 meses o menos. Esto incluye manual de operaciones, políticas, procedimientos, formularios, estándares de desempeño, checklists de cumplimiento y mejores prácticas. Sin esta documentación es imposible entrenar consistentemente o hacer cumplir estándares legalmente.",
+      "texto_nuevo": "Para que un negocio sea 'clonable', todos los sistemas operativos deben estar documentados de forma que puedan enseñarse a un franquiciado de competencia promedio, idealmente en 3 meses o menos (si toma más, franquiciar puede costarte, aunque hay excepciones). Esto incluye manual de operaciones, políticas, procedimientos, formularios, estándares de desempeño, checklists de cumplimiento y mejores prácticas. Sin esta documentación es imposible entrenar consistentemente o hacer cumplir estándares legalmente.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "567, 651",
+        "frase": "cannot be taught to a franchisee in three months, you may have difficulty franchising"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que si no se enseña en 3 meses puede costar franquiciar y admite excepciones; el nodo lo endurece.; El libro plantea los 3 meses como prueba orientativa con excepciones; volverlo requisito tajante es endurecer, no perder un matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-080-documentacion_sistemas_operativos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar programas de entrenamiento formal (videos, train-the-trainer, LMS)",
+      "texto_nuevo": "Si buscas crecer de forma más agresiva, desarrollar programas de entrenamiento formal (videos, train-the-trainer, LMS)",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "675",
+        "frase": "for franchisors looking to grow more aggressively, this documentation will often include formal training programs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro asocia estos programas a quien busca crecer de forma más agresiva; el mínimo es el manual.; Misma condición perdida: programas formales y LMS para crecimiento agresivo, que la mayoría de franquiciantes nuevos pospone.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-080-documentacion_sistemas_operativos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Simplificar el negocio si es demasiado complejo (reducir menú, tercerizar producción, dividir responsabilidades)",
+      "texto_nuevo": "Si el negocio es demasiado complejo, simplificarlo (reducir menú, tercerizar producción, dividir responsabilidades) o dirigirse solo a franquiciados ya formados en el oficio, aunque eso reduce mucho el grupo de candidatos",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "657-659",
+        "frase": "targeting only franchise prospects who are already educated in their business area"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da otra salida al negocio complejo: dirigirse solo a candidatos ya formados en el oficio, a costa de reducir el grupo de candidatos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-080-documentacion_sistemas_operativos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar con un profesional legal que la documentación es ejecutable en el contrato de franquicia",
+      "texto_nuevo": "Hacer que un profesional prepare o revise la documentación, por los riesgos de responsabilidad legal que implica",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "679",
+        "frase": "we always recommend that all such documentation is either prepared or reviewed by a professional"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide que un profesional prepare o revise la documentación por los riesgos de responsabilidad; no habla de validar su ejecutabilidad en el contrato.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

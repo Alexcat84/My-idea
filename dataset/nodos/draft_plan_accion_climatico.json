@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Redactar un Plan de Acción Climático",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Un plan de acción climático debe abordar tanto los impactos como las oportunidades de la empresa frente al cambio climático. Debe basarse en un inventario sólido de gases de efecto invernadero, definir el alcance del problema, establecer metas de reducción y detallar estrategias por departamento y función. La creación de este plan requiere un esfuerzo de equipo, involucrando a empleados de todos los departamentos —quienes suelen conocer mejor las oportunidades de eficiencia en sus áreas— y a los líderes senior desde el inicio para asegurar alineación estratégica y apoyo financiero.",
+  "resumen_teorico": "Un plan de acción climático debe abordar tanto los impactos como las oportunidades: cómo la empresa reducirá sus propias emisiones y cómo podría ayudar a sus clientes a reducir las suyas. Debe basarse en un inventario sólido de gases de efecto invernadero, definir el alcance del problema, establecer metas de reducción y detallar estrategias por departamento y función. Crear este plan suele requerir un esfuerzo de equipo, involucrando a empleados de todos los departamentos (quienes trabajan en las áreas con más emisiones suelen conocer mejor cómo mejorar su eficiencia) y a los líderes senior desde el inicio, lo que aumenta las probabilidades de alineación estratégica y apoyo financiero.",
   "pasos_accionables": [
     "Reunir un equipo multidisciplinario de empleados de distintos departamentos.",
     "Definir el alcance del problema basado en el inventario de emisiones.",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Redacta tu Plan Climático",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-083-draft_plan_accion_climatico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan de acción climático debe abordar tanto los impactos como las oportunidades de la empresa frente al cambio climático. Debe basarse en un inventario sólido de gases de efecto invernadero, definir el alcance del problema, establecer metas de reducción y detallar estrategias por departamento y función. La creación de este plan requiere un esfuerzo de equipo, involucrando a empleados de todos los departamentos —quienes suelen conocer mejor las oportunidades de eficiencia en sus áreas— y a los líderes senior desde el inicio para asegurar alineación estratégica y apoyo financiero.",
+      "texto_nuevo": "Un plan de acción climático debe abordar tanto los impactos como las oportunidades: cómo la empresa reducirá sus propias emisiones y cómo podría ayudar a sus clientes a reducir las suyas. Debe basarse en un inventario sólido de gases de efecto invernadero, definir el alcance del problema, establecer metas de reducción y detallar estrategias por departamento y función. Crear este plan suele requerir un esfuerzo de equipo, involucrando a empleados de todos los departamentos (quienes trabajan en las áreas con más emisiones suelen conocer mejor cómo mejorar su eficiencia) y a los líderes senior desde el inicio, lo que aumenta las probabilidades de alineación estratégica y apoyo financiero.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6289",
+        "frase": "Creating a climate action plan usually requires a team effort."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro atribuye ese conocimiento a quienes trabajan en áreas intensivas en emisiones, no a todos los empleados.; El libro dice que involucrar pronto a los líderes aumenta las probabilidades de alineación y apoyo, no que los asegure.; El libro dice que usualmente requiere un esfuerzo de equipo; el resumen lo vuelve absoluto.; El libro pide que el plan explique cómo reducir las propias emisiones y cómo ayudar a los clientes con las suyas.; Mismo defecto que la marca 1: 'increases the odds' pasa a asegurar.; Mismo defecto que la marca 2: se extiende a todos los empleados.; Mismo endurecimiento de 'usually requires' que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -10,9 +10,9 @@
     "Instalar ventilación mecánica o por gravedad en cuartos de almacenamiento",
     "Colocar señalización de 'NO SMOKING' en tanques y áreas de almacenamiento",
     "Establecer procedimientos de limpieza inmediata de derrames",
-    "Usar métodos de conexión a tierra al transferir líquidos inflamables"
+    "Usar métodos de conexión a tierra y de unión equipotencial al transferir líquidos inflamables"
   ],
-  "entregable_esperado": "Área de almacenamiento de inflamables conforme a 29 CFR 1910.106",
+  "entregable_esperado": "Área de almacenamiento de inflamables revisada con la lista de verificación, tomando 29 CFR 1910.106 como referencia",
   "nodos_previos": [
     "sistemas_de_extincion_de_incendios"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Almacena Líquidos Inflamables con Cuidado",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-082-almacenamiento_liquidos_inflamables-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar métodos de conexión a tierra al transferir líquidos inflamables",
+      "texto_nuevo": "Usar métodos de conexión a tierra y de unión equipotencial al transferir líquidos inflamables",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "611",
+        "frase": "appropriate grounding and bonding methods are used to minimize the generation of static electricity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide conexión a tierra y unión equipotencial al transferir y despachar; el paso deja fuera la unión, que es una medida distinta.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-082-almacenamiento_liquidos_inflamables-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Área de almacenamiento de inflamables conforme a 29 CFR 1910.106",
+      "texto_nuevo": "Área de almacenamiento de inflamables revisada con la lista de verificación, tomando 29 CFR 1910.106 como referencia",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "89",
+        "frase": "Do not use the checklists to assess your compliance with the OSH Act"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Promete conformidad con la norma, cuando el libro la cita solo como recurso adicional y advierte que sus listas no sirven para evaluar cumplimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

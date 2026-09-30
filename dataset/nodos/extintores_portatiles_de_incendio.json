@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Gestión de Extintores Portátiles de Incendio",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Los extintores deben seleccionarse según el tipo de material presente (Clase A, B, C, D, K), estar en ubicaciones accesibles, inspeccionarse mensualmente y recibir mantenimiento anual. Los trabajadores designados para usarlos deben recibir capacitación inicial y anual.",
+  "resumen_teorico": "Los extintores deben seleccionarse según el tipo de material presente (Clase A, B, C, D, K), estar en número suficiente y en ubicaciones accesibles, inspeccionarse mensualmente y recibir mantenimiento anual. Los trabajadores designados para usarlos deben recibir capacitación inicial y anual.",
   "pasos_accionables": [
     "Clasificar los materiales combustibles del área de trabajo para elegir el tipo correcto de extintor",
     "Instalar extintores en ubicaciones accesibles según NFPA 10",
     "Realizar inspección visual mensual y registrar los resultados",
     "Programar el mantenimiento anual de los extintores y dejarlo registrado",
-    "Capacitar a trabajadores designados en el uso de extintores anualmente"
+    "Capacitar a trabajadores designados en el uso de extintores al inicio y luego al menos una vez al año"
   ],
   "entregable_esperado": "Registro de inspección y mantenimiento de extintores, con capacitación documentada",
   "nodos_previos": [
@@ -40,6 +40,39 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso anade que el mantenimiento sea 'certificado', una exigencia normativa que el libro no pone. El libro pide un mantenimiento anual que quede registrado (L549: 'annual maintenance check, and the maintenance is recorded'). Ni el resumen ni el entregable repiten 'certificado'.",
       "indice": 3,
       "auditoria": "tramo1 SB1-089"
+    },
+    {
+      "id": "final-e1-082-extintores_portatiles_de_incendio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a trabajadores designados en el uso de extintores anualmente",
+      "texto_nuevo": "Capacitar a trabajadores designados en el uso de extintores al inicio y luego al menos una vez al año",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "535",
+        "frase": "provided with initial training in their use and at least annually thereafter"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige capacitación inicial y luego al menos anual; el paso solo menciona la anual.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-082-extintores_portatiles_de_incendio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los extintores deben seleccionarse según el tipo de material presente (Clase A, B, C, D, K), estar en ubicaciones accesibles, inspeccionarse mensualmente y recibir mantenimiento anual. Los trabajadores designados para usarlos deben recibir capacitación inicial y anual.",
+      "texto_nuevo": "Los extintores deben seleccionarse según el tipo de material presente (Clase A, B, C, D, K), estar en número suficiente y en ubicaciones accesibles, inspeccionarse mensualmente y recibir mantenimiento anual. Los trabajadores designados para usarlos deben recibir capacitación inicial y anual.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "537-539",
+        "frase": "provided in adequate numbers, and mounted in readily accessible locations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide extintores en número suficiente además de accesibles; el resumen pierde la cantidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

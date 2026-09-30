@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Necesidades Declaradas vs Necesidades Reales del Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los clientes expresan sus necesidades en su propio lenguaje, comúnmente en forma de bienes/productos, cuando su necesidad real es el servicio que dicho bien provee. La preocupación por vender bienes puede desviar la atención de las necesidades reales del cliente (ej: 'Marketing Myopia' de Levitt: los ferrocarriles fallaron por enfocarse en trenes en vez de en transporte).",
+  "resumen_teorico": "Los clientes expresan sus necesidades en su propio lenguaje, comúnmente en forma de bienes/productos, cuando su necesidad real es el servicio que dicho bien provee. La preocupación por vender bienes puede desviar la atención de las necesidades reales del cliente (ej.: los ferrocarriles perdieron una oportunidad de expansión por enfocarse en trenes en vez de en transporte).",
   "pasos_accionables": [
     "Preguntar directamente '¿por qué compra este producto/servicio?' y '¿qué servicio espera de él?'",
-    "Traducir las necesidades declaradas del cliente a necesidades reales de servicio",
+    "Traducir las necesidades declaradas del cliente a necesidades reales de servicio, sin descartar lo que el cliente dice ni sustituirlo por tu propio criterio técnico",
     "Evitar centrarse exclusivamente en el producto ignorando la función/servicio subyacente",
     "Rediseñar la propuesta de valor en torno a la necesidad real identificada"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Descubre la Necesidad Real",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-081-necesidades_reales_vs_declaradas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los clientes expresan sus necesidades en su propio lenguaje, comúnmente en forma de bienes/productos, cuando su necesidad real es el servicio que dicho bien provee. La preocupación por vender bienes puede desviar la atención de las necesidades reales del cliente (ej: 'Marketing Myopia' de Levitt: los ferrocarriles fallaron por enfocarse en trenes en vez de en transporte).",
+      "texto_nuevo": "Los clientes expresan sus necesidades en su propio lenguaje, comúnmente en forma de bienes/productos, cuando su necesidad real es el servicio que dicho bien provee. La preocupación por vender bienes puede desviar la atención de las necesidades reales del cliente (ej.: los ferrocarriles perdieron una oportunidad de expansión por enfocarse en trenes en vez de en transporte).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "800",
+        "frase": "the railroads missed an opportunity for expansion due to their focus on railroading"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los ferrocarriles perdieron una oportunidad de expansión, no que fracasaron.; Mismo defecto: fallar endurece lo que en el libro es una oportunidad perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-081-necesidades_reales_vs_declaradas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Traducir las necesidades declaradas del cliente a necesidades reales de servicio",
+      "texto_nuevo": "Traducir las necesidades declaradas del cliente a necesidades reales de servicio, sin descartar lo que el cliente dice ni sustituirlo por tu propio criterio técnico",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3610",
+        "frase": "does not mean that the planners can dismiss the customers' statements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que entender la necesidad real no autoriza a descartar lo que dice el cliente y sustituirlo por criterio técnico propio.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

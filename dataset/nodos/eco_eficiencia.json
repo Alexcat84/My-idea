@@ -9,7 +9,7 @@
     "Realizar una auditoría energética y de recursos (agua, materiales) de todas las operaciones, y en cada etapa de tu proceso",
     "Aplicar frameworks de identificación de desperdicio como AUDIO assessment o Lean/Green Six Sigma, y rediseña el proceso para reducirlo",
     "Priorizar inversiones en eficiencia con mayor retorno (HVAC, iluminación, automatización)",
-    "Revisar la utilización de activos fijos (edificios, espacio) para eliminar excedentes",
+    "Revisar la utilización de activos fijos (edificios, espacio) para eliminar o reasignar el espacio sobrante",
     "Medir y reportar ahorros logrados para justificar expansión del programa",
     "Implementa un sistema de seguimiento ambiental con métricas que puedas ir ampliando (panel de control digital)"
   ],
@@ -44,5 +44,24 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-083-eco_eficiencia-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar la utilización de activos fijos (edificios, espacio) para eliminar excedentes",
+      "texto_nuevo": "Revisar la utilización de activos fijos (edificios, espacio) para eliminar o reasignar el espacio sobrante",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "177",
+        "frase": "identify excess space that you can eliminate or redeploy for savings"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da dos salidas al espacio sobrante, eliminarlo o reasignarlo, y el paso deja solo eliminar.; Mismo defecto: se pierde la opción de reasignar el espacio sobrante.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -9,7 +9,7 @@
     "Identifica todas las superficies elevadas mayores a 4 pies en tu lugar de trabajo.",
     "Instala sistemas de barandales, redes de seguridad o sistemas de detención de caídas.",
     "Coloca rodapiés o pantallas para evitar la caída de objetos.",
-    "Erige estructuras de protección tipo dosel bajo las superficies elevadas.",
+    "Erige estructuras de protección tipo dosel bajo las superficies elevadas y aleja del borde los objetos que puedan caer, o acordona la zona donde podrían caer y prohíbe la entrada.",
     "Usa casco u otro EPP si estás expuesto a caída de objetos.",
     "Apila y asegura materiales en altura, verificando espacio adecuado, para evitar volcamientos o caídas."
   ],
@@ -40,5 +40,24 @@
   ],
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-082-elevated_surfaces_fall_protection-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Erige estructuras de protección tipo dosel bajo las superficies elevadas.",
+      "texto_nuevo": "Erige estructuras de protección tipo dosel bajo las superficies elevadas y aleja del borde los objetos que puedan caer, o acordona la zona donde podrían caer y prohíbe la entrada.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1443",
+        "frase": "the areas where objects could fall are barricaded and entrance into those areas is prohibited"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro une al dosel alejar los objetos del borde, o como alternativa acordonar la zona y prohibir la entrada; el paso pierde ambas cosas.; Mismo defecto señalado por el segundo lector.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

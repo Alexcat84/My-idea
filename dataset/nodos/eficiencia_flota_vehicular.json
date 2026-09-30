@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Mejora de Eficiencia de Flota mediante Mantenimiento y Capacitación",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La eficiencia de una flota de vehículos puede mejorarse significativamente mediante mantenimiento preventivo riguroso, reducción del tiempo de motor en ralentí (idling), capacitación de conductores en hábitos de manejo eficiente, y el uso de tecnologías como GPS y simuladores de conducción. Estas medidas de bajo costo generan ahorros sustanciales de combustible y reducción de emisiones sin grandes inversiones de capital.",
+  "resumen_teorico": "La eficiencia de una flota de vehículos puede mejorarse significativamente mediante mantenimiento preventivo riguroso, reducción del tiempo de motor en ralentí (idling), capacitación de conductores en hábitos de manejo eficiente, y el uso de tecnologías como GPS y simuladores de conducción. Estas medidas de bajo costo pueden ayudar a ahorrar combustible y reducir emisiones sin grandes inversiones de capital.",
   "pasos_accionables": [
     "Implementar un programa riguroso de mantenimiento e inspección de vehículos.",
-    "Establecer políticas de no-ralentí (no-idling) y zonas designadas.",
-    "Capacitar a conductores en técnicas de manejo eficiente: velocidad controlada, aceleración progresiva, uso de crucero.",
+    "Establecer políticas de no-ralentí (no-idling) y zonas designadas, y evaluar dispositivos que den calefacción, aire acondicionado y electricidad con el motor apagado.",
+    "Capacitar a conductores en técnicas de manejo eficiente: velocidad controlada, aceleración progresiva, anticipar las paradas para no frenar en seco, uso de crucero y aire acondicionado solo cuando haga falta.",
     "Incorporar tecnologías de navegación GPS y monitores de eficiencia de combustible.",
     "Evaluar el uso de simuladores de manejo para entrenamiento sin consumo real de combustible."
   ],
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Optimiza tu Flota Vehicular",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-083-eficiencia_flota_vehicular-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La eficiencia de una flota de vehículos puede mejorarse significativamente mediante mantenimiento preventivo riguroso, reducción del tiempo de motor en ralentí (idling), capacitación de conductores en hábitos de manejo eficiente, y el uso de tecnologías como GPS y simuladores de conducción. Estas medidas de bajo costo generan ahorros sustanciales de combustible y reducción de emisiones sin grandes inversiones de capital.",
+      "texto_nuevo": "La eficiencia de una flota de vehículos puede mejorarse significativamente mediante mantenimiento preventivo riguroso, reducción del tiempo de motor en ralentí (idling), capacitación de conductores en hábitos de manejo eficiente, y el uso de tecnologías como GPS y simuladores de conducción. Estas medidas de bajo costo pueden ayudar a ahorrar combustible y reducir emisiones sin grandes inversiones de capital.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4815",
+        "frase": "can help companies save money on fuel"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que estas medidas pueden ayudar a ahorrar combustible; el resumen lo da por seguro y sustancial.; Mismo endurecimiento del ahorro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-083-eficiencia_flota_vehicular-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer políticas de no-ralentí (no-idling) y zonas designadas.",
+      "texto_nuevo": "Establecer políticas de no-ralentí (no-idling) y zonas designadas, y evaluar dispositivos que den calefacción, aire acondicionado y electricidad con el motor apagado.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4819",
+        "frase": "installing idling reduction devices that provide heat, air-conditioning, and electricity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade un tercer medio: dispositivos que dan calefacción, aire acondicionado y electricidad con el motor apagado.; Mismo defecto: falta la tercera vía de los dispositivos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-083-eficiencia_flota_vehicular-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a conductores en técnicas de manejo eficiente: velocidad controlada, aceleración progresiva, uso de crucero.",
+      "texto_nuevo": "Capacitar a conductores en técnicas de manejo eficiente: velocidad controlada, aceleración progresiva, anticipar las paradas para no frenar en seco, uso de crucero y aire acondicionado solo cuando haga falta.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4821",
+        "frase": "anticipating stops so as not to slam on the brakes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye además anticipar las paradas para no frenar en seco y usar el aire acondicionado solo cuando haga falta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

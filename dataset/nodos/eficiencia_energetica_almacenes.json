@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Eficiencia Energética en Almacenes y Centros de Distribución",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Los almacenes y centros de distribución consumen grandes cantidades de energía principalmente en HVAC, iluminación y equipos de manejo de materiales (montacargas, transportadores). Aplicar procesos de 'commissioning' de edificios y tecnologías de iluminación inteligente puede reducir drásticamente el consumo energético, generando ahorros significativos a mediano y largo plazo.",
+  "resumen_teorico": "Los almacenes y centros de distribución suelen tener un consumo energético alto, sobre todo en HVAC, iluminación y equipos de manejo de materiales (montacargas, transportadores). Aplicar procesos de 'commissioning' de edificios y, tras las mejoras de bajo costo, tecnologías de iluminación inteligente (más caras al inicio) puede reducir drásticamente el consumo energético, generando ahorros significativos a mediano y largo plazo.",
   "pasos_accionables": [
     "Realizar un proceso de 'commissioning' para verificar la eficiencia operativa de los sistemas del edificio.",
     "Identificar mejoras de bajo costo en HVAC e iluminación.",
-    "Evaluar la inversión en sistemas de iluminación inteligente (ej. Digital Lumens) que pueden reducir hasta 90% del consumo lumínico.",
+    "Tras aprovechar las mejoras sin costo o de bajo costo, evaluar la inversión en sistemas de iluminación inteligente (ej. Digital Lumens), que cuestan más al inicio y piden paciencia para recuperarse, pero pueden reducir hasta 90% del consumo lumínico.",
     "Monitorear el consumo energético de equipos de manejo de materiales."
   ],
   "entregable_esperado": "Plan de eficiencia energética para instalaciones de almacenamiento con proyección de ahorro de costos y reducción de consumo energético.",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Ahorra Energía en tu Almacén",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-083-eficiencia_energetica_almacenes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los almacenes y centros de distribución consumen grandes cantidades de energía principalmente en HVAC, iluminación y equipos de manejo de materiales (montacargas, transportadores). Aplicar procesos de 'commissioning' de edificios y tecnologías de iluminación inteligente puede reducir drásticamente el consumo energético, generando ahorros significativos a mediano y largo plazo.",
+      "texto_nuevo": "Los almacenes y centros de distribución suelen tener un consumo energético alto, sobre todo en HVAC, iluminación y equipos de manejo de materiales (montacargas, transportadores). Aplicar procesos de 'commissioning' de edificios y, tras las mejoras de bajo costo, tecnologías de iluminación inteligente (más caras al inicio) puede reducir drásticamente el consumo energético, generando ahorros significativos a mediano y largo plazo.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4837",
+        "frase": "Warehouses and distribution centers often have high energy bills."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que a menudo tienen facturas altas y que los mayores responsables suelen ser esos sistemas; el resumen lo afirma como regla.; El libro pone la iluminación inteligente después de las mejoras de bajo costo y advierte que cuesta más al inicio.; Mismo endurecimiento de 'often' y 'usually'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-083-eficiencia_energetica_almacenes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar la inversión en sistemas de iluminación inteligente (ej. Digital Lumens) que pueden reducir hasta 90% del consumo lumínico.",
+      "texto_nuevo": "Tras aprovechar las mejoras sin costo o de bajo costo, evaluar la inversión en sistemas de iluminación inteligente (ej. Digital Lumens), que cuestan más al inicio y piden paciencia para recuperarse, pero pueden reducir hasta 90% del consumo lumínico.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4839",
+        "frase": "consider investing in energy-saving technologies that may cost more up front"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro sitúa esta inversión después de las mejoras sin costo o de bajo costo y advierte que cuesta más al inicio y pide paciencia.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,15 +4,15 @@
   "dominio": "franquicias",
   "titulo_concepto": "Cómo Definir el Tamaño de tu Territorio",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Si no tienes suficientes datos históricos para armar modelos predictivos complejos, puedes usar herramientas prácticas para estimar el tamaño ideal de tu territorio: un mapa de tus clientes actuales (pin-map), estudios de mercados aislados, análisis de cómo divide la competencia sus zonas, y cálculos de penetración de mercado. Si tienes más presupuesto, considera contratar una firma especializada en mapeo geográfico (GIS).",
+  "resumen_teorico": "Si no tienes suficientes datos históricos para armar modelos predictivos complejos, puedes usar herramientas prácticas para estimar el tamaño de tu territorio: un mapa de tus clientes actuales (pin-map), estudios de mercados aislados, análisis de cómo divide la competencia sus zonas, y cálculos de penetración de mercado. Combínalas para tu mejor estimación y deja margen para ajustar los territorios con más datos. Con más presupuesto, considera una firma de mapeo geográfico (GIS).",
   "pasos_accionables": [
     "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades",
-    "Busca mercados aislados para estudiar la demografía que necesitas para generar cierto nivel de negocio",
-    "Analiza cómo divide la competencia sus territorios en mercados parecidos",
+    "Si tienes una unidad en un mercado aislado, estudia su demografía para saber qué hace falta para generar cierto nivel de negocio (muchas veces no habrá un mercado adecuado)",
+    "Si tienes un competidor parecido y sabes cómo definió sus territorios, analiza cómo los divide en mercados parecidos, sin dar por hecho que no se equivocó en su análisis",
     "Calcula tu penetración de mercado actual y proyéctala a nuevas zonas",
     "Contrata una firma de mapeo geográfico (GIS) si tienes presupuesto para un análisis más completo"
   ],
-  "entregable_esperado": "Un análisis de tu territorio con el tamaño ideal según el tipo de mercado",
+  "entregable_esperado": "Un análisis de tu territorio con tu mejor estimación del tamaño según el tipo de mercado, con margen para ajustarlo cuando tengas más datos",
   "nodos_previos": [
     "determinacion_territorio"
   ],
@@ -40,6 +40,72 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-080-metodologias_analisis_territorio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca mercados aislados para estudiar la demografía que necesitas para generar cierto nivel de negocio",
+      "texto_nuevo": "Si tienes una unidad en un mercado aislado, estudia su demografía para saber qué hace falta para generar cierto nivel de negocio (muchas veces no habrá un mercado adecuado)",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1814",
+        "frase": "If you have a unit in an isolated market, you can study the demographics"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el estudio a tener una unidad en un mercado aislado y avisa que muchas veces no hay mercado adecuado.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-080-metodologias_analisis_territorio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analiza cómo divide la competencia sus territorios en mercados parecidos",
+      "texto_nuevo": "Si tienes un competidor parecido y sabes cómo definió sus territorios, analiza cómo los divide en mercados parecidos, sin dar por hecho que no se equivocó en su análisis",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1816",
+        "frase": "The downside to this analysis is that it assumes your competitor made no mistakes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se cae el límite: requiere un competidor parecido cuyos territorios conozcas y supone que no se equivocó, lo que es arriesgado.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-080-metodologias_analisis_territorio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si no tienes suficientes datos históricos para armar modelos predictivos complejos, puedes usar herramientas prácticas para estimar el tamaño ideal de tu territorio: un mapa de tus clientes actuales (pin-map), estudios de mercados aislados, análisis de cómo divide la competencia sus zonas, y cálculos de penetración de mercado. Si tienes más presupuesto, considera contratar una firma especializada en mapeo geográfico (GIS).",
+      "texto_nuevo": "Si no tienes suficientes datos históricos para armar modelos predictivos complejos, puedes usar herramientas prácticas para estimar el tamaño de tu territorio: un mapa de tus clientes actuales (pin-map), estudios de mercados aislados, análisis de cómo divide la competencia sus zonas, y cálculos de penetración de mercado. Combínalas para tu mejor estimación y deja margen para ajustar los territorios con más datos. Con más presupuesto, considera una firma de mapeo geográfico (GIS).",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1822",
+        "frase": "they should use some combination of these methodologies to develop a best estimate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja combinar estas herramientas para una mejor estimación y dejar flexibilidad para ajustar los territorios con más datos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-080-metodologias_analisis_territorio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un análisis de tu territorio con el tamaño ideal según el tipo de mercado",
+      "texto_nuevo": "Un análisis de tu territorio con tu mejor estimación del tamaño según el tipo de mercado, con margen para ajustarlo cuando tengas más datos",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1822",
+        "frase": "they should use some combination of these methodologies to develop a best estimate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide una mejor estimación combinando métodos, con flexibilidad para ajustarla, no un tamaño ideal definitivo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

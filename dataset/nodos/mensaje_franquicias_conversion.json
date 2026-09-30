@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Diseñar Mensaje Específico para Franquicias de Conversión",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Los franquiciados de conversión (negocios existentes que se convierten a la marca) tienen motivaciones distintas: orgullo de propiedad, temor al declive competitivo y resistencia a pagar regalías sobre ingresos ya generados. El mensaje debe abordar estas objeciones emocionales, mostrando que el valor incremental supera la pérdida de control y las tarifas.",
+  "resumen_teorico": "Los franquiciados de conversión (negocios existentes que se convierten a la marca) tienen motivaciones distintas: orgullo de propiedad, mayor apego a su independencia, temor al declive competitivo y resistencia a pagar regalías sobre ingresos ya generados. El mensaje debe abordar estas objeciones emocionales, mostrando que el valor incremental supera la pérdida de control y las tarifas.",
   "pasos_accionables": [
     "Identificar el temor competitivo específico que motiva la conversión en el sector",
     "Desarrollar argumentos que demuestren el valor incremental frente a las regalías",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Convence a Negocios en Conversión",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-080-mensaje_franquicias_conversion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los franquiciados de conversión (negocios existentes que se convierten a la marca) tienen motivaciones distintas: orgullo de propiedad, temor al declive competitivo y resistencia a pagar regalías sobre ingresos ya generados. El mensaje debe abordar estas objeciones emocionales, mostrando que el valor incremental supera la pérdida de control y las tarifas.",
+      "texto_nuevo": "Los franquiciados de conversión (negocios existentes que se convierten a la marca) tienen motivaciones distintas: orgullo de propiedad, mayor apego a su independencia, temor al declive competitivo y resistencia a pagar regalías sobre ingresos ya generados. El mensaje debe abordar estas objeciones emocionales, mostrando que el valor incremental supera la pérdida de control y las tarifas.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3110",
+        "frase": "a converting franchisee is likely to value his independence more than a typical startup"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta un elemento de la lista del libro: quien se convierte valora su independencia más que un franquiciado nuevo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

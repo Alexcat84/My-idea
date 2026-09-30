@@ -4,13 +4,13 @@
   "dominio": "environmental",
   "titulo_concepto": "Diseño de Mensaje de Marketing Verde Efectivo",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Un mensaje de marketing verde exitoso debe ser relevante para lo que el cliente valora (ahorro, salud, conveniencia), auténtico y consistente con la identidad de marca existente, y comunicado por un mensajero creíble. Además, debe evitar el tono de culpa o miedo, apostando por creatividad y un enfoque pragmático más que por narrativas abstractas de 'salvar el planeta'.",
+  "resumen_teorico": "Lo verde no vende solo: el producto debe competir en calidad y precio. Un mensaje de marketing verde exitoso debe ser relevante para lo que el cliente valora (ahorro, salud, conveniencia), auténtico y consistente con la identidad de marca existente, y comunicado por un mensajero creíble. También debe evitar el tono de culpa o miedo, apostando por creatividad y un enfoque pragmático más que por narrativas abstractas de 'salvar el planeta'.",
   "pasos_accionables": [
     "Alinear el mensaje verde con lo que realmente le importa al cliente objetivo",
-    "Asegurar consistencia entre el mensaje y la identidad histórica de la marca",
-    "Seleccionar mensajeros creíbles (empleados, historias reales) en vez de solo celebridades",
+    "Asegurar consistencia entre el mensaje y la identidad histórica de la marca, salvo que estés lanzando una marca completamente nueva",
+    "Seleccionar mensajeros creíbles según tu producto y tu público (a veces empleados o personas con historias reales funcionan mejor que las celebridades)",
     "Usar tono creativo, positivo y práctico en lugar de culpabilizador, con humor o historias atractivas, apoyándote en conceptos pragmáticos como innovación o progreso",
-    "Enfocar beneficios locales y tangibles en vez de abstracciones globales, del tipo ahorro, calidad de vida"
+    "Enfocar beneficios tangibles y locales en vez de abstracciones globales, del tipo ahorro, calidad de vida; lo tangible es lo decisivo, y un llamado más amplio también funciona si promete resultados reales y medibles"
   ],
   "entregable_esperado": "Pieza de comunicación/campaña de marketing verde validada en tono, mensajero y relevancia",
   "nodos_previos": [
@@ -57,6 +57,73 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-083-diseno_mensaje_verde-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un mensaje de marketing verde exitoso debe ser relevante para lo que el cliente valora (ahorro, salud, conveniencia), auténtico y consistente con la identidad de marca existente, y comunicado por un mensajero creíble. Además, debe evitar el tono de culpa o miedo, apostando por creatividad y un enfoque pragmático más que por narrativas abstractas de 'salvar el planeta'.",
+      "texto_nuevo": "Lo verde no vende solo: el producto debe competir en calidad y precio. Un mensaje de marketing verde exitoso debe ser relevante para lo que el cliente valora (ahorro, salud, conveniencia), auténtico y consistente con la identidad de marca existente, y comunicado por un mensajero creíble. También debe evitar el tono de culpa o miedo, apostando por creatividad y un enfoque pragmático más que por narrativas abstractas de 'salvar el planeta'.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5298",
+        "frase": "products and services that have sustainability attributes don't sell on green alone."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone primero que lo verde no vende solo: el producto tiene que competir en calidad y precio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-083-diseno_mensaje_verde-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar mensajeros creíbles (empleados, historias reales) en vez de solo celebridades",
+      "texto_nuevo": "Seleccionar mensajeros creíbles según tu producto y tu público (a veces empleados o personas con historias reales funcionan mejor que las celebridades)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5362",
+        "frase": "The answer can vary wildly depending on your product and target audience."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el mensajero adecuado varía mucho según producto y público; el rechazo a celebridades es el hallazgo de una empresa.; Mismo defecto: se pierde que el mensajero más creíble depende del producto y del público.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-083-diseno_mensaje_verde-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfocar beneficios locales y tangibles en vez de abstracciones globales, del tipo ahorro, calidad de vida",
+      "texto_nuevo": "Enfocar beneficios tangibles y locales en vez de abstracciones globales, del tipo ahorro, calidad de vida; lo tangible es lo decisivo, y un llamado más amplio también funciona si promete resultados reales y medibles",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5308",
+        "frase": "The emphasis on “tangible” is critical."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro subraya que lo decisivo es lo tangible y que un llamado más allá de lo local también funciona si suma resultados reales y medibles.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-083-diseno_mensaje_verde-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asegurar consistencia entre el mensaje y la identidad histórica de la marca",
+      "texto_nuevo": "Asegurar consistencia entre el mensaje y la identidad histórica de la marca, salvo que estés lanzando una marca completamente nueva",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5346",
+        "frase": "Unless you're launching an entirely new brand, green-related marketing works best"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa el caso de lanzar una marca completamente nueva.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

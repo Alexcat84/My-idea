@@ -4,10 +4,10 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Ergonomía Laboral",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "La ergonomía busca adaptar el trabajo a la persona que lo hace, para prevenir trastornos musculoesqueléticos causados por levantar objetos pesados con frecuencia, alcanzar cosas por encima de la cabeza de forma repetitiva, empujar o jalar con fuerza de manera repetida, mantener posturas incómodas o hacer tareas manuales repetitivas. Un programa efectivo requiere tu compromiso, la participación de quienes hacen el trabajo, un análisis del lugar donde se trabaja, controles de ingeniería (los preferidos), ajustes en la forma de organizar las tareas, equipo de protección y una revisión periódica de qué tan bien están funcionando esas medidas.",
+  "resumen_teorico": "La ergonomía busca adaptar el trabajo a la persona que lo hace, para prevenir trastornos musculoesqueléticos, cuyo riesgo aumenta al levantar objetos pesados con frecuencia, alcanzar cosas por encima de la cabeza de forma repetitiva, empujar o jalar con fuerza de manera repetida, mantener posturas incómodas o hacer tareas manuales repetitivas. Un programa efectivo requiere tu compromiso, la participación de quienes hacen el trabajo, un análisis del lugar donde se trabaja, controles de ingeniería (los preferidos), ajustes en la forma de organizar las tareas, equipo de protección y una revisión periódica de qué tan bien están funcionando esas medidas.",
   "pasos_accionables": [
-    "Revisar tus registros de accidentes, incapacidades y reportes de primeros auxilios para identificar problemas existentes (consulta qué registros exige tu mercado)",
-    "Enseñar a quienes trabajan contigo a reconocer señales y síntomas de trastornos musculoesqueléticos",
+    "Revisar tus registros de accidentes y casi accidentes, incapacidades, reportes de primeros auxilios y los síntomas que reporten quienes trabajan contigo para identificar problemas existentes (consulta qué registros exige tu mercado)",
+    "Enseñar a quienes trabajan contigo a reconocer señales y síntomas de trastornos musculoesqueléticos y a reportarlos desde los primeros síntomas",
     "Hacer un recorrido por el lugar de trabajo para identificar riesgos ergonómicos, escuchando lo que dicen quienes hacen las tareas",
     "Poner en marcha ajustes al equipo o al espacio, cambios en cómo se organizan las tareas y equipo de protección para reducir esos riesgos",
     "Buscar a un profesional de salud calificado para revisar cómo se atienden estos casos",
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Cuida la Ergonomía Laboral",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-082-ergonomia_laboral-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La ergonomía busca adaptar el trabajo a la persona que lo hace, para prevenir trastornos musculoesqueléticos causados por levantar objetos pesados con frecuencia, alcanzar cosas por encima de la cabeza de forma repetitiva, empujar o jalar con fuerza de manera repetida, mantener posturas incómodas o hacer tareas manuales repetitivas. Un programa efectivo requiere tu compromiso, la participación de quienes hacen el trabajo, un análisis del lugar donde se trabaja, controles de ingeniería (los preferidos), ajustes en la forma de organizar las tareas, equipo de protección y una revisión periódica de qué tan bien están funcionando esas medidas.",
+      "texto_nuevo": "La ergonomía busca adaptar el trabajo a la persona que lo hace, para prevenir trastornos musculoesqueléticos, cuyo riesgo aumenta al levantar objetos pesados con frecuencia, alcanzar cosas por encima de la cabeza de forma repetitiva, empujar o jalar con fuerza de manera repetida, mantener posturas incómodas o hacer tareas manuales repetitivas. Un programa efectivo requiere tu compromiso, la participación de quienes hacen el trabajo, un análisis del lugar donde se trabaja, controles de ingeniería (los preferidos), ajustes en la forma de organizar las tareas, equipo de protección y una revisión periódica de qué tan bien están funcionando esas medidas.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "377",
+        "frase": "several known activities that increase a worker's risk of MSDs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esas actividades aumentan el riesgo; decir que causan los trastornos endurece lo que dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-082-ergonomia_laboral-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar tus registros de accidentes, incapacidades y reportes de primeros auxilios para identificar problemas existentes (consulta qué registros exige tu mercado)",
+      "texto_nuevo": "Revisar tus registros de accidentes y casi accidentes, incapacidades, reportes de primeros auxilios y los síntomas que reporten quienes trabajan contigo para identificar problemas existentes (consulta qué registros exige tu mercado)",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "385",
+        "frase": "accident and near-miss investigation reports, insurance company reports, or employee reports of symptoms"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye los informes de casi accidentes y los síntomas que reportan los trabajadores, que el paso omite.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-082-ergonomia_laboral-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enseñar a quienes trabajan contigo a reconocer señales y síntomas de trastornos musculoesqueléticos",
+      "texto_nuevo": "Enseñar a quienes trabajan contigo a reconocer señales y síntomas de trastornos musculoesqueléticos y a reportarlos desde los primeros síntomas",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "387",
+        "frase": "including how to report early signs and symptoms of MSDs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en la capacitación cómo reportar las primeras señales y síntomas; el paso lo pierde.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

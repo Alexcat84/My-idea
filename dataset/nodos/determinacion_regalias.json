@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Determinación de la Estructura de Regalías",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Las regalías son la principal fuente de ingresos recurrentes del franquiciador, generalmente un porcentaje de ventas brutas. Un error de solo 1% en la tasa de regalía puede significar pérdidas de millones de dólares a lo largo de la vida del sistema, debido al efecto acumulado en contratos largos (5-20 años) y su impacto en la valoración futura del negocio. La determinación óptima requiere seis pasos: análisis de comparables, posicionamiento de marca, modelado financiero, análisis de sensibilidad, cuantificación de la propuesta de valor, y reingeniería inversa según el ROI del franquiciado.",
+  "resumen_teorico": "En la mayoría de los sistemas, las regalías son la principal fuente de ingresos recurrentes del franquiciador, generalmente un porcentaje de ventas brutas. Un error de solo 1% en la tasa de regalía puede significar pérdidas de millones de dólares a lo largo de la vida del sistema, debido al efecto acumulado en contratos largos (5-20 años) y su impacto en la valoración futura del negocio. La determinación óptima requiere seis pasos: análisis de comparables, posicionamiento de marca, modelado financiero, análisis de sensibilidad, cuantificación de la propuesta de valor, y reingeniería inversa según el ROI del franquiciado.",
   "pasos_accionables": [
     "Analizar estructuras de regalías de franquiciadores comparables incluyendo todo lo que reciben a cambio.",
     "Definir el posicionamiento de mercado deseado (bajo costo, premium, etc.).",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Define tu Estructura de Regalías",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-080-determinacion_regalias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las regalías son la principal fuente de ingresos recurrentes del franquiciador, generalmente un porcentaje de ventas brutas. Un error de solo 1% en la tasa de regalía puede significar pérdidas de millones de dólares a lo largo de la vida del sistema, debido al efecto acumulado en contratos largos (5-20 años) y su impacto en la valoración futura del negocio. La determinación óptima requiere seis pasos: análisis de comparables, posicionamiento de marca, modelado financiero, análisis de sensibilidad, cuantificación de la propuesta de valor, y reingeniería inversa según el ROI del franquiciado.",
+      "texto_nuevo": "En la mayoría de los sistemas, las regalías son la principal fuente de ingresos recurrentes del franquiciador, generalmente un porcentaje de ventas brutas. Un error de solo 1% en la tasa de regalía puede significar pérdidas de millones de dólares a lo largo de la vida del sistema, debido al efecto acumulado en contratos largos (5-20 años) y su impacto en la valoración futura del negocio. La determinación óptima requiere seis pasos: análisis de comparables, posicionamiento de marca, modelado financiero, análisis de sensibilidad, cuantificación de la propuesta de valor, y reingeniería inversa según el ROI del franquiciado.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1699",
+        "frase": "Royalties are the primary source of revenue in most franchise systems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo dice de la mayoría de los sistemas; en algunos el margen sobre productos reemplaza la regalía.; Misma generalización.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

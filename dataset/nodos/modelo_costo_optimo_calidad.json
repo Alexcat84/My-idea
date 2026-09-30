@@ -7,7 +7,7 @@
   "resumen_teorico": "Este modelo grafica tres curvas: costo de fallas, que crece cuando el producto es más defectuoso; costo de evaluación y prevención, que crece conforme te acercas a la perfección; y el costo total de calidad, que es la suma de ambas. Tradicionalmente se creía que existía un punto óptimo de conformidad menor al 100%, pero la creciente capacidad de cuantificar el impacto de fallas en tus ventas sugiere que el mínimo costo total tiende hacia la perfección o cero defectos en el largo plazo, aunque en el corto plazo esto no siempre es económicamente viable. Te sirve para decidir cuánto invertir en prevenir fallas frente a aceptar un cierto nivel de defectos según el beneficio económico real.",
   "pasos_accionables": [
     "Grafica las curvas de costo de fallas y de evaluación/prevención en función del nivel de conformidad de tu producto",
-    "Identifica el punto de intersección o mínimo de la curva de costo total de calidad",
+    "Identifica el punto mínimo de la curva de costo total de calidad",
     "Evalúa si existen proyectos de mejora cuyo beneficio supere claramente su costo",
     "Determina si tu negocio está lejos del punto óptimo o si ya alcanzaste el límite económico de mejora",
     "Ajusta tu presupuesto de prevención según el análisis de beneficio costo que obtuviste"
@@ -65,6 +65,23 @@
         "evidencia": "F16-011: Decidir cuanto invertir en prevencion segun costos de fallas reales es control y mejora de una operacion existente. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-081-modelo_costo_optimo_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica el punto de intersección o mínimo de la curva de costo total de calidad",
+      "texto_nuevo": "Identifica el punto mínimo de la curva de costo total de calidad",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "25861-25863",
+        "frase": "the minimum level of total quality costs occurs when the quality of conformance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro sitúa el óptimo en el mínimo de la curva de costo total; la intersección de las curvas es un añadido.; Mismo defecto: el libro no habla de intersección, solo del mínimo del costo total.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

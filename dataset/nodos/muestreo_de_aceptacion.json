@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo de Aceptación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso de evaluar una porción de producto en un lote para decidir aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo excesivo y minimiza errores por monotonía, aunque implica riesgos de muestreo (rechazar buenos lotes o aceptar malos).",
+  "resumen_teorico": "Proceso de evaluar una porción de un lote para decidir la aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo y errores por monotonía, pero implica riesgos de muestreo (rechazar buenos lotes o aceptar malos), más costo administrativo y menos información. Rinde más tras un programa de prevención.",
   "pasos_accionables": [
     "Determinar si el objetivo es evaluar el lote inmediato o el proceso productivo",
     "Definir el tamaño de muestra (n) y el criterio de aceptación (c)",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Acepta o Rechaza por Muestra",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-081-muestreo_de_aceptacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proceso de evaluar una porción de producto en un lote para decidir aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo excesivo y minimiza errores por monotonía, aunque implica riesgos de muestreo (rechazar buenos lotes o aceptar malos).",
+      "texto_nuevo": "Proceso de evaluar una porción de un lote para decidir la aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo y errores por monotonía, pero implica riesgos de muestreo (rechazar buenos lotes o aceptar malos), más costo administrativo y menos información. Rinde más tras un programa de prevención.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24879-24881",
+        "frase": "The disadvantages are sampling risks, greater administrative costs, and less information about the product"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona su mayor eficacia a un programa de prevención previo, y el resumen lo omite.; El libro da tres desventajas y el resumen solo conserva los riesgos de muestreo.; Mismo defecto: faltan el mayor costo administrativo y la menor información.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

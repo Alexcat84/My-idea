@@ -7,7 +7,7 @@
   "resumen_teorico": "El CMM (y su evolución CMMI) es un modelo desarrollado por el SEI de Carnegie Mellon para evaluar objetivamente la capacidad de los procesos de desarrollo de software (y otros procesos organizacionales) mediante niveles de madurez: 1-Inicial, 2-Gestionado, 3-Definido, 4-Gestionado Cuantitativamente, 5-Optimizando. Se basa en observación empírica de organizaciones y permite mejorar procesos de forma sistemática, siendo ampliamente usado en gobierno, industria y desarrollo de software.",
   "pasos_accionables": [
     "Determinar el nivel de madurez actual de los procesos organizacionales",
-    "Contratar un evaluador (lead appraiser) autorizado por el SEI para el diagnóstico",
+    "Si quieres declarar formalmente un nivel de madurez, contratar un evaluador (lead appraiser) autorizado por el SEI para el diagnóstico",
     "Aplicar el método SCAMPI para evaluar el cumplimiento del modelo CMMI",
     "Definir un plan de mejora para avanzar de nivel de madurez",
     "Institucionalizar las prácticas definidas en el nivel objetivo"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Evalúa la Madurez de tus Procesos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-081-modelo_madurez_capacidades_cmmi-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contratar un evaluador (lead appraiser) autorizado por el SEI para el diagnóstico",
+      "texto_nuevo": "Si quieres declarar formalmente un nivel de madurez, contratar un evaluador (lead appraiser) autorizado por el SEI para el diagnóstico",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26285",
+        "frase": "An organization may be assessed by an SEI-authorized lead appraiser and will then be able"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la evaluación por un lead appraiser como opción que permite declarar un nivel CMM, no como paso obligatorio.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

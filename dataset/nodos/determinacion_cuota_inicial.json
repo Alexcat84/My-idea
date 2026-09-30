@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcular los costos reales de venta, arranque y soporte por franquicia.",
     "Analizar las cuotas iniciales de competidores directos comparables.",
-    "Definir el posicionamiento de marca (premium, estándar, bajo costo) y ajustar la cuota en consecuencia.",
+    "Definir el posicionamiento de marca (premium, estándar, bajo costo) y ajustar la cuota en consecuencia, cuidando que una cuota premium esté justificada por la propuesta de valor que percibe el candidato.",
     "Evitar fijar una cuota que erija barreras de entrada innecesarias."
   ],
   "entregable_esperado": "Cuota de franquicia inicial justificada con análisis de costos y competencia.",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Define tu Cuota Inicial",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-080-determinacion_cuota_inicial-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir el posicionamiento de marca (premium, estándar, bajo costo) y ajustar la cuota en consecuencia.",
+      "texto_nuevo": "Definir el posicionamiento de marca (premium, estándar, bajo costo) y ajustar la cuota en consecuencia, cuidando que una cuota premium esté justificada por la propuesta de valor que percibe el candidato.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1695",
+        "frase": "the value proposition perceived by the franchisee candidate must justify the franchisor's premium pricing position"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el precio premium a que la propuesta de valor percibida por el candidato lo justifique.; Misma condición perdida.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

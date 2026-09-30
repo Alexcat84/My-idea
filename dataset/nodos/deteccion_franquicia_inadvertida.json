@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Cómo evitar convertirte en una franquicia sin saberlo",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Es fácil terminar creando sin darte cuenta una relación de franquicia, casi siempre por falta de asesoría legal adecuada o por desconocer la ley. Hay casos reales de multas que superan el millón de dólares a negocios que creían no ser franquicias porque no cobraban una cuota explícita, o que incluso habían firmado acuerdos donde se aclaraba por escrito que 'esto no es una franquicia'. En algunos países o estados la definición legal de franquicia es más amplia que la norma general, y puede activarse por algo tan pequeño como vender manuales de forma continuada durante varios años. Pregunta cómo se define exactamente en tu mercado.",
+  "resumen_teorico": "Es fácil terminar creando sin darte cuenta una relación de franquicia, a menudo por falta de asesoría legal adecuada o por desconocer la ley. Hay casos reales de indemnizaciones que superan el millón de dólares contra negocios que creían no ser franquicias porque no cobraban una cuota explícita, o que incluso habían firmado acuerdos donde se aclaraba por escrito que 'esto no es una franquicia'. En algunos países o estados la definición legal de franquicia es más amplia que la norma general, y puede activarse por algo tan pequeño como vender manuales de forma continuada durante varios años. Pregunta cómo se define exactamente en tu mercado.",
   "pasos_accionables": [
     "Consulta con un abogado especializado en franquicias si algún acuerdo de distribución, licencia o representación que tengas podría encajar en la definición legal de franquicia donde operas",
     "Revisa cada relación comercial que tengas hoy (distribuidores, licenciatarios) contra las definiciones más amplias que puedan existir en tu país o estado",
@@ -22,5 +22,23 @@
   "etiqueta_arbol": "Evita la Franquicia Inadvertida",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-080-deteccion_franquicia_inadvertida-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es fácil terminar creando sin darte cuenta una relación de franquicia, casi siempre por falta de asesoría legal adecuada o por desconocer la ley. Hay casos reales de multas que superan el millón de dólares a negocios que creían no ser franquicias porque no cobraban una cuota explícita, o que incluso habían firmado acuerdos donde se aclaraba por escrito que 'esto no es una franquicia'. En algunos países o estados la definición legal de franquicia es más amplia que la norma general, y puede activarse por algo tan pequeño como vender manuales de forma continuada durante varios años. Pregunta cómo se define exactamente en tu mercado.",
+      "texto_nuevo": "Es fácil terminar creando sin darte cuenta una relación de franquicia, a menudo por falta de asesoría legal adecuada o por desconocer la ley. Hay casos reales de indemnizaciones que superan el millón de dólares contra negocios que creían no ser franquicias porque no cobraban una cuota explícita, o que incluso habían firmado acuerdos donde se aclaraba por escrito que 'esto no es una franquicia'. En algunos países o estados la definición legal de franquicia es más amplia que la norma general, y puede activarse por algo tan pequeño como vender manuales de forma continuada durante varios años. Pregunta cómo se define exactamente en tu mercado.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2263-2277",
+        "frase": "What do these companies have in common? Often, unfortunately, it is bad legal advice."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'often' para la mala asesoría legal; 'casi siempre' endurece.; Los casos del libro son indemnizaciones y veredictos en juicios, no multas.; Mismo cambio de naturaleza que la marca 1.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
