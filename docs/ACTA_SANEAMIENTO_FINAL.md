@@ -676,3 +676,68 @@ se leyeron con dos lectores Opus y, donde hizo falta, un tercero.
   - Con k = 1, la semilla sería 20261002, que ya es la semilla fijada para la muestra de la etapa 2 (9.5). Hay que
     fijar otra antes de sortear.
   - No se relanza nada hasta su decisión.
+- **Fallo de método declarado en la muestra (regla de relectura, 9.4):** la trampa de matiz del lote p12 (nodo
+  `clausula_antidesviacion`, resumen: se quitó el "solo" de "solo a ciertos destinos") no la cazó ninguno de los tres
+  lectores. Queda como fallo de método de la lectura, igual que los 10 lotes de la etapa.
+
+### 9.7 Decisión del fundador tras la muestra de parada (30 sep 2026): pase dirigido, no completo
+
+**Decisión:** opción 2, con ajustes. Todo en Opus 5.5 (lectores, árbitros, verificadores y la muestra).
+
+**1. Clases nuevas** (`docs/REGLAS_DE_LA_CASA.md`, C29 y R7):
+
+| Clase | Qué es | Umbral en la muestra |
+|---|---|---|
+| Contrario | lo opuesto al libro | 0 |
+| Invención dura | hecho, cifra, causa, plazo, norma o resultado prometido que el libro no dice | 0 |
+| Paso práctico sin etiqueta | consejo útil sin "Sugerencia de My Idea:"; se etiqueta | 0,1 por nodo |
+| Certeza endurecida | un "puede" del libro dado por seguro; cuenta como matiz | 0,2 por nodo, junto con los matices |
+
+**2. Política de corrección** (C32 y R8): quitar lo que sobra o devolver las palabras del libro antes que redactar.
+Toda frase nueva, o toda corrección que trae palabras que no estaban en el texto, la lee un verificador ciego contra el
+libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`quitar`, `devolver`, `etiquetar` o
+`redactar`).
+
+**3. El pase dirigido (e1b), fijado antes de generar ningún paquete:**
+- **Universo, por elementos (resumen, paso o entregable):**
+  - **3a:** todo elemento que cambió alguna tanda de la etapa 1 (`final-e1-*`, con las FUERA y la de la muestra), con
+    su texto vigente. Son 3.548 elementos antes de la tanda de la muestra.
+  - **3b:** el barrido mecánico de marcas de certeza. Entra todo elemento, fuera de 3a, cuyo texto contenga una de
+    estas marcas: "siempre", "nunca", "jamás", "debe", "deben", "va a", "van a", "vas a", "garantiza…", "sin duda",
+    "necesariamente", "inevitable…", "en todos los casos", "seguro que", "te asegura…", "asegura que", "con toda
+    seguridad", "sin excepción". Salen 673 elementos. El lector coteja cada marca con el grado del libro.
+  - **3c:** los pasos que los lectores del pase y la muestra marcan como paso práctico sin etiqueta se etiquetan.
+    Etiquetar no es redactar: solo antepone "Sugerencia de My Idea:" al texto vigente.
+  - **Además:** las 2 correcciones FUERA de la muestra de parada.
+- **Lotes:** por libro (el primero de `fuentes_internas`), nodos en orden de `node_id`, hasta 16 nodos por lote. El
+  lector ve el nodo entero y juzga solo los elementos de su lista. Orden de lectura: `random.Random(20270501)`.
+- **Trampas sin marca:** una por lote, en un elemento de la lista.
+  - El nodo sale de `random.Random(20270501 + 1000 + L)`.
+  - El tipo va por turnos: contrario, invención dura (cifra), certeza endurecida, matiz. Es el plantado v2 de la etapa.
+  - Orden del paquete: `random.Random(20270501 + 2000 + L)`.
+- **Lectura:** dos lectores Opus con las instrucciones v3 (clases nuevas y política de corrección) y un tercero si
+  ninguno caza la trampa. Árbitro Opus con las instrucciones v3. Verificador ciego Opus para lo que redacta o trae
+  palabras nuevas.
+
+**4. Semillas nuevas, fijadas aquí antes de sortear nada:**
+- **Muestra de cierre de la etapa 1: 20271001.** Deriva 20271001 a 20271011 (espacios), 20272002 a 20272016
+  (trampas) y 20273002 a 20273016 (orden del paquete).
+- **Pase dirigido: 20270501.** Deriva 20271502 a 20271701 y 20272502 a 20272701.
+- **Sin choque:** las semillas ya asignadas en el repo y en las claves van de 20260807 a 20261021, y sus derivadas de
+  la etapa 1 llegan como mucho a 20263219.
+
+**5. La muestra de cierre (semilla 20271001):**
+- **Diseño:** el mismo del detalle de 9.6 (150 nodos, 8 por espacio, restos mayores, 15 lotes de 10, una trampa por
+  lote), leída con las instrucciones v3 y contada con las clases nuevas.
+- **Regla de parada, fijada ahora:**
+  - **La etapa 1 queda CERRADA si:** 0 contrarios, 0 invenciones duras, paso práctico sin etiqueta ≤ 0,1 por nodo,
+    matiz (con la certeza endurecida) ≤ 0,2 por nodo y todas las trampas de matiz cazadas.
+  - **Si aparece un contrario o una invención dura suelta:**
+    1. Se corrige.
+    2. Se relee su vecindad: el mismo campo en los nodos del mismo libro, con el método del pase.
+    3. La etapa se cierra declarando el riesgo residual estimado.
+  - **Sin tercer pase completo.**
+  - **Si lo que se pasa es otra clase:** se trata igual; es una lectura mía de "el resto dentro de su umbral" que el
+    fundador puede corregir.
+- **Cómo se estima el riesgo residual:** por clase, la tasa por nodo de la muestra con su intervalo de Wilson al 95 %,
+  llevada a los 3.169 nodos del universo.

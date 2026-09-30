@@ -47,9 +47,10 @@ con la misma vara que el catálogo.
 | C26 | Alcanzabilidad: todo nodo vivo se alcanza desde las puertas de su mundo (o las semillas del núcleo) | Auditoría final | 28 sep 2026 | `scripts/auditoria_final/navegacion.py`, Gate 0 (`scripts/run_phase1.py`) |
 | C27 | Puerta legítima: una situación que la persona cuenta y que ningún nodo produce; los aparcados no se borran | Fundador (mundo 11) | 28 sep 2026 | `engine/test_importar_forja_aparcados.py` |
 | C28 | El catálogo no se borra; los datos personales sí (borrar la cuenta borra de verdad) | Fundador | 26 sep 2026 | `web/app/api/cuenta/eliminar/borradoCompleto.test.ts` |
-| C29 | Frontera OPERATIVO / INVENCIÓN: lo operativo concreta el cómo sin afirmar nada nuevo y se queda; la invención añade un qué, un por qué o un cuánto que el libro no dice, o endurece lo que dice con cautela, y sale (o pasa a "Sugerencia de My Idea:" si es un consejo práctico útil) | Fundador, tras la auditoría final (dos pasos que la campaña dio por OPERATIVOS y el árbitro por invención) | 28 sep 2026 | lectura ciega con árbitro (etapa 1 del remedio); detalle en R6 |
+| C29 | Frontera OPERATIVO / INVENCIÓN: lo operativo concreta el cómo sin afirmar nada nuevo y se queda. Desde el 30 sep, lo que no es operativo se clasifica en cuatro clases con su umbral: contrario (0), invención dura (0), paso práctico sin etiqueta (se etiqueta; 0,1 por nodo) y certeza endurecida (cuenta como matiz; 0,2 por nodo) | Fundador, tras la auditoría final (dos pasos que la campaña dio por OPERATIVOS y el árbitro por invención); clases nuevas tras la muestra de parada de la etapa 1 | 28 sep 2026; clases el 30 sep | lectura ciega con árbitro (etapa 1 del remedio); detalle en R6 y R7 |
 | C30 | Las etiquetas llevan mayúscula de rótulo en las palabras con peso ("Traza tu Plan de Exportación"): es estilo de la casa, no falta de ortografía | Fundador (3.541 de 3.634 etiquetas ya lo usaban, sin regla escrita) | 28 sep 2026 | lectura; los lectores de ortografía no lo cuentan como falta |
 | C31 | Cada puerta de un mundo entra con su pregunta de ENTRADA propia (`pregunta_entrada`, campo aparte), que parte del concepto de la puerta y de la situación que la persona cuenta; la base no se toca; se verifica a ciegas con trampa sin marca | Fundador, tras la auditoría final (las bases miraban al siguiente concepto) | 28 sep 2026 | `web/lib/engine/puertasMundo.test.ts`, `web/lib/engine/preguntaEntrada.test.ts` |
+| C32 | Una corrección prefiere QUITAR lo que sobra o DEVOLVER las palabras del libro; solo redacta frase nueva cuando no hay otra forma, y esa frase se verifica a ciegas contra el libro antes de aplicarse | Fundador, tras la muestra de parada de la etapa 1 (15 de 39 invenciones estaban en textos ya corregidos) | 30 sep 2026 | el árbitro declara el `modo` de cada corrección; verificador ciego y `tanda_e1b.py` en las claves del remedio; detalle en R8 |
 
 ## B. Producto (lo que la app hace, promete y cobra)
 
@@ -231,3 +232,33 @@ y la usa toda la etapa 1 del remedio.
 - "materiales reciclados o recuperados como insumo principal": "principal" endurece un consejo que el libro da con
   cautela. Sale.
 
+
+## R7. Las clases de defecto contra el libro y sus umbrales
+
+**Decisión del fundador, 30 sep 2026**, tras la muestra de parada de la etapa 1: la clase "invención" mezclaba un
+hecho inventado con un consejo práctico sin etiqueta y con un "puede" del libro dado por seguro. Desde hoy son cuatro
+clases, cada una con su umbral, y corrigen la frontera de R6 en lo que no es operativo:
+
+| Clase | Qué es | Qué se hace | Umbral en una muestra |
+|---|---|---|---|
+| **Contrario** | el nodo dice lo opuesto al libro | se corrige | 0 |
+| **Invención dura** | un hecho, una cifra, una causa, un plazo, una norma o un resultado prometido que el libro no dice | sale | 0 |
+| **Paso práctico sin etiqueta** | un consejo útil que el libro no da, sin "Sugerencia de My Idea:" delante | se etiqueta | 0,1 por nodo |
+| **Certeza endurecida** | un "puede", "suele" o "a menudo" del libro convertido en afirmación | vuelve al grado del libro; **cuenta como matiz** | 0,2 por nodo, junto con los matices |
+
+Lo operativo (concreta el cómo sin afirmar nada nuevo) sigue sin ser defecto.
+
+## R8. La política de corrección: quitar o devolver antes que redactar
+
+**Decisión del fundador, 30 sep 2026.** En la muestra de parada de la etapa 1, 15 de las 39 invenciones estaban en
+textos que la propia etapa había corregido: corregir redactando estaba creando defectos nuevos.
+
+- **Orden de preferencia:**
+  1. QUITAR lo que sobra.
+  2. DEVOLVER las palabras del libro (traducidas, sin añadir).
+  3. Solo si no hay otra forma, REDACTAR una frase nueva.
+- **Verificación:** toda corrección que redacta, o que trae palabras que no estaban en el texto, la lee un verificador
+  ciego contra el libro antes de aplicarse. El verificador no ve el razonamiento del árbitro. Si no la sostiene, la
+  corrección no entra.
+- **Dónde vive:** el árbitro declara el `modo` de cada corrección (`quitar`, `devolver` o `redactar`). El verificador
+  y el filtro de la tanda viven en las claves del remedio (`tanda_e1b.py`).
