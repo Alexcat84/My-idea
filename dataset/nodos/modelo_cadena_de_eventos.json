@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Modelo de Cadena de Eventos (Chain of Events)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó, a partir de reportes de supervisores, que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de otros eventos que pudieron influir, incapacidad para tratar eventos simultáneos, y asume que causas pequeñas producen efectos pequeños.",
+  "resumen_teorico": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó, a partir de reportes de supervisores, que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de otros eventos que pudieron influir, incapacidad para tratar eventos simultáneos, asume que causas pequeñas producen efectos pequeños, y quitar un solo eslabón probablemente hace muy poco por eliminar el potencial de fallo.",
   "pasos_accionables": [
     "Identificar la secuencia de eventos, evaluaciones y acciones que llevaron al resultado",
     "Reconocer los límites del modelo: la elección del punto de inicio de la cadena es arbitraria",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro separa excluir otros eventos que influyeron y no poder tratar eventos simultáneos; el nodo pierde lo primero.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae que la cifra salió de reportes de supervisores, salvedad con la que el libro la relativiza.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-017-modelo_cadena_de_eventos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó, a partir de reportes de supervisores, que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de otros eventos que pudieron influir, incapacidad para tratar eventos simultáneos, y asume que causas pequeñas producen efectos pequeños.",
+      "texto_nuevo": "Modelo de accidentes de los años 1930 (basado en Heinrich) que propone que una serie lineal de errores, fallos y violaciones empuja al sistema hacia el colapso, como fichas de dominó cayendo una tras otra. Heinrich concluyó, a partir de reportes de supervisores, que el 88% de los accidentes eran causados por 'actos inseguros' de los trabajadores. Aunque tiene ventajas analíticas (fácil de graficar y de identificar dónde 'cortar la cadena'), tiene limitaciones serias: elección arbitraria del inicio de la cadena, exclusión de otros eventos que pudieron influir, incapacidad para tratar eventos simultáneos, asume que causas pequeñas producen efectos pequeños, y quitar un solo eslabón probablemente hace muy poco por eliminar el potencial de fallo.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2794",
+        "frase": "Taking one link out of the chain will likely do very little"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera cinco limitaciones y el nodo omite la quinta: quitar un eslabón probablemente hace muy poco por eliminar el potencial de fallo.; Misma omisión de la quinta limitación, que matiza la ventaja de saber dónde cortar la cadena.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

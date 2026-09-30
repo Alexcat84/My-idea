@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Suscribirse a fuentes de alertas de seguridad (CISA, NSA, FBI, ISACs, proveedores).",
     "Establecer una estrategia de monitoreo del sistema con procedimientos y herramientas definidas.",
-    "Detectar ataques, indicios de posibles ataques, conexiones no autorizadas, uso no autorizado del sistema y actividades inusuales en tráfico entrante/saliente.",
+    "Detectar ataques, indicios de posibles ataques, conexiones no autorizadas, uso no autorizado del sistema y actividades o condiciones inusuales o no autorizadas en tráfico entrante/saliente.",
     "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
     "Eliminar CUI de sistemas no federales una vez concluidos los contratos para reducir la superficie de ataque."
   ],
@@ -57,6 +57,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La estrategia del libro incluye detectar indicios de posibles ataques y el uso no autorizado del sistema, que el paso omite.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-016-getting_started_system_information_integrity-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detectar ataques, indicios de posibles ataques, conexiones no autorizadas, uso no autorizado del sistema y actividades inusuales en tráfico entrante/saliente.",
+      "texto_nuevo": "Detectar ataques, indicios de posibles ataques, conexiones no autorizadas, uso no autorizado del sistema y actividades o condiciones inusuales o no autorizadas en tráfico entrante/saliente.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "709",
+        "frase": "Unusual or unauthorized activities or conditions for inbound communications traffic."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide vigilar actividades o condiciones inusuales o no autorizadas en el tráfico; el nodo deja solo las actividades inusuales.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Revisar el estado de resultados en busca de líneas etiquetadas 'cargo único', 'restructuring' o 'write-off'",
     "Preguntar la justificación y metodología detrás del monto estimado",
     "Verificar si estos cargos se repiten en años consecutivos",
-    "Ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios"
+    "Sugerencia de My Idea: ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios"
   ],
   "entregable_esperado": "Análisis de utilidad que no trata como extraordinarios los cargos 'únicos' que se repiten año tras año, con nota de riesgo si se identifican patrones sospechosos",
   "nodos_previos": [
@@ -70,6 +70,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del libro: los cargos que se repiten año tras año no son extraordinarios.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-015-cargos_extraordinarios_bandera_amarilla-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios",
+      "texto_nuevo": "Sugerencia de My Idea: ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "845",
+        "frase": "how extraordinary can those charges really be?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro explica el sesgo de estos cargos pero no aconseja excluirlos ni normalizarlos en el análisis.; Mismo defecto: consejo práctico propio sin la etiqueta.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

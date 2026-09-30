@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Principios de Gestión del Error (Error Management)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Conjunto de ocho principios fundamentales que resumen cómo entender y gestionar el error humano en las organizaciones: los mejores empleados pueden cometer los peores errores, los estados mentales transitorios son difíciles de gestionar, no se puede cambiar la condición humana pero sí las condiciones de trabajo, culpar no reduce la falibilidad futura, los errores son en gran parte no intencionales y por eso difíciles de controlar desde la dirección, los errores son informacionales y las violaciones son sociales/motivacionales, y las violaciones aumentan tanto la probabilidad de error subsecuente como la severidad de sus consecuencias.",
+  "resumen_teorico": "Conjunto de ocho principios fundamentales que resumen cómo entender y gestionar el error humano en las organizaciones: los mejores empleados pueden cometer los peores errores, los estados mentales transitorios son difíciles de gestionar, no se puede cambiar la condición humana pero sí las condiciones de trabajo, culpar tiene poco o ningún efecto sobre la falibilidad futura, los errores son en gran parte no intencionales y por eso difíciles de controlar desde la dirección, los errores son informacionales y las violaciones son sociales/motivacionales, y las violaciones aumentan tanto la probabilidad de error subsecuente como la de que esos errores tengan consecuencias dañinas.",
   "pasos_accionables": [
     "Aceptar que el error humano es inevitable y enfocar la gestión en las condiciones de trabajo",
     "Diseñar mejoras informativas (procedimientos, señalización, retroalimentación) para reducir errores",
@@ -61,6 +61,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da una segunda vía para las violaciones: mejorar credibilidad, aplicabilidad, disponibilidad y precisión de los procedimientos.; Misma segunda vía perdida.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-016-principios_gestion_error-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conjunto de ocho principios fundamentales que resumen cómo entender y gestionar el error humano en las organizaciones: los mejores empleados pueden cometer los peores errores, los estados mentales transitorios son difíciles de gestionar, no se puede cambiar la condición humana pero sí las condiciones de trabajo, culpar no reduce la falibilidad futura, los errores son en gran parte no intencionales y por eso difíciles de controlar desde la dirección, los errores son informacionales y las violaciones son sociales/motivacionales, y las violaciones aumentan tanto la probabilidad de error subsecuente como la severidad de sus consecuencias.",
+      "texto_nuevo": "Conjunto de ocho principios fundamentales que resumen cómo entender y gestionar el error humano en las organizaciones: los mejores empleados pueden cometer los peores errores, los estados mentales transitorios son difíciles de gestionar, no se puede cambiar la condición humana pero sí las condiciones de trabajo, culpar tiene poco o ningún efecto sobre la falibilidad futura, los errores son en gran parte no intencionales y por eso difíciles de controlar desde la dirección, los errores son informacionales y las violaciones son sociales/motivacionales, y las violaciones aumentan tanto la probabilidad de error subsecuente como la de que esos errores tengan consecuencias dañinas.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3817-3833",
+        "frase": "it is also more likely that these errors will have damaging consequences"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que culpar tendrá poco o ningún efecto sobre la falibilidad futura; el nodo lo vuelve una negación sin matiz.; El libro dice que las violaciones hacen más probable que esos errores tengan consecuencias dañinas, no que aumenten su severidad.; Mismo defecto que la marca 0: 'little or no effect' pasa a una negación absoluta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

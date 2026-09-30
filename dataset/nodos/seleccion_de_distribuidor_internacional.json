@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Selección de Distribuidor o Representante Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La elección de un distribuidor o representante de ventas adecuado en el mercado destino es crítica para el éxito de la exportación. Un distribuidor compra los bienes y los revende asumiendo riesgo, mientras que un representante de ventas trabaja a comisión sin asumir riesgo. La capacidad técnica y la afinidad de perfil con la empresa exportadora son factores clave, tal como lo evidencia el caso de una empresa exportadora al buscar socios técnicamente capacitados en países en desarrollo.",
+  "resumen_teorico": "La elección de un distribuidor o representante de ventas adecuado en el mercado destino es crítica para el éxito de la exportación. Un distribuidor compra los bienes y los revende asumiendo riesgo, mientras que un representante de ventas normalmente trabaja a comisión sin asumir riesgo. La capacidad técnica y la afinidad de perfil con la empresa exportadora son factores clave, tal como lo evidencia el caso de una empresa exportadora al buscar socios técnicamente capacitados en países en desarrollo.",
   "pasos_accionables": [
     "Definir si se requiere un distribuidor (compra y reventa) o un representante de ventas (comisión)",
     "Evaluar la capacidad técnica del candidato en la industria relacionada e investigarlo con cuidado antes del acuerdo, incluidas sus referencias comerciales y bancarias",
     "Solicitar apoyo del U.S. Commercial Service para identificar candidatos evaluados",
-    "Establecer acuerdos contractuales claros sobre soporte, inventario y responsabilidades, con una cláusula de salida para terminar la relación si el socio no cumple",
+    "Establecer acuerdos contractuales claros sobre soporte, inventario y responsabilidades, con una cláusula de salida para terminar la relación si el socio no cumple, sabiendo que las leyes del país del socio pueden limitarla",
     "Definir mecanismos de evaluación continua del desempeño del distribuidor"
   ],
   "entregable_esperado": "Contrato de distribución o representación firmado con un socio evaluado y validado",
@@ -92,6 +92,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide investigar con cuidado al candidato antes del acuerdo, con referencias comerciales y bancarias; ningún paso lo recoge y el consejo pierde la verificación.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-015-seleccion_de_distribuidor_internacional-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La elección de un distribuidor o representante de ventas adecuado en el mercado destino es crítica para el éxito de la exportación. Un distribuidor compra los bienes y los revende asumiendo riesgo, mientras que un representante de ventas trabaja a comisión sin asumir riesgo. La capacidad técnica y la afinidad de perfil con la empresa exportadora son factores clave, tal como lo evidencia el caso de una empresa exportadora al buscar socios técnicamente capacitados en países en desarrollo.",
+      "texto_nuevo": "La elección de un distribuidor o representante de ventas adecuado en el mercado destino es crítica para el éxito de la exportación. Un distribuidor compra los bienes y los revende asumiendo riesgo, mientras que un representante de ventas normalmente trabaja a comisión sin asumir riesgo. La capacidad técnica y la afinidad de perfil con la empresa exportadora son factores clave, tal como lo evidencia el caso de una empresa exportadora al buscar socios técnicamente capacitados en países en desarrollo.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1907",
+        "frase": "The sales representative usually works for a commission, assumes no risk or responsibility"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el representante usually trabaja a comisión sin asumir riesgo; el nodo lo da como regla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-015-seleccion_de_distribuidor_internacional-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer acuerdos contractuales claros sobre soporte, inventario y responsabilidades, con una cláusula de salida para terminar la relación si el socio no cumple",
+      "texto_nuevo": "Establecer acuerdos contractuales claros sobre soporte, inventario y responsabilidades, con una cláusula de salida para terminar la relación si el socio no cumple, sabiendo que las leyes del país del socio pueden limitarla",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1983",
+        "frase": "escape clauses and other provisions to safeguard your company may be limited by the laws"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que las cláusulas de salida pueden quedar limitadas por las leyes del país del representante.; Mismo defecto: se cae el límite legal que el libro pone a la cláusula de salida.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

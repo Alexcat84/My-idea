@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Modelo SERVQUAL para Medición de Calidad de Servicio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "SERVQUAL es un modelo que identifica cinco dimensiones para medir la calidad percibida en servicios: tangibles (apariencia física), confiabilidad (desempeño consistente), capacidad de respuesta (rapidez), garantía (confianza) y empatía (atención personalizada). Permite cuantificar aspectos que tradicionalmente eran evaluados de forma cualitativa, pero debe medirse distinto en servicios de alta o baja implicación.",
+  "resumen_teorico": "SERVQUAL es un modelo que identifica cinco dimensiones para medir la calidad percibida en servicios: tangibles (apariencia física), confiabilidad (desempeño consistente), capacidad de respuesta (rapidez), garantía (confianza) y empatía (atención personalizada). Debe medirse distinto en servicios de alta o baja implicación.",
   "pasos_accionables": [
     "Diseñar encuesta basada en las cinco dimensiones SERVQUAL",
     "Aplicar la encuesta a clientes reales del servicio",
@@ -68,6 +68,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que la calidad de servicio debe medirse distinto entre servicios de alta y de baja implicación.; Mismo límite omitido sobre la medición según el tipo de servicio.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-015-modelo_servqual-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "SERVQUAL es un modelo que identifica cinco dimensiones para medir la calidad percibida en servicios: tangibles (apariencia física), confiabilidad (desempeño consistente), capacidad de respuesta (rapidez), garantía (confianza) y empatía (atención personalizada). Permite cuantificar aspectos que tradicionalmente eran evaluados de forma cualitativa, pero debe medirse distinto en servicios de alta o baja implicación.",
+      "texto_nuevo": "SERVQUAL es un modelo que identifica cinco dimensiones para medir la calidad percibida en servicios: tangibles (apariencia física), confiabilidad (desempeño consistente), capacidad de respuesta (rapidez), garantía (confianza) y empatía (atención personalizada). Debe medirse distinto en servicios de alta o baja implicación.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21981-21983",
+        "frase": "One approach to measuring service quality is the SERVQUAL model"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que los servicios se han medido de forma cualitativa, pero no atribuye a este modelo la capacidad de cuantificarlos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

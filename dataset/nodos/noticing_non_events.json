@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Dificultad para Notar la Ausencia de Cambio (Non-Events)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "En sistemas automatizados, varios accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque se abandonan bajo carga de trabajo alta. A menudo el resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
+  "resumen_teorico": "En sistemas automatizados, varios accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque suelen abandonarse bajo carga de trabajo alta. A menudo el resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
   "pasos_accionables": [
     "Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado",
     "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
@@ -54,6 +54,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las sorpresas de automatización son a menudo el resultado, no siempre.; El libro habla de varios accidentes ('a number of'), no de muchos.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-017-noticing_non_events-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En sistemas automatizados, varios accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque se abandonan bajo carga de trabajo alta. A menudo el resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
+      "texto_nuevo": "En sistemas automatizados, varios accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque suelen abandonarse bajo carga de trabajo alta. A menudo el resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2346",
+        "frase": "Such call-outs typically get shed when workload is higher"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que esos avisos verbales suelen abandonarse (typically) con carga alta; el nodo lo afirma sin matiz.; Misma marca: 'typically get shed' pasa a afirmación absoluta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

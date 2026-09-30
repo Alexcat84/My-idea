@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Adaptaciones Procedimentales (Procedural Adaptations)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Los procedimientos no pueden ser suficientemente sensibles a todas las variaciones de contexto en sistemas complejos y dinámicos. Aplicar procedimientos no es simplemente seguir reglas (IF-THEN), sino una actividad cognitiva sustantiva y habilidosa. Cuando múltiples procedimientos deben aplicarse simultáneamente y se contradicen, las personas deben adaptar; esta adaptación, lejos de ser una 'violación', suele ser una inversión activa en la seguridad. Aun así, es un equilibrio delicado: adaptar puede salir mal y ceñirse también.",
+  "resumen_teorico": "Los procedimientos no pueden ser suficientemente sensibles a todas las variaciones de contexto en la mayoría de los sistemas complejos y dinámicos. Aplicar procedimientos no es simplemente seguir reglas (IF-THEN), sino una actividad cognitiva sustantiva y habilidosa. Cuando múltiples procedimientos deben aplicarse simultáneamente y se contradicen, las personas deben adaptar; esta adaptación, lejos de ser una 'violación', suele ser una inversión activa en la seguridad. Aun así, es un equilibrio delicado: adaptar puede salir mal y ceñirse también.",
   "pasos_accionables": [
     "Documentar casos donde procedimientos escritos se contradicen entre sí en la práctica real",
     "Analizar cómo los operadores experimentados adaptan procedimientos para gestionar la carga de trabajo real",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta aplicar procedimientos como un equilibrio delicado: adaptar puede fallar y ceñirse también.; Mismo matiz.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-017-adaptaciones_procedimentales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los procedimientos no pueden ser suficientemente sensibles a todas las variaciones de contexto en sistemas complejos y dinámicos. Aplicar procedimientos no es simplemente seguir reglas (IF-THEN), sino una actividad cognitiva sustantiva y habilidosa. Cuando múltiples procedimientos deben aplicarse simultáneamente y se contradicen, las personas deben adaptar; esta adaptación, lejos de ser una 'violación', suele ser una inversión activa en la seguridad. Aun así, es un equilibrio delicado: adaptar puede salir mal y ceñirse también.",
+      "texto_nuevo": "Los procedimientos no pueden ser suficientemente sensibles a todas las variaciones de contexto en la mayoría de los sistemas complejos y dinámicos. Aplicar procedimientos no es simplemente seguir reglas (IF-THEN), sino una actividad cognitiva sustantiva y habilidosa. Cuando múltiples procedimientos deben aplicarse simultáneamente y se contradicen, las personas deben adaptar; esta adaptación, lejos de ser una 'violación', suele ser una inversión activa en la seguridad. Aun así, es un equilibrio delicado: adaptar puede salir mal y ceñirse también.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2393",
+        "frase": "In most complex, dynamic systems, procedures are not sufficiently sensitive"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro lo dice de la mayoría de los sistemas complejos y dinámicos; el nodo lo extiende a todos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

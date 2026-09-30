@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sistemas de Reporte de Casi Accidentes (Near-Miss)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Un 'casi accidente' es cualquier evento que pudo tener consecuencias graves pero no las tuvo. Estos ofrecen 'lecciones gratis': si sacas las conclusiones correctas y actúas sobre ellas, actúan como vacunas que fortalecen las defensas del sistema sin causar daño real, muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre, ofrecen datos cuantitativos abundantes (ocurren más frecuentemente que los accidentes reales) y recuerdan a la organización los peligros existentes, combatiendo el olvido del miedo. Sin embargo, enfrentan problemas: dependen de la voluntad de las personas para reportar eventos en los que ellos mismos pudieron tener responsabilidad, y de su capacidad para identificar los factores contribuyentes reales (a veces no perciben los precursores ascendentes o normalizan condiciones deficientes).",
+  "resumen_teorico": "Un 'casi accidente' es cualquier evento que pudo tener consecuencias graves pero no las tuvo. Estos ofrecen 'lecciones gratis': si sacas las conclusiones correctas y actúas sobre ellas, pueden actuar como vacunas que fortalecen las defensas del sistema sin causar daño real, muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre, ofrecen datos cuantitativos abundantes (ocurren más frecuentemente que los accidentes reales) y recuerdan a la organización los peligros existentes, combatiendo el olvido del miedo, siempre que los datos se difundan ampliamente, sobre todo en los niveles altos de la organización. Sin embargo, enfrentan problemas: dependen de la voluntad de las personas para reportar eventos en los que ellos mismos pudieron tener responsabilidad, y de su capacidad para identificar los factores contribuyentes reales (a veces no perciben los precursores ascendentes o normalizan condiciones deficientes).",
   "pasos_accionables": [
     "Establecer un sistema formal de reporte de casi accidentes, diferenciando eventos benignos de aquellos que casi fueron catastróficos",
     "Desarrollar una cultura de reporte sin represalias que incentive la notificación honesta",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el efecto de vacuna a sacar las conclusiones correctas y actuar sobre ellas.; Falta una de las cuatro ventajas: muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre.; Mismo defecto que la marca 0: la condición de sacar y aplicar las conclusiones correctas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-016-reporte_casi_accidentes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un 'casi accidente' es cualquier evento que pudo tener consecuencias graves pero no las tuvo. Estos ofrecen 'lecciones gratis': si sacas las conclusiones correctas y actúas sobre ellas, actúan como vacunas que fortalecen las defensas del sistema sin causar daño real, muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre, ofrecen datos cuantitativos abundantes (ocurren más frecuentemente que los accidentes reales) y recuerdan a la organización los peligros existentes, combatiendo el olvido del miedo. Sin embargo, enfrentan problemas: dependen de la voluntad de las personas para reportar eventos en los que ellos mismos pudieron tener responsabilidad, y de su capacidad para identificar los factores contribuyentes reales (a veces no perciben los precursores ascendentes o normalizan condiciones deficientes).",
+      "texto_nuevo": "Un 'casi accidente' es cualquier evento que pudo tener consecuencias graves pero no las tuvo. Estos ofrecen 'lecciones gratis': si sacas las conclusiones correctas y actúas sobre ellas, pueden actuar como vacunas que fortalecen las defensas del sistema sin causar daño real, muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre, ofrecen datos cuantitativos abundantes (ocurren más frecuentemente que los accidentes reales) y recuerdan a la organización los peligros existentes, combatiendo el olvido del miedo, siempre que los datos se difundan ampliamente, sobre todo en los niveles altos de la organización. Sin embargo, enfrentan problemas: dependen de la voluntad de las personas para reportar eventos en los que ellos mismos pudieron tener responsabilidad, y de su capacidad para identificar los factores contribuyentes reales (a veces no perciben los precursores ascendentes o normalizan condiciones deficientes).",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2675-2687",
+        "frase": "But, for this to occur, the data need to be disseminated widely"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona ese recordatorio a que los datos se difundan ampliamente, sobre todo en los niveles altos; el nodo pierde la condición.; El libro dice que pueden funcionar como vacunas ('can work like'); el nodo lo da por seguro.; Mismo defecto que la marca 0: se cae la condición de difundir los datos ampliamente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

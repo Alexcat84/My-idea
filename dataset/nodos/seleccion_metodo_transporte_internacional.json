@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Selección del Método de Transporte Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo puede ser más caro, su costo puede compensarse con menores costos de transporte doméstico y entregas más rápidas, dándote ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, puedes reservar espacio con anticipación mediante un booking contract. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
+  "resumen_teorico": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo puede ser más caro, su costo puede compensarse con menores costos de transporte doméstico y entregas más rápidas, lo que puede darte ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, puedes reservar espacio con anticipación mediante un booking contract. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
   "pasos_accionables": [
     "Consulta con un freight forwarder internacional para determinar el mejor método de envío.",
     "Compara costos y tiempos de entrega entre transporte aéreo, marítimo y multimodal.",
@@ -142,6 +142,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El entregable vuelve obligatorio el booking contract, que el libro da como opción para cargas grandes y voluminosas.; Mismo defecto que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-015-seleccion_metodo_transporte_internacional-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo puede ser más caro, su costo puede compensarse con menores costos de transporte doméstico y entregas más rápidas, dándote ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, puedes reservar espacio con anticipación mediante un booking contract. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
+      "texto_nuevo": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo puede ser más caro, su costo puede compensarse con menores costos de transporte doméstico y entregas más rápidas, lo que puede darte ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, puedes reservar espacio con anticipación mediante un booking contract. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3637",
+        "frase": "These factors may give the U.S. exporter an edge over other competitors."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que esos factores may give an edge; el nodo la da por segura.; Mismo defecto; la frase final de la propuesta sobre ventas que crecen un 30 % no está en el libro y no se incorpora.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

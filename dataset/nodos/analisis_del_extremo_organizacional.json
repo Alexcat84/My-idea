@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Empieza por el origen organizacional, no por el momento del error (blunt end)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "En lugar de arrancar tu análisis en el momento del accidente (lo que se llama el extremo agudo o sharp end), empieza por el origen organizacional (el extremo organizacional o blunt end). Así muestras que las condiciones que llevaron al accidente eran normales y estaban siempre presentes en cómo trabajas y decides. Para esto, identifica el modelo de riesgo que manejas y la brecha entre el trabajo que crees que se hace (procedimientos, manuales) y el trabajo que realmente se hace.",
+  "resumen_teorico": "En lugar de arrancar tu análisis en el momento del accidente (lo que se llama el extremo agudo o sharp end), empieza por el origen organizacional (el extremo organizacional o blunt end). Así puedes mostrar que las condiciones que llevaron al accidente eran normales y estaban siempre presentes en cómo trabajas y decides. Para esto, identifica el modelo de riesgo que manejas y la brecha entre el trabajo que crees que se hace (procedimientos, manuales) y el trabajo que realmente se hace.",
   "pasos_accionables": [
     "Construye un diagrama de flujo que vaya del origen organizacional hacia el momento operativo",
     "Identifica el modelo de riesgo que manejas y en qué invertiste para controlarlo",
@@ -57,6 +57,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide explicar qué marcó la diferencia ese día, no qué hizo distinto alguien.; Mismo defecto: el paso añade que hubo una conducta distinta de alguien, que el libro no dice.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-017-analisis_del_extremo_organizacional-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de arrancar tu análisis en el momento del accidente (lo que se llama el extremo agudo o sharp end), empieza por el origen organizacional (el extremo organizacional o blunt end). Así muestras que las condiciones que llevaron al accidente eran normales y estaban siempre presentes en cómo trabajas y decides. Para esto, identifica el modelo de riesgo que manejas y la brecha entre el trabajo que crees que se hace (procedimientos, manuales) y el trabajo que realmente se hace.",
+      "texto_nuevo": "En lugar de arrancar tu análisis en el momento del accidente (lo que se llama el extremo agudo o sharp end), empieza por el origen organizacional (el extremo organizacional o blunt end). Así puedes mostrar que las condiciones que llevaron al accidente eran normales y estaban siempre presentes en cómo trabajas y decides. Para esto, identifica el modelo de riesgo que manejas y la brecha entre el trabajo que crees que se hace (procedimientos, manuales) y el trabajo que realmente se hace.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1981",
+        "frase": "If, instead, you start from the blunt end, you can get the reader to understand"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que empezar por el extremo organizacional permite (can) hacer entender que las condiciones eran normales; el nodo lo da por logrado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

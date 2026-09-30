@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Abandonar la Falacia del Arreglo Rápido",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Tras un accidente o fallo, la presión por mostrar resultados empuja a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda detiene el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos, si no quitas ninguno, tienden a reducir la transparencia y a aumentar el incumplimiento, y la tecnología añadida probablemente cree nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
+  "resumen_teorico": "Tras un accidente o fallo, la presión por mostrar resultados puede empujar a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda suele detener el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos, si no quitas ninguno, tienden a reducir la transparencia y a aumentar el incumplimiento, y la tecnología añadida probablemente cree nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
   "pasos_accionables": [
     "Resistir la presión de ofrecer una solución rápida inmediatamente después de un incidente",
     "Identificar si la respuesta ha sido una quick fix falsa: reprimenda, reentrenamiento, procedimiento o tecnología nueva",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro condiciona el efecto a no quitar nada, dice 'tienden' y añade el incumplimiento.; El libro dice que la tecnología añadida probablemente cree nuevas oportunidades de error.; Mismo endurecimiento sobre la tecnología.; Mismo matiz sobre los procedimientos añadidos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-017-abandonar_arreglos_rapidos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tras un accidente o fallo, la presión por mostrar resultados empuja a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda detiene el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos, si no quitas ninguno, tienden a reducir la transparencia y a aumentar el incumplimiento, y la tecnología añadida probablemente cree nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
+      "texto_nuevo": "Tras un accidente o fallo, la presión por mostrar resultados puede empujar a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda suele detener el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos, si no quitas ninguno, tienden a reducir la transparencia y a aumentar el incumplimiento, y la tecnología añadida probablemente cree nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3940-3952",
+        "frase": "Reprimanding people involved in the incident typically stops learning from that incident."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la presión puede ser enorme según la visibilidad del caso y puede llevar a medidas de Vieja Vista; el nodo lo da por seguro.; El libro dice que reprender suele detener el aprendizaje (typically); el nodo lo afirma sin matiz.; Misma marca que la 0: el 'can lead' del libro pasa a certeza.; Misma marca que la 1: se pierde el 'typically' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

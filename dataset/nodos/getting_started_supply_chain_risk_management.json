@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
   "pasos_accionables": [
-    "Identificar proveedores críticos con acceso a sistemas que procesan CUI o que les suministran componentes.",
+    "Identificar proveedores críticos con acceso a sistemas que procesan, almacenan o transmiten CUI o que les suministran componentes.",
     "Definir la frecuencia de revisión y actualización del plan SCRM.",
     "Identificar riesgos en desarrollo, diseño, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho del sistema, sus componentes o servicios.",
     "Establecer políticas para evaluar proveedores antes de la compra o contratación de servicios.",
@@ -101,6 +101,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye también a los proveedores que suministran componentes a esos sistemas.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-016-getting_started_supply_chain_risk_management-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar proveedores críticos con acceso a sistemas que procesan CUI o que les suministran componentes.",
+      "texto_nuevo": "Identificar proveedores críticos con acceso a sistemas que procesan, almacenan o transmiten CUI o que les suministran componentes.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "793",
+        "frase": "systems that process, store, or transmit CUI"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro abarca sistemas que procesan, almacenan o transmiten CUI; el nodo reduce el alcance a los que la procesan.; Mismo defecto que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

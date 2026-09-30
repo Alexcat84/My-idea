@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Transitarios y Empresas de Transporte (Freight Forwarders)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y gestionar el despacho aduanero en el puerto de llegada. No es obligatorio tener uno, pero son especialmente útiles para exportadores primerizos o al entrar a un nuevo país. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y gestionar el despacho aduanero en el puerto de llegada. No es obligatorio tener uno, pero pueden ser útiles, especialmente para exportadores primerizos, al entrar a un nuevo país o si prefieres que otro se encargue de esos trámites. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Seleccionar un freight forwarder con experiencia en el mercado destino",
     "Solicitar cotización de transporte y documentación requerida",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que no es obligatorio tener un freight forwarder; sin eso el nodo deja implícito que hay que contratarlo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-015-transitarios_freight_forwarders-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y gestionar el despacho aduanero en el puerto de llegada. No es obligatorio tener uno, pero son especialmente útiles para exportadores primerizos o al entrar a un nuevo país. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y gestionar el despacho aduanero en el puerto de llegada. No es obligatorio tener uno, pero pueden ser útiles, especialmente para exportadores primerizos, al entrar a un nuevo país o si prefieres que otro se encargue de esos trámites. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1741",
+        "frase": "they can be useful, especially if you are exporting for the first time"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da un tercer caso: si prefieres que otro se encargue de esos trámites.; El libro dice que pueden ser útiles (can be useful), no que lo sean.; Mismo defecto que la marca 0: falta el tercer caso de la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

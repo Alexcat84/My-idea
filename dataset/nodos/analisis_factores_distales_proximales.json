@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Análisis de Factores Proximales y Distales",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Un análisis de 'error humano' completo no debe limitarse al 'extremo agudo' (sharp end, ej. sala de control) sino extenderse a los factores distales: entrenamiento, documentación, decisiones gerenciales, regulaciones e influencias de la industria. El desempeño de las personas en el extremo agudo es producto del entorno que las preparó, por lo que atender los factores distales, donde sea posible, es necesario desde una perspectiva preventiva, aunque más difícil de vincular causalmente.",
+  "resumen_teorico": "Un análisis de 'error humano' completo no debe limitarse al 'extremo agudo' (sharp end, ej. sala de control) sino extenderse a los factores distales: entrenamiento, documentación, decisiones gerenciales, regulaciones e influencias de la industria. El desempeño de las personas en el extremo agudo es en gran parte producto del entorno que las preparó, por lo que atender los factores distales, donde sea posible, es necesario desde una perspectiva preventiva, aunque más difícil de vincular causalmente.",
   "pasos_accionables": [
     "Mapear los factores proximales cercanos en tiempo y espacio al incidente",
     "Explorar factores distales: entrenamiento, diseño de equipos, decisiones organizacionales, normas regulatorias",
@@ -54,6 +54,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro lo limita con 'donde sea posible'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-017-analisis_factores_distales_proximales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un análisis de 'error humano' completo no debe limitarse al 'extremo agudo' (sharp end, ej. sala de control) sino extenderse a los factores distales: entrenamiento, documentación, decisiones gerenciales, regulaciones e influencias de la industria. El desempeño de las personas en el extremo agudo es producto del entorno que las preparó, por lo que atender los factores distales, donde sea posible, es necesario desde una perspectiva preventiva, aunque más difícil de vincular causalmente.",
+      "texto_nuevo": "Un análisis de 'error humano' completo no debe limitarse al 'extremo agudo' (sharp end, ej. sala de control) sino extenderse a los factores distales: entrenamiento, documentación, decisiones gerenciales, regulaciones e influencias de la industria. El desempeño de las personas en el extremo agudo es en gran parte producto del entorno que las preparó, por lo que atender los factores distales, donde sea posible, es necesario desde una perspectiva preventiva, aunque más difícil de vincular causalmente.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2084",
+        "frase": "Their performance is in great part the product, or the expression, of the environment"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el desempeño es en gran parte producto del entorno; el nodo lo vuelve total.; Misma marca: se pierde el 'in great part' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
