@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Manufactura y Entrega Justo a Tiempo (JIT)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "JIT es un sistema donde los insumos llegan exactamente cuando se necesitan, en lugar de esperar en inventario. Aplicado con enfoque verde, puede reducir sobreproducción, defectos, necesidad de espacio de almacén y emisiones por transporte innecesario. No toda empresa puede implementarlo: encaja mejor en producción en masa muy automatizada, y requiere alta organización y proveedores confiables, ya que reduce el buffer ante interrupciones.",
+  "resumen_teorico": "JIT es un sistema donde los insumos llegan exactamente cuando se necesitan, en lugar de esperar en inventario. Aplicado con enfoque verde, puede reducir sobreproducción, defectos, necesidad de espacio de almacén y emisiones por transporte innecesario. No toda empresa puede implementarlo: encaja mejor en producción en masa muy automatizada, y requiere alta organización, proveedores confiables y excelente comunicación con ellos, ya que reduce el buffer ante interrupciones.",
   "pasos_accionables": [
     "Evaluar la confiabilidad de proveedores y capacidad de comunicación con ellos.",
     "Reducir progresivamente los niveles de inventario almacenado.",
@@ -68,6 +68,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que el enfoque verde puede traducirse en esos beneficios, no que los produzca.; Se cae el límite del libro: no todas las empresas pueden implementarlo y encaja mejor en producción en masa y muy automatizada.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-just_in_time_manufacturing-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "JIT es un sistema donde los insumos llegan exactamente cuando se necesitan, en lugar de esperar en inventario. Aplicado con enfoque verde, puede reducir sobreproducción, defectos, necesidad de espacio de almacén y emisiones por transporte innecesario. No toda empresa puede implementarlo: encaja mejor en producción en masa muy automatizada, y requiere alta organización y proveedores confiables, ya que reduce el buffer ante interrupciones.",
+      "texto_nuevo": "JIT es un sistema donde los insumos llegan exactamente cuando se necesitan, en lugar de esperar en inventario. Aplicado con enfoque verde, puede reducir sobreproducción, defectos, necesidad de espacio de almacén y emisiones por transporte innecesario. No toda empresa puede implementarlo: encaja mejor en producción en masa muy automatizada, y requiere alta organización, proveedores confiables y excelente comunicación con ellos, ya que reduce el buffer ante interrupciones.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4563",
+        "frase": "reliable suppliers and excellent communications with suppliers"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae el tercer requisito del libro: una excelente comunicación con los proveedores.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

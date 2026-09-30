@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Convertir Necesidad en Demanda: Poner a las Personas Primero",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "El design thinking exitoso no parte de especificaciones técnicas o investigación de mercado tradicional, sino de una exploración profunda de las necesidades humanas latentes, incluso entre personas que no son clientes actuales. El caso Shimano ilustra cómo explorar por qué el 90% de los adultos estadounidenses no monta bicicleta (a pesar de haberlo hecho de niños) reveló un mercado completamente nuevo ('coasting') que las especificaciones técnicas nunca hubieran descubierto.",
+  "resumen_teorico": "El design thinking exitoso no parte de especificaciones técnicas o investigación de mercado tradicional, sino de una exploración profunda de las necesidades humanas latentes, incluso entre personas que no son clientes actuales. El caso Shimano ilustra cómo explorar por qué el 90% de los adultos estadounidenses no monta bicicleta (a pesar de haberlo hecho de niños) reveló un mercado completamente nuevo ('coasting').",
   "pasos_accionables": [
     "Salir del segmento de clientes actuales y estudiar también a los no-clientes o ex-clientes",
     "Realizar investigación etnográfica/cualitativa para descubrir barreras emocionales, sociales o funcionales, y no solo preguntarles qué quieren",
@@ -45,5 +45,23 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-041-convertir_necesidad_en_demanda-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El design thinking exitoso no parte de especificaciones técnicas o investigación de mercado tradicional, sino de una exploración profunda de las necesidades humanas latentes, incluso entre personas que no son clientes actuales. El caso Shimano ilustra cómo explorar por qué el 90% de los adultos estadounidenses no monta bicicleta (a pesar de haberlo hecho de niños) reveló un mercado completamente nuevo ('coasting') que las especificaciones técnicas nunca hubieran descubierto.",
+      "texto_nuevo": "El design thinking exitoso no parte de especificaciones técnicas o investigación de mercado tradicional, sino de una exploración profunda de las necesidades humanas latentes, incluso entre personas que no son clientes actuales. El caso Shimano ilustra cómo explorar por qué el 90% de los adultos estadounidenses no monta bicicleta (a pesar de haberlo hecho de niños) reveló un mercado completamente nuevo ('coasting').",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "187",
+        "frase": "A huge, untapped market began to take shape before their eyes."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no afirma que las especificaciones técnicas nunca habrían descubierto ese mercado; el contrafactual es añadido.; Mismo fragmento: resultado contrafactual que el libro no dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

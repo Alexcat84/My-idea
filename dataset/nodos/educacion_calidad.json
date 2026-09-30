@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Educación en Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "La educación en calidad debe orientarse visiblemente al producto, servicio y cliente, aunque en realidad busca cambiar a los individuos. Toma tres formas: orientación sobre conceptos y problemas de calidad, mejora directa de habilidades específicas, y un flujo continuo de comunicación de ideas de calidad para mantenerla presente en la mente de todos.",
+  "resumen_teorico": "La educación en calidad debe orientarse visiblemente al producto, servicio y cliente, aunque en realidad busca cambiar a los individuos. Toma tres formas: orientación sobre conceptos y procedimientos de calidad, problemas que dañan el producto y expectativas del cliente; mejora directa de habilidades específicas; y un flujo continuo de comunicación de ideas de calidad para mantenerla presente en la mente de todos.",
   "pasos_accionables": [
     "Diseñar orientación inicial sobre conceptos, procedimientos, problemas que dañan el producto y expectativas del cliente",
     "Impartir capacitación técnica específica en habilidades relevantes al puesto",
@@ -43,6 +43,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La orientación del libro incluye los problemas que dañan el producto; el paso deja fuera ese elemento de la lista.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-educacion_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La educación en calidad debe orientarse visiblemente al producto, servicio y cliente, aunque en realidad busca cambiar a los individuos. Toma tres formas: orientación sobre conceptos y problemas de calidad, mejora directa de habilidades específicas, y un flujo continuo de comunicación de ideas de calidad para mantenerla presente en la mente de todos.",
+      "texto_nuevo": "La educación en calidad debe orientarse visiblemente al producto, servicio y cliente, aunque en realidad busca cambiar a los individuos. Toma tres formas: orientación sobre conceptos y procedimientos de calidad, problemas que dañan el producto y expectativas del cliente; mejora directa de habilidades específicas; y un flujo continuo de comunicación de ideas de calidad para mantenerla presente en la mente de todos.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "839-841",
+        "frase": "Orientation to the concepts and procedures of quality; the problems that have a harmful effect"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La primera forma del libro incluye los procedimientos de calidad y las expectativas del cliente, que el resumen deja caer.; Misma omisión en la primera forma de la educación en calidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

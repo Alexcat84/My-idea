@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Brief de Diseño como Marco Creativo",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo casi garantiza resultados incrementales y, muy probablemente, mediocres. El arte está en balancear libertad y restricción.",
+  "resumen_teorico": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto corre el riesgo de dejar al equipo perdido; uno demasiado restrictivo casi garantiza resultados incrementales y, muy probablemente, mediocres. El arte está en balancear libertad y restricción.",
   "pasos_accionables": [
     "Definir objetivos claros pero no sobreespecificados (evitar dictar la solución final)",
     "Incluir restricciones de precio, tecnología, y segmento de mercado sin cerrar el espacio de exploración",
@@ -61,6 +61,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que casi garantiza un resultado incremental y muy probablemente mediocre; el nodo lo vuelve certeza.; Mismo defecto: se endurece 'almost guarantees' y 'most likely' a garantía.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-041-brief_de_diseno-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo casi garantiza resultados incrementales y, muy probablemente, mediocres. El arte está en balancear libertad y restricción.",
+      "texto_nuevo": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto corre el riesgo de dejar al equipo perdido; uno demasiado restrictivo casi garantiza resultados incrementales y, muy probablemente, mediocres. El arte está en balancear libertad y restricción.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "237",
+        "frase": "A design brief that is too abstract risks leaving the project team wandering about"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que un brief demasiado abstracto corre el riesgo de dejar al equipo perdido, no que lo deje con seguridad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

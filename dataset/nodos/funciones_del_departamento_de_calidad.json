@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Funciones Clave de Control de Calidad (Inspección, Pruebas, Proveedores)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "En tu negocio, el control de calidad debe cubrir funciones concretas: inspección de aceptación de producto (visual y mecánica, hecha por alguien capacitado que no sea quien fabrica), pruebas funcionales con equipos y software (tratando el software de prueba como un producto que también debe calificarse), y calidad de proveedores (involucrando el control de calidad desde el principio en la selección de proveedores, no solo en la compra, en vez de hacer auditorías superficiales de planta). Cada actividad debe planificarse, ejecutarla alguien calificado y mantenerse separada de quien realiza la operación que se está evaluando.",
+  "resumen_teorico": "En tu negocio, el control de calidad debe cubrir funciones concretas: inspección de aceptación de producto (visual y mecánica, hecha por alguien capacitado que no dependa del área que fabrica), pruebas funcionales con equipos y software (tratando el software de prueba como un producto que también debe calificarse), y calidad de proveedores (involucrando el control de calidad desde el principio en la selección de proveedores, no solo en la compra, en vez de hacer auditorías superficiales de planta). Cada actividad debe planificarse, ejecutarla alguien calificado y mantenerse separada, en la organización, de la operación que se está evaluando.",
   "pasos_accionables": [
     "Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no dependa del área que fabrica el producto.",
     "Define pruebas funcionales con procedimientos exactos y trata el software de prueba como un producto que también debe calificarse.",
@@ -62,6 +62,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro excluye de las pruebas de aceptación a los ingenieros en general.; El libro retiró a todos los ingenieros, no solo al diseñador.; Mismo límite estrechado.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-funciones_del_departamento_de_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En tu negocio, el control de calidad debe cubrir funciones concretas: inspección de aceptación de producto (visual y mecánica, hecha por alguien capacitado que no sea quien fabrica), pruebas funcionales con equipos y software (tratando el software de prueba como un producto que también debe calificarse), y calidad de proveedores (involucrando el control de calidad desde el principio en la selección de proveedores, no solo en la compra, en vez de hacer auditorías superficiales de planta). Cada actividad debe planificarse, ejecutarla alguien calificado y mantenerse separada de quien realiza la operación que se está evaluando.",
+      "texto_nuevo": "En tu negocio, el control de calidad debe cubrir funciones concretas: inspección de aceptación de producto (visual y mecánica, hecha por alguien capacitado que no dependa del área que fabrica), pruebas funcionales con equipos y software (tratando el software de prueba como un producto que también debe calificarse), y calidad de proveedores (involucrando el control de calidad desde el principio en la selección de proveedores, no solo en la compra, en vez de hacer auditorías superficiales de planta). Cada actividad debe planificarse, ejecutarla alguien calificado y mantenerse separada, en la organización, de la operación que se está evaluando.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "767",
+        "frase": "the inspection personnel are organizationally separate from those operations they are inspecting"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige que los inspectores estén separados en la organización de las operaciones que inspeccionan; que no sea la misma persona pierde esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

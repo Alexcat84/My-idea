@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Metas de desmaterialización y reducción de energía",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las empresas líderes en ventaja ecológica suelen establecer metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto y dando luego a sus diseñadores espacio para resolverlo. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.",
+  "resumen_teorico": "Las empresas líderes en ventaja ecológica suelen establecer metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto y dando luego a sus diseñadores espacio para resolverlo. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también puede reducir insumos, desperdicio y energía en manufactura y distribución.",
   "pasos_accionables": [
     "Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía, y luego dar a quienes diseñan espacio para resolverlo",
     "Establecer metas cuantitativas de reducción (% de materiales, % de energía)",
@@ -77,6 +77,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte del equilibrio: evitar el sobreempaque sin dejar de prevenir daños por falta de empaque.; Misma advertencia de equilibrio perdida.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-metas_desmaterializacion_energia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las empresas líderes en ventaja ecológica suelen establecer metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto y dando luego a sus diseñadores espacio para resolverlo. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.",
+      "texto_nuevo": "Las empresas líderes en ventaja ecológica suelen establecer metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto y dando luego a sus diseñadores espacio para resolverlo. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también puede reducir insumos, desperdicio y energía en manufactura y distribución.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3698",
+        "frase": "can significantly cut back on material inputs, reduce waste, and save energy"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que aligerar y rediseñar los empaques puede reducir insumos, desperdicio y energía; el nodo lo da por seguro.; Mismo endurecimiento del puede del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

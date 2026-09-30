@@ -4,9 +4,9 @@
   "dominio": "health_safety",
   "titulo_concepto": "Educación y Capacitación en Seguridad y Salud Ocupacional",
   "fuente": "OSHA3886",
-  "resumen_teorico": "La capacitación te da a ti, a las personas que supervisan y a cada trabajador el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y entender el rol de cada quien dentro del programa de seguridad, incluyendo cómo funciona y cómo se protegen los derechos de los trabajadores. Puede impartirse de forma formal, mediante charlas diarias, capacitación entre pares, capacitación en el puesto, demostraciones en el sitio o con herramientas de identificación de peligros disponibles en tu país. Debe dirigirse tanto a quienes se incorporan como a quienes ya están en el sitio, asegurando que todos entiendan los controles implementados y sepan cómo reportar incidentes, peligros y cuasi accidentes.",
+  "resumen_teorico": "La capacitación te da a ti, a las personas que supervisan y a cada trabajador el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y entender el rol de cada quien dentro del programa de seguridad, incluyendo cómo funciona y cómo se protegen los derechos de los trabajadores, además de formación especializada cuando su trabajo implica peligros particulares. Puede impartirse de forma formal, mediante charlas diarias, capacitación entre pares, capacitación en el puesto, demostraciones en el sitio o con herramientas de identificación de peligros disponibles en tu país. Debe dirigirse tanto a quienes se incorporan como a quienes ya están en el sitio, asegurando que todos entiendan los controles implementados y sepan cómo reportar incidentes, peligros y cuasi accidentes.",
   "pasos_accionables": [
-    "Capacita a todos en las políticas, metas y procedimientos de tu programa de seguridad, explicando cómo funciona, cuál es el rol de cada persona, a quién acudir con dudas, qué hacer en una emergencia y cuáles son los derechos de los trabajadores",
+    "Capacita a todos en las políticas, metas y procedimientos de tu programa de seguridad, explicando cómo funciona, a quién acudir con dudas, cómo reportar peligros, lesiones, enfermedades y cuasi accidentes, qué hacer en una emergencia, cuáles son tus responsabilidades como empleador dentro del programa y cuáles son los derechos de los trabajadores",
     "Fórmate junto con quienes supervisan en el rol de liderazgo, la forma de responder a los reportes de los trabajadores sin desalentarlos, la investigación de incidentes y la protección de sus derechos, incluido el derecho a reportar sin temor a represalias",
     "Entrena a los trabajadores en el reporte de incidentes, peligros y cuasi accidentes",
     "Capacita en el reconocimiento de peligros y en la jerarquía de controles, apoyándote en herramientas de identificación de peligros disponibles en tu país",
@@ -120,6 +120,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de cursos de seguridad de distinta duración, no de cursos de certificación.; El libro presenta esos cursos como punto de partida, que para los trabajadores se complementan con inducción y charlas sobre los peligros de cada sitio.; Mismo defecto que la marca 0.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-capacitacion_educacion_seguridad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La capacitación te da a ti, a las personas que supervisan y a cada trabajador el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y entender el rol de cada quien dentro del programa de seguridad, incluyendo cómo funciona y cómo se protegen los derechos de los trabajadores. Puede impartirse de forma formal, mediante charlas diarias, capacitación entre pares, capacitación en el puesto, demostraciones en el sitio o con herramientas de identificación de peligros disponibles en tu país. Debe dirigirse tanto a quienes se incorporan como a quienes ya están en el sitio, asegurando que todos entiendan los controles implementados y sepan cómo reportar incidentes, peligros y cuasi accidentes.",
+      "texto_nuevo": "La capacitación te da a ti, a las personas que supervisan y a cada trabajador el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y entender el rol de cada quien dentro del programa de seguridad, incluyendo cómo funciona y cómo se protegen los derechos de los trabajadores, además de formación especializada cuando su trabajo implica peligros particulares. Puede impartirse de forma formal, mediante charlas diarias, capacitación entre pares, capacitación en el puesto, demostraciones en el sitio o con herramientas de identificación de peligros disponibles en tu país. Debe dirigirse tanto a quienes se incorporan como a quienes ya están en el sitio, asegurando que todos entiendan los controles implementados y sepan cómo reportar incidentes, peligros y cuasi accidentes.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "793-799",
+        "frase": "Specialized training, when their work involves unique hazards."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera tres aportes y el tercero, la formación especializada ante peligros particulares, se cae del resumen.; Misma omisión: la formación especializada cuando el trabajo implica peligros particulares.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-042-capacitacion_educacion_seguridad-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacita a todos en las políticas, metas y procedimientos de tu programa de seguridad, explicando cómo funciona, cuál es el rol de cada persona, a quién acudir con dudas, qué hacer en una emergencia y cuáles son los derechos de los trabajadores",
+      "texto_nuevo": "Capacita a todos en las políticas, metas y procedimientos de tu programa de seguridad, explicando cómo funciona, a quién acudir con dudas, cómo reportar peligros, lesiones, enfermedades y cuasi accidentes, qué hacer en una emergencia, cuáles son tus responsabilidades como empleador dentro del programa y cuáles son los derechos de los trabajadores",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "811-825",
+        "frase": "How to report hazards, injuries, illnesses, and close calls/near misses"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de temas del libro incluye cómo reportar peligros, lesiones, enfermedades y cuasi accidentes y las responsabilidades del empleador; el paso las pierde o las diluye en un rol genérico.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

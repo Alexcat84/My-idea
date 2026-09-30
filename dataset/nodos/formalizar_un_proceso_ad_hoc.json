@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Formalizar un Proceso Ad Hoc que Cruza la Organización",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Los procesos que conviene formalizar son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben cómo funcionan de verdad. Y el orden importa: primero se define QUÉ tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, que es lo que permite ver en cuál se rompe en vez de saber solo que el resultado falló, y cada paso lleva un responsable con nombre. Lo último, y es lo que sostiene todo lo anterior, es hacer visible el desempeño de cada responsable.",
+  "resumen_teorico": "Los procesos que conviene formalizar son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben cómo funcionan de verdad. Y el orden importa: primero se define QUÉ tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, y cada paso lleva un responsable con nombre. Lo último es hacer visible el desempeño de cada responsable.",
   "pasos_accionables": [
     "Identificar los procesos ad hoc que cruzan fronteras organizacionales y son críticos (ej. contratación)",
     "Pedir a las personas que ya ejecutan el proceso informalmente que lo formalicen",
@@ -117,6 +117,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los procesos ayudan cuando la comunicación cruza fronteras; no afirma que los no escritos sean los que más daño hacen.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-043-formalizar_un_proceso_ad_hoc-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los procesos que conviene formalizar son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben cómo funcionan de verdad. Y el orden importa: primero se define QUÉ tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, que es lo que permite ver en cuál se rompe en vez de saber solo que el resultado falló, y cada paso lleva un responsable con nombre. Lo último, y es lo que sostiene todo lo anterior, es hacer visible el desempeño de cada responsable.",
+      "texto_nuevo": "Los procesos que conviene formalizar son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben cómo funcionan de verdad. Y el orden importa: primero se define QUÉ tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, y cada paso lleva un responsable con nombre. Lo último es hacer visible el desempeño de cada responsable.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2374-2376",
+        "frase": "What can you do to increase the visibility of their performance?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo pide saber si se obtiene lo buscado en cada paso y cómo medirlo; el contraste con saber solo que el resultado falló es añadido.; El libro solo pregunta cómo aumentar la visibilidad del desempeño; no dice que eso sostenga todo lo anterior.; Mismo defecto que la marca 1: la visibilidad es parte de la responsabilidad, sin jerarquía sobre lo demás.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

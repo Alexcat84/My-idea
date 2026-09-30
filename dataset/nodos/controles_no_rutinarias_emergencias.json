@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Controles para Tareas No Rutinarias y Emergencias",
   "fuente": "OSHA3886",
-  "resumen_teorico": "El plan de control de peligros debe proteger a los trabajadores en emergencias previsibles (incendios, derrames, desastres naturales), con procedimientos, equipos y simulacros, y en tareas no rutinarias (izajes críticos, vertidos de concreto), que piden especial cautela: revisa antes sus peligros con quienes las harán y avisa a los demás.",
+  "resumen_teorico": "El plan de control de peligros debe proteger a los trabajadores en emergencias previsibles (incendios, derrames, desastres naturales), con procedimientos, equipos, responsables y simulacros, y en tareas no rutinarias (izajes críticos, vertidos de concreto), que piden especial cautela: revisa antes sus peligros con quienes las harán y avisa a los demás.",
   "pasos_accionables": [
     "Desarrollar procedimientos específicos para tareas no rutinarias",
     "Modificar o crear planes de control para situaciones de emergencia",
@@ -45,6 +45,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide especial cautela en las tareas no rutinarias: revisar antes su análisis de peligros con quienes las harán y avisar a los demás.; Mismo defecto que la marca 0: se cae la cautela previa a las tareas no rutinarias.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-controles_no_rutinarias_emergencias-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El plan de control de peligros debe proteger a los trabajadores en emergencias previsibles (incendios, derrames, desastres naturales), con procedimientos, equipos y simulacros, y en tareas no rutinarias (izajes críticos, vertidos de concreto), que piden especial cautela: revisa antes sus peligros con quienes las harán y avisa a los demás.",
+      "texto_nuevo": "El plan de control de peligros debe proteger a los trabajadores en emergencias previsibles (incendios, derrames, desastres naturales), con procedimientos, equipos, responsables y simulacros, y en tareas no rutinarias (izajes críticos, vertidos de concreto), que piden especial cautela: revisa antes sus peligros con quienes las harán y avisa a los demás.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "739-749",
+        "frase": "Assign responsibilities for implementing the emergency plan."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración reproduce los pasos del libro pero deja caer la asignación de responsabilidades para implementar el plan de emergencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Equipo de Mejora de Calidad (Quality Improvement Team)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y dé seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Cada integrante representa a su área, y cada área sigue siendo responsable de su propio programa. Es clave que quien lidera tenga libertad para elegir a quienes participan y cómo se organiza el trabajo.",
+  "resumen_teorico": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y dé seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Cada integrante representa a su área, y cada área sigue siendo responsable de su propio programa.",
   "pasos_accionables": [
     "Elige a la persona que va a liderar la mejora de calidad: alguien con experiencia de dirección que entienda la necesidad de mejorar, esté de acuerdo con Cero Defectos y la prevención de defectos y cuente con tu confianza, por ejemplo quien se encarga de marketing u operaciones.",
-    "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad; que sea alguien que pueda hablar por su área y comprometerla a actuar.",
+    "Identifica quién representa cada área de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad; que sea alguien que pueda hablar por su área y comprometerla a actuar.",
     "Asigna a alguien que documente las reuniones, dé seguimiento a las acciones y mantenga el impulso del programa.",
     "Establece una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.",
     "Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas.",
@@ -153,6 +153,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recalca que cada integrante representa a su área y que cada área sigue siendo responsable de su propio programa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-equipo_mejora_calidad_2-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y dé seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Cada integrante representa a su área, y cada área sigue siendo responsable de su propio programa. Es clave que quien lidera tenga libertad para elegir a quienes participan y cómo se organiza el trabajo.",
+      "texto_nuevo": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y dé seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Cada integrante representa a su área, y cada área sigue siendo responsable de su propio programa.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2105-2113",
+        "frase": "The chairperson should assemble a team representing each department"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo dice que quien preside reúne un equipo que represente a cada departamento; no hace clave ninguna libertad del líder para elegir integrantes ni organización.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-042-equipo_mejora_calidad_2-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad; que sea alguien que pueda hablar por su área y comprometerla a actuar.",
+      "texto_nuevo": "Identifica quién representa cada área de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad; que sea alguien que pueda hablar por su área y comprometerla a actuar.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2101",
+        "frase": "every function of an operation is a contributor to defect levels, every portion must participate"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pide representantes de cada departamento porque toda función contribuye a los defectos; limitarlo a las áreas clave deja fuera parte del negocio.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

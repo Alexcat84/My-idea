@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Nueve Pasos Simples para Iniciar un Programa de Seguridad",
   "fuente": "OSHA3886",
-  "resumen_teorico": "Guía introductoria de acciones simples para que tú, como responsable de una pequeña o mediana empresa de construcción sin experiencia previa en programas formales, empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y reservar un tiempo regular para hablar de seguridad y buscar mejoras al programa. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
+  "resumen_teorico": "Guía introductoria de acciones simples para que empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y reservar un tiempo regular para hablar de seguridad y buscar mejoras al programa. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
   "pasos_accionables": [
     "Establece la seguridad y salud como prioridad máxima y comunícalo con claridad",
     "Predica con el ejemplo mostrando comportamientos seguros en tu trabajo diario",
-    "Crea un canal simple y sin represalias para reportar peligros e incidentes, con una opción para reportar de forma anónima",
+    "Crea y comunica un canal simple y sin represalias para reportar lesiones, enfermedades, incidentes (incluidos los cuasi accidentes), peligros o inquietudes de seguridad y salud, con una opción para reportar peligros o inquietudes de forma anónima",
     "Capacita a tus trabajadores en identificar y controlar peligros, y realiza inspecciones conjuntas para recoger sus ideas de mejora",
-    "Asigna a los trabajadores la tarea de elegir, implementar y evaluar las soluciones identificadas, y define protocolos claros y visibles para atender emergencias",
+    "Asigna a los trabajadores la tarea de elegir, implementar y evaluar las soluciones identificadas, e identifica las emergencias previsibles, prepara instrucciones para cada caso, reúnete a comentarlas y publícalas en un lugar visible del sitio",
     "Consulta a los trabajadores antes de cambios significativos y reserva tiempo regular para revisar y mejorar el programa"
   ],
   "entregable_esperado": "Lista de verificación con las nueve acciones iniciales completadas o en proceso, que sirve de base para un programa de seguridad más estructurado",
@@ -130,6 +130,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro asigna a los trabajadores elegir, implementar y evaluar las soluciones; el paso pierde ese papel y la evaluación.; Mismo defecto que la marca 0.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-nueve_pasos_iniciar_programa-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Guía introductoria de acciones simples para que tú, como responsable de una pequeña o mediana empresa de construcción sin experiencia previa en programas formales, empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y reservar un tiempo regular para hablar de seguridad y buscar mejoras al programa. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
+      "texto_nuevo": "Guía introductoria de acciones simples para que empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y reservar un tiempo regular para hablar de seguridad y buscar mejoras al programa. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "89-103",
+        "frase": "If these recommended practices appear challenging, here are some simple steps you can take"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro ofrece estos pasos a quien encuentre exigentes las prácticas recomendadas y dice que valen igual para empresas pequeñas y grandes; el destinatario pyme sin experiencia es añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-042-nueve_pasos_iniciar_programa-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crea un canal simple y sin represalias para reportar peligros e incidentes, con una opción para reportar de forma anónima",
+      "texto_nuevo": "Crea y comunica un canal simple y sin represalias para reportar lesiones, enfermedades, incidentes (incluidos los cuasi accidentes), peligros o inquietudes de seguridad y salud, con una opción para reportar peligros o inquietudes de forma anónima",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "115-119",
+        "frase": "report any injuries, illnesses, incidents including near misses/close calls), hazards, or safety and health concerns"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide reportar también lesiones, enfermedades, cuasi accidentes e inquietudes, y comunicar el procedimiento; el paso reduce la lista.; Misma reducción de la lista de lo que se reporta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-042-nueve_pasos_iniciar_programa-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asigna a los trabajadores la tarea de elegir, implementar y evaluar las soluciones identificadas, y define protocolos claros y visibles para atender emergencias",
+      "texto_nuevo": "Asigna a los trabajadores la tarea de elegir, implementar y evaluar las soluciones identificadas, e identifica las emergencias previsibles, prepara instrucciones para cada caso, reúnete a comentarlas y publícalas en un lugar visible del sitio",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "141-143",
+        "frase": "Identify foreseeable emergency scenarios and develop instructions on what to do in each case."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide identificar las emergencias previsibles, preparar instrucciones para cada caso y reunirse a comentarlas antes de colocarlas a la vista; el paso lo reduce a protocolos visibles.; Se cae la reunión para comentar las instrucciones, parte del mismo procedimiento.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "Comparar la lista de materiales declarados vs. no declarados de un producto",
     "Evaluar si los aditivos ocultos cumplen alguna función esencial o son solo remanentes del proceso industrial",
     "Documentar los riesgos de exposición (inhalación, ingestión, contacto con piel) para el usuario final",
-    "Definir criterios de transparencia que el nuevo diseño debe cumplir (etiquetado, trazabilidad)"
+    "Sugerencia de My Idea: definir criterios de transparencia que el nuevo diseño debe cumplir (etiquetado, trazabilidad)"
   ],
   "entregable_esperado": "Informe de transparencia que exponga los aditivos ocultos y su justificación (o falta de ella)",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Cuida los Aditivos Ocultos",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-041-concepto_producto_plus-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir criterios de transparencia que el nuevo diseño debe cumplir (etiquetado, trazabilidad)",
+      "texto_nuevo": "Sugerencia de My Idea: definir criterios de transparencia que el nuevo diseño debe cumplir (etiquetado, trazabilidad)",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "237",
+        "frase": "Maybe shirt labels should read: Product contains toxic dyes and catalysts."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro no propone definir criterios de transparencia de etiquetado y trazabilidad; es un consejo práctico propio sin etiqueta.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

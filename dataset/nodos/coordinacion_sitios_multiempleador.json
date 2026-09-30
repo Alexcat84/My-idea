@@ -10,7 +10,7 @@
     "Comunica los peligros del sitio y las medidas de control antes de iniciar el trabajo, incluyendo riesgos no rutinarios o de emergencia, y actualiza esta información cuando cambien las condiciones",
     "Define especificaciones y calificaciones de seguridad para contratistas y agencias de personal, inclúyelas en los contratos y asegúrate de que los seleccionados las cumplan",
     "Coordina la planificación y el cronograma de trabajo, acordando antes de empezar quién implementa cada parte del programa de seguridad",
-    "Establece un canal para reportar incidentes y da a contratistas y agencias el derecho a visitar e inspeccionar el sitio y a acceder a los registros de lesiones",
+    "Establece un canal para reportar incidentes y da a contratistas y agencias el derecho a visitar e inspeccionar el sitio y a acceder a los registros de lesiones y enfermedades y a otra información de seguridad y salud",
     "Resuelve conflictos de políticas de seguridad, como el uso de EPP, antes de que comience el trabajo"
   ],
   "entregable_esperado": "Protocolo de coordinación documentado entre todos los empleadores del sitio, con roles definidos, canal de comunicación de peligros y procedimiento de resolución de conflictos.",
@@ -161,6 +161,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da derecho a visitar e inspeccionar el sitio, además de acceder a los registros de lesiones; el paso lo reduce a registros.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-042-coordinacion_sitios_multiempleador-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece un canal para reportar incidentes y da a contratistas y agencias el derecho a visitar e inspeccionar el sitio y a acceder a los registros de lesiones",
+      "texto_nuevo": "Establece un canal para reportar incidentes y da a contratistas y agencias el derecho a visitar e inspeccionar el sitio y a acceder a los registros de lesiones y enfermedades y a otra información de seguridad y salud",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "1031",
+        "frase": "access injury and illness records and other safety and health information"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da acceso a los registros de lesiones y enfermedades y a otra información de seguridad y salud; el paso lo limita a lesiones.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
