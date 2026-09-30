@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Que tu IA actúe según tus valores (alineación ética)",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Alinear tu IA significa asegurarte de que haga lo que tú quieres, y no persiga un objetivo al pie de la letra causando daños que no previste (como en la analogía del 'maximizador de clips'). En tu negocio esto se traduce en dejar claro qué debe buscar la IA que uses, qué límites éticos no puede cruzar, y cómo vas a vigilar su comportamiento para evitar sesgos, desinformación o decisiones que dañen a tus clientes o tu marca.",
+  "resumen_teorico": "Alinear tu IA significa asegurarte de que sirva a los intereses y valores humanos en lugar de dañarlos, y no persiga un objetivo al pie de la letra causando daños que no previste (como en la analogía del 'maximizador de clips'). En tu negocio esto se traduce en dejar claro qué debe buscar la IA que uses, qué límites éticos no puede cruzar, y cómo vas a vigilar su comportamiento para evitar sesgos, desinformación o decisiones que dañen a tus clientes o tu marca.",
   "pasos_accionables": [
     "Define con claridad qué objetivos y qué límites éticos tiene el sistema de IA que usas en tu negocio",
     "Revisa tú mismo, o la persona que te ayuda, las decisiones importantes que tome la IA antes de que se ejecuten",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Alinea la IA con tus Valores",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-alineacion_etica_ia_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Alinear tu IA significa asegurarte de que haga lo que tú quieres, y no persiga un objetivo al pie de la letra causando daños que no previste (como en la analogía del 'maximizador de clips'). En tu negocio esto se traduce en dejar claro qué debe buscar la IA que uses, qué límites éticos no puede cruzar, y cómo vas a vigilar su comportamiento para evitar sesgos, desinformación o decisiones que dañen a tus clientes o tu marca.",
+      "texto_nuevo": "Alinear tu IA significa asegurarte de que sirva a los intereses y valores humanos en lugar de dañarlos, y no persiga un objetivo al pie de la letra causando daños que no previste (como en la analogía del 'maximizador de clips'). En tu negocio esto se traduce en dejar claro qué debe buscar la IA que uses, qué límites éticos no puede cruzar, y cómo vas a vigilar su comportamiento para evitar sesgos, desinformación o decisiones que dañen a tus clientes o tu marca.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "268",
+        "frase": "how to make sure that AI serves, rather than hurts, human interests"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro define la alineación como que la IA sirva a los intereses humanos y no los dañe; reducirla a la voluntad del dueño pierde ese criterio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Inspecciones Superficiales y Muestreo Incompleto",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Ilustrado por el caso Piper Alpha, este concepto señala que las inspecciones de seguridad basadas en muestreo, sin listas de verificación adecuadas, sin tiempo suficiente ni criterios estandarizados, pueden dar una falsa sensación de control mientras dejan pasar deficiencias críticas. La falta de checklist formales y la dependencia del juicio individual del inspector aumentan la variabilidad y el riesgo de omisión.",
+  "resumen_teorico": "Ilustrado por el caso Piper Alpha, este concepto señala que las inspecciones de seguridad basadas en muestreo, sin listas de verificación adecuadas, sin tiempo suficiente ni criterios estandarizados, pueden dar una falsa sensación de control mientras dejan pasar deficiencias críticas. En ese caso, el inspector no tenía la lista de verificación que existía para evaluar los permisos de trabajo ni experiencia en esos procedimientos.",
   "pasos_accionables": [
     "Desarrollar checklists estandarizados para los procesos críticos de seguridad (permisos de trabajo, cambios de turno, sistemas de emergencia)",
     "Asignar tiempo suficiente para auditorías completas en lugar de inspecciones rápidas",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Evita Inspecciones Superficiales",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-159-inspecciones_superficiales_y_muestreo_incompleto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ilustrado por el caso Piper Alpha, este concepto señala que las inspecciones de seguridad basadas en muestreo, sin listas de verificación adecuadas, sin tiempo suficiente ni criterios estandarizados, pueden dar una falsa sensación de control mientras dejan pasar deficiencias críticas. La falta de checklist formales y la dependencia del juicio individual del inspector aumentan la variabilidad y el riesgo de omisión.",
+      "texto_nuevo": "Ilustrado por el caso Piper Alpha, este concepto señala que las inspecciones de seguridad basadas en muestreo, sin listas de verificación adecuadas, sin tiempo suficiente ni criterios estandarizados, pueden dar una falsa sensación de control mientras dejan pasar deficiencias críticas. En ese caso, el inspector no tenía la lista de verificación que existía para evaluar los permisos de trabajo ni experiencia en esos procedimientos.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4027",
+        "frase": "but the inspector did not have it, nor was he experienced"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no afirma que depender del juicio del inspector aumente la variabilidad; describe carencias concretas del inspector en ese caso.; Mismo defecto: causa general añadida que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

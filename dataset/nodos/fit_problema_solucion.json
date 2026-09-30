@@ -10,7 +10,7 @@
     "Testear si los clientes quieren tu propuesta de valor concreta.",
     "Evaluar si el modelo de negocio asociado es escalable y rentable."
   ],
-  "entregable_esperado": "Evidencia documentada de al menos el problem-solution fit antes de escalar.",
+  "entregable_esperado": "Evidencia documentada de cuál de los tres tipos de encaje has alcanzado, empezando por el problem-solution fit.",
   "nodos_previos": [
     "value_proposition_canvas",
     "presales",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Valida los Tres Tipos de Encaje",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-fit_problema_solucion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evidencia documentada de al menos el problem-solution fit antes de escalar.",
+      "texto_nuevo": "Evidencia documentada de cuál de los tres tipos de encaje has alcanzado, empezando por el problem-solution fit.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "1797",
+        "frase": "The fit you achieve is not yet proven and exists mainly on paper."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pone el primer encaje como umbral para escalar: ese encaje aún no está probado y lo escalable es el tercero.; Mismo umbral añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "HEART: Human Error Assessment and Reduction Technique",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "HEART es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea, cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según su proporción real de influencia. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
+  "resumen_teorico": "HEART es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea, cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según la proporción de su influencia que juzgues adecuada. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
   "pasos_accionables": [
     "Clasifica la actividad a evaluar dentro de los tipos de tarea genéricos de la Tabla 7.2",
     "Determina la probabilidad de error nominal asociada a ese tipo de tarea",
@@ -56,6 +56,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-026 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-159-heart_metodo_evaluacion_error_humano-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "HEART es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea, cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según su proporción real de influencia. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
+      "texto_nuevo": "HEART es una técnica para evaluar y reducir el error humano en tareas críticas. Clasifica la actividad dentro de tipos genéricos de tarea, cada uno con una probabilidad nominal de error. Luego ajusta esa probabilidad multiplicándola por Condiciones Productoras de Error (EPCs) presentes en el contexto, como la falta de familiaridad con la situación (x17) o la falta de tiempo para detectar y corregir errores (x11), ponderadas según la proporción de su influencia que juzgues adecuada. El resultado es una probabilidad de error ajustada que te permite entender cuánto pesa cada factor y decidir dónde intervenir primero para reducir el riesgo en una actividad específica.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3395",
+        "frase": "error probability is multiplied by a suitably judged proportion of the appropriate EPC factor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de una proporción juzgada del factor, no de una proporción real.; Mismo defecto: presenta como real lo que es un juicio de quien evalúa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -6,7 +6,7 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Cinco errores comunes al interpretar datos de experimentos: el falso positivo (ver cosas que no están), el falso negativo (no ver cosas que sí están), la 'trampa del máximo local' (optimizar sobre una oportunidad pequeña ignorando una mayor), la 'trampa del máximo agotado' (sobreestimar el tamaño de una oportunidad), y la trampa de los datos incorrectos (buscar en el lugar equivocado).",
   "pasos_accionables": [
-    "Revisar si los datos positivos podrían ser un falso positivo testeando el círculo antes del cuadrado",
+    "Revisar si los datos positivos podrían ser un falso positivo testeando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
     "Verificar que el experimento sea adecuado para detectar la señal buscada (evitar falso negativo)",
     "Cuestionar si los resultados positivos podrían estar limitando el potencial real del negocio (máximo local)",
     "Confirmar que la muestra testeada no es en realidad toda la población disponible (máximo agotado)",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Evita las Trampas de Datos",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-five_data_traps-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar si los datos positivos podrían ser un falso positivo testeando el círculo antes del cuadrado",
+      "texto_nuevo": "Revisar si los datos positivos podrían ser un falso positivo testeando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7800",
+        "frase": "Design different experiments for the same hypothesis before making important decisions."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo remedio omitido.; Se cae el segundo remedio del libro contra el falso positivo: experimentos distintos para la misma hipótesis.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

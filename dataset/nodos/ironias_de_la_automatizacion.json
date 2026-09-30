@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Ironías de la Automatización (Bainbridge)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: al quitar las partes fáciles de una tarea, la automatización puede hacer más difíciles las partes complejas; los diseñadores dejan a los humanos las tareas que no supieron automatizar (restaurar el sistema tras fallos imprevistos); los operadores deben mantener vigilancia por largos períodos pese a que los humanos son malos en eso; y las habilidades se deterioran por falta de práctica justo cuando más se necesitan en emergencias. La ironía final es que los sistemas automatizados más exitosos, con rara necesidad de intervención manual, son los que más requieren inversión en entrenamiento del operador.",
+  "resumen_teorico": "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: al quitar las partes fáciles de una tarea, la automatización puede hacer más difíciles las partes complejas; los diseñadores dejan a los humanos las tareas que no supieron automatizar (restaurar el sistema tras fallos imprevistos); los operadores deben mantener vigilancia por largos períodos pese a que los humanos son malos en eso; y las habilidades se deterioran por falta de práctica justo cuando más se necesitan en emergencias. Quizás la ironía final sea que los sistemas automatizados más exitosos, con rara necesidad de intervención manual, pueden ser los que más requieren inversión en entrenamiento del operador.",
   "pasos_accionables": [
     "Evaluar qué tareas fueron automatizadas y cuáles quedaron 'residualmente' a cargo del humano (usualmente las más difíciles e impredecibles).",
     "Implementar programas de entrenamiento recurrente en escenarios de fallo simulado para mantener las habilidades manuales de los operadores.",
@@ -39,6 +39,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es una herramienta (sistemas de monitoreo compensatorios). El libro da el diagnóstico (L848) y pone el remedio en la formación (L856). Se reescribe como sugerencia de My Idea, con el aviso del libro sobre los dispositivos nuevos (L1033). El resumen solo recoge el diagnóstico del libro. El entregable ('diseño de interfaz') se deja, como manda la regla para PRACTICO.",
       "indice": 2,
       "auditoria": "muestreo A26"
+    },
+    {
+      "id": "final-e1-159-ironias_de_la_automatizacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: al quitar las partes fáciles de una tarea, la automatización puede hacer más difíciles las partes complejas; los diseñadores dejan a los humanos las tareas que no supieron automatizar (restaurar el sistema tras fallos imprevistos); los operadores deben mantener vigilancia por largos períodos pese a que los humanos son malos en eso; y las habilidades se deterioran por falta de práctica justo cuando más se necesitan en emergencias. La ironía final es que los sistemas automatizados más exitosos, con rara necesidad de intervención manual, son los que más requieren inversión en entrenamiento del operador.",
+      "texto_nuevo": "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: al quitar las partes fáciles de una tarea, la automatización puede hacer más difíciles las partes complejas; los diseñadores dejan a los humanos las tareas que no supieron automatizar (restaurar el sistema tras fallos imprevistos); los operadores deben mantener vigilancia por largos períodos pese a que los humanos son malos en eso; y las habilidades se deterioran por falta de práctica justo cuando más se necesitan en emergencias. Quizás la ironía final sea que los sistemas automatizados más exitosos, con rara necesidad de intervención manual, pueden ser los que más requieren inversión en entrenamiento del operador.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "856",
+        "frase": "Perhaps the final irony is that it is the most successful automated systems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: la ironía final se plantea con cautela ('perhaps', 'may need').; Mismo endurecimiento de la ironía final.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

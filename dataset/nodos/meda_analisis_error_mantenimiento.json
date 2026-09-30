@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Completar la Sección 1-3 documentando qué ocurrió (aerolínea, tipo de evento, naturaleza del fallo)",
     "Clasificar el tipo de lapso o error de mantenimiento según las categorías definidas",
-    "Completar el checklist de factores contribuyentes de la Sección 4 (información, equipo, diseño, capacitación, entorno, supervisión, comunicación)",
+    "Completar, para cada error identificado en la Sección 3, el checklist de factores contribuyentes de la Sección 4 (información; equipo, herramientas o piezas; diseño; trabajo o tarea; calificaciones y habilidades; desempeño individual; entorno e instalaciones; entorno organizacional; supervisión; comunicación)",
     "Determinar en la Sección 5a qué defensas fallaron y deberían haber prevenido el incidente",
     "Definir en la Sección 5b las medidas correctivas locales para prevenir la recurrencia",
     "Alimentar los datos a un sistema de análisis de tendencias organizacional"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Analiza Errores de Mantenimiento",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-159-meda_analisis_error_mantenimiento-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Completar el checklist de factores contribuyentes de la Sección 4 (información, equipo, diseño, capacitación, entorno, supervisión, comunicación)",
+      "texto_nuevo": "Completar, para cada error identificado en la Sección 3, el checklist de factores contribuyentes de la Sección 4 (información; equipo, herramientas o piezas; diseño; trabajo o tarea; calificaciones y habilidades; desempeño individual; entorno e instalaciones; entorno organizacional; supervisión; comunicación)",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3763",
+        "frase": "checklist that must be completed for each of the errors identified in Section 3"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de la Sección 4 omite trabajo o tarea, desempeño individual y entorno organizacional, entre otros, y que se completa para cada error.; Mismo defecto: faltan factores de la lista del libro y que el checklist se completa para cada error de la Sección 3.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

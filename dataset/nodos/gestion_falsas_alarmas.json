@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Gestión de Falsas Alarmas (Efecto 'Cry Wolf')",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las alarmas frecuentes que resultan falsas generan pérdida de confianza en los operadores, quienes tienden a ignorar o desactivar los sistemas de advertencia incluso cuando señalan una emergencia real. El caso del accidente del Trident de BEA en 1972 ilustra esto: los pilotos desactivaron el sistema de alarma de pérdida ('stick-shaker') porque desconfiaban de él debido a activaciones falsas previas, lo que contribuyó a un accidente fatal real.",
+  "resumen_teorico": "Las alarmas frecuentes que resultan falsas generan pérdida de confianza en los operadores, quienes tienden a ignorar o desactivar los sistemas de advertencia incluso cuando señalan una emergencia real. El caso del accidente del Trident de BEA en 1972 ilustra esto: alguien en la cabina desactivó el sistema de alarma de pérdida ('stick-shaker'); no se sabrá con certeza por qué, pero se cree que la tripulación no creía estar en pérdida y desconfiaba de él por activaciones falsas previas, lo que contribuyó a un accidente fatal real.",
   "pasos_accionables": [
     "Auditar la tasa de falsas alarmas de los sistemas de advertencia críticos",
     "Rediseñar los sistemas de alarma para reducir falsos positivos sin comprometer la sensibilidad",
@@ -39,6 +39,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La verificación cruzada contra la desactivación unilateral es un mecanismo añadido; el libro solo describe el riesgo de que las falsas alarmas hagan perder la confianza e ignorar avisos reales (L1085). Se reescribe como sugerencia de My Idea y se conserva el fin del libro. El dato no aparece en otros campos.",
       "indice": 2,
       "auditoria": "muestreo A21"
+    },
+    {
+      "id": "final-e1-159-gestion_falsas_alarmas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las alarmas frecuentes que resultan falsas generan pérdida de confianza en los operadores, quienes tienden a ignorar o desactivar los sistemas de advertencia incluso cuando señalan una emergencia real. El caso del accidente del Trident de BEA en 1972 ilustra esto: los pilotos desactivaron el sistema de alarma de pérdida ('stick-shaker') porque desconfiaban de él debido a activaciones falsas previas, lo que contribuyó a un accidente fatal real.",
+      "texto_nuevo": "Las alarmas frecuentes que resultan falsas generan pérdida de confianza en los operadores, quienes tienden a ignorar o desactivar los sistemas de advertencia incluso cuando señalan una emergencia real. El caso del accidente del Trident de BEA en 1972 ilustra esto: alguien en la cabina desactivó el sistema de alarma de pérdida ('stick-shaker'); no se sabrá con certeza por qué, pero se cree que la tripulación no creía estar en pérdida y desconfiaba de él por activaciones falsas previas, lo que contribuyó a un accidente fatal real.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "1093-1095",
+        "frase": "We will never know for sure, but it is widely believed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da dos razones: la tripulación no creía estar en pérdida y desconfiaba del sistema.; El libro dice que no se sabe quién desactivó el sistema ni se sabrá con certeza por qué; la desconfianza es una creencia extendida.; Mismo defecto: presenta como hecho una causa que el libro da como creencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

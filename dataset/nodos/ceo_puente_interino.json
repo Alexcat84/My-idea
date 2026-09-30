@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "CEO Puente o Interino en la Transición",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Estrategia de transición suave donde se contrata a un ejecutivo experimentado por un período limitado y predefinido (ej. 18 meses) para profesionalizar la empresa (procesos, estructura, dirección estratégica) sin representar una amenaza permanente al control del fundador. También existe la variante de 'transición en dos etapas', donde el sucesor entra primero como ejecutivo no-CEO antes de asumir el liderazgo completo.",
+  "resumen_teorico": "Estrategia de transición suave donde se contrata a un ejecutivo experimentado por un período limitado y predefinido (ej. 18 meses) para profesionalizar la empresa (procesos, estructura, dirección estratégica) sin representar una amenaza permanente al control del fundador. También existe la variante de 'transición en dos etapas', donde un posible sucesor entra primero como ejecutivo no-CEO y podría asumir el liderazgo completo cuando todos se sientan cómodos con ese cambio.",
   "pasos_accionables": [
     "Definir un mandato claro y temporal para el CEO interino (ej. estabilización, profesionalización de procesos)",
-    "Comunicar al equipo que se trata de una etapa transitoria para reducir resistencia",
+    "Sugerencia de My Idea: comunicar al equipo que se trata de una etapa transitoria",
     "Evaluar durante el período interino si se requiere una transición permanente adicional",
     "Considerar contratar al sucesor primero en un rol no-CEO para generar confianza mutua"
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Contrata un CEO Interino",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-ceo_puente_interino-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estrategia de transición suave donde se contrata a un ejecutivo experimentado por un período limitado y predefinido (ej. 18 meses) para profesionalizar la empresa (procesos, estructura, dirección estratégica) sin representar una amenaza permanente al control del fundador. También existe la variante de 'transición en dos etapas', donde el sucesor entra primero como ejecutivo no-CEO antes de asumir el liderazgo completo.",
+      "texto_nuevo": "Estrategia de transición suave donde se contrata a un ejecutivo experimentado por un período limitado y predefinido (ej. 18 meses) para profesionalizar la empresa (procesos, estructura, dirección estratégica) sin representar una amenaza permanente al control del fundador. También existe la variante de 'transición en dos etapas', donde un posible sucesor entra primero como ejecutivo no-CEO y podría asumir el liderazgo completo cuando todos se sientan cómodos con ese cambio.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3311",
+        "frase": "a potential CEO is hired as a non-CEO executive who might eventually take over"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el candidato podría llegar a ser CEO cuando todos se sientan cómodos; el nodo lo da por hecho.; Misma certeza añadida; se sostiene en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-160-ceo_puente_interino-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar al equipo que se trata de una etapa transitoria para reducir resistencia",
+      "texto_nuevo": "Sugerencia de My Idea: comunicar al equipo que se trata de una etapa transitoria",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3311",
+        "frase": "status as an interim CEO made him less threatening to the founders"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de comunicarlo al equipo ni de reducir su resistencia; lo interino reduce la amenaza para los fundadores.; Misma causa añadida; queda como sugerencia sin la causa.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

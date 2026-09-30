@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Consistencia de Decisiones con la Motivación Central del Fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "El éxito percibido de una serie de decisiones (cofundadores, contrataciones, inversionistas, roles) depende de si son consistentes entre sí y alineadas con la motivación central del fundador (riqueza o control), no de si son intrínsecamente 'buenas' o 'malas'. El caso de Lew Cirne (Wily Technology) muestra que un fundador motivado por control que toma decisiones de riqueza (VC, pérdida de junta) puede lograr un buen resultado financiero pero sentirse fracasado si esa no era su meta real.",
+  "resumen_teorico": "El éxito percibido de una serie de decisiones (cofundadores, contrataciones, inversionistas, roles) depende de si son consistentes entre sí y alineadas con la motivación central del fundador (riqueza o control), no de si son intrínsecamente 'buenas' o 'malas', salvo si la idea exige mucho capital y el tiempo apremia: ahí decidir por control es más problemático. El caso de Lew Cirne (Wily Technology) muestra que un fundador motivado por control que toma decisiones de riqueza (VC, pérdida de junta) puede lograr un buen resultado financiero y arrepentirse de haber cedido el control.",
   "pasos_accionables": [
     "Realizar un ejercicio de introspección sobre la motivación dominante (riqueza vs control) antes de tomar decisiones clave.",
     "Auditar decisiones pasadas del fundador para detectar inconsistencias entre motivación declarada y acciones tomadas.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Alinea Decisiones con tu Motivación",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-consistencia_decisiones_fundador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El éxito percibido de una serie de decisiones (cofundadores, contrataciones, inversionistas, roles) depende de si son consistentes entre sí y alineadas con la motivación central del fundador (riqueza o control), no de si son intrínsecamente 'buenas' o 'malas'. El caso de Lew Cirne (Wily Technology) muestra que un fundador motivado por control que toma decisiones de riqueza (VC, pérdida de junta) puede lograr un buen resultado financiero pero sentirse fracasado si esa no era su meta real.",
+      "texto_nuevo": "El éxito percibido de una serie de decisiones (cofundadores, contrataciones, inversionistas, roles) depende de si son consistentes entre sí y alineadas con la motivación central del fundador (riqueza o control), no de si son intrínsecamente 'buenas' o 'malas', salvo si la idea exige mucho capital y el tiempo apremia: ahí decidir por control es más problemático. El caso de Lew Cirne (Wily Technology) muestra que un fundador motivado por control que toma decisiones de riqueza (VC, pérdida de junta) puede lograr un buen resultado financiero y arrepentirse de haber cedido el control.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3517",
+        "frase": "capital-intensive idea in a ticking-clock environment, for example, control-oriented choices will indeed be more problematic"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que se arrepintió de ceder el control, no que se sintiera fracasado; el nodo endurece.; El libro exceptúa la idea intensiva en capital con el tiempo en contra, donde las decisiones de control son más problemáticas.; Misma excepción omitida; se sostiene en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

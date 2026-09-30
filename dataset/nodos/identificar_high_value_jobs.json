@@ -9,7 +9,7 @@
     "Anota las tareas, dolores y beneficios candidatos de tu cliente.",
     "Para cada uno, pregúntate qué tan importante es, qué tan visible resulta, qué tan insatisfecho está hoy y qué tan lucrativo puede ser.",
     "Compara los candidatos entre sí y ordénalos de mayor a menor valor.",
-    "Enfoca tu propuesta de valor en los que quedaron arriba en ese orden."
+    "Enfoca tu propuesta de valor en los que quedaron arriba en ese orden; si alguno de los primeros queda fuera de tu alcance, no estás obligado a abordarlo, pero asegúrate de atender algunos muy relevantes para tu cliente."
   ],
   "entregable_esperado": "Una lista ordenada de las tareas del cliente según cuánto valor tienen para tu propuesta.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Prioriza lo que Más Vale",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-identificar_high_value_jobs-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfoca tu propuesta de valor en los que quedaron arriba en ese orden.",
+      "texto_nuevo": "Enfoca tu propuesta de valor en los que quedaron arriba en ese orden; si alguno de los primeros queda fuera de tu alcance, no estás obligado a abordarlo, pero asegúrate de atender algunos muy relevantes para tu cliente.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "3351",
+        "frase": "It doesn’t mean you have to mandatorily address the most important ones"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que no es obligatorio abordar los más importantes si quedan fuera de tu alcance, aunque sí algunos muy relevantes.; Misma excepción omitida.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

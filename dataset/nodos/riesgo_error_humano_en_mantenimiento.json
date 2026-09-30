@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El Contacto Humano como Riesgo Creciente en Mantenimiento",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y el riesgo por negligencia de mantenimiento disminuye. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, con el tiempo, el mayor peligro para sistemas modernos proviene del contacto físico humano innecesario durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
+  "resumen_teorico": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y el riesgo por negligencia de mantenimiento disminuye. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, si el nivel de mantenimiento se mantiene relativamente constante, con el tiempo el mayor peligro para sistemas modernos proviene del contacto físico humano, a menudo innecesario, durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
   "pasos_accionables": [
     "Analizar históricamente la proporción de fallos atribuibles a error humano vs fallo técnico puro",
     "Evaluar si el nivel actual de contacto humano en mantenimiento sigue siendo necesario dado el avance tecnológico",
@@ -40,6 +40,22 @@
         "evidencia": "F27-025: Analiza el riesgo de error humano en el mantenimiento de sistemas en operacion y propone redisenos; es gestion operativa de seguridad. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-159-riesgo_error_humano_en_mantenimiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y el riesgo por negligencia de mantenimiento disminuye. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, con el tiempo, el mayor peligro para sistemas modernos proviene del contacto físico humano innecesario durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
+      "texto_nuevo": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y el riesgo por negligencia de mantenimiento disminuye. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, si el nivel de mantenimiento se mantiene relativamente constante, con el tiempo el mayor peligro para sistemas modernos proviene del contacto físico humano, a menudo innecesario, durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2354-2369",
+        "frase": "remains relatively constant over time, then a point will soon be reached"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición de que el nivel de mantenimiento se mantenga relativamente constante, y el contacto es a menudo innecesario, no siempre.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

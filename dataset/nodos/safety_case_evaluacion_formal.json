@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Safety Case y Evaluación Formal de Seguridad (FSA)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo cada vez que cambien las circunstancias de la operación de forma significativa.",
+  "resumen_teorico": "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo a intervalos regulares y cada vez que cambien las circunstancias de la operación de forma significativa.",
   "pasos_accionables": [
     "Identifica todos los peligros mayores de tu instalación u operación",
     "Evalúa el riesgo asociado a cada peligro identificado",
     "Considera alternativas concretas para gestionar cada riesgo",
     "Haz un análisis costo beneficio de esas alternativas de gestión",
     "Documenta tu decisión final y las medidas de control que implementarás en el Safety Case",
-    "Actualiza el Safety Case cada vez que haya un cambio significativo en la operación"
+    "Actualiza el Safety Case a intervalos regulares y cada vez que haya un cambio significativo en la operación"
   ],
   "entregable_esperado": "Documento Safety Case completo, actualizado y presentado al organismo regulador correspondiente.",
   "nodos_previos": [
@@ -43,5 +43,40 @@
   ],
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-159-safety_case_evaluacion_formal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo cada vez que cambien las circunstancias de la operación de forma significativa.",
+      "texto_nuevo": "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo a intervalos regulares y cada vez que cambien las circunstancias de la operación de forma significativa.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4388",
+        "frase": "which would be updated at regular intervals and on the occurrence of a major change"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide actualizar el Safety Case a intervalos regulares además de ante un cambio mayor.; Mismo disparador perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-159-safety_case_evaluacion_formal-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Actualiza el Safety Case cada vez que haya un cambio significativo en la operación",
+      "texto_nuevo": "Actualiza el Safety Case a intervalos regulares y cada vez que haya un cambio significativo en la operación",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4388",
+        "frase": "which would be updated at regular intervals and on the occurrence of a major change"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la actualización a intervalos regulares que el libro pone junto al cambio mayor.; Mismo disparador perdido.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Describe un segmento de clientes específico de forma estructurada, desglosándolo en tres componentes: Jobs (trabajos que el cliente intenta realizar), Pains (dolores, riesgos y obstáculos) y Gains (resultados y beneficios que busca). Es el lado de 'observar clientes' del Value Proposition Canvas.",
   "pasos_accionables": [
     "Seleccionar un segmento de clientes concreto",
-    "Identificar y listar los customer jobs (funcionales, sociales, emocionales)",
+    "Identificar y listar los customer jobs (funcionales, sociales, emocionales y de apoyo)",
     "Identificar y listar los customer pains (obstáculos, riesgos, resultados no deseados)",
     "Identificar y listar los customer gains (requeridos, esperados, deseados, inesperados)",
     "Priorizar jobs, pains y gains según importancia/severidad/relevancia"
@@ -34,5 +34,24 @@
   "etiqueta_arbol": "Define el Perfil del Cliente",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-customer_profile-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar y listar los customer jobs (funcionales, sociales, emocionales)",
+      "texto_nuevo": "Identificar y listar los customer jobs (funcionales, sociales, emocionales y de apoyo)",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "762",
+        "frase": "Distinguish between three main types of customer jobs to be done and supporting jobs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide distinguir también los jobs de apoyo junto a los tres tipos principales.; Misma parte de la enumeración omitida.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

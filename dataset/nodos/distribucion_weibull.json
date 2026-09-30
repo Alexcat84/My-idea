@@ -11,7 +11,7 @@
     "Graficar los datos en papel de probabilidad Weibull (escala logarítmica)",
     "Ajustar una línea recta y estimar el parámetro de forma (β)",
     "Extrapolar con cautela y calcular intervalos de confianza",
-    "Verificar el ajuste con el estadístico Anderson-Darling (P-value > .05)"
+    "Verificar el ajuste con el estadístico Anderson-Darling (P-value > .05); si el P-value es menor que .05, descartar el ajuste y evaluar otras distribuciones o los valores atípicos por causas especiales"
   ],
   "entregable_esperado": "Gráfico de probabilidad Weibull con predicción de porcentaje de fallos y parámetros estimados",
   "nodos_previos": [
@@ -39,6 +39,23 @@
         "motivo": "Weibull sirve para predecir la vida util a fatiga; no prepara la identificacion de riesgos de negocio. Si acaso encajaria despues, en la evaluacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-158-distribucion_weibull-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar el ajuste con el estadístico Anderson-Darling (P-value > .05)",
+      "texto_nuevo": "Verificar el ajuste con el estadístico Anderson-Darling (P-value > .05); si el P-value es menor que .05, descartar el ajuste y evaluar otras distribuciones o los valores atípicos por causas especiales",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11958",
+        "frase": "P-value is less than .05, then the fit is too poor to be used"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae lo que el libro manda si el ajuste falla: no usarlo y evaluar otras distribuciones o valores atípicos por causas especiales.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

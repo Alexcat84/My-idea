@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Mantenimiento como Mayor Fuente de Fallas Humanas",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "En cualquier tecnología peligrosa hay tres tipos de actividad: el control normal, el control de emergencia y el mantenimiento. De las tres, el mantenimiento es la que más riesgo trae porque junta al mismo tiempo tres cosas: se hace con las manos puestas directamente sobre el sistema, es crítico y se repite con frecuencia. Estudios en la industria de energía nuclear muestran que más del 50% de los problemas de desempeño humano están ligados a tareas de mantenimiento, prueba y calibración.",
+  "resumen_teorico": "En cualquier tecnología peligrosa hay tres tipos de actividad: el control normal, el control de emergencia y el mantenimiento. De las tres, el mantenimiento es la que más probabilidad tiene de generar problemas de desempeño humano porque junta al mismo tiempo tres cosas: se hace con las manos puestas directamente sobre el sistema, es crítico y se repite con frecuencia. Estudios en la industria de energía nuclear muestran que más del 50% de los problemas de desempeño humano están ligados a tareas de mantenimiento, prueba y calibración.",
   "pasos_accionables": [
     "Revisa cada tarea de tu negocio preguntándote tres cosas: si se hace con contacto directo, si es crítica y si se repite seguido",
     "Identifica cuáles tareas de mantenimiento cumplen las tres condiciones a la vez",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Cuida el Riesgo en Mantenimiento",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-159-riesgo_actividades_mantenimiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En cualquier tecnología peligrosa hay tres tipos de actividad: el control normal, el control de emergencia y el mantenimiento. De las tres, el mantenimiento es la que más riesgo trae porque junta al mismo tiempo tres cosas: se hace con las manos puestas directamente sobre el sistema, es crítico y se repite con frecuencia. Estudios en la industria de energía nuclear muestran que más del 50% de los problemas de desempeño humano están ligados a tareas de mantenimiento, prueba y calibración.",
+      "texto_nuevo": "En cualquier tecnología peligrosa hay tres tipos de actividad: el control normal, el control de emergencia y el mantenimiento. De las tres, el mantenimiento es la que más probabilidad tiene de generar problemas de desempeño humano porque junta al mismo tiempo tres cosas: se hace con las manos puestas directamente sobre el sistema, es crítico y se repite con frecuencia. Estudios en la industria de energía nuclear muestran que más del 50% de los problemas de desempeño humano están ligados a tareas de mantenimiento, prueba y calibración.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "1991",
+        "frase": "emerges as the activity most likely to generate human performance problems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro concluye que el mantenimiento es la actividad con más probabilidad de generar problemas de desempeño humano, no la de más riesgo en general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

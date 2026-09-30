@@ -7,7 +7,7 @@
   "resumen_teorico": "Toda organización tecnológica produce algo (bienes, servicios, transporte) y requiere protección para separar los peligros de las personas y activos vulnerables. La relación ideal es de 'paridad', pero en la práctica la producción suele predominar porque genera recursos, información directa y beneficios visibles, mientras que la protección se mide por la ausencia de eventos negativos (información indirecta y discontinua). Esto genera zonas peligrosas: sobreprotección (inviable comercialmente) y subprotección (alto riesgo de accidente catastrófico).",
   "pasos_accionables": [
     "Mapear el nivel actual de protección frente al nivel de peligrosidad de las operaciones productivas.",
-    "Identificar si la organización está operando por debajo de la 'zona de paridad' entre producción y protección.",
+    "Identificar si la organización está operando por debajo de la 'zona de paridad' entre producción y protección, teniendo en cuenta que una operación de bajo peligro puede estar por debajo de ella y una de alto peligro debe estar por encima.",
     "Establecer indicadores de protección proactivos, no solo reactivos (post-accidente)."
   ],
   "entregable_esperado": "Un diagrama o matriz que ubique a la organización en el espacio producción-protección, identificando zonas de riesgo.",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Equilibra Producción y Protección",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-159-produccion_y_proteccion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar si la organización está operando por debajo de la 'zona de paridad' entre producción y protección.",
+      "texto_nuevo": "Identificar si la organización está operando por debajo de la 'zona de paridad' entre producción y protección, teniendo en cuenta que una operación de bajo peligro puede estar por debajo de ella y una de alto peligro debe estar por encima.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "65",
+        "frase": "can operate in the region below the parity zone, whereas the latter must operate above"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que lo de bajo peligro puede operar por debajo de la paridad y lo de alto peligro debe operar por encima.; Mismo límite perdido.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

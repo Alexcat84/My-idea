@@ -9,7 +9,7 @@
     "Determinar si los datos son de tipo variable (continuo) o atributo (discreto)",
     "Seleccionar la distribución teórica apropiada (normal, exponencial, Weibull, Poisson, binomial)",
     "Ajustar los datos a la distribución seleccionada",
-    "Usar la distribución para estimar probabilidades de ocurrencia"
+    "Usar la distribución para estimar probabilidades de ocurrencia, después de comprobar que el proceso es estable en el tiempo (graficando los datos en orden de producción o con un gráfico de control)"
   ],
   "entregable_esperado": "Identificación y ajuste de la distribución de probabilidad apropiada para el conjunto de datos analizado",
   "nodos_previos": [
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Elige tu Distribución de Probabilidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-distribuciones_probabilidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar la distribución para estimar probabilidades de ocurrencia",
+      "texto_nuevo": "Usar la distribución para estimar probabilidades de ocurrencia, después de comprobar que el proceso es estable en el tiempo (graficando los datos en orden de producción o con un gráfico de control)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11769",
+        "frase": "Such predictions assume that the data come from a process that is stable over time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma condición de estabilidad perdida.; Se pierde la condición del libro: las predicciones suponen un proceso estable en el tiempo, que se comprueba graficando en orden de producción o con un gráfico de control.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

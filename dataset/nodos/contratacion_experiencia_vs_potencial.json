@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Contratar experiencia comprobada o potencial sin probar (rock stars vs rising stars)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Cuando contratas, decides entre alguien con experiencia comprobada en grandes empresas (rock star), que aporta valor de inmediato pero cuesta más y puede traer hábitos burocráticos que no te sirven, o alguien sin experiencia pero con potencial (rising star), más económico y más fácil de moldear a tu cultura, pero que necesita más tiempo de desarrollo y acompañamiento. La decisión correcta depende de cuánto dinero tienes disponible y en qué etapa está tu negocio.",
+  "resumen_teorico": "Cuando contratas, decides entre alguien con experiencia comprobada (rock star), que aporta valor de inmediato y suele escalar mejor con el crecimiento, pero cuesta más y, si viene de una empresa grande, puede traer hábitos burocráticos que no te sirven, o alguien sin experiencia pero con potencial (rising star), más económico y más fácil de moldear a tu cultura, pero que necesita más tiempo de desarrollo y acompañamiento. La decisión correcta depende de cuánto dinero tienes disponible y en qué etapa está tu negocio.",
   "pasos_accionables": [
     "Revisa cuánto dinero tienes disponible cada mes (lo que gastas, o burn rate) antes de decidir qué perfil buscas.",
     "Decide si el puesto necesita a alguien que ejecute de inmediato (rock star) o si puede crecer junto con tu negocio (rising star).",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Elige Experiencia o Potencial",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-contratacion_experiencia_vs_potencial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando contratas, decides entre alguien con experiencia comprobada en grandes empresas (rock star), que aporta valor de inmediato pero cuesta más y puede traer hábitos burocráticos que no te sirven, o alguien sin experiencia pero con potencial (rising star), más económico y más fácil de moldear a tu cultura, pero que necesita más tiempo de desarrollo y acompañamiento. La decisión correcta depende de cuánto dinero tienes disponible y en qué etapa está tu negocio.",
+      "texto_nuevo": "Cuando contratas, decides entre alguien con experiencia comprobada (rock star), que aporta valor de inmediato y suele escalar mejor con el crecimiento, pero cuesta más y, si viene de una empresa grande, puede traer hábitos burocráticos que no te sirven, o alguien sin experiencia pero con potencial (rising star), más económico y más fácil de moldear a tu cultura, pero que necesita más tiempo de desarrollo y acompañamiento. La decisión correcta depende de cuánto dinero tienes disponible y en qué etapa está tu negocio.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2381",
+        "frase": "A related but distinct decision is how experienced each hire should be"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro separa la experiencia de la procedencia de empresa grande; solo a esta le atribuye hábitos contraproducentes.; Se cae un beneficio que el libro da a la contratación con experiencia: suele escalar mejor y evita reemplazos en la siguiente etapa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

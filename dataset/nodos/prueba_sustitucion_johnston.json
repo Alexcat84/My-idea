@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Prueba de Sustitución de Johnston",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Test mental para evaluar la culpabilidad de un individuo en un accidente: sustituir a la persona involucrada por otra con calificaciones y experiencia comparables, y preguntar si probablemente habría actuado de forma diferente dadas las mismas circunstancias. Si la respuesta es 'probablemente no', la culpa individual no es apropiada y el foco debe estar en deficiencias sistémicas.",
+  "resumen_teorico": "Test mental para evaluar la culpabilidad de un individuo en un accidente, una vez aclarados el consumo de sustancias y el incumplimiento deliberado: sustituir a la persona involucrada por otra con calificaciones y experiencia comparables, y preguntar si probablemente habría actuado de forma diferente dadas las mismas circunstancias. Si la respuesta es 'probablemente no', la culpa individual no es apropiada y el foco debe estar en deficiencias sistémicas.",
   "pasos_accionables": [
     "Seleccionar un grupo de pares con formación y experiencia similar al implicado",
     "Presentarles el escenario y las condiciones reales en tiempo del incidente",
     "Preguntar si habrían actuado de manera diferente",
-    "Si la respuesta es negativa, redirigir el análisis hacia fallas sistémicas u organizacionales"
+    "Si la respuesta es negativa, redirigir el análisis hacia fallas sistémicas u organizacionales; si es afirmativa, revisar si hubo deficiencias del sistema en su formación, selección o experiencia antes de considerar una negligencia"
   ],
   "entregable_esperado": "Acta de evaluación de pares documentando el resultado de la prueba de sustitución",
   "nodos_previos": [
@@ -38,6 +38,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-017 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-159-prueba_sustitucion_johnston-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Test mental para evaluar la culpabilidad de un individuo en un accidente: sustituir a la persona involucrada por otra con calificaciones y experiencia comparables, y preguntar si probablemente habría actuado de forma diferente dadas las mismas circunstancias. Si la respuesta es 'probablemente no', la culpa individual no es apropiada y el foco debe estar en deficiencias sistémicas.",
+      "texto_nuevo": "Test mental para evaluar la culpabilidad de un individuo en un accidente, una vez aclarados el consumo de sustancias y el incumplimiento deliberado: sustituir a la persona involucrada por otra con calificaciones y experiencia comparables, y preguntar si probablemente habría actuado de forma diferente dadas las mismas circunstancias. Si la respuesta es 'probablemente no', la culpa individual no es apropiada y el foco debe estar en deficiencias sistémicas.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5057",
+        "frase": "once the issues of possible substance abuse and deliberate non-compliance have been settled"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro sitúa la prueba una vez resueltas las cuestiones de consumo de sustancias y de incumplimiento deliberado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-159-prueba_sustitucion_johnston-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la respuesta es negativa, redirigir el análisis hacia fallas sistémicas u organizacionales",
+      "texto_nuevo": "Si la respuesta es negativa, redirigir el análisis hacia fallas sistémicas u organizacionales; si es afirmativa, revisar si hubo deficiencias del sistema en su formación, selección o experiencia antes de considerar una negligencia",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5057",
+        "frase": "we have to consider whether there were any system-induced deficiencies in the person’s training"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la otra rama: si los pares no habrían cometido el error, se buscan deficiencias del sistema en formación, selección o experiencia antes de considerar negligencia.; Mismo defecto: la rama afirmativa del libro se pierde.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

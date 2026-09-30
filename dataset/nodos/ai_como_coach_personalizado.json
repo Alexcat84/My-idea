@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "IA como Coach o Tutor Personalizado para el Equipo",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Los tutores de IA pueden personalizar el aprendizaje según el desempeño de cada persona, ajustando el contenido y detectando patrones de dificultad para ofrecer ayuda más profunda. Aplicado a un equipo de startup, esto permite acelerar la capacitación de nuevos colaboradores, liberando tiempo del líder para interacciones de mayor valor y aprendizaje activo (resolución de problemas reales, discusión, mentoring directo).",
+  "resumen_teorico": "Los tutores de IA pueden personalizar el aprendizaje según el desempeño de cada persona, ajustando el contenido y detectando patrones de dificultad para ofrecer ayuda más profunda. En un equipo de startup, esto puede acelerar la capacitación de nuevos colaboradores y liberar tiempo del líder para el aprendizaje activo (problemas reales, discusión, mentoring). La IA es socia, no reemplazo: todavía se equivoca, así que una persona revisa y guía lo que enseña.",
   "pasos_accionables": [
     "Usar IA para preparar materiales de entrenamiento personalizados según el rol",
     "Delegar la explicación de conceptos básicos a la IA para liberar tiempo del líder/mentor",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Deja que la IA Entrene",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-ai_como_coach_personalizado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los tutores de IA pueden personalizar el aprendizaje según el desempeño de cada persona, ajustando el contenido y detectando patrones de dificultad para ofrecer ayuda más profunda. Aplicado a un equipo de startup, esto permite acelerar la capacitación de nuevos colaboradores, liberando tiempo del líder para interacciones de mayor valor y aprendizaje activo (resolución de problemas reales, discusión, mentoring directo).",
+      "texto_nuevo": "Los tutores de IA pueden personalizar el aprendizaje según el desempeño de cada persona, ajustando el contenido y detectando patrones de dificultad para ofrecer ayuda más profunda. En un equipo de startup, esto puede acelerar la capacitación de nuevos colaboradores y liberar tiempo del líder para el aprendizaje activo (problemas reales, discusión, mentoring). La IA es socia, no reemplazo: todavía se equivoca, así que una persona revisa y guía lo que enseña.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1266",
+        "frase": "AI comes in as a partner, not a replacement, since human teachers can fact-check"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de potencial ('have the potential', 'could be a big boost'); el nodo da el efecto por hecho.; El libro presenta la IA como socia y no reemplazo, a cargo de parte del contenido, con una persona que la verifica porque todavía alucina.; Mismo límite perdido: coach limitado que todavía se equivoca y necesita una persona que lo guíe.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "DMAIC - Fase Improve (Mejora del Proceso)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El equipo busca cuantificar la relación causa-efecto mediante diseño de experimentos (DOE) para predecir, mejorar y optimizar el desempeño del proceso. Se utilizan experimentos de screening (factoriales fraccionados) para identificar los determinantes vitales, seguidos de experimentos factoriales completos y técnicas de optimización como RSM y EVOP.",
+  "resumen_teorico": "El equipo busca cuantificar la relación causa-efecto, con diseño de experimentos (DOE) si aplica al proyecto, para predecir, mejorar y optimizar el desempeño del proceso. Se utilizan experimentos de screening (factoriales fraccionados) para identificar los determinantes vitales, seguidos de factoriales 2k para modelar el proceso y, si hace falta, factoriales completos y técnicas de optimización como RSM y EVOP.",
   "pasos_accionables": [
     "Planificar los experimentos diseñados (DOE) necesarios para el proyecto",
     "Ejecutar experimentos de screening (factoriales fraccionados) para reducir la lista de Xs",
@@ -13,7 +13,7 @@
     "Evaluar alternativas de mejora y seleccionar la solución óptima",
     "Diseñar e implementar la mejora seleccionada"
   ],
-  "entregable_esperado": "Modelo matemático del proceso, configuración óptima de parámetros y solución de mejora diseñada e implementada",
+  "entregable_esperado": "Modelo matemático del proceso, configuración óptima de parámetros, solución de mejora diseñada e implementada, plan de implementación y plan para enfrentar la resistencia cultural al cambio",
   "nodos_previos": [
     "dmaic_fase_analyze"
   ],
@@ -40,6 +40,38 @@
         "motivo": "Orden invertido: la fase Improve es una parte de DMAIC; deberia ir despues del modelo general, no prepararlo."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-158-dmaic_fase_improve-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El equipo busca cuantificar la relación causa-efecto mediante diseño de experimentos (DOE) para predecir, mejorar y optimizar el desempeño del proceso. Se utilizan experimentos de screening (factoriales fraccionados) para identificar los determinantes vitales, seguidos de experimentos factoriales completos y técnicas de optimización como RSM y EVOP.",
+      "texto_nuevo": "El equipo busca cuantificar la relación causa-efecto, con diseño de experimentos (DOE) si aplica al proyecto, para predecir, mejorar y optimizar el desempeño del proceso. Se utilizan experimentos de screening (factoriales fraccionados) para identificar los determinantes vitales, seguidos de factoriales 2k para modelar el proceso y, si hace falta, factoriales completos y técnicas de optimización como RSM y EVOP.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14624",
+        "frase": "The team may utilize DOEs if applicable to the particular project."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro modela con factoriales 2k y deja los factoriales completos y RSM/EVOP para cuando haga falta.; Endurece: el libro dice que el equipo puede usar DOE si aplica al proyecto.; Mismo endurecimiento sobre el DOE.; Mismo paso obligado de factoriales completos, con el 2k omitido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-158-dmaic_fase_improve-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo matemático del proceso, configuración óptima de parámetros y solución de mejora diseñada e implementada",
+      "texto_nuevo": "Modelo matemático del proceso, configuración óptima de parámetros, solución de mejora diseñada e implementada, plan de implementación y plan para enfrentar la resistencia cultural al cambio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14749-14752",
+        "frase": "Implementation plan. Plans to deal with cultural resistance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Los entregables del libro incluyen el plan de implementación y los planes ante la resistencia cultural.; Mismos entregables perdidos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Redes de Seguridad Regulatoria (Safety Net)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Concepto derivado del caso Dryden: la seguridad de un sistema complejo depende de múltiples capas de defensa regulatoria (guías, auditorías, manuales aprobados, certificación de personal, reporte de anomalías). Cuando varias de estas capas fallan simultáneamente por razones sistémicas (desregulación, recortes presupuestarios, burocracia excesiva), la red de seguridad colectiva se rompe y permite que fallas individuales se traduzcan en catástrofes.",
+  "resumen_teorico": "Concepto derivado del caso Dryden: la seguridad de un sistema complejo depende de múltiples capas de defensa regulatoria (guías, auditorías, manuales aprobados, certificación de personal, listas de equipo mínimo). Cuando varias de estas capas fallan simultáneamente por razones sistémicas (desregulación, recortes presupuestarios, burocracia excesiva), la red de seguridad colectiva se rompe y permite que fallas individuales se traduzcan en catástrofes.",
   "pasos_accionables": [
     "Mapear todas las capas de defensa regulatoria existentes en la organización (manuales, auditorías, certificaciones, listas de equipo mínimo)",
     "Verificar el estado real de cada capa (¿existe el manual aprobado? ¿está actualizado? ¿se audita realmente?)",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Construye Capas de Seguridad Regulatoria",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-159-redes_de_seguridad_regulatoria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concepto derivado del caso Dryden: la seguridad de un sistema complejo depende de múltiples capas de defensa regulatoria (guías, auditorías, manuales aprobados, certificación de personal, reporte de anomalías). Cuando varias de estas capas fallan simultáneamente por razones sistémicas (desregulación, recortes presupuestarios, burocracia excesiva), la red de seguridad colectiva se rompe y permite que fallas individuales se traduzcan en catástrofes.",
+      "texto_nuevo": "Concepto derivado del caso Dryden: la seguridad de un sistema complejo depende de múltiples capas de defensa regulatoria (guías, auditorías, manuales aprobados, certificación de personal, listas de equipo mínimo). Cuando varias de estas capas fallan simultáneamente por razones sistémicas (desregulación, recortes presupuestarios, burocracia excesiva), la red de seguridad colectiva se rompe y permite que fallas individuales se traduzcan en catástrofes.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4062-4084",
+        "frase": "no Minimum Equipment List six months after the aircraft had entered service"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La lista de capas que fallaron en el caso no incluye un reporte de anomalías; sí incluye la lista de equipo mínimo.; Mismo elemento añadido a la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

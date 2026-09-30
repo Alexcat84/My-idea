@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Construye tu red de contactos antes de fundar",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Tu red de contactos es el conjunto duradero de relaciones a través de las cuales encuentras y consigues lo que necesitas: gente para trabajar contigo, clientes, quien te asesore, quien te preste dinero. Si construyes esa red antes de fundar, ya sea por tu trabajo, tu escuela o contactos de tu sector, armas equipo más rápido, consigues tus primeros clientes más rápido y te resulta más fácil atraer capital.",
+  "resumen_teorico": "Tu red de contactos es el conjunto duradero de relaciones a través de las cuales encuentras y consigues lo que necesitas: gente para trabajar contigo, clientes, quien te asesore, quien invierta en tu negocio. Si construyes esa red antes de fundar, ya sea por tu trabajo, tu escuela o contactos de tu sector, armas equipo más rápido y te resulta más fácil atraer capital. Eso sí, acumular contactos sin fin rinde cada vez menos y esperar demasiado puede jugar en tu contra.",
   "pasos_accionables": [
     "Mapea tu red actual: excompañeros de trabajo, de escuela, gente del sector",
     "Identifica qué te falta en el equipo (por ejemplo, alguien con años de experiencia en el sector) y busca activamente cómo conectar con esa gente",
-    "Antes de fundar, dedica tiempo a cultivar relaciones con posibles clientes, con quien te asesore y con quien te preste dinero",
+    "Antes de fundar, dedica tiempo a cultivar relaciones con posibles clientes, con quien te asesore y con quien pueda invertir en tu negocio",
     "Usa tus conexiones de la escuela o de trabajos anteriores como puente hacia un primer cliente que te dé credibilidad"
   ],
   "entregable_esperado": "Un mapa de tu red de contactos clasificado por tipo de recurso: talento, clientes, capital, asesoría",
@@ -40,6 +40,39 @@
         "motivo": "Después de construir la red de contactos propia, el siguiente paso es integrarla en una red institucional compartida en vez de operar cada uno con su red aislada."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-160-capital_social_founder-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu red de contactos es el conjunto duradero de relaciones a través de las cuales encuentras y consigues lo que necesitas: gente para trabajar contigo, clientes, quien te asesore, quien te preste dinero. Si construyes esa red antes de fundar, ya sea por tu trabajo, tu escuela o contactos de tu sector, armas equipo más rápido, consigues tus primeros clientes más rápido y te resulta más fácil atraer capital.",
+      "texto_nuevo": "Tu red de contactos es el conjunto duradero de relaciones a través de las cuales encuentras y consigues lo que necesitas: gente para trabajar contigo, clientes, quien te asesore, quien invierta en tu negocio. Si construyes esa red antes de fundar, ya sea por tu trabajo, tu escuela o contactos de tu sector, armas equipo más rápido y te resulta más fácil atraer capital. Eso sí, acumular contactos sin fin rinde cada vez menos y esperar demasiado puede jugar en tu contra.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "463",
+        "frase": "people who accumulate more social capital before founding are able to attract more human capital"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte que acumular capital social sin fin tiene rendimientos decrecientes y puede ser contraproducente.; El libro habla de inversionistas, no de prestamistas.; La investigación citada habla de atraer más capital humano y financiero, y más rápido; no de clientes más rápido.; Mismo cambio de inversionistas a prestamistas.; Mismo efecto añadido sobre los clientes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-160-capital_social_founder-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de fundar, dedica tiempo a cultivar relaciones con posibles clientes, con quien te asesore y con quien te preste dinero",
+      "texto_nuevo": "Antes de fundar, dedica tiempo a cultivar relaciones con posibles clientes, con quien te asesore y con quien pueda invertir en tu negocio",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "459",
+        "frase": "building connections with potential employees, customers, advisors, and investors before he started"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de relaciones con inversionistas, no con prestamistas.; Mismo cambio de inversionistas a prestamistas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

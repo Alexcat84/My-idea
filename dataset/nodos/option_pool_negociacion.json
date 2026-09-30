@@ -9,7 +9,7 @@
     "Elaborar un 'option budget' detallado: listar todas las contrataciones planeadas hasta la siguiente ronda de financiamiento y el tamaño aproximado de opciones necesario para cada una.",
     "Presentar este presupuesto como evidencia objetiva durante la negociación del tamaño del pool.",
     "Si el VC insiste en un pool mayor al necesario, proponer aceptar el tamaño propuesto por el fundador a cambio de otorgar protección anti-dilución completa si el pool debe expandirse antes de la próxima ronda.",
-    "Evitar aceptar un pool desproporcionadamente grande solo para complacer al inversionista."
+    "Estar dispuesto a un pool con algo más de opciones de las que pide tu presupuesto, pero evitar aceptar uno desproporcionadamente grande solo para complacer al inversionista."
   ],
   "entregable_esperado": "Un option budget documentado con proyección de contrataciones y tamaño de pool justificado para la negociación del term sheet.",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Negocia tu Reserva de Opciones",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-161-option_pool_negociacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar aceptar un pool desproporcionadamente grande solo para complacer al inversionista.",
+      "texto_nuevo": "Estar dispuesto a un pool con algo más de opciones de las que pide tu presupuesto, pero evitar aceptar uno desproporcionadamente grande solo para complacer al inversionista.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "854",
+        "frase": "You should be prepared to have an option pool with more options than your budget"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide estar dispuesto a un pool algo mayor que el presupuesto; el paso solo conserva el límite.; Mismo defecto: se cae la disposición a aceptar un pool algo mayor que el presupuesto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

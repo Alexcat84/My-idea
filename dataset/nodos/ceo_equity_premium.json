@@ -3,11 +3,11 @@
   "dominio": "core",
   "titulo_concepto": "Prima de Equity para el CEO Fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Los roles jerárquicos claramente definidos en el equipo fundador tienden a justificar splits de equity desiguales: el fundador que asume el rol de CEO recibe en promedio una 'prima' de equity de 14 a 20 puntos porcentuales adicionales respecto a sus cofundadores, y el fundador-CTO una prima menor pero significativa de 5 a 8 puntos. Esta prima refleja la expectativa de mayor responsabilidad, esfuerzo y contribución al éxito del startup asociada a los roles de mayor control.",
+  "resumen_teorico": "Los roles jerárquicos claramente definidos en el equipo fundador tienden a justificar splits de equity desiguales: el fundador que asume el rol de CEO recibe en promedio una 'prima' de equity de 14 a 20 puntos porcentuales más que sus cofundadores, y el fundador-CTO una prima menor pero significativa de 5 a 8 puntos. Esta prima refleja la expectativa de mayor responsabilidad, esfuerzo y contribución al éxito del startup asociada a los roles de mayor control. Excepción común: startups nacidas de la propiedad intelectual de un fundador científico o tecnólogo.",
   "pasos_accionables": [
     "Al definir quién asumirá el rol de CEO o CTO, discutir explícitamente si esto implica una prima de equity",
     "Evaluar si cada cofundador prioriza el control (el título) o la recompensa financiera (el equity), y negociar el trade-off correspondiente",
-    "Comparar la asignación de equity propuesta contra el benchmark de prima de CEO (14-20 puntos) y de CTO (5-8 puntos) para detectar desalineaciones",
+    "Comparar la asignación de equity propuesta contra el benchmark de prima de CEO (14-20 puntos) y de CTO (5-8 puntos), recordando que es un promedio: muchos equipos se apartan de él a conciencia, cambiando título por equity, o porque otro cofundador aporta una habilidad escasa y crítica",
     "Documentar el razonamiento detrás de cualquier prima otorgada, asegurando que sea proporcional a la contribución esperada real y no solo al título"
   ],
   "entregable_esperado": "Tabla o acuerdo de asignación de equity que refleje explícitamente las primas por rol (CEO, CTO, etc.), con su justificación documentada y aceptada por todo el equipo fundador",
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Paga la Prima al CEO",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-160-ceo_equity_premium-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los roles jerárquicos claramente definidos en el equipo fundador tienden a justificar splits de equity desiguales: el fundador que asume el rol de CEO recibe en promedio una 'prima' de equity de 14 a 20 puntos porcentuales adicionales respecto a sus cofundadores, y el fundador-CTO una prima menor pero significativa de 5 a 8 puntos. Esta prima refleja la expectativa de mayor responsabilidad, esfuerzo y contribución al éxito del startup asociada a los roles de mayor control.",
+      "texto_nuevo": "Los roles jerárquicos claramente definidos en el equipo fundador tienden a justificar splits de equity desiguales: el fundador que asume el rol de CEO recibe en promedio una 'prima' de equity de 14 a 20 puntos porcentuales más que sus cofundadores, y el fundador-CTO una prima menor pero significativa de 5 a 8 puntos. Esta prima refleja la expectativa de mayor responsabilidad, esfuerzo y contribución al éxito del startup asociada a los roles de mayor control. Excepción común: startups nacidas de la propiedad intelectual de un fundador científico o tecnólogo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2080",
+        "frase": "A common exception is founding scientists or technologists in startups based on intellectual property"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa a los fundadores científicos o tecnólogos de startups basadas en su propiedad intelectual y el resumen lo omite.; Misma excepción omitida; se sostiene en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-160-ceo_equity_premium-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar la asignación de equity propuesta contra el benchmark de prima de CEO (14-20 puntos) y de CTO (5-8 puntos) para detectar desalineaciones",
+      "texto_nuevo": "Comparar la asignación de equity propuesta contra el benchmark de prima de CEO (14-20 puntos) y de CTO (5-8 puntos), recordando que es un promedio: muchos equipos se apartan de él a conciencia, cambiando título por equity, o porque otro cofundador aporta una habilidad escasa y crítica",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2084",
+        "frase": "the founders made conscious trade-offs between roles and rewards"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta la prima como promedio y muestra equipos que se apartan a conciencia o por una habilidad escasa; toda desviación no es desalineación.; Mismo límite perdido; se sostiene en el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

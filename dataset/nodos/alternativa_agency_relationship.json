@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Alternativa: Relación de Agencia (Sin Fee)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "En una estructura de agencia, un vendedor independiente vende un servicio en nombre de la corporación, siendo esta quien cumple el contrato (no el agente). El dinero fluye de la corporación hacia el agente, nunca al revés; si el agente envía dinero a la corporación, se activa el elemento de fee de franquicia. Este modelo típicamente presenta baja lealtad de marca, alta rotación y erosión de margen por soporte.",
+  "resumen_teorico": "En una estructura de agencia, un vendedor independiente vende un servicio en nombre de la corporación, siendo esta quien cumple el contrato (no el agente). El dinero fluye de la corporación hacia el agente, nunca al revés; si el agente envía dinero a la corporación, probablemente se activa el elemento de fee de franquicia. Este modelo típicamente presenta baja lealtad de marca, alta rotación y erosión de margen por soporte.",
   "pasos_accionables": [
     "Verificar que el cumplimiento del contrato lo realiza la corporación y no el agente",
     "Confirmar que el flujo de dinero va de la corporación hacia el agente, nunca al revés",
@@ -39,6 +39,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-158-alternativa_agency_relationship-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En una estructura de agencia, un vendedor independiente vende un servicio en nombre de la corporación, siendo esta quien cumple el contrato (no el agente). El dinero fluye de la corporación hacia el agente, nunca al revés; si el agente envía dinero a la corporación, se activa el elemento de fee de franquicia. Este modelo típicamente presenta baja lealtad de marca, alta rotación y erosión de margen por soporte.",
+      "texto_nuevo": "En una estructura de agencia, un vendedor independiente vende un servicio en nombre de la corporación, siendo esta quien cumple el contrato (no el agente). El dinero fluye de la corporación hacia el agente, nunca al revés; si el agente envía dinero a la corporación, probablemente se activa el elemento de fee de franquicia. Este modelo típicamente presenta baja lealtad de marca, alta rotación y erosión de margen por soporte.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1214",
+        "frase": "the relationship has likely triggered the fee element of the franchise laws"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que en ese caso probablemente se activó el elemento de fee.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

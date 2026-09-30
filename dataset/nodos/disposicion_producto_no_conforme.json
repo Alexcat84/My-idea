@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Marcar el lote como 'hold' y enviarlo a área de cuarentena.",
     "Asignar un investigador para recopilar información de aptitud para el uso.",
-    "Decidir la disposición final: reparar, reclasificar, desechar o enviar bajo waiver.",
+    "Decidir la disposición final: seleccionar, reparar, reclasificar o desechar (eligiendo según la economía de cada opción) o enviar bajo waiver.",
     "Documentar la decisión mediante el sistema formal (p. ej. material review board).",
     "Registrar y monitorear el porcentaje de lotes enviados bajo waiver."
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Decide qué Hacer con Defectos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-disposicion_producto_no_conforme-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir la disposición final: reparar, reclasificar, desechar o enviar bajo waiver.",
+      "texto_nuevo": "Decidir la disposición final: seleccionar, reparar, reclasificar o desechar (eligiendo según la economía de cada opción) o enviar bajo waiver.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24457",
+        "frase": "the economics are studied to find the best disposition: sorting, repairing, downgrading, scrapping, etc."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Omite la selección entre las opciones de no envío y que la mejor se elige estudiando la economía de cada una.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

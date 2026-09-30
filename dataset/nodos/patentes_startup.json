@@ -7,7 +7,7 @@
   "resumen_teorico": "Una patente de invención en Estados Unidos te da un derecho exclusivo sobre un invento que dura hasta 20 años contados desde la fecha en que presentaste la solicitud (no desde que te la conceden), siempre que pagues las tasas de mantenimiento. El proceso suele iniciar con una solicitud provisional, que dentro de un año puede convertirse en una solicitud completa. Pregunta el costo de cada etapa en tu mercado, porque varía según el país y el tipo de invento. Antes de avanzar, evalúa si la inversión vale la pena, sobre todo en mercados que cambian rápido, donde la tecnología puede quedar obsoleta antes de que termines de obtener la patente.",
   "pasos_accionables": [
     "Evaluar si tu mercado es lo bastante estable como para justificar invertir en una patente",
-    "Presentar una solicitud de patente provisional dentro de los 12 meses de haber divulgado o vendido el invento",
+    "Presentar una solicitud de patente provisional dentro de los 12 meses de haber ofrecido en venta el invento o de haberlo divulgado sin un acuerdo de confidencialidad",
     "Convertir esa solicitud provisional en una solicitud completa dentro del año siguiente",
     "Buscar a alguien especializado en patentes que te acompañe en el proceso, según cómo funcione esto en tu país"
   ],
@@ -38,6 +38,23 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La cifra de 20 años es correcta, pero el nodo omite que se cuentan desde la presentación de la solicitud y que la vigencia depende del pago de tasas; la vida útil real tras la concesión suele ser menor. Aplica a patentes de utilidad; las de diseño se rigen por 35 U.S.C. 173. MPEP 2701 revisado el 03",
       "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "final-e1-161-patentes_startup-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentar una solicitud de patente provisional dentro de los 12 meses de haber divulgado o vendido el invento",
+      "texto_nuevo": "Presentar una solicitud de patente provisional dentro de los 12 meses de haber ofrecido en venta el invento o de haberlo divulgado sin un acuerdo de confidencialidad",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4606",
+        "frase": "within the first 12 months of offering the invention for sale or of disclosing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El plazo corre desde ofrecer el invento en venta o divulgarlo sin acuerdo de confidencialidad.; Mismo defecto: se cae la condición de la divulgación sin acuerdo de confidencialidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

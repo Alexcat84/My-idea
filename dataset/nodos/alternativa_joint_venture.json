@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Alternativa: Joint Venture (Sociedad de Capital y Utilidades)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Un joint venture se caracteriza por compartir capital y utilidades (no fees). Es notoriamente difícil de gestionar por temas de definición de utilidades, compensación de socios, gastos, y tributación sobre utilidades no distribuidas. Se compara con un matrimonio: una sociedad negociada individualmente que a menudo termina en 'divorcio', a diferencia de la relación franquiciador-franquiciado (más parecida a padre-hijo). Cualquier joint venture que cobre fees por la propiedad intelectual será considerado también franquicia.",
+  "resumen_teorico": "Un joint venture se caracteriza por compartir capital y utilidades (no fees). Es notoriamente difícil de gestionar por temas de definición de utilidades, compensación de socios, gastos, y tributación sobre utilidades no distribuidas. Se compara con un matrimonio: una sociedad negociada individualmente que a menudo termina en 'divorcio', a diferencia de la relación franquiciador-franquiciado (más parecida a padre-hijo). Cualquier joint venture que pague fees al dueño de la propiedad intelectual, aunque ese dueño sea uno de los socios, será considerado también franquicia.",
   "pasos_accionables": [
     "Definir claramente la división de capital y utilidades entre los socios",
     "Establecer reglas claras para gastos, compensación y overhead antes de iniciar",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Considera una Sociedad de Utilidades",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-alternativa_joint_venture-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un joint venture se caracteriza por compartir capital y utilidades (no fees). Es notoriamente difícil de gestionar por temas de definición de utilidades, compensación de socios, gastos, y tributación sobre utilidades no distribuidas. Se compara con un matrimonio: una sociedad negociada individualmente que a menudo termina en 'divorcio', a diferencia de la relación franquiciador-franquiciado (más parecida a padre-hijo). Cualquier joint venture que cobre fees por la propiedad intelectual será considerado también franquicia.",
+      "texto_nuevo": "Un joint venture se caracteriza por compartir capital y utilidades (no fees). Es notoriamente difícil de gestionar por temas de definición de utilidades, compensación de socios, gastos, y tributación sobre utilidades no distribuidas. Se compara con un matrimonio: una sociedad negociada individualmente que a menudo termina en 'divorcio', a diferencia de la relación franquiciador-franquiciado (más parecida a padre-hijo). Cualquier joint venture que pague fees al dueño de la propiedad intelectual, aunque ese dueño sea uno de los socios, será considerado también franquicia.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1227",
+        "frase": "any joint venture that pays fees to the owner of the intellectual property"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Invierte la dirección del pago: en el libro es el joint venture el que paga fees al dueño de la propiedad intelectual.; Misma inversión de la dirección del pago.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

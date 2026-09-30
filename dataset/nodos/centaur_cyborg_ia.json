@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Modelos de Colaboración Centauro y Cyborg con IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Existen dos formas principales de integrar IA en el trabajo humano: el modelo Centauro, donde hay una división clara de tareas entre persona y máquina (cada uno hace lo que mejor sabe), y el modelo Cyborg, donde humano e IA se entrelazan profundamente en la misma tarea (por ejemplo, completando frases o iterando ideas juntos). Elegir el modelo correcto según la tarea permite maximizar productividad y calidad sin perder control ni criterio humano.",
+  "resumen_teorico": "Existen dos formas principales de integrar IA en el trabajo humano: el modelo Centauro, donde hay una división clara de tareas entre persona y máquina (cada uno hace lo que mejor sabe), y el modelo Cyborg, donde humano e IA se entrelazan profundamente en la misma tarea (por ejemplo, completando frases o iterando ideas juntos). Mientras la IA no automatice bien tareas completas, trabajar de una de estas dos formas es la manera más valiosa de usarla.",
   "pasos_accionables": [
     "Para tareas separables (ej. análisis vs. visualización), aplicar el modelo Centauro asignando cada parte a quien la hace mejor",
     "Para tareas creativas o de escritura donde se necesita iteración constante, aplicar el modelo Cyborg trabajando en conjunto con la IA en tiempo real",
-    "Empezar como Centauro para aprender los límites de la IA, y evolucionar naturalmente a Cyborg en tareas donde la colaboración fluida aporte más valor",
+    "Empezar invitando a la IA a todas tus tareas hasta aprender sus límites, luego trabajar como Centauro dándole tareas que no te gustan y que puedes revisar con facilidad, y evolucionar naturalmente a Cyborg en tareas donde la colaboración fluida aporte más valor",
     "Usar la IA para generar múltiples variantes o perspectivas (ideas, textos, enfoques) y luego seleccionar/editar como humano"
   ],
   "entregable_esperado": "Un flujo de trabajo definido que especifica qué tareas se hacen en modo Centauro y cuáles en modo Cyborg",
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Elige tu Modelo de Colaboración",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-centaur_cyborg_ia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos formas principales de integrar IA en el trabajo humano: el modelo Centauro, donde hay una división clara de tareas entre persona y máquina (cada uno hace lo que mejor sabe), y el modelo Cyborg, donde humano e IA se entrelazan profundamente en la misma tarea (por ejemplo, completando frases o iterando ideas juntos). Elegir el modelo correcto según la tarea permite maximizar productividad y calidad sin perder control ni criterio humano.",
+      "texto_nuevo": "Existen dos formas principales de integrar IA en el trabajo humano: el modelo Centauro, donde hay una división clara de tareas entre persona y máquina (cada uno hace lo que mejor sabe), y el modelo Cyborg, donde humano e IA se entrelazan profundamente en la misma tarea (por ejemplo, completando frases o iterando ideas juntos). Mientras la IA no automatice bien tareas completas, trabajar de una de estas dos formas es la manera más valiosa de usarla.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1043",
+        "frase": "Until AIs become very good at a range of Automated Tasks, the most valuable way"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Promete maximizar productividad y calidad sin perder control; el libro solo dice que, mientras la IA no automatice bien, son la forma más valiosa de usarla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-158-centaur_cyborg_ia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Empezar como Centauro para aprender los límites de la IA, y evolucionar naturalmente a Cyborg en tareas donde la colaboración fluida aporte más valor",
+      "texto_nuevo": "Empezar invitando a la IA a todas tus tareas hasta aprender sus límites, luego trabajar como Centauro dándole tareas que no te gustan y que puedes revisar con facilidad, y evolucionar naturalmente a Cyborg en tareas donde la colaboración fluida aporte más valor",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1080",
+        "frase": "follow the first principle (invite AI to everything) until you start to learn the shape"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone antes invitar a la IA a todo para aprender sus límites, y después trabajar como Centauro con tareas fáciles de revisar.; Misma etapa previa y misma condición de tareas que puedes revisar con facilidad, perdidas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

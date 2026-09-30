@@ -10,7 +10,7 @@
     "Graficar los datos en papel de probabilidad Weibull",
     "Estimar el parámetro de forma b a partir de la pendiente del gráfico",
     "Interpretar el tipo de comportamiento de fallo según el valor de b",
-    "Usar el modelo para predecir la confiabilidad R en un periodo de tiempo específico"
+    "Usar el modelo para predecir la confiabilidad R de cada componente en un periodo de tiempo específico y combinarlas con la regla del producto o fórmulas de redundancia para predecir la del sistema"
   ],
   "entregable_esperado": "Gráfico de Weibull con parámetro de forma estimado y predicción de confiabilidad para el periodo de interés",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Analiza Confiabilidad con Weibull",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-distribucion_weibull_confiabilidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el modelo para predecir la confiabilidad R en un periodo de tiempo específico",
+      "texto_nuevo": "Usar el modelo para predecir la confiabilidad R de cada componente en un periodo de tiempo específico y combinarlas con la regla del producto o fórmulas de redundancia para predecir la del sistema",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20308-20312",
+        "frase": "Combine the component reliabilities using the product rule and/or redundancy formulas to predict system reliability."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro calcula R por componente y luego las combina con la regla del producto o fórmulas de redundancia para el sistema.; Mismo segundo paso perdido.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

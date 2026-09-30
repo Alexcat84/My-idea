@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Distribución Binomial para Muestreo de Aceptación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La distribución binomial calcula la probabilidad de r ocurrencias en n ensayos independientes con probabilidad constante de éxito p. Se aplica cuando no se cumplen las condiciones para usar la aproximación de Poisson, típicamente cuando la población es al menos 10 veces el tamaño de muestra.",
+  "resumen_teorico": "La distribución binomial calcula la probabilidad de r ocurrencias en n ensayos independientes con probabilidad constante de éxito p. Puede aplicarse cuando no se cumplen las condiciones para usar la aproximación de Poisson. En la práctica, suponer una probabilidad constante es razonable cuando la población es al menos 10 veces el tamaño de muestra.",
   "pasos_accionables": [
     "Definir el tamaño de muestra n y la probabilidad de defecto histórica p",
     "Calcular q = 1 - p",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Calcula Aciertos con Binomial",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-distribucion_binomial-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La distribución binomial calcula la probabilidad de r ocurrencias en n ensayos independientes con probabilidad constante de éxito p. Se aplica cuando no se cumplen las condiciones para usar la aproximación de Poisson, típicamente cuando la población es al menos 10 veces el tamaño de muestra.",
+      "texto_nuevo": "La distribución binomial calcula la probabilidad de r ocurrencias en n ensayos independientes con probabilidad constante de éxito p. Puede aplicarse cuando no se cumplen las condiciones para usar la aproximación de Poisson. En la práctica, suponer una probabilidad constante es razonable cuando la población es al menos 10 veces el tamaño de muestra.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12003-12009",
+        "frase": "conditions of the Poisson distribution are not met, the binomial distribution may be applicable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El nodo no omite la regla de 10 veces: la reasigna como caso típico en que Poisson no aplica, un qué que el libro no dice; en el libro es la condición para suponer probabilidad constante.; Endurece: el libro dice que la binomial puede ser aplicable si no se cumplen las condiciones de Poisson.; Misma reasignación de la regla de 10 veces.; Mismo endurecimiento de 'may be applicable'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

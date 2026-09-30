@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Alternativa: Business Opportunity o Licencia sin Marca (Biz Opp)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Un biz opp elimina el elemento de nombre/marca de la definición de franquicia, evitando (parcialmente) el cumplimiento de regulaciones FTC de divulgación de franquicia. Sin embargo, al no compartir marca, el licenciante pierde control sobre el licenciatario, no puede construir reconocimiento de marca nacional, y las tarifas suelen ser más bajas y sin regalías continuas. Los licenciatarios compiten entre sí en precio, erosionando márgenes.",
+  "resumen_teorico": "Un biz opp elimina el elemento de nombre/marca de la definición de franquicia, evitando (parcialmente) el cumplimiento de regulaciones FTC de divulgación de franquicia, ahorro útil sobre todo en un lanzamiento local: uno nacional puede costar más en honorarios. Sin embargo, al no compartir marca, el licenciante pierde control sobre el licenciatario, no puede construir reconocimiento de marca nacional, y las tarifas suelen ser más bajas y sin regalías. A menudo los licenciatarios compiten en precio, erosionando márgenes.",
   "pasos_accionables": [
     "Verificar si el modelo elimina completamente el uso de nombre/marca compartida",
     "Evaluar leyes estatales de biz opp aplicables (más de dos docenas de estados)",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Considera una Licencia sin Marca",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-alternativa_business_opportunity_licensing-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un biz opp elimina el elemento de nombre/marca de la definición de franquicia, evitando (parcialmente) el cumplimiento de regulaciones FTC de divulgación de franquicia. Sin embargo, al no compartir marca, el licenciante pierde control sobre el licenciatario, no puede construir reconocimiento de marca nacional, y las tarifas suelen ser más bajas y sin regalías continuas. Los licenciatarios compiten entre sí en precio, erosionando márgenes.",
+      "texto_nuevo": "Un biz opp elimina el elemento de nombre/marca de la definición de franquicia, evitando (parcialmente) el cumplimiento de regulaciones FTC de divulgación de franquicia, ahorro útil sobre todo en un lanzamiento local: uno nacional puede costar más en honorarios. Sin embargo, al no compartir marca, el licenciante pierde control sobre el licenciatario, no puede construir reconocimiento de marca nacional, y las tarifas suelen ser más bajas y sin regalías. A menudo los licenciatarios compiten en precio, erosionando márgenes.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1162",
+        "frase": "a national rollout may require them to pay more in the way of legal fees"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que a menudo terminan compitiendo en precio porque los consumidores pueden compararlos.; Mismo endurecimiento sobre la competencia en precio.; Mismo límite del ahorro legal perdido.; Se pierde que el ahorro legal vale para un lanzamiento local y que uno nacional puede costar más en honorarios.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

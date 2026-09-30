@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Cláusula Pay-to-Play",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Provisión que obliga a los inversionistas existentes a participar proporcionalmente (pro rata) en futuras rondas de financiamiento calificadas (Qualified Financing) para mantener sus derechos y preferencias como acciones preferentes; si no participan, sus acciones se convierten automáticamente en acciones comunes, perdiendo privilegios como liquidación preferente.",
+  "resumen_teorico": "Provisión que obliga a los inversionistas existentes a participar proporcionalmente (pro rata) en futuras rondas calificadas (Qualified Financing) para mantener sus derechos como acciones preferentes; si no participan, sus acciones pasan a comunes y pierden privilegios como la liquidación preferente. Puede no ser apropiada si tus inversionistas, como un fondo semilla, no suelen invertir en rondas posteriores.",
   "pasos_accionables": [
     "Definir qué constituye una 'Qualified Financing' que gatilla la cláusula.",
     "Establecer el porcentaje pro rata mínimo requerido para mantener status preferente.",
-    "Negociar si la conversión a común es total o parcial según el nivel de participación.",
+    "Negociar si la conversión a común es total o parcial según el nivel de participación, y evitar versiones que permitan al inversionista forzar una recapitalización de la empresa si otros inversionistas no participan.",
     "Permitir la asignación de derechos a fondos afiliados del inversionista."
   ],
   "entregable_esperado": "Cláusula pay-to-play definida en el term sheet con mecánica de conversión clara.",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Participa o Pierde tus Derechos",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-161-pay_to_play-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Provisión que obliga a los inversionistas existentes a participar proporcionalmente (pro rata) en futuras rondas de financiamiento calificadas (Qualified Financing) para mantener sus derechos y preferencias como acciones preferentes; si no participan, sus acciones se convierten automáticamente en acciones comunes, perdiendo privilegios como liquidación preferente.",
+      "texto_nuevo": "Provisión que obliga a los inversionistas existentes a participar proporcionalmente (pro rata) en futuras rondas calificadas (Qualified Financing) para mantener sus derechos como acciones preferentes; si no participan, sus acciones pasan a comunes y pierden privilegios como la liquidación preferente. Puede no ser apropiada si tus inversionistas, como un fondo semilla, no suelen invertir en rondas posteriores.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1139",
+        "frase": "the pay-to-play provision may not be appropriate, especially in early rounds"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que puede no ser apropiada con inversionistas que por práctica no invierten en rondas posteriores.; Mismo defecto que la marca 0: se cae el límite para inversionistas que no suelen seguir invirtiendo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-161-pay_to_play-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar si la conversión a común es total o parcial según el nivel de participación.",
+      "texto_nuevo": "Negociar si la conversión a común es total o parcial según el nivel de participación, y evitar versiones que permitan al inversionista forzar una recapitalización de la empresa si otros inversionistas no participan.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1148",
+        "frase": "your VC has the right to force a recapitalization of the company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte evitar la versión que permite al inversionista forzar una recapitalización si otros no participan.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Negociación de la Extensión del No-Shop",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor gana temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, sobrepasar esta ventana de negociación puede endurecer al comprador en el resto del proceso hasta el cierre.",
+  "resumen_teorico": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor suele ganar temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, sobrepasar esta ventana de negociación puede endurecer al comprador en el resto del proceso hasta el cierre.",
   "pasos_accionables": [
     "Anticipar la solicitud de extensión del no-shop antes de que expire el periodo original",
     "Identificar concesiones razonables a solicitar a cambio de la extensión (ej. alivio del umbral de working capital, financiamiento puente), sin pedir de más",
     "Evitar pedir demasiado para no deteriorar el tono de la negociación final",
-    "Negociar carve-outs específicos en el no-shop, como financiamientos del sindicato existente, para mantener presión sobre el comprador",
+    "Limitar la duración del no-shop y negociar carve-outs específicos, como financiamientos del sindicato existente, para mantener presión sobre el comprador",
     "Incluir siempre una cláusula de salida automática si el comprador termina el proceso"
   ],
   "entregable_esperado": "Cláusula de no-shop renegociada con carve-outs definidos y lista de concesiones obtenidas del comprador a cambio de la extensión",
@@ -71,6 +71,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-161-no_shop_extension_negotiation-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor gana temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, sobrepasar esta ventana de negociación puede endurecer al comprador en el resto del proceso hasta el cierre.",
+      "texto_nuevo": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor suele ganar temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, sobrepasar esta ventana de negociación puede endurecer al comprador en el resto del proceso hasta el cierre.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4307",
+        "frase": "There is often some additional leverage that accrues to the seller at this moment"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que a menudo se gana algo de apalancamiento, no siempre.; Mismo defecto: el libro usa 'often'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-161-no_shop_extension_negotiation-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negociar carve-outs específicos en el no-shop, como financiamientos del sindicato existente, para mantener presión sobre el comprador",
+      "texto_nuevo": "Limitar la duración del no-shop y negociar carve-outs específicos, como financiamientos del sindicato existente, para mantener presión sobre el comprador",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4309",
+        "frase": "limit the duration of the no-shop period and carve out specific events"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro mantiene la presión con dos piezas, limitar la duración del no-shop y los carve-outs; la duración se cae.; Mismo defecto: se cae limitar la duración del no-shop.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

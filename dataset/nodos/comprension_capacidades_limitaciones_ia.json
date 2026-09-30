@@ -11,7 +11,7 @@
     "Anota qué patrones de error y de acierto vas encontrando mientras pruebas",
     "Revisa tú mismo, o con quien te ayude, cualquier resultado crítico antes de usarlo",
     "Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo, hasta encontrar la forma óptima de uso para esa tarea específica",
-    "Probar la IA en cada tarea del flujo de trabajo diario, sin descartar previamente ninguna por asumir que 'no aplica'",
+    "Probar la IA en cada tarea del flujo de trabajo diario, salvo donde haya barreras legales o éticas, sin descartar previamente ninguna por asumir que 'no aplica'",
     "Repetir el ejercicio periódicamente ya que las capacidades de la IA cambian con el tiempo",
     "Compartir hallazgos con el equipo para acelerar el aprendizaje colectivo",
     "Usa ese mapa para decidir qué automatizas, qué supervisas de cerca y qué haces tú sin IA"
@@ -75,6 +75,23 @@
         "evidencia": "F20-016: Consiste en probar la IA en cada tarea del flujo de trabajo diario para decidir que se automatiza; es operar y mejorar el negocio, no explorar una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-158-comprension_capacidades_limitaciones_ia-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Probar la IA en cada tarea del flujo de trabajo diario, sin descartar previamente ninguna por asumir que 'no aplica'",
+      "texto_nuevo": "Probar la IA en cada tarea del flujo de trabajo diario, salvo donde haya barreras legales o éticas, sin descartar previamente ninguna por asumir que 'no aplica'",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "381",
+        "frase": "try inviting AI to help you in everything you do, barring legal or ethical barriers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro invita a usar la IA en todo salvo donde haya barreras legales o éticas; el paso pierde esa excepción.; Misma excepción legal y ética perdida.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Diferencia entre Legislación de Riesgos Específicos y Riesgos Organizacionales",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las legislaciones de seguridad más exitosas históricamente (acopladores Janney en ferrocarriles, límites de velocidad, cinturones de seguridad) han sido efectivas porque atacan actos inseguros específicos con peligros, situaciones y personas en riesgo bien conocidas. Sin embargo, esta misma especificidad no funciona para accidentes organizacionales complejos, cuya etiología aún no se comprende completamente, lo que exige enfoques regulatorios diferentes centrados en factores humanos y organizacionales.",
+  "resumen_teorico": "Las legislaciones de seguridad más exitosas históricamente (acopladores Janney en ferrocarriles, límites de velocidad, cinturones de seguridad) han sido efectivas porque atacan actos inseguros específicos con peligros, situaciones y personas en riesgo bien conocidas. Sin embargo, esta misma especificidad no funciona para accidentes organizacionales complejos, cuya etiología aún no se comprende completamente, lo que deja abierta la pregunta de cómo pueden los reguladores limitar mejor estos eventos catastróficos pero infrecuentes.",
   "pasos_accionables": [
     "Clasificar el tipo de riesgo que se busca regular: riesgo individual específico vs riesgo organizacional sistémico",
     "Para riesgos específicos, diseñar reglas prescriptivas claras dirigidas al acto inseguro concreto",
@@ -39,6 +39,22 @@
         "evidencia": "F28-021: Clasifica los riesgos y diseña un enfoque de gestión distinto para cada tipo; eso es diseñar una estrategia, no explorar una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-159-legislacion_especifica_vs_accidente_organizacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las legislaciones de seguridad más exitosas históricamente (acopladores Janney en ferrocarriles, límites de velocidad, cinturones de seguridad) han sido efectivas porque atacan actos inseguros específicos con peligros, situaciones y personas en riesgo bien conocidas. Sin embargo, esta misma especificidad no funciona para accidentes organizacionales complejos, cuya etiología aún no se comprende completamente, lo que exige enfoques regulatorios diferentes centrados en factores humanos y organizacionales.",
+      "texto_nuevo": "Las legislaciones de seguridad más exitosas históricamente (acopladores Janney en ferrocarriles, límites de velocidad, cinturones de seguridad) han sido efectivas porque atacan actos inseguros específicos con peligros, situaciones y personas en riesgo bien conocidas. Sin embargo, esta misma especificidad no funciona para accidentes organizacionales complejos, cuya etiología aún no se comprende completamente, lo que deja abierta la pregunta de cómo pueden los reguladores limitar mejor estos eventos catastróficos pero infrecuentes.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4246",
+        "frase": "the question remains: how can regulators function more effectively to limit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro deja abierta la pregunta de cómo pueden los reguladores limitar estos eventos; no concluye que se exijan enfoques centrados en factores humanos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

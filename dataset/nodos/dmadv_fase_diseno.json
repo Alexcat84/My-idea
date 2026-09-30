@@ -10,7 +10,7 @@
     "Actualizar el design scorecard con resultados de experimentos, benchmarking y estudios de capacidad de proceso",
     "Reevaluar el diseño del producto contra la capacidad de manufactura u operación",
     "Validar tolerancias para cada parámetro mediante experimentos diseñados y tolerancias estadísticas",
-    "Documentar el conjunto de pruebas en un plan de Design Verification Test (DVT)",
+    "Documentar el conjunto de pruebas en un plan de Design Verification Test (DVT) y ejecutarlo con prototipos, modelos de preproducción o corridas piloto",
     "Realizar una reunión de revisión de diseño al concluir la fase"
   ],
   "entregable_esperado": "Diseño funcional detallado con parámetros optimizados, modelos de predicción, tolerancias óptimas, documentación de diseño, procedimientos operativos estándar, resultados de análisis de confiabilidad y resultados de verificación del diseño (DVT), y scorecard de diseño actualizado",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Construye tu Diseño Detallado",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-158-dmadv_fase_diseno-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar el conjunto de pruebas en un plan de Design Verification Test (DVT)",
+      "texto_nuevo": "Documentar el conjunto de pruebas en un plan de Design Verification Test (DVT) y ejecutarlo con prototipos, modelos de preproducción o corridas piloto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "16410",
+        "frase": "verified through testing of prototype, preproduction models, or initial pilot samples or pilot runs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige cerrar la fase verificando el diseño con pruebas de prototipos, preproducción o corridas piloto; el paso solo documenta el plan.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

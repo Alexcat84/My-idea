@@ -3,14 +3,14 @@
   "dominio": "core",
   "titulo_concepto": "Acuerdo de Exclusividad (No-Shop Agreement)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+  "resumen_teorico": "Es una cláusula que a menudo es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas ni con posibles compradores de tu empresa durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
   "pasos_accionables": [
     "Define el periodo de exclusividad (normalmente de 45 a 60 días; a veces puedes lograr que el inversor acepte 30 días)",
-    "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), junto con otras pocas como la de gastos legales y la de ley aplicable, a diferencia de la mayoría de sus condiciones",
+    "Ten claro que esta cláusula a menudo es vinculante desde que firmas la hoja de términos (term sheet), junto con otras pocas como la de gastos legales y la de ley aplicable, a diferencia de la mayoría de sus condiciones",
     "Establece la obligación de avisar si alguien más se te acerca durante este periodo",
-    "Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí"
+    "Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí; pide también que expire de inmediato si el inversionista termina el proceso y considera excluir las conversaciones de adquisición"
   ],
-  "entregable_esperado": "Cláusula de exclusividad (no shop) firmada, con plazo, obligación de aviso y consecuencias de incumplimiento claramente definidas",
+  "entregable_esperado": "Cláusula de exclusividad (no shop) firmada, con plazo, obligación de aviso y fin de la obligación claramente definidos",
   "condiciones_activacion": [
     "Si recibiste una hoja de términos y necesitas entender tus obligaciones de exclusividad",
     "Si el inversionista te pide garantía de exclusividad antes de invertir tiempo en revisar tu negocio a fondo (due diligence)",
@@ -104,6 +104,72 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-161-no_shop_agreement-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+      "texto_nuevo": "Es una cláusula que a menudo es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas ni con posibles compradores de tu empresa durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2046-2052",
+        "frase": "this term will often be part of the few terms that are binding"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que a menudo está entre los pocos términos vinculantes.; La cláusula típica también impide negociar la venta o adquisición de la empresa, no solo con inversionistas.; Mismo defecto: el libro usa 'often'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-161-no_shop_agreement-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), junto con otras pocas como la de gastos legales y la de ley aplicable, a diferencia de la mayoría de sus condiciones",
+      "texto_nuevo": "Ten claro que esta cláusula a menudo es vinculante desde que firmas la hoja de términos (term sheet), junto con otras pocas como la de gastos legales y la de ley aplicable, a diferencia de la mayoría de sus condiciones",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2052",
+        "frase": "this term will often be part of the few terms that are binding"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que a menudo es vinculante, no siempre.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-161-no_shop_agreement-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí",
+      "texto_nuevo": "Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí; pide también que expire de inmediato si el inversionista termina el proceso y considera excluir las conversaciones de adquisición",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2075",
+        "frase": "ask that the no-shop clause expire immediately if the VC terminates the process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que expire de inmediato si el inversionista termina el proceso y considerar excluir las adquisiciones.; Mismo defecto: se caen los dos pedidos del libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-161-no_shop_agreement-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cláusula de exclusividad (no shop) firmada, con plazo, obligación de aviso y consecuencias de incumplimiento claramente definidas",
+      "texto_nuevo": "Cláusula de exclusividad (no shop) firmada, con plazo, obligación de aviso y fin de la obligación claramente definidos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2046-2054",
+        "frase": "the entrepreneur should bound the no-shop agreement by a time period"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de consecuencias pactadas por incumplir; solo de plazo, aviso y fin de la obligación.; Mismo defecto: las consecuencias de incumplimiento no están en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

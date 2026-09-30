@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Alternativa: Dealerships y Distribuidoras (Modelo Sin Fee)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Los dealerships y distribuidoras involucran la venta de productos a terceros a precio mayorista de buena fe para reventa, sin cobrar tarifa (evitando así el elemento 'fee' de franquicia). Es apropiado solo para fabricantes y mayoristas. Es un modelo menos eficiente que franquiciar porque el soporte se da gratis (erosionando el margen mayorista) y los distribuidores tienen poca lealtad de marca frente a competidores con mejores condiciones.",
+  "resumen_teorico": "Los dealerships y distribuidoras involucran la venta de productos a terceros a precio mayorista de buena fe para reventa, sin cobrar tarifa (evitando así el elemento 'fee' de franquicia). Es apropiado solo para fabricantes y mayoristas. Muchos fabricantes lo encuentran menos eficiente que franquiciar porque el soporte se da gratis (erosionando el margen mayorista) y los distribuidores a menudo tienen poca lealtad de marca frente a competidores con mejores condiciones.",
   "pasos_accionables": [
     "Confirmar que el negocio es de manufactura o mayoreo de productos físicos",
     "Evitar vender equipo o displays no destinados a reventa (riesgo de activar elemento de fee)",
@@ -40,6 +40,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-158-alternativa_dealership_distributorship-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los dealerships y distribuidoras involucran la venta de productos a terceros a precio mayorista de buena fe para reventa, sin cobrar tarifa (evitando así el elemento 'fee' de franquicia). Es apropiado solo para fabricantes y mayoristas. Es un modelo menos eficiente que franquiciar porque el soporte se da gratis (erosionando el margen mayorista) y los distribuidores tienen poca lealtad de marca frente a competidores con mejores condiciones.",
+      "texto_nuevo": "Los dealerships y distribuidoras involucran la venta de productos a terceros a precio mayorista de buena fe para reventa, sin cobrar tarifa (evitando así el elemento 'fee' de franquicia). Es apropiado solo para fabricantes y mayoristas. Muchos fabricantes lo encuentran menos eficiente que franquiciar porque el soporte se da gratis (erosionando el margen mayorista) y los distribuidores a menudo tienen poca lealtad de marca frente a competidores con mejores condiciones.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1209",
+        "frase": "many manufacturers these days are finding that the traditional dealer model is much less efficient"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que muchos fabricantes lo encuentran menos eficiente y que los distribuidores a menudo tienen poca lealtad.; Mismo endurecimiento sobre la eficiencia.; Mismo endurecimiento sobre la lealtad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }
