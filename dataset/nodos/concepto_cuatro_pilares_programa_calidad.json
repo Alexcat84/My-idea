@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Los Cuatro Pilares del Programa de Calidad Corporativo",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+  "resumen_teorico": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes, con una formación común en calidad que es la columna vertebral del esfuerzo), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
   "pasos_accionables": [
     "Diagnosticar el nivel de participación actual de la dirección en temas de calidad.",
     "Formar consejos o comités de calidad independientes por unidad o región.",
     "Diseñar programas originales y prácticos adaptados a cada unidad de negocio.",
     "Crear un sistema de reconocimiento basado en nominación de pares, no en premios monetarios.",
-    "Sostener el esfuerzo durante varios años (5 a 7 años típicamente) para lograr un cambio cultural duradero."
+    "Sostener el esfuerzo durante varios años (en ITT tomó de 5 a 7 años) para lograr un cambio cultural duradero."
   ],
   "entregable_esperado": "Un plan estructurado con los cuatro pilares definidos, responsables asignados y un cronograma de implementación de mediano plazo.",
   "nodos_previos": [
@@ -41,6 +41,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-026 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-149-concepto_cuatro_pilares_programa_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+      "texto_nuevo": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes, con una formación común en calidad que es la columna vertebral del esfuerzo), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "107",
+        "frase": "It is the backbone of the total effort."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la formación común (la escuela de calidad) como columna vertebral de este pilar.; Mismo matiz: se cae la formación que sostiene a los consejos y a los programas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-149-concepto_cuatro_pilares_programa_calidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sostener el esfuerzo durante varios años (5 a 7 años típicamente) para lograr un cambio cultural duradero.",
+      "texto_nuevo": "Sostener el esfuerzo durante varios años (en ITT tomó de 5 a 7 años) para lograr un cambio cultural duradero.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "151",
+        "frase": "It took five to seven years of unrelenting effort to achieve the cultural revolution"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da de cinco a siete años como lo que tomó en ITT, no como plazo típico.; Misma generalización de la cifra de ITT.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

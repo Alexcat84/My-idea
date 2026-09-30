@@ -10,7 +10,7 @@
     "Evaluar si el canal fortalece el proceso de venta y a qué costo",
     "Analizar la complejidad y precio del producto respecto al canal elegido",
     "Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)",
-    "Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez"
+    "Enfocarse en UN canal principal hasta completar la validación de clientes (customer validation), evitando lanzar por múltiples canales a la vez, salvo apoyar un lanzamiento en canal físico con marketing web (y a veces venta en línea) simultáneo"
   ],
   "entregable_esperado": "Hipótesis de canal documentada con análisis de costos netos y justificación de por qué ese canal es el más adecuado para el producto",
   "nodos_previos": [
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Elige Tu Canal de Venta",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-seleccion_canal_distribucion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez",
+      "texto_nuevo": "Enfocarse en UN canal principal hasta completar la validación de clientes (customer validation), evitando lanzar por múltiples canales a la vez, salvo apoyar un lanzamiento en canal físico con marketing web (y a veces venta en línea) simultáneo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5996",
+        "frase": "Until the company completes customer validation, it should pick a sales channel"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide un solo canal hasta completar la validación de clientes, no solo durante el descubrimiento.; Recorta el plazo: el libro lo extiende hasta completar la validación de clientes.; Se pierde la excepción del lanzamiento físico con marketing web (y a veces venta) simultáneo.; Se pierde la excepción del libro: el lanzamiento en canal físico con apoyo simultáneo de marketing web.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

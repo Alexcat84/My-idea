@@ -9,10 +9,10 @@
     "Revisar el customer profile actual y preguntar si se pueden abordar más jobs relacionados.",
     "Evaluar si existe un job más importante al que cambiar el foco.",
     "Explorar jobs emocionales y sociales más allá de los funcionales.",
-    "Considerar cómo servir a un segmento más amplio de clientes con el mismo job.",
+    "Considerar cómo servir a un segmento más amplio de clientes con el mismo job, cuando ese job les resultaba demasiado complejo o demasiado caro.",
     "Decidir entre mejora incremental o mejora radical del job."
   ],
-  "entregable_esperado": "Lista de al menos 2-3 direcciones de innovación priorizadas basadas en el perfil del cliente.",
+  "entregable_esperado": "Lista de direcciones de innovación priorizadas basadas en el perfil del cliente.",
   "nodos_previos": [
     "identificar_high_value_jobs"
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Innova desde el Perfil del Cliente",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-seis_formas_innovar_perfil_cliente-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista de al menos 2-3 direcciones de innovación priorizadas basadas en el perfil del cliente.",
+      "texto_nuevo": "Lista de direcciones de innovación priorizadas basadas en el perfil del cliente.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "3406",
+        "frase": "Here are six ways to trigger your next value proposition move."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade una cifra mínima de direcciones que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-150-seis_formas_innovar_perfil_cliente-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar cómo servir a un segmento más amplio de clientes con el mismo job.",
+      "texto_nuevo": "Considerar cómo servir a un segmento más amplio de clientes con el mismo job, cuando ese job les resultaba demasiado complejo o demasiado caro.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "3469",
+        "frase": "Help more people do a job that was otherwise too complex or too expensive."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición del libro: ayudar a más gente con un job que antes les resultaba demasiado complejo o caro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

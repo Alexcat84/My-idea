@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Motor de Crecimiento de Pago (Paid Engine)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Motor de crecimiento basado en reinvertir ingresos por cliente en la adquisición de nuevos clientes mediante publicidad, ventas o marketing pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal) permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento no es sostenible sin capital externo. Cualquier canal de adquisición está sujeto a competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una capacidad diferenciada de monetización.",
+  "resumen_teorico": "Motor de crecimiento basado en reinvertir ingresos por cliente en la adquisición de nuevos clientes mediante publicidad, ventas o marketing pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal) permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento se frena, y compensarlo con capital invertido o golpes publicitarios no es sostenible. Cualquier canal de adquisición está sujeto a competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una capacidad diferenciada de monetización.",
   "pasos_accionables": [
     "Calcular el LTV (valor de vida del cliente) después de costos variables",
     "Calcular el CPA (costo por adquisición) de cada canal de marketing/ventas",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Invierte en Crecimiento de Pago",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-motor_crecimiento_pago-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Motor de crecimiento basado en reinvertir ingresos por cliente en la adquisición de nuevos clientes mediante publicidad, ventas o marketing pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal) permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento no es sostenible sin capital externo. Cualquier canal de adquisición está sujeto a competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una capacidad diferenciada de monetización.",
+      "texto_nuevo": "Motor de crecimiento basado en reinvertir ingresos por cliente en la adquisición de nuevos clientes mediante publicidad, ventas o marketing pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal) permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento se frena, y compensarlo con capital invertido o golpes publicitarios no es sostenible. Cualquier canal de adquisición está sujeto a competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una capacidad diferenciada de monetización.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2507",
+        "frase": "using invested capital or publicity stunts, but those tactics are not sustainable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Da a entender que el capital externo lo vuelve sostenible, cuando el libro dice que esa táctica no lo es.; El libro dice que cubrir la diferencia con capital invertido no es sostenible; el nodo sugiere lo contrario.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "CEO de Guerra vs. CEO de Paz",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial (crisis financiera, pérdida de cliente clave, colapso de mercado): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, aunque sigas delegando la ejecución. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+  "resumen_teorico": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial inminente (la competencia, un cambio macroeconómico drástico, un cambio de mercado o de la cadena de suministro): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, y te ocupas hasta del detalle más pequeño si afecta a la misión. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
   "pasos_accionables": [
     "Evaluar honestamente si tu negocio está en modo de crecimiento normal o en riesgo existencial",
     "Si es modo de guerra, concentrar en ti las decisiones estratégicas centrales y exigir alineación estricta sin tolerar desviaciones del plan",
     "Comunicar con claridad la situación crítica a tu equipo o colaboradores, sin dar falsas esperanzas",
     "Si es modo de paz, fomentar la experimentación, el consenso y la exploración de nuevas oportunidades",
-    "Delegar la ejecución táctica pero mantener el control total sobre la dirección estratégica",
+    "Si es modo de paz, delegar las decisiones de detalle y centrarte en el panorama general; si es modo de guerra, ocuparte hasta del detalle que afecte a la misión",
     "Revisar periódicamente si el contexto ha cambiado de modo para ajustar tu estilo de liderazgo"
   ],
   "entregable_esperado": "Diagnóstico claro del modo de liderazgo requerido (paz o guerra) con un protocolo de decisiones y ajustes de comunicación y tolerancia a errores según ese modo.",
@@ -64,6 +64,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U3-013 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-149-ceo_de_guerra_vs_paz-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial (crisis financiera, pérdida de cliente clave, colapso de mercado): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, aunque sigas delegando la ejecución. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+      "texto_nuevo": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial inminente (la competencia, un cambio macroeconómico drástico, un cambio de mercado o de la cadena de suministro): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, y te ocupas hasta del detalle más pequeño si afecta a la misión. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2833",
+        "frase": "Wartime CEO cares about a speck of dust on a gnat's ass if it interferes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion, matiz; doble lectura ciega y arbitro): Crisis financiera y pérdida de cliente clave no están en la lista del libro.; En el libro delegar el detalle es propio del CEO de paz; el de guerra atiende hasta el detalle que afecte a la misión.; La lista del libro empieza por la competencia, que el nodo pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-149-ceo_de_guerra_vs_paz-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Delegar la ejecución táctica pero mantener el control total sobre la dirección estratégica",
+      "texto_nuevo": "Si es modo de paz, delegar las decisiones de detalle y centrarte en el panorama general; si es modo de guerra, ocuparte hasta del detalle que afecte a la misión",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2833",
+        "frase": "Peacetime CEO focuses on the big picture and empowers her people to make detailed decisions."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la delegación del detalle solo en tiempos de paz; en guerra se atiende el detalle que afecte a la misión.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

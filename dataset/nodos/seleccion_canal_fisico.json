@@ -9,7 +9,7 @@
     "Listar las opciones de canal físico relevantes para la industria",
     "Evaluar fortalezas y debilidades de cada canal (costo, control, velocidad)",
     "Analizar hábitos de compra establecidos en la categoría de producto",
-    "Seleccionar un único canal dominante y evitar lanzar por múltiples canales simultáneamente"
+    "Seleccionar un único canal dominante hasta completar la validación de clientes y evitar lanzar por múltiples canales simultáneamente, salvo apoyar el lanzamiento físico con marketing web (y a veces venta en línea) al mismo tiempo"
   ],
   "entregable_esperado": "Selección justificada de canal(es) físico(s) de distribución con análisis de costo-beneficio",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Compara Canales Físicos de Venta",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-seleccion_canal_fisico-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar un único canal dominante y evitar lanzar por múltiples canales simultáneamente",
+      "texto_nuevo": "Seleccionar un único canal dominante hasta completar la validación de clientes y evitar lanzar por múltiples canales simultáneamente, salvo apoyar el lanzamiento físico con marketing web (y a veces venta en línea) al mismo tiempo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "18009",
+        "frase": "The big exception, of course: physical-channel launches with simultaneous web-marketing (and sometimes sales) support."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el canal único a la etapa previa a completar la validación de clientes.; El nodo presenta el canal único sin plazo; el libro lo limita hasta completar la validación.; Se pierde la excepción del apoyo web simultáneo a un lanzamiento en canal físico.; Se pierde la excepción del lanzamiento físico con marketing web (y a veces venta) simultáneo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

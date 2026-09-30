@@ -4,10 +4,10 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Riesgo Como Disciplina Permanente",
   "fuente": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
-  "resumen_teorico": "El riesgo no se acaba nunca, y ese es justo el punto: se administra. No hay un día en que hayas eliminado todos tus riesgos y puedas bajar la guardia; querer un negocio sin riesgo es querer un negocio sin recompensa. Lo que cambia con el tiempo no es la ausencia de riesgo, sino tu manera de convivir con él: dejas de temerle o de negarlo, y aprendes a llevarlo de la mano, a nombrarlo, medirlo, responderle y seguir. La gestión de riesgo no es una tarea que se completa, es una forma de caminar: con los ojos abiertos, un colchón bajo el brazo y la calma de saber que ningún golpe te tomará totalmente desprevenido. Para el emprendedor, hacer las paces con esto (que el riesgo es compañero de viaje, no enemigo a vencer) es lo que le permite arriesgar con valentía y dormir tranquilo a la vez.",
+  "resumen_teorico": "El riesgo no se acaba nunca, y ese es justo el punto: se administra. No hay un día en que hayas eliminado todos tus riesgos y puedas bajar la guardia; querer un negocio sin riesgo es querer un negocio sin recompensa. Lo que cambia con el tiempo no es la ausencia de riesgo, sino tu manera de convivir con él: dejas de temerle o de negarlo, y aprendes a llevarlo de la mano, a nombrarlo, medirlo, responderle y seguir. La gestión de riesgo no es una tarea que se completa, es una forma de caminar: con los ojos abiertos, un colchón bajo el brazo y la calma de saber que ningún golpe te tomará totalmente desprevenido. Para el emprendedor, hacer las paces con esto (que el riesgo es compañero de viaje, no enemigo a vencer) es lo que le permite arriesgar con valentía sabiendo cuánto arriesga.",
   "pasos_accionables": [
     "Acepta que siempre habrá riesgo: la meta no es cero riesgo, sino riesgo administrado.",
-    "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.",
+    "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina: sigue vigilando las señales de que un riesgo se está volviendo problema y buscando riesgos nuevos, sobre todo a mitad del camino.",
     "Sugerencia de My Idea: cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
     "Sigue arriesgando con valentía, ahora con método debajo del brazo."
   ],
@@ -43,6 +43,39 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica cómo mitigar y contener riesgos preparándose de antemano, pero nunca propone celebrar los golpes evitados, ni cada tanto ni de otra forma (busqué celebrat, credit, recogni y congratul sin resultados). Celebrar es una práctica nueva con una frecuencia que el libro no pone.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-006"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_nunca_se_acaba_se_administra-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.",
+      "texto_nuevo": "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina: sigue vigilando las señales de que un riesgo se está volviendo problema y buscando riesgos nuevos, sobre todo a mitad del camino.",
+      "cita": {
+        "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1154-1162",
+        "frase": "risk management needs to be particularly active"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concreta qué se mantiene activo (vigilar indicadores y seguir descubriendo riesgos) y pide más actividad a mitad del proyecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_nunca_se_acaba_se_administra-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El riesgo no se acaba nunca, y ese es justo el punto: se administra. No hay un día en que hayas eliminado todos tus riesgos y puedas bajar la guardia; querer un negocio sin riesgo es querer un negocio sin recompensa. Lo que cambia con el tiempo no es la ausencia de riesgo, sino tu manera de convivir con él: dejas de temerle o de negarlo, y aprendes a llevarlo de la mano, a nombrarlo, medirlo, responderle y seguir. La gestión de riesgo no es una tarea que se completa, es una forma de caminar: con los ojos abiertos, un colchón bajo el brazo y la calma de saber que ningún golpe te tomará totalmente desprevenido. Para el emprendedor, hacer las paces con esto (que el riesgo es compañero de viaje, no enemigo a vencer) es lo que le permite arriesgar con valentía y dormir tranquilo a la vez.",
+      "texto_nuevo": "El riesgo no se acaba nunca, y ese es justo el punto: se administra. No hay un día en que hayas eliminado todos tus riesgos y puedas bajar la guardia; querer un negocio sin riesgo es querer un negocio sin recompensa. Lo que cambia con el tiempo no es la ausencia de riesgo, sino tu manera de convivir con él: dejas de temerle o de negarlo, y aprendes a llevarlo de la mano, a nombrarlo, medirlo, responderle y seguir. La gestión de riesgo no es una tarea que se completa, es una forma de caminar: con los ojos abiertos, un colchón bajo el brazo y la calma de saber que ningún golpe te tomará totalmente desprevenido. Para el emprendedor, hacer las paces con esto (que el riesgo es compañero de viaje, no enemigo a vencer) es lo que le permite arriesgar con valentía sabiendo cuánto arriesga.",
+      "cita": {
+        "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "268",
+        "frase": "You're taking a risk, but you know how much risk."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Dormir tranquilo es un efecto prometido que el libro no afirma; dice que se arriesga sabiendo cuánto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

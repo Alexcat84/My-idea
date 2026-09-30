@@ -6,7 +6,7 @@
   "fuente": "DeMarco y Lister, Waltzing with Bears",
   "resumen_teorico": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana, más o menos, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
   "pasos_accionables": [
-    "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos.",
+    "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos, y decide qué entra en cada una antes de construir la primera.",
     "Ordena las versiones poniendo primero lo más valioso y lo más riesgoso.",
     "Entrega la primera versión pronto y observa qué riesgo confirma o desmiente.",
     "Ajusta el plan con lo aprendido antes de seguir con las siguientes versiones."
@@ -57,6 +57,23 @@
       },
       "decision": "Mandato del fundador, dato repetido en el resumen del mismo nodo: el resumen repetia el plazo \"cada semana o par de semanas\", que el libro fija en \"at least enough to schedule a new version every week or so\" (L1576). Se corrige con la misma cita que fidelidad-t11-02.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P012-067"
+    },
+    {
+      "id": "final-e1-148-entrega_por_partes_para_exponer_el_riesgo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos.",
+      "texto_nuevo": "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos, y decide qué entra en cada una antes de construir la primera.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1228",
+        "frase": "described in an incremental delivery plan (see below) before the first increment is constructed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige fijar por adelantado qué entra en cada versión; sin eso se pierden los beneficios.; Mismo defecto: el plan de versiones se decide antes de construir la primera.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Identificar si el programa se está comunicando solo como una técnica o proceso mecánico",
     "Reforzar el mensaje de que la mejora depende del compromiso personal de cada individuo",
-    "Diseñar comunicaciones que enfaticen el 'por qué' filosófico detrás de cada paso técnico",
+    "Presentar el programa como una técnica de gestión, pero hacer cada paso lo más personal posible para que nadie crea que funciona sin su esfuerzo",
     "Evitar que el programa se perciba como autosuficiente sin esfuerzo humano"
   ],
-  "entregable_esperado": "Mensaje institucional que combine claramente el fundamento filosófico (concepto) con las herramientas prácticas (técnica) del programa",
+  "entregable_esperado": "Un plan para presentar el programa como técnica de gestión (herramientas prácticas) y hacer personal, para cada persona, el compromiso con la mejora (concepto)",
   "nodos_previos": [
     "cero_defectos"
   ],
@@ -38,6 +38,39 @@
         "evidencia": "F10-008: Trata de comunicar y sostener un programa de calidad ya en marcha dentro del equipo, gestion operativa y no exploracion de una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-149-concepto_vs_tecnica-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Diseñar comunicaciones que enfaticen el 'por qué' filosófico detrás de cada paso técnico",
+      "texto_nuevo": "Presentar el programa como una técnica de gestión, pero hacer cada paso lo más personal posible para que nadie crea que funciona sin su esfuerzo",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2483-2485",
+        "frase": "That's why I have to make all this as personal as possible."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro presenta el programa como técnica de gestión y lo vuelve personal; el paso pide subrayar la filosofía.; Es el mismo defecto y va en sentido opuesto al libro, que presenta el concepto como si fuera solo técnica.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-149-concepto_vs_tecnica-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mensaje institucional que combine claramente el fundamento filosófico (concepto) con las herramientas prácticas (técnica) del programa",
+      "texto_nuevo": "Un plan para presentar el programa como técnica de gestión (herramientas prácticas) y hacer personal, para cada persona, el compromiso con la mejora (concepto)",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2483-2485",
+        "frase": "That's why I have to make all this as personal as possible."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El mensaje institucional que explica la filosofía no está en el libro; su remedio es hacerlo personal.; Mismo añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

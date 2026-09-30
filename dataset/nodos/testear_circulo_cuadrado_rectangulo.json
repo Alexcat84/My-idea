@@ -9,7 +9,7 @@
     "Primero, validar con evidencia qué jobs, pains y gains le importan realmente al cliente (círculo)",
     "Luego, validar que los pain relievers y gain creators propuestos resuelven esos problemas (cuadrado)",
     "Finalmente, validar que el modelo de negocio completo (socios, canales, ingresos, costos) es viable (rectángulo)",
-    "No avanzar al siguiente nivel sin evidencia suficiente del anterior"
+    "No empezar a testear la propuesta de valor (cuadrado) sin evidencia de lo que le importa al cliente (círculo)"
   ],
   "entregable_esperado": "Evidencia documentada en cada uno de los tres niveles (perfil del cliente, mapa de valor, modelo de negocio) antes de escalar",
   "nodos_previos": [
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Testea tu Encaje de Valor",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-testear_circulo_cuadrado_rectangulo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No avanzar al siguiente nivel sin evidencia suficiente del anterior",
+      "texto_nuevo": "No empezar a testear la propuesta de valor (cuadrado) sin evidencia de lo que le importa al cliente (círculo)",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7214-7220",
+        "frase": "evidence showing what customers care about (the circle) before focusing on how to help them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Generaliza a los tres niveles una compuerta que el libro solo pone entre círculo y cuadrado; del modelo de negocio pide no descuidarlo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

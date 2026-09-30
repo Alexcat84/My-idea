@@ -4,12 +4,12 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Valor Esperado También Es Incierto",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Solemos tratar el costo como incierto y el valor como una promesa segura, pero eso es un engaño. El beneficio que esperas de tu proyecto es tan incierto como su costo: las ventas que imaginas, los clientes que llegarán, el precio que aguantará el mercado, todo es un rango, no un dato. Si mides el costo con cuidado pero das el valor por hecho, tu comparación entre riesgo y beneficio está coja. La disciplina es medir el valor con la misma honestidad y precisión que el costo: exprésalo también como un rango con su incertidumbre. Para el emprendedor, reconocer que el valor puede quedar por debajo de lo soñado evita el error clásico de justificar cualquier riesgo con un beneficio inflado que quizá nunca llegue.",
+  "resumen_teorico": "Solemos excusarnos de estimar el valor diciendo que es demasiado incierto para predecirlo, pero eso es un engaño. El beneficio que esperas de tu proyecto es tan incierto como su costo: las ventas que imaginas, los clientes que llegarán, el precio que aguantará el mercado, todo es un rango, no un dato. Si mides el costo con cuidado pero das el valor por hecho, tu comparación entre riesgo y beneficio está coja. La disciplina es medir el valor con la misma honestidad y precisión que el costo: exprésalo también como un rango con su incertidumbre. Para el emprendedor, reconocer que el valor puede quedar por debajo de lo soñado evita el error clásico de justificar cualquier riesgo con un beneficio inflado que quizá nunca llegue.",
   "pasos_accionables": [
-    "Escribe el valor que esperas de tu proyecto como un rango, no como un número seguro.",
+    "Escribe el valor que esperas de tu proyecto como un rango, con su extremo más optimista, el menos optimista y el más probable, no como un número seguro.",
     "Pregúntate qué pasa con tu decisión si el valor cae en el extremo bajo del rango.",
     "Mide el valor con el mismo cuidado con que mides el costo, no con más optimismo.",
-    "Descarta las apuestas que solo se justifican con el mejor caso del valor."
+    "Sugerencia de My Idea: desconfía de las apuestas que solo se justifican con el mejor caso del valor."
   ],
   "entregable_esperado": "El valor esperado de tu proyecto expresado como un rango, con la decisión revisada contra su extremo bajo.",
   "nodos_previos": [
@@ -28,5 +28,57 @@
   "etiqueta_arbol": "El Valor También Es Incierto",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-148-el_valor_tambien_es_incierto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Descarta las apuestas que solo se justifican con el mejor caso del valor.",
+      "texto_nuevo": "Sugerencia de My Idea: desconfía de las apuestas que solo se justifican con el mejor caso del valor.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1502",
+        "frase": "No workable philosophy of risk-taking can ignore value."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da una regla de descarte; queda como sugerencia sin contradecirlo.; Mismo defecto: el libro liga el riesgo aceptable a lo que está en juego, no ordena descartar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_valor_tambien_es_incierto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Solemos tratar el costo como incierto y el valor como una promesa segura, pero eso es un engaño. El beneficio que esperas de tu proyecto es tan incierto como su costo: las ventas que imaginas, los clientes que llegarán, el precio que aguantará el mercado, todo es un rango, no un dato. Si mides el costo con cuidado pero das el valor por hecho, tu comparación entre riesgo y beneficio está coja. La disciplina es medir el valor con la misma honestidad y precisión que el costo: exprésalo también como un rango con su incertidumbre. Para el emprendedor, reconocer que el valor puede quedar por debajo de lo soñado evita el error clásico de justificar cualquier riesgo con un beneficio inflado que quizá nunca llegue.",
+      "texto_nuevo": "Solemos excusarnos de estimar el valor diciendo que es demasiado incierto para predecirlo, pero eso es un engaño. El beneficio que esperas de tu proyecto es tan incierto como su costo: las ventas que imaginas, los clientes que llegarán, el precio que aguantará el mercado, todo es un rango, no un dato. Si mides el costo con cuidado pero das el valor por hecho, tu comparación entre riesgo y beneficio está coja. La disciplina es medir el valor con la misma honestidad y precisión que el costo: exprésalo también como un rango con su incertidumbre. Para el emprendedor, reconocer que el valor puede quedar por debajo de lo soñado evita el error clásico de justificar cualquier riesgo con un beneficio inflado que quizá nunca llegue.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1442",
+        "frase": "often excuse themselves from predicting new- value because they reason that it's too uncertain"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que se evita predecir el valor por verlo demasiado incierto, no que se dé por seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_valor_tambien_es_incierto-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe el valor que esperas de tu proyecto como un rango, no como un número seguro.",
+      "texto_nuevo": "Escribe el valor que esperas de tu proyecto como un rango, con su extremo más optimista, el menos optimista y el más probable, no como un número seguro.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1444",
+        "frase": "Someplace in between the two is the most likely expectation."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro acota el valor con tres puntos; el paso pierde el más probable.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

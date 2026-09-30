@@ -4,12 +4,12 @@
   "dominio": "risk_management",
   "titulo_concepto": "Gestión de Riesgo Como Madurez",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Gestionar el riesgo es, en el fondo, un acto de madurez. Un niño puede darse el lujo de no pensar en las cosas feas de la vida; un adulto responsable no, tiene que mirarlas de frente para que su ignorancia no termine en tragedia. Con los proyectos pasa igual: considerar solo el escenario color de rosa y meterlo en el plan es cosa de chiquillos, por más que lo disfracemos de actitud positiva. Madurar como emprendedor es tomar nota explícita de lo que puede salir mal y planear en consecuencia, sin dejar de ser optimista sobre lo que puede salir bien. No es pesimismo, es responsabilidad. Para el que emprende solo, esta madurez es especialmente suya: nadie más va a obligarlo a mirar lo incómodo, así que la disciplina de hacerlo lo separa del soñador que cruza los dedos.",
+  "resumen_teorico": "Gestionar el riesgo es, en el fondo, un acto de madurez. Un niño puede darse el lujo de no pensar en las cosas feas de la vida; un adulto responsable no, tiene que mirarlas de frente para que su ignorancia no termine en tragedia. Con los proyectos pasa igual: considerar solo el escenario color de rosa y meterlo en el plan es cosa de chiquillos, por más que lo disfracemos de actitud positiva. Madurar como emprendedor es tomar nota explícita de lo que puede salir mal y planear en consecuencia. No es pesimismo, es responsabilidad. Para el que emprende, la disciplina de mirar lo incómodo es lo que lo separa del soñador que cruza los dedos.",
   "pasos_accionables": [
     "Revisa tu plan actual y pregúntate si solo contempla el escenario color de rosa.",
     "Agrega, sin drama, qué harías si las cosas no salen como esperas.",
     "Trata mirar lo que puede fallar como una responsabilidad, no como falta de fe.",
-    "Combina el optimismo sobre lo bueno con la previsión sobre lo malo: ambos caben."
+    "Sugerencia de My Idea: combina el optimismo sobre lo bueno con la previsión sobre lo malo."
   ],
   "entregable_esperado": "Tu plan revisado para que contemple, además del mejor escenario, qué harás si las cosas salen mal.",
   "nodos_previos": [
@@ -69,6 +69,39 @@
         "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-148-gestionar_el_riesgo_es_de_adultos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Gestionar el riesgo es, en el fondo, un acto de madurez. Un niño puede darse el lujo de no pensar en las cosas feas de la vida; un adulto responsable no, tiene que mirarlas de frente para que su ignorancia no termine en tragedia. Con los proyectos pasa igual: considerar solo el escenario color de rosa y meterlo en el plan es cosa de chiquillos, por más que lo disfracemos de actitud positiva. Madurar como emprendedor es tomar nota explícita de lo que puede salir mal y planear en consecuencia, sin dejar de ser optimista sobre lo que puede salir bien. No es pesimismo, es responsabilidad. Para el que emprende solo, esta madurez es especialmente suya: nadie más va a obligarlo a mirar lo incómodo, así que la disciplina de hacerlo lo separa del soñador que cruza los dedos.",
+      "texto_nuevo": "Gestionar el riesgo es, en el fondo, un acto de madurez. Un niño puede darse el lujo de no pensar en las cosas feas de la vida; un adulto responsable no, tiene que mirarlas de frente para que su ignorancia no termine en tragedia. Con los proyectos pasa igual: considerar solo el escenario color de rosa y meterlo en el plan es cosa de chiquillos, por más que lo disfracemos de actitud positiva. Madurar como emprendedor es tomar nota explícita de lo que puede salir mal y planear en consecuencia. No es pesimismo, es responsabilidad. Para el que emprende, la disciplina de mirar lo incómodo es lo que lo separa del soñador que cruza los dedos.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "92",
+        "frase": "Our infatuation with positive thinking and a can-do attitude has fixated us"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade una causa sobre quien emprende solo que el libro no plantea.; El libro no pide conservar el optimismo; señala el apego al pensamiento positivo como causa del problema.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-gestionar_el_riesgo_es_de_adultos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Combina el optimismo sobre lo bueno con la previsión sobre lo malo: ambos caben.",
+      "texto_nuevo": "Sugerencia de My Idea: combina el optimismo sobre lo bueno con la previsión sobre lo malo.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "96",
+        "frase": "We need to grow up, take explicit note of our risks, and plan accordingly."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no plantea combinar optimismo y previsión; queda como sugerencia sin contradecirlo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

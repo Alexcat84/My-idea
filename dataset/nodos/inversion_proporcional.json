@@ -7,12 +7,12 @@
   "resumen_teorico": "Principio central para aplicar los Cinco Porqués de forma efectiva en startups: la inversión en prevenir un problema debe ser proporcional a la gravedad del síntoma, no a un ideal teórico de proceso perfecto. Si el problema es menor, se hace una inversión pequeña; si es grave o recurrente, se justifica una inversión mayor. Esto evita el sobre-diseño de procesos (over-engineering) y la parálisis por intentar resolver todo de una vez, permitiendo que la organización acelere de manera orgánica a medida que reduce sus crisis recurrentes.",
   "pasos_accionables": [
     "Evaluar la severidad real del síntoma detectado en la sesión de Cinco Porqués",
-    "Definir una acción de prevención mínima viable para cada uno de los cinco niveles de causa identificados",
+    "Definir una acción de prevención proporcional a la gravedad del síntoma para cada uno de los cinco niveles de causa identificados: pequeña si el síntoma es menor, mayor si es más grave",
     "Evitar comprometerse a soluciones grandes (ej. programas de entrenamiento completos) ante síntomas menores",
     "Si el problema reaparece, escalar la inversión de prevención en la siguiente sesión",
     "Documentar el resultado de la inversión para verificar si redujo la recurrencia del problema"
   ],
-  "entregable_esperado": "Lista de acciones preventivas de bajo costo asignadas por nivel de causa, con seguimiento de recurrencia del problema",
+  "entregable_esperado": "Lista de acciones preventivas proporcionales a la gravedad del síntoma, asignadas por nivel de causa, con seguimiento de recurrencia del problema",
   "nodos_previos": [
     "five_whys_inversion_proporcional"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Invierte según la Gravedad",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-inversion_proporcional-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir una acción de prevención mínima viable para cada uno de los cinco niveles de causa identificados",
+      "texto_nuevo": "Definir una acción de prevención proporcional a la gravedad del síntoma para cada uno de los cinco niveles de causa identificados: pequeña si el síntoma es menor, mayor si es más grave",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2713",
+        "frase": "the investment should be smaller when the symptom is minor and larger"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide inversión proporcional en cada nivel, mayor ante síntomas graves; el paso la fija siempre mínima.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-150-inversion_proporcional-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista de acciones preventivas de bajo costo asignadas por nivel de causa, con seguimiento de recurrencia del problema",
+      "texto_nuevo": "Lista de acciones preventivas proporcionales a la gravedad del síntoma, asignadas por nivel de causa, con seguimiento de recurrencia del problema",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2713",
+        "frase": "larger when the symptom is more painful"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Fija el costo siempre bajo y pierde que la inversión crece cuando el síntoma es más grave.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

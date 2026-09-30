@@ -7,12 +7,12 @@
   "resumen_teorico": "Seis técnicas complementarias para entender profundamente al cliente: Data Detective (investigación de datos existentes), Journalist (entrevistas), Anthropologist (observación en contexto real), Impersonator (ponerse en el lugar del cliente), Cocreator (integrar al cliente en el proceso de creación) y Scientist (experimentos). Cada una tiene distinto nivel de dificultad, fortalezas y debilidades.",
   "pasos_accionables": [
     "Comenzar con investigación de datos existentes (Data Detective) como base.",
-    "Realizar entrevistas a clientes potenciales (Journalist) para insights rápidos.",
+    "Realizar entrevistas a clientes potenciales (Journalist) para insights rápidos, sabiendo que lo que dicen puede diferir de lo que hacen.",
     "Observar a los clientes en su contexto real (Anthropologist) para detectar comportamiento no sesgado.",
     "Vivir como el cliente (Impersonator) para experiencia de primera mano.",
     "Considerar cocreación o experimentos (Scientist) para ideas nuevas."
   ],
-  "entregable_esperado": "Perfil de cliente enriquecido con evidencia de al menos 2-3 técnicas distintas de investigación.",
+  "entregable_esperado": "Perfil de cliente enriquecido con evidencia de una buena mezcla de técnicas distintas de investigación.",
   "nodos_previos": [
     "seis_formas_innovar_perfil_cliente",
     "value_proposition_canvas",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Descubre a tu Cliente a Fondo",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-understanding_customers_tecnicas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar entrevistas a clientes potenciales (Journalist) para insights rápidos.",
+      "texto_nuevo": "Realizar entrevistas a clientes potenciales (Journalist) para insights rápidos, sabiendo que lo que dicen puede diferir de lo que hacen.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "3550-3560",
+        "frase": "customers might tell you one thing in an interview but behave differently"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la debilidad que el libro señala: el cliente puede decir una cosa y comportarse distinto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-150-understanding_customers_tecnicas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Perfil de cliente enriquecido con evidencia de al menos 2-3 técnicas distintas de investigación.",
+      "texto_nuevo": "Perfil de cliente enriquecido con evidencia de una buena mezcla de técnicas distintas de investigación.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "3522",
+        "frase": "Make sure you use a good mix of these techniques"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade una cifra mínima de técnicas; el libro pide una buena mezcla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

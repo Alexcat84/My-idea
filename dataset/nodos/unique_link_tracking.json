@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Unique Link Tracking",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace revela el interés real.",
+  "resumen_teorico": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace puede indicar el interés real.",
   "pasos_accionables": [
     "Crea un enlace único y rastreable (ej. con goo.gl) hacia información detallada.",
     "Presenta tu idea al cliente y comparte el enlace durante o después de la reunión.",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Rastrea el Interés Real",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-unique_link_tracking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace revela el interés real.",
+      "texto_nuevo": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace puede indicar el interés real.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8244",
+        "frase": "If the link wasn’t used, it may indicate lack of interest"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que no usar el enlace puede indicar falta de interés, no que lo revele.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

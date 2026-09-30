@@ -9,7 +9,7 @@
     "Probar todo cambio nuevo (producto, proceso o procedimiento) antes de su implementación general",
     "Demostrar que el producto opera en las condiciones ambientales reales de diseño",
     "Verificar por prueba que el proceso cumple los requisitos establecidos",
-    "Validar que los procedimientos sean precisos, comprensibles y efectivos ante testigos de calidad independientes"
+    "Validar que los procedimientos sean precisos, comprensibles y efectivos ante testigos de calidad independientes, viéndolos aplicar por quienes de verdad los van a ejecutar"
   ],
   "entregable_esperado": "Protocolo de calificación con evidencia de pruebas para cada cambio antes de su liberación",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Prueba Antes de Implementar",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-149-calificacion_productos_procesos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar que los procedimientos sean precisos, comprensibles y efectivos ante testigos de calidad independientes",
+      "texto_nuevo": "Validar que los procedimientos sean precisos, comprensibles y efectivos ante testigos de calidad independientes, viéndolos aplicar por quienes de verdad los van a ejecutar",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "817",
+        "frase": "It is another to witness actual reservation makers carrying the procedure out."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recuerda que la realidad es el criterio final: ver el procedimiento aplicado por quienes lo ejecutan.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

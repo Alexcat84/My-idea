@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El 'Error Humano' como Atribución Retrospectiva (Juicio a Posteriori)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "El 'error humano' no es una categoría objetiva y separada de comportamiento, sino una etiqueta o juicio que se hace después de conocer el resultado (hindsight). Lo que a algunos observadores les parece un error, para quien realiza la tarea puede ser una estrategia deliberada y exitosa para manejar problemas operacionales sutiles (como mostró el estudio de Hollnagel y Amalberti en control de tráfico aéreo, 2001). La atribución de error requiere un estándar de comparación que a menudo solo se vuelve visible en retrospectiva, gracias al conocimiento del resultado negativo. Sin ese resultado negativo, la misma acción podría considerarse normal, innovadora o incluso heroica.",
+  "resumen_teorico": "El 'error humano' no es una categoría objetiva y separada de comportamiento, sino una etiqueta o juicio que se hace después de conocer el resultado (hindsight). Lo que a algunos observadores les parece un error, para quien realiza la tarea puede ser una estrategia deliberada para manejar problemas operacionales sutiles (como mostró el estudio de Hollnagel y Amalberti en control de tráfico aéreo, 2001). La atribución de error requiere un estándar de comparación que a menudo solo se vuelve visible en retrospectiva, gracias al conocimiento del resultado negativo. Sin ese resultado negativo, la misma acción podría considerarse normal, innovadora o incluso heroica.",
   "pasos_accionables": [
     "Al analizar un incidente, evitar juzgar las acciones de los operadores usando el conocimiento del resultado final (hindsight bias).",
     "Entrevistar a los operadores involucrados para entender por qué su acción tenía sentido para ellos en ese momento (sensemaking local).",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Juzgas el Error a Toro Pasado",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-149-atribucion_retrospectiva_del_error-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El 'error humano' no es una categoría objetiva y separada de comportamiento, sino una etiqueta o juicio que se hace después de conocer el resultado (hindsight). Lo que a algunos observadores les parece un error, para quien realiza la tarea puede ser una estrategia deliberada y exitosa para manejar problemas operacionales sutiles (como mostró el estudio de Hollnagel y Amalberti en control de tráfico aéreo, 2001). La atribución de error requiere un estándar de comparación que a menudo solo se vuelve visible en retrospectiva, gracias al conocimiento del resultado negativo. Sin ese resultado negativo, la misma acción podría considerarse normal, innovadora o incluso heroica.",
+      "texto_nuevo": "El 'error humano' no es una categoría objetiva y separada de comportamiento, sino una etiqueta o juicio que se hace después de conocer el resultado (hindsight). Lo que a algunos observadores les parece un error, para quien realiza la tarea puede ser una estrategia deliberada para manejar problemas operacionales sutiles (como mostró el estudio de Hollnagel y Amalberti en control de tráfico aéreo, 2001). La atribución de error requiere un estándar de comparación que a menudo solo se vuelve visible en retrospectiva, gracias al conocimiento del resultado negativo. Sin ese resultado negativo, la misma acción podría considerarse normal, innovadora o incluso heroica.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "133",
+        "frase": "turned out to be deliberate strategies intended to manage subtle operational problems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de estrategias deliberadas destinadas a manejar problemas sutiles, sin afirmar que tuvieran éxito.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

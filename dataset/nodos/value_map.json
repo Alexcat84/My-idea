@@ -9,7 +9,7 @@
     "Listar todos los productos y servicios de la propuesta de valor",
     "Definir cómo cada pain reliever alivia un pain específico del cliente",
     "Definir cómo cada gain creator produce una ganancia específica para el cliente",
-    "Verificar que el mapa de valor conecte con el customer profile"
+    "Ordenar productos y servicios, pain relievers y gain creators según lo esenciales que son para el cliente, y verificar que el mapa de valor conecte con el customer profile"
   ],
   "entregable_esperado": "Mapa de valor completo con productos/servicios, pain relievers y gain creators",
   "nodos_previos": [
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Mapea tu Propuesta de Valor",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-value_map-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que el mapa de valor conecte con el customer profile",
+      "texto_nuevo": "Ordenar productos y servicios, pain relievers y gain creators según lo esenciales que son para el cliente, y verificar que el mapa de valor conecte con el customer profile",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "1573",
+        "frase": "Rank products and services, pain relievers, and gain creators according to how essential"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso del libro de ordenar productos, aliviadores y creadores según lo esenciales que son para el cliente.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

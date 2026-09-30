@@ -9,7 +9,7 @@
     "Construye un diagrama de flujo que vaya del origen organizacional hacia el momento operativo",
     "Identifica el modelo de riesgo que manejas y en qué invertiste para controlarlo",
     "Compara el trabajo tal como lo imaginas (procedimientos, manuales) con el trabajo tal como realmente se hace",
-    "Explica qué hiciste diferente ese día sin recurrir al 'error humano' como explicación fácil"
+    "Explica qué marcó la diferencia ese día, por qué las cosas se salieron de control esa vez si las condiciones siempre estaban presentes, sin recurrir al 'error humano' como explicación fácil"
   ],
   "entregable_esperado": "Un diagrama de flujo que muestre las condiciones organizacionales normales que contribuyeron al accidente, junto con el modelo de riesgo que identificaste",
   "nodos_previos": [
@@ -40,6 +40,23 @@
         "evidencia": "Q029-020: Investigar un accidente ya ocurrido para evitar que se repita es control y mejora de un negocio en marcha, no planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-149-analisis_del_extremo_organizacional-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explica qué hiciste diferente ese día sin recurrir al 'error humano' como explicación fácil",
+      "texto_nuevo": "Explica qué marcó la diferencia ese día, por qué las cosas se salieron de control esa vez si las condiciones siempre estaban presentes, sin recurrir al 'error humano' como explicación fácil",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1989",
+        "frase": "Allow the reader to understand what made the difference on the day of the accident."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide explicar qué marcó la diferencia ese día, no qué hizo distinto alguien.; Mismo defecto: el paso añade que hubo una conducta distinta de alguien, que el libro no dice.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

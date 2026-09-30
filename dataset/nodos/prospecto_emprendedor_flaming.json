@@ -4,9 +4,9 @@
   "dominio": "franquicias",
   "titulo_concepto": "Identificar y Evitar al 'Flaming Entrepreneur'",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, contagiando esta actitud a otros franquiciados.",
+  "resumen_teorico": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, y pueden contagiar esta actitud a los franquiciados que se sumen después.",
   "pasos_accionables": [
-    "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático",
+    "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático, historial académico poco destacado; ninguna por sí sola lo confirma, pero si aparecen, indagar más",
     "Hacer preguntas reveladoras como '¿cómo te sentirías si tuvieras una gran idea y no te dejáramos implementarla?'",
     "Observar si el candidato cuestiona el modelo de negocio antes de firmar",
     "Distinguir entre espíritu emprendedor valioso y tendencia a romper reglas",
@@ -55,6 +55,39 @@
         "motivo": "El sobreoptimismo del propio fundador no prepara la deteccion de franquiciados rebeldes a los estandares de marca; son sujetos y temas distintos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-148-prospecto_emprendedor_flaming-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, contagiando esta actitud a otros franquiciados.",
+      "texto_nuevo": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, y pueden contagiar esta actitud a los franquiciados que se sumen después.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4401",
+        "frase": "can set the tone for every subsequent franchisee who joins the system"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede marcar el tono para los siguientes franquiciados, no que lo haga siempre.; Mismo defecto: el 'can' del libro pasa a afirmación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-prospecto_emprendedor_flaming-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático",
+      "texto_nuevo": "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático, historial académico poco destacado; ninguna por sí sola lo confirma, pero si aparecen, indagar más",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4405-4415",
+        "frase": "none of these symptoms, taken by itself, guarantees a rebellious franchisee"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye un historial académico poco destacado.; Mismo defecto que la marca 0: falta la cautela y el indagar más.; Mismo defecto que la marca 1: falta el historial académico.; Se pierde que ninguna señal por sí sola lo garantiza y que al verlas hay que indagar más.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

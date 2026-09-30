@@ -1,0 +1,1459 @@
+[
+ {
+  "id": "final-e1-148-deja_de_ignorar_el_riesgo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "deja_de_ignorar_el_riesgo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Hay una trampa muy común: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Como emprendedor solo no tienes un equipo que te avise: tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista, te vuelve dueño de tu proyecto.",
+  "texto_nuevo": "Hay una trampa en la que a veces se cae: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista, te vuelve dueño de tu proyecto.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "70",
+   "frase": "Companies that seem to understand the necessity of risk-taking are sometimes prone"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que se cae en esto a veces; 'muy común' endurece la frecuencia.; El libro no dice nada de no tener un equipo que avise; es un hecho añadido.; Mismo defecto: el libro dice 'sometimes prone', no que sea muy común.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-el_riesgo_eres_tu-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_eres_tu",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+  "texto_nuevo": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+  "cita": {
+   "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1006",
+   "frase": "usually left out of the estimation process"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide reservar holgura en la estimación porque la rotación suele quedar fuera de ella; el resumen lo omite.; Mismo defecto: se pierde la holgura en los plazos que el libro pide para este riesgo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_eres_tu",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+  "texto_nuevo": "Sugerencia de My Idea: documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+  "cita": {
+   "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1006",
+   "frase": "you'll want to allocate some buffer to contain the risk"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro maneja la rotación con holgura y personal de reserva, no documentando accesos; queda como sugerencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_eres_tu",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+  "texto_nuevo": "Sugerencia de My Idea: nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+  "cita": {
+   "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1006",
+   "frase": "you'll want to allocate some buffer to contain the risk"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de un contacto de emergencia con acceso; queda como sugerencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_eres_tu",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
+  "texto_nuevo": "Sugerencia de My Idea: escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
+  "cita": {
+   "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1006",
+   "frase": "you'll want to allocate some buffer to contain the risk"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone un plan de aviso a clientes; queda como sugerencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_eres_tu",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte.",
+  "texto_nuevo": "Sugerencia de My Idea: cuida tu energía y tu salud como cuidas tu negocio.",
+  "cita": {
+   "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1006",
+   "frase": "you'll want to allocate some buffer to contain the risk"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice nada de la salud o la energía como activo.; Mismo defecto: la idea de la salud como activo no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-148-el_riesgo_eres_tu-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_eres_tu",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas un tiempo.",
+  "texto_nuevo": "Un documento con dónde vive todo, un contacto de emergencia con acceso, un plan de qué pasa con tus clientes si faltas un tiempo y la holgura que reservas en tus plazos por esa posibilidad.",
+  "cita": {
+   "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1006",
+   "frase": "you'll want to allocate some buffer to contain the risk"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El único manejo que da el libro para este riesgo, la holgura en la estimación, falta en el entregable.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-el_riesgo_nunca_se_acaba_se_administra-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_nunca_se_acaba_se_administra",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.",
+  "texto_nuevo": "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina: sigue vigilando las señales de que un riesgo se está volviendo problema y buscando riesgos nuevos, sobre todo a mitad del camino.",
+  "cita": {
+   "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1154-1162",
+   "frase": "risk management needs to be particularly active"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concreta qué se mantiene activo (vigilar indicadores y seguir descubriendo riesgos) y pide más actividad a mitad del proyecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-148-el_valor_tambien_es_incierto-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "el_valor_tambien_es_incierto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Descarta las apuestas que solo se justifican con el mejor caso del valor.",
+  "texto_nuevo": "Sugerencia de My Idea: desconfía de las apuestas que solo se justifican con el mejor caso del valor.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1502",
+   "frase": "No workable philosophy of risk-taking can ignore value."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da una regla de descarte; queda como sugerencia sin contradecirlo.; Mismo defecto: el libro liga el riesgo aceptable a lo que está en juego, no ordena descartar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-148-entrega_por_partes_para_exponer_el_riesgo-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos.",
+  "texto_nuevo": "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos, y decide qué entra en cada una antes de construir la primera.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1228",
+   "frase": "described in an incremental delivery plan (see below) before the first increment is constructed"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige fijar por adelantado qué entra en cada versión; sin eso se pierden los beneficios.; Mismo defecto: el plan de versiones se decide antes de construir la primera.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-148-gestionar_el_riesgo_es_de_adultos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gestionar_el_riesgo_es_de_adultos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Gestionar el riesgo es, en el fondo, un acto de madurez. Un niño puede darse el lujo de no pensar en las cosas feas de la vida; un adulto responsable no, tiene que mirarlas de frente para que su ignorancia no termine en tragedia. Con los proyectos pasa igual: considerar solo el escenario color de rosa y meterlo en el plan es cosa de chiquillos, por más que lo disfracemos de actitud positiva. Madurar como emprendedor es tomar nota explícita de lo que puede salir mal y planear en consecuencia, sin dejar de ser optimista sobre lo que puede salir bien. No es pesimismo, es responsabilidad. Para el que emprende solo, esta madurez es especialmente suya: nadie más va a obligarlo a mirar lo incómodo, así que la disciplina de hacerlo lo separa del soñador que cruza los dedos.",
+  "texto_nuevo": "Gestionar el riesgo es, en el fondo, un acto de madurez. Un niño puede darse el lujo de no pensar en las cosas feas de la vida; un adulto responsable no, tiene que mirarlas de frente para que su ignorancia no termine en tragedia. Con los proyectos pasa igual: considerar solo el escenario color de rosa y meterlo en el plan es cosa de chiquillos, por más que lo disfracemos de actitud positiva. Madurar como emprendedor es tomar nota explícita de lo que puede salir mal y planear en consecuencia. No es pesimismo, es responsabilidad. Para el que emprende, la disciplina de mirar lo incómodo es lo que lo separa del soñador que cruza los dedos.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "92",
+   "frase": "Our infatuation with positive thinking and a can-do attitude has fixated us"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade una causa sobre quien emprende solo que el libro no plantea.; El libro no pide conservar el optimismo; señala el apego al pensamiento positivo como causa del problema.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-gestionar_el_riesgo_es_de_adultos-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "gestionar_el_riesgo_es_de_adultos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Combina el optimismo sobre lo bueno con la previsión sobre lo malo: ambos caben.",
+  "texto_nuevo": "Sugerencia de My Idea: combina el optimismo sobre lo bueno con la previsión sobre lo malo.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "96",
+   "frase": "We need to grow up, take explicit note of our risks, and plan accordingly."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no plantea combinar optimismo y previsión; queda como sugerencia sin contradecirlo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-148-el_riesgo_nunca_se_acaba_se_administra-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "el_riesgo_nunca_se_acaba_se_administra",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El riesgo no se acaba nunca, y ese es justo el punto: se administra. No hay un día en que hayas eliminado todos tus riesgos y puedas bajar la guardia; querer un negocio sin riesgo es querer un negocio sin recompensa. Lo que cambia con el tiempo no es la ausencia de riesgo, sino tu manera de convivir con él: dejas de temerle o de negarlo, y aprendes a llevarlo de la mano, a nombrarlo, medirlo, responderle y seguir. La gestión de riesgo no es una tarea que se completa, es una forma de caminar: con los ojos abiertos, un colchón bajo el brazo y la calma de saber que ningún golpe te tomará totalmente desprevenido. Para el emprendedor, hacer las paces con esto (que el riesgo es compañero de viaje, no enemigo a vencer) es lo que le permite arriesgar con valentía y dormir tranquilo a la vez.",
+  "texto_nuevo": "El riesgo no se acaba nunca, y ese es justo el punto: se administra. No hay un día en que hayas eliminado todos tus riesgos y puedas bajar la guardia; querer un negocio sin riesgo es querer un negocio sin recompensa. Lo que cambia con el tiempo no es la ausencia de riesgo, sino tu manera de convivir con él: dejas de temerle o de negarlo, y aprendes a llevarlo de la mano, a nombrarlo, medirlo, responderle y seguir. La gestión de riesgo no es una tarea que se completa, es una forma de caminar: con los ojos abiertos, un colchón bajo el brazo y la calma de saber que ningún golpe te tomará totalmente desprevenido. Para el emprendedor, hacer las paces con esto (que el riesgo es compañero de viaje, no enemigo a vencer) es lo que le permite arriesgar con valentía sabiendo cuánto arriesga.",
+  "cita": {
+   "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "268",
+   "frase": "You're taking a risk, but you know how much risk."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Dormir tranquilo es un efecto prometido que el libro no afirma; dice que se arriesga sabiendo cuánto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-el_valor_tambien_es_incierto-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "el_valor_tambien_es_incierto",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Solemos tratar el costo como incierto y el valor como una promesa segura, pero eso es un engaño. El beneficio que esperas de tu proyecto es tan incierto como su costo: las ventas que imaginas, los clientes que llegarán, el precio que aguantará el mercado, todo es un rango, no un dato. Si mides el costo con cuidado pero das el valor por hecho, tu comparación entre riesgo y beneficio está coja. La disciplina es medir el valor con la misma honestidad y precisión que el costo: exprésalo también como un rango con su incertidumbre. Para el emprendedor, reconocer que el valor puede quedar por debajo de lo soñado evita el error clásico de justificar cualquier riesgo con un beneficio inflado que quizá nunca llegue.",
+  "texto_nuevo": "Solemos excusarnos de estimar el valor diciendo que es demasiado incierto para predecirlo, pero eso es un engaño. El beneficio que esperas de tu proyecto es tan incierto como su costo: las ventas que imaginas, los clientes que llegarán, el precio que aguantará el mercado, todo es un rango, no un dato. Si mides el costo con cuidado pero das el valor por hecho, tu comparación entre riesgo y beneficio está coja. La disciplina es medir el valor con la misma honestidad y precisión que el costo: exprésalo también como un rango con su incertidumbre. Para el emprendedor, reconocer que el valor puede quedar por debajo de lo soñado evita el error clásico de justificar cualquier riesgo con un beneficio inflado que quizá nunca llegue.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1442",
+   "frase": "often excuse themselves from predicting new- value because they reason that it's too uncertain"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que se evita predecir el valor por verlo demasiado incierto, no que se dé por seguro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-el_valor_tambien_es_incierto-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "el_valor_tambien_es_incierto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Escribe el valor que esperas de tu proyecto como un rango, no como un número seguro.",
+  "texto_nuevo": "Escribe el valor que esperas de tu proyecto como un rango, con su extremo más optimista, el menos optimista y el más probable, no como un número seguro.",
+  "cita": {
+   "libro": "DeMarco y Lister, Waltzing with Bears",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1444",
+   "frase": "Someplace in between the two is the most likely expectation."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro acota el valor con tres puntos; el paso pierde el más probable.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-148-reduccion_riesgo_franquiciante-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "reduccion_riesgo_franquiciante",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El franquiciado asume toda la responsabilidad de inversión (build-out, inventario, empleados, capital de trabajo) y la mayoría de las responsabilidades legales (litigios laborales, de consumidor, accidentes), reduciendo drásticamente el riesgo del franquiciante. El caso de Bennigan's (2008) ilustra cómo una estructura con más unidades franquiciadas que corporativas puede sobrevivir mejor una crisis financiera.",
+  "texto_nuevo": "El franquiciado asume toda la responsabilidad de inversión (build-out, inventario, empleados, capital de trabajo) y la mayoría de las responsabilidades legales (litigios laborales, de consumidor, accidentes), reduciendo drásticamente el riesgo del franquiciante. El caso de Bennigan's (2008), con más restaurantes propios que franquiciados, permite suponer, aunque nadie puede asegurarlo, que una estructura con mayoría de unidades franquiciadas habría sobrevivido mejor a la crisis.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "384",
+   "frase": "While no one can say for certain, one can speculate"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro lo presenta como especulación que nadie puede asegurar; el nodo lo da como ilustración demostrada.; Se pierde que Bennigan's tenía más unidades propias que franquiciadas, lo que da sentido al caso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-relaciones_publicas_leads_franquicia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "relaciones_publicas_leads_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las relaciones públicas son una de las herramientas más poderosas de generación de leads de franquicia, aportando leads de alta calidad gracias al respaldo de un tercero (medio de comunicación), aunque con menor volumen y previsibilidad que otros canales. Casos como Krispy Kreme, Auntie Anne's, The Original SoupMan y apariciones en programas como Shark Tank o Undercover Boss muestran cómo la publicidad puede generar cientos o miles de leads sin gasto directo en publicidad. Contratar una firma de PR especializada en franquicias aporta credibilidad, contactos y capacidad de generar historias atractivas, además de beneficiar el SEO mediante backlinks de medios digitales.",
+  "texto_nuevo": "Las relaciones públicas pueden ser una de las herramientas más poderosas de generación de leads de franquicia, aportando leads de alta calidad gracias al respaldo de un tercero (medio de comunicación), aunque con menor volumen y previsibilidad que otros canales y un costo por lead relativamente alto. Casos como Krispy Kreme, Auntie Anne's, The Original SoupMan y apariciones en programas como Shark Tank o Undercover Boss muestran cómo la publicidad puede generar cientos o miles de leads sin gasto directo en publicidad. Contratar una firma de PR especializada en franquicias aporta credibilidad, contactos y capacidad de generar historias atractivas, además de beneficiar el SEO mediante backlinks de medios digitales.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3674",
+   "frase": "Effective public relations can be one of the most powerful tools"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice 'can be one of the most powerful'; el nodo lo endurece.; Mismo defecto: falta el costo por lead relativamente alto.; Se pierde el costo por lead relativamente alto que el libro pone junto al menor volumen.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-rechazo_gentil_prospecto-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "rechazo_gentil_prospecto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comunica el rechazo poniendo por delante el éxito del futuro franquiciado",
+  "texto_nuevo": "Comunica el rechazo poniendo por delante el éxito del futuro franquiciado; si lo rechazas después del Discovery Day, no entres en las razones específicas",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4579",
+   "frase": "But do not go into specific reasons for the rejection."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide no entrar en razones específicas al rechazar tras la evaluación de encaje.; Mismo defecto: tras el Discovery Day no se dan razones específicas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-148-reduccion_riesgo_percibido-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "reduccion_riesgo_percibido",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuanto mayor es el riesgo percibido (por ser una marca nueva), mayor retorno exigirá el prospecto. Los nuevos franquiciadores pueden reducir este riesgo construyendo credibilidad: contratando management de calidad, abogados especializados, uniéndose a la IFA, trabajando con consultores reconocidos, y mejorando la imagen corporativa (logo, papelería, sitio web) para verse mejor que sus competidores directos.",
+  "texto_nuevo": "Cuanto mayor es el riesgo percibido (por ser una marca nueva), mayor retorno exigirá el prospecto. Los nuevos franquiciadores pueden reducir este riesgo construyendo credibilidad: contratando management de calidad, abogados especializados, consultores reconocidos y una firma de PR de franquicias, uniéndose a la IFA, cultivando relaciones muy sólidas con sus franquiciados, y mejorando la imagen corporativa (logo, papelería, sitio web) para verse mejor que sus competidores directos.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3242",
+   "frase": "Build incredibly strong relationships with your existing franchisees. And retain a franchise public relations firm."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye relaciones muy sólidas con los franquiciados y una firma de PR de franquicias.; Mismo defecto: faltan dos elementos de la lista de credibilidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-reduccion_riesgo_percibido-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "reduccion_riesgo_percibido",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Contratar abogado especializado en franquicias y consultores establecidos",
+  "texto_nuevo": "Contratar abogado especializado en franquicias, consultores establecidos y una firma de relaciones públicas de franquicias",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3242",
+   "frase": "And retain a franchise public relations firm."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye contratar una firma de PR de franquicias entre las vías de credibilidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-148-reduccion_riesgo_percibido-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "reduccion_riesgo_percibido",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Publicar una Representación de Desempeño Financiero (FPR) si los resultados lo respaldan",
+  "texto_nuevo": "Publicar una Representación de Desempeño Financiero (FPR) si los resultados lo respaldan, tras consultarlo con tu abogado o consultor",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3240",
+   "frase": "speak to your attorney and/or consultant before finalizing this decision"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide consultar al abogado o consultor antes de decidir publicar la FPR.; Mismo defecto: falta la consulta previa al abogado o consultor.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-148-rentabilidad_incrementada_franquicia-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "rentabilidad_incrementada_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Proyectar el estado de resultados del franquiciante basado en ingresos por regalías, no ventas totales",
+  "texto_nuevo": "Proyectar el estado de resultados del franquiciante basado en ingresos por regalías y, si los hay, ventas de producto o reembolsos de proveedores, no en ventas totales",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1464",
+   "frase": "based on royalties and estimated product sales or vendor rebates (if any)"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro estima los ingresos con regalías y también ventas de producto o reembolsos de proveedores si los hay.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-148-publicidad_impresa_franquicia-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "publicidad_impresa_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aunque en declive, la publicidad impresa (directorios de franquicia, publicaciones específicas de industria) puede seguir siendo efectiva en ciertos contextos, especialmente en mercados locales o regionales, aunque tiene costos por lead más altos y tasas de cierre promedio frente a canales digitales. Su medición es compleja porque los interesados suelen terminar buscando información en internet, ocultando el origen real del lead y dificultando su atribución. Sus ventajas incluyen la posibilidad de transmitir mensajes más extensos, fácil localización geográfica y valor de permanencia ('pass around value'), lo que la hace útil cuando el perfil de franquiciado objetivo aún consume este tipo de medios.",
+  "texto_nuevo": "Aunque en declive, la publicidad impresa (directorios de franquicia, publicaciones específicas de industria) puede seguir siendo efectiva en ciertos contextos, aunque tiene costos por lead más altos y tasas de cierre promedio frente a canales digitales. Su medición es compleja porque los interesados suelen terminar buscando información en internet, ocultando el origen real del lead y dificultando su atribución. Sus ventajas incluyen la posibilidad de transmitir mensajes más extensos, fácil localización geográfica y valor de permanencia ('pass around value'), lo que la hace útil cuando el perfil de franquiciado objetivo aún consume este tipo de medios.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3772",
+   "frase": "can also be effective, depending on the profile of your targeted franchisee"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro trata la localización como ventaja de formato; no dice que sea más efectiva en mercados locales.; Mismo defecto: 'especialmente en mercados locales' no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-publicidad_impresa_franquicia-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "publicidad_impresa_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide la prioridad presupuestaria del impreso según el presupuesto total disponible",
+  "texto_nuevo": "Decide la prioridad presupuestaria del impreso según el presupuesto total disponible, teniendo en cuenta que para la mayoría no es prioritario y con un presupuesto limitado probablemente no entra",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3774",
+   "frase": "if you have a limited budget, it is not likely to make the cut"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que para la mayoría el impreso no es prioridad y con presupuesto limitado probablemente no entra.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-148-prospecto_emprendedor_flaming-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "prospecto_emprendedor_flaming",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, contagiando esta actitud a otros franquiciados.",
+  "texto_nuevo": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, y pueden contagiar esta actitud a los franquiciados que se sumen después.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4401",
+   "frase": "can set the tone for every subsequent franchisee who joins the system"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede marcar el tono para los siguientes franquiciados, no que lo haga siempre.; Mismo defecto: el 'can' del libro pasa a afirmación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-prospecto_emprendedor_flaming-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "prospecto_emprendedor_flaming",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático",
+  "texto_nuevo": "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático, historial académico poco destacado; ninguna por sí sola lo confirma, pero si aparecen, indagar más",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4405-4415",
+   "frase": "none of these symptoms, taken by itself, guarantees a rebellious franchisee"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye un historial académico poco destacado.; Mismo defecto que la marca 0: falta la cautela y el indagar más.; Mismo defecto que la marca 1: falta el historial académico.; Se pierde que ninguna señal por sí sola lo garantiza y que al verlas hay que indagar más.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-148-proteccion_propiedad_intelectual_franq-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "proteccion_propiedad_intelectual_franq",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Clasificar el manual de operaciones y sistemas de negocio como secretos comerciales confidenciales",
+  "texto_nuevo": "Clasificar el manual de operaciones y sistemas de negocio como secretos comerciales confidenciales y tratarlos como tales en la práctica, sin dejarlos circular libremente, porque de lo contrario se pierde esa protección",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2630",
+   "frase": "must be treated as such to be protectable as trade secrets"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: rotularlo no basta si circula libremente.; Se pierde que el manual debe tratarse como confidencial en la práctica o se pierden los derechos de secreto comercial.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-148-referidos_franquiciados_existentes-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "referidos_franquiciados_existentes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los franquiciados actuales son una de las fuentes más valiosas y económicas de nuevos leads de franquicia. Al estar orgullosos de su decisión de negocio, suelen ser entusiastas embajadores con credibilidad instantánea ante prospectos, especialmente si conocen a personas en otras regiones. Contactarlos proactivamente antes de vender territorios adyacentes también previene conflictos de invasión de territorio (encroachment) y puede motivarlos a expandirse ellos mismos a multi-unidad.",
+  "texto_nuevo": "Los franquiciados actuales son una de las fuentes más valiosas y económicas de nuevos leads de franquicia. Al estar orgullosos de su decisión de negocio, suelen ser entusiastas embajadores con credibilidad instantánea ante prospectos, especialmente si conocen a personas en otras regiones. Contactarlos proactivamente antes de vender territorios adyacentes también suele suavizar los conflictos de invasión de territorio (encroachment) y puede motivarlos a expandirse ellos mismos a multi-unidad.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3965",
+   "frase": "will often soften the blow"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la llamada temprana a menudo suaviza el golpe, no que prevenga el conflicto.; Mismo defecto: 'often soften the blow' pasa a 'previene'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-148-relaciones_publicas_leads_franquicia-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "relaciones_publicas_leads_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Contratar una firma de PR especializada en franquicias cuando el presupuesto lo permita",
+  "texto_nuevo": "Contratar una firma de PR especializada en franquicias cuando el presupuesto lo permita, salvo que ya haya en el equipo alguien con las habilidades y la experiencia necesarias",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3704",
+   "frase": "Unless you have people on staff with the necessary skills and background"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona contratar la firma a no tener ya en el equipo a alguien con esas habilidades.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-149-concepto_reconocimiento_ring_of_quality-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "concepto_reconocimiento_ring_of_quality",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El reconocimiento es el cuarto pilar del programa de calidad y frecuentemente el más descuidado. En ITT se implementó el 'Ring of Quality', un premio nominado por pares (no por subordinados ni por jefes) para reconocer contribuciones sobresalientes y sostenidas a la calidad. Se demostró que el reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) es más efectivo que las recompensas monetarias para generar compromiso duradero.",
+  "texto_nuevo": "El reconocimiento es el cuarto pilar del programa de calidad y a menudo se pasa por alto o se hace mal. En ITT se implementó el 'Ring of Quality', un premio nominado por pares (no por subordinados ni por jefes) para reconocer contribuciones sobresalientes y sostenidas a la calidad. La reacción a estos premios dejó claro que el reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) funciona mejor que las recompensas monetarias, que no son lo bastante personales para reconocer de verdad.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "115-117",
+   "frase": "Cash or financial awards are not personal enough to provide effective recognition."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El efecto de generar compromiso duradero no está en el libro, que habla de reconocimiento personal.; El libro dice que a menudo se pasa por alto o se hace mal; no lo compara con los otros pilares.; El libro solo dice que el dinero no es lo bastante personal para reconocer; el compromiso duradero es añadido.; Misma comparación añadida: el libro no dice que sea el pilar más descuidado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-concepto_cuatro_pilares_programa_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "concepto_cuatro_pilares_programa_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+  "texto_nuevo": "Según la experiencia en ITT, un programa de calidad corporativo sólido se sostiene sobre cuatro pilares: (1) Participación y actitud de la dirección, (2) Gestión de calidad profesional (equipos y consejos de calidad independientes, con una formación común en calidad que es la columna vertebral del esfuerzo), (3) Programas originales (herramientas prácticas como Zero Defects, Buck a Day, etc.), y (4) Reconocimiento (premios significativos, no monetarios). Estos pilares sostienen una 'mesa de sistemas de integridad' que incluye todas las disciplinas de calidad de la organización.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "107",
+   "frase": "It is the backbone of the total effort."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la formación común (la escuela de calidad) como columna vertebral de este pilar.; Mismo matiz: se cae la formación que sostiene a los consejos y a los programas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-concepto_cuatro_pilares_programa_calidad-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "concepto_cuatro_pilares_programa_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Sostener el esfuerzo durante varios años (5 a 7 años típicamente) para lograr un cambio cultural duradero.",
+  "texto_nuevo": "Sostener el esfuerzo durante varios años (en ITT tomó de 5 a 7 años) para lograr un cambio cultural duradero.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "151",
+   "frase": "It took five to seven years of unrelenting effort to achieve the cultural revolution"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da de cinco a siete años como lo que tomó en ITT, no como plazo típico.; Misma generalización de la cifra de ITT.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-149-cero_defectos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cero_defectos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cero Defectos es la actitud de prevención que promueve hacer el trabajo bien desde la primera vez. No es un programa de motivación ni un eslogan pasajero, sino un estándar de desempeño y comportamiento que debe comunicarse con absoluta claridad, trabajando caso por caso en lugar de mensajes masivos e impersonales. La gente está condicionada a creer que el error es inevitable; cambiar esa mentalidad exige establecer el estándar, comunicarlo, reconocer el desempeño de forma genuina evitando premios en efectivo como único mecanismo, y reciclar el proceso de forma continua hasta que se vuelva parte habitual de tu trabajo. Aplica a todas tus áreas, no solo a la producción o entrega del producto.",
+  "texto_nuevo": "Cero Defectos es la actitud de prevención que promueve hacer el trabajo bien desde la primera vez. No es un programa de motivación ni un eslogan pasajero, sino un estándar de desempeño y comportamiento que debe comunicarse con absoluta claridad, trabajando caso por caso en lugar de mensajes masivos e impersonales. La gente está condicionada a creer que el error es inevitable; cambiar esa mentalidad exige establecer el estándar, comunicarlo, reconocer el desempeño de forma genuina con premios que no sean económicos, y reciclar el proceso de forma continua hasta que se vuelva parte habitual de tu trabajo. Aplica a todas tus áreas, no solo a la producción o entrega del producto.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1637",
+   "frase": "The prizes or awards should not be financial. Recognition is what is important."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que los premios no sean económicos; el nodo deja el efectivo como opción parcial.; Mismo matiz: 'como único mecanismo' abre la puerta al dinero que el libro descarta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-cero_defectos-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "cero_defectos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo",
+  "texto_nuevo": "Reconoce el desempeño alineado al estándar de forma genuina, con premios que no sean económicos",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1637",
+   "frase": "The prizes or awards should not be financial. Recognition is what is important."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide premios no económicos, no solo que el efectivo no sea el único mecanismo.; Mismo matiz sobre los premios en dinero.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-149-concepto_vs_tecnica-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "concepto_vs_tecnica",
+  "campo": "pasos_accionables",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Diseñar comunicaciones que enfaticen el 'por qué' filosófico detrás de cada paso técnico",
+  "texto_nuevo": "Presentar el programa como una técnica de gestión, pero hacer cada paso lo más personal posible para que nadie crea que funciona sin su esfuerzo",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2483-2485",
+   "frase": "That's why I have to make all this as personal as possible."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro presenta el programa como técnica de gestión y lo vuelve personal; el paso pide subrayar la filosofía.; Es el mismo defecto y va en sentido opuesto al libro, que presenta el concepto como si fuera solo técnica.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-149-concepto_vs_tecnica-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "concepto_vs_tecnica",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Mensaje institucional que combine claramente el fundamento filosófico (concepto) con las herramientas prácticas (técnica) del programa",
+  "texto_nuevo": "Un plan para presentar el programa como técnica de gestión (herramientas prácticas) y hacer personal, para cada persona, el compromiso con la mejora (concepto)",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2483-2485",
+   "frase": "That's why I have to make all this as personal as possible."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El mensaje institucional que explica la filosofía no está en el libro; su remedio es hacerlo personal.; Mismo añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-compromiso_gerencial_calidad-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "compromiso_gerencial_calidad",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Una postura de calidad clara, escrita y comunicada a las personas involucradas en los próximos días",
+  "texto_nuevo": "Una postura de calidad clara, escrita y comunicada a las personas involucradas",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2059",
+   "frase": "It should be stated, restated, and publicized until everyone knows, understands, and believes it."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija plazo; pide difundir la política hasta que todos la entiendan.; Mismo plazo añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-concepto_quality_is_free-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "concepto_quality_is_free",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantías e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofía de trabajo.",
+  "texto_nuevo": "La calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantías e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, probablemente puedas aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofía de trabajo.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "35",
+   "frase": "you can probably increase your profit by an amount equal to 5 to 10 percent"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'probablemente'; el nodo lo afirma sin cautela.; Mismo endurecimiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-calificacion_productos_procesos-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "calificacion_productos_procesos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Validar que los procedimientos sean precisos, comprensibles y efectivos ante testigos de calidad independientes",
+  "texto_nuevo": "Validar que los procedimientos sean precisos, comprensibles y efectivos ante testigos de calidad independientes, viéndolos aplicar por quienes de verdad los van a ejecutar",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "817",
+   "frase": "It is another to witness actual reservation makers carrying the procedure out."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recuerda que la realidad es el criterio final: ver el procedimiento aplicado por quienes lo ejecutan.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-149-cinco_suposiciones_erroneas_calidad-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "cinco_suposiciones_erroneas_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Redefine el rol de quien revisa la calidad: que mida y reporte, y no que cargue solo con la responsabilidad de resolverlo todo",
+  "texto_nuevo": "Redefine el rol de quien revisa la calidad: que mida, reporte y lidere una actitud positiva hacia la mejora con formación, y no que cargue solo con la responsabilidad de resolverlo todo",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "199",
+   "frase": "they should lead the drive to develop a positive attitude toward quality improvement"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro también le pide liderar la actitud positiva hacia la mejora con programas de formación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-149-abandonar_arreglos_rapidos-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "abandonar_arreglos_rapidos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tras un accidente o fallo, la presión por mostrar resultados empuja a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda detiene el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos reducen la transparencia, y la tecnología añadida crea nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
+  "texto_nuevo": "Tras un accidente o fallo, la presión por mostrar resultados empuja a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda detiene el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos, si no quitas ninguno, tienden a reducir la transparencia y a aumentar el incumplimiento, y la tecnología añadida probablemente cree nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "3956-3958",
+   "frase": "when you don't take anything away, additional procedures also tend to create less transparency"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro condiciona el efecto a no quitar nada, dice 'tienden' y añade el incumplimiento.; El libro dice que la tecnología añadida probablemente cree nuevas oportunidades de error.; Mismo endurecimiento sobre la tecnología.; Mismo matiz sobre los procedimientos añadidos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-autonomia_maestria_proposito-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "autonomia_maestria_proposito",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Diseñar espacios de retroalimentación significativa y elección sobre métodos de trabajo",
+  "texto_nuevo": "Diseñar espacios de retroalimentación significativa y elección sobre métodos de trabajo, y si alguna forma nueva resulta menos segura, conversarla y acordar en conjunto cómo trabajar mejor",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "3270",
+   "frase": "this offers excellent opportunities for conversation and joint agreements about how best to work"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz.; Se cae la cautela del libro: explorar puede llevar a formas menos seguras, y eso se conversa y se acuerda.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-149-analisis_factores_distales_proximales-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_factores_distales_proximales",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un análisis de 'error humano' completo no debe limitarse al 'extremo agudo' (sharp end, ej. sala de control) sino extenderse a los factores distales: entrenamiento, documentación, decisiones gerenciales, regulaciones e influencias de la industria. El desempeño de las personas en el extremo agudo es producto del entorno que las preparó, por lo que atender los factores distales es necesario desde una perspectiva preventiva, aunque más difícil de vincular causalmente.",
+  "texto_nuevo": "Un análisis de 'error humano' completo no debe limitarse al 'extremo agudo' (sharp end, ej. sala de control) sino extenderse a los factores distales: entrenamiento, documentación, decisiones gerenciales, regulaciones e influencias de la industria. El desempeño de las personas en el extremo agudo es producto del entorno que las preparó, por lo que atender los factores distales, donde sea posible, es necesario desde una perspectiva preventiva, aunque más difícil de vincular causalmente.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "2084",
+   "frase": "attention to distal factors is necessary (where possible) also from a preventive perspective"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro lo limita con 'donde sea posible'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-atribucion_retrospectiva_del_error-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "atribucion_retrospectiva_del_error",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El 'error humano' no es una categoría objetiva y separada de comportamiento, sino una etiqueta o juicio que se hace después de conocer el resultado (hindsight). Lo que a algunos observadores les parece un error, para quien realiza la tarea puede ser una estrategia deliberada y exitosa para manejar problemas operacionales sutiles (como mostró el estudio de Hollnagel y Amalberti en control de tráfico aéreo, 2001). La atribución de error requiere un estándar de comparación que a menudo solo se vuelve visible en retrospectiva, gracias al conocimiento del resultado negativo. Sin ese resultado negativo, la misma acción podría considerarse normal, innovadora o incluso heroica.",
+  "texto_nuevo": "El 'error humano' no es una categoría objetiva y separada de comportamiento, sino una etiqueta o juicio que se hace después de conocer el resultado (hindsight). Lo que a algunos observadores les parece un error, para quien realiza la tarea puede ser una estrategia deliberada para manejar problemas operacionales sutiles (como mostró el estudio de Hollnagel y Amalberti en control de tráfico aéreo, 2001). La atribución de error requiere un estándar de comparación que a menudo solo se vuelve visible en retrospectiva, gracias al conocimiento del resultado negativo. Sin ese resultado negativo, la misma acción podría considerarse normal, innovadora o incluso heroica.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "133",
+   "frase": "turned out to be deliberate strategies intended to manage subtle operational problems"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de estrategias deliberadas destinadas a manejar problemas sutiles, sin afirmar que tuvieran éxito.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-adaptaciones_procedimentales-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "adaptaciones_procedimentales",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los procedimientos no pueden ser suficientemente sensibles a todas las variaciones de contexto en sistemas complejos y dinámicos. Aplicar procedimientos no es simplemente seguir reglas (IF-THEN), sino una actividad cognitiva sustantiva y habilidosa. Cuando múltiples procedimientos deben aplicarse simultáneamente y se contradicen, las personas deben adaptar; esta adaptación, lejos de ser una 'violación', suele ser una inversión activa en la seguridad.",
+  "texto_nuevo": "Los procedimientos no pueden ser suficientemente sensibles a todas las variaciones de contexto en sistemas complejos y dinámicos. Aplicar procedimientos no es simplemente seguir reglas (IF-THEN), sino una actividad cognitiva sustantiva y habilidosa. Cuando múltiples procedimientos deben aplicarse simultáneamente y se contradicen, las personas deben adaptar; esta adaptación, lejos de ser una 'violación', suele ser una inversión activa en la seguridad. Aun así, es un equilibrio delicado: adaptar puede salir mal y ceñirse también.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "2397-2401",
+   "frase": "Applying procedures can thus be a delicate balance between"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta aplicar procedimientos como un equilibrio delicado: adaptar puede fallar y ceñirse también.; Mismo matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-analisis_del_extremo_organizacional-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_del_extremo_organizacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Explica qué hiciste diferente ese día sin recurrir al 'error humano' como explicación fácil",
+  "texto_nuevo": "Explica qué marcó la diferencia ese día, por qué las cosas se salieron de control esa vez si las condiciones siempre estaban presentes, sin recurrir al 'error humano' como explicación fácil",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "1989",
+   "frase": "Allow the reader to understand what made the difference on the day of the accident."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide explicar qué marcó la diferencia ese día, no qué hizo distinto alguien.; Mismo defecto: el paso añade que hubo una conducta distinta de alguien, que el libro no dice.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-149-analisis_conversacional-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_conversacional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Técnica de notación de grano fino para transcripciones de voz, que captura pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características, basadas en teorías de interacción social, revelan cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
+  "texto_nuevo": "Técnica de notación de grano fino para transcripciones de voz, que captura el orden de los turnos (quién habla, quién escucha y cuánto), pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características, basadas en teorías de interacción social, revelan cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "1529",
+   "frase": "The order of talk: how and when do participants switch roles as listener and speaker"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el orden de los turnos de habla, primer elemento de la lista del libro.; Mismo elemento perdido de la enumeración.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-autenticidad_del_liderazgo_de_campo-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "autenticidad_del_liderazgo_de_campo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Realizar debriefings después del trabajo con facilitador neutral cuando sea necesario",
+  "texto_nuevo": "Realizar debriefings después del trabajo, con personas presentes que puedan actuar sobre lo que se escucha y con facilitador neutral cuando sea necesario",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "3257",
+   "frase": "Make sure that relevant people are present who can do something with what is heard"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que en los debriefings estén presentes quienes puedan actuar sobre lo que se escucha.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-149-buen_lugar_para_trabajar-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "buen_lugar_para_trabajar",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un buen lugar para trabajar es aquel donde puedes concentrarte en tu trabajo con la confianza de que, si lo haces bien, eso te trae beneficios a ti y a tu negocio. En una mala organización, la gente lucha contra procesos rotos, política interna y falta de claridad sobre su rol. Ser una buena empresa no garantiza el éxito por sí solo, pero es lo que marca la diferencia entre sobrevivir o no cuando las cosas van mal, porque retiene a tu gente incluso cuando las razones externas para quedarse (dinero, prestigio, carrera) desaparecen.",
+  "texto_nuevo": "Un buen lugar para trabajar es aquel donde puedes concentrarte en tu trabajo con la confianza de que, si lo haces bien, eso te trae beneficios a ti y a tu negocio. En una mala organización, la gente lucha contra procesos rotos, política interna y falta de claridad sobre su rol. Ser una buena empresa no garantiza el éxito por sí solo, pero puede marcar la diferencia entre sobrevivir o no cuando las cosas van mal, porque retiene a tu gente incluso cuando las razones externas para quedarse (dinero, prestigio, carrera) desaparecen.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "1320",
+   "frase": "it can be the difference between life and death when things go wrong"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede ser la diferencia; el nodo lo vuelve certeza.; Mismo endurecimiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-comunicacion_interna_post_despido_ejecutivo-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "comunicacion_interna_post_despido_ejecutivo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define de inmediato a quién le reportarán esos empleados mientras tanto",
+  "texto_nuevo": "Define de inmediato a quién le reportarán esos empleados mientras tanto y qué sigue (búsqueda, reorganización, promoción interna u otra salida); en general conviene que tú ocupes el puesto en el ínterin, y si lo haces, ejércelo de verdad",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "980",
+   "frase": "Generally, it's smart for the CEO to act in the executive role in the meanwhile."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también el plan de qué sigue y recomienda que en general el CEO ocupe el puesto y lo ejerza.; Se cae el plan de qué sigue.; Se cae la recomendación de asumir el puesto en el ínterin y ejercerlo de verdad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-149-analisis_causa_raiz_despido_ejecutivo-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "analisis_causa_raiz_despido_ejecutivo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Despedir a un ejecutivo no debe verse como un fallo individual sino como un fallo del sistema de contratación e integración. Las causas comunes incluyen definir mal el puesto, contratar por ausencia de debilidades en vez de fortalezas, contratar para una escala que la empresa aún no tiene, buscar el 'candidato genérico', ambición equivocada, o fallar en la integración.",
+  "texto_nuevo": "Salvo casos raros de mala conducta, incompetencia o pereza, despedir a un ejecutivo no es fallo individual sino del sistema de contratación e integración; si la empresa se multiplicó y el puesto cambió, no es fallo de nadie. Causas comunes: definir mal el puesto, contratar por ausencia de debilidades y no por fortalezas, contratar para una escala que aún no hay, buscar el 'candidato genérico', ambición equivocada o fallar en la integración.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "912-932",
+   "frase": "This is neither an executive failure nor a system failure"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aparta el caso de escala, que no es fallo del ejecutivo ni del sistema.; El libro exceptúa los casos raros de mala conducta, incompetencia o pereza.; Recoge las dos excepciones perdidas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-comunicacion_honesta_en_crisis_al_equipo-pasos_accionables-7",
+  "fecha": "2026-09-28",
+  "node_id": "comunicacion_honesta_en_crisis_al_equipo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Emitir nuevas condiciones (ej. nuevas acciones, contratos) a quienes decidan quedarse como señal de compromiso mutuo",
+  "texto_nuevo": "Emitir nuevas acciones para todo el equipo, porque arranca una empresa nueva con un reto nuevo",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "499",
+   "frase": "brand-new company and a brand-new challenge, I am issuing everyone new stock grants"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da acciones nuevas a todos por ser una empresa nueva; no habla de contratos ni lo condiciona a quedarse.; Mismo añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 7
+ },
+ {
+  "id": "final-e1-149-ceo_de_guerra_vs_paz-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "ceo_de_guerra_vs_paz",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial (crisis financiera, pérdida de cliente clave, colapso de mercado): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, aunque sigas delegando la ejecución. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+  "texto_nuevo": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial inminente (la competencia, un cambio macroeconómico drástico, un cambio de mercado o de la cadena de suministro): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, y te ocupas hasta del detalle más pequeño si afecta a la misión. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "2833",
+   "frase": "Wartime CEO cares about a speck of dust on a gnat's ass if it interferes"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario, invencion, matiz; doble lectura ciega y arbitro): Crisis financiera y pérdida de cliente clave no están en la lista del libro.; En el libro delegar el detalle es propio del CEO de paz; el de guerra atiende hasta el detalle que afecte a la misión.; La lista del libro empieza por la competencia, que el nodo pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-comunicacion_transparente_en_crisis-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "comunicacion_transparente_en_crisis",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Durante el ataque competitivo de Microsoft contra Netscape, Mike Homer se destacó por enfrentar directamente a la prensa y a la crisis en lugar de evadirla, incluso tomando dos llamadas de periodistas simultáneamente. Este concepto ilustra la importancia de que los líderes de una startup asuman visibilidad pública y comunicación activa durante momentos de presión extrema, en lugar de ocultarse, para mantener la confianza de clientes, inversionistas y empleados.",
+  "texto_nuevo": "Durante el ataque competitivo de Microsoft contra Netscape, Mike Homer se destacó por enfrentar directamente a la prensa y a la crisis en lugar de evadirla, incluso tomando dos llamadas de periodistas simultáneamente. Este concepto ilustra la importancia de que los líderes de una startup asuman visibilidad pública y comunicación activa durante momentos de presión extrema, en lugar de ocultarse.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "157",
+   "frase": "During particularly brutal competitive attacks, most executives would run from the press."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo muestra a Homer dando la cara; el efecto sobre la confianza es añadido.; Mismo porqué añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-149-comunicacion_honesta_en_crisis_al_equipo-pasos_accionables-6",
+  "fecha": "2026-09-28",
+  "node_id": "comunicacion_honesta_en_crisis_al_equipo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dar a las personas la opción de irse con dignidad si deciden que no quieren continuar",
+  "texto_nuevo": "Dar a las personas la opción de irse con dignidad si deciden que no quieren continuar, pidiendo que quien ya lo decidió se vaya ese mismo día y ofreciéndole ayuda para encontrar trabajo",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "499",
+   "frase": "if you have decided to quit that you quit today"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que quien ya decidió irse lo haga ese mismo día y ofrece ayuda para encontrar trabajo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 6
+ },
+ {
+  "id": "final-e1-149-ceo_de_guerra_vs_paz-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "ceo_de_guerra_vs_paz",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Delegar la ejecución táctica pero mantener el control total sobre la dirección estratégica",
+  "texto_nuevo": "Si es modo de paz, delegar las decisiones de detalle y centrarte en el panorama general; si es modo de guerra, ocuparte hasta del detalle que afecte a la misión",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "2833",
+   "frase": "Peacetime CEO focuses on the big picture and empowers her people to make detailed decisions."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la delegación del detalle solo en tiempos de paz; en guerra se atiende el detalle que afecte a la misión.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-149-comunicacion_transparente_en_crisis-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "comunicacion_transparente_en_crisis",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usar la crisis como oportunidad para reforzar la narrativa estratégica de la empresa",
+  "texto_nuevo": "Sugerencia de My Idea: usa la crisis como oportunidad para reforzar la narrativa estratégica de la empresa",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "157",
+   "frase": "Mike, on the other hand, was always front and center."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no habla de reforzar la narrativa; es un consejo práctico que queda como sugerencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-inversion_proporcional-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "inversion_proporcional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir una acción de prevención mínima viable para cada uno de los cinco niveles de causa identificados",
+  "texto_nuevo": "Definir una acción de prevención proporcional a la gravedad del síntoma para cada uno de los cinco niveles de causa identificados: pequeña si el síntoma es menor, mayor si es más grave",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "2713",
+   "frase": "the investment should be smaller when the symptom is minor and larger"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide inversión proporcional en cada nivel, mayor ante síntomas graves; el paso la fija siempre mínima.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-150-inversion_proporcional-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "inversion_proporcional",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Lista de acciones preventivas de bajo costo asignadas por nivel de causa, con seguimiento de recurrencia del problema",
+  "texto_nuevo": "Lista de acciones preventivas proporcionales a la gravedad del síntoma, asignadas por nivel de causa, con seguimiento de recurrencia del problema",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "2713",
+   "frase": "larger when the symptom is more painful"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Fija el costo siempre bajo y pierde que la inversión crece cuando el síntoma es más grave.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-motor_crecimiento_pago-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "motor_crecimiento_pago",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Motor de crecimiento basado en reinvertir ingresos por cliente en la adquisición de nuevos clientes mediante publicidad, ventas o marketing pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal) permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento no es sostenible sin capital externo. Cualquier canal de adquisición está sujeto a competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una capacidad diferenciada de monetización.",
+  "texto_nuevo": "Motor de crecimiento basado en reinvertir ingresos por cliente en la adquisición de nuevos clientes mediante publicidad, ventas o marketing pagado. Se rige por la relación entre el Valor de Vida del Cliente (LTV) y el Costo de Adquisición (CPA). Si LTV > CPA, el margen (beneficio marginal) permite financiar crecimiento sostenido; si LTV < CPA, el crecimiento se frena, y compensarlo con capital invertido o golpes publicitarios no es sostenible. Cualquier canal de adquisición está sujeto a competencia, por lo que el CPA tiende a subir con el tiempo, exigiendo una capacidad diferenciada de monetización.",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "2507",
+   "frase": "using invested capital or publicity stunts, but those tactics are not sustainable"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Da a entender que el capital externo lo vuelve sostenible, cuando el libro dice que esa táctica no lo es.; El libro dice que cubrir la diferencia con capital invertido no es sostenible; el nodo sugiere lo contrario.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-hipotesis_valor_crecimiento-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "hipotesis_valor_crecimiento",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evitar confundir crecimiento pagado o teatral con crecimiento genuino basado en valor",
+  "texto_nuevo": "Evitar confundir con crecimiento genuino basado en valor el crecimiento teatral, el que se sostiene con rondas de inversión y publicidad pagada sin un producto que cree valor",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "946",
+   "frase": "lots of paid advertising but does not develop a value-creating product"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no condena el crecimiento pagado en sí, sino el que vive de inversión y publicidad sin un producto que cree valor.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-motor_crecimiento_pegajoso-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "motor_crecimiento_pegajoso",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si la tasa de compounding es baja o cero, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto",
+  "texto_nuevo": "Si la tasa de compounding es baja o cero aunque entren muchos clientes nuevos, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "2451",
+   "frase": "there are plenty of new customers coming in the door"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone el foco en retención cuando ya entran muchos clientes nuevos y el churn los anula; el paso pierde esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-metricas_como_validacion_cuantitativa-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "metricas_como_validacion_cuantitativa",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Fija metas de ingresos o usuarios mes a mes, aunque sean modestas, para mantenerte honesto con tu propio progreso",
+  "texto_nuevo": "Fija metas de ingresos o usuarios mes a mes, aunque sean modestas, para mantenerte honesto con tu propio progreso; si no las alcanzas, úsalo para ir a entrevistar clientes y guiar las preguntas que les haces",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "490-492",
+   "frase": "The quantitative targets created the motivation to engage in qualitative inquiry"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae para qué sirven las metas en el libro: no alcanzarlas empuja a entrevistar clientes y guía las preguntas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-150-seleccion_canal_distribucion-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_canal_distribucion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez",
+  "texto_nuevo": "Enfocarse en UN canal principal hasta completar la validación de clientes (customer validation), evitando lanzar por múltiples canales a la vez, salvo apoyar un lanzamiento en canal físico con marketing web (y a veces venta en línea) simultáneo",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "5996",
+   "frase": "Until the company completes customer validation, it should pick a sales channel"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide un solo canal hasta completar la validación de clientes, no solo durante el descubrimiento.; Recorta el plazo: el libro lo extiende hasta completar la validación de clientes.; Se pierde la excepción del lanzamiento físico con marketing web (y a veces venta) simultáneo.; Se pierde la excepción del libro: el lanzamiento en canal físico con apoyo simultáneo de marketing web.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-150-test_socios_de_trafico-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "test_socios_de_trafico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identifica los socios que podrían traerte tráfico y encajan con tu idea, mirando en tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito",
+  "texto_nuevo": "Identifica los socios que podrían traerte tráfico y encajan con tu idea, buscando sitios que llegan al mismo tipo de clientes que quieres alcanzar",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12305",
+   "frase": "sites that reach the same types of customers you want to reach"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Tiendas de apps, marketplaces y emisores de tarjetas son otras alianzas en el libro; los socios de tráfico son sitios que llegan a tus mismos clientes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-150-test_socios_de_trafico-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "test_socios_de_trafico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Propón intercambios: contenido, listas de correo, anuncios, mini sitios",
+  "texto_nuevo": "Propón intercambios: contenido, listas de correo, anuncios, mini sitios; si el trato beneficia más a una parte, el dinero suele equilibrarlo, y ofrecer pago es la mejor forma de captar la atención del socio",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12321",
+   "frase": "cash often brings the trade back into balance. Cash offers are the best way"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que el dinero suele equilibrar un trato desigual y que ofrecerlo es lo que mejor capta la atención del socio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-seleccion_estrategia_pricing-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_estrategia_pricing",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Existen múltiples modelos de fijación de precios: value pricing, competitive pricing, volume pricing, portfolio pricing, razor/razor blade, subscription, leasing y product-based pricing, cada uno adecuado a distintos contextos de mercado, producto y estructura de costos. La estrategia correcta depende de si el mercado es nuevo, existente o resegmentado, del valor único que entrega el producto, de las creencias del mercado, de los precios de la competencia, de la posibilidad de generar compras repetidas y de los costos de fabricación. Puedes elegir un solo modelo o combinar varios según tu producto y clientes. Si vendes a empresas (B2B), conviene calcular el Costo Total de Propiedad y el Retorno de Inversión que espera el cliente para justificar el precio. Antes de fijar el precio definitivo, valida la hipótesis con clientes reales durante el customer discovery.",
+  "texto_nuevo": "Existen múltiples modelos de fijación de precios: value pricing, competitive pricing, volume pricing, portfolio pricing, razor/razor blade, subscription, leasing y product-based pricing, cada uno adecuado a distintos contextos de mercado, producto y estructura de costos. La estrategia correcta depende de si el mercado es nuevo, existente o resegmentado, del valor único que entrega el producto, de las creencias del mercado, de los precios de la competencia y de los costos de fabricación. Si vendes a empresas (B2B), conviene calcular el Costo Total de Propiedad y el Retorno de Inversión que espera el cliente para justificar el precio. Antes de fijar el precio definitivo, valida la hipótesis con clientes reales durante el customer discovery.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "7727-7731",
+   "frase": "A good pricing model recognizes Market Type, accommodates manufacturing costs, the value the product delivers"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un sexto factor (compras repetidas) a los cinco que da el libro.; El libro presenta los modelos como opciones entre las que elegir; no dice que se puedan combinar.; Las compras repetidas no están entre los factores de un buen modelo de precio que enumera el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-seleccion_canal_fisico-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "seleccion_canal_fisico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Seleccionar un único canal dominante y evitar lanzar por múltiples canales simultáneamente",
+  "texto_nuevo": "Seleccionar un único canal dominante hasta completar la validación de clientes y evitar lanzar por múltiples canales simultáneamente, salvo apoyar el lanzamiento físico con marketing web (y a veces venta en línea) al mismo tiempo",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "18009",
+   "frase": "The big exception, of course: physical-channel launches with simultaneous web-marketing (and sometimes sales) support."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el canal único a la etapa previa a completar la validación de clientes.; El nodo presenta el canal único sin plazo; el libro lo limita hasta completar la validación.; Se pierde la excepción del apoyo web simultáneo a un lanzamiento en canal físico.; Se pierde la excepción del lanzamiento físico con marketing web (y a veces venta) simultáneo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-unique_selling_proposition_statement-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "unique_selling_proposition_statement",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si no la entienden, dar una explicación más larga y volver a pedir un resumen",
+  "texto_nuevo": "Si no la entienden, dar una explicación más larga y volver a pedir un resumen, porque otras personas suelen redactar mejor que tú una propuesta comprensible",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "13774",
+   "frase": "Other people are often better than you at crafting an understandable Unique Selling Proposition"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el porqué: otras personas suelen redactar mejor que tú una propuesta comprensible, así que su resumen sirve.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-segmentos_de_clientes_problema_necesidad-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "segmentos_de_clientes_problema_necesidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Mapea los tipos de cliente: quien usa el producto, quien influye en la compra y quien lo recomienda",
+  "texto_nuevo": "Mapea los tipos de cliente: quien usa el producto, quien influye en la compra, quien lo recomienda, quien controla el presupuesto, quien tiene la decisión final y quien puede frenar la compra",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "5684-5688",
+   "frase": "Economic buyers: They sit further up the decision chain and often control"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan tres de los seis tipos de cliente del libro: comprador económico, decisor final y saboteador.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-tipos_de_clientes-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "tipos_de_clientes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Toda venta involucra un conjunto de tomadores de decisiones distintos que rara vez son la misma persona: usuarios finales (usan el producto día a día), influenciadores (opinan y moldean tendencias pero no deciden), recomendadores (su opinión puede hacer o deshacer la venta), compradores económicos (controlan el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia y donde más de una persona participa en la decisión.",
+  "texto_nuevo": "Toda venta involucra un conjunto de tomadores de decisiones: usuarios finales (usan el producto día a día), influenciadores (opinan y moldean tendencias pero no deciden), recomendadores (su opinión puede hacer o deshacer la venta), compradores económicos (controlan el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia y donde más de una persona participa en la decisión.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "5668-5686",
+   "frase": "Decision-makers: They may be the economic buyers"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que los roles rara vez coincidan; admite que el decisor puede ser el comprador económico.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-test_card-pasos_accionables-5",
+  "fecha": "2026-09-28",
+  "node_id": "test_card",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad",
+  "texto_nuevo": "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad: las hipótesis más críticas arriba, pero las pruebas baratas y rápidas primero, cuando la incertidumbre es máxima",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "7595",
+   "frase": "Rank the most critical hypotheses highest, but prioritize cheap and quick tests"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el criterio de orden del libro: lo más crítico arriba, pero las pruebas baratas y rápidas primero.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-150-value_map-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "value_map",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verificar que el mapa de valor conecte con el customer profile",
+  "texto_nuevo": "Ordenar productos y servicios, pain relievers y gain creators según lo esenciales que son para el cliente, y verificar que el mapa de valor conecte con el customer profile",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "1573",
+   "frase": "Rank products and services, pain relievers, and gain creators according to how essential"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso del libro de ordenar productos, aliviadores y creadores según lo esenciales que son para el cliente.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-test_ab_precio-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "test_ab_precio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando variantes a distintos segmentos de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
+  "texto_nuevo": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando cada variante a una cantidad similar de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "8678",
+   "frase": "Send the same amount of people to the diff erent options you want to test."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro envía una cantidad similar de personas a cada opción; repartirlas por segmentos distintos no lo dice.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-test_ab_precio-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "test_ab_precio",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un precio o modelo de monetización validado con datos de conversión reales de al menos cientos de usuarios testeados.",
+  "texto_nuevo": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios testeados.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "9468",
+   "frase": "DATA: 1,170 people tested, $299 the best price"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Fija un mínimo de usuarios que el libro no da; solo relata la cifra de un caso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-seis_formas_innovar_perfil_cliente-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "seis_formas_innovar_perfil_cliente",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Lista de al menos 2-3 direcciones de innovación priorizadas basadas en el perfil del cliente.",
+  "texto_nuevo": "Lista de direcciones de innovación priorizadas basadas en el perfil del cliente.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "3406",
+   "frase": "Here are six ways to trigger your next value proposition move."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade una cifra mínima de direcciones que el libro no da.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-unique_link_tracking-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "unique_link_tracking",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace revela el interés real.",
+  "texto_nuevo": "Técnica sencilla para verificar el interés genuino de un cliente o socio potencial más allá de lo dicho en una reunión. Se crea un enlace único y rastreable que se comparte tras la presentación de la idea; el uso o no del enlace puede indicar el interés real.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "8244",
+   "frase": "If the link wasn’t used, it may indicate lack of interest"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que no usar el enlace puede indicar falta de interés, no que lo revele.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-starting_points_innovacion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "starting_points_innovacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las nuevas propuestas de valor no siempre parten del cliente, pero siempre deben terminar abordando jobs, pains o gains que le importan. Existen dos enfoques: Technology Push (partir de una tecnología/invención y buscar el problema que resuelve) y Market Pull (partir de un job/pain/gain manifiesto y buscar la solución/tecnología necesaria).",
+  "texto_nuevo": "Las nuevas propuestas de valor no siempre parten del cliente, pero siempre deben terminar abordando jobs, pains o gains que le importan. Entre muchos puntos de partida posibles, dos son comunes y viables según tu contexto: Technology Push (partir de una tecnología/invención y buscar el problema que resuelve) y Market Pull (partir de un job/pain/gain manifiesto y buscar la solución/tecnología necesaria).",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "3074",
+   "frase": "These are two common starting points, many of which we outlined previously."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Push y pull son dos puntos de partida comunes entre muchos, ambos viables según el contexto; el nodo los da como los únicos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-testing_process_completo-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "testing_process_completo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ejecuta el ciclo de aprendizaje y captura insights con la tarjeta de aprendizaje.",
+  "texto_nuevo": "Ejecuta el ciclo de aprendizaje y captura insights con la tarjeta de aprendizaje, indicando si necesitas aprender más, iterar, pivotar o pasar a la siguiente hipótesis.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "9121",
+   "frase": "indicate whether you need to learn more, iterate, pivot, or move on"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se caen las próximas acciones que registra la tarjeta de aprendizaje: aprender más, iterar, pivotar o seguir.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-understanding_customers_tecnicas-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "understanding_customers_tecnicas",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Realizar entrevistas a clientes potenciales (Journalist) para insights rápidos.",
+  "texto_nuevo": "Realizar entrevistas a clientes potenciales (Journalist) para insights rápidos, sabiendo que lo que dicen puede diferir de lo que hacen.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "3550-3560",
+   "frase": "customers might tell you one thing in an interview but behave differently"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la debilidad que el libro señala: el cliente puede decir una cosa y comportarse distinto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-150-understanding_customers_tecnicas-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "understanding_customers_tecnicas",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Perfil de cliente enriquecido con evidencia de al menos 2-3 técnicas distintas de investigación.",
+  "texto_nuevo": "Perfil de cliente enriquecido con evidencia de una buena mezcla de técnicas distintas de investigación.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "3522",
+   "frase": "Make sure you use a good mix of these techniques"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade una cifra mínima de técnicas; el libro pide una buena mezcla.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-150-seis_formas_innovar_perfil_cliente-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "seis_formas_innovar_perfil_cliente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Considerar cómo servir a un segmento más amplio de clientes con el mismo job.",
+  "texto_nuevo": "Considerar cómo servir a un segmento más amplio de clientes con el mismo job, cuando ese job les resultaba demasiado complejo o demasiado caro.",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "3469",
+   "frase": "Help more people do a job that was otherwise too complex or too expensive."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición del libro: ayudar a más gente con un job que antes les resultaba demasiado complejo o caro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-150-testear_circulo_cuadrado_rectangulo-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "testear_circulo_cuadrado_rectangulo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No avanzar al siguiente nivel sin evidencia suficiente del anterior",
+  "texto_nuevo": "No empezar a testear la propuesta de valor (cuadrado) sin evidencia de lo que le importa al cliente (círculo)",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "7214-7220",
+   "frase": "evidence showing what customers care about (the circle) before focusing on how to help them"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Generaliza a los tres niveles una compuerta que el libro solo pone entre círculo y cuadrado; del modelo de negocio pide no descuidarlo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ }
+]

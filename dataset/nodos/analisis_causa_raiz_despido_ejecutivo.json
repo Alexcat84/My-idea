@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Causa Raíz al Despedir a un Ejecutivo",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Despedir a un ejecutivo no debe verse como un fallo individual sino como un fallo del sistema de contratación e integración. Las causas comunes incluyen definir mal el puesto, contratar por ausencia de debilidades en vez de fortalezas, contratar para una escala que la empresa aún no tiene, buscar el 'candidato genérico', ambición equivocada, o fallar en la integración.",
+  "resumen_teorico": "Salvo casos raros de mala conducta, incompetencia o pereza, despedir a un ejecutivo no es fallo individual sino del sistema de contratación e integración; si la empresa se multiplicó y el puesto cambió, no es fallo de nadie. Causas comunes: definir mal el puesto, contratar por ausencia de debilidades y no por fortalezas, contratar para una escala que aún no hay, buscar el 'candidato genérico', ambición equivocada o fallar en la integración.",
   "pasos_accionables": [
     "Revisar la definición original del puesto y compararla con las necesidades reales",
     "Evaluar si se contrató por fortalezas necesarias o solo por ausencia de debilidades",
@@ -43,6 +43,22 @@
         "motivo": "Pasar de las barreras al orgullo por el trabajo (Deming) a la causa raiz de despedir a un ejecutivo no es una continuacion natural. Solo los une una idea sistemica vaga, y ninguno de los dos textos la desarrolla hacia el otro. La correccion solo marco un paso como sugerencia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-149-analisis_causa_raiz_despido_ejecutivo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Despedir a un ejecutivo no debe verse como un fallo individual sino como un fallo del sistema de contratación e integración. Las causas comunes incluyen definir mal el puesto, contratar por ausencia de debilidades en vez de fortalezas, contratar para una escala que la empresa aún no tiene, buscar el 'candidato genérico', ambición equivocada, o fallar en la integración.",
+      "texto_nuevo": "Salvo casos raros de mala conducta, incompetencia o pereza, despedir a un ejecutivo no es fallo individual sino del sistema de contratación e integración; si la empresa se multiplicó y el puesto cambió, no es fallo de nadie. Causas comunes: definir mal el puesto, contratar por ausencia de debilidades y no por fortalezas, contratar para una escala que aún no hay, buscar el 'candidato genérico', ambición equivocada o fallar en la integración.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "912-932",
+        "frase": "This is neither an executive failure nor a system failure"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aparta el caso de escala, que no es fallo del ejecutivo ni del sistema.; El libro exceptúa los casos raros de mala conducta, incompetencia o pereza.; Recoge las dos excepciones perdidas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -11,7 +11,7 @@
     "Diseñar el experimento específico para verificar la hipótesis",
     "Estimar costo, fiabilidad de los datos y tiempo requerido",
     "Definir qué métrica se va a medir y el umbral que determina éxito o fracaso",
-    "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad"
+    "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad: las hipótesis más críticas arriba, pero las pruebas baratas y rápidas primero, cuando la incertidumbre es máxima"
   ],
   "entregable_esperado": "Serie de Test Cards completos, ordenados por prioridad, listos para ejecutar",
   "nodos_previos": [
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Estructura tu Prueba de Hipótesis",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-test_card-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad",
+      "texto_nuevo": "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad: las hipótesis más críticas arriba, pero las pruebas baratas y rápidas primero, cuando la incertidumbre es máxima",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "7595",
+        "frase": "Rank the most critical hypotheses highest, but prioritize cheap and quick tests"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el criterio de orden del libro: lo más crítico arriba, pero las pruebas baratas y rápidas primero.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

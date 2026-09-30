@@ -9,7 +9,7 @@
     "Calcular la tasa de churn (abandono) del producto por periodo",
     "Calcular la tasa de adquisición de nuevos clientes por el mismo periodo",
     "Calcular la tasa de compounding (adquisición - churn) para proyectar la velocidad real de crecimiento",
-    "Si la tasa de compounding es baja o cero, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto"
+    "Si la tasa de compounding es baja o cero aunque entren muchos clientes nuevos, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto"
   ],
   "entregable_esperado": "Un modelo de churn rate y tasa de compounding calculado, con acciones concretas priorizadas para mejorar retención",
   "nodos_previos": [
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Retén Clientes para Crecer",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-motor_crecimiento_pegajoso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la tasa de compounding es baja o cero, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto",
+      "texto_nuevo": "Si la tasa de compounding es baja o cero aunque entren muchos clientes nuevos, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2451",
+        "frase": "there are plenty of new customers coming in the door"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone el foco en retención cuando ya entran muchos clientes nuevos y el churn los anula; el paso pierde esa condición.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

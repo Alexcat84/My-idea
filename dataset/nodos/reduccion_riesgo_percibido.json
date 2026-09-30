@@ -4,13 +4,13 @@
   "dominio": "franquicias",
   "titulo_concepto": "Reducir el Riesgo Percibido para Franquiciadores Nuevos",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Cuanto mayor es el riesgo percibido (por ser una marca nueva), mayor retorno exigirá el prospecto. Los nuevos franquiciadores pueden reducir este riesgo construyendo credibilidad: contratando management de calidad, abogados especializados, uniéndose a la IFA, trabajando con consultores reconocidos, y mejorando la imagen corporativa (logo, papelería, sitio web) para verse mejor que sus competidores directos.",
+  "resumen_teorico": "Cuanto mayor es el riesgo percibido (por ser una marca nueva), mayor retorno exigirá el prospecto. Los nuevos franquiciadores pueden reducir este riesgo construyendo credibilidad: contratando management de calidad, abogados especializados, consultores reconocidos y una firma de PR de franquicias, uniéndose a la IFA, cultivando relaciones muy sólidas con sus franquiciados, y mejorando la imagen corporativa (logo, papelería, sitio web) para verse mejor que sus competidores directos.",
   "pasos_accionables": [
     "Reclutar equipo directivo de experiencia reconocida",
-    "Contratar abogado especializado en franquicias y consultores establecidos",
+    "Contratar abogado especializado en franquicias, consultores establecidos y una firma de relaciones públicas de franquicias",
     "Unirse a la International Franchise Association y adoptar su código de ética",
     "Invertir en imagen corporativa profesional (logo, papelería, sitio web) superior a la competencia directa",
-    "Publicar una Representación de Desempeño Financiero (FPR) si los resultados lo respaldan"
+    "Publicar una Representación de Desempeño Financiero (FPR) si los resultados lo respaldan, tras consultarlo con tu abogado o consultor"
   ],
   "entregable_esperado": "Plan de construcción de credibilidad de marca con hitos concretos (equipo, afiliaciones, imagen, FPR)",
   "nodos_previos": [
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Reduce el Riesgo Percibido",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-148-reduccion_riesgo_percibido-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuanto mayor es el riesgo percibido (por ser una marca nueva), mayor retorno exigirá el prospecto. Los nuevos franquiciadores pueden reducir este riesgo construyendo credibilidad: contratando management de calidad, abogados especializados, uniéndose a la IFA, trabajando con consultores reconocidos, y mejorando la imagen corporativa (logo, papelería, sitio web) para verse mejor que sus competidores directos.",
+      "texto_nuevo": "Cuanto mayor es el riesgo percibido (por ser una marca nueva), mayor retorno exigirá el prospecto. Los nuevos franquiciadores pueden reducir este riesgo construyendo credibilidad: contratando management de calidad, abogados especializados, consultores reconocidos y una firma de PR de franquicias, uniéndose a la IFA, cultivando relaciones muy sólidas con sus franquiciados, y mejorando la imagen corporativa (logo, papelería, sitio web) para verse mejor que sus competidores directos.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3242",
+        "frase": "Build incredibly strong relationships with your existing franchisees. And retain a franchise public relations firm."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye relaciones muy sólidas con los franquiciados y una firma de PR de franquicias.; Mismo defecto: faltan dos elementos de la lista de credibilidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-reduccion_riesgo_percibido-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contratar abogado especializado en franquicias y consultores establecidos",
+      "texto_nuevo": "Contratar abogado especializado en franquicias, consultores establecidos y una firma de relaciones públicas de franquicias",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3242",
+        "frase": "And retain a franchise public relations firm."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye contratar una firma de PR de franquicias entre las vías de credibilidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-reduccion_riesgo_percibido-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Publicar una Representación de Desempeño Financiero (FPR) si los resultados lo respaldan",
+      "texto_nuevo": "Publicar una Representación de Desempeño Financiero (FPR) si los resultados lo respaldan, tras consultarlo con tu abogado o consultor",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3240",
+        "frase": "speak to your attorney and/or consultant before finalizing this decision"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide consultar al abogado o consultor antes de decidir publicar la FPR.; Mismo defecto: falta la consulta previa al abogado o consultor.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

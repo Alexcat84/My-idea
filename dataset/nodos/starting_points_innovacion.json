@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Puntos de Partida para la Innovación (Push vs Pull)",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Las nuevas propuestas de valor no siempre parten del cliente, pero siempre deben terminar abordando jobs, pains o gains que le importan. Existen dos enfoques: Technology Push (partir de una tecnología/invención y buscar el problema que resuelve) y Market Pull (partir de un job/pain/gain manifiesto y buscar la solución/tecnología necesaria).",
+  "resumen_teorico": "Las nuevas propuestas de valor no siempre parten del cliente, pero siempre deben terminar abordando jobs, pains o gains que le importan. Entre muchos puntos de partida posibles, dos son comunes y viables según tu contexto: Technology Push (partir de una tecnología/invención y buscar el problema que resuelve) y Market Pull (partir de un job/pain/gain manifiesto y buscar la solución/tecnología necesaria).",
   "pasos_accionables": [
     "Identificar si tu punto de partida es una tecnología (push) o una necesidad de cliente manifiesta (pull).",
     "Si es push: explorar prototipos de propuesta de valor con segmentos potencialmente interesados hasta encontrar problem-solution fit.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Elige tu Punto de Partida",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-starting_points_innovacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las nuevas propuestas de valor no siempre parten del cliente, pero siempre deben terminar abordando jobs, pains o gains que le importan. Existen dos enfoques: Technology Push (partir de una tecnología/invención y buscar el problema que resuelve) y Market Pull (partir de un job/pain/gain manifiesto y buscar la solución/tecnología necesaria).",
+      "texto_nuevo": "Las nuevas propuestas de valor no siempre parten del cliente, pero siempre deben terminar abordando jobs, pains o gains que le importan. Entre muchos puntos de partida posibles, dos son comunes y viables según tu contexto: Technology Push (partir de una tecnología/invención y buscar el problema que resuelve) y Market Pull (partir de un job/pain/gain manifiesto y buscar la solución/tecnología necesaria).",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "3074",
+        "frase": "These are two common starting points, many of which we outlined previously."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Push y pull son dos puntos de partida comunes entre muchos, ambos viables según el contexto; el nodo los da como los únicos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

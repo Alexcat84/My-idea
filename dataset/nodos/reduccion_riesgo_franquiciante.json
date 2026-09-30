@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Reducción de Riesgo del Franquiciante",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El franquiciado asume toda la responsabilidad de inversión (build-out, inventario, empleados, capital de trabajo) y la mayoría de las responsabilidades legales (litigios laborales, de consumidor, accidentes), reduciendo drásticamente el riesgo del franquiciante. El caso de Bennigan's (2008) ilustra cómo una estructura con más unidades franquiciadas que corporativas puede sobrevivir mejor una crisis financiera.",
+  "resumen_teorico": "El franquiciado asume toda la responsabilidad de inversión (build-out, inventario, empleados, capital de trabajo) y la mayoría de las responsabilidades legales (litigios laborales, de consumidor, accidentes), reduciendo drásticamente el riesgo del franquiciante. El caso de Bennigan's (2008), con más restaurantes propios que franquiciados, permite suponer, aunque nadie puede asegurarlo, que una estructura con mayoría de unidades franquiciadas habría sobrevivido mejor a la crisis.",
   "pasos_accionables": [
     "Identificar qué riesgos actuales (legales, financieros, operativos) se transferirían al franquiciado",
     "Consultar con abogado especializado sobre la creación de una entidad legal separada para el franquiciante",
@@ -38,6 +38,22 @@
         "evidencia": "F07-022: Modelar la exposicion al riesgo, la entidad legal y la estructura contractual de la franquicia es diseno del modelo, no exploracion de la idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-148-reduccion_riesgo_franquiciante-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El franquiciado asume toda la responsabilidad de inversión (build-out, inventario, empleados, capital de trabajo) y la mayoría de las responsabilidades legales (litigios laborales, de consumidor, accidentes), reduciendo drásticamente el riesgo del franquiciante. El caso de Bennigan's (2008) ilustra cómo una estructura con más unidades franquiciadas que corporativas puede sobrevivir mejor una crisis financiera.",
+      "texto_nuevo": "El franquiciado asume toda la responsabilidad de inversión (build-out, inventario, empleados, capital de trabajo) y la mayoría de las responsabilidades legales (litigios laborales, de consumidor, accidentes), reduciendo drásticamente el riesgo del franquiciante. El caso de Bennigan's (2008), con más restaurantes propios que franquiciados, permite suponer, aunque nadie puede asegurarlo, que una estructura con mayoría de unidades franquiciadas habría sobrevivido mejor a la crisis.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "384",
+        "frase": "While no one can say for certain, one can speculate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro lo presenta como especulación que nadie puede asegurar; el nodo lo da como ilustración demostrada.; Se pierde que Bennigan's tenía más unidades propias que franquiciadas, lo que da sentido al caso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

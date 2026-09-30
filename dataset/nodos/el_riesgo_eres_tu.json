@@ -4,14 +4,14 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Fundador Como Punto Único de Falla",
   "fuente": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
-  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
   "pasos_accionables": [
-    "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
-    "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
-    "Escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
-    "Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte."
+    "Sugerencia de My Idea: documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+    "Sugerencia de My Idea: nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+    "Sugerencia de My Idea: escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
+    "Sugerencia de My Idea: cuida tu energía y tu salud como cuidas tu negocio."
   ],
-  "entregable_esperado": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas un tiempo.",
+  "entregable_esperado": "Un documento con dónde vive todo, un contacto de emergencia con acceso, un plan de qué pasa con tus clientes si faltas un tiempo y la holgura que reservas en tus plazos por esa posibilidad.",
   "nodos_previos": [
     "las_formas_en_que_los_proyectos_mueren",
     "sigue_operando_pese_al_golpe"
@@ -91,6 +91,106 @@
       },
       "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_eres_tu-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+      "texto_nuevo": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006",
+        "frase": "usually left out of the estimation process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide reservar holgura en la estimación porque la rotación suele quedar fuera de ella; el resumen lo omite.; Mismo defecto: se pierde la holgura en los plazos que el libro pide para este riesgo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+      "texto_nuevo": "Sugerencia de My Idea: documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006",
+        "frase": "you'll want to allocate some buffer to contain the risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro maneja la rotación con holgura y personal de reserva, no documentando accesos; queda como sugerencia.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+      "texto_nuevo": "Sugerencia de My Idea: nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006",
+        "frase": "you'll want to allocate some buffer to contain the risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de un contacto de emergencia con acceso; queda como sugerencia.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
+      "texto_nuevo": "Sugerencia de My Idea: escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006",
+        "frase": "you'll want to allocate some buffer to contain the risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone un plan de aviso a clientes; queda como sugerencia.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_eres_tu-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte.",
+      "texto_nuevo": "Sugerencia de My Idea: cuida tu energía y tu salud como cuidas tu negocio.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006",
+        "frase": "you'll want to allocate some buffer to contain the risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice nada de la salud o la energía como activo.; Mismo defecto: la idea de la salud como activo no está en el libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-148-el_riesgo_eres_tu-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas un tiempo.",
+      "texto_nuevo": "Un documento con dónde vive todo, un contacto de emergencia con acceso, un plan de qué pasa con tus clientes si faltas un tiempo y la holgura que reservas en tus plazos por esa posibilidad.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006",
+        "frase": "you'll want to allocate some buffer to contain the risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El único manejo que da el libro para este riesgo, la holgura en la estimación, falta en el entregable.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

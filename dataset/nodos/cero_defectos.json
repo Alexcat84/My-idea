@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Cero Defectos (Zero Defects - ZD)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Cero Defectos es la actitud de prevención que promueve hacer el trabajo bien desde la primera vez. No es un programa de motivación ni un eslogan pasajero, sino un estándar de desempeño y comportamiento que debe comunicarse con absoluta claridad, trabajando caso por caso en lugar de mensajes masivos e impersonales. La gente está condicionada a creer que el error es inevitable; cambiar esa mentalidad exige establecer el estándar, comunicarlo, reconocer el desempeño de forma genuina evitando premios en efectivo como único mecanismo, y reciclar el proceso de forma continua hasta que se vuelva parte habitual de tu trabajo. Aplica a todas tus áreas, no solo a la producción o entrega del producto.",
+  "resumen_teorico": "Cero Defectos es la actitud de prevención que promueve hacer el trabajo bien desde la primera vez. No es un programa de motivación ni un eslogan pasajero, sino un estándar de desempeño y comportamiento que debe comunicarse con absoluta claridad, trabajando caso por caso en lugar de mensajes masivos e impersonales. La gente está condicionada a creer que el error es inevitable; cambiar esa mentalidad exige establecer el estándar, comunicarlo, reconocer el desempeño de forma genuina con premios que no sean económicos, y reciclar el proceso de forma continua hasta que se vuelva parte habitual de tu trabajo. Aplica a todas tus áreas, no solo a la producción o entrega del producto.",
   "pasos_accionables": [
     "Establece el estándar de Cero Defectos como compromiso personal de desempeño, no como eslogan motivacional pasajero",
     "Comunícalo con absoluta claridad, trabajándolo caso por caso en vez de con mensajes masivos",
     "Fija una fecha de lanzamiento (Día de Cero Defectos) tras una preparación cuidadosa de los pasos previos, que puede llevar meses, para darle visibilidad",
-    "Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo",
+    "Reconoce el desempeño alineado al estándar de forma genuina, con premios que no sean económicos",
     "Extiende el estándar a todas tus áreas de trabajo, no solo a la producción o entrega del producto",
     "Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar",
     "Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)"
@@ -136,6 +136,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-e1-149-cero_defectos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cero Defectos es la actitud de prevención que promueve hacer el trabajo bien desde la primera vez. No es un programa de motivación ni un eslogan pasajero, sino un estándar de desempeño y comportamiento que debe comunicarse con absoluta claridad, trabajando caso por caso en lugar de mensajes masivos e impersonales. La gente está condicionada a creer que el error es inevitable; cambiar esa mentalidad exige establecer el estándar, comunicarlo, reconocer el desempeño de forma genuina evitando premios en efectivo como único mecanismo, y reciclar el proceso de forma continua hasta que se vuelva parte habitual de tu trabajo. Aplica a todas tus áreas, no solo a la producción o entrega del producto.",
+      "texto_nuevo": "Cero Defectos es la actitud de prevención que promueve hacer el trabajo bien desde la primera vez. No es un programa de motivación ni un eslogan pasajero, sino un estándar de desempeño y comportamiento que debe comunicarse con absoluta claridad, trabajando caso por caso en lugar de mensajes masivos e impersonales. La gente está condicionada a creer que el error es inevitable; cambiar esa mentalidad exige establecer el estándar, comunicarlo, reconocer el desempeño de forma genuina con premios que no sean económicos, y reciclar el proceso de forma continua hasta que se vuelva parte habitual de tu trabajo. Aplica a todas tus áreas, no solo a la producción o entrega del producto.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1637",
+        "frase": "The prizes or awards should not be financial. Recognition is what is important."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que los premios no sean económicos; el nodo deja el efectivo como opción parcial.; Mismo matiz: 'como único mecanismo' abre la puerta al dinero que el libro descarta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-149-cero_defectos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo",
+      "texto_nuevo": "Reconoce el desempeño alineado al estándar de forma genuina, con premios que no sean económicos",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1637",
+        "frase": "The prizes or awards should not be financial. Recognition is what is important."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide premios no económicos, no solo que el efectivo no sea el único mecanismo.; Mismo matiz sobre los premios en dinero.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

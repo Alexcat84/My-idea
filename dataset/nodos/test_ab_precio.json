@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Test A/B de Precio",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando variantes a distintos segmentos de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
+  "resumen_teorico": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando cada variante a una cantidad similar de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
   "pasos_accionables": [
     "Definir las variantes a testear (ej. precio de venta vs. modelo de renta)",
     "Implementar el test en un canal real (sitio web, landing page)",
@@ -12,7 +12,7 @@
     "Medir el porcentaje de usuarios que prefieren cada variante",
     "Seleccionar el precio o modelo validado con mayor conversión"
   ],
-  "entregable_esperado": "Un precio o modelo de monetización validado con datos de conversión reales de al menos cientos de usuarios testeados.",
+  "entregable_esperado": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios testeados.",
   "nodos_previos": [
     "biblioteca_experimentos_validacion",
     "get_out_building_test_sell",
@@ -28,5 +28,39 @@
   "etiqueta_arbol": "Compara Precios con Experimentos",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-150-test_ab_precio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando variantes a distintos segmentos de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
+      "texto_nuevo": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando cada variante a una cantidad similar de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8678",
+        "frase": "Send the same amount of people to the diff erent options you want to test."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro envía una cantidad similar de personas a cada opción; repartirlas por segmentos distintos no lo dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-150-test_ab_precio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un precio o modelo de monetización validado con datos de conversión reales de al menos cientos de usuarios testeados.",
+      "texto_nuevo": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios testeados.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "9468",
+        "frase": "DATA: 1,170 people tested, $299 the best price"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Fija un mínimo de usuarios que el libro no da; solo relata la cifra de un caso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
