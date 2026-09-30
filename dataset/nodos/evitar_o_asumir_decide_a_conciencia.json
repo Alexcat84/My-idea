@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Apetito y Actitud ante el Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Cuánto riesgo estás dispuesto a asumir no es un rasgo fijo: está condicionado por tu cultura, tu entorno y tu psicología, y conviene revisarlo a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y hasta el estado de ánimo: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito reciente infla el apetito; un susto puede encogerlo. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
+  "resumen_teorico": "Cuánto riesgo estás dispuesto a asumir no es un rasgo fijo: está condicionado por tu cultura, tu entorno y tu psicología, y conviene revisarlo a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y el contexto: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito espectacular casi siempre infla el apetito; un susto puede encogerlo. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
   "pasos_accionables": [
     "Antes de una decisión grande, pregúntate cuánto riesgo estás dispuesto a asumir en ella.",
     "Revisa si un éxito o un susto reciente te está inflando o encogiendo el apetito sin razón.",
@@ -74,6 +74,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone fijar por escrito el nivel aceptado ni dice que evite cambios por impulso; como consejo práctico queda como sugerencia de la casa.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-evitar_o_asumir_decide_a_conciencia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuánto riesgo estás dispuesto a asumir no es un rasgo fijo: está condicionado por tu cultura, tu entorno y tu psicología, y conviene revisarlo a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y hasta el estado de ánimo: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito reciente infla el apetito; un susto puede encogerlo. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
+      "texto_nuevo": "Cuánto riesgo estás dispuesto a asumir no es un rasgo fijo: está condicionado por tu cultura, tu entorno y tu psicología, y conviene revisarlo a conciencia. Cada persona tiene un apetito de riesgo que cambia según el tema, el momento y el contexto: el mismo que es prudente con el dinero se lanza a un deporte extremo el fin de semana. Un éxito espectacular casi siempre infla el apetito; un susto puede encogerlo. El problema es cuando ese apetito decide por ti sin que te des cuenta, arrastrado por dos trampas comunes: darle demasiado peso a lo que te acaba de pasar, y confiar en datos viejos sin revisar si siguen siendo ciertos. El practicante en solitario debe revisar su propio perfil de riesgo con regularidad, para elegir a propósito cuánto arriesgar en cada decisión.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5469-5471",
+        "frase": "risk profiles are not necessarily consistent across different risks, nor over time or different contexts"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro atribuye el aumento casi seguro del apetito a un éxito espectacular; 'un éxito reciente' pierde esa condición.; El libro dice que el perfil varía entre riesgos, en el tiempo y entre contextos; el estado de ánimo no lo menciona.; Mismo defecto que la marca 0.; Mismo defecto que la marca 0; se devuelve el contexto que nombra el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Calificación de proveedores basada en capacidad real, no en manuales de auditoría",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, conviene que compitan demostrando compromiso activo de su gerencia con los 14 puntos, sobre todo la mejora continua de procesos, y con erradicar las enfermedades de gestión, más capacidad de I+D y récord de desarrollo de producto.",
+  "resumen_teorico": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, conviene que compitan, no por el precio, demostrando compromiso activo de su gerencia con los 14 puntos, sobre todo la mejora continua de procesos, y con erradicar las enfermedades de gestión, más capacidad de I+D y récord de desarrollo de producto.",
   "pasos_accionables": [
     "Descartar procesos de calificación basados solo en checklists genéricos",
     "Solicitar evidencia de inversión en investigación y desarrollo del proveedor",
@@ -68,6 +68,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide compromiso de la gerencia con los 14 puntos, en especial la mejora continua, y con abolir las enfermedades de la gestión; el nodo lo reduce a un punto.; Mismo defecto: se pierde el conjunto de los 14 puntos y las enfermedades de la gestión.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-021-calificacion_de_proveedores_por_capacidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, conviene que compitan demostrando compromiso activo de su gerencia con los 14 puntos, sobre todo la mejora continua de procesos, y con erradicar las enfermedades de gestión, más capacidad de I+D y récord de desarrollo de producto.",
+      "texto_nuevo": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, conviene que compitan, no por el precio, demostrando compromiso activo de su gerencia con los 14 puntos, sobre todo la mejora continua de procesos, y con erradicar las enfermedades de gestión, más capacidad de I+D y récord de desarrollo de producto.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "884-886",
+        "frase": "let suppliers compete to be the chosen one, not on price tag"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone expresamente que los proveedores compitan no por el precio; el resumen deja caer esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

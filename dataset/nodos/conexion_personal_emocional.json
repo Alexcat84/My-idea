@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Conexión mediante Datos Personales y Emocionales",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es por donde empezar y una técnica muy simple para lograrlo.",
+  "resumen_teorico": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte e idealmente positiva (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es por donde empezar y una técnica muy simple para lograrlo.",
   "pasos_accionables": [
     "Clasifica los datos que tienes de tus clientes en personales, emocionales, o ambos a la vez",
     "Da prioridad a recolectar los datos que caen en ambas categorías",
@@ -60,6 +60,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La cifra de al menos 3 por segmento no está; el libro propone de cinco a diez campos para registrar ya.; Mismo defecto: la cifra y el reparto por segmento son añadidos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-021-conexion_personal_emocional-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es por donde empezar y una técnica muy simple para lograrlo.",
+      "texto_nuevo": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte e idealmente positiva (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es por donde empezar y una técnica muy simple para lograrlo.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5513",
+        "frase": "something they have a strong and ideally positive feeling about"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro define el dato emocional como algo sobre lo que se siente algo fuerte e idealmente positivo; el resumen pierde lo de positivo.; Mismo defecto: se cae la condición idealmente positiva de la definición del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

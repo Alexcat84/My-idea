@@ -4,14 +4,14 @@
   "dominio": "risk_management",
   "titulo_concepto": "Registrar las Decisiones de Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+  "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
   "pasos_accionables": [
     "Sugerencia de My Idea: cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
     "Describe por completo la respuesta que elegiste y qué aspecto del riesgo ataca, por ejemplo, reducir su probabilidad con inspecciones más frecuentes.",
     "Guarda esas notas junto a tu lista de riesgos, no sueltas.",
     "Al cerrar el proyecto, relee tus decisiones y saca lecciones para el siguiente."
   ],
-  "entregable_esperado": "Un registro completo de cada decisión de riesgo, con la respuesta descrita entera y su razón, guardado junto a tu lista de riesgos.",
+  "entregable_esperado": "Un registro completo de cada decisión de riesgo, con la respuesta descrita entera, guardado junto a tu lista de riesgos.",
   "nodos_previos": [
     "reduce_el_riesgo_a_lo_razonable",
     "plan_b_antes_de_necesitarlo"
@@ -123,6 +123,38 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Contenido del registro que el libro no da; pide describir la respuesta completa y qué aspecto del riesgo trata.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-anota_por_que_decidiste_asi-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+      "texto_nuevo": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5827-5829",
+        "frase": "The decision should be entered into the Project Risk Item Record"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide registrar la decisión y describir completa la respuesta; no pide anotar la razón de la decisión.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-020-anota_por_que_decidiste_asi-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un registro completo de cada decisión de riesgo, con la respuesta descrita entera y su razón, guardado junto a tu lista de riesgos.",
+      "texto_nuevo": "Un registro completo de cada decisión de riesgo, con la respuesta descrita entera, guardado junto a tu lista de riesgos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5827-5829",
+        "frase": "Any intended treatment should be fully described"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro pide la decisión y la respuesta descrita completa; la razón de la decisión no figura.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

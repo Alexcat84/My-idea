@@ -7,7 +7,7 @@
   "resumen_teorico": "Dentro de organizaciones establecidas, la innovación genera miedo racional en los equipos existentes porque amenaza sus relaciones con clientes, ingresos y poder. Ocultar la innovación (skunkworks) genera desconfianza y política interna a largo plazo. La solución es crear un 'sandbox' (caja de arena): un espacio delimitado donde equipos pueden experimentar libremente con split-tests reales, sin necesidad de aprobación previa, pero con reglas claras que limitan el impacto (tiempo, número de clientes, páginas o segmentos afectados) y que exigen métricas accionables estandarizadas. Esto permite proteger tanto al equipo innovador como a la organización matriz.",
   "pasos_accionables": [
     "Definir el alcance inicial del sandbox (ej: solo la página de precios, ciertos clientes o territorios).",
-    "Asignar un equipo multifuncional con un líder claro (estilo Toyota shusa), que lleve cada experimento completo de principio a fin.",
+    "Asignar un equipo que lleve cada experimento completo de principio a fin; siempre que sea posible, que sea multifuncional y con un líder claro (estilo Toyota shusa).",
     "Establecer reglas: duración máxima del experimento, porcentaje máximo de clientes afectados.",
     "Definir un reporte estándar de 5 a 10 métricas accionables que todo experimento debe usar.",
     "Permitir que el equipo construya, lance y mida sin aprobación previa, pero exigir que reporte resultados con contabilidad de innovación.",
@@ -51,6 +51,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la regla de un solo equipo de principio a fin, que el libro liga a la retroalimentación rápida.; Se cae la regla del sandbox de que un mismo equipo lleve el experimento completo de principio a fin.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-022-sandbox_de_innovacion-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asignar un equipo multifuncional con un líder claro (estilo Toyota shusa), que lleve cada experimento completo de principio a fin.",
+      "texto_nuevo": "Asignar un equipo que lleve cada experimento completo de principio a fin; siempre que sea posible, que sea multifuncional y con un líder claro (estilo Toyota shusa).",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3149-3167",
+        "frase": "Whenever possible, the innovation team should be cross-functional and have a clear team leader"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide equipo multifuncional con líder claro solo siempre que sea posible (línea 3167); lo de principio a fin sí es incondicional (línea 3149).; Mismo defecto: se cae la condición siempre que sea posible del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

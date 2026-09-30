@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "La Moneda de Dos Caras del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. La mayoría de la gente solo mira la cara negativa, porque en general se pone más énfasis en los riesgos con resultados negativos. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
+  "resumen_teorico": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. No todo riesgo tiene las dos caras. En general se pone más énfasis en los riesgos con resultados negativos. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
   "pasos_accionables": [
     "De cada incertidumbre importante, escribe su cara de amenaza: cómo podría frenarte.",
     "Escribe también su cara de oportunidad, si la tiene: cómo podría, bien aprovechada, adelantarte.",
@@ -92,6 +92,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Exige las dos caras para cada incertidumbre, cuando el libro advierte que no todas las tienen.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-amenaza_y_oportunidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. La mayoría de la gente solo mira la cara negativa, porque en general se pone más énfasis en los riesgos con resultados negativos. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
+      "texto_nuevo": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. No todo riesgo tiene las dos caras. En general se pone más énfasis en los riesgos con resultados negativos. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "241-243",
+        "frase": "not every risk has the potential for both threat and opportunity outcomes"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro aclara que no todo riesgo puede tener a la vez resultado de amenaza y de oportunidad; el resumen omite esa excepción.; El libro dice que en general se pone más énfasis en lo negativo, no que la mayoría mire solo esa cara.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

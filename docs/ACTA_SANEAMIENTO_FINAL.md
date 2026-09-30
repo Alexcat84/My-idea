@@ -759,3 +759,30 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   reserva. Las de los lotes 004, 011 y 024 no las cazó ningún lector, igual que la p12 de la muestra de parada:
   fallo de método en esos lotes. Queda pendiente de decisión del fundador si la muestra de cierre usa solo matices de
   condición o excepción.
+
+**Decisión del fundador sobre las trampas de matiz (30 sep 2026):**
+- **La regla nueva:** en la muestra de cierre y en lo que queda del pase dirigido, una trampa de matiz quita una
+  condición o excepción real que cambia el sentido ("salvo que…", "solo si…", "siempre que…"), nunca un "solo" de
+  refuerzo.
+- **La validación:** antes de plantarla, un agente aparte (validador Opus, `INSTRUCCIONES_E1B_VALIDADOR_TRAMPAS.md`)
+  confirma contra el libro que quitarla es un defecto real según la rúbrica.
+- **Aplicado en el pase dirigido (`regen_matiz.py`):** los 23 lotes sin leer con trampa de matiz se replantaron con la
+  semilla 20270501 + 4000 + L.
+  - En 6 lotes había una condición o excepción real y el validador confirmó el defecto en las 7 candidatas.
+  - En los otros 17 no había ninguna, y la trampa pasó al siguiente tipo por turnos (contrario).
+  - Las trampas anteriores quedan en `e1b_trampas_antes_regen.json`, en las claves.
+- **Revisión de las trampas "solo" que ningún lector cazó:**
+
+  | Lote | ¿Quitar el "solo" cambiaba el sentido? | Registro |
+  |---|---|---|
+  | 004 | no | **trampa inválida** |
+  | 011 | no | **trampa inválida** |
+  | 024 | no | **trampa inválida** |
+  | 052 | sí ("no solo al arranque" pasaba a "no al arranque") | **fallo de método** |
+  | 056 | no | **trampa inválida** |
+  | p12 (muestra de parada) | no | **trampa inválida** |
+
+- **Cómo se leen los dos datos:** cinco de las seis trampas "solo" eran inválidas y no cuentan como fallo de los
+  lectores. La del lote 052 cambiaba el sentido y sigue como fallo de método.
+- **En la muestra de parada:** con p12 inválida, sus trampas de matiz válidas son 1 de 1 cazadas. El veredicto NO PASA
+  no cambia; lo sostienen el contrario, las invenciones y el matiz por nodo.

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Decide si vas a ofrecer una garantía escrita sobre tu producto.",
     "Si decides ofrecerla, verifica que cumple los tres requisitos: título 'full' o 'limited', términos divulgados con claridad y disponibilidad antes de la venta.",
-    "Revisa que tu garantía no obligue al cliente a comprar o usar algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni use frases engañosas.",
+    "Revisa que tu garantía no elimine las garantías implícitas, no obligue al cliente a comprar o usar algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni use frases engañosas.",
     "Consulta con un abogado que conozca esta ley antes de publicar tu garantía, para confirmar que todo está en regla."
   ],
   "entregable_esperado": "El texto de tu garantía revisado por un abogado, listo antes de imprimirlo o publicarlo, si vendes a clientes en Estados Unidos.",
@@ -178,6 +178,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El requisito no es un título claro cualquiera sino titularla 'full' o 'limited'.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-cumplimiento_magnuson_moss-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa que tu garantía no obligue al cliente a comprar o usar algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni use frases engañosas.",
+      "texto_nuevo": "Revisa que tu garantía no elimine las garantías implícitas, no obligue al cliente a comprar o usar algo de una empresa en particular, salvo que se lo des gratis o tengas una exención de la FTC, ni use frases engañosas.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "332-336",
+        "frase": "prohibits anyone who offers a written warranty from disclaiming or modifying implied warranties"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso revisa dos de las tres prohibiciones del libro y omite la de eliminar las garantías implícitas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

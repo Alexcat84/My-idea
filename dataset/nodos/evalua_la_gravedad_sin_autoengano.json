@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Evaluación de la Severidad del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. El peligro ahora no es la fórmula, es la honestidad: es tentador inflar por pesimismo la gravedad de algunos riesgos, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
+  "resumen_teorico": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. Evaluar así la gravedad exige mucho cuidado, y también honestidad: es tentador inflar por pesimismo la gravedad de algunos riesgos, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
   "pasos_accionables": [
     "Repasa tu lista ya ordenada por gravedad y pregúntate, riesgo por riesgo, si le pusiste el nivel que le corresponde o el que te conviene creer.",
     "Marca los riesgos donde notas que minimizaste algo que no quieres enfrentar.",
@@ -143,6 +143,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo mecanismo añadido: el libro habla de pesimismo excesivo, no de inflar lo que ya se decidió evitar.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-evalua_la_gravedad_sin_autoengano-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. El peligro ahora no es la fórmula, es la honestidad: es tentador inflar por pesimismo la gravedad de algunos riesgos, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
+      "texto_nuevo": "Ya cruzaste probabilidad e impacto y ordenaste tus riesgos por gravedad. Evaluar así la gravedad exige mucho cuidado, y también honestidad: es tentador inflar por pesimismo la gravedad de algunos riesgos, y minimizar la de lo que no quieres enfrentar. Cuando trabajas solo, sin nadie que te contrapese, tu miedo o tu ilusión pueden reescribir ese orden sin que te des cuenta. Evaluar la severidad sin autoengaño significa usar el mismo criterio para todos los riesgos y aceptar el veredicto aunque incomode, atendiendo primero los más graves y no los que más miedo emocional te generan.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5091-5095",
+        "frase": "Great care is necessary in devising measures for evaluating threat risk severity"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que evaluar la gravedad cruzando probabilidad e impacto exige mucho cuidado y que multiplicar valores ordinales no es válido; el nodo dice que la fórmula no es el peligro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

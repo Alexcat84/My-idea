@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Censo de Riesgos",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. De esa sesión sale la lista, y con el criterio distingues qué entra al registro y qué se queda fuera sin culpa. Esa primera sesión no es la última: sigue buscando riesgos nuevos mientras el proyecto avanza.",
+  "resumen_teorico": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su señal de alerta, lo que preparas antes, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los sueltas: los tan improbables que puedes ignorarlos y que, si ocurren, vuelven irrelevante tu proyecto; los de efecto mínimo que no piden preparación previa, y los riesgos de otro. De esa sesión sale la lista, y con el criterio distingues qué entra al registro y qué se queda fuera sin culpa. Esa primera sesión no es la última: sigue buscando riesgos nuevos mientras el proyecto avanza.",
   "pasos_accionables": [
     "Ponte un tiempo fijo y dedícalo solo a nombrar amenazas, sin evaluarlas todavía ni buscarles solución.",
     "Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.",
@@ -111,6 +111,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz que la marca 0.; Para los riesgos que se gestionan, el libro pide como mínimo señal de transición, mitigación previa y exposición.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-haz_tu_lista_de_lo_que_puede_fallar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los vas a soltar por ahora porque son improbables o su efecto es menor. De esa sesión sale la lista, y con el criterio distingues qué entra al registro y qué se queda fuera sin culpa. Esa primera sesión no es la última: sigue buscando riesgos nuevos mientras el proyecto avanza.",
+      "texto_nuevo": "Ya sabes cómo se registra un riesgo: con su identificador, su descripción, su causa y su efecto, su probabilidad y gravedad, su señal de alerta, lo que preparas antes, su respuesta y su responsable. Lo que falta es cómo se llena esa lista la primera vez sin quedarte corto. Se hace con una sesión honesta donde nombras, sin filtro, todo lo que podría hundir o frenar tu proyecto, incluso lo que te da vergüenza decir en voz alta. Después viene el criterio: no todo lo que nombraste merece una respuesta activa. Algunos riesgos los vas a trabajar ya, otros los sueltas: los tan improbables que puedes ignorarlos y que, si ocurren, vuelven irrelevante tu proyecto; los de efecto mínimo que no piden preparación previa, y los riesgos de otro. De esa sesión sale la lista, y con el criterio distingues qué entra al registro y qué se queda fuera sin culpa. Esa primera sesión no es la última: sigue buscando riesgos nuevos mientras el proyecto avanza.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "146, 414-426",
+        "frase": "The risk has minimal consequences and requires no mitigation."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige para ignorar un riesgo improbable que además vuelva irrelevante el proyecto, pide que el de efecto mínimo no requiera preparación y añade el riesgo que es de otro.; El libro pide, como mínimo para cada riesgo que se maneja, la señal de transición y lo que se hace antes de que ocurra; la lista del registro los omite.; El libro solo deja soltar un riesgo de efecto mínimo si no requiere preparación previa; esa condición se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diferenciación entre Garantía y Contrato de Servicio",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los términos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si haces tú mismo un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
+  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los términos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si haces tú mismo un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto ni limitarlas; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
   "pasos_accionables": [
     "Distingue con claridad en tu oferta la garantía incluida y el contrato de servicio opcional que se paga aparte.",
     "Escribe los términos del contrato de servicio en lenguaje simple y visible, sin que se confunda con una garantía.",
@@ -157,6 +157,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro asigna a la empresa que hace el contrato la divulgación de los términos; no habla de responder por su cumplimiento ni del fabricante.; Mismo defecto que la marca 0.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-diferenciacion_garantia_contrato_servicio-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los términos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si haces tú mismo un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
+      "texto_nuevo": "Esta es una regla de una ley federal de Estados Unidos (Magnuson-Moss Warranty Act). Un contrato de servicio es un acuerdo opcional de protección adicional que tu cliente compra por separado del producto, a diferencia de la garantía, que ya viene incluida en el precio de venta. La ley te exige escribir los términos del contrato de servicio de forma clara y comprensible, pero no te obliga a titularlo 'full' o 'limited'. Además, si haces tú mismo un contrato de servicio sobre tu propio producto, no puedes renunciar a las garantías implícitas de ese producto ni limitarlas; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "882",
+        "frase": "prohibited under the Act from disclaiming or limiting implied warranties"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro prohíbe excluir o limitar las garantías implícitas; el nodo deja fuera la limitación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

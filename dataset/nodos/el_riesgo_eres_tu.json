@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Fundador Como Punto Único de Falla",
   "fuente": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
-  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
   "pasos_accionables": [
     "Sugerencia de My Idea: documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
     "Sugerencia de My Idea: nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
@@ -191,6 +191,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El único manejo que da el libro para este riesgo, la holgura en la estimación, falta en el entregable.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-el_riesgo_eres_tu-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+      "texto_nuevo": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006, 1072",
+        "frase": "one key player whose departure could be disastrous to the project"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que la salida de una persona clave puede ser desastrosa y pone el plazo mal calculado como el riesgo de mayor impacto; no dice que sea el mayor riesgo.; Las medidas concretas (documentar, acceso de emergencia, plan para clientes) no están en el libro, que para la rotación habla de holgura y de preparar antes; se quitan del resumen y quedan en los pasos como sugerencias.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

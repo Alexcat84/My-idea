@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "La Naturaleza Dinámica del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Un riesgo no es una foto, es una película. Su probabilidad, su impacto o ambos cambian con el tiempo: pocos riesgos siguen iguales para siempre y algunos hasta desaparecen y se pueden dar por cerrados. Las tasas de interés suben, el clima se pone en contra, una ley cambia, tu productividad sube o baja. Por eso la lista de riesgos que hiciste al arrancar caduca sola: lo que era grave hace tres meses puede ser inofensivo hoy, y algo que ni existía ahora te acecha. Como emprendedor esto significa que revisar tus riesgos no es un trámite de una sola vez, sino un hábito que acompaña cada etapa del proyecto.",
+  "resumen_teorico": "Un riesgo no es una foto, es una película. Su probabilidad, su impacto o ambos pueden cambiar con el tiempo: pocos riesgos siguen iguales para siempre y algunos hasta desaparecen y se pueden dar por cerrados. Las tasas de interés suben, el clima se pone en contra, una ley cambia, tu productividad sube o baja. Por eso la lista de riesgos que hiciste al arrancar caduca sola: lo que era grave hace tres meses puede ser inofensivo hoy, y algo que ni existía ahora te acecha. Como emprendedor esto significa que revisar tus riesgos no es un trámite de una sola vez, sino un hábito que acompaña cada etapa del proyecto.",
   "pasos_accionables": [
     "Ponle fecha a tu lista de riesgos: es una foto de ese día, no una verdad eterna.",
     "Agenda una revisión periódica, aunque sea corta, para actualizarla.",
@@ -42,6 +42,22 @@
         "evidencia": "F19-005: Trata de revisar y actualizar periódicamente la lista de riesgos durante el proyecto, que es control y seguimiento continuo. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1b-020-el_riesgo_cambia_con_el_tiempo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un riesgo no es una foto, es una película. Su probabilidad, su impacto o ambos cambian con el tiempo: pocos riesgos siguen iguales para siempre y algunos hasta desaparecen y se pueden dar por cerrados. Las tasas de interés suben, el clima se pone en contra, una ley cambia, tu productividad sube o baja. Por eso la lista de riesgos que hiciste al arrancar caduca sola: lo que era grave hace tres meses puede ser inofensivo hoy, y algo que ni existía ahora te acecha. Como emprendedor esto significa que revisar tus riesgos no es un trámite de una sola vez, sino un hábito que acompaña cada etapa del proyecto.",
+      "texto_nuevo": "Un riesgo no es una foto, es una película. Su probabilidad, su impacto o ambos pueden cambiar con el tiempo: pocos riesgos siguen iguales para siempre y algunos hasta desaparecen y se pueden dar por cerrados. Las tasas de interés suben, el clima se pone en contra, una ley cambia, tu productividad sube o baja. Por eso la lista de riesgos que hiciste al arrancar caduca sola: lo que era grave hace tres meses puede ser inofensivo hoy, y algo que ni existía ahora te acecha. Como emprendedor esto significa que revisar tus riesgos no es un trámite de una sola vez, sino un hábito que acompaña cada etapa del proyecto.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "407",
+        "frase": "The probability of occurrence and the impact, or indeed both, of particular risks may change"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la probabilidad y el impacto pueden cambiar con el tiempo; el nodo lo da por seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

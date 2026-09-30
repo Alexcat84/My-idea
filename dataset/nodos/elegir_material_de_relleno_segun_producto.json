@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir el material de relleno según el producto",
   "fuente": "Guia de empaque para transporte",
-  "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+  "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos o estrechos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos livianos y no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
   "pasos_accionables": [
     "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
-    "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+    "Usa burbujas en varias vueltas y capas para proteger por completo los artículos livianos y delicados, sobre todo en esquinas y bordes, con la cara lisa hacia el producto y las burbujas hacia afuera.",
     "Evita maníes de poliestireno comunes con productos planos, estrechos o electrónicos; para la electrónica usa maníes antiestáticos y envuelve el artículo en plástico de burbujas.",
     "Sugerencia de My Idea: reserva el papel kraft bien arrugado para artículos livianos, resistentes y de bajo valor.",
     "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve."
@@ -93,6 +93,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la indicación de envolver con la cara lisa hacia el producto y las burbujas hacia afuera.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-021-elegir_material_de_relleno_segun_producto-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+      "texto_nuevo": "Usa burbujas en varias vueltas y capas para proteger por completo los artículos livianos y delicados, sobre todo en esquinas y bordes, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+      "cita": {
+        "libro": "Guia de empaque para transporte",
+        "fichero": "txt/Supply chain/Packaging_Guidelines.txt",
+        "lineas": "43-47",
+        "frase": "Used in multiple wraps and layers to ensure that the item is completely protected"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide varias vueltas y capas para proteger el artículo por completo, sobre todo en esquinas y bordes; el paso reduce la protección a esquinas y bordes.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-021-elegir_material_de_relleno_segun_producto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+      "texto_nuevo": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos o estrechos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos livianos y no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+      "cita": {
+        "libro": "Guia de empaque para transporte",
+        "fichero": "txt/Supply chain/Packaging_Guidelines.txt",
+        "lineas": "61-81",
+        "frase": "Used primarily as void-fill material for lightweight, non-fragile items."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro excluye los maníes con productos planos o estrechos; el resumen deja caer los estrechos.; El libro reserva el kraft arrugado para artículos livianos y no frágiles; el resumen pierde la condición de livianos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

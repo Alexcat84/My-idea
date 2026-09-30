@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Los Riesgos Nucleares de Todo Proyecto",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Hay cinco formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+  "resumen_teorico": "Hay cinco riesgos que aparecen una y otra vez en los proyectos, tan repetidos que puedes darlos por descontados, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estos cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
   "pasos_accionables": [
     "Revisa tu plan contra las cinco formas típicas de morir y anota cuál te amenaza más.",
     "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (cuándo lo quieren para).",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que esas cuatro son casi totalmente independientes del esfuerzo y la competencia, no que sean inevitables.; El libro dice que la ruptura del acuerdo, cuando ocurre, casi siempre es fatal; el 'a veces' le quita gravedad.; El libro elige cinco de veinte o treinta problemas comunes porque explican la mayor parte del desvío, y advierte que no son los únicos riesgos.; Mismo matiz que la marca 1: casi siempre fatal, no a veces.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-las_formas_en_que_los_proyectos_mueren-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hay cinco formas en que los proyectos mueren una y otra vez, tan repetidas que puedes darlas por descontadas, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estas cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+      "texto_nuevo": "Hay cinco riesgos que aparecen una y otra vez en los proyectos, tan repetidos que puedes darlos por descontados, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estos cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "928-942, 1018",
+        "frase": "they account for most of the deviation between plan and actual"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta los cinco como riesgos comunes que explican casi toda la desviación del plan; solo la ruptura de la especificación hunde el proyecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

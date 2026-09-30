@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Autoservicio y Autosanación del Producto",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Cada llamada de soporte es un síntoma: en algún punto tu producto le pidió a tu cliente algo que no supo resolver solo. La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan esas llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que tu cliente resuelva por su cuenta la mayoría de los problemas y tú quedes listo para arreglar los que no pueda. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
+  "resumen_teorico": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que tu cliente resuelva por su cuenta la mayoría de los problemas y tú quedes listo para arreglar los que no pueda. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
   "pasos_accionables": [
     "Revisar los puntos de fricción del producto que generan llamadas de soporte",
     "Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente",
@@ -81,6 +81,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro busca que el cliente resuelva la mayoría de los problemas solo y que la empresa quede lista para los que no pueda.; El libro muestra porcentajes de clientes que no tuvieron que llamar; no dice que todo se mida con una sola cifra.; Misma invención que la marca 1: la doctrina de la cifra única no está en el libro.; Mismo matiz que la marca 0: se pierde el límite de la mayoría y el respaldo de la empresa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-021-autoservicio_y_autosanacion_del_producto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada llamada de soporte es un síntoma: en algún punto tu producto le pidió a tu cliente algo que no supo resolver solo. La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan esas llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que tu cliente resuelva por su cuenta la mayoría de los problemas y tú quedes listo para arreglar los que no pueda. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
+      "texto_nuevo": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que tu cliente resuelva por su cuenta la mayoría de los problemas y tú quedes listo para arreglar los que no pueda. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "6336-6340",
+        "frase": "You have to build your product as if a call center doesn't exist."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no afirma que toda llamada de soporte nazca de algo que el producto pidió y el cliente no supo resolver; solo pide construir el producto como si no existiera el centro de llamadas.; Mismo defecto: una causa universal de toda llamada que el libro no enuncia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

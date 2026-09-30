@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Las Opciones de Respuesta al Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Ante un riesgo tienes cuatro caminos, y conviene conocerlos antes de decidir. Puedes evitarlo, cambiando de rumbo para que ya no pueda ocurrir; transferirlo, pasándoselo a otra parte, como con un seguro o una cláusula, aunque suele salir caro y rara vez te libera del todo; reducirlo, bajando su probabilidad o su impacto y quedándote con lo que sobra; o retenerlo, aceptarlo tal cual porque tratarlo costaría más de lo que vale. Los riesgos casi nunca se eliminan del todo: al cerrar uno suele abrirse otro. La respuesta siempre tiene un costo, así que se pesa contra el daño que evitaría. Para el emprendedor, tener presentes los cuatro caminos evita el reflejo de siempre reaccionar igual y abre opciones más baratas o más listas.",
+  "resumen_teorico": "Ante un riesgo tienes cuatro caminos, y conviene conocerlos antes de decidir. Puedes evitarlo, cambiando de rumbo para que ya no pueda ocurrir; transferirlo, pasándoselo a otra parte, como con un seguro o una cláusula, aunque suele salir caro y rara vez te libera del todo; reducirlo, bajando su probabilidad, su impacto o el tiempo que estás expuesto a él, y quedándote con lo que sobra; o retenerlo, aceptarlo tal cual, tras evaluarlo, porque tratarlo difícilmente sería eficaz o costaría más de lo que vale. Los riesgos casi nunca se eliminan del todo: al cerrar uno suele abrirse otro. La respuesta siempre tiene un costo, así que se pesa contra el daño que evitaría.",
   "pasos_accionables": [
     "Toma tus riesgos más graves y, de cada uno, escribe cuál de los cuatro caminos le conviene.",
     "Considera primero si puedes evitarlo cambiando de rumbo, la respuesta más contundente.",
@@ -62,6 +62,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide comprobar primero si el riesgo puede reducirse a un nivel aceptable antes de transferirlo o retenerlo entero.; Mismo matiz perdido.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-020-cuatro_caminos_ante_un_riesgo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante un riesgo tienes cuatro caminos, y conviene conocerlos antes de decidir. Puedes evitarlo, cambiando de rumbo para que ya no pueda ocurrir; transferirlo, pasándoselo a otra parte, como con un seguro o una cláusula, aunque suele salir caro y rara vez te libera del todo; reducirlo, bajando su probabilidad o su impacto y quedándote con lo que sobra; o retenerlo, aceptarlo tal cual porque tratarlo costaría más de lo que vale. Los riesgos casi nunca se eliminan del todo: al cerrar uno suele abrirse otro. La respuesta siempre tiene un costo, así que se pesa contra el daño que evitaría. Para el emprendedor, tener presentes los cuatro caminos evita el reflejo de siempre reaccionar igual y abre opciones más baratas o más listas.",
+      "texto_nuevo": "Ante un riesgo tienes cuatro caminos, y conviene conocerlos antes de decidir. Puedes evitarlo, cambiando de rumbo para que ya no pueda ocurrir; transferirlo, pasándoselo a otra parte, como con un seguro o una cláusula, aunque suele salir caro y rara vez te libera del todo; reducirlo, bajando su probabilidad, su impacto o el tiempo que estás expuesto a él, y quedándote con lo que sobra; o retenerlo, aceptarlo tal cual, tras evaluarlo, porque tratarlo difícilmente sería eficaz o costaría más de lo que vale. Los riesgos casi nunca se eliminan del todo: al cerrar uno suele abrirse otro. La respuesta siempre tiene un costo, así que se pesa contra el daño que evitaría.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5662, 5677",
+        "frase": "treatment is unlikely to be effective or delivers a negative benefit/cost ratio"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera tres dimensiones que se pueden reducir: probabilidad, impacto y duración de la exposición; se cae la tercera.; El libro no promete que conocer los cuatro caminos evite reaccionar igual ni abra opciones más baratas.; El libro también admite retener cuando el tratamiento difícilmente sería eficaz; esa razón se cae.; Mismo defecto que la marca 0.; Se caen la razón de la ineficacia y la condición de decidir retener tras evaluar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

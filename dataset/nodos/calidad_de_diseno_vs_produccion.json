@@ -7,7 +7,7 @@
   "resumen_teorico": "En cualquier sistema hay dos tipos de calidad: la calidad de diseño, que son los programas y procedimientos específicos que prometen producir un servicio o producto vendible (lo que el cliente requiere), y la calidad de producción, que es el logro de resultados acordes a la calidad prometida en el diseño. El control de calidad debe trabajar simultáneamente sobre ambos aspectos: no basta con encontrar el error, es necesario encontrar la causa detrás del error y construir un sistema que minimice errores futuros.",
   "pasos_accionables": [
     "Definir claramente los requisitos del cliente antes de diseñar el producto o servicio",
-    "Documentar los procedimientos y programas que garantizan ese diseño",
+    "Documentar los procedimientos y programas que prometen producir ese diseño",
     "Medir la brecha entre lo diseñado y lo efectivamente producido",
     "Investigar causas raíz de las desviaciones, no solo los síntomas"
   ],
@@ -55,6 +55,23 @@
         "evidencia": "F26-012: Mide la brecha entre lo disenado y lo producido y busca causas raiz; es control de calidad de la operacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1b-021-calidad_de_diseno_vs_produccion-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar los procedimientos y programas que garantizan ese diseño",
+      "texto_nuevo": "Documentar los procedimientos y programas que prometen producir ese diseño",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "5047",
+        "frase": "specific programs and procedures that promise to produce a saleable service or product"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que esos programas y procedimientos prometen producir el producto o servicio, no que lo garanticen.; Mismo defecto: garantizar donde el libro dice prometer.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [
