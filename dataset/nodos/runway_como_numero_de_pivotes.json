@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Runway medido en Pivotes Disponibles",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "La verdadera medida del runway (tiempo de vida restante) de una startup no es solo el efectivo dividido por la tasa de quema mensual, sino el número de pivotes que aún puede realizar. Reducir costos indiscriminadamente puede ralentizar el ciclo Construir-Medir-Aprender, lo cual solo prolonga el fracaso. La estrategia correcta es acelerar la velocidad para llegar a cada pivote más rápido y barato.",
+  "resumen_teorico": "La verdadera medida del runway (tiempo de vida restante) de una startup no es solo el efectivo dividido por la tasa de quema mensual, sino el número de pivotes que aún puede realizar. Reducir costos indiscriminadamente puede ralentizar el ciclo Construir-Medir-Aprender, lo cual solo prolonga el fracaso. Otra manera de alargar el runway es acelerar la velocidad para llegar a cada pivote más rápido y barato.",
   "pasos_accionables": [
     "Calcular el runway tradicional (efectivo disponible / tasa de quema mensual)",
     "Evaluar cuántos ciclos de Construir-Medir-Aprender puede financiar ese runway",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Cuenta tus Pivotes Disponibles",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-091-runway_como_numero_de_pivotes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La verdadera medida del runway (tiempo de vida restante) de una startup no es solo el efectivo dividido por la tasa de quema mensual, sino el número de pivotes que aún puede realizar. Reducir costos indiscriminadamente puede ralentizar el ciclo Construir-Medir-Aprender, lo cual solo prolonga el fracaso. La estrategia correcta es acelerar la velocidad para llegar a cada pivote más rápido y barato.",
+      "texto_nuevo": "La verdadera medida del runway (tiempo de vida restante) de una startup no es solo el efectivo dividido por la tasa de quema mensual, sino el número de pivotes que aún puede realizar. Reducir costos indiscriminadamente puede ralentizar el ciclo Construir-Medir-Aprender, lo cual solo prolonga el fracaso. Otra manera de alargar el runway es acelerar la velocidad para llegar a cada pivote más rápido y barato.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1834",
+        "frase": "suggests another way to extend that runway: get to each pivot faster"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta llegar antes a cada pivote como otra manera de alargar el runway, junto a recortar costos o recaudar fondos; llamarla 'la estrategia correcta' endurece lo que dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

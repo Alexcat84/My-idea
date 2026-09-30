@@ -7,7 +7,7 @@
   "resumen_teorico": "Dentro de organizaciones establecidas, la innovación genera miedo racional en los equipos existentes porque amenaza sus relaciones con clientes, ingresos y poder. Ocultar la innovación (skunkworks) genera desconfianza y política interna a largo plazo. La solución es crear un 'sandbox' (caja de arena): un espacio delimitado donde equipos pueden experimentar libremente con split-tests reales, sin necesidad de aprobación previa, pero con reglas claras que limitan el impacto (tiempo, número de clientes, páginas o segmentos afectados) y que exigen métricas accionables estandarizadas. Esto permite proteger tanto al equipo innovador como a la organización matriz.",
   "pasos_accionables": [
     "Definir el alcance inicial del sandbox (ej: solo la página de precios, ciertos clientes o territorios).",
-    "Asignar un equipo multifuncional con un líder claro (estilo Toyota shusa).",
+    "Asignar un equipo multifuncional con un líder claro (estilo Toyota shusa), que lleve cada experimento completo de principio a fin.",
     "Establecer reglas: duración máxima del experimento, porcentaje máximo de clientes afectados.",
     "Definir un reporte estándar de 5 a 10 métricas accionables que todo experimento debe usar.",
     "Permitir que el equipo construya, lance y mida sin aprobación previa, pero exigir que reporte resultados con contabilidad de innovación.",
@@ -33,5 +33,24 @@
   "etiqueta_arbol": "Crea un Sandbox Seguro",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-091-sandbox_de_innovacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asignar un equipo multifuncional con un líder claro (estilo Toyota shusa).",
+      "texto_nuevo": "Asignar un equipo multifuncional con un líder claro (estilo Toyota shusa), que lleve cada experimento completo de principio a fin.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3149",
+        "frase": "One team must see the whole experiment through from end to end."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta la regla de un solo equipo de principio a fin, que el libro liga a la retroalimentación rápida.; Se cae la regla del sandbox de que un mismo equipo lleve el experimento completo de principio a fin.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,14 +4,14 @@
   "dominio": "risk_management",
   "titulo_concepto": "Registrar las Decisiones de Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es una de las cosas más valiosas que puedes hacer, porque la memoria engaña: dentro de unos meses no recordarás si aceptaste un riesgo por análisis o por prisa, y repetirás el error o desharás una buena decisión sin saberlo. Registrar la razón (qué sabías, qué supusiste, qué alternativas descartaste) te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+  "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: cada vez que decidas qué hacer con un riesgo, escribe en una línea por qué lo decidiste así.",
-    "Anota qué sabías, qué supusiste y qué otras opciones descartaste.",
+    "Sugerencia de My Idea: cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
+    "Describe por completo la respuesta que elegiste y qué aspecto del riesgo ataca, por ejemplo, reducir su probabilidad con inspecciones más frecuentes.",
     "Guarda esas notas junto a tu lista de riesgos, no sueltas.",
     "Al cerrar el proyecto, relee tus decisiones y saca lecciones para el siguiente."
   ],
-  "entregable_esperado": "Un registro breve de cada decisión de riesgo con su razón, guardado junto a tu lista de riesgos.",
+  "entregable_esperado": "Un registro completo de cada decisión de riesgo, con la respuesta descrita entera y su razón, guardado junto a tu lista de riesgos.",
   "nodos_previos": [
     "reduce_el_riesgo_a_lo_razonable",
     "plan_b_antes_de_necesitarlo"
@@ -57,6 +57,72 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-084-anota_por_que_decidiste_asi-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Sugerencia de My Idea: cada vez que decidas qué hacer con un riesgo, escribe en una línea por qué lo decidiste así.",
+      "texto_nuevo": "Sugerencia de My Idea: cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5827",
+        "frase": "the item record entry should be as comprehensive and complete as possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro pide que el registro sea lo más completo posible y que la respuesta se describa entera, no en una línea.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-anota_por_que_decidiste_asi-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un registro breve de cada decisión de riesgo con su razón, guardado junto a tu lista de riesgos.",
+      "texto_nuevo": "Un registro completo de cada decisión de riesgo, con la respuesta descrita entera y su razón, guardado junto a tu lista de riesgos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5827",
+        "frase": "the item record entry should be as comprehensive and complete as possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El defecto existe, pero pedir un registro breve invierte lo que dice el libro, no solo pierde un matiz.; El libro pide un registro lo más completo posible, no breve.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-anota_por_que_decidiste_asi-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es una de las cosas más valiosas que puedes hacer, porque la memoria engaña: dentro de unos meses no recordarás si aceptaste un riesgo por análisis o por prisa, y repetirás el error o desharás una buena decisión sin saberlo. Registrar la razón (qué sabías, qué supusiste, qué alternativas descartaste) te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+      "texto_nuevo": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "1908",
+        "frase": "leave an organisation vulnerable to repeating poor decisions in the future"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pide registrar lo sabido, lo supuesto ni las alternativas; pide describir por completo la respuesta y qué aspecto ataca.; La memoria que engaña y deshacer buenas decisiones no están en el libro, que lo justifica como compromiso y constancia.; Valoración y efecto que el libro no da; solo dice que no registrar deja expuesto a repetir malas decisiones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-anota_por_que_decidiste_asi-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota qué sabías, qué supusiste y qué otras opciones descartaste.",
+      "texto_nuevo": "Describe por completo la respuesta que elegiste y qué aspecto del riesgo ataca, por ejemplo, reducir su probabilidad con inspecciones más frecuentes.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5829",
+        "frase": "Any intended treatment should be fully described, including the particular aspects of the risk addressed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Contenido del registro que el libro no da; pide describir la respuesta completa y qué aspecto del riesgo trata.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "El momento de decidir: pivotar o seguir adelante (Pivote o Proceder)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es el momento de pausa donde te sientas con quien te acompaña en esto (un socio, alguien que invirtió en ti) a revisar todo lo que aprendiste hablando con clientes y mirando el mercado, y decides si tus hipótesis de negocio necesitan un cambio de rumbo (pivotar) o si sigues adelante como lo planeaste. Comparas cómo trabaja el cliente en la vida real con lo que habías supuesto al inicio.",
+  "resumen_teorico": "Es el momento de pausa donde te sientas con quien te acompaña en esto (un socio, alguien que invirtió en ti) a revisar todo lo que aprendiste hablando con clientes y mirando el mercado, y decides si tus hipótesis de negocio necesitan un cambio de rumbo (pivotar) o si sigues adelante, sabiendo que con lo aprendido es casi seguro que al menos alguna tenga que cambiar. Comparas cómo trabaja el cliente en la vida real con lo que habías supuesto al inicio.",
   "pasos_accionables": [
     "Siéntate con quien te acompaña en esto, no lo decidas solo en tu cabeza, y si tienes inversores, súmalos también",
     "Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido",
     "Compara ese mapa real con lo que habías supuesto al armar tu modelo de negocio",
     "Pregúntate qué tan bien lo que estás construyendo resuelve el problema real de tu cliente",
-    "Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto",
+    "Si la respuesta es 'no del todo', revisa primero si hablaste con las personas correctas, con suficientes y con las preguntas adecuadas; antes de cambiar el producto sigue buscando clientes entusiasmados, en tu grupo o en otro, y solo si no los encuentras plantéate cambiar las funciones",
     "Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes",
     "Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes",
     "Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes",
@@ -57,5 +57,40 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-089-pivote_o_proceder-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es el momento de pausa donde te sientas con quien te acompaña en esto (un socio, alguien que invirtió en ti) a revisar todo lo que aprendiste hablando con clientes y mirando el mercado, y decides si tus hipótesis de negocio necesitan un cambio de rumbo (pivotar) o si sigues adelante como lo planeaste. Comparas cómo trabaja el cliente en la vida real con lo que habías supuesto al inicio.",
+      "texto_nuevo": "Es el momento de pausa donde te sientas con quien te acompaña en esto (un socio, alguien que invirtió en ti) a revisar todo lo que aprendiste hablando con clientes y mirando el mercado, y decides si tus hipótesis de negocio necesitan un cambio de rumbo (pivotar) o si sigues adelante, sabiendo que con lo aprendido es casi seguro que al menos alguna tenga que cambiar. Comparas cómo trabaja el cliente en la vida real con lo que habías supuesto al inicio.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8704",
+        "frase": "makes it a near-certainty that at least some business model hypotheses need to change"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que lo aprendido hace casi seguro que al menos algunas hipótesis cambien; seguir no es seguir como se planeó.; Misma pérdida de la casi certeza de que alguna hipótesis debe cambiar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-089-pivote_o_proceder-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto",
+      "texto_nuevo": "Si la respuesta es 'no del todo', revisa primero si hablaste con las personas correctas, con suficientes y con las preguntas adecuadas; antes de cambiar el producto sigue buscando clientes entusiasmados, en tu grupo o en otro, y solo si no los encuentras plantéate cambiar las funciones",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8726",
+        "frase": "before changing the product, keep looking for customer enthusiasm."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma pérdida del orden: solo si no aparecen clientes se discute cambiar las funciones.; Se pierde el orden del libro: revisar primero a quién y cómo se entrevistó y seguir buscando entusiasmo antes de tocar las funciones.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

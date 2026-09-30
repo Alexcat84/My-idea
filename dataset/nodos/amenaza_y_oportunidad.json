@@ -4,14 +4,14 @@
   "dominio": "risk_management",
   "titulo_concepto": "La Moneda de Dos Caras del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. La mayoría de la gente solo mira la cara negativa, y con razón, porque las consecuencias malas suelen doler más y ser más urgentes. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
+  "resumen_teorico": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. La mayoría de la gente solo mira la cara negativa, porque en general se pone más énfasis en los riesgos con resultados negativos. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
   "pasos_accionables": [
     "De cada incertidumbre importante, escribe su cara de amenaza: cómo podría frenarte.",
-    "Escribe también su cara de oportunidad: cómo podría, bien aprovechada, adelantarte.",
+    "Escribe también su cara de oportunidad, si la tiene: cómo podría, bien aprovechada, adelantarte.",
     "Si no tiene ni una cara ni la otra respecto a tu meta, déjala fuera de tu lista.",
     "Marca una oportunidad concreta que valga la pena perseguir."
   ],
-  "entregable_esperado": "Una tabla de tus incertidumbres con su cara de amenaza y su cara de oportunidad, y una oportunidad marcada para perseguir.",
+  "entregable_esperado": "Una tabla de tus incertidumbres con su cara de amenaza y su cara de oportunidad cuando la tengan, y una oportunidad marcada para perseguir.",
   "nodos_previos": [
     "riesgo_no_es_mala_suerte"
   ],
@@ -43,6 +43,55 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro apoya buscar y explotar oportunidades, pero no fija el plazo de esta semana.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-072"
+    },
+    {
+      "id": "final-e1-084-amenaza_y_oportunidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. La mayoría de la gente solo mira la cara negativa, y con razón, porque las consecuencias malas suelen doler más y ser más urgentes. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
+      "texto_nuevo": "El riesgo es una moneda de dos caras. Una cara es la amenaza: lo que puede impedir que alcances tu objetivo. La otra es la oportunidad: lo que, si lo aprovechas, puede hacer que lo superes. La mayoría de la gente solo mira la cara negativa, porque en general se pone más énfasis en los riesgos con resultados negativos. Pero un emprendedor despierto también vigila la cara buena: un cambio en el mercado, un proveedor que quiebra y te deja su hueco, una tecnología nueva que abarata tu operación. La regla práctica es simple: si un evento incierto no amenaza tu meta ni te abre una oportunidad, no es un riesgo para ti.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "243",
+        "frase": "society generally places more emphasis on the management of risks with negative"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da esa causa; dice que la sociedad en general pone más énfasis en los riesgos con resultados negativos.; Mismo defecto: causa inventada para el foco en lo negativo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-amenaza_y_oportunidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe también su cara de oportunidad: cómo podría, bien aprovechada, adelantarte.",
+      "texto_nuevo": "Escribe también su cara de oportunidad, si la tiene: cómo podría, bien aprovechada, adelantarte.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "241",
+        "frase": "not every risk has the potential for both threat and opportunity outcomes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no todo riesgo tiene a la vez cara de amenaza y de oportunidad; el paso la exige siempre.; Mismo matiz perdido.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-amenaza_y_oportunidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una tabla de tus incertidumbres con su cara de amenaza y su cara de oportunidad, y una oportunidad marcada para perseguir.",
+      "texto_nuevo": "Una tabla de tus incertidumbres con su cara de amenaza y su cara de oportunidad cuando la tengan, y una oportunidad marcada para perseguir.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "241",
+        "frase": "not every risk has the potential for both threat and opportunity outcomes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Exige las dos caras para cada incertidumbre, cuando el libro advierte que no todas las tienen.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

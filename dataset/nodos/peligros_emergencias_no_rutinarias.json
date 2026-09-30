@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+  "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
   "pasos_accionables": [
     "Identificar escenarios de emergencia previsibles según el tipo de instalación, material manejado y ubicación",
     "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
     "Desarrollar planes o procedimientos de respuesta específicos para cada escenario identificado",
-    "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria",
-    "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia"
+    "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria y avisar a los demás sobre la naturaleza del trabajo, el horario y las precauciones necesarias",
+    "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia, conseguir el equipo necesario, asignar responsables y hacer simulacros para comprobar que protegen de forma adecuada"
   ],
   "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con planes o procedimientos de respuesta asociados",
   "nodos_previos": [
@@ -117,6 +117,56 @@
         "motivo": "Referencia de un nodo vivo a inspeccion_sitio_peligros, deprecado; su superviviente es inspeccion_lugar_trabajo_peligros."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-086-peligros_emergencias_no_rutinarias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+      "texto_nuevo": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos, emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "593-617",
+        "frase": "hazards associated with foreseeable emergency scenarios and nonroutine situations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no da esas razones y habla de escenarios previsibles, no imprevisibles.; La lista del libro incluye emergencias médicas, violencia en el lugar de trabajo y brotes de enfermedades, que también requieren plan.; Mismo porqué añadido, que además choca con los escenarios previsibles del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-peligros_emergencias_no_rutinarias-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria",
+      "texto_nuevo": "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria y avisar a los demás sobre la naturaleza del trabajo, el horario y las precauciones necesarias",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "731",
+        "frase": "notify others about the nature of the work, work schedule, and any necessary precautions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además avisar a los demás de la naturaleza del trabajo, el horario y las precauciones.; Mismo defecto: se cae el aviso a los demás.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-peligros_emergencias_no_rutinarias-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia",
+      "texto_nuevo": "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia, conseguir el equipo necesario, asignar responsables y hacer simulacros para comprobar que protegen de forma adecuada",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "737-743",
+        "frase": "Conduct emergency drills to ensure that procedures and equipment provide adequate protection"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye conseguir el equipo, asignar responsables y hacer simulacros que comprueben la protección.; Mismo defecto: se pierden equipo, responsables y simulacros.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

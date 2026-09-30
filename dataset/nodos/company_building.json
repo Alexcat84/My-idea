@@ -9,9 +9,9 @@
     "Forma áreas de trabajo definidas: ventas, marketing, desarrollo de negocio",
     "Si tú y tu equipo fundador no tienen experiencia operando a esta escala, contrata gente que sí la tenga",
     "Redefine tu propio rol si hace falta, por ejemplo pasar a formar parte del consejo en vez de operar el día a día",
-    "Pon en marcha procesos, un plan de operación y proyecciones financieras formales"
+    "Pon a cada responsable de área a construir su departamento para escalar la empresa, con el foco en ejecutar y no en buscar"
   ],
-  "entregable_esperado": "Una estructura de trabajo formal, con roles definidos y un plan de operación para ejecutar.",
+  "entregable_esperado": "Una estructura de trabajo formal, con roles definidos y enfocada en ejecutar.",
   "nodos_previos": [
     "customer_creation",
     "modelo_customer_development",
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Construye Tu Empresa Formal",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-088-company_building-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pon en marcha procesos, un plan de operación y proyecciones financieras formales",
+      "texto_nuevo": "Pon a cada responsable de área a construir su departamento para escalar la empresa, con el foco en ejecutar y no en buscar",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "934",
+        "frase": "These executives now focus on building their departments to scale the company"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe departamentos formales enfocados en ejecutar; no habla de plan de operación ni proyecciones financieras.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-company_building-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una estructura de trabajo formal, con roles definidos y un plan de operación para ejecutar.",
+      "texto_nuevo": "Una estructura de trabajo formal, con roles definidos y enfocada en ejecutar.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "934",
+        "frase": "refocuses the team’s energy away from “search” mode and to a focus on execution"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El plan de operación no aparece en el libro.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

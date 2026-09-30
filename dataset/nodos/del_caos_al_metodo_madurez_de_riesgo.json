@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Niveles de Madurez en la Gestión de Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo, y empiezas a mejorarlas. En el cuarto maduras: la gestión de riesgo es estable, propia, y está en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista, sin saltarte etapas. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
+  "resumen_teorico": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo, y empiezas a mejorarlas. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo es estable, propia, y está en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
   "pasos_accionables": [
     "Ubica en qué nivel estás: improvisas, arrancas, creces o ya tienes método propio.",
     "Identifica el escalón siguiente y una sola práctica que te llevaría a él.",
-    "No intentes saltar al método perfecto: consolida un nivel antes de subir al otro.",
+    "Sugerencia de My Idea: no intentes saltar al método perfecto; consolida un nivel antes de subir al otro.",
     "Repite y afina tu método en cada proyecto, para que suba de nivel con el tiempo."
   ],
   "entregable_esperado": "Tu nivel de madurez de riesgo identificado y la práctica concreta que te sube al siguiente escalón.",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Del Caos al Método",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-084-del_caos_al_metodo_madurez_de_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo, y empiezas a mejorarlas. En el cuarto maduras: la gestión de riesgo es estable, propia, y está en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista, sin saltarte etapas. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
+      "texto_nuevo": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo, y empiezas a mejorarlas. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo es estable, propia, y está en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "10809",
+        "frase": "there is a threat risk of system decay, at least for levels 2 and 3"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro describe los niveles y sugiere empezar simple, pero no fija la regla de no saltarse etapas.; Mismo matiz que la marca 0: riesgo de decaimiento en los niveles 2 y 3.; Se cae la advertencia de que en los niveles 2 y 3 el sistema corre riesgo de decaer.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-del_caos_al_metodo_madurez_de_riesgo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No intentes saltar al método perfecto: consolida un nivel antes de subir al otro.",
+      "texto_nuevo": "Sugerencia de My Idea: no intentes saltar al método perfecto; consolida un nivel antes de subir al otro.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "10782",
+        "frase": "Added sophistication can be introduced as maturity increases"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Regla de progresión que el libro no da; solo sugiere empezar con un sistema sencillo y sumar sofisticación con la madurez.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

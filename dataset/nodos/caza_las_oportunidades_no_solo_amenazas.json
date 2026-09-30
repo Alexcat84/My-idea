@@ -4,10 +4,10 @@
   "dominio": "risk_management",
   "titulo_concepto": "La Gestión del Riesgo de Oportunidad",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "La incertidumbre no solo trae amenazas: también trae oportunidades, y gestionarlas es la cara olvidada del riesgo. Igual que vigilas lo que podría hundirte, puedes vigilar lo que, si lo aprovechas a tiempo, podría dispararte: un competidor que cae y libera clientes, un cambio de reglas que te favorece, una tecnología nueva que te abarata todo. La mayoría solo se defiende y deja pasar estas oportunidades por no estar atento o por no atreverse. Manejar el riesgo de oportunidad es tratar esas incertidumbres buenas con el mismo método: nombrarlas, estimar su probabilidad y su premio, y preparar cómo las tomarías si aparecen. Para el emprendedor, cazar oportunidades a propósito, y no solo esquivar amenazas, es lo que convierte el manejo del riesgo en un motor de crecimiento y no solo en un escudo.",
+  "resumen_teorico": "La incertidumbre no solo trae amenazas: también trae oportunidades, y gestionarlas es la cara olvidada del riesgo. Igual que vigilas lo que podría hundirte, puedes vigilar lo que, si lo aprovechas a tiempo, podría dispararte: un competidor que cae y libera clientes, un cambio de reglas que te favorece, una tecnología nueva que te abarata todo. La mayoría solo se defiende y deja pasar estas oportunidades por no estar atento o por no atreverse. Manejar el riesgo de oportunidad es tratar esas incertidumbres buenas con el mismo método: nombrarlas, estimar su probabilidad y su premio, y preparar cómo las tomarías si aparecen. Eso sí, las amenazas van primero y se buscan aparte, y cada oportunidad puede traer amenazas nuevas. Para el emprendedor, cazar oportunidades a propósito, y no solo esquivar amenazas, puede traer grandes beneficios, en este proyecto y en los siguientes.",
   "pasos_accionables": [
-    "Junto a tu lista de amenazas, abre una lista de oportunidades posibles.",
-    "De cada una estima qué tan probable es y qué premio traería si la tomas.",
+    "Después de identificar tus amenazas, abre aparte una lista de oportunidades posibles.",
+    "De cada una estima qué premio traería si la tomas y qué tan probable es obtenerlo.",
     "Define la señal que te avisaría que la oportunidad llegó y cómo la aprovecharías rápido.",
     "Reserva algo de tu capacidad para perseguir la oportunidad más prometedora cuando aparezca."
   ],
@@ -56,6 +56,56 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por reglas_gestion_riesgo_gambling."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-084-caza_las_oportunidades_no_solo_amenazas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La incertidumbre no solo trae amenazas: también trae oportunidades, y gestionarlas es la cara olvidada del riesgo. Igual que vigilas lo que podría hundirte, puedes vigilar lo que, si lo aprovechas a tiempo, podría dispararte: un competidor que cae y libera clientes, un cambio de reglas que te favorece, una tecnología nueva que te abarata todo. La mayoría solo se defiende y deja pasar estas oportunidades por no estar atento o por no atreverse. Manejar el riesgo de oportunidad es tratar esas incertidumbres buenas con el mismo método: nombrarlas, estimar su probabilidad y su premio, y preparar cómo las tomarías si aparecen. Para el emprendedor, cazar oportunidades a propósito, y no solo esquivar amenazas, es lo que convierte el manejo del riesgo en un motor de crecimiento y no solo en un escudo.",
+      "texto_nuevo": "La incertidumbre no solo trae amenazas: también trae oportunidades, y gestionarlas es la cara olvidada del riesgo. Igual que vigilas lo que podría hundirte, puedes vigilar lo que, si lo aprovechas a tiempo, podría dispararte: un competidor que cae y libera clientes, un cambio de reglas que te favorece, una tecnología nueva que te abarata todo. La mayoría solo se defiende y deja pasar estas oportunidades por no estar atento o por no atreverse. Manejar el riesgo de oportunidad es tratar esas incertidumbres buenas con el mismo método: nombrarlas, estimar su probabilidad y su premio, y preparar cómo las tomarías si aparecen. Eso sí, las amenazas van primero y se buscan aparte, y cada oportunidad puede traer amenazas nuevas. Para el emprendedor, cazar oportunidades a propósito, y no solo esquivar amenazas, puede traer grandes beneficios, en este proyecto y en los siguientes.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "9954",
+        "frase": "always to first ensure the attainment of its project objectives by managing threat risks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que una oportunidad bien aprovechada puede dar grandes beneficios, no que convierta la gestión en motor de crecimiento.; Mismo endurecimiento que la marca 1.; Mismo matiz que la marca 0.; Se pierde que las amenazas tienen prioridad y se buscan antes y por separado, y que aprovechar oportunidades puede traer amenazas nuevas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-caza_las_oportunidades_no_solo_amenazas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Junto a tu lista de amenazas, abre una lista de oportunidades posibles.",
+      "texto_nuevo": "Después de identificar tus amenazas, abre aparte una lista de oportunidades posibles.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "9735",
+        "frase": "threat risks should be identified first"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide identificar primero las amenazas y no explorar amenazas y oportunidades a la vez.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-caza_las_oportunidades_no_solo_amenazas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "De cada una estima qué tan probable es y qué premio traería si la tomas.",
+      "texto_nuevo": "De cada una estima qué premio traería si la tomas y qué tan probable es obtenerlo.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "9746",
+        "frase": "to the attainment of a particular beneficial outcome if a decision is made"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En las oportunidades la probabilidad suele referirse a obtener el beneficio si decides aprovecharla.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

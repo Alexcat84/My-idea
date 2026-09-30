@@ -7,7 +7,7 @@
   "resumen_teorico": "Actividad de designar las 'estaciones' donde debe realizarse la inspección (incoming inspection, process inspection, lot approval, finished-goods inspection, etc.) y proporcionar los medios e instrucciones necesarias. Se apoya en el flowchart del proceso para ubicar los puntos críticos de control.",
   "pasos_accionables": [
     "Mapear el proceso completo mediante un flowchart.",
-    "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado.",
+    "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado, antes de una operación costosa e irreversible y en las mirillas naturales del proceso.",
     "Definir si la inspección será fija, itinerante (roving) o integrada al operador (poka-yoke).",
     "Documentar instrucciones y facilidades requeridas en cada estación."
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Define tus Puntos de Inspección",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-085-planificacion_inspeccion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado.",
+      "texto_nuevo": "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado, antes de una operación costosa e irreversible y en las mirillas naturales del proceso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24527-24529",
+        "frase": "Before performing a costly, irreversible operation... At natural “peepholes” in the process."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae además antes de una operación costosa e irreversible y en las mirillas naturales del proceso.; Mismo defecto: se caen dos ubicaciones de la enumeración del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

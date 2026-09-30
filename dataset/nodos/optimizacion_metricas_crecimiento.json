@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Mide los dólares incrementales promedio por cliente recurrente (meta: +15%)",
     "Calcula el take rate de ofertas de upsell (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B",
-    "Aumenta el tamaño promedio de orden mediante suscripciones más largas o bonos",
-    "Monitorea la tasa de opt-outs; si supera el 25% del baseline, suaviza el enfoque de venta",
+    "Aumenta el tamaño promedio de orden probando con pruebas A/B ofertas como suscripciones más largas, bonos o descuentos más profundos en la venta adicional, y acepta un margen más estrecho en esos ingresos extra",
+    "Monitorea la tasa de opt-outs; si tus ofertas de crecimiento la elevan un 25% o más sobre tu tasa habitual, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta",
     "Realiza encuestas de satisfacción y llamadas de seguimiento que incluyan ofertas sutiles",
     "Diseña e implementa un programa de referidos para atraer nuevos clientes a través de los existentes"
   ],
@@ -57,6 +57,40 @@
         "evidencia": "F18-025: Optimizar las ventas adicionales, los referidos y las bajas sobre una base activa de clientes es operar y mejorar un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-089-optimizacion_metricas_crecimiento-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aumenta el tamaño promedio de orden mediante suscripciones más largas o bonos",
+      "texto_nuevo": "Aumenta el tamaño promedio de orden probando con pruebas A/B ofertas como suscripciones más largas, bonos o descuentos más profundos en la venta adicional, y acepta un margen más estrecho en esos ingresos extra",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12114",
+        "frase": "accept a more narrow margin on these incremental revenues"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro prueba con A/B también descuentos más profundos en la venta adicional y pide aceptar un margen más estrecho.; Misma omisión: los descuentos más profundos y la aceptación de un margen más estrecho.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-089-optimizacion_metricas_crecimiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Monitorea la tasa de opt-outs; si supera el 25% del baseline, suaviza el enfoque de venta",
+      "texto_nuevo": "Monitorea la tasa de opt-outs; si tus ofertas de crecimiento la elevan un 25% o más sobre tu tasa habitual, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12116",
+        "frase": "if these grow offers increase that rate by 25 percent or more"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da tres salidas: frenar, suavizar el mensaje o llamar a clientes para saber qué les gustó y ajustar.; El umbral del libro es que las ofertas eleven la tasa un 25% o más sobre la habitual, no que supere el 25% de ella.; Mismo umbral mal expresado.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

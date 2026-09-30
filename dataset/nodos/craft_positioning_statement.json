@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Crear el Positioning Statement / Unique Selling Proposition",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de vender, la empresa necesita condensar todo lo aprendido en discovery en un mensaje corto, claro y emocionalmente convincente (unique selling proposition) que explique por qué la empresa es diferente y por qué vale la pena comprar el producto. Este mensaje guía todo el material de marketing y ventas, debe pasar pruebas de credibilidad, ser comprensible en el lenguaje del cliente y considerar el tipo de mercado (existente vs. nuevo/transformacional).",
+  "resumen_teorico": "Antes de vender, la empresa necesita condensar todo lo aprendido en discovery en un mensaje corto, claro y emocionalmente convincente (unique selling proposition) que explique por qué la empresa es diferente y por qué vale la pena comprar el producto. Este mensaje guía todo el material de marketing y ventas, debe pasar pruebas de credibilidad, ser comprensible en el lenguaje del cliente y considerar el tipo de mercado (existente vs. nuevo/transformacional). Basta un primer intento: cambiará con lo que digan clientes, analistas e inversionistas.",
   "pasos_accionables": [
     "Revisar lo que los clientes valoraron más en customer discovery",
     "Identificar frases recurrentes sobre el problema o la solución",
@@ -12,7 +12,7 @@
     "Realizar una sesión de brainstorming con el equipo para generar candidatos de tagline",
     "Validar el mensaje contra pruebas emocionales, de credibilidad y de tipo de mercado"
   ],
-  "entregable_esperado": "Un positioning statement corto y una propuesta de tagline validados con el equipo",
+  "entregable_esperado": "Un positioning statement corto y una propuesta de tagline que pasen las pruebas emocional, de credibilidad y de tipo de mercado",
   "nodos_previos": [
     "priorizar_elementos_a_validar"
   ],
@@ -25,5 +25,39 @@
   "etiqueta_arbol": "Resume por Qué Eres Distinto",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-088-craft_positioning_statement-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de vender, la empresa necesita condensar todo lo aprendido en discovery en un mensaje corto, claro y emocionalmente convincente (unique selling proposition) que explique por qué la empresa es diferente y por qué vale la pena comprar el producto. Este mensaje guía todo el material de marketing y ventas, debe pasar pruebas de credibilidad, ser comprensible en el lenguaje del cliente y considerar el tipo de mercado (existente vs. nuevo/transformacional).",
+      "texto_nuevo": "Antes de vender, la empresa necesita condensar todo lo aprendido en discovery en un mensaje corto, claro y emocionalmente convincente (unique selling proposition) que explique por qué la empresa es diferente y por qué vale la pena comprar el producto. Este mensaje guía todo el material de marketing y ventas, debe pasar pruebas de credibilidad, ser comprensible en el lenguaje del cliente y considerar el tipo de mercado (existente vs. nuevo/transformacional). Basta un primer intento: cambiará con lo que digan clientes, analistas e inversionistas.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "10229",
+        "frase": "Don’t worry about getting it perfect, because it will change with feedback"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide un primer intento sin buscar perfección porque el mensaje cambiará con la retroalimentación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-craft_positioning_statement-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un positioning statement corto y una propuesta de tagline validados con el equipo",
+      "texto_nuevo": "Un positioning statement corto y una propuesta de tagline que pasen las pruebas emocional, de credibilidad y de tipo de mercado",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "10265-10279",
+        "frase": "To see if the positioning is emotionally compelling, think about the following"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El equipo genera candidatos; las pruebas del libro miran la reacción del cliente, la credibilidad y el tipo de mercado.; Mismo defecto: la validación no es con el equipo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

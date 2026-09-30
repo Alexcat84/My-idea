@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planes de Muestreo de Aceptación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). El diseño debe balancear el costo de clasificación (sorting) versus muestreo, considerando también el error de medición.",
+  "resumen_teorico": "Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). Balancear el costo de clasificación (sorting) versus muestreo puede ser un insumo útil para el diseño, considerando también el error de medición.",
   "pasos_accionables": [
     "Definir el promedio de proceso esperado del proveedor",
     "Calcular el costo del daño por defectos no detectados",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Define tus Criterios de Muestreo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-085-planes_de_muestreo_de_aceptacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). El diseño debe balancear el costo de clasificación (sorting) versus muestreo, considerando también el error de medición.",
+      "texto_nuevo": "Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). Balancear el costo de clasificación (sorting) versus muestreo puede ser un insumo útil para el diseño, considerando también el error de medición.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23861",
+        "frase": "Balancing the cost of sorting versus sampling can be a useful input"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que ese balance puede ser un insumo útil, no que el diseño deba hacerlo.; Mismo endurecimiento de 'can be a useful input' a 'debe'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

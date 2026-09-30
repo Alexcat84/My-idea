@@ -4,11 +4,11 @@
   "dominio": "health_safety",
   "titulo_concepto": "Participación de los Trabajadores en el Programa de Seguridad",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Tus trabajadores, incluidos subcontratistas y temporales, conocen mejor que nadie los peligros de su propio trabajo. Por eso debes hacerlos participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin que teman represalias. Elimina las barreras de idioma, habilidad, educación o miedo a represalias, y revisa que los incentivos que uses no terminen desalentando el reporte. Mantén canales de comunicación abiertos, da retroalimentación frecuente sobre lo que haces con cada reporte, y protege legalmente a quien reporta según la norma de tu país (en Estados Unidos, esto está amparado por la Sección 11(c) de la ley de salud y seguridad ocupacional, OSH Act).",
+  "resumen_teorico": "Tus trabajadores, incluidos subcontratistas y temporales, a menudo son quienes más saben de los peligros de su propio trabajo. Por eso debes hacerlos participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin que teman represalias. Elimina las barreras de idioma, habilidad, educación o miedo a represalias, y revisa que los incentivos que uses no terminen desalentando el reporte. Mantén canales de comunicación abiertos, da retroalimentación frecuente sobre lo que haces con cada reporte, y protege legalmente a quien reporta según la norma de tu país (en Estados Unidos, esto está amparado por la Sección 11(c) de la ley de salud y seguridad ocupacional, OSH Act).",
   "pasos_accionables": [
-    "Crea un proceso simple para que te reporten peligros, incidentes y casi accidentes, incluyendo la opción de hacerlo de forma anónima",
+    "Crea un proceso simple para que te reporten peligros, incidentes y casi accidentes, incluyendo la opción de hacerlo de forma anónima, y faculta a todos para detener o pedir que se detenga temporalmente cualquier tarea que crean insegura",
     "Da retroalimentación frecuente sobre lo que haces con cada reporte que recibes",
-    "Comparte con tus trabajadores la información de seguridad, como las hojas de datos de seguridad (SDS), los datos de lesiones y las inspecciones",
+    "Comparte con tus trabajadores la información de seguridad, como las hojas de datos de seguridad (SDS), los datos de lesiones, quitando si hace falta lo que identifique a las personas, y las inspecciones",
     "Involucra a tus trabajadores en el diseño de metas, análisis de peligros, inspecciones, capacitación y desarrollo de soluciones",
     "Elimina barreras de idioma, habilidad, educación o miedo a represalias",
     "Comunica con claridad las protecciones contra represalias que existen en tu país y revisa que tus incentivos no desalienten el reporte"
@@ -66,6 +66,56 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R003-017 (CONTRARIO, lector y verificador de acuerdo): Rebaja el umbral que da el libro (todas las fases) a una cifra que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R003-017"
+    },
+    {
+      "id": "final-e1-086-participacion_trabajadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tus trabajadores, incluidos subcontratistas y temporales, conocen mejor que nadie los peligros de su propio trabajo. Por eso debes hacerlos participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin que teman represalias. Elimina las barreras de idioma, habilidad, educación o miedo a represalias, y revisa que los incentivos que uses no terminen desalentando el reporte. Mantén canales de comunicación abiertos, da retroalimentación frecuente sobre lo que haces con cada reporte, y protege legalmente a quien reporta según la norma de tu país (en Estados Unidos, esto está amparado por la Sección 11(c) de la ley de salud y seguridad ocupacional, OSH Act).",
+      "texto_nuevo": "Tus trabajadores, incluidos subcontratistas y temporales, a menudo son quienes más saben de los peligros de su propio trabajo. Por eso debes hacerlos participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin que teman represalias. Elimina las barreras de idioma, habilidad, educación o miedo a represalias, y revisa que los incentivos que uses no terminen desalentando el reporte. Mantén canales de comunicación abiertos, da retroalimentación frecuente sobre lo que haces con cada reporte, y protege legalmente a quien reporta según la norma de tu país (en Estados Unidos, esto está amparado por la Sección 11(c) de la ley de salud y seguridad ocupacional, OSH Act).",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "315",
+        "frase": "They also often know the most about potential hazards associated with their jobs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo son quienes más saben; el nodo lo vuelve absoluto.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-participacion_trabajadores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparte con tus trabajadores la información de seguridad, como las hojas de datos de seguridad (SDS), los datos de lesiones y las inspecciones",
+      "texto_nuevo": "Comparte con tus trabajadores la información de seguridad, como las hojas de datos de seguridad (SDS), los datos de lesiones, quitando si hace falta lo que identifique a las personas, y las inspecciones",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "387",
+        "frase": "may need to be redacted and aggregated to eliminate personal identifiers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los datos de lesiones pueden tener que depurarse de identificadores personales antes de compartirse.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-participacion_trabajadores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crea un proceso simple para que te reporten peligros, incidentes y casi accidentes, incluyendo la opción de hacerlo de forma anónima",
+      "texto_nuevo": "Crea un proceso simple para que te reporten peligros, incidentes y casi accidentes, incluyendo la opción de hacerlo de forma anónima, y faculta a todos para detener o pedir que se detenga temporalmente cualquier tarea que crean insegura",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "373",
+        "frase": "Empower all workers to initiate or request a temporary suspension or shutdown"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el fomento del reporte el libro también faculta a todos a pedir la suspensión de una tarea que crean insegura.; Mismo defecto: se cae esa facultad.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

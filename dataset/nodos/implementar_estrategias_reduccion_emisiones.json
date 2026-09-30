@@ -4,13 +4,13 @@
   "dominio": "environmental",
   "titulo_concepto": "Implementar Estrategias de Reducción de Emisiones",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Para decidir qué inversiones priorizar necesitas mirar cada iniciativa con rigor: cuánto reduce las emisiones, cuánto cuesta implementarla, qué tan sólidos son los supuestos detrás, qué tan rentable es, cuál es su retorno, en cuánto tiempo se recupera la inversión, qué habilidades exige, quién la va a liderar dentro de tu equipo y qué obstáculos puede encontrar. Conviene que empieces por las iniciativas de retorno rápido para ganar impulso, y que pruebes con un piloto en las áreas más complejas antes de llevarlo a toda la empresa, como hizo Jones Apparel Group con un piloto de iluminación en una tienda.",
+  "resumen_teorico": "Para decidir qué inversiones priorizar necesitas mirar cada iniciativa con rigor: cuánto reduce las emisiones, cuánto cuesta implementarla, qué tan sólidos son los supuestos detrás, cuánto reduce por cada dólar invertido, cuál es su retorno, en cuánto tiempo se recupera la inversión, cuánto tarda en implementarse, qué habilidades exige, quién la va a liderar dentro de tu equipo, qué cooperación y apoyo externo requiere y qué obstáculos puede encontrar. Conviene que empieces por las iniciativas de retorno rápido para ganar impulso, y que pruebes con un piloto en las áreas más complejas antes de llevarlo a toda la empresa, como hizo Jones Apparel Group con un piloto de iluminación en una tienda.",
   "pasos_accionables": [
     "Evalúa cada iniciativa según su costo, su impacto y qué tan viable es llevarla a cabo.",
     "Prioriza las iniciativas de retorno rápido para generar impulso.",
     "Lanza proyectos piloto en las áreas de mayor complejidad.",
     "Mide los resultados y, si el piloto funciona, replícalo a toda la escala.",
-    "Haz un análisis de ciclo de vida para encontrar oportunidades adicionales."
+    "Empieza con un análisis de ciclo de vida: a menudo revela las oportunidades de retorno rápido."
   ],
   "entregable_esperado": "Un conjunto de iniciativas de reducción de emisiones implementadas y en seguimiento, con métricas de resultado.",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Prioriza tus Reducciones de Emisiones",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-implementar_estrategias_reduccion_emisiones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para decidir qué inversiones priorizar necesitas mirar cada iniciativa con rigor: cuánto reduce las emisiones, cuánto cuesta implementarla, qué tan sólidos son los supuestos detrás, qué tan rentable es, cuál es su retorno, en cuánto tiempo se recupera la inversión, qué habilidades exige, quién la va a liderar dentro de tu equipo y qué obstáculos puede encontrar. Conviene que empieces por las iniciativas de retorno rápido para ganar impulso, y que pruebes con un piloto en las áreas más complejas antes de llevarlo a toda la empresa, como hizo Jones Apparel Group con un piloto de iluminación en una tienda.",
+      "texto_nuevo": "Para decidir qué inversiones priorizar necesitas mirar cada iniciativa con rigor: cuánto reduce las emisiones, cuánto cuesta implementarla, qué tan sólidos son los supuestos detrás, cuánto reduce por cada dólar invertido, cuál es su retorno, en cuánto tiempo se recupera la inversión, cuánto tarda en implementarse, qué habilidades exige, quién la va a liderar dentro de tu equipo, qué cooperación y apoyo externo requiere y qué obstáculos puede encontrar. Conviene que empieces por las iniciativas de retorno rápido para ganar impulso, y que pruebes con un piloto en las áreas más complejas antes de llevarlo a toda la empresa, como hizo Jones Apparel Group con un piloto de iluminación en una tienda.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6313-6345",
+        "frase": "Cost effectiveness (measured in tons of CO2e eliminated per dollar invested)."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide la costo efectividad en toneladas eliminadas por dólar; 'qué tan rentable es' la pierde y repite el retorno.; La lista del libro trae factores que el nodo cierra fuera, como el tiempo de implementación, la cooperación interna y el apoyo externo.; Mismo defecto que la marca 0: se pierde el criterio de emisiones eliminadas por cada dólar invertido.; Mismo defecto que la marca 1: la lista se presenta cerrada y faltan factores del libro que pesan en la priorización.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-087-implementar_estrategias_reduccion_emisiones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Haz un análisis de ciclo de vida para encontrar oportunidades adicionales.",
+      "texto_nuevo": "Empieza con un análisis de ciclo de vida: a menudo revela las oportunidades de retorno rápido.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6311",
+        "frase": "often reveals such opportunities and is a good first step towards greater efficiency"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro pone el análisis de ciclo de vida como buen primer paso que revela las oportunidades de retorno rápido; el nodo lo deja al final para buscar extras.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -12,7 +12,7 @@
     "Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel",
     "Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto",
     "Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad",
-    "Eliminar las iniciativas que no estén alineadas con tu plan estratégico"
+    "Cambiar o eliminar las iniciativas que no estén alineadas con tu plan estratégico"
   ],
   "entregable_esperado": "Un plan estratégico anual único que integra tus metas de calidad, financieras y operativas, con proyectos concretos y quién se encarga de cada uno",
   "nodos_previos": [
@@ -33,5 +33,24 @@
   "etiqueta_arbol": "Alinea Calidad con tu Estrategia",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-085-planificacion_estrategica_despliegue_2-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Eliminar las iniciativas que no estén alineadas con tu plan estratégico",
+      "texto_nuevo": "Cambiar o eliminar las iniciativas que no estén alineadas con tu plan estratégico",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8518",
+        "frase": "Activities not aligned with the organization’s strategic goals should be changed or eliminated."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que las actividades no alineadas deben cambiarse o eliminarse; el paso deja solo eliminar.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

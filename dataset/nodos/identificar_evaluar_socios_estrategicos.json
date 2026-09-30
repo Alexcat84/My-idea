@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Definir los impactos ambientales prioritarios de la empresa",
     "Listar potenciales socios (ONGs, gobiernos, competidores) alineados a esos impactos",
-    "Aplicar criterios de evaluación: impacto, valor de negocio, viabilidad y potencial de escalamiento",
-    "Seleccionar al socio óptimo y definir el alcance inicial de la colaboración"
+    "Aplicar criterios de evaluación: impacto, valor de negocio, viabilidad, potencial de escalamiento y encaje con las capacidades de la empresa y del socio",
+    "Seleccionar al socio óptimo, definir el alcance inicial de la colaboración y aclarar qué recursos y capacidades aporta cada parte"
   ],
   "entregable_esperado": "Matriz de evaluación de socios potenciales con el socio seleccionado y justificación",
   "nodos_previos": [
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Elige Bien tus Aliados",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-identificar_evaluar_socios_estrategicos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar criterios de evaluación: impacto, valor de negocio, viabilidad y potencial de escalamiento",
+      "texto_nuevo": "Aplicar criterios de evaluación: impacto, valor de negocio, viabilidad, potencial de escalamiento y encaje con las capacidades de la empresa y del socio",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6931",
+        "frase": "Fit with company/partner capabilities: Does the project fit well with the current capabilities"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el quinto grupo de preguntas del libro: el encaje con las capacidades de la empresa y del socio.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-087-identificar_evaluar_socios_estrategicos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar al socio óptimo y definir el alcance inicial de la colaboración",
+      "texto_nuevo": "Seleccionar al socio óptimo, definir el alcance inicial de la colaboración y aclarar qué recursos y capacidades aporta cada parte",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6919",
+        "frase": "clarify who will bring what resources and capabilities to the joint efforts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también aclarar quién aportará qué recursos y capacidades antes de comprometerse; el paso lo pierde.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

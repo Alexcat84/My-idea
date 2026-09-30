@@ -3,10 +3,10 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia de Crecimiento de Clientes (Grow)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Dos vías principales para crecer aprovechando la base de clientes existente: lograr que gasten más (venta cruzada, venta adicional, desagregación del producto) o que refieran a nuevos clientes (marketing viral, programas de referidos). Estas tácticas maximizan el valor de los clientes actuales antes de invertir en adquirir clientes nuevos, que suele ser más costoso. Para priorizarlas correctamente conviene calcular el valor de vida del cliente -cuánto ingreso genera un cliente a lo largo de toda su relación con el negocio- en vez de enfocarse solo en la primera venta.",
+  "resumen_teorico": "Dos vías principales para crecer aprovechando la base de clientes existente: lograr que gasten más (venta cruzada, venta adicional, desagregación del producto) o que refieran a nuevos clientes (marketing viral, programas de referidos). Estas tácticas maximizan el valor de los clientes actuales, y venderles más cuesta menos que adquirir clientes nuevos. Conviene pensar en el valor de vida del cliente -cuánto ingreso genera un cliente a lo largo de toda su relación con el negocio- en vez de enfocarse solo en la primera venta.",
   "pasos_accionables": [
     "Calcular el valor de vida del cliente de la base de clientes actual",
-    "Diseñar programas de venta cruzada y venta adicional integrados en el proceso de compra (por ejemplo: 'gasta 25 dólares más y obtén envío gratis')",
+    "Tras asegurarse de que los clientes están satisfechos con el producto, su desempeño y su precio, diseñar programas de venta cruzada y venta adicional integrados en el proceso de compra (por ejemplo: 'gasta 25 dólares más y obtén envío gratis')",
     "Crear motores de recomendación tipo 'si compraste X, te gustará Y'",
     "Diseñar mecanismos de marketing viral y programas de referidos que incentiven a los clientes actuales a invitar a nuevos",
     "Probar estas tácticas con clientes reales, incluyendo ofertas y promociones exclusivas",
@@ -33,5 +33,40 @@
   "etiqueta_arbol": "Haz Crecer a tus Clientes",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-estrategia_crecimiento_clientes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dos vías principales para crecer aprovechando la base de clientes existente: lograr que gasten más (venta cruzada, venta adicional, desagregación del producto) o que refieran a nuevos clientes (marketing viral, programas de referidos). Estas tácticas maximizan el valor de los clientes actuales antes de invertir en adquirir clientes nuevos, que suele ser más costoso. Para priorizarlas correctamente conviene calcular el valor de vida del cliente -cuánto ingreso genera un cliente a lo largo de toda su relación con el negocio- en vez de enfocarse solo en la primera venta.",
+      "texto_nuevo": "Dos vías principales para crecer aprovechando la base de clientes existente: lograr que gasten más (venta cruzada, venta adicional, desagregación del producto) o que refieran a nuevos clientes (marketing viral, programas de referidos). Estas tácticas maximizan el valor de los clientes actuales, y venderles más cuesta menos que adquirir clientes nuevos. Conviene pensar en el valor de vida del cliente -cuánto ingreso genera un cliente a lo largo de toda su relación con el negocio- en vez de enfocarse solo en la primera venta.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6414, 7305",
+        "frase": "why not sell them more, since it costs less than acquiring new customers?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que vender más cuesta menos que adquirir, pero no pone el crecimiento antes de la adquisición; pone primero conseguir clientes.; El libro no liga el valor de vida del cliente a priorizar las tácticas; dice pensar en el ingreso de toda la relación y no solo en la primera venta.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-087-estrategia_crecimiento_clientes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar programas de venta cruzada y venta adicional integrados en el proceso de compra (por ejemplo: 'gasta 25 dólares más y obtén envío gratis')",
+      "texto_nuevo": "Tras asegurarse de que los clientes están satisfechos con el producto, su desempeño y su precio, diseñar programas de venta cruzada y venta adicional integrados en el proceso de compra (por ejemplo: 'gasta 25 dólares más y obtén envío gratis')",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6853",
+        "frase": "starts by making sure they’re satisfied with the product, performance and price"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como punto de partida asegurarse de que el cliente está satisfecho con producto, desempeño y precio; el paso lo pierde.; Mismo defecto que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

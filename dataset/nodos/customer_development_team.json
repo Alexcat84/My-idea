@@ -9,9 +9,9 @@
     "Decide quién de ustedes lidera la conversación con clientes (Customer Development)",
     "Define cómo vas a salir a hablar con clientes en persona (get out of the building)",
     "Decide qué parte de las respuestas de tus clientes vas a recoger en línea y qué parte cara a cara",
-    "Escribe entre 3 y 5 valores centrales que te guían a ti y a tus cofundadores (no es tu misión, no habla de ganancias)"
+    "Escribe entre 3 y 5 valores centrales que te guían a ti y a tus cofundadores (no es tu misión, no habla de ganancias ni de productos, sino de lo que cree tu proyecto)"
   ],
-  "entregable_esperado": "Tienes claro quién habla con los clientes en cada etapa del descubrimiento, y una lista escrita de 3 a 5 valores centrales.",
+  "entregable_esperado": "Tienes claro quién habla con los clientes en cada etapa del descubrimiento, una lista escrita de 3 a 5 valores centrales y el acuerdo de tu equipo y tu directorio con esta forma de trabajar.",
   "nodos_previos": [
     "board_management_buyin"
   ],
@@ -39,6 +39,39 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R062-033 (CONTRARIO, arbitro): Tenía razón el lector B. La lista de control (L4519, repetida en L16865) pide acordar los roles para los cuatro pasos del Customer Development, y el glosario (L24924) deja claro que Customer Discovery es solo el primero de esos cuatro pasos. El libro sí tiene cuatro fases dentro del Discovery, pero ningún pasaje asigna los roles del equipo a esas fases, así que el campo cambia la secuencia a la que se asignan los roles. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R062-033"
+    },
+    {
+      "id": "final-e1-088-customer_development_team-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe entre 3 y 5 valores centrales que te guían a ti y a tus cofundadores (no es tu misión, no habla de ganancias)",
+      "texto_nuevo": "Escribe entre 3 y 5 valores centrales que te guían a ti y a tus cofundadores (no es tu misión, no habla de ganancias ni de productos, sino de lo que cree tu proyecto)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "4525-4527",
+        "frase": "Not about profit or products. Core ideology is about what the company believes in"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae de la lista que los valores no hablan de productos y tratan de lo que la empresa cree.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-customer_development_team-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tienes claro quién habla con los clientes en cada etapa del descubrimiento, y una lista escrita de 3 a 5 valores centrales.",
+      "texto_nuevo": "Tienes claro quién habla con los clientes en cada etapa del descubrimiento, una lista escrita de 3 a 5 valores centrales y el acuerdo de tu equipo y tu directorio con esta forma de trabajar.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "4531",
+        "frase": "Buy-in of the team and board for a customer development team"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El criterio de salida del libro es el acuerdo del equipo y del directorio con el equipo de desarrollo de clientes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

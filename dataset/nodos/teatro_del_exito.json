@@ -7,7 +7,7 @@
   "resumen_teorico": "Concepto que describe negocios que aparentan éxito y crecimiento (mediante levantamiento continuo de capital, gasto en publicidad pagada, o métricas de vanidad) sin haber desarrollado realmente un producto que crea valor genuino para el cliente. Este tipo de crecimiento es 'value-destroying' y debe distinguirse mediante contabilidad de innovación y métricas accionables, ya que puede ocultar el fracaso real de la hipótesis de valor o crecimiento del negocio.",
   "pasos_accionables": [
     "Cuestionar si el crecimiento observado proviene de valor real entregado al cliente o de gasto en adquisición/marketing",
-    "Evaluar la rentabilidad y sostenibilidad del negocio más allá de las métricas de vanidad (usuarios totales, visitas, rondas de inversión)",
+    "Evaluar si el negocio crea valor real más allá de las métricas de vanidad (usuarios totales, visitas, rondas de inversión), sin juzgarlo solo por su rentabilidad",
     "Usar métricas accionables e innovation accounting para detectar crecimiento genuino vs. teatral",
     "Evitar decisiones estratégicas basadas únicamente en cifras de crecimiento superficiales"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Evita el Teatro del Éxito",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-091-teatro_del_exito-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Evaluar la rentabilidad y sostenibilidad del negocio más allá de las métricas de vanidad (usuarios totales, visitas, rondas de inversión)",
+      "texto_nuevo": "Evaluar si el negocio crea valor real más allá de las métricas de vanidad (usuarios totales, visitas, rondas de inversión), sin juzgarlo solo por su rentabilidad",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "944",
+        "frase": "I use the language of economics in referring to value rather than profit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro razona en valor y no en beneficio, y advierte que hay negocios muy rentables que destruyen valor y startups con grandes pérdidas que triunfan; usar la rentabilidad como vara del teatro del éxito va en contra.; Mismo defecto que la marca 0: no es solo un añadido, el libro descarta expresamente la rentabilidad como criterio fiable para una startup.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

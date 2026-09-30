@@ -4,14 +4,14 @@
   "dominio": "risk_management",
   "titulo_concepto": "La Gestión de la Crisis",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Hay un momento en que un riesgo deja de ser posibilidad y se vuelve un hecho: la crisis. Es un punto de quiebre, un tiempo de peligro donde ya no sirve prevenir porque el problema ya está aquí. Ahí cambias de modo: pasas de gestionar el riesgo, que es pensar con calma antes, a gestionar la crisis, que es responder bajo presión. La buena noticia es que si hiciste tu tarea antes, la crisis no te agarra en blanco: tienes tu plan B pensado y tus alertas te avisaron a tiempo. La mala gestión de crisis es la de quien nunca preparó nada y ahora improvisa con miedo. Para el emprendedor solo, saber reconocer cuándo cruzaste a modo crisis, y ejecutar el plan que ya tenías en vez de congelarte, es lo que convierte un golpe en un susto y no en el final.",
+  "resumen_teorico": "Hay un momento en que un riesgo deja de ser posibilidad y se vuelve un hecho: la crisis. Es un punto de quiebre, un tiempo de peligro donde ya no sirve prevenir porque el problema ya está aquí. Ahí cambias de modo: pasas de gestionar el riesgo, que es pensar con calma antes, a gestionar la crisis, que es responder bajo presión. La buena noticia es que si hiciste tu tarea antes, la crisis no te agarra en blanco: tienes tu plan B pensado y tus alertas te avisaron a tiempo. La mala gestión de crisis es la de quien nunca preparó nada y ahora improvisa con miedo. Para el emprendedor solo, saber reconocer cuándo cruzaste a modo crisis, y ejecutar el plan que ya tenías en vez de congelarte, es lo que evita quedar en clara desventaja frente a lo que llega.",
   "pasos_accionables": [
     "Reconoce cuándo un riesgo ya se volvió hecho: es momento de responder, no de prevenir.",
-    "Cambia a modo crisis: ejecuta el plan B que preparaste, sin buscar culpables ahora.",
-    "Concéntrate en contener el daño primero y en resolver la causa después.",
+    "Cambia a modo crisis: ejecuta el plan B que preparaste.",
+    "Sugerencia de My Idea: concéntrate en contener el daño primero y en resolver la causa después.",
     "Anota lo que pasó y cómo respondiste, para revisarlo con calma cuando pase el fuego."
   ],
-  "entregable_esperado": "Una respuesta a la crisis basada en tu plan B, con el daño contenido y una nota de lo ocurrido para revisar después.",
+  "entregable_esperado": "Una respuesta a la crisis basada en tu plan B, con una nota de lo ocurrido para revisar después.",
   "nodos_previos": [
     "plan_b_antes_de_necesitarlo",
     "que_hacer_con_un_riesgo_nuevo"
@@ -28,5 +28,73 @@
   "etiqueta_arbol": "Cuando el Riesgo Se Vuelve Realidad",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-084-cuando_el_riesgo_se_vuelve_realidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cambia a modo crisis: ejecuta el plan B que preparaste, sin buscar culpables ahora.",
+      "texto_nuevo": "Cambia a modo crisis: ejecuta el plan B que preparaste.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "6140",
+        "frase": "prepare and maintain plans to deal with the more severe risks they face"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da la consigna de no buscar culpables durante la crisis; solo pide tener planes preparados para los riesgos graves.; Mismo defecto: la consigna de no buscar culpables no aparece en el tratamiento de la crisis.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-cuando_el_riesgo_se_vuelve_realidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concéntrate en contener el daño primero y en resolver la causa después.",
+      "texto_nuevo": "Sugerencia de My Idea: concéntrate en contener el daño primero y en resolver la causa después.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "9439",
+        "frase": "these are all in the service of preparedness"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no fija el orden contener primero y resolver la causa después; queda como sugerencia de la casa.; Mismo defecto: orden de respuesta que el libro no establece.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-cuando_el_riesgo_se_vuelve_realidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hay un momento en que un riesgo deja de ser posibilidad y se vuelve un hecho: la crisis. Es un punto de quiebre, un tiempo de peligro donde ya no sirve prevenir porque el problema ya está aquí. Ahí cambias de modo: pasas de gestionar el riesgo, que es pensar con calma antes, a gestionar la crisis, que es responder bajo presión. La buena noticia es que si hiciste tu tarea antes, la crisis no te agarra en blanco: tienes tu plan B pensado y tus alertas te avisaron a tiempo. La mala gestión de crisis es la de quien nunca preparó nada y ahora improvisa con miedo. Para el emprendedor solo, saber reconocer cuándo cruzaste a modo crisis, y ejecutar el plan que ya tenías en vez de congelarte, es lo que convierte un golpe en un susto y no en el final.",
+      "texto_nuevo": "Hay un momento en que un riesgo deja de ser posibilidad y se vuelve un hecho: la crisis. Es un punto de quiebre, un tiempo de peligro donde ya no sirve prevenir porque el problema ya está aquí. Ahí cambias de modo: pasas de gestionar el riesgo, que es pensar con calma antes, a gestionar la crisis, que es responder bajo presión. La buena noticia es que si hiciste tu tarea antes, la crisis no te agarra en blanco: tienes tu plan B pensado y tus alertas te avisaron a tiempo. La mala gestión de crisis es la de quien nunca preparó nada y ahora improvisa con miedo. Para el emprendedor solo, saber reconocer cuándo cruzaste a modo crisis, y ejecutar el plan que ya tenías en vez de congelarte, es lo que evita quedar en clara desventaja frente a lo que llega.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "9458",
+        "frase": "Organisations lacking familiarity with project risk and risk management will be at a distinct disadvantage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mismo resultado prometido; el libro plantea la preparación como objetivo, no garantiza que el golpe quede en susto.; Promete un resultado que el libro no afirma; solo dice que quien no está familiarizado queda en clara desventaja.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-cuando_el_riesgo_se_vuelve_realidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una respuesta a la crisis basada en tu plan B, con el daño contenido y una nota de lo ocurrido para revisar después.",
+      "texto_nuevo": "Una respuesta a la crisis basada en tu plan B, con una nota de lo ocurrido para revisar después.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "6140",
+        "frase": "prepare and maintain plans to deal with the more severe risks they face"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Arrastra al entregable el resultado del daño contenido, que el libro no afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

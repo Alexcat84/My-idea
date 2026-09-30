@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Impresión y Uso Inteligente del Papel",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La transición hacia sistemas electrónicos y prácticas de impresión más eficientes (doble cara por defecto, márgenes reducidos, sistemas de PIN para recoger impresiones) genera ahorros significativos de costos, agua y madera. Empresas como Cox Communications y el Gobierno de EE.UU. han demostrado ahorros de toneladas de papel y millones de dólares mediante facturación electrónica y herramientas como Adobe LiveCycle.",
+  "resumen_teorico": "La transición hacia sistemas electrónicos y prácticas de impresión más eficientes (doble cara por defecto, márgenes reducidos, sistemas de PIN para recoger impresiones) puede generar ahorros significativos de costos, agua y madera. Empresas como Cox Communications y el Gobierno de EE.UU. han demostrado ahorros de toneladas de papel y de dinero (en el caso del gobierno, un millón de dólares en cinco años) mediante facturación electrónica y herramientas como Adobe LiveCycle.",
   "pasos_accionables": [
     "Configurar todas las impresoras y copiadoras en modo doble cara por defecto",
     "Implementar software de ahorro de papel (GreenPrint, HP Smart Web Printing)",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Imprime con Más Cabeza",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-impresion_inteligente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La transición hacia sistemas electrónicos y prácticas de impresión más eficientes (doble cara por defecto, márgenes reducidos, sistemas de PIN para recoger impresiones) genera ahorros significativos de costos, agua y madera. Empresas como Cox Communications y el Gobierno de EE.UU. han demostrado ahorros de toneladas de papel y millones de dólares mediante facturación electrónica y herramientas como Adobe LiveCycle.",
+      "texto_nuevo": "La transición hacia sistemas electrónicos y prácticas de impresión más eficientes (doble cara por defecto, márgenes reducidos, sistemas de PIN para recoger impresiones) puede generar ahorros significativos de costos, agua y madera. Empresas como Cox Communications y el Gobierno de EE.UU. han demostrado ahorros de toneladas de papel y de dinero (en el caso del gobierno, un millón de dólares en cinco años) mediante facturación electrónica y herramientas como Adobe LiveCycle.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2327-2339",
+        "frase": "The payoff for these simple interventions can be significant"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da un millón de dólares en cinco años para la imprenta del gobierno y ninguna cifra para Cox; 'millones' infla el cuánto.; El libro dice que el beneficio puede ser significativo; el nodo lo afirma como resultado seguro.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

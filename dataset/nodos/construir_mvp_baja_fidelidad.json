@@ -7,12 +7,12 @@
   "resumen_teorico": "Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una acción concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.",
   "pasos_accionables": [
     "Crea una página simple con tu propuesta de valor y sus beneficios",
-    "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden",
+    "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden; deja la más simple como la más visible, porque cuanto más pides, menos responde la gente",
     "Suma videos, encuestas o un blog si te ayudan a mostrar la idea",
     "Prueba varias versiones si quieres testear distintas formas de contar el problema",
     "Publica lo antes posible sin preocuparte por que se vea perfecto"
   ],
-  "entregable_esperado": "Una página o prototipo funcionando en línea, listo para recibir visitas y medir el interés real",
+  "entregable_esperado": "Una página o prototipo funcionando en línea, listo para recibir visitas y medir el interés real, con sus pruebas de pasa o no pasa definidas",
   "nodos_previos": [
     "disenar_tests_pass_fail",
     "desirability_feasibility_viability",
@@ -89,6 +89,39 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-088-construir_mvp_baja_fidelidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden",
+      "texto_nuevo": "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden; deja la más simple como la más visible, porque cuanto más pides, menos responde la gente",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8110",
+        "frase": "the simplest, most basic response mechanism—like “sign up to learn more”—most prominent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que la respuesta más simple sea la más visible, porque cuanto más se pide menos se responde.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-construir_mvp_baja_fidelidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una página o prototipo funcionando en línea, listo para recibir visitas y medir el interés real",
+      "texto_nuevo": "Una página o prototipo funcionando en línea, listo para recibir visitas y medir el interés real, con sus pruebas de pasa o no pasa definidas",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8195",
+        "frase": "Pass/Fail tests identified"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El criterio de salida del libro incluye tener identificadas las pruebas de pasa o no pasa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

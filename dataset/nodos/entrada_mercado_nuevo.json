@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Entrada a un Mercado Nuevo",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Crear un mercado nuevo significa que no existen clientes ni competidores comparables. Aunque parece atractivo por la ausencia de competencia, es la opción más costosa y lenta: se requiere educar al mercado durante años (típicamente 3 a 7 años) antes de generar ganancias significativas. El éxito depende de convencer a los clientes de una visión, no de superar características de producto.",
+  "resumen_teorico": "Crear un mercado nuevo significa que no existen clientes ni competidores comparables. Aunque parece atractivo por la ausencia de competencia, es la opción más costosa y lenta: salvo en una economía de burbuja, se requiere educar al mercado durante años (típicamente 3 a 7 años) antes de generar ganancias significativas. El éxito depende de convencer a los clientes de una visión, no de superar características de producto.",
   "pasos_accionables": [
     "Identificar mercados adyacentes de donde vendrán los primeros clientes",
     "Articular la visión de la empresa y por qué importará a la gente",
     "Estimar el tiempo y presupuesto necesario para educar al mercado",
     "Definir pronósticos de ventas realistas para los primeros 3 años",
-    "Evaluar qué evitará que un competidor con más recursos tome el mercado una vez creado"
+    "Evaluar qué evitará que un competidor con más recursos tome el mercado una vez creado, y si el producto encaja mejor como resegmentación de un mercado o entrada a uno existente"
   ],
   "entregable_esperado": "Brief de mercado nuevo con visión, estimación de costos de educación de mercado y pronósticos de adopción",
   "nodos_previos": [
@@ -42,6 +42,39 @@
         "evidencia": "F02-007: No prueba nada con clientes: estima presupuesto y tiempo de educacion del mercado, pronostica ventas y define la defensa estrategica, lo que es planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-087-entrada_mercado_nuevo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear un mercado nuevo significa que no existen clientes ni competidores comparables. Aunque parece atractivo por la ausencia de competencia, es la opción más costosa y lenta: se requiere educar al mercado durante años (típicamente 3 a 7 años) antes de generar ganancias significativas. El éxito depende de convencer a los clientes de una visión, no de superar características de producto.",
+      "texto_nuevo": "Crear un mercado nuevo significa que no existen clientes ni competidores comparables. Aunque parece atractivo por la ausencia de competencia, es la opción más costosa y lenta: salvo en una economía de burbuja, se requiere educar al mercado durante años (típicamente 3 a 7 años) antes de generar ganancias significativas. El éxito depende de convencer a los clientes de una visión, no de superar características de producto.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6261",
+        "frase": "unless you’re in a “bubble economy,” it takes time for new ideas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa las economías de burbuja de la regla de los 3 a 7 años; el nodo pierde la excepción.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-087-entrada_mercado_nuevo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar qué evitará que un competidor con más recursos tome el mercado una vez creado",
+      "texto_nuevo": "Evaluar qué evitará que un competidor con más recursos tome el mercado una vez creado, y si el producto encaja mejor como resegmentación de un mercado o entrada a uno existente",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6245-6247",
+        "frase": "Is the product better-defined as one that will re-segment a market or enter"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de preguntas del libro cierra con si el producto encaja mejor como resegmentación o entrada a un mercado existente; el paso lo pierde.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

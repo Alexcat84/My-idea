@@ -7,7 +7,7 @@
   "pasos_accionables": [
     "Investiga el flujo de trabajo actual de tu cliente y sus interacciones con otras personas o áreas",
     "Pregunta qué otras soluciones usa hoy y si el problema lo comparten más personas en su entorno de trabajo",
-    "Explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar",
+    "Comprueba si pagaría por tu solución y cuánto, y explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar",
     "Pasa un día haciendo lo que hace tu cliente (por ejemplo, detrás de un mostrador o en una feria) y asiste a sus eventos",
     "Identifica qué publicaciones lee y a quién sigue tu cliente",
     "Documenta todos tus hallazgos de forma ordenada, con criterios claros de qué cuenta como validado"
@@ -35,5 +35,24 @@
   "etiqueta_arbol": "Comprende a Fondo a tu Cliente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-ganar_comprension_del_cliente-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar",
+      "texto_nuevo": "Comprueba si pagaría por tu solución y cuánto, y explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8400",
+        "frase": "check your assumptions about whether and how much people will pay for your solution"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el mismo tramo el libro pide comprobar si la gente pagaría por tu solución y cuánto; el paso lo pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

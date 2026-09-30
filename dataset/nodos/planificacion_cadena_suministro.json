@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Documentar la actividad histórica y futura de compras",
     "Identificar commodities de alto gasto y alta criticidad",
-    "Formar equipo cross-funcional para la commodity seleccionada",
+    "Formar equipo cross-funcional para la commodity seleccionada y determinar las necesidades de abastecimiento del cliente mediante recolección de datos y encuestas",
     "Analizar estructura y tendencias de la industria proveedora",
-    "Calcular el costo total de propiedad del commodity",
+    "Calcular el costo total de propiedad del commodity y traducir las necesidades del cliente en un proceso de sourcing que las satisfaga y permita gestionar y optimizar ese costo",
     "Obtener respaldo de la dirección para implementar la estrategia de sourcing"
   ],
   "entregable_esperado": "Estrategia de sourcing aprobada por la dirección con plan de implementación",
@@ -73,6 +73,40 @@
         "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-085-planificacion_cadena_suministro-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formar equipo cross-funcional para la commodity seleccionada",
+      "texto_nuevo": "Formar equipo cross-funcional para la commodity seleccionada y determinar las necesidades de abastecimiento del cliente mediante recolección de datos y encuestas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23787",
+        "frase": "Determine the sourcing needs of the customer through data collection, survey, and other activities."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro pide, tras formar el equipo, determinar las necesidades de abastecimiento del cliente; los pasos lo omiten.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-085-planificacion_cadena_suministro-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el costo total de propiedad del commodity",
+      "texto_nuevo": "Calcular el costo total de propiedad del commodity y traducir las necesidades del cliente en un proceso de sourcing que las satisfaga y permita gestionar y optimizar ese costo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23793",
+        "frase": "Translate the customer needs into a sourcing process that will satisfy the customer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso del libro de traducir las necesidades del cliente en un proceso de sourcing que optimice el costo total.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

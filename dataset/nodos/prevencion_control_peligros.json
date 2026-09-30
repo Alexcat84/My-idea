@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Prevención y Control de Peligros (Jerarquía de Controles)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Este elemento consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros ya identificados. Sigue el modelo NIOSH de jerarquía de controles, donde las opciones más efectivas remueven físicamente el peligro (eliminación, sustitución) y las menos efectivas dependen de tu comportamiento (controles administrativos, EPP), pasando por soluciones de ingeniería y prácticas de trabajo seguras. Debes evitar controles que generen nuevos peligros y combinar varios niveles cuando uno solo no baste. Aplica principios de Prevención mediante el Diseño al elegir equipos y materiales. El resultado debe plasmarse en un plan que garantice implementación con plazos, protección provisional mientras se aplican controles definitivos, y verificación posterior de que realmente funcionan.",
+  "resumen_teorico": "Este elemento consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros ya identificados. Sigue el modelo NIOSH de jerarquía de controles, donde las opciones más efectivas remueven físicamente el peligro (eliminación, sustitución) y las menos efectivas dependen de tu comportamiento (controles administrativos, EPP), pasando por soluciones de ingeniería y prácticas de trabajo seguras. Debes evitar controles que generen nuevos peligros y combinar varios niveles cuando uno solo no baste. Siempre que sea posible, aplica principios de Prevención mediante el Diseño al elegir equipos y materiales. Los peligros graves se eliminan o controlan de inmediato, y el resultado debe plasmarse en un plan que los atienda primero y garantice implementación con plazos, protección provisional mientras se aplican controles definitivos, y verificación posterior de que realmente funcionan.",
   "pasos_accionables": [
-    "Identificar opciones de control revisando estándares, literatura de fabricantes y experiencias de otros sitios",
+    "Identificar opciones de control revisando estándares, literatura de fabricantes y experiencias de otros sitios, y pidiendo a quienes trabajan contigo su opinión sobre su viabilidad y eficacia",
     "Priorizar eliminación o sustitución del peligro antes de recurrir a ingeniería, controles administrativos o EPP",
     "Combinar varios niveles de control cuando uno solo no sea suficiente, evitando introducir nuevos peligros",
-    "Desarrollar un plan de implementación con plazos y protección provisional mientras aplicas los controles definitivos",
+    "Desarrollar un plan de implementación que ordene los peligros por prioridad, atendiendo primero los graves, asigne un responsable con capacidad de aplicar cada control, fije plazos, prevea cómo seguir el avance y dé protección provisional mientras aplicas los controles definitivos",
     "Verificar la efectividad de los controles implementados y ajustarlos según resultados",
-    "Aplicar principios de Prevención mediante el Diseño al elegir equipos y materiales"
+    "Siempre que sea posible, aplicar principios de Prevención mediante el Diseño al elegir equipos y materiales"
   ],
   "entregable_esperado": "Plan de control de peligros con jerarquía aplicada, plazos, protección provisional y mecanismo de verificación de efectividad",
   "nodos_previos": [
@@ -54,5 +54,74 @@
   "fuentes_internas": [
     "OSHA3885",
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-086-prevencion_control_peligros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este elemento consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros ya identificados. Sigue el modelo NIOSH de jerarquía de controles, donde las opciones más efectivas remueven físicamente el peligro (eliminación, sustitución) y las menos efectivas dependen de tu comportamiento (controles administrativos, EPP), pasando por soluciones de ingeniería y prácticas de trabajo seguras. Debes evitar controles que generen nuevos peligros y combinar varios niveles cuando uno solo no baste. Aplica principios de Prevención mediante el Diseño al elegir equipos y materiales. El resultado debe plasmarse en un plan que garantice implementación con plazos, protección provisional mientras se aplican controles definitivos, y verificación posterior de que realmente funcionan.",
+      "texto_nuevo": "Este elemento consiste en seleccionar e implementar métodos para eliminar, prevenir o controlar los peligros ya identificados. Sigue el modelo NIOSH de jerarquía de controles, donde las opciones más efectivas remueven físicamente el peligro (eliminación, sustitución) y las menos efectivas dependen de tu comportamiento (controles administrativos, EPP), pasando por soluciones de ingeniería y prácticas de trabajo seguras. Debes evitar controles que generen nuevos peligros y combinar varios niveles cuando uno solo no baste. Siempre que sea posible, aplica principios de Prevención mediante el Diseño al elegir equipos y materiales. Los peligros graves se eliminan o controlan de inmediato, y el resultado debe plasmarse en un plan que los atienda primero y garantice implementación con plazos, protección provisional mientras se aplican controles definitivos, y verificación posterior de que realmente funcionan.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "669-685",
+        "frase": "An effective plan will address serious hazards first."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro pide eliminar o controlar de inmediato los peligros graves y que el plan los atienda primero; el nodo lo deja todo a plazo.; El libro recomienda aplicar Prevención mediante el Diseño siempre que sea posible; el nodo lo vuelve incondicional.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-prevencion_control_peligros-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar opciones de control revisando estándares, literatura de fabricantes y experiencias de otros sitios",
+      "texto_nuevo": "Identificar opciones de control revisando estándares, literatura de fabricantes y experiencias de otros sitios, y pidiendo a quienes trabajan contigo su opinión sobre su viabilidad y eficacia",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "651-659",
+        "frase": "it is essential to solicit workers' input on their feasibility and effectiveness"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro considera esencial pedir la opinión de los trabajadores sobre viabilidad y eficacia antes de elegir controles.; Mismo defecto: se cae la consulta a los trabajadores que el libro considera esencial.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-prevencion_control_peligros-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar un plan de implementación con plazos y protección provisional mientras aplicas los controles definitivos",
+      "texto_nuevo": "Desarrollar un plan de implementación que ordene los peligros por prioridad, atendiendo primero los graves, asigne un responsable con capacidad de aplicar cada control, fije plazos, prevea cómo seguir el avance y dé protección provisional mientras aplicas los controles definitivos",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "685-727",
+        "frase": "List the hazards needing controls in order of priority."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro ordena los peligros por prioridad, asigna un responsable con capacidad de implementar y planifica el seguimiento del avance.; Mismo defecto: se pierden el orden por prioridad con los graves primero y el responsable.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-prevencion_control_peligros-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar principios de Prevención mediante el Diseño al elegir equipos y materiales",
+      "texto_nuevo": "Siempre que sea posible, aplicar principios de Prevención mediante el Diseño al elegir equipos y materiales",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "681",
+        "frase": "Whenever possible, select equipment, machinery, and materials that are inherently safer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo recomienda siempre que sea posible; el paso lo vuelve incondicional.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

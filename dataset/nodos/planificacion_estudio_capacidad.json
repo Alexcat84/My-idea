@@ -9,10 +9,10 @@
     "Describe el proceso: qué entra, qué pasos sigue y cómo debería salir",
     "Define las condiciones de cada variable: cuál es el ajuste óptimo y en qué rango puede moverse",
     "Revisa que cada característica de calidad tenga una variable que puedas ajustar en el proceso",
-    "Evalúa si el error al medir es lo bastante grande como para hacer un estudio aparte sobre eso",
+    "Decide si el error al medir es significativo: puedes averiguarlo con un estudio aparte sobre eso o, en algunos casos, dentro del mismo estudio",
     "Decide si tu estudio se va a enfocar solo en la variación normal o también en errores y equivocaciones",
     "Planea usar gráficos de control para ver si el proceso se mantiene estable",
-    "Prepara un plan de recolección de datos con una muestra de tamaño adecuado",
+    "Prepara un plan de recolección de datos con una muestra de tamaño adecuado, que registre los resultados junto con las condiciones del proceso y conserve el orden de las mediciones para ver tendencias",
     "Define cómo vas a analizar los datos antes de empezar a recolectarlos",
     "Reserva tiempo para revisar resultados parciales antes de calcular la capacidad final"
   ],
@@ -31,5 +31,41 @@
   "etiqueta_arbol": "Planifica tu Estudio de Capacidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-085-planificacion_estudio_capacidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Evalúa si el error al medir es lo bastante grande como para hacer un estudio aparte sobre eso",
+      "texto_nuevo": "Decide si el error al medir es significativo: puedes averiguarlo con un estudio aparte sobre eso o, en algunos casos, dentro del mismo estudio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20767",
+        "frase": "Decide whether measurement error is significant. This can be determined from a separate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En el libro el estudio aparte es el medio para decidir si el error es significativo, no su consecuencia.; Mismo orden invertido; además el libro admite evaluarlo dentro del estudio general.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-085-planificacion_estudio_capacidad-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prepara un plan de recolección de datos con una muestra de tamaño adecuado",
+      "texto_nuevo": "Prepara un plan de recolección de datos con una muestra de tamaño adecuado, que registre los resultados junto con las condiciones del proceso y conserve el orden de las mediciones para ver tendencias",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20773",
+        "frase": "along with the process conditions and preserves information on the order of measurements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide registrar las condiciones del proceso y conservar el orden de las mediciones para ver tendencias.; Mismo defecto: se caen las condiciones del proceso y el orden de las mediciones.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

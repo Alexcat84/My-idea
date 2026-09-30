@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Tratar cada intento de venta como una prueba de hipótesis, no como ejecución de un plan fijo",
     "Evitar contratar y estructurar un equipo de ventas tradicional en esta etapa",
-    "Enfocarse en conseguir pedidos reales o compromisos de usuarios como evidencia dura",
+    "Enfocarse en conseguir pedidos reales, a precio completo o cercano, o compromisos de usuarios como evidencia dura",
     "Aceptar que las reglas de venta corporativa tradicional no aplican en startups"
   ],
   "entregable_esperado": "Comprensión compartida del equipo de que customer validation es búsqueda, no ejecución, y un proceso de pruebas de venta documentado",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Vende para Validar tu Idea",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-filosofia_validacion_clientes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfocarse en conseguir pedidos reales o compromisos de usuarios como evidencia dura",
+      "texto_nuevo": "Enfocarse en conseguir pedidos reales, a precio completo o cercano, o compromisos de usuarios como evidencia dura",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "23320-23329",
+        "frase": "until the hypotheses are proved with real orders at or near full price"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa pedidos a precio completo o cercano, porque regalar o descontar mucho no prueba la intención de compra.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

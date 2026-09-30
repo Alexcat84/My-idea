@@ -4,9 +4,9 @@
   "dominio": "health_safety",
   "titulo_concepto": "Investigación de Incidentes y Casi Accidentes",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Cada lesión, enfermedad, casi accidente o señal de alerta te dice que existe un peligro real en tu lugar de trabajo. Investigarlo a fondo te permite descubrir las causas de raíz, que casi siempre son varias, en lugar de quedarte con lo primero que salta a la vista. Una buena investigación pregunta reiteradamente por qué hasta llegar a las fallas de fondo en tu manera de gestionar la seguridad. Conviene que sumes tu propia mirada y la de quienes trabajan contigo, que te formes en técnicas objetivas de análisis y que no te limites a los casos con daño, porque los casi accidentes también cuentan. Además, infórmate sobre los plazos de reporte que exige la normativa de tu mercado ante accidentes graves o fatales, y cúmplelos.",
+  "resumen_teorico": "Cada lesión, enfermedad, casi accidente o señal de alerta te dice que existe un peligro real en tu lugar de trabajo. Investigarlo a fondo te permite descubrir las causas de raíz, que a menudo son varias, en lugar de quedarte con lo primero que salta a la vista. Una buena investigación pregunta reiteradamente por qué hasta llegar a las fallas de fondo en tu manera de gestionar la seguridad. Conviene que sumes tu propia mirada y la de quienes trabajan contigo, que te formes en técnicas objetivas de análisis y que no te limites a los casos con daño, porque los casi accidentes también cuentan. Además, infórmate sobre los plazos de reporte que exige la normativa de tu mercado ante accidentes graves o fatales, y cúmplelos.",
   "pasos_accionables": [
-    "Define un plan y un procedimiento claro para investigar incidentes, con responsabilidades bien definidas",
+    "Define un plan y un procedimiento claro para investigar incidentes, que te permita empezar de inmediato, con quiénes participan, líneas de comunicación, materiales necesarios y formularios de reporte",
     "Fórmate en técnicas objetivas de análisis para no quedarte en la primera explicación",
     "Suma en cada investigación tu propia visión y la de las personas que trabajan contigo",
     "Investiga también los casi accidentes y las señales de alerta, no solo los casos con daño",
@@ -78,6 +78,39 @@
         "motivo": "Referencia de un nodo vivo a inspeccion_sitio_peligros, deprecado; su superviviente es inspeccion_lugar_trabajo_peligros."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-086-investigacion_incidentes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada lesión, enfermedad, casi accidente o señal de alerta te dice que existe un peligro real en tu lugar de trabajo. Investigarlo a fondo te permite descubrir las causas de raíz, que casi siempre son varias, en lugar de quedarte con lo primero que salta a la vista. Una buena investigación pregunta reiteradamente por qué hasta llegar a las fallas de fondo en tu manera de gestionar la seguridad. Conviene que sumes tu propia mirada y la de quienes trabajan contigo, que te formes en técnicas objetivas de análisis y que no te limites a los casos con daño, porque los casi accidentes también cuentan. Además, infórmate sobre los plazos de reporte que exige la normativa de tu mercado ante accidentes graves o fatales, y cúmplelos.",
+      "texto_nuevo": "Cada lesión, enfermedad, casi accidente o señal de alerta te dice que existe un peligro real en tu lugar de trabajo. Investigarlo a fondo te permite descubrir las causas de raíz, que a menudo son varias, en lugar de quedarte con lo primero que salta a la vista. Una buena investigación pregunta reiteradamente por qué hasta llegar a las fallas de fondo en tu manera de gestionar la seguridad. Conviene que sumes tu propia mirada y la de quienes trabajan contigo, que te formes en técnicas objetivas de análisis y que no te limites a los casos con daño, porque los casi accidentes también cuentan. Además, infórmate sobre los plazos de reporte que exige la normativa de tu mercado ante accidentes graves o fatales, y cúmplelos.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "563",
+        "frase": "the root causes (and there is often more than one)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo hay más de una causa de raíz; 'casi siempre' lo endurece.; Mismo endurecimiento del 'often' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-investigacion_incidentes-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define un plan y un procedimiento claro para investigar incidentes, con responsabilidades bien definidas",
+      "texto_nuevo": "Define un plan y un procedimiento claro para investigar incidentes, que te permita empezar de inmediato, con quiénes participan, líneas de comunicación, materiales necesarios y formularios de reporte",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "567-575",
+        "frase": "so that an investigation can begin immediately when an incident occurs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro quiere el plan para poder empezar la investigación de inmediato y le pide cubrir comunicación, materiales y formularios, no solo quiénes participan.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

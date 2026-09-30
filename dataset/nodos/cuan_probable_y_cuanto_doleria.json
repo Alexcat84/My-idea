@@ -4,15 +4,15 @@
   "dominio": "risk_management",
   "titulo_concepto": "Probabilidad e Impacto",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano mínimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
+  "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de daño mínimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
   "pasos_accionables": [
-    "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderías, no a una etiqueta de color.",
-    "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja.",
+    "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderías, o al daño concreto que causaría (a personas, a tu reputación), no a una etiqueta de color; si tiene varias consecuencias, califícalo por la más grave.",
+    "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja, y el plazo al que se refiere.",
     "Revisa si dos riesgos con la misma etiqueta en realidad significan cosas muy distintas en dinero o tiempo; si es así, corrige la etiqueta.",
     "Marca qué riesgos improbables pero capaces de hundirte necesitan tu atención, aunque su probabilidad sea baja.",
     "Aplica el mismo criterio de conversión, en dinero, en tiempo o en rango de porcentaje, a todos los riesgos de tu lista, sin excepciones."
   ],
-  "entregable_esperado": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero o tiempo, en vez de etiquetas o colores vagos.",
+  "entregable_esperado": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero, tiempo u otro daño concreto, en vez de etiquetas o colores vagos.",
   "nodos_previos": [
     "haz_tu_lista_de_lo_que_puede_fallar",
     "el_pre_mortem_imagina_el_fracaso",
@@ -132,6 +132,72 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-084-cuan_probable_y_cuanto_doleria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano mínimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
+      "texto_nuevo": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Además, tres niveles son una escala muy gruesa: cinco distinguen mejor. Para que la comparación sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el daño en dinero, tiempo perdido o daño a personas, no en un color, y califícalo por su consecuencia más grave. Cuando digas probabilidad media, aclara qué rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimación imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de daño mínimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5074",
+        "frase": "the highest impact category rating should be used to assess the whole risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro considera la escala de tres niveles demasiado gruesa y prefiere cinco intervalos.; El libro mide también el daño a personas y otros tipos, y califica el riesgo por su consecuencia más grave.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-cuan_probable_y_cuanto_doleria-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderías, no a una etiqueta de color.",
+      "texto_nuevo": "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderías, o al daño concreto que causaría (a personas, a tu reputación), no a una etiqueta de color; si tiene varias consecuencias, califícalo por la más grave.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5074",
+        "frase": "the highest impact category rating should be used to assess the whole risk"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Deja fuera impactos que no son dinero ni tiempo, como el daño a personas o a la reputación, y la regla de la consecuencia más grave.; Mismo matiz perdido.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-cuan_probable_y_cuanto_doleria-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja.",
+      "texto_nuevo": "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja, y el plazo al que se refiere.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "4975",
+        "frase": "time is usually implied or made explicit in the probability itself"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide considerar el plazo al que se refiere cada probabilidad.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-084-cuan_probable_y_cuanto_doleria-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero o tiempo, en vez de etiquetas o colores vagos.",
+      "texto_nuevo": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero, tiempo u otro daño concreto, en vez de etiquetas o colores vagos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5074",
+        "frase": "the levels of impact assessed for any risk could differ"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo recorte de los tipos de impacto que el libro contempla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

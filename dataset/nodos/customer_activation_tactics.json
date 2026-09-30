@@ -6,13 +6,13 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "La activación es el punto crítico donde el cliente decide participar, jugar o comprar. Es equivalente al paso de 'compra' en el canal físico. Aquí el producto mismo actúa como vendedor, por lo que se necesita una propuesta de valor clara y un MVP de baja o alta fidelidad según la fase. Incluso una simple llamada telefónica o la presencia de un número de contacto puede aumentar significativamente las tasas de activación.",
   "pasos_accionables": [
-    "Capturar el email del cliente y obtener permiso de seguimiento",
+    "Capturar el email del cliente y obtener permiso de seguimiento; al hacer el seguimiento con 1.000 clientes, esperar que al menos 50 acepten activarse",
     "Ofrecer incentivos de activación: prueba gratuita, descuento, whitepaper",
-    "Llamar a prospectos que no se activaron inmediatamente y medir mejora en respuesta",
-    "Probar conversión de gratis a pago con periodos de prueba de 7-14 días",
-    "Medir tasa de respuesta de al menos 5% en las ofertas probadas"
+    "Llamar a prospectos que no se activaron inmediatamente y medir si la mejora en respuesta justifica el costo (probablemente hace falta el triple de respuesta)",
+    "Probar conversión de gratis a pago con periodos de prueba de 7-14 días y comparar el ingreso total a 60 días con el de la oferta pagada típica",
+    "Probar al menos tres ofertas distintas y seguir probando hasta que al menos una logre una tasa de respuesta de 5% o más"
   ],
-  "entregable_esperado": "Un plan de tácticas de activación probado con métricas de conversión (mínimo 5% de respuesta) documentado",
+  "entregable_esperado": "Un plan de tácticas de activación probado y documentado con métricas de conversión, con al menos una oferta que alcance 5% o más de respuesta",
   "nodos_previos": [
     "get_customers_funnel_webmobile",
     "plan_de_adquisicion_acquire",
@@ -29,5 +29,91 @@
   "etiqueta_arbol": "Convierte Interés en Compra",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-088-customer_activation_tactics-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capturar el email del cliente y obtener permiso de seguimiento",
+      "texto_nuevo": "Capturar el email del cliente y obtener permiso de seguimiento; al hacer el seguimiento con 1.000 clientes, esperar que al menos 50 acepten activarse",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6633",
+        "frase": "Follow up with 1,000 customers and expect at least 50 or more to agree"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La prueba del libro trae su referencia de éxito: al menos 50 de cada 1.000 aceptan activarse.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-customer_activation_tactics-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Llamar a prospectos que no se activaron inmediatamente y medir mejora en respuesta",
+      "texto_nuevo": "Llamar a prospectos que no se activaron inmediatamente y medir si la mejora en respuesta justifica el costo (probablemente hace falta el triple de respuesta)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6637",
+        "frase": "enough of a response-rate improvement to warrant the cost"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde que la mejora debe justificar el costo de las llamadas, probablemente triplicando la respuesta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-customer_activation_tactics-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Probar conversión de gratis a pago con periodos de prueba de 7-14 días",
+      "texto_nuevo": "Probar conversión de gratis a pago con periodos de prueba de 7-14 días y comparar el ingreso total a 60 días con el de la oferta pagada típica",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6639",
+        "frase": "compare the total 60-day acquisition revenue with the Get results of the typical paid offer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae la comparación del ingreso a 60 días con la oferta pagada típica, que da el veredicto de la prueba.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-customer_activation_tactics-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Medir tasa de respuesta de al menos 5% en las ofertas probadas",
+      "texto_nuevo": "Probar al menos tres ofertas distintas y seguir probando hasta que al menos una logre una tasa de respuesta de 5% o más",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6635",
+        "frase": "at least three different offers, hoping to find at least one"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide al menos tres ofertas buscando una con 5% o más y seguir probando hasta lograrla.; Mismo defecto: el 5% es la meta de al menos una oferta y falta el mínimo de tres.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-088-customer_activation_tactics-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan de tácticas de activación probado con métricas de conversión (mínimo 5% de respuesta) documentado",
+      "texto_nuevo": "Un plan de tácticas de activación probado y documentado con métricas de conversión, con al menos una oferta que alcance 5% o más de respuesta",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6635",
+        "frase": "hoping to find at least one that generates a 5 percent or greater response rate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El 5% es la meta de al menos una de varias ofertas, no un mínimo de todo el plan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

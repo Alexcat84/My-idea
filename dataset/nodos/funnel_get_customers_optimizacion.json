@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Optimización del Embudo 'Get Customers' (Adquisición y Activación)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es el proceso sistemático de mejorar cada paso del embudo de adquisición de clientes (acquire y activate). Dado que hasta el 98% de los visitantes nunca regresan, es crítico optimizar constantemente. El proceso consiste en revisar qué programas funcionan mejor, cuáles decepcionan, cuáles traen mejores clientes (LTV), y testear variaciones de ofertas, incentivos y mensajes.",
+  "resumen_teorico": "Es el proceso sistemático de mejorar cada paso del embudo de adquisición de clientes (acquire y activate). Dado que en algunos sitios web hasta el 98% de los visitantes nunca regresan, es crítico optimizar constantemente. El proceso consiste en revisar qué programas funcionan mejor, cuáles decepcionan, cuáles traen mejores clientes (LTV), y testear variaciones de ofertas, incentivos y mensajes.",
   "pasos_accionables": [
     "Revisar resultados de cada programa 'get' implementado (SEO, ads, referidos, etc.)",
-    "Identificar el programa más productivo y escalarlo primero",
+    "Empezar por los programas gratuitos, que si funcionan son los más fáciles de escalar, e identificar el programa más productivo para escalarlo primero",
     "Diseñar tests pass/fail para los programas más decepcionantes",
     "Identificar comportamiento de clientes de alto LTV y buscar más similares",
     "Probar variedad de ofertas, incentivos, descuentos y límites de tiempo",
@@ -33,5 +33,40 @@
   "etiqueta_arbol": "Optimiza tu Embudo de Clientes",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-funnel_get_customers_optimizacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es el proceso sistemático de mejorar cada paso del embudo de adquisición de clientes (acquire y activate). Dado que hasta el 98% de los visitantes nunca regresan, es crítico optimizar constantemente. El proceso consiste en revisar qué programas funcionan mejor, cuáles decepcionan, cuáles traen mejores clientes (LTV), y testear variaciones de ofertas, incentivos y mensajes.",
+      "texto_nuevo": "Es el proceso sistemático de mejorar cada paso del embudo de adquisición de clientes (acquire y activate). Dado que en algunos sitios web hasta el 98% de los visitantes nunca regresan, es crítico optimizar constantemente. El proceso consiste en revisar qué programas funcionan mejor, cuáles decepcionan, cuáles traen mejores clientes (LTV), y testear variaciones de ofertas, incentivos y mensajes.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "11745",
+        "frase": "For some websites 98 percent of people who visit (“acquired”) never ever return."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el 98% para algunos sitios web; el nodo lo presenta como dato general de los visitantes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-087-funnel_get_customers_optimizacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar el programa más productivo y escalarlo primero",
+      "texto_nuevo": "Empezar por los programas gratuitos, que si funcionan son los más fáciles de escalar, e identificar el programa más productivo para escalarlo primero",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "11795",
+        "frase": "Start with the free “get” programs for because if they’re working they are the easiest"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide empezar por los programas gratuitos porque, si funcionan, son los más fáciles de escalar; el paso pierde ese orden.; Mismo defecto que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

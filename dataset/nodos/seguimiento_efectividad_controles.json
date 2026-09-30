@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguimiento de la Efectividad de los Controles (Industria General)",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, y que fuiste capacitado en su uso correcto. Inspecciona y evalúa su funcionamiento con monitoreo de higiene industrial periódico, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrarte activamente en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, es clave para mantener la protección a lo largo del tiempo.",
+  "resumen_teorico": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, es clave para mantener la protección a lo largo del tiempo.",
   "pasos_accionables": [
-    "Verificar que todos los controles se implementaron según el plan",
+    "Verificar que todos los controles se implementaron según el plan y que se usan de forma correcta y constante",
     "Confirmar que los controles de ingeniería fueron instalados y probados",
-    "Verificar que fuiste capacitado en el uso correcto de los controles",
-    "Realizar inspecciones regulares y monitoreo de higiene industrial",
+    "Verificar que quienes trabajan contigo fueron capacitados para entender y usar correctamente los controles",
+    "Realizar inspecciones regulares y, si está indicado, monitoreo de higiene industrial",
     "Modificar controles ineficaces o implementar medidas adicionales si es necesario",
     "Ejecutar mantenimiento preventivo rutinario de equipos y controles"
   ],
@@ -42,5 +42,74 @@
   "fuentes_internas": [
     "OSHA3885",
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-086-seguimiento_efectividad_controles-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, y que fuiste capacitado en su uso correcto. Inspecciona y evalúa su funcionamiento con monitoreo de higiene industrial periódico, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrarte activamente en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, es clave para mantener la protección a lo largo del tiempo.",
+      "texto_nuevo": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, es clave para mantener la protección a lo largo del tiempo.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "771-777",
+        "frase": "Conduct regular inspections (and industrial hygiene monitoring, if indicated)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro pide el monitoreo de higiene industrial solo si está indicado.; El libro pide involucrar a los trabajadores en la evaluación de los controles.; El libro verifica la capacitación de los trabajadores y que usen los controles de forma correcta y constante.; Falta la comprobación del libro de que los controles se usan de forma correcta y constante.; Mismo defecto: la capacitación que se verifica es la de los trabajadores.; Mismo defecto: la evaluación involucra a los trabajadores.; Mismo endurecimiento del monitoreo condicionado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-seguimiento_efectividad_controles-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que todos los controles se implementaron según el plan",
+      "texto_nuevo": "Verificar que todos los controles se implementaron según el plan y que se usan de forma correcta y constante",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "767-773",
+        "frase": "Are controls being used correctly and consistently?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la pregunta del libro sobre si los controles se usan de forma correcta y constante.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-seguimiento_efectividad_controles-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que fuiste capacitado en el uso correcto de los controles",
+      "texto_nuevo": "Verificar que quienes trabajan contigo fueron capacitados para entender y usar correctamente los controles",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "771",
+        "frase": "Have workers been appropriately trained so that they understand the controls"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pregunta si los trabajadores fueron capacitados para entender y operar los controles.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-086-seguimiento_efectividad_controles-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar inspecciones regulares y monitoreo de higiene industrial",
+      "texto_nuevo": "Realizar inspecciones regulares y, si está indicado, monitoreo de higiene industrial",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "775",
+        "frase": "Conduct regular inspections (and industrial hygiene monitoring, if indicated)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro condiciona el monitoreo de higiene industrial a que esté indicado.; Mismo endurecimiento.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

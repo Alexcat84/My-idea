@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir el tipo de mercado (existente, nuevo, o re-segmentado) para la estrategia",
     "Escalar la inversión en marketing y ventas una vez validada la adquisición de clientes",
-    "Identificar y priorizar los segmentos de clientes más rentables",
+    "Identificar con experimentos de segmentación de bajo costo los segmentos de clientes en los que invertir",
     "Controlar el ritmo de quema de caja (burn rate) mientras se escala"
   ],
   "entregable_esperado": "Plan de escalamiento de demanda con inversión de marketing/ventas dirigida a segmentos validados",
@@ -53,6 +53,23 @@
         "motivo": "Orden invertido: Customer Creation es el tercer paso de Customer Development y sus actividades dependen del tipo de mercado ya definido; deberia ir despues, no antes."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-088-customer_creation-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar y priorizar los segmentos de clientes más rentables",
+      "texto_nuevo": "Identificar con experimentos de segmentación de bajo costo los segmentos de clientes en los que invertir",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "925",
+        "frase": "IMVU ran a wide range of low-cost customer segmentation experiments"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro identifica segmentos con experimentos de bajo costo; el criterio de rentabilidad no aparece.; Mismo defecto: 'más rentables' es un criterio añadido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

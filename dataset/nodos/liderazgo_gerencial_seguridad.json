@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Liderazgo en Seguridad y Salud",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Este es el elemento fundacional que impulsa todo el programa de seguridad y salud de tu negocio. Como responsable del emprendimiento, demuestras compromiso visible convirtiendo la seguridad en un valor central, no solo en una obligación formal. Esto implica comunicar tu postura con claridad, dar ejemplo con tu propio comportamiento, e integrar la seguridad en decisiones de negocio como presupuestos, licitaciones o selección de subcontratistas. Debes definir metas medibles enfocadas en prevenir lesiones y enfermedades, no solo en medir tasas de incidentes, y asignar los recursos necesarios (tiempo, presupuesto, personal) para sostener el esfuerzo. El desempeño se impulsa mediante responsabilidad y reconocimiento positivo de comportamientos seguros, evitando la disciplina punitiva como único mecanismo.",
+  "resumen_teorico": "Este es el elemento fundacional que impulsa todo el programa de seguridad y salud de tu negocio. Como responsable del emprendimiento, demuestras compromiso visible convirtiendo la seguridad en un valor central, no solo en una obligación formal. Esto implica comunicar tu postura con claridad, dar ejemplo con tu propio comportamiento, e integrar la seguridad en decisiones de negocio como presupuestos, licitaciones o selección de subcontratistas. Debes definir metas medibles enfocadas en prevenir lesiones y enfermedades, no solo en medir tasas de incidentes, y asignar los recursos necesarios (tiempo, presupuesto, personal) para sostener el esfuerzo. El desempeño se impulsa mediante responsabilidad y reconocimiento positivo de comportamientos seguros: a quien señala problemas se le recompensa en lugar de sancionarlo, y la disciplina se reserva para quien no coopera o frena el avance.",
   "pasos_accionables": [
     "Redactar y firmar una política escrita de compromiso con la seguridad y salud",
     "Comunicar la política a trabajadores, contratistas, proveedores y visitantes",
@@ -72,6 +72,22 @@
         "motivo": "Referencia de un nodo vivo a evaluacion_mejora_programa_2, deprecado; su superviviente es evaluacion_mejora_programa."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-086-liderazgo_gerencial_seguridad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este es el elemento fundacional que impulsa todo el programa de seguridad y salud de tu negocio. Como responsable del emprendimiento, demuestras compromiso visible convirtiendo la seguridad en un valor central, no solo en una obligación formal. Esto implica comunicar tu postura con claridad, dar ejemplo con tu propio comportamiento, e integrar la seguridad en decisiones de negocio como presupuestos, licitaciones o selección de subcontratistas. Debes definir metas medibles enfocadas en prevenir lesiones y enfermedades, no solo en medir tasas de incidentes, y asignar los recursos necesarios (tiempo, presupuesto, personal) para sostener el esfuerzo. El desempeño se impulsa mediante responsabilidad y reconocimiento positivo de comportamientos seguros, evitando la disciplina punitiva como único mecanismo.",
+      "texto_nuevo": "Este es el elemento fundacional que impulsa todo el programa de seguridad y salud de tu negocio. Como responsable del emprendimiento, demuestras compromiso visible convirtiendo la seguridad en un valor central, no solo en una obligación formal. Esto implica comunicar tu postura con claridad, dar ejemplo con tu propio comportamiento, e integrar la seguridad en decisiones de negocio como presupuestos, licitaciones o selección de subcontratistas. Debes definir metas medibles enfocadas en prevenir lesiones y enfermedades, no solo en medir tasas de incidentes, y asignar los recursos necesarios (tiempo, presupuesto, personal) para sostener el esfuerzo. El desempeño se impulsa mediante responsabilidad y reconocimiento positivo de comportamientos seguros: a quien señala problemas se le recompensa en lugar de sancionarlo, y la disciplina se reserva para quien no coopera o frena el avance.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "311",
+        "frase": "Successful programs reward, rather than discipline, workers who identify problems or concerns"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo límite perdido.; Se pierde el límite del libro: se recompensa a quien señala problemas y la disciplina queda para quien no coopera o frena el avance.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

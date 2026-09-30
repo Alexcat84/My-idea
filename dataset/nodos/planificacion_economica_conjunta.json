@@ -7,7 +7,7 @@
   "resumen_teorico": "Se centra en analizar el valor del producto comprado (ingeniería de valor) en lugar de solo la conformidad con especificación, y en calcular el costo total de propiedad incluyendo inspección de entrada, rechazos y costos de uso, ya que el precio más bajo no siempre resulta en el menor costo total.",
   "pasos_accionables": [
     "Aplicar ingeniería de valor para detectar sobre-especificación o costos innecesarios",
-    "Calcular el costo total de propiedad (precio + inspección + rechazos + costos de uso)",
+    "Calcular el costo total de propiedad (precio + inspección + revisión de materiales + rechazos + retrasos de producción + tiempo muerto + inventarios extra + costos de uso)",
     "Comparar ofertas de proveedores no solo por precio unitario sino por costo total",
     "Fomentar que proveedores propongan mejoras de diseño que reduzcan costo manteniendo calidad"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Analiza el Valor con Proveedores",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-085-planificacion_economica_conjunta-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el costo total de propiedad (precio + inspección + rechazos + costos de uso)",
+      "texto_nuevo": "Calcular el costo total de propiedad (precio + inspección + revisión de materiales + rechazos + retrasos de producción + tiempo muerto + inventarios extra + costos de uso)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23824",
+        "frase": "incoming inspection, materials review, production delays, downtime, extra inventories, etc."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro suma también revisión de materiales, retrasos de producción, tiempo muerto e inventarios extra; la fórmula cerrada los deja fuera.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

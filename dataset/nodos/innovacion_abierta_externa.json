@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Innovación abierta y colaboración externa (Ley de Joy)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Basado en la 'Ley de Joy' ('la mayoría de las personas más inteligentes trabajan para otro'), las empresas líderes buscan innovación fuera de sus propias oficinas mediante concursos de diseño verde, crowdsourcing, o plataformas de intercambio de propiedad intelectual como Green Xchange de Nike. Esto requiere un cambio cultural donde la propiedad intelectual se use como herramienta de colaboración en lugar de exclusión, forjando nuevas alianzas internas y externas.",
+  "resumen_teorico": "Basado en la 'Ley de Joy' ('la mayoría de las personas más inteligentes trabajan para otro'), las empresas líderes buscan innovación fuera de sus propias oficinas mediante concursos de diseño verde, crowdsourcing, o plataformas de intercambio de propiedad intelectual como Green Xchange de Nike. Esto requiere un cambio cultural, que toma tiempo, donde la propiedad intelectual se use como herramienta de colaboración en lugar de exclusión, forjando nuevas alianzas internas y externas.",
   "pasos_accionables": [
     "Lanzar concursos de diseño o innovación abierta (crowdsourcing) para retos ambientales",
     "Evaluar qué patentes o investigaciones propias podrían compartirse sin riesgo competitivo",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Colabora con Talento Externo",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-innovacion_abierta_externa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Basado en la 'Ley de Joy' ('la mayoría de las personas más inteligentes trabajan para otro'), las empresas líderes buscan innovación fuera de sus propias oficinas mediante concursos de diseño verde, crowdsourcing, o plataformas de intercambio de propiedad intelectual como Green Xchange de Nike. Esto requiere un cambio cultural donde la propiedad intelectual se use como herramienta de colaboración en lugar de exclusión, forjando nuevas alianzas internas y externas.",
+      "texto_nuevo": "Basado en la 'Ley de Joy' ('la mayoría de las personas más inteligentes trabajan para otro'), las empresas líderes buscan innovación fuera de sus propias oficinas mediante concursos de diseño verde, crowdsourcing, o plataformas de intercambio de propiedad intelectual como Green Xchange de Nike. Esto requiere un cambio cultural, que toma tiempo, donde la propiedad intelectual se use como herramienta de colaboración en lugar de exclusión, forjando nuevas alianzas internas y externas.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3781",
+        "frase": "intellectual property is used as a tool for collaboration versus exclusion takes time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que ese cambio cultural toma tiempo (años en el caso citado); el nodo lo pierde. La frase final de la propuesta es invención y no se usa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

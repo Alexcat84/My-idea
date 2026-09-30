@@ -7,7 +7,7 @@
   "pasos_accionables": [
     "Diseñar experimentos con criterios claros de éxito y fracaso (para mensajes, características, precios, etc.), aceptando de antemano que varios fallarán",
     "Cambiar la cultura del equipo de 'miedo al fracaso' a 'aprendizaje y descubrimiento'",
-    "Cuando algo no funciona, reorientarse rápidamente hacia los nuevos hechos y decidir qué corregir",
+    "Cuando algo no funciona, reorientarse rápidamente hacia los nuevos hechos, decidir qué corregir y actuar con decisión",
     "Documentar cada fracaso como aprendizaje válido que alimenta la decisión de pivotar",
     "Evitar penalizar al equipo por hipótesis fallidas; en su lugar, ajustar el modelo"
   ],
@@ -42,5 +42,24 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-087-fracaso_como_aprendizaje_startup-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando algo no funciona, reorientarse rápidamente hacia los nuevos hechos y decidir qué corregir",
+      "texto_nuevo": "Cuando algo no funciona, reorientarse rápidamente hacia los nuevos hechos, decidir qué corregir y actuar con decisión",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1030",
+        "frase": "orient themselves to the new facts, decide what needs fixing, and act decisively"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro describe tres movimientos: orientarse a los hechos, decidir qué arreglar y actuar con decisión; el paso pierde el tercero.; Mismo defecto que la marca 0.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

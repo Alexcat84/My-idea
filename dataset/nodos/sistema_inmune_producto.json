@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Sistema Inmune del Producto (Andon Cord adaptado)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Inspirado en el cordón andon de Toyota (que permite a cualquier trabajador detener la línea de producción al detectar un defecto), el 'sistema inmune del producto' es un conjunto de mecanismos automáticos de defensa que monitorean tanto el funcionamiento técnico del producto como la salud del negocio (métricas clave). Cuando se detecta un problema —incluso uno sutil que las pruebas automatizadas no capturarían, como un botón de compra invisible por error de diseño— el sistema puede revertir automáticamente el cambio defectuoso, notificar al equipo responsable y bloquear nuevos cambios hasta resolver la causa raíz.",
+  "resumen_teorico": "Inspirado en el cordón andon de Toyota (que permite a cualquier trabajador pedir ayuda al detectar un defecto y detener la línea de producción si no se puede corregir de inmediato), el 'sistema inmune del producto' es un conjunto de mecanismos automáticos de defensa que monitorean tanto el funcionamiento técnico del producto como la salud del negocio (métricas clave). Cuando se detecta un problema (incluso uno sutil que las pruebas automatizadas no capturarían, como un botón de compra invisible por error de diseño), el sistema puede revertir automáticamente el cambio defectuoso, notificar al equipo responsable y bloquear nuevos cambios hasta resolver la causa raíz.",
   "pasos_accionables": [
     "Definir métricas de negocio críticas que deben monitorearse continuamente (ej: tasa de conversión, ventas)",
     "Implementar pruebas automatizadas funcionales y de negocio para cada despliegue",
@@ -12,7 +12,7 @@
     "Establecer un protocolo de reversión automática del cambio defectuoso",
     "Bloquear nuevos despliegues del equipo responsable hasta encontrar y corregir la causa raíz del problema"
   ],
-  "entregable_esperado": "Un sistema de monitoreo y alertas automáticas que protege al producto y al negocio de cambios defectuosos, permitiendo detección y corrección casi inmediata",
+  "entregable_esperado": "Un sistema de monitoreo y alertas automáticas que protege al producto y al negocio de cambios defectuosos, los retira automáticamente y bloquea nuevos cambios hasta corregir la causa raíz, permitiendo detección y corrección casi inmediata",
   "nodos_previos": [
     "despliegue_continuo"
   ],
@@ -27,5 +27,39 @@
   "etiqueta_arbol": "Defiende tu Producto de Defectos",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-091-sistema_inmune_producto-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un sistema de monitoreo y alertas automáticas que protege al producto y al negocio de cambios defectuosos, permitiendo detección y corrección casi inmediata",
+      "texto_nuevo": "Un sistema de monitoreo y alertas automáticas que protege al producto y al negocio de cambios defectuosos, los retira automáticamente y bloquea nuevos cambios hasta corregir la causa raíz, permitiendo detección y corrección casi inmediata",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2193-2199",
+        "frase": "The defective change is removed immediately and automatically."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El entregable reduce el sistema a vigilar y avisar, y pierde la retirada automática del cambio defectuoso y el bloqueo de nuevos cambios hasta corregir la causa raíz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-091-sistema_inmune_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inspirado en el cordón andon de Toyota (que permite a cualquier trabajador detener la línea de producción al detectar un defecto), el 'sistema inmune del producto' es un conjunto de mecanismos automáticos de defensa que monitorean tanto el funcionamiento técnico del producto como la salud del negocio (métricas clave). Cuando se detecta un problema —incluso uno sutil que las pruebas automatizadas no capturarían, como un botón de compra invisible por error de diseño— el sistema puede revertir automáticamente el cambio defectuoso, notificar al equipo responsable y bloquear nuevos cambios hasta resolver la causa raíz.",
+      "texto_nuevo": "Inspirado en el cordón andon de Toyota (que permite a cualquier trabajador pedir ayuda al detectar un defecto y detener la línea de producción si no se puede corregir de inmediato), el 'sistema inmune del producto' es un conjunto de mecanismos automáticos de defensa que monitorean tanto el funcionamiento técnico del producto como la salud del negocio (métricas clave). Cuando se detecta un problema (incluso uno sutil que las pruebas automatizadas no capturarían, como un botón de compra invisible por error de diseño), el sistema puede revertir automáticamente el cambio defectuoso, notificar al equipo responsable y bloquear nuevos cambios hasta resolver la causa raíz.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2151",
+        "frase": "allows any worker to ask for help as soon as they notice any problem"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El cordón sirve para pedir ayuda al notar un problema y la línea solo se detiene si no se puede corregir de inmediato; esa condición se cae.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
