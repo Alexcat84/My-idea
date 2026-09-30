@@ -6,9 +6,9 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Requisitos de inspección, mantenimiento y operación segura de grúas, montacargas aéreos, cadenas y cables, para prevenir caídas de carga y fallas mecánicas durante el izaje de materiales.",
   "pasos_accionables": [
-    "Inspeccionar periódicamente grúas aéreas y de pórtico según su nivel de uso y ambiente.",
-    "Revisar mensualmente cables, ganchos y cadenas, manteniendo registros de certificación.",
-    "Verificar que cada polipasto tenga interruptor de límite y capacidad de carga visible.",
+    "Inspeccionar grúas aéreas y de pórtico en intervalos de 1 a 12 meses, según su nivel de uso, la exigencia del servicio y el ambiente.",
+    "Revisar mensualmente cables, ganchos y cadenas, manteniendo registros de certificación, y revisar a simple vista cada día los ganchos y cadenas del polipasto.",
+    "Verificar que cada polipasto eléctrico aéreo tenga interruptor de límite y que cada polipasto tenga su capacidad de carga visible.",
     "Asegurar que las cargas estén bien balanceadas y aseguradas antes de izarlas.",
     "Prohibir el paso de personas debajo de cargas suspendidas."
   ],
@@ -25,5 +25,58 @@
   "etiqueta_arbol": "Asegura tus Grúas y Equipos",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-hoist_auxiliary_equipment_safety-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inspeccionar periódicamente grúas aéreas y de pórtico según su nivel de uso y ambiente.",
+      "texto_nuevo": "Inspeccionar grúas aéreas y de pórtico en intervalos de 1 a 12 meses, según su nivel de uso, la exigencia del servicio y el ambiente.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1097",
+        "frase": "periodically inspected for defects or safety concerns in 1 to 12 month intervals"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro acota la periodicidad a intervalos de 1 a 12 meses e incluye la exigencia del servicio.; Mismo defecto: se cae el rango de 1 a 12 meses.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-hoist_auxiliary_equipment_safety-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar mensualmente cables, ganchos y cadenas, manteniendo registros de certificación.",
+      "texto_nuevo": "Revisar mensualmente cables, ganchos y cadenas, manteniendo registros de certificación, y revisar a simple vista cada día los ganchos y cadenas del polipasto.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1099-1103",
+        "frase": "hoist chains, including end connections, are visually inspected daily"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además la revisión visual diaria de ganchos y cadenas del polipasto.; Mismo defecto: se cae la inspección visual diaria.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-hoist_auxiliary_equipment_safety-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que cada polipasto tenga interruptor de límite y capacidad de carga visible.",
+      "texto_nuevo": "Verificar que cada polipasto eléctrico aéreo tenga interruptor de límite y que cada polipasto tenga su capacidad de carga visible.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1105-1109",
+        "frase": "Each overhead electric hoist is equipped with a limit switch/device"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro exige el interruptor de límite en cada polipasto eléctrico aéreo, no en todo polipasto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

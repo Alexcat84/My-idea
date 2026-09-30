@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Organizaciones de Alta Confiabilidad (HRO) — Lectura Crítica de la Teoría",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "La teoría HRO (High-Reliability Organization) plantea un enfoque optimista sobre la prevención de accidentes, exigiendo liderazgo comprometido con la seguridad, sistemas operacionales relativamente cerrados, descentralización funcional, cultura de seguridad, redundancia de equipos y personal, y aprendizaje sistemático. Aun así, ninguna organización ha cerrado completamente la brecha hacia la eliminación total de accidentes.",
+  "resumen_teorico": "La teoría HRO (High-Reliability Organization) plantea un enfoque optimista sobre la prevención de accidentes, exigiendo liderazgo comprometido con la seguridad, sistemas operacionales relativamente cerrados, descentralización funcional, cultura de seguridad, redundancia de equipos y personal, y aprendizaje sistemático. Aun así, ninguna organización ha cerrado completamente la brecha hacia la eliminación total de accidentes, ni hay garantía de que ajustar estos atributos la mantenga en cero accidentes.",
   "pasos_accionables": [
     "Evaluar el grado de descentralización funcional en la toma de decisiones de seguridad",
     "Implementar redundancias críticas en equipos y personal en procesos de alto riesgo",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Cuestiona la Alta Confiabilidad",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-139-sistemas_alta_confiabilidad_hro-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La teoría HRO (High-Reliability Organization) plantea un enfoque optimista sobre la prevención de accidentes, exigiendo liderazgo comprometido con la seguridad, sistemas operacionales relativamente cerrados, descentralización funcional, cultura de seguridad, redundancia de equipos y personal, y aprendizaje sistemático. Aun así, ninguna organización ha cerrado completamente la brecha hacia la eliminación total de accidentes.",
+      "texto_nuevo": "La teoría HRO (High-Reliability Organization) plantea un enfoque optimista sobre la prevención de accidentes, exigiendo liderazgo comprometido con la seguridad, sistemas operacionales relativamente cerrados, descentralización funcional, cultura de seguridad, redundancia de equipos y personal, y aprendizaje sistemático. Aun así, ninguna organización ha cerrado completamente la brecha hacia la eliminación total de accidentes, ni hay garantía de que ajustar estos atributos la mantenga en cero accidentes.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3648",
+        "frase": "there are no guarantees that manipulating these attributes will keep an organization at zero"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el límite del libro: no hay garantía de que ajustar esos atributos mantenga a la organización en cero.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

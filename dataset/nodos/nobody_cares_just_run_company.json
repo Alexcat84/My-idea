@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Cuando enfrentes una crisis, evita gastar energía mental explicando por qué las circunstancias son injustas o difíciles.",
     "Redirige el 100% del esfuerzo mental hacia encontrar la salida posible, por improbable que parezca.",
-    "Evita comunicar excusas extensas a inversores o equipo; comunica acciones concretas.",
+    "Sugerencia de My Idea: evita comunicar excusas extensas a inversores o equipo; comunica acciones concretas.",
     "Acepta que el contexto externo no exime de responsabilidad por los resultados."
   ],
-  "entregable_esperado": "Mentalidad y comunicación enfocada en soluciones accionables durante una crisis, sin justificaciones extensas.",
+  "entregable_esperado": "Mentalidad enfocada en soluciones accionables durante una crisis, sin gastar energía en justificaciones.",
   "nodos_previos": [
     "equipo_de_gestion_de_crisis",
     "la_lucha_resiliencia_ceo"
@@ -51,6 +51,39 @@
         "motivo": "Después de reconocer La Lucha, el siguiente paso es dejar las excusas y enfocar toda la energía en dirigir la empresa hacia adelante."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-140-nobody_cares_just_run_company-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita comunicar excusas extensas a inversores o equipo; comunica acciones concretas.",
+      "texto_nuevo": "Sugerencia de My Idea: evita comunicar excusas extensas a inversores o equipo; comunica acciones concretas.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1136-1142",
+        "frase": "All the mental energy you use to elaborate your misery would be far better used"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje trata de la energía mental propia, no de qué comunicar a inversores o equipo; queda como sugerencia.; Mismo defecto: el consejo de comunicación no está en el libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-140-nobody_cares_just_run_company-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mentalidad y comunicación enfocada en soluciones accionables durante una crisis, sin justificaciones extensas.",
+      "texto_nuevo": "Mentalidad enfocada en soluciones accionables durante una crisis, sin gastar energía en justificaciones.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1142",
+        "frase": "Spend zero time on what you could have done, and devote all of your time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de dónde poner la energía mental, no de una comunicación sin justificaciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

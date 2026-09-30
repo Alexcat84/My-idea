@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Mantenimiento Seguro de Herramientas Manuales y Portátiles",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Las herramientas manuales y eléctricas deben mantenerse en buen estado, con protecciones adecuadas, mangos bien ajustados, filos afilados, y almacenamiento seguro. Las herramientas eléctricas requieren conexión a tierra o doble aislamiento y protectores en partes móviles.",
+  "resumen_teorico": "Las herramientas manuales y eléctricas deben mantenerse en buen estado, con protecciones adecuadas, mangos bien ajustados, filos afilados y almacenamiento seguro, y usarse con gafas o careta si pueden lanzar partículas o romperse. Las eléctricas requieren conexión a tierra o doble aislamiento y protectores en partes móviles.",
   "pasos_accionables": [
     "Inspeccionar regularmente el estado de herramientas manuales y eléctricas",
     "Reemplazar mangos rotos o herramientas con cabezas deformadas",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Cuida tus Herramientas de Trabajo",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-herramientas_manuales_y_portatiles-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las herramientas manuales y eléctricas deben mantenerse en buen estado, con protecciones adecuadas, mangos bien ajustados, filos afilados, y almacenamiento seguro. Las herramientas eléctricas requieren conexión a tierra o doble aislamiento y protectores en partes móviles.",
+      "texto_nuevo": "Las herramientas manuales y eléctricas deben mantenerse en buen estado, con protecciones adecuadas, mangos bien ajustados, filos afilados y almacenamiento seguro, y usarse con gafas o careta si pueden lanzar partículas o romperse. Las eléctricas requieren conexión a tierra o doble aislamiento y protectores en partes móviles.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "681",
+        "frase": "safety glasses, face shields, and other PPE are used"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide gafas, careta u otro EPP con herramientas que pueden lanzar partículas o romperse; el resumen lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

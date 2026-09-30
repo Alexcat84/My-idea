@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Extremo Agudo vs Extremo Romo del Sistema",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Todo sistema operacional puede dividirse en un extremo agudo (sharp end), donde las personas están en contacto directo con el proceso crítico de seguridad (cabina de tren, cabina de avión, mesa de operaciones), y un extremo romo (blunt end), que es la organización que da soporte y restringe la actividad en el extremo agudo (aerolínea, hospital, reguladores, proveedores de equipo). El extremo romo entrega recursos pero también impone presiones (no llegar tarde, no gastar de más) que moldean, crean e incluso alientan oportunidades de error en el extremo agudo. Entender el error requiere ver ambos extremos y su interacción.",
+  "resumen_teorico": "Todo sistema operacional puede dividirse en un extremo agudo (sharp end), donde las personas están en contacto directo con el proceso crítico de seguridad (cabina de tren, cabina de avión, mesa de operaciones), y un extremo romo (blunt end), que es la organización que da soporte y restringe la actividad en el extremo agudo (aerolínea, hospital, reguladores, proveedores de equipo). El extremo romo entrega recursos pero también impone presiones (no llegar tarde, no gastar de más) que moldean, crean y a veces incluso alientan oportunidades de error en el extremo agudo. Entender el error requiere ver ambos extremos y su interacción.",
   "pasos_accionables": [
     "Mapear quiénes están en el extremo agudo del evento investigado y quiénes en el extremo romo",
     "Identificar qué recursos y qué restricciones/presiones provienen del extremo romo",
@@ -39,6 +39,22 @@
         "evidencia": "Q019-018: Los pasos y condiciones tratan de investigar un accidente ya ocurrido en una operación en marcha (evento investigado, informe final), que es control y mejora de lo que funciona, no planificación. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-139-sharp_end_blunt_end-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo sistema operacional puede dividirse en un extremo agudo (sharp end), donde las personas están en contacto directo con el proceso crítico de seguridad (cabina de tren, cabina de avión, mesa de operaciones), y un extremo romo (blunt end), que es la organización que da soporte y restringe la actividad en el extremo agudo (aerolínea, hospital, reguladores, proveedores de equipo). El extremo romo entrega recursos pero también impone presiones (no llegar tarde, no gastar de más) que moldean, crean e incluso alientan oportunidades de error en el extremo agudo. Entender el error requiere ver ambos extremos y su interacción.",
+      "texto_nuevo": "Todo sistema operacional puede dividirse en un extremo agudo (sharp end), donde las personas están en contacto directo con el proceso crítico de seguridad (cabina de tren, cabina de avión, mesa de operaciones), y un extremo romo (blunt end), que es la organización que da soporte y restringe la actividad en el extremo agudo (aerolínea, hospital, reguladores, proveedores de equipo). El extremo romo entrega recursos pero también impone presiones (no llegar tarde, no gastar de más) que moldean, crean y a veces incluso alientan oportunidades de error en el extremo agudo. Entender el error requiere ver ambos extremos y su interacción.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "920",
+        "frase": "The blunt end shapes, creates, and sometimes even encourages opportunities for errors"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'sometimes even encourages'; el nodo quita el 'a veces' y lo vuelve general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

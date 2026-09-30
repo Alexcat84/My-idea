@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Definición de Procedimientos en Organizaciones de Servicio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "A diferencia de manufactura, donde existen especificaciones detalladas, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). La ambigüedad en la definición operacional de un 'error' o 'defecto' en servicios es tan compleja como en manufactura.",
+  "resumen_teorico": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
   "pasos_accionables": [
     "Auditar todos los departamentos de servicio para verificar si existen procedimientos escritos y actualizados",
     "Definir operacionalmente qué constituye un error o defecto en cada proceso de servicio",
@@ -71,6 +71,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-e1-137-procedimientos_definidos_en_servicios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "A diferencia de manufactura, donde existen especificaciones detalladas, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). La ambigüedad en la definición operacional de un 'error' o 'defecto' en servicios es tan compleja como en manufactura.",
+      "texto_nuevo": "Al igual que en manufactura, muchas organizaciones de servicio operan sin procedimientos definidos y actualizados. Se asume erróneamente que los procesos están claros, generando errores por falta de guías operacionales (por ejemplo, cómo ingresar un pedido, cómo codificar información). En algunas organizaciones de servicio, definir operacionalmente un 'error' o 'defecto' puede ser tan difícil como en manufactura.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4228-4232",
+        "frase": "One finds in service organizations, as in manufacturing, absence of definite procedures."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro dice que la ausencia de procedimientos definidos se da en servicios igual que en manufactura, no en contraste con ella.; Endurece: el libro dice que el problema afecta a algunas organizaciones de servicio y que en muchos estudios es tan difícil, no que lo sea en general.; Mismo contrario que la marca 0: 'as in manufacturing'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

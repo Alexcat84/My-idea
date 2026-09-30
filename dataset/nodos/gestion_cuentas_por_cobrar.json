@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de Cuentas por Cobrar (Accounts Receivable)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Los acreedores también monitorean este rubro de cerca como indicador de salud financiera.",
+  "resumen_teorico": "Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Es probable que los acreedores también la estén vigilando.",
   "pasos_accionables": [
     "Revisar periódicamente el saldo total de cuentas por cobrar",
     "Establecer una política de reserva para cuentas incobrables basada en experiencia histórica",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Vigila tus Cuentas por Cobrar",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-136-gestion_cuentas_por_cobrar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Los acreedores también monitorean este rubro de cerca como indicador de salud financiera.",
+      "texto_nuevo": "Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Es probable que los acreedores también la estén vigilando.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "1209",
+        "frase": "Creditors are likely to be watching it as well."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que es probable que los acreedores la vigilen; el nodo lo vuelve hecho y añade el porqué.; Mismo defecto: endurece el 'likely' del libro y añade la causa 'indicador de salud financiera'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

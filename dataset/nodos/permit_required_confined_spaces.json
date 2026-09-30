@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Espacios Confinados con Permiso de Entrada",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Procedimiento formal para identificar, señalizar y controlar el acceso a espacios confinados peligrosos, incluyendo pruebas atmosféricas, ventilación, comunicación con vigilante externo y planes de rescate.",
+  "resumen_teorico": "Procedimiento formal para identificar, señalizar y controlar el acceso a espacios confinados peligrosos, incluyendo aislamiento de tuberías y energías, pruebas atmosféricas, ventilación, comunicación con vigilante externo y planes de rescate.",
   "pasos_accionables": [
     "Identificar y señalizar espacios confinados con permiso requerido.",
     "Implementar un programa escrito de espacios confinados.",
     "Realizar pruebas atmosféricas antes y durante la entrada (oxígeno, gases inflamables, tóxicos).",
-    "Asignar un vigilante capacitado fuera del espacio con comunicación constante.",
+    "Asignar un vigilante capacitado y equipado fuera del espacio, dedicado solo a vigilar el trabajo, dar la alarma y prestar ayuda, con comunicación constante.",
     "Verificar disponibilidad de servicios de rescate antes de cada entrada."
   ],
   "entregable_esperado": "Programa escrito de espacios confinados, señalización instalada y protocolo de rescate verificado.",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Controla el Ingreso a Espacios Confinados",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-permit_required_confined_spaces-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asignar un vigilante capacitado fuera del espacio con comunicación constante.",
+      "texto_nuevo": "Asignar un vigilante capacitado y equipado fuera del espacio, dedicado solo a vigilar el trabajo, dar la alarma y prestar ayuda, con comunicación constante.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1339",
+        "frase": "trained and equipped attendant is positioned outside the confined space, whose sole responsibility"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide un vigilante también equipado y con la vigilancia, la alarma y la ayuda como única responsabilidad.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-permit_required_confined_spaces-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Procedimiento formal para identificar, señalizar y controlar el acceso a espacios confinados peligrosos, incluyendo pruebas atmosféricas, ventilación, comunicación con vigilante externo y planes de rescate.",
+      "texto_nuevo": "Procedimiento formal para identificar, señalizar y controlar el acceso a espacios confinados peligrosos, incluyendo aislamiento de tuberías y energías, pruebas atmosféricas, ventilación, comunicación con vigilante externo y planes de rescate.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1313-1315",
+        "frase": "valved off and blanked, or disconnected and separated before entry"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide aislar las tuberías con materiales peligrosos y bloquear las energías mecánicas antes de entrar; el resumen lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

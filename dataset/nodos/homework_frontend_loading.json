@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Front-End Loading / Homework Predesarrollo",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El homework o diligencia debida antes de entrar a desarrollo (fuzzy front end) es el factor que decide el éxito o fracaso de tu producto, aunque la mayoría invierte poco tiempo aquí a pesar de su alto impacto. Debes completar un conjunto de actividades: screening inicial, evaluación preliminar de mercado y técnica, evaluación de operaciones y suministro, estudio detallado de mercado con voz del cliente, prueba de concepto con clientes reales, determinación del valor económico para el cliente, y análisis financiero para construir el business case. Invertir más tiempo en esta etapa no retrasa el proyecto, en realidad acelera el desarrollo posterior al evitar cambios costosos y tardíos, y reduce las tasas de fracaso atribuibles a mala definición inicial del producto.",
+  "resumen_teorico": "El homework o diligencia debida antes de entrar a desarrollo (fuzzy front end) decide en gran medida el éxito o fracaso de tu producto, aunque la mayoría invierte poco tiempo aquí a pesar de su alto impacto. Debes completar un conjunto de actividades: screening inicial, evaluación preliminar de mercado y técnica, evaluación de operaciones y suministro, estudio detallado de mercado con voz del cliente, prueba de concepto con clientes reales, determinación del valor económico para el cliente, y análisis financiero para construir el business case. Invertir más tiempo en esta etapa no retrasa el proyecto, en realidad acelera el desarrollo posterior al evitar cambios costosos y tardíos, y reduce las tasas de fracaso atribuibles a mala definición inicial del producto.",
   "pasos_accionables": [
     "Realiza un screening inicial de tu idea antes de comprometer recursos significativos",
     "Ejecuta en paralelo una evaluación preliminar de mercado y una evaluación técnica preliminar identificando riesgos y ruta técnica",
@@ -42,5 +42,23 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-homework_frontend_loading-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El homework o diligencia debida antes de entrar a desarrollo (fuzzy front end) es el factor que decide el éxito o fracaso de tu producto, aunque la mayoría invierte poco tiempo aquí a pesar de su alto impacto. Debes completar un conjunto de actividades: screening inicial, evaluación preliminar de mercado y técnica, evaluación de operaciones y suministro, estudio detallado de mercado con voz del cliente, prueba de concepto con clientes reales, determinación del valor económico para el cliente, y análisis financiero para construir el business case. Invertir más tiempo en esta etapa no retrasa el proyecto, en realidad acelera el desarrollo posterior al evitar cambios costosos y tardíos, y reduce las tasas de fracaso atribuibles a mala definición inicial del producto.",
+      "texto_nuevo": "El homework o diligencia debida antes de entrar a desarrollo (fuzzy front end) decide en gran medida el éxito o fracaso de tu producto, aunque la mayoría invierte poco tiempo aquí a pesar de su alto impacto. Debes completar un conjunto de actividades: screening inicial, evaluación preliminar de mercado y técnica, evaluación de operaciones y suministro, estudio detallado de mercado con voz del cliente, prueba de concepto con clientes reales, determinación del valor económico para el cliente, y análisis financiero para construir el business case. Invertir más tiempo en esta etapa no retrasa el proyecto, en realidad acelera el desarrollo posterior al evitar cambios costosos y tardíos, y reduce las tasas de fracaso atribuibles a mala definición inicial del producto.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2685",
+        "frase": "New-product success or failure is largely decided in the first few plays of the game"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que el éxito se decide en gran medida en esas primeras tareas, no que sean el factor que lo decide.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

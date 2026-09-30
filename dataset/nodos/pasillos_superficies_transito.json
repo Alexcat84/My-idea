@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Mantenimiento de Pasillos y Zonas de Paso",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Mantén limpios, ordenados y en buen estado los pisos por donde caminas y trabajas. Cubre las superficies húmedas con materiales antideslizantes, repara los huecos apenas los veas, y ordena los materiales guardados para que no bloqueen los pasillos. Si tienes maquinaria en movimiento cerca, diseña esos pasillos pensando en reducir el riesgo.",
+  "resumen_teorico": "Mantén limpios, ordenados y en buen estado los pisos por donde caminas y trabajas. Cubre las superficies húmedas con materiales antideslizantes, repara los huecos apenas los veas, y ordena los materiales guardados para que no bloqueen los pasillos. Pon barandas si un pasillo o escalera se eleva más de 1,2 m. Si tienes maquinaria en movimiento cerca, diseña esos pasillos pensando en reducir el riesgo.",
   "pasos_accionables": [
     "Limpia los derrames apenas ocurran",
     "Cubre las superficies húmedas con materiales antideslizantes",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Mantén Limpios tus Pasillos",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-pasillos_superficies_transito-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantén limpios, ordenados y en buen estado los pisos por donde caminas y trabajas. Cubre las superficies húmedas con materiales antideslizantes, repara los huecos apenas los veas, y ordena los materiales guardados para que no bloqueen los pasillos. Si tienes maquinaria en movimiento cerca, diseña esos pasillos pensando en reducir el riesgo.",
+      "texto_nuevo": "Mantén limpios, ordenados y en buen estado los pisos por donde caminas y trabajas. Cubre las superficies húmedas con materiales antideslizantes, repara los huecos apenas los veas, y ordena los materiales guardados para que no bloqueen los pasillos. Pon barandas si un pasillo o escalera se eleva más de 1,2 m. Si tienes maquinaria en movimiento cerca, diseña esos pasillos pensando en reducir el riesgo.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1575",
+        "frase": "Guardrails are provided wherever aisle, walkway, and stairway surfaces are elevated more than four feet"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige barandas en pasillos, pasarelas y escaleras elevados más de 4 pies (1,2 m); el resumen lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

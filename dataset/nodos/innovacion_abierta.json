@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Innovación Abierta (Open Innovation)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Estrategia para generar ideas de nuevos productos aprovechando fuentes externas a la organización, superando el síndrome NIH ('not invented here'). Incluye seis métodos: socios/proveedores, comunidad técnica externa, pequeñas empresas y startups, diseños externos de producto (crowdsourcing), envío externo de ideas, y concursos externos de ideas. El método más popular y efectivo es trabajar con socios y proveedores.",
+  "resumen_teorico": "Estrategia para generar ideas de nuevos productos aprovechando fuentes externas a la organización, superando el síndrome NIH ('not invented here'). Incluye seis métodos: socios/proveedores, comunidad técnica externa, pequeñas empresas y startups, diseños externos de producto (crowdsourcing), envío externo de ideas, y concursos externos de ideas. El método más popular y efectivo es trabajar con socios y proveedores. Todos rinden menos que oír al cliente y muchos solo sirven a ciertos productos.",
   "pasos_accionables": [
     "Evaluar el grado de síndrome NIH en la organización",
     "Establecer equipos de exploración (scouting) que investiguen startups, inventores y pequeñas empresas, y que visiten conferencias, ferias",
@@ -50,5 +50,23 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-innovacion_abierta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estrategia para generar ideas de nuevos productos aprovechando fuentes externas a la organización, superando el síndrome NIH ('not invented here'). Incluye seis métodos: socios/proveedores, comunidad técnica externa, pequeñas empresas y startups, diseños externos de producto (crowdsourcing), envío externo de ideas, y concursos externos de ideas. El método más popular y efectivo es trabajar con socios y proveedores.",
+      "texto_nuevo": "Estrategia para generar ideas de nuevos productos aprovechando fuentes externas a la organización, superando el síndrome NIH ('not invented here'). Incluye seis métodos: socios/proveedores, comunidad técnica externa, pequeñas empresas y startups, diseños externos de producto (crowdsourcing), envío externo de ideas, y concursos externos de ideas. El método más popular y efectivo es trabajar con socios y proveedores. Todos rinden menos que oír al cliente y muchos solo sirven a ciertos productos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5377-5383",
+        "frase": "None of these open innovation approaches is as effective as an idea source"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el límite del libro: ninguno de estos métodos rinde como la voz del cliente y muchos solo sirven para ciertas categorías.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

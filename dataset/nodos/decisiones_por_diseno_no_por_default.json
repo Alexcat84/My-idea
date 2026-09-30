@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Decisiones Fundacionales por Diseño, no por Default",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Las decisiones más comunes al fundar una startup (cofundar con amigos, repartir equity en partes iguales, contratar conocidos, etc.) suelen tomarse por defecto o comodidad, sin evaluar el rango completo de opciones disponibles ni sus consecuencias a largo plazo. Estas decisiones deben tomarse deliberadamente ('by design'), evaluando múltiples opciones, porque las decisiones fáciles a corto plazo suelen generar problemas graves a largo plazo, y son costosas y difíciles de deshacer (path dependence).",
+  "resumen_teorico": "Las decisiones más comunes al fundar una startup (cofundar con amigos, repartir equity en partes iguales, contratar conocidos, etc.) suelen tomarse por defecto o comodidad, sin evaluar el rango completo de opciones disponibles ni sus consecuencias a largo plazo. Estas decisiones deben tomarse deliberadamente ('by design'), evaluando múltiples opciones, porque las decisiones fáciles a corto plazo pueden generar problemas a largo plazo, y son costosas y difíciles de deshacer (path dependence).",
   "pasos_accionables": [
     "Antes de tomar cualquier decisión fundacional importante (socios, roles, equity), listar explícitamente todas las opciones disponibles, no solo la más obvia o cómoda.",
     "Evaluar cada opción en términos de consecuencias a corto y largo plazo.",
@@ -41,6 +41,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-008 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-139-decisiones_por_diseno_no_por_default-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las decisiones más comunes al fundar una startup (cofundar con amigos, repartir equity en partes iguales, contratar conocidos, etc.) suelen tomarse por defecto o comodidad, sin evaluar el rango completo de opciones disponibles ni sus consecuencias a largo plazo. Estas decisiones deben tomarse deliberadamente ('by design'), evaluando múltiples opciones, porque las decisiones fáciles a corto plazo suelen generar problemas graves a largo plazo, y son costosas y difíciles de deshacer (path dependence).",
+      "texto_nuevo": "Las decisiones más comunes al fundar una startup (cofundar con amigos, repartir equity en partes iguales, contratar conocidos, etc.) suelen tomarse por defecto o comodidad, sin evaluar el rango completo de opciones disponibles ni sus consecuencias a largo plazo. Estas decisiones deben tomarse deliberadamente ('by design'), evaluando múltiples opciones, porque las decisiones fáciles a corto plazo pueden generar problemas a largo plazo, y son costosas y difíciles de deshacer (path dependence).",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "86",
+        "frase": "An “easy” short-term decision may introduce long-term problems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que una decisión fácil a corto plazo 'may introduce long-term problems'; el nodo lo endurece a 'suelen' y 'graves'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Minimizar la Política Corporativa",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "El comportamiento político en una empresa (avanzar carreras por medios distintos al mérito) casi siempre se origina, aunque sea accidentalmente, en las acciones del CEO. Otorgar aumentos o promociones fuera de proceso ante peticiones individuales crea incentivos perversos que fomentan la política. La solución es construir procesos estrictos y no desviarse de ellos en áreas sensibles: evaluación de desempeño/compensación, diseño organizacional/territorio y promociones.",
+  "resumen_teorico": "El comportamiento político en una empresa (avanzar carreras por medios distintos al mérito) casi siempre se origina, aunque sea accidentalmente, en las acciones del CEO. Otorgar aumentos o promociones fuera de proceso ante peticiones individuales crea incentivos perversos que fomentan la política. La solución tiene dos partes: contratar gente cuya ambición sea el éxito de la empresa, no solo el propio, y construir procesos estrictos y no desviarse de ellos en áreas sensibles: evaluación de desempeño/compensación, diseño organizacional/territorio y promociones.",
   "pasos_accionables": [
     "Identificar las áreas de mayor riesgo político: compensación, diseño organizacional, promociones.",
-    "Diseñar un proceso formal, regular y visible para revisiones de desempeño y compensación, involucrando al directorio en el caso de ejecutivos.",
+    "Diseñar un proceso formal, regular y visible para revisiones de desempeño y compensación, idealmente involucrando al directorio en el caso de ejecutivos.",
     "Ante solicitudes de expansión de responsabilidades, evitar dar señales o reacciones que puedan filtrarse; evaluar y decidir en privado, luego ejecutar rápidamente sin dejar tiempo para lobbying.",
-    "Crear un proceso de promoción formal y defendible que involucre a varios gerentes familiarizados con el trabajo del empleado.",
+    "Crear un proceso de promoción formal, visible y defendible que involucre a varios gerentes familiarizados con el trabajo del empleado y, en el caso de los ejecutivos, al directorio.",
     "Nunca ceder a solicitudes de aumento o promoción fuera de ciclo sin pasar por el proceso establecido."
   ],
   "entregable_esperado": "Documento de políticas formales de compensación, diseño organizacional y promociones, comunicado a todo el equipo directivo.",
@@ -54,6 +54,56 @@
         "motivo": "Tenia razon el lector A: el nodo trata de como el CEO genera politica al ceder fuera de proceso ante peticiones de territorio, ascensos y compensacion, que son justo las situaciones que maneja gestion_confrontacion_ejecutiva con procesos claros, asi que es su consecuencia directa; buen_lugar_para_trabajar solo nombra la politica interna como uno de varios sintomas de una mala organizacion y es un paraguas mas generico."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-140-minimizar_politica_organizacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El comportamiento político en una empresa (avanzar carreras por medios distintos al mérito) casi siempre se origina, aunque sea accidentalmente, en las acciones del CEO. Otorgar aumentos o promociones fuera de proceso ante peticiones individuales crea incentivos perversos que fomentan la política. La solución es construir procesos estrictos y no desviarse de ellos en áreas sensibles: evaluación de desempeño/compensación, diseño organizacional/territorio y promociones.",
+      "texto_nuevo": "El comportamiento político en una empresa (avanzar carreras por medios distintos al mérito) casi siempre se origina, aunque sea accidentalmente, en las acciones del CEO. Otorgar aumentos o promociones fuera de proceso ante peticiones individuales crea incentivos perversos que fomentan la política. La solución tiene dos partes: contratar gente cuya ambición sea el éxito de la empresa, no solo el propio, y construir procesos estrictos y no desviarse de ellos en áreas sensibles: evaluación de desempeño/compensación, diseño organizacional/territorio y promociones.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1923-1933",
+        "frase": "I found two key techniques to be useful in minimizing politics."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da dos técnicas y el resumen pierde la primera: contratar gente con la ambición correcta.; Mismo defecto: se cae la técnica de contratar personas cuya ambición es el éxito de la empresa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-140-minimizar_politica_organizacional-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar un proceso formal, regular y visible para revisiones de desempeño y compensación, involucrando al directorio en el caso de ejecutivos.",
+      "texto_nuevo": "Diseñar un proceso formal, regular y visible para revisiones de desempeño y compensación, idealmente involucrando al directorio en el caso de ejecutivos.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1937",
+        "frase": "Ideally, the executive compensation process should involve the board of directors."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea la participación del directorio en la compensación ejecutiva como lo ideal, no como requisito.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-140-minimizar_politica_organizacional-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear un proceso de promoción formal y defendible que involucre a varios gerentes familiarizados con el trabajo del empleado.",
+      "texto_nuevo": "Crear un proceso de promoción formal, visible y defendible que involucre a varios gerentes familiarizados con el trabajo del empleado y, en el caso de los ejecutivos, al directorio.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1949",
+        "frase": "the executive process should include the board of directors."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide un proceso formal, visible y defendible, y que el de ejecutivos incluya al directorio; el paso pierde ambas cosas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

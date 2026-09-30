@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Elementos Fundamentales de un Contrato Válido",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+  "resumen_teorico": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
   "pasos_accionables": [
     "Identificar todos los acuerdos verbales existentes entre cofundadores, empleados clave o socios.",
     "Formalizar por escrito cualquier acuerdo que pueda tardar más de un año en cumplirse.",
@@ -41,6 +41,22 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). A y B coinciden en estado (IMPRECISO), norma y cita, y ambos tenian razon. Verifique hoy en leginfo.legislature.ca.gov el texto literal de § 1624(a) y (a)(1) ('The following contracts are invalid, unless they, or some note or memorandum thereof, are in writing and subscribed by the party to be charg",
       "auditoria": "SANEAMIENTO P21 (arbitro)"
+    },
+    {
+      "id": "final-e1-139-elementos_contrato_legal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+      "texto_nuevo": "Bajo el common law, puede considerarse que existe un contrato cuando se dan tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "4836",
+        "frase": "If these three elements exist, a contract can be found to have been established"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que con esos tres elementos un contrato 'can be found' establecido, y que cada estado decide; el nodo lo endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

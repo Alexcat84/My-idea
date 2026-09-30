@@ -3,13 +3,13 @@
   "dominio": "core",
   "titulo_concepto": "Elegir entre hacerte rico o mantener el control (Rich vs. King)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Es una de las tensiones centrales que vas a enfrentar como fundador: elegir entre maximizar el valor financiero de tu empresa (volverte rico) o mantener el control absoluto sobre las decisiones (ser rey). Estas dos motivaciones suelen ser excluyentes: las decisiones que tomas a lo largo de la vida de tu negocio, como buscar capital externo, contratar ejecutivos con experiencia o acelerar el crecimiento, suelen aumentar el valor de tu empresa pero diluyen tu control, empujándote hacia uno de los dos extremos; muy pocos fundadores logran ambas cosas a la vez. Estructuras híbridas, como las franquicias, donde cedes parte del control y las ganancias a cambio de crecer con menos capital propio, muestran que existen puntos intermedios posibles.",
+  "resumen_teorico": "Es una de las tensiones centrales que vas a enfrentar como fundador: elegir entre maximizar el valor financiero de tu empresa (volverte rico) o mantener el control absoluto sobre las decisiones (ser rey). Estas dos motivaciones suelen ser excluyentes: las decisiones que tomas a lo largo de la vida de tu negocio, como buscar capital externo, contratar ejecutivos con experiencia o acelerar el crecimiento, suelen aumentar el valor de tu empresa pero diluyen tu control, empujándote hacia uno de los dos extremos; muy pocos fundadores logran ambas cosas a la vez. Estructuras híbridas, como las franquicias, donde cedes parte del control y las ganancias a cambio de crecer con menos capital propio, podrían ser una vía hacia puntos intermedios.",
   "pasos_accionables": [
     "Reflexiona con honestidad sobre qué es más importante para ti: maximizar el valor de salida o mantener el control de las decisiones clave",
     "Pregúntate si tu motivación principal es la riqueza financiera o el control, porque eso anticipa cómo vas a responder ante futuras decisiones de financiamiento o crecimiento",
     "Evalúa, en cada decisión de financiamiento o contratación, cuánto control pierdes a cambio de cuánto valor ganas",
     "Define con claridad qué decisiones no estás dispuesto a ceder en cuanto a control, por ejemplo la dirección estratégica o la cultura, y cuáles sí puedes soltar a cambio de recursos",
-    "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, sabiendo que también aumenta el riesgo de fracasar",
+    "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, que puede funcionar si tienes tiempo y tu negocio requiere poco capital, sabiendo que también aumenta el riesgo de fracasar",
     "Ten presente que crecer rápido o levantar capital de riesgo suele significar sacrificar control"
   ],
   "entregable_esperado": "Una declaración clara de tus prioridades, riqueza o control, que guíe tus futuras decisiones de financiamiento, contratación y gobierno de tu empresa",
@@ -90,6 +90,39 @@
         "motivo": "Orden invertido: los Tres Rs sirven para gestionar la sucesion de un fundador ya reemplazado, que viene despues de elegir entre riqueza y control, no antes."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-139-dilema_riqueza_vs_control-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una de las tensiones centrales que vas a enfrentar como fundador: elegir entre maximizar el valor financiero de tu empresa (volverte rico) o mantener el control absoluto sobre las decisiones (ser rey). Estas dos motivaciones suelen ser excluyentes: las decisiones que tomas a lo largo de la vida de tu negocio, como buscar capital externo, contratar ejecutivos con experiencia o acelerar el crecimiento, suelen aumentar el valor de tu empresa pero diluyen tu control, empujándote hacia uno de los dos extremos; muy pocos fundadores logran ambas cosas a la vez. Estructuras híbridas, como las franquicias, donde cedes parte del control y las ganancias a cambio de crecer con menos capital propio, muestran que existen puntos intermedios posibles.",
+      "texto_nuevo": "Es una de las tensiones centrales que vas a enfrentar como fundador: elegir entre maximizar el valor financiero de tu empresa (volverte rico) o mantener el control absoluto sobre las decisiones (ser rey). Estas dos motivaciones suelen ser excluyentes: las decisiones que tomas a lo largo de la vida de tu negocio, como buscar capital externo, contratar ejecutivos con experiencia o acelerar el crecimiento, suelen aumentar el valor de tu empresa pero diluyen tu control, empujándote hacia uno de los dos extremos; muy pocos fundadores logran ambas cosas a la vez. Estructuras híbridas, como las franquicias, donde cedes parte del control y las ganancias a cambio de crecer con menos capital propio, podrían ser una vía hacia puntos intermedios.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3798",
+        "frase": "corporate partnerships may be a way to achieve “75% Rich, 75% King.”"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea alianzas y franquicias solo como posible vía hacia un punto intermedio ('may be'), no como prueba.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-139-dilema_riqueza_vs_control-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, sabiendo que también aumenta el riesgo de fracasar",
+      "texto_nuevo": "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, que puede funcionar si tienes tiempo y tu negocio requiere poco capital, sabiendo que también aumenta el riesgo de fracasar",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3491",
+        "frase": "with the luxuries of time and low capital-intensity, such a strategy can work"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del libro: esa estrategia puede funcionar con tiempo y poca intensidad de capital; en otros casos resta desarrollo y competitividad.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

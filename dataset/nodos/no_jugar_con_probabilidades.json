@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Rechazar la parálisis que producen las probabilidades desfavorables",
     "Concentrar el cien por ciento del esfuerzo en buscar activamente una solución viable",
-    "Evitar construir planes de contingencia que desvíen el enfoque de encontrar la salida",
+    "Aunque aconsejen prepararse para el peor desenlace, mantener el enfoque en encontrar la salida sin guiarse por las probabilidades en contra",
     "Mantener la búsqueda de opciones incluso cuando parezca no haber ninguna ('siempre hay un movimiento')"
   ],
   "entregable_esperado": "Definición clara del objetivo único de supervivencia y plan de acción enfocado exclusivamente en encontrarlo, sin distracción por análisis probabilístico",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "No Confíes en las Probabilidades",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-no_jugar_con_probabilidades-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar construir planes de contingencia que desvíen el enfoque de encontrar la salida",
+      "texto_nuevo": "Aunque aconsejen prepararse para el peor desenlace, mantener el enfoque en encontrar la salida sin guiarse por las probabilidades en contra",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "710-716",
+        "frase": "you must believe there is an answer and you cannot pay attention to your odds"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro cuenta que no construyó ese plan, pero no da una regla contra los planes de contingencia; la lección es no guiarse por las probabilidades.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Reducción de Inventario mediante Mejora de Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La mejora de la calidad en materiales entrantes y la reducción de retrabajo permiten disminuir drásticamente el inventario en proceso, generando ahorros significativos. Esto se logra mediante cooperación con proveedores, reducción del número de vendedores, y eliminación de márgenes de seguridad por materiales defectuosos.",
+  "resumen_teorico": "La mejora de la calidad en materiales entrantes y la reducción de retrabajo permiten disminuir drásticamente el inventario en proceso, generando ahorros significativos. Esto se logra mediante cooperación con proveedores, reducción del número de vendedores, eliminación de márgenes de seguridad por materiales defectuosos y, más importante aún, menos piezas esperando retrabajo.",
   "pasos_accionables": [
     "Medir el inventario en proceso actual (incluyendo materiales entrantes y piezas en espera de retrabajo)",
     "Establecer un programa de cooperación con proveedores para mejorar calidad de materiales entrantes",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Reduce Inventario Mejorando tu Calidad",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-137-reduccion_inventario_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mejora de la calidad en materiales entrantes y la reducción de retrabajo permiten disminuir drásticamente el inventario en proceso, generando ahorros significativos. Esto se logra mediante cooperación con proveedores, reducción del número de vendedores, y eliminación de márgenes de seguridad por materiales defectuosos.",
+      "texto_nuevo": "La mejora de la calidad en materiales entrantes y la reducción de retrabajo permiten disminuir drásticamente el inventario en proceso, generando ahorros significativos. Esto se logra mediante cooperación con proveedores, reducción del número de vendedores, eliminación de márgenes de seguridad por materiales defectuosos y, más importante aún, menos piezas esperando retrabajo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7900",
+        "frase": "A more important factor is fewer parts waiting for rework."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración de medios pierde el que el libro señala como más importante: menos piezas esperando retrabajo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

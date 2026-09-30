@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Fechas Límite Artificiales para Forzar Decisiones en una Negociación",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando estás vendiendo un activo, negociando una fusión o una compra, y el tiempo juega en tu contra, te conviene poner fechas límite artificiales y avisarlas a varios compradores potenciales al mismo tiempo. Eso genera urgencia, evita que el proceso se alargue sin fin y aprovecha que hay varios interesados compitiendo entre sí para cerrar el trato antes y en mejores condiciones para ti.",
+  "resumen_teorico": "Cuando estás vendiendo un activo, negociando una fusión o una compra, y el tiempo juega en tu contra, te conviene poner fechas límite artificiales y avisarlas a varios compradores potenciales al mismo tiempo. Eso genera urgencia, evita que el proceso se alargue sin fin y aprovecha que hay varios interesados compitiendo entre sí para cerrar el trato antes.",
   "pasos_accionables": [
     "Mapea a los compradores o socios potenciales y prioriza a los que tienen mayor necesidad real (no solo interés) de lo que ofreces",
     "Identifica quién dentro de cada organización compradora tiene el poder real de decidir",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Impón Plazos para Decidir",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-negociacion_con_plazos_artificiales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando estás vendiendo un activo, negociando una fusión o una compra, y el tiempo juega en tu contra, te conviene poner fechas límite artificiales y avisarlas a varios compradores potenciales al mismo tiempo. Eso genera urgencia, evita que el proceso se alargue sin fin y aprovecha que hay varios interesados compitiendo entre sí para cerrar el trato antes y en mejores condiciones para ti.",
+      "texto_nuevo": "Cuando estás vendiendo un activo, negociando una fusión o una compra, y el tiempo juega en tu contra, te conviene poner fechas límite artificiales y avisarlas a varios compradores potenciales al mismo tiempo. Eso genera urgencia, evita que el proceso se alargue sin fin y aprovecha que hay varios interesados compitiendo entre sí para cerrar el trato antes.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "466-472",
+        "frase": "We were racing against time and had two bidders"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro busca cerrar el trato a tiempo; no afirma que el plazo artificial logre mejores condiciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

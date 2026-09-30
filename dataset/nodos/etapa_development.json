@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Pon en marcha el plan de desarrollo junto con quien te ayude en lo técnico",
     "Haz pruebas internas o de laboratorio en condiciones controladas",
-    "Revisa el avance del proyecto en momentos periódicos para mantener el control",
+    "Revisa el avance del proyecto en momentos periódicos para mantener el control; si no cumples uno o dos hitos, suele ser señal de que el proyecto se desvió y pide una revisión inmediata de si sigue",
     "Repite ciclos de mostrarle al cliente el avance y ajustar según su respuesta",
     "Si te sirve, trabaja en tramos cortos al estilo ágil (sprints) para iterar más rápido",
     "Actualiza en paralelo tus números y tus planes de lanzamiento y operación"
   ],
-  "entregable_esperado": "Un prototipo parcialmente probado y validado por el cliente varias veces, listo para pruebas completas, junto con planes actualizados de marketing y operación",
+  "entregable_esperado": "Un prototipo parcialmente probado y validado por el cliente varias veces, listo para pruebas completas, junto con planes actualizados de marketing y operación, el plan de la etapa de pruebas y tus números actualizados",
   "nodos_previos": [
     "gate3_go_to_development"
   ],
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Desarrolla tu Producto",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-etapa_development-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa el avance del proyecto en momentos periódicos para mantener el control",
+      "texto_nuevo": "Revisa el avance del proyecto en momentos periódicos para mantener el control; si no cumples uno o dos hitos, suele ser señal de que el proyecto se desvió y pide una revisión inmediata de si sigue",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3175",
+        "frase": "missing a milestone or two usually signals that the project is off course"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae que fallar uno o dos hitos suele indicar desvío y pide una revisión inmediata.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-140-etapa_development-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un prototipo parcialmente probado y validado por el cliente varias veces, listo para pruebas completas, junto con planes actualizados de marketing y operación",
+      "texto_nuevo": "Un prototipo parcialmente probado y validado por el cliente varias veces, listo para pruebas completas, junto con planes actualizados de marketing y operación, el plan de la etapa de pruebas y tus números actualizados",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3183",
+        "frase": "the plans for the next stage, namely, Testing; and an updated financial and business analysis"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye también el plan de la etapa de pruebas y el análisis financiero y de negocio actualizado.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

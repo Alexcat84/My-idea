@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diagnóstico: Compuertas sin Dientes (Gates with No Teeth)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Puede que tengas un sistema de etapas y filtros instalado, pero si los filtros no tienen poder real, una vez que apruebas un proyecto casi nunca lo detienes, y el proceso se vuelve un 'túnel' en vez de un 'embudo'. La raíz del problema es que no sabes decir 'no' por inercia, por política interna, o porque te faltan criterios claros para decidir.",
+  "resumen_teorico": "Puede que tengas un sistema de etapas y filtros instalado, pero si los filtros no tienen poder real, una vez que apruebas un proyecto casi nunca lo detienes, y el proceso se vuelve un 'túnel' en vez de un 'embudo'. La raíz del problema es que no sabes decir 'no', por razones como la inercia, la política interna, un equipo que no suelta el proyecto, datos pobres o la falta de criterios claros para decidir.",
   "pasos_accionables": [
     "Dibuja la curva de cuántos proyectos sobreviven cada filtro de tu proceso actual",
     "Revisa si casi ningún proyecto se elimina en los filtros tempranos (es una señal de alerta)",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Dale Poder Real a tus Filtros",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-gates_sin_dientes_problema-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Puede que tengas un sistema de etapas y filtros instalado, pero si los filtros no tienen poder real, una vez que apruebas un proyecto casi nunca lo detienes, y el proceso se vuelve un 'túnel' en vez de un 'embudo'. La raíz del problema es que no sabes decir 'no' por inercia, por política interna, o porque te faltan criterios claros para decidir.",
+      "texto_nuevo": "Puede que tengas un sistema de etapas y filtros instalado, pero si los filtros no tienen poder real, una vez que apruebas un proyecto casi nunca lo detienes, y el proceso se vuelve un 'túnel' en vez de un 'embudo'. La raíz del problema es que no sabes decir 'no', por razones como la inercia, la política interna, un equipo que no suelta el proyecto, datos pobres o la falta de criterios claros para decidir.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6576-6645",
+        "frase": "SEVEN REASONS WHY WE CAN'T SEEM TO KILL PROJECTS"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da siete razones y el resumen presenta tres como la raíz completa; se caen otras que piden remedios distintos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

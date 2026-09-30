@@ -9,7 +9,7 @@
     "Asegurar acceso a instalación médica cercana o personal capacitado en primeros auxilios en cada turno.",
     "Mantener botiquines de primeros auxilios completos, accesibles e inspeccionados periódicamente.",
     "Proveer EPP y capacitación en patógenos transmitidos por sangre a quienes brindan primeros auxilios.",
-    "Ofrecer vacunación contra hepatitis B a personal expuesto.",
+    "Ofrecer vacunación contra hepatitis B a personal expuesto y, ante un incidente de exposición a patógenos transmitidos por sangre, dar una evaluación médica confidencial inmediata con seguimiento.",
     "Publicar números de emergencia visibles en el lugar de trabajo."
   ],
   "entregable_esperado": "Botiquines abastecidos, personal certificado en primeros auxilios y protocolo de respuesta a emergencias médicas documentado.",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Prepara tus Primeros Auxilios",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-medical_services_first_aid-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ofrecer vacunación contra hepatitis B a personal expuesto.",
+      "texto_nuevo": "Ofrecer vacunación contra hepatitis B a personal expuesto y, ante un incidente de exposición a patógenos transmitidos por sangre, dar una evaluación médica confidencial inmediata con seguimiento.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1267",
+        "frase": "received an immediate post-exposure confidential medical evaluation and follow-up"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide evaluación médica confidencial inmediata y seguimiento tras un incidente de exposición; el nodo no lo recoge.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

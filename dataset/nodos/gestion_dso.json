@@ -9,7 +9,7 @@
     "Calcular el DSO actual y su tendencia histórica",
     "Investigar con operaciones si hay problemas de calidad o entrega que retrasen pagos",
     "Consultar con ventas y servicio al cliente sobre la salud financiera de los clientes",
-    "Definir políticas de crédito claras (términos, descuentos por pronto pago como 2/10 net 30)",
+    "Definir políticas de crédito claras (términos, descuentos por pronto pago como 2/10 net 30, sabiendo que el descuento reduce la rentabilidad)",
     "Establecer criterios de perfil de cliente ideal para otorgar crédito"
   ],
   "entregable_esperado": "Plan de acción para reducir DSO con políticas de crédito y cobranza definidas",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Cobra Más Rápido a Clientes",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-136-gestion_dso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir políticas de crédito claras (términos, descuentos por pronto pago como 2/10 net 30)",
+      "texto_nuevo": "Definir políticas de crédito claras (términos, descuentos por pronto pago como 2/10 net 30, sabiendo que el descuento reduce la rentabilidad)",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3319",
+        "frase": "it does so by eating into profitability"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el descuento por pronto pago baja el DSO comiéndose rentabilidad.; Mismo límite perdido: el costo del descuento en rentabilidad.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

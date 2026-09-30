@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Índice de Productividad (Productivity Index) para Priorización",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Refinamiento del ranking por NPV que maximiza el valor del portafolio considerando recursos limitados. Se calcula dividiendo el NPV entre el recurso restrictivo (por ejemplo, costo de desarrollo restante), obteniendo un 'bang for the buck'. Esto favorece proyectos eficientes y casi terminados sobre proyectos grandes pero costosos en recursos, generando una cartera de mayor valor total dado un presupuesto fijo.",
+  "resumen_teorico": "Refinamiento del ranking por NPV que maximiza el valor del portafolio considerando recursos limitados. Se calcula dividiendo el NPV entre el recurso restrictivo (por ejemplo, costo de desarrollo restante), obteniendo un 'bang for the buck'. Esto favorece proyectos eficientes y casi terminados sobre proyectos grandes pero costosos en recursos, generando una cartera de mayor valor total dado un presupuesto fijo. No se usa en las primeras compuertas, donde mataría todo salvo lo seguro.",
   "pasos_accionables": [
     "Identificar el recurso restrictivo (presupuesto de I+D, capital, personas)",
     "Calcular el Índice de Productividad = NPV / Costo de desarrollo restante (go-forward costs, no sunk costs)",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Prioriza según tu Índice",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-indice_de_productividad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Refinamiento del ranking por NPV que maximiza el valor del portafolio considerando recursos limitados. Se calcula dividiendo el NPV entre el recurso restrictivo (por ejemplo, costo de desarrollo restante), obteniendo un 'bang for the buck'. Esto favorece proyectos eficientes y casi terminados sobre proyectos grandes pero costosos en recursos, generando una cartera de mayor valor total dado un presupuesto fijo.",
+      "texto_nuevo": "Refinamiento del ranking por NPV que maximiza el valor del portafolio considerando recursos limitados. Se calcula dividiendo el NPV entre el recurso restrictivo (por ejemplo, costo de desarrollo restante), obteniendo un 'bang for the buck'. Esto favorece proyectos eficientes y casi terminados sobre proyectos grandes pero costosos en recursos, generando una cartera de mayor valor total dado un presupuesto fijo. No se usa en las primeras compuertas, donde mataría todo salvo lo seguro.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6448",
+        "frase": "along with the Productivity Index, but not at the early gates"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el análisis financiero con el Índice de Productividad: no en las primeras compuertas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

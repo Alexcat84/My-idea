@@ -4,11 +4,11 @@
   "dominio": "health_safety",
   "titulo_concepto": "Tres Supuestos Erróneos en el Diseño de Procedimientos",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos generan procedimientos frágiles que se rompen bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
+  "resumen_teorico": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
   "pasos_accionables": [
     "Revisar los procedimientos existentes e identificar dónde asumen linealidad, predictibilidad o controlabilidad",
     "Realizar observaciones de campo para contrastar el trabajo real (interleaving de tareas) contra el trabajo prescrito",
-    "Rediseñar guías escritas incorporando manejo explícito de interrupciones y tareas concurrentes",
+    "Rediseñar guías escritas incorporando manejo explícito de interrupciones y tareas concurrentes, sabiendo que solo muy pocas interrupciones pueden anticiparse por escrito y que no todo cabe en una guía",
     "Sugerencia de My Idea: capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas"
   ],
   "entregable_esperado": "Documento de rediseño de procedimientos que contemple explícitamente la gestión de tareas concurrentes e interrupciones",
@@ -40,6 +40,39 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Herramienta añadida (capacitación): el libro constata que intercalar tareas no practicadas lleva a menudo a errores de omisión y que las personas subestiman su vulnerabilidad al error en esas circunstancias (Dekker L2447-L2449). No propone capacitar a los equipos. Se reescribe como sugerencia de My Idea. El resumen_teorico y el entregable no mencionan la capacitación.",
       "indice": 3,
       "auditoria": "tramo1 DK4-051"
+    },
+    {
+      "id": "final-e1-139-supuestos_de_procedimientos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Rediseñar guías escritas incorporando manejo explícito de interrupciones y tareas concurrentes",
+      "texto_nuevo": "Rediseñar guías escritas incorporando manejo explícito de interrupciones y tareas concurrentes, sabiendo que solo muy pocas interrupciones pueden anticiparse por escrito y que no todo cabe en una guía",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2447",
+        "frase": "only very few of the distractions, changes or interruptions that occur"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el límite del libro: muy pocas interrupciones pueden anticiparse por escrito y no todo cabe en una guía.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-139-supuestos_de_procedimientos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos generan procedimientos frágiles que se rompen bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
+      "texto_nuevo": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos tienden a generar procedimientos frágiles, que se rompen con facilidad bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2447",
+        "frase": "based on the three assumptions above) tend to be brittle, or fragile"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos procedimientos 'tend to be brittle' y se desmoronan con facilidad; el nodo lo afirma como efecto seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

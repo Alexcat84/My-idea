@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Etapa 1 - Scoping: Investigación Preliminar Rápida",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Es una etapa de bajo costo y corta duración (menos de un mes) que involucra investigación de escritorio (desk research) para evaluar el mérito técnico y de mercado del proyecto. Incluye una evaluación preliminar de mercado (búsqueda en internet, contacto con fuerza de ventas, prueba rápida de concepto) y una evaluación técnica preliminar (viabilidad, riesgos, costos y tiempos estimados).",
+  "resumen_teorico": "Es una etapa de bajo costo y corta duración (suele tomar menos de un mes) que involucra investigación de escritorio (desk research) para evaluar el mérito técnico y de mercado del proyecto. Incluye una evaluación preliminar de mercado (búsqueda en internet, contacto con fuerza de ventas, prueba rápida de concepto) y una evaluación técnica preliminar (viabilidad, riesgos, costos y tiempos estimados).",
   "pasos_accionables": [
     "Realizar una búsqueda de información secundaria (internet, biblioteca, información interna)",
     "Contactar a la fuerza de ventas y usuarios clave para retroalimentación rápida",
@@ -12,7 +12,7 @@
     "Realizar una evaluación técnica preliminar de viabilidad, costos y riesgos",
     "Elaborar un primer borrador de definición de producto y un Business Case preliminar"
   ],
-  "entregable_esperado": "Informe de evaluación preliminar de mercado y técnica, más un Business Case preliminar basado en estimaciones",
+  "entregable_esperado": "Informe de evaluación preliminar de mercado y técnica, un primer borrador de definición del producto y un Business Case preliminar basado en estimaciones",
   "nodos_previos": [
     "gate1_idea_screen"
   ],
@@ -25,5 +25,39 @@
   "etiqueta_arbol": "Investiga Rápido y Barato",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-etapa_scoping-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una etapa de bajo costo y corta duración (menos de un mes) que involucra investigación de escritorio (desk research) para evaluar el mérito técnico y de mercado del proyecto. Incluye una evaluación preliminar de mercado (búsqueda en internet, contacto con fuerza de ventas, prueba rápida de concepto) y una evaluación técnica preliminar (viabilidad, riesgos, costos y tiempos estimados).",
+      "texto_nuevo": "Es una etapa de bajo costo y corta duración (suele tomar menos de un mes) que involucra investigación de escritorio (desk research) para evaluar el mérito técnico y de mercado del proyecto. Incluye una evaluación preliminar de mercado (búsqueda en internet, contacto con fuerza de ventas, prueba rápida de concepto) y una evaluación técnica preliminar (viabilidad, riesgos, costos y tiempos estimados).",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3045",
+        "frase": "This stage is usually done in less than one calendar month's elapsed time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la etapa suele durar menos de un mes; el nodo lo vuelve fijo.; Mismo defecto: 'usually' pasa a duración fija.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-140-etapa_scoping-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Informe de evaluación preliminar de mercado y técnica, más un Business Case preliminar basado en estimaciones",
+      "texto_nuevo": "Informe de evaluación preliminar de mercado y técnica, un primer borrador de definición del producto y un Business Case preliminar basado en estimaciones",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3057",
+        "frase": "a preliminary product definition (first draft), and a preliminary Business Case"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Los entregables del libro incluyen un primer borrador de definición del producto, que falta.; Mismo defecto: se cae el borrador de definición del producto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

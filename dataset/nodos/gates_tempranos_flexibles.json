@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Al principio de una idea nueva no estás decidiendo todo o nada: estás pagando un poco para ver si vale la pena seguir explorando, como quien compra una opción. Si le pides a una idea recién nacida un cálculo financiero detallado (retorno esperado, ganancia proyectada), cuando los datos todavía son puras suposiciones, la puedes matar antes de tiempo.",
   "pasos_accionables": [
-    "En las primeras evaluaciones, juzga la idea con criterio y sentido común, no con números financieros exigentes",
+    "En las primeras evaluaciones, juzga la idea con criterios cualitativos (encaje con tu estrategia, ventaja del producto), no con números financieros exigentes",
     "Piensa en tu primera inversión como pagar poco para probar el terreno, no como apostarlo todo",
     "A medida que la idea avanza y empieza a costar más, exige cálculos cada vez más rigurosos",
     "No le pidas un retorno de inversión (ROI) completo y detallado cuando los datos de base todavía son especulativos"
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Sé Flexible en Etapas Tempranas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-gates_tempranos_flexibles-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En las primeras evaluaciones, juzga la idea con criterio y sentido común, no con números financieros exigentes",
+      "texto_nuevo": "En las primeras evaluaciones, juzga la idea con criterios cualitativos (encaje con tu estrategia, ventaja del producto), no con números financieros exigentes",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6223, 7163",
+        "frase": "the first few gates should be relatively gentle, with qualitative rather than financial criteria"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide criterios cualitativos en los primeros filtros y rechaza decidir por intuición; se pierde qué se usa en lugar de los números.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

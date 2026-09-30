@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Punto de Equilibrio de Calidad (Break-even Quality) para Decisiones de Inspección",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Existe un punto de equilibrio de calidad (break-even quality) definido como p = k1/k2, donde k1 es el costo de inspeccionar una pieza y k2 es el costo de reparar o reensamblar un producto que falla por una pieza defectuosa no detectada. Si la fracción defectuosa entrante p es menor que este punto, la estrategia de costo mínimo es no inspeccionar. Si p es mayor, la inspección al 100% da el costo mínimo. Cualquier plan de muestreo intermedio entre estos dos extremos aumenta el costo total cuando la calidad se ubica consistentemente de un lado del punto de equilibrio: casi nunca conviene un plan parcial. Cuando manejas varias piezas o proveedores a la vez, ordena los terminos (ki menos K por pi) de mayor a menor para aplicar la regla a cada una.",
+  "resumen_teorico": "Existe un punto de equilibrio de calidad (break-even quality) definido como p = k1/k2, donde k1 es el costo de inspeccionar una pieza y k2 es el costo de reparar o reensamblar un producto que falla por una pieza defectuosa no detectada. Con el proceso en control estadístico, o sabiendo por el desempeño pasado de qué lado caerán los lotes, si la fracción defectuosa entrante p es menor que este punto, la estrategia de costo mínimo es no inspeccionar. Si p es mayor, la inspección al 100% da el costo mínimo. Cualquier plan de muestreo intermedio entre estos dos extremos aumenta el costo total cuando la calidad se ubica consistentemente de un lado del punto de equilibrio: casi nunca conviene un plan parcial. Cuando manejas varias piezas o proveedores a la vez, ordena los términos (ki menos K por pi) de mayor a menor para aplicar la regla a cada una.",
   "pasos_accionables": [
     "Calcula k1, el costo de inspeccionar una pieza, y k2, el costo de reparar un ensamble que falla por esa pieza defectuosa",
     "Determina el punto de equilibrio dividiendo k1 entre k2",
@@ -12,7 +12,7 @@
     "Compara p contra el punto de equilibrio: si p es menor, elimina la inspección; si p es mayor, aplica inspección al 100%",
     "Evita planes de muestreo intermedios cuando p esté consistentemente de un lado del punto de equilibrio",
     "Si manejas varias piezas o proveedores, ordena los términos ki menos K por pi de mayor a menor y aplica la regla a cada una",
-    "Seleccionar la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante está en caos.",
+    "Seleccionar la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; cuando la calidad entrante está en caos, cabe la inspección al 100% o, como alternativa, el muestreo con las reglas de Joyce Orsini.",
     "Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable."
   ],
   "entregable_esperado": "Tabla de costos comparativos que documente, por cada componente o proveedor, la política de inspección aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
@@ -213,6 +213,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-137-punto_equilibrio_calidad_inspeccion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existe un punto de equilibrio de calidad (break-even quality) definido como p = k1/k2, donde k1 es el costo de inspeccionar una pieza y k2 es el costo de reparar o reensamblar un producto que falla por una pieza defectuosa no detectada. Si la fracción defectuosa entrante p es menor que este punto, la estrategia de costo mínimo es no inspeccionar. Si p es mayor, la inspección al 100% da el costo mínimo. Cualquier plan de muestreo intermedio entre estos dos extremos aumenta el costo total cuando la calidad se ubica consistentemente de un lado del punto de equilibrio: casi nunca conviene un plan parcial. Cuando manejas varias piezas o proveedores a la vez, ordena los terminos (ki menos K por pi) de mayor a menor para aplicar la regla a cada una.",
+      "texto_nuevo": "Existe un punto de equilibrio de calidad (break-even quality) definido como p = k1/k2, donde k1 es el costo de inspeccionar una pieza y k2 es el costo de reparar o reensamblar un producto que falla por una pieza defectuosa no detectada. Con el proceso en control estadístico, o sabiendo por el desempeño pasado de qué lado caerán los lotes, si la fracción defectuosa entrante p es menor que este punto, la estrategia de costo mínimo es no inspeccionar. Si p es mayor, la inspección al 100% da el costo mínimo. Cualquier plan de muestreo intermedio entre estos dos extremos aumenta el costo total cuando la calidad se ubica consistentemente de un lado del punto de equilibrio: casi nunca conviene un plan parcial. Cuando manejas varias piezas o proveedores a la vez, ordena los términos (ki menos K por pi) de mayor a menor para aplicar la regla a cada una.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9285-9306",
+        "frase": "No inspection is not a directive to proceed in ignorance."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la regla a saber por el desempeño pasado de qué lado caerán los lotes, o a tener el proceso en control estadístico; no inspeccionar no es avanzar a ciegas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-137-punto_equilibrio_calidad_inspeccion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante está en caos.",
+      "texto_nuevo": "Seleccionar la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; cuando la calidad entrante está en caos, cabe la inspección al 100% o, como alternativa, el muestreo con las reglas de Joyce Orsini.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9372-9381",
+        "frase": "One might adopt, in a state of chaos, the rule of 100 percent inspection."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En estado de caos el libro pone la inspección al 100% como opción a considerar y las reglas de Joyce Orsini como alternativa a ella; el paso la pierde.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

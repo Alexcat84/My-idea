@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Manejo Seguro de Químicos Peligrosos en el Lugar de Trabajo",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos.",
+  "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos.",
   "pasos_accionables": [
     "Instalar estaciones de lavado de ojos y duchas de seguridad donde se manejen químicos",
     "Proveer EPP adecuado (guantes, protección ocular, respiradores)",
     "Establecer procedimientos estándar para limpieza de derrames químicos",
     "Implementar monitoreo médico/biológico para trabajadores expuestos a sustancias específicas",
-    "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos cuando no se usan"
+    "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos cuando no se usan"
   ],
   "entregable_esperado": "Procedimientos operativos estándar (SOP) para manejo y derrame de químicos, con EPP asignado",
   "nodos_previos": [
@@ -56,6 +56,39 @@
       },
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
       "auditoria": "tramo1 SB1-077"
+    },
+    {
+      "id": "final-e1-138-manejo_de_quimicos_peligrosos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos.",
+      "texto_nuevo": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "807",
+        "frase": "Materials that give off toxic, asphyxiant, suffocating, or anesthetic fumes are stored in remote"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye vapores asfixiantes, sofocantes o anestésicos, no solo tóxicos.; Mismo defecto: la lista del libro es más amplia que tóxicos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-manejo_de_quimicos_peligrosos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos cuando no se usan",
+      "texto_nuevo": "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos cuando no se usan",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "807",
+        "frase": "Materials that give off toxic, asphyxiant, suffocating, or anesthetic fumes are stored in remote"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye vapores asfixiantes, sofocantes o anestésicos, no solo tóxicos.; Mismo defecto en el paso.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

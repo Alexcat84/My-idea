@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Aproximaciones No Estabilizadas y Decisión de Ir al Aire (Go-Around)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Las tripulaciones no interpretan la situación en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordatorios genéricos sobre criterios rara vez cambian el comportamiento; incentivos positivos (recompensas sin culpa) para ejecutar go-around han mostrado más éxito que advertencias.",
+  "resumen_teorico": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Los datos sugieren que las tripulaciones no interpretan la situación principalmente en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordatorios genéricos sobre criterios rara vez cambian el comportamiento; ofrecer incentivos positivos (recompensas sin culpa) por ejecutar go-around parece una contramedida más prometedora, con un éxito modesto.",
   "pasos_accionables": [
     "Revisar si existían criterios formales (soft/hard gates) para abortar la aproximación u operación",
     "Identificar si esos criterios funcionaron como normas negociables en lugar de reglas de parada estrictas",
     "Evaluar políticas de incentivos: ¿se premia el abandono seguro de un plan o se penaliza (ej. bonos por puntualidad)?",
-    "Diseñar mecanismos de recompensa sin culpa para decisiones de aborto seguro"
+    "Diseñar mecanismos de recompensa sin culpa para decisiones de aborto seguro, comunicando que abortar no solo es legítimo sino deseado y dando a conocer ampliamente cada recompensa"
   ],
   "entregable_esperado": "Política o recomendación que fomente el abandono seguro de procedimientos sin penalización, alineada con incentivos organizacionales",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Aborta si no Está Estable",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-139-unstabilized_approach_go_around-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Las tripulaciones no interpretan la situación en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordatorios genéricos sobre criterios rara vez cambian el comportamiento; incentivos positivos (recompensas sin culpa) para ejecutar go-around han mostrado más éxito que advertencias.",
+      "texto_nuevo": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Los datos sugieren que las tripulaciones no interpretan la situación principalmente en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordatorios genéricos sobre criterios rara vez cambian el comportamiento; ofrecer incentivos positivos (recompensas sin culpa) por ejecutar go-around parece una contramedida más prometedora, con un éxito modesto.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2248-2252",
+        "frase": "generally report modest success in reducing the number of unstabilized approaches"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los datos sugieren que no interpretan 'primarily' por criterios formales; el nodo quita ambas cautelas.; El libro presenta la recompensa como contramedida que 'seems' prometedora con 'modest success'; el nodo lo vuelve un éxito demostrado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-139-unstabilized_approach_go_around-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar mecanismos de recompensa sin culpa para decisiones de aborto seguro",
+      "texto_nuevo": "Diseñar mecanismos de recompensa sin culpa para decisiones de aborto seguro, comunicando que abortar no solo es legítimo sino deseado y dando a conocer ampliamente cada recompensa",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2252",
+        "frase": "breaking off an approach is not only entirely legitimate, but actually desired"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae lo que el libro llama crucial: comunicar que abortar es legítimo y deseado y difundir ampliamente las recompensas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

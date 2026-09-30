@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Lectura de Notas al Pie (Footnotes) en Estados Financieros",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Las notas al pie explican cómo los contadores llegaron a ciertos totales, especialmente en temas de juicio o discreción contable. Son ventanas hacia las decisiones y supuestos detrás de las cifras, cruciales para entender cambios en políticas contables que afectan el resultado.",
+  "resumen_teorico": "Las notas al pie explican cómo los contadores llegaron a ciertos totales, especialmente en temas de juicio o discreción contable. Son ventanas hacia las decisiones y supuestos detrás de las cifras, cruciales para entender cambios en políticas contables que afectan el resultado, aunque un cambio puede no aparecer en ninguna nota.",
   "pasos_accionables": [
     "Leer cuidadosamente cada nota al pie del estado de resultados, especialmente sobre reconocimiento de ingresos.",
     "Preguntar al contador sobre supuestos detrás de cifras importantes aunque no haya nota explícita.",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Lee las Notas al Pie",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-136-footnotes_financieros-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las notas al pie explican cómo los contadores llegaron a ciertos totales, especialmente en temas de juicio o discreción contable. Son ventanas hacia las decisiones y supuestos detrás de las cifras, cruciales para entender cambios en políticas contables que afectan el resultado.",
+      "texto_nuevo": "Las notas al pie explican cómo los contadores llegaron a ciertos totales, especialmente en temas de juicio o discreción contable. Son ventanas hacia las decisiones y supuestos detrás de las cifras, cruciales para entender cambios en políticas contables que afectan el resultado, aunque un cambio puede no aparecer en ninguna nota.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "632",
+        "frase": "might appear in a footnote to the financial statements, but then again it might not"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el límite: un cambio contable puede no aparecer en una nota, porque los contadores deciden qué es material.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

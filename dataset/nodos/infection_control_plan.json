@@ -4,11 +4,11 @@
   "dominio": "health_safety",
   "titulo_concepto": "Plan de Control de Infecciones",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposición en tus tareas para luego poner en marcha hábitos de higiene de manos, limpieza y desinfección de superficies, manejo de residuos biopeligrosos, uso de equipo de protección personal (también frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitación sobre exposición a animales. También contempla definir una política de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+  "resumen_teorico": "Conjunto de prácticas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposición en tus tareas para luego poner en marcha hábitos de higiene de manos, limpieza y desinfección de superficies, ventilación, manejo de residuos biopeligrosos, uso de equipo de protección personal (también frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitación en prevención de contagios, vacunación y exposición a animales. También contempla definir una política de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
   "pasos_accionables": [
     "Evalúa los riesgos de exposición a agentes infecciosos en tu negocio.",
     "Pon en marcha hábitos de higiene de manos, limpieza y desinfección de superficies.",
-    "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos y objetos punzocortantes, con las etiquetas correspondientes.",
+    "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos, y contenedores resistentes a perforaciones para los objetos punzocortantes, con las etiquetas correspondientes.",
     "Ten a mano el equipo de protección necesario según el riesgo: guantes, protección ocular, mascarillas o respiradores certificados.",
     "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacítate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
     "Define una política de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado."
@@ -197,6 +197,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-138-infection_control_plan-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposición en tus tareas para luego poner en marcha hábitos de higiene de manos, limpieza y desinfección de superficies, manejo de residuos biopeligrosos, uso de equipo de protección personal (también frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitación sobre exposición a animales. También contempla definir una política de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+      "texto_nuevo": "Conjunto de prácticas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposición en tus tareas para luego poner en marcha hábitos de higiene de manos, limpieza y desinfección de superficies, ventilación, manejo de residuos biopeligrosos, uso de equipo de protección personal (también frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitación en prevención de contagios, vacunación y exposición a animales. También contempla definir una política de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "891-905",
+        "frase": "hand hygiene, cleaning and disinfection, ventilation, general sanitation precautions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide capacitación general en prevención de contagios y formación anual sobre vacunación; el resumen solo deja la de animales.; La lista del libro incluye la ventilación y la capacitación en prevención y vacunación, que el resumen omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-infection_control_plan-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos y objetos punzocortantes, con las etiquetas correspondientes.",
+      "texto_nuevo": "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos, y contenedores resistentes a perforaciones para los objetos punzocortantes, con las etiquetas correspondientes.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "909-911",
+        "frase": "Dispose of contaminated sharps in puncture- containers that are properly identified and labeled."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige contenedores resistentes a perforaciones para los punzocortantes, no solo cerrados y a prueba de fugas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

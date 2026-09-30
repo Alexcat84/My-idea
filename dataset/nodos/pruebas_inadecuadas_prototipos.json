@@ -9,7 +9,7 @@
     "Realizar pruebas con muestras que reflejen la variación real esperada en producción, no solo valores nominales",
     "Aplicar métodos Monte Carlo para simular variaciones de dimensión, presión, temperatura, etc. en diseño asistido por computadora",
     "Verificar el estado de control estadístico del proceso antes de confiar en resultados de prototipos",
-    "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año?"
+    "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen?"
   ],
   "entregable_esperado": "Un protocolo de pruebas de prototipos que incluya variación realista de parámetros y simulación de condiciones de producción",
   "nodos_previos": [
@@ -36,6 +36,23 @@
         "motivo": "Pedir a la IA respuestas de alta variacion no tiene que ver con la variacion estadistica en pruebas de prototipos; solo comparten la palabra variacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "final-e1-137-pruebas_inadecuadas_prototipos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año?",
+      "texto_nuevo": "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado de próximo año? ¿Bajo qué condiciones lo predicen?",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3039-3051",
+        "frase": "Under what conditions will these results predict results of tomorrow’s run"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De la lista de preguntas del libro se cae la de bajo qué condiciones los resultados predicen la corrida de mañana o la cosecha del año próximo, que conecta la prueba con la variación real.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

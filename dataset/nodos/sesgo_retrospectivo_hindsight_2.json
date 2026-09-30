@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sesgo de mirar hacia atrás (Hindsight Bias)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso te impide entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dado el contexto, la pantalla o herramienta que usabas, y todo lo demás que tenías encima al mismo tiempo).",
+  "resumen_teorico": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso distorsiona mucho tu capacidad de entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dado el contexto, la pantalla o herramienta que usabas, y todo lo demás que tenías encima al mismo tiempo).",
   "pasos_accionables": [
-    "No te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia",
+    "Para explicar lo que pasó, no te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia; solo te sirve para prepararte ante situaciones parecidas",
     "Reconstruye la situación tal como la viviste o la vivió la otra persona, sin usar lo que ya sabes ahora del resultado",
     "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Sugerencia de My Idea: ten en cuenta también el volumen de información disperso entre los participantes.",
     "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal",
-    "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo."
+    "Sugerencia de My Idea: entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo."
   ],
   "entregable_esperado": "Una reconstrucción en orden cronológico de la situación, contada desde lo que sabías o sabía la otra persona en ese momento, sin dejar que el resultado final contamine esa mirada",
   "nodos_previos": [
@@ -81,6 +81,56 @@
         "motivo": "arista entre dos mundos (health_safety -> risk_management): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-139-sesgo_retrospectivo_hindsight_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso te impide entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dado el contexto, la pantalla o herramienta que usabas, y todo lo demás que tenías encima al mismo tiempo).",
+      "texto_nuevo": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso distorsiona mucho tu capacidad de entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dado el contexto, la pantalla o herramienta que usabas, y todo lo demás que tenías encima al mismo tiempo).",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2075",
+        "frase": "It significantly distorts our ability to understand why it made sense"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el sesgo 'significantly distorts' la capacidad de entender; el nodo lo vuelve un impedimento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-139-sesgo_retrospectivo_hindsight_2-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia",
+      "texto_nuevo": "Para explicar lo que pasó, no te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia; solo te sirve para prepararte ante situaciones parecidas",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2059-2061",
+        "frase": "Such remarks or questions have no role to play, however, in explaining"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da a esas preguntas un papel para prepararse ante situaciones parecidas y ninguno para explicar lo que se hizo; el paso las prohíbe sin ese límite.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-139-sesgo_retrospectivo_hindsight_2-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo.",
+      "texto_nuevo": "Sugerencia de My Idea: entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2075",
+        "frase": "This conversion into simple, linear causality is called the hindsight bias."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Ninguno de los dos libros recomienda entrenar a los investigadores; es consejo práctico sin hecho nuevo, queda como sugerencia.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

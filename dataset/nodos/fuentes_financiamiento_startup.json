@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Fuentes Genéricas de Financiamiento",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Existen tres fuentes básicas de financiamiento para una empresa emprendedora: financiamiento del propio dueño (ahorros, hipotecas), inversión de capital externo (family, friends, angel investors que reciben acciones y posible asiento en el consejo) y deuda (préstamos que no otorgan propiedad pero exigen repago con reclamo legal sobre activos si se falla). Cada fuente implica un trade-off distinto entre control, riesgo y obligación de pago.",
+  "resumen_teorico": "Hay tres fuentes básicas de financiamiento para emprender: aporte del propio dueño (ahorros, hipotecas), inversión de capital externo (family, friends, angel investors que reciben acciones y posible asiento en el consejo) y deuda (préstamos que no dan propiedad pero exigen repago; si fallas, es probable que tengan reclamo legal sobre tus activos, y el banco no suele prestar a un negocio nuevo sino a ti, si tus finanzas personales aseguran el repago). Cada fuente implica un trade-off entre control, riesgo y obligación de pago.",
   "pasos_accionables": [
     "Evaluar cuánto capital propio se puede/quiere aportar",
     "Decidir si se busca inversión externa (dilución de propiedad) o deuda (obligación de pago)",
-    "Consultar con un asesor financiero sobre la estructura fiscal óptima",
+    "Consultar con un contador o asesor financiero la mejor forma de estructurar tu aporte, considerando impuestos y futuras necesidades bancarias y de financiamiento",
     "Preparar los términos que se ofrecerán a inversionistas o prestamistas"
   ],
   "entregable_esperado": "Plan de estructura de capital definiendo mezcla de fuentes de financiamiento",
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Explora tus Fuentes de Financiamiento",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-136-fuentes_financiamiento_startup-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen tres fuentes básicas de financiamiento para una empresa emprendedora: financiamiento del propio dueño (ahorros, hipotecas), inversión de capital externo (family, friends, angel investors que reciben acciones y posible asiento en el consejo) y deuda (préstamos que no otorgan propiedad pero exigen repago con reclamo legal sobre activos si se falla). Cada fuente implica un trade-off distinto entre control, riesgo y obligación de pago.",
+      "texto_nuevo": "Hay tres fuentes básicas de financiamiento para emprender: aporte del propio dueño (ahorros, hipotecas), inversión de capital externo (family, friends, angel investors que reciben acciones y posible asiento en el consejo) y deuda (préstamos que no dan propiedad pero exigen repago; si fallas, es probable que tengan reclamo legal sobre tus activos, y el banco no suele prestar a un negocio nuevo sino a ti, si tus finanzas personales aseguran el repago). Cada fuente implica un trade-off entre control, riesgo y obligación de pago.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "297",
+        "frase": "Banks won’t normally lend money to start-up businesses, but they will often lend"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que es probable que tengan un reclamo legal sobre tus activos; el nodo lo vuelve seguro.; Misma condición perdida sobre a quién prestan los bancos en el arranque.; Mismo endurecimiento del 'likely' del libro sobre el reclamo legal.; Se cae la condición de la deuda bancaria: el banco no suele prestar al negocio que empieza sino al emprendedor solvente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-136-fuentes_financiamiento_startup-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consultar con un asesor financiero sobre la estructura fiscal óptima",
+      "texto_nuevo": "Consultar con un contador o asesor financiero la mejor forma de estructurar tu aporte, considerando impuestos y futuras necesidades bancarias y de financiamiento",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "293",
+        "frase": "taking into account taxes, future banking and financing requirements, and other considerations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide estructurar el aporte considerando impuestos y también las futuras necesidades bancarias y de financiamiento.; Mismo defecto: reduce a lo fiscal lo que el libro amplía a necesidades futuras de financiamiento.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

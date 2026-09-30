@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Manejo de Pruebas Destructivas mediante Control Estadístico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no es posible aplicar inspección por muestreo o screening tradicional, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.",
+  "resumen_teorico": "Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no tiene sentido hacer screening de un lote rechazado, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.",
   "pasos_accionables": [
     "Identificar los atributos de calidad que requieren pruebas destructivas.",
     "Implementar cartas de control (X-barra y R) sobre el proceso de fabricación en lugar de pruebas al producto terminado.",
@@ -40,6 +40,22 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por regla_disponibilidad_previa_venta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-137-pruebas_destructivas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no es posible aplicar inspección por muestreo o screening tradicional, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.",
+      "texto_nuevo": "Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no tiene sentido hacer screening de un lote rechazado, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9456-9458",
+        "frase": "Screening a rejected lot would have no meaning, as nothing would be left"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que no tiene sentido cribar un lote rechazado; no dice que sea imposible inspeccionar por muestreo, que es justamente lo que hace una prueba destructiva.; Mismo defecto: la imposibilidad del muestreo no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Clasificar la queja recibida: ¿es sobre comportamiento o sobre competencia?",
     "Para quejas de comportamiento, convocar una reunión conjunta entre ambos ejecutivos, nunca resolver unilateralmente.",
     "Para quejas de competencia que ya conocías, actuar con rapidez (generalmente removiendo al ejecutivo) porque la organización ya perdió confianza en él.",
-    "Para quejas de competencia que son noticia nueva, detener la conversación, no mostrar acuerdo, y reevaluar el desempeño del ejecutivo en cuestión de forma independiente antes de tomar cualquier acción."
+    "Para quejas de competencia que son noticia nueva, detener la conversación, no mostrar acuerdo y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo."
   ],
   "entregable_esperado": "Protocolo interno de manejo de conflictos y quejas entre miembros del equipo ejecutivo.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Resuelve Quejas entre tus Ejecutivos",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-manejo_de_quejas_entre_ejecutivos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para quejas de competencia que son noticia nueva, detener la conversación, no mostrar acuerdo, y reevaluar el desempeño del ejecutivo en cuestión de forma independiente antes de tomar cualquier acción.",
+      "texto_nuevo": "Para quejas de competencia que son noticia nueva, detener la conversación, no mostrar acuerdo y reevaluar rápido y de forma independiente el desempeño del ejecutivo en cuestión: si hace un excelente trabajo, averiguar y resolver los motivos de quien se quejó; si lo hace mal, encaminarse a removerlo.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1965",
+        "frase": "Once you've shut down the conversation, you must quickly reassess the employee in question."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide reevaluar rápido y dice qué hacer después según el desempeño encontrado; el paso lo pierde.; Mismo defecto: se caen la rapidez y la resolución de los motivos de quien se quejó.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

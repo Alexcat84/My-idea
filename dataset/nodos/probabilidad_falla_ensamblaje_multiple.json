@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Listar todas las partes componentes del ensamblaje final y su fracción defectuosa individual (pi).",
     "Calcular la probabilidad de falla del ensamblaje usando la fórmula acumulativa (aproximación por suma de pi si son pequeñas).",
-    "Identificar qué partes requieren inspección 100% (Caso 2) versus las que pueden dejarse sin inspección con calidad casi cero defectos.",
+    "Identificar qué partes requieren inspección 100% (Caso 2), que solo pueden ser unas pocas para que el costo de inspección no sea excesivo, versus las que pueden dejarse sin inspección con calidad casi cero defectos.",
     "Evaluar la posibilidad de exposición múltiple al mismo defecto (ej. múltiples soldaduras) y su efecto acumulativo en la tasa de falla."
   ],
-  "entregable_esperado": "Matriz de partes críticas con su fracción defectuosa y clasificación de estrategia de inspección (100% o cero defectos garantizado).",
+  "entregable_esperado": "Matriz de partes críticas con su fracción defectuosa y clasificación de estrategia de inspección (100% o calidad en cero defectos o muy cerca de cero).",
   "nodos_previos": [
     "punto_equilibrio_calidad_inspeccion"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Calcula el Riesgo de Falla",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-137-probabilidad_falla_ensamblaje_multiple-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar qué partes requieren inspección 100% (Caso 2) versus las que pueden dejarse sin inspección con calidad casi cero defectos.",
+      "texto_nuevo": "Identificar qué partes requieren inspección 100% (Caso 2), que solo pueden ser unas pocas para que el costo de inspección no sea excesivo, versus las que pueden dejarse sin inspección con calidad casi cero defectos.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9657-9661",
+        "frase": "We can tolerate only a few parts in Case 2 (100 percent inspection)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita la inspección al 100% a unas pocas partes porque si no el costo de inspección se vuelve excesivo.; Mismo límite perdido: solo unas pocas partes pueden ir al Caso 2.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-137-probabilidad_falla_ensamblaje_multiple-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Matriz de partes críticas con su fracción defectuosa y clasificación de estrategia de inspección (100% o cero defectos garantizado).",
+      "texto_nuevo": "Matriz de partes críticas con su fracción defectuosa y clasificación de estrategia de inspección (100% o calidad en cero defectos o muy cerca de cero).",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9659-9661",
+        "frase": "We can tolerate for the remaining parts only quality at or close to zero defective"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro pide calidad en cero defectos o cerca de cero, no una garantía de cero defectos.; Mismo endurecimiento: 'at or close to zero defective' no es 'garantizado'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

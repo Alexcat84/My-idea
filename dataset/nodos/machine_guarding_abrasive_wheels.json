@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Montar esmeriladoras de banco y pedestal de forma permanente.",
     "Instalar guardas de seguridad que cubran husillo, tuerca y bridas, alineadas correctamente.",
-    "Ajustar los descansos de trabajo y la lengüeta ajustable a las distancias reglamentarias de la rueda.",
-    "Inspeccionar visualmente y realizar prueba de sonido (ring test) a las ruedas nuevas antes de montarlas.",
-    "Proveer colectores de polvo y EPP adecuado para operaciones de esmerilado."
+    "Ajustar los descansos de trabajo a no más de 1/8 de pulgada (unos 3 mm) de la rueda y la lengüeta ajustable a no más de 1/4 de pulgada (unos 6 mm).",
+    "Inspeccionar visualmente y realizar prueba de sonido (ring test) a las ruedas nuevas antes de montarlas, y comprobar que sus rpm máximas sean compatibles con las del motor.",
+    "Proveer colectores de polvo en las esmeriladoras usadas en operaciones que producen mucho polvo, y EPP adecuado para operaciones de esmerilado."
   ],
   "entregable_esperado": "Esmeriladoras con guardas instaladas correctamente, registro de inspecciones de ruedas y EPP asignado a operadores.",
   "nodos_previos": [
@@ -25,5 +25,58 @@
   "etiqueta_arbol": "Protege tus Ruedas Abrasivas",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-machine_guarding_abrasive_wheels-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajustar los descansos de trabajo y la lengüeta ajustable a las distancias reglamentarias de la rueda.",
+      "texto_nuevo": "Ajustar los descansos de trabajo a no más de 1/8 de pulgada (unos 3 mm) de la rueda y la lengüeta ajustable a no más de 1/4 de pulgada (unos 6 mm).",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "985-987",
+        "frase": "Work rests are used and kept adjusted to within 1/8 inch"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija las distancias: descanso a 1/8 de pulgada y lengüeta a 1/4 de pulgada de la rueda.; Mismo defecto: se caen las distancias concretas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-machine_guarding_abrasive_wheels-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proveer colectores de polvo y EPP adecuado para operaciones de esmerilado.",
+      "texto_nuevo": "Proveer colectores de polvo en las esmeriladoras usadas en operaciones que producen mucho polvo, y EPP adecuado para operaciones de esmerilado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1025-1029",
+        "frase": "provided on grinders used in operations that produce large amounts of dust"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide colectores de polvo en las esmeriladoras de operaciones que producen mucho polvo; el paso pierde la condición.; Mismo defecto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-machine_guarding_abrasive_wheels-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inspeccionar visualmente y realizar prueba de sonido (ring test) a las ruedas nuevas antes de montarlas.",
+      "texto_nuevo": "Inspeccionar visualmente y realizar prueba de sonido (ring test) a las ruedas nuevas antes de montarlas, y comprobar que sus rpm máximas sean compatibles con las del motor.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "991",
+        "frase": "rating of each abrasive wheel is compatible with the rpm rating of the grinder motor"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide comprobar que las rpm máximas de cada rueda sean compatibles con las del motor.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

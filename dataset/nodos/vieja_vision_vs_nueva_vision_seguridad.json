@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Contraste entre Vieja Visión y Nueva Visión de la Seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "La Vieja Visión ve a las personas como un problema a controlar, se enfoca en actitudes y comportamiento, define seguridad como ausencia de eventos negativos, está dominada por el staff, se guía por reglas y busca hacer imposible el error. La Nueva Visión ve a las personas como un recurso, se enfoca en las condiciones de trabajo, define seguridad como presencia de capacidades positivas, está impulsada por la línea, se guía por contexto y busca dar espacio para hacer lo correcto.",
+  "resumen_teorico": "La Vieja y la Nueva Visión de la seguridad se oponen punto por punto: las personas como problema a controlar o como recurso; el foco en actitudes y conducta o en las condiciones de trabajo; la seguridad como ausencia de incidentes o como presencia de capacidades positivas; decide el jefe o quien conoce el trabajo; manda el staff o la línea; reglas o contexto; hacer imposible el error o dar espacio para hacer lo correcto; burocracia o coordinación mutua; estandarización o diversidad e innovación; rendir cuentas hacia arriba o responsabilidad gestionada hacia abajo.",
   "pasos_accionables": [
     "Realizar un diagnóstico de qué elementos de la Vieja Visión predominan en la organización",
     "Identificar oportunidades para migrar hacia prácticas de la Nueva Visión",
@@ -40,6 +40,22 @@
         "evidencia": "F01-010: Diagnosticar la vision de seguridad de la organizacion y redisenar sus politicas es gestion de una operacion existente. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-139-vieja_vision_vs_nueva_vision_seguridad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La Vieja Visión ve a las personas como un problema a controlar, se enfoca en actitudes y comportamiento, define seguridad como ausencia de eventos negativos, está dominada por el staff, se guía por reglas y busca hacer imposible el error. La Nueva Visión ve a las personas como un recurso, se enfoca en las condiciones de trabajo, define seguridad como presencia de capacidades positivas, está impulsada por la línea, se guía por contexto y busca dar espacio para hacer lo correcto.",
+      "texto_nuevo": "La Vieja y la Nueva Visión de la seguridad se oponen punto por punto: las personas como problema a controlar o como recurso; el foco en actitudes y conducta o en las condiciones de trabajo; la seguridad como ausencia de incidentes o como presencia de capacidades positivas; decide el jefe o quien conoce el trabajo; manda el staff o la línea; reglas o contexto; hacer imposible el error o dar espacio para hacer lo correcto; burocracia o coordinación mutua; estandarización o diversidad e innovación; rendir cuentas hacia arriba o responsabilidad gestionada hacia abajo.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3440-3502",
+        "frase": "Whoever is expert and knows the work, gets to say"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La tabla del libro trae diez contrastes; el nodo omite cuatro (quién decide, burocracia, estandarización, responsabilidad), en los que se apoya el diagnóstico.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

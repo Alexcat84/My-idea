@@ -11,7 +11,7 @@
     "Ejecutar investigación VoC profunda para especificar requerimientos del producto",
     "Realizar prueba de concepto con clientes potenciales",
     "Llevar a cabo evaluación técnica y operativa detallada de viabilidad",
-    "Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad",
+    "Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad, junto con una evaluación de riesgos",
     "Consolidar todo en un Business Case con definición de producto, justificación y plan de acción"
   ],
   "entregable_esperado": "Un Business Case completo con tres elementos: definición del producto, justificación financiera/de negocio, y plan de proyecto detallado (action plan)",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Construye tu Caso de Negocio",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-etapa_build_business_case-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad",
+      "texto_nuevo": "Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad, junto con una evaluación de riesgos",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3127",
+        "frase": "A risk assessment is also part of this business analysis."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye la evaluación de riesgos en el análisis de negocio que justifica el proyecto; ningún paso la recoge.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

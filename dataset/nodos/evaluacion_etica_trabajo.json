@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Cómo saber si un candidato realmente es trabajador",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El candidato te va a decir lo que quieres oír, así que preguntarle directamente si es trabajador no te sirve de nada. Usa preguntas indirectas sobre su día a día, sus pasatiempos y sus expectativas para descubrir su nivel real de energía y su compromiso verdadero con el negocio.",
+  "resumen_teorico": "El candidato te va a decir lo que quieres oír, así que preguntarle directamente si es trabajador te dará una respuesta obvia y probablemente no te enseñe nada. Usa preguntas indirectas sobre su día a día, sus pasatiempos y sus expectativas para descubrir su nivel real de energía y su compromiso verdadero con el negocio.",
   "pasos_accionables": [
     "Evita preguntas obvias como '¿eres trabajador?'",
     "Pregúntale sobre un día típico, sus pasatiempos y sus logros",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Detecta la Ética de Trabajo",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-136-evaluacion_etica_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El candidato te va a decir lo que quieres oír, así que preguntarle directamente si es trabajador no te sirve de nada. Usa preguntas indirectas sobre su día a día, sus pasatiempos y sus expectativas para descubrir su nivel real de energía y su compromiso verdadero con el negocio.",
+      "texto_nuevo": "El candidato te va a decir lo que quieres oír, así que preguntarle directamente si es trabajador te dará una respuesta obvia y probablemente no te enseñe nada. Usa preguntas indirectas sobre su día a día, sus pasatiempos y sus expectativas para descubrir su nivel real de energía y su compromiso verdadero con el negocio.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4310",
+        "frase": "will get you obvious answers and will likely teach you nothing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece el 'likely' del libro: la pregunta obvia probablemente no te enseñe nada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

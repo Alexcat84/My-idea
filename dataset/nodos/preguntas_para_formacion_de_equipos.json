@@ -4,9 +4,9 @@
   "dominio": "quality",
   "titulo_concepto": "Preguntas Guía para la Formación de Equipos de Mejora",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Edward M. Baker (Ford Motor Company) propuso un conjunto de preguntas estructuradas para ayudar a los equipos a entender su rol dentro de la organización, sus productos/resultados, sus clientes (inmediatos e intermedios) y sus proveedores. Estas preguntas ayudan a clarificar responsabilidades, estándares de desempeño y las relaciones de dependencia mutua necesarias para la mejora continua.",
+  "resumen_teorico": "Edward M. Baker (Ford Motor Company) propuso un conjunto de preguntas estructuradas para ayudar a los equipos a entender su rol dentro de la organización, sus productos/resultados, sus clientes (inmediatos, intermedios y finales) y sus proveedores. Estas preguntas ayudan a clarificar responsabilidades, estándares de desempeño y las relaciones de dependencia mutua necesarias para la mejora continua.",
   "pasos_accionables": [
-    "Responder como equipo: ¿dónde encaja nuestra unidad en la organización total y qué produce?",
+    "Responder como equipo: ¿dónde encaja nuestra unidad en la organización total y qué produce? ¿Cómo sabemos si nuestros resultados son buenos o malos, con qué estándares, y cómo se fijaron?",
     "Identificar los clientes inmediatos y preguntarles cómo usan lo que se les entrega",
     "Determinar qué pasaría si el equipo no hiciera bien su trabajo, y cómo se detectan los errores",
     "Identificar proveedores y estándares de desempeño que deberían cumplir, y verificar si se cumplen",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Preguntas para Formar tu Equipo",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-137-preguntas_para_formacion_de_equipos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Edward M. Baker (Ford Motor Company) propuso un conjunto de preguntas estructuradas para ayudar a los equipos a entender su rol dentro de la organización, sus productos/resultados, sus clientes (inmediatos e intermedios) y sus proveedores. Estas preguntas ayudan a clarificar responsabilidades, estándares de desempeño y las relaciones de dependencia mutua necesarias para la mejora continua.",
+      "texto_nuevo": "Edward M. Baker (Ford Motor Company) propuso un conjunto de preguntas estructuradas para ayudar a los equipos a entender su rol dentro de la organización, sus productos/resultados, sus clientes (inmediatos, intermedios y finales) y sus proveedores. Estas preguntas ayudan a clarificar responsabilidades, estándares de desempeño y las relaciones de dependencia mutua necesarias para la mejora continua.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1953-1955",
+        "frase": "Intermediate and ultimate customer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las preguntas del libro llegan al cliente intermedio y al último; el resumen pierde el cliente final.; Mismo cliente final perdido en la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-137-preguntas_para_formacion_de_equipos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Responder como equipo: ¿dónde encaja nuestra unidad en la organización total y qué produce?",
+      "texto_nuevo": "Responder como equipo: ¿dónde encaja nuestra unidad en la organización total y qué produce? ¿Cómo sabemos si nuestros resultados son buenos o malos, con qué estándares, y cómo se fijaron?",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1925-1933",
+        "frase": "How do you know if you produce good results or poor results"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las preguntas para arrancar el equipo se caen cómo saber si los resultados son buenos o malos y cómo se fijaron esos estándares.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

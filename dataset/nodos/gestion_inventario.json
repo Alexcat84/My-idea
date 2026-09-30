@@ -10,7 +10,7 @@
     "Evaluar el impacto de personalizaciones de producto ofrecidas por ventas",
     "Revisar la proliferación de versiones de producto por parte de ingeniería",
     "Analizar tiempos de inactividad de máquinas y cambios de producción",
-    "Evitar producir por producir cuando la demanda es baja, priorizando el efectivo sobre el costo unitario"
+    "Evitar producir por producir cuando la demanda es baja, considerando el efectivo además del costo unitario"
   ],
   "entregable_esperado": "Plan de reducción de inventario con métricas de DII y acciones específicas por área",
   "nodos_previos": [
@@ -49,6 +49,23 @@
         "motivo": "El reto de minimizar inventario sin quiebres de stock conduce a la impresión 3D como forma de fabricar bajo demanda en vez de almacenar variantes."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-136-gestion_inventario-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar producir por producir cuando la demanda es baja, priorizando el efectivo sobre el costo unitario",
+      "texto_nuevo": "Evitar producir por producir cuando la demanda es baja, considerando el efectivo además del costo unitario",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3360",
+        "frase": "must consider the company’s cash as well as its unit costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide considerar el efectivo además del costo unitario cuando la demanda es lenta, no ponerlo por encima.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

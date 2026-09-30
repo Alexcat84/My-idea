@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Control de Exposición al Ruido Ocupacional",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Programa para identificar, medir y controlar niveles de ruido superiores a 85 decibeles en el lugar de trabajo, incluyendo conservación auditiva, pruebas audiométricas y uso de protección auditiva.",
+  "resumen_teorico": "Programa para identificar, medir y controlar niveles de ruido superiores a 85 decibeles en el lugar de trabajo, incluyendo controles de ingeniería o administrativos, conservación auditiva, audiometrías y protección auditiva.",
   "pasos_accionables": [
     "Medir los niveles de ruido con sonómetro o analizador de bandas de octava.",
     "Implementar un programa de conservación auditiva cuando se identifique exposición excesiva.",
@@ -41,6 +41,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-138-noise_exposure_control-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programa para identificar, medir y controlar niveles de ruido superiores a 85 decibeles en el lugar de trabajo, incluyendo conservación auditiva, pruebas audiométricas y uso de protección auditiva.",
+      "texto_nuevo": "Programa para identificar, medir y controlar niveles de ruido superiores a 85 decibeles en el lugar de trabajo, incluyendo controles de ingeniería o administrativos, conservación auditiva, audiometrías y protección auditiva.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1285",
+        "frase": "engineering controls, administrative control, and/or personnel protective equipment are used"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone controles de ingeniería y administrativos junto al EPP para reducir la exposición; el resumen los omite.; Mismo defecto: se caen los controles de ingeniería y administrativos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

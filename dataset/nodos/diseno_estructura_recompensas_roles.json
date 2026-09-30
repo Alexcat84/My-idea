@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Alineación de Recompensas con Tipos de Rol",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Las estructuras de compensación deben alinearse con la naturaleza del rol: bonos altos ligados a desempeño individual funcionan bien para ventas pero pueden ser contraproducentes para roles de desarrollo colaborativo. Un diseño correcto de incentivos también facilita la autoselección de salida para contrataciones débiles ('hire fast, fire fast').",
+  "resumen_teorico": "Las estructuras de compensación deben alinearse con la naturaleza del rol: bonos altos ligados a desempeño individual pueden funcionar bien para ventas pero ser contraproducentes para roles de desarrollo colaborativo. Un diseño correcto de incentivos también facilita la autoselección de salida para contrataciones débiles ('hire fast, fire fast').",
   "pasos_accionables": [
     "Clasificar los roles del equipo según si requieren desempeño individual o colaborativo.",
     "Diseñar estructuras de compensación contingente para roles individuales (ej. ventas).",
-    "Diseñar estructuras de compensación estable para roles colaborativos (ej. desarrollo de producto)."
+    "Evitar bonos altos ligados al desempeño individual en roles colaborativos (ej. desarrollo de producto), donde pueden ser contraproducentes."
   ],
   "entregable_esperado": "Documento de políticas de compensación diferenciadas por tipo de rol.",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Alinea Recompensas con cada Rol",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-139-diseno_estructura_recompensas_roles-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las estructuras de compensación deben alinearse con la naturaleza del rol: bonos altos ligados a desempeño individual funcionan bien para ventas pero pueden ser contraproducentes para roles de desarrollo colaborativo. Un diseño correcto de incentivos también facilita la autoselección de salida para contrataciones débiles ('hire fast, fire fast').",
+      "texto_nuevo": "Las estructuras de compensación deben alinearse con la naturaleza del rol: bonos altos ligados a desempeño individual pueden funcionar bien para ventas pero ser contraproducentes para roles de desarrollo colaborativo. Un diseño correcto de incentivos también facilita la autoselección de salida para contrataciones débiles ('hire fast, fire fast').",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2550",
+        "frase": "may be productive with a salesperson but counterproductive with a programmer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que ese esquema 'may be productive' con un vendedor; el nodo lo afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-139-diseno_estructura_recompensas_roles-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar estructuras de compensación estable para roles colaborativos (ej. desarrollo de producto).",
+      "texto_nuevo": "Evitar bonos altos ligados al desempeño individual en roles colaborativos (ej. desarrollo de producto), donde pueden ser contraproducentes.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2550",
+        "frase": "a bonus-heavy compensation structure tied to individual performance may be"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no prescribe compensación estable; solo advierte que los bonos altos individuales pueden ser contraproducentes en esos roles.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

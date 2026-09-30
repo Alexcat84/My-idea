@@ -10,9 +10,9 @@
     "Trabajar directamente con usuarios líderes (lead users)",
     "Analizar la cadena de valor de la industria",
     "Crear un Market Map para ver qué jugadores tienen qué porción de ingresos",
-    "Crear un Profit Pool Map para identificar márgenes de ganancia por actividad, y cómo están cambiando",
+    "Crear un Profit Pool Map para identificar la porción de ingresos y los márgenes de ganancia de cada actividad",
     "Identificar los segmentos de mercado más atractivos (arenas) para enfocar la búsqueda de ideas",
-    "Evaluar el futuro de cada actor: quién gana, quién es desintermediado",
+    "Evaluar el futuro de cada actor: quién gana, quién es desintermediado; e identificar qué factores hacen rentables a los clientes y cómo están cambiando",
     "Definir escenarios futuros y detectar arenas de oportunidad"
   ],
   "entregable_esperado": "Documento con mapa de mercado, mapa de pool de ganancias y lista de arenas/segmentos prioritarios para innovación",
@@ -47,5 +47,41 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-140-evaluacion_industria_cliente-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear un Profit Pool Map para identificar márgenes de ganancia por actividad, y cómo están cambiando",
+      "texto_nuevo": "Crear un Profit Pool Map para identificar la porción de ingresos y los márgenes de ganancia de cada actividad",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5197",
+        "frase": "Profit Pool Maps, which identifies the activities in an industry, percentage of revenue by each"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe el Profit Pool Map como actividades, porción de ingresos y márgenes; no dice que muestre cómo cambian.; Mismo defecto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-140-evaluacion_industria_cliente-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar el futuro de cada actor: quién gana, quién es desintermediado",
+      "texto_nuevo": "Evaluar el futuro de cada actor: quién gana, quién es desintermediado; e identificar qué factores hacen rentables a los clientes y cómo están cambiando",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5191",
+        "frase": "try to assess what factors make them (or their competitors) profitable and successful"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Tras evaluar el futuro de cada actor, el libro pide identificar qué hace rentables a los clientes y cómo cambia; se cae.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

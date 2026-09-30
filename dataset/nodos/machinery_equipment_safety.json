@@ -7,7 +7,7 @@
   "resumen_teorico": "Prácticas generales para proteger a los operadores de puntos de operación, partes rotativas, chispas y otros peligros mecánicos, incluyendo anclaje de máquinas, guardas, interruptores de apagado de emergencia y mantenimiento preventivo.",
   "pasos_accionables": [
     "Anclar máquinas fijas para prevenir volcamientos o movimientos.",
-    "Instalar guardas en puntos de operación, engranajes, poleas y correas dentro de 7 pies del piso.",
+    "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso.",
     "Proveer interruptores de apagado de emergencia de color rojo al alcance del operador.",
     "Capacitar a los trabajadores en métodos seguros de operación de maquinaria.",
     "Implementar un programa de inspección regular de seguridad de maquinaria y equipos."
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Asegura tu Maquinaria y Equipos",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-machinery_equipment_safety-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Instalar guardas en puntos de operación, engranajes, poleas y correas dentro de 7 pies del piso.",
+      "texto_nuevo": "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1039-1051",
+        "frase": "Moving chains and gears are properly guarded."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro protege engranajes, cadenas en movimiento y puntos de operación sin límite de altura.; El límite de 7 pies sí está en el libro, pero solo para poleas y correas; lo que se pierde es que engranajes, cadenas y puntos de operación se protegen a cualquier altura.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

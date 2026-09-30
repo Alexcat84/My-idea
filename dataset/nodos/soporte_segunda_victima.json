@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Soporte a la 'Segunda Víctima'",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Las 'segundas víctimas' son los trabajadores involucrados en un incidente que dañó o mató a alguien y que sienten responsabilidad personal por ello. Sistemas de apoyo social y organizacional (primeros auxilios psicológicos, debriefings, seguimiento) son críticos para contener consecuencias negativas como el estrés postraumático, y representan una inversión en justicia, aprendizaje y retención de personal.",
+  "resumen_teorico": "Las 'segundas víctimas' son los trabajadores involucrados en un incidente que dañó o mató, o pudo dañar o matar, a alguien y que sienten responsabilidad personal por ello. Sistemas de apoyo social y organizacional (primeros auxilios psicológicos, debriefings, seguimiento) son críticos para contener consecuencias negativas como el estrés postraumático, y representan una inversión en justicia, aprendizaje y retención de personal.",
   "pasos_accionables": [
     "Implementar protocolos de primeros auxilios psicológicos tras incidentes graves",
     "Realizar debriefings estructurados con los trabajadores involucrados",
@@ -41,6 +41,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Plazo añadido: el libro nombra el seguimiento ('follow-up') como parte del apoyo a las segundas víctimas, sin horizonte temporal (Dekker L656-L658: \"psychological first aid, debriefings, follow-up\"). Se quita 'a mediano y largo plazo'. El resumen_teorico dice 'seguimiento' sin plazo y el entregable no lo menciona, así que no hay dato repetido.",
       "indice": 2,
       "auditoria": "tramo1 DK4-019"
+    },
+    {
+      "id": "final-e1-139-soporte_segunda_victima-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las 'segundas víctimas' son los trabajadores involucrados en un incidente que dañó o mató a alguien y que sienten responsabilidad personal por ello. Sistemas de apoyo social y organizacional (primeros auxilios psicológicos, debriefings, seguimiento) son críticos para contener consecuencias negativas como el estrés postraumático, y representan una inversión en justicia, aprendizaje y retención de personal.",
+      "texto_nuevo": "Las 'segundas víctimas' son los trabajadores involucrados en un incidente que dañó o mató, o pudo dañar o matar, a alguien y que sienten responsabilidad personal por ello. Sistemas de apoyo social y organizacional (primeros auxilios psicológicos, debriefings, seguimiento) son críticos para contener consecuencias negativas como el estrés postraumático, y representan una inversión en justicia, aprendizaje y retención de personal.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "658",
+        "frase": "involved in an incident that (potentially) hurt or killed someone else"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye el incidente que '(potentially)' dañó o mató a alguien; el nodo deja fuera los casi accidentes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

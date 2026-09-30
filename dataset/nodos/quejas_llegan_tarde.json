@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Las Quejas Llegan Demasiado Tarde: Riesgo del Cliente Silencioso",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un cliente insatisfecho generalmente no se queja: simplemente cambia de proveedor ('the goods come back, but not the customer'). Estudiar solo las quejas o los costos de garantía da una imagen sesgada del desempeño real, ya que la calidad ya estaba fallando antes de que el cliente se quejara. La ganancia proviene de clientes recurrentes que además recomiendan el producto.",
+  "resumen_teorico": "Un cliente insatisfecho generalmente no se queja: simplemente cambia de proveedor ('the goods come back, but not the customer'). Estudiar solo las quejas o los costos de garantía da una imagen sesgada del desempeño real, ya que la calidad ya estaba fallando antes de que el cliente se quejara. Algunos clientes apenas satisfechos también se cambian: la ganancia proviene de clientes recurrentes que además recomiendan el producto.",
   "pasos_accionables": [
     "No depender únicamente del volumen de quejas para medir satisfacción del cliente",
     "Implementar mecanismos proactivos de escucha (encuestas, seguimiento post-venta)",
@@ -39,6 +39,22 @@
         "evidencia": "F05-004: Trata del seguimiento de la satisfacción y de la pérdida de clientes en un negocio que ya vende, es decir, gestión operativa de la calidad. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-137-quejas_llegan_tarde-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un cliente insatisfecho generalmente no se queja: simplemente cambia de proveedor ('the goods come back, but not the customer'). Estudiar solo las quejas o los costos de garantía da una imagen sesgada del desempeño real, ya que la calidad ya estaba fallando antes de que el cliente se quejara. La ganancia proviene de clientes recurrentes que además recomiendan el producto.",
+      "texto_nuevo": "Un cliente insatisfecho generalmente no se queja: simplemente cambia de proveedor ('the goods come back, but not the customer'). Estudiar solo las quejas o los costos de garantía da una imagen sesgada del desempeño real, ya que la calidad ya estaba fallando antes de que el cliente se quejara. Algunos clientes apenas satisfechos también se cambian: la ganancia proviene de clientes recurrentes que además recomiendan el producto.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3928",
+        "frase": "Customers that are unhappy and some that are merely satisfied switch."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que no basta con clientes meramente satisfechos, porque algunos también se cambian; eso sostiene que la ganancia venga de los recurrentes.; Mismo matiz perdido: algunos clientes apenas satisfechos también se van.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

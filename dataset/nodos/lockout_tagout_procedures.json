@@ -10,10 +10,10 @@
     "Capacítate como trabajador autorizado y consigue tus propios candados de seguridad y etiquetas.",
     "Identifica y libera o bloquea toda fuente de energía almacenada antes de iniciar cualquier mantenimiento.",
     "Verifica el aislamiento de la fuente de energía con pruebas o medidores antes de tocar el equipo.",
-    "Bloquea la maquinaria en la fuente de energía principal, nunca en interruptores de control, y marca con etiqueta quién hizo el bloqueo.",
+    "Bloquea la maquinaria en la fuente de energía principal, nunca en interruptores de control, y marca con etiqueta quién hizo el bloqueo; solo quien está expuesto al riesgo pone y quita su candado, y guarda su llave mientras está puesto.",
     "Establece un procedimiento alterno seguro para equipos que no puedan ser bloqueados/etiquetados."
   ],
-  "entregable_esperado": "Procedimiento LOTO documentado, capacitación certificada y candados/etiquetas personales asignados para cada máquina.",
+  "entregable_esperado": "Procedimiento LOTO documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
   "nodos_previos": [
     "machinery_equipment_safety",
     "infection_control_plan"
@@ -38,5 +38,40 @@
   ],
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-138-lockout_tagout_procedures-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Procedimiento LOTO documentado, capacitación certificada y candados/etiquetas personales asignados para cada máquina.",
+      "texto_nuevo": "Procedimiento LOTO documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "945",
+        "frase": "trained on the lockout/tagout procedure, and are provided with personal safety locks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da candados personales a cada trabajador autorizado, no los asigna a cada máquina.; El libro pide trabajadores autorizados capacitados, no una capacitación certificada.; Recoge los dos añadidos: certificada y por máquina.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-138-lockout_tagout_procedures-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Bloquea la maquinaria en la fuente de energía principal, nunca en interruptores de control, y marca con etiqueta quién hizo el bloqueo.",
+      "texto_nuevo": "Bloquea la maquinaria en la fuente de energía principal, nunca en interruptores de control, y marca con etiqueta quién hizo el bloqueo; solo quien está expuesto al riesgo pone y quita su candado, y guarda su llave mientras está puesto.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "965-967",
+        "frase": "Only the worker exposed to the hazard is permitted to place or remove"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que solo el trabajador expuesto ponga y quite su candado y conserve su llave mientras está puesto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

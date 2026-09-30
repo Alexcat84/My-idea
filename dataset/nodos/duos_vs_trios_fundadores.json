@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Dinámica de Equipos: Dúos vs. Tríos de Fundadores",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "El número de cofundadores con poder igual afecta la dinámica de decisión. Los tríos permiten resolver empates (2 contra 1) pero tienen más conflicto cognitivo. Los dúos son más fáciles de alinear si hay dominios complementarios claros (interno/externo, tecnología/negocio), pero corren el riesgo de empates paralizantes (1 contra 1) sin mecanismo de desempate.",
+  "resumen_teorico": "El número de cofundadores con poder igual afecta la dinámica de decisión. Los tríos permiten resolver empates (2 contra 1) pero tienen más conflicto cognitivo. Los dúos pueden ser más fáciles de alinear si hay dominios complementarios claros (interno/externo, tecnología/negocio), pero corren el riesgo de empates paralizantes (1 contra 1) sin mecanismo de desempate.",
   "pasos_accionables": [
     "Si el equipo es un dúo, definir dominios de responsabilidad claramente separados desde el inicio",
     "Si el equipo es un trío, aprovechar la estructura para resolver desacuerdos por mayoría",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Decide: Dúo o Trío",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-139-duos_vs_trios_fundadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El número de cofundadores con poder igual afecta la dinámica de decisión. Los tríos permiten resolver empates (2 contra 1) pero tienen más conflicto cognitivo. Los dúos son más fáciles de alinear si hay dominios complementarios claros (interno/externo, tecnología/negocio), pero corren el riesgo de empates paralizantes (1 contra 1) sin mecanismo de desempate.",
+      "texto_nuevo": "El número de cofundadores con poder igual afecta la dinámica de decisión. Los tríos permiten resolver empates (2 contra 1) pero tienen más conflicto cognitivo. Los dúos pueden ser más fáciles de alinear si hay dominios complementarios claros (interno/externo, tecnología/negocio), pero corren el riesgo de empates paralizantes (1 contra 1) sin mecanismo de desempate.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "1387",
+        "frase": "may find it easier to agree on goals and to be aligned"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que un dúo complementario 'may find it easier' alinearse; el nodo lo afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

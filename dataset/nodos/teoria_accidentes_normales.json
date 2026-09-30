@@ -4,10 +4,10 @@
   "dominio": "health_safety",
   "titulo_concepto": "Teoría de Accidentes Normales (Perrow)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Charles Perrow propuso que el riesgo de accidente es una propiedad estructural fija de la complejidad de los sistemas que construimos, no dependiente del compromiso de nadie con la 'visión cero'. Sistemas con alta complejidad interactiva (difícil de rastrear cómo se propagan las fallas) y acoplamiento estrecho (efectos de fallas se propagan rápido y sin margen de intervención) son intrínsecamente más propensos a accidentes 'normales' o inevitables.",
+  "resumen_teorico": "Charles Perrow propuso que el riesgo de accidente es una propiedad estructural fija de la complejidad de los sistemas que construimos, no dependiente del compromiso de nadie con la 'visión cero'. Sistemas con alta complejidad interactiva (difícil de rastrear cómo se propagan las fallas) y acoplamiento estrecho (los efectos de una falla se propagan por el sistema, a veces tan rápido o a tal escala que no hay margen de intervención) son intrínsecamente más propensos a accidentes 'normales' o inevitables.",
   "pasos_accionables": [
     "Evaluar el grado de complejidad interactiva y acoplamiento estrecho de los sistemas críticos de la organización",
-    "Considerar rediseños que reduzcan el acoplamiento estrecho entre subsistemas",
+    "Sugerencia de My Idea: considerar rediseños que reduzcan el acoplamiento estrecho entre subsistemas",
     "Determinar si el nivel de riesgo estructural justifica continuar, rediseñar o desmantelar la actividad"
   ],
   "entregable_esperado": "Análisis de complejidad y acoplamiento de los sistemas críticos con recomendaciones de rediseño o mitigación estructural",
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Entiende los Accidentes Normales",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-139-teoria_accidentes_normales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Charles Perrow propuso que el riesgo de accidente es una propiedad estructural fija de la complejidad de los sistemas que construimos, no dependiente del compromiso de nadie con la 'visión cero'. Sistemas con alta complejidad interactiva (difícil de rastrear cómo se propagan las fallas) y acoplamiento estrecho (efectos de fallas se propagan rápido y sin margen de intervención) son intrínsecamente más propensos a accidentes 'normales' o inevitables.",
+      "texto_nuevo": "Charles Perrow propuso que el riesgo de accidente es una propiedad estructural fija de la complejidad de los sistemas que construimos, no dependiente del compromiso de nadie con la 'visión cero'. Sistemas con alta complejidad interactiva (difícil de rastrear cómo se propagan las fallas) y acoplamiento estrecho (los efectos de una falla se propagan por el sistema, a veces tan rápido o a tal escala que no hay margen de intervención) son intrínsecamente más propensos a accidentes 'normales' o inevitables.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3654",
+        "frase": "sometimes so rapidly or on such a massive scale that intervention is impossible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los efectos se propagan 'sometimes so rapidly' que no se puede intervenir; el nodo lo vuelve la regla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-139-teoria_accidentes_normales-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar rediseños que reduzcan el acoplamiento estrecho entre subsistemas",
+      "texto_nuevo": "Sugerencia de My Idea: considerar rediseños que reduzcan el acoplamiento estrecho entre subsistemas",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3656",
+        "frase": "only way to achieve a zero vision in such a system is to dismantle it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone rediseñar para reducir el acoplamiento (solo menciona desmantelar); como consejo práctico queda como sugerencia.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cuándo necesitas una etapa de pruebas separada antes de invertir en grande",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Si tu proyecto es grande, caro y de larga duración, no te alcanza con validar con clientes mientras desarrollas: conviene que agregues una etapa de pruebas aparte, con su propia decisión de avanzar (pasar a pruebas). Ahí haces pruebas de producción, ensayos de campo formales, pruebas con usuarios reales (beta) y pruebas de mercado. Esto te permite revisar todo antes de comprometer dinero en equipo de producción o en un lanzamiento a media escala.",
+  "resumen_teorico": "Si tu proyecto es grande, caro y de larga duración, no te alcanza con validar con clientes mientras desarrollas: conviene que agregues una etapa de pruebas aparte, con su propia decisión de avanzar (pasar a pruebas). Ahí puede haber pruebas de producción, ensayos de campo formales, pruebas con usuarios reales (beta) y pruebas de mercado. Esto te permite revisar todo antes de comprometer dinero en equipo de producción o en un lanzamiento a media escala.",
   "pasos_accionables": [
     "Mira el tamaño, el costo y la duración de tu proyecto para decidir si necesitas una etapa de pruebas separada",
     "Si el proyecto es grande, define un momento claro de decidir si pasas a pruebas, distinto de cuando cierras el desarrollo",
@@ -39,6 +39,22 @@
         "evidencia": "Q013-026: Es una etapa de pruebas (beta, ensayos de campo, pruebas de mercado) previa al lanzamiento y a la inversion en produccion, lo que es validacion y no operar lo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-140-etapa_pruebas_necesaria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu proyecto es grande, caro y de larga duración, no te alcanza con validar con clientes mientras desarrollas: conviene que agregues una etapa de pruebas aparte, con su propia decisión de avanzar (pasar a pruebas). Ahí haces pruebas de producción, ensayos de campo formales, pruebas con usuarios reales (beta) y pruebas de mercado. Esto te permite revisar todo antes de comprometer dinero en equipo de producción o en un lanzamiento a media escala.",
+      "texto_nuevo": "Si tu proyecto es grande, caro y de larga duración, no te alcanza con validar con clientes mientras desarrollas: conviene que agregues una etapa de pruebas aparte, con su propia decisión de avanzar (pasar a pruebas). Ahí puede haber pruebas de producción, ensayos de campo formales, pruebas con usuarios reales (beta) y pruebas de mercado. Esto te permite revisar todo antes de comprometer dinero en equipo de producción o en un lanzamiento a media escala.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4698",
+        "frase": "Larger projects could have production trials here"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los proyectos grandes pueden tener estas pruebas; el nodo afirma que se hacen todas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }
