@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diseñar encuestas o pruebas de mercado sobre el diseño propuesto",
     "Medir la disposición a pagar de distintos segmentos de mercado por cada característica",
-    "Comparar tasas de instalación de opciones en líneas de producto propias y de la competencia",
+    "Si tu producto es complejo y tiene características opcionales, comparar tasas de instalación de opciones en líneas de producto propias y de la competencia",
     "Identificar segmentos que valoran poco ciertas características para ajustar el diseño"
   ],
   "entregable_esperado": "Reporte de vendibilidad con segmentación de clientes y disposición a pagar por característica",
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Descubre Qué Motiva a Comprar",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-118-analisis_vendibilidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar tasas de instalación de opciones en líneas de producto propias y de la competencia",
+      "texto_nuevo": "Si tu producto es complejo y tiene características opcionales, comparar tasas de instalación de opciones en líneas de producto propias y de la competencia",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4319",
+        "frase": "with multiple optional features and optional configurations offer a unique opportunity to evaluate salability"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta las tasas de instalación de opciones como oportunidad propia de productos complejos con características opcionales; el paso lo generaliza.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

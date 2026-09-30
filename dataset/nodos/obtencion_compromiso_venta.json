@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Antes de cerrar, revisa en voz alta las preocupaciones principales del comprador y confirma que han sido atendidas.",
     "Resume los beneficios que el propio cliente reconoció durante las Preguntas de Necesidad-beneficio.",
-    "Propón un siguiente paso concreto y proporcional al nivel de avance de la conversación (no siempre el cierre final).",
+    "Propón un siguiente paso concreto que haga avanzar la venta y que sea el compromiso más alto que el cliente pueda dar de forma realista (no siempre el cierre final).",
     "Evita técnicas de presión o manipulación típicas de ventas pequeñas."
   ],
   "entregable_esperado": "Un protocolo de cierre de tres pasos (verificar, resumir, proponer) adaptado al ciclo de venta del usuario.",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Olvida el Cierre Tradicional",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-121-obtencion_compromiso_venta-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Propón un siguiente paso concreto y proporcional al nivel de avance de la conversación (no siempre el cierre final).",
+      "texto_nuevo": "Propón un siguiente paso concreto que haga avanzar la venta y que sea el compromiso más alto que el cliente pueda dar de forma realista (no siempre el cierre final).",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "913-917",
+        "frase": "The commitment proposed is the highest realistic commitment that the customer is able to give."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el compromiso haga avanzar la venta y sea el más alto que el cliente pueda dar de forma realista.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

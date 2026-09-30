@@ -4,14 +4,14 @@
   "dominio": "franquicias",
   "titulo_concepto": "Comprobar el dinero y el crédito del candidato",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "La falta de capital es la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
+  "resumen_teorico": "La falta de capital es quizás la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
   "pasos_accionables": [
     "Pide al candidato su estado de patrimonio neto personal",
     "Confirma los fondos directamente con su banco",
     "Evalúa qué tan líquidos son sus activos, cuidando que no sobrevalore activos difíciles de convertir en dinero",
     "Revisa su historial de crédito en las agencias de tu país",
     "Si el negocio implica entrar a hogares o tener contacto con niños, haz una verificación de antecedentes",
-    "Decide cuánto apalancamiento (deuda) puedes aceptarle durante los primeros meses críticos del arranque"
+    "Decide con un criterio conservador cuánto apalancamiento (deuda) puedes aceptarle durante los primeros meses críticos del arranque, y descarta al candidato que quedaría demasiado endeudado"
   ],
   "entregable_esperado": "Un reporte con la situación financiera y de crédito del candidato ya verificada",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Verifica que Tenga Capital",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-120-verificacion_capitalizacion_credito-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La falta de capital es la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
+      "texto_nuevo": "La falta de capital es quizás la razón número uno por la que un franquiciado fracasa. Tienes que verificar que la persona que quiere comprar tu franquicia tenga fondos suficientes para abrirla y sostenerla hasta que sea rentable. Revisa su patrimonio neto, qué tan líquidos son sus activos y su historial de crédito (score crediticio). Pídele un estado de patrimonio neto y confirma los fondos directamente con su banco.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4285",
+        "frase": "Undercapitalization is perhaps the number-one reason for franchisee failure."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la falta de capital es quizás la razón número uno; el nodo lo afirma sin cautela.; Mismo defecto: se endurece el 'perhaps' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-120-verificacion_capitalizacion_credito-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide cuánto apalancamiento (deuda) puedes aceptarle durante los primeros meses críticos del arranque",
+      "texto_nuevo": "Decide con un criterio conservador cuánto apalancamiento (deuda) puedes aceptarle durante los primeros meses críticos del arranque, y descarta al candidato que quedaría demasiado endeudado",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4287",
+        "frase": "Take a conservative approach to determining these standards and walk away"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide fijar ese estándar de forma conservadora y alejarse de los candidatos demasiado apalancados.; Mismo defecto: sin el criterio conservador el paso queda abierto a aceptar deuda excesiva.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

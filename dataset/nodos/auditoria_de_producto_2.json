@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría de Producto (Reinspección para Verificar Decisiones)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica se justifica por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.",
+  "resumen_teorico": "La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica a menudo puede justificarse por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.",
   "pasos_accionables": [
     "Seleccionar puntos de control (estaciones de inspección o ensamblaje final) para la auditoría",
     "Reinspeccionar una muestra de productos ya clasificados como aceptados o rechazados",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Reinspecciona tus Decisiones de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-118-auditoria_de_producto_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica se justifica por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.",
+      "texto_nuevo": "La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica a menudo puede justificarse por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23204",
+        "frase": "In practice, they can often be justified by field complaints."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que en la práctica a menudo pueden justificarse por quejas de campo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

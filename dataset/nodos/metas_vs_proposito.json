@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Distinguir Metas (Goals) de Propósito (Ley de Goodhart)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Las metas son objetivos medibles (puntos, likes, ventas) mientras que el propósito es la razón profunda detrás de la acción (diversión, conexión, impacto). Cuando confundimos metas con propósito, corremos el riesgo de optimizar el indicador en vez del valor real que representa —la Ley de Goodhart: 'cuando una medida se convierte en objetivo, deja de ser una buena medida'—. Esto puede generar comportamiento no ético, toma de riesgo excesiva y pérdida de motivación intrínseca (caso 'Goals Gone Wild').",
+  "resumen_teorico": "Las metas son objetivos medibles (puntos, likes, ventas) mientras que el propósito es la razón profunda detrás de la acción (diversión, conexión, impacto). Cuando confundimos metas con propósito, corremos el riesgo de optimizar el indicador en vez del valor real que representa (la Ley de Goodhart: 'cuando una medida se convierte en objetivo, deja de ser una buena medida'). Esto puede generar foco estrechado, comportamiento no ético, toma de riesgo excesiva, menor cooperación y pérdida de motivación intrínseca (caso 'Goals Gone Wild').",
   "pasos_accionables": [
     "Lista explícitamente las métricas/KPIs actuales de tu proyecto",
     "Para cada métrica, pregúntate: ¿esta métrica realmente representa el valor/propósito que queremos lograr?",
     "Identifica si alguna métrica podría ser 'hackeada' (como el AI de Q*bert) sin cumplir el propósito real",
-    "Ajusta o complementa las métricas con indicadores cualitativos que capturen mejor el propósito"
+    "Ajusta o complementa las métricas con más metas explícitas, incluidas antimetas (lo que te comprometes a no hacer), para que se contrapesen entre sí"
   ],
   "entregable_esperado": "Una tabla de métricas actuales junto con el propósito que cada una debería representar, señalando discrepancias o riesgos de 'gaming the metric'",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "No Confundas Metas con Propósito",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-metas_vs_proposito-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ajusta o complementa las métricas con indicadores cualitativos que capturen mejor el propósito",
+      "texto_nuevo": "Ajusta o complementa las métricas con más metas explícitas, incluidas antimetas (lo que te comprometes a no hacer), para que se contrapesen entre sí",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3661",
+        "frase": "To offset troublesome goals, make more goals."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone indicadores cualitativos; su remedio es hacer más metas explícitas, incluidas antimetas, y dejar que se contrapesen.; Mismo defecto: el remedio del libro es añadir metas y antimetas, no indicadores cualitativos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-123-metas_vs_proposito-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las metas son objetivos medibles (puntos, likes, ventas) mientras que el propósito es la razón profunda detrás de la acción (diversión, conexión, impacto). Cuando confundimos metas con propósito, corremos el riesgo de optimizar el indicador en vez del valor real que representa —la Ley de Goodhart: 'cuando una medida se convierte en objetivo, deja de ser una buena medida'—. Esto puede generar comportamiento no ético, toma de riesgo excesiva y pérdida de motivación intrínseca (caso 'Goals Gone Wild').",
+      "texto_nuevo": "Las metas son objetivos medibles (puntos, likes, ventas) mientras que el propósito es la razón profunda detrás de la acción (diversión, conexión, impacto). Cuando confundimos metas con propósito, corremos el riesgo de optimizar el indicador en vez del valor real que representa (la Ley de Goodhart: 'cuando una medida se convierte en objetivo, deja de ser una buena medida'). Esto puede generar foco estrechado, comportamiento no ético, toma de riesgo excesiva, menor cooperación y pérdida de motivación intrínseca (caso 'Goals Gone Wild').",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3659",
+        "frase": "narrowed focus, unethical behavior, increased risk taking, decreased cooperation, and decreased intrinsic motivation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La advertencia del estudio trae cinco efectos; el nodo pierde el foco estrechado y la menor cooperación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

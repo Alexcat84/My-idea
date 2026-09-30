@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Llamada de Bienvenida por un Cliente Veterano (Peer Onboarding)",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "En lugar de que la bienvenida a un nuevo cliente provenga del equipo de ventas o soporte, se delega a un cliente veterano y satisfecho, quien realiza una llamada de bienvenida al nuevo miembro. Esto elimina el escepticismo hacia mensajes 'vendedores' y satisface la necesidad humana de pertenecer a una comunidad o tribu, generando una conexión genuina desde el inicio. El caso CADRE muestra una retención anual del 90% gracias a este mecanismo.",
+  "resumen_teorico": "En lugar de que la bienvenida a un nuevo cliente provenga del equipo de ventas o soporte, se delega a un cliente veterano y satisfecho, quien realiza una llamada de bienvenida al nuevo miembro. Esto elimina el escepticismo hacia mensajes 'vendedores' y satisface la necesidad humana de pertenecer a una comunidad o tribu, generando una conexión genuina desde el inicio. En el caso CADRE, esta llamada es parte integral de lo que ayuda a sostener una retención anual del 90%.",
   "pasos_accionables": [
     "Identificar un grupo de clientes activos y entusiastas dispuestos a apoyar la incorporación de nuevos miembros",
     "Crear un 'comité de bienvenida' formal con capacitación breve sobre qué comunicar",
-    "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse",
+    "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse, en la que el veterano refuerce los beneficios y se ofrezca como recurso para cualquier duda",
     "Recoger feedback del nuevo cliente sobre la experiencia de bienvenida para iterar el proceso"
   ],
   "entregable_esperado": "Programa formalizado de bienvenida entre pares (comité de clientes veteranos) con guion o lineamientos básicos",
@@ -47,6 +47,39 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da una duración concreta de veinte minutos y el paso la cambia a un rango de 15 a 20. El libro también pone la llamada justo después de unirse, con una presentación previa por email. No hay pasaje que respalde el rango de 15 minutos.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-019"
+    },
+    {
+      "id": "final-e1-121-welcome_call_cliente_veterano-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de que la bienvenida a un nuevo cliente provenga del equipo de ventas o soporte, se delega a un cliente veterano y satisfecho, quien realiza una llamada de bienvenida al nuevo miembro. Esto elimina el escepticismo hacia mensajes 'vendedores' y satisface la necesidad humana de pertenecer a una comunidad o tribu, generando una conexión genuina desde el inicio. El caso CADRE muestra una retención anual del 90% gracias a este mecanismo.",
+      "texto_nuevo": "En lugar de que la bienvenida a un nuevo cliente provenga del equipo de ventas o soporte, se delega a un cliente veterano y satisfecho, quien realiza una llamada de bienvenida al nuevo miembro. Esto elimina el escepticismo hacia mensajes 'vendedores' y satisface la necesidad humana de pertenecer a una comunidad o tribu, generando una conexión genuina desde el inicio. En el caso CADRE, esta llamada es parte integral de lo que ayuda a sostener una retención anual del 90%.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "2853",
+        "frase": "plays an integral part in helping the organization maintain an incredible 90 percent retention rate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la llamada tiene un papel integral en ayudar a sostener el 90 %, no que la retención se deba a ella.; Mismo defecto: endurece la causalidad del caso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-121-welcome_call_cliente_veterano-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse",
+      "texto_nuevo": "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse, en la que el veterano refuerce los beneficios y se ofrezca como recurso para cualquier duda",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "2845",
+        "frase": "reinforces the multiple benefits of CADRE membership and offers to serve as a resource"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la llamada no es solo para conocerse: el veterano refuerza los beneficios y se ofrece como recurso, lo que refuerza la decisión de compra.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

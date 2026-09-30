@@ -14,7 +14,7 @@
     "Seleccionar un grupo de control con nivel de desempeño inicial similar al grupo que recibirá la intervención",
     "Medir resultados de ambos grupos en el mismo periodo de tiempo bajo las mismas condiciones de mercado",
     "Comparar el cambio porcentual de ambos grupos, no solo los valores absolutos",
-    "Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención"
+    "Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención, después de descartar otras explicaciones igual de plausibles, como un cambio de gerente o el simple efecto de la atención recibida"
   ],
   "entregable_esperado": "Un informe con evidencia en tres niveles: que la conducta se relaciona con el éxito, que el comportamiento cambió después del entrenamiento, y que hay una ganancia de productividad medible frente a un grupo que no fue entrenado.",
   "nodos_previos": [
@@ -46,6 +46,23 @@
         "evidencia": "F05-015: Mide con un grupo de control si la capacitación del equipo comercial propio mejora las ventas, lo que es controlar y mejorar la operación y no validar con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-121-metodologia_evaluacion_entrenamiento_ventas-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención",
+      "texto_nuevo": "Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención, después de descartar otras explicaciones igual de plausibles, como un cambio de gerente o el simple efecto de la atención recibida",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "2930-2936",
+        "frase": "But even with a control group, results can be misleading."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que aun con grupo de control el resultado puede engañar si otra explicación igual de plausible lo explica.; Mismo defecto.",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

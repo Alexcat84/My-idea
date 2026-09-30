@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Programa de Referidos basado en Exclusividad y Escasez",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "En lugar de maximizar la cantidad de referidos, algunas empresas priorizan la calidad limitando el número de referidos que cada cliente puede hacer (ej. 'golden ticket'). Esto genera urgencia, exclusividad y asegura que los referidos sean del perfil correcto, además de convertir la invitación misma en un honor social.",
+  "resumen_teorico": "En lugar de maximizar la cantidad de referidos, algunas empresas priorizan la calidad limitando el número de referidos que cada cliente puede hacer (ej. 'golden ticket'). Esto genera urgencia, exclusividad y ayuda a que los referidos sean del perfil correcto, además de convertir la invitación misma en un honor social.",
   "pasos_accionables": [
     "Limitar el número de referidos permitidos por cliente (ej: solo 1 por año)",
     "Convertir el referido en un privilegio exclusivo, no en una tarea más",
@@ -66,6 +66,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-123-programa_referidos_exclusividad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En lugar de maximizar la cantidad de referidos, algunas empresas priorizan la calidad limitando el número de referidos que cada cliente puede hacer (ej. 'golden ticket'). Esto genera urgencia, exclusividad y asegura que los referidos sean del perfil correcto, además de convertir la invitación misma en un honor social.",
+      "texto_nuevo": "En lugar de maximizar la cantidad de referidos, algunas empresas priorizan la calidad limitando el número de referidos que cada cliente puede hacer (ej. 'golden ticket'). Esto genera urgencia, exclusividad y ayuda a que los referidos sean del perfil correcto, además de convertir la invitación misma en un honor social.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5294",
+        "frase": "The referred prospect would still need to go through the same application process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro prioriza al referido correcto, pero este aún pasa la misma solicitud; el límite no lo asegura.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

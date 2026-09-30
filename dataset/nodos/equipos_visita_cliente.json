@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Equipos de Visita al Cliente (Customer Visit Teams)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Método de investigación de la voz del cliente (VoC, por sus siglas en inglés) donde equipos multifuncionales (marketing, ventas, área técnica) visitan a los clientes y realizan entrevistas profundas basadas en una guía cuidadosamente diseñada, para descubrir problemas, necesidades y puntos de dolor no resueltos. A diferencia de la etnografía pura, combina la entrevista estructurada con observación directa del uso del producto tras la conversación. Es el método mejor calificado en la relación popularidad-efectividad, y más accesible de implementar que una etnografía completa.",
+  "resumen_teorico": "Método de investigación de la voz del cliente (VoC, por sus siglas en inglés) donde equipos multifuncionales (marketing, ventas, área técnica) visitan a los clientes y realizan entrevistas profundas basadas en una guía cuidadosamente diseñada, para descubrir problemas, necesidades y puntos de dolor no resueltos. A diferencia de la etnografía pura, combina la entrevista estructurada con observación directa del uso del producto tras la conversación. Es el método mejor calificado en la relación popularidad-efectividad.",
   "pasos_accionables": [
     "Identificar los sitios o clientes clave a visitar y obtener su acuerdo",
     "Formar un equipo multidisciplinario para las visitas (por ejemplo: marketing, ventas y área técnica)",
@@ -35,5 +35,23 @@
   "etiqueta_arbol": "Visita Clientes con tu Equipo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-119-equipos_visita_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Método de investigación de la voz del cliente (VoC, por sus siglas en inglés) donde equipos multifuncionales (marketing, ventas, área técnica) visitan a los clientes y realizan entrevistas profundas basadas en una guía cuidadosamente diseñada, para descubrir problemas, necesidades y puntos de dolor no resueltos. A diferencia de la etnografía pura, combina la entrevista estructurada con observación directa del uso del producto tras la conversación. Es el método mejor calificado en la relación popularidad-efectividad, y más accesible de implementar que una etnografía completa.",
+      "texto_nuevo": "Método de investigación de la voz del cliente (VoC, por sus siglas en inglés) donde equipos multifuncionales (marketing, ventas, área técnica) visitan a los clientes y realizan entrevistas profundas basadas en una guía cuidadosamente diseñada, para descubrir problemas, necesidades y puntos de dolor no resueltos. A diferencia de la etnografía pura, combina la entrevista estructurada con observación directa del uso del producto tras la conversación. Es el método mejor calificado en la relación popularidad-efectividad.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5015, 5047",
+        "frase": "in-depth interviews at multiple customer sites do take more effort than most of the methods"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no compara la facilidad de implementar las visitas con la de la etnografía.; Mismo defecto; el libro subraya que las visitas exigen tiempo, dinero y viajes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

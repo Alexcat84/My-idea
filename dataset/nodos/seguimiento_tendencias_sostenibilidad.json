@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Seguimiento de Tendencias Futuras",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios en la población, normas sociales que cambian, presión ambiental por el clima, avances tecnológicos, tensión política y más regulación. En vez de hacer una predicción única, construye varios escenarios posibles de futuro.",
+  "resumen_teorico": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios económicos y productivos, cambios en la población, normas sociales que cambian, diferencias entre generaciones, presión ambiental por el clima, avances tecnológicos, tensión política y más regulación. En vez de una predicción única, puede servirte construir varios escenarios de futuro.",
   "pasos_accionables": [
-    "Identifica los factores de cambio que te afectan: ciencia, demografía, normas sociales, tecnología, política, regulación",
+    "Identifica los factores de cambio que te afectan: ciencia, economía y producción, demografía, normas sociales, diferencias entre generaciones, presión de la naturaleza, tecnología, política, regulación",
     "Evalúa qué tan incierta es cada tendencia y en qué punto se vuelve crítica",
     "Construye varios escenarios alternativos de futuro (siguiendo el modelo de Shell)",
     "Usa herramientas como el Mapa de Fuerzas Futuras que Afectan la Sostenibilidad (Map of Future Forces Affecting Sustainability) de GEMI",
@@ -41,6 +41,39 @@
         "evidencia": "F04-028: Construir escenarios futuros para ajustar la priorizacion de temas de sostenibilidad es estrategia, no validacion con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-122-seguimiento_tendencias_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios en la población, normas sociales que cambian, presión ambiental por el clima, avances tecnológicos, tensión política y más regulación. En vez de hacer una predicción única, construye varios escenarios posibles de futuro.",
+      "texto_nuevo": "Anticipa los cambios futuros que pueden modificar lo que es importante para tu negocio: avances científicos, cambios económicos y productivos, cambios en la población, normas sociales que cambian, diferencias entre generaciones, presión ambiental por el clima, avances tecnológicos, tensión política y más regulación. En vez de una predicción única, puede servirte construir varios escenarios de futuro.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1400-1424",
+        "frase": "some company leaders find that it makes sense not to try to forecast specific trends"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que algunos líderes encuentran útil construir escenarios; el resumen lo vuelve instrucción general.; La lista omite el reordenamiento económico y productivo y la divergencia de visiones entre generaciones, que el libro pide considerar.; Mismo defecto que la marca 0: faltan los factores económicos y productivos y la diferencia entre generaciones.; Mismo defecto que la marca 1: endurece a instrucción lo que el libro presenta como opción de algunos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-122-seguimiento_tendencias_sostenibilidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los factores de cambio que te afectan: ciencia, demografía, normas sociales, tecnología, política, regulación",
+      "texto_nuevo": "Identifica los factores de cambio que te afectan: ciencia, economía y producción, demografía, normas sociales, diferencias entre generaciones, presión de la naturaleza, tecnología, política, regulación",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1400-1412",
+        "frase": "Realignment in economic structures and production patterns"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso omite factores de la lista del libro: la presión de la naturaleza, el reordenamiento económico y productivo y la divergencia entre generaciones.; Mismo defecto: faltan la presión de la naturaleza y el reordenamiento económico y productivo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

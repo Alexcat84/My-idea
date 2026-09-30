@@ -3,11 +3,11 @@
   "dominio": "core",
   "titulo_concepto": "El Diamante de la Innovación (Enfoque Sistémico)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Ganar en innovación no depende solo de tener un buen proceso de desarrollo de productos, sino de un enfoque integral que alinee simultáneamente cuatro pilares: una estrategia de innovación clara (dónde enfocar los esfuerzos), una gestión de portafolio y recursos balanceada, un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión), y un clima, cultura y liderazgo organizacional que tolere el riesgo y premie la creatividad. Sin estos cuatro elementos alineados, incluso el mejor proceso de desarrollo fallará en producir innovaciones audaces.",
+  "resumen_teorico": "Ganar en innovación no depende solo de tener un buen proceso de desarrollo de productos, sino de un enfoque integral que alinee simultáneamente cuatro pilares: una estrategia de innovación clara (dónde enfocar los esfuerzos), una gestión de portafolio y recursos balanceada, la generación de grandes ideas con un proceso de idea a lanzamiento disciplinado, ágil y rápido (por ejemplo, etapas y compuertas de decisión), y un clima, cultura y liderazgo organizacional que tolere el riesgo y premie la creatividad. Sin estos cuatro elementos alineados, ni siquiera el mejor proceso de desarrollo asegura innovaciones audaces.",
   "pasos_accionables": [
     "Definir una estrategia de innovación clara: dónde enfocar los esfuerzos y recursos",
     "Evaluar y asegurar una gestión de portafolio y asignación de recursos balanceada",
-    "Implementar un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión)",
+    "Generar grandes ideas e implementar un proceso de idea a lanzamiento disciplinado, ágil y rápido (por ejemplo, etapas y compuertas de decisión)",
     "Fomentar una cultura organizacional y un liderazgo que toleren el riesgo y premien la creatividad",
     "Evaluar el estado actual del proyecto o la empresa en cada uno de los cuatro pilares e identificar cuál es el eslabón más débil",
     "Diseñar un plan de acción que aborde los cuatro pilares de manera integrada, no aislada"
@@ -35,5 +35,40 @@
   "etiqueta_arbol": "Alinea los Pilares de tu Innovación",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-119-diamante_de_innovacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ganar en innovación no depende solo de tener un buen proceso de desarrollo de productos, sino de un enfoque integral que alinee simultáneamente cuatro pilares: una estrategia de innovación clara (dónde enfocar los esfuerzos), una gestión de portafolio y recursos balanceada, un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión), y un clima, cultura y liderazgo organizacional que tolere el riesgo y premie la creatividad. Sin estos cuatro elementos alineados, incluso el mejor proceso de desarrollo fallará en producir innovaciones audaces.",
+      "texto_nuevo": "Ganar en innovación no depende solo de tener un buen proceso de desarrollo de productos, sino de un enfoque integral que alinee simultáneamente cuatro pilares: una estrategia de innovación clara (dónde enfocar los esfuerzos), una gestión de portafolio y recursos balanceada, la generación de grandes ideas con un proceso de idea a lanzamiento disciplinado, ágil y rápido (por ejemplo, etapas y compuertas de decisión), y un clima, cultura y liderazgo organizacional que tolere el riesgo y premie la creatividad. Sin estos cuatro elementos alineados, ni siquiera el mejor proceso de desarrollo asegura innovaciones audaces.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "477-486, 7634",
+        "frase": "Creating Big Ideas and Then Executing Developments With an Adaptive, Agile, and Accelerated Idea-to-Launch Engine"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que sin los cuatro vectores no necesariamente se logra el alto desempeño; 'fallará' lo endurece.; El tercer pilar del libro incluye crear grandes ideas y un motor de idea a lanzamiento ágil y acelerado, no solo disciplinado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-diamante_de_innovacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión)",
+      "texto_nuevo": "Generar grandes ideas e implementar un proceso de idea a lanzamiento disciplinado, ágil y rápido (por ejemplo, etapas y compuertas de decisión)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "477-486",
+        "frase": "Generating great ideas is half the battle."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la generación de grandes ideas y el carácter ágil y acelerado que el libro pone en este pilar.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

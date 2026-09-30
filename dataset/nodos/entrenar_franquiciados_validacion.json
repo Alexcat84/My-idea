@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Entrenar a Franquiciados para la Validación",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Los franquiciados existentes son la principal fuente de validación para nuevos candidatos, pero muchos temen la competencia de nuevas franquicias cercanas o sienten la obligación de parecer objetivos y mencionar aspectos negativos. Los mejores franquiciadores educan activamente a sus franquiciados sobre los beneficios de vender la marca (mayor poder publicitario, de compra, reconocimiento y valorización del negocio) para que se conviertan en parte del equipo de ventas.",
+  "resumen_teorico": "Los franquiciados existentes son la principal fuente de validación para nuevos candidatos, pero muchos temen la competencia de nuevas franquicias cercanas o sienten la obligación de parecer objetivos y mencionar aspectos negativos. Antes, asegúrate de que estén de verdad satisfechos; si no, ese es tu primer trabajo. Los mejores franquiciadores educan activamente a sus franquiciados sobre los beneficios de vender la marca (mayor poder publicitario, de compra, reconocimiento y valorización del negocio) para que se conviertan en parte del equipo de ventas.",
   "pasos_accionables": [
     "Explicar a los franquiciados los beneficios de que la marca crezca (poder de compra, publicidad, valorización)",
     "Comunicar que son parte del equipo de ventas de la franquicia",
@@ -43,6 +43,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-120-entrenar_franquiciados_validacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los franquiciados existentes son la principal fuente de validación para nuevos candidatos, pero muchos temen la competencia de nuevas franquicias cercanas o sienten la obligación de parecer objetivos y mencionar aspectos negativos. Los mejores franquiciadores educan activamente a sus franquiciados sobre los beneficios de vender la marca (mayor poder publicitario, de compra, reconocimiento y valorización del negocio) para que se conviertan en parte del equipo de ventas.",
+      "texto_nuevo": "Los franquiciados existentes son la principal fuente de validación para nuevos candidatos, pero muchos temen la competencia de nuevas franquicias cercanas o sienten la obligación de parecer objetivos y mencionar aspectos negativos. Antes, asegúrate de que estén de verdad satisfechos; si no, ese es tu primer trabajo. Los mejores franquiciadores educan activamente a sus franquiciados sobre los beneficios de vender la marca (mayor poder publicitario, de compra, reconocimiento y valorización del negocio) para que se conviertan en parte del equipo de ventas.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4736",
+        "frase": "you need to be sure they are actually satisfied"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto, señalado en otra frase del resumen.; Se cae la condición previa del libro: antes de promover a tus franquiciados debes asegurarte de que estén satisfechos, y si no, cambiar eso es lo primero.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

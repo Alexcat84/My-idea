@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Limitaciones de los intervalos de confianza para predicción",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Los intervalos de confianza y niveles de significancia estadística son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
+  "resumen_teorico": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
   "pasos_accionables": [
     "Distinguir claramente entre estudios enumerativos (resumen de datos pasados) y estudios analíticos (predicción futura)",
     "No usar p-values ni intervalos de confianza como base para decisiones de planificación futura, porque no dan ningún grado de creencia para predecir",
@@ -39,6 +39,22 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro dice que los intervalos de confianza y las pruebas de significancia no dan ninguna base para predecir ni planificar (L2856: 'they provide no basis for prediction'; L2860: 'do not provide any measure of degree of belief for planning'), que no tienen aplicacion en problemas analiticos (L8408) y 'have no application here or anywhere' (L6495). Solo les da valor para resumir estudios enumerativos (L2858). Busque en todo el libro un apoyo para usarlos como base parcial de planificacion y no lo hay. Al decir 'como unica base', el paso da a entender que sirven como base parcial, y eso cambia la condicion del libro. El lector A reconocio que el libro es mas tajante, pero lo dejo en OPERATIVO.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-071"
+    },
+    {
+      "id": "final-e1-119-limitaciones_intervalos_confianza-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los intervalos de confianza y niveles de significancia estadística son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
+      "texto_nuevo": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2858-2860, 6495",
+        "frase": "do not provide any measure of degree of belief for planning"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro concede utilidad solo al intervalo de confianza en estudios enumerativos; de los niveles de significancia dice que no dan ninguna medida para planificar y que no tienen aplicación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

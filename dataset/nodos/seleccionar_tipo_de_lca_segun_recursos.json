@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Selección entre LCA Simplificado y LCA Completo",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Existen dos categorías básicas de LCA: el 'simplificado' o 'screening', que es rápido y económico, útil para decisiones diarias de diseño y trade-offs de materiales; y el 'completo' o 'extensivo', que es costoso, intensivo en recursos y generalmente reservado para grandes empresas o productos que se comercializarán con atributos ambientales destacados. La elección depende del presupuesto, la experiencia interna disponible y el propósito del análisis (decisión interna vs. comunicación externa).",
+  "resumen_teorico": "Existen dos categorías básicas de LCA: el 'simplificado' o 'screening', que es rápido y económico, con menos variables y datos, y resultados aproximados pero útiles para decisiones diarias de diseño y trade-offs de materiales; y el 'completo' o 'extensivo', que es costoso, intensivo en recursos y generalmente reservado para grandes empresas o productos que se comercializarán con atributos ambientales destacados. La elección depende del presupuesto, la experiencia interna disponible y el propósito del análisis (decisión interna vs. comunicación externa).",
   "pasos_accionables": [
     "Evaluar el propósito del análisis: decisión interna rápida vs. comunicación externa certificada",
     "Si es para decisiones internas rápidas, optar por herramientas de LCA Light, EIO-LCA o MIPS",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Elige tu Nivel de Análisis",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-seleccionar_tipo_de_lca_segun_recursos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos categorías básicas de LCA: el 'simplificado' o 'screening', que es rápido y económico, útil para decisiones diarias de diseño y trade-offs de materiales; y el 'completo' o 'extensivo', que es costoso, intensivo en recursos y generalmente reservado para grandes empresas o productos que se comercializarán con atributos ambientales destacados. La elección depende del presupuesto, la experiencia interna disponible y el propósito del análisis (decisión interna vs. comunicación externa).",
+      "texto_nuevo": "Existen dos categorías básicas de LCA: el 'simplificado' o 'screening', que es rápido y económico, con menos variables y datos, y resultados aproximados pero útiles para decisiones diarias de diseño y trade-offs de materiales; y el 'completo' o 'extensivo', que es costoso, intensivo en recursos y generalmente reservado para grandes empresas o productos que se comercializarán con atributos ambientales destacados. La elección depende del presupuesto, la experiencia interna disponible y el propósito del análisis (decisión interna vs. comunicación externa).",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1918-1920",
+        "frase": "all versions of simplified LCAs essentially boil down to fewer variables under analysis"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el límite del LCA simplificado: menos variables, datos más pequeños y resultados aproximados, lo que pesa en la elección.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

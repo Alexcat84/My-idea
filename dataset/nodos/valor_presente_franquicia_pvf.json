@@ -4,9 +4,9 @@
   "dominio": "franquicias",
   "titulo_concepto": "Valor Presente de una Franquicia (PVF)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
+  "resumen_teorico": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo, aunque moderándolas según el flujo de caja previsto.",
   "pasos_accionables": [
-    "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates)",
+    "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
     "Estimar el impacto en el valor de empresa de cada franquiciado adicional",
     "Usar el PVF para evaluar decisiones de inversión en marketing, brokers y personal",
     "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de brokers)"
@@ -39,6 +39,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-029 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-120-valor_presente_franquicia_pvf-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates)",
+      "texto_nuevo": "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2995",
+        "frase": "account for incremental expenses and discount the cash flow streams"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que para un valor presente real hay que restar gastos incrementales y descontar los flujos al costo de capital.; Mismo defecto: se cae la advertencia sobre gastos incrementales y descuento.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-120-valor_presente_franquicia_pvf-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
+      "texto_nuevo": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo, aunque moderándolas según el flujo de caja previsto.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3001",
+        "frase": "the franchisor must temper its decision making based on an understanding of anticipated cash flows"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro matiza que el franquiciante debe moderar esas decisiones según el flujo de caja previsto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

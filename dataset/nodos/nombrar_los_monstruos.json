@@ -6,7 +6,7 @@
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
   "resumen_teorico": "Cuando no sabemos cómo nombrar un problema complejo o desconocido, podemos dibujarlo como un 'monstruo'. Esta técnica, inspirada en los mapas marítimos del siglo XVII que dibujaban criaturas para marcar zonas desconocidas y peligrosas, permite dar forma tangible a miedos, incertidumbres o fascinaciones sin necesidad de precisión. Nombrar y visualizar lo desconocido (en vez de ignorarlo con la regla 'when in doubt, leave it out') permite investigarlo, documentarlo y compartirlo con otros, sirviendo como punto de partida para exploración futura.",
   "pasos_accionables": [
-    "Identifica un área de incertidumbre, riesgo o miedo en tu proyecto que no puedes definir claramente",
+    "Identifica un área de incertidumbre, riesgo, miedo o fascinación en tu proyecto que no puedes definir claramente",
     "Dibuja o representa visualmente ese 'monstruo' sin preocuparte por la precisión o exactitud",
     "Comparte el dibujo/monstruo con tu equipo o audiencia para abrir conversación sobre el riesgo",
     "Usa el monstruo como marcador para futuras investigaciones o decisiones de diseño"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Nombra tus Monstruos Desconocidos",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-nombrar_los_monstruos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica un área de incertidumbre, riesgo o miedo en tu proyecto que no puedes definir claramente",
+      "texto_nuevo": "Identifica un área de incertidumbre, riesgo, miedo o fascinación en tu proyecto que no puedes definir claramente",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3061",
+        "frase": "Sometimes monsters represent fear; other times, fascination."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que los monstruos pueden ser miedos o fascinaciones; el paso deja fuera la fascinación.; Mismo matiz: el paso reduce el monstruo a lo negativo y pierde la fascinación.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

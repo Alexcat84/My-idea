@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Reunión de Conclusión con Encuestas Internas y Externas",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Al finalizar un proyecto o entrega, es clave realizar una Reunión de Conclusión que espeje la reunión de arranque (kickoff), revisando los objetivos organizacionales y métricas de éxito definidas al inicio. Se complementa con dos encuestas: una interna (equipo evalúa su experiencia y la del cliente) y una externa (cliente evalúa su experiencia con la empresa), ambas diseñadas para capturar feedback honesto, generar testimonios de los casos positivos y gestionar constructivamente los casos negativos ('venteo' de frustraciones con humor).",
+  "resumen_teorico": "Al finalizar un proyecto o entrega, es clave realizar una Reunión de Conclusión que espeje la reunión de arranque (kickoff), revisando los objetivos organizacionales y métricas de éxito definidas al inicio. Se complementa con dos encuestas: una interna (el equipo evalúa su propio desempeño, el de sus compañeros y al cliente) y una externa (cliente evalúa su experiencia con la empresa), ambas diseñadas para capturar feedback honesto, generar testimonios de los casos positivos y gestionar constructivamente los casos negativos ('venteo' de frustraciones con humor).",
   "pasos_accionables": [
-    "Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff",
+    "Programar una Reunión de Conclusión al finalizar el proyecto, después de recoger las encuestas, revisando los objetivos y métricas definidos en el kickoff",
     "Diseñar una encuesta interna para el equipo: satisfacción de trabajar con el cliente, disposición a repetir, comentarios abiertos",
     "Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos, con una calificación inicial de estrellas o NPS",
     "Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)",
     "Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente",
-    "Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero",
+    "Solicitar testimonios y reseñas solo después de dar valor y feedback positivo primero",
     "Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff",
     "Realizar una evaluación honesta del nivel de éxito en cada métrica",
     "Solicitar feedback del cliente sobre esas métricas",
@@ -48,5 +48,57 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-121-reunion_conclusion_proyecto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al finalizar un proyecto o entrega, es clave realizar una Reunión de Conclusión que espeje la reunión de arranque (kickoff), revisando los objetivos organizacionales y métricas de éxito definidas al inicio. Se complementa con dos encuestas: una interna (equipo evalúa su experiencia y la del cliente) y una externa (cliente evalúa su experiencia con la empresa), ambas diseñadas para capturar feedback honesto, generar testimonios de los casos positivos y gestionar constructivamente los casos negativos ('venteo' de frustraciones con humor).",
+      "texto_nuevo": "Al finalizar un proyecto o entrega, es clave realizar una Reunión de Conclusión que espeje la reunión de arranque (kickoff), revisando los objetivos organizacionales y métricas de éxito definidas al inicio. Se complementa con dos encuestas: una interna (el equipo evalúa su propio desempeño, el de sus compañeros y al cliente) y una externa (cliente evalúa su experiencia con la empresa), ambas diseñadas para capturar feedback honesto, generar testimonios de los casos positivos y gestionar constructivamente los casos negativos ('venteo' de frustraciones con humor).",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4112",
+        "frase": "evaluate their own performance, as well as that of their peers and the client"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La encuesta interna del libro evalúa el desempeño propio, el de los compañeros y al cliente; el nodo omite a los compañeros y cambia lo que se evalúa del cliente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-121-reunion_conclusion_proyecto-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff",
+      "texto_nuevo": "Programar una Reunión de Conclusión al finalizar el proyecto, después de recoger las encuestas, revisando los objetivos y métricas definidos en el kickoff",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4331",
+        "frase": "After gathering the survey feedback, the Yoko Co team conducts a Conclusion Meeting"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la Reunión de Conclusión se hace después de recoger las encuestas, para compartir allí sus resultados.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-121-reunion_conclusion_proyecto-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero",
+      "texto_nuevo": "Solicitar testimonios y reseñas solo después de dar valor y feedback positivo primero",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "4333",
+        "frase": "ask the client for testimonials and reviews"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el cierre el libro pide testimonios y reseñas; los referidos no están en ese pasaje.; Mismo defecto: añade los referidos al cierre del proyecto.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

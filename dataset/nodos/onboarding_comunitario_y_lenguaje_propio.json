@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Onboarding basado en Comunidad y Lenguaje Compartido",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Un proceso de incorporación estructurado que combina educación progresiva, asignación de mentores/coaches personalizados según la personalidad del cliente, introducción a un lenguaje o cultura propia de la marca, y eventos sociales, genera un fuerte sentido de pertenencia. Esto incrementa dramáticamente la retención al transformar clientes escépticos en miembros comprometidos de una comunidad.",
+  "resumen_teorico": "Un proceso de incorporación estructurado que combina educación progresiva, asignación de mentores/coaches personalizados según la personalidad del cliente, introducción a un lenguaje o cultura propia de la marca, y eventos sociales, genera un fuerte sentido de pertenencia. Aunque es más caro y puede intimidar al principio, esto incrementa dramáticamente la retención al transformar clientes escépticos en miembros comprometidos de una comunidad.",
   "pasos_accionables": [
     "Diseñar un recorrido introductorio breve y educativo (no orientado a venta) para nuevos prospectos.",
     "Asignar guías o mentores compatibles con el perfil/personalidad del cliente.",
@@ -12,7 +12,7 @@
     "Crear rituales grupales (presentaciones, bienvenida) en cada interacción para generar cohesión.",
     "Organizar eventos sociales recurrentes que fortalezcan el vínculo comunitario.",
     "Medir tasas de conversión de prueba a membresía y retención a largo plazo.",
-    "Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la comunidad existente",
+    "Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la comunidad existente, acorde con el estilo de tu clientela, porque lo que encaja con un grupo puede no encajar con otro",
     "Desarrollar un vocabulario o identidad compartida para los miembros/clientes (ej. 'creed', apodos, insignias)",
     "Facilitar la conexión entre clientes nuevos y clientes veteranos (mentoría, foros, eventos)"
   ],
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Da Bienvenida con tu Comunidad",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-onboarding_comunitario_y_lenguaje_propio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un proceso de incorporación estructurado que combina educación progresiva, asignación de mentores/coaches personalizados según la personalidad del cliente, introducción a un lenguaje o cultura propia de la marca, y eventos sociales, genera un fuerte sentido de pertenencia. Esto incrementa dramáticamente la retención al transformar clientes escépticos en miembros comprometidos de una comunidad.",
+      "texto_nuevo": "Un proceso de incorporación estructurado que combina educación progresiva, asignación de mentores/coaches personalizados según la personalidad del cliente, introducción a un lenguaje o cultura propia de la marca, y eventos sociales, genera un fuerte sentido de pertenencia. Aunque es más caro y puede intimidar al principio, esto incrementa dramáticamente la retención al transformar clientes escépticos en miembros comprometidos de una comunidad.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "3591",
+        "frase": "Even though it's more expensive for us and can be intimidating to our customers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que este proceso es más caro para el negocio y puede intimidar al cliente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-123-onboarding_comunitario_y_lenguaje_propio-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la comunidad existente",
+      "texto_nuevo": "Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la comunidad existente, acorde con el estilo de tu clientela, porque lo que encaja con un grupo puede no encajar con otro",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "2338",
+        "frase": "While it may not work in a gathering of accountants or lawyers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que ese ritual funciona porque encaja con ese público y puede no funcionar con otro.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

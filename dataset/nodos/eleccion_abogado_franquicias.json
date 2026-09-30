@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Elección de un Abogado Especializado en Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El derecho de franquicias es un área altamente especializada y compleja por la variedad de regulaciones estatales en EE.UU., por lo que no debes delegarlo en un abogado generalista. Necesitas verificar que tenga experiencia específica representando al lado franquiciante (no franquiciado), un enfoque transaccional o litigioso según tu caso, conocimiento de tu industria y un tamaño de firma acorde a tu estilo de comunicación. Conviene contratar primero al consultor de franquicias, quien validará si franquiciar es la estrategia correcta, y después al abogado: esto hace el trabajo legal más eficiente y puede reducir honorarios, ya que llegarás con decisiones estratégicas ya tomadas.",
+  "resumen_teorico": "El derecho de franquicias es un área altamente especializada y compleja por la variedad de regulaciones estatales en EE.UU., por lo que no debes delegarlo en un abogado generalista. Necesitas verificar que tenga experiencia específica representando al lado franquiciante (no franquiciado), algo de enfoque transaccional (con o sin litigio, según tu caso), conocimiento de tu industria (vital si está muy regulada), un tamaño de firma que equilibre recursos y acceso al socio, y un estilo de comunicación compatible con el tuyo. Conviene contratar primero al consultor de franquicias, quien validará si franquiciar es la estrategia correcta, y después al abogado: esto hace el trabajo legal más eficiente y puede reducir honorarios, ya que llegarás con decisiones estratégicas ya tomadas.",
   "pasos_accionables": [
     "Confirma primero con tu consultor que franquiciar es la estrategia correcta antes de buscar abogado",
     "Busca un abogado con derecho de franquicias como práctica separada en su firma, no un generalista",
     "Verifica que tenga experiencia representando franquiciantes, no solo franquiciados",
-    "Pregunta si su enfoque es transaccional, litigioso o ambos según lo que necesitas",
+    "Pregunta si su enfoque es transaccional, litigioso o ambos; conviene que tenga al menos algo de enfoque transaccional para preparar tus documentos con eficiencia",
     "Solicita su modelo de honorarios (tarifa plana o por hora) y qué incluye exactamente, mencionando que ya cuentas con un consultor",
     "Valida su experiencia en el marco regulatorio estatal y en la industria de tu negocio"
   ],
@@ -49,5 +49,40 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-120-eleccion_abogado_franquicias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El derecho de franquicias es un área altamente especializada y compleja por la variedad de regulaciones estatales en EE.UU., por lo que no debes delegarlo en un abogado generalista. Necesitas verificar que tenga experiencia específica representando al lado franquiciante (no franquiciado), un enfoque transaccional o litigioso según tu caso, conocimiento de tu industria y un tamaño de firma acorde a tu estilo de comunicación. Conviene contratar primero al consultor de franquicias, quien validará si franquiciar es la estrategia correcta, y después al abogado: esto hace el trabajo legal más eficiente y puede reducir honorarios, ya que llegarás con decisiones estratégicas ya tomadas.",
+      "texto_nuevo": "El derecho de franquicias es un área altamente especializada y compleja por la variedad de regulaciones estatales en EE.UU., por lo que no debes delegarlo en un abogado generalista. Necesitas verificar que tenga experiencia específica representando al lado franquiciante (no franquiciado), algo de enfoque transaccional (con o sin litigio, según tu caso), conocimiento de tu industria (vital si está muy regulada), un tamaño de firma que equilibre recursos y acceso al socio, y un estilo de comunicación compatible con el tuyo. Conviene contratar primero al consultor de franquicias, quien validará si franquiciar es la estrategia correcta, y después al abogado: esto hace el trabajo legal más eficiente y puede reducir honorarios, ya que llegarás con decisiones estratégicas ya tomadas.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5458",
+        "frase": "If your franchise lawyer does not have some focus on the transactional side"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que sin algo de enfoque transaccional el abogado es menos eficiente preparando los documentos; lo litigioso es un añadido, no una alternativa.; El libro gradúa el conocimiento de la industria: poco importante en servicios no regulados y vital en industrias con regulación compleja.; El libro no liga el tamaño de la firma al estilo de comunicación: el tamaño pesa recursos frente a acceso al socio y el estilo es un criterio aparte.; Mismo defecto que la marca 0: lo transaccional no es intercambiable con lo litigioso.; Mismo defecto: vínculo inventado entre tamaño de firma y estilo de comunicación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-120-eleccion_abogado_franquicias-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pregunta si su enfoque es transaccional, litigioso o ambos según lo que necesitas",
+      "texto_nuevo": "Pregunta si su enfoque es transaccional, litigioso o ambos; conviene que tenga al menos algo de enfoque transaccional para preparar tus documentos con eficiencia",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5458",
+        "frase": "If your franchise lawyer does not have some focus on the transactional side"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Presenta lo transaccional y lo litigioso como equivalentes; el libro dice que sin algo de enfoque transaccional será menos eficiente con tus documentos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

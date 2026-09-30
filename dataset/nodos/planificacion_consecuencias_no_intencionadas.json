@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Anticipar Consecuencias No Intencionadas en Sistemas Complejos",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "La parábola de los apicultores que modifican genéticamente abejas muestra que tener buenas intenciones no garantiza buenos resultados: cada solución que aplicas a un problema (hacer abejas 'sedentarias' para cuidarlas mejor) puede traer efectos secundarios que no viste venir (abejas alcohólicas que hacen colapsar la colmena) al chocar con variables del entorno que no controlaste (calor, humedad, fermentación). La idea es que mapees activamente los efectos de segundo y tercer orden de tu solución antes de aplicarla, sobre todo cuando trabajas con sistemas vivos o complejos.",
+  "resumen_teorico": "La parábola de los apicultores que modifican genéticamente abejas muestra que tener buenas intenciones no garantiza buenos resultados: cada solución que aplicas a un problema (hacer abejas 'sedentarias' para cuidarlas mejor) puede traer efectos secundarios que no viste venir (abejas alcohólicas que podrían hacer colapsar la colmena) al chocar con variables del entorno que no controlaste (calor, humedad, fermentación) y con los sesgos y huecos de tu propio trabajo. La idea es que mapees activamente los efectos de segundo y tercer orden de tu solución antes de aplicarla, sobre todo cuando trabajas con sistemas vivos o complejos.",
   "pasos_accionables": [
     "Lista los efectos directos que quieres lograr con tu solución.",
     "Para cada efecto directo, pregúntate '¿qué otras variables del sistema podrían cruzarse con este cambio?', o sea los que aparecen después del primer impacto",
@@ -46,5 +46,23 @@
   ],
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-planificacion_consecuencias_no_intencionadas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La parábola de los apicultores que modifican genéticamente abejas muestra que tener buenas intenciones no garantiza buenos resultados: cada solución que aplicas a un problema (hacer abejas 'sedentarias' para cuidarlas mejor) puede traer efectos secundarios que no viste venir (abejas alcohólicas que hacen colapsar la colmena) al chocar con variables del entorno que no controlaste (calor, humedad, fermentación). La idea es que mapees activamente los efectos de segundo y tercer orden de tu solución antes de aplicarla, sobre todo cuando trabajas con sistemas vivos o complejos.",
+      "texto_nuevo": "La parábola de los apicultores que modifican genéticamente abejas muestra que tener buenas intenciones no garantiza buenos resultados: cada solución que aplicas a un problema (hacer abejas 'sedentarias' para cuidarlas mejor) puede traer efectos secundarios que no viste venir (abejas alcohólicas que podrían hacer colapsar la colmena) al chocar con variables del entorno que no controlaste (calor, humedad, fermentación) y con los sesgos y huecos de tu propio trabajo. La idea es que mapees activamente los efectos de segundo y tercer orden de tu solución antes de aplicarla, sobre todo cuando trabajas con sistemas vivos o complejos.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4256-4258",
+        "frase": "These bees could collapse a colony."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro atribuye el fallo también a los sesgos y huecos detrás del propio esfuerzo, no solo al entorno.; El libro dice que esas abejas podrían hacer colapsar una colonia; el nodo lo da como hecho.; Mismo endurecimiento: 'could collapse' pasa a 'hacen colapsar'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

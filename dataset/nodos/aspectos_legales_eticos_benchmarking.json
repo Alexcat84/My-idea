@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Aspectos legales y éticos de comparar tu negocio con otros (benchmarking)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El benchmarking está regido por leyes de competencia y de propiedad intelectual. Si compartes información con otros, puedes infringir derechos de propiedad intelectual, y si comparas precios o costos con tu competencia, eso puede considerarse un comportamiento anticompetitivo. El Código de Conducta de Benchmarking (creado por APQC en 1992, con una versión europea en 1996) establece principios de legalidad, confidencialidad e intercambio de información, aunque no te obliga legalmente. Por eso, firma siempre un acuerdo de confidencialidad legalmente vinculante entre todas las partes.",
+  "resumen_teorico": "El benchmarking está regido por leyes de competencia y de propiedad intelectual. Si aplicas información que otro participante compartió contigo, puedes infringir sus derechos de propiedad intelectual, y si comparas precios o costos con tu competencia, eso puede considerarse un comportamiento anticompetitivo. El Código de Conducta de Benchmarking (creado por APQC en 1992, con una versión europea en 1996) establece principios de legalidad, confidencialidad e intercambio de información, aunque no te obliga legalmente. Sea cual sea el nivel de confidencialidad, firma siempre un acuerdo de confidencialidad legalmente vinculante entre todas las partes.",
   "pasos_accionables": [
-    "Busca asesoría legal antes de comparar tu negocio con el de tus competidores",
-    "Evita el intercambio directo de información sobre precios y secretos comerciales sensibles",
+    "Busca asesoría legal antes de comparar tu negocio con el de otros, sobre todo si son tus competidores o si el ejercicio abarca varios países",
+    "Ten mucho cuidado al intercambiar información sobre precios y secretos comerciales sensibles",
     "Adopta los principios del Código de Conducta de Benchmarking (APQC/EFQM)",
-    "Define qué tan confidencial o anónima debe quedar la información según su sensibilidad",
+    "Define qué tan confidencial o anónima debe quedar la información según su sensibilidad, lo que exige la ley de competencia y lo dispuestos que estén los participantes a compartir",
     "Firma un acuerdo de confidencialidad legalmente vinculante con todos los participantes y quien facilite el proceso",
     "Equilibra la necesidad de confidencialidad con lo que puedes aprender del estudio"
   ],
@@ -27,5 +27,74 @@
   "etiqueta_arbol": "Compara sin Cruzar la Línea",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-118-aspectos_legales_eticos_benchmarking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El benchmarking está regido por leyes de competencia y de propiedad intelectual. Si compartes información con otros, puedes infringir derechos de propiedad intelectual, y si comparas precios o costos con tu competencia, eso puede considerarse un comportamiento anticompetitivo. El Código de Conducta de Benchmarking (creado por APQC en 1992, con una versión europea en 1996) establece principios de legalidad, confidencialidad e intercambio de información, aunque no te obliga legalmente. Por eso, firma siempre un acuerdo de confidencialidad legalmente vinculante entre todas las partes.",
+      "texto_nuevo": "El benchmarking está regido por leyes de competencia y de propiedad intelectual. Si aplicas información que otro participante compartió contigo, puedes infringir sus derechos de propiedad intelectual, y si comparas precios o costos con tu competencia, eso puede considerarse un comportamiento anticompetitivo. El Código de Conducta de Benchmarking (creado por APQC en 1992, con una versión europea en 1996) establece principios de legalidad, confidencialidad e intercambio de información, aunque no te obliga legalmente. Sea cual sea el nivel de confidencialidad, firma siempre un acuerdo de confidencialidad legalmente vinculante entre todas las partes.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17596",
+        "frase": "possibility of infringing the intellectual property rights of the benchmarker who offered the information"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro no liga el acuerdo a que el código no sea vinculante; lo pide sea cual sea el nivel de confidencialidad.; En el libro el riesgo es de quien aplica la información que otro participante ofreció, que puede infringir los derechos de ese otro; el resumen lo pone del lado de quien comparte.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-aspectos_legales_eticos_benchmarking-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca asesoría legal antes de comparar tu negocio con el de tus competidores",
+      "texto_nuevo": "Busca asesoría legal antes de comparar tu negocio con el de otros, sobre todo si son tus competidores o si el ejercicio abarca varios países",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17600",
+        "frase": "any organization considering entering into a benchmarking exercise is strongly urged to seek legal advice"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recomienda asesoría legal a cualquier organización que vaya a hacer benchmarking, no solo con competidores, y sobre todo si abarca varios países.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-aspectos_legales_eticos_benchmarking-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define qué tan confidencial o anónima debe quedar la información según su sensibilidad",
+      "texto_nuevo": "Define qué tan confidencial o anónima debe quedar la información según su sensibilidad, lo que exige la ley de competencia y lo dispuestos que estén los participantes a compartir",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17618",
+        "frase": "the requirement to comply with competition law, and the degree of willingness by the participants"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro hace depender la confidencialidad de tres factores (sensibilidad, ley de competencia y disposición a compartir); el paso deja solo uno.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-aspectos_legales_eticos_benchmarking-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita el intercambio directo de información sobre precios y secretos comerciales sensibles",
+      "texto_nuevo": "Ten mucho cuidado al intercambiar información sobre precios y secretos comerciales sensibles",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17598",
+        "frase": "Care has to be taken when exchanging information in a benchmarking study."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro pide mucho cuidado al intercambiar precios y secretos, y anonimizar lo sensible, no evitarlo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

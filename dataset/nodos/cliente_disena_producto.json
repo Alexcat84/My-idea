@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Deja que tu cliente diseñe el producto (co-creación digital)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Con herramientas digitales e internet puedes invitar a tus clientes o usuarios a diseñar directamente el producto, usando plataformas simples (por ejemplo, LEGO Digital Designer). Los estudios muestran que los consumidores pueden llegar a ser hasta 2.4 veces más eficientes que los propios productores generando innovaciones significativas, sobre todo en las primeras etapas de una categoría.",
+  "resumen_teorico": "Con herramientas digitales e internet puedes invitar a tus clientes o usuarios a diseñar directamente el producto, usando plataformas simples (por ejemplo, LEGO Digital Designer). Un estudio importante encontró que los consumidores, en conjunto, son 2.4 veces más eficientes que los propios productores generando innovaciones significativas, sobre todo en las primeras etapas de una categoría; cuando la categoría madura, esa ventaja se invierte.",
   "pasos_accionables": [
     "Evalúa si tu producto es apto para esto: tu cliente debe poder entender la tecnología que hay detrás",
     "Desarrolla una herramienta digital simple de diseño (tipo CAD) que le permita a tus usuarios crear sus propios diseños",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Deja que el Cliente Diseñe",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-cliente_disena_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Con herramientas digitales e internet puedes invitar a tus clientes o usuarios a diseñar directamente el producto, usando plataformas simples (por ejemplo, LEGO Digital Designer). Los estudios muestran que los consumidores pueden llegar a ser hasta 2.4 veces más eficientes que los propios productores generando innovaciones significativas, sobre todo en las primeras etapas de una categoría.",
+      "texto_nuevo": "Con herramientas digitales e internet puedes invitar a tus clientes o usuarios a diseñar directamente el producto, usando plataformas simples (por ejemplo, LEGO Digital Designer). Un estudio importante encontró que los consumidores, en conjunto, son 2.4 veces más eficientes que los propios productores generando innovaciones significativas, sobre todo en las primeras etapas de una categoría; cuando la categoría madura, esa ventaja se invierte.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5097",
+        "frase": "One major study found that consumers in aggregate are 2.4 times more efficient"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro cita un solo estudio con una cifra agregada; el resumen lo vuelve varios estudios y un máximo.; Mismo defecto que la marca 0: falta que la ventaja se invierte al madurar la categoría.; Se pierde que la ventaja de los consumidores se invierte cuando el campo madura.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Un paquete de bienvenida altamente personalizado y sorprendente que envías al nuevo cliente justo después de la compra para energizar la relación y reforzar su decisión. Combina transparencia sobre qué esperar, contenido educativo que acelera la comprensión del producto o servicio, y un elemento de deleite inesperado como un regalo o video personalizado. Su objetivo es pintar una imagen vívida de cómo será la relación futura, anclando una impresión positiva desde el inicio y estableciendo expectativas altas para todo el proceso posterior. Se diseña con identidad de marca propia, personalización real y un regalo cuyo valor está en el significado, no en el costo.",
   "pasos_accionables": [
-    "Define los elementos que refuercen la decisión de compra: garantías, casos de éxito, próximos pasos",
+    "Define los elementos que refuercen la decisión de compra: casos de éxito, próximos pasos",
     "Diseña un paquete de bienvenida con identidad de marca y personalización real, incluyendo una carta agradeciendo la compra",
     "Añade contenido educativo que explique la filosofía y los próximos pasos para que el cliente entienda cómo aprovechar el producto o servicio",
     "Incluye un regalo o recurso inesperado que aporte valor simbólico, no necesariamente costoso",
@@ -42,5 +42,24 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-121-shock_and_awe_kit_bienvenida-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define los elementos que refuercen la decisión de compra: garantías, casos de éxito, próximos pasos",
+      "texto_nuevo": "Define los elementos que refuercen la decisión de compra: casos de éxito, próximos pasos",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "3175",
+        "frase": "a folder that includes step-by-step directions for what will happen next"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El kit del libro trae informes, trayectoria, próximos pasos y qué esperar de la primera cita; no incluye garantías.; Mismo defecto: las garantías no están en la lista del libro.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

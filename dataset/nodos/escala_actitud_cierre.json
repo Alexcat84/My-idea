@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Escala de Actitud hacia el Cierre de Ventas",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Herramienta de autoevaluación que mide las creencias y actitudes de un vendedor respecto a las técnicas de cierre tradicionales (ej. 'ABC: Always Be Closing'). Permite identificar si un vendedor sobrevalora las técnicas de cierre agresivo en detrimento de comportamientos que generan más valor en ventas complejas de alto valor, como las preguntas de indagación (Situation, Problem, Implication, Need-payoff).",
+  "resumen_teorico": "Herramienta de autoevaluación que mide las creencias y actitudes de un vendedor respecto a las técnicas de cierre tradicionales (ej. 'ABC: Always Be Closing'). Permite identificar si un vendedor sobrevalora las técnicas de cierre agresivo en detrimento de comportamientos que generan más valor en ventas complejas de alto valor, como las preguntas de indagación (Situation, Problem, Implication, Need-payoff). Mide actitudes, que no predicen con precisión la conducta real.",
   "pasos_accionables": [
     "Responder el cuestionario de 15 afirmaciones sobre creencias de cierre",
     "Calcular el puntaje según las instrucciones de interpretación",
     "Identificar si existe sesgo hacia técnicas de cierre agresivo vs. enfoque consultivo",
-    "Usar el resultado para ajustar el enfoque de entrenamiento o coaching individual del vendedor"
+    "Usar el resultado para ajustar el enfoque de entrenamiento o coaching individual del vendedor, confirmándolo con la observación de sus llamadas reales, porque la actitud no predice con precisión lo que hace en ellas"
   ],
-  "entregable_esperado": "Puntaje individual de actitud hacia el cierre, con diagnóstico de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo.",
+  "entregable_esperado": "Puntaje individual de actitud hacia el cierre, con diagnóstico, según el tipo de venta, de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo; en ventas de bajo valor, con clientes poco sofisticados y sin relación posterior, un puntaje alto puede estar justificado.",
   "nodos_previos": [
     "modelo_spin_preguntas",
     "cierre_segun_complejidad_venta"
@@ -45,6 +45,55 @@
         "evidencia": "F23-021: Autoevaluacion de vendedores para ajustar su coaching y entrenamiento es gestion de un equipo comercial en operacion, no validacion con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-121-escala_actitud_cierre-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Herramienta de autoevaluación que mide las creencias y actitudes de un vendedor respecto a las técnicas de cierre tradicionales (ej. 'ABC: Always Be Closing'). Permite identificar si un vendedor sobrevalora las técnicas de cierre agresivo en detrimento de comportamientos que generan más valor en ventas complejas de alto valor, como las preguntas de indagación (Situation, Problem, Implication, Need-payoff).",
+      "texto_nuevo": "Herramienta de autoevaluación que mide las creencias y actitudes de un vendedor respecto a las técnicas de cierre tradicionales (ej. 'ABC: Always Be Closing'). Permite identificar si un vendedor sobrevalora las técnicas de cierre agresivo en detrimento de comportamientos que generan más valor en ventas complejas de alto valor, como las preguntas de indagación (Situation, Problem, Implication, Need-payoff). Mide actitudes, que no predicen con precisión la conducta real.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "450",
+        "frase": "you can’t use attitude scales to predict behavior accurately"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la actitud medida por la escala no predice con precisión la conducta en llamadas reales.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-121-escala_actitud_cierre-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Puntaje individual de actitud hacia el cierre, con diagnóstico de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo.",
+      "texto_nuevo": "Puntaje individual de actitud hacia el cierre, con diagnóstico, según el tipo de venta, de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo; en ventas de bajo valor, con clientes poco sofisticados y sin relación posterior, un puntaje alto puede estar justificado.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "3372",
+        "frase": "a very favorable attitude toward closing (a score above 50) might well be justified"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la lectura del puntaje al tipo de venta: en ventas de bajo valor un puntaje alto puede estar justificado.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-121-escala_actitud_cierre-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el resultado para ajustar el enfoque de entrenamiento o coaching individual del vendedor",
+      "texto_nuevo": "Usar el resultado para ajustar el enfoque de entrenamiento o coaching individual del vendedor, confirmándolo con la observación de sus llamadas reales, porque la actitud no predice con precisión lo que hace en ellas",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "450",
+        "frase": "The best test of how people actually perform is to watch them in action."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la actitud no predice con precisión la conducta y que la mejor prueba es observar las llamadas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

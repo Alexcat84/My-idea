@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Inventario y Aprovechamiento del Conocimiento Estadístico Interno",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Muchas empresas tienen empleados con formación estadística avanzada (maestrías, autoestudio) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
+  "resumen_teorico": "Muchas empresas tienen empleados con formación estadística avanzada (maestrías, estudios en una universidad cercana) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
   "pasos_accionables": [
     "Realizar un mapeo del personal con formación o interés en estadística, matemáticas o teoría de probabilidad",
     "Identificar oportunidades para que estas personas trabajen bajo la guía de un líder estadístico competente",
-    "Facilitar la continuación de su educación estadística mediante cursos y mentoría",
+    "Facilitar la continuación de su educación estadística mediante cursos y mentoría, siempre que quien enseña sea competente en teoría",
     "Integrar a este personal en proyectos de mejora de calidad y productividad"
   ],
   "entregable_esperado": "Inventario documentado de talento estadístico interno con plan de desarrollo y asignación a proyectos de mejora",
@@ -39,6 +39,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-005 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-119-inventario_conocimiento_estadistico_personal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas empresas tienen empleados con formación estadística avanzada (maestrías, autoestudio) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
+      "texto_nuevo": "Muchas empresas tienen empleados con formación estadística avanzada (maestrías, estudios en una universidad cercana) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10592",
+        "frase": "people here and there that are studying statistics at a nearby university"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de gente que estudia estadística en una universidad cercana y de gente con maestría; el autoestudio no aparece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-inventario_conocimiento_estadistico_personal-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Facilitar la continuación de su educación estadística mediante cursos y mentoría",
+      "texto_nuevo": "Facilitar la continuación de su educación estadística mediante cursos y mentoría, siempre que quien enseña sea competente en teoría",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10594",
+        "frase": "provided the teacher is competent in theory"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del libro: los cursos valen siempre que el profesor sea competente en teoría.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

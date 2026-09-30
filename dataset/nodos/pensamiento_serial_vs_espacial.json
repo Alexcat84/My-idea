@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Antes de analizar un problema, pregúntate qué necesitas revelar: ¿un porqué (historia) o un cómo (patrón)?",
     "Si buscas entender consecuencias futuras, usa una historia especulativa",
-    "Si buscas overlaps o nuevas posibilidades, usa metáforas",
+    "Si buscas overlaps que puedan revelar nuevas posibilidades, prueba a pensar con metáforas",
     "Si buscas ver qué sucede debajo de la superficie, usa mapeo espacial",
     "Alterna conscientemente entre modos si te sientes atascado en uno solo"
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Elige tu Forma de Pensar",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-pensamiento_serial_vs_espacial-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si buscas overlaps o nuevas posibilidades, usa metáforas",
+      "texto_nuevo": "Si buscas overlaps que puedan revelar nuevas posibilidades, prueba a pensar con metáforas",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3493",
+        "frase": "Are you looking for overlaps that might reveal new possibilities? Thinking in metaphors might work."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que pensar en metáforas podría servir ('might work') para overlaps que podrían revelar posibilidades; el paso lo vuelve una receta segura.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

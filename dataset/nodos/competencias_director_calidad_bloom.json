@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Competencias del Director de Calidad basadas en Taxonomía de Bloom",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El Director de Calidad requiere competencias de liderazgo, planificación estratégica, gestión de relaciones con clientes, gestión de la cadena de suministro, sistemas de información de calidad y desarrollo de talento. Estas competencias se evalúan según los seis niveles de la Taxonomía de Bloom revisada (recordar, comprender, aplicar, analizar, evaluar, crear), siendo el Director quien debe dominar los seis niveles, a diferencia del Ingeniero de Calidad que requiere como mínimo los tres primeros.",
+  "resumen_teorico": "El Director de Calidad requiere todas las competencias del Ingeniero de Calidad y, además, competencias de liderazgo, planificación estratégica, gestión de relaciones con clientes, gestión de la cadena de suministro, sistemas de información de calidad y desarrollo de talento. Estas competencias se evalúan según los seis niveles de la Taxonomía de Bloom revisada (recordar, comprender, aplicar, analizar, evaluar, crear), siendo el Director quien debe dominar los seis niveles, a diferencia del Ingeniero de Calidad que requiere como mínimo los tres primeros.",
   "pasos_accionables": [
     "Elaborar una matriz de competencias para el rol de Director de Calidad",
     "Clasificar cada competencia según los niveles de Bloom aplicables",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Desarrolla al Director de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-competencias_director_calidad_bloom-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Director de Calidad requiere competencias de liderazgo, planificación estratégica, gestión de relaciones con clientes, gestión de la cadena de suministro, sistemas de información de calidad y desarrollo de talento. Estas competencias se evalúan según los seis niveles de la Taxonomía de Bloom revisada (recordar, comprender, aplicar, analizar, evaluar, crear), siendo el Director quien debe dominar los seis niveles, a diferencia del Ingeniero de Calidad que requiere como mínimo los tres primeros.",
+      "texto_nuevo": "El Director de Calidad requiere todas las competencias del Ingeniero de Calidad y, además, competencias de liderazgo, planificación estratégica, gestión de relaciones con clientes, gestión de la cadena de suministro, sistemas de información de calidad y desarrollo de talento. Estas competencias se evalúan según los seis niveles de la Taxonomía de Bloom revisada (recordar, comprender, aplicar, analizar, evaluar, crear), siendo el Director quien debe dominar los seis niveles, a diferencia del Ingeniero de Calidad que requiere como mínimo los tres primeros.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2886",
+        "frase": "All of the competencies of a Quality Engineer, including the following:"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el Director tiene todas las competencias del Ingeniero de Calidad además de las seis propias.; Mismo matiz: sin las competencias del Ingeniero la matriz del puesto queda incompleta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

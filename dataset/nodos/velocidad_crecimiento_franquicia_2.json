@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Encuentra tu velocidad correcta para crecer",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Al principio tienes que crecer despacio para no repetir a lo grande los mismos errores operativos. Piénsalo como 'rápido o cuidadoso': creces rápido si eres el primero en un mercado nuevo, o vas con cuidado y meticulosidad si ya hay competidores establecidos peleando el mismo terreno. Además, conviene que limites tu expansión inicial a un radio de 3 horas de donde estás tú, para poder dar soporte, hacer marketing local y cuidar tu reputación sin dispersarte.",
+  "resumen_teorico": "Al principio tienes que crecer despacio para no repetir a lo grande los mismos errores operativos. Piénsalo como 'rápido o cuidadoso': si eres el primero en un mercado nuevo, puede que necesites crecer rápido; si ya hay competidores establecidos peleando el mismo terreno, vas con cuidado y meticulosidad. Además, conviene que limites tu expansión inicial a un radio de 3 horas de donde estás tú, para poder dar soporte, hacer marketing local y cuidar tu reputación sin dispersarte.",
   "pasos_accionables": [
     "Mira qué tan competido y maduro está tu mercado: ¿eres el primero o ya hay otros haciendo esto?",
     "Decide si conviene moverte rápido o ir con cuidado, según esa competencia",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Elige tu Ritmo de Crecimiento",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-120-velocidad_crecimiento_franquicia_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al principio tienes que crecer despacio para no repetir a lo grande los mismos errores operativos. Piénsalo como 'rápido o cuidadoso': creces rápido si eres el primero en un mercado nuevo, o vas con cuidado y meticulosidad si ya hay competidores establecidos peleando el mismo terreno. Además, conviene que limites tu expansión inicial a un radio de 3 horas de donde estás tú, para poder dar soporte, hacer marketing local y cuidar tu reputación sin dispersarte.",
+      "texto_nuevo": "Al principio tienes que crecer despacio para no repetir a lo grande los mismos errores operativos. Piénsalo como 'rápido o cuidadoso': si eres el primero en un mercado nuevo, puede que necesites crecer rápido; si ya hay competidores establecidos peleando el mismo terreno, vas con cuidado y meticulosidad. Además, conviene que limites tu expansión inicial a un radio de 3 horas de donde estás tú, para poder dar soporte, hacer marketing local y cuidar tu reputación sin dispersarte.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1512",
+        "frase": "the first one to a brand-new market, you may need to be quick"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el primero en un mercado nuevo puede necesitar ir rápido; el nodo lo endurece a regla.; Mismo defecto: el 'may need to be quick' del libro pasa a afirmación tajante.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

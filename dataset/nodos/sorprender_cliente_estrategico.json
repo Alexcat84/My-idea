@@ -6,11 +6,11 @@
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Este es el cuarto y último paso del proceso IOPS. En vez de mandar regalos genéricos y de último momento (tarjetas de regalo, canastas de frutas), practica una apreciación pensada con anticipación: regalos personalizados, sin el logo de tu negocio, dirigidos no solo a tu cliente sino también a su familia o a su equipo. La idea es que generes una conexión emocional duradera que te traiga lealtad y recomendaciones espontáneas.",
   "pasos_accionables": [
-    "Planifica los regalos con anticipación, no los dejes para el último momento",
+    "Planifica los regalos con anticipación, no los dejes para el último momento, y entrégalos cuando nadie los espera, lejos de las fechas festivas",
     "Personaliza el regalo según los intereses reales de tu cliente, nada genérico",
     "No incluyas tu logo ni mensajes de tu marca en el regalo",
     "Piensa también en sorprender a la familia, al asistente o al equipo de tu cliente",
-    "Prioriza la calidad y el significado del regalo por sobre su costo"
+    "Prioriza la calidad y el significado del regalo por sobre su costo, y acompáñalo de una nota escrita a mano; si no vas a escribirla, mejor no lo des"
   ],
   "entregable_esperado": "Un calendario o plan de regalos y sorpresas personalizadas para tus clientes clave, incluyendo destinatarios secundarios como familia o equipo",
   "nodos_previos": [
@@ -26,5 +26,41 @@
   "etiqueta_arbol": "Sorprende con Gestos Estratégicos",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-121-sorprender_cliente_estrategico-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prioriza la calidad y el significado del regalo por sobre su costo",
+      "texto_nuevo": "Prioriza la calidad y el significado del regalo por sobre su costo, y acompáñalo de una nota escrita a mano; si no vas a escribirla, mejor no lo des",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5969-5972",
+        "frase": "If you’re not willing to do that, please don’t even bother with the gift."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la nota escrita a mano como condición del regalo: si no vas a escribirla, mejor no regalar.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-121-sorprender_cliente_estrategico-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planifica los regalos con anticipación, no los dejes para el último momento",
+      "texto_nuevo": "Planifica los regalos con anticipación, no los dejes para el último momento, y entrégalos cuando nadie los espera, lejos de las fechas festivas",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5942-5944",
+        "frase": "Instead, give gifts when no one expects it."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el consejo del calendario: el libro dice evitar las fechas festivas y regalar cuando nadie lo espera.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

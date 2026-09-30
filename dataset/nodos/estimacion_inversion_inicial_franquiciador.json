@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Cuánto Necesitas Invertir para Convertirte en Franquiciador",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Franquiciar no tiene costo cero. Tienes que anticipar una inversión de tiempo y capital en el plan de negocio, los documentos legales, el manual de operaciones, los materiales de marketing, la entidad legal, el entrenamiento del personal y los gastos de vender tus franquicias. Aunque en general sale más barato que abrir otra unidad propia, nunca emprendas este camino sin el capital necesario.",
+  "resumen_teorico": "Franquiciar no tiene costo cero. Tienes que anticipar una inversión de tiempo y capital en el plan de negocio, los documentos legales, el manual de operaciones, los materiales de marketing, la entidad legal, el entrenamiento del personal y los gastos de vender tus franquicias. Aunque en muchos negocios sale más barato que abrir otra unidad propia, nunca emprendas este camino sin el capital necesario.",
   "pasos_accionables": [
     "Lista todas las áreas donde vas a necesitar invertir: legal, marketing, manual, entidad, entrenamiento",
     "Cotiza el costo de armar los documentos legales de tu franquicia (por ejemplo el contrato y el documento de divulgación conocido como FDD)",
@@ -44,5 +44,23 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-120-estimacion_inversion_inicial_franquiciador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Franquiciar no tiene costo cero. Tienes que anticipar una inversión de tiempo y capital en el plan de negocio, los documentos legales, el manual de operaciones, los materiales de marketing, la entidad legal, el entrenamiento del personal y los gastos de vender tus franquicias. Aunque en general sale más barato que abrir otra unidad propia, nunca emprendas este camino sin el capital necesario.",
+      "texto_nuevo": "Franquiciar no tiene costo cero. Tienes que anticipar una inversión de tiempo y capital en el plan de negocio, los documentos legales, el manual de operaciones, los materiales de marketing, la entidad legal, el entrenamiento del personal y los gastos de vender tus franquicias. Aunque en muchos negocios sale más barato que abrir otra unidad propia, nunca emprendas este camino sin el capital necesario.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5605",
+        "frase": "For many businesses, the costs of establishing a franchise program are less than"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que ocurre en muchos negocios; 'en general' lo endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

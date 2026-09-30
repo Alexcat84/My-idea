@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Clasificación de Tipos de Benchmarking",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El benchmarking puede clasificarse según qué se está comparando (funcional, de proceso, de unidad de negocio/sitio, de proyecto, genérico, modelos de excelencia empresarial) y según quién participa (interno, externo, competitivo, no competitivo). Cada tipo tiene beneficios y limitaciones distintas relacionadas con la similitud de los participantes, el nivel de control sobre el proceso y el costo/tiempo requerido.",
+  "resumen_teorico": "El benchmarking puede clasificarse según qué se compara (funcional, de proceso, de unidad de negocio/sitio, de proyecto, genérico, modelos de excelencia empresarial), quién participa (interno, externo, competitivo, no competitivo) y cómo se hace (fuentes de datos). Cada tipo tiene pros y contras según la similitud de los participantes, el control sobre el proceso, el costo/tiempo requerido, la apertura y confidencialidad posibles y el potencial de aprendizaje.",
   "pasos_accionables": [
     "Determinar el objeto del benchmarking: función, proceso, unidad de negocio, proyecto o modelo genérico",
     "Decidir el tipo de participantes: internos, externos, competidores o no competidores",
     "Seleccionar el modelo de excelencia (ej. Baldridge o EFQM) si se busca un marco holístico de comparación",
-    "Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido"
+    "Evaluar el nivel de control, costo y tiempo disponible, la apertura y confidencialidad posibles y el potencial de aprendizaje para el tipo de benchmarking elegido"
   ],
   "entregable_esperado": "Definición documentada del tipo de benchmarking a realizar (qué, quién y cómo) que oriente el diseño del estudio",
   "nodos_previos": [
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Clasifica tus Comparaciones de Referencia",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-clasificacion_benchmarking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El benchmarking puede clasificarse según qué se está comparando (funcional, de proceso, de unidad de negocio/sitio, de proyecto, genérico, modelos de excelencia empresarial) y según quién participa (interno, externo, competitivo, no competitivo). Cada tipo tiene beneficios y limitaciones distintas relacionadas con la similitud de los participantes, el nivel de control sobre el proceso y el costo/tiempo requerido.",
+      "texto_nuevo": "El benchmarking puede clasificarse según qué se compara (funcional, de proceso, de unidad de negocio/sitio, de proyecto, genérico, modelos de excelencia empresarial), quién participa (interno, externo, competitivo, no competitivo) y cómo se hace (fuentes de datos). Cada tipo tiene pros y contras según la similitud de los participantes, el control sobre el proceso, el costo/tiempo requerido, la apertura y confidencialidad posibles y el potencial de aprendizaje.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17065-17075",
+        "frase": "the degree of openness that is possible and the level of confidentiality necessary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro clasifica también por cómo se hace (fuentes de datos e información); el resumen omite esa dimensión.; La lista del libro tiene cinco factores; faltan la apertura y confidencialidad y el potencial de aprendizaje.; Mismo matiz: faltan dos de los cinco factores para elegir el enfoque.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-123-clasificacion_benchmarking-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido",
+      "texto_nuevo": "Evaluar el nivel de control, costo y tiempo disponible, la apertura y confidencialidad posibles y el potencial de aprendizaje para el tipo de benchmarking elegido",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17073-17075",
+        "frase": "the potential for learning and therefore performance improvement."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz que la marca 0.; Omite dos factores que el libro pide considerar: apertura y confidencialidad, y potencial de aprendizaje.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

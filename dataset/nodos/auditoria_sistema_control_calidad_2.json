@@ -9,7 +9,7 @@
     "Establece un calendario de revisiones periódicas e independientes de tu sistema de control de calidad",
     "Define las preguntas clave de cada revisión: si el sistema sigue siendo adecuado y si se está siguiendo correctamente",
     "Verifica el grado real de cumplimiento del sistema en las operaciones diarias",
-    "Clarifica qué acciones tomar cuando los puntos salen de los límites de control",
+    "Clarifica quién es responsable de la acción correctiva cuando los puntos salen de los límites de control",
     "Establece guías de acción para cuando el producto está fuera de límites estadísticos pero dentro de tolerancia",
     "Actualiza el manual de calidad y los procedimientos según los hallazgos de la revisión"
   ],
@@ -42,5 +42,24 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-118-auditoria_sistema_control_calidad_2-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clarifica qué acciones tomar cuando los puntos salen de los límites de control",
+      "texto_nuevo": "Clarifica quién es responsable de la acción correctiva cuando los puntos salen de los límites de control",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8446",
+        "frase": "clarify the responsibility for corrective action on points outside the control limits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide aclarar quién es responsable de la acción correctiva cuando los puntos salen de los límites; el paso pierde la asignación de responsabilidad.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

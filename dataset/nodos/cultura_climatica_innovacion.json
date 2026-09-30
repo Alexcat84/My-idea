@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "El ambiente, la forma de trabajar y el ejemplo que das para innovar",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El ambiente en el que trabajas es clave para que la innovación funcione. Cuando el clima es positivo, cuando te animas a invertir en algo que puede no salir, y cuando reconoces a quien innova, las cosas cambian. Tienes que apoyar el esfuerzo de innovar con hechos, no solo con palabras, y construir una forma de trabajar donde las ideas de cualquiera sean bienvenidas, en lugar de castigar el fracaso o mirar solo el resultado inmediato.",
+  "resumen_teorico": "El ambiente en el que trabajas es clave para que la innovación funcione. Cuando el clima es positivo, cuando te animas a invertir en algo que puede no salir, y cuando reconoces a quien innova, las cosas cambian. Tienes que apoyar el esfuerzo de innovar con hechos, no solo con palabras, y construir una forma de trabajar donde las ideas de cualquiera sean bienvenidas, en lugar de castigar el fracaso.",
   "pasos_accionables": [
-    "Revisa si de verdad le dedicas tiempo a apoyar los proyectos de innovación, no solo dinero.",
+    "Revisa si de verdad apoyas los proyectos de innovación con hechos, no solo con palabras.",
     "Reconoce a quien se anima a probar algo nuevo, gane o pierda con esa apuesta.",
     "Abre espacios para que las ideas puedan venir de cualquiera, no solo de ti."
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Reconoce el Riesgo Asumido",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-cultura_climatica_innovacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si de verdad le dedicas tiempo a apoyar los proyectos de innovación, no solo dinero.",
+      "texto_nuevo": "Revisa si de verdad apoyas los proyectos de innovación con hechos, no solo con palabras.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "497",
+        "frase": "drive and support the innovation effort with words as well as through actions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La distinción entre tiempo y dinero no está en el libro, que pide apoyar la innovación con hechos además de con palabras.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-122-cultura_climatica_innovacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El ambiente en el que trabajas es clave para que la innovación funcione. Cuando el clima es positivo, cuando te animas a invertir en algo que puede no salir, y cuando reconoces a quien innova, las cosas cambian. Tienes que apoyar el esfuerzo de innovar con hechos, no solo con palabras, y construir una forma de trabajar donde las ideas de cualquiera sean bienvenidas, en lugar de castigar el fracaso o mirar solo el resultado inmediato.",
+      "texto_nuevo": "El ambiente en el que trabajas es clave para que la innovación funcione. Cuando el clima es positivo, cuando te animas a invertir en algo que puede no salir, y cuando reconoces a quien innova, las cosas cambian. Tienes que apoyar el esfuerzo de innovar con hechos, no solo con palabras, y construir una forma de trabajar donde las ideas de cualquiera sean bienvenidas, en lugar de castigar el fracaso.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "495-497",
+        "frase": "Those businesses that create a positive climate for innovation, support innovation at every opportunity"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Mirar solo el resultado inmediato como freno de la innovación no aparece en el pasaje.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

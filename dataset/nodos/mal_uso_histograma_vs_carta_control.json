@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Mal Uso de Histogramas de Distribución en Lugar de Cartas de Control",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Presentar a un operador un histograma de distribución de resultados (por ejemplo, pesos de lingotes) no distingue entre causas atribuibles al sistema y causas que el operador podría corregir, por lo que no ayuda a mejorar y solo genera frustración. Los operadores que ajustan el proceso basándose en esta información sin una carta de control adecuada terminan aumentando la variabilidad en lugar de reducirla (siguiendo reglas de sobre-ajuste).",
+  "resumen_teorico": "Presentar a un operador un histograma de distribución de resultados (por ejemplo, pesos de lingotes) no distingue entre causas atribuibles al sistema y causas que el operador podría corregir, por lo que no ayuda a mejorar y solo genera frustración. Los operadores que ajustan el proceso arriba o abajo después de cada pieza, sin una carta de control adecuada, terminan aumentando la variabilidad en lugar de reducirla (siguiendo reglas de sobre-ajuste).",
   "pasos_accionables": [
     "Sustituir histogramas de desempeño diario por cartas de control apropiadas",
     "Asegurar que la herramienta usada distinga entre variación del sistema y variación atribuible al operador",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "No Confundas Distribución con Control",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-119-mal_uso_histograma_vs_carta_control-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentar a un operador un histograma de distribución de resultados (por ejemplo, pesos de lingotes) no distingue entre causas atribuibles al sistema y causas que el operador podría corregir, por lo que no ayuda a mejorar y solo genera frustración. Los operadores que ajustan el proceso basándose en esta información sin una carta de control adecuada terminan aumentando la variabilidad en lugar de reducirla (siguiendo reglas de sobre-ajuste).",
+      "texto_nuevo": "Presentar a un operador un histograma de distribución de resultados (por ejemplo, pesos de lingotes) no distingue entre causas atribuibles al sistema y causas que el operador podría corregir, por lo que no ayuda a mejorar y solo genera frustración. Los operadores que ajustan el proceso arriba o abajo después de cada pieza, sin una carta de control adecuada, terminan aumentando la variabilidad en lugar de reducirla (siguiendo reglas de sobre-ajuste).",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8197, 8213-8222",
+        "frase": "by adjusting the machine up or down at every bar, was working against himself"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el operador no ajustaba a partir del histograma, sino arriba o abajo después de cada lingote; el nodo atribuye el sobreajuste al histograma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

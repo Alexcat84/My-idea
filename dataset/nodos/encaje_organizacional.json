@@ -7,7 +7,7 @@
   "resumen_teorico": "El ajuste subjetivo del candidato con los valores y cultura de la organización puede ser incluso más importante que la solvencia financiera o ética de trabajo. Se recomiendan herramientas de perfilamiento especializadas (no tests estándar genéricos) y el juicio personal del franquiciante, tratando la relación como se trataría de conocer a un socio de vida.",
   "pasos_accionables": [
     "Usar herramientas de perfilamiento diseñadas específicamente para franquicias (ej. Nathan Profiler)",
-    "Identificar rasgos de los mejores franquiciados/gerentes actuales como benchmark",
+    "Identificar rasgos de los mejores franquiciados/gerentes actuales como benchmark; si tienes pocos operadores, apoyarte en la experiencia de quien diseñó la herramienta de perfilamiento",
     "Reunirse uno a uno con cada candidato para evaluar compatibilidad personal",
     "Involucrar a múltiples miembros del equipo directivo en la evaluación final",
     "Confiar en el instinto si hay 'mala sensación' aunque el candidato luzca bien en papel",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Evalúa el Encaje Cultural",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-120-encaje_organizacional-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar rasgos de los mejores franquiciados/gerentes actuales como benchmark",
+      "texto_nuevo": "Identificar rasgos de los mejores franquiciados/gerentes actuales como benchmark; si tienes pocos operadores, apoyarte en la experiencia de quien diseñó la herramienta de perfilamiento",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4339",
+        "frase": "Franchisors with fewer operators may simply rely on the experience of the assessment designers."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el benchmark a tener operadores de alto desempeño; con pocos operadores se apoya en quien diseñó la evaluación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

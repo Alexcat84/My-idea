@@ -4,12 +4,12 @@
   "dominio": "environmental",
   "titulo_concepto": "Selección de Productos y Servicios Ecológicos",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Elegir proveedores y productos con contenido reciclado, eficiencia energética, ausencia de tóxicos y empaques mínimos reduce el impacto ambiental corporativo mientras genera ahorros operativos y una imagen de marca responsable.",
+  "resumen_teorico": "Elegir proveedores y productos con contenido reciclado, eficiencia energética y de agua, ausencia de tóxicos y empaques mínimos reduce el impacto ambiental corporativo mientras genera ahorros operativos.",
   "pasos_accionables": [
     "Evaluar proveedores con criterios de sostenibilidad (reciclado, eficiencia, no tóxico)",
     "Priorizar productos con empaque mínimo",
     "Sustituir dispositivos por versiones energéticamente eficientes",
-    "Explorar servicios innovadores de renta o reciclaje (ej. RentaGreenBox, EcoNation)"
+    "Explorar servicios innovadores como la renta de cajas temporales o el transporte en vehículos híbridos (ej. RentaGreenBox, EcoNation)"
   ],
   "entregable_esperado": "Lista de criterios de compra verde y proveedores evaluados",
   "nodos_previos": [
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Elige Productos y Servicios Verdes",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-seleccion_productos_servicios_verdes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir proveedores y productos con contenido reciclado, eficiencia energética, ausencia de tóxicos y empaques mínimos reduce el impacto ambiental corporativo mientras genera ahorros operativos y una imagen de marca responsable.",
+      "texto_nuevo": "Elegir proveedores y productos con contenido reciclado, eficiencia energética y de agua, ausencia de tóxicos y empaques mínimos reduce el impacto ambiental corporativo mientras genera ahorros operativos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2475",
+        "frase": "Water-efficient faucets, showerheads, and low-flow toilets reduce pressure on local watersheds and lower water bills"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El pasaje no atribuye a la compra de productos verdes una imagen de marca responsable.; La enumeración omite los equipos eficientes en agua, que el libro incluye y que bajan la factura de agua.; Mismo defecto que la marca 0: efecto de imagen de marca que el pasaje no afirma.; Mismo defecto que la marca 1: falta la eficiencia en agua.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-122-seleccion_productos_servicios_verdes-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explorar servicios innovadores de renta o reciclaje (ej. RentaGreenBox, EcoNation)",
+      "texto_nuevo": "Explorar servicios innovadores como la renta de cajas temporales o el transporte en vehículos híbridos (ej. RentaGreenBox, EcoNation)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2477-2479",
+        "frase": "chauffeurs its customers to the airport or their other appointments in hybrid vehicles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): EcoNation es un servicio de transporte en vehículos híbridos, no de renta ni de reciclaje.; Mismo defecto: atribuye a EcoNation un tipo de servicio que no es.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

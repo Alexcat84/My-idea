@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Revisión independiente de tu producto terminado (auditoría de producto)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
+  "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
   "pasos_accionables": [
     "Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita",
     "Elige en qué momento revisas: fábrica, distribuidor, servicio o ya en campo, según qué tan complejo sea tu producto",
-    "Decide cuántas unidades vas a revisar, usando un método estadístico o una regla práctica como revisar un porcentaje pequeño de lo que produces por turno",
-    "Diseña qué vas a mirar en cada revisión: si será al azar o enfocada en un problema que ya conoces",
+    "Decide cuántas unidades vas a revisar: si produces en masa, con un método estadístico; si fabricas unidades grandes o en poca cantidad, con una regla práctica como revisar un porcentaje pequeño de lo que produces por turno",
+    "Diseña qué vas a mirar en cada revisión, previendo tanto revisiones al azar como revisiones enfocadas en un problema que ya conoces",
     "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estás midiendo lo que de verdad importa",
-    "Clasifica cada falla según su gravedad, de crítica a incidental, y calcula un índice de fallas por unidad",
+    "Clasifica cada falla según su gravedad, de crítica a incidental, dale a cada clase un peso y calcula los deméritos por unidad",
     "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo está empeorando"
   ],
   "entregable_esperado": "Tu informe de revisión con un índice de fallas por unidad, la gravedad de cada falla y la comparación con lo que pasa en campo o en el mercado",
@@ -172,6 +172,73 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-118-auditoria_de_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
+      "texto_nuevo": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificación del 98%) mientras en la calle el producto sigue fallando.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10364",
+        "frase": "Provision should be made for two types of audit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el plan prevea los dos tipos, al azar y enfocada; el resumen los presenta como alternativas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-auditoria_de_producto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña qué vas a mirar en cada revisión: si será al azar o enfocada en un problema que ya conoces",
+      "texto_nuevo": "Diseña qué vas a mirar en cada revisión, previendo tanto revisiones al azar como revisiones enfocadas en un problema que ya conoces",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10364",
+        "frase": "Provision should be made for two types of audit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide prever ambos tipos de revisión, no elegir uno.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-auditoria_de_producto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide cuántas unidades vas a revisar, usando un método estadístico o una regla práctica como revisar un porcentaje pequeño de lo que produces por turno",
+      "texto_nuevo": "Decide cuántas unidades vas a revisar: si produces en masa, con un método estadístico; si fabricas unidades grandes o en poca cantidad, con una regla práctica como revisar un porcentaje pequeño de lo que produces por turno",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10373",
+        "frase": "For products manufactured by mass production, sample sizes for product audit can often be determined"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro liga cada opción a un caso: método estadístico en producción en masa, regla práctica con unidades grandes o pocas cantidades.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-auditoria_de_producto-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasifica cada falla según su gravedad, de crítica a incidental, y calcula un índice de fallas por unidad",
+      "texto_nuevo": "Clasifica cada falla según su gravedad, de crítica a incidental, dale a cada clase un peso y calcula los deméritos por unidad",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10384",
+        "frase": "each with some “weight” in the form of demerits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro cada clase de gravedad lleva un peso en deméritos y la medida es deméritos por unidad; el paso pierde la ponderación.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

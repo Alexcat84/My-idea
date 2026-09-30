@@ -9,7 +9,7 @@
     "Comunicar a proveedores el uso final específico del material o componente, no solo las especificaciones técnicas",
     "Evaluar la compatibilidad e integración de componentes en el sistema completo, no solo su cumplimiento individual",
     "Diseñar y probar subsistemas de manera conjunta, no de forma aislada",
-    "Solicitar retroalimentación de diseño e ingeniería antes de fijar especificaciones finales"
+    "Sugerencia de My Idea: solicitar retroalimentación de diseño e ingeniería antes de fijar especificaciones finales"
   ],
   "entregable_esperado": "Documentación de especificaciones que incluya el contexto de uso final y pruebas de integración con otros componentes del sistema",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Conoce el Uso Final",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-119-insuficiencia_especificaciones-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar retroalimentación de diseño e ingeniería antes de fijar especificaciones finales",
+      "texto_nuevo": "Sugerencia de My Idea: solicitar retroalimentación de diseño e ingeniería antes de fijar especificaciones finales",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2999",
+        "frase": "The supplier must know what the material is to be used for."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no trae este paso; es un consejo práctico sin afirmación de hecho, así que queda como sugerencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

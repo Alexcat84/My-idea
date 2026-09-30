@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "El Embudo de Atrición de Nuevos Productos (Odds 7 a 1)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los datos históricos muestran que de cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Esto significa que aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+  "resumen_teorico": "Los datos históricos muestran que de cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, se estima que aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
   "pasos_accionables": [
     "Mapear cuántas ideas de producto entran al pipeline anualmente.",
     "Medir cuántas de esas ideas pasan a fase de desarrollo, luego a lanzamiento, y finalmente logran éxito comercial.",
     "Calcular la tasa de atrición en cada etapa (idea->desarrollo->lanzamiento->éxito).",
-    "Comparar la tasa propia contra el benchmark de la industria (60% de éxito en lanzamiento es el promedio)."
+    "Comparar la tasa propia contra el benchmark de la industria (60% de éxito en lanzamiento es el promedio), sin tomar la curva de atrición promedio como meta: la ideal corta más en las primeras etapas y muy poco al final."
   ],
   "entregable_esperado": "Un diagrama de embudo (funnel) con las tasas de conversión de la empresa en cada etapa del proceso de innovación.",
   "nodos_previos": [
@@ -42,6 +42,39 @@
         "evidencia": "F08-027: Mide las tasas de atricion reales del pipeline de innovacion de la empresa frente al benchmark, que es controlar un proceso existente. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-119-embudo_atricion_nuevos_productos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los datos históricos muestran que de cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Esto significa que aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+      "texto_nuevo": "Los datos históricos muestran que de cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, se estima que aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1050-1052",
+        "frase": "An estimated 46 percent of what industry spends on new-product development goes to initiatives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el 46% como estimación independiente del gasto, no como consecuencia de la curva 7 a 1.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-embudo_atricion_nuevos_productos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar la tasa propia contra el benchmark de la industria (60% de éxito en lanzamiento es el promedio).",
+      "texto_nuevo": "Comparar la tasa propia contra el benchmark de la industria (60% de éxito en lanzamiento es el promedio), sin tomar la curva de atrición promedio como meta: la ideal corta más en las primeras etapas y muy poco al final.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6731-6741",
+        "frase": "The average attrition curve in Figure 1.4 is not a good benchmark."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la curva de atrición promedio no es un buen benchmark: la ideal corta más al principio y casi nada al final.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Criterios de Éxito para Evaluar tu Proyecto por Etapas (Gates)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Como alternativa a evaluar solo con números financieros, puedes definir criterios de éxito claros para cada etapa (gate) de tu proyecto, por ejemplo ventas del primer año, margen de utilidad o fecha de lanzamiento. Este método, que usan compañías como P&G, te sirve para revisar tu avance en cada etapa sucesiva y también en la revisión posterior al lanzamiento, ayudándote a mantenerte responsable de los resultados que prometiste.",
+  "resumen_teorico": "Como alternativa a evaluar solo con números financieros, puedes definir criterios de éxito claros para cada etapa (gate) de tu proyecto, por ejemplo ventas del primer año, margen de utilidad o fecha de lanzamiento. Este método, que usan compañías como P&G, te sirve para decidir en cada etapa sucesiva si el proyecto sigue o se cancela, y en la revisión posterior al lanzamiento te hace responsable de lo que prometiste. Tiene riesgos: úsalo solo si ya evalúas por etapas y estimas con realismo.",
   "pasos_accionables": [
     "Define criterios de éxito específicos y medibles para cada etapa de tu proyecto",
     "Acuerda esos criterios con tu equipo antes de avanzar a la siguiente etapa",
-    "Usa esos criterios para evaluar tu progreso en cada etapa sucesiva",
+    "Usa esos criterios para evaluar tu proyecto en cada etapa sucesiva: si sus estimaciones no cumplen alguno de los criterios acordados, el proyecto puede cancelarse",
     "Compara los resultados reales contra tus criterios en la revisión posterior al lanzamiento"
   ],
   "entregable_esperado": "Un documento con los criterios de éxito de cada etapa, sus métricas objetivo y el seguimiento de resultados en el tiempo",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Define el Éxito de Cada Etapa",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-criterios_de_exito_gate-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa esos criterios para evaluar tu progreso en cada etapa sucesiva",
+      "texto_nuevo": "Usa esos criterios para evaluar tu proyecto en cada etapa sucesiva: si sus estimaciones no cumplen alguno de los criterios acordados, el proyecto puede cancelarse",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6864",
+        "frase": "fail on any agreed-to criterion at successive gates, the project could be killed"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que los criterios deciden Go/Kill: si las estimaciones no cumplen un criterio acordado en etapas sucesivas, el proyecto puede cancelarse.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-122-criterios_de_exito_gate-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Como alternativa a evaluar solo con números financieros, puedes definir criterios de éxito claros para cada etapa (gate) de tu proyecto, por ejemplo ventas del primer año, margen de utilidad o fecha de lanzamiento. Este método, que usan compañías como P&G, te sirve para revisar tu avance en cada etapa sucesiva y también en la revisión posterior al lanzamiento, ayudándote a mantenerte responsable de los resultados que prometiste.",
+      "texto_nuevo": "Como alternativa a evaluar solo con números financieros, puedes definir criterios de éxito claros para cada etapa (gate) de tu proyecto, por ejemplo ventas del primer año, margen de utilidad o fecha de lanzamiento. Este método, que usan compañías como P&G, te sirve para decidir en cada etapa sucesiva si el proyecto sigue o se cancela, y en la revisión posterior al lanzamiento te hace responsable de lo que prometiste. Tiene riesgos: úsalo solo si ya evalúas por etapas y estimas con realismo.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6202-6204",
+        "frase": "its use should be reserved for businesses with considerable experience with gating systems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la advertencia del libro: el método tiene riesgos y conviene reservarlo para quien ya tiene experiencia con la evaluación por etapas y estimaciones realistas.; Se pierde que los criterios sirven para decidir Go/Kill: si el proyecto no cumple un criterio acordado en etapas sucesivas, puede cancelarse.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

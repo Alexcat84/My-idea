@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Transparencia y Simplificación en la Facturación",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "La confusión en la facturación es una fuente importante de desconfianza y llamadas de soporte. Comcast simplificó su estructura de precios, unificó tarifas confusas (como los cargos de instalación) y creó videos personalizados ('Explain My Bill') que explican cada factura al cliente por su nombre. Esta transparencia proactiva reduce drásticamente las llamadas de soporte y mejora la confianza del cliente.",
+  "resumen_teorico": "La confusión en la facturación es una fuente importante de desconfianza y llamadas de soporte. Comcast simplificó su estructura de precios, unificó tarifas confusas (como los cargos de instalación) y creó videos personalizados ('Explain My Bill') que, llamando al cliente por su nombre, explican su primera factura y cada cambio importante en su cuenta. Esta transparencia proactiva redujo las llamadas en un 10 % y mejora la confianza del cliente.",
   "pasos_accionables": [
     "Auditar la estructura de precios y cargos para identificar confusiones frecuentes",
     "Simplificar y consolidar tarifas y líneas de facturación",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Simplifica y Aclara tu Facturación",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-121-transparencia_facturacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La confusión en la facturación es una fuente importante de desconfianza y llamadas de soporte. Comcast simplificó su estructura de precios, unificó tarifas confusas (como los cargos de instalación) y creó videos personalizados ('Explain My Bill') que explican cada factura al cliente por su nombre. Esta transparencia proactiva reduce drásticamente las llamadas de soporte y mejora la confianza del cliente.",
+      "texto_nuevo": "La confusión en la facturación es una fuente importante de desconfianza y llamadas de soporte. Comcast simplificó su estructura de precios, unificó tarifas confusas (como los cargos de instalación) y creó videos personalizados ('Explain My Bill') que, llamando al cliente por su nombre, explican su primera factura y cada cambio importante en su cuenta. Esta transparencia proactiva redujo las llamadas en un 10 % y mejora la confianza del cliente.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "6327",
+        "frase": "drove a 10 percent reduction in calls"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro cuantifica una reducción del 10 % de las llamadas; drásticamente endurece la magnitud.; El video explica la primera factura y se reenvía con cada cambio significativo de la cuenta, no con cada factura.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

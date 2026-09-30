@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Calidad de Ejecución como Proceso de Innovación",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "La innovación de productos debe gestionarse como un proceso, aplicando principios de gestión de calidad total (TQM) para eliminar errores de ejecución. Muchas fallas de nuevos productos no se deben a falta de ideas, sino a omisiones de pasos clave y ejecución deficiente. El objetivo es lograr completitud (ningún paso omitido), calidad (hacerlo bien a la primera, DIRTFT) y foco en las actividades críticas, especialmente las de front-end y las orientadas al mercado. Además de mapear y controlar el proceso, conviene revisar después de cada proyecto qué causó los fallos de ejecución, para cerrar la brecha entre lo planificado y lo realmente hecho, y dirigir los recursos hacia las etapas más débiles y pivotales del recorrido idea-lanzamiento.",
+  "resumen_teorico": "La innovación de productos debe gestionarse como un proceso, aplicando principios de gestión de calidad total (TQM) para eliminar errores de ejecución. Muchas fallas de nuevos productos están muy ligadas a omisiones de pasos clave y a una ejecución deficiente. El objetivo es lograr completitud (ningún paso omitido), calidad (hacerlo bien a la primera, DIRTFT) y foco en las actividades críticas, especialmente las de front-end y las orientadas al mercado. Además de mapear y controlar el proceso, conviene revisar después de cada proyecto qué causó los fallos de ejecución, para cerrar la brecha entre lo planificado y lo realmente hecho, y dirigir los recursos hacia las etapas más débiles y pivotales del recorrido idea-lanzamiento.",
   "pasos_accionables": [
     "Mapea el proceso completo de idea a lanzamiento identificando todas las actividades necesarias",
     "Verifica que no falten actividades críticas como VoC, homework o planificación de lanzamiento",
@@ -48,5 +48,23 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-calidad_de_ejecucion_proceso_innovacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La innovación de productos debe gestionarse como un proceso, aplicando principios de gestión de calidad total (TQM) para eliminar errores de ejecución. Muchas fallas de nuevos productos no se deben a falta de ideas, sino a omisiones de pasos clave y ejecución deficiente. El objetivo es lograr completitud (ningún paso omitido), calidad (hacerlo bien a la primera, DIRTFT) y foco en las actividades críticas, especialmente las de front-end y las orientadas al mercado. Además de mapear y controlar el proceso, conviene revisar después de cada proyecto qué causó los fallos de ejecución, para cerrar la brecha entre lo planificado y lo realmente hecho, y dirigir los recursos hacia las etapas más débiles y pivotales del recorrido idea-lanzamiento.",
+      "texto_nuevo": "La innovación de productos debe gestionarse como un proceso, aplicando principios de gestión de calidad total (TQM) para eliminar errores de ejecución. Muchas fallas de nuevos productos están muy ligadas a omisiones de pasos clave y a una ejecución deficiente. El objetivo es lograr completitud (ningún paso omitido), calidad (hacerlo bien a la primera, DIRTFT) y foco en las actividades críticas, especialmente las de front-end y las orientadas al mercado. Además de mapear y controlar el proceso, conviene revisar después de cada proyecto qué causó los fallos de ejecución, para cerrar la brecha entre lo planificado y lo realmente hecho, y dirigir los recursos hacia las etapas más débiles y pivotales del recorrido idea-lanzamiento.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2568",
+        "frase": "And these deficiencies are strongly tied to product failures"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga las omisiones y la mala ejecución a los fracasos, pero no dice que no se deban a falta de ideas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -10,7 +10,7 @@
     "Especificar los entregables esperados al final de cada etapa mediante plantillas simples",
     "Establecer criterios de Go/Kill claros para cada gate (idealmente en forma de scorecard)",
     "Definir las salidas posibles de cada gate y qué implica cada decisión",
-    "Asignar y clarificar los roles: equipo del proyecto, líder, gerente de proyecto, gatekeepers, gerente de proceso y patrocinador ejecutivo"
+    "Asignar y clarificar los roles: equipo del proyecto, líder, gerente de proyecto (opcional; en proyectos pequeños suele asumirlo el líder), gatekeepers, gerente de proceso y, en proyectos grandes, patrocinador ejecutivo"
   ],
   "entregable_esperado": "Documento o mapa visual del sistema Stage-Gate que incluya explícitamente los cinco artefactos: etapas, entregables, gates, salidas y roles.",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Arma tu Sistema por Etapas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-cinco_artefactos_stage_gate-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asignar y clarificar los roles: equipo del proyecto, líder, gerente de proyecto, gatekeepers, gerente de proceso y patrocinador ejecutivo",
+      "texto_nuevo": "Asignar y clarificar los roles: equipo del proyecto, líder, gerente de proyecto (opcional; en proyectos pequeños suele asumirlo el líder), gatekeepers, gerente de proceso y, en proyectos grandes, patrocinador ejecutivo",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3279-3285",
+        "frase": "For smaller projects, often the project leader handles these tasks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se caen las condiciones de esos dos roles.; Se pierde que el gerente de proyecto es opcional (en proyectos pequeños lo cubre el líder) y que el patrocinador ejecutivo es para proyectos grandes.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

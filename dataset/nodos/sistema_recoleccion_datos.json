@@ -9,7 +9,7 @@
     "Identifica los temas y riesgos más importantes de tu negocio",
     "Define qué datos necesitas para medir tu avance en las metas de tu estrategia ambiental",
     "Determina cómo vas a medir el retorno de tus inversiones ambientales",
-    "Averigua qué datos te exige la ley o las entidades voluntarias de reporte (como CDP); pregúntalo en tu mercado",
+    "Asegura los datos básicos que toda empresa necesita (emisiones al aire y al agua, consumo de energía y residuos) y averigua qué datos te exige la ley o las entidades voluntarias de reporte (como CDP); pregúntalo en tu mercado",
     "Define qué datos necesitas para comunicarte con las personas interesadas en tu negocio"
   ],
   "entregable_esperado": "Un sistema de métricas priorizadas, con la frecuencia de recolección y quién es responsable de cada una",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Construye tu Sistema de Datos",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-sistema_recoleccion_datos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Averigua qué datos te exige la ley o las entidades voluntarias de reporte (como CDP); pregúntalo en tu mercado",
+      "texto_nuevo": "Asegura los datos básicos que toda empresa necesita (emisiones al aire y al agua, consumo de energía y residuos) y averigua qué datos te exige la ley o las entidades voluntarias de reporte (como CDP); pregúntalo en tu mercado",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6122",
+        "frase": "Every company needs data on air and water emissions, energy consumption, and waste"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el mínimo que el libro fija para toda empresa: datos de emisiones al aire y al agua, consumo de energía y residuos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

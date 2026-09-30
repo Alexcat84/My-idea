@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Mapeo como Herramienta de Pensamiento Espacial",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "El mapeo es una técnica de sensemaking instantáneo que revela patrones y relaciones ocultas al mover datos espacialmente, en contraste con el pensamiento lineal/narrativo que busca causa-efecto. Cada mapa es una lente parcial (dato + sesgo + oficio) que resalta y oculta información; ningún mapa es 'verdadero', pero todos pueden ser útiles. Un mismo concepto o dataset puede mapearse de múltiples formas para descubrir relaciones nuevas que el pensamiento lineal no revela.",
+  "resumen_teorico": "El mapeo es una técnica de sensemaking instantáneo que revela patrones y relaciones ocultas al mover datos espacialmente, en contraste con el pensamiento lineal/narrativo que busca causa-efecto. Cada mapa es una lente parcial (dato + sesgo + oficio) que resalta y oculta información; ningún mapa es 'verdadero', pero algunos son útiles. Un mismo concepto o dataset puede mapearse de múltiples formas para descubrir relaciones nuevas que el pensamiento lineal no revela.",
   "pasos_accionables": [
     "Selecciona 5 elementos de tu proyecto/idea (datos, features, usuarios, riesgos, etc.)",
-    "Dibuja un continuo (línea con dos extremos) y ordena los elementos según un criterio relevante",
+    "Dibuja un continuo (línea con dos extremos) y ordena los elementos según un criterio relevante, moviéndolos con las manos frente a ti y no solo en tu cabeza",
     "Repite el ejercicio con el mismo dataset pero un criterio de ordenamiento distinto",
     "Crea un diagrama de Venn amorfo con dos elementos y articula qué comparten en la superposición",
     "Genera varios mapas del mismo concepto para construir un 'atlas' de perspectivas"
@@ -73,6 +73,39 @@
         "motivo": "La busqueda de un modelo de negocio no prepara el mapeo como tecnica de pensamiento espacial. La relacion es muy generica y no tiene continuidad real."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-123-pensamiento_espacial_mapeo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El mapeo es una técnica de sensemaking instantáneo que revela patrones y relaciones ocultas al mover datos espacialmente, en contraste con el pensamiento lineal/narrativo que busca causa-efecto. Cada mapa es una lente parcial (dato + sesgo + oficio) que resalta y oculta información; ningún mapa es 'verdadero', pero todos pueden ser útiles. Un mismo concepto o dataset puede mapearse de múltiples formas para descubrir relaciones nuevas que el pensamiento lineal no revela.",
+      "texto_nuevo": "El mapeo es una técnica de sensemaking instantáneo que revela patrones y relaciones ocultas al mover datos espacialmente, en contraste con el pensamiento lineal/narrativo que busca causa-efecto. Cada mapa es una lente parcial (dato + sesgo + oficio) que resalta y oculta información; ningún mapa es 'verdadero', pero algunos son útiles. Un mismo concepto o dataset puede mapearse de múltiples formas para descubrir relaciones nuevas que el pensamiento lineal no revela.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3358",
+        "frase": "All models are wrong, but some are useful."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro cita que todos los modelos son falsos pero algunos son útiles; el nodo lo extiende a todos.; Mismo defecto: 'some are useful' pasa a 'todos pueden ser útiles'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-123-pensamiento_espacial_mapeo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dibuja un continuo (línea con dos extremos) y ordena los elementos según un criterio relevante",
+      "texto_nuevo": "Dibuja un continuo (línea con dos extremos) y ordena los elementos según un criterio relevante, moviéndolos con las manos frente a ti y no solo en tu cabeza",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3460",
+        "frase": "you need to actually move the data around on the table in front of you"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro insiste en mover los elementos con las manos frente a ti, porque solo pensando no aparecen los patrones nuevos.; Mismo matiz: se cae la condición de mover físicamente los datos para que aparezcan relaciones nuevas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

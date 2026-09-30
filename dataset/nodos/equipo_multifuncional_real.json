@@ -10,8 +10,8 @@
     "Libera tiempo real de las tareas habituales de las personas que reúnas para el equipo",
     "Define indicadores y recompensas basadas en el desempeño del equipo, no solo individual",
     "Mantén un núcleo estable de personas comprometidas desde el inicio hasta el final del proyecto",
-    "Elige cómo vas a organizar al equipo según qué tan complejo sea: compartiendo tiempo con otras tareas, dándole prioridad al proyecto, o dedicándolo por completo",
-    "Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia",
+    "Elige cómo vas a organizar al equipo según qué tan complejo sea el proyecto: con un líder que comparte la autoridad con los jefes de área, con un líder que tiene la autoridad principal, o con un equipo propio que responde solo al líder, que encaja mejor en proyectos grandes y complejos",
+    "Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia combinadas con reuniones presenciales periódicas",
     "Evita el modelo de pasar el proyecto de área en área; trabaja en paralelo y de forma colaborativa"
   ],
   "entregable_esperado": "Carta de equipo con roles definidos, tiempo asignado, autoridad del líder y un sistema de incentivos ligado a resultados",
@@ -57,5 +57,41 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-119-equipo_multifuncional_real-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige cómo vas a organizar al equipo según qué tan complejo sea: compartiendo tiempo con otras tareas, dándole prioridad al proyecto, o dedicándolo por completo",
+      "texto_nuevo": "Elige cómo vas a organizar al equipo según qué tan complejo sea el proyecto: con un líder que comparte la autoridad con los jefes de área, con un líder que tiene la autoridad principal, o con un equipo propio que responde solo al líder, que encaja mejor en proyectos grandes y complejos",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2181-2193",
+        "frase": "the last one appears to be best suited for large, complex projects"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Las tres estructuras del libro se distinguen por la autoridad del líder frente a los jefes de área, no por el tiempo dedicado.; Mismo defecto que la marca 0.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-equipo_multifuncional_real-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia",
+      "texto_nuevo": "Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia combinadas con reuniones presenciales periódicas",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "2197",
+        "frase": "combined with timely and periodic face-to-face meetings, are vital to success"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Sin colocación, el libro pide buena tecnología de comunicación combinada con reuniones presenciales periódicas; se cae lo presencial.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

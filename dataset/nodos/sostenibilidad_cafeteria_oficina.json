@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Sostenibilidad en Cocina y Cafetería Corporativa",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las cocinas y cafeterías ofrecen oportunidades de reducción de impacto mediante la eliminación de contenedores de espuma, adopción de vajilla reutilizable, y selección de alimentos saludables, locales y de temporada. La agenda puede expandirse hacia nutrición y bienestar (subsidios de frutas/verduras, huertos comunitarios en azotea) generando beneficios ambientales y de cultura organizacional.",
+  "resumen_teorico": "Las cocinas y cafeterías ofrecen oportunidades de reducción de impacto mediante la eliminación de contenedores de espuma, adopción de vajilla reutilizable, mejora de la eficiencia energética en iluminación y aparatos, y selección de alimentos saludables, locales y de temporada. La agenda puede expandirse hacia nutrición y bienestar (subsidios de frutas/verduras, huertos comunitarios en azotea) generando beneficios ambientales y de cultura organizacional.",
   "pasos_accionables": [
-    "Eliminar contenedores y vasos de espuma, sustituir por vajilla reutilizable con lavavajillas eficiente",
+    "Eliminar contenedores y vasos de espuma y, si hay lavavajillas de alta eficiencia disponibles, sustituir lo desechable por vajilla reutilizable",
     "Priorizar proveedores de alimentos locales, de temporada y certificados sostenibles",
     "Comunicar el programa de sostenibilidad alimentaria mediante carteles y eventos (ej. 'Lunch with the Chef')",
     "Evaluar la viabilidad de un huerto comunitario o mercado de agricultores en la oficina"
@@ -23,5 +23,40 @@
   "etiqueta_arbol": "Haz tu Cafetería más Sostenible",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-sostenibilidad_cafeteria_oficina-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las cocinas y cafeterías ofrecen oportunidades de reducción de impacto mediante la eliminación de contenedores de espuma, adopción de vajilla reutilizable, y selección de alimentos saludables, locales y de temporada. La agenda puede expandirse hacia nutrición y bienestar (subsidios de frutas/verduras, huertos comunitarios en azotea) generando beneficios ambientales y de cultura organizacional.",
+      "texto_nuevo": "Las cocinas y cafeterías ofrecen oportunidades de reducción de impacto mediante la eliminación de contenedores de espuma, adopción de vajilla reutilizable, mejora de la eficiencia energética en iluminación y aparatos, y selección de alimentos saludables, locales y de temporada. La agenda puede expandirse hacia nutrición y bienestar (subsidios de frutas/verduras, huertos comunitarios en azotea) generando beneficios ambientales y de cultura organizacional.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2364",
+        "frase": "particularly in lighting and appliances—should be high on the agenda"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone alta en la agenda de la cocina la eficiencia energética en iluminación y aparatos, y el resumen la omite.; Mismo defecto: se cae la eficiencia energética en iluminación y aparatos que el libro prioriza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-122-sostenibilidad_cafeteria_oficina-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Eliminar contenedores y vasos de espuma, sustituir por vajilla reutilizable con lavavajillas eficiente",
+      "texto_nuevo": "Eliminar contenedores y vasos de espuma y, si hay lavavajillas de alta eficiencia disponibles, sustituir lo desechable por vajilla reutilizable",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2364",
+        "frase": "move away from throw-away paper plates, cups, and utensils if high-efficiency dishwashers are available"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que dejar lo desechable puede tener sentido si hay lavavajillas de alta eficiencia; el paso lo vuelve sustitución incondicional.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

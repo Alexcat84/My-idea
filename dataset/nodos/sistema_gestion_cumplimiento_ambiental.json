@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Sistema de Gestión de Cumplimiento Ambiental",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Sistematizar el cumplimiento de normativas ambientales mediante software y procesos de seguimiento ayuda a las empresas a rastrear permisos, plazos y estándares regulatorios, reduciendo el riesgo de sanciones. Muchos problemas de cumplimiento se resuelven mejor con ingeniería que solo con asesoría legal.",
+  "resumen_teorico": "Sistematizar el cumplimiento de normativas ambientales mediante software y procesos de seguimiento ayuda a las empresas a rastrear permisos, plazos y estándares regulatorios, y a mantenerse al día con fechas límite y avisos. Muchos problemas de cumplimiento se resuelven mejor con ingeniería que solo con asesoría legal.",
   "pasos_accionables": [
     "Implementar un software de gestión de cumplimiento ambiental (ej. EPOCH)",
     "Definir responsables de monitoreo de permisos y plazos regulatorios",
-    "Evaluar si el problema de cumplimiento requiere solución de ingeniería o rediseño de procesos",
+    "Evaluar si el problema de cumplimiento requiere solución de ingeniería o rediseño de procesos y, para construir el sistema, considerar una consultora de ingeniería especializada en tu industria en lugar de abogados",
     "Actualizar el sistema regularmente conforme cambian las regulaciones"
   ],
   "entregable_esperado": "Sistema funcional de gestión de cumplimiento con alertas de plazos y auditorías periódicas",
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Sistematiza tu Cumplimiento Ambiental",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-122-sistema_gestion_cumplimiento_ambiental-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si el problema de cumplimiento requiere solución de ingeniería o rediseño de procesos",
+      "texto_nuevo": "Evaluar si el problema de cumplimiento requiere solución de ingeniería o rediseño de procesos y, para construir el sistema, considerar una consultora de ingeniería especializada en tu industria en lugar de abogados",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5573",
+        "frase": "it makes more sense to hire an engineering consulting firm specializing in their industry's issues"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el consejo concreto del libro: muchas empresas pequeñas y medianas contratan una consultora de ingeniería de su industria en vez de abogados.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-122-sistema_gestion_cumplimiento_ambiental-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sistematizar el cumplimiento de normativas ambientales mediante software y procesos de seguimiento ayuda a las empresas a rastrear permisos, plazos y estándares regulatorios, reduciendo el riesgo de sanciones. Muchos problemas de cumplimiento se resuelven mejor con ingeniería que solo con asesoría legal.",
+      "texto_nuevo": "Sistematizar el cumplimiento de normativas ambientales mediante software y procesos de seguimiento ayuda a las empresas a rastrear permisos, plazos y estándares regulatorios, y a mantenerse al día con fechas límite y avisos. Muchos problemas de cumplimiento se resuelven mejor con ingeniería que solo con asesoría legal.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5571",
+        "frase": "stay on top of deadlines, notifications, and events"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no habla de reducir sanciones; habla de conocer permisos y plazos, cumplir estándares y estar al día con fechas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

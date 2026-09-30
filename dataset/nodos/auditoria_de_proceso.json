@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría de Proceso (Monitor Process Audit)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La auditoría de proceso es una verificación sistemática, mediante checklist, de que las operaciones de manufactura cumplen con las especificaciones establecidas: registros, calibración de equipos, procedimientos de limpieza, requisitos de seguridad y control de proceso. Las discrepancias se clasifican en críticas, mayores o menores, y requieren acción correctiva documentada dentro de plazos definidos (inmediato para críticas, cinco días para mayores/menores).",
+  "resumen_teorico": "La auditoría de proceso es una verificación sistemática, mediante checklist, de que las especificaciones son correctas y de que las operaciones de manufactura las cumplen: registros, calibración de equipos, procedimientos de limpieza, requisitos de seguridad y control de proceso. Las discrepancias se clasifican en críticas, mayores o menores, y requieren acción correctiva documentada dentro de plazos definidos (inmediato para críticas, cinco días hábiles para mayores/menores).",
   "pasos_accionables": [
     "Diseñar un checklist de auditoría que cubra especificaciones, registros, calibración, procedimientos y seguridad",
     "Clasificar cada hallazgo como crítico, mayor o menor",
     "Documentar por escrito las discrepancias encontradas",
-    "Definir plazos de corrección según severidad (inmediato, 5 días)",
+    "Definir plazos de corrección según severidad (inmediato para críticas, 5 días hábiles para mayores y menores)",
     "Dar seguimiento a la implementación de la acción correctiva"
   ],
   "entregable_esperado": "Checklist de auditoría de proceso aplicado y reporte de discrepancias con plan de acción correctiva documentado",
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Verifica tu Proceso con Checklist",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-118-auditoria_de_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La auditoría de proceso es una verificación sistemática, mediante checklist, de que las operaciones de manufactura cumplen con las especificaciones establecidas: registros, calibración de equipos, procedimientos de limpieza, requisitos de seguridad y control de proceso. Las discrepancias se clasifican en críticas, mayores o menores, y requieren acción correctiva documentada dentro de plazos definidos (inmediato para críticas, cinco días para mayores/menores).",
+      "texto_nuevo": "La auditoría de proceso es una verificación sistemática, mediante checklist, de que las especificaciones son correctas y de que las operaciones de manufactura las cumplen: registros, calibración de equipos, procedimientos de limpieza, requisitos de seguridad y control de proceso. Las discrepancias se clasifican en críticas, mayores o menores, y requieren acción correctiva documentada dentro de plazos definidos (inmediato para críticas, cinco días hábiles para mayores/menores).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23202",
+        "frase": "majors and minors must be resolved within five working days"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija cinco días hábiles, no cinco días.; El libro incluye revisar si las especificaciones son correctas, no solo si se cumplen; el resumen lo pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-auditoria_de_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir plazos de corrección según severidad (inmediato, 5 días)",
+      "texto_nuevo": "Definir plazos de corrección según severidad (inmediato para críticas, 5 días hábiles para mayores y menores)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23202",
+        "frase": "majors and minors must be resolved within five working days"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija cinco días hábiles para mayores y menores.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

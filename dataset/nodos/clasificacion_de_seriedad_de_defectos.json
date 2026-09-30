@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Clasificación de Seriedad de Defectos y Deméritos por Unidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad entre periodos, líneas de producción o competidores de forma objetiva y proporcional a la oportunidad de error.",
+  "resumen_teorico": "Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad con periodos anteriores y, a veces, con competidores, de forma objetiva y proporcional a la oportunidad de error. No todos lo aceptan: algunos prefieren ver aparte los críticos y mayores.",
   "pasos_accionables": [
     "Definir categorías de seriedad de defectos relevantes para el producto",
     "Asignar peso (demérito) a cada categoría de defecto",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Pondera la Gravedad de tus Defectos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-clasificacion_de_seriedad_de_defectos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad entre periodos, líneas de producción o competidores de forma objetiva y proporcional a la oportunidad de error.",
+      "texto_nuevo": "Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad con periodos anteriores y, a veces, con competidores, de forma objetiva y proporcional a la oportunidad de error. No todos lo aceptan: algunos prefieren ver aparte los críticos y mayores.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10392-10394",
+        "frase": "A scoreboard in demerits per unit is by no means universally accepted."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro compara con el histórico y a veces con competidores; las líneas de producción son un añadido.; Mismo defecto que la marca 0: comparar entre líneas de producción no está en el libro.; Mismo matiz que la marca 1: se cae que el índice no es aceptado por todos.; Se pierde el límite: el índice no es aceptado universalmente y algunos gerentes quieren ver aparte los defectos críticos y mayores.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

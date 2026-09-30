@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfacción, reputación) son extremadamente difíciles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+  "resumen_teorico": "El análisis costo/beneficio frecuentemente falla en calidad porque los costos (por ejemplo, el costo real de un defecto que llega al cliente) a veces son difíciles de poner en números, y los beneficios (satisfacción, reputación) lo son todavía más. Si no puedes estimar con confianza alguno de los dos lados, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
   "pasos_accionables": [
     "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precisión razonable",
-    "Si no puedes ponerle número al beneficio, usa un análisis de rangos o de opciones en lugar de forzar una cifra monetaria",
+    "Si no puedes ponerle número al beneficio, compara un beneficio contra otro; a veces así logras ordenarlos en una escala de rangos, en lugar de forzar una cifra monetaria",
     "Evita apoyarte en costo/beneficio cuando la decisión de diseño ponga en juego la seguridad o la vida de alguien",
     "Anota los supuestos y los límites de cualquier análisis costo/beneficio que uses para decidir"
   ],
@@ -149,6 +149,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-119-limitaciones_analisis_costo_beneficio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfacción, reputación) son extremadamente difíciles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "texto_nuevo": "El análisis costo/beneficio frecuentemente falla en calidad porque los costos (por ejemplo, el costo real de un defecto que llega al cliente) a veces son difíciles de poner en números, y los beneficios (satisfacción, reputación) lo son todavía más. Si no puedes estimar con confianza alguno de los dos lados, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8982-8988",
+        "frase": "Costs are sometimes elusive; difficult to estimate."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que los costos a veces son esquivos y difíciles, y los beneficios aún más; 'extremadamente' endurece.; Mismo endurecimiento que la marca 0.; Para el libro basta con no poder estimar uno de los dos términos para que la cuenta sea imposible; el nodo exige que fallen ambos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-limitaciones_analisis_costo_beneficio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si no puedes ponerle número al beneficio, usa un análisis de rangos o de opciones en lugar de forzar una cifra monetaria",
+      "texto_nuevo": "Si no puedes ponerle número al beneficio, compara un beneficio contra otro; a veces así logras ordenarlos en una escala de rangos, en lugar de forzar una cifra monetaria",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8984",
+        "frase": "a scale of ranks for benefits can sometimes be achieved"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo habla de comparar un beneficio contra otro para lograr a veces una escala de rangos; el análisis de opciones no está.; Mismo defecto que la marca 0, y además se pierde el 'a veces'.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

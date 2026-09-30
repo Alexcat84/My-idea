@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Investigación de las Necesidades Futuras del Consumidor",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El propósito de la investigación de consumidor no es solo medir preferencias actuales sino entender necesidades futuras para diseñar productos y servicios que mejoren la vida del cliente. El costo de un cliente insatisfecho que no se queja (simplemente cambia de proveedor) es una de las 'cifras desconocidas' más peligrosas para el negocio.",
+  "resumen_teorico": "El propósito de la investigación de consumidor no es solo medir preferencias actuales sino entender necesidades futuras para diseñar productos y servicios que mejoren la vida del cliente. El costo de un cliente insatisfecho que no se queja (simplemente cambia de proveedor) es una de las 'cifras desconocidas' más importantes para el negocio.",
   "pasos_accionables": [
-    "Diseñar estudios de consumidor enfocados en necesidades futuras, no solo satisfacción actual",
+    "Diseñar estudios de consumidor enfocados en necesidades futuras, no solo satisfacción actual, sabiendo que el cliente rara vez puede decir qué producto nuevo querrá en unos años: eso sale del conocimiento y la innovación de quien produce",
     "Reconocer que la pérdida de negocio por clientes insatisfechos que no se quejan no se puede estimar, y no ignorarla por no poder medirla",
     "Comparar percepción del cliente con la intención original de diseño del producto",
-    "Monitorear tasas de retención de clientes como indicador indirecto de calidad percibida"
+    "Sugerencia de My Idea: monitorear cuántos clientes vuelven, ya que la ganancia viene de los clientes que repiten"
   ],
   "entregable_esperado": "Estudio de necesidades futuras del consumidor que reconozca la pérdida por insatisfacción silenciosa como una cifra que no se puede estimar, sin ignorarla por no poder medirla",
   "nodos_previos": [
@@ -54,6 +54,56 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el dato corregido en el paso 1: el entregable pide estimar la pérdida por clientes insatisfechos que no se quejan, y el libro dice que esa pérdida no se puede estimar (L3843, L244, L9409).",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-112"
+    },
+    {
+      "id": "final-e1-119-investigacion_necesidades_consumidor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El propósito de la investigación de consumidor no es solo medir preferencias actuales sino entender necesidades futuras para diseñar productos y servicios que mejoren la vida del cliente. El costo de un cliente insatisfecho que no se queja (simplemente cambia de proveedor) es una de las 'cifras desconocidas' más peligrosas para el negocio.",
+      "texto_nuevo": "El propósito de la investigación de consumidor no es solo medir preferencias actuales sino entender necesidades futuras para diseñar productos y servicios que mejoren la vida del cliente. El costo de un cliente insatisfecho que no se queja (simplemente cambia de proveedor) es una de las 'cifras desconocidas' más importantes para el negocio.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2655, 3843",
+        "frase": "the most important figures that one needs for management are unknown or unknowable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esas cifras desconocidas son las más importantes para dirigir, no las más peligrosas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-investigacion_necesidades_consumidor-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar estudios de consumidor enfocados en necesidades futuras, no solo satisfacción actual",
+      "texto_nuevo": "Diseñar estudios de consumidor enfocados en necesidades futuras, no solo satisfacción actual, sabiendo que el cliente rara vez puede decir qué producto nuevo querrá en unos años: eso sale del conocimiento y la innovación de quien produce",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "4003",
+        "frase": "A consumer can seldom say today what new product or new service would be desirable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma omisión que la marca 0: sin el límite, el paso invita a preguntar al cliente lo que el libro dice que rara vez sabe responder.; Se cae el límite del libro: el consumidor rara vez sabe decir qué producto nuevo querrá; eso sale del conocimiento e innovación del productor.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-investigacion_necesidades_consumidor-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Monitorear tasas de retención de clientes como indicador indirecto de calidad percibida",
+      "texto_nuevo": "Sugerencia de My Idea: monitorear cuántos clientes vuelven, ya que la ganancia viene de los clientes que repiten",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3928",
+        "frase": "Profit comes from repeat customers—those that boast about the product or service."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la ganancia viene de los clientes que repiten, pero no propone la retención como indicador de calidad percibida; queda como sugerencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

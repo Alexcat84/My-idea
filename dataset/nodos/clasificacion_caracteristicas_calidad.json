@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Clasificación de Características y Defectos de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Consiste en elaborar dos listas: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
+  "resumen_teorico": "Consiste en elaborar dos listas y clasificar ambas por gravedad: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
   "pasos_accionables": [
     "Derivar la lista de características de calidad a partir de las especificaciones del producto.",
     "Elaborar la lista de defectos observados en manufactura y en campo.",
-    "Comparar ambas listas para identificar diferencias relevantes.",
+    "Clasificar ambas listas por gravedad, normalmente con un mismo sistema, y compararlas para identificar diferencias relevantes.",
     "Usar la clasificación para priorizar esfuerzos de inspección."
   ],
   "entregable_esperado": "Documento con listas clasificadas de características de calidad y defectos asociados.",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Clasifica Características y Defectos de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-clasificacion_caracteristicas_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en elaborar dos listas: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
+      "texto_nuevo": "Consiste en elaborar dos listas y clasificar ambas por gravedad: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24654-24656",
+        "frase": "There are actually two lists that need to be classified."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz: falta clasificar ambas listas, que es lo que guía al planificador.; Se pierde que las dos listas se clasifican por gravedad, normalmente con un mismo sistema.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-123-clasificacion_caracteristicas_calidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar ambas listas para identificar diferencias relevantes.",
+      "texto_nuevo": "Clasificar ambas listas por gravedad, normalmente con un mismo sistema, y compararlas para identificar diferencias relevantes.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24656",
+        "frase": "Normally, it is feasible to make one system of classification applicable to both lists."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso central: clasificar ambas listas por gravedad; el paso siguiente usa una clasificación que nunca se hace.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

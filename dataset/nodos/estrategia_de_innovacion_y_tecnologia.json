@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia de Innovación y Tecnología de Producto (Arenas Estratégicas)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Un prerrequisito para la generación efectiva de ideas es contar con una estrategia de innovación de producto que defina 'arenas estratégicas' - focos de esfuerzo de I+D donde se buscarán ideas. Estas arenas deben ser atractivas (mercados grandes, en crecimiento, competencia débil) y alineadas con las competencias core de la empresa. Delimitar estos campos de búsqueda hace la búsqueda de ideas más enfocada y efectiva.",
+  "resumen_teorico": "Un prerrequisito para la generación efectiva de ideas es contar con una estrategia de innovación de producto que defina 'arenas estratégicas' - focos de esfuerzo de I+D donde se buscarán ideas. Estas arenas deben ser atractivas (mercados grandes, en crecimiento, competencia débil, buenas oportunidades para desarrollar productos nuevos) y alineadas con las competencias core de la empresa. Delimitar estos campos de búsqueda hace la búsqueda de ideas más enfocada y efectiva.",
   "pasos_accionables": [
-    "Identificar mercados atractivos: grandes, en crecimiento, con competencia débil",
+    "Identificar mercados atractivos: grandes, en crecimiento, con competencia débil y con buenas oportunidades para desarrollar productos nuevos",
     "Evaluar las competencias core de la empresa en tecnología, marketing y producción",
     "Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen",
     "Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas",
@@ -30,5 +30,40 @@
   "etiqueta_arbol": "Define tus Arenas Estratégicas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-119-estrategia_de_innovacion_y_tecnologia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un prerrequisito para la generación efectiva de ideas es contar con una estrategia de innovación de producto que defina 'arenas estratégicas' - focos de esfuerzo de I+D donde se buscarán ideas. Estas arenas deben ser atractivas (mercados grandes, en crecimiento, competencia débil) y alineadas con las competencias core de la empresa. Delimitar estos campos de búsqueda hace la búsqueda de ideas más enfocada y efectiva.",
+      "texto_nuevo": "Un prerrequisito para la generación efectiva de ideas es contar con una estrategia de innovación de producto que defina 'arenas estratégicas' - focos de esfuerzo de I+D donde se buscarán ideas. Estas arenas deben ser atractivas (mercados grandes, en crecimiento, competencia débil, buenas oportunidades para desarrollar productos nuevos) y alineadas con las competencias core de la empresa. Delimitar estos campos de búsqueda hace la búsqueda de ideas más enfocada y efectiva.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4934",
+        "frase": "large, growing markets; weak competition; good opportunities to develop new products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye en el atractivo las buenas oportunidades para desarrollar productos nuevos; se cae ese criterio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-119-estrategia_de_innovacion_y_tecnologia-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar mercados atractivos: grandes, en crecimiento, con competencia débil",
+      "texto_nuevo": "Identificar mercados atractivos: grandes, en crecimiento, con competencia débil y con buenas oportunidades para desarrollar productos nuevos",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4934",
+        "frase": "large, growing markets; weak competition; good opportunities to develop new products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el cuarto criterio de atractivo del libro: buenas oportunidades para desarrollar productos nuevos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

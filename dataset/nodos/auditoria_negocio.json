@@ -6,11 +6,11 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La auditoría de negocio es una revisión independiente de cómo está funcionando tu negocio, hecha por alguien que no tiene responsabilidad directa sobre lo que se revisa. Su propósito es darte información imparcial para confirmar que tus sistemas funcionan bien y que estás logrando los resultados que buscas. Puedes compararla contra estándares de calidad reconocidos externamente o contra tus propios criterios internos.",
   "pasos_accionables": [
-    "Identificar las preguntas clave que quieres que la auditoría responda",
+    "Identificar tú mismo, sin delegarlo, las preguntas clave que quieres que la auditoría responda",
     "Recopilar y analizar la información necesaria para responder esas preguntas",
     "Comparar el desempeño auditado contra criterios externos o contra los que tú mismo definiste",
     "Revisar los hallazgos y las recomendaciones con calma antes de decidir",
-    "Definir qué acciones tomar según los resultados de la auditoría"
+    "Definir tú mismo, sin delegarlo, qué acciones tomar según los resultados de la auditoría"
   ],
   "entregable_esperado": "Un informe de auditoría con hallazgos, comparación contra criterios de calidad y recomendaciones de acción",
   "nodos_previos": [
@@ -44,6 +44,40 @@
         "evidencia": "F07-017: Una auditoria independiente de como funcionan los sistemas del negocio es control y mejora de lo que ya opera. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-118-auditoria_negocio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar las preguntas clave que quieres que la auditoría responda",
+      "texto_nuevo": "Identificar tú mismo, sin delegarlo, las preguntas clave que quieres que la auditoría responda",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9360",
+        "frase": "the upper managers have to participate in identifying these questions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que identificar las preguntas no se delega y la dirección debe participar; el paso lo omite, y el resumen sugiere que todo lo hace un tercero.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-118-auditoria_negocio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir qué acciones tomar según los resultados de la auditoría",
+      "texto_nuevo": "Definir tú mismo, sin delegarlo, qué acciones tomar según los resultados de la auditoría",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9360",
+        "frase": "the decisions of what to do in light of those answers. That’s no delegable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la decisión sobre qué hacer con las respuestas no se delega; el paso lo omite.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

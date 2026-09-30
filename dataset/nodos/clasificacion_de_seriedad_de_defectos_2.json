@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Clasificación de Seriedad de Defectos (Guía para el Proveedor)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Esta clasificación es fundamental para priorizar recursos y establecer niveles de calidad aceptables (AQL) o defectos por millón (DPM) según la criticidad del defecto.",
+  "resumen_teorico": "Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Algunos planes de muestreo usan además esta clasificación para fijar niveles de calidad aceptables (AQL) distintos según la criticidad del defecto, aunque todo producto debe cumplir las especificaciones.",
   "pasos_accionables": [
     "Listar todos los posibles defectos del producto o proceso",
     "Asignar niveles de seriedad (crítico, mayor, menor) a cada defecto",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Prioriza Defectos con tu Proveedor",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-clasificacion_de_seriedad_de_defectos_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Esta clasificación es fundamental para priorizar recursos y establecer niveles de calidad aceptables (AQL) o defectos por millón (DPM) según la criticidad del defecto.",
+      "texto_nuevo": "Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Algunos planes de muestreo usan además esta clasificación para fijar niveles de calidad aceptables (AQL) distintos según la criticidad del defecto, aunque todo producto debe cumplir las especificaciones.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "25128",
+        "frase": "Some plans include a classification of defects to help determine the numerical value"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que algunos planes usan la clasificación para fijar el AQL; 'fundamental' y priorizar recursos endurecen y añaden.; Mismo defecto: además el DPM no se liga a la criticidad en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Benchmarking de Inversión en I+D por Industria",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Antes de definir la estrategia de innovación de una empresa, es fundamental comparar el nivel de inversión en I+D (como porcentaje de ventas) contra los promedios de la industria específica. Sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación revela si la empresa está subinvirtiendo o sobreinvirtiendo en innovación respecto a sus competidores directos.",
+  "resumen_teorico": "Conviene comparar el nivel de inversión en I+D de la empresa (como porcentaje de ventas) contra los promedios de la industria específica. Sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación te lleva a preguntarte por qué la empresa invierte más o menos que sus competidores o su industria, y si invierte lo suficiente para lograr los resultados que busca.",
   "pasos_accionables": [
     "Calcular el gasto histórico en I+D de la empresa como porcentaje de ventas.",
     "Sugerencia de My Idea: identificar el promedio de I+D/ventas de la industria específica usando fuentes como los datos de la NSF (o la autoridad equivalente en tu mercado) o asociaciones sectoriales.",
@@ -85,6 +85,22 @@
         "motivo": "Quien empieza a medir su innovación sigue naturalmente comparando su inversión en I+D con la de su industria, y eso ocurre antes de fijar la estrategia y las arenas."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "final-e1-122-benchmark_inversion_rd_industria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de definir la estrategia de innovación de una empresa, es fundamental comparar el nivel de inversión en I+D (como porcentaje de ventas) contra los promedios de la industria específica. Sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación revela si la empresa está subinvirtiendo o sobreinvirtiendo en innovación respecto a sus competidores directos.",
+      "texto_nuevo": "Conviene comparar el nivel de inversión en I+D de la empresa (como porcentaje de ventas) contra los promedios de la industria específica. Sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación te lleva a preguntarte por qué la empresa invierte más o menos que sus competidores o su industria, y si invierte lo suficiente para lograr los resultados que busca.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1027-1037",
+        "frase": "investing enough in R&D and new products to yield the results that you want"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo propone como sugerencia de revisión, no como algo fundamental ni previo a definir la estrategia.; El libro no dice que la comparación revele sub o sobreinversión; pide explicar por qué el gasto es mayor o menor y si alcanza para los resultados buscados.; Mismo defecto que la marca 0: endurece a fundamental y previo lo que el libro ofrece para comparar.; Mismo defecto que la marca 1: efecto que el libro no afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

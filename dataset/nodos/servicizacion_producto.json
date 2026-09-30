@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Servicización del producto (Servicize)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La servicización transforma un producto en un servicio, reduciendo el impacto ambiental al minimizar la necesidad de posesión individual. Ejemplos incluyen Zipcar (carsharing, que reemplaza 15-20 autos por cada auto compartido), Chegg.com (renta de libros de texto) y FedEx Print Online (impresión remota que reduce el transporte físico). Este modelo de negocio genera valor ambiental, económico y de conveniencia para el cliente.",
+  "resumen_teorico": "La servicización transforma un producto en un servicio, reduciendo el impacto ambiental al minimizar la necesidad de posesión individual. Ejemplos incluyen Zipcar (carsharing; la empresa afirma que cada auto compartido reemplaza 15-20 autos), Chegg.com (renta de libros de texto) y FedEx Print Online (impresión remota que reduce el transporte físico). Este modelo de negocio genera valor ambiental, económico y de conveniencia para el cliente.",
   "pasos_accionables": [
     "Identificar si el producto puede ofrecerse como servicio en lugar de venta directa",
     "Diseñar el modelo de negocio de servicio (renta, compartición, acceso bajo demanda)",
@@ -39,6 +39,22 @@
         "evidencia": "F11-023: El entregable es un modelo de negocio de servicizacion disenado con su propuesta de valor, lo que corresponde a planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-122-servicizacion_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La servicización transforma un producto en un servicio, reduciendo el impacto ambiental al minimizar la necesidad de posesión individual. Ejemplos incluyen Zipcar (carsharing, que reemplaza 15-20 autos por cada auto compartido), Chegg.com (renta de libros de texto) y FedEx Print Online (impresión remota que reduce el transporte físico). Este modelo de negocio genera valor ambiental, económico y de conveniencia para el cliente.",
+      "texto_nuevo": "La servicización transforma un producto en un servicio, reduciendo el impacto ambiental al minimizar la necesidad de posesión individual. Ejemplos incluyen Zipcar (carsharing; la empresa afirma que cada auto compartido reemplaza 15-20 autos), Chegg.com (renta de libros de texto) y FedEx Print Online (impresión remota que reduce el transporte físico). Este modelo de negocio genera valor ambiental, económico y de conveniencia para el cliente.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3813",
+        "frase": "It says that each of its shared cars takes 15 to 20 fully owned vehicles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La cifra de 15 a 20 autos es lo que la propia empresa dice; el resumen la da como hecho.; Mismo defecto: endurece a hecho una afirmación de la empresa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

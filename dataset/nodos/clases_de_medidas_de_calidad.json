@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Clases Generales de Medidas de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Existen cinco clases generales de medidas de calidad: defectos (deficiencias, fallas), costos de mala calidad, características de producto/proceso, necesidades del cliente y comportamiento del cliente. Cada clase requiere unidades de medida específicas; por ejemplo, los defectos se expresan como fracciones (numerador de fallas sobre denominador de unidades producidas), mientras que las características de producto pueden requerir la invención de nuevas unidades de medida y sensores.",
+  "resumen_teorico": "Existen cinco clases generales de medidas de calidad: defectos (deficiencias, fallas), costos de mala calidad, características de producto/proceso, necesidades del cliente y comportamiento del cliente. Cada clase requiere unidades de medida específicas; por ejemplo, los defectos suelen expresarse como fracciones (numerador de fallas sobre denominador de unidades producidas), mientras que las características de producto pueden requerir la invención de nuevas unidades de medida y sensores.",
   "pasos_accionables": [
     "Determinar cuál de las cinco clases de medida aplica al problema de calidad",
     "Definir numerador y denominador apropiados si se trata de medidas de defectos",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Elige tus Medidas de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-123-clases_de_medidas_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen cinco clases generales de medidas de calidad: defectos (deficiencias, fallas), costos de mala calidad, características de producto/proceso, necesidades del cliente y comportamiento del cliente. Cada clase requiere unidades de medida específicas; por ejemplo, los defectos se expresan como fracciones (numerador de fallas sobre denominador de unidades producidas), mientras que las características de producto pueden requerir la invención de nuevas unidades de medida y sensores.",
+      "texto_nuevo": "Existen cinco clases generales de medidas de calidad: defectos (deficiencias, fallas), costos de mala calidad, características de producto/proceso, necesidades del cliente y comportamiento del cliente. Cada clase requiere unidades de medida específicas; por ejemplo, los defectos suelen expresarse como fracciones (numerador de fallas sobre denominador de unidades producidas), mientras que las características de producto pueden requerir la invención de nuevas unidades de medida y sensores.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19153",
+        "frase": "Units of measure for product deficiencies usually take the form of a fraction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que las medidas de defectos suelen tomar forma de fracción.; Mismo endurecimiento del 'usually'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

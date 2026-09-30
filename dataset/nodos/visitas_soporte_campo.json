@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir el perfil y responsabilidades múltiples del representante de campo",
     "Establecer frecuencia y tipo de visitas (programadas vs sorpresa)",
-    "Calcular cuántos franquiciados puede atender un representante según complejidad del negocio",
+    "Calcular cuántos franquiciados puede atender un representante según la frecuencia y duración de las visitas, la complejidad del negocio, el tipo de franquiciado y qué tan agrupados estén",
     "Crear un manual de soporte de campo con checklist de estándares de marca",
     "Diseñar protocolo de escalamiento para incumplimientos"
   ],
@@ -23,5 +23,24 @@
   "etiqueta_arbol": "Visita y Acompaña en Terreno",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-120-visitas_soporte_campo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular cuántos franquiciados puede atender un representante según complejidad del negocio",
+      "texto_nuevo": "Calcular cuántos franquiciados puede atender un representante según la frecuencia y duración de las visitas, la complejidad del negocio, el tipo de franquiciado y qué tan agrupados estén",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2865",
+        "frase": "the frequency of visits, the length of visits, the complexity of the business"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro calcula la capacidad del representante con cinco factores; el paso deja solo la complejidad.; Mismo defecto: faltan frecuencia, duración, tipo de franquiciado y agrupación, que cambian el cálculo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

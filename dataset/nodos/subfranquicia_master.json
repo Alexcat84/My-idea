@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Subfranquicia o Master Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Otorga el derecho de vender franquicias individuales en un territorio específico junto con la obligación de dar soporte a esas franquicias, a cambio de compartir tarifas con el franquiciador (comúnmente 50/50). El master franquiciado firma contratos directamente con los franquiciados. Es común en mercados internacionales. Acelera el crecimiento pero reduce la rentabilidad a largo plazo del franquiciador y aumenta el riesgo de menor calidad en selección de franquiciados y responsabilidad legal compartida.",
+  "resumen_teorico": "Otorga el derecho de vender franquicias individuales en un territorio específico junto con la obligación de dar soporte a esas franquicias, a cambio de compartir tarifas con el franquiciador (comúnmente 50/50). El master franquiciado firma contratos directamente con los franquiciados. Es común en mercados internacionales. Acelera el crecimiento pero reduce la rentabilidad a largo plazo del franquiciador y aumenta el riesgo de menor calidad en selección de franquiciados, sin librar al franquiciador de la responsabilidad legal por lo que el master declare al vender.",
   "pasos_accionables": [
     "Definir el porcentaje de reparto de tarifas y regalías con el master franquiciado.",
     "Establecer estándares de operación y capacitación que el master debe replicar.",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Vende Franquicias por Territorio",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-120-subfranquicia_master-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Otorga el derecho de vender franquicias individuales en un territorio específico junto con la obligación de dar soporte a esas franquicias, a cambio de compartir tarifas con el franquiciador (comúnmente 50/50). El master franquiciado firma contratos directamente con los franquiciados. Es común en mercados internacionales. Acelera el crecimiento pero reduce la rentabilidad a largo plazo del franquiciador y aumenta el riesgo de menor calidad en selección de franquiciados y responsabilidad legal compartida.",
+      "texto_nuevo": "Otorga el derecho de vender franquicias individuales en un territorio específico junto con la obligación de dar soporte a esas franquicias, a cambio de compartir tarifas con el franquiciador (comúnmente 50/50). El master franquiciado firma contratos directamente con los franquiciados. Es común en mercados internacionales. Acelera el crecimiento pero reduce la rentabilidad a largo plazo del franquiciador y aumenta el riesgo de menor calidad en selección de franquiciados, sin librar al franquiciador de la responsabilidad legal por lo que el master declare al vender.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1616",
+        "frase": "will not absolve the franchisor from any liability it might incur in the sales process"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que involucrar al tercero en la venta no libra al franquiciador de responsabilidad y puede acabar en juicio por lo que este declare; 'compartida' pierde ese límite.; Mismo defecto: la responsabilidad por las declaraciones del master sigue recayendo en el franquiciador.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
