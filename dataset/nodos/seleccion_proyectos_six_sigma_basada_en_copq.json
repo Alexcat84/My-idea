@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Selección de Proyectos Six Sigma Basada en el COPQ",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El costo de la mala calidad debe ser el principal criterio para seleccionar proyectos de mejora, particularmente en programas Six Sigma. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque permite concentrar los recursos de mejora en los 'pocos vitales' con mayor impacto financiero.",
+  "resumen_teorico": "Los datos del costo de la mala calidad ayudan a seleccionar proyectos de mejora, particularmente en programas Six Sigma, aunque algunos se eligen por su impacto en los clientes o en la cultura interna. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque permite concentrar los recursos de mejora en los 'pocos vitales' con mayor impacto financiero.",
   "pasos_accionables": [
     "Definir la meta de reducción de costos anual de la organización",
     "Calcular el número de proyectos de mejora necesarios usando el retorno promedio esperado por proyecto",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro selecciona las deficiencias que ya cuestan al menos el retorno promedio usado en el cálculo, y pide la lista y el Pareto antes de lanzar proyectos.; Mismo defecto: se cae el umbral del retorno promedio por deficiencia.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-seleccion_proyectos_six_sigma_basada_en_copq-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El costo de la mala calidad debe ser el principal criterio para seleccionar proyectos de mejora, particularmente en programas Six Sigma. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque permite concentrar los recursos de mejora en los 'pocos vitales' con mayor impacto financiero.",
+      "texto_nuevo": "Los datos del costo de la mala calidad ayudan a seleccionar proyectos de mejora, particularmente en programas Six Sigma, aunque algunos se eligen por su impacto en los clientes o en la cultura interna. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque permite concentrar los recursos de mejora en los 'pocos vitales' con mayor impacto financiero.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5968-5970",
+        "frase": "may select some projects because of the impact on customers or internal culture"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no hace del costo el criterio principal: los datos ayudan a elegir, pero admite proyectos elegidos por su impacto en clientes o cultura; es una excepción que se cae.; Se cae la excepción del libro: algunos proyectos se eligen por su impacto en los clientes o en la cultura interna.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

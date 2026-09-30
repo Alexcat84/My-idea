@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Los Roles Clave para Implementar Six Sigma",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; tu equipo de proyecto y los expertos en la materia aportan lo que saben del proceso; y el dueño del proceso apoya al implementar mejoras y el plan de control. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
+  "resumen_teorico": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) es miembro clave de un proyecto de nivel Black Belt o puede liderar proyectos menores; tu equipo de proyecto y los expertos en la materia aportan lo que saben del proceso; y el dueño del proceso apoya al implementar mejoras y el plan de control. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
   "pasos_accionables": [
     "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt, equipo de proyecto con expertos en la materia y dueño del proceso",
     "Capacita a tu liderazgo para que entienda y respalde la metodología Six Sigma",
@@ -77,6 +77,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no atribuye al dueño del proceso el conocimiento técnico: es el mando responsable del producto que apoya al equipo sobre todo en Improve y Control.; La lista de roles clave del libro incluye al equipo de proyecto y los expertos en la materia, que el nodo omite.; Mismo rol omitido de la lista de siete del libro. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-roles_six_sigma-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; tu equipo de proyecto y los expertos en la materia aportan lo que saben del proceso; y el dueño del proceso apoya al implementar mejoras y el plan de control. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
+      "texto_nuevo": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) es miembro clave de un proyecto de nivel Black Belt o puede liderar proyectos menores; tu equipo de proyecto y los expertos en la materia aportan lo que saben del proceso; y el dueño del proceso apoya al implementar mejoras y el plan de control. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14093-14095",
+        "frase": "key team members on a Black Belt-level project or can be leaders"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da al Green Belt dos papeles: miembro clave de un proyecto de nivel Black Belt o líder de proyectos menores; el nodo deja solo el segundo.; Mismo defecto: se cae el papel de miembro clave en proyectos de nivel Black Belt.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

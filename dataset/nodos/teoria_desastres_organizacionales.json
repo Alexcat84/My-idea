@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Teoría de Desastres Provocados por el Hombre (Man-Made Disaster Theory)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Desarrollada por Barry Turner, esta teoría sostiene que, a pesar de las mejores intenciones, procesos organizacionales normales (información mal interpretada, ensamblada incorrectamente, o en conflicto con supuestos previos de riesgo) pueden subvertir cualquier objetivo de seguridad, incluida la visión cero. Vaughan amplió esto mostrando que el potencial de accidente crece como subproducto normal de operar bajo presión de recursos y competencia, incrustado en la cultura de producción y el secreto estructural de la burocracia.",
+  "resumen_teorico": "Desarrollada por Barry Turner, esta teoría sostiene que, a pesar de las mejores intenciones, procesos organizacionales normales (información mal interpretada, ensamblada incorrectamente, o en conflicto con supuestos previos de riesgo) pueden subvertir cualquier objetivo de seguridad, incluida la visión cero. Vaughan amplió esto mostrando que el potencial de accidente crece como subproducto normal de operar bajo presión de recursos y competencia, incrustado en la cultura de producción, el secreto estructural de la burocracia y la aceptación gradual de más riesgo mientras las malas consecuencias se mantienen a raya.",
   "pasos_accionables": [
     "Mapear los silos de información dentro de la organización que podrían ocultar señales de riesgo",
     "Identificar prácticas normales de trabajo bajo presión que puedan estar erosionando los márgenes de seguridad",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el objetivo de seguridad 'could be subverted' por esos procesos; el nodo lo afirma como algo que siempre ocurre ('cualquier' sí lo respalda 'no matter what vision').",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-teoria_desastres_organizacionales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollada por Barry Turner, esta teoría sostiene que, a pesar de las mejores intenciones, procesos organizacionales normales (información mal interpretada, ensamblada incorrectamente, o en conflicto con supuestos previos de riesgo) pueden subvertir cualquier objetivo de seguridad, incluida la visión cero. Vaughan amplió esto mostrando que el potencial de accidente crece como subproducto normal de operar bajo presión de recursos y competencia, incrustado en la cultura de producción y el secreto estructural de la burocracia.",
+      "texto_nuevo": "Desarrollada por Barry Turner, esta teoría sostiene que, a pesar de las mejores intenciones, procesos organizacionales normales (información mal interpretada, ensamblada incorrectamente, o en conflicto con supuestos previos de riesgo) pueden subvertir cualquier objetivo de seguridad, incluida la visión cero. Vaughan amplió esto mostrando que el potencial de accidente crece como subproducto normal de operar bajo presión de recursos y competencia, incrustado en la cultura de producción, el secreto estructural de la burocracia y la aceptación gradual de más riesgo mientras las malas consecuencias se mantienen a raya.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3626-3632",
+        "frase": "gradual acceptance of more risk as bad consequences are kept at bay"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta el tercer factor de la lista.; Se cae el tercer elemento de la lista: la aceptación gradual de más riesgo mientras las malas consecuencias se mantienen a raya.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

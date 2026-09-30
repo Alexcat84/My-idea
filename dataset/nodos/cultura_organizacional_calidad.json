@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Cultura Organizacional y su Impacto en la Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
+  "resumen_teorico": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas y nuevos deberes sin conocer su efecto en quienes deben cumplirlos).",
   "pasos_accionables": [
     "Diagnosticar las normas, valores y patrones culturales actuales de la organización",
     "Identificar posibles conflictos entre nuevas iniciativas de calidad y la estructura de autoridad existente",
@@ -100,6 +100,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye el fracaso principalmente a la falta de adaptación cultural, sin descartar del todo lo técnico.; Mismo endurecimiento que la marca 0. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-cultura_organizacional_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas).",
+      "texto_nuevo": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas y nuevos deberes sin conocer su efecto en quienes deben cumplirlos).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1426-1434",
+        "frase": "New duties are created without clear knowledge of their effect on employees"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de cambios culturales pierde los nuevos deberes sin conocer su efecto en quienes los cumplen; la acción distinta de la práctica anterior pertenece a otra lista del libro, pero la omisión en la enumeración se sostiene.; Se cae de la enumeración el cuarto cambio del libro: nuevos deberes sin conocer su efecto en quienes deben cumplirlos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Plan de Control de Proceso del Proveedor",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. Junto a ese plan, la planificación conjunta con el proveedor abarca tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
+  "resumen_teorico": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. Junto a ese plan, la planificación conjunta con el proveedor abarca, entre otros elementos, tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
   "pasos_accionables": [
     "Solicitar al proveedor un plan escrito de control del proceso de manufactura",
     "Incluir requisitos de SPC para detección temprana de defectos",
@@ -79,6 +79,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro las tareas especiales, la clasificación de defectos y los estándares son otros elementos de la planificación conjunta, no parte del plan de control.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-control_del_proceso_del_proveedor-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. Junto a ese plan, la planificación conjunta con el proveedor abarca tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
+      "texto_nuevo": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. Junto a ese plan, la planificación conjunta con el proveedor abarca, entre otros elementos, tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23834-23875",
+        "frase": "The standard elements of such planning include:"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro lista doce elementos estándar de la planificación conjunta; el resumen presenta unos pocos como si fueran todo su alcance.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

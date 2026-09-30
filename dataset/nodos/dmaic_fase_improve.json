@@ -13,7 +13,7 @@
     "Evaluar alternativas de mejora y seleccionar la solución óptima",
     "Diseñar e implementar la mejora seleccionada"
   ],
-  "entregable_esperado": "Modelo matemático del proceso, configuración óptima de parámetros, solución de mejora diseñada e implementada, plan de implementación y plan para enfrentar la resistencia cultural al cambio",
+  "entregable_esperado": "Plan de experimentos diseñados, lista reducida de los pocos insumos vitales (Xs), modelo matemático del proceso, configuración óptima de parámetros, solución de mejora diseñada e implementada, plan de implementación y plan para enfrentar la resistencia cultural al cambio",
   "nodos_previos": [
     "dmaic_fase_analyze"
   ],
@@ -72,6 +72,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Los entregables del libro incluyen el plan de implementación y los planes ante la resistencia cultural.; Mismos entregables perdidos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-dmaic_fase_improve-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo matemático del proceso, configuración óptima de parámetros, solución de mejora diseñada e implementada, plan de implementación y plan para enfrentar la resistencia cultural al cambio",
+      "texto_nuevo": "Plan de experimentos diseñados, lista reducida de los pocos insumos vitales (Xs), modelo matemático del proceso, configuración óptima de parámetros, solución de mejora diseñada e implementada, plan de implementación y plan para enfrentar la resistencia cultural al cambio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14737-14752",
+        "frase": "Plan for designed experiments; Reduced list of vital few inputs (Xs)"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de entregables pierde el plan de experimentos diseñados y la lista reducida de Xs vitales.; Mismo defecto: se caen dos entregables de la lista del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

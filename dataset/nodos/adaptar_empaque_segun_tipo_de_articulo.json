@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Adaptar el empaque según el tipo de artículo",
   "fuente": "Guia visual de empaque",
-  "resumen_teorico": "Cada categoría de producto tiene un punto débil distinto durante el transporte, y el empaque genérico no lo resuelve. Los líquidos, como las bebidas, piden un empaque suficiente y cuidadoso. Los artículos de más de 25 kg piden cajas de doble pared y material que no se desprenda con facilidad, y conviene sellarlos con cinta reforzada, revisando que no superen los límites de tamaño y peso de la caja. Los objetos enrollados, como mapas, pósteres o planos, van en tubos triangulares o cilíndricos. Los artículos frágiles se envuelven por separado y van en una caja nueva de doble pared, sin reutilizar cajas gastadas, rotas o con esquinas dañadas. Conviene reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento.",
+  "resumen_teorico": "Los líquidos, como las bebidas, piden un empaque suficiente y cuidadoso. Los artículos de más de 25 kg piden cajas de doble pared y material que no se desprenda con facilidad, y conviene sellarlos con cinta reforzada, revisando que no superen los límites de tamaño y peso de la caja; estos envíos deben cumplir los requisitos de empaque del courier, con una caja probada por el fabricante. Los objetos enrollados, como mapas, pósteres o planos, van en tubos triangulares o cilíndricos. Los artículos frágiles se envuelven por separado y van en una caja nueva de doble pared, sin reutilizar cajas gastadas, rotas o con esquinas dañadas. Conviene reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento.",
   "pasos_accionables": [
     "Clasifica cada producto que vendes en una de estas categorías: líquido, pesado, frágil o de forma irregular.",
     "Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
@@ -96,6 +96,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Bordes filosos cubiertos con cartón no están; el libro habla de objetos enrollados en tubos triangulares o cilíndricos.; El libro no promete reducir devoluciones por daño.; El libro solo pide un embalaje suficiente y cuidadoso para líquidos; envase sellado y bolsa plástica son añadidos.; La caja dentro de caja no está en el libro; queda solo como la sugerencia del paso 4.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1, con la cinta reforzada como recomendación ('it is best').; Mismo defecto que la marca 2.; Mismo defecto que la marca 3; el libro pide envolver por separado y caja nueva de doble pared.; Mismo defecto que la marca 5.; Se cae el umbral del libro: más de 25 kg.; Se cae lo que el libro pide para frágiles: caja nueva de doble pared, sin cajas gastadas, y cada artículo envuelto por separado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-059-adaptar_empaque_segun_tipo_de_articulo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada categoría de producto tiene un punto débil distinto durante el transporte, y el empaque genérico no lo resuelve. Los líquidos, como las bebidas, piden un empaque suficiente y cuidadoso. Los artículos de más de 25 kg piden cajas de doble pared y material que no se desprenda con facilidad, y conviene sellarlos con cinta reforzada, revisando que no superen los límites de tamaño y peso de la caja. Los objetos enrollados, como mapas, pósteres o planos, van en tubos triangulares o cilíndricos. Los artículos frágiles se envuelven por separado y van en una caja nueva de doble pared, sin reutilizar cajas gastadas, rotas o con esquinas dañadas. Conviene reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento.",
+      "texto_nuevo": "Los líquidos, como las bebidas, piden un empaque suficiente y cuidadoso. Los artículos de más de 25 kg piden cajas de doble pared y material que no se desprenda con facilidad, y conviene sellarlos con cinta reforzada, revisando que no superen los límites de tamaño y peso de la caja; estos envíos deben cumplir los requisitos de empaque del courier, con una caja probada por el fabricante. Los objetos enrollados, como mapas, pósteres o planos, van en tubos triangulares o cilíndricos. Los artículos frágiles se envuelven por separado y van en una caja nueva de doble pared, sin reutilizar cajas gastadas, rotas o con esquinas dañadas. Conviene reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento.",
+      "cita": {
+        "libro": "Guia visual de empaque",
+        "fichero": "txt/Supply chain/packaging_guide_infographic.txt",
+        "lineas": "55-57",
+        "frase": "These shipments must meet UPS packaging requirements and must be tested"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo enumera artículos especiales y cómo empacarlos; no afirma que el empaque genérico no resuelva cada punto débil.; Mismo defecto que la marca 1: se cae el requisito del courier y la prueba del fabricante.; Se cae que los envíos de más de 25 kg deben cumplir los requisitos de empaque del courier y estar probados por el fabricante.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

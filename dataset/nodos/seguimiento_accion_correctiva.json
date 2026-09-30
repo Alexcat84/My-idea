@@ -7,9 +7,9 @@
   "resumen_teorico": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas que las conclusiones del reporte sean correctas y que haya acuerdo sobre ellas; si no lo hay, resuelves ese desacuerdo. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que pesen ante la dirección, por ejemplo, en términos monetarios.",
   "pasos_accionables": [
     "Programar una auditoría de seguimiento para verificar que las acciones correctivas se implementaron y que son eficaces",
-    "Confirmar que las conclusiones del reporte original son correctas y que hay acuerdo sobre ellas; si no lo hay, resolver primero ese desacuerdo",
+    "Si la acción correctiva no se implementó, confirmar primero que las conclusiones del reporte original son correctas y que hay acuerdo sobre ellas; si no lo hay, resolver primero ese desacuerdo",
     "Si faltan recursos u otra cosa lo impide, reformular la seriedad de la deficiencia en términos monetarios u otros de impacto que ayuden a conseguir los recursos o quitar los obstáculos",
-    "Cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas"
+    "Sugerencia de My Idea: cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas"
   ],
   "entregable_esperado": "Confirmación documentada de que las no conformidades quedaron cerradas, o la decisión de seguir dándole prioridad al tema si continúa pendiente",
   "nodos_previos": [
@@ -109,6 +109,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El seguimiento del libro confirma también que la acción correctiva es eficaz. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-seguimiento_accion_correctiva-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar que las conclusiones del reporte original son correctas y que hay acuerdo sobre ellas; si no lo hay, resolver primero ese desacuerdo",
+      "texto_nuevo": "Si la acción correctiva no se implementó, confirmar primero que las conclusiones del reporte original son correctas y que hay acuerdo sobre ellas; si no lo hay, resolver primero ese desacuerdo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10284",
+        "frase": "If corrective action is not implemented for some reason, the auditor should first verify"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone esta verificación para cuando la acción correctiva no se implementó; el paso pierde la condición.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-060-seguimiento_accion_correctiva-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas",
+      "texto_nuevo": "Sugerencia de My Idea: cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10060",
+        "frase": "planning, opening meeting, performing, reporting, follow-up on corrective action, and closure"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro solo nombra el cierre como último paso de la auditoría; la regla de cerrar solo con las no conformidades corregidas es un consejo propio.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

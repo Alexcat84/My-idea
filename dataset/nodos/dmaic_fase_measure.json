@@ -8,13 +8,13 @@
   "pasos_accionables": [
     "Mapear el proceso en detalle mediante diagramas de flujo",
     "Medir el desempeño base (Ys) usando análisis Pareto",
-    "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs)",
+    "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs), y calificar la severidad de cada efecto, la probabilidad de que ocurra y la de detectarlo si ocurre",
     "Evaluar la capacidad del sistema de medición (Gage R&R) y, si no es capaz, corregirlo antes de seguir",
     "Determinar si el proceso está en control estadístico; si no lo está, eliminar las causas especiales de variación antes de medir su capacidad a corto plazo",
     "Confirmar o modificar el objetivo del proyecto según los datos obtenidos",
     "Generar una lista priorizada de teorías de causa raíz usando diagramas causa-efecto"
   ],
-  "entregable_esperado": "Métricas de línea base, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
+  "entregable_esperado": "Métricas de línea base, diagrama de flujo del proceso, variables clave de entrada y de salida del proceso, diagrama causa-efecto, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
   "nodos_previos": [
     "dmaic_fase_define"
   ],
@@ -96,6 +96,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de entregables del libro incluye además el plan de recolección de datos con su muestreo, la capacidad medida del proceso y el objetivo confirmado o modificado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-dmaic_fase_measure-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs)",
+      "texto_nuevo": "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs), y calificar la severidad de cada efecto, la probabilidad de que ocurra y la de detectarlo si ocurre",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14412",
+        "frase": "rate the severity of each effect, the likelihood of its occurrence, and the likelihood"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta calificar severidad, probabilidad de ocurrencia y de detección.; Se cae la calificación de severidad, ocurrencia y detección, que es lo que permite identificar las fallas de mayor riesgo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-060-dmaic_fase_measure-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Métricas de línea base, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
+      "texto_nuevo": "Métricas de línea base, diagrama de flujo del proceso, variables clave de entrada y de salida del proceso, diagrama causa-efecto, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14496-14511",
+        "frase": "Process flow diagram; key process input variables; key process output variables; cause-effect diagram"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de entregables pierde el diagrama de flujo, las variables clave de entrada y salida y el diagrama causa-efecto que el libro incluye.; Mismo defecto: se caen tres entregables de la lista del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sesgo de mirar hacia atrás (Hindsight Bias)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso distorsiona mucho tu capacidad de entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dado el contexto, la pantalla o herramienta que usabas, y todo lo demás que tenías encima al mismo tiempo).",
+  "resumen_teorico": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso distorsiona mucho tu capacidad de entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dada la pantalla o herramienta que usabas y las tareas, objetivos, intereses y conocimientos que tenías entre manos al mismo tiempo).",
   "pasos_accionables": [
     "Para explicar lo que pasó, no te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia; solo te sirve para prepararte ante situaciones parecidas",
     "Reconstruye la situación tal como la viviste o la vivió la otra persona, sin usar lo que ya sabes ahora del resultado",
@@ -131,6 +131,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Ninguno de los dos libros recomienda entrenar a los investigadores; es consejo práctico sin hecho nuevo, queda como sugerencia.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-sesgo_retrospectivo_hindsight_2-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso distorsiona mucho tu capacidad de entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dado el contexto, la pantalla o herramienta que usabas, y todo lo demás que tenías encima al mismo tiempo).",
+      "texto_nuevo": "Este sesgo aparece cuando, ya sabiendo cómo terminó algo, reduces todo a una elección simple entre haber notado o no haber notado lo importante. Eso distorsiona mucho tu capacidad de entender por qué alguien hizo lo que hizo, porque esa persona no sabía cómo iba a terminar la historia. Tienes que separar dos cosas: lo que estaba disponible (lo que físicamente existía) de lo que era observable (lo que se podía notar dada la pantalla o herramienta que usabas y las tareas, objetivos, intereses y conocimientos que tenías entre manos al mismo tiempo).",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2065-2067",
+        "frase": "the multiple interleaving tasks, goals, interests, knowledge of the people looking at it"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La definición de observable pierde los objetivos, intereses y conocimientos de quien mira.; Mismo defecto: se caen objetivos, intereses y conocimientos de la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

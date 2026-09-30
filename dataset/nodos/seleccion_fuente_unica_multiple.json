@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Selección entre Fuente Única y Múltiples Proveedores",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Múltiples proveedores generan competencia (mejor calidad, costos, servicio) y reducen riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
+  "resumen_teorico": "Múltiples proveedores generan competencia, que puede traer mejor calidad, menores costos, mejor servicio y menor riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
   "pasos_accionables": [
     "Evaluar ventajas de competencia (múltiples proveedores) versus profundidad de relación (fuente única)",
     "Analizar reputación, pruebas de calificación de diseño, encuestas de instalaciones del proveedor e información de bancos de datos y otras fuentes sobre su calidad",
@@ -72,6 +72,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade un cuarto criterio de selección: la información de bancos de datos y otras fuentes sobre la calidad del proveedor.; Mismo defecto: falta el cuarto criterio de la lista.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-seleccion_fuente_unica_multiple-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Múltiples proveedores generan competencia (mejor calidad, costos, servicio) y reducen riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
+      "texto_nuevo": "Múltiples proveedores generan competencia, que puede traer mejor calidad, menores costos, mejor servicio y menor riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23656",
+        "frase": "Competition can result in better quality, lower costs, better service, and minimum disruption of supply"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la competencia puede traer esos beneficios ('can result in'); el nodo los da por seguros.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

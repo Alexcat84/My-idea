@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Criterios de Selección de Proyectos de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, la mayoría de las organizaciones evalúa sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+  "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, la mayoría de las organizaciones evalúa sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios da una indicación de las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
   "pasos_accionables": [
     "Listar todas las nominaciones de proyectos disponibles desde todas las fuentes posibles (datos, encuestas, empleados, clientes)",
     "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio; para los primeros proyectos, exigir además que ataquen un problema crónico, sean factibles en pocos meses, significativos y medibles, y que sean ganadores",
@@ -77,6 +77,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reserva factibilidad, significancia y medibilidad para los primeros proyectos, junto con problema crónico y éxito asegurado.; Mismo matiz que la marca 0, con los dos criterios omitidos.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-criterios_seleccion_proyectos_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para priorizar proyectos de mejora entre múltiples nominaciones, la mayoría de las organizaciones evalúa sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+      "texto_nuevo": "Para priorizar proyectos de mejora entre múltiples nominaciones, la mayoría de las organizaciones evalúa sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios da una indicación de las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6676",
+        "frase": "This yields a composite evaluation that then becomes an indication of the relative priorities"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la evaluación compuesta es una indicación de las prioridades relativas, no que las determine.; Mismo defecto: 'becomes an indication' pasa a 'determina'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Curva de la Bañera y Periodos de Fallo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por errores de diseño o fabricación, mal uso o mala aplicación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño, cambios del entorno o accidentes de uso o mantenimiento) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+  "resumen_teorico": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos, comúnmente por errores de diseño o fabricación, mal uso o mala aplicación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño, cambios del entorno o accidentes de uso o mantenimiento) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
   "pasos_accionables": [
     "Recolectar datos de tiempos de fallo del producto en campo o pruebas",
     "Graficar la tasa de fallo en el tiempo para identificar en qué periodo se encuentra el producto",
@@ -63,6 +63,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las listas de causas pierden el mal uso y la mala aplicación, y los cambios del entorno y los accidentes de mantenimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-curva_banera_periodos_fallo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos por errores de diseño o fabricación, mal uso o mala aplicación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño, cambios del entorno o accidentes de uso o mantenimiento) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+      "texto_nuevo": "Modelo que describe tres periodos característicos en la vida de un producto: mortalidad infantil (fallos tempranos, comúnmente por errores de diseño o fabricación, mal uso o mala aplicación), tasa de fallo constante (fallos aleatorios por limitaciones del diseño, cambios del entorno o accidentes de uso o mantenimiento) y desgaste (fallos por envejecimiento de componentes). Cada periodo requiere estrategias distintas de mitigación.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20117",
+        "frase": "Commonly, these failures are the result of blunders in design or manufacture, misuse, or misapplication"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que estos fallos comúnmente vienen de esas causas; el nodo lo da sin matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

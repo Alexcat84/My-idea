@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Aproximaciones No Estabilizadas y Decisión de Ir al Aire (Go-Around)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Los datos sugieren que las tripulaciones no interpretan la situación principalmente en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordatorios genéricos sobre criterios rara vez cambian el comportamiento; ofrecer incentivos positivos (recompensas sin culpa) por ejecutar go-around parece una contramedida más prometedora, con un éxito modesto.",
+  "resumen_teorico": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, potencia del motor, posición, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Los datos sugieren que las tripulaciones no interpretan la situación principalmente en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordar a las tripulaciones los criterios parece servir de poco; ofrecer incentivos positivos (recompensas sin culpa) por ejecutar go-around parece una contramedida más prometedora, con un éxito modesto.",
   "pasos_accionables": [
     "Revisar si existían criterios formales (soft/hard gates) para abortar la aproximación u operación",
     "Identificar si esos criterios funcionaron como normas negociables en lugar de reglas de parada estrictas",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae lo que el libro llama crucial: comunicar que abortar es legítimo y deseado y difundir ampliamente las recompensas.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-060-unstabilized_approach_go_around-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Los datos sugieren que las tripulaciones no interpretan la situación principalmente en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordatorios genéricos sobre criterios rara vez cambian el comportamiento; ofrecer incentivos positivos (recompensas sin culpa) por ejecutar go-around parece una contramedida más prometedora, con un éxito modesto.",
+      "texto_nuevo": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, potencia del motor, posición, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Los datos sugieren que las tripulaciones no interpretan la situación principalmente en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordar a las tripulaciones los criterios parece servir de poco; ofrecer incentivos positivos (recompensas sin culpa) por ejecutar go-around parece una contramedida más prometedora, con un éxito modesto.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2244-2250",
+        "frase": "there seems little mileage in just reminding crews of the situations that demand a go-around"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice con cautela que recordar los criterios parece servir de poco; el nodo lo afirma como hecho.; La lista de criterios de estabilización pierde la potencia del motor y la posición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
