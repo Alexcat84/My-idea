@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Documentación que necesitas para viajar por negocios al extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas, certificados de vacunación cuando corresponda, y un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles) si llevas muestras comerciales o equipo de trabajo. Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
+  "resumen_teorico": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas y certificados de vacunación cuando corresponda; si llevas muestras comerciales o equipo de trabajo, también puede servirte un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles). Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
   "pasos_accionables": [
     "Revisa que tu pasaporte esté vigente",
     "Consulta los requisitos de visa del país al que vas en su embajada o consulado",
     "Revisa los requisitos de vacunación en la fuente oficial de tu país",
-    "Solicita un carnet ATA si vas a llevar muestras o equipo profesional",
+    "Si vas a llevar muestras o equipo profesional, verifica si el país al que vas es miembro del Convenio ATA y, si lo es, solicita un carnet ATA",
     "Empieza todos estos trámites con al menos 6 a 8 semanas de anticipación"
   ],
   "entregable_esperado": "Pasaporte, visa, certificados de vacunación y carnet ATA (si aplica) listos antes de viajar",
@@ -45,6 +45,39 @@
       },
       "decision": "'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-162-documentacion_viaje_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas, certificados de vacunación cuando corresponda, y un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles) si llevas muestras comerciales o equipo de trabajo. Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
+      "texto_nuevo": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas y certificados de vacunación cuando corresponda; si llevas muestras comerciales o equipo de trabajo, también puede servirte un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles). Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4503",
+        "frase": "an ATA carnet may also be helpful."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el carnet ATA puede ser útil si llevas muestras; el nodo lo pone entre lo que necesitas.; Mismo defecto: convierte en requisito lo que el libro presenta como algo que puede ayudar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-162-documentacion_viaje_internacional-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicita un carnet ATA si vas a llevar muestras o equipo profesional",
+      "texto_nuevo": "Si vas a llevar muestras o equipo profesional, verifica si el país al que vas es miembro del Convenio ATA y, si lo es, solicita un carnet ATA",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4509",
+        "frase": "determine whether the country you are visiting is a member of the ATA Convention"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro indica comprobar si el país de destino es miembro del Convenio ATA; el paso lo omite.; Mismo defecto: el carnet solo aplica en países del Convenio ATA.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

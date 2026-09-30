@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Desmitificación de Supuestos sobre Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), el papeleo es mínimo con ayuda de facilitadores, y casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados. Identificar y contrastar estas viejas suposiciones con la nueva realidad del comercio global es el primer paso mental para animarse a exportar.",
+  "resumen_teorico": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), la mayoría de las exportaciones requieren poco papeleo, y casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados. Conviene identificar estas viejas suposiciones y contrastarlas con la nueva realidad del comercio global.",
   "pasos_accionables": [
     "Listar los miedos o supuestos actuales de la empresa sobre exportar (riesgo, complejidad, tamaño, idioma)",
     "Contrastar cada supuesto con la evidencia disponible en publicaciones de comercio exterior",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Derriba tus Miedos a Exportar",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-162-desmitificacion_barreras_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), el papeleo es mínimo con ayuda de facilitadores, y casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados. Identificar y contrastar estas viejas suposiciones con la nueva realidad del comercio global es el primer paso mental para animarse a exportar.",
+      "texto_nuevo": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), la mayoría de las exportaciones requieren poco papeleo, y casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados. Conviene identificar estas viejas suposiciones y contrastarlas con la nueva realidad del comercio global.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "241",
+        "frase": "Most exporting requires minimal paperwork."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la mayoría de las exportaciones requieren poco papeleo; el nodo lo generaliza.; El libro no presenta contrastar los supuestos como el primer paso para animarse a exportar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

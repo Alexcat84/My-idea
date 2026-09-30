@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Pruebas locales de publicidad fuera de internet",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así sabes con certeza qué está funcionando y qué no.",
+  "resumen_teorico": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
   "pasos_accionables": [
     "Diseña varias pruebas pequeñas de publicidad fuera de internet en paralelo, en distintos mercados locales",
-    "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos",
+    "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos, sabiendo que a cambio pierdes capacidad de elegir a quién y cuándo le llega",
     "Asigna un código único o una dirección web específica a cada campaña para rastrear qué te trae resultados, y un código de descuento distinto para cada canal",
     "Mide los resultados y escala solo lo que te esté dando retorno positivo",
     "Revisa el rendimiento cada tanto, porque un anuncio que funciona hoy puede dejar de funcionar con el tiempo",
@@ -46,5 +46,40 @@
   ],
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-166-publicidad_offline_pruebas_locales-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así sabes con certeza qué está funcionando y qué no.",
+      "texto_nuevo": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1473",
+        "frase": "we could approximate how many visits originated from our flyer campaign"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que con direcciones únicas puedes aproximar de dónde vienen las visitas, no saberlo con certeza.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-166-publicidad_offline_pruebas_locales-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos",
+      "texto_nuevo": "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos, sabiendo que a cambio pierdes capacidad de elegir a quién y cuándo le llega",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1614",
+        "frase": "The downside is less targeting ability, both in terms of demographics and timing."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el espacio sobrante segmenta peor por demografía y momento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

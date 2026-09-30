@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Estar Listo para Ser una Empresa Publica",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Querer salir a bolsa y estar listo para hacerlo son dos cosas distintas, y la segunda se mide con honestidad o no se mide. El mínimo no es una cifra de ingresos: es que la operación sea estable, que los procesos estén ordenados y que las proyecciones se puedan sostener trimestre tras trimestre delante de gente que no perdona un fallo. La lista de ventajas y desventajas no se escribe en abstracto sino contra el momento del mercado, que cambia el calculo entero. Y hay dos conversaciones que ahorran anos: hablar con quien ya dirigió una empresa publica, y preparar al equipo para lo que la valuación va a decir de verdad, incluido el caso incomodo de tener que ofrecer por debajo de lo que valieron las rondas privadas, porque el precio lo fijan los comparables del mercado y no la historia propia.",
+  "resumen_teorico": "Querer salir a bolsa y estar listo para hacerlo son dos cosas distintas, y la segunda se mide con honestidad o no se mide. Lo mínimo es que la operación sea estable, que los procesos estén ordenados y que las proyecciones se puedan sostener trimestre tras trimestre delante de gente que no perdona un fallo. Aun así, si se acaba el dinero y no hay financiación privada, puede tocarte salir sin estar listo. La lista de ventajas y desventajas no se escribe en abstracto sino contra el momento del mercado, que cambia el cálculo entero. Y hay dos conversaciones que conviene tener: hablar con quien ya dirigió una empresa pública, y preparar al equipo para lo que la valuación va a decir de verdad, incluido el caso incómodo de tener que ofrecer por debajo de lo que valieron las rondas privadas, porque el precio lo fijan los comparables del mercado y no la historia propia.",
   "pasos_accionables": [
-    "Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyecciones confiables, operación estable",
+    "Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyecciones confiables, operación estable, cuánto tiempo seguirás perdiendo dinero, qué tan sanos están tus clientes y si los inversionistas pueden entender tu modelo",
     "Haz una lista clara de ventajas y desventajas de salir a bolsa según el momento actual del mercado",
     "Habla con personas que hayan sido directores generales de empresas públicas y pídeles su experiencia",
     "Prepara a tu equipo para la realidad de la valuación y lo que implica, por ejemplo si hay que hacer un contrasplit y agrupar las acciones",
@@ -81,6 +81,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-166-estar_listo_para_ser_publica-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Querer salir a bolsa y estar listo para hacerlo son dos cosas distintas, y la segunda se mide con honestidad o no se mide. El mínimo no es una cifra de ingresos: es que la operación sea estable, que los procesos estén ordenados y que las proyecciones se puedan sostener trimestre tras trimestre delante de gente que no perdona un fallo. La lista de ventajas y desventajas no se escribe en abstracto sino contra el momento del mercado, que cambia el calculo entero. Y hay dos conversaciones que ahorran anos: hablar con quien ya dirigió una empresa publica, y preparar al equipo para lo que la valuación va a decir de verdad, incluido el caso incomodo de tener que ofrecer por debajo de lo que valieron las rondas privadas, porque el precio lo fijan los comparables del mercado y no la historia propia.",
+      "texto_nuevo": "Querer salir a bolsa y estar listo para hacerlo son dos cosas distintas, y la segunda se mide con honestidad o no se mide. Lo mínimo es que la operación sea estable, que los procesos estén ordenados y que las proyecciones se puedan sostener trimestre tras trimestre delante de gente que no perdona un fallo. Aun así, si se acaba el dinero y no hay financiación privada, puede tocarte salir sin estar listo. La lista de ventajas y desventajas no se escribe en abstracto sino contra el momento del mercado, que cambia el cálculo entero. Y hay dos conversaciones que conviene tener: hablar con quien ya dirigió una empresa pública, y preparar al equipo para lo que la valuación va a decir de verdad, incluido el caso incómodo de tener que ofrecer por debajo de lo que valieron las rondas privadas, porque el precio lo fijan los comparables del mercado y no la historia propia.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "292-304",
+        "frase": "We are losing money and will be losing money for quite some time."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no descarta lo financiero: entre los problemas de preparación lista las pérdidas prolongadas.; En el libro concluyen que no están listos y aun así salen porque no hay financiación privada; esa excepción cambia el consejo.; Misma excepción que la marca 2: sin otra opción de dinero, se sale sin estar listo.; Mismo defecto que la marca 0: el libro no dice que el mínimo no sea una cifra de ingresos.; Mismo defecto que la marca 1: el ahorro de años lo añade el nodo.; Que esas conversaciones ahorren años es un beneficio que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-166-estar_listo_para_ser_publica-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyecciones confiables, operación estable",
+      "texto_nuevo": "Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyecciones confiables, operación estable, cuánto tiempo seguirás perdiendo dinero, qué tan sanos están tus clientes y si los inversionistas pueden entender tu modelo",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "294-304, 316",
+        "frase": "Our customers are going bankrupt at an alarming and unpredictable rate."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye además las pérdidas prolongadas, los clientes que quiebran y un negocio difícil de entender para los inversionistas.; Mismo defecto: faltan las pérdidas que seguirán y la salud de los clientes.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "Revisa si el comprador te dio especificaciones de empaque y sigue esas primero",
     "Empaca en contenedores fuertes, bien sellados y bien llenos",
     "Distribuye el peso de forma uniforme y usa paletas cuando puedas",
-    "Usa materiales resistentes a la humedad y no escribas el contenido ni tu marca por fuera",
+    "Usa materiales resistentes a la humedad, no escribas el contenido ni tu marca por fuera y asegura la carga con flejes, sellos y película retráctil",
     "Pregunta si tu madera o tus materiales necesitan algún tratamiento especial o si son peligrosos",
     "Si no tienes cómo hacerlo bien tú mismo, contrata a alguien que se especialice en empaque"
   ],
@@ -57,6 +57,23 @@
       },
       "decision": "'al momento de la fuente' es voz de libro: pasa a 'en su momento'; el aviso de verificar la norma vigente se conserva",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guarda G6"
+    },
+    {
+      "id": "final-e1-162-embalaje_exportacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa materiales resistentes a la humedad y no escribas el contenido ni tu marca por fuera",
+      "texto_nuevo": "Usa materiales resistentes a la humedad, no escribas el contenido ni tu marca por fuera y asegura la carga con flejes, sellos y película retráctil",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3511",
+        "frase": "Use straps, seals, and shrink-wrap to safeguard goods."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro contra el robo incluye flejes, sellos y película retráctil, que ningún paso recoge.; Mismo defecto: se cae la pauta de asegurar la carga con flejes, sellos y película retráctil.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

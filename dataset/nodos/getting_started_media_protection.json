@@ -12,7 +12,7 @@
     "Marcar los medios con las restricciones de distribución y manejo de CUI.",
     "Sanitizar medios antes de reutilización o disposición.",
     "Restringir y revisar periódicamente el acceso a medios digitales y físicos.",
-    "Mantener trazabilidad durante el transporte de medios."
+    "Restringir el transporte de medios a personal autorizado y mantener trazabilidad durante el transporte."
   ],
   "entregable_esperado": "Inventario de medios con CUI, procedimiento de sanitización y registro de control de acceso/transporte.",
   "nodos_previos": [
@@ -42,6 +42,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-165-getting_started_media_protection-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantener trazabilidad durante el transporte de medios.",
+      "texto_nuevo": "Restringir el transporte de medios a personal autorizado y mantener trazabilidad durante el transporte.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "527",
+        "frase": "Restrict transport activities to authorized personnel."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide restringir el transporte a personal autorizado.; Mismo defecto: falta restringir el transporte a personal autorizado.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

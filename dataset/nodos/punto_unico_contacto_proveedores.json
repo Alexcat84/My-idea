@@ -4,9 +4,9 @@
   "dominio": "compras",
   "titulo_concepto": "Designa un único punto de contacto con proveedores",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y el proveedor termine sabiendo más de tu situación que tú mismo. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después usas en tu contra al negociar. También te ayuda a llevar un solo hilo de la conversación en vez de perder detalles repartidos entre varias personas.",
+  "resumen_teorico": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
   "pasos_accionables": [
-    "Decide quién es la única persona autorizada para negociar precios y condiciones con cada proveedor.",
+    "Decide quién es la única persona autorizada para negociar precios y condiciones con cada proveedor, y quién la suple cuando no esté disponible.",
     "Avisa a tu equipo, familiares o socios que las conversaciones de negociación se remiten a esa persona.",
     "Si alguien recibe una llamada o mensaje de un proveedor sobre condiciones, pídele que lo reenvíe sin responder.",
     "Anota cada conversación importante con el proveedor para no depender de la memoria de varias personas.",
@@ -56,6 +56,39 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por negociacion_contratos_proveedores."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-163-punto_unico_contacto_proveedores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y el proveedor termine sabiendo más de tu situación que tú mismo. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después usas en tu contra al negociar. También te ayuda a llevar un solo hilo de la conversación en vez de perder detalles repartidos entre varias personas.",
+      "texto_nuevo": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "3985-4081",
+        "frase": "sometimes things are said in passing that are important to the procurement"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Beneficio que el libro no da; sus razones son la equidad entre proveedores, el riesgo legal y lo dicho de pasada.; El libro advierte de cosas dichas de pasada que perjudican la compra, no de que el proveedor sepa más de tu situación que tú.; Mismo efecto exagerado que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-163-punto_unico_contacto_proveedores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide quién es la única persona autorizada para negociar precios y condiciones con cada proveedor.",
+      "texto_nuevo": "Decide quién es la única persona autorizada para negociar precios y condiciones con cada proveedor, y quién la suple cuando no esté disponible.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "3985",
+        "frase": "It is also a good idea to have a backup person"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja también una persona de respaldo para cuando la responsable no está disponible.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

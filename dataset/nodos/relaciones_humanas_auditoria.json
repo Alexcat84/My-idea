@@ -9,8 +9,8 @@
     "Explicar a supervisores y no supervisores las razones detrás de las auditorías",
     "Evitar un enfoque de búsqueda de culpables; orientar el reporte al problema",
     "Incluir observaciones positivas ('commendable observations') además de deficiencias",
-    "Basar las recomendaciones en hechos, evitando opiniones personales del auditor",
-    "Realizar una reunión post-auditoría para validar hallazgos con el equipo auditado"
+    "Basar las recomendaciones en hechos y no en la opinión del auditor; donde quepa diferencia de opinión, darla como insumo para la decisión sin abogar de más",
+    "Realizar una reunión post-auditoría para validar hallazgos con el equipo auditado y que este planee la acción correctiva"
   ],
   "entregable_esperado": "Protocolo de comunicación y conducta ética para auditores",
   "nodos_previos": [
@@ -26,5 +26,41 @@
   "etiqueta_arbol": "Cuida el Lado Humano al Auditar",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-165-relaciones_humanas_auditoria-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Basar las recomendaciones en hechos, evitando opiniones personales del auditor",
+      "texto_nuevo": "Basar las recomendaciones en hechos y no en la opinión del auditor; donde quepa diferencia de opinión, darla como insumo para la decisión sin abogar de más",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10303",
+        "frase": "auditors have a right and a duty to give their opinions as input"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reconoce el derecho y el deber del auditor de dar su opinión como insumo donde cabe diferencia, sin abogar de más.; Mismo defecto: 'evitando opiniones' borra la excepción que el libro da.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-165-relaciones_humanas_auditoria-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar una reunión post-auditoría para validar hallazgos con el equipo auditado",
+      "texto_nuevo": "Realizar una reunión post-auditoría para validar hallazgos con el equipo auditado y que este planee la acción correctiva",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10305",
+        "frase": "presented so that the manager and the team can plan for corrective action"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la reunión presenta las observaciones para que el equipo planee la acción correctiva; eso se cae.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

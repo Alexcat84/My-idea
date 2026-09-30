@@ -9,9 +9,9 @@
     "Eliminar bucles de reproceso para corregir errores del proceso",
     "Eliminar o simplificar pasos de valor marginal para el cliente",
     "Eliminar pasos redundantes como inspecciones (solo tras eliminar causas de error)",
-    "Combinar pasos realizados por un mismo trabajador",
+    "Combinar pasos para que los realice un solo trabajador",
     "Transferir pasos de aprobación a niveles inferiores",
-    "Cambiar la secuencia de actividades de consecutivas a simultáneas",
+    "Cambiar la secuencia de actividades de consecutivas a simultáneas, o hacer un paso después de atender al cliente en lugar de antes",
     "Usar tecnología para realizar pasos rutinarios y complejos"
   ],
   "entregable_esperado": "Proceso de servicio rediseñado con tiempo de ciclo reducido, documentado con datos de antes/después",
@@ -29,5 +29,41 @@
   "etiqueta_arbol": "Acorta tu Tiempo de Ciclo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-165-reduccion_tiempo_ciclo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Combinar pasos realizados por un mismo trabajador",
+      "texto_nuevo": "Combinar pasos para que los realice un solo trabajador",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21393",
+        "frase": "Combine steps and have them done by one worker"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro propone combinar pasos para que los haga un solo trabajador; el nodo lo restringe a pasos que ya hace uno.; No es lo opuesto sino un estrechamiento: el nodo reduce la acción a pasos que ya hace una misma persona.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-165-reduccion_tiempo_ciclo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cambiar la secuencia de actividades de consecutivas a simultáneas",
+      "texto_nuevo": "Cambiar la secuencia de actividades de consecutivas a simultáneas, o hacer un paso después de atender al cliente en lugar de antes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21399",
+        "frase": "Perform a step after serving a customer rather than before."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta una acción de la lista del libro: hacer un paso después de atender al cliente en vez de antes.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

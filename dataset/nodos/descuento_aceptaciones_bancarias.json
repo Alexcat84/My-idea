@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Descuento de Letras y Aceptaciones Bancarias",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibiendo un monto menor al valor nominal por intereses y comisiones) o utilizar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+  "resumen_teorico": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
   "pasos_accionables": [
     "Evaluar la solvencia del comprador extranjero antes de descontar la letra",
     "Negociar con el banco el descuento de letras a plazo",
@@ -38,6 +38,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-162-descuento_aceptaciones_bancarias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibiendo un monto menor al valor nominal por intereses y comisiones) o utilizar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+      "texto_nuevo": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4271",
+        "frase": "The bank may also require you to reimburse it if the draft is unpaid"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el banco puede exigir el reembolso si la letra no se paga al vencimiento; el nodo lo omite.; Mismo defecto: se pierde el recurso del banco contra el exportador.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

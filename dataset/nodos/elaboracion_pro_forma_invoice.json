@@ -4,14 +4,14 @@
   "dominio": "exportacion",
   "titulo_concepto": "Elaboración de la Pro Forma Invoice",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La pro forma invoice es una cotización preparada en formato de factura, siendo el método preferido en el negocio de exportación. Describe el producto, establece precio, tiempo de envío y términos de venta y pago. Sirve como modelo para que el comprador solicite licencias de importación, abra cartas de crédito o gestione fondos. Debe incluir detalles extensos que una cotización doméstica no requiere.",
+  "resumen_teorico": "La pro forma invoice es una cotización preparada en formato de factura, siendo el método preferido en el negocio de exportación. Describe el producto, establece precio, tiempo de envío y términos de venta y pago. Sirve como modelo para que el comprador solicite licencias de importación, abra cartas de crédito o gestione fondos. Su descripción suele requerir más detalle que una cotización doméstica.",
   "pasos_accionables": [
     "Incluir nombres y direcciones de vendedor y comprador.",
     "Detallar número de referencia y fecha de consulta del comprador.",
     "Listar productos solicitados con descripción breve y precio en USD.",
     "Especificar volumen cúbico, peso bruto/neto en unidades métricas.",
     "Indicar descuentos comerciales, punto de entrega, términos de venta y pago.",
-    "Agregar costos de seguro y flete, periodo de validez de la cotización.",
+    "Agregar costos de seguro y flete, periodo de validez de la cotización, cargos totales a pagar por el comprador, fecha estimada de embarque y moneda de la venta.",
     "Incluir declaración de veracidad y país de origen de los bienes.",
     "Marcar claramente el documento como 'Pro Forma Invoice'."
   ],
@@ -46,6 +46,39 @@
         "motivo": "Orden invertido: el comprador usa la pro forma invoice para abrir la carta de credito, asi que la pro forma va antes que la L/C y no despues."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-162-elaboracion_pro_forma_invoice-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La pro forma invoice es una cotización preparada en formato de factura, siendo el método preferido en el negocio de exportación. Describe el producto, establece precio, tiempo de envío y términos de venta y pago. Sirve como modelo para que el comprador solicite licencias de importación, abra cartas de crédito o gestione fondos. Debe incluir detalles extensos que una cotización doméstica no requiere.",
+      "texto_nuevo": "La pro forma invoice es una cotización preparada en formato de factura, siendo el método preferido en el negocio de exportación. Describe el producto, establece precio, tiempo de envío y términos de venta y pago. Sirve como modelo para que el comprador solicite licencias de importación, abra cartas de crédito o gestione fondos. Su descripción suele requerir más detalle que una cotización doméstica.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3847",
+        "frase": "usually must include more detail than is required in a domestic quotation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la descripción suele requerir más detalle; el nodo lo vuelve obligación y lo exagera.; Mismo defecto: endurece un 'usually must include more detail' en un deber de detalle extenso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-162-elaboracion_pro_forma_invoice-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Agregar costos de seguro y flete, periodo de validez de la cotización.",
+      "texto_nuevo": "Agregar costos de seguro y flete, periodo de validez de la cotización, cargos totales a pagar por el comprador, fecha estimada de embarque y moneda de la venta.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3891-3899",
+        "frase": "Total charges to be paid by customer"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye el total de cargos a pagar por el cliente y ningún paso lo recoge.; Se caen de la lista del libro los cargos totales, la fecha estimada de embarque y la moneda de la venta.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

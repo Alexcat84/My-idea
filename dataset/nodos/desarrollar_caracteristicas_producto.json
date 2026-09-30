@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuarto paso: traducir las necesidades del cliente en 'features' (características), entendidas como aquello que el cliente utiliza para satisfacer su necesidad. Requiere priorizar y optimizar la lista de características, aceptando que no todas sobrevivirán al proceso de planificación.",
   "pasos_accionables": [
     "Traducir cada necesidad identificada en una o más características concretas",
-    "Priorizar las características según impacto en la satisfacción del cliente",
+    "Priorizar las características según impacto en la satisfacción del cliente, de forma acordada con los involucrados",
     "Optimizar la lista final, descartando características de bajo valor o inviables",
     "Establecer metas medibles para cada característica seleccionada"
   ],
@@ -40,6 +40,23 @@
         "evidencia": "Q044-001: Traducir necesidades en caracteristicas priorizadas con metas es diseno del producto dentro del Diseno para la Calidad, no operacion de algo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-164-desarrollar_caracteristicas_producto-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar las características según impacto en la satisfacción del cliente",
+      "texto_nuevo": "Priorizar las características según impacto en la satisfacción del cliente, de forma acordada con los involucrados",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3289",
+        "frase": "We finalize by optimizing and agreeing on the list of features"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide ordenar las características y cerrar la lista de forma acordada; el paso omite el acuerdo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

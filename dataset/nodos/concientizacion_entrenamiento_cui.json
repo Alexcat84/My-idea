@@ -4,9 +4,9 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Concientización y Entrenamiento en Seguridad para Personal",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer amenazas internas e ingeniería social.",
+  "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
   "pasos_accionables": [
-    "Diseñar contenido de entrenamiento personalizado según roles y entornos de trabajo del personal",
+    "Diseñar contenido de entrenamiento básico y avanzado personalizado según roles, sistemas a los que se accede y entornos de trabajo del personal, e impartirlo con regularidad al personal nuevo y existente",
     "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
     "Implementar técnicas de concientización como posters, correos de liderazgo, eventos tipo lunch-and-learn",
     "Utilizar recursos gratuitos disponibles (NARA CUI training, Security Awareness Hub)"
@@ -54,6 +54,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-165-concientizacion_entrenamiento_cui-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer amenazas internas e ingeniería social.",
+      "texto_nuevo": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "323",
+        "frase": "How to recognize and report insider threats, social engineering, and social mining."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide reconocer y reportar, e incluye la minería social.; Mismo defecto: se pierde el reporte.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-165-concientizacion_entrenamiento_cui-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar contenido de entrenamiento personalizado según roles y entornos de trabajo del personal",
+      "texto_nuevo": "Diseñar contenido de entrenamiento básico y avanzado personalizado según roles, sistemas a los que se accede y entornos de trabajo del personal, e impartirlo con regularidad al personal nuevo y existente",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "313",
+        "frase": "Regularly provide basic and advanced security literacy training to new and existing staff."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide impartir con regularidad entrenamiento básico y avanzado al personal nuevo y existente.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

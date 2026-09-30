@@ -4,13 +4,13 @@
   "dominio": "compras",
   "titulo_concepto": "Usa una plantilla fija para pedir y comparar cotizaciones",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Cuando pides cotizaciones a distintos proveedores sin una guia fija, cada uno responde a una versión distinta de tu necesidad y comparar precios se vuelve imposible. La solución es armar un formulario propio, corto, que capture siempre lo mismo: que necesitas, cuanto, para cuando, y cualquier condición especial. Ese mismo formulario, o la lista de requisitos que contiene, se envía igual a todos los proveedores que cotices. Así cada cotización responde a la misma pregunta y puedes comparar peras con peras. Si al final decides quedarte con un solo proveedor sin comparar, el mismo documento te sirve para anotar por que, de modo que la decisión quede registrada y no dependa solo de la memoria o de la simpatía del momento.",
+  "resumen_teorico": "Cuando pides cotizaciones a distintos proveedores sin una guía fija, cada uno responde a una versión distinta de tu necesidad y comparar precios se vuelve difícil. La solución es armar un formulario propio que capture siempre lo mismo: qué necesitas, descrito con detalle y por completo aunque tengas que anexar hojas, cuánto, para cuándo, y cualquier condición especial. Ese mismo formulario, o la lista de requisitos que contiene, se envía igual a todos los proveedores que cotices. Así cada cotización responde a la misma pregunta y puedes comparar peras con peras. Si al final decides quedarte con un solo proveedor sin comparar, el mismo documento te sirve para anotar por qué, de modo que la decisión quede registrada y no dependa solo de la memoria o de la simpatía del momento.",
   "pasos_accionables": [
     "Crea un formulario simple con: qué necesitas, cantidad, fecha de entrega requerida y presupuesto aproximado.",
     "Envía el mismo formulario o lista de requisitos a cada proveedor que vayas a cotizar.",
     "Pide a cada proveedor que cotice exactamente los mismos ítems, cantidades y plazos.",
     "Guarda las cotizaciones recibidas junto con la fecha en que las pediste.",
-    "Si eliges un proveedor único sin comparar, escribe la razón en el mismo documento."
+    "Si eliges un proveedor único sin comparar, escribe la razón en el mismo documento y, si la razón es que no hay otro proveedor, adjunta los datos de mercado que lo muestran."
   ],
   "entregable_esperado": "Un formulario de solicitud de compra que reutilizas cada vez que pides cotizaciones a proveedores.",
   "nodos_previos": [],
@@ -127,6 +127,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-163-plantilla_fija_cotizaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando pides cotizaciones a distintos proveedores sin una guia fija, cada uno responde a una versión distinta de tu necesidad y comparar precios se vuelve imposible. La solución es armar un formulario propio, corto, que capture siempre lo mismo: que necesitas, cuanto, para cuando, y cualquier condición especial. Ese mismo formulario, o la lista de requisitos que contiene, se envía igual a todos los proveedores que cotices. Así cada cotización responde a la misma pregunta y puedes comparar peras con peras. Si al final decides quedarte con un solo proveedor sin comparar, el mismo documento te sirve para anotar por que, de modo que la decisión quede registrada y no dependa solo de la memoria o de la simpatía del momento.",
+      "texto_nuevo": "Cuando pides cotizaciones a distintos proveedores sin una guía fija, cada uno responde a una versión distinta de tu necesidad y comparar precios se vuelve difícil. La solución es armar un formulario propio que capture siempre lo mismo: qué necesitas, descrito con detalle y por completo aunque tengas que anexar hojas, cuánto, para cuándo, y cualquier condición especial. Ese mismo formulario, o la lista de requisitos que contiene, se envía igual a todos los proveedores que cotices. Así cada cotización responde a la misma pregunta y puedes comparar peras con peras. Si al final decides quedarte con un solo proveedor sin comparar, el mismo documento te sirve para anotar por qué, de modo que la decisión quede registrada y no dependa solo de la memoria o de la simpatía del momento.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "901-1013",
+        "frase": "a detailed, specific, complete description of the goods"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que describir por completo lo que necesitas da propuestas precisas; 'imposible' endurece esa idea.; El libro exige una descripción detallada y completa de lo que compras, con hojas anexas si no cabe; 'corto' la pierde.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-163-plantilla_fija_cotizaciones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si eliges un proveedor único sin comparar, escribe la razón en el mismo documento.",
+      "texto_nuevo": "Si eliges un proveedor único sin comparar, escribe la razón en el mismo documento y, si la razón es que no hay otro proveedor, adjunta los datos de mercado que lo muestran.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "1011",
+        "frase": "the market data used to make this determination must be included"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Si la razón es que solo hay un proveedor, el libro exige incluir los datos de mercado que lo muestran.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

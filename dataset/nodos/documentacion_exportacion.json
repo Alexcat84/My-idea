@@ -9,8 +9,8 @@
     "Determina qué documentos necesitas según el destino y el tipo de producto",
     "Prepara la factura pro forma para cotizar al comprador antes del envío",
     "Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones",
-    "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker)",
-    "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país o si necesitas una licencia de exportación",
+    "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+    "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
     "Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito"
   ],
   "entregable_esperado": "Carpeta completa de documentos de exportación por embarque, validada antes del envío",
@@ -97,6 +97,40 @@
       },
       "decision": "'al momento de la fuente' es voz de libro: pasa a 'en su momento'; el aviso de verificar la norma vigente se conserva",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guarda G6"
+    },
+    {
+      "id": "final-e1-162-documentacion_exportacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker)",
+      "texto_nuevo": "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3561",
+        "frase": "as the exporter, you are ultimately responsible for the accuracy of the necessary documents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que, aunque delegues, el exportador sigue siendo responsable de la exactitud de los documentos.; Mismo defecto: se pierde la responsabilidad final del exportador.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-162-documentacion_exportacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país o si necesitas una licencia de exportación",
+      "texto_nuevo": "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3613",
+        "frase": "regardless of value, that require an export license or are destined for countries restricted"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige la declaración, sin importar el valor, en envíos a países restringidos; el paso omite esa condición.; Mismo defecto: falta la condición de destino restringido.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

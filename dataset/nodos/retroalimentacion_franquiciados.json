@@ -4,10 +4,10 @@
   "dominio": "franquicias",
   "titulo_concepto": "Escucha Activa y Retroalimentación de Franquiciados",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Muchos franquiciadores confían en su instinto para evaluar cómo se sienten sus franquiciados, lo cual suele estar sesgado. Es fundamental implementar mecanismos formales de retroalimentación (encuestas, mystery shopping de validación) para conocer la percepción real de los franquiciados sobre la marca y su liderazgo.",
+  "resumen_teorico": "Muchos franquiciadores confían en su instinto para evaluar cómo se sienten sus franquiciados, lo cual suele estar sesgado. Es fundamental escucharlos y pedirles retroalimentación con regularidad, complementada si hace falta con encuestas e incluso mystery shopping de validación, para conocer la percepción real de los franquiciados sobre la marca y su liderazgo.",
   "pasos_accionables": [
-    "Diseñar encuestas periódicas de satisfacción de franquiciados",
-    "Realizar mystery shopping sobre el proceso de validación de franquicias",
+    "Si hace falta, diseñar encuestas periódicas de satisfacción de franquiciados para complementar otras vías de retroalimentación",
+    "Si lo eliges, realizar mystery shopping sobre el proceso de validación de franquicias para oír lo que tus franquiciados dicen a tus prospectos",
     "Solicitar feedback de manera regular más allá de conversaciones informales",
     "Analizar resultados y comunicar acciones derivadas de la retroalimentación"
   ],
@@ -22,5 +22,57 @@
   "etiqueta_arbol": "Escucha a tus Franquiciados",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-164-retroalimentacion_franquiciados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos franquiciadores confían en su instinto para evaluar cómo se sienten sus franquiciados, lo cual suele estar sesgado. Es fundamental implementar mecanismos formales de retroalimentación (encuestas, mystery shopping de validación) para conocer la percepción real de los franquiciados sobre la marca y su liderazgo.",
+      "texto_nuevo": "Muchos franquiciadores confían en su instinto para evaluar cómo se sienten sus franquiciados, lo cual suele estar sesgado. Es fundamental escucharlos y pedirles retroalimentación con regularidad, complementada si hace falta con encuestas e incluso mystery shopping de validación, para conocer la percepción real de los franquiciados sobre la marca y su liderazgo.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5146",
+        "frase": "Conduct formal surveys if need be to supplement other feedback mechanisms."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide escuchar y pedir retroalimentación con regularidad; las encuestas formales complementan si hace falta y el mystery shopping es opcional.; Mismo defecto: convierte en fundamental lo que el libro plantea como complemento opcional.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-164-retroalimentacion_franquiciados-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar encuestas periódicas de satisfacción de franquiciados",
+      "texto_nuevo": "Si hace falta, diseñar encuestas periódicas de satisfacción de franquiciados para complementar otras vías de retroalimentación",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5146",
+        "frase": "Conduct formal surveys if need be to supplement other feedback mechanisms."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea las encuestas formales solo si hace falta, como complemento de otras vías de retroalimentación.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-164-retroalimentacion_franquiciados-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar mystery shopping sobre el proceso de validación de franquicias",
+      "texto_nuevo": "Si lo eliges, realizar mystery shopping sobre el proceso de validación de franquicias para oír lo que tus franquiciados dicen a tus prospectos",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "5146",
+        "frase": "You may even choose to mystery shop your franchise validation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo presenta como una opción ('may even choose'), no como paso obligatorio.; Mismo defecto: endurece una opción a paso obligatorio.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

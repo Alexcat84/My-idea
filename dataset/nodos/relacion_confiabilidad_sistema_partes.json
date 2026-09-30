@@ -10,7 +10,7 @@
     "Calcular la confiabilidad del sistema multiplicando las confiabilidades de las partes",
     "Evaluar si el aumento de complejidad reduce significativamente la confiabilidad total",
     "Diseñar redundancia paralela en componentes críticos si es necesario",
-    "Calcular la nueva confiabilidad del sistema con redundancia usando Ps = 1-(1-P1)^n"
+    "Calcular la nueva confiabilidad del sistema con redundancia paralela de n elementos idénticos usando Ps = 1-(1-P1)^n"
   ],
   "entregable_esperado": "Diagrama de bloques de confiabilidad del sistema con cálculo de Ps y propuesta de redundancia si aplica",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Calcula la Confiabilidad del Sistema",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-165-relacion_confiabilidad_sistema_partes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular la nueva confiabilidad del sistema con redundancia usando Ps = 1-(1-P1)^n",
+      "texto_nuevo": "Calcular la nueva confiabilidad del sistema con redundancia paralela de n elementos idénticos usando Ps = 1-(1-P1)^n",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20239",
+        "frase": "n = number of identical redundant elements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La fórmula del libro vale para redundancia paralela de n elementos idénticos.; Mismo defecto: se cae la condición de elementos idénticos en paralelo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

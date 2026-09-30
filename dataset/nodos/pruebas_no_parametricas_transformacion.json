@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando los datos violan los supuestos de las pruebas paramétricas (como la normalidad), existen alternativas: pruebas no paramétricas (basadas en rangos, libres de distribución), transformación de datos (funciones de potencia, Box-Cox, Johnson) para cumplir los supuestos, y bootstrapping (remuestreo con reemplazo para determinar empíricamente la distribución de un estadístico).",
   "pasos_accionables": [
     "Verificar los supuestos de normalidad y varianza igual de los datos",
-    "Si se violan los supuestos, considerar pruebas no paramétricas basadas en rangos",
+    "Si se violan los supuestos, considerar pruebas no paramétricas basadas en rangos, sabiendo que tienen sus propios supuestos y con frecuencia son menos potentes",
     "Alternativamente, aplicar una transformación de datos (potencia, Box-Cox o Johnson)",
     "Como opción adicional, aplicar bootstrapping para estimar la distribución empírica del estadístico",
     "Seleccionar el método más apropiado según el software y necesidad de interpretabilidad"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Ajusta tus Datos, Prueba Distinto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-165-pruebas_no_parametricas_transformacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si se violan los supuestos, considerar pruebas no paramétricas basadas en rangos",
+      "texto_nuevo": "Si se violan los supuestos, considerar pruebas no paramétricas basadas en rangos, sabiendo que tienen sus propios supuestos y con frecuencia son menos potentes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19787",
+        "frase": "frequently are statistically less powerful compared to parametric tests"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que las no paramétricas tienen sus propios supuestos y suelen ser menos potentes, lo que pesa al elegir.; Mismo defecto: se pierden los supuestos propios y la menor potencia que el libro señala.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

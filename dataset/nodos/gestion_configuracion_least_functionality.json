@@ -9,7 +9,7 @@
     "Limitar quién puede realizar cambios en sistemas que contienen CUI",
     "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
     "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
-    "Deshabilitar funciones, puertos y servicios innecesarios en los sistemas"
+    "Deshabilitar o remover funciones, puertos, protocolos y servicios innecesarios o inseguros en los sistemas"
   ],
   "entregable_esperado": "Inventario de configuraciones base documentado y política de gestión de cambios implementada",
   "nodos_previos": [
@@ -39,6 +39,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-165-gestion_configuracion_least_functionality-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Deshabilitar funciones, puertos y servicios innecesarios en los sistemas",
+      "texto_nuevo": "Deshabilitar o remover funciones, puertos, protocolos y servicios innecesarios o inseguros en los sistemas",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "387",
+        "frase": "Disable or remove functions, ports, protocols, connections, and services that are unnecessary or nonsecure."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide deshabilitar o remover también lo inseguro, no solo lo innecesario.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

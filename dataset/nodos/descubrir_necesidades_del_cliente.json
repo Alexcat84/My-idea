@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Descubrimiento de las Necesidades del Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, y traducirlas al lenguaje de la organización.",
+  "resumen_teorico": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, traducirlas al lenguaje de la organización y establecer unidades de medida y sensores.",
   "pasos_accionables": [
-    "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc.",
+    "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc., y consultar a los clientes con frecuencia, porque sus necesidades cambian",
     "Recopilar la lista de necesidades en el lenguaje propio del cliente",
     "Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente",
     "Investigar posibles usos no previstos del producto y sus riesgos de seguridad",
     "Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente",
-    "Traducir las necesidades priorizadas al lenguaje técnico de la organización"
+    "Traducir las necesidades priorizadas al lenguaje técnico de la organización y establecer para cada una su unidad de medida y su sensor"
   ],
   "entregable_esperado": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en spreadsheet",
   "nodos_previos": [
@@ -80,6 +80,56 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-164-descubrir_necesidades_del_cliente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, y traducirlas al lenguaje de la organización.",
+      "texto_nuevo": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, traducirlas al lenguaje de la organización y establecer unidades de medida y sensores.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3575-3585",
+        "frase": "Establish units of measurement and sensors."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro tiene una quinta actividad, establecer unidades de medida y sensores, que el resumen omite.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-164-descubrir_necesidades_del_cliente-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc.",
+      "texto_nuevo": "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc., y consultar a los clientes con frecuencia, porque sus necesidades cambian",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3741",
+        "frase": "It becomes extremely important to check with customers frequently"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que las necesidades cambian y que hay que consultar a los clientes con frecuencia.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-164-descubrir_necesidades_del_cliente-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Traducir las necesidades priorizadas al lenguaje técnico de la organización",
+      "texto_nuevo": "Traducir las necesidades priorizadas al lenguaje técnico de la organización y establecer para cada una su unidad de medida y su sensor",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3585",
+        "frase": "Establish units of measurement and sensors."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye establecer unidades de medida y sensores, que los pasos omiten.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,9 +4,9 @@
   "dominio": "quality",
   "titulo_concepto": "Mantenimiento Centrado en Confiabilidad (RCM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+  "resumen_teorico": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
   "pasos_accionables": [
-    "Clasificar todos los activos según criticidad (reactivo, preventivo, predictivo)",
+    "Clasificar todos los activos según su criticidad y su patrón de falla (reactivo, preventivo, predictivo)",
     "Para activos reactivos, permitir operación hasta falla",
     "Para activos preventivos, establecer calendario de mantenimiento basado en ciclos/tiempo",
     "Para activos predictivos, implementar monitoreo de condición (vibración, temperatura, lubricación)",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Prioriza tu Mantenimiento con Confiabilidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-165-rcm_reliability_centered_maintenance-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+      "texto_nuevo": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13621",
+        "frase": "This group also includes assets with random failure patterns"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone también en predictivo los activos de falla aleatoria, sin desgaste normal y los repuestos de reposición larga.; Mismo defecto: la categoría predictiva del libro no se limita a los activos críticos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-165-rcm_reliability_centered_maintenance-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar todos los activos según criticidad (reactivo, preventivo, predictivo)",
+      "texto_nuevo": "Clasificar todos los activos según su criticidad y su patrón de falla (reactivo, preventivo, predictivo)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13621",
+        "frase": "This set of assets has a known failure pattern"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro separa preventivo de predictivo también por el patrón de falla, no solo por criticidad.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

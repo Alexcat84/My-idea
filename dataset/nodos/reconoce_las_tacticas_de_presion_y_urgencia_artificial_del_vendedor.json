@@ -4,9 +4,9 @@
   "dominio": "compras",
   "titulo_concepto": "Reconoce las tácticas de presión y urgencia artificial del vendedor",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Muchos vendedores usan frases como que solo queda una unidad, que el precio sube pronto o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Esa urgencia casi nunca es información real sobre el mercado, es una herramienta de venta pensada para que bajes la guardia. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
+  "resumen_teorico": "Muchos vendedores usan frases como que solo queda una unidad o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Es una táctica de presión que cabe esperar de un vendedor y, aunque lo que dice sea cierto, no debería cambiar tu decisión. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
   "pasos_accionables": [
-    "Cuando el vendedor diga que hay poca disponibilidad o que el precio sube pronto, pregúntate si es real o una táctica de presión.",
+    "Cuando el vendedor diga que hay poca disponibilidad o que la oferta se acaba pronto, pregúntate si es real o una táctica de presión, y recuerda que aunque sea real no debería apurar tu decisión, porque suele haber otra unidad u otro proveedor.",
     "Sugerencia de My Idea: pide que la oferta con fecha límite te la confirmen por escrito.",
     "Antes de la reunión, fija tu propio límite de tiempo y de precio, y no lo cambies solo porque el vendedor apura.",
     "Si sientes presión, pide una pausa breve para pensar antes de responder.",
@@ -43,6 +43,39 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide ignorar la urgencia del vendedor, pero en ninguna parte dice que se pida la oferta por escrito.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-060"
+    },
+    {
+      "id": "final-e1-163-reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos vendedores usan frases como que solo queda una unidad, que el precio sube pronto o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Esa urgencia casi nunca es información real sobre el mercado, es una herramienta de venta pensada para que bajes la guardia. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
+      "texto_nuevo": "Muchos vendedores usan frases como que solo queda una unidad o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Es una táctica de presión que cabe esperar de un vendedor y, aunque lo que dice sea cierto, no debería cambiar tu decisión. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5033-5051",
+        "frase": "Even when the information is true"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que la urgencia casi nunca sea cierta; dice que, aun siendo cierta, no debería influir en la decisión.; La enumeración añade una táctica que el libro no describe; sus ejemplos son la unidad única y que no estará mañana.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-163-reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el vendedor diga que hay poca disponibilidad o que el precio sube pronto, pregúntate si es real o una táctica de presión.",
+      "texto_nuevo": "Cuando el vendedor diga que hay poca disponibilidad o que la oferta se acaba pronto, pregúntate si es real o una táctica de presión, y recuerda que aunque sea real no debería apurar tu decisión, porque suele haber otra unidad u otro proveedor.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5051",
+        "frase": "should have no impact on the decision to buy it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El precio que sube pronto es una táctica que el libro no describe.; Mismo defecto que la marca 0.; Se cae que, aunque la escasez sea real, no debe apurar la decisión porque habrá otra unidad u otro proveedor.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

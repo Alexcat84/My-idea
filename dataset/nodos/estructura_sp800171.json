@@ -4,10 +4,10 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Estructura de SP 800-171: 17 Familias de Requisitos de Seguridad",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Cada requisito incluye un identificador único, descripción, parámetros definidos por la organización (ODP), discusión y referencias a SP 800-53.",
+  "resumen_teorico": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Un requisito típico incluye un identificador único, descripción, discusión y referencias a SP 800-53, y algunos incluyen parámetros definidos por la organización (ODP).",
   "pasos_accionables": [
     "Revisar las 17 familias de requisitos disponibles en el catálogo de SP 800-171",
-    "Priorizar familias según el nivel de madurez actual de la organización",
+    "Priorizar la implementación por fases según tus recursos (tiempo, experiencia, presupuesto), partiendo de los requisitos que ya cumples",
     "Usar la herramienta NIST Cybersecurity and Privacy Reference Tool (CPRT) para explorar requisitos específicos"
   ],
   "entregable_esperado": "Lista priorizada de familias de requisitos a implementar según recursos disponibles",
@@ -55,6 +55,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-165-estructura_sp800171-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Cada requisito incluye un identificador único, descripción, parámetros definidos por la organización (ODP), discusión y referencias a SP 800-53.",
+      "texto_nuevo": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Un requisito típico incluye un identificador único, descripción, discusión y referencias a SP 800-53, y algunos incluyen parámetros definidos por la organización (ODP).",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "223",
+        "frase": "Organization-Defined Parameters (ODPs) are included in certain security requirements."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe un requisito típico y dice que los ODP están solo en ciertos requisitos.; Mismo defecto: los ODP no están en todos los requisitos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-165-estructura_sp800171-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar familias según el nivel de madurez actual de la organización",
+      "texto_nuevo": "Priorizar la implementación por fases según tus recursos (tiempo, experiencia, presupuesto), partiendo de los requisitos que ya cumples",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "265",
+        "frase": "Implement in phases based upon your resources (including time, expertise, budget, etc.)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide implementar por fases según los recursos, partiendo de lo que ya se cumple; el criterio de madurez no lo recoge.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

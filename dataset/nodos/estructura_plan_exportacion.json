@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Estructura del Plan de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso a largo plazo, dado que la exportación puede tardar meses o años en generar retorno.",
+  "resumen_teorico": "Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso con la exportación a largo plazo.",
   "pasos_accionables": [
     "Redactar tabla de contenido y resumen ejecutivo (1-2 páginas)",
     "Escribir la declaración de compromiso de política de exportación",
@@ -14,7 +14,7 @@
     "Elaborar el presupuesto de exportación y estados financieros pro-forma",
     "Establecer el cronograma de implementación y seguimiento periódico"
   ],
-  "entregable_esperado": "Documento de Plan de Exportación completo con todas sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma) listo para guiar la ejecución",
+  "entregable_esperado": "Documento de Plan de Exportación con sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma), simple y de pocas páginas la primera vez y más detallado a medida que ganas experiencia, listo para guiar la ejecución",
   "nodos_previos": [
     "evaluacion_preparacion_empresa_exportar",
     "desarrollo_plan_exportacion"
@@ -31,5 +31,39 @@
   "etiqueta_arbol": "Estructura tu Plan de Exportación",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-162-estructura_plan_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso a largo plazo, dado que la exportación puede tardar meses o años en generar retorno.",
+      "texto_nuevo": "Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso con la exportación a largo plazo.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "671",
+        "frase": "help assure a commitment to exporting over the longer term"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el plan ayuda a asegurar el compromiso a largo plazo, sin dar esa causa ni el plazo de meses o años.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-162-estructura_plan_exportacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento de Plan de Exportación completo con todas sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma) listo para guiar la ejecución",
+      "texto_nuevo": "Documento de Plan de Exportación con sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma), simple y de pocas páginas la primera vez y más detallado a medida que ganas experiencia, listo para guiar la ejecución",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "627",
+        "frase": "The first time an export plan is developed, it should be kept simple."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que el primer plan sea simple y de pocas páginas y que se detalle con la experiencia; el entregable exige un plan completo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

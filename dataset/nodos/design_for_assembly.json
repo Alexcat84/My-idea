@@ -7,7 +7,7 @@
   "resumen_teorico": "Metodología para evaluar el diseño de partes y ensamblajes con el fin de identificar piezas innecesarias y determinar tiempos y costos de ensamblaje. Busca simplificar el producto reduciendo el número de partes, mejorando calidad, confiabilidad y acortando ciclos de desarrollo.",
   "pasos_accionables": [
     "Evaluar la contribución de costo de cada parte del ensamblaje",
-    "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza",
+    "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza, hasta donde sea económicamente viable",
     "Calcular tiempos y costos de ensamblaje con software especializado",
     "Rediseñar el producto para simplificar el proceso de ensamblaje"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Simplifica el Ensamblaje del Producto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-164-design_for_assembly-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza",
+      "texto_nuevo": "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza, hasta donde sea económicamente viable",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "16058",
+        "frase": "incorporating as many features into one part as is economically feasible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae el límite del libro: combinar funciones en una pieza solo hasta donde sea económicamente viable.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

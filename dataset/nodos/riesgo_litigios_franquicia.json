@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Gestión del Riesgo de Litigios en Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Aunque existe temor generalizado a litigios de franquiciados, estudios (FRANdata 2004) muestran que solo 26% de franquiciantes reportaron algún litigio. La responsabilidad contractual del franquiciante se limita a los compromisos del contrato de franquicia, el cual suele redactarse a favor del franquiciante. Además, evitar franquiciar no elimina el riesgo legal, solo lo traslada a otras formas (responsabilidad laboral, accidentes, etc. en operaciones propias).",
+  "resumen_teorico": "Aunque existe temor generalizado a litigios de franquiciados, estudios (FRANdata 2004) muestran que solo 26% de franquiciantes reportaron algún litigio. La responsabilidad contractual del franquiciante se limita en gran medida a los compromisos del contrato de franquicia, el cual suele redactarse a favor del franquiciante. Además, salvo que decidas no crecer en absoluto, evitar franquiciar no elimina el riesgo legal, solo lo traslada a otras formas (responsabilidad laboral, accidentes, etc. en operaciones propias).",
   "pasos_accionables": [
     "Contratar un abogado especializado en franquicias para redactar el contrato de franquicia",
     "Comparar el riesgo legal de litigios de franquiciados vs. litigios laborales/de consumidor en operación propia",
@@ -38,6 +38,22 @@
         "evidencia": "F12-030: Redactar con abogado el contrato de franquicia y sus clausulas de riesgo es preparar el modelo y los recursos, no probar con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-164-riesgo_litigios_franquicia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aunque existe temor generalizado a litigios de franquiciados, estudios (FRANdata 2004) muestran que solo 26% de franquiciantes reportaron algún litigio. La responsabilidad contractual del franquiciante se limita a los compromisos del contrato de franquicia, el cual suele redactarse a favor del franquiciante. Además, evitar franquiciar no elimina el riesgo legal, solo lo traslada a otras formas (responsabilidad laboral, accidentes, etc. en operaciones propias).",
+      "texto_nuevo": "Aunque existe temor generalizado a litigios de franquiciados, estudios (FRANdata 2004) muestran que solo 26% de franquiciantes reportaron algún litigio. La responsabilidad contractual del franquiciante se limita en gran medida a los compromisos del contrato de franquicia, el cual suele redactarse a favor del franquiciante. Además, salvo que decidas no crecer en absoluto, evitar franquiciar no elimina el riesgo legal, solo lo traslada a otras formas (responsabilidad laboral, accidentes, etc. en operaciones propias).",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "413",
+        "frase": "A franchisor's contractual liability is largely limited to the commitments"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que la responsabilidad contractual se limita en gran medida al contrato, no por completo.; Mismo defecto.; Se cae la excepción del libro: el riesgo solo se traslada si igual decides crecer por otra vía.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

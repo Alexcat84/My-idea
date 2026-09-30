@@ -4,9 +4,9 @@
   "dominio": "compras",
   "titulo_concepto": "Registra qué funcionó en cada compra",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Después de cerrar una compra o un contrato, tómate unos minutos para anotar qué salió bien y qué salió mal, separado del contrato mismo. Este registro no necesita ser formal: basta una nota con la fecha, el proveedor, qué se cumplió del plazo o presupuesto, y qué sorpresa apareció en la negociación. Sin este hábito, cada vez que vuelvas a comprar algo parecido repetirás los mismos errores porque la memoria sola no alcanza. Con el tiempo, este archivo se convierte en tu propia guía de qué proveedores cumplen, qué cláusulas conviene pedir y qué preguntas se te olvidó hacer la vez anterior. Revisarlo antes de la próxima compra similar te ahorra tiempo y evita que negocies desde cero cada vez.",
+  "resumen_teorico": "Después de cerrar una compra o un contrato, tómate unos minutos para anotar qué salió bien y qué salió mal, separado del contrato mismo. Este registro no necesita ser formal: basta una nota con la fecha, el proveedor, qué se cumplió del plazo o presupuesto, y qué sorpresa apareció en la negociación. Este hábito es la mejor forma de no repetir los mismos errores cuando vuelvas a comprar algo parecido. Con el tiempo, este archivo se convierte en tu propia guía de qué proveedores cumplen, qué cláusulas conviene pedir y qué preguntas se te olvidó hacer la vez anterior. Revisarlo antes de la próxima compra similar te ahorra tiempo y evita que negocies desde cero cada vez.",
   "pasos_accionables": [
-    "Al cerrar cada compra o contrato, escribe en una nota qué funcionó y qué no.",
+    "Al cerrar cada compra o contrato, escribe en una nota qué funcionó, qué no y cómo podrías arreglar lo que falló la próxima vez.",
     "Anota específicamente los retrasos, sorpresas de precio o problemas de calidad que aparecieron.",
     "Guarda estas notas en un solo lugar, ordenadas por proveedor o por tipo de compra.",
     "Antes de tu próxima compra similar, relee las notas de la vez anterior.",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Anota qué funcionó en cada compra",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-163-registro_lecciones_aprendidas_compra-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de cerrar una compra o un contrato, tómate unos minutos para anotar qué salió bien y qué salió mal, separado del contrato mismo. Este registro no necesita ser formal: basta una nota con la fecha, el proveedor, qué se cumplió del plazo o presupuesto, y qué sorpresa apareció en la negociación. Sin este hábito, cada vez que vuelvas a comprar algo parecido repetirás los mismos errores porque la memoria sola no alcanza. Con el tiempo, este archivo se convierte en tu propia guía de qué proveedores cumplen, qué cláusulas conviene pedir y qué preguntas se te olvidó hacer la vez anterior. Revisarlo antes de la próxima compra similar te ahorra tiempo y evita que negocies desde cero cada vez.",
+      "texto_nuevo": "Después de cerrar una compra o un contrato, tómate unos minutos para anotar qué salió bien y qué salió mal, separado del contrato mismo. Este registro no necesita ser formal: basta una nota con la fecha, el proveedor, qué se cumplió del plazo o presupuesto, y qué sorpresa apareció en la negociación. Este hábito es la mejor forma de no repetir los mismos errores cuando vuelvas a comprar algo parecido. Con el tiempo, este archivo se convierte en tu propia guía de qué proveedores cumplen, qué cláusulas conviene pedir y qué preguntas se te olvidó hacer la vez anterior. Revisarlo antes de la próxima compra similar te ahorra tiempo y evita que negocies desde cero cada vez.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5471-5473",
+        "frase": "It is also the best way to avoid mistakes in the future"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta el registro como la mejor forma de evitar errores; no afirma que sin él los repitas ni habla de la memoria.; Mismo endurecimiento a certeza que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-163-registro_lecciones_aprendidas_compra-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al cerrar cada compra o contrato, escribe en una nota qué funcionó y qué no.",
+      "texto_nuevo": "Al cerrar cada compra o contrato, escribe en una nota qué funcionó, qué no y cómo podrías arreglar lo que falló la próxima vez.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5477-5483",
+        "frase": "At the very least, get ideas for ways to fix the things that went wrong"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, tras lo bueno y lo malo, ideas para mejorar y como mínimo para arreglar lo que falló.; Mismo paso perdido que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

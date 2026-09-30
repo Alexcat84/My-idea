@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Desarrollar Estrategias o Metas de Largo Plazo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, evalúa cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia.",
+  "resumen_teorico": "El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, quizá necesites evaluar cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura y la satisfacción de tu equipo, tus procesos internos (incluidos tus proveedores) y cómo te comparas con la competencia.",
   "pasos_accionables": [
-    "Evalúa las cinco áreas clave: satisfacción de tus clientes, costos de mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia",
+    "Evalúa las cinco áreas clave: lealtad y satisfacción de tus clientes, costos de mala calidad, tu cultura y la satisfacción de tu equipo, tus procesos internos (incluidos tus proveedores) y cómo te comparas con la competencia",
     "Analiza los datos para identificar tus fortalezas, debilidades, oportunidades y amenazas",
-    "Define de 4 a 5 estrategias clave que aporten de verdad a tu visión",
+    "Define un número pequeño de estrategias clave, por lo general 4 o 5, que aporten de verdad a tu visión",
     "Asigna a alguien concreto la responsabilidad de llevar adelante cada estrategia"
   ],
   "entregable_esperado": "Documento con tus 4 o 5 estrategias clave de largo plazo, cada una con un responsable asignado",
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Define tus Estrategias Clave",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-164-desarrollar_estrategias_largo_plazo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, evalúa cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia.",
+      "texto_nuevo": "El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, quizá necesites evaluar cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura y la satisfacción de tu equipo, tus procesos internos (incluidos tus proveedores) y cómo te comparas con la competencia.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8859-8869",
+        "frase": "one may need to assess five areas of the organization"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que puede ser necesario evaluar cinco áreas; el resumen lo presenta como obligatorio.; La tercera área del libro une cultura y satisfacción del personal; el resumen pierde esta última.; Mismo defecto que la marca 0.; Pierde la satisfacción del personal y a los proveedores dentro de los procesos internos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-164-desarrollar_estrategias_largo_plazo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa las cinco áreas clave: satisfacción de tus clientes, costos de mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia",
+      "texto_nuevo": "Evalúa las cinco áreas clave: lealtad y satisfacción de tus clientes, costos de mala calidad, tu cultura y la satisfacción de tu equipo, tus procesos internos (incluidos tus proveedores) y cómo te comparas con la competencia",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8861-8867",
+        "frase": "Organization culture and employee satisfaction"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Frente a la lista del libro, el paso pierde la lealtad del cliente, la satisfacción del personal y los proveedores.; Mismo defecto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-164-desarrollar_estrategias_largo_plazo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define de 4 a 5 estrategias clave que aporten de verdad a tu visión",
+      "texto_nuevo": "Define un número pequeño de estrategias clave, por lo general 4 o 5, que aporten de verdad a tu visión",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "8853",
+        "frase": "break the vision into a small number of key strategies (usually four or five)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice un número pequeño, usualmente cuatro o cinco; el paso lo fija como cifra.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

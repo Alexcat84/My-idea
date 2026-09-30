@@ -4,12 +4,12 @@
   "dominio": "compras",
   "titulo_concepto": "Ten reglas claras para avisar a proveedores no elegidos",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu reputación y tu poder de negociación futuro. Es mejor esperar a tener la decisión final antes de notificar a nadie, porque si los proveedores descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
+  "resumen_teorico": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu reputación y tu poder de negociación futuro. Si las ofertas quedaron muy distintas, conviene esperar a tener la decisión final antes de notificar, porque si los descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido; si quedaron parejas, avisar antes probablemente es seguro. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
   "pasos_accionables": [
-    "Decide de antemano si vas a dar retroalimentación a los proveedores que no elegiste.",
-    "Espera a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido.",
+    "Decide de antemano si vas a dar retroalimentación a los proveedores que no elegiste y, si la darás, anúncialo en tu solicitud de cotización, con cómo pedirla y en qué plazo.",
+    "Si las ofertas quedaron muy distintas entre sí, espera a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido; si quedaron parejas, puedes avisar antes. A quien entregó tarde o incompleto, avísale por escrito en cuanto cierre el plazo, con ese motivo.",
     "Comparte solo razones generales, como precio no competitivo o requisito incumplido, nunca cifras de otros proveedores.",
-    "No reveles información confidencial de tu negocio ni del proveedor ganador.",
+    "No reveles información confidencial de tu negocio ni del proveedor ganador, ni los detalles de la propuesta ganadora, ni en qué lugar quedó cada proveedor en tu evaluación.",
     "Si un proveedor se queja de la decisión, dile que fue definitiva y que puede enviar su reclamo por escrito si insiste."
   ],
   "entregable_esperado": "Un criterio escrito propio sobre qué decir, cuándo decirlo y qué callar al avisar a proveedores no elegidos.",
@@ -25,5 +25,74 @@
   "etiqueta_arbol": "Notifica bien a quien no elegiste",
   "fuentes_internas": [
     "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-163-ten_reglas_claras_para_avisar_a_proveedores_no_elegidos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu reputación y tu poder de negociación futuro. Es mejor esperar a tener la decisión final antes de notificar a nadie, porque si los proveedores descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
+      "texto_nuevo": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu reputación y tu poder de negociación futuro. Si las ofertas quedaron muy distintas, conviene esperar a tener la decisión final antes de notificar, porque si los descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido; si quedaron parejas, avisar antes probablemente es seguro. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5451",
+        "frase": "variations in either pricing or other important areas of the RFX are wide"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro condiciona la espera: si las ofertas son parejas avisar antes es probablemente seguro; solo con grandes diferencias conviene esperar.; Mismo endurecimiento a regla general que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-163-ten_reglas_claras_para_avisar_a_proveedores_no_elegidos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Espera a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido.",
+      "texto_nuevo": "Si las ofertas quedaron muy distintas entre sí, espera a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido; si quedaron parejas, puedes avisar antes. A quien entregó tarde o incompleto, avísale por escrito en cuanto cierre el plazo, con ese motivo.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5451-5461",
+        "frase": "then you are probably safe to do notifications to unsuccessful suppliers now"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro recomienda esperar solo si las ofertas difieren mucho; si son parejas, avisar antes es probablemente seguro.; Misma excepción perdida que la marca 1.; Mismo endurecimiento que la marca 0.; Se cae la excepción: a quien entregó tarde o incompleto se le avisa por escrito en cuanto cierra la solicitud, con esa razón.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-163-ten_reglas_claras_para_avisar_a_proveedores_no_elegidos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide de antemano si vas a dar retroalimentación a los proveedores que no elegiste.",
+      "texto_nuevo": "Decide de antemano si vas a dar retroalimentación a los proveedores que no elegiste y, si la darás, anúncialo en tu solicitud de cotización, con cómo pedirla y en qué plazo.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5453",
+        "frase": "there will be a statement in the RFX about it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que, si se permite pedir retroalimentación, se anuncia en la solicitud con cómo pedirla y en qué plazo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-163-ten_reglas_claras_para_avisar_a_proveedores_no_elegidos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No reveles información confidencial de tu negocio ni del proveedor ganador.",
+      "texto_nuevo": "No reveles información confidencial de tu negocio ni del proveedor ganador, ni los detalles de la propuesta ganadora, ni en qué lugar quedó cada proveedor en tu evaluación.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5463-5465",
+        "frase": "listed after the weighted evaluations were complete, details of the winning proposal"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro también prohíbe compartir el lugar del proveedor en la evaluación y los detalles de la propuesta ganadora.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

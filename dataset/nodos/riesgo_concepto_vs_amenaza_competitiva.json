@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Balance entre Riesgo de Concepto y Amenaza Competitiva (Timing de Franquiciar)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Existen dos riesgos opuestos al decidir el momento de franquiciar: el 'riesgo de concepto' (franquiciar antes de haber perfeccionado y probado el modelo de negocio) y la 'amenaza competitiva' (esperar demasiado permite que competidores copien el concepto y se posicionen como líderes de mercado primero). El momento óptimo para franquiciar es cuando estas dos curvas de riesgo se cruzan, idealmente unos meses antes, dado que preparar la organización para vender franquicias toma de 4 a 6 meses.",
+  "resumen_teorico": "Existen dos riesgos opuestos al decidir el momento de franquiciar: el 'riesgo de concepto' (franquiciar antes de haber perfeccionado y probado el modelo de negocio) y la 'amenaza competitiva' (esperar demasiado permite que competidores copien el concepto y se posicionen como líderes de mercado primero). El momento óptimo para franquiciar es cuando estas dos curvas de riesgo se cruzan, o incluso unos meses antes, dado que preparar la organización para vender franquicias suele tomar de 4 a 6 meses.",
   "pasos_accionables": [
     "Evaluar cuánto tiempo lleva operando el concepto y qué tan probado está el modelo",
     "Identificar barreras de entrada (patentes, exclusividad, dificultad de replicar el concepto)",
     "Monitorear actividad de competidores potenciales que podrían copiar el concepto",
-    "Estimar el punto de cruce entre ambos riesgos y planificar el inicio del proceso de franquicia 4-6 meses antes"
+    "Estimar el punto de cruce entre ambos riesgos y planificar el inicio del proceso de franquicia en ese punto o incluso unos meses antes, porque la preparación suele tomar de 4 a 6 meses"
   ],
   "entregable_esperado": "Cronograma de decisión de franquicia basado en el análisis de riesgo de concepto vs. amenaza competitiva",
   "nodos_previos": [
@@ -39,6 +39,39 @@
         "evidencia": "F03-015: Decidir cuándo franquiciar un concepto que ya opera y fijar el cronograma es estrategia de expansión; no se prueba con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-164-riesgo_concepto_vs_amenaza_competitiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos riesgos opuestos al decidir el momento de franquiciar: el 'riesgo de concepto' (franquiciar antes de haber perfeccionado y probado el modelo de negocio) y la 'amenaza competitiva' (esperar demasiado permite que competidores copien el concepto y se posicionen como líderes de mercado primero). El momento óptimo para franquiciar es cuando estas dos curvas de riesgo se cruzan, idealmente unos meses antes, dado que preparar la organización para vender franquicias toma de 4 a 6 meses.",
+      "texto_nuevo": "Existen dos riesgos opuestos al decidir el momento de franquiciar: el 'riesgo de concepto' (franquiciar antes de haber perfeccionado y probado el modelo de negocio) y la 'amenaza competitiva' (esperar demasiado permite que competidores copien el concepto y se posicionen como líderes de mercado primero). El momento óptimo para franquiciar es cuando estas dos curvas de riesgo se cruzan, o incluso unos meses antes, dado que preparar la organización para vender franquicias suele tomar de 4 a 6 meses.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "963",
+        "frase": "or even a few months prior to that point, as it will generally take"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice en el cruce o incluso unos meses antes, y que la preparación generalmente toma de 4 a 6 meses; 'idealmente' y 'toma' endurecen.; Quita el 'generally' del libro y fija el plazo como seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-164-riesgo_concepto_vs_amenaza_competitiva-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estimar el punto de cruce entre ambos riesgos y planificar el inicio del proceso de franquicia 4-6 meses antes",
+      "texto_nuevo": "Estimar el punto de cruce entre ambos riesgos y planificar el inicio del proceso de franquicia en ese punto o incluso unos meses antes, porque la preparación suele tomar de 4 a 6 meses",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "963",
+        "frase": "the time to initiate your franchise efforts is when these two lines intersect"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro sitúa el inicio en el cruce o unos meses antes; los 4 a 6 meses son el tiempo habitual de preparación, no el adelanto a planificar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

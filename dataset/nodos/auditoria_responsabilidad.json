@@ -4,11 +4,11 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Auditoría y Responsabilidad (Audit and Accountability)",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, y con qué frecuencia se revisan.",
+  "resumen_teorico": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, a quién se alerta si falla su captura o se llena su almacenamiento, y con qué frecuencia se revisan.",
   "pasos_accionables": [
     "Preguntar al personal de TI o proveedor de seguridad qué información de auditoría se captura actualmente",
-    "Verificar que los registros contengan tipo de evento, momento, origen, resultado e identidad del individuo asociado",
-    "Definir políticas de retención de registros conforme a regulaciones del sector",
+    "Verificar que los registros contengan tipo de evento, momento, lugar, origen, resultado e identidad del individuo asociado",
+    "Definir la retención de registros según la política de retención de registros del negocio, atendiendo las normas específicas si tu industria o tus datos las tienen (por ejemplo, registros financieros, de empleados o médicos)",
     "Restringir el acceso a la gestión de funciones de auditoría solo a usuarios privilegiados autorizados",
     "Establecer frecuencia de revisión de los registros de auditoría"
   ],
@@ -40,6 +40,56 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-165-auditoria_responsabilidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que los registros contengan tipo de evento, momento, origen, resultado e identidad del individuo asociado",
+      "texto_nuevo": "Verificar que los registros contengan tipo de evento, momento, lugar, origen, resultado e identidad del individuo asociado",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "353",
+        "frase": "when the event occurred, where the event occurred, the source of the event"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye dónde ocurrió el evento.; Mismo defecto: falta el lugar del evento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-165-auditoria_responsabilidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir políticas de retención de registros conforme a regulaciones del sector",
+      "texto_nuevo": "Definir la retención de registros según la política de retención de registros del negocio, atendiendo las normas específicas si tu industria o tus datos las tienen (por ejemplo, registros financieros, de empleados o médicos)",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "353",
+        "frase": "consistent with the business records retention policy"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro ancla la retención a la política de retención del negocio y dice que solo algunas industrias y datos tienen normas.; Mismo defecto: se pierde el ancla en la política del negocio y la condición de la norma.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-165-auditoria_responsabilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, y con qué frecuencia se revisan.",
+      "texto_nuevo": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, a quién se alerta si falla su captura o se llena su almacenamiento, y con qué frecuencia se revisan.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "353",
+        "frase": "Who within the business should be alerted"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye definir a quién alertar ante fallas en la captura de registros o al llenarse su almacenamiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

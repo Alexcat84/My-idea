@@ -4,13 +4,13 @@
   "dominio": "exportacion",
   "titulo_concepto": "Enfoque Paso a Paso para la Investigación de Mercados de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Sigue una metodología en tres etapas para elegir tus mercados de exportación sin perder tiempo ni dinero en países equivocados. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como precio, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
+  "resumen_teorico": "Sigue una metodología en tres etapas para elegir tus mercados de exportación. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
   "pasos_accionables": [
     "Obtén estadísticas de exportación de tu producto por país usando el U.S. Census Bureau",
     "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento y explora mercados emergentes con menor competencia, considerando agrupaciones por tratados de libre comercio",
     "Selecciona de 3 a 5 mercados más prometedores para profundizar el análisis",
     "Examina las tendencias de consumo e importación del producto y estudia la competencia doméstica y extranjera en cada mercado",
-    "Analiza factores de marketing como precio, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
+    "Analiza factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
     "Concluye con tu lista final de mercados, limitándola a menos de 10 si recién comienzas a exportar"
   ],
   "entregable_esperado": "Lista corta de 3 a 5 mercados meta seleccionados con justificación basada en estadísticas de exportación, tendencias, competencia, barreras e incentivos.",
@@ -45,5 +45,40 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-162-enfoque_paso_a_paso_investigacion_mercado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sigue una metodología en tres etapas para elegir tus mercados de exportación sin perder tiempo ni dinero en países equivocados. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como precio, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
+      "texto_nuevo": "Sigue una metodología en tres etapas para elegir tus mercados de exportación. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1287",
+        "frase": "such as end-user sectors, channels of distribution, cultural idiosyncrasies"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro nombra sectores de usuarios finales, canales de distribución, cultura y prácticas comerciales, no el precio.; Mismo defecto que la marca 0: el precio no está entre los factores de marketing de esta etapa.; Promete un resultado que el libro no afirma; solo presenta el método como un enfoque que puede ser útil.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-162-enfoque_paso_a_paso_investigacion_mercado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analiza factores de marketing como precio, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
+      "texto_nuevo": "Analiza factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1287",
+        "frase": "such as end-user sectors, channels of distribution, cultural idiosyncrasies"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El precio no figura entre los factores de marketing que el libro manda analizar en este paso.; Mismo defecto: el libro nombra los sectores de usuarios finales, no el precio.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Retargeting y Publicidad Display",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o AdRoll) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca.",
+  "resumen_teorico": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que a menudo genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o BuySellAds) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca, y conviene sumarlos cuando tu campaña SEM ya funciona con éxito.",
   "pasos_accionables": [
     "Instalar píxeles de retargeting (por ejemplo, Google AdWords o AdRoll) en el sitio",
     "Segmentar audiencias según comportamiento (ej. visitó pero no compró)",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Vuelve a Buscar a tu Visitante",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-166-retargeting_display-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o AdRoll) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca.",
+      "texto_nuevo": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que a menudo genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o BuySellAds) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca, y conviene sumarlos cuando tu campaña SEM ya funciona con éxito.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1279",
+        "frase": "This personalization makes such ads particularly effective, often generating 3x to 10x higher CTRs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que a menudo genera CTRs de 3x a 10x, no siempre.; El libro menciona AdRoll solo para retargeting, no como red de display.; El libro presenta el retargeting y la red de contenido como tácticas avanzadas para cuando la campaña SEM ya funciona con éxito.; Mismo endurecimiento que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

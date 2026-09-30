@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Utilizar los resultados de la evaluación de competencias como línea base",
     "Diseñar un currículo de capacitación por rol y nivel jerárquico",
-    "Establecer un programa de certificación interno (ej. Green Belt, Black Belt, Lean Expert)",
+    "Establecer un programa de certificación, interna o externa (ej. Green Belt, Black Belt, Lean Expert), con un organismo certificador reputado",
     "Medir el impacto de la capacitación en el desempeño de los proyectos de mejora"
   ],
   "entregable_esperado": "Programa de certificación y desarrollo de talento en calidad implementado, con métricas de seguimiento",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Desarrolla Expertos Realmente Capaces",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-164-desarrollo_expertos_capaces-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un programa de certificación interno (ej. Green Belt, Black Belt, Lean Expert)",
+      "texto_nuevo": "Establecer un programa de certificación, interna o externa (ej. Green Belt, Black Belt, Lean Expert), con un organismo certificador reputado",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3001-3009",
+        "frase": "No matter what organization you use to certify your experts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro contempla certificación interna o externa y pide un organismo certificador reputado; el paso lo reduce a un programa interno sin esa cautela.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

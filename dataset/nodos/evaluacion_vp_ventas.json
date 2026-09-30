@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de Candidatos para VP de Ventas",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+  "resumen_teorico": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, porque hay una gran diferencia entre quien sabe escribir un plan de juego y quien solo sabe seguirlo.",
   "pasos_accionables": [
     "Pregunta si el candidato diseñó o solo ejecutó el proceso de ventas en su empresa anterior",
     "Verifica su comprensión de procesos técnicos de venta: benchmarking, POCs, demos, lockout documents",
-    "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiéndole ejemplos de contrataciones que salieron mal",
+    "Evalúa su capacidad para entrenar al equipo en el proceso de ventas y hacerlo cumplir, y aparte si sabe contratar vendedores, pidiéndole que te describa una contratación reciente que salió mal",
     "Pide que describa su modelo de evaluación de representantes y diferencie entre reps transaccionales y de venta enterprise",
     "Solicita referencias de clientes que puedan confirmar su capacidad de cerrar grandes deals",
     "Evalúa su entendimiento de marketing (branding, generación de leads, sales enablement) y de conflictos de canal",
@@ -85,6 +85,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 2
+    },
+    {
+      "id": "final-e1-166-evaluacion_vp_ventas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+      "texto_nuevo": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, porque hay una gran diferencia entre quien sabe escribir un plan de juego y quien solo sabe seguirlo.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "3489-3491",
+        "frase": "big difference between people who can write a game plan"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que hay gran diferencia entre escribir y seguir un plan; 'muchos candidatos' es una frecuencia añadida.; Mismo defecto: causa y frecuencia añadidas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-166-evaluacion_vp_ventas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiéndole ejemplos de contrataciones que salieron mal",
+      "texto_nuevo": "Evalúa su capacidad para entrenar al equipo en el proceso de ventas y hacerlo cumplir, y aparte si sabe contratar vendedores, pidiéndole que te describa una contratación reciente que salió mal",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "3455-3459, 3483-3485",
+        "frase": "Ask her to describe a recent bad hire."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro usa la mala contratación reciente para evaluar si sabe contratar vendedores, no su capacidad de entrenar y hacer cumplir el proceso.; El nodo pierde el bloque de si sabe contratar vendedores, que es donde el libro sitúa la pregunta de la mala contratación.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

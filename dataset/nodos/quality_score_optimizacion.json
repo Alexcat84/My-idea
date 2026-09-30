@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Optimización del Quality Score en Anuncios",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "El Quality Score es una calificación que Google (y otras plataformas) asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
+  "resumen_teorico": "El Quality Score es una calificación que Google asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
   "pasos_accionables": [
     "Revisar el CTR de cada keyword y anuncio regularmente",
     "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna Quality Score bajo (el promedio ronda el 2%)",
@@ -41,6 +41,22 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Para el libro, el 2% es solo el CTR promedio de referencia. El umbral para reescribir es el 1.5%. El paso adelanta la acción a todo anuncio por debajo del 2%, así que cambia el umbral.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C106-039"
+    },
+    {
+      "id": "final-e1-166-quality_score_optimizacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Quality Score es una calificación que Google (y otras plataformas) asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
+      "texto_nuevo": "El Quality Score es una calificación que Google asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1256-1258",
+        "frase": "The quality score is Google's way of rewarding advertisers for high-quality advertisements."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe el Quality Score solo como calificación de Google.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Proceso de revisiones de desempeño y feedback",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando no tienes un proceso claro para dar feedback y revisar el desempeño, pagas un 'impuesto silencioso': rumbos difusos, gente que no mejora porque no sabe en qué falla, y un rendimiento general mediocre. Es una deuda de gestión muy común: la posponés por miedo a parecer 'gran empresa' o a incomodar a alguien.",
+  "resumen_teorico": "Cuando no tienes un proceso claro para dar feedback y revisar el desempeño, pagas un 'impuesto silencioso': rumbos difusos, gente que rara vez mejora porque no sabe en qué falla, y un rendimiento general mediocre. Es una deuda de gestión muy común: la pospones por miedo a parecer 'gran empresa' o a incomodar a alguien.",
   "pasos_accionables": [
     "Pon en marcha revisiones de desempeño formales y periódicas, aunque tu equipo sea pequeño (unas 25 personas)",
     "Da feedback claro y consistente a cada persona, nunca ambiguo",
     "Revisa que todos reciban su evaluación a tiempo, sin excepciones",
-    "Si alguien tiene bajo desempeño, actúa: no lo dejes pasar",
+    "Si alguien tiene bajo desempeño, gestiona su salida de forma efectiva: no lo dejes pasar",
     "Comprueba que, poco después de contratar a alguien, entienda con claridad qué esperas de él"
   ],
   "entregable_esperado": "Un proceso formal de revisiones de desempeño con calendario definido, un formato de feedback por escrito y un seguimiento de que se esté cumpliendo",
@@ -56,6 +56,39 @@
         "motivo": "Una vez instalado un proceso de revisiones y feedback, el paso natural es aprender a dar feedback auténtico y efectivo, aunque vaya contra el instinto."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-166-gestion_desempeno_feedback-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando no tienes un proceso claro para dar feedback y revisar el desempeño, pagas un 'impuesto silencioso': rumbos difusos, gente que no mejora porque no sabe en qué falla, y un rendimiento general mediocre. Es una deuda de gestión muy común: la posponés por miedo a parecer 'gran empresa' o a incomodar a alguien.",
+      "texto_nuevo": "Cuando no tienes un proceso claro para dar feedback y revisar el desempeño, pagas un 'impuesto silencioso': rumbos difusos, gente que rara vez mejora porque no sabe en qué falla, y un rendimiento general mediocre. Es una deuda de gestión muy común: la pospones por miedo a parecer 'gran empresa' o a incomodar a alguien.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1742",
+        "frase": "People rarely improve weakness they are unaware of."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la gente rara vez mejora debilidades que desconoce; el nodo lo vuelve absoluto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-166-gestion_desempeno_feedback-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si alguien tiene bajo desempeño, actúa: no lo dejes pasar",
+      "texto_nuevo": "Si alguien tiene bajo desempeño, gestiona su salida de forma efectiva: no lo dejes pasar",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1803",
+        "frase": "Do you effectively manage out poor performers?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro concreta la acción: gestionar con eficacia la salida de quien rinde mal; 'actúa' la pierde.; Mismo defecto: el libro pregunta si sacas con eficacia a quien rinde mal.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

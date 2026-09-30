@@ -7,7 +7,7 @@
   "resumen_teorico": "Sexto y último paso del modelo Quality by Design: diseñar controles de retroalimentación (control subject, unidad de medida, sensor, meta) que aseguren que el proceso opera dentro de su capacidad diseñada, y transferir la responsabilidad a quienes operan el proceso día a día. Incluye la importancia de involucrar a los operadores desde etapas tempranas (ej. equipos de plataforma tipo Ford Taurus).",
   "pasos_accionables": [
     "Definir el sujeto de control, unidad de medida, sensor y meta para cada punto crítico",
-    "Diseñar el ciclo de retroalimentación (medir, comparar contra meta, ajustar)",
+    "Diseñar el ciclo de retroalimentación (medir, comparar contra meta y ajustar solo cuando haga falta y hasta la meta acordada, sin sobrecontrolar)",
     "Documentar procedimientos y checklists de control operativo",
     "Formar equipos multidisciplinarios (diseño-operación) para asegurar transferencia efectiva",
     "Capacitar a los operadores en el nuevo proceso antes del lanzamiento"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Controla y Entrega el Proceso",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-164-desarrollar_controles_transferir_operaciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar el ciclo de retroalimentación (medir, comparar contra meta, ajustar)",
+      "texto_nuevo": "Diseñar el ciclo de retroalimentación (medir, comparar contra meta y ajustar solo cuando haga falta y hasta la meta acordada, sin sobrecontrolar)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3324",
+        "frase": "Next we adjust when adjustment is called for"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae que se ajusta solo cuando hace falta y hasta la meta acordada; ajustar de más es sobrecontrol.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

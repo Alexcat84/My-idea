@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Dos estilos de liderazgo: pensar la dirección o hacer que funcione (Ones y Twos)",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Como líder de tu negocio, tienes un estilo natural: unos disfrutan definir hacia dónde va el negocio (la visión, las grandes decisiones, el pensamiento a largo plazo) y se llaman Ones; otros disfrutan hacer que el negocio funcione al máximo nivel (los procesos, las metas claras, la disciplina diaria) y se llaman Twos. Necesitas ambas habilidades para liderar bien, pero es normal sentirte más cómodo con una que con la otra. Si eres fundador, es probable que te incline hacia el perfil visionario y falles si no dedicas tiempo a desarrollar la ejecución. Incluso alguien fuerte en su área puede ser visionario ahí pero necesitar más disciplina de ejecución con el resto del equipo.",
+  "resumen_teorico": "Como líder de tu negocio, tienes un estilo natural: unos disfrutan definir hacia dónde va el negocio (la visión, las grandes decisiones, el pensamiento a largo plazo) y se llaman Ones; otros disfrutan hacer que el negocio funcione al máximo nivel (los procesos, las metas claras, la disciplina diaria) y se llaman Twos. Necesitas ambas habilidades para liderar bien, pero es normal sentirte más cómodo con una que con la otra. Si eres fundador, es probable que te inclines hacia el perfil visionario y falles si no dedicas tiempo a desarrollar la ejecución. Incluso alguien fuerte en su área puede decidir como visionario ahí y preferir seguir la dirección general con el resto del equipo, y esa combinación funciona muy bien porque las decisiones son claras y rápidas.",
   "pasos_accionables": [
     "Evalúa si tu estilo de liderazgo es más visionario (One) o más de ejecución (Two)",
     "Identifica qué tareas del perfil contrario estás descuidando en tu día a día",
-    "Si eres más visionario, busca a alguien de confianza fuerte en ejecución que te ayude con los procesos y la disciplina operativa",
+    "Si eres más visionario, dedica tiempo a volverte competente en los procesos y la disciplina operativa como para dirigirlos, y apóyate en alguien de confianza fuerte en ejecución",
     "Si eres más de ejecución, reserva tiempo cada semana solo para pensar en la dirección del negocio, sin sentir que estás perdiendo el tiempo",
-    "Si trabajas con un socio, evita que los dos sean del perfil visionario compitiendo por definir la dirección del negocio"
+    "Si eres más visionario, ten en cuenta que otra persona de perfil visionario en tu equipo directo puede ser contraproducente, porque querrá fijar su propia dirección en vez de seguir la tuya"
   ],
   "entregable_esperado": "Un diagnóstico personal de tu estilo de liderazgo (visionario o de ejecución) y un plan para desarrollarte o para conseguir ayuda que te complemente",
   "nodos_previos": [
@@ -30,5 +30,57 @@
   "etiqueta_arbol": "Define tu Estilo de Liderazgo",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-166-framework_ones_and_twos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Como líder de tu negocio, tienes un estilo natural: unos disfrutan definir hacia dónde va el negocio (la visión, las grandes decisiones, el pensamiento a largo plazo) y se llaman Ones; otros disfrutan hacer que el negocio funcione al máximo nivel (los procesos, las metas claras, la disciplina diaria) y se llaman Twos. Necesitas ambas habilidades para liderar bien, pero es normal sentirte más cómodo con una que con la otra. Si eres fundador, es probable que te incline hacia el perfil visionario y falles si no dedicas tiempo a desarrollar la ejecución. Incluso alguien fuerte en su área puede ser visionario ahí pero necesitar más disciplina de ejecución con el resto del equipo.",
+      "texto_nuevo": "Como líder de tu negocio, tienes un estilo natural: unos disfrutan definir hacia dónde va el negocio (la visión, las grandes decisiones, el pensamiento a largo plazo) y se llaman Ones; otros disfrutan hacer que el negocio funcione al máximo nivel (los procesos, las metas claras, la disciplina diaria) y se llaman Twos. Necesitas ambas habilidades para liderar bien, pero es normal sentirte más cómodo con una que con la otra. Si eres fundador, es probable que te inclines hacia el perfil visionario y falles si no dedicas tiempo a desarrollar la ejecución. Incluso alguien fuerte en su área puede decidir como visionario ahí y preferir seguir la dirección general con el resto del equipo, y esa combinación funciona muy bien porque las decisiones son claras y rápidas.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2719",
+        "frase": "This is the best kind of multilayer leadership possible"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro presenta al ejecutivo que decide en su área y sigue la dirección general como la mejor forma de liderazgo en capas, no como una carencia.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-166-framework_ones_and_twos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si eres más visionario, busca a alguien de confianza fuerte en ejecución que te ayude con los procesos y la disciplina operativa",
+      "texto_nuevo": "Si eres más visionario, dedica tiempo a volverte competente en los procesos y la disciplina operativa como para dirigirlos, y apóyate en alguien de confianza fuerte en ejecución",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2701",
+        "frase": "they never invested the time to be competent enough in the Two tasks"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el fundador visionario falla si no invierte tiempo en volverse competente en ejecución para dirigirla; apoyarse en otro no lo sustituye.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-166-framework_ones_and_twos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si trabajas con un socio, evita que los dos sean del perfil visionario compitiendo por definir la dirección del negocio",
+      "texto_nuevo": "Si eres más visionario, ten en cuenta que otra persona de perfil visionario en tu equipo directo puede ser contraproducente, porque querrá fijar su propia dirección en vez de seguir la tuya",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "2725",
+        "frase": "it can be counterproductive to have another One on your staff"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de otro visionario en tu equipo directo y dice que puede ser contraproducente; el nodo lo lleva a socios y lo vuelve prohibición.; Mismo defecto: el socio es una situación que el libro no trata.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

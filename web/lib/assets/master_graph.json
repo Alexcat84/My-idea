@@ -7694,11 +7694,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Auditoría y Responsabilidad (Audit and Accountability)",
-      "resumen_teorico": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, y con qué frecuencia se revisan.",
+      "resumen_teorico": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, a quién se alerta si falla su captura o se llena su almacenamiento, y con qué frecuencia se revisan.",
       "pasos_accionables": [
         "Preguntar al personal de TI o proveedor de seguridad qué información de auditoría se captura actualmente",
-        "Verificar que los registros contengan tipo de evento, momento, origen, resultado e identidad del individuo asociado",
-        "Definir políticas de retención de registros conforme a regulaciones del sector",
+        "Verificar que los registros contengan tipo de evento, momento, lugar, origen, resultado e identidad del individuo asociado",
+        "Definir la retención de registros según la política de retención de registros del negocio, atendiendo las normas específicas si tu industria o tus datos las tienen (por ejemplo, registros financieros, de empleados o médicos)",
         "Restringir el acceso a la gestión de funciones de auditoría solo a usuarios privilegiados autorizados",
         "Establecer frecuencia de revisión de los registros de auditoría"
       ],
@@ -19829,9 +19829,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Concientización y Entrenamiento en Seguridad para Personal",
-      "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer amenazas internas e ingeniería social.",
+      "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
       "pasos_accionables": [
-        "Diseñar contenido de entrenamiento personalizado según roles y entornos de trabajo del personal",
+        "Diseñar contenido de entrenamiento básico y avanzado personalizado según roles, sistemas a los que se accede y entornos de trabajo del personal, e impartirlo con regularidad al personal nuevo y existente",
         "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
         "Implementar técnicas de concientización como posters, correos de liderazgo, eventos tipo lunch-and-learn",
         "Utilizar recursos gratuitos disponibles (NARA CUI training, Security Awareness Hub)"
@@ -23328,7 +23328,7 @@
         "Implementar políticas que limiten el acceso a CUI solo a individuos que lo requieren para su trabajo",
         "Revisar información pública (sitio web de la empresa) para eliminar CUI expuesto",
         "Proteger CUI con bloqueos de dispositivo y terminación de sesión automática",
-        "Identificar y restringir privilegios administrativos solo a quienes los necesitan",
+        "Identificar y restringir privilegios administrativos solo a quienes los necesitan, y restringir el uso de esas cuentas en tareas rutinarias que no los requieren",
         "Reasignar o remover privilegios cuando un individuo ya no requiere acceso"
       ],
       "entregable_esperado": "Política de control de acceso documentada e implementada, con lista de usuarios y sus niveles de privilegio",
@@ -34927,7 +34927,7 @@
       "resumen_teorico": "Cuarto paso: traducir las necesidades del cliente en 'features' (características), entendidas como aquello que el cliente utiliza para satisfacer su necesidad. Requiere priorizar y optimizar la lista de características, aceptando que no todas sobrevivirán al proceso de planificación.",
       "pasos_accionables": [
         "Traducir cada necesidad identificada en una o más características concretas",
-        "Priorizar las características según impacto en la satisfacción del cliente",
+        "Priorizar las características según impacto en la satisfacción del cliente, de forma acordada con los involucrados",
         "Optimizar la lista final, descartando características de bajo valor o inviables",
         "Establecer metas medibles para cada característica seleccionada"
       ],
@@ -34953,7 +34953,7 @@
       "resumen_teorico": "Sexto y último paso del modelo Quality by Design: diseñar controles de retroalimentación (control subject, unidad de medida, sensor, meta) que aseguren que el proceso opera dentro de su capacidad diseñada, y transferir la responsabilidad a quienes operan el proceso día a día. Incluye la importancia de involucrar a los operadores desde etapas tempranas (ej. equipos de plataforma tipo Ford Taurus).",
       "pasos_accionables": [
         "Definir el sujeto de control, unidad de medida, sensor y meta para cada punto crítico",
-        "Diseñar el ciclo de retroalimentación (medir, comparar contra meta, ajustar)",
+        "Diseñar el ciclo de retroalimentación (medir, comparar contra meta y ajustar solo cuando haga falta y hasta la meta acordada, sin sobrecontrolar)",
         "Documentar procedimientos y checklists de control operativo",
         "Formar equipos multidisciplinarios (diseño-operación) para asegurar transferencia efectiva",
         "Capacitar a los operadores en el nuevo proceso antes del lanzamiento"
@@ -35003,11 +35003,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Desarrollar Estrategias o Metas de Largo Plazo",
-      "resumen_teorico": "El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, evalúa cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia.",
+      "resumen_teorico": "El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, quizá necesites evaluar cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura y la satisfacción de tu equipo, tus procesos internos (incluidos tus proveedores) y cómo te comparas con la competencia.",
       "pasos_accionables": [
-        "Evalúa las cinco áreas clave: satisfacción de tus clientes, costos de mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia",
+        "Evalúa las cinco áreas clave: lealtad y satisfacción de tus clientes, costos de mala calidad, tu cultura y la satisfacción de tu equipo, tus procesos internos (incluidos tus proveedores) y cómo te comparas con la competencia",
         "Analiza los datos para identificar tus fortalezas, debilidades, oportunidades y amenazas",
-        "Define de 4 a 5 estrategias clave que aporten de verdad a tu visión",
+        "Define un número pequeño de estrategias clave, por lo general 4 o 5, que aporten de verdad a tu visión",
         "Asigna a alguien concreto la responsabilidad de llevar adelante cada estrategia"
       ],
       "entregable_esperado": "Documento con tus 4 o 5 estrategias clave de largo plazo, cada una con un responsable asignado",
@@ -35077,7 +35077,7 @@
         "Revisa las siete áreas clave de metas: producto, competitividad, mejora, costo de mala calidad, procesos, satisfacción y lealtad del cliente",
         "Reúne propuestas de metas de todas las personas que trabajan contigo, no solo las tuyas",
         "Filtra y prioriza las metas que entrarán en tu plan de negocio",
-        "Basa cada meta en tu desempeño histórico, en la comparación con la competencia o en el desempeño del mercado, según corresponda",
+        "Basa cada meta en tu desempeño histórico, en la comparación con la competencia o en el desempeño del mercado, según corresponda; si tu costo de la mala calidad es crónicamente alto, no uses el histórico como base y fija esa meta sobre una mejora de ruptura planificada",
         "Asegúrate de que cada meta sea específica, medible y tenga un plazo definido"
       ],
       "entregable_esperado": "Una lista de metas anuales específicas, medibles y con plazo, priorizadas y decididas por ti",
@@ -35179,7 +35179,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Enfoque de Desarrollo de Expertos Centrado en el Cliente",
-      "resumen_teorico": "Metodología de tres pasos para desarrollar expertos en calidad: (1) determinar las competencias requeridas identificando clientes internos y traduciendo sus necesidades en competencias, (2) evaluar a los expertos actuales y potenciales mediante pruebas escritas y orales, y (3) cerrar las brechas mediante planes de desarrollo individualizados (formación, proyectos, certificación). Este enfoque asegura que la inversión en capacitación responda a necesidades reales y no a entrenamiento genérico desperdiciado.",
+      "resumen_teorico": "Metodología de tres pasos para desarrollar expertos en calidad: (1) determinar las competencias requeridas identificando clientes internos y traduciendo sus necesidades en competencias, (2) evaluar a los expertos actuales y potenciales mediante pruebas escritas y orales, y (3) cerrar las brechas mediante planes de desarrollo individualizados (formación, proyectos, certificación). Este enfoque busca que la inversión en capacitación responda a necesidades reales y no a entrenamiento genérico desperdiciado.",
       "pasos_accionables": [
         "Identificar a los clientes internos de los expertos de calidad (gerentes de operaciones, ingenieros de diseño, etc.)",
         "Determinar y priorizar las necesidades de esos clientes expresadas como beneficios",
@@ -35215,7 +35215,7 @@
         "Aplicar técnicas creativas (cambio de palabras clave, asociación aleatoria, ponerse en el lugar del otro) para generar alternativas",
         "Verificar cumplimiento de estándares, regulaciones y políticas aplicables",
         "Seleccionar características de alto nivel usando criterios explícitos de diseño",
-        "Desarrollar características y metas detalladas para cada componente"
+        "Desarrollar características y metas detalladas para cada componente, y luego optimizarlas y publicar el diseño final"
       ],
       "entregable_esperado": "Diseño de características de producto/servicio de alto nivel y detallado, validado contra estándares y necesidades del cliente",
       "nodos_previos": [
@@ -35271,8 +35271,8 @@
       "pasos_accionables": [
         "Identificar los controles necesarios evaluando el desempeño real contra las metas.",
         "Diseñar el bucle de retroalimentación y definir puntos de control en el diagrama de flujo.",
-        "Establecer estándares de control y acciones correctivas ante desviaciones.",
-        "Entrenar a los trabajadores en decisiones de conformidad del producto.",
+        "Establecer estándares de control, acciones correctivas ante desviaciones y quién tomará esas acciones.",
+        "Entrenar a los trabajadores en decisiones de conformidad del producto y evaluarlos para asegurar que deciden bien.",
         "Planificar y documentar la transferencia formal a operaciones incluyendo metas, procedimientos y capacitación.",
         "Desarrollar un plan de auditoría para validar que la transferencia fue exitosa."
       ],
@@ -35349,7 +35349,7 @@
       "pasos_accionables": [
         "Utilizar los resultados de la evaluación de competencias como línea base",
         "Diseñar un currículo de capacitación por rol y nivel jerárquico",
-        "Establecer un programa de certificación interno (ej. Green Belt, Black Belt, Lean Expert)",
+        "Establecer un programa de certificación, interna o externa (ej. Green Belt, Black Belt, Lean Expert), con un organismo certificador reputado",
         "Medir el impacto de la capacitación en el desempeño de los proyectos de mejora"
       ],
       "entregable_esperado": "Programa de certificación y desarrollo de talento en calidad implementado, con métricas de seguimiento",
@@ -35696,14 +35696,14 @@
       "fase_proyecto": "validacion",
       "dominio": "quality",
       "titulo_concepto": "Descubrimiento de las Necesidades del Cliente",
-      "resumen_teorico": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, y traducirlas al lenguaje de la organización.",
+      "resumen_teorico": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, traducirlas al lenguaje de la organización y establecer unidades de medida y sensores.",
       "pasos_accionables": [
-        "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc.",
+        "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc., y consultar a los clientes con frecuencia, porque sus necesidades cambian",
         "Recopilar la lista de necesidades en el lenguaje propio del cliente",
         "Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente",
         "Investigar posibles usos no previstos del producto y sus riesgos de seguridad",
         "Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente",
-        "Traducir las necesidades priorizadas al lenguaje técnico de la organización"
+        "Traducir las necesidades priorizadas al lenguaje técnico de la organización y establecer para cada una su unidad de medida y su sensor"
       ],
       "entregable_esperado": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en spreadsheet",
       "nodos_previos": [
@@ -35792,7 +35792,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Descuento de Letras y Aceptaciones Bancarias",
-      "resumen_teorico": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibiendo un monto menor al valor nominal por intereses y comisiones) o utilizar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+      "resumen_teorico": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
       "pasos_accionables": [
         "Evaluar la solvencia del comprador extranjero antes de descontar la letra",
         "Negociar con el banco el descuento de letras a plazo",
@@ -35844,7 +35844,7 @@
       "resumen_teorico": "Metodología para evaluar el diseño de partes y ensamblajes con el fin de identificar piezas innecesarias y determinar tiempos y costos de ensamblaje. Busca simplificar el producto reduciendo el número de partes, mejorando calidad, confiabilidad y acortando ciclos de desarrollo.",
       "pasos_accionables": [
         "Evaluar la contribución de costo de cada parte del ensamblaje",
-        "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza",
+        "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza, hasta donde sea económicamente viable",
         "Calcular tiempos y costos de ensamblaje con software especializado",
         "Rediseñar el producto para simplificar el proceso de ensamblaje"
       ],
@@ -36229,7 +36229,7 @@
       "fase_proyecto": "ideacion",
       "dominio": "exportacion",
       "titulo_concepto": "Desmitificación de Supuestos sobre Exportación",
-      "resumen_teorico": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), el papeleo es mínimo con ayuda de facilitadores, y casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados. Identificar y contrastar estas viejas suposiciones con la nueva realidad del comercio global es el primer paso mental para animarse a exportar.",
+      "resumen_teorico": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), la mayoría de las exportaciones requieren poco papeleo, y casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados. Conviene identificar estas viejas suposiciones y contrastarlas con la nueva realidad del comercio global.",
       "pasos_accionables": [
         "Listar los miedos o supuestos actuales de la empresa sobre exportar (riesgo, complejidad, tamaño, idioma)",
         "Contrastar cada supuesto con la evidencia disponible en publicaciones de comercio exterior",
@@ -37153,7 +37153,7 @@
       "resumen_teorico": "Los requisitos de seguridad de SP 800-171 solo aplican a los componentes de sistemas no federales que procesan, almacenan o transmiten CUI, o que proveen protección a dichos componentes. Un alcance adecuado es clave para decisiones de inversión en protección y gestión de riesgos. Se puede limitar el alcance aislando componentes en un dominio de seguridad separado mediante subredes, firewalls u otros dispositivos de protección perimetral, usando separación física, lógica o ambas.",
       "pasos_accionables": [
         "Inventariar todos los sistemas y componentes de la organización",
-        "Identificar cuáles sistemas procesan, almacenan o transmiten CUI",
+        "Identificar cuáles sistemas procesan, almacenan o transmiten CUI, y cuáles les proveen protección",
         "Evaluar la posibilidad de aislar estos sistemas en un dominio de seguridad separado (subredes, firewalls)",
         "Documentar la decisión de alcance y su justificación"
       ],
@@ -37889,7 +37889,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Diagrama de Flujo de Datos de CUI",
-      "resumen_teorico": "Crear un diagrama de flujo de datos que muestre cómo el CUI entra, se mueve dentro y sale del negocio ayuda a los profesionales a entender el alcance de aplicabilidad de los requisitos de seguridad de SP 800-171 a los sistemas del negocio. Es un paso fundamental para inventariar sistemas y componentes relacionados con el manejo de CUI.",
+      "resumen_teorico": "Crear un diagrama de flujo de datos que muestre cómo el CUI entra, se mueve dentro y sale del negocio, junto con el inventario de los sistemas y componentes que tiene el negocio, ayuda a los profesionales a entender el alcance de aplicabilidad de los requisitos de seguridad de SP 800-171 a los sistemas del negocio.",
       "pasos_accionables": [
         "Identificar todos los puntos de entrada de CUI a la organización (correos, portales, contratos)",
         "Mapear cómo el CUI se mueve entre sistemas internos (bases de datos, servidores, dispositivos)",
@@ -42041,8 +42041,8 @@
         "Determina qué documentos necesitas según el destino y el tipo de producto",
         "Prepara la factura pro forma para cotizar al comprador antes del envío",
         "Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones",
-        "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker)",
-        "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país o si necesitas una licencia de exportación",
+        "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+        "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
         "Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito"
       ],
       "entregable_esperado": "Carpeta completa de documentos de exportación por embarque, validada antes del envío",
@@ -42178,12 +42178,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Documentación que necesitas para viajar por negocios al extranjero",
-      "resumen_teorico": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas, certificados de vacunación cuando corresponda, y un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles) si llevas muestras comerciales o equipo de trabajo. Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
+      "resumen_teorico": "Antes de viajar al extranjero por negocios, necesitas pasaporte vigente, visa según el país al que vas y certificados de vacunación cuando corresponda; si llevas muestras comerciales o equipo de trabajo, también puede servirte un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles). Empieza estos trámites con 6 a 8 semanas de anticipación. Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes en su momento: confirma el acuerdo y la regulación vigente en tu país antes de actuar.",
       "pasos_accionables": [
         "Revisa que tu pasaporte esté vigente",
         "Consulta los requisitos de visa del país al que vas en su embajada o consulado",
         "Revisa los requisitos de vacunación en la fuente oficial de tu país",
-        "Solicita un carnet ATA si vas a llevar muestras o equipo profesional",
+        "Si vas a llevar muestras o equipo profesional, verifica si el país al que vas es miembro del Convenio ATA y, si lo es, solicita un carnet ATA",
         "Empieza todos estos trámites con al menos 6 a 8 semanas de anticipación"
       ],
       "entregable_esperado": "Pasaporte, visa, certificados de vacunación y carnet ATA (si aplica) listos antes de viajar",
@@ -43388,7 +43388,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Construcción del Ecosistema Global de Emprendimiento (GEE)",
-      "resumen_teorico": "El Ecosistema Global de Emprendimiento (GEE) es la red de contactos y recursos, públicos y privados, que puede ayudarte a exportar con éxito. Incluye la oficina de comercio exterior de tu gobierno, bancos con experiencia internacional, cámaras de comercio, centros de desarrollo de pequeños negocios, universidades con programas de negocios internacionales, agentes de aduana y transporte internacional, y redes sociales profesionales. Construir este ecosistema de apoyo reduce drásticamente el costo y el riesgo que sientes al exportar, porque gran parte de esa ayuda es gratuita o de muy bajo costo.",
+      "resumen_teorico": "El Ecosistema Global de Emprendimiento (GEE) es la red de contactos y recursos, públicos y privados, que puede ayudarte a exportar con éxito. Incluye la oficina de comercio exterior de tu gobierno, bancos con experiencia internacional, cámaras de comercio, centros de desarrollo de pequeños negocios, universidades con programas de negocios internacionales, agentes de aduana y transporte internacional, y redes sociales profesionales. Construir este ecosistema de apoyo te ayuda a reducir el costo y el riesgo que sientes al exportar, porque gran parte de esa ayuda es gratuita o de muy bajo costo.",
       "pasos_accionables": [
         "Identificar la oficina de comercio exterior de tu gobierno más cercana (pregunta en tu mercado cuál es el equivalente local)",
         "Contactar la cámara de comercio local y el centro de comercio internacional de tu región",
@@ -44234,14 +44234,14 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Elaboración de la Pro Forma Invoice",
-      "resumen_teorico": "La pro forma invoice es una cotización preparada en formato de factura, siendo el método preferido en el negocio de exportación. Describe el producto, establece precio, tiempo de envío y términos de venta y pago. Sirve como modelo para que el comprador solicite licencias de importación, abra cartas de crédito o gestione fondos. Debe incluir detalles extensos que una cotización doméstica no requiere.",
+      "resumen_teorico": "La pro forma invoice es una cotización preparada en formato de factura, siendo el método preferido en el negocio de exportación. Describe el producto, establece precio, tiempo de envío y términos de venta y pago. Sirve como modelo para que el comprador solicite licencias de importación, abra cartas de crédito o gestione fondos. Su descripción suele requerir más detalle que una cotización doméstica.",
       "pasos_accionables": [
         "Incluir nombres y direcciones de vendedor y comprador.",
         "Detallar número de referencia y fecha de consulta del comprador.",
         "Listar productos solicitados con descripción breve y precio en USD.",
         "Especificar volumen cúbico, peso bruto/neto en unidades métricas.",
         "Indicar descuentos comerciales, punto de entrega, términos de venta y pago.",
-        "Agregar costos de seguro y flete, periodo de validez de la cotización.",
+        "Agregar costos de seguro y flete, periodo de validez de la cotización, cargos totales a pagar por el comprador, fecha estimada de embarque y moneda de la venta.",
         "Incluir declaración de veracidad y país de origen de los bienes.",
         "Marcar claramente el documento como 'Pro Forma Invoice'."
       ],
@@ -45048,7 +45048,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Elementos Prácticos de un Plan de Exportación (Ejemplo Aplicado)",
-      "resumen_teorico": "Más allá del esquema general, cuando armas tu plan de exportación necesitas incluir secciones concretas y personalizadas: por qué quieres exportar, tus metas, los recursos financieros y no financieros con que cuentas, las tendencias actuales, tu capacidad de producción, los mercados a los que apuntas, el riesgo, tus políticas de crédito y devolución, el envío, si necesitas un agente de carga (forwarder), las licencias, los certificados de salud, los requisitos de idioma, el código arancelario, la propiedad intelectual, los documentos de exportación, los precios y la manera en que tu sitio web habla a otros países. El ejemplo de 'Lips L'amour' muestra cómo un negocio pequeño puede documentar cada uno de estos elementos de forma concreta y medible. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
+      "resumen_teorico": "Más allá del esquema general, cuando armas tu plan de exportación puedes incluir secciones concretas, adaptadas a tu negocio: por qué quieres exportar, tus metas, los recursos financieros y no financieros con que cuentas, las tendencias actuales, tu capacidad de producción, los mercados a los que apuntas, el riesgo, tus políticas de crédito y devolución, el envío, si necesitas un agente de carga (forwarder), las licencias, los certificados de salud, los requisitos de idioma, el código arancelario, la propiedad intelectual, los documentos de exportación, los precios y la manera en que tu sitio web habla a otros países. El ejemplo de 'Lips L'amour' muestra cómo un negocio pequeño puede documentar cada uno de estos elementos de forma concreta y medible. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
       "pasos_accionables": [
         "Redacta una introducción breve explicando por qué quieres exportar",
         "Define metas medibles (por ejemplo, aumentar tus ventas un 15% en dos años usando plataformas de venta en línea)",
@@ -45920,7 +45920,7 @@
         "Revisa si el comprador te dio especificaciones de empaque y sigue esas primero",
         "Empaca en contenedores fuertes, bien sellados y bien llenos",
         "Distribuye el peso de forma uniforme y usa paletas cuando puedas",
-        "Usa materiales resistentes a la humedad y no escribas el contenido ni tu marca por fuera",
+        "Usa materiales resistentes a la humedad, no escribas el contenido ni tu marca por fuera y asegura la carga con flejes, sellos y película retráctil",
         "Pregunta si tu madera o tus materiales necesitan algún tratamiento especial o si son peligrosos",
         "Si no tienes cómo hacerlo bien tú mismo, contrata a alguien que se especialice en empaque"
       ],
@@ -47325,13 +47325,13 @@
       "fase_proyecto": "validacion",
       "dominio": "exportacion",
       "titulo_concepto": "Enfoque Paso a Paso para la Investigación de Mercados de Exportación",
-      "resumen_teorico": "Sigue una metodología en tres etapas para elegir tus mercados de exportación sin perder tiempo ni dinero en países equivocados. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como precio, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
+      "resumen_teorico": "Sigue una metodología en tres etapas para elegir tus mercados de exportación. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
       "pasos_accionables": [
         "Obtén estadísticas de exportación de tu producto por país usando el U.S. Census Bureau",
         "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento y explora mercados emergentes con menor competencia, considerando agrupaciones por tratados de libre comercio",
         "Selecciona de 3 a 5 mercados más prometedores para profundizar el análisis",
         "Examina las tendencias de consumo e importación del producto y estudia la competencia doméstica y extranjera en cada mercado",
-        "Analiza factores de marketing como precio, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
+        "Analiza factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
         "Concluye con tu lista final de mercados, limitándola a menos de 10 si recién comienzas a exportar"
       ],
       "entregable_esperado": "Lista corta de 3 a 5 mercados meta seleccionados con justificación basada en estadísticas de exportación, tendencias, competencia, barreras e incentivos.",
@@ -51303,9 +51303,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Estar Listo para Ser una Empresa Publica",
-      "resumen_teorico": "Querer salir a bolsa y estar listo para hacerlo son dos cosas distintas, y la segunda se mide con honestidad o no se mide. El mínimo no es una cifra de ingresos: es que la operación sea estable, que los procesos estén ordenados y que las proyecciones se puedan sostener trimestre tras trimestre delante de gente que no perdona un fallo. La lista de ventajas y desventajas no se escribe en abstracto sino contra el momento del mercado, que cambia el calculo entero. Y hay dos conversaciones que ahorran anos: hablar con quien ya dirigió una empresa publica, y preparar al equipo para lo que la valuación va a decir de verdad, incluido el caso incomodo de tener que ofrecer por debajo de lo que valieron las rondas privadas, porque el precio lo fijan los comparables del mercado y no la historia propia.",
+      "resumen_teorico": "Querer salir a bolsa y estar listo para hacerlo son dos cosas distintas, y la segunda se mide con honestidad o no se mide. Lo mínimo es que la operación sea estable, que los procesos estén ordenados y que las proyecciones se puedan sostener trimestre tras trimestre delante de gente que no perdona un fallo. Aun así, si se acaba el dinero y no hay financiación privada, puede tocarte salir sin estar listo. La lista de ventajas y desventajas no se escribe en abstracto sino contra el momento del mercado, que cambia el cálculo entero. Y hay dos conversaciones que conviene tener: hablar con quien ya dirigió una empresa pública, y preparar al equipo para lo que la valuación va a decir de verdad, incluido el caso incómodo de tener que ofrecer por debajo de lo que valieron las rondas privadas, porque el precio lo fijan los comparables del mercado y no la historia propia.",
       "pasos_accionables": [
-        "Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyecciones confiables, operación estable",
+        "Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyecciones confiables, operación estable, cuánto tiempo seguirás perdiendo dinero, qué tan sanos están tus clientes y si los inversionistas pueden entender tu modelo",
         "Haz una lista clara de ventajas y desventajas de salir a bolsa según el momento actual del mercado",
         "Habla con personas que hayan sido directores generales de empresas públicas y pídeles su experiencia",
         "Prepara a tu equipo para la realidad de la valuación y lo que implica, por ejemplo si hay que hacer un contrasplit y agrupar las acciones",
@@ -53096,7 +53096,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Estructura del Plan de Exportación",
-      "resumen_teorico": "Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso a largo plazo, dado que la exportación puede tardar meses o años en generar retorno.",
+      "resumen_teorico": "Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso con la exportación a largo plazo.",
       "pasos_accionables": [
         "Redactar tabla de contenido y resumen ejecutivo (1-2 páginas)",
         "Escribir la declaración de compromiso de política de exportación",
@@ -53106,7 +53106,7 @@
         "Elaborar el presupuesto de exportación y estados financieros pro-forma",
         "Establecer el cronograma de implementación y seguimiento periódico"
       ],
-      "entregable_esperado": "Documento de Plan de Exportación completo con todas sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma) listo para guiar la ejecución",
+      "entregable_esperado": "Documento de Plan de Exportación con sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma), simple y de pocas páginas la primera vez y más detallado a medida que ganas experiencia, listo para guiar la ejecución",
       "nodos_previos": [
         "evaluacion_preparacion_empresa_exportar",
         "desarrollo_plan_exportacion"
@@ -53212,10 +53212,10 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Estructura de SP 800-171: 17 Familias de Requisitos de Seguridad",
-      "resumen_teorico": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Cada requisito incluye un identificador único, descripción, parámetros definidos por la organización (ODP), discusión y referencias a SP 800-53.",
+      "resumen_teorico": "SP 800-171 organiza sus requisitos de seguridad en 17 familias temáticas (Control de Acceso, Concientización y Entrenamiento, Auditoría, Gestión de Configuración, Identificación y Autenticación, Respuesta a Incidentes, Mantenimiento, Protección de Medios, Seguridad de Personal, Protección Física, Planificación, Evaluación de Riesgos, Adquisición de Sistemas y Servicios, Gestión de Riesgo de Cadena de Suministro, Evaluación y Monitoreo de Seguridad, Protección de Sistemas y Comunicaciones, Integridad de Sistemas e Información). Un requisito típico incluye un identificador único, descripción, discusión y referencias a SP 800-53, y algunos incluyen parámetros definidos por la organización (ODP).",
       "pasos_accionables": [
         "Revisar las 17 familias de requisitos disponibles en el catálogo de SP 800-171",
-        "Priorizar familias según el nivel de madurez actual de la organización",
+        "Priorizar la implementación por fases según tus recursos (tiempo, experiencia, presupuesto), partiendo de los requisitos que ya cumples",
         "Usar la herramienta NIST Cybersecurity and Privacy Reference Tool (CPRT) para explorar requisitos específicos"
       ],
       "entregable_esperado": "Lista priorizada de familias de requisitos a implementar según recursos disponibles",
@@ -53960,7 +53960,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Cómo evaluar a un ejecutivo sin quedarte solo con los resultados (Método de las Cuatro Áreas)",
-      "resumen_teorico": "Bill Campbell, mentor de grandes líderes de tecnología, sostenía que evaluar a un ejecutivo solo por los resultados que entrega no basta. Tienes que mirar cuatro cosas: primero, si cumplió los objetivos que le pusiste; segundo, cómo gestiona y qué tan sólido es el equipo que construye; tercero, si innova o si sacrifica el futuro por ganar hoy; y cuarto, si colabora bien con sus pares. Si solo miras el primer punto, puede que un ejecutivo brillante en números esté destruyendo tu negocio a largo plazo por maltratar a su equipo o tomar decisiones cortoplacistas.",
+      "resumen_teorico": "Bill Campbell, mentor de grandes líderes de tecnología, sostenía que evaluar a un ejecutivo solo por los resultados que entrega no basta. Tienes que mirar cuatro cosas: primero, si cumplió los objetivos que le pusiste; segundo, cómo gestiona y qué tan sólido es el equipo que construye; tercero, si innova o si sacrifica el futuro por ganar hoy; y cuarto, si colabora bien con sus pares. Si solo miras el primer punto, puede que un ejecutivo brillante en números no esté construyendo un equipo sólido y leal, o que esté cumpliendo la meta de hoy a costa del futuro.",
       "pasos_accionables": [
         "Mide su desempeño contra los objetivos que le pusiste desde el inicio",
         "Evalúa la calidad y la lealtad del equipo que gestiona, no solo si cumplió las metas",
@@ -55258,11 +55258,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Evaluación de Candidatos para VP de Ventas",
-      "resumen_teorico": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+      "resumen_teorico": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, porque hay una gran diferencia entre quien sabe escribir un plan de juego y quien solo sabe seguirlo.",
       "pasos_accionables": [
         "Pregunta si el candidato diseñó o solo ejecutó el proceso de ventas en su empresa anterior",
         "Verifica su comprensión de procesos técnicos de venta: benchmarking, POCs, demos, lockout documents",
-        "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiéndole ejemplos de contrataciones que salieron mal",
+        "Evalúa su capacidad para entrenar al equipo en el proceso de ventas y hacerlo cumplir, y aparte si sabe contratar vendedores, pidiéndole que te describa una contratación reciente que salió mal",
         "Pide que describa su modelo de evaluación de representantes y diferencie entre reps transaccionales y de venta enterprise",
         "Solicita referencias de clientes que puedan confirmar su capacidad de cerrar grandes deals",
         "Evalúa su entendimiento de marketing (branding, generación de leads, sales enablement) y de conflictos de canal",
@@ -58725,7 +58725,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Dar Feedback Efectivo como Habilidad Antinatural del CEO",
-      "resumen_teorico": "Ser CEO requiere ejecutar movimientos 'antinaturales', siendo el más básico dar feedback constante y honesto, algo que va contra el instinto humano de agradar a los demás. Técnicas simples como el 'Shit Sandwich' (elogio-crítica-elogio) funcionan con empleados junior pero fallan con seniors por sentirse formulaicas e inauténticas. El feedback efectivo debe ser auténtico, venir desde el deseo genuino de que la persona tenga éxito, enfocarse en el comportamiento (no en la persona), evitar la humillación pública, adaptarse a la personalidad del receptor, y ser directo sin ser cruel. El objetivo es que el feedback abra el diálogo en vez de cerrarlo, permitiendo que el empleado cuestione el juicio del líder.",
+      "resumen_teorico": "Ser CEO requiere ejecutar movimientos 'antinaturales', siendo el más básico dar feedback constante y honesto, algo que va contra el instinto humano de agradar a los demás. Técnicas simples como el 'Shit Sandwich' (elogio-crítica-elogio) pueden funcionar con empleados junior pero fallan con seniors por sentirse formulaicas e inauténticas. El feedback efectivo debe ser auténtico, venir desde el deseo genuino de que la persona tenga éxito, enfocarse en el comportamiento (no en la persona), evitar la humillación pública, adaptarse a la personalidad del receptor, y ser directo sin ser cruel. El objetivo es que el feedback abra el diálogo en vez de cerrarlo, permitiendo que el empleado cuestione el juicio del líder.",
       "pasos_accionables": [
         "Antes de dar feedback, verificar la propia intención: ¿busco que esta persona tenga éxito o solo desahogarme?",
         "Evitar fórmulas rígidas tipo 'shit sandwich' con empleados senior; ser directo desde el inicio.",
@@ -60698,7 +60698,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Formalizar un Proceso Ad Hoc que Cruza la Organización",
-      "resumen_teorico": "Los procesos que mas dano hacen cuando fallan son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben como funcionan de verdad. Y el orden importa: primero se define QUE tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, que es lo que permite ver en cual se rompe en vez de saber solo que el resultado fallo, y cada paso lleva un responsable con nombre. Lo ultimo, y es lo que sostiene todo lo anterior, es hacer visible el desempeño de cada responsable.",
+      "resumen_teorico": "Los procesos que conviene formalizar son los que nadie escribió: los que cruzan fronteras entre áreas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo típico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben cómo funcionan de verdad. Y el orden importa: primero se define QUÉ tiene que producir el proceso, el resultado final concreto, y solo después se diseñan las etapas que llevan hasta ahí. Cada etapa lleva su métrica propia, que es lo que permite ver en cuál se rompe en vez de saber solo que el resultado falló, y cada paso lleva un responsable con nombre. Lo último, y es lo que sostiene todo lo anterior, es hacer visible el desempeño de cada responsable.",
       "pasos_accionables": [
         "Identificar los procesos ad hoc que cruzan fronteras organizacionales y son críticos (ej. contratación)",
         "Pedir a las personas que ya ejecutan el proceso informalmente que lo formalicen",
@@ -61255,13 +61255,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Dos estilos de liderazgo: pensar la dirección o hacer que funcione (Ones y Twos)",
-      "resumen_teorico": "Como líder de tu negocio, tienes un estilo natural: unos disfrutan definir hacia dónde va el negocio (la visión, las grandes decisiones, el pensamiento a largo plazo) y se llaman Ones; otros disfrutan hacer que el negocio funcione al máximo nivel (los procesos, las metas claras, la disciplina diaria) y se llaman Twos. Necesitas ambas habilidades para liderar bien, pero es normal sentirte más cómodo con una que con la otra. Si eres fundador, es probable que te incline hacia el perfil visionario y falles si no dedicas tiempo a desarrollar la ejecución. Incluso alguien fuerte en su área puede ser visionario ahí pero necesitar más disciplina de ejecución con el resto del equipo.",
+      "resumen_teorico": "Como líder de tu negocio, tienes un estilo natural: unos disfrutan definir hacia dónde va el negocio (la visión, las grandes decisiones, el pensamiento a largo plazo) y se llaman Ones; otros disfrutan hacer que el negocio funcione al máximo nivel (los procesos, las metas claras, la disciplina diaria) y se llaman Twos. Necesitas ambas habilidades para liderar bien, pero es normal sentirte más cómodo con una que con la otra. Si eres fundador, es probable que te inclines hacia el perfil visionario y falles si no dedicas tiempo a desarrollar la ejecución. Incluso alguien fuerte en su área puede decidir como visionario ahí y preferir seguir la dirección general con el resto del equipo, y esa combinación funciona muy bien porque las decisiones son claras y rápidas.",
       "pasos_accionables": [
         "Evalúa si tu estilo de liderazgo es más visionario (One) o más de ejecución (Two)",
         "Identifica qué tareas del perfil contrario estás descuidando en tu día a día",
-        "Si eres más visionario, busca a alguien de confianza fuerte en ejecución que te ayude con los procesos y la disciplina operativa",
+        "Si eres más visionario, dedica tiempo a volverte competente en los procesos y la disciplina operativa como para dirigirlos, y apóyate en alguien de confianza fuerte en ejecución",
         "Si eres más de ejecución, reserva tiempo cada semana solo para pensar en la dirección del negocio, sin sentir que estás perdiendo el tiempo",
-        "Si trabajas con un socio, evita que los dos sean del perfil visionario compitiendo por definir la dirección del negocio"
+        "Si eres más visionario, ten en cuenta que otra persona de perfil visionario en tu equipo directo puede ser contraproducente, porque querrá fijar su propia dirección en vez de seguir la tuya"
       ],
       "entregable_esperado": "Un diagnóstico personal de tu estilo de liderazgo (visionario o de ejecución) y un plan para desarrollarte o para conseguir ayuda que te complemente",
       "nodos_previos": [
@@ -63085,7 +63085,7 @@
         "Limitar quién puede realizar cambios en sistemas que contienen CUI",
         "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
         "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
-        "Deshabilitar funciones, puertos y servicios innecesarios en los sistemas"
+        "Deshabilitar o remover funciones, puertos, protocolos y servicios innecesarios o inseguros en los sistemas"
       ],
       "entregable_esperado": "Inventario de configuraciones base documentado y política de gestión de cambios implementada",
       "nodos_previos": [
@@ -63128,7 +63128,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Gestión de Confrontación con Ejecutivos y Top Performers",
-      "resumen_teorico": "Los líderes deben tener procesos claros para manejar situaciones difíciles: solicitudes de más territorio o poder de un ejecutivo top, promociones, despidos, y comportamiento crónico negativo de un top performer. La capacidad de manejar estas confrontaciones de forma justa y sistemática es un indicador clave de madurez de liderazgo.",
+      "resumen_teorico": "Los líderes deben tener procesos claros para manejar situaciones difíciles: solicitudes de más territorio o poder de un ejecutivo top, promociones, despidos, y comportamiento crónico negativo de un top performer. La forma de manejar estas confrontaciones muestra si quien lidera piensa de forma sistemática o resuelve caso por caso.",
       "pasos_accionables": [
         "Define un proceso formal y documentado para promociones y despidos",
         "Establece criterios claros para manejar solicitudes de expansión de territorio o poder de ejecutivos",
@@ -63613,12 +63613,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Proceso de revisiones de desempeño y feedback",
-      "resumen_teorico": "Cuando no tienes un proceso claro para dar feedback y revisar el desempeño, pagas un 'impuesto silencioso': rumbos difusos, gente que no mejora porque no sabe en qué falla, y un rendimiento general mediocre. Es una deuda de gestión muy común: la posponés por miedo a parecer 'gran empresa' o a incomodar a alguien.",
+      "resumen_teorico": "Cuando no tienes un proceso claro para dar feedback y revisar el desempeño, pagas un 'impuesto silencioso': rumbos difusos, gente que rara vez mejora porque no sabe en qué falla, y un rendimiento general mediocre. Es una deuda de gestión muy común: la pospones por miedo a parecer 'gran empresa' o a incomodar a alguien.",
       "pasos_accionables": [
         "Pon en marcha revisiones de desempeño formales y periódicas, aunque tu equipo sea pequeño (unas 25 personas)",
         "Da feedback claro y consistente a cada persona, nunca ambiguo",
         "Revisa que todos reciban su evaluación a tiempo, sin excepciones",
-        "Si alguien tiene bajo desempeño, actúa: no lo dejes pasar",
+        "Si alguien tiene bajo desempeño, gestiona su salida de forma efectiva: no lo dejes pasar",
         "Comprueba que, poco después de contratar a alguien, entienda con claridad qué esperas de él"
       ],
       "entregable_esperado": "Un proceso formal de revisiones de desempeño con calendario definido, un formato de feedback por escrito y un seguimiento de que se esté cumpliendo",
@@ -65304,7 +65304,7 @@
         "Marcar los medios con las restricciones de distribución y manejo de CUI.",
         "Sanitizar medios antes de reutilización o disposición.",
         "Restringir y revisar periódicamente el acceso a medios digitales y físicos.",
-        "Mantener trazabilidad durante el transporte de medios."
+        "Restringir el transporte de medios a personal autorizado y mantener trazabilidad durante el transporte."
       ],
       "entregable_esperado": "Inventario de medios con CUI, procedimiento de sanitización y registro de control de acceso/transporte.",
       "nodos_previos": [
@@ -72223,7 +72223,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "compras",
       "titulo_concepto": "Investiga con fuentes objetivas antes de contactar al proveedor",
-      "resumen_teorico": "Antes de hablar con un proveedor, investiga por tu cuenta en fuentes que no dependan de el: reportes independientes, opiniones de otros compradores, comparativos de precio y calidad. Esta tarea te da una base propia de comparación que el vendedor no puede manipular. Cuando ya sabes que existe en el mercado, que rango de precio es razonable y que otras opciones hay, entras a la conversación sabiendo que preguntar y que exigir. Sin esta tarea previa, dependes solo de lo que el vendedor te cuenta, y eso deja toda la ventaja de información del lado de quien te quiere vender. Investigar primero también te ayuda a notar contradicciones entre lo que dice un proveedor y lo que dicen fuentes independientes.",
+      "resumen_teorico": "Antes de hablar con un proveedor, investiga por tu cuenta en fuentes que no dependan de él: reportes independientes, opiniones de otros compradores, comparativos de precio y calidad. Esta tarea te da una base propia de comparación que el vendedor no puede manipular. Cuando ya sabes qué existe en el mercado, qué rango de precio es razonable y qué otras opciones hay, entras a la conversación sabiendo qué preguntar y qué exigir.",
       "pasos_accionables": [
         "Busca fuentes independientes y de confianza, como reseñas o comparadores, sobre lo que necesitas.",
         "Anota el rango de precios que encuentras para tener un punto de referencia propio.",
@@ -75929,7 +75929,7 @@
       "titulo_concepto": "Lleva un scorecard de desempeño de cada proveedor",
       "resumen_teorico": "Para decidir con datos, y no solo por intuición o por la última mala experiencia, conviene llevar un registro simple del cumplimiento de cada proveedor: si entrega a tiempo, si la calidad es la acordada, si respeta el precio y las condiciones pactadas. Usa categorías en palabras, como cumple, no cumple o superó lo esperado, en vez de números que aparenten una precisión que no tienes, y anota siempre un comentario breve de qué pasó en cada entrega. Con el tiempo, este historial te dice a qué proveedor conviene renovarle el trato, a cuál renegociarle condiciones y a cuál conviene reemplazar, antes de que un problema puntual se vuelva costumbre.",
       "pasos_accionables": [
-        "Escribe una lista corta con lo que más te importa de ese proveedor: plazo, calidad, precio, trato.",
+        "Escribe una lista corta con lo que más te importa de ese proveedor, partiendo de los criterios con que lo elegiste, como plazo, calidad, precio y trato, y acuérdala con él: puede aportar puntos en los que no habías pensado.",
         "Cada vez que recibas un pedido o servicio, anota en palabras si cumplió, no cumplió o superó cada punto.",
         "Guarda también un comentario breve sobre qué pasó, no solo la calificación.",
         "Revisa este registro antes de renovar o renegociar un contrato con ese proveedor.",
@@ -84338,12 +84338,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Negocia por intereses, no por posiciones",
-      "resumen_teorico": "Detrás de una posición rígida, como quiero este precio o no acepto ese plazo, casi siempre hay un interés real: seguridad, reputación, flujo de caja o miedo a quedar mal con alguien más. En vez de discutir directamente el número o la condición, pregunta con curiosidad por qué esa condición le importa tanto a la otra parte. Separa a la persona del problema: no es tu proveedor o cliente el rival, sino la situación concreta que hay que resolver. Una vez que entiendes el interés real detrás de la postura, puedes proponer más de una forma de resolverlo, y apoyar la decisión final en criterios objetivos que ambos reconozcan, como precios de mercado o plazos habituales del sector.",
+      "resumen_teorico": "Detrás de una posición rígida, como quiero este precio o no acepto ese plazo, casi siempre hay un interés real, como el margen de ganancia que necesita, tener trabajo asegurado o cobrar rápido. En vez de discutir directamente el número o la condición, pregunta con curiosidad por qué esa condición le importa tanto a la otra parte. Separa a la persona del problema: no es tu proveedor o cliente el rival, sino la situación concreta que hay que resolver. Una vez que entiendes el interés real detrás de la postura, busca junto con la otra parte más de una forma de resolverlo que sirva a los intereses de ambos, y apoya la decisión final en criterios objetivos que ambos reconozcan, como precios de mercado o plazos habituales del sector.",
       "pasos_accionables": [
         "Antes de reunirte, escribe la posición de la otra parte y pregúntate qué necesidad real puede esconder.",
         "Durante la conversación, pregunta por qué es importante eso para él en vez de discutir directamente el número.",
         "Cuando surja un desacuerdo, sepáralo de la persona: habla del problema, no de quién tiene razón.",
-        "Propón opciones distintas que resuelvan el interés detectado, no solo la petición original.",
+        "Busca junto con la otra parte opciones distintas que sirvan a los intereses de ambos, no solo a la petición original.",
         "Anota los criterios objetivos que ambos aceptan, como precios de mercado o plazos habituales, para apoyar la decisión final."
       ],
       "entregable_esperado": "Una lista de los intereses reales detrás de la posición de la otra parte y opciones que los resuelven.",
@@ -89312,13 +89312,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Pide una revisión externa antes de firmar cualquier contrato",
-      "resumen_teorico": "Antes de firmar, pide que alguien mas lea el contrato completo: un colega con mas experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o cláusulas faltantes que tu, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo este mal. Esta revisión cuesta poco tiempo y evita que después tengas que corregir el contrato con el proveedor, lo cual siempre es mas incomodo que corregirlo antes de firmar.",
+      "resumen_teorico": "Antes de firmar, pide que alguien más lea el contrato completo: un colega con más experiencia, otro emprendedor que ya haya pasado por esto, o un abogado si no tienes formación en contratos o si el monto lo justifica. Una segunda mirada encuentra huecos, ambigüedades o cláusulas faltantes que tú, por estar metido en la negociación, ya no ves. No necesitas un equipo legal para hacer esto: basta con mandar el borrador a alguien de confianza con más experiencia que tú en compras y pedirle que marque lo que le parezca raro o incompleto. Si encuentran preguntas, eso normalmente significa que falta información por escrito, no que algo esté mal. Esta revisión no garantiza cubrirlo todo, pero sí la mayoría; si algo queda fuera, se puede corregir después con una enmienda por escrito acordada con el proveedor.",
       "pasos_accionables": [
         "Termina el borrador del contrato con todos los términos que negociaste incluidos.",
         "Envíalo a al menos una persona de confianza con más experiencia en contratos o en tu tipo de negocio.",
         "Pídele que marque cualquier cláusula que le parezca ambigua, incompleta o riesgosa.",
         "Agrega la información que falte antes de mandar el contrato al proveedor para su firma.",
-        "Si el monto es alto, paga una consulta puntual con un abogado solo para esa revisión."
+        "Si no tienes formación en contratos o el monto es alto, paga una consulta puntual con un abogado solo para esa revisión."
       ],
       "entregable_esperado": "Un contrato revisado por un segundo par de ojos, con los huecos corregidos antes de firmar.",
       "nodos_previos": [
@@ -91644,13 +91644,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Usa una plantilla fija para pedir y comparar cotizaciones",
-      "resumen_teorico": "Cuando pides cotizaciones a distintos proveedores sin una guia fija, cada uno responde a una versión distinta de tu necesidad y comparar precios se vuelve imposible. La solución es armar un formulario propio, corto, que capture siempre lo mismo: que necesitas, cuanto, para cuando, y cualquier condición especial. Ese mismo formulario, o la lista de requisitos que contiene, se envía igual a todos los proveedores que cotices. Así cada cotización responde a la misma pregunta y puedes comparar peras con peras. Si al final decides quedarte con un solo proveedor sin comparar, el mismo documento te sirve para anotar por que, de modo que la decisión quede registrada y no dependa solo de la memoria o de la simpatía del momento.",
+      "resumen_teorico": "Cuando pides cotizaciones a distintos proveedores sin una guía fija, cada uno responde a una versión distinta de tu necesidad y comparar precios se vuelve difícil. La solución es armar un formulario propio que capture siempre lo mismo: qué necesitas, descrito con detalle y por completo aunque tengas que anexar hojas, cuánto, para cuándo, y cualquier condición especial. Ese mismo formulario, o la lista de requisitos que contiene, se envía igual a todos los proveedores que cotices. Así cada cotización responde a la misma pregunta y puedes comparar peras con peras. Si al final decides quedarte con un solo proveedor sin comparar, el mismo documento te sirve para anotar por qué, de modo que la decisión quede registrada y no dependa solo de la memoria o de la simpatía del momento.",
       "pasos_accionables": [
         "Crea un formulario simple con: qué necesitas, cantidad, fecha de entrega requerida y presupuesto aproximado.",
         "Envía el mismo formulario o lista de requisitos a cada proveedor que vayas a cotizar.",
         "Pide a cada proveedor que cotice exactamente los mismos ítems, cantidades y plazos.",
         "Guarda las cotizaciones recibidas junto con la fecha en que las pediste.",
-        "Si eliges un proveedor único sin comparar, escribe la razón en el mismo documento."
+        "Si eliges un proveedor único sin comparar, escribe la razón en el mismo documento y, si la razón es que no hay otro proveedor, adjunta los datos de mercado que lo muestran."
       ],
       "entregable_esperado": "Un formulario de solicitud de compra que reutilizas cada vez que pides cotizaciones a proveedores.",
       "nodos_previos": [],
@@ -93540,7 +93540,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "compras",
       "titulo_concepto": "Prepara tu posición y la agenda antes de negociar",
-      "resumen_teorico": "Antes de sentarte a negociar con un proveedor, define tus objetivos mas allá del precio: garantías, plazos, calidad, condiciones de entrega. Ordena esos objetivos por importancia y detecta cuales podrías soltar si hace falta ceder algo. Investiga a quien tienes enfrente: quien decide, que le preocupa, como le va a su negocio y a su sector. Esa información te permite entender sus intereses reales, no solo su postura inicial. Además, quien propone la agenda de la reunion suele marcar el rumbo de la conversación, así que prepárala tu mismo y compartela con tiempo. Llegar con esta tarea hecha te da margen para ceder en lo secundario sin perder lo esencial, y evita que la presión del momento te haga aceptar condiciones que no puedes sostener.",
+      "resumen_teorico": "Antes de sentarte a negociar con un proveedor, define tus objetivos más allá del precio: garantías, plazos, calidad, condiciones de entrega. Ordena esos objetivos por importancia y detecta cuáles podrías soltar si hace falta ceder algo. Investiga a quién tienes enfrente: quién decide, qué le preocupa, cómo le va a su negocio y a su sector. Esa información te permite entender sus intereses reales, no solo su postura inicial. Además, quien propone la agenda de la reunión suele marcar el rumbo de la conversación, así que prepárala tú mismo y compártela con tiempo. Llegar con esta tarea hecha te da margen para ceder en lo secundario sin perder lo esencial.",
       "pasos_accionables": [
         "Escribe en una hoja todos tus objetivos para esta compra, no solo el precio.",
         "Ordena esos objetivos de mayor a menor prioridad y marca cuáles podrías soltar sin problema.",
@@ -99578,7 +99578,7 @@
       "resumen_teorico": "Cuando los datos violan los supuestos de las pruebas paramétricas (como la normalidad), existen alternativas: pruebas no paramétricas (basadas en rangos, libres de distribución), transformación de datos (funciones de potencia, Box-Cox, Johnson) para cumplir los supuestos, y bootstrapping (remuestreo con reemplazo para determinar empíricamente la distribución de un estadístico).",
       "pasos_accionables": [
         "Verificar los supuestos de normalidad y varianza igual de los datos",
-        "Si se violan los supuestos, considerar pruebas no paramétricas basadas en rangos",
+        "Si se violan los supuestos, considerar pruebas no paramétricas basadas en rangos, sabiendo que tienen sus propios supuestos y con frecuencia son menos potentes",
         "Alternativamente, aplicar una transformación de datos (potencia, Box-Cox o Johnson)",
         "Como opción adicional, aplicar bootstrapping para estimar la distribución empírica del estadístico",
         "Seleccionar el método más apropiado según el software y necesidad de interpretabilidad"
@@ -99774,10 +99774,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Pruebas locales de publicidad fuera de internet",
-      "resumen_teorico": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así sabes con certeza qué está funcionando y qué no.",
+      "resumen_teorico": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
       "pasos_accionables": [
         "Diseña varias pruebas pequeñas de publicidad fuera de internet en paralelo, en distintos mercados locales",
-        "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos",
+        "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos, sabiendo que a cambio pierdes capacidad de elegir a quién y cuándo le llega",
         "Asigna un código único o una dirección web específica a cada campaña para rastrear qué te trae resultados, y un código de descuento distinto para cada canal",
         "Mide los resultados y escala solo lo que te esté dando retorno positivo",
         "Revisa el rendimiento cada tanto, porque un anuncio que funciona hoy puede dejar de funcionar con el tiempo",
@@ -99813,7 +99813,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Publicidad Remanente (Remnant Advertising)",
-      "resumen_teorico": "La publicidad remanente es el espacio publicitario no vendido que los medios (revistas, vallas, etc.) ofrecen a precios muy reducidos (hasta 90% de descuento) cerca de sus fechas límite de cierre, ya que para ellos es pérdida total si no lo venden. Es una estrategia efectiva para llegar a audiencias masivas con bajo presupuesto si el negocio no depende de ubicación o timing específico.",
+      "resumen_teorico": "La publicidad remanente es el espacio publicitario no vendido que los medios (revistas, vallas, etc.) ofrecen a precios muy reducidos (hasta 90% de descuento) cerca de sus fechas límite de cierre, ya que para ellos es pérdida total si no lo venden. Puede ser una estrategia efectiva para llegar a audiencias masivas con bajo presupuesto si el negocio no depende de ubicación o timing específico.",
       "pasos_accionables": [
         "Contactar agencias especializadas en remnant ads (ej. Manhattan Media, Novus Media)",
         "Negociar descuentos sobre la tarifa de lista (rate card)",
@@ -99844,7 +99844,7 @@
         "Definir un ángulo de historia con carga emocional que provoque reacción y ganas de compartir",
         "Empaquetar anuncios pequeños en un hito más grande (ej. lanzamiento + barrera de uso superada)",
         "Redactar un pitch corto con asunto claro, contexto breve y demo/link, evitando 'muro de texto'",
-        "Comenzar con medios pequeños y dejar que la historia escale naturalmente hacia medios grandes"
+        "Comenzar con medios pequeños y, cuando la historia tenga eco, difundirla tú mismo (sitios para compartir enlaces, redes sociales, influyentes y blogs de tu sector) para aumentar la probabilidad de que la recojan medios grandes"
       ],
       "entregable_esperado": "Pitch de prensa redactado, lista de reporteros/medios objetivo y un hito o narrativa lista para comunicar",
       "nodos_previos": [
@@ -100033,9 +100033,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Designa un único punto de contacto con proveedores",
-      "resumen_teorico": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y el proveedor termine sabiendo más de tu situación que tú mismo. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después usas en tu contra al negociar. También te ayuda a llevar un solo hilo de la conversación en vez de perder detalles repartidos entre varias personas.",
+      "resumen_teorico": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
       "pasos_accionables": [
-        "Decide quién es la única persona autorizada para negociar precios y condiciones con cada proveedor.",
+        "Decide quién es la única persona autorizada para negociar precios y condiciones con cada proveedor, y quién la suple cuando no esté disponible.",
         "Avisa a tu equipo, familiares o socios que las conversaciones de negociación se remiten a esa persona.",
         "Si alguien recibe una llamada o mensaje de un proveedor sobre condiciones, pídele que lo reenvíe sin responder.",
         "Anota cada conversación importante con el proveedor para no depender de la memoria de varias personas.",
@@ -100062,13 +100062,13 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Buscar los Puntos Brillantes Antes de Pivotar",
-      "resumen_teorico": "Antes de cambiar de rumbo hay una búsqueda que casi nadie hace: mirar si en medio de los malos números hay clientes de verdad comprometidos, aunque sean poquisimos. Si los hay, la pregunta siguiente no es cuantos son sino que tienen en común, porque de ese parecido sale la única pista útil. Y ahí hay una bifurcacion que decide el destino del negocio: esos pocos pueden ser adoptadores tempranos de un mercado grande que todavía no llego, o pueden ser valores atípicos que no representan a nadie. La misma duda tiene una tercera cara, que es el momento: a veces el producto esta bien y lo que fallo fue llegar temprano. Solo cuando la búsqueda no encuentra un solo punto brillante, el pivote deja de ser una salida y pasa a ser la decisión.",
+      "resumen_teorico": "Antes de cambiar de rumbo, lo primero es buscar si en medio de los malos números hay clientes de verdad comprometidos, aunque sean poquísimos. Si los hay, la pregunta siguiente no es cuántos son sino qué tienen en común, porque ese parecido puede revelar una promesa que tus métricas principales no muestran. Y ahí hay una pregunta clave: esos pocos pueden ser adoptadores tempranos de un mercado grande que todavía no llegó, o pueden ser valores atípicos que no representan a nadie. La misma duda tiene una tercera cara, que es el momento: a veces el producto está bien y lo que falló fue llegar temprano. Si la búsqueda no encuentra un solo punto brillante, puede ser un buen momento para pivotar.",
       "pasos_accionables": [
         "Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos",
-        "Analiza qué característica común tienen esos clientes leales",
+        "Analiza por qué el producto les funciona tan bien y qué característica común tienen esos clientes leales, para ver si puedes expandirte desde esa base",
         "Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos",
-        "Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto",
-        "Solo pivota si no encuentras ningún punto brillante tras análisis profundo"
+        "Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto: uno o dos años de adelanto pueden jugar a tu favor, una década casi nadie la aguanta, y si solo vas algo adelantado ya debería haber adoptadores tempranos usándolo",
+        "Si tras un análisis profundo no encuentras ningún punto brillante, puede ser un buen momento para pivotar"
       ],
       "entregable_esperado": "El análisis de tus clientes más comprometidos con lo que tienen en común, tu veredicto escrito de si son adoptadores tempranos o valores atípicos, y la decisión de pivotar o perseverar que sale de él",
       "nodos_previos": [
@@ -100396,7 +100396,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Optimización del Quality Score en Anuncios",
-      "resumen_teorico": "El Quality Score es una calificación que Google (y otras plataformas) asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
+      "resumen_teorico": "El Quality Score es una calificación que Google asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
       "pasos_accionables": [
         "Revisar el CTR de cada keyword y anuncio regularmente",
         "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna Quality Score bajo (el promedio ronda el 2%)",
@@ -100745,9 +100745,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Mantenimiento Centrado en Confiabilidad (RCM)",
-      "resumen_teorico": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
+      "resumen_teorico": "Método de planificación que complementa TPM, priorizando recursos de mantenimiento en tres categorías: reactivo (correr hasta fallar, para activos no críticos), preventivo (basado en tiempo/ciclos para activos con patrón de falla conocido), y predictivo (basado en condición, para activos críticos, de falla aleatoria, sin desgaste o con repuestos de reposición larga). Busca reducir inventarios, acortar lead times y mejorar confiabilidad.",
       "pasos_accionables": [
-        "Clasificar todos los activos según criticidad (reactivo, preventivo, predictivo)",
+        "Clasificar todos los activos según su criticidad y su patrón de falla (reactivo, preventivo, predictivo)",
         "Para activos reactivos, permitir operación hasta falla",
         "Para activos preventivos, establecer calendario de mantenimiento basado en ciclos/tiempo",
         "Para activos predictivos, implementar monitoreo de condición (vibración, temperatura, lubricación)",
@@ -101189,9 +101189,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Reconoce las tácticas de presión y urgencia artificial del vendedor",
-      "resumen_teorico": "Muchos vendedores usan frases como que solo queda una unidad, que el precio sube pronto o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Esa urgencia casi nunca es información real sobre el mercado, es una herramienta de venta pensada para que bajes la guardia. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
+      "resumen_teorico": "Muchos vendedores usan frases como que solo queda una unidad o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Es una táctica de presión que cabe esperar de un vendedor y, aunque lo que dice sea cierto, no debería cambiar tu decisión. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
       "pasos_accionables": [
-        "Cuando el vendedor diga que hay poca disponibilidad o que el precio sube pronto, pregúntate si es real o una táctica de presión.",
+        "Cuando el vendedor diga que hay poca disponibilidad o que la oferta se acaba pronto, pregúntate si es real o una táctica de presión, y recuerda que aunque sea real no debería apurar tu decisión, porque suele haber otra unidad u otro proveedor.",
         "Sugerencia de My Idea: pide que la oferta con fecha límite te la confirmen por escrito.",
         "Antes de la reunión, fija tu propio límite de tiempo y de precio, y no lo cambies solo porque el vendedor apura.",
         "Si sientes presión, pide una pausa breve para pensar antes de responder.",
@@ -102645,9 +102645,9 @@
         "Eliminar bucles de reproceso para corregir errores del proceso",
         "Eliminar o simplificar pasos de valor marginal para el cliente",
         "Eliminar pasos redundantes como inspecciones (solo tras eliminar causas de error)",
-        "Combinar pasos realizados por un mismo trabajador",
+        "Combinar pasos para que los realice un solo trabajador",
         "Transferir pasos de aprobación a niveles inferiores",
-        "Cambiar la secuencia de actividades de consecutivas a simultáneas",
+        "Cambiar la secuencia de actividades de consecutivas a simultáneas, o hacer un paso después de atender al cliente en lugar de antes",
         "Usar tecnología para realizar pasos rutinarios y complejos"
       ],
       "entregable_esperado": "Proceso de servicio rediseñado con tiempo de ciclo reducido, documentado con datos de antes/después",
@@ -103243,9 +103243,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Registra qué funcionó en cada compra",
-      "resumen_teorico": "Después de cerrar una compra o un contrato, tómate unos minutos para anotar qué salió bien y qué salió mal, separado del contrato mismo. Este registro no necesita ser formal: basta una nota con la fecha, el proveedor, qué se cumplió del plazo o presupuesto, y qué sorpresa apareció en la negociación. Sin este hábito, cada vez que vuelvas a comprar algo parecido repetirás los mismos errores porque la memoria sola no alcanza. Con el tiempo, este archivo se convierte en tu propia guía de qué proveedores cumplen, qué cláusulas conviene pedir y qué preguntas se te olvidó hacer la vez anterior. Revisarlo antes de la próxima compra similar te ahorra tiempo y evita que negocies desde cero cada vez.",
+      "resumen_teorico": "Después de cerrar una compra o un contrato, tómate unos minutos para anotar qué salió bien y qué salió mal, separado del contrato mismo. Este registro no necesita ser formal: basta una nota con la fecha, el proveedor, qué se cumplió del plazo o presupuesto, y qué sorpresa apareció en la negociación. Este hábito es la mejor forma de no repetir los mismos errores cuando vuelvas a comprar algo parecido. Con el tiempo, este archivo se convierte en tu propia guía de qué proveedores cumplen, qué cláusulas conviene pedir y qué preguntas se te olvidó hacer la vez anterior. Revisarlo antes de la próxima compra similar te ahorra tiempo y evita que negocies desde cero cada vez.",
       "pasos_accionables": [
-        "Al cerrar cada compra o contrato, escribe en una nota qué funcionó y qué no.",
+        "Al cerrar cada compra o contrato, escribe en una nota qué funcionó, qué no y cómo podrías arreglar lo que falló la próxima vez.",
         "Anota específicamente los retrasos, sorpresas de precio o problemas de calidad que aparecieron.",
         "Guarda estas notas en un solo lugar, ordenadas por proveedor o por tipo de compra.",
         "Antes de tu próxima compra similar, relee las notas de la vez anterior.",
@@ -103295,7 +103295,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "La Regla del 50 Por Ciento",
-      "resumen_teorico": "Dedica la mitad de tu tiempo a construir el producto y la otra mitad a conseguir que la gente lo use y lo compre (tracción), desde el principio y en paralelo, no primero uno y después el otro. Así evitas el error común de armar un gran producto sin saber como llegar a la gente, y detectas a tiempo si el negocio no funciona, si el mercado es muy chico, si conseguir clientes te cuesta demasiado o si hay demasiada competencia.",
+      "resumen_teorico": "Dedica la mitad de tu tiempo a construir el producto y la otra mitad a conseguir que la gente lo use y lo compre (tracción), desde el principio y en paralelo, no primero uno y después el otro. Así tienes la mejor oportunidad de evitar el error común de armar un gran producto sin saber cómo llegar a la gente, y detectas a tiempo si el negocio no funciona, si el mercado es muy chico, si conseguir clientes te cuesta demasiado o si hay demasiada competencia.",
       "pasos_accionables": [
         "Divide tu semana en partes iguales entre trabajar en el producto y probar formas de conseguir clientes.",
         "Empieza a probar canales para conseguir clientes incluso antes de lanzar el producto, por ejemplo un blog, mejorar tu posicionamiento en buscadores o armar una lista de espera.",
@@ -104049,7 +104049,7 @@
         "Calcular la confiabilidad del sistema multiplicando las confiabilidades de las partes",
         "Evaluar si el aumento de complejidad reduce significativamente la confiabilidad total",
         "Diseñar redundancia paralela en componentes críticos si es necesario",
-        "Calcular la nueva confiabilidad del sistema con redundancia usando Ps = 1-(1-P1)^n"
+        "Calcular la nueva confiabilidad del sistema con redundancia paralela de n elementos idénticos usando Ps = 1-(1-P1)^n"
       ],
       "entregable_esperado": "Diagrama de bloques de confiabilidad del sistema con cálculo de Ps y propuesta de redundancia si aplica",
       "nodos_previos": [
@@ -104233,8 +104233,8 @@
         "Explicar a supervisores y no supervisores las razones detrás de las auditorías",
         "Evitar un enfoque de búsqueda de culpables; orientar el reporte al problema",
         "Incluir observaciones positivas ('commendable observations') además de deficiencias",
-        "Basar las recomendaciones en hechos, evitando opiniones personales del auditor",
-        "Realizar una reunión post-auditoría para validar hallazgos con el equipo auditado"
+        "Basar las recomendaciones en hechos y no en la opinión del auditor; donde quepa diferencia de opinión, darla como insumo para la decisión sin abogar de más",
+        "Realizar una reunión post-auditoría para validar hallazgos con el equipo auditado y que este planee la acción correctiva"
       ],
       "entregable_esperado": "Protocolo de comunicación y conducta ética para auditores",
       "nodos_previos": [
@@ -106632,7 +106632,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Retargeting y Publicidad Display",
-      "resumen_teorico": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o AdRoll) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca.",
+      "resumen_teorico": "El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que a menudo genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o BuySellAds) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca, y conviene sumarlos cuando tu campaña SEM ya funciona con éxito.",
       "pasos_accionables": [
         "Instalar píxeles de retargeting (por ejemplo, Google AdWords o AdRoll) en el sitio",
         "Segmentar audiencias según comportamiento (ej. visitó pero no compró)",
@@ -106851,10 +106851,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "franquicias",
       "titulo_concepto": "Escucha Activa y Retroalimentación de Franquiciados",
-      "resumen_teorico": "Muchos franquiciadores confían en su instinto para evaluar cómo se sienten sus franquiciados, lo cual suele estar sesgado. Es fundamental implementar mecanismos formales de retroalimentación (encuestas, mystery shopping de validación) para conocer la percepción real de los franquiciados sobre la marca y su liderazgo.",
+      "resumen_teorico": "Muchos franquiciadores confían en su instinto para evaluar cómo se sienten sus franquiciados, lo cual suele estar sesgado. Es fundamental escucharlos y pedirles retroalimentación con regularidad, complementada si hace falta con encuestas e incluso mystery shopping de validación, para conocer la percepción real de los franquiciados sobre la marca y su liderazgo.",
       "pasos_accionables": [
-        "Diseñar encuestas periódicas de satisfacción de franquiciados",
-        "Realizar mystery shopping sobre el proceso de validación de franquicias",
+        "Si hace falta, diseñar encuestas periódicas de satisfacción de franquiciados para complementar otras vías de retroalimentación",
+        "Si lo eliges, realizar mystery shopping sobre el proceso de validación de franquicias para oír lo que tus franquiciados dicen a tus prospectos",
         "Solicitar feedback de manera regular más allá de conversaciones informales",
         "Analizar resultados y comunicar acciones derivadas de la retroalimentación"
       ],
@@ -107599,7 +107599,7 @@
         "Enviar todo material promocional al abogado de franquicias antes de su lanzamiento",
         "Verificar consistencia entre el marketing y el FDD",
         "Revisar programas de referidos y comunicaciones formales con prospectos",
-        "Confirmar cumplimiento en los ocho estados que regulan materiales de marketing de franquicia"
+        "Si vendes en alguno de los ocho estados que regulan materiales de marketing de franquicia, presentarlos allí para su aprobación"
       ],
       "entregable_esperado": "Aprobación legal documentada de todos los materiales de marketing antes de su uso",
       "nodos_previos": [
@@ -107877,12 +107877,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Balance entre Riesgo de Concepto y Amenaza Competitiva (Timing de Franquiciar)",
-      "resumen_teorico": "Existen dos riesgos opuestos al decidir el momento de franquiciar: el 'riesgo de concepto' (franquiciar antes de haber perfeccionado y probado el modelo de negocio) y la 'amenaza competitiva' (esperar demasiado permite que competidores copien el concepto y se posicionen como líderes de mercado primero). El momento óptimo para franquiciar es cuando estas dos curvas de riesgo se cruzan, idealmente unos meses antes, dado que preparar la organización para vender franquicias toma de 4 a 6 meses.",
+      "resumen_teorico": "Existen dos riesgos opuestos al decidir el momento de franquiciar: el 'riesgo de concepto' (franquiciar antes de haber perfeccionado y probado el modelo de negocio) y la 'amenaza competitiva' (esperar demasiado permite que competidores copien el concepto y se posicionen como líderes de mercado primero). El momento óptimo para franquiciar es cuando estas dos curvas de riesgo se cruzan, o incluso unos meses antes, dado que preparar la organización para vender franquicias suele tomar de 4 a 6 meses.",
       "pasos_accionables": [
         "Evaluar cuánto tiempo lleva operando el concepto y qué tan probado está el modelo",
         "Identificar barreras de entrada (patentes, exclusividad, dificultad de replicar el concepto)",
         "Monitorear actividad de competidores potenciales que podrían copiar el concepto",
-        "Estimar el punto de cruce entre ambos riesgos y planificar el inicio del proceso de franquicia 4-6 meses antes"
+        "Estimar el punto de cruce entre ambos riesgos y planificar el inicio del proceso de franquicia en ese punto o incluso unos meses antes, porque la preparación suele tomar de 4 a 6 meses"
       ],
       "entregable_esperado": "Cronograma de decisión de franquicia basado en el análisis de riesgo de concepto vs. amenaza competitiva",
       "nodos_previos": [
@@ -108063,7 +108063,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Gestión del Riesgo de Litigios en Franquicias",
-      "resumen_teorico": "Aunque existe temor generalizado a litigios de franquiciados, estudios (FRANdata 2004) muestran que solo 26% de franquiciantes reportaron algún litigio. La responsabilidad contractual del franquiciante se limita a los compromisos del contrato de franquicia, el cual suele redactarse a favor del franquiciante. Además, evitar franquiciar no elimina el riesgo legal, solo lo traslada a otras formas (responsabilidad laboral, accidentes, etc. en operaciones propias).",
+      "resumen_teorico": "Aunque existe temor generalizado a litigios de franquiciados, estudios (FRANdata 2004) muestran que solo 26% de franquiciantes reportaron algún litigio. La responsabilidad contractual del franquiciante se limita en gran medida a los compromisos del contrato de franquicia, el cual suele redactarse a favor del franquiciante. Además, salvo que decidas no crecer en absoluto, evitar franquiciar no elimina el riesgo legal, solo lo traslada a otras formas (responsabilidad laboral, accidentes, etc. en operaciones propias).",
       "pasos_accionables": [
         "Contratar un abogado especializado en franquicias para redactar el contrato de franquicia",
         "Comparar el riesgo legal de litigios de franquiciados vs. litigios laborales/de consumidor en operación propia",
@@ -110388,7 +110388,7 @@
         "Identificar canales de bajo costo para atraer usuarios nuevos (SEO, ads)",
         "Dirigir estos usuarios nuevos hacia el inicio del ciclo viral",
         "Medir cuánto crecimiento adicional genera el seeding vs el loop orgánico",
-        "Combinar seeding con otros canales de tracción para amplificar resultados"
+        "Sugerencia de My Idea: combina el seeding con otros canales de tracción que ya estés probando."
       ],
       "entregable_esperado": "Plan de seeding con canales identificados y presupuesto asignado para alimentar el loop viral",
       "nodos_previos": [
@@ -111477,7 +111477,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Selección de un Consultor de Franquicias",
-      "resumen_teorico": "Elegir el consultor de franquicias correcto es una decisión crítica que impacta directamente el éxito de tu programa. La proximidad geográfica ya no importa gracias a la conectividad digital, lo que sí importa es su integridad, calidad de equipo, experiencia diversa y track record verificable. Investiga su reputación online, el conocimiento institucional que ha acumulado en franquicias (costo por lead, tasas de cierre), el tamaño de su firma y si existe revisión por pares en sus decisiones. Compara siempre servicios equivalentes, ya que ofertas con precio similar pueden diferir enormemente en alcance, como análisis competitivo o modelado financiero. Prioriza expertise y calidad sobre cercanía.",
+      "resumen_teorico": "Elegir el consultor de franquicias correcto es una decisión crítica que impacta directamente el éxito de tu programa. La proximidad geográfica es una ventaja, pero gracias a la conectividad digital en general ya no es una necesidad; lo que sí importa es su integridad, calidad de equipo, experiencia diversa y track record verificable. Investiga su reputación online, el conocimiento institucional que ha acumulado en franquicias (costo por lead, tasas de cierre), el tamaño de su firma y si existe revisión por pares en sus decisiones. Compara siempre servicios equivalentes, ya que ofertas con precio similar pueden diferir enormemente en alcance, como análisis competitivo o modelado financiero. Prioriza expertise y calidad sobre cercanía.",
       "pasos_accionables": [
         "Verifica que el consultor evalúe tu negocio antes de recomendar franquiciar, como señal de integridad",
         "Busca el nombre de la firma y sus consultores en Google y LinkedIn durante al menos una hora para revisar experiencia y reputación",
@@ -111730,7 +111730,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Cómo elegir la forma en que vendes tus franquicias (estructura de oferta)",
-      "resumen_teorico": "Antes de vender franquicias, tienes que elegir la estructura (o la combinación de estructuras) bajo la cual las vas a ofrecer: unidad individual, conversión, desarrollo de área, subfranquicia (master) o representante de área. Esta decisión afecta a quién le vendes, qué soporte necesitas dar, qué personal requieres y cómo se forma tu estructura de costos. Para decidir, mira factores como la velocidad de crecimiento que quieres, el retorno que da cada unidad, tu capacidad real de dar soporte, la fragmentación del mercado y la competencia por conseguir franquiciados.",
+      "resumen_teorico": "Antes de vender franquicias, tienes que elegir la estructura (o la combinación de estructuras) bajo la cual las vas a ofrecer: unidad individual, conversión, desarrollo de área, subfranquicia (master) o representante de área. Esta decisión afecta a quién le vendes, qué soporte necesitas dar, qué personal requieres y cómo se forma tu estructura de costos. Para decidir, mira factores como la velocidad de crecimiento que quieres, el retorno que da cada unidad, tu capacidad real de dar soporte, la fragmentación del mercado y la competencia por conseguir franquiciados. Si recién empiezas a franquiciar, la unidad individual suele ser la opción más segura.",
       "pasos_accionables": [
         "Evalúa qué velocidad de crecimiento necesitas para cumplir tus metas.",
         "Analiza el retorno económico que da cada unidad.",
@@ -112013,7 +112013,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Selección de Plataforma Social Según Audiencia y Objetivo",
-      "resumen_teorico": "Cada red social (LinkedIn, Twitter, Facebook, StumbleUpon, Foursquare, Tumblr, reddit, YouTube) tiene características únicas de targeting, formato de anuncio y comportamiento de usuario. Elegir la plataforma correcta depende del tipo de audiencia (profesional, local, joven, por intereses) y del objetivo de la campaña (awareness, engagement, conversión).",
+      "resumen_teorico": "Cada red social (LinkedIn, Twitter, Facebook, StumbleUpon, Foursquare, Tumblr, reddit, YouTube) tiene características únicas de targeting, formato de anuncio y comportamiento de usuario. Elegir la plataforma correcta depende del tipo de audiencia (profesional, local, por intereses) y del objetivo de la campaña (awareness, engagement, conversión).",
       "pasos_accionables": [
         "Mapear el perfil demográfico y de intereses del cliente objetivo",
         "Comparar las opciones de targeting de cada plataforma social relevante",
@@ -112364,7 +112364,7 @@
         "Elimina los anuncios que no funcionan y mejora los que sí dan resultado",
         "Antes de lanzar cualquier campaña, define qué es una conversión para ti: una compra, un registro o un contacto interesado",
         "Calcula en cada campaña de prueba cuántos hacen clic sobre los que la ven, cuánto pagas por cada clic y cuánto te cuesta cada cliente conseguido (CTR, CPC y CPA)",
-        "Compara lo que te cuesta conseguir un cliente con lo que ese cliente te va a dar durante toda su relación contigo (LTV), para saber si el negocio es rentable",
+        "Compara lo que te cuesta conseguir un cliente con lo que ese cliente te va a dar durante toda su relación contigo (LTV), para saber si el negocio es rentable; no esperes que tus primeras pruebas lo sean: si una campaña se acerca al punto de equilibrio tras unas semanas, el canal puede valer la pena",
         "Usa la publicidad en buscadores (SEM) para aprender temprano qué mensaje funciona y qué dice tu producto, no solo como un canal para vender"
       ],
       "entregable_esperado": "Tienes una campaña de anuncios activa con al menos 4 variantes, cada una conectada a una página de destino distinta y con el seguimiento de conversiones ya configurado.",
@@ -112584,7 +112584,7 @@
         "Reducir la lista a un puñado de keywords usando Google Trends",
         "Validar keywords comprando anuncios SEM para ver tasa de conversión",
         "Optimizar títulos de página y encabezados con los términos elegidos",
-        "Conseguir enlaces externos usando el texto exacto del término objetivo"
+        "Conseguir enlaces externos, idealmente con el texto exacto del término objetivo"
       ],
       "entregable_esperado": "Lista priorizada de un puñado de keywords fat-head validadas con plan de optimización on-page y estrategia de link building",
       "nodos_previos": [
@@ -115065,7 +115065,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "franquicias",
       "titulo_concepto": "Soporte Continuo al Franquiciado (Ongoing Support)",
-      "resumen_teorico": "El soporte continuo abarca visitas de campo, desarrollo de nuevos productos, asistencia publicitaria, programas de compra, relaciones públicas, tecnología y servicios administrativos. El objetivo es contribuir a franquiciados más rentables y de mayor calidad, y hacerles sentir que el franquiciante se preocupa por su éxito.",
+      "resumen_teorico": "El soporte continuo puede tomar muchas formas, como visitas de campo, desarrollo de nuevos productos, asistencia publicitaria, programas de compra, relaciones públicas, tecnología, ventas a cuentas nacionales y servicios administrativos. El objetivo es contribuir a franquiciados más rentables y de mayor calidad, y hacerles sentir que el franquiciante se preocupa por su éxito.",
       "pasos_accionables": [
         "Definir qué formas de soporte continuo se ofrecerán (visitas, marketing, tecnología, etc.)",
         "Asignar personal y presupuesto para cada tipo de soporte",
@@ -117594,12 +117594,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Ten reglas claras para avisar a proveedores no elegidos",
-      "resumen_teorico": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu reputación y tu poder de negociación futuro. Es mejor esperar a tener la decisión final antes de notificar a nadie, porque si los proveedores descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
+      "resumen_teorico": "Cuando cotizas con varios proveedores y eliges a uno, cómo avisas a los demás también afecta tu reputación y tu poder de negociación futuro. Si las ofertas quedaron muy distintas, conviene esperar a tener la decisión final antes de notificar, porque si los descartados se enteran demasiado pronto de que están fuera de la lista, pierdes margen para negociar con el elegido; si quedaron parejas, avisar antes probablemente es seguro. Al dar retroalimentación, comparte razones generales como precio poco competitivo o un requisito no cumplido, pero nunca reveles cifras exactas de otros proveedores ni información confidencial de tu negocio. Tener esta regla decidida de antemano evita improvisar respuestas incómodas y te ayuda a conservar una buena relación con proveedores que podrías necesitar en una compra futura.",
       "pasos_accionables": [
-        "Decide de antemano si vas a dar retroalimentación a los proveedores que no elegiste.",
-        "Espera a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido.",
+        "Decide de antemano si vas a dar retroalimentación a los proveedores que no elegiste y, si la darás, anúncialo en tu solicitud de cotización, con cómo pedirla y en qué plazo.",
+        "Si las ofertas quedaron muy distintas entre sí, espera a tener la decisión final antes de notificar, para no perder margen de negociación con el elegido; si quedaron parejas, puedes avisar antes. A quien entregó tarde o incompleto, avísale por escrito en cuanto cierre el plazo, con ese motivo.",
         "Comparte solo razones generales, como precio no competitivo o requisito incumplido, nunca cifras de otros proveedores.",
-        "No reveles información confidencial de tu negocio ni del proveedor ganador.",
+        "No reveles información confidencial de tu negocio ni del proveedor ganador, ni los detalles de la propuesta ganadora, ni en qué lugar quedó cada proveedor en tu evaluación.",
         "Si un proveedor se queja de la decisión, dile que fue definitiva y que puede enviar su reclamo por escrito si insiste."
       ],
       "entregable_esperado": "Un criterio escrito propio sobre qué decir, cuándo decirlo y qué callar al avisar a proveedores no elegidos.",
@@ -117619,9 +117619,9 @@
       "fase_proyecto": "planificacion",
       "dominio": "compras",
       "titulo_concepto": "Ten un checklist de cláusulas que todo contrato necesita",
-      "resumen_teorico": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantías, quien es responsable de que, requisitos de seguro si aplica, como se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y que pasa si alguna parte incumple. No todos los contratos necesitan cada cláusula, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrió. Tener esta lista escrita te permite negociar y firmar sin depender de un abogado en cada paso, y usarla como base para pedir ayuda puntual cuando el monto o el riesgo lo justifiquen.",
+      "resumen_teorico": "Un contrato bien armado no depende de la memoria, depende de una lista fija de puntos que revisas cada vez. Precio y forma de pago, fechas de entrega, garantías, quién es responsable de qué, requisitos de seguro si aplica, cómo se indemniza a cada parte, condiciones para terminar el contrato antes de tiempo por conveniencia y qué pasa si alguna parte incumple. No todos los contratos necesitan cada cláusula, pero repasar la lista completa evita que olvides algo importante solo porque esta vez no se te ocurrió. Si no conoces alguno de estos conceptos o no tienes formación en contratos, consulta a alguien con más experiencia o a un abogado.",
       "pasos_accionables": [
-        "Escribe tu propia lista de cláusulas básicas: precio, pago, fechas, garantías, seguro, terminación e incumplimiento.",
+        "Escribe tu propia lista de cláusulas básicas: precio, pago, fechas, deberes de cada parte, garantías, responsabilidad, indemnización, seguro, confidencialidad, terminación e incumplimiento.",
         "Antes de firmar cualquier contrato, revisa uno por uno los puntos de tu lista contra el borrador.",
         "Marca qué cláusulas faltan o están poco claras y pídele al proveedor que las agregue por escrito.",
         "Guarda esta lista como plantilla para reutilizarla en tus siguientes contratos.",

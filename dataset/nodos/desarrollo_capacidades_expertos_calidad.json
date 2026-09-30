@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Enfoque de Desarrollo de Expertos Centrado en el Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Metodología de tres pasos para desarrollar expertos en calidad: (1) determinar las competencias requeridas identificando clientes internos y traduciendo sus necesidades en competencias, (2) evaluar a los expertos actuales y potenciales mediante pruebas escritas y orales, y (3) cerrar las brechas mediante planes de desarrollo individualizados (formación, proyectos, certificación). Este enfoque asegura que la inversión en capacitación responda a necesidades reales y no a entrenamiento genérico desperdiciado.",
+  "resumen_teorico": "Metodología de tres pasos para desarrollar expertos en calidad: (1) determinar las competencias requeridas identificando clientes internos y traduciendo sus necesidades en competencias, (2) evaluar a los expertos actuales y potenciales mediante pruebas escritas y orales, y (3) cerrar las brechas mediante planes de desarrollo individualizados (formación, proyectos, certificación). Este enfoque busca que la inversión en capacitación responda a necesidades reales y no a entrenamiento genérico desperdiciado.",
   "pasos_accionables": [
     "Identificar a los clientes internos de los expertos de calidad (gerentes de operaciones, ingenieros de diseño, etc.)",
     "Determinar y priorizar las necesidades de esos clientes expresadas como beneficios",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Forma Expertos según tus Clientes",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-164-desarrollo_capacidades_expertos_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodología de tres pasos para desarrollar expertos en calidad: (1) determinar las competencias requeridas identificando clientes internos y traduciendo sus necesidades en competencias, (2) evaluar a los expertos actuales y potenciales mediante pruebas escritas y orales, y (3) cerrar las brechas mediante planes de desarrollo individualizados (formación, proyectos, certificación). Este enfoque asegura que la inversión en capacitación responda a necesidades reales y no a entrenamiento genérico desperdiciado.",
+      "texto_nuevo": "Metodología de tres pasos para desarrollar expertos en calidad: (1) determinar las competencias requeridas identificando clientes internos y traduciendo sus necesidades en competencias, (2) evaluar a los expertos actuales y potenciales mediante pruebas escritas y orales, y (3) cerrar las brechas mediante planes de desarrollo individualizados (formación, proyectos, certificación). Este enfoque busca que la inversión en capacitación responda a necesidades reales y no a entrenamiento genérico desperdiciado.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3037",
+        "frase": "By focusing on the customer, the following approach is recommended"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro recomienda el enfoque y advierte del desperdicio por falta de definición, pero no promete que el enfoque lo asegure.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
