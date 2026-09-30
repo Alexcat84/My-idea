@@ -1,0 +1,333 @@
+[
+ {
+  "id": "final-e1b-032-funcion_protect_politica_seguridad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "funcion_protect_politica_seguridad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de dispositivos y capacitación del personal.",
+  "texto_nuevo": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados, proveedores y cualquier otra persona con acceso a datos sensibles y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de archivos electrónicos y dispositivos viejos y capacitación del personal.",
+  "cita": {
+   "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+   "fichero": "books/seguridad_digital/cybersecurity_sb_nist-cyber-framework.txt",
+   "lineas": "19-37",
+   "frase": "Roles and responsibilities for employees, vendors, and anyone else with access to sensitive data."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide políticas para desechar con seguridad archivos electrónicos y dispositivos viejos; el resumen pierde los archivos.; La política del libro cubre también a cualquier otra persona con acceso a datos sensibles; el resumen deja fuera ese tercer grupo.; Mismo defecto que la marca 0: se cae el tercer destinatario de la política.; Mismo defecto que la marca 1: la disposición segura pierde los archivos electrónicos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-032-mapeo_flujo_valor-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "mapeo_flujo_valor",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en todos los pasos del proceso, incluidos proveedores y clientes",
+  "texto_nuevo": "Mapea el estado actual documentando tiempos de ciclo, esperas, rendimiento, inventarios, downtime y capacidad, y el flujo actual de materiales e información en todos los pasos del proceso, incluidos proveedores y clientes",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "13306",
+   "frase": "such as cycle times, downtime, capacity, wait times, yield, and inventory levels"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro de datos del mapa actual incluye el rendimiento (yield), que el paso omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-032-limites_tolerancia_estadistica-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "limites_tolerancia_estadistica",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Metodología para establecer límites de especificación realistas basados en la capacidad real del proceso de manufactura, usando datos muestrales para calcular límites naturales de tolerancia (basados en 3 desviaciones estándar) o límites de tolerancia estadística más precisos (que incorporan un factor K según el nivel de confianza, el porcentaje de población deseado y el número de datos de la muestra).",
+  "texto_nuevo": "Metodología para establecer límites de especificación realistas basados en la capacidad real del proceso de manufactura, usando datos muestrales de una característica con distribución normal para calcular límites naturales de tolerancia (basados en 3 desviaciones estándar) o límites de tolerancia estadística más precisos (que incorporan un factor K según el nivel de confianza, el porcentaje de población deseado y el número de datos de la muestra).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20437-20443",
+   "frase": "and if the characteristic is normally distributed, then 99.73 percent of the pieces"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Tanto los límites naturales como los factores K del libro dependen de que la característica tenga distribución normal, condición que el resumen deja caer.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-032-limites_especificacion_dimensiones_interactuantes-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "limites_especificacion_dimensiones_interactuantes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando varios componentes se ensamblan para formar una dimensión final, sus tolerancias interactúan. Sumarlas directamente es matemáticamente correcto pero a menudo demasiado conservador para tu manufactura. El método estadístico usa la raíz de la suma de cuadrados de las tolerancias, porque es estadísticamente improbable que todos los componentes caigan a la vez en el extremo de su tolerancia. Esto exige que cada componente se fabrique de forma independiente, que su dimensión siga una distribución normal y que su promedio real coincida con el valor nominal, así que controla ese promedio; si no se cumple, puedes corregir con el factor de Bender (1.5). El resultado son límites de ensamble más realistas, tolerancias de componente que pueden ser más amplias sin penalizar el ensamble, y un riesgo residual calculable de que una pieza caiga fuera de especificación.",
+  "texto_nuevo": "Cuando varios componentes se ensamblan para formar una dimensión final, sus tolerancias interactúan. Sumarlas directamente es matemáticamente correcto pero a menudo demasiado conservador para tu manufactura. El método estadístico usa la raíz de la suma de cuadrados de las tolerancias, porque es estadísticamente improbable que todos los componentes caigan a la vez en el extremo de su tolerancia. Esto supone que cada componente se fabrique de forma independiente y se elija al azar para el ensamble, que su dimensión siga una distribución normal (se admite cierta desviación) y que su promedio real coincida con el valor nominal, así que controla ese promedio; si algún supuesto no se cumple, úsalo con cautela y puedes corregir con el factor de Bender (1.5). El resultado son límites de ensamble más realistas, tolerancias de componente que pueden ser más amplias sin penalizar el ensamble, y un riesgo residual calculable de que una pieza caiga fuera de especificación.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20570-20576",
+   "frase": "Some departure from this assumption is permissible."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro admite cierta desviación de la normalidad y pide cautela si se viola un supuesto; el resumen lo vuelve exigencia sin esa excepción.; El libro pone junto a la independencia que cada componente se elija al azar para el ensamble; el resumen pierde esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-032-limites_especificacion_dimensiones_interactuantes-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "limites_especificacion_dimensiones_interactuantes",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verifica que cada componente se fabrique de forma independiente y aleatoria, que su dimensión siga una distribución normal y que su promedio real coincida con el valor nominal de la especificación",
+  "texto_nuevo": "Verifica que las dimensiones de los componentes sean independientes y que cada componente se elija al azar para el ensamble, que su dimensión siga una distribución normal y que su promedio real coincida con el valor nominal de la especificación",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20570",
+   "frase": "The component dimensions are independent and each component to be assembled is chosen randomly."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide dimensiones independientes y que cada componente se elija al azar para el ensamble; el paso pasa lo aleatorio a la fabricación y pierde la selección al azar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-032-liderazgo_calidad_mercado-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "liderazgo_calidad_mercado",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad, controles operativos, confiabilidad, servicio de campo)",
+  "texto_nuevo": "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad fuerte y mejora sistemática de la calidad, controles operativos, programas de confiabilidad y mantenibilidad, servicio de campo rápido y sin defectos)",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "532-542",
+   "frase": "Strong quality control and systematic quality improvement"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro trae la mejora sistemática junto al control, la mantenibilidad junto a la confiabilidad y un servicio de campo rápido y sin defectos; el paso los pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-032-cultura_de_reporte-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "cultura_de_reporte",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y más análisis)",
+  "texto_nuevo": "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y suelen requerir más análisis)",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "4948",
+   "frase": "takes longer and usually requires more analytic resources within the reporting system"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las preguntas abiertas por lo general requieren más recursos de análisis; el paso lo da por seguro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-032-documentacion_mantenimiento_linea_base-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "documentacion_mantenimiento_linea_base",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El mantenimiento de línea (tareas rápidas, a menudo no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo breves, que solo remiten a la documentación detallada, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso), se genera una brecha peligrosa en las defensas del sistema.",
+  "texto_nuevo": "El mantenimiento de línea (tareas rápidas, a menudo no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo breves, que solo remiten a la documentación detallada, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso, mención del trabajo de restitución y firmas paso a paso que confirmen su realización), se genera una brecha peligrosa en las defensas del sistema.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "421",
+   "frase": "contained no mention of the restorative work"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro señala que al paquete de línea le faltaba la mención del trabajo de restitución y las firmas paso a paso; la enumeración los pierde.; Mismo defecto que la marca 0: faltan el trabajo de restitución y las firmas que confirman su realización.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-032-diseno_recordatorios_efectivos_2-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "diseno_recordatorios_efectivos_2",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados, aunque no los eliminan del todo: son primeros auxilios, y lo más duradero es diseñar piezas que solo puedan instalarse bien. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.",
+  "texto_nuevo": "Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados, aunque no los eliminan del todo: son primeros auxilios. Soluciones más duraderas serían diseñar piezas que solo puedan instalarse bien, que el sistema se desactive solo al detectar piezas faltantes y, más de fondo, eliminar la necesidad de contacto manual en las inspecciones. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "2311",
+   "frase": "A third and more fundamental solution would be to design out the need"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da tres soluciones más duraderas y llama más fundamental a eliminar el contacto manual en las inspecciones; el resumen deja una sola como la más duradera.; Mismo defecto que la marca 0: esa solución es una de tres y no la más de fondo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-033-pensamiento_no_guiado_vs_regulado-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "pensamiento_no_guiado_vs_regulado",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Se distingue entre el pensamiento 'no guiado' (una cadena libre de asociaciones sin propósito definido, donde una idea lleva a otra por semejanza, contigüidad o sucesión temporal) y el pensamiento 'regulado' (dirigido por un deseo o meta, donde el pensador vuelve constantemente a la meta cuando su mente divaga).",
+  "texto_nuevo": "Se distingue entre el pensamiento 'no guiado' (una cadena libre de asociaciones sin propósito definido, donde una idea lleva a otra por semejanza, contigüidad, sucesión temporal o conexión lógica) y el pensamiento 'regulado' (dirigido por lo que se desea o se teme, donde el fin vuelve a menudo a la mente y, si los pensamientos divagan, pronto los devuelve al camino).",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "257, 263",
+   "frase": "the end, by the greatness of the impression, comes often to mind"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el fin vuelve a menudo a la mente ('comes often to mind'), no constantemente.; En el libro el pensamiento regulado lo mueve la impresión de lo que se desea o se teme; el nodo deja caer el temor.; La lista del libro de los vínculos de asociación tiene cuatro elementos e incluye la conexión lógica, que el nodo pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-033-gestion_de_habitos_mentales_para_pensar-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "gestion_de_habitos_mentales_para_pensar",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Toda actividad mental crea hábitos, y estos hábitos pueden ser herramientas útiles (como un ritual de 'calentamiento' asociado a un horario, lugar o gesto físico) o barreras que impiden nuevas perspectivas. Los mejores administradores a menudo intentan romper sus propios hábitos mentales para encontrar puntos de partida frescos, mientras mantienen rutinas que facilitan entrar en estado de concentración.",
+  "texto_nuevo": "Toda actividad mental crea hábitos, y estos hábitos pueden ser herramientas útiles (como un ritual de 'calentamiento' asociado a un horario, lugar o gesto físico) o barreras que impiden nuevas perspectivas. Los mejores administradores a menudo intentan romper sus propios hábitos mentales para encontrar puntos de partida frescos.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "141",
+   "frase": "the best administrators often attempt to get a fresh point of intellectual departure"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro atribuye a los mejores administradores solo romper sus hábitos mentales; no dice que a la vez mantengan rutinas para concentrarse.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-033-mental_trial_and_error-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "mental_trial_and_error",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Registra tanto las soluciones rechazadas como las razones de rechazo.",
+  "texto_nuevo": "Sugerencia de My Idea: registra tanto las soluciones rechazadas como las razones de rechazo.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "269",
+   "frase": "successive proposed solutions presented themselves, and were met by successive objections"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro describe el diálogo de soluciones y objeciones, pero no aconseja registrar las rechazadas ni sus razones.; Mismo defecto: consejo útil de la casa que el libro no da, sin etiqueta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-033-esfuerzo_y_energia_intelectual-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "esfuerzo_y_energia_intelectual",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conviene distinguir entre la intensidad del esfuerzo mental y el 'stroke' o carácter correcto de ese esfuerzo: muchos pensadores fallan no por falta de energía sino porque nunca descubren la forma adecuada de aplicar su esfuerzo a su trabajo particular. La energía mental efectiva surge más de la acción relevante para un propósito, y para las condiciones externas de las que depende cumplirlo, que del descanso pasivo o la búsqueda de armonía orgánica total, ya que el objetivo del pensamiento es la verdad, no la comodidad.",
+  "texto_nuevo": "Conviene distinguir entre la intensidad del esfuerzo mental y el 'stroke' o carácter correcto de ese esfuerzo: muchos pensadores malgastan su esfuerzo porque nunca descubren la forma adecuada de aplicarlo a su trabajo particular. La energía mental efectiva surge más de la acción relevante para un propósito, y para las condiciones externas de las que depende cumplirlo, que del descanso pasivo o la búsqueda de armonía orgánica total, ya que el objetivo del pensamiento es la verdad, no la comodidad.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "145",
+   "frase": "many men have wasted their efforts because they never discovered the right stroke"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no dice que a esos pensadores les falte ni les sobre energía; dice que malgastaron su esfuerzo por no dar con el golpe correcto, así que el 'no por falta de energía' es una causa añadida, no lo opuesto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-033-actualizacion_hvac-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "actualizacion_hvac",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos industriales",
+  "texto_nuevo": "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos de producción, hornos, compresores de aire, calderas y ductos de escape",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2758",
+   "frase": "excess waste heat from production processes, furnaces, air compressors, boilers, and exhaust ducts"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cinco fuentes de calor residual; reducirla a procesos industriales deja fuera calderas, compresores o ductos que muchas empresas sí tienen.; Mismo defecto: la lista de cinco fuentes queda reducida a una.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-033-aprender_haciendo_dfe-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "aprender_haciendo_dfe",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Empieza con una prueba de meta modesta, baja inversión y retorno rápido: en muchas situaciones es la mejor forma de arrancar un proceso de rediseño ecológico, sobre todo si prefieres no arriesgar mucho de entrada; si aceptas más riesgo, cabe algo más ambicioso. Examina los impactos ecológicos de tu negocio (desperdicio, toxicidad, uso de recursos escasos) para encontrar dónde el rediseño tiene más potencial. El éxito depende de que logres a la vez calidad, precio e impacto ambiental que tu cliente espera.",
+  "texto_nuevo": "Empieza con una prueba de meta modesta, baja inversión y retorno rápido: en muchas situaciones es la mejor forma de arrancar un proceso de rediseño ecológico, sobre todo si prefieres no arriesgar mucho de entrada; si aceptas más riesgo, cabe algo más ambicioso. Examina los impactos ecológicos de tu negocio (desperdicio, toxicidad, uso de recursos escasos o de materiales de hábitats amenazados) para encontrar dónde el rediseño tiene más potencial. El éxito depende de que logres a la vez calidad, precio e impacto ambiental que tu cliente espera.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "3679",
+   "frase": "reliance on scarce natural resources or materials from threatened habitats also needs scrutiny"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide revisar también la dependencia de materiales de hábitats amenazados, que se cae de la lista.; Mismo defecto: falta ese elemento de la enumeración.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-033-biomimicry_diseno-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "biomimicry_diseno",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúa soluciones que busquen la mayor eficiencia, emulen esos procesos naturales y usen materiales no tóxicos",
+  "texto_nuevo": "Evalúa soluciones que busquen la mayor eficiencia, emulen esos procesos naturales y usen materiales no tóxicos derivados de la naturaleza",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "3797",
+   "frase": "Use non-toxic materials derived from nature."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide materiales no tóxicos derivados de la naturaleza; el paso pierde esa condición de origen.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-033-alianzas_cross_industry-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "alianzas_cross_industry",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar desafíos de sostenibilidad compartidos con competidores o empresas de la industria, evaluando antes si la empresa tiene suficiente poder de mercado para exigir cambios individualmente, si podría cobrar un sobreprecio o diferenciarse como la opción más verde, y si hay economías de escala en actuar juntos, recordando que ir en común implica renunciar a esa ventaja competitiva",
+  "texto_nuevo": "Identificar desafíos de sostenibilidad compartidos con competidores o empresas de la industria, evaluando antes si la empresa tiene suficiente poder de mercado para exigir cambios individualmente, si podría cobrar un sobreprecio que justifique el costo adicional o diferenciarse como la opción más verde de un modo que lo compense, y si hay economías de escala en actuar juntos, recordando que ir en común implica renunciar a esa ventaja competitiva",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "4100",
+   "frase": "sell your product for a price premium that justifies the added expense"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pregunta si el sobreprecio o la diferenciación compensan el costo adicional del insumo más verde; sin esa condición la pregunta cambia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-033-optimizacion_metricas_crecimiento-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "optimizacion_metricas_crecimiento",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si la tasa de opt-out sube demasiado, suaviza el enfoque de venta y refuerza el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
+  "texto_nuevo": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si tus ofertas de crecimiento elevan la tasa de opt-out un 25 % o más, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta. Mantén además el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12116-12128",
+   "frase": "either slow down your efforts, tone down your copy, or call some customers"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Ante la alarma del opt-out el libro fija un umbral del 25 % y manda frenar, suavizar o llamar para averiguar qué gustó; las llamadas con ofertas son otra práctica aparte.; Mismo defecto: se pierden frenar y averiguar, y el remedio pasa a ser llamadas con ofertas, que el libro trata aparte.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-033-plan_de_adquisicion_acquire-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "plan_de_adquisicion_acquire",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es un documento táctico de una página donde detallas los experimentos con los que vas a atraer clientes de forma predecible y a bajo costo hacia la entrada de tu embudo de ventas. Te apoyas en dos anclas y no en una: las hipótesis de segmentos, relaciones y propuesta de valor que ya trazaste en tu mapa del modelo de negocio, y lo que aprendiste hablando con clientes (customer discovery). Cada prueba lleva su táctica nombrada (SEO, PPC, correo, referidos), su responsable, su presupuesto con tope, su plazo y el número que decide si va a pasar o fracasar, fijado antes de lanzarla. Las pruebas se lanzan de forma escalonada y no todas a la vez, para poder medir cada resultado por separado, y solo se escala con más fuerza y más presupuesto lo que de verdad funcionó. Nada de esto se lanza antes de que esté lista la plomería que activa al cliente: el sistema detrás, los pagos y los correos de confirmación. En esta etapa tu meta es aprender qué canales funcionan, no generar ingresos ni lanzar el producto de forma oficial.",
+  "texto_nuevo": "Es un documento táctico de una página donde detallas los experimentos con los que vas a atraer clientes de forma predecible y a bajo costo hacia la entrada de tu embudo de ventas. Te apoyas en dos anclas y no en una: las hipótesis de segmentos, relaciones y propuesta de valor que ya trazaste en tu mapa del modelo de negocio, y lo que aprendiste hablando con clientes (customer discovery). Cada prueba lleva su táctica nombrada (SEO, PPC, correo, referidos), su responsable, su presupuesto con tope, su plazo y el número que decide si va a pasar o fracasar, fijado antes de lanzarla. Las pruebas se lanzan de forma escalonada y no todas a la vez, para poder medir cada resultado por separado, y cuando una prueba parece funcionar se amplía, para comprobar que resiste la escala. Nada de esto se lanza antes de que esté lista la plomería que activa al cliente: el sistema detrás, los pagos y los correos de confirmación. En esta etapa tu meta es aprender qué canales funcionan, no generar ingresos ni lanzar el producto de forma oficial.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "10478",
+   "frase": "When a test seems to be working, ramp it up to be sure"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro amplía la prueba que parece funcionar para comprobar si resiste la escala; el nodo lo da por demostrado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ }
+]

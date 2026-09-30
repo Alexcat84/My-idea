@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Función Proteger: Política de Ciberseguridad y Controles",
   "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
-  "resumen_teorico": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de dispositivos y capacitación del personal.",
+  "resumen_teorico": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados, proveedores y cualquier otra persona con acceso a datos sensibles y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de archivos electrónicos y dispositivos viejos y capacitación del personal.",
   "pasos_accionables": [
     "Redactar y compartir una política de ciberseguridad con roles y responsabilidades claros y los pasos para protegerte de un ataque y limitar el daño si ocurre",
     "Implementar control de acceso a la red y dispositivos",
@@ -78,6 +78,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La política del libro también incluye los pasos para protegerse de un ataque y limitar el daño.; Mismo defecto que la marca 0.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-032-funcion_protect_politica_seguridad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de dispositivos y capacitación del personal.",
+      "texto_nuevo": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados, proveedores y cualquier otra persona con acceso a datos sensibles y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de archivos electrónicos y dispositivos viejos y capacitación del personal.",
+      "cita": {
+        "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+        "fichero": "books/seguridad_digital/cybersecurity_sb_nist-cyber-framework.txt",
+        "lineas": "19-37",
+        "frase": "Roles and responsibilities for employees, vendors, and anyone else with access to sensitive data."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide políticas para desechar con seguridad archivos electrónicos y dispositivos viejos; el resumen pierde los archivos.; La política del libro cubre también a cualquier otra persona con acceso a datos sensibles; el resumen deja fuera ese tercer grupo.; Mismo defecto que la marca 0: se cae el tercer destinatario de la política.; Mismo defecto que la marca 1: la disposición segura pierde los archivos electrónicos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

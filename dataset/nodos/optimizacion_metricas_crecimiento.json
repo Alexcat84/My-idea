@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Optimización de Métricas de Crecimiento (Grow Customers)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si la tasa de opt-out sube demasiado, suaviza el enfoque de venta y refuerza el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
+  "resumen_teorico": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si tus ofertas de crecimiento elevan la tasa de opt-out un 25 % o más, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta. Mantén además el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
   "pasos_accionables": [
     "Mide los dólares incrementales promedio por cliente recurrente (meta: +15%)",
     "Calcula el take rate de ofertas de upsell (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B",
@@ -91,6 +91,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da tres salidas: frenar, suavizar el mensaje o llamar a clientes para saber qué les gustó y ajustar.; El umbral del libro es que las ofertas eleven la tasa un 25% o más sobre la habitual, no que supere el 25% de ella.; Mismo umbral mal expresado.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-033-optimizacion_metricas_crecimiento-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si la tasa de opt-out sube demasiado, suaviza el enfoque de venta y refuerza el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
+      "texto_nuevo": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si tus ofertas de crecimiento elevan la tasa de opt-out un 25 % o más, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta. Mantén además el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12116-12128",
+        "frase": "either slow down your efforts, tone down your copy, or call some customers"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Ante la alarma del opt-out el libro fija un umbral del 25 % y manda frenar, suavizar o llamar para averiguar qué gustó; las llamadas con ofertas son otra práctica aparte.; Mismo defecto: se pierden frenar y averiguar, y el remedio pasa a ser llamadas con ofertas, que el libro trata aparte.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

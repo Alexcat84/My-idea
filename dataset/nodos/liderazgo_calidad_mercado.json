@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir en qué aspecto de la calidad se buscará el liderazgo (diseño, conformidad, disponibilidad, garantías, servicio)",
     "Establecer el liderazgo en calidad como objetivo formal de negocio dentro de la planificación estratégica",
-    "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad, controles operativos, confiabilidad, servicio de campo)",
+    "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad fuerte y mejora sistemática de la calidad, controles operativos, programas de confiabilidad y mantenibilidad, servicio de campo rápido y sin defectos)",
     "Monitorear continuamente la posición competitiva para detectar amenazas de otros competidores"
   ],
   "entregable_esperado": "Plan estratégico de liderazgo en calidad con objetivos, métricas y responsables definidos",
@@ -58,6 +58,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta uno de los cinco focos del libro, los controles operativos, que corresponde a liderar en disponibilidad.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-032-liderazgo_calidad_mercado-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad, controles operativos, confiabilidad, servicio de campo)",
+      "texto_nuevo": "Desarrollar las capacidades organizacionales necesarias según el aspecto elegido (I+D, control de calidad fuerte y mejora sistemática de la calidad, controles operativos, programas de confiabilidad y mantenibilidad, servicio de campo rápido y sin defectos)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "532-542",
+        "frase": "Strong quality control and systematic quality improvement"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro trae la mejora sistemática junto al control, la mantenibilidad junto a la confiabilidad y un servicio de campo rápido y sin defectos; el paso los pierde.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

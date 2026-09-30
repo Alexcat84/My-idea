@@ -9,7 +9,7 @@
     "Ajustar controles automáticos según ocupación real del edificio",
     "Reemplazar equipos HVAC obsoletos por alternativas eficientes",
     "Sellar ductos para reducir fugas de aire (hasta 80% menos fuga)",
-    "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos industriales"
+    "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos de producción, hornos, compresores de aire, calderas y ductos de escape"
   ],
   "entregable_esperado": "Plan de modernización HVAC con estimación de ahorro energético",
   "nodos_previos": [
@@ -58,6 +58,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro deja la recuperación de calor residual para cuando la estrategia madure, después de los ajustes y reemplazos.; Misma condición de momento perdida.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-033-actualizacion_hvac-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos industriales",
+      "texto_nuevo": "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos de producción, hornos, compresores de aire, calderas y ductos de escape",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2758",
+        "frase": "excess waste heat from production processes, furnaces, air compressors, boilers, and exhaust ducts"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cinco fuentes de calor residual; reducirla a procesos industriales deja fuera calderas, compresores o ductos que muchas empresas sí tienen.; Mismo defecto: la lista de cinco fuentes queda reducida a una.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

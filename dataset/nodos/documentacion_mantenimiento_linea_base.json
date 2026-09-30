@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Diferencias entre Documentación de Mantenimiento de Línea y de Base",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "El mantenimiento de línea (tareas rápidas, a menudo no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo breves, que solo remiten a la documentación detallada, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso), se genera una brecha peligrosa en las defensas del sistema.",
+  "resumen_teorico": "El mantenimiento de línea (tareas rápidas, a menudo no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo breves, que solo remiten a la documentación detallada, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso, mención del trabajo de restitución y firmas paso a paso que confirmen su realización), se genera una brecha peligrosa en las defensas del sistema.",
   "pasos_accionables": [
     "Auditar si existen procedimientos formales de traspaso de trabajo entre turnos o áreas (línea/base).",
     "Sugerencia de My Idea: cuando una tarea de línea pase a manos de personal de base, comprobar que el paquete de trabajo incluya las tarjetas de tarea paso a paso, el trabajo de restitución con su firma y las advertencias del manual de mantenimiento.",
@@ -56,6 +56,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que los paquetes de línea estén diseñados para personal experimentado: son breves porque se generan justo antes y solo remiten a la documentación detallada.; Endurece: el libro dice que las tareas de línea son a menudo no programadas.; Misma marca: el porqué de la brevedad de los paquetes de línea es otro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-032-documentacion_mantenimiento_linea_base-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El mantenimiento de línea (tareas rápidas, a menudo no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo breves, que solo remiten a la documentación detallada, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso), se genera una brecha peligrosa en las defensas del sistema.",
+      "texto_nuevo": "El mantenimiento de línea (tareas rápidas, a menudo no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo breves, que solo remiten a la documentación detallada, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso, mención del trabajo de restitución y firmas paso a paso que confirmen su realización), se genera una brecha peligrosa en las defensas del sistema.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "421",
+        "frase": "contained no mention of the restorative work"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro señala que al paquete de línea le faltaba la mención del trabajo de restitución y las firmas paso a paso; la enumeración los pierde.; Mismo defecto que la marca 0: faltan el trabajo de restitución y las firmas que confirman su realización.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

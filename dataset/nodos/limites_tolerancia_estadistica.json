@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Límites de Tolerancia Estadística basados en Variabilidad del Proceso",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Metodología para establecer límites de especificación realistas basados en la capacidad real del proceso de manufactura, usando datos muestrales para calcular límites naturales de tolerancia (basados en 3 desviaciones estándar) o límites de tolerancia estadística más precisos (que incorporan un factor K según el nivel de confianza, el porcentaje de población deseado y el número de datos de la muestra).",
+  "resumen_teorico": "Metodología para establecer límites de especificación realistas basados en la capacidad real del proceso de manufactura, usando datos muestrales de una característica con distribución normal para calcular límites naturales de tolerancia (basados en 3 desviaciones estándar) o límites de tolerancia estadística más precisos (que incorporan un factor K según el nivel de confianza, el porcentaje de población deseado y el número de datos de la muestra).",
   "pasos_accionables": [
     "Obtener una muestra representativa de datos del proceso de manufactura",
     "Calcular el promedio y la desviación estándar de la muestra",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): K depende también del número de datos de la muestra; sin él se lee mal la tabla.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-032-limites_tolerancia_estadistica-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodología para establecer límites de especificación realistas basados en la capacidad real del proceso de manufactura, usando datos muestrales para calcular límites naturales de tolerancia (basados en 3 desviaciones estándar) o límites de tolerancia estadística más precisos (que incorporan un factor K según el nivel de confianza, el porcentaje de población deseado y el número de datos de la muestra).",
+      "texto_nuevo": "Metodología para establecer límites de especificación realistas basados en la capacidad real del proceso de manufactura, usando datos muestrales de una característica con distribución normal para calcular límites naturales de tolerancia (basados en 3 desviaciones estándar) o límites de tolerancia estadística más precisos (que incorporan un factor K según el nivel de confianza, el porcentaje de población deseado y el número de datos de la muestra).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20437-20443",
+        "frase": "and if the characteristic is normally distributed, then 99.73 percent of the pieces"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Tanto los límites naturales como los factores K del libro dependen de que la característica tenga distribución normal, condición que el resumen deja caer.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

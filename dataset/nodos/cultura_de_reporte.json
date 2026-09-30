@@ -10,7 +10,7 @@
     "Establecer protocolos de confidencialidad o des-identificación de los reportes",
     "Separar organizacionalmente el área que recibe reportes de la que aplica sanciones",
     "Crear canales de retroalimentación rápida y accesible hacia los reportantes",
-    "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y más análisis)",
+    "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y suelen requerir más análisis)",
     "Comunicar claramente los criterios de qué constituye un incidente reportable"
   ],
   "entregable_esperado": "Sistema de reporte de incidentes implementado con políticas de confidencialidad, indemnidad y retroalimentación documentadas",
@@ -64,6 +64,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se pierde la disyuntiva entre preguntas específicas y abiertas.; Se pierde el equilibrio del libro: las preguntas específicas facilitan el llenado pero limitan la información, y las abiertas toman más tiempo y análisis.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-032-cultura_de_reporte-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y más análisis)",
+      "texto_nuevo": "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y suelen requerir más análisis)",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4948",
+        "frase": "takes longer and usually requires more analytic resources within the reporting system"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las preguntas abiertas por lo general requieren más recursos de análisis; el paso lo da por seguro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
