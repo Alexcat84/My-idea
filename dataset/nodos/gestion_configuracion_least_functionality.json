@@ -9,7 +9,7 @@
     "Limitar quién puede realizar cambios en sistemas que contienen CUI",
     "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
     "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
-    "Deshabilitar o remover funciones, puertos, protocolos y servicios innecesarios o inseguros en los sistemas"
+    "Deshabilitar o remover funciones, puertos, protocolos, conexiones y servicios innecesarios o inseguros en los sistemas"
   ],
   "entregable_esperado": "Inventario de configuraciones base documentado y política de gestión de cambios implementada",
   "nodos_previos": [
@@ -56,6 +56,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide deshabilitar o remover también lo inseguro, no solo lo innecesario.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-002-gestion_configuracion_least_functionality-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Deshabilitar o remover funciones, puertos, protocolos y servicios innecesarios o inseguros en los sistemas",
+      "texto_nuevo": "Deshabilitar o remover funciones, puertos, protocolos, conexiones y servicios innecesarios o inseguros en los sistemas",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "387",
+        "frase": "Disable or remove functions, ports, protocols, connections, and services that are unnecessary or nonsecure."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye las conexiones en la lista de lo que hay que deshabilitar o remover.; Mismo defecto: falta 'conexiones' de la enumeración del libro.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -9,11 +9,11 @@
     "Define con claridad el objetivo, el alcance y el porqué de tu proyecto",
     "Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise",
     "Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto",
-    "Pon a prueba tu idea continuamente con personas de trayectorias distintas y, además, haz un ejercicio (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
+    "Pon a prueba tu idea continuamente con personas de trayectorias distintas y, además, puedes considerar hacer un ejercicio (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
     "Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados",
     "Si estás dentro de una empresa ya establecida, educa a los tomadores de decisiones sobre modelos de negocio usando historias e imágenes, no teoría"
   ],
-  "entregable_esperado": "Tu equipo armado, el objetivo definido por escrito, y una primera puesta a prueba de tu idea de negocio con el ejercicio kill/thrill",
+  "entregable_esperado": "Tu equipo armado, el objetivo definido por escrito, y una primera puesta a prueba de tu idea de negocio",
   "nodos_previos": [
     "proceso_diseno_modelo_negocio_5_fases",
     "customer_development_team"
@@ -88,6 +88,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Orientar y educar a quienes deciden figura bajo la perspectiva de la empresa ya establecida; el paso pierde esa condición.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-001-fase_mobilizar_modelo_negocio-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pon a prueba tu idea continuamente con personas de trayectorias distintas y, además, haz un ejercicio (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
+      "texto_nuevo": "Pon a prueba tu idea continuamente con personas de trayectorias distintas y, además, puedes considerar hacer un ejercicio (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "4371",
+        "frase": "You may also want to consider organizing a so-called kill/thrill session"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta la sesión kill/thrill como algo que puedes considerar organizar, no como orden.; Mismo defecto: el libro lo propone como opción a considerar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-001-fase_mobilizar_modelo_negocio-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu equipo armado, el objetivo definido por escrito, y una primera puesta a prueba de tu idea de negocio con el ejercicio kill/thrill",
+      "texto_nuevo": "Tu equipo armado, el objetivo definido por escrito, y una primera puesta a prueba de tu idea de negocio",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "4371",
+        "frase": "You may also want to consider organizing a so-called kill/thrill session"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro deja la sesión kill/thrill como opción a considerar; el entregable la vuelve obligatoria.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

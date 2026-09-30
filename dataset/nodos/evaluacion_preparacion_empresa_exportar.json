@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Evaluación de la Preparación de la Empresa para Exportar (Export Readiness)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
+  "resumen_teorico": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real y está dispuesta a financiar la exportación, entiende las exigencias adicionales sobre sus recursos clave, tiene expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
   "pasos_accionables": [
     "Responde con honestidad qué esperas ganar al exportar y verifica que sean motivos sólidos, no una solución rápida a caídas en ventas domésticas",
     "Evalúa tu nivel real de compromiso con el esfuerzo exportador y si es consistente con tus otras metas de negocio",
     "Revisa tu experiencia previa: países con los que ya hiciste negocios, consultas recibidas y productos más solicitados",
-    "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas, y pregúntate si los beneficios esperados valen esos costos o si esos recursos rendirían más en nuevo negocio doméstico",
+    "Analiza las demandas que exportar pondrá sobre tus recursos clave: gerencia y personal, capacidad de producción, financiamiento, cómo vas a cubrirlas y su impacto en tus ventas domésticas, y pregúntate si los beneficios esperados valen esos costos o si esos recursos rendirían más en nuevo negocio doméstico",
     "Determina el capital disponible para producción y marketing de exportación y el plazo de retorno que esperas",
     "Realiza la evaluación formal de preparación exportadora que ofrece el portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado."
   ],
@@ -113,6 +113,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la pregunta del libro de si los beneficios esperados valen los costos o si esos recursos rendirían más en nuevo negocio doméstico, que es el criterio de decisión. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-001-evaluacion_preparacion_empresa_exportar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
+      "texto_nuevo": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real y está dispuesta a financiar la exportación, entiende las exigencias adicionales sobre sus recursos clave, tiene expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "535",
+        "frase": "prepared to fund exporting activities • Understand the added demands"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De las cinco cualidades del libro se caen estar dispuesta a financiar la exportación y entender las exigencias sobre los recursos clave.; Mismo defecto: faltan dos de las cinco cualidades de la empresa preparada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-001-evaluacion_preparacion_empresa_exportar-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas, y pregúntate si los beneficios esperados valen esos costos o si esos recursos rendirían más en nuevo negocio doméstico",
+      "texto_nuevo": "Analiza las demandas que exportar pondrá sobre tus recursos clave: gerencia y personal, capacidad de producción, financiamiento, cómo vas a cubrirlas y su impacto en tus ventas domésticas, y pregúntate si los beneficios esperados valen esos costos o si esos recursos rendirían más en nuevo negocio doméstico",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "531",
+        "frase": "management and personnel, production capacity, and financing, and how will these demands be met"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye la gerencia entre los recursos clave y pide pensar cómo se cubrirán esas demandas.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

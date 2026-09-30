@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Lista de requisitos flexible para productos físicos (product backlog)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
+  "resumen_teorico": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo, siempre que los cambios no afecten el plan general, el presupuesto ni el atractivo financiero del proyecto. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
   "pasos_accionables": [
     "Crea una lista inicial de requisitos priorizada, aceptando que no está completa al 100%",
     "Actualiza esa lista de forma continua con el feedback de tus clientes y lo que aprendes en cada iteración técnica",
@@ -78,6 +78,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que algunas decisiones de hardware deben congelarse antes; el nodo lo extiende a todas.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-003-product_backlog_fisico-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
+      "texto_nuevo": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo, siempre que los cambios no afecten el plan general, el presupuesto ni el atractivo financiero del proyecto. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4724",
+        "frase": "as long as these changes do not affect the overall project plan, budget"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro acepta los cambios de producto y alcance solo si no afectan el plan general, el presupuesto ni el atractivo financiero; el nodo quita ese límite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

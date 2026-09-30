@@ -9,8 +9,8 @@
     "Determina qué documentos necesitas según el destino y el tipo de producto",
     "Prepara la factura pro forma para cotizar al comprador antes del envío",
     "Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones",
-    "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
-    "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+    "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y considera seriamente delegar la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+    "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si el valor de las mercancías clasificadas bajo un mismo número de clasificación supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
     "Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito"
   ],
   "entregable_esperado": "Carpeta completa de documentos de exportación por embarque, validada antes del envío",
@@ -131,6 +131,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige la declaración, sin importar el valor, en envíos a países restringidos; el paso omite esa condición.; Mismo defecto: falta la condición de destino restringido.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-001-documentacion_exportacion-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+      "texto_nuevo": "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si el valor de las mercancías clasificadas bajo un mismo número de clasificación supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3613",
+        "frase": "when the value of the commodities, classified under any single Schedule B number"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El umbral del libro se mide por el valor de las mercancías bajo un mismo número de clasificación, no por el envío entero.; Misma condición caída: el valor se cuenta por número de clasificación, no por envío.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-001-documentacion_exportacion-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+      "texto_nuevo": "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y considera seriamente delegar la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3547",
+        "frase": "Your company should seriously consider having the freight forwarder handle the documentation"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide considerar seriamente que el agente maneje la documentación y aclara que no es obligatorio usarlo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

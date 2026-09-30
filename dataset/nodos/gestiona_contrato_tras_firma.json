@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Gestiona el contrato después de firmarlo, no lo archives",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+  "resumen_teorico": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: la entrega de bienes o servicios, la facturación, cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
   "pasos_accionables": [
     "Anota en tu calendario la fecha de vencimiento del contrato y una alerta unos meses antes.",
     "Revisa cada factura del proveedor contra lo que realmente se pactó y confirma que se recibió todo lo que cobra antes de pagarla.",
@@ -94,6 +94,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista pierde dos opciones del libro: traer el trabajo de vuelta a tu negocio o terminar el contrato si ya no se necesita.; Mismas opciones perdidas.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-001-gestiona_contrato_tras_firma-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+      "texto_nuevo": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: la entrega de bienes o servicios, la facturación, cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5821",
+        "frase": "Dates such as delivery of goods/services, invoicing, and contract expiration should be noted"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El calendario del libro incluye también la entrega de bienes o servicios y la facturación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

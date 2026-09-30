@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Concientización y Entrenamiento en Seguridad para Personal",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
+  "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, directivas, políticas, estándares, regulaciones o procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
   "pasos_accionables": [
     "Diseñar contenido de entrenamiento básico y avanzado personalizado según roles, sistemas a los que se accede y entornos de trabajo del personal, e impartirlo con regularidad al personal nuevo y existente",
     "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
@@ -87,6 +87,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide impartir con regularidad entrenamiento básico y avanzado al personal nuevo y existente.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-002-concientizacion_entrenamiento_cui-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
+      "texto_nuevo": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, directivas, políticas, estándares, regulaciones o procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "309",
+        "frase": "the applicable laws, directives, policies, standards, regulations, or procedures"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera leyes, directivas, políticas, estándares, regulaciones o procedimientos; el nodo pierde tres elementos.; Mismo defecto: la enumeración del libro tiene seis elementos y el nodo deja tres.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

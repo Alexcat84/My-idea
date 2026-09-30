@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Revisión periódica de todos tus proyectos juntos (Portfolio Review)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Además de revisar cada proyecto por separado en las revisiones de control (gates), conviene que de vez en cuando, cada trimestre o cada seis meses, te sientes a mirar todos tus proyectos como un conjunto. En una revisión individual analizas un proyecto a fondo; aquí miras el conjunto completo: si están alineados con tu estrategia, si las prioridades siguen teniendo sentido, si el conjunto está balanceado, si tienes recursos suficientes para todos y si vas a llegar a las metas de ventas que esperas de tus nuevos productos. Las revisiones individuales analizan los árboles; esta revisión analiza el bosque.",
+  "resumen_teorico": "Además de revisar cada proyecto por separado en las revisiones de control (gates), conviene que de vez en cuando, cada trimestre o cada seis meses, te sientes a mirar todos tus proyectos como un conjunto. En una revisión individual analizas un proyecto a fondo; aquí miras el conjunto completo: si están alineados con tu estrategia, si las prioridades siguen teniendo sentido, si hay proyectos activos que deberías cancelar o acelerar, si el conjunto está balanceado, si tienes recursos suficientes para todos y si vas a llegar a las metas de ventas que esperas de tus nuevos productos. Las revisiones individuales analizan los árboles; esta revisión analiza el bosque.",
   "pasos_accionables": [
     "Agenda reuniones periódicas, por ejemplo cada trimestre, para revisar todos tus proyectos juntos.",
     "Prepara un panorama visual simple de todos tus proyectos activos, por ejemplo un gráfico de torta o de burbujas.",
@@ -36,5 +36,23 @@
   "etiqueta_arbol": "Revisa tu Portafolio Completo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-003-revision_portafolio_periodica-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Además de revisar cada proyecto por separado en las revisiones de control (gates), conviene que de vez en cuando, cada trimestre o cada seis meses, te sientes a mirar todos tus proyectos como un conjunto. En una revisión individual analizas un proyecto a fondo; aquí miras el conjunto completo: si están alineados con tu estrategia, si las prioridades siguen teniendo sentido, si el conjunto está balanceado, si tienes recursos suficientes para todos y si vas a llegar a las metas de ventas que esperas de tus nuevos productos. Las revisiones individuales analizan los árboles; esta revisión analiza el bosque.",
+      "texto_nuevo": "Además de revisar cada proyecto por separado en las revisiones de control (gates), conviene que de vez en cuando, cada trimestre o cada seis meses, te sientes a mirar todos tus proyectos como un conjunto. En una revisión individual analizas un proyecto a fondo; aquí miras el conjunto completo: si están alineados con tu estrategia, si las prioridades siguen teniendo sentido, si hay proyectos activos que deberías cancelar o acelerar, si el conjunto está balanceado, si tienes recursos suficientes para todos y si vas a llegar a las metas de ventas que esperas de tus nuevos productos. Las revisiones individuales analizan los árboles; esta revisión analiza el bosque.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6022",
+        "frase": "Are there some projects on the active list that you should kill?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De las seis preguntas del libro se cae la de qué proyectos activos conviene cancelar o acelerar.; Misma omisión: falta la pregunta que convierte la revisión en punto de decisión.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

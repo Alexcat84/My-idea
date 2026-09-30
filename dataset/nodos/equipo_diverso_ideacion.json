@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Composición de Equipo Diverso para Innovación",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "La innovación de modelos de negocio no debe limitarse a 'gente creativa' o al departamento de I+D. Requiere un equipo con diversidad de antigüedad, edad, experiencia, unidad de negocio, conocimiento del cliente y experiencia profesional, ya que el modelo de negocio involucra los nueve bloques del Canvas y necesita perspectivas múltiples para generar conexiones innovadoras.",
+  "resumen_teorico": "La innovación de modelos de negocio no debe limitarse a 'gente creativa', al departamento de I+D o a la oficina de planificación estratégica. Requiere un equipo con diversidad de antigüedad, edad, experiencia, unidad de negocio, experiencia profesional y origen cultural, ya que puede involucrar los nueve bloques del Canvas y necesita perspectivas múltiples para generar conexiones innovadoras.",
   "pasos_accionables": [
     "Reclutar miembros de distintas unidades de negocio y niveles jerárquicos",
     "Incluir personas externas a la organización o incluso perspectivas no convencionales (ej. niños)",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Reúne un Equipo Diverso",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-001-equipo_diverso_ideacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La innovación de modelos de negocio no debe limitarse a 'gente creativa' o al departamento de I+D. Requiere un equipo con diversidad de antigüedad, edad, experiencia, unidad de negocio, conocimiento del cliente y experiencia profesional, ya que el modelo de negocio involucra los nueve bloques del Canvas y necesita perspectivas múltiples para generar conexiones innovadoras.",
+      "texto_nuevo": "La innovación de modelos de negocio no debe limitarse a 'gente creativa', al departamento de I+D o a la oficina de planificación estratégica. Requiere un equipo con diversidad de antigüedad, edad, experiencia, unidad de negocio, experiencia profesional y origen cultural, ya que puede involucrar los nueve bloques del Canvas y necesita perspectivas múltiples para generar conexiones innovadoras.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2165-2181",
+        "frase": "This can involve all nine blocks of the canvas"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la innovación puede involucrar los nueve bloques, no que siempre los involucre.; El libro dice que no debe confinarse a I+D ni a la oficina de planificación estratégica; se cae la segunda.; La lista del libro incluye el origen cultural distinto y el nodo lo pierde.; La lista del libro no trae el conocimiento del cliente como criterio de diversidad.; Mismo defecto: el 'can involve' del libro pasa a afirmación sin matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

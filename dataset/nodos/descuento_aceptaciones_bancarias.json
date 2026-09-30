@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Descuento de Letras y Aceptaciones Bancarias",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+  "resumen_teorico": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco si su comprador es solvente y ya aceptó pagarlas en una fecha futura (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
   "pasos_accionables": [
     "Evaluar la solvencia del comprador extranjero antes de descontar la letra",
     "Negociar con el banco el descuento de letras a plazo",
@@ -54,6 +54,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el banco puede exigir el reembolso si la letra no se paga al vencimiento; el nodo lo omite.; Mismo defecto: se pierde el recurso del banco contra el exportador.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-001-descuento_aceptaciones_bancarias-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+      "texto_nuevo": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco si su comprador es solvente y ya aceptó pagarlas en una fecha futura (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4271",
+        "frase": "if you have a creditworthy foreign buyer who has accepted or agreed to pay"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona el descuento a que el comprador extranjero sea solvente y haya aceptado o se haya comprometido a pagar en una fecha futura.; Misma condición caída del libro sobre el comprador solvente que ya aceptó pagar a plazo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

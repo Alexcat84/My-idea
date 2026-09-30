@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Cómo estructurar la seguridad de tu negocio de forma efectiva",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo pequeño pero bien conectado con el día a día puede ser mucho más efectivo, aunque uno mínimo puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+  "resumen_teorico": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo mínimo puede evitar esa burocracia y la idea de que la seguridad es asunto solo de esa área, aunque puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
   "pasos_accionables": [
     "Revisa si lo que generas sobre seguridad te da información útil o solo estadísticas que no sirven para nada",
     "Verifica que quien se encarga de la seguridad esté cerca, física y humanamente, del trabajo de primera línea",
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que no es una elección entre staff o línea sino un intercambio constructivo entre ambos; el entregable pide elegir uno.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-003-diseno_departamento_seguridad_efectivo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo pequeño pero bien conectado con el día a día puede ser mucho más efectivo, aunque uno mínimo puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+      "texto_nuevo": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo mínimo puede evitar esa burocracia y la idea de que la seguridad es asunto solo de esa área, aunque puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3036",
+        "frase": "it prevents the bureaucratization of safety"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no dice que un equipo pequeño y conectado sea mucho más efectivo; solo que uno mínimo evita la burocratización y la idea de que la seguridad es solo de ese departamento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

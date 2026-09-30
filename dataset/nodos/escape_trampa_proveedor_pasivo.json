@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Escapar de la Trampa del Proveedor Pasivo de Seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
+  "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, que dejes de medirla con metas numéricas periódicas, que siga arraigada en la operación real y que su gente se forme en gestión de seguridad. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
   "pasos_accionables": [
     "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
     "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia, y en lo que hagas después de un incidente",
@@ -130,6 +130,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también que el área participe en las acciones de la dirección tras un incidente.; Mismo defecto: falta la participación tras un incidente.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-003-escape_trampa_proveedor_pasivo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
+      "texto_nuevo": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, que dejes de medirla con metas numéricas periódicas, que siga arraigada en la operación real y que su gente se forme en gestión de seguridad. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3076-3078",
+        "frase": "A continued grounding in operational reality."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide cinco condiciones para salir de la trampa y el resumen presenta como solución solo tres; faltan el arraigo en la operación real y la formación del personal.; Misma omisión: se caen el arraigo operativo y la formación en gestión de seguridad e investigación de incidentes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

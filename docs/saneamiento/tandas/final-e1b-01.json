@@ -1,0 +1,657 @@
+[
+ {
+  "id": "final-e1b-001-desmitificacion_barreras_exportacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "desmitificacion_barreras_exportacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), la mayoría de las exportaciones requieren poco papeleo, y casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados. Conviene identificar estas viejas suposiciones y contrastarlas con la nueva realidad del comercio global.",
+  "texto_nuevo": "Muchas pequeñas empresas evitan exportar por percepciones erróneas: creer que es demasiado riesgoso, complicado, que son 'demasiado pequeñas', o que su producto no se venderá fuera de EE.UU. La realidad es que el riesgo varía según el mercado (Canadá es tan seguro como vender internamente), existen mecanismos de pago confiables (cartas de crédito, tarjetas, pagos online), la mayoría de las exportaciones requieren poco papeleo, y en 2005 casi el 30% de los exportadores estadounidenses tenían menos de 19 empleados. Conviene identificar estas viejas suposiciones y contrastarlas con la nueva realidad del comercio global.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "231",
+   "frase": "nearly 30 percent of all U.S. exporters in 2005 had fewer than 19 employees"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fecha la cifra en 2005 y el nodo la pasa a presente como dato actual.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-documentacion_exportacion-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "documentacion_exportacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+  "texto_nuevo": "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si el valor de las mercancías clasificadas bajo un mismo número de clasificación supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3613",
+   "frase": "when the value of the commodities, classified under any single Schedule B number"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El umbral del libro se mide por el valor de las mercancías bajo un mismo número de clasificación, no por el envío entero.; Misma condición caída: el valor se cuenta por número de clasificación, no por envío.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-001-descuento_aceptaciones_bancarias-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "descuento_aceptaciones_bancarias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+  "texto_nuevo": "Para convertir letras de cambio a plazo en efectivo inmediato, el exportador puede descontarlas con su banco si su comprador es solvente y ya aceptó pagarlas en una fecha futura (recibe menos del valor nominal por intereses y comisiones, y el banco puede exigirle el reembolso si la letra no se paga) o usar una aceptación bancaria, donde un banco comercial asume la obligación de pago de la letra por una comisión.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4271",
+   "frase": "if you have a creditworthy foreign buyer who has accepted or agreed to pay"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona el descuento a que el comprador extranjero sea solvente y haya aceptado o se haya comprometido a pagar en una fecha futura.; Misma condición caída del libro sobre el comprador solvente que ya aceptó pagar a plazo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-evaluacion_preparacion_empresa_exportar-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "evaluacion_preparacion_empresa_exportar",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real, expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
+  "texto_nuevo": "Antes de exportar, examina con honestidad tus motivos, experiencia y recursos. Una empresa preparada tiene compromiso gerencial real y está dispuesta a financiar la exportación, entiende las exigencias adicionales sobre sus recursos clave, tiene expectativas realistas de retorno de inversión, disposición para adaptar el producto a cada mercado y dar capacitación y servicio posventa, y apertura a trabajar con agencias gubernamentales de promoción de exportación. Evalúa factores motivacionales como expansión a largo plazo, competitividad y tecnología única, junto con factores organizacionales como financiamiento, experiencia previa en negocios internacionales, capacidad de personal y de producción. Es clave distinguir si exportar responde a objetivos sólidos de crecimiento o si es una salida rápida ante caídas en ventas domésticas, y si descuidarías a tus clientes de exportación cuando las ventas locales se recuperen.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "535",
+   "frase": "prepared to fund exporting activities • Understand the added demands"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De las cinco cualidades del libro se caen estar dispuesta a financiar la exportación y entender las exigencias sobre los recursos clave.; Mismo defecto: faltan dos de las cinco cualidades de la empresa preparada.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-evaluacion_preparacion_empresa_exportar-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "evaluacion_preparacion_empresa_exportar",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas, y pregúntate si los beneficios esperados valen esos costos o si esos recursos rendirían más en nuevo negocio doméstico",
+  "texto_nuevo": "Analiza las demandas que exportar pondrá sobre tus recursos clave: gerencia y personal, capacidad de producción, financiamiento, cómo vas a cubrirlas y su impacto en tus ventas domésticas, y pregúntate si los beneficios esperados valen esos costos o si esos recursos rendirían más en nuevo negocio doméstico",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "531",
+   "frase": "management and personnel, production capacity, and financing, and how will these demands be met"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye la gerencia entre los recursos clave y pide pensar cómo se cubrirán esas demandas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-001-documentacion_exportacion-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "documentacion_exportacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+  "texto_nuevo": "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y considera seriamente delegar la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3547",
+   "frase": "Your company should seriously consider having the freight forwarder handle the documentation"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide considerar seriamente que el agente maneje la documentación y aclara que no es obligatorio usarlo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-001-fase_mobilizar_modelo_negocio-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "fase_mobilizar_modelo_negocio",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pon a prueba tu idea continuamente con personas de trayectorias distintas y, además, haz un ejercicio (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
+  "texto_nuevo": "Pon a prueba tu idea continuamente con personas de trayectorias distintas y, además, puedes considerar hacer un ejercicio (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "4371",
+   "frase": "You may also want to consider organizing a so-called kill/thrill session"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta la sesión kill/thrill como algo que puedes considerar organizar, no como orden.; Mismo defecto: el libro lo propone como opción a considerar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-001-equipo_diverso_ideacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "equipo_diverso_ideacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La innovación de modelos de negocio no debe limitarse a 'gente creativa' o al departamento de I+D. Requiere un equipo con diversidad de antigüedad, edad, experiencia, unidad de negocio, conocimiento del cliente y experiencia profesional, ya que el modelo de negocio involucra los nueve bloques del Canvas y necesita perspectivas múltiples para generar conexiones innovadoras.",
+  "texto_nuevo": "La innovación de modelos de negocio no debe limitarse a 'gente creativa', al departamento de I+D o a la oficina de planificación estratégica. Requiere un equipo con diversidad de antigüedad, edad, experiencia, unidad de negocio, experiencia profesional y origen cultural, ya que puede involucrar los nueve bloques del Canvas y necesita perspectivas múltiples para generar conexiones innovadoras.",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "2165-2181",
+   "frase": "This can involve all nine blocks of the canvas"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la innovación puede involucrar los nueve bloques, no que siempre los involucre.; El libro dice que no debe confinarse a I+D ni a la oficina de planificación estratégica; se cae la segunda.; La lista del libro incluye el origen cultural distinto y el nodo lo pierde.; La lista del libro no trae el conocimiento del cliente como criterio de diversidad.; Mismo defecto: el 'can involve' del libro pasa a afirmación sin matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-fase_entendimiento_investigacion_mercado-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "fase_entendimiento_investigacion_mercado",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Esta es la segunda fase del proceso de diseño de tu modelo de negocio. Consiste en sumergirte a fondo en el contexto donde va a evolucionar tu idea: escanear el entorno de mercado, estudiar a tus clientes potenciales, entrevistar expertos del dominio y revisar intentos previos y sus causas de fracaso. El objetivo es cuestionar supuestos establecidos de la industria antes de comprometerte con una idea concreta. El riesgo principal es caer en 'parálisis por análisis', sobre investigar sin conexión con tus objetivos, o sesgar la investigación porque ya te enamoraste de una idea. Para estructurar la investigación de clientes conviene apoyarte en el Mapa de Empatía del Cliente, y para evitar la parálisis, empezar a prototipar modelos de negocio de forma temprana, para obtener retroalimentación rápida en vez de seguir investigando indefinidamente.",
+  "texto_nuevo": "Esta es la segunda fase del proceso de diseño de tu modelo de negocio. Consiste en sumergirte a fondo en el contexto donde va a evolucionar tu idea: escanear el entorno de mercado, estudiar a tus clientes potenciales, entrevistar expertos del dominio, revisar intentos previos y sus causas de fracaso, y recoger ideas y opiniones. Un factor crítico de éxito es cuestionar los supuestos establecidos de la industria y los patrones de modelo de negocio. El riesgo principal es caer en 'parálisis por análisis', sobre investigar sin conexión con tus objetivos, o sesgar la investigación porque ya te enamoraste de una idea. Para estructurar la investigación de clientes conviene apoyarte en el Mapa de Empatía del Cliente, y para evitar la parálisis, empezar a prototipar modelos de negocio de forma temprana, para obtener retroalimentación rápida en vez de seguir investigando indefinidamente.",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "4421",
+   "frase": "A critical success factor in this phase is questioning industry assumptions"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no lo da como objetivo de la fase ni lo ata a un 'antes de comprometerte': es un factor crítico de éxito.; Misma actividad caída: recoger ideas y opiniones.; Se cae de las actividades de la fase recoger ideas y opiniones.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-business_plan_cinco_secciones-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "business_plan_cinco_secciones",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usa el Canvas visual para mostrar tu Modelo de Negocio, con dibujos, historias y evidencia de que el cliente lo necesita; explica cómo llegarás al mercado, destaca el atractivo de tus segmentos y describe los recursos y actividades clave que necesitas",
+  "texto_nuevo": "Usa el Canvas visual para mostrar tu Modelo de Negocio, con dibujos, historias y evidencia de que el cliente lo necesita; describe tu propuesta de valor, explica cómo llegarás al mercado, destaca el atractivo de tus segmentos y describe los recursos y actividades clave que necesitas",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "4905",
+   "frase": "Then, describe the Value Proposition, show evidence of customer need"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide describir la propuesta de valor en esta sección y el paso lo pierde.; Mismo elemento caído: describir la propuesta de valor.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-001-fase_mobilizar_modelo_negocio-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "fase_mobilizar_modelo_negocio",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu equipo armado, el objetivo definido por escrito, y una primera puesta a prueba de tu idea de negocio con el ejercicio kill/thrill",
+  "texto_nuevo": "Tu equipo armado, el objetivo definido por escrito, y una primera puesta a prueba de tu idea de negocio",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "4371",
+   "frase": "You may also want to consider organizing a so-called kill/thrill session"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro deja la sesión kill/thrill como opción a considerar; el entregable la vuelve obligatoria.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-depura_proveedores_sin_respuesta-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "depura_proveedores_sin_respuesta",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando envías una solicitud de cotización a varios proveedores, es común que algunos no respondan nunca. La solución es enviar un aviso corto pidiendo confirmación explícita: que digan si participan, si no pueden esta vez pero quieren seguir en tu lista, o si prefieren salir de ella por completo. Esto te permite depurar tu base de proveedores, quedarte solo con contactos activos y mantener una relación cordial con quienes no participan hoy pero podrían servirte en el futuro. A quien no dé ninguna respuesta puedes retirarlo de tu lista.",
+  "texto_nuevo": "Cuando envías una solicitud de cotización a varios proveedores, es común que algunos no respondan nunca. La solución es enviar un aviso corto pidiendo confirmación explícita: que digan si participan, si no pueden proveer lo que pides, si no pueden esta vez pero quieren seguir en tu lista, o si prefieren salir de ella por completo. Esto te permite depurar tu base de proveedores, quedarte solo con contactos activos y mantener una relación cordial con quienes no participan hoy pero podrían servirte en el futuro. A quien no dé ninguna respuesta puedes retirarlo de tu lista.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "8139",
+   "frase": "I/Our Company cannot provide the products, supplies, and/or ser vices listed"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El aviso del libro trae la opción de declarar que no se puede proveer lo solicitado; el nodo la pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-domina_lo_que_compras-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "domina_lo_que_compras",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor. Habla con otras personas que compren lo mismo en tu rubro para saber qué condiciones son normales y cuáles son abusivas. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
+  "texto_nuevo": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor; puedes tomar de él la información valiosa para el tuyo, sabiendo qué significa para ti y para el proveedor. Habla con otras personas que compren lo mismo en tu rubro para saber qué condiciones son normales y cuáles son abusivas. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5873",
+   "frase": "you can take any type of valuable information from a supplier's template"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la excepción del libro: puedes tomar información valiosa del formato del proveedor sabiendo qué significa para ambos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-ata_el_pago_al_cumplimiento_real_del_servicio-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ata_el_pago_al_cumplimiento_real_del_servicio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es pagar por algo que no recibiste. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Así tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te da además una base sólida para negociar mejor en el siguiente contrato con ese mismo proveedor.",
+  "texto_nuevo": "Pagar el total de una factura aunque el proveedor no haya cumplido todo lo pactado es pagar por algo que no recibiste. La forma correcta de protegerte es definir con claridad, desde el contrato, qué tareas específicas corresponden a cada pago, y descontar del monto exactamente el costo de lo que no se entregó, ni un centavo más ni menos. Así tanto tú como el proveedor saben de antemano qué se mide y cómo se ajusta el pago si algo falla. Revisar cada factura contra lo realmente entregado antes de pagar, y dejar constancia escrita de cualquier incumplimiento, te sirve además para decidir si renuevas el contrato con ese mismo proveedor.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "7547",
+   "frase": "renewal options at the sole discretion of XYZ Company based upon satisfactory performance"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no promete negociar mejor; usa el desempeño para decidir la renovación.; Mismo resultado prometido que el libro no da.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-gestiona_contrato_tras_firma-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "gestiona_contrato_tras_firma",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+  "texto_nuevo": "Firmar el contrato no es el final del trabajo, es el inicio de otra tarea: administrarlo. Para eso, anota en un calendario simple las fechas que importan: la entrega de bienes o servicios, la facturación, cuándo vence, cuándo debes avisar si quieres renovar o cambiar de proveedor, y cuándo revisar si el precio o el servicio siguen siendo los pactados. Revisa cada factura contra lo acordado antes de pagar, y habla de tanto en tanto con la persona de tu proveedor que te atiende para saber cómo va todo. Esta revisión periódica te permite decidir con tiempo si sigues, renegocias o buscas otra opción, en lugar de descubrir el vencimiento cuando ya es tarde para reaccionar.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "5821",
+   "frase": "Dates such as delivery of goods/services, invoicing, and contract expiration should be noted"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El calendario del libro incluye también la entrega de bienes o servicios y la facturación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-001-investiga_a_fondo_antes_de_renovar_un_contrato_existente-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "investiga_a_fondo_antes_de_renovar_un_contrato_existente",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando te toca renovar un contrato que ya tienes con un proveedor, no firmes por inercia. Revisa el contrato completo, incluyendo anexos y notas de la negociación anterior, para entender que se acordó y por que. Habla con quien usa el producto o servicio día a día para saber si funciona bien o si hay quejas. Conversa también con la persona del proveedor que maneja tu cuenta para escuchar su versión de lo que ha ido bien y lo que no. Esta información te da argumentos reales para pedir mejores condiciones en la renovación, en lugar de aceptar lo mismo de siempre solo porque ya es costumbre trabajar con ese proveedor. Sin este repaso, renuevas a ciegas y pierdes la oportunidad de corregir problemas o negociar un mejor precio.",
+  "texto_nuevo": "Cuando te toca renovar un contrato que ya tienes con un proveedor, no firmes por inercia. Revisa el contrato completo, incluyendo anexos y notas de la negociación anterior, para entender qué se acordó y por qué. Habla con quien usa el producto o servicio día a día para saber si funciona bien o si hay quejas. Conversa también con la persona del proveedor que maneja tu cuenta para escuchar su versión de lo que ha ido bien y lo que no. Investiga además qué otras empresas ofrecen lo mismo y su situación financiera. Esta información te da argumentos reales para pedir mejores condiciones en la renovación, en lugar de aceptar lo mismo de siempre solo porque ya es costumbre trabajar con ese proveedor. Sin este repaso, renuevas a ciegas y pierdes la oportunidad de corregir problemas o negociar un mejor precio.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "891",
+   "frase": "do industry research to find out which companies provide the same service"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae el paso del libro de investigar qué otras empresas ofrecen lo mismo y su situación financiera.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-concientizacion_entrenamiento_cui-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "concientizacion_entrenamiento_cui",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, políticas y procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
+  "texto_nuevo": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, directivas, políticas, estándares, regulaciones o procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "309",
+   "frase": "the applicable laws, directives, policies, standards, regulations, or procedures"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera leyes, directivas, políticas, estándares, regulaciones o procedimientos; el nodo pierde tres elementos.; Mismo defecto: la enumeración del libro tiene seis elementos y el nodo deja tres.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-gestion_configuracion_least_functionality-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "gestion_configuracion_least_functionality",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Deshabilitar o remover funciones, puertos, protocolos y servicios innecesarios o inseguros en los sistemas",
+  "texto_nuevo": "Deshabilitar o remover funciones, puertos, protocolos, conexiones y servicios innecesarios o inseguros en los sistemas",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "387",
+   "frase": "Disable or remove functions, ports, protocols, connections, and services that are unnecessary or nonsecure."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye las conexiones en la lista de lo que hay que deshabilitar o remover.; Mismo defecto: falta 'conexiones' de la enumeración del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-002-personalizacion_guiada_por_el_cliente-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "personalizacion_guiada_por_el_cliente",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dejar que tu cliente decida sobre tu producto no es lo mismo que dejarlo solo delante de un catálogo de opciones. Primero eliges en qué partes de tu producto o servicio la decisión es suya de verdad, y después diseñas el camino para que tomarla sea fácil en vez de abrumador. La segunda mitad es la que casi nadie hace: cuando tu cliente ya decidió, devuélvele esa decisión convertida en algo que pueda tocar o enseñar. Un objeto tangible o simbólico que represente lo que eligió, y cuando tenga sentido, mostrarlo de forma visible, convierte una elección privada en un compromiso que el cliente reconoce como propio.",
+  "texto_nuevo": "Que tu cliente participe en la selección y el armado de lo que compra crea un sentido de orgullo y de propiedad: cocrear una experiencia genera compromiso rápido. Cuando tu cliente ya decidió, devuélvele esa decisión convertida en algo que pueda tocar o enseñar. Un objeto tangible o simbólico que represente lo que eligió, y cuando tenga sentido, mostrarlo de forma visible, convierte una elección privada en un compromiso que el cliente reconoce como propio.",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "2132-2136",
+   "frase": "Co-creating an experience establishes buy-in quickly."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no dice que un catálogo de opciones abrume; en su ejemplo el niño elige casi todo y otro caso ofrece millones de combinaciones.; El libro no plantea elegir qué decisiones ceder ni allanar el camino; dice que cocrear genera compromiso, orgullo y sentido de propiedad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-seis_canales_comunicacion_assess-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "seis_canales_comunicacion_assess",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ajusta y quédate con los canales que mejor te funcionen",
+  "texto_nuevo": "Sugerencia de My Idea: ajusta y quédate con los canales que mejor te funcionen",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "2083-2085",
+   "frase": "How would you measure the impact of the improvement on the overall prospect experience?"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro pregunta cómo medir el impacto de la mejora, pero no aconseja ajustar y quedarse con los mejores canales.; Mismo defecto: consejo práctico útil que el libro no da, sin la etiqueta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-002-transparencia_facturacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "transparencia_facturacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La confusión en la facturación es una fuente importante de desconfianza y llamadas de soporte. Comcast simplificó su estructura de precios, unificó tarifas confusas (como los cargos de instalación) y creó videos personalizados ('Explain My Bill') que, llamando al cliente por su nombre, explican su primera factura y cada cambio importante en su cuenta. Esta transparencia proactiva redujo las llamadas en un 10 % y mejora la confianza del cliente.",
+  "texto_nuevo": "La confusión en la facturación es una fuente importante de desconfianza y llamadas de soporte. Comcast simplificó su estructura de precios, unificó tarifas confusas (como los cargos de instalación) y creó videos personalizados ('Explain My Bill') que, llamando al cliente por su nombre, explican su primera factura y cada cambio importante en su cuenta. Esta transparencia proactiva redujo las llamadas en un 10 %.",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "6327",
+   "frase": "drove a 10 percent reduction in calls"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro atribuye a la medida menos llamadas, horas de llamada y frustración ahorradas, no más confianza.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-asociacion_de_ideas-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "asociacion_de_ideas",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aristóteles observó que las ideas se llaman unas a otras por semejanza, contigüidad en el tiempo o lugar, o conexión lógica; Hobbes, solo por sucesión temporal. Es una simplificación: también las guían el deseo, el temor y causas no conscientes. Este 'proceso de asociación' es el mecanismo fundamental mediante el cual la mente genera nuevas conexiones y, por tanto, nuevas ideas. Entender este mecanismo permite al pensador observar y eventualmente influir en cómo su mente conecta conceptos, lo cual es la base de cualquier técnica de generación de ideas o innovación.",
+  "texto_nuevo": "Aristóteles observó que las ideas se llaman unas a otras por semejanza, contigüidad en el tiempo o lugar, o conexión lógica; Hobbes, solo por sucesión temporal. Es una simplificación: también las guían el deseo, el temor y causas no conscientes. Este 'proceso de asociación' es el mecanismo fundamental mediante el cual la mente genera nuevas conexiones y, por tanto, nuevas ideas. Entender este mecanismo permite al pensador observar y eventualmente influir en cómo su mente conecta conceptos.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "257",
+   "frase": "It is this process of ‘association’ which their art will attempt to improve"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo dice que la asociación es el proceso que el arte de pensar intenta mejorar, no la base de cualquier técnica.; Mismo defecto: afirmación universal que el libro no hace.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-encontrar_el_golpe_mental-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "encontrar_el_golpe_mental",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Así como un atleta natural encuentra su 'stroke' (golpe/técnica) óptimo sin enseñanza explícita, el pensador debe descubrir la forma particular de esfuerzo que canaliza mejor su energía intelectual hacia la tarea correcta. Un ejemplo es William Morris, quien tenía gran energía pero la dirigía mal en su activismo político (a diferencia de su maestría en el diseño y la imprenta, y a veces en su poesía), lo que ilustra que el fracaso creativo a menudo proviene de aplicar el tipo equivocado de esfuerzo a una tarea, no de falta de energía.",
+  "texto_nuevo": "Así como un atleta natural encuentra su 'stroke' (golpe/técnica) óptimo sin enseñanza explícita, el pensador debe descubrir la forma particular de esfuerzo que canaliza mejor su energía intelectual hacia la tarea correcta. Un ejemplo es William Morris, quien tenía gran energía pero la dirigía mal en su activismo político (a diferencia de su maestría en el diseño y la imprenta, y a veces en su poesía), lo que ilustra que el fracaso creativo a veces proviene de aplicar el tipo equivocado de esfuerzo a una tarea, no de falta de energía.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "589",
+   "frase": "Sometimes a thinker will miss the necessary ‘stroke’ because he directs his conscious effort"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro): El libro dice 'sometimes'; 'a menudo' lo vuelve frecuente.; Mismo defecto: el 'a veces' del libro sube a 'a menudo'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-cuatro_etapas_del_pensamiento_creativo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "cuatro_etapas_del_pensamiento_creativo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En general, en un proceso de pensamiento creativo o de resolución de problemas, sea científico, artístico o de negocios, pueden distinguirse cuatro etapas que no son estrictamente lineales y pueden solaparse cuando trabajas en varios problemas a la vez. Preparación: investigas el problema en profundidad y de forma consciente, reuniendo toda la información relevante. Incubación: dejas de pensar conscientemente en el problema mientras descansas o haces otra cosa, aunque puede seguir un trabajo mental inconsciente. Iluminación: aparece de golpe la idea o solución feliz, a menudo precedida por señales sutiles de que algo se está formando, llamadas intimación. Verificación: sometes la idea a un análisis lógico riguroso y a pruebas antes de implementarla.",
+  "texto_nuevo": "En general, en un proceso de pensamiento creativo o de resolución de problemas, sea científico, artístico o de negocios, pueden distinguirse cuatro etapas que no son estrictamente lineales y pueden solaparse cuando trabajas en varios problemas a la vez, e incluso en distintos aspectos de un mismo problema. Preparación: investigas el problema en profundidad y de forma consciente, reuniendo toda la información relevante. Incubación: dejas de pensar conscientemente en el problema mientras descansas o haces otra cosa, aunque puede seguir un trabajo mental inconsciente. Iluminación: aparece de golpe la idea o solución feliz, a menudo precedida por señales sutiles de que algo se está formando, llamadas intimación. Verificación: sometes la idea a un análisis lógico riguroso y a pruebas antes de implementarla.",
+  "cita": {
+   "libro": "The Art of Thought - Graham Wallas",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "313",
+   "frase": "Even in exploring the same problem, the mind may be unconsciously incubating on one aspect"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el solapamiento se da también entre aspectos de un mismo problema; el nodo lo limita a varios problemas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-cultivo_estimulo_emocional_pensamiento_propio-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "cultivo_estimulo_emocional_pensamiento_propio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El caso de un estudiante entrenado en la memorización pura demuestra que el pensamiento genuinamente original requiere de un 'estímulo emocional' que active la conexión entre las ideas y la experiencia personal del pensador. La estrategia consistió en alejar al estudiante de fuentes literarias/autorizadas y exponerlo a experiencia directa (observación de personas, conversaciones, escritura personal en su lengua materna) mientras se le insistía constantemente en identificar 'lo que él tenía que decir de su propio'. El proceso es lento y puede generar 'agonía mental' (dudas agudas) antes de que emerja un pensamiento genuinamente propio; con nociones tempranas de cómo funciona el pensamiento, esa espera y ese sufrimiento habrían sido menores.",
+  "texto_nuevo": "El caso de un estudiante entrenado en la memorización pura ilustra la búsqueda de un 'estímulo emocional' que active la conexión entre las ideas y la experiencia personal del pensador. La estrategia consistió en darle un problema sobre el que se había escrito poco, alejarlo de fuentes literarias/autorizadas, hacer que tomara su material de periódicos, informes oficiales y conversaciones, que observara a la gente, que escribiera cartas en su lengua materna y, más adelante, que leyera psicología, etnología y antropología, mientras se le insistía constantemente en identificar 'lo que él tenía que decir de su propio'. El proceso es lento y puede generar 'agonía mental' (dudas agudas) antes de que emerja un pensamiento genuinamente propio; con nociones tempranas de cómo funciona el pensamiento, esa espera y ese sufrimiento habrían sido menores.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "785",
+   "frase": "constantly urged them to look out for ‘thoughts of their own,’ and for"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo redactar; doble lectura ciega, arbitro y verificador ciego): El libro narra un caso como algo de evidencia y cuenta que instaba a buscar un estímulo emocional; no lo presenta como prueba de un requisito.; El procedimiento del libro incluye un problema poco estudiado y material de periódicos e informes oficiales, que el nodo omite.; Mismo defecto que la marca 0: 'demuestra que ... requiere' endurece un caso narrado.; Se cae una parte del procedimiento: tras la etapa sin lecturas literarias, leyó meses de psicología, etnología y antropología.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-002-balance_estructura_libertad_aprendizaje-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "balance_estructura_libertad_aprendizaje",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Combina la libertad de exploración con estructuras mínimas basadas en conocimiento acumulado (mentorías, frameworks probados, revisión de casos previos), ajustadas a lo que la persona ya puede hacer y a lo que necesitará después.",
+  "texto_nuevo": "Combina la libertad de exploración con estructuras basadas en conocimiento acumulado (mentorías, frameworks probados, revisión de casos previos), ajustadas a lo que la persona ya puede hacer y a lo que necesitará después.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "741-743",
+   "frase": "we accept responsibility for showing the child what we believe to be the best way"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no pide que la guía sea mínima; defiende mostrar la mejor forma que enseña la experiencia, en compromiso con lo que el alumno puede y necesitará.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-003-escape_trampa_proveedor_pasivo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "escape_trampa_proveedor_pasivo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
+  "texto_nuevo": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, que dejes de medirla con metas numéricas periódicas, que siga arraigada en la operación real y que su gente se forme en gestión de seguridad. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "3076-3078",
+   "frase": "A continued grounding in operational reality."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide cinco condiciones para salir de la trampa y el resumen presenta como solución solo tres; faltan el arraigo en la operación real y la formación del personal.; Misma omisión: se caen el arraigo operativo y la formación en gestión de seguridad e investigación de incidentes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-cuestionar_vision_zero-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "cuestionar_vision_zero",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir la seguridad como que nunca pase nada malo es un compromiso ético válido, pero no es un resultado científico ni hay evidencia de que sea alcanzable. Te confunde sobre qué hacer, porque pones el foco en el resultado que quieres y no en lo que realmente puedes controlar día a día. Al suponer todo prevenible, te obliga a investigarlo todo y puede malgastar recursos. Además te empuja a maquillar los números, puede llevarte a tratar los errores como fallas morales, y te puede dejar ciego ante riesgos reales: te concentras en evitar incidentes pequeños mientras un riesgo grande se acumula sin que lo notes.",
+  "texto_nuevo": "Definir la seguridad como que nunca pase nada malo es un compromiso ético válido, pero no es un resultado científico ni hay evidencia de que sea alcanzable. A menudo te deja sin saber qué hacer, porque pones el foco en el resultado que quieres y no en lo que realmente puedes controlar día a día. Al suponer todo prevenible, te obliga a investigarlo todo y puede malgastar recursos. Además te empuja a maquillar los números, puede llevarte a tratar los errores como fallas morales, y te puede dejar ciego ante riesgos reales: te concentras en evitar incidentes pequeños mientras un riesgo grande se acumula sin que lo notes.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "3565",
+   "frase": "a commitment to zero often leaves many people in the dark"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el compromiso con cero a menudo deja a la gente sin saber qué hacer; el nodo lo afirma como efecto seguro.; Mismo fragmento: se pierde el 'often' del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-diseno_departamento_seguridad_efectivo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "diseno_departamento_seguridad_efectivo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo pequeño pero bien conectado con el día a día puede ser mucho más efectivo, aunque uno mínimo puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+  "texto_nuevo": "El tamaño de quienes se encargan de la seguridad en tu negocio no garantiza mejores resultados. Un equipo grande puede caer en la burocracia, juntando datos irrelevantes y llenando papeles, mientras un equipo mínimo puede evitar esa burocracia y la idea de que la seguridad es asunto solo de esa área, aunque puede carecer de información o de capacidad de respuesta. La clave está en evitar que la seguridad se convierta en una simple tabla de números desconectada de lo que realmente pasa en el trabajo.",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "3036",
+   "frase": "it prevents the bureaucratization of safety"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no dice que un equipo pequeño y conectado sea mucho más efectivo; solo que uno mínimo evita la burocratización y la idea de que la seguridad es solo de ese departamento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-financiamiento_venture_capital-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "financiamiento_venture_capital",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los inversionistas de capital de riesgo (VC) administran dinero de otras personas (los inversionistas que ponen el dinero en sus fondos, llamados LP) y buscan ganancias altas invirtiendo en negocios con gran potencial de crecimiento. Si aceptas su dinero, te dan mucho más capital que otras fuentes, además de contactos (a futuros inversionistas, clientes, talento) y ayuda práctica (mentoría, una forma más ordenada de gobernar tu negocio). A cambio, cedes una parte de la propiedad de tu negocio, mayor con cada ronda, y te van a pedir parte del control, un lugar en tu junta directiva (board) y más disciplina en cómo operas. Tener a un VC reconocido detrás también te puede dar más credibilidad frente al mercado.",
+  "texto_nuevo": "Los inversionistas de capital de riesgo (VC) administran dinero de otras personas (los inversionistas que ponen el dinero en sus fondos, llamados LP) y buscan ganancias altas invirtiendo en negocios con gran potencial de crecimiento. Si aceptas su dinero, te pueden dar mucho más capital que otras fuentes, además de contactos (a futuros inversionistas, clientes, talento) y ayuda práctica (mentoría, una forma más ordenada de gobernar tu negocio). A cambio, cedes una parte de la propiedad de tu negocio, mayor con cada ronda, y te van a pedir parte del control, un lugar en tu junta directiva (board) y más disciplina en cómo operas. Tener a un VC reconocido detrás también te puede dar más credibilidad frente al mercado.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "2769",
+   "frase": "Venture capitalists can provide founders with more financial capital"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los VC pueden aportar más capital que amigos, familia o ángeles; el nodo lo da por hecho.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-evaluacion_disimilitud_sucesor-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "evaluacion_disimilitud_sucesor",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas. Te resulta más fácil aceptar un rol secundario si quien llega tiene claramente más experiencia, al menos en algo crucial; aun así, cuanto más distinto sea su perfil del tuyo, más probable es que termines saliendo por completo del negocio.",
+  "texto_nuevo": "Tiendes a sentirte atraído por candidatos que se parecen a ti, pero muchas veces aceptas mejor la sucesión cuando el candidato tiene habilidades claramente distintas y complementarias que resuelven debilidades que ya reconoces en ti mismo, por ejemplo experiencia en ventas. Te resulta más fácil aceptar un rol secundario si quien llega tiene claramente más experiencia, al menos en algo crucial; aun así, cuanto más distinto sea su perfil del tuyo, más probable es que termines saliendo por completo del negocio.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "3226",
+   "frase": "for many founders, the more different the candidate is, the more acceptable"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro lo dice de muchos fundadores, no como regla general; el nodo quita ese matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-estrategia_hibrida_control_riqueza-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "estrategia_hibrida_control_riqueza",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Sin embargo, esta estrategia puede aumentar el riesgo de terminar 'atascado en el medio' y fracasar.",
+  "texto_nuevo": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Puede funcionar con tiempo y poca necesidad de capital; si no, hace más probable un producto lento y una desventaja competitiva. Además, puede aumentar el riesgo de terminar 'atascado en el medio' y fracasar.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "3491",
+   "frase": "with the luxuries of time and low capital-intensity, such a strategy can work"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la condición del libro: la secuencia puede funcionar con tiempo y poca intensidad de capital; en otros negocios hace más probable un producto lento y desventaja competitiva.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-estructura_de_la_venta-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "estructura_de_la_venta",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando negocias la venta de tu negocio, tienes que elegir (o negociar) entre dos formas de cobrar: todo en efectivo de una vez por tus acciones, o una parte al momento y otra parte importante en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
+  "texto_nuevo": "Cuando negocias la venta de tu negocio, hay muchas formas de estructurarla; dos de las principales son cobrar todo en efectivo de una vez por tus acciones, o una parte al momento y otra parte importante en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "4002",
+   "frase": "Acquisitions can be structured in a wide variety of ways"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la venta se puede estructurar de muchas formas y estas son dos de las principales; el nodo la reduce a una elección entre solo dos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-evaluacion_tipos_inversores-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "evaluacion_tipos_inversores",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los inversores van desde quienes solo ponen dinero (dumb money) hasta quienes también aportan contactos y experiencia (smart money). Amigos y familia son fáciles de conseguir pero aportan poco más que el dinero, y si el negocio va mal pones en riesgo tu relación con ellos. Los ángeles pueden sumar experiencia, sobre todo los profesionales; a muchos otros les falta. El capital de riesgo (VC) trae más dinero, contactos y experiencia, pero pide más control y una parte mayor de tu negocio. Antes de elegir, identifica qué te falta: contactos, experiencia o dinero.",
+  "texto_nuevo": "Los inversores van desde quienes solo ponen dinero (dumb money) hasta quienes también aportan contactos y experiencia (smart money). Amigos y familia son fáciles de conseguir pero aportan poco más que el dinero, y si el negocio va mal pones en riesgo tu relación con ellos. Los ángeles pueden sumar experiencia, sobre todo los profesionales; a muchos otros les falta. El capital de riesgo (VC) puede traer más dinero, contactos y experiencia, pero pide más control y una parte mayor de tu negocio. Antes de elegir, identifica qué te falta: contactos, experiencia o dinero.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "2769",
+   "frase": "Venture capitalists can provide founders with more financial capital, social capital, and human capital"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los VC pueden aportar más de los tres capitales; el nodo lo afirma sin matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-revision_portafolio_periodica-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "revision_portafolio_periodica",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Además de revisar cada proyecto por separado en las revisiones de control (gates), conviene que de vez en cuando, cada trimestre o cada seis meses, te sientes a mirar todos tus proyectos como un conjunto. En una revisión individual analizas un proyecto a fondo; aquí miras el conjunto completo: si están alineados con tu estrategia, si las prioridades siguen teniendo sentido, si el conjunto está balanceado, si tienes recursos suficientes para todos y si vas a llegar a las metas de ventas que esperas de tus nuevos productos. Las revisiones individuales analizan los árboles; esta revisión analiza el bosque.",
+  "texto_nuevo": "Además de revisar cada proyecto por separado en las revisiones de control (gates), conviene que de vez en cuando, cada trimestre o cada seis meses, te sientes a mirar todos tus proyectos como un conjunto. En una revisión individual analizas un proyecto a fondo; aquí miras el conjunto completo: si están alineados con tu estrategia, si las prioridades siguen teniendo sentido, si hay proyectos activos que deberías cancelar o acelerar, si el conjunto está balanceado, si tienes recursos suficientes para todos y si vas a llegar a las metas de ventas que esperas de tus nuevos productos. Las revisiones individuales analizan los árboles; esta revisión analiza el bosque.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6022",
+   "frase": "Are there some projects on the active list that you should kill?"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De las seis preguntas del libro se cae la de qué proyectos activos conviene cancelar o acelerar.; Misma omisión: falta la pregunta que convierte la revisión en punto de decisión.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-ranking_proyectos_por_npv-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ranking_proyectos_por_npv",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Método financiero simple que calcula el NPV de cada proyecto (ingresos futuros descontados menos costos de desarrollo y comercialización) para tomar decisiones Go/Kill en gates y priorizar proyectos en revisiones de portafolio. Se complementa con el IRR (tasa interna de retorno) y el Payback Period (periodo de recuperación) para capturar rentabilidad y riesgo. Supone proyecciones exactas, a menudo poco fiables en gates tempranos.",
+  "texto_nuevo": "Método financiero simple que calcula el NPV de cada proyecto (ingresos futuros descontados menos costos de desarrollo y comercialización) para tomar decisiones Go/Kill en gates y priorizar proyectos en revisiones de portafolio. Se complementa con el IRR (tasa interna de retorno) y el Payback Period (periodo de recuperación) para capturar rentabilidad y riesgo. Supone proyecciones exactas (a menudo poco fiables en gates tempranos) y que solo cuentan metas financieras; suele ignorar probabilidades de éxito y riesgo.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6162",
+   "frase": "NPV assumes that only financial goals are important"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera más limitaciones del NPV (solo metas financieras, ignora probabilidades de éxito y riesgo, todo o nada); el resumen deja solo la de las proyecciones.; Misma omisión: se caen que solo importan las metas financieras y que en general ignora probabilidades de éxito y riesgo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-003-red_flags_proyectos_en_problemas-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "red_flags_proyectos_en_problemas",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos y cambios en las especificaciones del producto que afecten lo que el cliente necesita.",
+  "texto_nuevo": "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos, cambios en las especificaciones del producto que afecten lo que el cliente necesita y cualquier cambio que afecte de forma importante tu caso de negocio.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "7503",
+   "frase": "If any change occurs that significantly impacts the Business Case"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los siete disparadores del libro se cae el de cualquier cambio que afecte de forma importante el caso de negocio.; Misma omisión del séptimo disparador (caso de negocio).",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-003-product_backlog_fisico-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "product_backlog_fisico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
+  "texto_nuevo": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo, siempre que los cambios no afecten el plan general, el presupuesto ni el atractivo financiero del proyecto. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "4724",
+   "frase": "as long as these changes do not affect the overall project plan, budget"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro acepta los cambios de producto y alcance solo si no afectan el plan general, el presupuesto ni el atractivo financiero; el nodo quita ese límite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ }
+]

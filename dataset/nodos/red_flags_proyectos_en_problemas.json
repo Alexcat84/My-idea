@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "En vez de esperar a la siguiente revisión programada (gate) para actuar ante un problema, usa un sistema de banderas rojas: una señal que lanzas de inmediato cuando ocurre algo crítico. Por ejemplo, un retraso de más de 30 días en el cronograma, un cambio en las ventas o costos esperados que altere tu caso de negocio en más del 20%, un obstáculo técnico que aumenta el tiempo o el costo más del 10%, o el incumplimiento de recursos que te habían prometido. Cualquiera de estas señales puede llevar a una reunión de emergencia con quienes deciden el futuro del proyecto, para corregir el rumbo, redirigirlo o detenerlo sin demora.",
   "pasos_accionables": [
-    "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos y cambios en las especificaciones del producto que afecten lo que el cliente necesita.",
+    "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos, cambios en las especificaciones del producto que afecten lo que el cliente necesita y cualquier cambio que afecte de forma importante tu caso de negocio.",
     "Aprende a reconocer estas señales tú mismo y repórtalas de inmediato, sin esperar a nadie.",
     "Ten pensado de antemano cómo convocar una reunión de emergencia con las personas que deciden sobre el proyecto.",
     "Toma la acción que corresponda, corregir, redirigir o cerrar el proyecto, sin esperar a la próxima revisión formal."
@@ -77,6 +77,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de disparadores omite los obstáculos técnicos y los cambios de especificaciones que afectan la necesidad del cliente.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-003-red_flags_proyectos_en_problemas-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos y cambios en las especificaciones del producto que afecten lo que el cliente necesita.",
+      "texto_nuevo": "Define los umbrales concretos que para ti cuentan como bandera roja: tiempo, costo, ventas, recursos, obstáculos técnicos, cambios en las especificaciones del producto que afecten lo que el cliente necesita y cualquier cambio que afecte de forma importante tu caso de negocio.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7503",
+        "frase": "If any change occurs that significantly impacts the Business Case"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los siete disparadores del libro se cae el de cualquier cambio que afecte de forma importante el caso de negocio.; Misma omisión del séptimo disparador (caso de negocio).",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

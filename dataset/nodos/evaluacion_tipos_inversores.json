@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación del Espectro de Inversores (Amigos/Familia, Ángeles, VC)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Los inversores van desde quienes solo ponen dinero (dumb money) hasta quienes también aportan contactos y experiencia (smart money). Amigos y familia son fáciles de conseguir pero aportan poco más que el dinero, y si el negocio va mal pones en riesgo tu relación con ellos. Los ángeles pueden sumar experiencia, sobre todo los profesionales; a muchos otros les falta. El capital de riesgo (VC) trae más dinero, contactos y experiencia, pero pide más control y una parte mayor de tu negocio. Antes de elegir, identifica qué te falta: contactos, experiencia o dinero.",
+  "resumen_teorico": "Los inversores van desde quienes solo ponen dinero (dumb money) hasta quienes también aportan contactos y experiencia (smart money). Amigos y familia son fáciles de conseguir pero aportan poco más que el dinero, y si el negocio va mal pones en riesgo tu relación con ellos. Los ángeles pueden sumar experiencia, sobre todo los profesionales; a muchos otros les falta. El capital de riesgo (VC) puede traer más dinero, contactos y experiencia, pero pide más control y una parte mayor de tu negocio. Antes de elegir, identifica qué te falta: contactos, experiencia o dinero.",
   "pasos_accionables": [
     "Identifica qué te falta hoy: contactos, experiencia o dinero.",
     "Revisa qué tipo de inversor tienes a tu alcance según la etapa en la que estás: amigos y familia, ángeles o capital de riesgo.",
@@ -71,6 +71,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el VC aporta más capital financiero, social y humano que los otros dos tipos; dejarlo solo en dinero altera la comparación de valor agregado.; El libro presenta el dinero de amigos y familia como accesible pero arriesgado: pone en riesgo la relación si el negocio va mal, y el resumen lo calla.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-003-evaluacion_tipos_inversores-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los inversores van desde quienes solo ponen dinero (dumb money) hasta quienes también aportan contactos y experiencia (smart money). Amigos y familia son fáciles de conseguir pero aportan poco más que el dinero, y si el negocio va mal pones en riesgo tu relación con ellos. Los ángeles pueden sumar experiencia, sobre todo los profesionales; a muchos otros les falta. El capital de riesgo (VC) trae más dinero, contactos y experiencia, pero pide más control y una parte mayor de tu negocio. Antes de elegir, identifica qué te falta: contactos, experiencia o dinero.",
+      "texto_nuevo": "Los inversores van desde quienes solo ponen dinero (dumb money) hasta quienes también aportan contactos y experiencia (smart money). Amigos y familia son fáciles de conseguir pero aportan poco más que el dinero, y si el negocio va mal pones en riesgo tu relación con ellos. Los ángeles pueden sumar experiencia, sobre todo los profesionales; a muchos otros les falta. El capital de riesgo (VC) puede traer más dinero, contactos y experiencia, pero pide más control y una parte mayor de tu negocio. Antes de elegir, identifica qué te falta: contactos, experiencia o dinero.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2769",
+        "frase": "Venture capitalists can provide founders with more financial capital, social capital, and human capital"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los VC pueden aportar más de los tres capitales; el nodo lo afirma sin matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

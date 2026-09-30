@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Cuestionar la idea de 'cero accidentes' en seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Definir la seguridad como que nunca pase nada malo es un compromiso ético válido, pero no es un resultado científico ni hay evidencia de que sea alcanzable. Te confunde sobre qué hacer, porque pones el foco en el resultado que quieres y no en lo que realmente puedes controlar día a día. Al suponer todo prevenible, te obliga a investigarlo todo y puede malgastar recursos. Además te empuja a maquillar los números, puede llevarte a tratar los errores como fallas morales, y te puede dejar ciego ante riesgos reales: te concentras en evitar incidentes pequeños mientras un riesgo grande se acumula sin que lo notes.",
+  "resumen_teorico": "Definir la seguridad como que nunca pase nada malo es un compromiso ético válido, pero no es un resultado científico ni hay evidencia de que sea alcanzable. A menudo te deja sin saber qué hacer, porque pones el foco en el resultado que quieres y no en lo que realmente puedes controlar día a día. Al suponer todo prevenible, te obliga a investigarlo todo y puede malgastar recursos. Además te empuja a maquillar los números, puede llevarte a tratar los errores como fallas morales, y te puede dejar ciego ante riesgos reales: te concentras en evitar incidentes pequeños mientras un riesgo grande se acumula sin que lo notes.",
   "pasos_accionables": [
     "Revisa tu compromiso de 'cero accidentes' y tradúcelo en acciones concretas que tú y tu equipo puedan controlar, no solo en el resultado que esperas",
     "No uses la meta de cero accidentes como excusa para decir que todo era evitable cuando algo sale mal",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la visión cero puede estigmatizar y que los errores pueden equipararse a faltas morales; el nodo lo vuelve efecto seguro y sobre cada error.; El libro dice que no es un resultado de investigación ni hay respaldo de que sea alcanzable; no dice que no pueda medirse.; Falta la razón del libro de que, si todo es prevenible, todo debe investigarse y se malgastan los recursos de investigación.; Mismo defecto que la marca 0 en la parte de las faltas morales; lo de maquillar números sí está en el libro.; Mismo defecto que la marca 1.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-003-cuestionar_vision_zero-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir la seguridad como que nunca pase nada malo es un compromiso ético válido, pero no es un resultado científico ni hay evidencia de que sea alcanzable. Te confunde sobre qué hacer, porque pones el foco en el resultado que quieres y no en lo que realmente puedes controlar día a día. Al suponer todo prevenible, te obliga a investigarlo todo y puede malgastar recursos. Además te empuja a maquillar los números, puede llevarte a tratar los errores como fallas morales, y te puede dejar ciego ante riesgos reales: te concentras en evitar incidentes pequeños mientras un riesgo grande se acumula sin que lo notes.",
+      "texto_nuevo": "Definir la seguridad como que nunca pase nada malo es un compromiso ético válido, pero no es un resultado científico ni hay evidencia de que sea alcanzable. A menudo te deja sin saber qué hacer, porque pones el foco en el resultado que quieres y no en lo que realmente puedes controlar día a día. Al suponer todo prevenible, te obliga a investigarlo todo y puede malgastar recursos. Además te empuja a maquillar los números, puede llevarte a tratar los errores como fallas morales, y te puede dejar ciego ante riesgos reales: te concentras en evitar incidentes pequeños mientras un riesgo grande se acumula sin que lo notes.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3565",
+        "frase": "a commitment to zero often leaves many people in the dark"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el compromiso con cero a menudo deja a la gente sin saber qué hacer; el nodo lo afirma como efecto seguro.; Mismo fragmento: se pierde el 'often' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [
