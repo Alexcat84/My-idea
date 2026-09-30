@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Índice de Capacidad de Proceso Cpk",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cpk es un índice que refleja tanto la variación del proceso como la ubicación de su media respecto a los límites de especificación, a diferencia de Cp que asume centrado perfecto. Cpk indica qué tan cerca está la media actual del proceso del límite de especificación más próximo, siendo crítico para certificación de proveedores y detección de procesos descentrados.",
+  "resumen_teorico": "Cpk es un índice que refleja tanto la variación del proceso como la ubicación de su media respecto a los límites de especificación, a diferencia de Cp que asume centrado perfecto. Cpk indica qué tan cerca está la media actual del proceso del límite de especificación más próximo; algunas organizaciones lo usan como uno de sus criterios para certificar proveedores, y sirve para detectar procesos descentrados.",
   "pasos_accionables": [
     "Calcular la media actual del proceso y su desviación estándar",
     "Calcular la distancia de la media a cada límite de especificación (USL y LSL)",
@@ -56,6 +56,22 @@
         "evidencia": "F21-021: Calcular el Cpk y actuar para centrar o reducir la variacion de un proceso es control y mejora operativa. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-070-indice_cpk-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cpk es un índice que refleja tanto la variación del proceso como la ubicación de su media respecto a los límites de especificación, a diferencia de Cp que asume centrado perfecto. Cpk indica qué tan cerca está la media actual del proceso del límite de especificación más próximo, siendo crítico para certificación de proveedores y detección de procesos descentrados.",
+      "texto_nuevo": "Cpk es un índice que refleja tanto la variación del proceso como la ubicación de su media respecto a los límites de especificación, a diferencia de Cp que asume centrado perfecto. Cpk indica qué tan cerca está la media actual del proceso del límite de especificación más próximo; algunas organizaciones lo usan como uno de sus criterios para certificar proveedores, y sirve para detectar procesos descentrados.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20872",
+        "frase": "some organizations use Cpk as one element of certification criteria"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que algunas organizaciones usan Cpk como un elemento de sus criterios de certificación; 'crítico' endurece.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

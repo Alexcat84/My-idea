@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Project Scope Statement",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Documento que detalla el alcance del proyecto, incluyendo la descripción del producto, entregables, criterios de aceptación, exclusiones, restricciones y supuestos. Es la base para desglosar el trabajo del proyecto y sirve como referencia para validar el alcance completado.",
+  "resumen_teorico": "Documento que detalla el alcance del proyecto, incluyendo la descripción del producto, entregables, criterios de aceptación, exclusiones, restricciones y supuestos. Es la base para desglosar el trabajo del proyecto y sirve como referencia para evaluar si un cambio o trabajo adicional cae dentro o fuera del proyecto.",
   "pasos_accionables": [
     "Documentar la descripción del alcance del producto basándose en el project charter",
     "Listar todos los entregables únicos y verificables del proyecto",
@@ -36,5 +36,23 @@
   "etiqueta_arbol": "Delimita el Alcance del Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-067-project_scope_statement-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento que detalla el alcance del proyecto, incluyendo la descripción del producto, entregables, criterios de aceptación, exclusiones, restricciones y supuestos. Es la base para desglosar el trabajo del proyecto y sirve como referencia para validar el alcance completado.",
+      "texto_nuevo": "Documento que detalla el alcance del proyecto, incluyendo la descripción del producto, entregables, criterios de aceptación, exclusiones, restricciones y supuestos. Es la base para desglosar el trabajo del proyecto y sirve como referencia para evaluar si un cambio o trabajo adicional cae dentro o fuera del proyecto.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "974",
+        "frase": "provides a basis for evaluating whether requests for changes or additional work are contained"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro le da la función de evaluar si cambios o trabajo adicional caen dentro o fuera de los límites, no la de validar el alcance completado.; Mismo defecto: la función que el libro le da es servir de base para evaluar cambios o trabajo adicional.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

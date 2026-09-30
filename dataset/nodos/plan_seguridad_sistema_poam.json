@@ -9,7 +9,7 @@
     "Realizar una autoevaluación o auditoría de seguridad usando SP 800-171A",
     "Documentar en el SSP cómo se satisface cada requisito de seguridad aplicable",
     "Para los requisitos no satisfechos, crear un POAM con plazos y responsables de mitigación",
-    "Usar plantillas editables disponibles del Defense Industrial Base Sector Coordinating Council"
+    "Usar como guía las plantillas de muestra del plan de seguridad del sistema del Defense Industrial Base Sector Coordinating Council"
   ],
   "entregable_esperado": "Documentos SSP y POAM completos, actualizados y disponibles para revisión de auditores o agencias federales",
   "nodos_previos": [
@@ -42,6 +42,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-072-plan_seguridad_sistema_poam-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar plantillas editables disponibles del Defense Industrial Base Sector Coordinating Council",
+      "texto_nuevo": "Usar como guía las plantillas de muestra del plan de seguridad del sistema del Defense Industrial Base Sector Coordinating Council",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "265-267",
+        "frase": "View sample templates for system security plans on the Defense Industrial Base Sector Coordinating Council"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye a ese consejo plantillas de muestra del plan de seguridad del sistema; la plantilla editable es otra y no se le atribuye.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

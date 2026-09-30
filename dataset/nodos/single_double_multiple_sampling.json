@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo Simple, Doble y Múltiple",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
+  "resumen_teorico": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple en general reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
   "pasos_accionables": [
     "Evaluar el volumen de inspección disponible y la complejidad administrativa tolerable",
     "Optar por muestreo simple si se prioriza la simplicidad de administración",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Elige tu Tipo de Muestreo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-single_double_multiple_sampling-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
+      "texto_nuevo": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple en general reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24996",
+        "frase": "the average number of pieces inspected per lot is generally smaller"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el promedio inspeccionado es en general menor y que estos planes pueden significar menos inspección; el nodo lo afirma sin cautela.; Mismo defecto: se endurece el 'en general menor' y el 'puede significar menos inspección'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

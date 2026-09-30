@@ -7,9 +7,9 @@
   "resumen_teorico": "El Shingo Institute, parte de la Universidad Estatal de Utah, administra el Shingo Prize, un premio global que reconoce la excelencia empresarial con énfasis en enfoques Lean. A diferencia del Baldrige Award o el EFQM, el Shingo Prize tiene alcance internacional y múltiples niveles de reconocimiento: Shingo Prize, Silver Medallion y Bronze Medallion, cada uno representando distintos grados de madurez cultural y de resultados en la organización.",
   "pasos_accionables": [
     "Evaluar el nivel de madurez cultural y operativa de la organización",
-    "Comparar el desempeño actual contra los criterios de Bronze, Silver o Shingo Prize",
+    "Comparar el desempeño actual contra los criterios de Bronze, Silver o Shingo Prize, con apoyo de alguien con experiencia en el área evaluada, porque usar bien estas escalas de madurez la exige",
     "Definir un plan de mejora para avanzar en los niveles de reconocimiento",
-    "Aplicar formalmente al programa Shingo Prize si se cumplen los criterios mínimos"
+    "Aplicar formalmente al programa Shingo Prize si decides buscar el reconocimiento externo"
   ],
   "entregable_esperado": "Autoevaluación comparativa contra los niveles Shingo (Bronze, Silver, Prize) con brechas identificadas",
   "nodos_previos": [
@@ -39,6 +39,40 @@
         "evidencia": "F11-004: Evaluar la madurez operativa y Lean de una organizacion en marcha frente a un premio de excelencia es mejorar lo que ya funciona, no probar la idea con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-070-shingo_prize-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar el desempeño actual contra los criterios de Bronze, Silver o Shingo Prize",
+      "texto_nuevo": "Comparar el desempeño actual contra los criterios de Bronze, Silver o Shingo Prize, con apoyo de alguien con experiencia en el área evaluada, porque usar bien estas escalas de madurez la exige",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12979",
+        "frase": "Effective maturity scale use requires significant expertise of the area being assessed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que usar bien estas escalas de madurez exige mucha experiencia en el área evaluada.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-070-shingo_prize-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aplicar formalmente al programa Shingo Prize si se cumplen los criterios mínimos",
+      "texto_nuevo": "Aplicar formalmente al programa Shingo Prize si decides buscar el reconocimiento externo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12981",
+        "frase": "Many enterprises using excellence models, however, do not formally pursue a prize"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de criterios mínimos para postular; describe una puntuación sobre 1000 y dice que muchas organizaciones usan el modelo solo para autoevaluarse.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Driver de Transporte: Selección de Modo según Valor del Producto",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El transporte mueve materiales y productos entre instalaciones. Existen seis modos básicos: barco y ferrocarril (bajo costo, lento), tuberías (eficiente pero limitado a líquidos/gases), camiones (flexible, costo variable), avión (rápido y costoso) y transporte electrónico (instantáneo pero limitado a datos/energía). Como regla general, productos de alto valor deben usar redes de transporte que prioricen capacidad de respuesta, y productos de bajo valor (commodities) deben usar redes que prioricen eficiencia. El transporte puede representar hasta un tercio del costo operativo de la cadena de suministro.",
+  "resumen_teorico": "El transporte mueve materiales y productos entre instalaciones. Existen seis modos básicos: barco y ferrocarril (bajo costo, lento), tuberías (eficiente pero limitado a líquidos/gases), camiones (flexible, costo variable), avión (rápido y costoso) y transporte electrónico (el más rápido, pero limitado a energía, datos y productos hechos de datos). Como regla general, productos de alto valor deben usar redes de transporte que prioricen capacidad de respuesta, y productos de bajo valor (commodities) deben usar redes que prioricen eficiencia. El transporte puede representar hasta un tercio del costo operativo de la cadena de suministro.",
   "pasos_accionables": [
     "Clasificar los productos según su valor y su sensibilidad al tiempo de entrega.",
     "Seleccionar el modo de transporte (barco, ferrocarril, tubería, camión, avión, electrónico) según esa clasificación.",
@@ -43,6 +43,22 @@
         "evidencia": "D-07: Elegir entre barco, tren, tubería, camión o avión y diseñar redes de transporte es decisión logística de especialista, ajena a una tienda pequeña o a un servicio. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-068-driver_transporte-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El transporte mueve materiales y productos entre instalaciones. Existen seis modos básicos: barco y ferrocarril (bajo costo, lento), tuberías (eficiente pero limitado a líquidos/gases), camiones (flexible, costo variable), avión (rápido y costoso) y transporte electrónico (instantáneo pero limitado a datos/energía). Como regla general, productos de alto valor deben usar redes de transporte que prioricen capacidad de respuesta, y productos de bajo valor (commodities) deben usar redes que prioricen eficiencia. El transporte puede representar hasta un tercio del costo operativo de la cadena de suministro.",
+      "texto_nuevo": "El transporte mueve materiales y productos entre instalaciones. Existen seis modos básicos: barco y ferrocarril (bajo costo, lento), tuberías (eficiente pero limitado a líquidos/gases), camiones (flexible, costo variable), avión (rápido y costoso) y transporte electrónico (el más rápido, pero limitado a energía, datos y productos hechos de datos). Como regla general, productos de alto valor deben usar redes de transporte que prioricen capacidad de respuesta, y productos de bajo valor (commodities) deben usar redes que prioricen eficiencia. El transporte puede representar hasta un tercio del costo operativo de la cadena de suministro.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "207",
+        "frase": "which is the fastest mode of transport and is very flexible and cost efficient"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el transporte electrónico es el modo más rápido, no instantáneo, y su límite incluye productos hechos de datos.; Mismo defecto: 'instantáneo' endurece el 'el más rápido' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Reducción del Tiempo al Mercado (Speed to Market)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "La velocidad al mercado otorga ventaja competitiva, mayor rentabilidad y menor riesgo de que el mercado cambie durante el desarrollo. Sin embargo, la búsqueda excesiva de velocidad tiene un 'lado oscuro': atajos que generan errores costosos, enfoque exclusivo en proyectos fáciles ('low hanging fruit'), y plazos poco realistas que dañan la moral del equipo. La velocidad debe lograrse mediante buenas prácticas de gestión (homework temprano, procesamiento paralelo, equipos multifuncionales) y no a costa de la calidad de ejecución.",
+  "resumen_teorico": "La velocidad al mercado puede dar ventaja competitiva y mayor rentabilidad, aunque la evidencia es mixta, y reduce el riesgo de que el mercado cambie durante el desarrollo. Sin embargo, la búsqueda excesiva de velocidad tiene un 'lado oscuro': atajos que generan errores costosos, enfoque en proyectos fáciles y rápidos ('low hanging fruit'), y plazos poco realistas que dañan la moral del equipo. La velocidad debe lograrse mediante buenas prácticas de gestión (homework temprano, procesamiento paralelo, equipos multifuncionales) y no a costa de la calidad de ejecución.",
   "pasos_accionables": [
     "Realizar el trabajo de homework temprano (VoC, definición de producto) para evitar retrabajos posteriores",
     "Construir calidad de ejecución en cada etapa para evitar ciclos de repetición",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Acelera tu Llegada al Mercado",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-074-reduccion_tiempo_de_mercado_velocidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La velocidad al mercado otorga ventaja competitiva, mayor rentabilidad y menor riesgo de que el mercado cambie durante el desarrollo. Sin embargo, la búsqueda excesiva de velocidad tiene un 'lado oscuro': atajos que generan errores costosos, enfoque exclusivo en proyectos fáciles ('low hanging fruit'), y plazos poco realistas que dañan la moral del equipo. La velocidad debe lograrse mediante buenas prácticas de gestión (homework temprano, procesamiento paralelo, equipos multifuncionales) y no a costa de la calidad de ejecución.",
+      "texto_nuevo": "La velocidad al mercado puede dar ventaja competitiva y mayor rentabilidad, aunque la evidencia es mixta, y reduce el riesgo de que el mercado cambie durante el desarrollo. Sin embargo, la búsqueda excesiva de velocidad tiene un 'lado oscuro': atajos que generan errores costosos, enfoque en proyectos fáciles y rápidos ('low hanging fruit'), y plazos poco realistas que dañan la moral del equipo. La velocidad debe lograrse mediante buenas prácticas de gestión (homework temprano, procesamiento paralelo, equipos multifuncionales) y no a costa de la calidad de ejecución.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1779-1781",
+        "frase": "Speed yields higher profitability. Again there is mixed evidence."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro advierte evidencia contradictoria y mixta sobre ventaja y rentabilidad; el nodo lo afirma como hecho, y 'exclusivo' endurece 'focusing on easy and quick hits'.; Mismo defecto, con la misma evidencia en las líneas 1779 a 1793.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

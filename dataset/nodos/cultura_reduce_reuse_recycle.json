@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "El principio de las 3Rs prioriza deliberadamente en ese orden: primero reducir el consumo y compra de recursos innecesarios, luego reutilizar lo que ya existe antes de desecharlo, y finalmente reciclar como última opción. Las áreas clave de impacto en oficina incluyen papel, basura, electricidad, agua, viajes y desechos electrónicos/tóxicos. Cultivar esta mentalidad entre empleados permite identificar oportunidades no evidentes de ahorro y reducción de impacto.",
   "pasos_accionables": [
-    "Mapear las principales áreas de desperdicio de la oficina (papel, electricidad, agua, viajes, e-waste)",
+    "Mapear las principales áreas de desperdicio de la oficina (papel, basura, electricidad, agua, viajes, e-waste)",
     "Cuestionar compras excesivas o innecesarias (impresoras personales, botellas de agua, vasos desechables)",
     "Fomentar la reutilización de materiales antes de desecharlos (sobres, papel de un solo lado)",
     "Establecer canales para donar o vender lo que no se puede reutilizar internamente"
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Reduce, Reutiliza y Recicla",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-cultura_reduce_reuse_recycle-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mapear las principales áreas de desperdicio de la oficina (papel, electricidad, agua, viajes, e-waste)",
+      "texto_nuevo": "Mapear las principales áreas de desperdicio de la oficina (papel, basura, electricidad, agua, viajes, e-waste)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2277-2289",
+        "frase": "Trash (plastic, foam, food)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro tiene seis áreas y el paso omite la basura (plástico, espuma, comida).; Mismo defecto: falta la basura en la enumeración.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Poda del Portafolio (Portfolio Pruning)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Cuando el pipeline de proyectos está sobrecargado con iniciativas mediocres o de bajo valor estratégico, es necesario realizar una revisión drástica y sistemática proyecto por proyecto para eliminar aquellos que no aportan valor. La experiencia sugiere que aproximadamente un tercio de los proyectos en un portafolio típico deberían ser eliminados, liberando recursos para los proyectos de mayor valor.",
+  "resumen_teorico": "Cuando el pipeline de proyectos está sobrecargado con iniciativas mediocres o de bajo valor estratégico, una forma de arrancar es una revisión única, drástica y sistemática proyecto por proyecto para eliminar o poner en pausa aquellos que no aportan valor. La experiencia sugiere que aproximadamente un tercio de los proyectos en un portafolio típico deberían ser eliminados, liberando recursos para los proyectos de mayor valor.",
   "pasos_accionables": [
     "Listar todos los proyectos activos en el pipeline de desarrollo",
     "Evaluar cada proyecto contra criterios estratégicos y de valor (usar scorecard)",
@@ -12,7 +12,7 @@
     "Ejecutar una decisión de corte (Kill) y reasignar los recursos liberados a proyectos prioritarios",
     "Medir el impacto en tiempo-al-mercado tras la poda"
   ],
-  "entregable_esperado": "Lista depurada de proyectos activos con una reducción de aproximadamente un tercio, y plan de reasignación de recursos liberados",
+  "entregable_esperado": "Lista depurada de proyectos activos y plan de reasignación de los recursos liberados",
   "nodos_previos": [
     "gates_sin_dientes_problema",
     "gestion_visual_del_pipeline_de_desarrollo",
@@ -91,6 +91,38 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-074-pruning_portafolio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el pipeline de proyectos está sobrecargado con iniciativas mediocres o de bajo valor estratégico, es necesario realizar una revisión drástica y sistemática proyecto por proyecto para eliminar aquellos que no aportan valor. La experiencia sugiere que aproximadamente un tercio de los proyectos en un portafolio típico deberían ser eliminados, liberando recursos para los proyectos de mayor valor.",
+      "texto_nuevo": "Cuando el pipeline de proyectos está sobrecargado con iniciativas mediocres o de bajo valor estratégico, una forma de arrancar es una revisión única, drástica y sistemática proyecto por proyecto para eliminar o poner en pausa aquellos que no aportan valor. La experiencia sugiere que aproximadamente un tercio de los proyectos en un portafolio típico deberían ser eliminados, liberando recursos para los proyectos de mayor valor.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6701",
+        "frase": "One way to kick-start the process is by undertaking a ruthless one-time pruning operation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la poda drástica y única como una forma de arrancar, no como algo necesario, y los proyectos débiles se eliminan o se ponen en pausa.; Mismo defecto: 'one way to kick-start' se endurece a 'es necesario' y se pierde que es una operación única.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-074-pruning_portafolio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista depurada de proyectos activos con una reducción de aproximadamente un tercio, y plan de reasignación de recursos liberados",
+      "texto_nuevo": "Lista depurada de proyectos activos y plan de reasignación de los recursos liberados",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6707",
+        "frase": "experience suggests that in the typical portfolio, roughly one-third of the projects should be cut"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el tercio como referencia de un portafolio típico; el entregable lo convierte en meta para el portafolio propio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Costeo de Ciclo de Vida (Life Cycle Costing)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Esta herramienta evalúa los costos relacionados con un producto o activo a lo largo de todo su ciclo de vida: producción, uso, mantenimiento y disposición final. Ayuda a los gerentes a evaluar opciones de diseño o adquisición mirando más allá del precio de compra, que solo representa una fracción de los costos totales que un producto generará.",
+  "resumen_teorico": "Esta herramienta evalúa los costos relacionados con un producto o activo a lo largo de todo su ciclo de vida: producción, uso, mantenimiento y disposición final. Ayuda a los gerentes a evaluar opciones de diseño o adquisición mirando más allá del precio de compra, que suele representar solo una pequeña parte de los costos totales que un producto generará.",
   "pasos_accionables": [
     "Mapear todas las fases del ciclo de vida de un producto o activo",
     "Estimar costos de instalación, energía, mantenimiento, cumplimiento normativo, reemplazo y disposición",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Calcula el Costo Total del Ciclo",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-costeo_ciclo_de_vida-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta herramienta evalúa los costos relacionados con un producto o activo a lo largo de todo su ciclo de vida: producción, uso, mantenimiento y disposición final. Ayuda a los gerentes a evaluar opciones de diseño o adquisición mirando más allá del precio de compra, que solo representa una fracción de los costos totales que un producto generará.",
+      "texto_nuevo": "Esta herramienta evalúa los costos relacionados con un producto o activo a lo largo de todo su ciclo de vida: producción, uso, mantenimiento y disposición final. Ayuda a los gerentes a evaluar opciones de diseño o adquisición mirando más allá del precio de compra, que suele representar solo una pequeña parte de los costos totales que un producto generará.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5802",
+        "frase": "which usually reflects only a tiny portion of the costs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el precio de compra suele reflejar solo una pequeña parte; el nodo quita el 'suele'.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

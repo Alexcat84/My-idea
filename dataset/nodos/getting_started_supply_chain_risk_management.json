@@ -6,9 +6,9 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
   "pasos_accionables": [
-    "Identificar proveedores críticos con acceso a sistemas que procesan CUI.",
+    "Identificar proveedores críticos con acceso a sistemas que procesan CUI o que les suministran componentes.",
     "Definir la frecuencia de revisión y actualización del plan SCRM.",
-    "Identificar riesgos en diseño, manufactura, adquisición, entrega e integración de componentes.",
+    "Identificar riesgos en desarrollo, diseño, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho del sistema, sus componentes o servicios.",
     "Establecer políticas para evaluar proveedores antes de la compra o contratación de servicios.",
     "Definir acciones de respuesta ante incidentes de la cadena de suministro y proveedores alternativos.",
     "Establecer estrategia de monitoreo de desempeño frente al plan SCRM."
@@ -67,6 +67,40 @@
         "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en definicion_alineacion_cadena_suministro."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "final-e1-072-getting_started_supply_chain_risk_management-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar riesgos en diseño, manufactura, adquisición, entrega e integración de componentes.",
+      "texto_nuevo": "Identificar riesgos en desarrollo, diseño, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho del sistema, sus componentes o servicios.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "797",
+        "frase": "Identify risks associated with the development, design, manufacturing, acquisition, delivery, integration, operations, maintenance, and disposal"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera también desarrollo, operaciones, mantenimiento y desecho; el paso los omite.; Mismo defecto: faltan cuatro fases del ciclo de vida que el libro pide cubrir.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-072-getting_started_supply_chain_risk_management-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar proveedores críticos con acceso a sistemas que procesan CUI.",
+      "texto_nuevo": "Identificar proveedores críticos con acceso a sistemas que procesan CUI o que les suministran componentes.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "793",
+        "frase": "Identify critical suppliers that have access to, or provide components to, systems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye también a los proveedores que suministran componentes a esos sistemas.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

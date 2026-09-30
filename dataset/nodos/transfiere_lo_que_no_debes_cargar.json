@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Transferencia del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Algunos riesgos no tienes por qué cargarlos tú: puedes transferirlos a quien está mejor preparado para absorberlos. Un seguro convierte un golpe raro pero devastador en un pago mensual predecible; una cláusula en un contrato pasa la responsabilidad de un retraso o un defecto a quien lo causa; un proveedor con garantía carga con el costo de su propia falla. Transferir no hace desaparecer el riesgo, solo cambia quién paga si ocurre, y casi siempre tiene un precio: la prima del seguro, una condición del contrato. La regla es transferir lo que te puede hundir y no puedes controlar, y quedarte con lo que sí manejas. Para el emprendedor solo, un buen seguro o una cláusula bien puesta pueden ser la diferencia entre un susto y la quiebra.",
+  "resumen_teorico": "Algunos riesgos no tienes por qué cargarlos tú: puedes transferirlos a quien está mejor preparado para absorberlos. Un seguro convierte un golpe raro pero devastador en un pago mensual predecible; una cláusula en un contrato pasa la responsabilidad de un retraso o un defecto a quien lo causa; un proveedor con garantía carga con el costo de su propia falla. Transferir no hace desaparecer el riesgo ni te libera del todo: rara vez funciona al cien por ciento y el daño a tu reputación suele quedarse contigo; y casi siempre tiene un precio: la prima del seguro, una condición del contrato. La regla es comprobar primero si puedes reducirlo a un nivel aceptable y, si no, transferir lo que te puede hundir y no puedes controlar, y quedarte con lo que sí manejas. Para el emprendedor solo, un buen seguro o una cláusula bien puesta pueden ser la diferencia entre un susto y la quiebra.",
   "pasos_accionables": [
     "Identifica los riesgos que te hundirían y que en realidad no controlas.",
     "De cada uno, pregúntate quién está mejor preparado para absorberlo: un seguro, el proveedor, el cliente.",
@@ -41,6 +41,22 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por contract_close_out."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-067-transfiere_lo_que_no_debes_cargar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Algunos riesgos no tienes por qué cargarlos tú: puedes transferirlos a quien está mejor preparado para absorberlos. Un seguro convierte un golpe raro pero devastador en un pago mensual predecible; una cláusula en un contrato pasa la responsabilidad de un retraso o un defecto a quien lo causa; un proveedor con garantía carga con el costo de su propia falla. Transferir no hace desaparecer el riesgo, solo cambia quién paga si ocurre, y casi siempre tiene un precio: la prima del seguro, una condición del contrato. La regla es transferir lo que te puede hundir y no puedes controlar, y quedarte con lo que sí manejas. Para el emprendedor solo, un buen seguro o una cláusula bien puesta pueden ser la diferencia entre un susto y la quiebra.",
+      "texto_nuevo": "Algunos riesgos no tienes por qué cargarlos tú: puedes transferirlos a quien está mejor preparado para absorberlos. Un seguro convierte un golpe raro pero devastador en un pago mensual predecible; una cláusula en un contrato pasa la responsabilidad de un retraso o un defecto a quien lo causa; un proveedor con garantía carga con el costo de su propia falla. Transferir no hace desaparecer el riesgo ni te libera del todo: rara vez funciona al cien por ciento y el daño a tu reputación suele quedarse contigo; y casi siempre tiene un precio: la prima del seguro, una condición del contrato. La regla es comprobar primero si puedes reducirlo a un nivel aceptable y, si no, transferir lo que te puede hundir y no puedes controlar, y quedarte con lo que sí manejas. Para el emprendedor solo, un buen seguro o una cláusula bien puesta pueden ser la diferencia entre un susto y la quiebra.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5641-5660",
+        "frase": "it is usually expensive, and it is rarely 100% effective."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la transferencia rara vez es eficaz al cien por ciento, no libera del todo y el daño a la reputación suele quedarse.; El libro exige comprobar antes si el riesgo puede reducirse a un nivel aceptable; la regla del nodo salta esa condición.; Misma condición previa omitida: ningún riesgo se transfiere sin comprobar antes si se puede reducir.; Mismo límite perdido: 'solo cambia quién paga' borra que la transferencia casi nunca libera del todo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

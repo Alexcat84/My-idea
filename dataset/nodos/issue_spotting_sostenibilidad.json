@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Encontrar tus problemas ambientales (identificación de problemas)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Este es tu primer paso para meter la sostenibilidad en tu negocio. Se trata de que identifiques qué problemas ambientales o sociales te afectan, mirando dos direcciones: hacia adentro (los impactos que tú generas y de los que vas a ser responsable) y hacia afuera (cómo cosas externas como nuevas normas, escasez de recursos o cambios tecnológicos pueden golpear tu negocio). Usa el marco AUDIO para asegurarte de revisar todo: lo que generas tú, lo de tus proveedores y lo de tus clientes.",
+  "resumen_teorico": "Este es tu primer paso para meter la sostenibilidad en tu negocio. Se trata de que identifiques qué problemas ambientales o sociales te afectan, mirando dos direcciones: de adentro hacia afuera (cómo tus actividades afectan al ambiente) y de afuera hacia adentro (de qué recursos naturales depende tu negocio y cómo podría afectarse tu acceso a ellos). Usa el marco AUDIO para asegurarte de revisar todo: lo que generas tú, lo de tus proveedores y lo de tus clientes.",
   "pasos_accionables": [
     "Lista los impactos ambientales que generan tus propias operaciones (residuos, emisiones, uso de agua, químicos, etc.)",
     "Revisa los impactos de tus proveedores y los de tus clientes cuando usan tu producto",
-    "Usa el marco AUDIO para ordenar este análisis",
+    "Usa el marco AUDIO para ordenar este análisis y, al final, mira cada problema también como una posible oportunidad de diferenciarte de tu competencia",
     "Identifica quiénes están mirando este tema (reguladores, organizaciones, comunidades, clientes) y entiende qué piensan",
     "Identifica tendencias que vienen (normas nuevas, tecnología, mercado) que puedan cambiar el panorama"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Identifica Problemas Ambientales Propios",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-issue_spotting_sostenibilidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa el marco AUDIO para ordenar este análisis",
+      "texto_nuevo": "Usa el marco AUDIO para ordenar este análisis y, al final, mira cada problema también como una posible oportunidad de diferenciarte de tu competencia",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1295-1305",
+        "frase": "Turn the analysis around to see if the issues presented provide a way to differentiate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El marco incluye dar la vuelta a cada problema para ver si es una oportunidad de diferenciarte, y el nodo no lo recoge en ninguna parte.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-073-issue_spotting_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este es tu primer paso para meter la sostenibilidad en tu negocio. Se trata de que identifiques qué problemas ambientales o sociales te afectan, mirando dos direcciones: hacia adentro (los impactos que tú generas y de los que vas a ser responsable) y hacia afuera (cómo cosas externas como nuevas normas, escasez de recursos o cambios tecnológicos pueden golpear tu negocio). Usa el marco AUDIO para asegurarte de revisar todo: lo que generas tú, lo de tus proveedores y lo de tus clientes.",
+      "texto_nuevo": "Este es tu primer paso para meter la sostenibilidad en tu negocio. Se trata de que identifiques qué problemas ambientales o sociales te afectan, mirando dos direcciones: de adentro hacia afuera (cómo tus actividades afectan al ambiente) y de afuera hacia adentro (de qué recursos naturales depende tu negocio y cómo podría afectarse tu acceso a ellos). Usa el marco AUDIO para asegurarte de revisar todo: lo que generas tú, lo de tus proveedores y lo de tus clientes.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1223-1255",
+        "frase": "understand your company's dependence on “natural capital” such as water"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define la mirada de afuera hacia adentro como la dependencia de recursos naturales; normas y tecnología no forman parte de ella, y 'vas a ser responsable' no está.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

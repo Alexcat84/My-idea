@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Conseguir dinero de fondos de capital de riesgo (Venture Capital o VC)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Los inversionistas de capital de riesgo (VC) administran dinero de otras personas (fondos que ellos manejan, llamados LP) y buscan ganancias altas invirtiendo en negocios con gran potencial de crecimiento. Si aceptas su dinero, te dan mucho más capital que otras fuentes, además de contactos (a futuros inversionistas, clientes, talento) y ayuda práctica (mentoría, una forma más ordenada de gobernar tu negocio). A cambio, te van a pedir parte del control de tu negocio, un lugar en tu junta directiva (board) y más disciplina en cómo operas. Tener a un VC reconocido detrás también te puede dar más credibilidad frente al mercado.",
+  "resumen_teorico": "Los inversionistas de capital de riesgo (VC) administran dinero de otras personas (los inversionistas que ponen el dinero en sus fondos, llamados LP) y buscan ganancias altas invirtiendo en negocios con gran potencial de crecimiento. Si aceptas su dinero, te dan mucho más capital que otras fuentes, además de contactos (a futuros inversionistas, clientes, talento) y ayuda práctica (mentoría, una forma más ordenada de gobernar tu negocio). A cambio, te van a pedir parte del control de tu negocio, un lugar en tu junta directiva (board) y más disciplina en cómo operas. Tener a un VC reconocido detrás también te puede dar más credibilidad frente al mercado.",
   "pasos_accionables": [
     "Prepara un plan de negocio y una presentación (pitch deck) sólida para pasar la revisión a fondo (due diligence) que te van a hacer",
     "Busca inversionistas de capital de riesgo que trabajen con tu tipo de negocio y tu etapa (arranque, primera ronda seria, etc.)",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Consigue Capital de Riesgo",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-072-financiamiento_venture_capital-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los inversionistas de capital de riesgo (VC) administran dinero de otras personas (fondos que ellos manejan, llamados LP) y buscan ganancias altas invirtiendo en negocios con gran potencial de crecimiento. Si aceptas su dinero, te dan mucho más capital que otras fuentes, además de contactos (a futuros inversionistas, clientes, talento) y ayuda práctica (mentoría, una forma más ordenada de gobernar tu negocio). A cambio, te van a pedir parte del control de tu negocio, un lugar en tu junta directiva (board) y más disciplina en cómo operas. Tener a un VC reconocido detrás también te puede dar más credibilidad frente al mercado.",
+      "texto_nuevo": "Los inversionistas de capital de riesgo (VC) administran dinero de otras personas (los inversionistas que ponen el dinero en sus fondos, llamados LP) y buscan ganancias altas invirtiendo en negocios con gran potencial de crecimiento. Si aceptas su dinero, te dan mucho más capital que otras fuentes, además de contactos (a futuros inversionistas, clientes, talento) y ayuda práctica (mentoría, una forma más ordenada de gobernar tu negocio). A cambio, te van a pedir parte del control de tu negocio, un lugar en tu junta directiva (board) y más disciplina en cómo operas. Tener a un VC reconocido detrás también te puede dar más credibilidad frente al mercado.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2756",
+        "frase": "VCs raise capital from limited partners (LPs), most of which are large institutions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): Los LP son quienes ponen el dinero en el fondo del VC, no los fondos que el VC maneja.; Mismo defecto: se invierte el papel de los LP.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

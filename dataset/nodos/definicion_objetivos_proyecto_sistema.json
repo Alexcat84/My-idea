@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Definición de Objetivos de Proyecto mediante Componentes Cohesivos",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Un diseño conceptual efectivo se descompone en 3 a 9 componentes de alto nivel, cada uno altamente cohesivo (realiza un conjunto de tareas relacionadas a una sola actividad bien definida). Cada componente se convierte en un objetivo de proyecto, alcanzable en 3 a 9 meses, que debe aportar valor por sí mismo sin depender de pasos futuros.",
+  "resumen_teorico": "Un diseño conceptual efectivo suele descomponerse en 3 a 9 componentes de alto nivel, cada uno altamente cohesivo (realiza un conjunto de tareas relacionadas a una sola actividad bien definida). Cada componente se convierte en un objetivo de proyecto, alcanzable en 3 a 9 meses o menos, que debe aportar valor por sí mismo sin depender de pasos futuros.",
   "pasos_accionables": [
     "Descomponer el diseño conceptual en componentes de alto nivel (entre 3 y 9)",
     "Verificar que cada componente sea cohesivo: haga una sola cosa bien definida",
     "Convertir cada componente en un objetivo de proyecto con valor independiente",
-    "Asegurar que cada objetivo sea alcanzable en un plazo de 3 a 9 meses",
+    "Asegurar que cada objetivo sea alcanzable en un plazo de 3 a 9 meses o menos, priorizando los que se logran rápido",
     "Evitar que un objetivo dependa de la finalización previa de otro",
     "Divide tu proyecto en partes independientes que dependan lo menos posible entre sí",
     "Diseña las tareas para que puedas ejecutarlas en paralelo, no en cascada",
@@ -33,5 +33,40 @@
   "etiqueta_arbol": "Divide tu Sistema en Piezas",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-068-definicion_objetivos_proyecto_sistema-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un diseño conceptual efectivo se descompone en 3 a 9 componentes de alto nivel, cada uno altamente cohesivo (realiza un conjunto de tareas relacionadas a una sola actividad bien definida). Cada componente se convierte en un objetivo de proyecto, alcanzable en 3 a 9 meses, que debe aportar valor por sí mismo sin depender de pasos futuros.",
+      "texto_nuevo": "Un diseño conceptual efectivo suele descomponerse en 3 a 9 componentes de alto nivel, cada uno altamente cohesivo (realiza un conjunto de tareas relacionadas a una sola actividad bien definida). Cada componente se convierte en un objetivo de proyecto, alcanzable en 3 a 9 meses o menos, que debe aportar valor por sí mismo sin depender de pasos futuros.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4610-4614",
+        "frase": "There will tend to be somewhere between three and nine high-level components"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que suele haber entre tres y nueve componentes; el nodo lo vuelve regla fija.; El libro dice tres a nueve meses 'o menos' y pide buscar objetivos que se logren pronto; se pierde el 'o menos'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-068-definicion_objetivos_proyecto_sistema-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asegurar que cada objetivo sea alcanzable en un plazo de 3 a 9 meses",
+      "texto_nuevo": "Asegurar que cada objetivo sea alcanzable en un plazo de 3 a 9 meses o menos, priorizando los que se logran rápido",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4614",
+        "frase": "Objectives should each be achievable in three to nine months (or less)."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el 'o menos' del libro y su preferencia por objetivos que se logren pronto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

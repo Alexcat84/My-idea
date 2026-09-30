@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "El reemplazo del fundador como director general (CEO)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "A medida que tu negocio crece, es probable que dejes de ser tú quien dirige la empresa: más de la mitad de los fundadores son reemplazados en ese puesto, típicamente hacia la tercera ronda de inversión. Esto puede pasar porque decides dar un paso al costado, porque los resultados no llegan (lo que aumenta mucho la probabilidad de que la junta busque a alguien externo), o incluso por éxito: lograste desarrollar el producto y conseguir fondos, pero te faltan las habilidades que pide la siguiente etapa, como ventas, marketing o coordinar varias áreas a la vez. Quien dispara el cambio importa: la junta inicia el 73% de estas sucesiones, y solo el 27% las inicia el propio fundador. Si te reemplazan, puedes seguir en la empresa como ejecutivo o miembro de la junta, y que la transición funcione depende de quién te sucede y de cómo se maneje el cambio.",
+  "resumen_teorico": "A medida que tu negocio crece, es probable que dejes de ser tú quien dirige la empresa: más de la mitad de los fundadores son reemplazados en ese puesto, típicamente hacia la tercera ronda de inversión. Esto puede pasar porque decides dar un paso al costado, porque los resultados no llegan y la junta cree que otro CEO lo haría mejor, o incluso por éxito: lograste desarrollar el producto y conseguir fondos, pero te faltan las habilidades que pide la siguiente etapa, como ventas, marketing o coordinar varias áreas a la vez. Quien dispara el cambio importa: la junta u otra parte, como inversionistas que no están en la junta, inicia el 73% de estas sucesiones, y solo el 27% las inicia el propio fundador. Si te reemplazan, puedes seguir en la empresa como ejecutivo o miembro de la junta, y que la transición funcione depende de quién te sucede y de cómo se maneje el cambio.",
   "pasos_accionables": [
     "Desde el principio, define con la junta métricas claras de desempeño para evaluar tu gestión como director general",
     "Evalúa si tus habilidades actuales encajan con los desafíos de la siguiente etapa del negocio, por ejemplo pasar de desarrollar el producto a vender y hacer marketing",
@@ -45,5 +45,23 @@
   "etiqueta_arbol": "Planea tu Sucesión como CEO",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-072-founder_ceo_succession_process-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que tu negocio crece, es probable que dejes de ser tú quien dirige la empresa: más de la mitad de los fundadores son reemplazados en ese puesto, típicamente hacia la tercera ronda de inversión. Esto puede pasar porque decides dar un paso al costado, porque los resultados no llegan (lo que aumenta mucho la probabilidad de que la junta busque a alguien externo), o incluso por éxito: lograste desarrollar el producto y conseguir fondos, pero te faltan las habilidades que pide la siguiente etapa, como ventas, marketing o coordinar varias áreas a la vez. Quien dispara el cambio importa: la junta inicia el 73% de estas sucesiones, y solo el 27% las inicia el propio fundador. Si te reemplazan, puedes seguir en la empresa como ejecutivo o miembro de la junta, y que la transición funcione depende de quién te sucede y de cómo se maneje el cambio.",
+      "texto_nuevo": "A medida que tu negocio crece, es probable que dejes de ser tú quien dirige la empresa: más de la mitad de los fundadores son reemplazados en ese puesto, típicamente hacia la tercera ronda de inversión. Esto puede pasar porque decides dar un paso al costado, porque los resultados no llegan y la junta cree que otro CEO lo haría mejor, o incluso por éxito: lograste desarrollar el producto y conseguir fondos, pero te faltan las habilidades que pide la siguiente etapa, como ventas, marketing o coordinar varias áreas a la vez. Quien dispara el cambio importa: la junta u otra parte, como inversionistas que no están en la junta, inicia el 73% de estas sucesiones, y solo el 27% las inicia el propio fundador. Si te reemplazan, puedes seguir en la empresa como ejecutivo o miembro de la junta, y que la transición funcione depende de quién te sucede y de cómo se maneje el cambio.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3090, 3112, 3194",
+        "frase": "the board believes a new CEO could do better."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El 73% es de la junta u otra parte, como inversionistas fuera de la junta; la junta sola es el 62%.; El libro liga el sucesor externo por mal desempeño a las grandes empresas; en las startups el sucesor casi siempre es externo.; Mismo defecto que la marca 0.; No es lo opuesto: se cae 'u otra parte' del iniciador del 73%.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

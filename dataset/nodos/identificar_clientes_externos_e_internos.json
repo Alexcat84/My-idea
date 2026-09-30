@@ -10,7 +10,7 @@
     "Listar clientes externos: compradores, usuarios finales, comerciantes, procesadores, proveedores, potenciales y ocultos",
     "Identificar clientes internos analizando las relaciones proveedor-procesador-cliente dentro de la organización",
     "Distinguir entre quien ordena el producto y quien lo usa",
-    "Priorizar el elenco de clientes de forma consensuada por el equipo"
+    "Priorizar el elenco de clientes para enfocar el presupuesto en lo más importante"
   ],
   "entregable_esperado": "Lista completa y clasificada de clientes externos e internos, con diagrama de flujo del proceso",
   "nodos_previos": [
@@ -54,6 +54,23 @@
         "evidencia": "F19-014: Es un paso del Diseño para la Calidad que identifica y prioriza clientes al diseñar el producto, sin probar nada con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-071-identificar_clientes_externos_e_internos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar el elenco de clientes de forma consensuada por el equipo",
+      "texto_nuevo": "Priorizar el elenco de clientes para enfocar el presupuesto en lo más importante",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3841",
+        "frase": "Prioritizing the customers and their needs ensures that the budget is focused"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro prioriza a los clientes para enfocar el presupuesto, pero no dice que sea por consenso del equipo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

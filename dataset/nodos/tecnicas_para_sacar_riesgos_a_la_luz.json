@@ -4,12 +4,12 @@
   "dominio": "risk_management",
   "titulo_concepto": "Técnicas de Identificación de Riesgos",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
+  "resumen_teorico": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, es la base de todas las técnicas; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías, sobre todo si tu proyecto se parece a otros que conoces y trae pocas novedades; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
   "pasos_accionables": [
     "Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo.",
     "Busca o arma una lista de chequeo de riesgos típicos de tu tipo de negocio.",
     "Estudia proyectos parecidos que fracasaron y anota por qué cayeron.",
-    "Reescribe cada riesgo como una frase completa de causa y efecto, no como una palabra suelta."
+    "Reescribe cada riesgo como una frase completa, no como una palabra suelta: la situación, el evento que lo dispara y su probabilidad, sus consecuencias y qué tan inciertas son, y sus plazos."
   ],
   "entregable_esperado": "Una lista de riesgos sacada con varias técnicas, cada uno escrito como frase completa de causa y efecto.",
   "nodos_previos": [
@@ -108,6 +108,39 @@
         "evidencia": "F03-007: Identificar y redactar los riesgos del proyecto es parte del plan; no se prueba nada con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-067-tecnicas_para_sacar_riesgos_a_la_luz-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
+      "texto_nuevo": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, es la base de todas las técnicas; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías, sobre todo si tu proyecto se parece a otros que conoces y trae pocas novedades; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "3126, 3259",
+        "frase": "The active ingredient common to every one of these techniques is brainstorming."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro limita la eficacia de las listas a proyectos conocidos con pocas novedades; para un proyecto nuevo cambia el consejo.; El libro no limita la lluvia de ideas a lo obvio; la presenta como el ingrediente común de todas las técnicas.; Mismo defecto: 'saca lo obvio' no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-067-tecnicas_para_sacar_riesgos_a_la_luz-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reescribe cada riesgo como una frase completa de causa y efecto, no como una palabra suelta.",
+      "texto_nuevo": "Reescribe cada riesgo como una frase completa, no como una palabra suelta: la situación, el evento que lo dispara y su probabilidad, sus consecuencias y qué tan inciertas son, y sus plazos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "4650-4668",
+        "frase": "trigger event and its likelihood of occurrence and the nature and uncertainty of the consequences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La frase de riesgo del libro incluye también la probabilidad, la incertidumbre de la consecuencia y los plazos.; Mismo defecto: faltan la probabilidad del evento y los plazos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

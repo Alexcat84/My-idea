@@ -4,9 +4,9 @@
   "dominio": "franquicias",
   "titulo_concepto": "Gestión de Incumplimiento y Terminación de Franquiciados",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "A diferencia de un empleado, un franquiciador no puede terminar a un franquiciado a voluntad; debe demostrar causa (violación del contrato) y, en la mayoría de los casos, dar oportunidad de 'cura' del incumplimiento mediante una carta de default. Existen incumplimientos no subsanables (falsificación de datos, uso indebido de marca, insolvencia, delitos graves) que permiten terminación inmediata, y subsanables (ej. tienda sucia, licencia faltante) que requieren un plazo de corrección.",
+  "resumen_teorico": "A diferencia de un empleado, un franquiciador no puede terminar a un franquiciado a voluntad; debe demostrar causa (violación del contrato) y, en la mayoría de los casos, dar oportunidad de 'cura' del incumplimiento mediante una carta de default. En general, toda violación se considera subsanable salvo que el contrato la liste expresamente como no subsanable (por ejemplo, falsificación de datos, uso indebido de marca, insolvencia, delitos graves), y esas permiten terminación inmediata; las subsanables (ej. tienda sucia, licencia faltante) requieren un plazo de corrección.",
   "pasos_accionables": [
-    "Definir en el contrato de franquicia qué violaciones son curables y cuáles no, tras aceptar y documentar qué decisiones operativas quedarán bajo control del franquiciado",
+    "Definir en el contrato de franquicia qué violaciones son curables y cuáles no",
     "Establecer plazos estándar de cura para cada tipo de incumplimiento, graduados según su gravedad",
     "Crear plantilla de carta de default con descripción del problema y plazo de corrección",
     "Documentar el proceso de escalamiento para incumplimientos repetidos (ej. checklist de cumplimiento fallido 3 veces)",
@@ -41,5 +41,40 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-069-gestion_terminacion_franquiciado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de un empleado, un franquiciador no puede terminar a un franquiciado a voluntad; debe demostrar causa (violación del contrato) y, en la mayoría de los casos, dar oportunidad de 'cura' del incumplimiento mediante una carta de default. Existen incumplimientos no subsanables (falsificación de datos, uso indebido de marca, insolvencia, delitos graves) que permiten terminación inmediata, y subsanables (ej. tienda sucia, licencia faltante) que requieren un plazo de corrección.",
+      "texto_nuevo": "A diferencia de un empleado, un franquiciador no puede terminar a un franquiciado a voluntad; debe demostrar causa (violación del contrato) y, en la mayoría de los casos, dar oportunidad de 'cura' del incumplimiento mediante una carta de default. En general, toda violación se considera subsanable salvo que el contrato la liste expresamente como no subsanable (por ejemplo, falsificación de datos, uso indebido de marca, insolvencia, delitos graves), y esas permiten terminación inmediata; las subsanables (ej. tienda sucia, licencia faltante) requieren un plazo de corrección.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "460-462",
+        "frase": "will be deemed a curable default unless it is specifically listed as noncurable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en general toda violación es subsanable salvo que el contrato la liste como no subsanable; los ejemplos no lo son por sí mismos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-069-gestion_terminacion_franquiciado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir en el contrato de franquicia qué violaciones son curables y cuáles no, tras aceptar y documentar qué decisiones operativas quedarán bajo control del franquiciado",
+      "texto_nuevo": "Definir en el contrato de franquicia qué violaciones son curables y cuáles no",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "462",
+        "frase": "will be deemed a curable default unless it is specifically listed as noncurable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pone como requisito previo documentar las decisiones operativas del franquiciado al definir las violaciones curables y no curables.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

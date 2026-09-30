@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Comparación de Enfoques de los Gurús de la Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cinco figuras históricas moldearon la gestión de calidad moderna, cada una con énfasis distintos: Juran (enfoque balanceado managerial-estadístico-tecnológico, trilogía de calidad), Deming (14 puntos y sistema de conocimiento profundo), Feigenbaum (control total de calidad en todas las funciones), Crosby (conformidad con requerimientos y cero defectos) e Ishikawa (integración de herramientas simples de mejora para los japoneses). Comprender estas diferencias permite a las organizaciones elegir y adaptar el marco que mejor se ajuste a su contexto y necesidades específicas.",
+  "resumen_teorico": "Cinco figuras históricas moldearon la gestión de calidad moderna, cada una con énfasis distintos: Juran (enfoque balanceado managerial-estadístico-tecnológico, trilogía de calidad), Deming (14 puntos y sistema de conocimiento profundo), Feigenbaum (control total de calidad en todas las funciones), Crosby (conformidad con requerimientos y cero defectos) e Ishikawa (integración de herramientas simples de mejora para los japoneses). Sus enfoques tienen similitudes y diferencias, sobre todo en el énfasis relativo en lo gerencial, lo estadístico, lo tecnológico y lo conductual.",
   "pasos_accionables": [
     "Estudiar los principios centrales de cada uno de los cinco gurús de la calidad",
-    "Evaluar cuál enfoque (o combinación) se ajusta mejor a la cultura y necesidades de la organización",
-    "Seleccionar y adaptar el marco conceptual elegido a las circunstancias específicas del negocio",
+    "Sugerencia de My Idea: evaluar cuál enfoque (o combinación) se ajusta mejor a la cultura y necesidades de la organización",
+    "Sugerencia de My Idea: seleccionar y adaptar el marco conceptual elegido a las circunstancias específicas del negocio",
     "Sugerencia de My Idea: documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad"
   ],
   "entregable_esperado": "Documento de análisis comparativo de enfoques de calidad con la selección justificada del marco a adoptar",
@@ -54,6 +54,56 @@
         "evidencia": "F25-018: Comparar enfoques de calidad para elegir y justificar el marco del sistema de gestion de calidad es disenar la estrategia. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-071-enfoques_gurus_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cinco figuras históricas moldearon la gestión de calidad moderna, cada una con énfasis distintos: Juran (enfoque balanceado managerial-estadístico-tecnológico, trilogía de calidad), Deming (14 puntos y sistema de conocimiento profundo), Feigenbaum (control total de calidad en todas las funciones), Crosby (conformidad con requerimientos y cero defectos) e Ishikawa (integración de herramientas simples de mejora para los japoneses). Comprender estas diferencias permite a las organizaciones elegir y adaptar el marco que mejor se ajuste a su contexto y necesidades específicas.",
+      "texto_nuevo": "Cinco figuras históricas moldearon la gestión de calidad moderna, cada una con énfasis distintos: Juran (enfoque balanceado managerial-estadístico-tecnológico, trilogía de calidad), Deming (14 puntos y sistema de conocimiento profundo), Feigenbaum (control total de calidad en todas las funciones), Crosby (conformidad con requerimientos y cero defectos) e Ishikawa (integración de herramientas simples de mejora para los japoneses). Sus enfoques tienen similitudes y diferencias, sobre todo en el énfasis relativo en lo gerencial, lo estadístico, lo tecnológico y lo conductual.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "217",
+        "frase": "The approaches of these gurus have similarities as well as differences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que los enfoques tienen similitudes y diferencias; no que sirvan para elegir y adaptar un marco.; Mismo defecto: la utilidad para elegir un marco es añadida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-071-enfoques_gurus_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar cuál enfoque (o combinación) se ajusta mejor a la cultura y necesidades de la organización",
+      "texto_nuevo": "Sugerencia de My Idea: evaluar cuál enfoque (o combinación) se ajusta mejor a la cultura y necesidades de la organización",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "217",
+        "frase": "This book draws upon the contributions of these and other experts."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no indica evaluar ni elegir entre los enfoques; es un consejo práctico.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-071-enfoques_gurus_calidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar y adaptar el marco conceptual elegido a las circunstancias específicas del negocio",
+      "texto_nuevo": "Sugerencia de My Idea: seleccionar y adaptar el marco conceptual elegido a las circunstancias específicas del negocio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "217",
+        "frase": "This book draws upon the contributions of these and other experts."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no indica seleccionar ni adaptar un marco; es un consejo práctico.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "El Sensor: Medición del Desempeño Real",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El sensor es el dispositivo o persona que detecta y convierte datos en información utilizable para la toma de decisiones. Puede ser un instrumento tecnológico, un sistema de datos, o un ser humano (encuestas, entrevistas). Es crítico definir la precisión, unidad de medida y frecuencia de medición.",
+  "resumen_teorico": "El sensor es el dispositivo o persona que detecta y convierte datos en información utilizable para la toma de decisiones. Puede ser un instrumento tecnológico, un sistema de datos, o un ser humano (encuestas, entrevistas). Es crítico definir exactitud y precisión, unidad de medida, frecuencia, registro, reporte y análisis de los datos, y quién mide.",
   "pasos_accionables": [
     "Seleccionar el tipo de sensor adecuado (tecnológico, de datos o humano)",
     "Definir la unidad de medida comprensible y enfocada en el cliente",
@@ -22,5 +22,23 @@
   "etiqueta_arbol": "Mide tu Desempeño Real",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-sensor_medicion_desempeno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El sensor es el dispositivo o persona que detecta y convierte datos en información utilizable para la toma de decisiones. Puede ser un instrumento tecnológico, un sistema de datos, o un ser humano (encuestas, entrevistas). Es crítico definir la precisión, unidad de medida y frecuencia de medición.",
+      "texto_nuevo": "El sensor es el dispositivo o persona que detecta y convierte datos en información utilizable para la toma de decisiones. Puede ser un instrumento tecnológico, un sistema de datos, o un ser humano (encuestas, entrevistas). Es crítico definir exactitud y precisión, unidad de medida, frecuencia, registro, reporte y análisis de los datos, y quién mide.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7514",
+        "frase": "the means by which data will be recorded, the format for reporting the data"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide especificar además la exactitud, el registro, el formato de reporte, el análisis de los datos y quién mide; la lista del nodo queda en tres.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

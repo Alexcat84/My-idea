@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcular activos corrientes divididos entre pasivos corrientes (current ratio)",
     "Calcular (activos corrientes - inventario) dividido entre pasivos corrientes (quick ratio)",
-    "Verificar que ambos ratios estén por encima de 1, especialmente en periodos de alto crecimiento",
+    "Verificar que el current ratio esté bien por encima de 1, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y que el quick ratio esté por encima de 1, especialmente en periodos de alto crecimiento",
     "Comparar con estándares de la industria para determinar si hay exceso de efectivo ocioso o riesgo de falta de liquidez"
   ],
   "entregable_esperado": "Reporte de liquidez con current ratio y quick ratio calculados y análisis de suficiencia de caja",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Mide tu Liquidez de Corto Plazo",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-069-ratios_liquidez-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar que ambos ratios estén por encima de 1, especialmente en periodos de alto crecimiento",
+      "texto_nuevo": "Verificar que el current ratio esté bien por encima de 1, porque en la mayoría de las industrias cerca de 1 ya es demasiado bajo, y que el quick ratio esté por encima de 1, especialmente en periodos de alto crecimiento",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2675-2677",
+        "frase": "a current ratio is too low when it is getting close to 1"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo límite perdido: el current ratio debe quedar bien por encima de 1.; Para el current ratio, el libro dice que acercarse a 1 ya es demasiado bajo en la mayoría de las industrias.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "El riesgo de repartir títulos de gerente antes de tiempo",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Si eres cofundador y no eres el líder principal, es tentador ponerte un título grande (director de tecnología, director financiero, y similares) desde el día uno. El problema es que, a medida que tu negocio crezca, quizás no seas la persona indicada para ese puesto. Bajarle el título o reemplazar a alguien que ya se acostumbró a un cargo grande es muy difícil y puede romper la relación entre socios. Por eso conviene ser cuidadoso al repartir estos títulos desde el principio.",
+  "resumen_teorico": "Si eres cofundador y no eres el líder principal, es tentador ponerte un título grande (director de tecnología, director financiero, y similares) desde el día uno. El problema es que, a medida que tu negocio crezca, quizás no seas la persona indicada para ese puesto. Bajarle el título o reemplazar a alguien que ya se acostumbró a un cargo grande es muy difícil y puede ser muy disruptivo para tu negocio. Por eso conviene ser cuidadoso al repartir estos títulos desde el principio.",
   "pasos_accionables": [
     "Antes de ponerte o ponerle a alguien un título grande, pregúntate si esa persona podrá crecer al mismo ritmo que el negocio",
-    "Considera usar títulos más flexibles o provisionales mientras estás empezando",
+    "Sugerencia de My Idea: considera usar títulos más flexibles o provisionales mientras estás empezando",
     "Deja claro entre los socios que los roles se van a revisar a medida que el negocio crezca"
   ],
   "entregable_esperado": "Lista de títulos asignados con justificación y cláusula de revisión futura",
@@ -23,5 +23,40 @@
   "etiqueta_arbol": "No Infles Títulos muy Pronto",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-072-riesgo_titulos_inflados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si eres cofundador y no eres el líder principal, es tentador ponerte un título grande (director de tecnología, director financiero, y similares) desde el día uno. El problema es que, a medida que tu negocio crezca, quizás no seas la persona indicada para ese puesto. Bajarle el título o reemplazar a alguien que ya se acostumbró a un cargo grande es muy difícil y puede romper la relación entre socios. Por eso conviene ser cuidadoso al repartir estos títulos desde el principio.",
+      "texto_nuevo": "Si eres cofundador y no eres el líder principal, es tentador ponerte un título grande (director de tecnología, director financiero, y similares) desde el día uno. El problema es que, a medida que tu negocio crezca, quizás no seas la persona indicada para ese puesto. Bajarle el título o reemplazar a alguien que ya se acostumbró a un cargo grande es muy difícil y puede ser muy disruptivo para tu negocio. Por eso conviene ser cuidadoso al repartir estos títulos desde el principio.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "1467",
+        "frase": "demoting or replacing “overtitled” founders can be quite disruptive"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que degradar o reemplazar a un fundador con título inflado puede ser muy disruptivo; romper la relación entre socios es un efecto añadido.; Mismo defecto: el efecto sobre la relación entre socios no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-072-riesgo_titulos_inflados-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considera usar títulos más flexibles o provisionales mientras estás empezando",
+      "texto_nuevo": "Sugerencia de My Idea: considera usar títulos más flexibles o provisionales mientras estás empezando",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "1467",
+        "frase": "teams should be more hesitant to assign C-level titles to themselves"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone títulos flexibles ni provisionales; queda como sugerencia práctica.; Mismo defecto; se conserva como sugerencia de la casa.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

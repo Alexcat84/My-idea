@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Círculos de Relación para Elegir Cofundadores",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Los cofundadores pueden buscarse en tres círculos concéntricos: el círculo interno (familiares, amigos cercanos, pareja), el círculo medio (contactos indirectos a través de conocidos mutuos) y el círculo externo (desconocidos encontrados por búsqueda impersonal). Fundar con familiares o amigos cercanos ofrece alta confianza inicial pero riesgos subestimados de conflicto relacional; fundar con conocidos o desconocidos reduce esos riesgos pero requiere procesos más formales de evaluación.",
+  "resumen_teorico": "Los cofundadores pueden buscarse en tres círculos concéntricos: el círculo interno (familiares, amigos cercanos, pareja), el círculo medio (contactos indirectos a través de conocidos mutuos) y el círculo externo (desconocidos encontrados por búsqueda impersonal). Fundar con familiares o amigos cercanos ofrece alta confianza inicial pero riesgos subestimados de conflicto relacional; fundar con conocidos o desconocidos reduce esos riesgos, porque suelen hablar de los temas difíciles antes de comprometerse. Aun así, los equipos más estables son los de excompañeros de trabajo.",
   "pasos_accionables": [
     "Mapear tu red de contactos según los tres círculos: cercanos, indirectos y desconocidos.",
     "Evaluar honestamente los riesgos de mezclar relaciones personales (familia, pareja) con la sociedad de negocio.",
@@ -37,5 +37,23 @@
   "etiqueta_arbol": "Elige Cofundadores en tus Círculos",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-072-seleccion_relaciones_cofundadores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los cofundadores pueden buscarse en tres círculos concéntricos: el círculo interno (familiares, amigos cercanos, pareja), el círculo medio (contactos indirectos a través de conocidos mutuos) y el círculo externo (desconocidos encontrados por búsqueda impersonal). Fundar con familiares o amigos cercanos ofrece alta confianza inicial pero riesgos subestimados de conflicto relacional; fundar con conocidos o desconocidos reduce esos riesgos pero requiere procesos más formales de evaluación.",
+      "texto_nuevo": "Los cofundadores pueden buscarse en tres círculos concéntricos: el círculo interno (familiares, amigos cercanos, pareja), el círculo medio (contactos indirectos a través de conocidos mutuos) y el círculo externo (desconocidos encontrados por búsqueda impersonal). Fundar con familiares o amigos cercanos ofrece alta confianza inicial pero riesgos subestimados de conflicto relacional; fundar con conocidos o desconocidos reduce esos riesgos, porque suelen hablar de los temas difíciles antes de comprometerse. Aun así, los equipos más estables son los de excompañeros de trabajo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "1047, 1167",
+        "frase": "Teams of prior coworkers were significantly more stable than both teams"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no exige procesos formales de evaluación; dice que los desconocidos suelen tener las conversaciones difíciles antes de comprometerse.; Mismo defecto que la marca 0: se pierde qué equipos son los más estables.; Se cae que los equipos de excompañeros de trabajo son los más estables, lo que cambia dónde conviene buscar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

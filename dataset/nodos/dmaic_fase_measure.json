@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Mapear el proceso en detalle mediante diagramas de flujo",
     "Medir el desempeño base (Ys) usando análisis Pareto",
-    "Realizar un FMEA para identificar modos de falla potenciales (Xs)",
+    "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs)",
     "Evaluar la capacidad del sistema de medición (Gage R&R)",
-    "Determinar si el proceso está en control estadístico y medir su capacidad a corto plazo",
+    "Determinar si el proceso está en control estadístico; si no lo está, eliminar las causas especiales de variación antes de medir su capacidad a corto plazo",
     "Confirmar o modificar el objetivo del proyecto según los datos obtenidos",
     "Generar una lista priorizada de teorías de causa raíz usando diagramas causa-efecto"
   ],
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Mide el Desempeño Actual",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-071-dmaic_fase_measure-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Realizar un FMEA para identificar modos de falla potenciales (Xs)",
+      "texto_nuevo": "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14412",
+        "frase": "listing potential process defects (Ys) that could occur, their effects and their potential causes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En el libro los defectos potenciales del proceso son las Ys y las Xs son sus causas potenciales; el nodo llama Xs a los modos de falla.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-071-dmaic_fase_measure-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si el proceso está en control estadístico y medir su capacidad a corto plazo",
+      "texto_nuevo": "Determinar si el proceso está en control estadístico; si no lo está, eliminar las causas especiales de variación antes de medir su capacidad a corto plazo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14438",
+        "frase": "take action to remove the special causes of variation before proceeding"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: falta eliminar las causas especiales antes de medir la capacidad.; Se pierde la condición: si el proceso no está en control, primero se eliminan las causas especiales.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

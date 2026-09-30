@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "La logística inversa (gestión de devoluciones, exceso de inventario y productos al final de su vida útil) tradicionalmente se ve como un costo de cumplimiento, pero las empresas Eco-Advantage la convierten en una fuente de valor mediante un sistema de ciclo cerrado. Opciones como reacondicionar, reparar, revender a terceros o reciclar permiten recuperar valor en lugar de simplemente desechar productos, generando ahorros y hasta ingresos significativos.",
   "pasos_accionables": [
-    "Evaluar cada producto devuelto según la jerarquía: reacondicionar, reparar, vender a terceros, reciclar o desechar.",
+    "Evaluar cada producto devuelto según las opciones disponibles: reacondicionar, recuperar componentes para reutilizarlos, reparar, vender a terceros, reciclar o desechar.",
     "Establecer partnerships con clientes, fabricantes y proveedores externos de servicios de reciclaje/reventa.",
     "Crear canales de reventa (ej. plataformas online) para productos recuperados.",
     "Involucrar a profesionales de logística inversa en el rediseño de productos para reducir devoluciones futuras.",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Convierte tus Devoluciones en Ganancia",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-logistica_inversa_rentable-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar cada producto devuelto según la jerarquía: reacondicionar, reparar, vender a terceros, reciclar o desechar.",
+      "texto_nuevo": "Evaluar cada producto devuelto según las opciones disponibles: reacondicionar, recuperar componentes para reutilizarlos, reparar, vender a terceros, reciclar o desechar.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5017",
+        "frase": "the full suite of options that every company should consider for reclaimed products"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro presenta un conjunto de opciones a considerar, no una jerarquía.; Falta separar componentes para reutilizarlos, que el libro incluye entre las opciones.; Mismo defecto que las marcas 0 y 1: jerarquía inexistente y opción omitida.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

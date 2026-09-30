@@ -7,8 +7,8 @@
   "resumen_teorico": "Un estado de resultados 'pro forma' puede significar dos cosas: una proyección financiera para un negocio futuro, o un estado que excluye cargos únicos o inusuales para mostrar un desempeño 'ajustado'. Aunque útil para proyecciones, los pro forma que excluyen pérdidas reales pueden distorsionar la percepción del desempeño real de la empresa.",
   "pasos_accionables": [
     "Al crear un plan de negocio, elaborar un estado de resultados pro forma proyectado para los primeros 1-2 años.",
-    "Al evaluar una adquisición o el propio negocio, comparar siempre el pro forma con los números reales (actuals).",
-    "Desconfiar de pro formas que excluyen cargos negativos sin justificación clara del contexto."
+    "Al evaluar una adquisición o el propio negocio, comparar la mayoría de las veces el pro forma con los números reales (actuals) y, si hay que elegir uno solo, quedarse con los reales, que probablemente sean la mejor apuesta.",
+    "Desconfiar de pro formas que excluyen cargos negativos, porque esos cargos sí ocurrieron."
   ],
   "entregable_esperado": "Un estado de resultados proyectado (pro forma) para el nuevo negocio, acompañado de un análisis comparativo con los actuals cuando estén disponibles.",
   "nodos_previos": [
@@ -26,5 +26,41 @@
   "etiqueta_arbol": "Compara Proyección y Realidad",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-069-pro_forma_vs_actuals-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al evaluar una adquisición o el propio negocio, comparar siempre el pro forma con los números reales (actuals).",
+      "texto_nuevo": "Al evaluar una adquisición o el propio negocio, comparar la mayoría de las veces el pro forma con los números reales (actuals) y, si hay que elegir uno solo, quedarse con los reales, que probablemente sean la mejor apuesta.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "484",
+        "frase": "if you have to choose just one, the actuals are probably the better bet"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice 'most of the time', no siempre.; Mismo endurecimiento del 'most of the time' del libro.; Mismo matiz perdido: preferir los reales si solo se puede mirar uno.; Se cae que, si hay que elegir uno, los reales son probablemente la mejor apuesta.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-069-pro_forma_vs_actuals-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desconfiar de pro formas que excluyen cargos negativos sin justificación clara del contexto.",
+      "texto_nuevo": "Desconfiar de pro formas que excluyen cargos negativos, porque esos cargos sí ocurrieron.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "484",
+        "frase": "Of course, the write-off really did happen, and the company really did lose money."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro previene contra esos pro forma porque el cargo sí ocurrió, sin la condición de falta de justificación.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

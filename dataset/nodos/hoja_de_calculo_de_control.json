@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Hoja de Cálculo de Control (Control Spreadsheet)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es la herramienta principal que resume el trabajo de planificación del control. En filas horizontales se listan los sujetos de control y en columnas verticales los elementos del bucle de retroalimentación (unidad de medida, tipo de sensor, meta de calidad, frecuencia de medición, tamaño de muestra, criterios de decisión y responsabilidad). También existe una variante para asignar 'quién hace qué' entre los distintos roles en una estación de control.",
+  "resumen_teorico": "Es una herramienta importante de planificación donde suele resumirse el trabajo de planificación del control. En filas horizontales se listan los sujetos de control y en columnas verticales los elementos del bucle de retroalimentación (unidad de medida, tipo de sensor, meta de calidad, frecuencia de medición, tamaño de muestra, criterios de decisión y responsabilidad). También existe una variante para asignar 'quién hace qué' entre los distintos roles en una estación de control.",
   "pasos_accionables": [
     "Listar todos los sujetos de control identificados en el mapa de proceso",
     "Definir para cada uno: unidad de medida, sensor, meta, frecuencia y tamaño de muestra",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Organiza tu Hoja de Control",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-071-hoja_de_calculo_de_control-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es la herramienta principal que resume el trabajo de planificación del control. En filas horizontales se listan los sujetos de control y en columnas verticales los elementos del bucle de retroalimentación (unidad de medida, tipo de sensor, meta de calidad, frecuencia de medición, tamaño de muestra, criterios de decisión y responsabilidad). También existe una variante para asignar 'quién hace qué' entre los distintos roles en una estación de control.",
+      "texto_nuevo": "Es una herramienta importante de planificación donde suele resumirse el trabajo de planificación del control. En filas horizontales se listan los sujetos de control y en columnas verticales los elementos del bucle de retroalimentación (unidad de medida, tipo de sensor, meta de calidad, frecuencia de medición, tamaño de muestra, criterios de decisión y responsabilidad). También existe una variante para asignar 'quién hace qué' entre los distintos roles en una estación de control.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7790",
+        "frase": "usually summarized on a control spreadsheet. This spreadsheet is a major planning tool."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): 'A major planning tool' no es 'la herramienta principal'.; El libro la llama una herramienta importante que suele resumir el trabajo; el nodo la vuelve la principal y categórica.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

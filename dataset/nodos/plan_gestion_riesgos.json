@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Cómo vas a manejar los riesgos del proyecto (Plan de Gestión de Riesgos)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines qué método vas a usar, quién se encarga de qué, qué tipos de riesgo vas a vigilar, cuánto dinero reservas para imprevistos, cómo actuar si algo pasa, y cómo vas a medir qué tan probable y grave es cada riesgo.",
+  "resumen_teorico": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo.",
   "pasos_accionables": [
     "Elige el método y las herramientas que vas a usar para manejar los riesgos",
     "Define quién se encarga de qué en el manejo de riesgos",
     "Establece categorías de riesgo para ordenar tu lista",
-    "Decide cuánto dinero vas a reservar para imprevistos y qué hacer si algo pasa",
+    "Documenta cuánto dinero necesitas para las actividades de manejo de riesgos y define cómo vas a fijar y repartir tus reservas de dinero y de tiempo",
     "Define qué tan probable y qué tan grave puede ser cada riesgo según tus objetivos",
     "Decide tu propia forma de comparar qué riesgos son más probables o más graves que otros"
   ],
@@ -34,5 +34,40 @@
   "etiqueta_arbol": "Anticipa los Riesgos del Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-067-plan_gestion_riesgos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide cuánto dinero vas a reservar para imprevistos y qué hacer si algo pasa",
+      "texto_nuevo": "Documenta cuánto dinero necesitas para las actividades de manejo de riesgos y define cómo vas a fijar y repartir tus reservas de dinero y de tiempo",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3089-3091",
+        "frase": "Describe the guidelines for establishing, measuring, and allocating both budget contingency and schedule contingency."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de fondos para las actividades de riesgo y de pautas para fijar y repartir reservas de presupuesto y cronograma, no de qué hacer si algo pasa.; Mismo defecto: convierte financiamiento y protocolos de contingencia en una reserva para imprevistos y un plan de reacción.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-067-plan_gestion_riesgos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines qué método vas a usar, quién se encarga de qué, qué tipos de riesgo vas a vigilar, cuánto dinero reservas para imprevistos, cómo actuar si algo pasa, y cómo vas a medir qué tan probable y grave es cada riesgo.",
+      "texto_nuevo": "Es la parte de tu plan donde decides cómo vas a manejar la incertidumbre de tu proyecto, tanto las amenazas como las oportunidades. Ahí defines el método, quién hace qué, los tipos de riesgo, el dinero para manejarlos, tus reservas de dinero y de tiempo, cada cuánto revisas, cuánto riesgo toleran tú y tus interesados, cómo das seguimiento, y cómo medir qué tan probable y grave es cada riesgo.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3089-3099",
+        "frase": "Describe the guidelines for establishing, measuring, and allocating both budget contingency and schedule contingency."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Desvía financiamiento y contingencia y deja fuera frecuencia, tolerancia al riesgo y seguimiento, que la lista del libro incluye.; El libro no habla de una reserva genérica ni de cómo actuar ante el evento, sino de fondos para las actividades de riesgo y pautas de contingencia.; Faltan tres elementos de la lista del libro: frecuencia y momento, tolerancia al riesgo de los interesados, seguimiento y auditoría.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

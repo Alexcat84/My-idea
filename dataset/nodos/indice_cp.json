@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Qué tan capaz es tu proceso de cumplir con lo que se pide (índice Cp)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El índice Cp te dice si tu proceso, tal como funciona hoy, puede cumplir con lo que esperas de él. Compara el ancho de lo permitido (la diferencia entre el límite superior y el límite inferior que aceptas) con la variación natural de tu proceso (seis veces la desviación estándar), suponiendo que tu proceso está centrado en el punto medio de esos límites. Un Cp de 1.0 significa que apenas cumples, sin margen de error. Apunta a un Cp de al menos 1.33 para tener un colchón de seguridad.",
+  "resumen_teorico": "El índice Cp te dice si la variación de tu proceso cabe dentro de lo que esperas de él; mide su capacidad potencial, no si hoy produces dentro de los límites, porque no mira tu promedio. Compara el ancho de lo permitido (la diferencia entre el límite superior y el límite inferior que aceptas) con la variación natural de tu proceso (seis veces la desviación estándar), suponiendo que tu proceso está centrado en el punto medio de esos límites. Un Cp de 1.0 significa que apenas cumples, sin margen de error. Apunta a un Cp de al menos 1.33 para tener un colchón de seguridad.",
   "pasos_accionables": [
     "Calcula la desviación estándar de tu proceso usando datos que estén bajo control estadístico",
     "Define tus límites de especificación, el superior y el inferior",
     "Calcula el Cp dividiendo la diferencia entre esos límites entre seis veces la desviación estándar",
-    "Compara tu resultado con el mínimo aceptable en tu mercado (normalmente 1.33)",
+    "Compara tu resultado con el mínimo recomendado de 1.33, que deja margen porque tu promedio no siempre se quedará en el centro",
     "Usa ese número para decidir si mejoras tu proceso o si eliges otro"
   ],
   "entregable_esperado": "El valor numérico de Cp que calculaste, escrito junto con lo que significa para tu caso",
@@ -41,6 +41,39 @@
         "evidencia": "F18-015: Calcular el Cp de un proceso bajo control estadístico sirve para controlar y mejorar la producción, no para validar con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-070-indice_cp-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El índice Cp te dice si tu proceso, tal como funciona hoy, puede cumplir con lo que esperas de él. Compara el ancho de lo permitido (la diferencia entre el límite superior y el límite inferior que aceptas) con la variación natural de tu proceso (seis veces la desviación estándar), suponiendo que tu proceso está centrado en el punto medio de esos límites. Un Cp de 1.0 significa que apenas cumples, sin margen de error. Apunta a un Cp de al menos 1.33 para tener un colchón de seguridad.",
+      "texto_nuevo": "El índice Cp te dice si la variación de tu proceso cabe dentro de lo que esperas de él; mide su capacidad potencial, no si hoy produces dentro de los límites, porque no mira tu promedio. Compara el ancho de lo permitido (la diferencia entre el límite superior y el límite inferior que aceptas) con la variación natural de tu proceso (seis veces la desviación estándar), suponiendo que tu proceso está centrado en el punto medio de esos límites. Un Cp de 1.0 significa que apenas cumples, sin margen de error. Apunta a un Cp de al menos 1.33 para tener un colchón de seguridad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20825",
+        "frase": "It does not indicate whether the process is actually running within the specification"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la advertencia de que Cp mide capacidad potencial y no indica si el proceso produce hoy dentro de los límites, porque no incluye el promedio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-070-indice_cp-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara tu resultado con el mínimo aceptable en tu mercado (normalmente 1.33)",
+      "texto_nuevo": "Compara tu resultado con el mínimo recomendado de 1.33, que deja margen porque tu promedio no siempre se quedará en el centro",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20819",
+        "frase": "the process average will not remain at the midpoint"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro recomienda al menos 1.33 por la criticidad y porque el promedio no se queda en el centro, no como mínimo de un mercado.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

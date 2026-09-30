@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Seguimiento de la Acción Correctiva Post-Auditoría",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas si hay acuerdo sobre las conclusiones del reporte. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que te muevan a actuar, por ejemplo, en términos monetarios.",
+  "resumen_teorico": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas que las conclusiones del reporte sean correctas y que haya acuerdo sobre ellas; si no lo hay, resuelves ese desacuerdo. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que te muevan a actuar, por ejemplo, en términos monetarios.",
   "pasos_accionables": [
     "Programar una auditoría de seguimiento para verificar que las acciones correctivas se implementaron",
-    "Confirmar que hay acuerdo sobre las conclusiones del reporte original",
-    "Si faltan recursos, reformular la deficiencia en términos de impacto que te ayuden a decidir",
+    "Confirmar que las conclusiones del reporte original son correctas y que hay acuerdo sobre ellas; si no lo hay, resolver primero ese desacuerdo",
+    "Si faltan recursos u otra cosa lo impide, reformular la seriedad de la deficiencia en términos monetarios u otros de impacto que ayuden a conseguir los recursos o quitar los obstáculos",
     "Cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas"
   ],
   "entregable_esperado": "Confirmación documentada de que las no conformidades quedaron cerradas, o la decisión de seguir dándole prioridad al tema si continúa pendiente",
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Verifica Tu Acción Correctiva",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-seguimiento_accion_correctiva-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar que hay acuerdo sobre las conclusiones del reporte original",
+      "texto_nuevo": "Confirmar que las conclusiones del reporte original son correctas y que hay acuerdo sobre ellas; si no lo hay, resolver primero ese desacuerdo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10284",
+        "frase": "If this is not the case, then the lack of agreement must be resolved."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide verificar que las conclusiones sean correctas y acordadas y, si no lo están, resolver el desacuerdo; el paso pierde esa rama.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-070-seguimiento_accion_correctiva-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si faltan recursos, reformular la deficiencia en términos de impacto que te ayuden a decidir",
+      "texto_nuevo": "Si faltan recursos u otra cosa lo impide, reformular la seriedad de la deficiencia en términos monetarios u otros de impacto que ayuden a conseguir los recursos o quitar los obstáculos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10284",
+        "frase": "can help to obtain the necessary resources or remove obstacles"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la reformulación sirve para conseguir recursos o quitar obstáculos, y cubre también otras razones además de la falta de recursos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-070-seguimiento_accion_correctiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas si hay acuerdo sobre las conclusiones del reporte. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que te muevan a actuar, por ejemplo, en términos monetarios.",
+      "texto_nuevo": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas que las conclusiones del reporte sean correctas y que haya acuerdo sobre ellas; si no lo hay, resuelves ese desacuerdo. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que te muevan a actuar, por ejemplo, en términos monetarios.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10284",
+        "frase": "verify that the conclusions in the report are correct and agreed upon"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide verificar que las conclusiones sean correctas y acordadas y, si no, resolver el desacuerdo; el nodo pierde esa rama.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

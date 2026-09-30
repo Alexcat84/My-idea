@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Estrategia de Expansión Alrededor de Centros de Distribución (Modelo Walmart)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Walmart popularizó una estrategia de entrada a nuevos mercados geográficos basada en construir primero un Centro de Distribución (DC) central que sirva como cabeza de puente, y luego abrir múltiples tiendas alrededor de esa área en lugar de una sola tienda aislada. Esto reduce el costo marginal de abrir nuevas tiendas y permite trasladar el ahorro a precios más bajos para el cliente. Esta estrategia ejemplifica cómo el diseño de la cadena de suministro puede convertirse en la ventaja competitiva central de un negocio (junto con EDI con proveedores, formato de tienda grande y precios bajos todos los días).",
+  "resumen_teorico": "Walmart entra a nuevos mercados geográficos con una estrategia basada en construir un Centro de Distribución (DC) central que sirva como cabeza de puente, abrir al mismo tiempo la primera tienda y luego abrir múltiples tiendas alrededor de esa área en lugar de una sola tienda aislada. Esto reduce el costo marginal de abrir nuevas tiendas y permite trasladar el ahorro a precios más bajos para el cliente. Esta estrategia ejemplifica cómo el diseño de la cadena de suministro puede convertirse en la ventaja competitiva central de un negocio (junto con EDI con proveedores, formato de tienda grande y precios bajos todos los días).",
   "pasos_accionables": [
     "Identificar regiones que puedan soportar múltiples puntos de venta, no solo uno.",
-    "Construir o contratar un centro de distribución central en esa región antes o simultáneamente con la primera apertura.",
+    "Construir o contratar un centro de distribución central en esa región al mismo tiempo que la primera apertura.",
     "Usar ese DC como base para abrir nuevos puntos de venta a bajo costo incremental.",
     "Trasladar los ahorros de eficiencia logística a precios competitivos para el cliente final."
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Expande desde tu Centro Logístico",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-068-estrategia_expansion_centros_distribucion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Walmart popularizó una estrategia de entrada a nuevos mercados geográficos basada en construir primero un Centro de Distribución (DC) central que sirva como cabeza de puente, y luego abrir múltiples tiendas alrededor de esa área en lugar de una sola tienda aislada. Esto reduce el costo marginal de abrir nuevas tiendas y permite trasladar el ahorro a precios más bajos para el cliente. Esta estrategia ejemplifica cómo el diseño de la cadena de suministro puede convertirse en la ventaja competitiva central de un negocio (junto con EDI con proveedores, formato de tienda grande y precios bajos todos los días).",
+      "texto_nuevo": "Walmart entra a nuevos mercados geográficos con una estrategia basada en construir un Centro de Distribución (DC) central que sirva como cabeza de puente, abrir al mismo tiempo la primera tienda y luego abrir múltiples tiendas alrededor de esa área en lugar de una sola tienda aislada. Esto reduce el costo marginal de abrir nuevas tiendas y permite trasladar el ahorro a precios más bajos para el cliente. Esta estrategia ejemplifica cómo el diseño de la cadena de suministro puede convertirse en la ventaja competitiva central de un negocio (junto con EDI con proveedores, formato de tienda grande y precios bajos todos los días).",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "269",
+        "frase": "It then builds a new DC at a central location in the area"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el DC se construye y la primera tienda abre al mismo tiempo; el 'primero' añade un orden que el libro no da.; El libro dice que la estrategia es central en cómo Walmart entra a nuevos mercados, no que la haya popularizado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-068-estrategia_expansion_centros_distribucion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construir o contratar un centro de distribución central en esa región antes o simultáneamente con la primera apertura.",
+      "texto_nuevo": "Construir o contratar un centro de distribución central en esa región al mismo tiempo que la primera apertura.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "269",
+        "frase": "and opens its first store at the same time"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el DC se construye al mismo tiempo que abre la primera tienda; la opción de 'antes' es añadida.; Mismo defecto: la opción de construir el DC antes no está en el libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

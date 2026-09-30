@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Calcula hacia atrás desde tu meta financiera (ingeniería inversa)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Parte de la meta final que quieres lograr, por ejemplo vender tu negocio en $10M dentro de 5 años, y retrocede desde ahí para calcular cuánto tiene que crecer tu valoración, cuánta ganancia operativa (EBIT) necesitas generar y cuántas franquicias tienes que vender y abrir para llegar a esa meta. Te apoyas en estimar cuánto te deja cada franquiciado en regalías y margen neto, y multiplicas por el número de unidades que necesitas.",
+  "resumen_teorico": "Parte de la meta final que quieres lograr, por ejemplo vender tu negocio en $10M dentro de 5 años, y retrocede desde ahí para calcular cuánto tiene que crecer tu valoración, cuánta ganancia operativa (EBIT) necesitas generar y cuántas franquicias tienes que vender y abrir para llegar a esa meta. Como atajo muy simplificado, te apoyas en estimar cuánto te deja cada franquiciado en regalías y margen neto, y multiplicas por el número de unidades que necesitas; el plan real pide un modelo financiero completo.",
   "pasos_accionables": [
     "Define el valor de venta que quieres alcanzar y en cuánto tiempo, por ejemplo $10M en 5 años",
     "Resta el valor actual de tu negocio para saber cuánto crecimiento en valoración necesitas",
     "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánto EBIT necesitas generar",
-    "Calcula cuánto te deja en promedio cada franquiciado en regalías y ventas de producto, y cuál es tu margen neto por unidad",
+    "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y rebates de proveedores si los hay, y cuál es tu margen neto por unidad",
     "Divide el EBIT que necesitas entre lo que te deja cada franquiciado para saber cuántas franquicias tienes que vender",
     "Reparte esas ventas en un cronograma de 5 años, empezando con crecimiento gradual al inicio"
   ],
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Calcula tu Meta al Revés",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-069-ingenieria_inversa_metas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Parte de la meta final que quieres lograr, por ejemplo vender tu negocio en $10M dentro de 5 años, y retrocede desde ahí para calcular cuánto tiene que crecer tu valoración, cuánta ganancia operativa (EBIT) necesitas generar y cuántas franquicias tienes que vender y abrir para llegar a esa meta. Te apoyas en estimar cuánto te deja cada franquiciado en regalías y margen neto, y multiplicas por el número de unidades que necesitas.",
+      "texto_nuevo": "Parte de la meta final que quieres lograr, por ejemplo vender tu negocio en $10M dentro de 5 años, y retrocede desde ahí para calcular cuánto tiene que crecer tu valoración, cuánta ganancia operativa (EBIT) necesitas generar y cuántas franquicias tienes que vender y abrir para llegar a esa meta. Como atajo muy simplificado, te apoyas en estimar cuánto te deja cada franquiciado en regalías y margen neto, y multiplicas por el número de unidades que necesitas; el plan real pide un modelo financiero completo.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1462-1464",
+        "frase": "As a vastly oversimplified shortcut, you might start by estimating"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta ese cálculo como un atajo muy simplificado; el plan real pide un modelo financiero completo.; Mismo límite perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-069-ingenieria_inversa_metas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto te deja en promedio cada franquiciado en regalías y ventas de producto, y cuál es tu margen neto por unidad",
+      "texto_nuevo": "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y rebates de proveedores si los hay, y cuál es tu margen neto por unidad",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1464",
+        "frase": "After deducting an appropriate cost of goods from your product sales revenue"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro resta el costo de las ventas de producto y cuenta los rebates de proveedores antes de aplicar el margen neto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

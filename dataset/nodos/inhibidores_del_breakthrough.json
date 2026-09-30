@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Barreras que frenan un avance real",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Hay obstáculos predecibles que impiden que una mejora funcione: la desilusión por intentos anteriores que no dieron resultado, la creencia equivocada de que 'más calidad cuesta más', la trampa de delegar todo el cambio en otra persona y desentenderte, y el miedo natural de quien te ayuda ante algo nuevo, por temor a perder su lugar o su rol. Superar estas barreras requiere hablar con claridad y comprometerte tú mismo con el cambio, no solo pedirlo.",
+  "resumen_teorico": "Hay obstáculos predecibles que impiden que una mejora funcione: la desilusión por intentos anteriores que no dieron resultado, la creencia de que 'más calidad cuesta más' (suele ser cierto si sumas prestaciones, no si reduces desperdicio), la trampa de delegar todo el cambio en otra persona y desentenderte, y el miedo natural de quien te ayuda ante algo nuevo, por temor a perder su lugar o su rol. Superar estas barreras requiere hablar con claridad y comprometerte tú mismo con el cambio, no solo pedirlo.",
   "pasos_accionables": [
     "Identificar cuál o cuáles de estas barreras están presentes en tu negocio",
     "Aclarar la diferencia entre gastar más por sumar cosas y gastar menos por reducir desperdicio",
@@ -42,6 +42,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 4
+    },
+    {
+      "id": "final-e1-070-inhibidores_del_breakthrough-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hay obstáculos predecibles que impiden que una mejora funcione: la desilusión por intentos anteriores que no dieron resultado, la creencia equivocada de que 'más calidad cuesta más', la trampa de delegar todo el cambio en otra persona y desentenderte, y el miedo natural de quien te ayuda ante algo nuevo, por temor a perder su lugar o su rol. Superar estas barreras requiere hablar con claridad y comprometerte tú mismo con el cambio, no solo pedirlo.",
+      "texto_nuevo": "Hay obstáculos predecibles que impiden que una mejora funcione: la desilusión por intentos anteriores que no dieron resultado, la creencia de que 'más calidad cuesta más' (suele ser cierto si sumas prestaciones, no si reduces desperdicio), la trampa de delegar todo el cambio en otra persona y desentenderte, y el miedo natural de quien te ayuda ante algo nuevo, por temor a perder su lugar o su rol. Superar estas barreras requiere hablar con claridad y comprometerte tú mismo con el cambio, no solo pedirlo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5697",
+        "frase": "higher in the sense of lower chronic waste usually costs less"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no da la creencia por falsa sin más: sumar prestaciones suele costar más y reducir desperdicio suele costar menos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

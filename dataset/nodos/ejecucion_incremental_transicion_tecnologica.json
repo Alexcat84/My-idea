@@ -11,7 +11,7 @@
     "Evaluar aprendizajes después de cada paso antes de avanzar al siguiente",
     "Evitar adoptar tecnología de punta solo por su novedad; enfocarse en el valor real al cliente",
     "Definir el objetivo final a largo plazo (visión ambiciosa).",
-    "Dividir la implementación en hitos de 30, 60 y 90 días.",
+    "Dividir la implementación en fases que se puedan completar en tres a nueve meses.",
     "Entregar una versión funcional al final de cada ciclo, por mínima que sea.",
     "Ajustar el plan siguiente basado en el aprendizaje del ciclo anterior.",
     "Identificar las funcionalidades críticas que generan el mayor valor.",
@@ -37,5 +37,24 @@
   "etiqueta_arbol": "Avanza Tu Tecnología Paso a Paso",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-068-ejecucion_incremental_transicion_tecnologica-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dividir la implementación en hitos de 30, 60 y 90 días.",
+      "texto_nuevo": "Dividir la implementación en fases que se puedan completar en tres a nueve meses.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4451",
+        "frase": "broken up into phases that can each be completed in three to nine months"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da hitos de 30, 60 y 90 días; la cifra es inventada.; Mismo defecto: el libro divide la implementación en fases de tres a nueve meses.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

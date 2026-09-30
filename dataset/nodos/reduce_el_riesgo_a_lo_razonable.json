@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Reducir el Riesgo Hasta lo Razonable",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, o sobre el impacto, para que si ocurre duela menos, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
+  "resumen_teorico": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, sobre el impacto, para que si ocurre duela menos, o sobre el tiempo que quedas expuesto, para acortarlo, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
   "pasos_accionables": [
-    "De un riesgo grave, decide si atacas su probabilidad, su impacto, o ambos.",
+    "De un riesgo grave, decide si atacas su probabilidad, su impacto, el tiempo que quedas expuesto a él, o una combinación.",
     "Lista las acciones concretas de reducción posibles y el costo aproximado de cada una.",
-    "Detente cuando gastar más ya casi no baje el riesgo: ese es el límite razonable.",
+    "Detente cuando el riesgo que queda ya sea aceptable para ti: ese es el límite razonable; si gastar más ya casi no lo baja y aún no es aceptable, considera otra respuesta.",
     "Anota el riesgo residual que aceptas quedarte, para no olvidar que sigue ahí."
   ],
   "entregable_esperado": "Un plan de reducción para un riesgo grave, con el punto razonable donde parar y el riesgo residual anotado.",
@@ -43,6 +43,56 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'dos o tres acciones' no está en el libro; se quita. El libro pide plantear tratamientos alternativos sin número fijo (L5749: \"brainstorm alternative treatments for the five cases\") y recuerda que toda respuesta tiene un costo (L5438: \"Any response to, and treatment of, a project risk is likely to incur costs\"). No se repite en otros campos.",
       "indice": 1,
       "auditoria": "muestreo A9"
+    },
+    {
+      "id": "final-e1-067-reduce_el_riesgo_a_lo_razonable-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, o sobre el impacto, para que si ocurre duela menos, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
+      "texto_nuevo": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, sobre el impacto, para que si ocurre duela menos, o sobre el tiempo que quedas expuesto, para acortarlo, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5662, 5729",
+        "frase": "Shorten the exposure period (duration) to the risk event or its consequences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera tres vías: probabilidad, impacto y duración de la exposición; falta la tercera.; Misma vía omitida: acortar la exposición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-067-reduce_el_riesgo_a_lo_razonable-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "De un riesgo grave, decide si atacas su probabilidad, su impacto, o ambos.",
+      "texto_nuevo": "De un riesgo grave, decide si atacas su probabilidad, su impacto, el tiempo que quedas expuesto a él, o una combinación.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5725-5731",
+        "frase": "Shorten the exposure period (duration) to the risk event or its consequences"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la tercera vía del libro: acortar el tiempo de exposición.; Misma vía omitida.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-067-reduce_el_riesgo_a_lo_razonable-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detente cuando gastar más ya casi no baje el riesgo: ese es el límite razonable.",
+      "texto_nuevo": "Detente cuando el riesgo que queda ya sea aceptable para ti: ese es el límite razonable; si gastar más ya casi no lo baja y aún no es aceptable, considera otra respuesta.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5668, 5818",
+        "frase": "until the point is reached where the residual amount of a risk is acceptable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la reducción sigue hasta que el residual es aceptable; el paso deja solo el rendimiento decreciente como señal de parada.; Mismo límite perdido: si el residual no es aceptable, el libro pide considerar más tratamiento.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

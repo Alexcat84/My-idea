@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de la Junta Directiva Liderada por Inversionistas",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Una junta directiva liderada por VCs es una entidad distinta a las estructuras de gobierno corporativo tradicionales. Los miembros de la junta dan sugerencias, pero no tienen la autoridad de exigir su cumplimiento directo; el CEO retiene autonomía real. El error común es tratar a la junta como un jefe, dedicando tiempo excesivo a reportar detalles operativos en lugar de enfocarse en decisiones estratégicas de alto nivel y delegar el resto.",
+  "resumen_teorico": "Una junta directiva liderada por VCs es una entidad distinta a las estructuras de gobierno corporativo tradicionales. Los miembros de la junta dan sugerencias, pero no tienen la responsabilidad de asegurarse de que las cumplas, y tienes más autonomía que con un jefe, aunque la junta sí decide asuntos como si te reemplazan. El error común es tratar a la junta como un jefe, dedicando tiempo excesivo a reportar detalles operativos en lugar de enfocarse en decisiones estratégicas de alto nivel y delegar el resto.",
   "pasos_accionables": [
     "Preparar reportes de junta enfocados en métricas estratégicas, no en detalles operativos exhaustivos",
     "Clarificar explícitamente qué decisiones requieren aprobación de la junta y cuáles son autoridad exclusiva del CEO",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Maneja tu Junta de Inversionistas",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-gestion_junta_directiva_startup-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una junta directiva liderada por VCs es una entidad distinta a las estructuras de gobierno corporativo tradicionales. Los miembros de la junta dan sugerencias, pero no tienen la autoridad de exigir su cumplimiento directo; el CEO retiene autonomía real. El error común es tratar a la junta como un jefe, dedicando tiempo excesivo a reportar detalles operativos en lugar de enfocarse en decisiones estratégicas de alto nivel y delegar el resto.",
+      "texto_nuevo": "Una junta directiva liderada por VCs es una entidad distinta a las estructuras de gobierno corporativo tradicionales. Los miembros de la junta dan sugerencias, pero no tienen la responsabilidad de asegurarse de que las cumplas, y tienes más autonomía que con un jefe, aunque la junta sí decide asuntos como si te reemplazan. El error común es tratar a la junta como un jefe, dedicando tiempo excesivo a reportar detalles operativos en lugar de enfocarse en decisiones estratégicas de alto nivel y delegar el resto.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "439",
+        "frase": "board members give you suggestions and ideas, but don't have responsibility"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que no tienen la responsabilidad de asegurarse de que cumplas sus sugerencias y que tienes más autonomía que con un jefe, no que carezcan de autoridad.; Mismo defecto: el libro atribuye a la junta decisiones de fondo, entre ellas si reemplazar al CEO; la falta de autoridad se generaliza sin base.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

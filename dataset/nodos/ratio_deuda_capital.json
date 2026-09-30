@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ratio Deuda-Capital (Debt-to-Equity)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Mide cuánta deuda tiene la empresa por cada dólar de patrimonio de los accionistas. Es clave para bancos e inversores al evaluar riesgo de préstamo. Un ratio alto indica mayor apalancamiento y puede dificultar futuras financiaciones por deuda, mientras que uno muy bajo puede convertir a la empresa en objetivo de compra apalancada.",
+  "resumen_teorico": "Mide cuánta deuda tiene la empresa por cada dólar de patrimonio de los accionistas. Es clave para bancos e inversores al evaluar riesgo de préstamo. Un ratio alto indica mayor apalancamiento y puede dificultar futuras financiaciones por deuda, mientras que uno muy bajo puede convertir a una empresa que cotiza en bolsa en objetivo de compra apalancada.",
   "pasos_accionables": [
     "Calcular deuda total dividida entre patrimonio neto usando el balance",
     "Comparar el ratio con el promedio de la industria",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Mide tu Deuda sobre Capital",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-069-ratio_deuda_capital-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide cuánta deuda tiene la empresa por cada dólar de patrimonio de los accionistas. Es clave para bancos e inversores al evaluar riesgo de préstamo. Un ratio alto indica mayor apalancamiento y puede dificultar futuras financiaciones por deuda, mientras que uno muy bajo puede convertir a la empresa en objetivo de compra apalancada.",
+      "texto_nuevo": "Mide cuánta deuda tiene la empresa por cada dólar de patrimonio de los accionistas. Es clave para bancos e inversores al evaluar riesgo de préstamo. Un ratio alto indica mayor apalancamiento y puede dificultar futuras financiaciones por deuda, mientras que uno muy bajo puede convertir a una empresa que cotiza en bolsa en objetivo de compra apalancada.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2621",
+        "frase": "public companies with particularly low debt-to-equity ratios may be targets for a leveraged buyout"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el riesgo de compra apalancada a empresas que cotizan en bolsa.; Misma condición perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

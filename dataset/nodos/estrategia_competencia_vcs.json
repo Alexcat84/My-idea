@@ -6,7 +6,7 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Cuando varios inversores de capital de riesgo (VCs) quieren entrar en tu ronda, tienes más poder para negociar. Planea el proceso de levantar capital con 3 a 6 meses de anticipación para que los tiempos de decisión de las distintas firmas coincidan, así evitas quedarte sin urgencia o, al contrario, verte apurado por falta de tiempo.",
   "pasos_accionables": [
-    "Planea tu ronda con una ventana de 3 a 6 meses.",
+    "Planea tu ronda con al menos 3 a 6 meses de anticipación.",
     "Sincroniza tus conversaciones con varios inversores para que las ofertas (term sheets) te lleguen en fechas cercanas.",
     "No reveles con qué otros inversores estás hablando, salvo que sean colaboradores conocidos entre ellos.",
     "Pide feedback concreto si un inversor decide no invertir."
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Genera Competencia entre Inversores",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-estrategia_competencia_vcs-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planea tu ronda con una ventana de 3 a 6 meses.",
+      "texto_nuevo": "Planea tu ronda con al menos 3 a 6 meses de anticipación.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "647",
+        "frase": "allow at least three to six months to raise money"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice al menos tres a seis meses; el nodo lo vuelve una ventana cerrada.; Mismo defecto.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

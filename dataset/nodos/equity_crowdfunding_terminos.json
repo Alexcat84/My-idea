@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Términos y Riesgos del Equity Crowdfunding",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "A diferencia de una ronda tradicional con VC, en equity crowdfunding el propio emprendedor suele fijar los términos del acuerdo (tipo de instrumento, valoración, protecciones). Los inversionistas suelen ser muchos y pequeños, con poco compromiso activo post-inversión, lo que traslada la responsabilidad de comunicación al fundador. Existen riesgos: quedar 'varado' sin suficiente capital ni apoyo de inversionistas, y lidiar con inversionistas problemáticos ('jerks') sin mecanismos claros de diligencia previa.",
+  "resumen_teorico": "A diferencia de una ronda tradicional con VC, en equity crowdfunding el propio emprendedor suele fijar los términos del acuerdo (tipo de instrumento, valoración, protecciones). Los inversionistas suelen ser muchos y pequeños, y pueden o no estar enfocados en ayudar a la empresa, lo que traslada la responsabilidad de comunicación al fundador. Existen riesgos: quedar 'varado' sin suficiente capital ni apoyo de inversionistas, y lidiar con inversionistas problemáticos ('jerks') sin mecanismos claros de diligencia previa.",
   "pasos_accionables": [
     "Definir el tipo de instrumento a emitir (deuda convertible con cap, o acciones preferentes ligeras).",
     "Preparar materiales atractivos: resumen ejecutivo, presentación, video y datos de tracción actualizados.",
-    "Planificar un sistema propio de comunicación continua con los inversionistas dado que no habrá seguimiento proactivo de su parte.",
+    "Planificar un sistema propio de comunicación continua con los inversionistas, dado que es poco probable que muchos de ellos te busquen por iniciativa propia.",
     "Evaluar el riesgo de quedar sin fondos suficientes ni apoyo si la ronda no cierra bien.",
-    "Establecer límites y expectativas claras para evitar problemas con inversionistas difíciles."
+    "Sugerencia de My Idea: ten cuidado con los inversionistas difíciles y fija desde el inicio límites y expectativas claras con todos tus inversionistas."
   ],
   "entregable_esperado": "Paquete de materiales de fundraising (deck, resumen ejecutivo, términos del instrumento) y plan de comunicación post-inversión para una campaña de equity crowdfunding.",
   "nodos_previos": [
@@ -30,5 +30,57 @@
   "etiqueta_arbol": "Fija tus Términos, Conoce Riesgos",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-equity_crowdfunding_terminos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de una ronda tradicional con VC, en equity crowdfunding el propio emprendedor suele fijar los términos del acuerdo (tipo de instrumento, valoración, protecciones). Los inversionistas suelen ser muchos y pequeños, con poco compromiso activo post-inversión, lo que traslada la responsabilidad de comunicación al fundador. Existen riesgos: quedar 'varado' sin suficiente capital ni apoyo de inversionistas, y lidiar con inversionistas problemáticos ('jerks') sin mecanismos claros de diligencia previa.",
+      "texto_nuevo": "A diferencia de una ronda tradicional con VC, en equity crowdfunding el propio emprendedor suele fijar los términos del acuerdo (tipo de instrumento, valoración, protecciones). Los inversionistas suelen ser muchos y pequeños, y pueden o no estar enfocados en ayudar a la empresa, lo que traslada la responsabilidad de comunicación al fundador. Existen riesgos: quedar 'varado' sin suficiente capital ni apoyo de inversionistas, y lidiar con inversionistas problemáticos ('jerks') sin mecanismos claros de diligencia previa.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2713",
+        "frase": "many small investors who may, or may not, be focused on helping"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que pueden o no estar enfocados en ayudar; el nodo lo afirma como regla.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-073-equity_crowdfunding_terminos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planificar un sistema propio de comunicación continua con los inversionistas dado que no habrá seguimiento proactivo de su parte.",
+      "texto_nuevo": "Planificar un sistema propio de comunicación continua con los inversionistas, dado que es poco probable que muchos de ellos te busquen por iniciativa propia.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2713",
+        "frase": "it's unlikely that many of your new investors will proactively reach out"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que es poco probable que muchos te busquen por iniciativa propia.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-073-equity_crowdfunding_terminos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer límites y expectativas claras para evitar problemas con inversionistas difíciles.",
+      "texto_nuevo": "Sugerencia de My Idea: ten cuidado con los inversionistas difíciles y fija desde el inicio límites y expectativas claras con todos tus inversionistas.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2717",
+        "frase": "Finally, watch out for the jerks."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo advierte que tengas cuidado con los inversionistas difíciles y que es más difícil hacer diligencia a la multitud; el remedio y su efecto no están.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

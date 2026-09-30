@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Vender una parte de tu negocio a través de una plataforma online (equity crowdfunding) y las reglas de valores (SEC)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Si usas una plataforma como AngelList para recaudar dinero a cambio de una parte de tu negocio (equity crowdfunding), estás vendiendo un valor a través de un intermediario. En Estados Unidos, vender valores requiere registrarte ante la SEC, salvo que califiques para una excepción. Para eso necesitas fijarte en dos cosas: que tus inversionistas cumplan con ser 'inversionista acreditado' (un nivel de ingreso o patrimonio que la ley define) y que evites la 'solicitud general', es decir, que no promociones tu ronda de financiamiento públicamente. Estos detalles legales y fiscales varían según el país, así que verifícalos con un profesional local antes de actuar.",
+  "resumen_teorico": "Si usas una plataforma como AngelList para recaudar dinero a cambio de una parte de tu negocio (equity crowdfunding), estás vendiendo un valor a través de un intermediario. En Estados Unidos, vender valores requiere registrarte ante la SEC, salvo que califiques para una excepción. Para eso necesitas fijarte en dos cosas: que tus inversionistas cumplan con ser 'inversionista acreditado' (un nivel de ingreso o patrimonio que la ley define) y que evites la 'solicitud general', es decir, que no promociones tu ronda públicamente, salvo que uses una excepción que permita promocionarla o admitir inversionistas no acreditados. Estos detalles legales y fiscales varían según el país, así que verifícalos con un profesional local antes de actuar.",
   "pasos_accionables": [
     "Revisa si las personas que quieren invertir califican como 'inversionista acreditado' según las reglas de la SEC",
     "Evita promocionar tu ronda de financiamiento públicamente, salvo que cumplas con las excepciones que lo permiten",
@@ -56,6 +56,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-073-equity_crowdfunding-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si usas una plataforma como AngelList para recaudar dinero a cambio de una parte de tu negocio (equity crowdfunding), estás vendiendo un valor a través de un intermediario. En Estados Unidos, vender valores requiere registrarte ante la SEC, salvo que califiques para una excepción. Para eso necesitas fijarte en dos cosas: que tus inversionistas cumplan con ser 'inversionista acreditado' (un nivel de ingreso o patrimonio que la ley define) y que evites la 'solicitud general', es decir, que no promociones tu ronda de financiamiento públicamente. Estos detalles legales y fiscales varían según el país, así que verifícalos con un profesional local antes de actuar.",
+      "texto_nuevo": "Si usas una plataforma como AngelList para recaudar dinero a cambio de una parte de tu negocio (equity crowdfunding), estás vendiendo un valor a través de un intermediario. En Estados Unidos, vender valores requiere registrarte ante la SEC, salvo que califiques para una excepción. Para eso necesitas fijarte en dos cosas: que tus inversionistas cumplan con ser 'inversionista acreditado' (un nivel de ingreso o patrimonio que la ley define) y que evites la 'solicitud general', es decir, que no promociones tu ronda públicamente, salvo que uses una excepción que permita promocionarla o admitir inversionistas no acreditados. Estos detalles legales y fiscales varían según el país, así que verifícalos con un profesional local antes de actuar.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2674-2684",
+        "frase": "With the JOBS Act, the rules changed somewhat."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: evitar la solicitud general no es absoluto, algunas excepciones la permiten.; Se pierde que, según la excepción, se puede promocionar la ronda o admitir inversionistas no acreditados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

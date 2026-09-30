@@ -4,11 +4,11 @@
   "dominio": "entrega",
   "titulo_concepto": "Estandarización de Identificación de Producto (GTIN/EPC)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un número de serie único a cada ítem individual, permitiendo rastrear su historial de movimiento a través de la red EPCglobal.",
+  "resumen_teorico": "Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un número de serie único a cada ítem individual. La red EPCglobal busca permitir rastrear el historial de movimiento de cada ítem, aunque todavía está en construcción.",
   "pasos_accionables": [
     "Registrar la organización en GS1 para obtener un código de gestor (manager code)",
     "Etiquetar los productos con GTIN/EPC usando el esquema unificado de 14 dígitos (el 'UPC de 14 dígitos' en Norteamérica o el 'EAN de 13 dígitos más dígito de control' en Europa)",
-    "Integrar los sistemas internos con la red EPCglobal para consulta y actualización en tiempo real",
+    "Integrar los sistemas internos con la red EPCglobal para consulta y actualización en tiempo real, sabiendo que la red todavía está en construcción",
     "Mantener actualizada la base de datos de códigos EPC conforme los productos se mueven en la cadena"
   ],
   "entregable_esperado": "Catálogo de productos codificado bajo estándar GTIN/EPC, registrado en GS1",
@@ -78,6 +78,39 @@
         "evidencia": "D-03: Registrarse en GS1 e integrarse con EPCglobal solo lo necesita quien vende producto físico en canales de distribución; un servicio o una app jamás lo toca. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-068-estandar_gtin_epc-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un número de serie único a cada ítem individual, permitiendo rastrear su historial de movimiento a través de la red EPCglobal.",
+      "texto_nuevo": "Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un número de serie único a cada ítem individual. La red EPCglobal busca permitir rastrear el historial de movimiento de cada ítem, aunque todavía está en construcción.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2387",
+        "frase": "The EPCglobal Network and its various subsystems are still works in progress."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la red EPCglobal sigue en construcción y que consultar el historial de cualquier ítem aún no es realidad.; Mismo defecto: el nodo presenta como disponible lo que el libro da como meta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-068-estandar_gtin_epc-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Integrar los sistemas internos con la red EPCglobal para consulta y actualización en tiempo real",
+      "texto_nuevo": "Integrar los sistemas internos con la red EPCglobal para consulta y actualización en tiempo real, sabiendo que la red todavía está en construcción",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2387",
+        "frase": "The ultimate goal is that any company anywhere in the world can read an EPC"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta la red EPCglobal como trabajo en curso cuya meta aún no es realidad; el paso la da por disponible.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

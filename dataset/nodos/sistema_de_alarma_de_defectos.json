@@ -7,7 +7,7 @@
   "resumen_teorico": "Mecanismo para detectar fallas de calidad y actuar positivamente sobre estas señales para evitar deterioro en calidad, costo o entrega. La función de calidad debe establecer estos sistemas de alarma dentro del cronograma común entre comprador y proveedor.",
   "pasos_accionables": [
     "Definir indicadores clave que disparen alarmas de calidad",
-    "Establecer un cronograma común entre comprador y proveedor",
+    "Ubicar las alarmas dentro del cronograma común que el contrato fije entre comprador y proveedor",
     "Asignar responsables de actuar sobre las alarmas",
     "Documentar tiempos de respuesta esperados"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Responde a Alarmas de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-sistema_de_alarma_de_defectos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un cronograma común entre comprador y proveedor",
+      "texto_nuevo": "Ubicar las alarmas dentro del cronograma común que el contrato fije entre comprador y proveedor",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23867",
+        "frase": "Under many contracts, the buyer and supplier are yoked to a common timetable"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da el cronograma común como algo que ya fijan muchos contratos y que suele llevar otro departamento; a calidad le toca montar las alarmas, no crear el cronograma.; Mismo defecto: el paso añade crear el cronograma, que el libro no pide.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

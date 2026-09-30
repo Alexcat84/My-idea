@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Homogeneidad vs. Diversidad en el Equipo Fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "La homofilia -la tendencia natural a asociarse con personas similares en género, etnia, origen geográfico, formación y experiencia funcional- genera equipos fundadores homogéneos. Esto aporta beneficios de corto plazo (velocidad de coordinación, confianza, comunicación fácil), pero genera riesgos de largo plazo: habilidades redundantes, falta de competencias críticas, menor adaptabilidad y menor estabilidad del equipo frente a problemas complejos. La diversidad funcional y de redes sociales, aunque más lenta de construir y con mayor riesgo de conflicto inicial, tiende a producir equipos más valiosos, creativos y adaptables.",
+  "resumen_teorico": "La homofilia -la tendencia natural a asociarse con personas similares en género, etnia, origen geográfico, formación y experiencia funcional- genera equipos fundadores homogéneos. Esto aporta beneficios de corto plazo (velocidad de coordinación, confianza, comunicación fácil), pero genera riesgos de largo plazo: habilidades redundantes, falta de competencias críticas, menor estabilidad del equipo y menor adaptabilidad en contextos turbulentos. La diversidad funcional y de redes sociales, aunque más lenta de construir y con mayor riesgo de conflicto inicial, tiende a producir equipos más valiosos, creativos y adaptables.",
   "pasos_accionables": [
     "Identificar si el equipo fundador actual es homogéneo en habilidades, formación, experiencia funcional o redes sociales",
     "Hacer un análisis estructurado de las necesidades de capital humano, social y financiero del proyecto para detectar brechas críticas (por ejemplo, conocimiento de industria, técnico o comercial)",
@@ -44,5 +44,23 @@
   ],
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-073-homogeneidad_vs_diversidad_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La homofilia -la tendencia natural a asociarse con personas similares en género, etnia, origen geográfico, formación y experiencia funcional- genera equipos fundadores homogéneos. Esto aporta beneficios de corto plazo (velocidad de coordinación, confianza, comunicación fácil), pero genera riesgos de largo plazo: habilidades redundantes, falta de competencias críticas, menor adaptabilidad y menor estabilidad del equipo frente a problemas complejos. La diversidad funcional y de redes sociales, aunque más lenta de construir y con mayor riesgo de conflicto inicial, tiende a producir equipos más valiosos, creativos y adaptables.",
+      "texto_nuevo": "La homofilia -la tendencia natural a asociarse con personas similares en género, etnia, origen geográfico, formación y experiencia funcional- genera equipos fundadores homogéneos. Esto aporta beneficios de corto plazo (velocidad de coordinación, confianza, comunicación fácil), pero genera riesgos de largo plazo: habilidades redundantes, falta de competencias críticas, menor estabilidad del equipo y menor adaptabilidad en contextos turbulentos. La diversidad funcional y de redes sociales, aunque más lenta de construir y con mayor riesgo de conflicto inicial, tiende a producir equipos más valiosos, creativos y adaptables.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "990-994",
+        "frase": "especially important in turbulent contexts"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga la adaptabilidad a los contextos turbulentos y la estabilidad a la experiencia funcional homogénea; 'problemas complejos' no aparece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

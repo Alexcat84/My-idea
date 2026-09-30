@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Doble Significado de la Calidad: Características vs. Ausencia de Fallos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La calidad tiene dos significados críticos que deben entenderse por separado: (1) cómo las características (features) de un producto/servicio satisfacen las necesidades del cliente, generando satisfacción -normalmente a mayor costo-, y (2) la libertad respecto a fallos, orientada a costos -donde mayor calidad usualmente implica menor costo-. Comprender ambos significados es esencial para tomar decisiones de negocio equilibradas entre satisfacción del cliente y viabilidad financiera.",
+  "resumen_teorico": "La calidad tiene dos significados críticos que deben entenderse y comunicarse con claridad: (1) cómo las características (features) de un producto/servicio satisfacen las necesidades del cliente, generando satisfacción (normalmente a mayor costo), y (2) la libertad respecto a fallos, orientada a costos (donde mayor calidad usualmente implica menor costo).",
   "pasos_accionables": [
     "Clasificar los atributos del producto/servicio en 'características que generan satisfacción' vs 'fallos que generan insatisfacción'",
     "Evaluar si el incremento de características genera suficiente ingreso adicional para cubrir su costo",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Entiende la Doble Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-071-doble_significado_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La calidad tiene dos significados críticos que deben entenderse por separado: (1) cómo las características (features) de un producto/servicio satisfacen las necesidades del cliente, generando satisfacción -normalmente a mayor costo-, y (2) la libertad respecto a fallos, orientada a costos -donde mayor calidad usualmente implica menor costo-. Comprender ambos significados es esencial para tomar decisiones de negocio equilibradas entre satisfacción del cliente y viabilidad financiera.",
+      "texto_nuevo": "La calidad tiene dos significados críticos que deben entenderse y comunicarse con claridad: (1) cómo las características (features) de un producto/servicio satisfacen las necesidades del cliente, generando satisfacción (normalmente a mayor costo), y (2) la libertad respecto a fallos, orientada a costos (donde mayor calidad usualmente implica menor costo).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1057",
+        "frase": "“Quality” has two meanings that must be clearly understood and communicated."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los dos significados deben entenderse y comunicarse con claridad; no que sirvan para equilibrar decisiones de negocio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

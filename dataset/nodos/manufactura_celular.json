@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Manufactura Celular y Equipo de Tamaño Adecuado",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La manufactura celular divide grandes procesos unitarios en 'células' flexibles y de tamaño adecuado, procesando una pieza a la vez en lugar de lotes grandes ('batch and queue'). Utiliza innovaciones como SMED (cambio rápido de matriz), autonomación (equipos que se detienen/inician automáticamente) y equipos de tamaño adecuado para responder rápidamente a la demanda del cliente, reduciendo sobreproducción y desperdicio.",
+  "resumen_teorico": "La manufactura celular divide grandes procesos unitarios en 'células' flexibles y de tamaño adecuado, procesando una pieza a la vez en lugar de lotes grandes ('batch and queue'). A menudo utiliza innovaciones como SMED (cambio rápido de matriz), autonomación (equipos que se detienen/inician automáticamente) y equipos de tamaño adecuado para responder rápidamente a la demanda del cliente, y puede reducir la sobreproducción y el desperdicio.",
   "pasos_accionables": [
     "Rediseñar el layout de producción para minimizar tiempos de transferencia entre etapas",
     "Implementar SMED para reducir tiempos de cambio de configuración de máquinas",
@@ -86,6 +86,22 @@
         "motivo": "El SMED es una de las piezas de la manufactura celular; con los cambios ya reducidos, organizar la línea en células es el paso siguiente."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "final-e1-073-manufactura_celular-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La manufactura celular divide grandes procesos unitarios en 'células' flexibles y de tamaño adecuado, procesando una pieza a la vez en lugar de lotes grandes ('batch and queue'). Utiliza innovaciones como SMED (cambio rápido de matriz), autonomación (equipos que se detienen/inician automáticamente) y equipos de tamaño adecuado para responder rápidamente a la demanda del cliente, reduciendo sobreproducción y desperdicio.",
+      "texto_nuevo": "La manufactura celular divide grandes procesos unitarios en 'células' flexibles y de tamaño adecuado, procesando una pieza a la vez en lugar de lotes grandes ('batch and queue'). A menudo utiliza innovaciones como SMED (cambio rápido de matriz), autonomación (equipos que se detienen/inician automáticamente) y equipos de tamaño adecuado para responder rápidamente a la demanda del cliente, y puede reducir la sobreproducción y el desperdicio.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4541-4551",
+        "frase": "Cellular manufacturing often utilizes the following innovations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a menudo usa esas innovaciones y que tiene el potencial de eliminar la sobreproducción; el nodo lo afirma sin cautela.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

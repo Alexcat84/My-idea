@@ -7,10 +7,10 @@
   "resumen_teorico": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
   "pasos_accionables": [
     "Identificar las herramientas usadas para diagnóstico y reparación del sistema",
-    "Determinar un cronograma regular de mantenimiento y verificar su cumplimiento",
+    "Determinar un cronograma regular de mantenimiento, verificar su cumplimiento y registrar el mantenimiento programado y las reparaciones de emergencia",
     "Habilitar actualizaciones automáticas donde sea apropiado",
     "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
-    "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+    "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
     "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones."
   ],
   "entregable_esperado": "Plan de mantenimiento documentado con cronograma, herramientas autorizadas y procedimientos para mantenimiento remoto seguro",
@@ -54,6 +54,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-072-mantenimiento_sistema_cui-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar un cronograma regular de mantenimiento y verificar su cumplimiento",
+      "texto_nuevo": "Determinar un cronograma regular de mantenimiento, verificar su cumplimiento y registrar el mantenimiento programado y las reparaciones de emergencia",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "477",
+        "frase": "Track regularly scheduled maintenance and any emergency repairs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El plan de mantenimiento del libro incluye registrar el mantenimiento programado y las reparaciones de emergencia, y el nodo lo pierde.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-072-mantenimiento_sistema_cui-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+      "texto_nuevo": "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "481",
+        "frase": "Ensure a maintenance session with an authorized provider is established."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que la sesión remota se establezca con un proveedor autorizado; el paso lo omite.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

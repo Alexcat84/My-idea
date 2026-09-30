@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir explícitamente qué constituye una situación de crisis para la organización.",
     "Establecer un tiempo máximo de comunicación al equipo de crisis (ej. 30 minutos).",
-    "Implementar la regla de 'dos personas en la caja' para decisiones críticas.",
+    "Implementar la regla de 'dos personas en la caja' para decisiones críticas y agradecer a quien escala una alerta, aunque resulte falsa, sin castigar nunca al mensajero.",
     "Usar preguntas guía: qué sabemos, qué no sabemos, quién obtendrá esa información y cuándo.",
     "Documentar todo evento de crisis con tiempos y fuentes de información.",
     "Realizar un debrief posterior para capturar lecciones aprendidas."
@@ -67,6 +67,23 @@
         "motivo": "arista entre dos mundos (risk_management -> quality): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-071-equipo_de_gestion_de_crisis-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar la regla de 'dos personas en la caja' para decisiones críticas.",
+      "texto_nuevo": "Implementar la regla de 'dos personas en la caja' para decisiones críticas y agradecer a quien escala una alerta, aunque resulte falsa, sin castigar nunca al mensajero.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12393",
+        "frase": "Never punish the messenger or the system will not work."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición de la que depende la regla: agradecer a quien escala una alerta, aunque sea falsa, y no castigar al mensajero.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

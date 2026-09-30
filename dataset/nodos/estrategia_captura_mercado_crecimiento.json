@@ -10,7 +10,7 @@
     "Forma alianzas tempranas con proveedores clave que te aseguren el suministro.",
     "Capacita e incentiva a tu equipo de ventas con bonos para que priorice el producto emergente.",
     "Usa relaciones públicas y acciones visibles (por ejemplo, tu propia sostenibilidad operativa) para reforzar la percepción de tu marca.",
-    "Planifica el momento en que pasarás a una estrategia de eficiencia interna cuando el mercado se estabilice y madure.",
+    "Planifica cómo competirás cuando el mercado se estabilice y madure: ahí pesa la eficiencia interna, y si tus competidores son más eficientes que tú, enfócate en clientes con necesidades únicas y evita las guerras de precios.",
     "Detecta tendencias de mercado emergentes mediante investigación de ventas y comportamiento de clientes clave",
     "Identifica fabricantes con productos alineados a la tendencia emergente",
     "Negocia alianzas con compromisos de compra anticipada a cambio de garantías de suministro preferencial",
@@ -33,5 +33,24 @@
   "etiqueta_arbol": "Muévete Rápido en Mercados Nuevos",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-068-estrategia_captura_mercado_crecimiento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planifica el momento en que pasarás a una estrategia de eficiencia interna cuando el mercado se estabilice y madure.",
+      "texto_nuevo": "Planifica cómo competirás cuando el mercado se estabilice y madure: ahí pesa la eficiencia interna, y si tus competidores son más eficientes que tú, enfócate en clientes con necesidades únicas y evita las guerras de precios.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5331",
+        "frase": "has to focus on specific customers with unique needs and avoid getting into price wars"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en el mercado maduro ganan los más eficientes y que quien no lo es debe enfocarse en clientes con necesidades únicas y evitar guerras de precios; el paso pierde esa condición.; No es lo opuesto a todo el libro, que también dice que la eficiencia interna importa en mercados maduros; lo que se cae es la condición de que los competidores sean más eficientes y la salida que propone.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -10,7 +10,7 @@
     "Verificar que el diseño incorpore contramedidas de análisis de criticidad, FMEA y árbol de fallas",
     "Evaluar el impacto de anatomías de proceso radicalmente distintas (unidades dedicadas vs funciones especializadas)",
     "Documentar para cada actividad: entradas, salidas, metas, tiempo de ciclo, costo y descripción de conversión",
-    "Revisar el flujo para eliminar fuentes de error, redundancias y reducir tiempos de ciclo"
+    "Revisar el flujo para eliminar fuentes de error y redundancias, reducir traspasos y tiempos de ciclo, reemplazar tareas con salidas defectuosas y corregir la secuencia"
   ],
   "entregable_esperado": "Diagrama de flujo de proceso de alto nivel documentado con especificaciones de entradas, salidas y metas por actividad",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Diseña tu Flujo de Proceso",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-seleccionar_diseno_general_proceso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar el flujo para eliminar fuentes de error, redundancias y reducir tiempos de ciclo",
+      "texto_nuevo": "Revisar el flujo para eliminar fuentes de error y redundancias, reducir traspasos y tiempos de ciclo, reemplazar tareas con salidas defectuosas y corregir la secuencia",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4506-4510",
+        "frase": "Decrease the number of handoffs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La revisión del libro incluye además reducir traspasos, reemplazar tareas con salidas defectuosas y corregir la secuencia.; Mismo defecto: el paso deja fuera la mitad de la lista de mejoras.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

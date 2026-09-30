@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Selección de Proyectos Six Sigma Basada en el COPQ",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El costo de la mala calidad debe ser el principal criterio para seleccionar proyectos de mejora, particularmente en programas Six Sigma. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque asegura que los recursos de mejora se concentren en los 'pocos vitales' con mayor impacto financiero.",
+  "resumen_teorico": "El costo de la mala calidad debe ser el principal criterio para seleccionar proyectos de mejora, particularmente en programas Six Sigma. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque permite concentrar los recursos de mejora en los 'pocos vitales' con mayor impacto financiero.",
   "pasos_accionables": [
     "Definir la meta de reducción de costos anual de la organización",
     "Calcular el número de proyectos de mejora necesarios usando el retorno promedio esperado por proyecto",
     "Determinar el número de Black Belts y empleados de tiempo parcial requeridos según la capacidad de ejecución",
-    "Crear una lista de costos de mala calidad y aplicar un análisis de Pareto para seleccionar los proyectos con mayor impacto",
+    "Antes de lanzar cualquier proyecto, crear una lista de costos de mala calidad y aplicar un análisis de Pareto para seleccionar los proyectos cuya deficiencia ya cuesta al menos el retorno promedio esperado por proyecto",
     "Debatir con el equipo ejecutivo las variables del plan para asegurar que el ritmo de mejora sea sostenible"
   ],
   "entregable_esperado": "Un plan de despliegue de proyectos Six Sigma priorizados por su impacto en el COPQ, con recursos y expertos asignados",
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Prioriza según Costo de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-seleccion_proyectos_six_sigma_basada_en_copq-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El costo de la mala calidad debe ser el principal criterio para seleccionar proyectos de mejora, particularmente en programas Six Sigma. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque asegura que los recursos de mejora se concentren en los 'pocos vitales' con mayor impacto financiero.",
+      "texto_nuevo": "El costo de la mala calidad debe ser el principal criterio para seleccionar proyectos de mejora, particularmente en programas Six Sigma. La metodología incluye definir una meta de reducción de costos, calcular cuántos proyectos son necesarios usando un retorno promedio esperado por proyecto, determinar cuántos expertos (Black Belts) se requieren y cuántos empleados deben involucrarse, e identificar deficiencias específicas que ya generan pérdidas significativas mediante un análisis de Pareto. Este enfoque permite concentrar los recursos de mejora en los 'pocos vitales' con mayor impacto financiero.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5970",
+        "frase": "data must show where costs are highest so that focus can be concentrated"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los datos deben mostrar dónde están los costos para que el foco pueda concentrarse en los pocos vitales; 'asegura' endurece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-070-seleccion_proyectos_six_sigma_basada_en_copq-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear una lista de costos de mala calidad y aplicar un análisis de Pareto para seleccionar los proyectos con mayor impacto",
+      "texto_nuevo": "Antes de lanzar cualquier proyecto, crear una lista de costos de mala calidad y aplicar un análisis de Pareto para seleccionar los proyectos cuya deficiencia ya cuesta al menos el retorno promedio esperado por proyecto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "5843",
+        "frase": "select projects from this list that are already causing your organization to incur"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro selecciona las deficiencias que ya cuestan al menos el retorno promedio usado en el cálculo, y pide la lista y el Pareto antes de lanzar proyectos.; Mismo defecto: se cae el umbral del retorno promedio por deficiencia.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Selección entre Fuente Única y Múltiples Proveedores",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Múltiples proveedores generan competencia (mejor calidad, costos, servicio) y reducen riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships).",
+  "resumen_teorico": "Múltiples proveedores generan competencia (mejor calidad, costos, servicio) y reducen riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
   "pasos_accionables": [
     "Evaluar ventajas de competencia (múltiples proveedores) versus profundidad de relación (fuente única)",
-    "Analizar reputación, pruebas de calificación de diseño y encuestas de instalaciones del proveedor",
+    "Analizar reputación, pruebas de calificación de diseño, encuestas de instalaciones del proveedor e información de bancos de datos y otras fuentes sobre su calidad",
     "Decidir estrategia de reducción de base de proveedores si se busca partnership",
     "Documentar la decisión según criticidad del componente/commodity"
   ],
@@ -39,6 +39,39 @@
         "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "final-e1-070-seleccion_fuente_unica_multiple-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Múltiples proveedores generan competencia (mejor calidad, costos, servicio) y reducen riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships).",
+      "texto_nuevo": "Múltiples proveedores generan competencia (mejor calidad, costos, servicio) y reducen riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23660",
+        "frase": "This trend does not necessarily mean that businesses are going to have single sources"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que la tendencia no implica fuente única para todas las compras; sin eso el nodo empuja hacia la fuente única general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-070-seleccion_fuente_unica_multiple-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analizar reputación, pruebas de calificación de diseño y encuestas de instalaciones del proveedor",
+      "texto_nuevo": "Analizar reputación, pruebas de calificación de diseño, encuestas de instalaciones del proveedor e información de bancos de datos y otras fuentes sobre su calidad",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23662",
+        "frase": "and information from data banks and other sources on supplier quality"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade un cuarto criterio de selección: la información de bancos de datos y otras fuentes sobre la calidad del proveedor.; Mismo defecto: falta el cuarto criterio de la lista.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

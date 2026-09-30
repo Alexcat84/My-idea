@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Elección de Estrategia Circular y Diseño del Mecanismo de Retorno",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Decidir que tu negocio será circular no dice todavía por dónde empieza. Antes de simular nada y antes de invertir, hay un acto propio: mirar el ciclo de vida que tu producto tiene HOY, compararlo con las cinco estrategias circulares y elegir en cuál de ellas tu negocio tiene más potencial real. Elegida la estrategia, hay que diseñar el mecanismo que la hace posible, el retorno del producto o su remanufactura, y recién entonces poner números: cuánto mejora la sostenibilidad y cuánto mueve tus costos de materiales y de logística. La elección y el mecanismo son el insumo de la simulación, no su resultado.",
+  "resumen_teorico": "Decidir que tu negocio será circular no dice todavía por dónde empieza. Antes de simular nada y antes de invertir, hay un acto propio: mirar el ciclo de vida que tu producto tiene HOY, compararlo con las cinco estrategias circulares y elegir en cuál de ellas tu negocio tiene más potencial real. Elegida la estrategia, hay que diseñar el mecanismo que la hace posible (si la estrategia es cerrar el ciclo, el retorno del producto o su remanufactura), y recién entonces poner números: cuánto mejora la sostenibilidad y cuánto mueve tus costos de materiales y de logística. La elección y el mecanismo son el insumo de la simulación, no su resultado.",
   "pasos_accionables": [
     "Mapear el ciclo de vida actual de tu producto (lineal vs circular)",
     "Identificar en cuál de las cinco estrategias circulares tiene mayor potencial tu negocio",
     "Diseñar un mecanismo de retorno o remanufactura si aplica",
     "Calcular el impacto en sostenibilidad y en costos de materiales/logística"
   ],
-  "entregable_esperado": "La estrategia circular elegida para tu negocio, con el mecanismo de retorno o remanufactura diseñado y el impacto calculado en sostenibilidad y en costos de materiales y logística",
+  "entregable_esperado": "La estrategia circular elegida para tu negocio, con el mecanismo que la hace posible diseñado (el retorno o la remanufactura, si la estrategia es cerrar el ciclo) y el impacto calculado en sostenibilidad y en costos de materiales y logística",
   "nodos_previos": [
     "economia_circular_como_modelo_de_negocio"
   ],
@@ -39,6 +39,38 @@
         "motivo": "Este candidato declara que la estrategia circular elegida y el mecanismo de retorno son el insumo de la simulación, así que la simulación circular es su paso siguiente."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-068-estrategia_circular_y_mecanismo_de_retorno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir que tu negocio será circular no dice todavía por dónde empieza. Antes de simular nada y antes de invertir, hay un acto propio: mirar el ciclo de vida que tu producto tiene HOY, compararlo con las cinco estrategias circulares y elegir en cuál de ellas tu negocio tiene más potencial real. Elegida la estrategia, hay que diseñar el mecanismo que la hace posible, el retorno del producto o su remanufactura, y recién entonces poner números: cuánto mejora la sostenibilidad y cuánto mueve tus costos de materiales y de logística. La elección y el mecanismo son el insumo de la simulación, no su resultado.",
+      "texto_nuevo": "Decidir que tu negocio será circular no dice todavía por dónde empieza. Antes de simular nada y antes de invertir, hay un acto propio: mirar el ciclo de vida que tu producto tiene HOY, compararlo con las cinco estrategias circulares y elegir en cuál de ellas tu negocio tiene más potencial real. Elegida la estrategia, hay que diseñar el mecanismo que la hace posible (si la estrategia es cerrar el ciclo, el retorno del producto o su remanufactura), y recién entonces poner números: cuánto mejora la sostenibilidad y cuánto mueve tus costos de materiales y de logística. La elección y el mecanismo son el insumo de la simulación, no su resultado.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "485",
+        "frase": "Servitization closes loops by focusing on used product returns, extended producer responsibility, remanufacturing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro el retorno y la remanufactura son el medio de cerrar el ciclo, no de todas las estrategias; el resumen pierde el 'si aplica'.; Mismo defecto: presenta el retorno o la remanufactura como mecanismo de cualquier estrategia circular.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-068-estrategia_circular_y_mecanismo_de_retorno-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La estrategia circular elegida para tu negocio, con el mecanismo de retorno o remanufactura diseñado y el impacto calculado en sostenibilidad y en costos de materiales y logística",
+      "texto_nuevo": "La estrategia circular elegida para tu negocio, con el mecanismo que la hace posible diseñado (el retorno o la remanufactura, si la estrategia es cerrar el ciclo) y el impacto calculado en sostenibilidad y en costos de materiales y logística",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "485",
+        "frase": "Servitization closes loops by focusing on used product returns, extended producer responsibility, remanufacturing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El entregable da por hecho el retorno o la remanufactura, que solo aplican si la estrategia elegida es cerrar el ciclo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

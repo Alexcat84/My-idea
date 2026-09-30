@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "DMAIC - Fase Select (Selección de la Oportunidad)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Antes de iniciar el ciclo DMAIC, la dirección debe seleccionar el proyecto adecuado. Las nominaciones pueden provenir de clientes, reportes o empleados. El criterio de evaluación más frecuente es el costo de la mala calidad (COPQ), junto con el impacto en la lealtad del cliente y el cumplimiento regulatorio. Se prepara un team charter con el problema y objetivo del proyecto, y se asignan los recursos y el equipo apropiado.",
+  "resumen_teorico": "Antes de iniciar el ciclo DMAIC, la dirección debe seleccionar el proyecto adecuado. Las nominaciones pueden provenir de clientes, reportes o empleados. El criterio de evaluación más frecuente es el costo de la mala calidad (COPQ), junto con el impacto en la lealtad del cliente, la eficacia de los empleados y el cumplimiento de requisitos regulatorios u otros. Se prepara un team charter con el problema y objetivo del proyecto, y se asignan los recursos y el equipo apropiado.",
   "pasos_accionables": [
     "Recopilar nominaciones de proyectos desde clientes, reportes y empleados",
     "Evaluar los proyectos usando COPQ y otros criterios estratégicos",
@@ -42,6 +42,22 @@
         "evidencia": "F10-026: Seleccionar proyectos DMAIC por costo de mala calidad y armar el team charter es mejora de procesos en una organizacion que ya opera. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-071-dmaic_fase_select-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de iniciar el ciclo DMAIC, la dirección debe seleccionar el proyecto adecuado. Las nominaciones pueden provenir de clientes, reportes o empleados. El criterio de evaluación más frecuente es el costo de la mala calidad (COPQ), junto con el impacto en la lealtad del cliente y el cumplimiento regulatorio. Se prepara un team charter con el problema y objetivo del proyecto, y se asignan los recursos y el equipo apropiado.",
+      "texto_nuevo": "Antes de iniciar el ciclo DMAIC, la dirección debe seleccionar el proyecto adecuado. Las nominaciones pueden provenir de clientes, reportes o empleados. El criterio de evaluación más frecuente es el costo de la mala calidad (COPQ), junto con el impacto en la lealtad del cliente, la eficacia de los empleados y el cumplimiento de requisitos regulatorios u otros. Se prepara un team charter con el problema y objetivo del proyecto, y se asignan los recursos y el equipo apropiado.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14267",
+        "frase": "Other criteria include impact on customer loyalty, employee effectiveness, and conformance"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de criterios del libro incluye la eficacia de los empleados y el cumplimiento de requisitos regulatorios u otros.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

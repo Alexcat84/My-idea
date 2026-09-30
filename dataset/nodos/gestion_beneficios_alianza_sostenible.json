@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión Sostenible de Beneficios en Alianzas (Costo/Beneficio Compartido)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Una alianza sostenible no busca solo reducir costos al socio, sino generar una relación de costo/beneficio favorable donde ambas partes crecen. Los costos operativos pueden subir siempre que el ratio beneficio/costo se mantenga favorable; ese crecimiento en costos del socio representa su ganancia. La clave es definir métricas claras, asignarles valor monetario y rastrear su cumplimiento continuamente para evitar 'matar a la gallina de los huevos de oro'.",
+  "resumen_teorico": "Una alianza sostenible no busca solo reducir costos al socio, sino generar una relación de costo/beneficio favorable donde ambas partes crecen. Los costos operativos pueden subir siempre que el ratio beneficio/costo se mantenga favorable; si tu empresa crece, ese aumento de tus costos operativos es el ingreso y la ganancia que tu socio necesita. La clave es definir métricas claras, asignarles valor monetario y rastrear su cumplimiento continuamente para evitar 'matar a la gallina de los huevos de oro'.",
   "pasos_accionables": [
     "Definir métricas de beneficio compartido (ahorro de costos, crecimiento de ingresos, participación de mercado).",
     "Asignar valor monetario a cada beneficio esperado por ambas partes.",
@@ -58,6 +58,22 @@
         "motivo": "Tras entender que la coordinación con socios vale más que el control unilateral, se sigue con cómo sostener el beneficio compartido de la alianza con métricas valorizadas."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "final-e1-068-gestion_beneficios_alianza_sostenible-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Una alianza sostenible no busca solo reducir costos al socio, sino generar una relación de costo/beneficio favorable donde ambas partes crecen. Los costos operativos pueden subir siempre que el ratio beneficio/costo se mantenga favorable; ese crecimiento en costos del socio representa su ganancia. La clave es definir métricas claras, asignarles valor monetario y rastrear su cumplimiento continuamente para evitar 'matar a la gallina de los huevos de oro'.",
+      "texto_nuevo": "Una alianza sostenible no busca solo reducir costos al socio, sino generar una relación de costo/beneficio favorable donde ambas partes crecen. Los costos operativos pueden subir siempre que el ratio beneficio/costo se mantenga favorable; si tu empresa crece, ese aumento de tus costos operativos es el ingreso y la ganancia que tu socio necesita. La clave es definir métricas claras, asignarles valor monetario y rastrear su cumplimiento continuamente para evitar 'matar a la gallina de los huevos de oro'.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5394",
+        "frase": "These increases in operating costs are the increases in revenue and profits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En el libro el aumento de costos operativos es el de tu empresa al crecer, y ese aumento es el ingreso y la ganancia del socio.; Mismo defecto: el nodo atribuye al socio el aumento de costos que en el libro es de tu empresa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

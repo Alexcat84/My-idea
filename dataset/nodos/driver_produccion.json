@@ -6,9 +6,9 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "La producción se refiere a la capacidad de fabricar y almacenar productos. Las fábricas pueden diseñarse con enfoque de producto (realizan todas las operaciones para una línea de producto, generando expertise en ese producto) o enfoque funcional (se especializan en pocas operaciones aplicables a múltiples productos, generando expertise funcional). Además, los almacenes pueden organizarse mediante almacenamiento por SKU, por lote de trabajo (job lot) o crossdocking (sin almacenar, solo redistribuyendo rápidamente).",
   "pasos_accionables": [
-    "Determinar si la fábrica/operación debe tener enfoque de producto o enfoque funcional según la variedad y volumen de productos.",
+    "Determinar si la fábrica/operación debe tener enfoque de producto, enfoque funcional o una mezcla de ambos, según la capacidad y la experiencia que necesitas para responder a la demanda de tus clientes.",
     "Evaluar exceso de capacidad vs. utilización total para decidir el nivel de flexibilidad deseado.",
-    "Elegir el método de almacenamiento (SKU, job lot o crossdocking) según la velocidad de rotación y diversidad de productos.",
+    "Elegir el método de almacenamiento (SKU, job lot o crossdocking) sopesando lo que ofrece cada uno: SKU es eficiente y fácil de entender, job lot agiliza el picking y el empaque pero suele ocupar más espacio, y crossdocking no almacena el producto.",
     "Diseñar el master production schedule considerando capacidad de planta, balance de carga, calidad y mantenimiento."
   ],
   "entregable_esperado": "Plan de producción y almacenamiento con el enfoque (producto/funcional) y método de almacenaje definidos, junto con un cronograma maestro de producción.",
@@ -65,6 +65,40 @@
         "motivo": "Tras disenar fabricas y almacenes en el driver de produccion se llega a automatizarlos con robots."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "final-e1-068-driver_produccion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si la fábrica/operación debe tener enfoque de producto o enfoque funcional según la variedad y volumen de productos.",
+      "texto_nuevo": "Determinar si la fábrica/operación debe tener enfoque de producto, enfoque funcional o una mezcla de ambos, según la capacidad y la experiencia que necesitas para responder a la demanda de tus clientes.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "146",
+        "frase": "what mix of these two approaches will give them the capability and expertise"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da variedad y volumen como criterio; dice que se elige el enfoque o la mezcla que da la capacidad y experiencia para responder a los clientes.; Mismo defecto: el criterio de elección es inventado.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-068-driver_produccion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir el método de almacenamiento (SKU, job lot o crossdocking) según la velocidad de rotación y diversidad de productos.",
+      "texto_nuevo": "Elegir el método de almacenamiento (SKU, job lot o crossdocking) sopesando lo que ofrece cada uno: SKU es eficiente y fácil de entender, job lot agiliza el picking y el empaque pero suele ocupar más espacio, y crossdocking no almacena el producto.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "150-154",
+        "frase": "allows for an efficient picking and packing operation but usually requires more storage space"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da rotación ni diversidad como criterio; describe lo que ofrece cada método.; Mismo defecto: el criterio de elección del método de almacenamiento es inventado.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

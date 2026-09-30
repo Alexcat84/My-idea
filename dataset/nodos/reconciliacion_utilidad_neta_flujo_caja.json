@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Reconciliación de Utilidad Neta con Flujo de Caja",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Es posible calcular el flujo de caja a partir del estado de resultados y dos balances generales consecutivos. El proceso consiste en partir de la utilidad neta y hacer ajustes: sumar gastos no monetarios (depreciación), restar incrementos en activos (como cuentas por cobrar o inventario), y sumar incrementos en pasivos (como cuentas por pagar). Esta técnica revela cómo cada transacción del negocio afecta simultáneamente el estado de resultados, el balance y el flujo de caja.",
+  "resumen_teorico": "Es posible calcular el flujo de caja a partir del estado de resultados y dos balances generales consecutivos. El proceso consiste en partir de la utilidad neta y hacer ajustes: sumar gastos no monetarios (depreciación), restar incrementos en activos (como cuentas por cobrar o inventario) y sumar sus disminuciones, y sumar incrementos en pasivos (como cuentas por pagar) y restar sus disminuciones. Esta técnica revela cómo la mayoría de las transacciones del negocio terminan afectando el estado de resultados, el balance y el flujo de caja.",
   "pasos_accionables": [
     "Partir de la utilidad neta del periodo",
     "Sumar la depreciación y otros gastos no monetarios",
-    "Restar los incrementos en cuentas por cobrar, inventario u otros activos",
-    "Sumar los incrementos en cuentas por pagar y otros pasivos",
+    "Restar los incrementos en cuentas por cobrar, inventario u otros activos, y sumar sus disminuciones",
+    "Sumar los incrementos en cuentas por pagar y otros pasivos, y restar sus disminuciones",
     "Ajustar por dividendos pagados y cambios en deuda de largo plazo",
     "Verificar que el resultado coincida con el cambio real en la línea de caja del balance"
   ],
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Concilia Utilidad y Flujo de Caja",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-069-reconciliacion_utilidad_neta_flujo_caja-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es posible calcular el flujo de caja a partir del estado de resultados y dos balances generales consecutivos. El proceso consiste en partir de la utilidad neta y hacer ajustes: sumar gastos no monetarios (depreciación), restar incrementos en activos (como cuentas por cobrar o inventario), y sumar incrementos en pasivos (como cuentas por pagar). Esta técnica revela cómo cada transacción del negocio afecta simultáneamente el estado de resultados, el balance y el flujo de caja.",
+      "texto_nuevo": "Es posible calcular el flujo de caja a partir del estado de resultados y dos balances generales consecutivos. El proceso consiste en partir de la utilidad neta y hacer ajustes: sumar gastos no monetarios (depreciación), restar incrementos en activos (como cuentas por cobrar o inventario) y sumar sus disminuciones, y sumar incrementos en pasivos (como cuentas por pagar) y restar sus disminuciones. Esta técnica revela cómo la mayoría de las transacciones del negocio terminan afectando el estado de resultados, el balance y el flujo de caja.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2001",
+        "frase": "most transactions eventually find their way onto all three"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro revisa cada cambio entre balances: las disminuciones de activos se suman y las de pasivos se restan.; Endurece: el libro dice que la mayoría de las transacciones terminan en los tres estados, no cada una a la vez.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-069-reconciliacion_utilidad_neta_flujo_caja-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Restar los incrementos en cuentas por cobrar, inventario u otros activos",
+      "texto_nuevo": "Restar los incrementos en cuentas por cobrar, inventario u otros activos, y sumar sus disminuciones",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2193-2211",
+        "frase": "Inventory declined by $244 Add that decrease to net profit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro suma las disminuciones de activos (el inventario que baja).; Mismo caso contrario perdido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-069-reconciliacion_utilidad_neta_flujo_caja-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sumar los incrementos en cuentas por pagar y otros pasivos",
+      "texto_nuevo": "Sumar los incrementos en cuentas por pagar y otros pasivos, y restar sus disminuciones",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2193-2219",
+        "frase": "Accounts payable decreased by $107 Subtract that decrease from net profit"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro resta las disminuciones de pasivos (cuentas por pagar que bajan).; Mismo caso contrario perdido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

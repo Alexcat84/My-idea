@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica todos los puntos de inventario en tu flujo de valor (value stream)",
     "Determina si ese inventario es estratégico o es desperdicio puro",
-    "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición y la variación",
+    "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
     "Implementa un conteo por ciclos para mejorar la exactitud de tus registros",
     "Reduce o elimina el inventario que no sea estratégico"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Revisa tu Inventario Estratégico",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-inventory_analysis_lean-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición y la variación",
+      "texto_nuevo": "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13421",
+        "frase": "and impact of flow disruptions"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el cuarto factor que el libro pide considerar: el impacto de las interrupciones del flujo.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

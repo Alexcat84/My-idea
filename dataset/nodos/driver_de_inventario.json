@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Driver de Inventario: Cíclico, de Seguridad y Estacional",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario cíclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacén. El inventario de seguridad no depende del promedio de la demanda sino de su variabilidad y de lo que te cuesta quedarte sin stock. Y el estacional obliga a una elección de fondo: acumular antes del pico o invertir en flexibilidad de producción para no acumular. Las tres se sostienen sobre los puntos de reorden, y esos se ajustan con datos reales de demanda, no con los del plan original.",
+  "resumen_teorico": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario cíclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacén. El inventario de seguridad cubre la incertidumbre de la demanda y de la reposición, y se pesa contra lo que te cuesta quedarte sin stock. Y el estacional obliga a una elección de fondo: acumular antes del pico o invertir en flexibilidad de producción para no acumular. La cantidad económica de pedido de cada producto cambia con el tiempo, así que mídela de forma continua.",
   "pasos_accionables": [
     "Calcular el inventario cíclico óptimo balanceando costos de ordenar vs. costos de mantener.",
     "Definir niveles de inventario de seguridad según la variabilidad de la demanda y el costo de quiebre de stock.",
     "Identificar patrones estacionales de demanda y decidir entre acumular inventario estacional o invertir en flexibilidad de producción.",
-    "Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda."
+    "Medir de forma continua la cantidad económica de pedido (EOQ) de cada producto, porque cambia con el tiempo y hay que mantenerla al día."
   ],
   "entregable_esperado": "Los tres niveles de inventario dimensionados, cíclico, de seguridad y estacional, con sus puntos de reorden y la fecha en que se vuelven a revisar con demanda real",
   "nodos_previos": [
@@ -95,6 +95,39 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-068-driver_de_inventario-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario cíclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacén. El inventario de seguridad no depende del promedio de la demanda sino de su variabilidad y de lo que te cuesta quedarte sin stock. Y el estacional obliga a una elección de fondo: acumular antes del pico o invertir en flexibilidad de producción para no acumular. Las tres se sostienen sobre los puntos de reorden, y esos se ajustan con datos reales de demanda, no con los del plan original.",
+      "texto_nuevo": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario cíclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacén. El inventario de seguridad cubre la incertidumbre de la demanda y de la reposición, y se pesa contra lo que te cuesta quedarte sin stock. Y el estacional obliga a una elección de fondo: acumular antes del pico o invertir en flexibilidad de producción para no acumular. La cantidad económica de pedido de cada producto cambia con el tiempo, así que mídela de forma continua.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "897",
+        "frase": "the higher the level of uncertainty, the higher the level of safety stock"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga el inventario de seguridad a la incertidumbre de la demanda y de la reposición; lo de no depender del promedio sino de la variabilidad es un mecanismo añadido.; El libro no dice que los puntos de reorden sostengan las tres partes ni que se ajusten con datos reales; lo que pide es medir de forma continua la EOQ, que cambia con el tiempo.; Mismo defecto: el libro habla de cubrir la incertidumbre y sopesar su costo contra el de perder ventas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-068-driver_de_inventario-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda.",
+      "texto_nuevo": "Medir de forma continua la cantidad económica de pedido (EOQ) de cada producto, porque cambia con el tiempo y hay que mantenerla al día.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "888",
+        "frase": "The EOQ for different products changes over time, so a company needs an ongoing measurement"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que los puntos de reorden se ajusten con datos reales; pide medir de forma continua la EOQ porque cambia con el tiempo.; Mismo defecto: la práctica de ajuste con datos reales no está en el libro; se corrige hacia lo que el libro sí pide.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

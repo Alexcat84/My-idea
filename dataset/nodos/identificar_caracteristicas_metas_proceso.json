@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Identificación de Características y Metas del Proceso",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Una característica de proceso es cualquier propiedad o atributo necesario para crear el bien o entregar el servicio y alcanzar las metas de características del producto. Responde a qué mecanismos se necesitan para crear o entregar esas características repetidamente sin fallas, categorizándose en procedimientos, métodos, equipos, materiales, personas, entrenamiento y otros recursos.",
+  "resumen_teorico": "Una característica de proceso es cualquier propiedad o atributo necesario para crear el bien o entregar el servicio y alcanzar las metas de características del producto. Responde a qué mecanismos se necesitan para crear o entregar esas características repetidamente sin fallas; la mayoría cae en procedimientos, métodos, equipos y suministros, materiales, personas, entrenamiento, otros recursos y procesos de apoyo.",
   "pasos_accionables": [
     "Descomponer el proceso en características específicas necesarias para cada característica del producto",
-    "Clasificar cada característica en procedimientos, métodos, equipos, materiales, personas, entrenamiento o recursos",
+    "Clasificar cada característica en procedimientos, métodos, equipos y suministros, materiales, personas, entrenamiento, otros recursos o procesos de apoyo",
     "Organizar las características y metas en una hoja de cálculo de diseño de proceso",
     "Verificar que cada característica del producto sea alcanzada por al menos una característica del proceso y eliminar redundancias",
     "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas"
@@ -42,6 +42,39 @@
         "evidencia": "Q064-010: El nodo disena el proceso (caracteristicas, metas y hoja de calculo de diseno de proceso) antes de operarlo, lo que corresponde a planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-071-identificar_caracteristicas_metas_proceso-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar cada característica en procedimientos, métodos, equipos, materiales, personas, entrenamiento o recursos",
+      "texto_nuevo": "Clasificar cada característica en procedimientos, métodos, equipos y suministros, materiales, personas, entrenamiento, otros recursos o procesos de apoyo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4574-4590",
+        "frase": "Support processes—secretarial support, occasionally other support"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la octava categoría del libro: los procesos de apoyo.; Mismo defecto: se cae la categoría de procesos de apoyo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-071-identificar_caracteristicas_metas_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una característica de proceso es cualquier propiedad o atributo necesario para crear el bien o entregar el servicio y alcanzar las metas de características del producto. Responde a qué mecanismos se necesitan para crear o entregar esas características repetidamente sin fallas, categorizándose en procedimientos, métodos, equipos, materiales, personas, entrenamiento y otros recursos.",
+      "texto_nuevo": "Una característica de proceso es cualquier propiedad o atributo necesario para crear el bien o entregar el servicio y alcanzar las metas de características del producto. Responde a qué mecanismos se necesitan para crear o entregar esas características repetidamente sin fallas; la mayoría cae en procedimientos, métodos, equipos y suministros, materiales, personas, entrenamiento, otros recursos y procesos de apoyo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4574",
+        "frase": "Most process features fall into one of the following categories"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista omite los procesos de apoyo, que el libro incluye como categoría.; Se cae la categoría de procesos de apoyo y el libro dice que la mayoría, no todas, caen en esas categorías.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

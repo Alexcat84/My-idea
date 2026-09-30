@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis Riesgo-Beneficio de Retener al Fundador tras la Sucesión",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Mantener al fundador en la empresa después de ser reemplazado como CEO ofrece beneficios significativos (conocimiento institucional, relaciones con clientes, moral del equipo) pero también riesgos altos, especialmente si el fundador está motivado por control y no acepta genuinamente el cambio. El caso Segway ilustra cómo un fundador que retiene poder informal puede sabotear sistemáticamente a los CEOs sucesivos, llevando a rotación constante de liderazgo.",
+  "resumen_teorico": "Mantener al fundador en la empresa después de ser reemplazado como CEO ofrece beneficios significativos (conocimiento institucional, relaciones con clientes, moral del equipo) pero también riesgos altos, especialmente si el fundador está motivado por control, no acepta genuinamente el cambio, o ambas cosas. El caso Segway ilustra cómo un fundador que no quiere soltar el control puede poner trabas al nuevo CEO, reemplazarlo y terminar contratando y despidiendo CEOs casi cada año, con grave daño al crecimiento.",
   "pasos_accionables": [
     "Evaluar honestamente si el fundador está genuinamente alineado con la sucesión o solo la tolera superficialmente.",
     "Establecer límites claros de autoridad que impidan al fundador socavar informalmente al nuevo CEO.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Sopesa Retener al Fundador",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-072-riesgo_beneficio_retener_fundador-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantener al fundador en la empresa después de ser reemplazado como CEO ofrece beneficios significativos (conocimiento institucional, relaciones con clientes, moral del equipo) pero también riesgos altos, especialmente si el fundador está motivado por control y no acepta genuinamente el cambio. El caso Segway ilustra cómo un fundador que retiene poder informal puede sabotear sistemáticamente a los CEOs sucesivos, llevando a rotación constante de liderazgo.",
+      "texto_nuevo": "Mantener al fundador en la empresa después de ser reemplazado como CEO ofrece beneficios significativos (conocimiento institucional, relaciones con clientes, moral del equipo) pero también riesgos altos, especialmente si el fundador está motivado por control, no acepta genuinamente el cambio, o ambas cosas. El caso Segway ilustra cómo un fundador que no quiere soltar el control puede poner trabas al nuevo CEO, reemplazarlo y terminar contratando y despidiendo CEOs casi cada año, con grave daño al crecimiento.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3286",
+        "frase": "Dean replaced Tim and proceeded to hire and fire CEOs nearly annually"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro cuenta trabas al primer CEO, su reemplazo y luego CEOs contratados y despedidos casi cada año; no habla de poder informal ni de sabotaje sistemático a cada sucesor.; El libro sitúa el riesgo si el fundador está motivado por control, descontento con el cambio, o ambas cosas; el nodo exige las dos.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

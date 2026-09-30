@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Decisión de subcontratar o hacerlo tú mismo (Outsourcing)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Subcontratar es pagarle a alguien de afuera para que haga algo que hoy haces tú o tu gente, buscando bajar costos, ganar tiempo o mejorar la calidad. Antes de decidir, pregúntate si esa actividad es el corazón de tu negocio, lo que realmente te distingue, o no. Lo que es el corazón de tu negocio mejor no lo sueltes, porque el riesgo de perder ese conocimiento técnico y de mercado es alto.",
+  "resumen_teorico": "Subcontratar es pagarle a alguien de afuera para que haga algo que hoy haces tú o tu gente, buscando bajar costos, ganar tiempo o mejorar la calidad. Antes de decidir, pregúntate si esa actividad es el corazón de tu negocio, lo que realmente te distingue, o no. Lo que es el corazón de tu negocio mejor no lo sueltes, porque cuanto más conocimiento técnico y de mercado obtiene el proveedor, mayor es el riesgo para ti.",
   "pasos_accionables": [
     "Identifica qué partes de tu negocio son el corazón que no debes soltar",
     "Para cada actividad que consideres soltar, revisa qué tan bien la haces hoy, cuánta capacidad tienes, cuánto cuesta y si cumples los plazos",
-    "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera",
+    "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera, confirmando que haya un proveedor capaz y que puedas vigilar bien el contrato",
     "Piensa cómo afecta esto el ánimo y la lealtad de las personas que trabajan contigo"
   ],
   "entregable_esperado": "Tu decisión de hacerlo tú mismo o subcontratarlo, con la lista de lo que es el corazón de tu negocio y lo que sí puedes soltar",
@@ -54,6 +54,39 @@
         "evidencia": "F13-025: Ambos aciertan en que ideacion es erronea, pero tiene razon A: el entregable es una decision de hacer o subcontratar y un mapa de lo que es nucleo del negocio, es decir, una decision de recursos y modelo operativo, no la operacion diaria. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-070-seleccion_hacer_o_comprar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Subcontratar es pagarle a alguien de afuera para que haga algo que hoy haces tú o tu gente, buscando bajar costos, ganar tiempo o mejorar la calidad. Antes de decidir, pregúntate si esa actividad es el corazón de tu negocio, lo que realmente te distingue, o no. Lo que es el corazón de tu negocio mejor no lo sueltes, porque el riesgo de perder ese conocimiento técnico y de mercado es alto.",
+      "texto_nuevo": "Subcontratar es pagarle a alguien de afuera para que haga algo que hoy haces tú o tu gente, buscando bajar costos, ganar tiempo o mejorar la calidad. Antes de decidir, pregúntate si esa actividad es el corazón de tu negocio, lo que realmente te distingue, o no. Lo que es el corazón de tu negocio mejor no lo sueltes, porque cuanto más conocimiento técnico y de mercado obtiene el proveedor, mayor es el riesgo para ti.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23639",
+        "frase": "the more that outsourcing results in a supplier obtaining technical knowledge"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea un riesgo graduado según cuánto conocimiento técnico y de mercado obtiene el proveedor; el nodo lo vuelve un 'es alto' absoluto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-070-seleccion_hacer_o_comprar-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera",
+      "texto_nuevo": "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera, confirmando que haya un proveedor capaz y que puedas vigilar bien el contrato",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23641",
+        "frase": "Outsourcing also assumes that a capable supplier can be found"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que subcontratar supone encontrar un proveedor capaz y vigilar bien el contrato, y que olvidarlo trae problemas serios de calidad.; Mismo defecto: se cae la condición del proveedor capaz y del contrato vigilado.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

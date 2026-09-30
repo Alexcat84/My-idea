@@ -562,3 +562,33 @@ cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de conta
 - **Si pasan los dos umbrales,** todos los lectores de la etapa pasan a Sonnet. **Si no,** pareja mixta: un lector
   Opus y uno Sonnet. Los árbitros y el agente principal siguen en Opus 5.5. La muestra ciega final que certifica, en
   Opus.
+
+**Resultado del piloto Sonnet (29 sep 2026; árbitros en Opus, paquetes 67 a 74):**
+- **Umbral 1, PASA:** 10 de 10 trampas cazadas, y por los DOS lectores en cada lote (20 de 20), sin tercer lector.
+- **Umbral 2, NO PASA:** 76 hallazgos reales confirmados contra 115,7 exigidos (128,6 esperados; 59 %).
+
+  | Lote | Nodos | Esperado | Confirmados |
+  |---|---|---|---|
+  | 96 | 11 | 12,9 | 6 |
+  | 97 | 12 | 15,5 | 10 |
+  | 98 | 12 | 8,7 | 8 |
+  | 99 | 10 | 10,0 | 3 |
+  | 100 | 12 | 14,5 | 7 |
+  | 101 | 11 | 9,2 | 8 |
+  | 102 | 12 | 14,5 | 8 |
+  | 103 | 11 | 13,3 | 3 |
+  | 104 | 12 | 15,5 | 14 |
+  | 105 | 11 | 14,5 | 9 |
+
+- **Contraste informativo, no es el umbral:** los lotes 88 a 95, leídos por Opus y arbitrados en los mismos paquetes,
+  dan 82 confirmados en 92 nodos (0,891 por nodo). El piloto da 76 en 114 (0,667 por nodo), el 75 % de esa cifra. No
+  pasaría ni contra ese contraste, así que el veredicto no depende de la base elegida.
+- **Lo que mide:** Sonnet es preciso, con 128 de 134 marcas confirmadas (Opus: 162 de 173), pero encuentra menos.
+- **Incidencia de forma:** la lectura 102a salió como JSON inválido (rutas de Windows sin escapar). Se reparó solo el
+  escape de las rutas, sin tocar el contenido, y el original queda en la cuarentena de claves. Desde el lote 106 la
+  consigna del lector pide rutas escapadas.
+- **Consecuencia, por la regla fijada antes:** pareja mixta desde el lote 106, con el lector A en Opus y el lector B
+  en Sonnet. Los árbitros, el agente principal y la muestra de parada siguen en Opus. Los lectores B de los lotes 106
+  a 117 se lanzaron en Sonnet mientras se arbitraba el piloto, porque ambos resultados posibles ponían un Sonnet en
+  ese puesto.
+- **Sexta y séptima tandas:** los arbitrajes 62 a 66 y 67 a 74, incluido el piloto.

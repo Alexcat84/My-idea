@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Ganancias del propietario (Owner Earnings)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+  "resumen_teorico": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas lo que inviertes en bienes de capital para mantener tu negocio funcionando.",
   "pasos_accionables": [
     "Calcula el flujo de caja operativo de tu negocio",
-    "Resta los gastos de capital que necesitas para mantener el negocio, no para crecerlo",
+    "Resta lo invertido en bienes de capital, tal como aparece en la sección de inversiones de tu estado de flujo de caja",
     "Usa esa cifra para saber cuánto efectivo podrías retirar sin dañar tu negocio",
     "Compara esta cifra entre distintos períodos para ver si tu salud financiera real mejora o empeora"
   ],
@@ -53,6 +53,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-069-owner_earnings-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+      "texto_nuevo": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas lo que inviertes en bienes de capital para mantener tu negocio funcionando.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2369",
+        "frase": "deduct the amount invested in capital equipment, as shown in the investment section"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro resta lo invertido en equipo tal como aparece en la sección de inversión, sin separar mantenimiento de crecimiento.; Misma distinción ausente del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-069-owner_earnings-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Resta los gastos de capital que necesitas para mantener el negocio, no para crecerlo",
+      "texto_nuevo": "Resta lo invertido en bienes de capital, tal como aparece en la sección de inversiones de tu estado de flujo de caja",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2369",
+        "frase": "deduct the amount invested in capital equipment, as shown in the investment section"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El procedimiento del libro resta lo invertido en equipo según la sección de inversión, sin excluir lo que es para crecer.; Misma distinción ausente del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

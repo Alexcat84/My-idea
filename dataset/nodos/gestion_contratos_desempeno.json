@@ -4,11 +4,11 @@
   "dominio": "compras",
   "titulo_concepto": "Gestión y Seguimiento del Desempeño de Proveedores",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
+  "resumen_teorico": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. A menudo conviene que el propio proveedor siga y cuide su desempeño. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
   "pasos_accionables": [
     "Establecer indicadores de desempeño (KPIs) alineados al contrato",
     "Recolectar datos de desempeño de proveedores de forma rutinaria",
-    "Notificar y exigir corrección a proveedores que no cumplen niveles acordados",
+    "Notificar y exigir corrección a proveedores que de forma constante no cumplen niveles acordados",
     "Evaluar implementar Vendor-Managed Inventory (VMI) para proveedores estratégicos"
   ],
   "entregable_esperado": "Sistema de seguimiento de KPIs de proveedores con reportes periódicos de cumplimiento",
@@ -53,6 +53,39 @@
         "evidencia": "D-12: Montar un sistema de KPIs de proveedores y evaluar VMI es gestión de proveedores a fondo; quien nunca entra en compras puede operar sin él. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-068-gestion_contratos_desempeno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
+      "texto_nuevo": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. A menudo conviene que el propio proveedor siga y cuide su desempeño. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1036",
+        "frase": "Often the suppliers themselves should be given responsibility for tracking their own performance."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta el VMI como ejemplo del consejo de que a menudo el propio proveedor siga su desempeño, y el nodo pierde ese consejo.; Mismo defecto: se cae la idea de dar al proveedor la responsabilidad de seguir su desempeño, que el VMI ilustra.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-068-gestion_contratos_desempeno-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Notificar y exigir corrección a proveedores que no cumplen niveles acordados",
+      "texto_nuevo": "Notificar y exigir corrección a proveedores que de forma constante no cumplen niveles acordados",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1034",
+        "frase": "Any supplier that consistently falls below requirements should be made aware of its shortcomings"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide avisar y pedir corrección al proveedor que queda por debajo de forma constante, no ante cualquier falla.; Mismo defecto: se pierde la condición de incumplimiento consistente.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

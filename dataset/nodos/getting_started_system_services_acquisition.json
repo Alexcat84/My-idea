@@ -10,7 +10,7 @@
     "Establecer procedimientos para reemplazo o uso continuado justificado de componentes no soportados.",
     "Definir mitigaciones de riesgo o fuentes alternativas de soporte.",
     "Revisar acuerdos de nivel de servicio (SLA) con proveedores externos.",
-    "Definir requisitos de seguridad, roles, responsabilidades y remedios ante incumplimiento en los SLA.",
+    "Definir en los SLA los requisitos de seguridad, roles, responsabilidades, resultados medibles y remedios ante incumplimiento.",
     "Establecer procedimiento de monitoreo del cumplimiento de requisitos de seguridad por proveedores externos."
   ],
   "entregable_esperado": "Inventario de componentes no soportados con plan de mitigación y acuerdos de servicio revisados con criterios de seguridad.",
@@ -41,6 +41,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-072-getting_started_system_services_acquisition-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir requisitos de seguridad, roles, responsabilidades y remedios ante incumplimiento en los SLA.",
+      "texto_nuevo": "Definir en los SLA los requisitos de seguridad, roles, responsabilidades, resultados medibles y remedios ante incumplimiento.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "777",
+        "frase": "A description of measurable outcomes."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de criterios del libro para los SLA incluye una descripción de resultados medibles que el paso omite.; Mismo defecto: falta el criterio de resultados medibles.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

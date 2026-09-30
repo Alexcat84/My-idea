@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Introducción a Lean (Manufactura Esbelta)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Lean es una filosofía de gestión de procesos orientada a optimizar sistemas reduciendo costos y mejorando la eficiencia mediante la eliminación de desperdicio (muda) en productos y procesos. Se basa en un sistema de 'pull' (jalar desde la demanda del cliente) en lugar de 'push'. Identifica ocho desperdicios clásicos: sobreproducción, tiempo de espera, transporte, procesamiento excesivo, inventario, movimiento, defectos y creatividad no utilizada.",
+  "resumen_teorico": "Lean es una filosofía de gestión de procesos orientada a optimizar sistemas reduciendo costos y mejorando la eficiencia mediante la eliminación de desperdicio (muda) en productos y procesos, sin olvidar la sobrecarga (muri) ni la irregularidad (mura): solo el muda no basta. Se basa en un sistema de 'pull' (jalar desde la demanda del cliente) en lugar de 'push'. Identifica ocho desperdicios clásicos: sobreproducción, tiempo de espera, transporte, procesamiento excesivo, inventario, movimiento, defectos y creatividad no utilizada.",
   "pasos_accionables": [
     "Mapear el proceso actual para identificar actividades sin valor agregado",
     "Clasificar los desperdicios según las 8 categorías clásicas (sobreproducción, espera, transporte, etc.)",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Elimina el Desperdicio, Piensa Lean",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-070-introduccion_lean-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lean es una filosofía de gestión de procesos orientada a optimizar sistemas reduciendo costos y mejorando la eficiencia mediante la eliminación de desperdicio (muda) en productos y procesos. Se basa en un sistema de 'pull' (jalar desde la demanda del cliente) en lugar de 'push'. Identifica ocho desperdicios clásicos: sobreproducción, tiempo de espera, transporte, procesamiento excesivo, inventario, movimiento, defectos y creatividad no utilizada.",
+      "texto_nuevo": "Lean es una filosofía de gestión de procesos orientada a optimizar sistemas reduciendo costos y mejorando la eficiencia mediante la eliminación de desperdicio (muda) en productos y procesos, sin olvidar la sobrecarga (muri) ni la irregularidad (mura): solo el muda no basta. Se basa en un sistema de 'pull' (jalar desde la demanda del cliente) en lugar de 'push'. Identifica ocho desperdicios clásicos: sobreproducción, tiempo de espera, transporte, procesamiento excesivo, inventario, movimiento, defectos y creatividad no utilizada.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13050",
+        "frase": "One must ensure that all three waste types are addressed."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que atacar solo el muda es reactivo y parcial, y pide atender también el muri y el mura.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
