@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo manejar tu rol después de que alguien más toma el mando",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "A diferencia de las grandes empresas, donde si te reemplazan como líder principal sueles irte del todo, en las startups es más común que te quedes trabajando en el negocio y en el consejo, sobre todo si fuiste tú quien impulsó el cambio. Esto trae riesgos: resistencia oculta y confusión entre tu equipo sobre a quién debe hacerle caso. También trae beneficios: se conserva lo que tú sabes del negocio y las relaciones que tienes con tus clientes.",
+  "resumen_teorico": "A diferencia de las grandes empresas, donde si te reemplazan como líder principal sueles irte del todo, en las startups es más común que te quedes trabajando en el negocio y en el consejo, sobre todo si fuiste tú quien impulsó el cambio. Esto puede traer riesgos, sobre todo si te mueve el control o no te gusta el cambio: resistencia y confusión entre tu equipo sobre a quién debe hacerle caso. También trae beneficios: se conserva lo que sabes del negocio, tus relaciones con clientes y el apoyo de los empleados que contrataste.",
   "pasos_accionables": [
     "Define con claridad tu nuevo rol (por ejemplo, responsable técnico, un puesto directivo o presidencia del consejo) y evita quedarte en un cargo simbólico sin responsabilidades reales.",
     "Deja explícito quién tiene la última palabra frente a tu equipo, para que nadie tenga que preguntar '¿puedo hacer esto, fundador?' en lugar de acudir a quien ahora lidera.",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Gestiona tu Salida como Fundador",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-024-transicion_post_sucesion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de las grandes empresas, donde si te reemplazan como líder principal sueles irte del todo, en las startups es más común que te quedes trabajando en el negocio y en el consejo, sobre todo si fuiste tú quien impulsó el cambio. Esto trae riesgos: resistencia oculta y confusión entre tu equipo sobre a quién debe hacerle caso. También trae beneficios: se conserva lo que tú sabes del negocio y las relaciones que tienes con tus clientes.",
+      "texto_nuevo": "A diferencia de las grandes empresas, donde si te reemplazan como líder principal sueles irte del todo, en las startups es más común que te quedes trabajando en el negocio y en el consejo, sobre todo si fuiste tú quien impulsó el cambio. Esto puede traer riesgos, sobre todo si te mueve el control o no te gusta el cambio: resistencia y confusión entre tu equipo sobre a quién debe hacerle caso. También trae beneficios: se conserva lo que sabes del negocio, tus relaciones con clientes y el apoyo de los empleados que contrataste.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3284-3286",
+        "frase": "keeping the founder around can be risky, especially if the founder is control-motivated"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que quedarse puede ser riesgoso sobre todo si al fundador lo mueve el control o no está conforme; el nodo pierde la condición.; El libro habla de resistencia al nuevo líder, nunca de que sea oculta; su ejemplo es de interferencia abierta.; Misma condición perdida sobre el riesgo de quedarse.; Misma condición perdida: el riesgo es sobre todo si te mueve el control o no estás conforme con el cambio.; Se cae el mayor apoyo de los empleados que contrató el fundador.; Se sostiene por el apoyo de los empleados que contrataste, que se devuelve; el papel de respaldo ya está en el paso 4 del nodo y no cabe en el resumen sin pasar el tope de longitud.; Se sostiene: el libro cuenta entre los beneficios el mayor apoyo de los empleados que contrató el fundador, y se devuelve; su papel de respaldo si el nuevo líder fracasa ya lo recoge el paso 4 del nodo y no cabe en el resumen sin pasar",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

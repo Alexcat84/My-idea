@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Gestión de Residuos Electrónicos (E-Waste)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El e-waste es un problema global creciente con implicaciones regulatorias y ambientales debido a metales pesados y tóxicos. Las empresas pueden reducir su huella mediante venta de equipos usados a recicladores certificados, donación de equipos funcionales, devolución a fabricantes, y compra de equipos remanufacturados, asegurando siempre la responsabilidad extendida del producto.",
+  "resumen_teorico": "El e-waste es un problema global creciente con implicaciones regulatorias y ambientales debido a metales pesados y tóxicos. Las empresas pueden reducir su huella mediante venta de equipos usados a reacondicionadores de buena reputación, donación de equipos funcionales, devolución a fabricantes, y compra de equipos remanufacturados, asegurando siempre la responsabilidad extendida del producto.",
   "pasos_accionables": [
     "Si ya renuevas tus equipos con regularidad (cada 3-4 años), vende los que retiras a un reacondicionador de buena reputación",
     "Donar equipos funcionales a escuelas u organizaciones sin fines de lucro, borrando datos previamente",
@@ -44,6 +44,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no recomienda fijar un ciclo de 3-4 años; dice que quien ya renueva así a menudo puede vender lo que retira.; Mismo defecto; además el libro habla de venderlos a un reacondicionador de buena reputación.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-024-gestion_e_waste-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El e-waste es un problema global creciente con implicaciones regulatorias y ambientales debido a metales pesados y tóxicos. Las empresas pueden reducir su huella mediante venta de equipos usados a recicladores certificados, donación de equipos funcionales, devolución a fabricantes, y compra de equipos remanufacturados, asegurando siempre la responsabilidad extendida del producto.",
+      "texto_nuevo": "El e-waste es un problema global creciente con implicaciones regulatorias y ambientales debido a metales pesados y tóxicos. Las empresas pueden reducir su huella mediante venta de equipos usados a reacondicionadores de buena reputación, donación de equipos funcionales, devolución a fabricantes, y compra de equipos remanufacturados, asegurando siempre la responsabilidad extendida del producto.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3305",
+        "frase": "sell the machines they are retiring to a computer refurbisher ... use a reputable company"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro aconseja vender a un reacondicionador de buena reputación; no habla de recicladores certificados.; Mismo defecto: la certificación del comprador no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

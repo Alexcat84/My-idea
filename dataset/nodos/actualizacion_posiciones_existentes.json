@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Actualización ('Upgrade') de Posiciones Existentes",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "A medida que el startup crece, las demandas de cada posición aumentan más rápido de lo que muchas personas pueden aprender, obligando a decidir entre mantener a un fundador/empleado temprano que no puede escalar o reemplazarlo con alguien más capacitado. Esta decisión es delicada por el impacto emocional y organizacional en equipos pequeños y cohesionados, y porque mantenerlo también conserva conocimiento, contactos y relaciones; además se complica por la 'inflación de títulos' otorgada tempranamente.",
+  "resumen_teorico": "A medida que el startup crece, las demandas de cada posición tienden a crecer y, si el crecimiento es rápido, aumentan más rápido de lo que muchas personas pueden aprender, obligando a decidir entre mantener a un fundador/empleado temprano que no puede escalar o reemplazarlo con alguien más capacitado. Esta decisión es delicada por el impacto emocional y organizacional en equipos pequeños y cohesionados, y porque mantenerlo también conserva conocimiento, contactos y relaciones; además se complica por la 'inflación de títulos' otorgada tempranamente.",
   "pasos_accionables": [
     "Establecer desde el inicio expectativas claras sobre la posibilidad de futuras 'actualizaciones' de posición, sabiendo que eso no elimina del todo la resistencia cuando llegue el momento",
-    "Evitar otorgar títulos inflados tempranamente que compliquen futuros reemplazos, sopesando que un título alto ayuda a atraer cofundadores y primeras contrataciones",
+    "Evitar otorgar títulos inflados tempranamente que compliquen futuros reemplazos, sopesando que un título alto puede ayudar a atraer cofundadores y primeras contrataciones",
     "Evaluar objetivamente si un empleado clave puede escalar con las nuevas demandas del rol",
     "Comunicar de forma transparente y anticipada cuando se prevé contratar a alguien por encima de un empleado actual"
   ],
@@ -76,6 +76,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que avisar de antemano no basta del todo y los retos de gestión suelen seguir.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-024-actualizacion_posiciones_existentes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que el startup crece, las demandas de cada posición aumentan más rápido de lo que muchas personas pueden aprender, obligando a decidir entre mantener a un fundador/empleado temprano que no puede escalar o reemplazarlo con alguien más capacitado. Esta decisión es delicada por el impacto emocional y organizacional en equipos pequeños y cohesionados, y porque mantenerlo también conserva conocimiento, contactos y relaciones; además se complica por la 'inflación de títulos' otorgada tempranamente.",
+      "texto_nuevo": "A medida que el startup crece, las demandas de cada posición tienden a crecer y, si el crecimiento es rápido, aumentan más rápido de lo que muchas personas pueden aprender, obligando a decidir entre mantener a un fundador/empleado temprano que no puede escalar o reemplazarlo con alguien más capacitado. Esta decisión es delicada por el impacto emocional y organizacional en equipos pequeños y cohesionados, y porque mantenerlo también conserva conocimiento, contactos y relaciones; además se complica por la 'inflación de títulos' otorgada tempranamente.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2317",
+        "frase": "in a fast-growing startup, the demands will grow more quickly than most people can learn"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las demandas tienden a crecer y que solo en un startup de crecimiento rápido superan lo que la gente puede aprender.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-024-actualizacion_posiciones_existentes-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar otorgar títulos inflados tempranamente que compliquen futuros reemplazos, sopesando que un título alto ayuda a atraer cofundadores y primeras contrataciones",
+      "texto_nuevo": "Evitar otorgar títulos inflados tempranamente que compliquen futuros reemplazos, sopesando que un título alto puede ayudar a atraer cofundadores y primeras contrataciones",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2325",
+        "frase": "Title inflation may be good for attracting potential cofounders or early hires"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la inflación de títulos puede servir para atraer cofundadores y primeras contrataciones; el nodo lo afirma sin matiz.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

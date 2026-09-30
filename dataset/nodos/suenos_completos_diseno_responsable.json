@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Sueños Completos: Diseñar con Humildad y Optimismo",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Un 'sueño completo' es aquel que es grande y ambicioso pero no ignora sus propios efectos negativos potenciales; deja espacio para los sueños de otros (sociedad, naturaleza, futuras generaciones). Este concepto contrapone el optimismo ciego de innovadores como los Eames o los creadores de CFCs (Protocolo de Montreal) con una postura de humildad activa que anticipa errores en el deseo mismo, no solo en la ejecución. La imperfección se acepta como un resultado inevitable y hasta deseable del diseño, siempre que se mantenga vigilancia y responsabilidad.",
+  "resumen_teorico": "Un 'sueño completo' es aquel que es grande y ambicioso pero no ignora sus propios efectos negativos potenciales; deja espacio para los sueños de otros (sociedad, naturaleza, futuras generaciones). Este concepto contrapone el optimismo de innovadores como los Eames con una postura de humildad activa que anticipa errores en el deseo mismo, no solo en la ejecución. La imperfección se acepta como un resultado inevitable y hasta deseable del diseño, siempre que se mantenga vigilancia y responsabilidad.",
   "pasos_accionables": [
     "Al formular la visión/misión de tu proyecto, pregunta explícitamente qué podría salir mal si todo sale 'bien'.",
     "Enumera a los actores no representados en tu visión actual (comunidades, ecosistemas, generaciones futuras).",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Sueña en Grande, con Humildad",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-023-suenos_completos_diseno_responsable-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un 'sueño completo' es aquel que es grande y ambicioso pero no ignora sus propios efectos negativos potenciales; deja espacio para los sueños de otros (sociedad, naturaleza, futuras generaciones). Este concepto contrapone el optimismo ciego de innovadores como los Eames o los creadores de CFCs (Protocolo de Montreal) con una postura de humildad activa que anticipa errores en el deseo mismo, no solo en la ejecución. La imperfección se acepta como un resultado inevitable y hasta deseable del diseño, siempre que se mantenga vigilancia y responsabilidad.",
+      "texto_nuevo": "Un 'sueño completo' es aquel que es grande y ambicioso pero no ignora sus propios efectos negativos potenciales; deja espacio para los sueños de otros (sociedad, naturaleza, futuras generaciones). Este concepto contrapone el optimismo de innovadores como los Eames con una postura de humildad activa que anticipa errores en el deseo mismo, no solo en la ejecución. La imperfección se acepta como un resultado inevitable y hasta deseable del diseño, siempre que se mantenga vigilancia y responsabilidad.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4124-4130",
+        "frase": "Their self-styled motto nailed the optimistic problem-solving ethos of the time"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no llama ciego al optimismo de los Eames ni habla de creadores de CFC: el Protocolo de Montreal eliminó los CFC.; Mismo defecto: calificativo y hecho histórico que el libro no dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

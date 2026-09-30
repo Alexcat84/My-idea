@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Motivaciones del Fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera; salvo esta última, que también pesa en quienes no emprenden, en ellos dominan otras motivaciones, sobre todo al inicio de la carrera. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+  "resumen_teorico": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que los hombres que emprenden suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera; salvo esta última, que también pesa en quienes no emprenden, en ellos dominan otras motivaciones, sobre todo al inicio de la carrera. En las mujeres que emprenden también domina el control, pero la ganancia financiera pesa mucho menos. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
   "pasos_accionables": [
     "Reflexiona sobre las influencias familiares y culturales que tuviste relacionadas con emprender",
     "Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.), por ejemplo con una herramienta tipo CareerLeader",
@@ -75,6 +75,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la diferencia se da sobre todo al inicio de la carrera y que los perfiles se acercan en los 40.; El libro exceptúa la ganancia financiera, que también está arriba en quienes no emprenden; el nodo la presenta como rasgo distintivo.; Mismo defecto que la marca 0: se pierde la excepción de la ganancia financiera. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-024-analisis_motivaciones_fundador-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera; salvo esta última, que también pesa en quienes no emprenden, en ellos dominan otras motivaciones, sobre todo al inicio de la carrera. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+      "texto_nuevo": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que los hombres que emprenden suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera; salvo esta última, que también pesa en quienes no emprenden, en ellos dominan otras motivaciones, sobre todo al inicio de la carrera. En las mujeres que emprenden también domina el control, pero la ganancia financiera pesa mucho menos. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "297-307",
+        "frase": "control motivations also dominate the list for female entrepreneurs, but financial gain ranks much lower"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da ese perfil para hombres de veintitantos y dice que en las mujeres que emprenden la ganancia financiera pesa mucho menos; el nodo lo generaliza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

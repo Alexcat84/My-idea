@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Requisitos Numéricos de Calidad y Confiabilidad para Lotes",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, y los criterios también pueden generar confusión en discusiones de responsabilidad del producto.",
+  "resumen_teorico": "Más allá de los requisitos de calidad para unidades individuales, suelen necesitarse criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, y los criterios también pueden generar confusión en discusiones de responsabilidad del producto.",
   "pasos_accionables": [
     "Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)",
     "Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas",
@@ -82,6 +82,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se pierde lo que el libro pide que el proveedor entienda: se espera que todo producto enviado cumpla las especificaciones. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-024-requisitos_numericos_calidad_lotes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, y los criterios también pueden generar confusión en discusiones de responsabilidad del producto.",
+      "texto_nuevo": "Más allá de los requisitos de calidad para unidades individuales, suelen necesitarse criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, y los criterios también pueden generar confusión en discusiones de responsabilidad del producto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23587",
+        "frase": "there is usually a need for added numerical criteria to judge conformance of lots"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que usualmente hay necesidad de esos criterios; el nodo lo da como necesidad sin matiz.; Mismo defecto: 'usually a need' pasa a necesidad sin matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

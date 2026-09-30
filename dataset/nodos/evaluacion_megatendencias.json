@@ -7,7 +7,7 @@
   "resumen_teorico": "Lente para definir el espacio de oportunidad analizando las principales tendencias en la sociedad y en la industria. Con visión de futuro, el equipo identifica los 'grandes desafíos' de la industria que pueden abrir oportunidades. Se buscan las grandes tendencias inevitables y se pregunta dónde la empresa tiene que jugar y dónde podría jugar.",
   "pasos_accionables": [
     "Reunir un equipo para analizar las principales tendencias sociales e industriales",
-    "Identificar los grandes desafíos (grand challenges) inevitables de la industria",
+    "Identificar los grandes desafíos (grand challenges) de la industria",
     "Preguntar: ¿dónde tenemos que jugar? ¿dónde podríamos jugar?",
     "Analizar disrupciones potenciales de mercado y tecnología asociadas a estas tendencias",
     "Definir espacios de oportunidad concretos para la empresa"
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Lee las Grandes Tendencias",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-025-evaluacion_megatendencias-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar los grandes desafíos (grand challenges) inevitables de la industria",
+      "texto_nuevo": "Identificar los grandes desafíos (grand challenges) de la industria",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5291",
+        "frase": "identify the grand challenges in the industry that may open up great opportunities and ideas"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro llama inevitables a las grandes tendencias; de los grandes desafíos solo dice que pueden abrir oportunidades.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

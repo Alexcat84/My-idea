@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Sesgos Naturales: Pasión, Optimismo e Instinto",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Eres optimista y estás orientado a la acción, rasgos que necesitas para emprender, pero que a menudo se vuelven en tu contra. El optimismo excesivo te lleva a subestimar los recursos que necesitas, a sobreestimar tus propias capacidades frente a la competencia, a involucrar a familiares o amigos de forma imprudente como empleados o inversionistas, y a no planificar para problemas previsibles. Los entornos de un negocio propio, ambiguos y con señales poco claras, hacen que seas más susceptible a estos sesgos.",
+  "resumen_teorico": "Eres optimista y estás orientado a la acción, rasgos que necesitas para emprender, pero que a menudo se vuelven en tu contra. El optimismo excesivo te lleva a subestimar los recursos que necesitas, a sobreestimar tus propias capacidades frente a la competencia y a no planificar para problemas previsibles, y puede llevarte a involucrar a familiares o amigos de forma imprudente como empleados o inversionistas. Los entornos de un negocio propio, ambiguos y con señales poco claras, hacen que seas más susceptible a estos sesgos.",
   "pasos_accionables": [
     "Busca activamente una opinión externa y crítica (mentores, asesores) que contrarreste tu optimismo natural.",
     "Sugerencia de My Idea: imagina que tu negocio ya fracasó y haz una lista de las razones más probables, como en un ejercicio de premortem.",
@@ -69,6 +69,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que esos sesgos a menudo se vuelven contra el fundador; 'peligros sistemáticos' lo endurece.; Mismo defecto de endurecimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-024-sesgos_naturales_del_fundador-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Eres optimista y estás orientado a la acción, rasgos que necesitas para emprender, pero que a menudo se vuelven en tu contra. El optimismo excesivo te lleva a subestimar los recursos que necesitas, a sobreestimar tus propias capacidades frente a la competencia, a involucrar a familiares o amigos de forma imprudente como empleados o inversionistas, y a no planificar para problemas previsibles. Los entornos de un negocio propio, ambiguos y con señales poco claras, hacen que seas más susceptible a estos sesgos.",
+      "texto_nuevo": "Eres optimista y estás orientado a la acción, rasgos que necesitas para emprender, pero que a menudo se vuelven en tu contra. El optimismo excesivo te lleva a subestimar los recursos que necesitas, a sobreestimar tus propias capacidades frente a la competencia y a no planificar para problemas previsibles, y puede llevarte a involucrar a familiares o amigos de forma imprudente como empleados o inversionistas. Los entornos de un negocio propio, ambiguos y con señales poco claras, hacen que seas más susceptible a estos sesgos.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "101",
+        "frase": "Excessive confidence and optimism ... can lead entrepreneurs to involve family and friends"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el exceso de optimismo puede llevar a involucrar a familiares y amigos; el nodo lo pone entre los efectos seguros.; Mismo defecto: el 'can lead' del libro pasa a efecto seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "El Embudo de Ventas de Franquicia (Franchise Sales Funnel)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Este modelo te ayuda a ver qué tan bien funciona tu marketing de franquicias. El embudo muestra el camino que recorren tus contactos desde que llegan por distintas vías (relaciones públicas, medios impresos, ferias, correo directo, internet, intermediarios, referidos) hasta que se convierten en ventas, y cada vía tiene su propio costo por contacto y su propia tasa de cierre. Los intermediarios te traen los contactos de mejor calidad y más fáciles de cerrar, seguidos de relaciones públicas y referidos; internet te da el mayor volumen pero la tasa de cierre más baja. En general puedes esperar que cerca del 13.5% de quienes completan el formulario de solicitud de información (CIRF) termine comprando, que solo un 2% de todas las consultas llegue a venta, y que el cierre completo tome entre 12 y 14 semanas (más al principio, mientras llenas tu embudo). Pregunta el costo por contacto en tu mercado.",
+  "resumen_teorico": "Este modelo te ayuda a ver qué tan bien funciona tu marketing de franquicias. El embudo muestra el camino que recorren tus contactos desde que llegan por distintas vías (relaciones públicas, medios impresos, ferias, correo directo, internet, intermediarios, referidos) hasta que se convierten en ventas, y cada vía tiene su propio costo por contacto y su propia tasa de cierre. Los intermediarios te traen los contactos de mejor calidad y más fáciles de cerrar, seguidos de relaciones públicas y referidos; internet te da el mayor volumen pero, por lo general, la tasa de cierre más baja. En general puedes esperar que cerca del 13.5% de quienes completan el formulario de solicitud de información (CIRF) termine comprando, que solo un 2% de todas las consultas llegue a venta, y que el cierre completo tome entre 12 y 14 semanas (más al principio, mientras llenas tu embudo). Pregunta el costo por contacto en tu mercado.",
   "pasos_accionables": [
     "Mapea todas las vías por las que hoy te llegan contactos y cuánto te cuesta cada una",
     "Mide la tasa de conversión de cada vía en cada etapa del embudo (contacto, formulario, reunión, venta)",
@@ -61,6 +61,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que probablemente necesitarás una mezcla de casi todas las vías para vender con previsibilidad.; Mismo defecto.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-023-embudo_ventas_franquicia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este modelo te ayuda a ver qué tan bien funciona tu marketing de franquicias. El embudo muestra el camino que recorren tus contactos desde que llegan por distintas vías (relaciones públicas, medios impresos, ferias, correo directo, internet, intermediarios, referidos) hasta que se convierten en ventas, y cada vía tiene su propio costo por contacto y su propia tasa de cierre. Los intermediarios te traen los contactos de mejor calidad y más fáciles de cerrar, seguidos de relaciones públicas y referidos; internet te da el mayor volumen pero la tasa de cierre más baja. En general puedes esperar que cerca del 13.5% de quienes completan el formulario de solicitud de información (CIRF) termine comprando, que solo un 2% de todas las consultas llegue a venta, y que el cierre completo tome entre 12 y 14 semanas (más al principio, mientras llenas tu embudo). Pregunta el costo por contacto en tu mercado.",
+      "texto_nuevo": "Este modelo te ayuda a ver qué tan bien funciona tu marketing de franquicias. El embudo muestra el camino que recorren tus contactos desde que llegan por distintas vías (relaciones públicas, medios impresos, ferias, correo directo, internet, intermediarios, referidos) hasta que se convierten en ventas, y cada vía tiene su propio costo por contacto y su propia tasa de cierre. Los intermediarios te traen los contactos de mejor calidad y más fáciles de cerrar, seguidos de relaciones públicas y referidos; internet te da el mayor volumen pero, por lo general, la tasa de cierre más baja. En general puedes esperar que cerca del 13.5% de quienes completan el formulario de solicitud de información (CIRF) termine comprando, que solo un 2% de todas las consultas llegue a venta, y que el cierre completo tome entre 12 y 14 semanas (más al principio, mientras llenas tu embudo). Pregunta el costo por contacto en tu mercado.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3561",
+        "frase": "Leads from the internet will generally have the lowest close rates."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los contactos de internet por lo general tienen la tasa de cierre más baja; el resumen lo afirma sin matiz.; Mismo defecto: se cae el generally del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

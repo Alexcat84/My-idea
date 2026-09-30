@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Anticipa los riesgos de fundar tu negocio antes de que te pasen",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Muchos de los problemas que vas a enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va, investigar antes a tus inversionistas) que reducen el daño.",
+  "resumen_teorico": "Muchos de los problemas que puedes enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va o un reparto que se ajuste con el tiempo, investigar antes a tus inversionistas) que reducen el daño.",
   "pasos_accionables": [
     "Pon acuerdos claros por escrito si vas a cofundar con familiares o amigos cercanos",
     "Incluye una cláusula para recomprar la participación de un cofundador que abandone el proyecto",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Anticipa Riesgos de Fundación",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-024-anticipacion_riesgos_fundacionales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos de los problemas que vas a enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va, investigar antes a tus inversionistas) que reducen el daño.",
+      "texto_nuevo": "Muchos de los problemas que puedes enfrentar al fundar tu negocio (cofundar con amigos o familia, repartir la participación de forma fija desde el inicio, aceptar dinero de inversionistas que suelen reemplazar al fundador que dirige) son predecibles. Si los anticipas, puedes poner protecciones (acuerdos claros con familiares, cláusulas para recomprar la participación de quien se va o un reparto que se ajuste con el tiempo, investigar antes a tus inversionistas) que reducen el daño.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3665-3667",
+        "frase": "can include terms for buying out cofounders ... or can structure dynamic equity splits"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos protecciones para el reparto, la recompra o un reparto dinámico que se ajuste a los cambios; el resumen deja caer la segunda.; El libro dice que esas decisiones pueden causar daño; el nodo da por hecho que los vas a enfrentar.; Mismo defecto: 'can cause' pasa a 'vas a enfrentar'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }
