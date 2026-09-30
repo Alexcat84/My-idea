@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Realizar pronósticos simplificados de demanda basados en riesgo geográfico y población",
     "Preposicionar inventario estratégico ('surge capacity') en ubicaciones clave",
-    "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia, sabiendo que quizá no puedan entregar grandes cantidades de golpe y que a menudo habrá que sumar proveedores nuevos",
+    "Seleccionar proveedores, sabiendo que quizá no puedan entregar grandes cantidades de golpe y que a menudo habrá que sumar proveedores nuevos",
     "Diseñar y ejecutar simulaciones de entrenamiento colaborativo entre organizaciones participantes",
     "Establecer una plataforma común de datos (basada en mapas) para coordinación en tiempo real"
   ],
@@ -83,6 +83,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los proveedores preseleccionados pueden no entregar de golpe grandes cantidades y que a menudo hay que buscar proveedores nuevos.; Mismo defecto: se pierde el límite de la preselección de proveedores.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-062-cadena_suministro_respuesta_desastres-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar proveedores capaces de escalar rápidamente en caso de emergencia, sabiendo que quizá no puedan entregar grandes cantidades de golpe y que a menudo habrá que sumar proveedores nuevos",
+      "texto_nuevo": "Seleccionar proveedores, sabiendo que quizá no puedan entregar grandes cantidades de golpe y que a menudo habrá que sumar proveedores nuevos",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1648-1650",
+        "frase": "previously selected suppliers may not always be able to deliver more"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro solo habla de seleccionar proveedores que entreguen en los lugares de acopio y advierte que quizá no puedan escalar; elegirlos por su capacidad de escalar es un criterio que no da.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

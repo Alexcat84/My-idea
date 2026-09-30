@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cumplimiento de la Foreign Corrupt Practices Act (FCPA)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, también a través de un tercero a sabiendas (y cuenta como saberlo hacerte de la vista gorda), para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+  "resumen_teorico": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, o autorizar ese pago o esa promesa, también a través de un tercero a sabiendas (y cuenta como saberlo hacerte de la vista gorda), para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
   "pasos_accionables": [
     "Establecer políticas internas anticorrupción antes de iniciar operaciones internacionales",
     "Capacitar a empleados, agentes y distribuidores sobre la FCPA",
@@ -73,6 +73,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que saber incluye la indiferencia consciente y la ceguera deliberada; sin eso parece que basta con no preguntar.; Mismo defecto que la marca 0, con la misma evidencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-061-foreign_corrupt_practices_act-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, también a través de un tercero a sabiendas (y cuenta como saberlo hacerte de la vista gorda), para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+      "texto_nuevo": "La FCPA prohíbe a personas o empresas de EE.UU. ofrecer, pagar o prometer pagar dinero o cualquier cosa de valor a funcionarios, partidos o candidatos extranjeros, o autorizar ese pago o esa promesa, también a través de un tercero a sabiendas (y cuenta como saberlo hacerte de la vista gorda), para obtener o retener negocios. También cubre a personas extranjeras que cometan actos de soborno en territorio de EE.UU.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2863",
+        "frase": "authorization of any such payment or promise is prohibited, as well."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro prohíbe también autorizar el pago o la promesa y el resumen lo omite de la lista de conductas.; Mismo defecto: se cae la autorización del pago o la promesa de la enumeración.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

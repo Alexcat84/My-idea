@@ -9,7 +9,7 @@
     "Identifica los pocos desastres que te dejarían fuera del juego: pérdida de datos, un incendio o una inundación en tu local.",
     "Para cada uno, escribe los pasos concretos que te devolverían a operar, en orden.",
     "Prepara de antemano lo que esa recuperación necesita: respaldos, contactos, un fondo.",
-    "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo."
+    "Sugerencia de My Idea: guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo."
   ],
   "entregable_esperado": "Un plan de recuperación escrito para cada desastre que te sacaría del juego, con sus pasos y recursos listos de antemano, mantenido al día y ensayado.",
   "nodos_previos": [
@@ -121,6 +121,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide preparar y mantener los planes de desastre y ensayar los procedimientos; el paso se queda en guardarlo.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-061-plan_de_desastre_y_recuperacion-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo.",
+      "texto_nuevo": "Sugerencia de My Idea: guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "9287",
+        "frase": "against potential crises and disasters should be conducted on a regular basis"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro pide pruebas periódicas contra crisis y desastres, no dónde guardar el plan; consejo propio sin etiqueta.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

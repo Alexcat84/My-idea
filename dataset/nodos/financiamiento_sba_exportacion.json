@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas de Financiamiento de la SBA para Exportadores",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Si eres una pequeña empresa exportadora en Estados Unidos, la SBA te ofrece garantías de préstamo pensadas para tu negocio. El Export Working Capital Program (EWCP) garantiza hasta 1.5 millones de dólares o el 90% del préstamo, lo que sea menor, para capital de trabajo. El International Trade Loan Program puede garantizar hasta 1.25 millones combinando capital de trabajo y financiamiento de activos fijos. Export Express te da préstamos rápidos de hasta 250,000 dólares con garantía del 75 al 85%. El Surety Bond Program puede ayudarte a obtener fianzas de licitación y desempeño en contratos internacionales. Para Export Express necesitas al menos un año en operación y poder mostrar el impacto en tus ventas de exportación, además de los demás requisitos de la SBA. Antes de acudir a un prestamista, puedes pedir orientación en la oficina local de la SBA o del U.S. Commercial Service.",
+  "resumen_teorico": "Si eres una pequeña empresa exportadora en Estados Unidos, la SBA te ofrece garantías de préstamo pensadas para tu negocio. El Export Working Capital Program (EWCP) garantiza hasta 1.5 millones de dólares o el 90% del préstamo, lo que sea menor, para capital de trabajo. El International Trade Loan Program puede garantizar hasta 1.25 millones combinando capital de trabajo y financiamiento de activos fijos, si certificas que te permitirá ampliar de forma significativa tus mercados de exportación o abrir otros, o si muestras que te perjudicó la competencia de las importaciones. Export Express te da préstamos rápidos de hasta 250,000 dólares con garantía del 75 al 85%. El Surety Bond Program puede ayudarte a obtener fianzas de licitación y desempeño en contratos internacionales. Para Export Express necesitas al menos un año en operación y poder mostrar el impacto en tus ventas de exportación, además de los demás requisitos de la SBA. Antes de acudir a un prestamista, puedes pedir orientación en la oficina local de la SBA o del U.S. Commercial Service.",
   "pasos_accionables": [
     "Define tu necesidad concreta: capital de trabajo, activos fijos o fianzas de licitación",
     "Busca orientación en la oficina local de la SBA o del U.S. Commercial Service",
@@ -86,6 +86,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Los requisitos son los de Export Express y el libro añade que aplican los demás requisitos de la SBA.; Mismo defecto que la marca 0: se pierde a qué programa aplican esos requisitos.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-061-financiamiento_sba_exportacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si eres una pequeña empresa exportadora en Estados Unidos, la SBA te ofrece garantías de préstamo pensadas para tu negocio. El Export Working Capital Program (EWCP) garantiza hasta 1.5 millones de dólares o el 90% del préstamo, lo que sea menor, para capital de trabajo. El International Trade Loan Program puede garantizar hasta 1.25 millones combinando capital de trabajo y financiamiento de activos fijos. Export Express te da préstamos rápidos de hasta 250,000 dólares con garantía del 75 al 85%. El Surety Bond Program puede ayudarte a obtener fianzas de licitación y desempeño en contratos internacionales. Para Export Express necesitas al menos un año en operación y poder mostrar el impacto en tus ventas de exportación, además de los demás requisitos de la SBA. Antes de acudir a un prestamista, puedes pedir orientación en la oficina local de la SBA o del U.S. Commercial Service.",
+      "texto_nuevo": "Si eres una pequeña empresa exportadora en Estados Unidos, la SBA te ofrece garantías de préstamo pensadas para tu negocio. El Export Working Capital Program (EWCP) garantiza hasta 1.5 millones de dólares o el 90% del préstamo, lo que sea menor, para capital de trabajo. El International Trade Loan Program puede garantizar hasta 1.25 millones combinando capital de trabajo y financiamiento de activos fijos, si certificas que te permitirá ampliar de forma significativa tus mercados de exportación o abrir otros, o si muestras que te perjudicó la competencia de las importaciones. Export Express te da préstamos rápidos de hasta 250,000 dólares con garantía del 75 al 85%. El Surety Bond Program puede ayudarte a obtener fianzas de licitación y desempeño en contratos internacionales. Para Export Express necesitas al menos un año en operación y poder mostrar el impacto en tus ventas de exportación, además de los demás requisitos de la SBA. Antes de acudir a un prestamista, puedes pedir orientación en la oficina local de la SBA o del U.S. Commercial Service.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4335-4339",
+        "frase": "significantly expand existing export markets or develop new ones, or"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige para ese programa certificar la expansión de mercados de exportación o mostrar daño por importaciones; el resumen omite la condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

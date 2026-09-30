@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Tendencias con Gráficos de Control (Cause-Effect Charting)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, puedes detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa; por eso hay que actuar de inmediato en cuanto los defectos empiezan a subir. Este análisis te permite pasar de una gestión reactiva basada en intuición a una gestión predictiva basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
+  "resumen_teorico": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, puedes detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa; por eso hay que actuar de inmediato en cuanto los defectos empiezan a subir. Este análisis te permite pasar de una gestión reactiva basada en intuición a una gestión basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
   "pasos_accionables": [
     "Recopilar los gráficos históricos de las métricas clave: cumplimiento de programa, defectos por unidad, ausentismo y faltantes.",
     "Superponer los gráficos en el mismo eje temporal para comparar visualmente.",
@@ -61,6 +61,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Da por hecho como resultado la cadena causal de un caso concreto del libro, que no se presenta como hallazgo garantizado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-062-analisis_causa_efecto_indicadores_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, puedes detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa; por eso hay que actuar de inmediato en cuanto los defectos empiezan a subir. Este análisis te permite pasar de una gestión reactiva basada en intuición a una gestión predictiva basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
+      "texto_nuevo": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, puedes detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa; por eso hay que actuar de inmediato en cuanto los defectos empiezan a subir. Este análisis te permite pasar de una gestión reactiva basada en intuición a una gestión basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1169",
+        "frase": "I'm not pretending that you can know the future just by plotting the past"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro advierte que graficar el pasado no permite conocer el futuro, solo que algunas tendencias se repiten; 'gestión predictiva' lo endurece. Basta quitar 'predictiva'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

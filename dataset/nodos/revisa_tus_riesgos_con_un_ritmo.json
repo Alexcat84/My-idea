@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Procedimientos de Monitoreo del Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Vigilar tus riesgos no puede ser algo que haces cuando te sobra tiempo: necesita un ritmo fijo. La frecuencia sana depende de la gravedad y del movimiento del proyecto: como base, una revisión mensual si la ejecución dura más de un año y quincenal si es más corta; los momentos intensos piden revisión semanal o hasta diaria, y los riesgos más graves, una vigilancia frecuente o incluso continua. La idea no es reunirte a contemplar la lista, sino detectar a tiempo cualquier desviación de lo normal y decidir si actúas. Para el emprendedor solo, poner en la agenda un momento fijo de revisión, con una frecuencia acorde a lo que está en juego, es lo que convierte la gestión de riesgo de una buena intención en un hábito real.",
+  "resumen_teorico": "Vigilar tus riesgos no puede ser algo que haces cuando te sobra tiempo: necesita un ritmo fijo. La frecuencia sana depende de la gravedad y del movimiento del proyecto: como base, una revisión mensual si la ejecución dura más de un año y, si es más corta, una quincenal puede ser más adecuada; en los momentos intensos puede hacer falta revisión semanal o hasta diaria, y los riesgos más graves, una vigilancia frecuente o incluso continua. La idea no es reunirte a contemplar la lista, sino detectar a tiempo cualquier desviación de lo normal y decidir si actúas. Para el emprendedor solo, poner en la agenda un momento fijo de revisión, con una frecuencia acorde a lo que está en juego, es lo que convierte la gestión de riesgo de una buena intención en un hábito real.",
   "pasos_accionables": [
     "Clasifica tus riesgos según su gravedad y elige para cada uno una frecuencia de revisión acorde: más seguido para los más graves.",
     "Agenda esas revisiones como una cita fija en tu calendario, no como algo para cuando sobre tiempo.",
@@ -48,6 +48,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Lo mensual es la base para proyectos largos y lo quincenal para los cortos, y los riesgos graves pueden pedir vigilancia continua.; Mismas condiciones perdidas: duración del proyecto y vigilancia continua de los riesgos altos y extremos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-061-revisa_tus_riesgos_con_un_ritmo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vigilar tus riesgos no puede ser algo que haces cuando te sobra tiempo: necesita un ritmo fijo. La frecuencia sana depende de la gravedad y del movimiento del proyecto: como base, una revisión mensual si la ejecución dura más de un año y quincenal si es más corta; los momentos intensos piden revisión semanal o hasta diaria, y los riesgos más graves, una vigilancia frecuente o incluso continua. La idea no es reunirte a contemplar la lista, sino detectar a tiempo cualquier desviación de lo normal y decidir si actúas. Para el emprendedor solo, poner en la agenda un momento fijo de revisión, con una frecuencia acorde a lo que está en juego, es lo que convierte la gestión de riesgo de una buena intención en un hábito real.",
+      "texto_nuevo": "Vigilar tus riesgos no puede ser algo que haces cuando te sobra tiempo: necesita un ritmo fijo. La frecuencia sana depende de la gravedad y del movimiento del proyecto: como base, una revisión mensual si la ejecución dura más de un año y, si es más corta, una quincenal puede ser más adecuada; en los momentos intensos puede hacer falta revisión semanal o hasta diaria, y los riesgos más graves, una vigilancia frecuente o incluso continua. La idea no es reunirte a contemplar la lista, sino detectar a tiempo cualquier desviación de lo normal y decidir si actúas. Para el emprendedor solo, poner en la agenda un momento fijo de revisión, con una frecuencia acorde a lo que está en juego, es lo que convierte la gestión de riesgo de una buena intención en un hábito real.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5968",
+        "frase": "fortnightly meetings may be more appropriate"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la quincenal puede ser más adecuada y que en periodos intensos pueden hacer falta reuniones semanales o diarias; el resumen lo da por norma.; Mismo defecto en los momentos intensos: el libro dice que pueden hacer falta, no que se exijan.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

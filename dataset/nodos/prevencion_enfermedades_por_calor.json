@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Plan de Prevención de Enfermedades Relacionadas con el Calor",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física intensa, EPP no transpirable, humedad alta o falta de circulación de aire o de aire acondicionado), conviene tener un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
+  "resumen_teorico": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física de moderada a intensa, EPP no transpirable, humedad alta o falta de circulación de aire o de aire acondicionado), conviene tener un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
   "pasos_accionables": [
     "Evaluar los factores de riesgo de calor presentes en el lugar de trabajo",
     "Designar a un responsable capacitado para monitorear condiciones y síntomas de calor",
-    "Implementar un plan de aclimatación para trabajadores nuevos, temporales o por contrato, o que regresan de licencia",
+    "Implementar un plan de aclimatación para trabajadores nuevos, temporales o por contrato, o que regresan de una licencia prolongada",
     "Proveer agua potable, sombra y descansos frecuentes",
     "Establecer un sistema de compañeros para detectar signos de enfermedad por calor",
-    "Capacitar a supervisores y trabajadores en identificar y controlar los peligros de calor, reconocer los signos de enfermedad por calor, los factores individuales de riesgo, dar primeros auxilios y RCP, y activar rápido los servicios de emergencia"
+    "Capacitar a supervisores y trabajadores, en un idioma que entiendan, en identificar y controlar los peligros de calor, reconocer los signos de enfermedad por calor, los factores individuales de riesgo, dar primeros auxilios y RCP, y activar rápido los servicios de emergencia"
   ],
   "entregable_esperado": "Plan escrito de prevención de enfermedades por calor con roles y procedimientos definidos",
   "nodos_previos": [
@@ -77,6 +77,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La capacitación del libro abarca todas las enfermedades por calor, identificar y controlar peligros, factores individuales y activar rápido la emergencia.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-062-prevencion_enfermedades_por_calor-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física intensa, EPP no transpirable, humedad alta o falta de circulación de aire o de aire acondicionado), conviene tener un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
+      "texto_nuevo": "Ante factores de riesgo de calor (trabajo exterior en clima cálido, fuentes de calor radiante, actividad física de moderada a intensa, EPP no transpirable, humedad alta o falta de circulación de aire o de aire acondicionado), conviene tener un plan escrito con monitoreo ambiental, plan de aclimatación, controles de ingeniería, hidratación, descansos programados, sistema de compañeros y capacitación en signos/síntomas de enfermedades por calor.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "829",
+        "frase": "Moderate to strenuous physical activity performed in warm/hot indoor or outdoor environments."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro cuenta la actividad física de moderada a intensa; se cae la moderada.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-062-prevencion_enfermedades_por_calor-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a supervisores y trabajadores en identificar y controlar los peligros de calor, reconocer los signos de enfermedad por calor, los factores individuales de riesgo, dar primeros auxilios y RCP, y activar rápido los servicios de emergencia",
+      "texto_nuevo": "Capacitar a supervisores y trabajadores, en un idioma que entiendan, en identificar y controlar los peligros de calor, reconocer los signos de enfermedad por calor, los factores individuales de riesgo, dar primeros auxilios y RCP, y activar rápido los servicios de emergencia",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "869",
+        "frase": "provided with proper training in a language they understand"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide la capacitación en un idioma que supervisores y trabajadores entiendan; se cae esa condición.; Mismo defecto.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-062-prevencion_enfermedades_por_calor-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar un plan de aclimatación para trabajadores nuevos, temporales o por contrato, o que regresan de licencia",
+      "texto_nuevo": "Implementar un plan de aclimatación para trabajadores nuevos, temporales o por contrato, o que regresan de una licencia prolongada",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "851",
+        "frase": "workers returning from extended leave"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de quienes regresan de una licencia prolongada; sin 'prolongada' el plan cambia a quién aplica.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

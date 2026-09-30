@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Acción Correctiva (Paso 6)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.",
+  "resumen_teorico": "A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección, auditoría o autoevaluación. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.",
   "pasos_accionables": [
     "Establecer reuniones regulares de supervisión para tratar problemas de calidad",
     "Escalar problemas no resueltos al siguiente nivel jerárquico",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Habla y Corrige tus Problemas",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-062-accion_correctiva_4-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.",
+      "texto_nuevo": "A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección, auditoría o autoevaluación. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1629",
+        "frase": "not just the defects found by inspection, audit, or self-evaluation"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro nombra tres fuentes de defectos detectados (inspección, auditoría o autoevaluación) y el resumen deja solo una.; Mismo defecto: la enumeración de tres fuentes queda reducida a la inspección.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

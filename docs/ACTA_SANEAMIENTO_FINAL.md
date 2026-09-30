@@ -800,3 +800,20 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   de". Las demás trampas de contrario sí se cazaron. El punto ciego es concreto: la inversión de orden temporal
   dentro de una frase que por lo demás sigue siendo verdad. La muestra de cierre lo mide con trampas del mismo
   diseño, sin retocarlas.
+- **Lote 176 (matiz validado, nodo `comprender_definicion_legal_franquicia`):** la trampa quitaba una condición de
+  jurisdicción: que la obligación rige solo si vendes o piensas vender franquicias en Estados Unidos. El validador la
+  había confirmado como defecto real. Ninguno de los tres lectores la cazó. Queda como **fallo de método** en ese lote.
+
+**Pase dirigido, lectura terminada (184 lotes, 377 lecturas):**
+
+| Tipo de trampa | Lotes | Cazadas | Sin cazar |
+|---|---|---|---|
+| Invención con cifra | 48 | 48 | 0 |
+| Certeza endurecida | 39 | 39 | 0 |
+| Contrario | 80 | 78 (una solo por el tercer lector, lote 057) | 2 (lotes 076 y 129, fallo de método) |
+| Matiz de condición validado | 6 | 5 | 1 (lote 176, fallo de método) |
+| Matiz "solo" anterior a la decisión | 11 | 6 | 5 (004, 011, 024 y 056 inválidas; 052 fallo de método) |
+
+- **Fallos de método del pase:** cuatro lotes, 052, 076, 129 y 176. Dos son la inversión "antes de / después de". Los
+  otros dos son la caída de una condición que acota a quién o cuándo aplica el consejo.
+- **Control del verificador ciego:** rechazó las 29 correcciones falsas de los paquetes v07 a v35.

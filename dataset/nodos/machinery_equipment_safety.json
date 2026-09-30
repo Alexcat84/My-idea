@@ -7,7 +7,7 @@
   "resumen_teorico": "Prácticas generales para proteger a los operadores de puntos de operación, partes rotativas, chispas y otros peligros mecánicos, incluyendo anclaje de máquinas, guardas, interruptores de apagado de emergencia y mantenimiento preventivo.",
   "pasos_accionables": [
     "Anclar máquinas fijas para prevenir volcamientos o movimientos.",
-    "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso.",
+    "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso o del nivel de trabajo.",
     "Proveer interruptores de apagado de emergencia de color rojo al alcance del operador.",
     "Capacitar a los trabajadores en métodos seguros de operación de maquinaria.",
     "Implementar un programa de inspección regular de seguridad de maquinaria y equipos."
@@ -44,6 +44,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro protege engranajes, cadenas en movimiento y puntos de operación sin límite de altura.; El límite de 7 pies sí está en el libro, pero solo para poleas y correas; lo que se pierde es que engranajes, cadenas y puntos de operación se protegen a cualquier altura.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-062-machinery_equipment_safety-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso.",
+      "texto_nuevo": "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso o del nivel de trabajo.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1049",
+        "frase": "Pulleys and belts within 7 feet (2.1336 meters) of the floor or working level"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro mide los 7 pies desde el piso o el nivel de trabajo; se cae el nivel de trabajo.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

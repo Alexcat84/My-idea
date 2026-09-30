@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cuánto dinero quemas cada trimestre (Cash Burn)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es la forma de calcular cuánto dinero pierdes o ganas en tu negocio en cada periodo (trimestre u otro que te sirva): restas todos los costos (ventas, producto, operativos) de tus ingresos netos. Con ese número sabes cuánto tiempo de vida (runway) te queda antes de quedarte sin efectivo; si prevé que te quedarás sin dinero dentro del año, frena tu decisión de avanzar.",
+  "resumen_teorico": "Es la forma de calcular cuánto dinero pierdes o ganas en tu negocio en cada periodo (trimestre u otro que te sirva): restas todos los costos (ventas, producto, operativos) de tus ingresos netos. Con ese número sabes cuánto tiempo de vida (runway) te queda antes de quedarte sin efectivo; si prevé que te quedarás sin dinero dentro del año, puede frenar tu decisión de avanzar.",
   "pasos_accionables": [
     "Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)",
     "Resta tus costos de ventas, de producto y los operativos corrientes",
@@ -58,6 +58,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que si el cálculo prevé quedarse sin dinero en el año, debe frenar el avance; el nodo lo omite.; El libro pide usar el periodo que tenga sentido para el negocio; el trimestre es solo su ejemplo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-063-cash_burn_calculation-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es la forma de calcular cuánto dinero pierdes o ganas en tu negocio en cada periodo (trimestre u otro que te sirva): restas todos los costos (ventas, producto, operativos) de tus ingresos netos. Con ese número sabes cuánto tiempo de vida (runway) te queda antes de quedarte sin efectivo; si prevé que te quedarás sin dinero dentro del año, frena tu decisión de avanzar.",
+      "texto_nuevo": "Es la forma de calcular cuánto dinero pierdes o ganas en tu negocio en cada periodo (trimestre u otro que te sirva): restas todos los costos (ventas, producto, operativos) de tus ingresos netos. Con ese número sabes cuánto tiempo de vida (runway) te queda antes de quedarte sin efectivo; si prevé que te quedarás sin dinero dentro del año, puede frenar tu decisión de avanzar.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9643",
+        "frase": "This analysis all by itself may stop the pivot-or-proceed process in its tracks"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que este análisis 'may stop' la decisión de pivotar o avanzar; el nodo lo da como efecto seguro.; Mismo defecto: el 'may stop ... as it often does' del libro pasa a un 'frena' sin matiz.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

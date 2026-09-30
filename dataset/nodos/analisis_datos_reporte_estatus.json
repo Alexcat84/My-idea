@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Datos y Reporte del Estado",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Cada inspección te da dos resultados: si el producto se acepta o se rechaza, y el registro de la medición. Acumulando y analizando estos datos determinas el estado continuo de tu proceso. Los reportes deben ser visibles y explicados a quienes trabajan contigo; solo podrás pensar en el futuro si la calidad te ayuda a sobrevivir el presente con datos de tendencia precisos.",
+  "resumen_teorico": "Cada inspección te da dos resultados: si el producto se acepta o se rechaza, y el registro de la medición. Acumulando y analizando estos datos determinas el estado continuo de tu proceso. Los reportes deben ser visibles y explicados a quienes trabajan contigo, y necesitas datos de tendencia precisos para saber cuándo hay que actuar.",
   "pasos_accionables": [
     "Registrar sistemáticamente cada resultado de inspección o prueba",
     "Colocar gráficos de progreso visibles en las áreas de trabajo y explicarlos a quienes trabajan contigo",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Reporta el Estatus del Proceso",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-062-analisis_datos_reporte_estatus-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada inspección te da dos resultados: si el producto se acepta o se rechaza, y el registro de la medición. Acumulando y analizando estos datos determinas el estado continuo de tu proceso. Los reportes deben ser visibles y explicados a quienes trabajan contigo; solo podrás pensar en el futuro si la calidad te ayuda a sobrevivir el presente con datos de tendencia precisos.",
+      "texto_nuevo": "Cada inspección te da dos resultados: si el producto se acepta o se rechaza, y el registro de la medición. Acumulando y analizando estos datos determinas el estado continuo de tu proceso. Los reportes deben ser visibles y explicados a quienes trabajan contigo, y necesitas datos de tendencia precisos para saber cuándo hay que actuar.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "797",
+        "frase": "Senior management needs accurate trend data to learn when action must be taken."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la alta dirección deja a calidad trabajar en el futuro solo si la ayuda a sobrevivir el presente; el resumen lo vuelve condición para quien emprende. Lo que el libro afirma de los datos es que sirven para saber cuándo actuar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

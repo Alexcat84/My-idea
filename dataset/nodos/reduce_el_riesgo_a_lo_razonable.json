@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Reducir el Riesgo Hasta lo Razonable",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, sobre el impacto, para que si ocurre duela menos, o sobre el tiempo que quedas expuesto, para acortarlo, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
+  "resumen_teorico": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible, sino bajarlo hasta que el riesgo que queda sea aceptable y puedas retenerlo: ese es el límite razonable. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, sobre el impacto, para que si ocurre duela menos, o sobre el tiempo que quedas expuesto, para acortarlo, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
   "pasos_accionables": [
     "De un riesgo grave, decide si atacas su probabilidad, su impacto, el tiempo que quedas expuesto a él, o una combinación.",
     "Lista las acciones concretas de reducción posibles y el costo aproximado de cada una.",
@@ -93,6 +93,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro la reducción sigue hasta que el residual es aceptable; el paso deja solo el rendimiento decreciente como señal de parada.; Mismo límite perdido: si el residual no es aceptable, el libro pide considerar más tratamiento.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-061-reduce_el_riesgo_a_lo_razonable-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, sobre el impacto, para que si ocurre duela menos, o sobre el tiempo que quedas expuesto, para acortarlo, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
+      "texto_nuevo": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible, sino bajarlo hasta que el riesgo que queda sea aceptable y puedas retenerlo: ese es el límite razonable. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, sobre el impacto, para que si ocurre duela menos, o sobre el tiempo que quedas expuesto, para acortarlo, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5668",
+        "frase": "until the point is reached where the residual amount of a risk is acceptable"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los riesgos rara vez se eliminan, pero no que hacerlo sea carísimo; se quita solo lo inventado.; El libro fija el punto de parada en un riesgo residual aceptable que se puede retener; la regla de rendimientos decrecientes y el derroche de recursos no están.; Mismo defecto que la marca 0: el criterio de parada del libro es el riesgo residual aceptable.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Fundamentos de la Exportación de Servicios",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El sector servicios es el componente más grande de la economía estadounidense y representa una oportunidad significativa de exportación, con sectores de alto crecimiento como turismo, servicios ambientales, transporte, finanzas, telecomunicaciones, educación, servicios profesionales, entretenimiento y construcción. Exportar servicios presenta retos únicos por su naturaleza intangible: mayor necesidad de viajes, gestión de mano de obra local, e investigación de mercado más intensiva. La intangibilidad también hace algo más difícil el financiamiento al no existir garantía colateral, aunque muchas instituciones públicas y privadas apoyan a exportadores de servicios solventes.",
+  "resumen_teorico": "El sector servicios es el componente más grande de la economía estadounidense y representa una oportunidad significativa de exportación, con sectores de alto crecimiento como turismo, servicios ambientales, transporte, finanzas, telecomunicaciones, educación, servicios profesionales, entretenimiento y construcción. Exportar servicios presenta retos únicos por su naturaleza intangible, que muy probablemente significarán: mayor necesidad de viajes, gestión de mano de obra local, e investigación de mercado más intensiva. La intangibilidad también hace algo más difícil el financiamiento al no existir garantía colateral, aunque muchas instituciones públicas y privadas apoyan a exportadores de servicios solventes.",
   "pasos_accionables": [
     "Identificar el sector de servicios en el que compite la empresa (turismo, TI, financiero, educativo, etc.)",
     "Evaluar necesidades de viaje, presencia local y permisos de trabajo en el mercado destino",
@@ -56,6 +56,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que lo hace algo más difícil y añade que muchas instituciones sí financian a exportadores de servicios solventes; sin eso el financiamiento parece cerrado.; Mismo defecto: se cae el contrapeso de la línea 2783 sobre instituciones que financian a exportadores solventes.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-061-exportacion_de_servicios-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El sector servicios es el componente más grande de la economía estadounidense y representa una oportunidad significativa de exportación, con sectores de alto crecimiento como turismo, servicios ambientales, transporte, finanzas, telecomunicaciones, educación, servicios profesionales, entretenimiento y construcción. Exportar servicios presenta retos únicos por su naturaleza intangible: mayor necesidad de viajes, gestión de mano de obra local, e investigación de mercado más intensiva. La intangibilidad también hace algo más difícil el financiamiento al no existir garantía colateral, aunque muchas instituciones públicas y privadas apoyan a exportadores de servicios solventes.",
+      "texto_nuevo": "El sector servicios es el componente más grande de la economía estadounidense y representa una oportunidad significativa de exportación, con sectores de alto crecimiento como turismo, servicios ambientales, transporte, finanzas, telecomunicaciones, educación, servicios profesionales, entretenimiento y construcción. Exportar servicios presenta retos únicos por su naturaleza intangible, que muy probablemente significarán: mayor necesidad de viajes, gestión de mano de obra local, e investigación de mercado más intensiva. La intangibilidad también hace algo más difícil el financiamiento al no existir garantía colateral, aunque muchas instituciones públicas y privadas apoyan a exportadores de servicios solventes.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2763",
+        "frase": "because the export is often invisible or intangible. Most likely, this will mean:"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta esos retos con cautela (muy probablemente); el resumen los da como seguros.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras y en entradas de escaleras de mano. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
   "pasos_accionables": [
     "Inspeccionar todas las aberturas de piso existentes en la instalación",
-    "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
+    "Proteger cada abertura con cubierta, barandilla o equivalente en todos sus lados, excepto en escaleras y entradas de escaleras de mano; las cubiertas deben soportar el doble de la carga máxima prevista",
     "Colocar rodapiés alrededor de los bordes de las aberturas permanentes de piso donde pueda pasar gente por debajo de la abertura",
     "Verificar que las rejillas permitan el tránsito seguro de personas y equipos"
   ],
@@ -72,6 +72,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa también las entradas de escaleras de mano.; Mismo defecto: falta la excepción de las entradas de escaleras de mano.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-062-pisos_aberturas_paredes_seguridad-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
+      "texto_nuevo": "Proteger cada abertura con cubierta, barandilla o equivalente en todos sus lados, excepto en escaleras y entradas de escaleras de mano; las cubiertas deben soportar el doble de la carga máxima prevista",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1477",
+        "frase": "guarded by a cover, a guardrail, or equivalent on all sides (except at stairways"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide la protección en todos los lados y exceptúa escaleras y entradas de escaleras de mano; se caen ambas cosas.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

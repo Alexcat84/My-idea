@@ -10,10 +10,10 @@
     "Revisa a diario los problemas nuevos junto con la persona que te ayuda con calidad o producción, si la tienes",
     "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo, a un nivel de más responsabilidad y con las personas de otras áreas involucradas",
     "Revisa una vez al mes lo que sigue sin resolverse y decide si necesita un esfuerzo dedicado aparte",
-    "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, una tarea bien definida y un plazo para terminarla, y disuélvelo en cuanto el problema quede resuelto",
+    "Para los problemas que exigen una acción compleja o de largo plazo, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, una tarea bien definida y un plazo para terminarla, y disuélvelo en cuanto el problema quede resuelto",
     "Ordena los problemas por gravedad y ataca primero los más grandes",
     "Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento",
-    "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular",
+    "Escala los problemas que siguen sin resolverse a un nivel de decisión superior con frecuencia regular",
     "Dar seguimiento y verificar que la acción implementada haya eliminado el problema"
   ],
   "entregable_esperado": "Un sistema documentado de seguimiento de problemas, con fichas de control en tres ritmos (diario, semanal, mensual) y un registro claro de cuándo se cierra cada problema",
@@ -109,6 +109,40 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un por qué que el libro no da.; Mismo por qué añadido.",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-062-accion_correctiva_sistematica-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, una tarea bien definida y un plazo para terminarla, y disuélvelo en cuanto el problema quede resuelto",
+      "texto_nuevo": "Para los problemas que exigen una acción compleja o de largo plazo, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, una tarea bien definida y un plazo para terminarla, y disuélvelo en cuanto el problema quede resuelto",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2873",
+        "frase": "those requiring complex or long-range action should be assigned to a task team"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro manda al grupo de trabajo los problemas que exigen acción compleja o de largo plazo; el paso pierde los de largo plazo.; Mismo defecto: se cae la acción de largo plazo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-062-accion_correctiva_sistematica-pasos_accionables-7",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular",
+      "texto_nuevo": "Escala los problemas que siguen sin resolverse a un nivel de decisión superior con frecuencia regular",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2873",
+        "frase": "held by the general manager and staff to review the unresolved problems"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no tiene una categoría de problemas sutiles que se escalen; lo que sube al nivel superior son los problemas sin resolver.; Mismo defecto: al nivel de dirección suben los problemas sin resolver, y los de largo plazo van a un grupo de trabajo.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

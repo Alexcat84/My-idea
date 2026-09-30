@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Reevaluación del Riesgo Tratado",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Después de actuar sobre un riesgo, o después de que un susto lo cambió, hay que volver a medirlo: la foto vieja ya no sirve. Cuando aplicaste una respuesta, la pregunta es si de verdad funcionó, es decir, si el riesgo quedó tan bajo como querías o si sigue igual de peligroso y hace falta más. Mídelo también antes de aplicarla, por si esa respuesta trae riesgos nuevos o afecta a otros. Y cuando un riesgo se materializó o el entorno cambió, su probabilidad y su impacto ya no son los de antes. Reevaluar cierra el ciclo: comparas el riesgo tratado contra tu criterio y decides si lo das por controlado o le das otra vuelta. Para el emprendedor solo, este paso evita dos errores: creer que un riesgo está resuelto cuando tu respuesta no sirvió, y seguir temiendo un riesgo que en realidad ya bajó.",
+  "resumen_teorico": "Después de actuar sobre un riesgo, o después de que un susto lo cambió, hay que volver a medirlo: la foto vieja ya no sirve. Cuando aplicaste una respuesta, la pregunta es si de verdad funcionó, es decir, si el riesgo quedó tan bajo como querías o si sigue igual de peligroso y hace falta más. Mídelo también antes de aplicarla, por si esa respuesta trae riesgos nuevos o afecta a otros. Y cuando un riesgo se materializó o el entorno cambió, su probabilidad y su impacto pueden haber cambiado. Reevaluar cierra el ciclo: comparas el riesgo tratado contra tu criterio y decides si lo das por controlado o le das otra vuelta. Para el emprendedor solo, este paso evita dos errores: creer que un riesgo está resuelto cuando tu respuesta no sirvió, y seguir temiendo un riesgo que en realidad ya bajó.",
   "pasos_accionables": [
     "Después de aplicar una respuesta, mide de nuevo el riesgo: bajó lo suficiente o no.",
     "Si no bajó a un nivel aceptable, decide qué respuesta adicional le das.",
@@ -89,6 +89,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide reevaluar antes de aplicar el tratamiento, mirando si trae riesgos nuevos o afecta a otros; el nodo solo mide después.; Mismo control previo perdido: la reevaluación antes de aplicar la respuesta.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-061-vuelve_a_medir_despues_del_susto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de actuar sobre un riesgo, o después de que un susto lo cambió, hay que volver a medirlo: la foto vieja ya no sirve. Cuando aplicaste una respuesta, la pregunta es si de verdad funcionó, es decir, si el riesgo quedó tan bajo como querías o si sigue igual de peligroso y hace falta más. Mídelo también antes de aplicarla, por si esa respuesta trae riesgos nuevos o afecta a otros. Y cuando un riesgo se materializó o el entorno cambió, su probabilidad y su impacto ya no son los de antes. Reevaluar cierra el ciclo: comparas el riesgo tratado contra tu criterio y decides si lo das por controlado o le das otra vuelta. Para el emprendedor solo, este paso evita dos errores: creer que un riesgo está resuelto cuando tu respuesta no sirvió, y seguir temiendo un riesgo que en realidad ya bajó.",
+      "texto_nuevo": "Después de actuar sobre un riesgo, o después de que un susto lo cambió, hay que volver a medirlo: la foto vieja ya no sirve. Cuando aplicaste una respuesta, la pregunta es si de verdad funcionó, es decir, si el riesgo quedó tan bajo como querías o si sigue igual de peligroso y hace falta más. Mídelo también antes de aplicarla, por si esa respuesta trae riesgos nuevos o afecta a otros. Y cuando un riesgo se materializó o el entorno cambió, su probabilidad y su impacto pueden haber cambiado. Reevaluar cierra el ciclo: comparas el riesgo tratado contra tu criterio y decides si lo das por controlado o le das otra vuelta. Para el emprendedor solo, este paso evita dos errores: creer que un riesgo está resuelto cuando tu respuesta no sirvió, y seguir temiendo un riesgo que en realidad ya bajó.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "6206",
+        "frase": "the circumstances of previously identified project risks may have changed"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las circunstancias de los riesgos pueden haber cambiado y piden nuevo análisis; el resumen da el cambio por seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

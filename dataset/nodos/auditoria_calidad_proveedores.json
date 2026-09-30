@@ -14,7 +14,7 @@
     "Anotar en el informe final los desacuerdos del cliente o, si sus comentarios son correctos, cambiar el informe",
     "Si el informe se va a distribuir, enviarlo directamente desde la planta auditada"
   ],
-  "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, revisado primero con quien lleva la calidad y luego con quien dirige la planta auditada, con sus desacuerdos anotados si los hay",
+  "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, revisado primero con quien lleva la calidad y luego con quien dirige la planta auditada, con sus desacuerdos anotados o, si sus comentarios son correctos, con el informe cambiado",
   "nodos_previos": [
     "accion_correctiva_sistematica"
   ],
@@ -96,6 +96,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro revisa el informe con ambos gerentes y anota sus desacuerdos; no dice que lo validen.; Mismo añadido: revisar no es validar ni aprobar. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-062-auditoria_calidad_proveedores-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Informe de auditoría con acciones requeridas y situación general documentada, revisado primero con quien lleva la calidad y luego con quien dirige la planta auditada, con sus desacuerdos anotados si los hay",
+      "texto_nuevo": "Informe de auditoría con acciones requeridas y situación general documentada, revisado primero con quien lleva la calidad y luego con quien dirige la planta auditada, con sus desacuerdos anotados o, si sus comentarios son correctos, con el informe cambiado",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2941",
+        "frase": "note them on your report or, if their comments are correct, change the report"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos salidas a los desacuerdos: anotarlos o, si los comentarios son correctos, cambiar el informe; se cae la segunda.; Mismo defecto: falta cambiar el informe cuando los comentarios son correctos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
