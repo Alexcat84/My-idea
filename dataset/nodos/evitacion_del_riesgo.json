@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Evitación del Riesgo (Risk Avoidance)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Estrategia de gestión de riesgos que consiste en evitar completamente una práctica o actividad cuando el riesgo es demasiado alto, el costo de gestionarlo es prohibitivo, o el beneficio no justifica la exposición. Requiere sopesar si el beneficio potencial amerita aceptar el riesgo o si es mejor abstenerse por completo.",
+  "resumen_teorico": "Estrategia de gestión de riesgos que consiste en evitar completamente una práctica o actividad cuando el riesgo es demasiado alto, el costo de gestionarlo es prohibitivo, tu capacidad de gestionarlo es demasiado limitada, o el beneficio no justifica la exposición. Requiere sopesar si el beneficio potencial amerita aceptar el riesgo o si es mejor abstenerse por completo.",
   "pasos_accionables": [
     "Identificar actividades con riesgo potencial de pérdida severa",
     "Evaluar si el costo de gestionar el riesgo es más alto que el beneficio esperado",
-    "Decidir si se evita la práctica por completo o se continúa con compromiso explícito de la dirección",
+    "Decidir si se evita la práctica por completo o se continúa con plena conciencia del riesgo y, idealmente, con el compromiso de la dirección para gestionarlo",
     "Documentar la decisión y la justificación del riesgo aceptado o evitado"
   ],
   "entregable_esperado": "Documento de decisión sobre continuar o evitar una práctica riesgosa, con justificación de costo/beneficio",
@@ -38,6 +38,39 @@
         "evidencia": "Q062-002: El contenido es una estrategia de tratamiento de riesgos (evitar la actividad), no gestion de la calidad: su mundo es gestion de riesgos. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "final-e1-142-evitacion_del_riesgo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estrategia de gestión de riesgos que consiste en evitar completamente una práctica o actividad cuando el riesgo es demasiado alto, el costo de gestionarlo es prohibitivo, o el beneficio no justifica la exposición. Requiere sopesar si el beneficio potencial amerita aceptar el riesgo o si es mejor abstenerse por completo.",
+      "texto_nuevo": "Estrategia de gestión de riesgos que consiste en evitar completamente una práctica o actividad cuando el riesgo es demasiado alto, el costo de gestionarlo es prohibitivo, tu capacidad de gestionarlo es demasiado limitada, o el beneficio no justifica la exposición. Requiere sopesar si el beneficio potencial amerita aceptar el riesgo o si es mejor abstenerse por completo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12496",
+        "frase": "our ability to effectively manage it too limited or inadequate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo motivo perdido de la enumeración.; Se cae uno de los cuatro motivos del libro: que tu capacidad de gestionar el riesgo sea demasiado limitada.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-142-evitacion_del_riesgo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir si se evita la práctica por completo o se continúa con compromiso explícito de la dirección",
+      "texto_nuevo": "Decidir si se evita la práctica por completo o se continúa con plena conciencia del riesgo y, idealmente, con el compromiso de la dirección para gestionarlo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12496",
+        "frase": "we do so with awareness and hopefully commitment from our management"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que se continúa con conciencia del riesgo y, ojalá, con compromiso de la dirección; no es condición explícita.; Mismo endurecimiento del 'hopefully' del libro.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

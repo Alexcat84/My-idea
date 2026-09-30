@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Haz pruebas de pasa o no pasa (pass/fail tests)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de avanzar, define de antemano qué significa que tu hipótesis de negocio funcionó o no. No te conformes con una respuesta positiva de un par de personas: busca una reacción masiva y contundente de tus primeros clientes entusiastas antes de pasar a la etapa de validación de clientes. El criterio de éxito debe estar ligado a tu modelo de negocio, por ejemplo comparando cuánto te cuesta conseguir un cliente contra lo que cobras por tu producto.",
+  "resumen_teorico": "Antes de avanzar, define de antemano qué significa que tu hipótesis de negocio funcionó o no. No te conformes con apenas aprobar tu prueba: busca una reacción masiva y contundente de tus primeros clientes entusiastas antes de pasar a la etapa de validación de clientes. El criterio de éxito debe estar ligado a tu modelo de negocio, por ejemplo comparando cuánto te cuesta conseguir un cliente contra lo que cobras por tu producto.",
   "pasos_accionables": [
     "Define de antemano el número o porcentaje de clientes que consideras suficiente para decir que la prueba funcionó",
     "Compara cuánto te cuesta conseguir un cliente contra el precio de tu producto",
-    "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden, en números absolutos y en porcentaje",
-    "Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que no ven la necesidad, etc."
+    "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden y cuántos se lo cuentan a otros, en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
+    "Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que lo entienden tras una larga explicación pero no se lanzan a comprarlo y los que no ven la necesidad"
   ],
   "entregable_esperado": "Un documento con tus criterios de pasa o no pasa, los resultados reales comparados, y tu decisión de seguir adelante o pivotar",
   "nodos_previos": [
@@ -29,5 +29,57 @@
   "etiqueta_arbol": "Define Pruebas de Pasa o No",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-144-realizar_pruebas_pasa_no_pasa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de avanzar, define de antemano qué significa que tu hipótesis de negocio funcionó o no. No te conformes con una respuesta positiva de un par de personas: busca una reacción masiva y contundente de tus primeros clientes entusiastas antes de pasar a la etapa de validación de clientes. El criterio de éxito debe estar ligado a tu modelo de negocio, por ejemplo comparando cuánto te cuesta conseguir un cliente contra lo que cobras por tu producto.",
+      "texto_nuevo": "Antes de avanzar, define de antemano qué significa que tu hipótesis de negocio funcionó o no. No te conformes con apenas aprobar tu prueba: busca una reacción masiva y contundente de tus primeros clientes entusiastas antes de pasar a la etapa de validación de clientes. El criterio de éxito debe estar ligado a tu modelo de negocio, por ejemplo comparando cuánto te cuesta conseguir un cliente contra lo que cobras por tu producto.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9016",
+        "frase": "look for great or massive response and activity, not just a passing grade"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide buscar una respuesta masiva y no solo aprobar la prueba; el nodo lo reduce a no conformarse con un par de personas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-144-realizar_pruebas_pasa_no_pasa-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden, en números absolutos y en porcentaje",
+      "texto_nuevo": "Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden y cuántos se lo cuentan a otros, en números absolutos y en porcentaje; si la respuesta es baja, prueba otro mensaje antes de concluir que el producto no interesa",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9040-9046",
+        "frase": "Consider changing the messaging if traffic or engagement are inadequate."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide medir también cuántos se lo cuentan a otros y cambiar el mensaje si la respuesta es baja, para no confundir mal mensaje con producto sin interés.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-144-realizar_pruebas_pasa_no_pasa-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que no ven la necesidad, etc.",
+      "texto_nuevo": "Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que lo entienden tras una larga explicación pero no se lanzan a comprarlo y los que no ven la necesidad",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "9146",
+        "frase": "Customers can understand the product after a long explanation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la tercera categoría del libro (lo entienden tras una larga explicación pero nadie se lanza a comprarlo), que el libro trata como señal de pivote.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

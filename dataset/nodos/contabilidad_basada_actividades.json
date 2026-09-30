@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Contabilidad Basada en Actividades (ABC) para Revelar Costos Ambientales Ocultos",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El Activity-Based Costing (ABC) es una técnica que permite rastrear costos ambientales normalmente ocultos en gastos generales (overhead), asignándolos a las actividades, productos o unidades responsables de su generación. Esto evita la subvención cruzada de procesos contaminantes y permite decisiones más informadas, como el caso de eBay asignando costos energéticos de sus centros de datos directamente al presupuesto de TI.",
+  "resumen_teorico": "El Activity-Based Costing (ABC) es una técnica que permite rastrear costos ambientales normalmente ocultos en gastos generales (overhead), asignándolos a las actividades, productos o unidades responsables de su generación. No es sencillo: exige reunir el conocimiento de muchas personas. Esto puede ayudar a eliminar la subvención cruzada de procesos contaminantes y permite decisiones más informadas, como el caso de eBay asignando costos energéticos de sus centros de datos directamente al presupuesto de TI.",
   "pasos_accionables": [
     "Identificar los gastos generales que incluyen costos ambientales ocultos (energía, residuos)",
-    "Determinar qué actividades o unidades son responsables de cada costo",
-    "Reasignar los costos a los responsables reales en lugar de distribuirlos por headcount o ingresos",
+    "Determinar qué actividades o unidades son responsables de cada costo, reuniendo el conocimiento de muchas personas, porque no es una tarea fácil",
+    "Reasignar los costos a los responsables reales en lugar de dejarlos en los gastos generales",
     "Usar la nueva información de costos para incentivar la eficiencia"
   ],
   "entregable_esperado": "Un sistema de asignación de costos ambientales basado en actividades reales, con responsables identificados",
@@ -24,5 +24,57 @@
   "etiqueta_arbol": "Revela Costos Ambientales Ocultos",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-143-contabilidad_basada_actividades-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Activity-Based Costing (ABC) es una técnica que permite rastrear costos ambientales normalmente ocultos en gastos generales (overhead), asignándolos a las actividades, productos o unidades responsables de su generación. Esto evita la subvención cruzada de procesos contaminantes y permite decisiones más informadas, como el caso de eBay asignando costos energéticos de sus centros de datos directamente al presupuesto de TI.",
+      "texto_nuevo": "El Activity-Based Costing (ABC) es una técnica que permite rastrear costos ambientales normalmente ocultos en gastos generales (overhead), asignándolos a las actividades, productos o unidades responsables de su generación. No es sencillo: exige reunir el conocimiento de muchas personas. Esto puede ayudar a eliminar la subvención cruzada de procesos contaminantes y permite decisiones más informadas, como el caso de eBay asignando costos energéticos de sus centros de datos directamente al presupuesto de TI.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5766",
+        "frase": "ABC can help eliminate unintentional but costly cross-subsidization"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el ABC puede ayudar a eliminar la subvención cruzada; 'evita' endurece.; Mismo defecto que la marca 0.; Se pierde el límite del libro: el ABC no es fácil y exige el conocimiento de muchas personas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-143-contabilidad_basada_actividades-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reasignar los costos a los responsables reales en lugar de distribuirlos por headcount o ingresos",
+      "texto_nuevo": "Reasignar los costos a los responsables reales en lugar de dejarlos en los gastos generales",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5764",
+        "frase": "costs normally assigned to General and Administrative or overhead"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona repartos por número de empleados o ingresos; solo que esos costos quedan en gastos generales.; Mismo defecto: bases de reparto que el libro no trae.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-143-contabilidad_basada_actividades-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar qué actividades o unidades son responsables de cada costo",
+      "texto_nuevo": "Determinar qué actividades o unidades son responsables de cada costo, reuniendo el conocimiento de muchas personas, porque no es una tarea fácil",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5766",
+        "frase": "ABC is no easy feat: It requires drawing on knowledge from many people"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el límite del libro: identificar los costos de cada actividad exige reunir el conocimiento de muchas personas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

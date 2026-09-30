@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Familia de Normas ISO 9000",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "ISO 9000 es una familia de normas internacionales de gestion de calidad, creada por el Comité Técnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamaño o sector. Son normas no prescriptivas: definen que debe existir en el sistema de gestion, no como implementarlo, y combinan estándares de producto (especificaciones técnicas) con estándares de sistema de gestion. La versión ISO 9001:2015 incorporo un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestion de relaciones mas allá del cliente tradicional.",
+  "resumen_teorico": "ISO 9000 es una familia de normas internacionales de gestión de calidad, creada por el Comité Técnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamaño o sector. Son normas no prescriptivas: definen qué debe existir en el sistema de gestión, no cómo implementarlo, y parten de que la calidad se asegura aplicando a la vez estándares de producto (especificaciones técnicas) y de sistema de gestión, que es su terreno propio. La versión ISO 9001:2015 incorporó un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestión de relaciones más allá del cliente tradicional.",
   "pasos_accionables": [
     "Identificar si el requisito que enfrentas aplica a especificaciones técnicas del producto o al sistema de gestión",
     "Analizar el contexto de tu negocio y las necesidades de las partes interesadas según las cláusulas 4.1 y 4.2",
@@ -212,6 +212,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-142-familia_normas_iso_9000-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "ISO 9000 es una familia de normas internacionales de gestion de calidad, creada por el Comité Técnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamaño o sector. Son normas no prescriptivas: definen que debe existir en el sistema de gestion, no como implementarlo, y combinan estándares de producto (especificaciones técnicas) con estándares de sistema de gestion. La versión ISO 9001:2015 incorporo un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestion de relaciones mas allá del cliente tradicional.",
+      "texto_nuevo": "ISO 9000 es una familia de normas internacionales de gestión de calidad, creada por el Comité Técnico 176 de ISO, aplicable a cualquier producto, servicio o negocio sin importar su tamaño o sector. Son normas no prescriptivas: definen qué debe existir en el sistema de gestión, no cómo implementarlo, y parten de que la calidad se asegura aplicando a la vez estándares de producto (especificaciones técnicas) y de sistema de gestión, que es su terreno propio. La versión ISO 9001:2015 incorporó un enfoque basado en riesgos, nuevas exigencias sobre el contexto de tu negocio y las partes interesadas, y mayor peso al liderazgo y a la gestión de relaciones más allá del cliente tradicional.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11171",
+        "frase": "The management system is the domain of the ISO 9000 standards."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la calidad se asegura aplicando ambos tipos de estándar, pero el dominio de ISO 9000 es solo el sistema de gestión.; Mismo defecto: atribuye a ISO 9000 los estándares de producto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

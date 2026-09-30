@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Usuario Líder (Lead-User Analysis)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Metodología basada en la investigación de Eric von Hippel que sostiene que los usuarios más innovadores ('lead users') ya han pensado o incluso prototipado soluciones que están años adelante de las tendencias del mercado promedio. Trabajar con este segmento reducido pero altamente innovador genera ideas de ruptura en lugar de ideas promedio.",
+  "resumen_teorico": "Metodología basada en la investigación de Eric von Hippel que sostiene que los usuarios más innovadores ('lead users') ya han pensado o incluso prototipado soluciones que van muy por delante de las tendencias del mercado promedio. Trabajar con este segmento reducido pero altamente innovador genera ideas de ruptura en lugar de ideas promedio.",
   "pasos_accionables": [
     "Identificar el mercado objetivo y las metas de innovación",
     "Determinar tendencias hablando con expertos de la industria",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Escucha a tus Usuarios Líderes",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-144-lead_user_analysis-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodología basada en la investigación de Eric von Hippel que sostiene que los usuarios más innovadores ('lead users') ya han pensado o incluso prototipado soluciones que están años adelante de las tendencias del mercado promedio. Trabajar con este segmento reducido pero altamente innovador genera ideas de ruptura en lugar de ideas promedio.",
+      "texto_nuevo": "Metodología basada en la investigación de Eric von Hippel que sostiene que los usuarios más innovadores ('lead users') ya han pensado o incluso prototipado soluciones que van muy por delante de las tendencias del mercado promedio. Trabajar con este segmento reducido pero altamente innovador genera ideas de ruptura en lugar de ideas promedio.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5058",
+        "frase": "innovative companies, organizations, or individuals that are well ahead of market trends"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que van muy por delante de las tendencias, sin plazo en años.; Mismo plazo añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

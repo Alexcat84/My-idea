@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Los scorecards y los indicadores clave de desempeño (KPI) son mediciones visibles en toda la organización que permiten evaluar el grado de cumplimiento del plan estratégico. Son esenciales para cerrar el ciclo de planificación estratégica, ya que proporcionan retroalimentación sobre el desempeño reciente y sirven de base para ajustar las prioridades futuras de la organización.",
   "pasos_accionables": [
-    "Definir KPIs alineados con cada hoshin o meta estratégica establecida",
+    "Definir pocos KPIs, alineados con cada hoshin o meta estratégica establecida y que incluyan las necesidades de tus clientes internos y externos",
     "Implementar un scorecard visible para toda la organización",
     "Realizar revisiones periódicas de progreso (stage gate reviews)",
     "Ajustar prioridades futuras con base en resultados obtenidos e inteligencia externa (legislación, tecnología, mercado)"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Mide tu Progreso con KPI",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-142-medicion_kpi-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir KPIs alineados con cada hoshin o meta estratégica establecida",
+      "texto_nuevo": "Definir pocos KPIs, alineados con cada hoshin o meta estratégica establecida y que incluyan las necesidades de tus clientes internos y externos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9091-9093",
+        "frase": "A small number of key measures of key processes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se caen dos propiedades de la lista del libro: pocos indicadores clave y que incluyan las necesidades de los clientes.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

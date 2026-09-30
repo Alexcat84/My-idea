@@ -4,14 +4,14 @@
   "dominio": "environmental",
   "titulo_concepto": "Contratos de Desempeño Energético con ESCOs",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa e implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta útil cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiéndote modernizar tus sistemas energéticos minimizando el riesgo financiero en mejoras de gran escala.",
+  "resumen_teorico": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa y posiblemente implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta útil cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiéndote financiar y modernizar tus sistemas energéticos minimizando los riesgos técnicos y de desempeño. Eso sí, rara vez ofrecen tecnologías de punta: usan enfoques probados para reducir su propio riesgo.",
   "pasos_accionables": [
     "Investigar y evaluar ESCOs disponibles en tu región",
     "Solicitar una evaluación inicial de oportunidades de eficiencia energética",
     "Negociar el contrato de desempeño energético con garantías de ahorro",
     "Definir el alcance de auditoría, implementación y mantenimiento a cargo del ESCO",
     "Establecer mecanismos de monitoreo y verificación de los ahorros durante el contrato",
-    "Capacitarte o capacitar a alguien de confianza para el mantenimiento a largo plazo"
+    "Asegurar que el contrato incluya la capacitación de tu personal y el mantenimiento a largo plazo a cargo de la ESCO"
   ],
   "entregable_esperado": "Contrato firmado con ESCO especificando garantías de ahorro y plan de implementación de mejoras energéticas",
   "nodos_previos": [
@@ -181,6 +181,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-143-contratos_desempeno_energetico_esco-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa e implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta útil cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiéndote modernizar tus sistemas energéticos minimizando el riesgo financiero en mejoras de gran escala.",
+      "texto_nuevo": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa y posiblemente implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta útil cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiéndote financiar y modernizar tus sistemas energéticos minimizando los riesgos técnicos y de desempeño. Eso sí, rara vez ofrecen tecnologías de punta: usan enfoques probados para reducir su propio riesgo.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2776",
+        "frase": "identify, evaluate, and possibly even implement energy-saving retrofits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que la ESCO identifica, evalúa y posiblemente implementa; el resumen da la implementación por hecha.; El libro habla de minimizar riesgos técnicos y de desempeño; 'de gran escala' no está en el libro.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.; Se pierde el límite: las ESCO rara vez ofrecen tecnologías de punta y usan enfoques probados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-143-contratos_desempeno_energetico_esco-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Capacitarte o capacitar a alguien de confianza para el mantenimiento a largo plazo",
+      "texto_nuevo": "Asegurar que el contrato incluya la capacitación de tu personal y el mantenimiento a largo plazo a cargo de la ESCO",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2776",
+        "frase": "The ESCO will also provide staff training and long-term maintenance services"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro dice que la ESCO provee la capacitación del personal y el mantenimiento a largo plazo; el paso lo pone a cargo de quien contrata.; Mismo defecto: invierte a quién le toca.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

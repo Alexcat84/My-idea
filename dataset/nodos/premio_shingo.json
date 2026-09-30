@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Premio Shingo (Shingo Prize)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Programa de reconocimiento público a empresas en distintas etapas de su camino hacia la excelencia empresarial, mediante niveles diferenciados: Shingo Prize, Shingo Silver Medallion y Shingo Bronze Medallion. Sirve como marco de referencia y validación externa del nivel de madurez Lean de una organización.",
+  "resumen_teorico": "Programa de reconocimiento público a empresas en distintas etapas de su camino hacia la excelencia empresarial, mediante niveles diferenciados: Shingo Prize, Shingo Silver Medallion y Shingo Bronze Medallion. Sirve como marco de referencia y validación externa del nivel de madurez Lean; muchas empresas no postulan y lo usan como autoevaluación, por lo general anual.",
   "pasos_accionables": [
     "Evaluar el nivel de madurez Lean de la organización frente a los criterios Shingo",
     "Documentar evidencia de implementación de principios Lean y cultura de mejora",
-    "Postular a la categoría correspondiente (Bronze, Silver o Prize) según nivel de madurez",
+    "Postular al Premio Shingo, que evalúa a la organización y la reconoce en el nivel que corresponda (Bronze, Silver o Prize)",
     "Usar el feedback de la evaluación externa para planificar próximos pasos de mejora"
   ],
   "entregable_esperado": "Postulación documentada al Premio Shingo con evidencia de prácticas Lean implementadas",
@@ -38,6 +38,39 @@
         "evidencia": "F28-029: Es un reconocimiento externo a la madurez Lean de una operación ya implementada; aquí 'validación' no significa probar con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-141-premio_shingo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Postular a la categoría correspondiente (Bronze, Silver o Prize) según nivel de madurez",
+      "texto_nuevo": "Postular al Premio Shingo, que evalúa a la organización y la reconoce en el nivel que corresponda (Bronze, Silver o Prize)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12833, 12951",
+        "frase": "applicant enterprises are assessed on a 1000 points possible scale"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no describe elegir una categoría según la propia madurez: los solicitantes se evalúan y el programa reconoce en distintos niveles.; Mismo mecanismo añadido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-141-premio_shingo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programa de reconocimiento público a empresas en distintas etapas de su camino hacia la excelencia empresarial, mediante niveles diferenciados: Shingo Prize, Shingo Silver Medallion y Shingo Bronze Medallion. Sirve como marco de referencia y validación externa del nivel de madurez Lean de una organización.",
+      "texto_nuevo": "Programa de reconocimiento público a empresas en distintas etapas de su camino hacia la excelencia empresarial, mediante niveles diferenciados: Shingo Prize, Shingo Silver Medallion y Shingo Bronze Medallion. Sirve como marco de referencia y validación externa del nivel de madurez Lean; muchas empresas no postulan y lo usan como autoevaluación, por lo general anual.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12981",
+        "frase": "many enterprises use such models as a self-assessment tool"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo uso alternativo perdido.; Se pierde que muchas empresas no postulan y usan el modelo como autoevaluación periódica, típicamente anual.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

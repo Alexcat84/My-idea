@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "PRE-Control",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.",
+  "resumen_teorico": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso. Es un método discutido: comprueba que encaja en tu caso.",
   "pasos_accionables": [
     "Centrar el proceso entre los límites de especificación al iniciar",
     "Sugerencia de My Idea: definir zonas de PRE-Control (verde, amarilla, roja) según la distancia a los límites de especificación",
@@ -117,6 +117,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-141-pre_control_estadistico-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.",
+      "texto_nuevo": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso. Es un método discutido: comprueba que encaja en tu caso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20610",
+        "frase": "The concept, however, has generated some controversy."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se pierde la cautela del libro: el concepto ha generado controversia y conviene ver en qué aplicaciones es apropiado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

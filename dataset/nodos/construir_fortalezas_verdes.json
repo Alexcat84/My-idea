@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Construir sobre Fortalezas Verdes Existentes",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Muchas empresas ya poseen atributos ambientales valiosos en sus productos que no están siendo comunicados o aprovechados comercialmente. La estrategia consiste en identificar estas fortalezas subutilizadas (como eficiencia energética o contenido reciclado) y construir campañas de marketing a partir de ellas, integrándolas con otros valores que interesan al consumidor como calidad, salud o accesibilidad.",
+  "resumen_teorico": "A veces una empresa ya posee en sus productos atributos ambientales valiosos, quizá poco apreciados, que no están siendo comunicados o aprovechados comercialmente. La estrategia consiste en identificar estas fortalezas subutilizadas (como eficiencia energética o contenido reciclado) y construir campañas de marketing a partir de ellas, integrándolas con otros valores que interesan al consumidor como calidad, salud o accesibilidad.",
   "pasos_accionables": [
     "Auditar atributos ambientales ya presentes en productos actuales",
     "Determinar si estos atributos son conocidos y valorados por los clientes",
-    "Integrar el atributo verde con otros valores clave (calidad, salud, precio)",
+    "Considerar cómo la fortaleza verde aporta a las metas generales del negocio o, si la sostenibilidad es tu valor principal, integrarla con otros valores clave (calidad, salud, precio)",
     "Diseñar el mensaje de marketing en torno a la fortaleza identificada"
   ],
   "entregable_esperado": "Brief de campaña de marketing verde basado en fortalezas ambientales reales del producto",
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Aprovecha tus Fortalezas Verdes",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-143-construir_fortalezas_verdes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas empresas ya poseen atributos ambientales valiosos en sus productos que no están siendo comunicados o aprovechados comercialmente. La estrategia consiste en identificar estas fortalezas subutilizadas (como eficiencia energética o contenido reciclado) y construir campañas de marketing a partir de ellas, integrándolas con otros valores que interesan al consumidor como calidad, salud o accesibilidad.",
+      "texto_nuevo": "A veces una empresa ya posee en sus productos atributos ambientales valiosos, quizá poco apreciados, que no están siendo comunicados o aprovechados comercialmente. La estrategia consiste en identificar estas fortalezas subutilizadas (como eficiencia energética o contenido reciclado) y construir campañas de marketing a partir de ellas, integrándolas con otros valores que interesan al consumidor como calidad, salud o accesibilidad.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5233",
+        "frase": "Sometimes companies develop a leading-edge environmental position in the marketplace by highlighting existing"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que a veces se destacan atributos verdes existentes y quizá poco apreciados; 'muchas empresas' endurece la frecuencia.; Mismo defecto: 'sometimes' pasa a 'muchas empresas'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-143-construir_fortalezas_verdes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Integrar el atributo verde con otros valores clave (calidad, salud, precio)",
+      "texto_nuevo": "Considerar cómo la fortaleza verde aporta a las metas generales del negocio o, si la sostenibilidad es tu valor principal, integrarla con otros valores clave (calidad, salud, precio)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5237",
+        "frase": "Or if sustainability is your main value, think about how to integrate that"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona integrar con otros valores del consumidor a que la sostenibilidad sea tu valor principal; si no, pide ver cómo aporta a las metas del negocio.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

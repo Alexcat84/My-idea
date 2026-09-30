@@ -7,7 +7,7 @@
   "resumen_teorico": "Es una tabla que armas para comparar a los clientes que entrevistaste, dándole un puntaje a cada respuesta según qué tan interesados están, qué tan urgente es su problema, si ya usan una solución casera, si comprarían en los próximos meses y si hablaste con quien realmente decide la compra. Con esos puntajes puedes ver quiénes son clientes con entusiasmo real y no solo curiosidad.",
   "pasos_accionables": [
     "Definir las dimensiones de puntuación relevantes al producto (excitación, urgencia, impacto, workaround, ventana de compra, decisor)",
-    "Puntuar cada cliente entrevistado en escala 1-3 por dimensión",
+    "Puntuar cada cliente entrevistado en escala 1-3 por dimensión, comprobando primero que el sistema de puntuación es preciso antes de aplicarlo a todo el conjunto",
     "Ponderar las dimensiones críticas para el negocio (ej. doble peso a probabilidad de compra en 120 días)",
     "Clasificar clientes en: perseguir agresivamente, poner en espera, o abandonar temporalmente",
     "Revisar comentarios atípicos (outliers) que no encajan en el patrón general",
@@ -52,6 +52,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-144-scorecard_descubrimiento_cliente-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Puntuar cada cliente entrevistado en escala 1-3 por dimensión",
+      "texto_nuevo": "Puntuar cada cliente entrevistado en escala 1-3 por dimensión, comprobando primero que el sistema de puntuación es preciso antes de aplicarlo a todo el conjunto",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20336",
+        "frase": "discuss the system's accuracy. If it's accurate, score the entire set"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo control perdido.; Se cae el control del libro: discutir si el sistema es preciso antes de puntuar a todo el conjunto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

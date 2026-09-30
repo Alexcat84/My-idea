@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Comunicación Interna de Sostenibilidad a Empleados",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Los reportes anuales extensos no son efectivos para comunicar sostenibilidad a los empleados. Se requieren formatos creativos como boletines, folletos breves, recursos web o correos electrónicos, y para empleados sin acceso constante a computadoras (ej. planta o vehículos), es necesario recurrir a comunicación presencial, como los 'momentos de sostenibilidad' implementados por Duke Energy.",
+  "resumen_teorico": "Los reportes anuales extensos no son efectivos para comunicar sostenibilidad a los empleados. Se requieren formatos creativos como boletines, folletos breves, recursos web o correos electrónicos, y para empleados sin acceso constante a computadoras (ej. planta o vehículos), es un error depender solo de herramientas en línea: conviene buscar formas creativas, incluida la conversación en persona, como los 'momentos de sostenibilidad' implementados por Duke Energy.",
   "pasos_accionables": [
     "Crear formatos breves y visuales para comunicar iniciativas de sostenibilidad internamente",
     "Implementar momentos regulares de sostenibilidad en reuniones de equipo",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Comunica Sostenibilidad a Empleados",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-143-comunicacion_interna_empleados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los reportes anuales extensos no son efectivos para comunicar sostenibilidad a los empleados. Se requieren formatos creativos como boletines, folletos breves, recursos web o correos electrónicos, y para empleados sin acceso constante a computadoras (ej. planta o vehículos), es necesario recurrir a comunicación presencial, como los 'momentos de sostenibilidad' implementados por Duke Energy.",
+      "texto_nuevo": "Los reportes anuales extensos no son efectivos para comunicar sostenibilidad a los empleados. Se requieren formatos creativos como boletines, folletos breves, recursos web o correos electrónicos, y para empleados sin acceso constante a computadoras (ej. planta o vehículos), es un error depender solo de herramientas en línea: conviene buscar formas creativas, incluida la conversación en persona, como los 'momentos de sostenibilidad' implementados por Duke Energy.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7297",
+        "frase": "it is a mistake to rely on online communications tools alone"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que es un error depender solo de herramientas en línea y sugiere, entre otras formas, hablar en persona; no lo hace necesario.; Mismo defecto: endurece una opción a una necesidad.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

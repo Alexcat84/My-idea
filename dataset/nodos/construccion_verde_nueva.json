@@ -4,14 +4,14 @@
   "dominio": "environmental",
   "titulo_concepto": "Construir Nuevo, en Verde",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Mejorar un edificio que ya existe tiene un techo. Si tienes la oportunidad de construir algo nuevo desde cero, ahí puedes pensar en verde desde el primer trazo: dónde lo ubicas, cómo lo orientas al sol, qué materiales usas, qué tan flexible dejas la climatización, cómo manejas el agua de lluvia. La clave es que quien diseña, quien construye y quien va a ser dueño se sienten a pensar esto juntos desde el principio, no al final.",
+  "resumen_teorico": "Mejorar un edificio que ya existe tiene un techo. Si tienes la oportunidad de construir algo nuevo desde cero, ahí puedes pensar en verde desde el primer trazo: dónde lo ubicas, cómo lo orientas al sol, qué materiales usas, qué tan flexible dejas la climatización, cómo manejas el agua de lluvia. La clave es que quien diseña, quien construye, quien va a ser dueño y quienes van a ocupar el espacio se sienten a pensar esto juntos desde el principio, no al final.",
   "pasos_accionables": [
     "Piensa en el edificio como un sistema completo, donde cada parte afecta a las demás, en vez de resolver piezas sueltas",
     "Elige una ubicación cercana a infraestructura ya existente y a transporte público",
     "Orienta el edificio para aprovechar la luz del sol y la sombra natural",
     "Usa superficies que dejen pasar el agua para reducir la escorrentía de la lluvia",
     "Usa la mayor cantidad posible de materiales renovables o reciclados",
-    "Diseña la climatización (HVAC) pensando en que dure y se adapte a largo plazo",
+    "Diseña la climatización (HVAC) pensando en que sea eficiente y se adapte a largo plazo",
     "Planea juntos la demolición y la construcción para generar menos residuos",
     "Equilibra el ahorro de energía con lo que el espacio realmente necesita para funcionar bien"
   ],
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Diseña tus Nuevas Construcciones Verdes",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-143-construccion_verde_nueva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mejorar un edificio que ya existe tiene un techo. Si tienes la oportunidad de construir algo nuevo desde cero, ahí puedes pensar en verde desde el primer trazo: dónde lo ubicas, cómo lo orientas al sol, qué materiales usas, qué tan flexible dejas la climatización, cómo manejas el agua de lluvia. La clave es que quien diseña, quien construye y quien va a ser dueño se sienten a pensar esto juntos desde el principio, no al final.",
+      "texto_nuevo": "Mejorar un edificio que ya existe tiene un techo. Si tienes la oportunidad de construir algo nuevo desde cero, ahí puedes pensar en verde desde el primer trazo: dónde lo ubicas, cómo lo orientas al sol, qué materiales usas, qué tan flexible dejas la climatización, cómo manejas el agua de lluvia. La clave es que quien diseña, quien construye, quien va a ser dueño y quienes van a ocupar el espacio se sienten a pensar esto juntos desde el principio, no al final.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2835",
+        "frase": "Open communication between the designer, owner, architect, and tenants can raise the odds"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La comunicación abierta del libro incluye a los inquilinos, que el resumen deja fuera.; Mismo defecto: la enumeración pierde a quienes ocuparán el edificio; el arquitecto ya queda cubierto por 'quien diseña'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-143-construccion_verde_nueva-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña la climatización (HVAC) pensando en que dure y se adapte a largo plazo",
+      "texto_nuevo": "Diseña la climatización (HVAC) pensando en que sea eficiente y se adapte a largo plazo",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2871",
+        "frase": "Design HVAC systems for long-term flexibility and efficiency"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El principio del libro pide flexibilidad y eficiencia a largo plazo; el paso pierde la eficiencia.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

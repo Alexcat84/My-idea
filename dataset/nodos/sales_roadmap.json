@@ -6,7 +6,7 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "El mapa de ruta de ventas es el detalle práctico de cada etapa de tu embudo de ventas: define a quién contactar dentro de la empresa a la que le quieres vender, en qué orden hacerlo y con qué mensaje, para lograr cerrar la venta. Es la traducción de tu embudo de ventas en un plan de acción concreto que puedes seguir paso a paso.",
   "pasos_accionables": [
-    "Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién lo compra y quién decide el gasto.",
+    "Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién influye o recomienda la compra, quién lo compra, quién decide el gasto y quién podría sabotear la venta.",
     "Define el orden en que vas a contactar a cada uno y el mensaje específico para cada rol.",
     "Escribe el proceso paso a paso para poder repetirlo cada vez que vendas."
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Define a Quién Contactar Primero",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-144-sales_roadmap-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién lo compra y quién decide el gasto.",
+      "texto_nuevo": "Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién influye o recomienda la compra, quién lo compra, quién decide el gasto y quién podría sabotear la venta.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1884-1885",
+        "frase": "Who influences a sale? Who recommends a sale?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye también a quien influye o recomienda la venta y al saboteador.; Mismo defecto: faltan el que influye o recomienda y el posible saboteador.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

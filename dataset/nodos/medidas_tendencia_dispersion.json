@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Medidas de Tendencia Central y Dispersión",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los datos pueden resumirse numéricamente mediante medidas de tendencia central (media, mediana) que indican dónde se centran los datos, y medidas de dispersión (rango, desviación estándar) que indican la cantidad de dispersión. La desviación estándar es la medida de dispersión más útil para conjuntos de más de 10 observaciones.",
+  "resumen_teorico": "Los datos pueden resumirse numéricamente mediante medidas de tendencia central (media, mediana) que indican dónde se centran los datos, y medidas de dispersión (rango, desviación estándar) que indican la cantidad de dispersión. Para conjuntos de más de 10 observaciones, la desviación estándar suele ser la medida de dispersión más útil.",
   "pasos_accionables": [
     "Calcular la media aritmética de los datos",
     "Calcular la mediana si los datos presentan asimetría o valores atípicos",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Conoce Centro y Dispersión",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-142-medidas_tendencia_dispersion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los datos pueden resumirse numéricamente mediante medidas de tendencia central (media, mediana) que indican dónde se centran los datos, y medidas de dispersión (rango, desviación estándar) que indican la cantidad de dispersión. La desviación estándar es la medida de dispersión más útil para conjuntos de más de 10 observaciones.",
+      "texto_nuevo": "Los datos pueden resumirse numéricamente mediante medidas de tendencia central (media, mediana) que indican dónde se centran los datos, y medidas de dispersión (rango, desviación estándar) que indican la cantidad de dispersión. Para conjuntos de más de 10 observaciones, la desviación estándar suele ser la medida de dispersión más útil.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11744",
+        "frase": "For data sets of more than 10, the standard deviation is usually the best choice."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que en general es la más útil y que para más de 10 datos suele ser la mejor opción; el nodo lo vuelve tajante.; Mismo endurecimiento del 'usually' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

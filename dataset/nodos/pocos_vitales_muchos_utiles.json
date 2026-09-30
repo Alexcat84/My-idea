@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Los Pocos Vitales y los Muchos Útiles",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Principio de Pareto aplicado a la selección de proyectos: los 'pocos vitales' son proyectos grandes que generan el mayor impacto financiero y de liderazgo, mientras que los 'muchos útiles' tienen efecto menor en resultados financieros pero gran impacto en relaciones humanas y participación del empleado. Ambos tipos son necesarios y pueden ejecutarse simultáneamente asignando diferentes personas a cada uno, evitando el error de solo hacer proyectos de 'apagar incendios' que no atacan el desperdicio crónico.",
+  "resumen_teorico": "Principio de Pareto aplicado a la selección de proyectos: los 'pocos vitales' son proyectos grandes que generan el mayor impacto financiero y de liderazgo, mientras que los 'muchos útiles' tienen efecto menor en resultados financieros pero gran impacto en relaciones humanas y participación del empleado. Ambos tipos son necesarios y pueden ejecutarse simultáneamente asignando diferentes personas a cada uno, evitando el error de elegir solo proyectos de 'apagar incendios', que no atacan el desperdicio crónico, o solo muchos útiles y de relaciones humanas, sin ningún proyecto vital.",
   "pasos_accionables": [
     "Clasificar cada proyecto candidato como 'vital few', 'useful many' o 'firefighting'",
-    "Asegurar que se trabaje en ambos tipos de proyectos simultáneamente con equipos distintos",
+    "Asegurar que se trabaje en ambos tipos de proyectos, cada uno en su momento; pueden hacerse a la vez con equipos distintos",
     "Evitar enfocar todos los recursos solo en proyectos de apagado de incendios",
     "Medir el impacto en el resultado financiero (bottom line) de los proyectos vitales"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Prioriza tus Proyectos Vitales",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-pocos_vitales_muchos_utiles-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Principio de Pareto aplicado a la selección de proyectos: los 'pocos vitales' son proyectos grandes que generan el mayor impacto financiero y de liderazgo, mientras que los 'muchos útiles' tienen efecto menor en resultados financieros pero gran impacto en relaciones humanas y participación del empleado. Ambos tipos son necesarios y pueden ejecutarse simultáneamente asignando diferentes personas a cada uno, evitando el error de solo hacer proyectos de 'apagar incendios' que no atacan el desperdicio crónico.",
+      "texto_nuevo": "Principio de Pareto aplicado a la selección de proyectos: los 'pocos vitales' son proyectos grandes que generan el mayor impacto financiero y de liderazgo, mientras que los 'muchos útiles' tienen efecto menor en resultados financieros pero gran impacto en relaciones humanas y participación del empleado. Ambos tipos son necesarios y pueden ejecutarse simultáneamente asignando diferentes personas a cada uno, evitando el error de elegir solo proyectos de 'apagar incendios', que no atacan el desperdicio crónico, o solo muchos útiles y de relaciones humanas, sin ningún proyecto vital.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6696-6704",
+        "frase": "requires selecting the “vital few” projects as well as the “useful many.”"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro describe el error como elegir solo proyectos de apagar incendios, muchos útiles o de relaciones humanas, sin los pocos vitales.; Mismo defecto: el nodo deja solo el primero de los tres.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-141-pocos_vitales_muchos_utiles-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asegurar que se trabaje en ambos tipos de proyectos simultáneamente con equipos distintos",
+      "texto_nuevo": "Asegurar que se trabaje en ambos tipos de proyectos, cada uno en su momento; pueden hacerse a la vez con equipos distintos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6706-6710",
+        "frase": "Both are needed—at the right time."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que pueden hacerse a la vez y que ambos se necesitan en su momento, no que siempre deban ir simultáneos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

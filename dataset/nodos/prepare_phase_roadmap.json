@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Segunda fase del roadmap donde el equipo ejecutivo despliega el plan creado en la fase Decide y desarrolla un esfuerzo piloto para probar el cambio en algunas unidades de negocio antes de expandirlo. Concluye con un breakthrough en la estructura organizacional.",
   "pasos_accionables": [
-    "Desplegar el plan creado en la fase Decide",
+    "Desplegar el plan creado en la fase Decide e identificar las fortalezas y los posibles problemas de desempeño detectados en esa fase",
     "Identificar flujos de valor y procesos clave que requieren mejora",
     "Seleccionar proyectos piloto multifuncionales y crear sus charters",
     "Crear plan de entrenamiento para los equipos",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Prepara el Plan Piloto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-prepare_phase_roadmap-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desplegar el plan creado en la fase Decide",
+      "texto_nuevo": "Desplegar el plan creado en la fase Decide e identificar las fortalezas y los posibles problemas de desempeño detectados en esa fase",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2255-2259",
+        "frase": "Identify the areas of strength and uncover possible problems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La primera acción que el libro enumera para esta fase, identificar fortalezas y posibles problemas de la fase uno, no está en ningún paso.; Mismo elemento perdido del procedimiento.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

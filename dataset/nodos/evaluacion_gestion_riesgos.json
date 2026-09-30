@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Proceso estructurado para identificar riesgos potenciales, evaluar su severidad y probabilidad, y definir acciones concretas para minimizarlos o eliminarlos. Incluye el análisis de consecuencias de actuar o no actuar, el impacto futuro de las decisiones, y el balance costo/beneficio. El objetivo final no es solo evaluar sino generar una lista de acciones ejecutables con responsables y fechas.",
   "pasos_accionables": [
-    "Hacer una lluvia de ideas exhaustiva de todos los riesgos y opciones posibles sin restricciones, o sea lo que te preocupa (concerns) de cada riesgo que priorizaste",
+    "Hacer una lluvia de ideas exhaustiva y sin restricciones de lo que te preocupa (concerns) de cada riesgo que priorizaste, incluyendo severidad, probabilidad, velocidad de impacto, indignación, complejidad, alcance e incertidumbre, y otra de todas tus opciones para reducirlo o eliminarlo",
     "Evaluar consecuencias de actuar vs no actuar, incluyendo efectos secundarios inesperados (revenge effects)",
     "Analizar el impacto futuro de la decisión sobre la flexibilidad del negocio",
     "Calcular el costo/beneficio de cada opción de mitigación",
@@ -111,6 +111,23 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-142-evaluacion_gestion_riesgos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hacer una lluvia de ideas exhaustiva de todos los riesgos y opciones posibles sin restricciones, o sea lo que te preocupa (concerns) de cada riesgo que priorizaste",
+      "texto_nuevo": "Hacer una lluvia de ideas exhaustiva y sin restricciones de lo que te preocupa (concerns) de cada riesgo que priorizaste, incluyendo severidad, probabilidad, velocidad de impacto, indignación, complejidad, alcance e incertidumbre, y otra de todas tus opciones para reducirlo o eliminarlo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12433",
+        "frase": "Include all the factors in your list: severity, probability, impact of speed, outrage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide dos listas distintas, preocupaciones con sus factores y opciones para reducir el riesgo; el nodo las mezcla y pierde los factores.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

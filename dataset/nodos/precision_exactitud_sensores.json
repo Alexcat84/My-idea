@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Precisión y Exactitud de los Sensores de Medición",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La precisión de un sensor es su capacidad de reproducir resultados en pruebas repetidas, mientras que la exactitud es el grado en que el sensor refleja el valor verdadero según un estándar establecido. Los sensores humanos (inspectores, auditores) suelen ser menos precisos que los tecnológicos. La exactitud generalmente se corrige mediante recalibración, mientras que mejorar la precisión más allá de su límite de diseño requiere rediseñar el sensor.",
+  "resumen_teorico": "La precisión de un sensor es su capacidad de reproducir resultados en pruebas repetidas, mientras que la exactitud es el grado en que el sensor refleja el valor verdadero según un estándar establecido. Los sensores humanos (inspectores, auditores) suelen ser menos precisos que los tecnológicos. En los sensores tecnológicos, la exactitud generalmente se corrige mediante recalibración, mientras que mejorar la precisión más allá de su límite de diseño requiere rediseñar el sensor.",
   "pasos_accionables": [
     "Evaluar si el sensor a utilizar es tecnológico o humano y sus limitaciones inherentes",
     "Medir la reproducibilidad (precisión) del sensor mediante pruebas repetidas",
     "Comparar los resultados del sensor contra un estándar establecido para verificar exactitud",
     "Establecer un programa de calibración y mantenimiento periódico del sensor",
-    "Si la precisión es insuficiente, considerar el rediseño del sensor o método de medición"
+    "Si la precisión es insuficiente, descartar primero el mal uso o el mantenimiento insuficiente; si ya está en su límite de diseño, considerar el rediseño del sensor o método de medición"
   ],
   "entregable_esperado": "Plan de calibración y mantenimiento de sensores con métricas de precisión y exactitud documentadas",
   "nodos_previos": [
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Calibra Precisión y Exactitud",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-precision_exactitud_sensores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La precisión de un sensor es su capacidad de reproducir resultados en pruebas repetidas, mientras que la exactitud es el grado en que el sensor refleja el valor verdadero según un estándar establecido. Los sensores humanos (inspectores, auditores) suelen ser menos precisos que los tecnológicos. La exactitud generalmente se corrige mediante recalibración, mientras que mejorar la precisión más allá de su límite de diseño requiere rediseñar el sensor.",
+      "texto_nuevo": "La precisión de un sensor es su capacidad de reproducir resultados en pruebas repetidas, mientras que la exactitud es el grado en que el sensor refleja el valor verdadero según un estándar establecido. Los sensores humanos (inspectores, auditores) suelen ser menos precisos que los tecnológicos. En los sensores tecnológicos, la exactitud generalmente se corrige mediante recalibración, mientras que mejorar la precisión más allá de su límite de diseño requiere rediseñar el sensor.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3996",
+        "frase": "For technological sensors, it is usually easy to adjust for accuracy by recalibrating"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita la recalibración fácil a los sensores tecnológicos.; Mismo límite perdido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-141-precision_exactitud_sensores-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la precisión es insuficiente, considerar el rediseño del sensor o método de medición",
+      "texto_nuevo": "Si la precisión es insuficiente, descartar primero el mal uso o el mantenimiento insuficiente; si ya está en su límite de diseño, considerar el rediseño del sensor o método de medición",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3996",
+        "frase": "operating at a level of precision below that of its capability owing to misuse"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el sensor puede rendir por debajo de su capacidad por mal uso o mal mantenimiento; el rediseño es para superar el límite de diseño.; Mismo matiz perdido.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

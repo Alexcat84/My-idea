@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Formación del Equipo de Proyecto Multifuncional",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los proyectos vitales suelen ser multifuncionales por naturaleza, por lo que requieren equipos multifuncionales en lugar de individuos, ya que los síntomas aparecen en un departamento pero las causas y remedios suelen estar en otros. La selección de miembros debe considerar qué departamentos representar (afectado, sospechoso, remediador, diagnóstico, expertos), el nivel jerárquico apropiado según la naturaleza del proyecto, y las capacidades individuales (tiempo, conocimiento, entrenamiento). Los equipos ideales tienen de 6 a 8 miembros.",
+  "resumen_teorico": "Los proyectos vitales suelen ser multifuncionales por naturaleza, por lo que requieren equipos multifuncionales en lugar de individuos, ya que los síntomas suelen aparecer en un departamento pero no hay acuerdo sobre dónde están las causas ni cuáles deben ser los remedios. La selección de miembros debe considerar qué departamentos representar (afectado, sospechoso, remediador, diagnóstico, expertos), el nivel jerárquico apropiado según la naturaleza del proyecto, y las capacidades individuales (tiempo, conocimiento, entrenamiento). La mayoría de los equipos tiene de 6 a 8 miembros; más gente tiende a volverlo difícil de manejar y costoso.",
   "pasos_accionables": [
     "Identificar los departamentos relevantes: afectado, sospechoso, remediador, diagnóstico, expertos",
     "Determinar el nivel jerárquico apropiado según la naturaleza técnica o gerencial del proyecto",
     "Seleccionar individuos considerando tiempo disponible, conocimiento y necesidad de entrenamiento",
-    "Limitar el equipo a 6-8 miembros para mantener eficiencia",
+    "Apuntar a un equipo de 6 a 8 miembros, como la mayoría, porque con más gente tiende a volverse difícil de manejar y costoso",
     "Publicar los nombres del equipo y su meta para formalizar la asignación"
   ],
   "entregable_esperado": "Equipo de proyecto formalmente constituido y publicado con roles definidos",
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Combina Funciones, No Solo Individuos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-142-formacion_equipo_proyecto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los proyectos vitales suelen ser multifuncionales por naturaleza, por lo que requieren equipos multifuncionales en lugar de individuos, ya que los síntomas aparecen en un departamento pero las causas y remedios suelen estar en otros. La selección de miembros debe considerar qué departamentos representar (afectado, sospechoso, remediador, diagnóstico, expertos), el nivel jerárquico apropiado según la naturaleza del proyecto, y las capacidades individuales (tiempo, conocimiento, entrenamiento). Los equipos ideales tienen de 6 a 8 miembros.",
+      "texto_nuevo": "Los proyectos vitales suelen ser multifuncionales por naturaleza, por lo que requieren equipos multifuncionales en lugar de individuos, ya que los síntomas suelen aparecer en un departamento pero no hay acuerdo sobre dónde están las causas ni cuáles deben ser los remedios. La selección de miembros debe considerar qué departamentos representar (afectado, sospechoso, remediador, diagnóstico, expertos), el nivel jerárquico apropiado según la naturaleza del proyecto, y las capacidades individuales (tiempo, conocimiento, entrenamiento). La mayoría de los equipos tiene de 6 a 8 miembros; más gente tiende a volverlo difícil de manejar y costoso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6842",
+        "frase": "there is no agreement on where the causes lie, what the causes are"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe que la mayoría de los equipos tiene de seis a ocho miembros; no lo fija como ideal.; El libro dice que no hay acuerdo sobre dónde están las causas ni cuáles son los remedios, no que estén en otros departamentos.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-142-formacion_equipo_proyecto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Limitar el equipo a 6-8 miembros para mantener eficiencia",
+      "texto_nuevo": "Apuntar a un equipo de 6 a 8 miembros, como la mayoría, porque con más gente tiende a volverse difícil de manejar y costoso",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6911",
+        "frase": "Larger numbers tend to make the team unwieldy as well as costly."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe el tamaño habitual y advierte que más gente tiende a volverlo inmanejable y costoso, sin fijar un límite.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

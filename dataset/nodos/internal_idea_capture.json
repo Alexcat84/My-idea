@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Sistema de Captura Interna de Ideas",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Es un sistema formal para solicitar, evaluar y gestionar ideas de nuevos productos provenientes de los propios empleados, típicamente a través de una plataforma web interna. Es el método de ideación más utilizado, pero su efectividad depende críticamente de una buena implementación (comunicación, retroalimentación rápida, incentivos adecuados).",
+  "resumen_teorico": "Es un sistema formal para solicitar, evaluar y gestionar ideas de nuevos productos provenientes de los propios empleados, típicamente a través de una plataforma web interna. Es el método de ideación más utilizado, pero su efectividad promedio es decepcionante y varía mucho: depende críticamente de una buena implementación (comunicación, retroalimentación rápida, incentivos adecuados).",
   "pasos_accionables": [
     "Nombrar un responsable claro del sistema de sugerencias de ideas",
-    "Publicitar ampliamente el sistema entre los empleados",
+    "Publicitar ampliamente el sistema entre los empleados, acoger todas las ideas sin menospreciar las poco convencionales y hacer fácil enviarlas",
     "Separar el sistema de 'ideas para nuevos productos' de las cajas de sugerencias generales",
     "Definir y publicar los 'campos de búsqueda' donde se buscan activamente ideas",
     "Garantizar una respuesta rápida (2-4 semanas) con retroalimentación mediante scorecard",
@@ -43,6 +43,39 @@
         "motivo": "Un sistema interno de captura de ideas de los empleados no prepara la medicion del aprendizaje validado de la contabilidad de la innovacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-144-internal_idea_capture-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es un sistema formal para solicitar, evaluar y gestionar ideas de nuevos productos provenientes de los propios empleados, típicamente a través de una plataforma web interna. Es el método de ideación más utilizado, pero su efectividad depende críticamente de una buena implementación (comunicación, retroalimentación rápida, incentivos adecuados).",
+      "texto_nuevo": "Es un sistema formal para solicitar, evaluar y gestionar ideas de nuevos productos provenientes de los propios empleados, típicamente a través de una plataforma web interna. Es el método de ideación más utilizado, pero su efectividad promedio es decepcionante y varía mucho: depende críticamente de una buena implementación (comunicación, retroalimentación rápida, incentivos adecuados).",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5532",
+        "frase": "effectiveness is disappointing, ranked number twelve"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo dato perdido.; Se pierde que su efectividad promedio es decepcionante (puesto doce), aunque varía mucho entre empresas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-144-internal_idea_capture-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Publicitar ampliamente el sistema entre los empleados",
+      "texto_nuevo": "Publicitar ampliamente el sistema entre los empleados, acoger todas las ideas sin menospreciar las poco convencionales y hacer fácil enviarlas",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5546",
+        "frase": "Welcome all ideas and do not belittle people for submitting offbeat ideas."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta un consejo de la lista: acoger todas las ideas sin menospreciar las poco convencionales y hacer fácil enviarlas.; Mismo consejo perdido.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

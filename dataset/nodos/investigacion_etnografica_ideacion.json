@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Investigación Etnográfica ('Camping Out') para Generación de Ideas",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "La etnografía consiste en observar a los clientes en su entorno natural durante períodos extendidos, detectando necesidades no articuladas. Aunque es poco popular (baja adopción por costo y tiempo), es calificada como el método MÁS EFECTIVO para generar ideas innovadoras, ya que revela problemas que el cliente ni siquiera sabe expresar (ejemplo: Purell FST Military Bottle desarrollado tras observar soldados en entrenamiento).",
+  "resumen_teorico": "La etnografía consiste en observar a los clientes en su entorno natural durante períodos extendidos, detectando necesidades no articuladas. Aunque es poco popular (baja adopción), es calificada como el método MÁS EFECTIVO para generar ideas innovadoras, ya que revela problemas que el cliente ni siquiera sabe expresar (ejemplo: Purell FST Military Bottle desarrollado tras observar soldados en entrenamiento). No sirve para todo: en un hospital es viable, en una cocina cuesta más.",
   "pasos_accionables": [
     "Seleccionar un contexto de uso real del producto (ej. campo, fábrica, hospital)",
     "Sugerencia de My Idea: observa directamente a los usuarios usando o usando mal el producto durante un período extendido, e involucra a líderes o clientes en la observación de campo para generar empatía directa",
@@ -140,6 +140,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La primera parte es fiel, pero el libro no pide involucrar o delegar en lideres o clientes la observacion de campo; busque deputiz y la presencia de ejecutivos en visitas sin hallarlo.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-117"
+    },
+    {
+      "id": "final-e1-144-investigacion_etnografica_ideacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La etnografía consiste en observar a los clientes en su entorno natural durante períodos extendidos, detectando necesidades no articuladas. Aunque es poco popular (baja adopción por costo y tiempo), es calificada como el método MÁS EFECTIVO para generar ideas innovadoras, ya que revela problemas que el cliente ni siquiera sabe expresar (ejemplo: Purell FST Military Bottle desarrollado tras observar soldados en entrenamiento).",
+      "texto_nuevo": "La etnografía consiste en observar a los clientes en su entorno natural durante períodos extendidos, detectando necesidades no articuladas. Aunque es poco popular (baja adopción), es calificada como el método MÁS EFECTIVO para generar ideas innovadoras, ya que revela problemas que el cliente ni siquiera sabe expresar (ejemplo: Purell FST Military Bottle desarrollado tras observar soldados en entrenamiento). No sirve para todo: en un hospital es viable, en una cocina cuesta más.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5006",
+        "frase": "the method does not suit all product types and markets"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da la baja adopción y, por separado, el costo y el tiempo; no dice que una cause la otra.; Mismo límite perdido que la marca 1.; Mismo nexo causal añadido que la marca 0.; Se pierde el límite: el método no sirve para todos los productos y mercados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

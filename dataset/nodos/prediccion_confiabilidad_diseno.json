@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Predicción de Confiabilidad Durante el Diseño",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales).",
+  "resumen_teorico": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
   "pasos_accionables": [
     "Definir el producto y su operación funcional mediante diagrama de bloques funcional",
     "Preparar un diagrama de bloques de confiabilidad mostrando redundancias e interrelaciones",
     "Desarrollar el modelo de probabilidad para predecir la confiabilidad",
-    "Recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
+    "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
     "Combinar los datos para obtener la predicción numérica de confiabilidad del sistema"
   ],
   "entregable_esperado": "Reporte de predicción de confiabilidad del sistema con diagramas de bloques funcionales y de confiabilidad, y banco de datos de partes documentado",
@@ -31,5 +31,40 @@
   "etiqueta_arbol": "Predice la Confiabilidad en Diseño",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-prediccion_confiabilidad_diseno-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
+      "texto_nuevo": "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20264-20276",
+        "frase": "Collect information relevant to parts reliability."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro tiene un paso propio, reunir la información de cada parte, del que dependen las tasas de falla; el nodo lo omite.; Mismo paso perdido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-141-prediccion_confiabilidad_diseno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales).",
+      "texto_nuevo": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20282",
+        "frase": "The predictions differed greatly from observed field behavior"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se pierde la advertencia de que estas predicciones son controvertidas y difirieron mucho de lo observado en campo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

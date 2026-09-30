@@ -6,11 +6,11 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Herramienta para comparar múltiples soluciones alternativas contra criterios preestablecidos (CTQs), calificando cada alternativa como mejor, peor o igual respecto a una solución base (datum), permitiendo crear soluciones híbridas más fuertes a partir de las más débiles.",
   "pasos_accionables": [
-    "Definir criterios incluyendo CTQs del cliente y criterios de negocio",
+    "Definir criterios que incluyan los CTQs del cliente; puedes sumar criterios de negocio",
     "Ponderar los criterios según importancia",
     "Calificar cada alternativa como mejor (+), peor (-) o igual (s) respecto al datum",
     "Comparar el número de positivos, negativos e iguales entre alternativas",
-    "Crear una nueva alternativa híbrida que combine las mejores características"
+    "Evaluar si puedes crear una nueva alternativa híbrida que combine las mejores características"
   ],
   "entregable_esperado": "Matriz de Pugh completada con calificación comparativa de alternativas y selección de la mejor opción o híbrido",
   "nodos_previos": [
@@ -40,6 +40,40 @@
         "evidencia": "F17-009: Compara alternativas de diseno contra criterios ponderados para elegir o hibridar la solucion, es decision de diseno, no prueba con clientes ni mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-142-matriz_pugh-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir criterios incluyendo CTQs del cliente y criterios de negocio",
+      "texto_nuevo": "Definir criterios que incluyan los CTQs del cliente; puedes sumar criterios de negocio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18550",
+        "frase": "Customer CTQs must be included. Business criteria such as time to market"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro exige los CTQs del cliente y deja los criterios de negocio como opcionales; el nodo los pone al mismo nivel.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-142-matriz_pugh-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear una nueva alternativa híbrida que combine las mejores características",
+      "texto_nuevo": "Evaluar si puedes crear una nueva alternativa híbrida que combine las mejores características",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18556",
+        "frase": "Can you create a new alternative that leverages the best of the initial alternatives?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro plantea la alternativa híbrida como pregunta y posibilidad, no como paso obligatorio.; Mismo endurecimiento: la híbrida es una posibilidad a explorar.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

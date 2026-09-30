@@ -10,7 +10,7 @@
     "Traduce esa meta en un número concreto de franquicias que necesitas vender (por ejemplo, 100 franquicias)",
     "Fija tu objetivo de corto plazo (por ejemplo, vender 12 franquicias en el primer año)",
     "Multiplica el número de franquicias que quieres vender por el costo promedio de marketing por venta en tu mercado",
-    "Si el capital que necesitas no está disponible, ajusta el plan: reduce la meta, alarga el plazo o busca capital externo"
+    "Si el capital que necesitas no está disponible, ajusta el plan: reduce la meta, alarga el plazo, busca capital externo o cambia a un enfoque más agresivo (por ejemplo, abrir unidades propias a la vez o sumar desarrollo de área); o decide cuánto puedes gastar y deja que ese presupuesto marque tu crecimiento"
   ],
   "entregable_esperado": "Tu presupuesto anual de marketing de franquicia, con desglose mensual y una proyección de cuándo recuperas la inversión",
   "nodos_previos": [
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Calcula tu Presupuesto de Mercadeo",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-presupuesto_marketing_franquicia-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el capital que necesitas no está disponible, ajusta el plan: reduce la meta, alarga el plazo o busca capital externo",
+      "texto_nuevo": "Si el capital que necesitas no está disponible, ajusta el plan: reduce la meta, alarga el plazo, busca capital externo o cambia a un enfoque más agresivo (por ejemplo, abrir unidades propias a la vez o sumar desarrollo de área); o decide cuánto puedes gastar y deja que ese presupuesto marque tu crecimiento",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "3447-3457",
+        "frase": "decide how much you can afford to spend on marketing and let your budget dictate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da una cuarta opción: cambiar a tácticas más agresivas, como unidades propias a la vez o desarrollo de área.; Faltan la opción de tácticas más agresivas y la de dejar que el presupuesto que puedes pagar marque el crecimiento.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,9 +4,9 @@
   "dominio": "quality",
   "titulo_concepto": "Tu política de calidad y cómo la refuerzas con quién sumas a tu equipo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es la decisión que dejas clara por escrito sobre qué pesa más para ti: la calidad o la cantidad de lo que entregas. Esa decisión solo tiene valor si se refleja en a quién eliges sumar a tu negocio, cómo lo recibes y qué le explicas desde el primer día. Si dices una cosa y en la práctica premias otra, tu palabra pierde credibilidad.",
+  "resumen_teorico": "Es la decisión que dejas clara por escrito sobre qué pesa más para ti: la calidad o la cantidad de lo que entregas. Esa decisión solo tiene valor si la haces cumplir, y se refuerza en a quién sumas, cómo lo recibes, qué le explicas desde el primer día, qué recompensas y a quién promueves. Si dices una cosa y en la práctica premias otra, tu palabra pierde credibilidad.",
   "pasos_accionables": [
-    "Redactar una declaración de política de calidad clara y medible",
+    "Redactar una declaración de política de calidad clara",
     "Reflejar esos valores de calidad al elegir a quién sumar y cómo lo recibes",
     "Dejar por escrito, en lo que le entregas a quien se suma, las prácticas y expectativas de calidad",
     "Revisar cada tanto que lo que haces en el día a día coincida con lo que declaraste"
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Refuerza tu Política de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-politica_de_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es la decisión que dejas clara por escrito sobre qué pesa más para ti: la calidad o la cantidad de lo que entregas. Esa decisión solo tiene valor si se refleja en a quién eliges sumar a tu negocio, cómo lo recibes y qué le explicas desde el primer día. Si dices una cosa y en la práctica premias otra, tu palabra pierde credibilidad.",
+      "texto_nuevo": "Es la decisión que dejas clara por escrito sobre qué pesa más para ti: la calidad o la cantidad de lo que entregas. Esa decisión solo tiene valor si la haces cumplir, y se refuerza en a quién sumas, cómo lo recibes, qué le explicas desde el primer día, qué recompensas y a quién promueves. Si dices una cosa y en la práctica premias otra, tu palabra pierde credibilidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2040-2059",
+        "frase": "is ignored and not enforced, it becomes worthless"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el valor a hacerla cumplir y la refuerza también con lo que recompensas y a quién promueves.; Mismo defecto: se reduce a la incorporación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-141-politica_de_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redactar una declaración de política de calidad clara y medible",
+      "texto_nuevo": "Redactar una declaración de política de calidad clara",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2038",
+        "frase": "This statement rates the relative worth that organization members should place"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe la declaración como el valor relativo de la calidad; que sea medible no está.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

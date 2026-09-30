@@ -10,9 +10,9 @@
     "Cada miembro del equipo distribuye 100 puntos entre los criterios",
     "Calcular el promedio de puntos por criterio y acordar los pesos finales",
     "Listar las alternativas a evaluar",
-    "Calificar cada alternativa según cada criterio (escala 1-5)",
+    "Que cada miembro del equipo califique cada alternativa según cada criterio (escala 1-5)",
     "Calcular el promedio de calificación por alternativa",
-    "Discutir resultados y llegar a consenso sobre próximos pasos"
+    "Dar a cada miembro una tabla con cómo calificó cada uno cada alternativa, discutir los resultados y llegar a consenso sobre próximos pasos"
   ],
   "entregable_esperado": "Matriz de selección con alternativas evaluadas, ponderadas y una decisión consensuada",
   "nodos_previos": [
@@ -43,6 +43,40 @@
         "evidencia": "F27-001: Tiene razon el lector B: la matriz pondera criterios internos del equipo para elegir entre soluciones o proyectos y termina en una decision sobre los proximos pasos, sin probar nada con clientes ni con el mercado, asi que es planificacion y no validacion. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-142-matriz_de_seleccion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Discutir resultados y llegar a consenso sobre próximos pasos",
+      "texto_nuevo": "Dar a cada miembro una tabla con cómo calificó cada uno cada alternativa, discutir los resultados y llegar a consenso sobre próximos pasos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18589",
+        "frase": "Give each team member a table showing how each member rated each alternative."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo paso del procedimiento perdido.; Se cae el paso del libro de dar a cada miembro la tabla de cómo calificó cada uno, base de la discusión.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-142-matriz_de_seleccion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calificar cada alternativa según cada criterio (escala 1-5)",
+      "texto_nuevo": "Que cada miembro del equipo califique cada alternativa según cada criterio (escala 1-5)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18585",
+        "frase": "Each team member rates each alternative according to how well it meets each criterion"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que cada miembro del equipo califique cada alternativa; esa calificación individual alimenta los promedios y la tabla.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

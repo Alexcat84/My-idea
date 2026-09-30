@@ -12,7 +12,7 @@
     "Calcular TCO (costo total de propiedad) para ventas B2B",
     "Preparar un ROI hipotético para presentar a clientes corporativos"
   ],
-  "entregable_esperado": "Modelo financiero de ingresos con proyección de volumen, precio y validación de viabilidad del negocio",
+  "entregable_esperado": "Estimación aproximada de ingresos con volumen y precio, y un cálculo rápido de si el negocio vale la pena, sin precisión contable todavía",
   "nodos_previos": [
     "key_partners_hypothesis",
     "channels_hypothesis_physical",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Define tus Ingresos y Precios",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-144-revenue_pricing_hypothesis-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo financiero de ingresos con proyección de volumen, precio y validación de viabilidad del negocio",
+      "texto_nuevo": "Estimación aproximada de ingresos con volumen y precio, y un cálculo rápido de si el negocio vale la pena, sin precisión contable todavía",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7783",
+        "frase": "this is a rough, back-of-the-envelope calculation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide en esta etapa un cálculo aproximado, no un ejercicio contable, solo para decidir si pasar a validación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

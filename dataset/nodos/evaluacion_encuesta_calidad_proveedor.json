@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Encuesta de Evaluación de Calidad del Proveedor",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es una revisión de la capacidad real de un proveedor para prevenir, detectar y corregir producto no conforme. Puede ser tan simple como un cuestionario o tan completa como una visita donde revisas su forma de gestionar, diseñar, fabricar e inspeccionar, y los resultados de calidad que ha tenido. Lo que buscas es confirmar si lo que promete coincide con lo que realmente hace.",
+  "resumen_teorico": "Es una revisión de la capacidad real de un proveedor para prevenir, detectar y corregir producto no conforme. Puede ser tan simple como un cuestionario o tan completa como una visita donde revisas su forma de gestionar, diseñar, fabricar e inspeccionar, y los resultados de calidad que ha tenido. Buscas confirmar si lo que promete coincide con lo que hace; mirar solo sus procedimientos y documentos predice poco su desempeño futuro.",
   "pasos_accionables": [
     "Preparar un cuestionario o un plan de visita que cubra gestión, diseño, manufactura, inspección y resultados",
     "Si puedes, llevar contigo o consultar a alguien con mirada distinta a la tuya (por ejemplo alguien que entienda de producción o de diseño) para no evaluar solo desde un ángulo",
     "Dar más peso a lo que más te importa a ti en esa compra al momento de valorar lo que ves",
-    "Anotar tanto los hechos concretos como tu propia impresión sobre si ese proveedor te va a sostener en el tiempo",
+    "Anotar tanto los hechos concretos como tu propia impresión sobre si ese proveedor te va a sostener en el tiempo, y cuánta ayuda necesitaría para cumplir tus requisitos",
     "Revisar si el proveedor ya tiene una certificación reconocida en tu mercado, para no repetir evaluaciones que ya alguien mas hizo"
   ],
   "entregable_esperado": "Un informe simple con tu evaluación del proveedor y tu recomendación de si aprobarlo o no",
@@ -85,6 +85,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-142-evaluacion_encuesta_calidad_proveedor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una revisión de la capacidad real de un proveedor para prevenir, detectar y corregir producto no conforme. Puede ser tan simple como un cuestionario o tan completa como una visita donde revisas su forma de gestionar, diseñar, fabricar e inspeccionar, y los resultados de calidad que ha tenido. Lo que buscas es confirmar si lo que promete coincide con lo que realmente hace.",
+      "texto_nuevo": "Es una revisión de la capacidad real de un proveedor para prevenir, detectar y corregir producto no conforme. Puede ser tan simple como un cuestionario o tan completa como una visita donde revisas su forma de gestionar, diseñar, fabricar e inspeccionar, y los resultados de calidad que ha tenido. Buscas confirmar si lo que promete coincide con lo que hace; mirar solo sus procedimientos y documentos predice poco su desempeño futuro.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23764",
+        "frase": "have had only limited success in predicting future performance of the product"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo límite perdido.; Se cae el límite del libro: las encuestas centradas en organización, procedimientos y documentos predicen poco el desempeño futuro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-142-evaluacion_encuesta_calidad_proveedor-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anotar tanto los hechos concretos como tu propia impresión sobre si ese proveedor te va a sostener en el tiempo",
+      "texto_nuevo": "Anotar tanto los hechos concretos como tu propia impresión sobre si ese proveedor te va a sostener en el tiempo, y cuánta ayuda necesitaría para cumplir tus requisitos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23748",
+        "frase": "a further judgment on the extent of assistance needed by the supplier"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De los cuatro hallazgos del informe se cae el juicio sobre cuánta ayuda necesitaría el proveedor.; Mismo hallazgo perdido.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

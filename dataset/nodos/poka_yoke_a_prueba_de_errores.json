@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Poka-Yoke (A Prueba de Errores)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Técnica Lean que consiste en diseñar mecanismos o procedimientos que hacen imposible o muy difícil que ocurra un error humano en el proceso, previniendo defectos en su origen en lugar de detectarlos después de producidos.",
+  "resumen_teorico": "Técnica Lean que consiste en diseñar mecanismos o procedimientos que hacen imposible o muy difícil que ocurra un error humano en el proceso. Lo mejor es prevenir el defecto en su origen, desde el diseño; si no se puede, impedir que pase a la operación siguiente.",
   "pasos_accionables": [
     "Identificar los puntos del proceso donde ocurren errores humanos frecuentes",
     "Diseñar un mecanismo físico o de procedimiento que prevenga el error",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Previene el Error en su Origen",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-poka_yoke_a_prueba_de_errores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica Lean que consiste en diseñar mecanismos o procedimientos que hacen imposible o muy difícil que ocurra un error humano en el proceso, previniendo defectos en su origen en lugar de detectarlos después de producidos.",
+      "texto_nuevo": "Técnica Lean que consiste en diseñar mecanismos o procedimientos que hacen imposible o muy difícil que ocurra un error humano en el proceso. Lo mejor es prevenir el defecto en su origen, desde el diseño; si no se puede, impedir que pase a la operación siguiente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13650",
+        "frase": "the next best alternative is to prevent defects from passing along"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reconoce un modo reactivo: si no se previene en el diseño, lo siguiente mejor es impedir que el defecto pase a la operación siguiente.; Mismo modo reactivo perdido; el nodo lo excluye.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

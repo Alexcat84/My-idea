@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Construye un mapa de ventas (sales roadmap) antes que un equipo de ventas",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Cuando quieres acelerar, la tentación es contratar más vendedores o gastar más en conseguir clientes. Eso te frena, porque mezclas dos cosas distintas: todavía estás buscando un modelo de negocio que funcione y ya estás actuando como si lo tuvieras probado. Antes de armar un equipo de ventas, construye un mapa de ventas: un documento que explique cómo se logran ventas que se repiten, y que te sirva para comprobar de verdad si tu producto encaja con el mercado.",
+  "resumen_teorico": "Cuando quieres acelerar, la tentación es contratar más vendedores o gastar más en conseguir clientes. Eso no acelera la validación y la mayoría de las veces la frena, porque mezclas dos cosas distintas: todavía estás buscando un modelo de negocio que funcione y ya estás actuando como si lo tuvieras probado. Antes de armar un equipo de ventas, construye un mapa de ventas: un documento que explique cómo se logran ventas que se repiten, y que te sirva para comprobar de verdad si tu producto encaja con el mercado.",
   "pasos_accionables": [
     "Escribe paso a paso el camino que te lleva a una venta que se repite",
     "Pon a prueba ese mapa de ventas con clientes reales antes de crecer tu equipo",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Planifica antes de Vender Más",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-144-sales_roadmap_vs_sales_force-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando quieres acelerar, la tentación es contratar más vendedores o gastar más en conseguir clientes. Eso te frena, porque mezclas dos cosas distintas: todavía estás buscando un modelo de negocio que funcione y ya estás actuando como si lo tuvieras probado. Antes de armar un equipo de ventas, construye un mapa de ventas: un documento que explique cómo se logran ventas que se repiten, y que te sirva para comprobar de verdad si tu producto encaja con el mercado.",
+      "texto_nuevo": "Cuando quieres acelerar, la tentación es contratar más vendedores o gastar más en conseguir clientes. Eso no acelera la validación y la mayoría de las veces la frena, porque mezclas dos cosas distintas: todavía estás buscando un modelo de negocio que funcione y ya estás actuando como si lo tuvieras probado. Antes de armar un equipo de ventas, construye un mapa de ventas: un documento que explique cómo se logran ventas que se repiten, y que te sirva para comprobar de verdad si tu producto encaja con el mercado.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1914",
+        "frase": "this doesn't speed up the validation phase. In fact, it most often slows it down"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que no acelera la validación y que la mayoría de las veces la frena; el nodo lo da como efecto seguro.; Mismo endurecimiento del grado ('most often' pasa a efecto seguro).",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -9,7 +9,7 @@
     "Recolectar una muestra de datos históricos del proceso de servicio",
     "Comparar los datos contra las especificaciones o metas establecidas",
     "Construir un histograma para visualizar la distribución de los datos",
-    "Determinar si el proceso es capaz de cumplir consistentemente con las especificaciones",
+    "Determinar de forma preliminar si el proceso es capaz de cumplir consistentemente con las especificaciones y, después, hacer un estudio completo en condiciones controladas",
     "Si no es capaz, rediseñar el proceso y volver a probar",
     "Evaluar los cuatro parámetros: efectividad, eficiencia, adaptabilidad y tiempo de ciclo"
   ],
@@ -46,6 +46,23 @@
         "evidencia": "F21-010: Medir la capacidad de un proceso de servicio con datos historicos es control de operaciones de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-142-medicion_capacidad_servicio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si el proceso es capaz de cumplir consistentemente con las especificaciones",
+      "texto_nuevo": "Determinar de forma preliminar si el proceso es capaz de cumplir consistentemente con las especificaciones y, después, hacer un estudio completo en condiciones controladas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21475",
+        "frase": "This preliminary capability study is based on available data."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el estudio con datos disponibles es preliminar y que luego debe hacerse uno completo en condiciones controladas.; Mismo defecto: se cae el carácter preliminar y el estudio completo posterior.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

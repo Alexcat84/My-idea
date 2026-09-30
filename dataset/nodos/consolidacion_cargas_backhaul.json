@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Consolidación de Cargas y Aprovechamiento de Backhauls",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Consolidar envíos y aprovechar los viajes de retorno vacíos (backhauls) reduce significativamente el desperdicio de combustible y costos, ya que un camión que regresa vacío desperdicia la mitad del costo de entrega. Programas como 'Empty Miles Service' conectan empresas con capacidad de carga sobrante para optimizar el uso de la flota.",
+  "resumen_teorico": "Consolidar envíos y aprovechar los viajes de retorno vacíos (backhauls) reduce significativamente el desperdicio de combustible y costos, ya que un camión que regresa vacío desperdicia la mitad del costo de entrega. Consolidar puede exigir más tiempo y clasificación. Programas como 'Empty Miles Service' conectan empresas con capacidad de carga sobrante para optimizar el uso de la flota.",
   "pasos_accionables": [
     "Analizar patrones de envío para identificar oportunidades de consolidación de pedidos.",
     "Evaluar la participación en programas de backhaul compartido (ej. Empty Miles Service).",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Aprovecha Cada Viaje de Carga",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-143-consolidacion_cargas_backhaul-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consolidar envíos y aprovechar los viajes de retorno vacíos (backhauls) reduce significativamente el desperdicio de combustible y costos, ya que un camión que regresa vacío desperdicia la mitad del costo de entrega. Programas como 'Empty Miles Service' conectan empresas con capacidad de carga sobrante para optimizar el uso de la flota.",
+      "texto_nuevo": "Consolidar envíos y aprovechar los viajes de retorno vacíos (backhauls) reduce significativamente el desperdicio de combustible y costos, ya que un camión que regresa vacío desperdicia la mitad del costo de entrega. Consolidar puede exigir más tiempo y clasificación. Programas como 'Empty Miles Service' conectan empresas con capacidad de carga sobrante para optimizar el uso de la flota.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4892",
+        "frase": "Consolidating shipments may take more time and sorting, but the returns can be significant."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que consolidar envíos puede exigir más tiempo y clasificación; el resumen solo da el beneficio.; Mismo defecto: se cae el costo de consolidar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

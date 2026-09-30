@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Penetración de Mercados Secundarios y Terciarios",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Debido a que los franquiciados suelen tener estructuras de costos distintas (menores salarios, beneficios) y mejor desempeño operativo, pueden operar rentablemente en mercados donde una unidad corporativa tendría retornos marginales, permitiendo al franquiciante expandirse a territorios de menor prioridad sin arriesgar capital propio.",
+  "resumen_teorico": "Debido a que los franquiciados suelen tener estructuras de costos distintas (menores salarios, beneficios) y mejor desempeño operativo, pueden operar rentablemente en mercados donde una unidad corporativa tendría retornos marginales, permitiendo al franquiciante expandirse a territorios de menor prioridad sin arriesgar capital propio, siempre que den al franquiciado una fuerte probabilidad de éxito.",
   "pasos_accionables": [
     "Identificar mercados secundarios/terciarios donde el retorno corporativo sería marginal",
     "Evaluar si estos mercados podrían ser viables para franquiciados con estructura de costos más baja",
@@ -22,5 +22,23 @@
   "etiqueta_arbol": "Penetra Mercados Secundarios y Terciarios",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-141-penetracion_mercados_secundarios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Debido a que los franquiciados suelen tener estructuras de costos distintas (menores salarios, beneficios) y mejor desempeño operativo, pueden operar rentablemente en mercados donde una unidad corporativa tendría retornos marginales, permitiendo al franquiciante expandirse a territorios de menor prioridad sin arriesgar capital propio.",
+      "texto_nuevo": "Debido a que los franquiciados suelen tener estructuras de costos distintas (menores salarios, beneficios) y mejor desempeño operativo, pueden operar rentablemente en mercados donde una unidad corporativa tendría retornos marginales, permitiendo al franquiciante expandirse a territorios de menor prioridad sin arriesgar capital propio, siempre que den al franquiciado una fuerte probabilidad de éxito.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "369-371",
+        "frase": "you never want to consider a market you do not feel provides"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo límite perdido.; Se cae el límite del libro: nunca considerar un mercado que no dé al franquiciado una fuerte probabilidad de éxito.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
