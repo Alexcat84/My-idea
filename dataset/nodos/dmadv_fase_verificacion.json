@@ -14,7 +14,7 @@
     "Completa la tabla final de resultados del diseño (scorecard) y guarda los hallazgos clave",
     "Escribe un informe final con las lecciones aprendidas del proyecto"
   ],
-  "entregable_esperado": "Verificación de que tu producto o proceso cumple los objetivos del proyecto, corrida piloto completa, documentación operativa y de control lista, decisión sobre si escalar, procesos a escala completa construidos e implementados, resultados de negocio analizados, procesos entregados a quienes los van a operar y cierre formal del proyecto.",
+  "entregable_esperado": "Verificación de que tu producto o proceso cumple los objetivos del proyecto, corrida piloto completa, pruebas piloto completadas y sus resultados analizados, toda la documentación operativa y de control, los procedimientos, los controles y la capacitación completos, decisión sobre si escalar, procesos a escala completa construidos e implementados, resultados de negocio analizados, procesos entregados a quienes los van a operar y cierre formal del proyecto.",
   "nodos_previos": [
     "dmadv_fase_diseno"
   ],
@@ -46,6 +46,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye procesos a escala completa construidos e implementados y resultados de negocio analizados.; Mismos dos entregables perdidos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-054-dmadv_fase_verificacion-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificación de que tu producto o proceso cumple los objetivos del proyecto, corrida piloto completa, documentación operativa y de control lista, decisión sobre si escalar, procesos a escala completa construidos e implementados, resultados de negocio analizados, procesos entregados a quienes los van a operar y cierre formal del proyecto.",
+      "texto_nuevo": "Verificación de que tu producto o proceso cumple los objetivos del proyecto, corrida piloto completa, pruebas piloto completadas y sus resultados analizados, toda la documentación operativa y de control, los procedimientos, los controles y la capacitación completos, decisión sobre si escalar, procesos a escala completa construidos e implementados, resultados de negocio analizados, procesos entregados a quienes los van a operar y cierre formal del proyecto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "16478-16480",
+        "frase": "Pilot tests are completed and results are analyzed"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige completos también los procedimientos, los controles y la capacitación.; Falta el entregable de pruebas piloto completadas con sus resultados analizados.; Misma omisión de la capacitación completa.; Misma omisión de las pruebas piloto y su análisis.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

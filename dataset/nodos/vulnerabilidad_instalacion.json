@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Vulnerabilidad de la Instalación frente al Desensamblaje",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Dentro del mantenimiento, la fase de reinstalación/reensamblaje es mucho más propensa a errores que el desensamblaje. El desensamblaje tiene una secuencia natural cuya lógica está 'en el mundo' (casi siempre hay una sola forma de hacerlo), mientras que la reinstalación permite múltiples combinaciones erróneas (ej. 8 tuercas = 40,320 formas de reensamblar mal) y muchos errores pueden quedar ocultos. Datos de aviación (Boeing, Pratt & Whitney, UK CAA) confirman que la instalación incompleta, dañada o incorrecta son las causas más frecuentes de fallas.",
+  "resumen_teorico": "Dentro del mantenimiento, la fase de reinstalación/reensamblaje es mucho más propensa a errores que el desensamblaje. El desensamblaje tiene una secuencia natural cuya lógica está 'en el mundo' (casi siempre hay una sola forma de hacerlo), mientras que la reinstalación permite múltiples combinaciones erróneas (ej. 8 tuercas = 40,320 formas de reensamblar mal) y muchos errores pueden quedar ocultos. Datos de aviación (Boeing, Pratt & Whitney, UK CAA) confirman que la instalación incompleta, dañada o incorrecta y el equipo no instalado o faltante son las causas más frecuentes de fallas.",
   "pasos_accionables": [
     "Diseñar procedimientos de reinstalación con secuencias claramente numeradas y verificables",
     "Implementar listas de verificación específicas para pasos de reensamblaje, obligatorias y con firma paso a paso",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que en su mayor parte hay una sola forma de desmontar.; Endurece: el libro dice que muchas omisiones y desórdenes pueden quedar ocultos.; Mismo endurecimiento sobre la única forma de desmontar.; Mismo endurecimiento sobre los errores ocultos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-054-vulnerabilidad_instalacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dentro del mantenimiento, la fase de reinstalación/reensamblaje es mucho más propensa a errores que el desensamblaje. El desensamblaje tiene una secuencia natural cuya lógica está 'en el mundo' (casi siempre hay una sola forma de hacerlo), mientras que la reinstalación permite múltiples combinaciones erróneas (ej. 8 tuercas = 40,320 formas de reensamblar mal) y muchos errores pueden quedar ocultos. Datos de aviación (Boeing, Pratt & Whitney, UK CAA) confirman que la instalación incompleta, dañada o incorrecta son las causas más frecuentes de fallas.",
+      "texto_nuevo": "Dentro del mantenimiento, la fase de reinstalación/reensamblaje es mucho más propensa a errores que el desensamblaje. El desensamblaje tiene una secuencia natural cuya lógica está 'en el mundo' (casi siempre hay una sola forma de hacerlo), mientras que la reinstalación permite múltiples combinaciones erróneas (ej. 8 tuercas = 40,320 formas de reensamblar mal) y muchos errores pueden quedar ocultos. Datos de aviación (Boeing, Pratt & Whitney, UK CAA) confirman que la instalación incompleta, dañada o incorrecta y el equipo no instalado o faltante son las causas más frecuentes de fallas.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2046",
+        "frase": "Equipment not installed or missing (11%)"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae el equipo no instalado o faltante, una de las cuatro formas de instalación defectuosa que encabezan los datos y la primera causa en el otro estudio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

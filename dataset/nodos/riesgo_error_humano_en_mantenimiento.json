@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El Contacto Humano como Riesgo Creciente en Mantenimiento",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y el riesgo por negligencia de mantenimiento disminuye. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, si el nivel de mantenimiento se mantiene relativamente constante, con el tiempo el mayor peligro para sistemas modernos proviene del contacto físico humano, a menudo innecesario, durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
+  "resumen_teorico": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y es probable que el riesgo por negligencia de mantenimiento disminuya. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, si el nivel de mantenimiento se mantiene relativamente constante, con el tiempo el mayor peligro para sistemas modernos proviene del contacto físico humano, a menudo innecesario, durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
   "pasos_accionables": [
     "Analizar históricamente la proporción de fallos atribuibles a error humano vs fallo técnico puro",
     "Evaluar si el nivel actual de contacto humano en mantenimiento sigue siendo necesario dado el avance tecnológico",
@@ -56,6 +56,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la condición de que el nivel de mantenimiento se mantenga relativamente constante, y el contacto es a menudo innecesario, no siempre.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-054-riesgo_error_humano_en_mantenimiento-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y el riesgo por negligencia de mantenimiento disminuye. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, si el nivel de mantenimiento se mantiene relativamente constante, con el tiempo el mayor peligro para sistemas modernos proviene del contacto físico humano, a menudo innecesario, durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
+      "texto_nuevo": "A medida que la tecnología mejora, la confiabilidad intrínseca de los componentes aumenta y es probable que el riesgo por negligencia de mantenimiento disminuya. Sin embargo, el riesgo de error humano durante el mantenimiento permanece relativamente constante, ya que la falibilidad humana no cambia con la tecnología. Esto significa que, si el nivel de mantenimiento se mantiene relativamente constante, con el tiempo el mayor peligro para sistemas modernos proviene del contacto físico humano, a menudo innecesario, durante inspecciones y reensamblajes, más que de fallos técnicos no asistidos.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2354",
+        "frase": "the risks due to maintenance neglect are likely to diminish steadily"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que es probable que ese riesgo disminuya, dentro de un gráfico que llama muy especulativo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

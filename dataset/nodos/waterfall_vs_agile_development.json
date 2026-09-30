@@ -7,7 +7,7 @@
   "resumen_teorico": "Waterfall Development es un proceso de ingeniería lineal y secuencial por etapas, donde todo el producto y sus características se especifican por adelantado y cada etapa se asigna a un equipo separado para mayor control. Es la antítesis del Agile Development, que es iterativo y flexible. Entender esta distinción es clave para elegir el enfoque de desarrollo de producto adecuado para un startup en búsqueda de su modelo de negocio.",
   "pasos_accionables": [
     "Evaluar si el contexto del proyecto requiere certeza total de requisitos (waterfall) o iteración (agile).",
-    "Para startups en fase de búsqueda, usar metodologías ágiles que permitan pivotar: con desarrollo en cascada el producto queda sordo a lo que dicen los clientes.",
+    "Para startups en fase de búsqueda, usar metodologías ágiles que permitan pivotar: con desarrollo en cascada el producto queda sordo a lo que dicen los clientes, salvo durante el breve periodo en que se especifica.",
     "Alinear el proceso de desarrollo de producto con el proceso de Customer Development."
   ],
   "entregable_esperado": "Una decisión documentada sobre la metodología de desarrollo de producto a utilizar.",
@@ -58,6 +58,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz: 'preferir' lo vuelve opcional.; Para el libro lo ágil es una necesidad, no una preferencia: sin ello el desarrollo de clientes no sirve.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-055-waterfall_vs_agile_development-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para startups en fase de búsqueda, usar metodologías ágiles que permitan pivotar: con desarrollo en cascada el producto queda sordo a lo que dicen los clientes.",
+      "texto_nuevo": "Para startups en fase de búsqueda, usar metodologías ágiles que permitan pivotar: con desarrollo en cascada el producto queda sordo a lo que dicen los clientes, salvo durante el breve periodo en que se especifica.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1002",
+        "frase": "except during a short period when it's specifying the product"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exceptúa el breve periodo en que se especifica el producto; el paso lo da como sordera total.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

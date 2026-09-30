@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Terminología Clave para Diagnóstico de Breakthrough",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para un diagnóstico riguroso es esencial dominar conceptos clave: defecto (falta de aptitud para el uso o no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada; si hay varias, siguen el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (estudiar síntomas, teorizar causas, probar teorías y descubrir causas) y remedio (cambio que elimina o neutraliza la causa).",
+  "resumen_teorico": "Para un diagnóstico riguroso es esencial dominar conceptos clave: defecto (falta de aptitud para el uso o no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada; si hay varias, siguen el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (estudiar síntomas, teorizar causas, probar teorías y descubrir causas) y remedio (cambio que puede eliminar o neutralizar la causa).",
   "pasos_accionables": [
     "Definir claramente cada término con el equipo antes de iniciar el diagnóstico",
     "Diferenciar síntomas de causas en cada problema detectado",
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro define defecto también como falta de aptitud para el uso.; El remedio puede eliminar o neutralizar la causa; se cae la neutralización.; Endurece: solo cuando hay varias causas siguen el principio de Pareto.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.; Se caen dos de los cuatro elementos del diagnóstico: teorizar causas y descubrirlas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-054-terminologia_clave_breakthrough-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para un diagnóstico riguroso es esencial dominar conceptos clave: defecto (falta de aptitud para el uso o no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada; si hay varias, siguen el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (estudiar síntomas, teorizar causas, probar teorías y descubrir causas) y remedio (cambio que elimina o neutraliza la causa).",
+      "texto_nuevo": "Para un diagnóstico riguroso es esencial dominar conceptos clave: defecto (falta de aptitud para el uso o no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada; si hay varias, siguen el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (estudiar síntomas, teorizar causas, probar teorías y descubrir causas) y remedio (cambio que puede eliminar o neutralizar la causa).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "7165",
+        "frase": "A “remedy” is a change that can eliminate or neutralize a cause of defects."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro define el remedio como un cambio que puede eliminar o neutralizar una causa.; Mismo defecto sobre la definición de remedio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

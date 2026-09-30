@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Mantener el Puntaje (Keep Score) en Innovación",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El principio 'no puedes gestionar lo que no mides' aplica directamente a la innovación de productos. Muchas empresas no llevan estadísticas confiables sobre tasas de éxito/fracaso, tasas de atrición por etapa, o proporción de recursos invertidos en ganadores vs. perdedores. Establecer métricas claras es el primer paso para mejorar el desempeño de innovación, pero antes acuerda qué cuenta como nuevo producto.",
+  "resumen_teorico": "El principio 'no puedes gestionar lo que no mides' aplica directamente a la innovación de productos. Muchas empresas no llevan estadísticas confiables sobre tasas de éxito, fracaso y cancelación, proporción de recursos invertidos en ganadores vs. perdedores, o número de proyectos que cumplen sus metas de tiempo y ganancia. Establecer métricas claras es el primer paso para mejorar el desempeño de innovación, pero antes acuerda qué cuenta como nuevo producto.",
   "pasos_accionables": [
     "Definir y registrar la tasa de éxito vs. fracaso en el lanzamiento.",
     "Registrar las tasas de atrición en cada etapa del proceso de innovación.",
@@ -74,6 +74,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma condición perdida.; Se pierde la condición previa: acordar una definición sólida de qué cuenta como nuevo producto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-055-mantener_puntaje_innovacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El principio 'no puedes gestionar lo que no mides' aplica directamente a la innovación de productos. Muchas empresas no llevan estadísticas confiables sobre tasas de éxito/fracaso, tasas de atrición por etapa, o proporción de recursos invertidos en ganadores vs. perdedores. Establecer métricas claras es el primer paso para mejorar el desempeño de innovación, pero antes acuerda qué cuenta como nuevo producto.",
+      "texto_nuevo": "El principio 'no puedes gestionar lo que no mides' aplica directamente a la innovación de productos. Muchas empresas no llevan estadísticas confiables sobre tasas de éxito, fracaso y cancelación, proporción de recursos invertidos en ganadores vs. perdedores, o número de proyectos que cumplen sus metas de tiempo y ganancia. Establecer métricas claras es el primer paso para mejorar el desempeño de innovación, pero antes acuerda qué cuenta como nuevo producto.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1060",
+        "frase": "reliable statistics on success, fail, and kill rates; on resources spent on winners versus losers"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro de estadísticas que faltan incluye cancelaciones y proyectos que cumplen metas de tiempo y ganancia, no la atrición por etapa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tipos de Clientes en el Proceso de Decisión de Compra",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Toda venta involucra un conjunto de tomadores de decisiones: usuarios finales (usan el producto día a día), influenciadores (opinan y moldean tendencias pero no deciden), recomendadores (su opinión puede hacer o deshacer la venta), compradores económicos (controlan el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia y donde más de una persona participa en la decisión.",
+  "resumen_teorico": "Toda venta involucra un conjunto de tomadores de decisiones: usuarios finales (usan el producto día a día), influenciadores (opinan y moldean tendencias pero no deciden), recomendadores (su opinión puede hacer o deshacer la venta), compradores económicos (a menudo controlan o aprueban la compra o el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia y donde más de una persona participa en la decisión.",
   "pasos_accionables": [
     "Lista quién usará el producto día a día (usuario final)",
     "Mapea quiénes son los influenciadores y recomendadores, internos y externos",
@@ -62,6 +62,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que los roles rara vez coincidan; admite que el decisor puede ser el comprador económico.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-055-tipos_de_clientes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Toda venta involucra un conjunto de tomadores de decisiones: usuarios finales (usan el producto día a día), influenciadores (opinan y moldean tendencias pero no deciden), recomendadores (su opinión puede hacer o deshacer la venta), compradores económicos (controlan el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia y donde más de una persona participa en la decisión.",
+      "texto_nuevo": "Toda venta involucra un conjunto de tomadores de decisiones: usuarios finales (usan el producto día a día), influenciadores (opinan y moldean tendencias pero no deciden), recomendadores (su opinión puede hacer o deshacer la venta), compradores económicos (a menudo controlan o aprueban la compra o el presupuesto), decisores (autoridad final de compra) y saboteadores (pueden vetar la compra). Comprender estos roles es esencial, especialmente en ventas corporativas complejas donde el usuario final puede tener la menor influencia y donde más de una persona participa en la decisión.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5684",
+        "frase": "often control or approve the purchase or budget"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que a menudo controlan o aprueban la compra o el presupuesto; el resumen lo da como regla.; Mismo defecto: se cae el 'often' del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

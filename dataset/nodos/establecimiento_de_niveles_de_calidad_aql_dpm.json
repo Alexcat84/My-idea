@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Cómo fijar el nivel de calidad que aceptas (AQL/DPM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El AQL (nivel de calidad aceptable) es un punto en la curva que describe los riesgos de los planes de muestreo, pero muchos proveedores lo malinterpretan como si fuera el nivel de defectos que se permite tener. Por eso conviene dejar en el contrato que todo el producto debe cumplir las especificaciones. En muchas industrias, la unidad de medida es la de defectos por millón (DPM).",
+  "resumen_teorico": "El AQL (nivel de calidad aceptable) es un punto en la curva que describe los riesgos de los planes de muestreo, pero muchos proveedores lo malinterpretan como si fuera el nivel de defectos que se permite tener. Por eso conviene dejar en el contrato que todo el producto debe cumplir las especificaciones y que el producto no conforme puede devolverse para su reemplazo. En muchas industrias, la unidad de medida es la de defectos por millón (DPM).",
   "pasos_accionables": [
     "No comuniques el AQL como si fuera un nivel de defectos aceptable",
     "Deja establecido en el contrato que todo el producto debe cumplir las especificaciones",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye a DPM mayor precisión; solo dice que es la unidad de medida en muchas industrias.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-054-establecimiento_de_niveles_de_calidad_aql_dpm-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El AQL (nivel de calidad aceptable) es un punto en la curva que describe los riesgos de los planes de muestreo, pero muchos proveedores lo malinterpretan como si fuera el nivel de defectos que se permite tener. Por eso conviene dejar en el contrato que todo el producto debe cumplir las especificaciones. En muchas industrias, la unidad de medida es la de defectos por millón (DPM).",
+      "texto_nuevo": "El AQL (nivel de calidad aceptable) es un punto en la curva que describe los riesgos de los planes de muestreo, pero muchos proveedores lo malinterpretan como si fuera el nivel de defectos que se permite tener. Por eso conviene dejar en el contrato que todo el producto debe cumplir las especificaciones y que el producto no conforme puede devolverse para su reemplazo. En muchas industrias, la unidad de medida es la de defectos por millón (DPM).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23863",
+        "frase": "any nonconforming product may be returned for replacement"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Misma omisión.; Se cae la segunda parte de la cláusula: el producto no conforme puede devolverse para su reemplazo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

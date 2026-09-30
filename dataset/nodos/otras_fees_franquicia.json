@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Definir Fees Adicionales del Sistema de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Además del royalty y publicidad, los franquiciadores pueden cobrar fees adicionales: transferencia (venta de unidad), acuerdo sucesor (renovación), territorio (para master franchise o área de desarrollo), servicios específicos, tecnología, y recuperación de costos (pagos tardíos, auditorías, etc.). Cada fee debe balancear el valor entregado contra la rentabilidad del franquiciado.",
+  "resumen_teorico": "Además del royalty y publicidad, los franquiciadores pueden cobrar fees adicionales: transferencia (venta de unidad), acuerdo sucesor (renovación), territorio (para master franchise, territorios de representante de área o área de desarrollo), servicios específicos, tecnología, y recuperación de costos (pagos tardíos, auditorías, etc.). Cada fee debe balancear el valor entregado contra la rentabilidad del franquiciado.",
   "pasos_accionables": [
     "Listar todos los servicios y eventos que ameritan un fee adicional",
     "Definir montos de transfer fee, successor fee, territory fee según el modelo de negocio",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Define tus Cuotas Adicionales",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-054-otras_fees_franquicia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Además del royalty y publicidad, los franquiciadores pueden cobrar fees adicionales: transferencia (venta de unidad), acuerdo sucesor (renovación), territorio (para master franchise o área de desarrollo), servicios específicos, tecnología, y recuperación de costos (pagos tardíos, auditorías, etc.). Cada fee debe balancear el valor entregado contra la rentabilidad del franquiciado.",
+      "texto_nuevo": "Además del royalty y publicidad, los franquiciadores pueden cobrar fees adicionales: transferencia (venta de unidad), acuerdo sucesor (renovación), territorio (para master franchise, territorios de representante de área o área de desarrollo), servicios específicos, tecnología, y recuperación de costos (pagos tardíos, auditorías, etc.). Cada fee debe balancear el valor entregado contra la rentabilidad del franquiciado.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1777",
+        "frase": "offering master franchises, area representative territories, or area development rights"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro asocia fees de territorio a tres casos y el nodo omite los territorios de representante de área.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

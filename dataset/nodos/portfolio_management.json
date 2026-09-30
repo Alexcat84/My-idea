@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de Portafolio de Proyectos (Portfolio Management)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan, priorizan y reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos. Abarca también la estrategia de nuevos productos y sus roadmaps.",
+  "resumen_teorico": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan y priorizan proyectos nuevos, los existentes pueden acelerarse, cancelarse o despriorizarse, y se reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos. Abarca también la estrategia de nuevos productos y sus roadmaps.",
   "pasos_accionables": [
     "Evaluar si existen demasiados proyectos para los recursos disponibles",
     "Revisar el balance del portafolio (proyectos pequeños vs de alto valor)",
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La definición del libro incluye desarrollar la estrategia de nuevos productos con asignación estratégica de recursos y roadmaps; el nodo la reduce a la selección de proyectos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-055-portfolio_management-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan, priorizan y reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos. Abarca también la estrategia de nuevos productos y sus roadmaps.",
+      "texto_nuevo": "La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan y priorizan proyectos nuevos, los existentes pueden acelerarse, cancelarse o despriorizarse, y se reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos. Abarca también la estrategia de nuevos productos y sus roadmaps.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5708",
+        "frase": "existing projects may be accelerated, killed, or de-prioritized"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La definición del libro incluye que los proyectos existentes pueden acelerarse, cancelarse o despriorizarse; el resumen lo pierde.; Mismo defecto en la misma definición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

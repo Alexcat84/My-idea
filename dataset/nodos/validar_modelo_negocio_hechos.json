@@ -10,7 +10,7 @@
     "Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas",
     "Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente",
     "Identificar pruebas pass/fail para cada hipótesis",
-    "Determinar si los resultados cumplen los objetivos de tráfico o financieros y, si no los cumplen, iterar o pivotar y volver a probar"
+    "Determinar si los resultados son lo bastante convincentes y cumplen los objetivos de tráfico o financieros y, si no, iterar o pivotar y volver a probar"
   ],
   "entregable_esperado": "Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas",
   "nodos_previos": [
@@ -47,6 +47,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido.; Se cae la consecuencia del libro: si no se cumplen los objetivos, iterar o pivotar y volver a probar.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-055-validar_modelo_negocio_hechos-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si los resultados cumplen los objetivos de tráfico o financieros y, si no los cumplen, iterar o pivotar y volver a probar",
+      "texto_nuevo": "Determinar si los resultados son lo bastante convincentes y cumplen los objetivos de tráfico o financieros y, si no, iterar o pivotar y volver a probar",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12961",
+        "frase": "when the results aren't convincing enough, or when they don't deliver the traffic"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro también manda iterar o pivotar cuando los resultados no son lo bastante convincentes; el paso solo conserva los objetivos.; Mismo defecto: se cae la condición de resultados no lo bastante convincentes.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

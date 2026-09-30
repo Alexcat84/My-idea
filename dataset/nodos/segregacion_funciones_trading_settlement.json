@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Segregación de Funciones como Defensa Organizacional",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
+  "resumen_teorico": "Uno de los principios básicos del negocio de valores es mantener estrictamente separados a quien ejecuta una operación (trading) y a quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
   "pasos_accionables": [
     "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separados.",
     "Prohibir que una misma persona pueda autorizar y aprobar su propio trabajo.",
@@ -80,6 +80,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que el ocultamiento pueda durar indefinidamente; las pérdidas terminaron descubriéndose.; Mismo cuánto añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-054-segregacion_funciones_trading_settlement-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
+      "texto_nuevo": "Uno de los principios básicos del negocio de valores es mantener estrictamente separados a quien ejecuta una operación (trading) y a quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "478",
+        "frase": "one of the basic principles of the securities business"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro sitúa el principio en el negocio de valores y lo pide estricto; el nodo lo vuelve principio general de control interno.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

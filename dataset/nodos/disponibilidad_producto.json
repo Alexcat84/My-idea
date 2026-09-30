@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Cálculo de Disponibilidad del Producto",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+  "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando, bajo ciertas condiciones, la fórmula de estado estable basada en MTBF y MTTR.",
   "pasos_accionables": [
     "Determinar el MTBF del producto o sistema",
     "Determinar el MTTR (tiempo medio de reparación) o MDT (tiempo medio de inactividad)",
@@ -57,6 +57,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera cinco supuestos que no siempre se cumplen; el paso trae dos y pierde la alternativa de fórmulas más precisas.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-054-disponibilidad_producto-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+      "texto_nuevo": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando, bajo ciertas condiciones, la fórmula de estado estable basada en MTBF y MTTR.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20362",
+        "frase": "Under certain conditions, availability can be calculated as"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la fórmula de estado estable vale bajo ciertas condiciones y se basa en supuestos que no siempre se cumplen.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Comprobar si tus ingresos aguantan el negocio",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de crecer, haz un cálculo aproximado, a mano y sin ser contador, para ver si lo que vas a ganar cubre tus costos, si eso mejora con el tiempo y si te conviene más entre más grande te pones. También revisa cómo el canal por el que vendes afecta cuánto ingreso te queda realmente, y ten en cuenta cuánto vale un cliente durante todo el tiempo que te compra (su valor de vida, o Customer Lifetime Value) porque eso debería guiar tu precio.",
+  "resumen_teorico": "Antes de crecer, haz un cálculo aproximado, a mano y sin ser contador, para ver si lo que vas a ganar cubre tus costos en el corto plazo, si eso mejora con el tiempo y si te conviene más entre más grande te pones. También revisa cómo el canal por el que vendes afecta cuánto ingreso te queda realmente, y ten en cuenta cuánto vale un cliente durante todo el tiempo que te compra (su valor de vida, o Customer Lifetime Value) porque eso debería guiar tu precio.",
   "pasos_accionables": [
     "Calcula tus ingresos brutos aproximados multiplicando cuánto vendes por tu precio promedio",
     "Revisa si ese ingreso te alcanza para cubrir tus costos fijos y variables en el corto plazo",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Comprueba tu Hipótesis de Ingresos",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-055-validacion_hipotesis_ingresos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de crecer, haz un cálculo aproximado, a mano y sin ser contador, para ver si lo que vas a ganar cubre tus costos, si eso mejora con el tiempo y si te conviene más entre más grande te pones. También revisa cómo el canal por el que vendes afecta cuánto ingreso te queda realmente, y ten en cuenta cuánto vale un cliente durante todo el tiempo que te compra (su valor de vida, o Customer Lifetime Value) porque eso debería guiar tu precio.",
+      "texto_nuevo": "Antes de crecer, haz un cálculo aproximado, a mano y sin ser contador, para ver si lo que vas a ganar cubre tus costos en el corto plazo, si eso mejora con el tiempo y si te conviene más entre más grande te pones. También revisa cómo el canal por el que vendes afecta cuánto ingreso te queda realmente, y ten en cuenta cuánto vale un cliente durante todo el tiempo que te compra (su valor de vida, o Customer Lifetime Value) porque eso debería guiar tu precio.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7775",
+        "frase": "Is the revenue adequate to cover costs in the short term?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La pregunta del libro es si el ingreso cubre los costos en el corto plazo; el resumen pierde ese límite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }
