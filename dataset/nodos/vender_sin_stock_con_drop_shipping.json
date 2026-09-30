@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Vender sin stock con drop-shipping",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde evitas manipular la carga dos veces. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+  "resumen_teorico": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde reduces la doble manipulación de la carga. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
   "pasos_accionables": [
     "Contacta fabricantes o mayoristas de tu categoría y pregunta si envían directo al cliente final.",
     "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
@@ -186,6 +186,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que es difícil asegurar el nivel de servicio deseado; el desglose y el pedido por pedido son añadidos.; Endurece la dificultad del libro a pérdida de control y añade riesgos concretos que no trae. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-012-vender_sin_stock_con_drop_shipping-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde evitas manipular la carga dos veces. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+      "texto_nuevo": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde reduces la doble manipulación de la carga. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "198",
+        "frase": "particularly for heavy items as this reduces double handling"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el drop-shipping reduce la doble manipulación, no que la evite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

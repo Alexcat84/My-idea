@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Aviso fiscal para pagar impuestos por adelantado sobre tus acciones (elección 83(b))",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos sobre la diferencia entre lo que pagaste y el valor que esas acciones ganen con el tiempo. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+  "resumen_teorico": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
   "pasos_accionables": [
     "Identifica a todos los que reciben acciones con vesting, incluido tú mismo y tus primeros empleados",
     "Consulta con un asesor fiscal si te conviene hacer la elección 83(b)",
@@ -118,6 +118,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que evita pagar impuestos sobre la diferencia entre el precio pagado y el valor con el tiempo; 'mucho más altos' es una magnitud que no da.; Misma magnitud añadida; se corrige al beneficio que el libro sí describe.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-014-eleccion_83b-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos sobre la diferencia entre lo que pagaste y el valor que esas acciones ganen con el tiempo. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+      "texto_nuevo": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4700",
+        "frase": "Aside from accelerating the individual’s ordinary income tax, filing an 83(b) election also starts"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no promete ese ahorro; solo dice que adelanta el impuesto y hace empezar antes el plazo de ganancias de capital.; Mismo defecto: resultado prometido que el libro no da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

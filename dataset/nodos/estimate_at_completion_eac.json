@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cuánto te va a costar terminar (Estimación al Completar o EAC)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "La Estimación al Completar (EAC) te dice cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
+  "resumen_teorico": "La Estimación al Completar (EAC) te pronostica cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
   "pasos_accionables": [
     "Calcula el CPI y el SPI actuales de tu proyecto",
     "Elige la fórmula de EAC que mejor se ajuste a lo que esperas que pase",
@@ -42,6 +42,22 @@
         "motivo": "La estimacion al completar no lleva naturalmente a auditar el proceso de riesgos."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1b-012-estimate_at_completion_eac-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La Estimación al Completar (EAC) te dice cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
+      "texto_nuevo": "La Estimación al Completar (EAC) te pronostica cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5092",
+        "frase": "Determine an appropriate method to forecast the total expenditures at the project completion."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta el EAC como un pronóstico del gasto total, no como una cifra que te dice lo que gastarás.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

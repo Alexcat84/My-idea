@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Decide qué vas a evaluar en cada proveedor (experiencia, precio, calidad, etc.)",
     "Reparte la importancia entre esos puntos hasta que sumen el 100%",
-    "Define cómo vas a calificar cada punto",
+    "Define el rango de calificación de cada punto, por ejemplo de 1 a 5 o de 1 a 10, y qué desempeño corresponde a cada calificación",
     "Evalúa cada propuesta con esos mismos puntos",
     "Multiplica la importancia de cada punto por la calificación que le pusiste",
     "Suma los resultados y elige al proveedor con el puntaje más alto"
@@ -45,6 +45,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese porqué; solo dice que el formulario ayuda a determinar y calificar los criterios.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-012-criterios_seleccion_proveedores-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define cómo vas a calificar cada punto",
+      "texto_nuevo": "Define el rango de calificación de cada punto, por ejemplo de 1 a 5 o de 1 a 10, y qué desempeño corresponde a cada calificación",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3581-3583",
+        "frase": "The range of ratings for each criterion is determined, such as 1–5 or 1–10."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija el rango de calificación (1 a 5 o 1 a 10) y el desempeño de cada calificación; el paso pierde ambos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

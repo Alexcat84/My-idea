@@ -1,0 +1,657 @@
+[
+ {
+  "id": "final-e1b-012-cronograma_proyecto-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "cronograma_proyecto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto.",
+  "texto_nuevo": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "2023-2037",
+   "frase": "can be much more detailed, depending on the needs of the project"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El Gantt de muestra enseña identificador, nombre, fechas y recurso; el libro no dice que muestre el detalle completo de cada actividad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-criterios_seleccion_proveedores-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "criterios_seleccion_proveedores",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define cómo vas a calificar cada punto",
+  "texto_nuevo": "Define el rango de calificación de cada punto, por ejemplo de 1 a 5 o de 1 a 10, y qué desempeño corresponde a cada calificación",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "3581-3583",
+   "frase": "The range of ratings for each criterion is determined, such as 1–5 or 1–10."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija el rango de calificación (1 a 5 o 1 a 10) y el desempeño de cada calificación; el paso pierde ambos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-012-estimate_at_completion_eac-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "estimate_at_completion_eac",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La Estimación al Completar (EAC) te dice cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
+  "texto_nuevo": "La Estimación al Completar (EAC) te pronostica cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "5092",
+   "frase": "Determine an appropriate method to forecast the total expenditures at the project completion."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta el EAC como un pronóstico del gasto total, no como una cifra que te dice lo que gastarás.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-preparar_candidato_validacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "preparar_candidato_validacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El vendedor de franquicias debe guiar al candidato sobre cómo realizar su investigación de validación, explicando que encontrará una variedad de respuestas (curva de campana de satisfacción) y enseñándole a profundizar en las respuestas negativas para entender las causas reales del desempeño, ya sea ubicación, capitalización o habilidades del franquiciado.",
+  "texto_nuevo": "El vendedor de franquicias debe guiar al candidato sobre cómo realizar su investigación de validación, explicando que probablemente encontrará una variedad de respuestas (curva de campana de satisfacción) y enseñándole a profundizar en las respuestas negativas para entender las causas reales del desempeño, ya sea ubicación, habilidades de venta, capitalización o conocimiento del sector, entre otras.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4750-4756",
+   "frase": "location, sales skills, capitalization, industry knowledge, etc."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro deja abierta la lista de causas e incluye habilidades de venta y conocimiento del sector; el resumen la cierra en tres.; El libro dice que el candidato probablemente recibirá respuestas variadas; el resumen lo da por seguro.; Mismo defecto que la marca 1: lista cerrada que pierde el conocimiento del sector.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-preparar_candidato_validacion-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "preparar_candidato_validacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Según el sistema, considerar decir con franqueza que algunos franquiciados tienen mejor desempeño que otros y, en la medida en que se conozca la razón, explicar por qué",
+  "texto_nuevo": "Según el sistema, considerar decir con franqueza que algunos franquiciados tienen mejor desempeño que otros y, en la medida en que se conozca la razón, orientar al candidato sobre cómo llegar a la raíz de los problemas de quien rinde menos",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "4750",
+   "frase": "the salesperson should coach the prospect on how to get to the root"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide que, cuando se conoce la razón, el vendedor oriente al candidato para llegar a la raíz del problema, no que le explique la razón.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-012-presupuesto_marketing_franquicia-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "presupuesto_marketing_franquicia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si el capital que necesitas no está disponible, ajusta el plan: reduce la meta, alarga el plazo, busca capital externo o cambia a un enfoque más agresivo (por ejemplo, abrir unidades propias a la vez o sumar desarrollo de área); o decide cuánto puedes gastar y deja que ese presupuesto marque tu crecimiento",
+  "texto_nuevo": "Si el plan resulta demasiado agresivo o el capital que necesitas no está disponible, ajusta el plan: reduce la meta, alarga el plazo, busca capital externo o cambia a un enfoque más agresivo (por ejemplo, abrir unidades propias a la vez o sumar desarrollo de área); o decide cuánto puedes gastar y deja que ese presupuesto marque tu crecimiento",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3447",
+   "frase": "the plan is too aggressive or the required capital is not available"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro abre estas opciones también cuando el plan resulta demasiado agresivo; el paso pierde esa condición.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-012-programa_de_referidos_de_franquiciados-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "programa_de_referidos_de_franquiciados",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer incentivos formales para franquiciados que generen referidos calificados, consultándolo antes con tu abogado de franquicias, porque pueden activar obligaciones de divulgación y un conflicto de interés.",
+  "texto_nuevo": "Establecer incentivos formales para franquiciados por los referidos que terminen firmando contigo, consultándolo antes con tu abogado de franquicias, porque pueden activar obligaciones de divulgación y un conflicto de interés.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3971",
+   "frase": "pay referral fees for franchisees that end up signing with you"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro liga el pago a los referidos que terminan firmando, no a los que solo están calificados.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-012-ppc_para_venta_de_franquicias-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ppc_para_venta_de_franquicias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La publicidad PPC en buscadores como Google y Bing permite obtener visibilidad inmediata en la primera página de resultados, aunque suele tener menor rendimiento que el SEO orgánico (solo el 6% de los clics van a anuncios pagados frente al 94% de resultados orgánicos, según estudios citados). Requiere gestión activa de palabras clave, pujas, landing pages y prevención de fraude de clics. El posicionamiento depende tanto del presupuesto propio como de la competencia por las mismas palabras clave, lo que exige pruebas y ajustes constantes.",
+  "texto_nuevo": "La publicidad PPC en buscadores como Google y Bing permite obtener visibilidad inmediata en la primera página de resultados, aunque suele tener menor rendimiento que el SEO orgánico (solo el 6% de los clics van a anuncios pagados frente al 94% de resultados orgánicos, según estudios citados). Requiere gestión activa de palabras clave, pujas, landing pages y prevención de fraude de clics. El posicionamiento depende de tus pujas, de las pujas de la competencia, del contenido del anuncio, de la tasa de clics y de otros factores, lo que exige pruebas y ajustes constantes.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3888-3894",
+   "frase": "not just by your keyword bids, but by competitor’s bids, ad content, clickthrough rates"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro añade el contenido del anuncio, la tasa de clics y otros factores; el resumen cierra la lista en dos.; Mismo defecto; además el libro habla de pujas, no de presupuesto, que se fija aparte.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-programa_entrenamiento_franquiciados-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "programa_entrenamiento_franquiciados",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer logística: lugar, instructores, asistentes obligatorios, duración por tema, cómo se evaluará a los participantes y qué pasa si alguien no aprueba o no asiste",
+  "texto_nuevo": "Establecer logística: lugar, calendario fijo o según se necesite, instructores, quién debe asistir y quién puede asistir, duración total y por tema, formato del entrenamiento, cómo se evaluará a los participantes y qué pasa si alguien no aprueba, no asiste o muestra mala actitud",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2663-2683",
+   "frase": "Will training be given on a regular schedule or on an as-needed basis?"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de logística del libro incluye calendario fijo o a demanda, quién puede asistir y la mala actitud; el paso los omite.; Mismo defecto; faltan además la duración total y el formato del entrenamiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-012-principio_apalancamiento_numero_magico-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "principio_apalancamiento_numero_magico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Contar tu propio esfuerzo (sweat equity) como el único gasto incremental de las primeras ventas",
+  "texto_nuevo": "Si mantienes tus gastos bajo control, contar tu propio esfuerzo (sweat equity) como el único gasto incremental de las primeras ventas",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1086",
+   "frase": "if a franchisor keeps its expenses in check"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el libro el esfuerzo propio es el único gasto incremental solo si se mantienen los gastos bajo control.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-012-presupuesto_publicidad_franquicia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "presupuesto_publicidad_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando vendes franquicias, a menudo basta con que tu presupuesto de marketing cubra unos seis meses de publicidad antes de que puedas esperar recuperar el costo con las cuotas de franquicia, porque las ventas no llegan de inmediato. Cuanto más inviertas cada mes en publicidad, más probable es que cierres antes tu primera venta. Por ejemplo, si tu meta es vender 6 franquicias en el primer año necesitarás un presupuesto de publicidad menor que si tu meta es vender 12; pregunta el precio de publicidad en tu mercado para calcular el monto real que te corresponde.",
+  "texto_nuevo": "Cuando empiezas a vender franquicias, a menudo basta con que tu presupuesto de flujo de caja cubra unos seis meses de publicidad planificada antes de que puedas esperar recuperar el costo con las cuotas de franquicia, porque las ventas no llegan de inmediato. Cuanto más inviertas cada mes en publicidad, más probable es que cierres antes tu primera venta. Por ejemplo, si tu meta es vender 6 franquicias en el primer año necesitarás un presupuesto de publicidad menor que si tu meta es vender 12; pregunta el precio de publicidad en tu mercado para calcular el monto real que te corresponde.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5663",
+   "frase": "For most new franchisors, a cash-flow budget covering six months’ worth of planned advertising"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita los seis meses a quien empieza a franquiciar y los refiere al presupuesto de flujo de caja.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-reducir_devoluciones_mejorando_informacion_previa-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reducir_devoluciones_mejorando_informacion_previa",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En una encuesta a compradores en línea, casi la mitad culpó a las tiendas del alto nivel de devoluciones porque la información previa a la compra no era lo bastante buena. Esto pesa mucho porque una devolución no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo, además del costo del envío de vuelta. Además de gestionar bien los retornos, conviene reducirlos desde el principio atacando la causa antes de que ocurra: dar información honesta y completa antes de que la persona compre. Esto es especialmente crítico en categorías como ropa, donde es común que la gente compre varias tallas o colores a propósito sabiendo que va a devolver lo que no le sirva.",
+  "texto_nuevo": "En una encuesta a compradores en línea, casi la mitad culpó a las tiendas del alto nivel de devoluciones porque la información previa a la compra no era lo bastante buena. Esto pesa mucho porque una devolución no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo. Además de gestionar bien los retornos, conviene reducirlos desde el principio atacando la causa antes de que ocurra: dar información honesta y completa antes de que la persona compre. Esto es especialmente crítico en categorías como ropa, donde es común que la gente compre varias tallas o colores a propósito sabiendo que va a devolver lo que no le sirva.",
+  "cita": {
+   "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+   "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+   "lineas": "210, 226",
+   "frase": "the value of a returned product was 5-10 per cent lower than the original"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo nombra la pérdida de valor y la revisión del producto devuelto; no menciona el costo del envío de vuelta.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-ofrecer_puntos_recogida-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ofrecer_puntos_recogida",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el cliente no está en casa, la entrega falla y el paquete regresa al vehículo o termina en un centro de distribución lejano, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+  "texto_nuevo": "Cuando el cliente no está en casa, la entrega falla; por lo general se hacen dos visitas más y, si la última también falla, el paquete termina en un centro de distribución lejano desde donde el cliente tiene que ir a recogerlo, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+  "cita": {
+   "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+   "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+   "lineas": "234",
+   "frase": "Two return visits are usually made and failure on the last visit means"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro describe dos visitas de reintento antes del centro de distribución, desde donde el cliente debe recoger el paquete.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-tratar_packaging_costo_marca-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "tratar_packaging_costo_marca",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y ese peso agregado le resta eficiencia a tus envíos. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho más del necesario para proteger el contenido, puede generar una impresión negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes qué perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuánto relleno es demasiado.",
+  "texto_nuevo": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y ese peso agregado le resta eficiencia a tus envíos. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes qué perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuánto relleno es demasiado, aunque esa encuesta, por sí sola, no parece evitar que lleguen pedidos con cantidades exageradas de empaque.",
+  "cita": {
+   "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+   "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+   "lineas": "268",
+   "frase": "this does not seem to prevent items arriving with seemingly ludicrous amounts of packaging"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no habla de la impresión del cliente ni de la imagen de la marca por el exceso de empaque.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae la advertencia del libro: la encuesta de empaque tras la entrega no parece evitar cantidades exageradas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-detectar_prioridad_cliente_entrega-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "detectar_prioridad_cliente_entrega",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando vendes en línea, la velocidad y el precio no son lo único que decide una compra: en una encuesta, casi la mitad de los compradores admitió haber abandonado un carrito antes de pagar por problemas con la entrega ofrecida. El comprador quiere recibir su pedido en buen estado, en un lugar y a una hora que le convengan, con una ventana de entrega angosta para no quedarse esperando todo el día, un aviso por mensaje cuando el paquete está en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros intentos de entrega en línea no tuvieron gran éxito porque muchas empresas no entendían lo complejo de llevar el pedido hasta el cliente, sobre todo en la última milla. Detectar cuáles de estos puntos pesan más para tu público, antes de prometer plazos o métodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+  "texto_nuevo": "Cuando vendes en línea, la velocidad y el precio no son lo único que decide una compra: en una encuesta, casi la mitad de los compradores admitió haber abandonado un carrito antes de pagar por problemas con la entrega ofrecida. El comprador quiere recibir su pedido en buen estado, en un lugar y a una hora que le convengan, a un precio que compita con el de las tiendas físicas, con una ventana de entrega angosta para no quedarse esperando todo el día, un aviso por mensaje cuando el paquete está en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros intentos de entrega en línea no tuvieron gran éxito porque muchas empresas no entendían lo complejo de llevar el pedido hasta el cliente, sobre todo en la última milla. Detectar cuáles de estos puntos pesan más para tu público, antes de prometer plazos o métodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+  "cita": {
+   "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+   "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+   "lineas": "184",
+   "frase": "at a price that is competitive with the high street"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro incluye un precio competitivo con el de las tiendas físicas; el resumen la pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-012-vender_sin_stock_con_drop_shipping-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "vender_sin_stock_con_drop_shipping",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde evitas manipular la carga dos veces. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+  "texto_nuevo": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde reduces la doble manipulación de la carga. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+  "cita": {
+   "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+   "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+   "lineas": "198",
+   "frase": "particularly for heavy items as this reduces double handling"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el drop-shipping reduce la doble manipulación, no que la evite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-second_wind_energia_mental-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "second_wind_energia_mental",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Existe una diferencia crucial entre la fatiga primaria (la sensación inicial de cansancio al esforzarse intelectualmente) y el 'segundo aliento', un estado de energía mental sostenida que puede aparecer cuando se persiste más allá de esa fatiga inicial. Muchas personas y organizaciones se rinden ante la primera señal de fatiga sin descubrir nunca esta capacidad de energía prolongada, limitando su potencial de trabajo profundo y creativo.",
+  "texto_nuevo": "Existe una diferencia crucial entre la fatiga primaria (la sensación inicial de cansancio al esforzarse intelectualmente) y el 'segundo aliento', un estado de energía mental sostenida que puede aparecer cuando se persiste más allá de esa fatiga inicial. Distínguela del agotamiento, que si se ignora lleva al sobreesfuerzo patológico. Muchas personas y organizaciones se rinden ante la primera señal de fatiga sin descubrir nunca esta capacidad de energía prolongada, limitando su potencial de trabajo profundo y creativo.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "745",
+   "frase": "the 'staleness' which, if it is ignored, leads to the pathological condition of overstrain"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone junto al segundo aliento el límite de distinguir la fatiga primaria del 'staleness', que ignorado lleva al sobreesfuerzo; el resumen lo omite.; Mismo defecto: se cae la distinción con el agotamiento que el libro exige para aguantar la fatiga.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-ruptura_de_habitos_para_estimulo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ruptura_de_habitos_para_estimulo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El pensador creativo debe ser 'amo y no esclavo' de sus hábitos. Los hábitos facilitan el pensamiento productivo, pero volverse completamente esclavo de ellos puede impedir la aparición de ideas nuevas y profundas. Cuando las rutinas de tiempo, método y material comienzan a volverse 'viciadas', repetitivas o generan una sensación de 'sofocación' mental, es necesario romperlas deliberadamente para recuperar el aire fresco físico y moral necesario para la creatividad. Esto implica sacrificar temporalmente las ventajas de la rutina establecida para fortalecer el factor de estímulo novedoso, buscando experiencias nuevas que actúen como renovador del pensamiento.",
+  "texto_nuevo": "El pensador creativo debe ser 'amo y no esclavo' de sus hábitos. Los hábitos facilitan el pensamiento productivo, pero volverse completamente esclavo de ellos puede impedir la aparición de ideas nuevas y profundas. Cuando las rutinas de tiempo, método y material comienzan a volverse 'viciadas', repetitivas o generan una sensación de 'sofocación' mental, es necesario romperlas deliberadamente para recuperar el aire fresco físico y moral necesario para la creatividad. Para ello puede convenir sacrificar temporalmente algunas de las ventajas de la rutina establecida para fortalecer el factor de estímulo novedoso, buscando experiencias nuevas que actúen como renovador del pensamiento.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "551",
+   "frase": "he may find it best to sacrifice some of the advantages of habit"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que puede convenir sacrificar algunas de las ventajas del hábito, no que eso se implique de forma necesaria ni con todas.; Mismo defecto: 'may find it best to sacrifice some' pasa a consecuencia obligada y total.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-proteccion_del_tren_asociativo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "proteccion_del_tren_asociativo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un tren de pensamiento en fase de Intimación es frágil y puede perderse por interrupciones externas (llamadas, preguntas, lectura continua) o por el intento prematuro de verbalizarlo. Por eso hacen falta precauciones negativas (evitar distracciones) y, a menudo, un esfuerzo positivo de atención para no 'espantar' la idea antes de que madure, similar a atrapar un pez o un pájaro esquivo, aunque ese mismo esfuerzo también puede entorpecerla.",
+  "texto_nuevo": "Un tren de pensamiento en fase de Intimación es frágil y puede perderse porque se desvía por sí solo hacia la irrelevancia y el olvido, por interrupciones externas (llamadas, preguntas, lectura continua) o por el intento prematuro de verbalizarlo. Por eso hacen falta precauciones negativas (evitar distracciones) y, a menudo, un esfuerzo positivo de atención para no 'espantar' la idea antes de que madure, similar a atrapar un pez o un pájaro esquivo, aunque ese mismo esfuerzo también puede entorpecerla.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "419",
+   "frase": "may either drift away of itself ... into mere irrelevance and forgetfulness"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera primero el peligro de que el tren se desvíe por sí solo hacia la irrelevancia y el olvido; el resumen lo omite.; Mismo defecto: falta el primer peligro de la enumeración del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-wallas_etapa_verificacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "wallas_etapa_verificacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La Verificación es la etapa final, normalmente plenamente consciente, en la que la idea surgida en la Iluminación se pone a prueba y se reduce a una forma exacta y comunicable. Poincaré subraya que el trabajo inconsciente nunca entrega un resultado terminado y listo para aplicar reglas fijas: solo ofrece un punto de partida que debe desarrollarse mediante cálculo, disciplina, atención y trabajo consciente riguroso, análogo al proceso de Preparación pero aplicado a validar (no generar) la idea.",
+  "texto_nuevo": "La Verificación es la etapa final, normalmente plenamente consciente, en la que la idea surgida en la Iluminación se pone a prueba y se reduce a una forma exacta y comunicable. Poincaré subraya que el trabajo inconsciente nunca entrega un resultado terminado y listo para aplicar reglas fijas: solo ofrece un punto de partida que debe desarrollarse mediante cálculo, disciplina, atención, voluntad y trabajo consciente riguroso, análogo al proceso de Preparación pero aplicado a validar (no generar) la idea.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "313",
+   "frase": "they demand discipline, attention, will, and consequently, consciousness"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro (disciplina, atención, voluntad y consciencia) pierde la voluntad en el resumen.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-poder_a_traves_de_la_accion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "poder_a_traves_de_la_accion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Frente al 'evangelio de la relajación' (que puede derivar en pasividad intelectual), la fórmula 'Poder a través de la Acción' sostiene que actuar sobre las propias ideas y opiniones privadas genera una unidad psicológica entre el 'yo real', el 'yo ideal' y el 'yo que otros perciben', aumentando la energía disponible para el pensamiento, aunque tiene peligros y no sustituye todo el arte de pensar ni la Verificación. Hay que actuar inmediatamente sobre cada resolución o impulso emocional hacia los hábitos que buscas, pues dejarlo evaporar sin fruto práctico entorpece futuras resoluciones. La acción debe ser voluntaria y comprometer a todo el organismo, no un mero movimiento mecánico.",
+  "texto_nuevo": "Frente al 'evangelio de la relajación' (que puede derivar en pasividad intelectual), la fórmula 'Poder a través de la Acción' sostiene que actuar sobre las propias ideas y opiniones privadas genera una unidad psicológica entre el 'yo real', el 'yo ideal' y el 'yo que otros perciben', sin pérdida de energía, y que además puede aumentar la energía disponible para el pensamiento, aunque tiene peligros y no sustituye todo el arte de pensar ni la Verificación. Hay que actuar inmediatamente sobre cada resolución o impulso emocional hacia los hábitos que buscas, pues dejarlo evaporar sin fruto práctico entorpece futuras resoluciones. La acción debe ser voluntaria y comprometer a todo el organismo, no un mero movimiento mecánico.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "599-601",
+   "frase": "not only produces psychological unity ... but may also directly increase ... the energy"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la acción trae unidad sin pérdida de energía y que además puede aumentarla; el resumen da el aumento como efecto seguro de la unidad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-retroalimentacion_shock_pensamiento_original-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "retroalimentacion_shock_pensamiento_original",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ciertos maestros usan frases o comentarios inesperados (como 'una excelente pieza de prosa de Cuarto Grado' dirigida a un alumno de Quinto que se sentía orgulloso) para provocar un 'shock' psicológico que revela al pensador que su trabajo, aunque técnicamente correcto, carece de originalidad genuina. Este tipo de retroalimentación personal e individualizada puede cambiar hábitos de pensamiento arraigados al hacer consciente una limitación que antes pasaba desapercibida. Su eficacia es local, cuesta trasladarla de un maestro a otro y rinde a solas: en grupo suena sarcástica y humilla. En la mentoría de emprendedores, sirve para señalar con precisión (no con sarcasmo genérico) el punto exacto donde el pensamiento se ha vuelto mecánico o derivativo.",
+  "texto_nuevo": "Ciertos maestros usan frases o comentarios inesperados (como 'una excelente pieza de prosa de Cuarto Grado' dirigida a un alumno de Quinto que se sentía orgulloso) para provocar un 'shock' psicológico que revela al pensador que su trabajo, aunque técnicamente correcto, carece de originalidad genuina. Este tipo de retroalimentación personal e individualizada puede cambiar hábitos de pensamiento arraigados al hacer consciente una limitación que antes pasaba desapercibida. Su eficacia es local, cuesta trasladarla de un maestro a otro y rinde a solas: en grupo suena sarcástica y humilla.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "779",
+   "frase": "the efficacy of such hints is local and individual"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro habla de maestros y alumnos y no afirma ninguna utilidad en la mentoría de emprendedores; la frase añade un resultado que el libro no da.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-storyboard-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "storyboard",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Actuar o presentar el storyboard al equipo para recibir feedback",
+  "texto_nuevo": "Una vez terminado, actuar o presentar el storyboard al equipo para recibir feedback",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "5139",
+   "frase": "Once you’re done, act out the Storyboard to your team for feedback."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone este paso una vez terminado el storyboard; sin esa condición, y colocado antes de dividir y titular escenas, se presenta un storyboard a medias.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-013-publicidad_remanente_remnant_ads-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "publicidad_remanente_remnant_ads",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La publicidad remanente es el espacio publicitario no vendido que los medios (revistas, vallas, etc.) ofrecen a precios muy reducidos (hasta 90% de descuento) cerca de sus fechas límite de cierre, ya que para ellos es pérdida total si no lo venden. Puede ser una estrategia efectiva para llegar a audiencias masivas con bajo presupuesto si el negocio no depende de ubicación o timing específico.",
+  "texto_nuevo": "La publicidad remanente es el espacio publicitario no vendido que los medios (revistas, vallas, etc.) ofrecen a precios muy reducidos (hasta 90% de descuento) cerca de sus fechas límite de cierre, ya que para ellos es pérdida total si no lo venden. Puede ser una estrategia efectiva para llegar a audiencias masivas con bajo presupuesto si tienes un producto de mercado masivo y el negocio no depende de ubicación o timing específico.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "1471",
+   "frase": "effective strategy to reach millions of people if you have a mass-market product"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la eficacia para llegar a millones a tener un producto de mercado masivo; el resumen solo conserva la condición de ubicación y momento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-law_of_shitty_click_throughs-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "law_of_shitty_click_throughs",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Concepto que establece que con el tiempo todas las estrategias de marketing se saturan y sus tasas de respuesta (click-through) se deterioran a medida que más competidores las adoptan. La defensa es buscar constantemente canales o tácticas no explotadas antes de que se vuelvan comunes y costosas, sabiendo que la ventaja dura meses o años, hasta que también se saturan.",
+  "texto_nuevo": "Concepto que establece que con el tiempo todas las estrategias de marketing se saturan y sus tasas de respuesta (click-through) se deterioran a medida que más competidores las adoptan. La defensa es buscar constantemente canales o tácticas no explotadas antes de que se vuelvan comunes y costosas, sabiendo que, si logras que funcionen con un producto sólido detrás, probablemente la ventaja dure meses o años, hasta que también se saturen.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "579",
+   "frase": "with a strong product behind [them], then great. Chances are, you’ll enjoy"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona ese rendimiento a lograr que la táctica funcione con un producto sólido detrás; el resumen omite la condición.; El libro dice que lo probable ('chances are') es disfrutar meses o años; el resumen lo da por seguro.; Mismo defecto que la marca 0: 'chances are' pasa a certeza.; Mismo defecto que la marca 1: se cae la condición del producto sólido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-013-publicidad_offline_pruebas_locales-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "publicidad_offline_pruebas_locales",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
+  "texto_nuevo": "Es difícil predecir qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, aunque a cambio pierdes capacidad de elegir a quién y cuándo le llega, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "1612-1614",
+   "frase": "It is hard to predict what will work ... The downside is less targeting ability"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que es difícil predecir qué funcionará; el resumen lo vuelve imposible de saber.; El libro pone junto al consejo de los espacios sobrantes su desventaja: menos capacidad de segmentar por público y momento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-venture_debt_introduccion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "venture_debt_introduccion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda puede incluir términos de repago definidos, tasas y covenants, y es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.",
+  "texto_nuevo": "El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda puede incluir términos de repago definidos, tasas y covenants, y es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, financiamiento de adquisiciones o de gastos de capital e inventario, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "2791",
+   "frase": "funding for acquisitions or capital expenses and inventory, or a short-term bridge"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cuatro usos y el resumen omite el de financiar adquisiciones, gastos de capital e inventario.; Mismo defecto: falta el uso de financiar adquisiciones, gastos de capital e inventario.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-tesis_boulder_liderazgo_emprendedor-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "tesis_boulder_liderazgo_emprendedor",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades o inversionistas, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
+  "texto_nuevo": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades, inversionistas, mentores o proveedores de servicios, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "5560",
+   "frase": "government, universities, investors, mentors, and service providers"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro de actores que no pueden liderar incluye mentores y proveedores de servicios; el resumen los omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-venture_debt_terminos_economicos-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "venture_debt_terminos_economicos",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, a veces un pago final al terminar el préstamo que también suma al precio total, y entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que podrás ejercer esas acciones (precio de ejercicio o strike price) es un punto clave de la negociación: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
+  "texto_nuevo": "Cuando negocies un préstamo de deuda de riesgo (venture debt), el precio no es solo la tasa de interés (normalmente variable, atada a una tasa de referencia más un margen): también pagas comisiones por abrir y usar el crédito, a veces un pago final al terminar el préstamo que también suma al precio total, y a menudo entregas certificados de compra de acciones (warrants) como parte del pago a quien te presta. El precio al que quien te presta podrá ejercer esos warrants (precio de ejercicio o strike price) es un punto clave de la negociación: tú quieres anclarlo a tu próxima ronda, con una valoración más alta y menos dilución; quien te presta prefiere anclarlo a tu última ronda, con un precio más bajo y más acciones para él.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "2862-2868",
+   "frase": "a last-round strike price of $0.50 per share, would provide the lender with 80,000 shares"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los warrants son una pieza común y que algunos bancos dan préstamos sin warrants; el resumen lo da como siempre.; Los warrants los ejerce el prestamista, que recibe las acciones; el resumen dice que los ejerces tú.; Mismo defecto que la marca 0: el libro presenta los warrants como comunes, no como seguros.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-term_sheet_disposiciones_vinculantes-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "term_sheet_disposiciones_vinculantes",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen exclusividad, a veces una penalidad por romper el trato, confidencialidad, costos (cada parte asume los suyos), ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
+  "texto_nuevo": "En procesos de adquisición o financiamiento, ciertas cláusulas del term sheet son legalmente vinculantes aunque el resto del documento no lo sea. Estas incluyen exclusividad, a veces una penalidad por romper el trato, acceso a la empresa, operación ordinaria del negocio, confidencialidad, no divulgación, costos (en una adquisición, cada parte asume los suyos), ley aplicable, jurisdicción, terminación y ausencia de responsabilidad legal previa a un acuerdo definitivo. Entender esta distinción protege al emprendedor de comprometerse involuntariamente antes de negociar los términos finales.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4943-4947, 5252-5342",
+   "frase": "The Company shall bear its own fees and expenses and shall pay at the closing"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (contrario, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Cada parte asume sus costos solo en la carta de adquisición; en el term sheet de financiamiento la empresa paga los honorarios del abogado del inversionista, y esa cláusula es vinculante.; La lista de cláusulas vinculantes del libro incluye acceso, operación del negocio en su curso ordinario y no divulgación, que obligan al vendedor; el resumen las omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-warrant_pricing_venture_debt-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "warrant_pricing_venture_debt",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando pides deuda de riesgo (venture debt), el prestamista no solo cobra interés: también pide warrants, que le dan derecho a comprar una parte de tu empresa más adelante a un precio fijado hoy. Lo vas a ver expresado de tres formas: como un porcentaje de cobertura del warrant (warrant coverage) sobre el monto del préstamo, como un valor económico directo, o como un porcentaje de propiedad totalmente diluida en puntos base. Los bancos suelen pedir menos que los fondos de deuda, porque estos últimos dependen más del rendimiento que les dan los warrants para compensar el riesgo que toman. Pregunta los rangos habituales en tu mercado.",
+  "texto_nuevo": "Cuando pides deuda de riesgo (venture debt), el prestamista no solo cobra interés: también suele pedir warrants, que le dan derecho a comprar una parte de tu empresa más adelante a un precio fijado hoy. Lo vas a ver expresado de tres formas: como un porcentaje de cobertura del warrant (warrant coverage) sobre el monto del préstamo, como un valor económico directo, o como un porcentaje de propiedad totalmente diluida en puntos base. Los bancos suelen pedir menos que los fondos de deuda, porque estos últimos dependen más del rendimiento que les dan los warrants para compensar el riesgo que toman. Pregunta los rangos habituales en tu mercado.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "2862",
+   "frase": "Warrants are a common piece of the lender’s compensation in the venture debt market."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los warrants son una pieza común y que hay bancos que dan préstamos sin warrants a cambio de covenants.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-venture_debt_terminos_economicos-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "venture_debt_terminos_economicos",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Una tabla donde compares las ofertas de préstamo de deuda de riesgo que recibas, con la tasa, las comisiones, el pago final si lo hay, el porcentaje de warrants y el precio de ejercicio de cada una, para elegir la mejor.",
+  "texto_nuevo": "Una tabla donde compares las ofertas de préstamo de deuda de riesgo que recibas, con la tasa, las comisiones, el pago final si lo hay, el porcentaje de warrants y el precio de ejercicio de cada una.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "2883",
+   "frase": "amortization terms are actually more critical to ensure that the debt aligns"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El entregable elige la mejor oferta solo por el precio y el libro advierte que los términos de amortización pesan más que el precio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-errores_comunes_fundraising-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "errores_comunes_fundraising",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Existen comportamientos que hacen ver al emprendedor como inexperto o directamente eliminan sus posibilidades de financiamiento: comportarse como una 'máquina' sin conexión humana, pedir NDA (que delata que no investigaste al VC y le impide hablar de tu empresa con otros VCs), enviar emails masivos no personalizados ('carpet-bombing'), pedir referencias después de un rechazo, ser fundador solitario sin equipo, y sobrevalorar patentes en negocios de software.",
+  "texto_nuevo": "Existen comportamientos que hacen ver al emprendedor como inexperto o directamente eliminan sus posibilidades de financiamiento: comportarse como una 'máquina' sin conexión humana, pedir NDA (que delata que no investigaste al VC y le impide hablar de tu empresa con otros VCs), enviar emails masivos no personalizados ('carpet-bombing'), insistir cuando un VC ya dijo que no, pedir referencias después de un rechazo, ser fundador solitario sin equipo, y sobrevalorar patentes en negocios de software.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "3805-3808",
+   "frase": "when they say they aren’t interested, they usually mean it."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye no insistir cuando el VC ya dijo que no; el resumen la omite.; Mismo defecto: falta el elemento de respetar el no del VC.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-errores_comunes_fundraising-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "errores_comunes_fundraising",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Formar un equipo (basta con dos personas) antes de buscar financiamiento serio; la excepción es el emprendedor recurrente con el que el fondo ya tuvo una buena experiencia",
+  "texto_nuevo": "Formar un equipo (basta con dos personas) antes de buscar financiamiento serio; la excepción es el emprendedor recurrente con el que el fondo ya tuvo una buena experiencia y que, a juicio del fondo, puede armar un equipo sólido después de la inversión",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "3851",
+   "frase": "believes they can build a solid team post-funding"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige además que el fondo crea que esa persona puede armar un equipo sólido después de la inversión.; Mismo defecto: se cae la segunda condición de la excepción.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-014-decision_hire_investment_banker-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "decision_hire_investment_banker",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La decisión de vender la empresa corresponde al consejo, CEO y fundadores, no al banquero. Sin embargo, una vez tomada la decisión de buscar un comprador, un banquero de inversión puede aportar valor significativo gestionando el proceso de M&A, maximizando el valor de salida al contactar un universo amplio de compradores, asumiendo carga operativa y actuando como intermediario en negociaciones delicadas. No siempre es necesario contratarlo, especialmente en ofertas preemptivas atractivas o ventas de bajo valor tipo liquidación.",
+  "texto_nuevo": "La decisión de vender la empresa corresponde al consejo, CEO y fundadores, no al banquero. Sin embargo, una vez tomada la decisión de buscar un comprador, un banquero de inversión puede aportar valor significativo gestionando el proceso de M&A, maximizando el valor de salida al contactar un universo amplio de compradores, asumiendo carga operativa y actuando como intermediario en negociaciones delicadas. No siempre es necesario contratarlo, especialmente en ofertas preemptivas atractivas, ventas de bajo valor tipo liquidación o si el CEO tiene amplia experiencia vendiendo empresas y buena relación con los compradores lógicos.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4401",
+   "frase": "extensive prior experience in managing a sale process and are well connected"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da un tercer caso en que el banquero no suma: el CEO con amplia experiencia en ventas y bien conectado con los compradores lógicos.; Mismo defecto: falta el tercer caso del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-eleccion_83b-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "eleccion_83b",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting, porque te evita pagar impuestos sobre la diferencia entre lo que pagaste y el valor que esas acciones ganen con el tiempo. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+  "texto_nuevo": "Cuando recibes acciones con vesting (acciones restringidas), puedes elegir pagar los impuestos sobre ese valor en el momento en que te las entregan en lugar de esperar a que se consoliden (vesting). Ese aviso se llama elección 83(b) y tienes que presentarlo dentro de los 30 días posteriores a la entrega de las acciones, sin excepciones ni forma de corregirlo si dejas pasar el plazo. Es clave si tú o tus primeros empleados reciben acciones sujetas a vesting. Esto solo aplica si tributas en Estados Unidos, por ejemplo porque tu empresa está constituida allí.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4700",
+   "frase": "Aside from accelerating the individual’s ordinary income tax, filing an 83(b) election also starts"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no promete ese ahorro; solo dice que adelanta el impuesto y hace empezar antes el plazo de ganancias de capital.; Mismo defecto: resultado prometido que el libro no da.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-cumplimiento_inversionistas_acreditados-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "cumplimiento_inversionistas_acreditados",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las leyes de valores de EE.UU. restringen la venta de acciones de empresas privadas a inversionistas acreditados (personas de alto patrimonio o sofisticadas legalmente definidas), salvo excepciones bajo el régimen de crowdfunding post-JOBS Act. Vender acciones a personas no acreditadas expone a la empresa a violaciones de valores y otorga a esos inversionistas un derecho de rescisión que les permite exigir la recompra de sus acciones en cualquier momento por al menos su precio de compra, sin importar el desempeño de la empresa. Puedes evaluar si te conviene usar las excepciones de crowdfunding del JOBS Act para ampliar el universo de inversionistas permitidos. Los detalles legales y fiscales varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "texto_nuevo": "Las leyes de valores de EE.UU. restringen la venta de acciones de empresas privadas a inversionistas acreditados (personas de alto patrimonio y sofisticadas, legalmente definidas), salvo excepciones bajo el régimen de crowdfunding post-JOBS Act. Vender acciones a personas no acreditadas expone a la empresa a violaciones de valores y otorga a esos inversionistas un derecho de rescisión que les permite exigir la recompra de sus acciones en cualquier momento por al menos su precio de compra, sin importar el desempeño de la empresa. Puedes evaluar si te conviene usar las excepciones de crowdfunding del JOBS Act para ampliar el universo de inversionistas permitidos. Los detalles legales y fiscales varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "2670, 4668",
+   "frase": "only rich and sophisticated people are accredited investors"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro): El defecto existe, pero la 'o' crea una vía de acreditación que el libro no da: es una norma inventada más que un matiz perdido.; El libro dice ricas y sofisticadas y define al acreditado por ingreso o patrimonio; con la 'o' el resumen inventa que basta ser sofisticado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-014-employee_pool_esop-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "employee_pool_esop",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.",
+  "texto_nuevo": "Ten presente que la reserva que pide el inversionista incluye solo lo que vas a repartir a futuro, no las opciones que ya entregaste.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "813",
+   "frase": "You may have already granted options to employees. These are not included"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la reserva que pide el inversionista son opciones no emitidas y que las ya entregadas no cuentan; el paso lo deja como elección.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ }
+]

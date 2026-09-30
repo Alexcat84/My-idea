@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Trata el empaque como una variable de costo y de marca",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y ese peso agregado le resta eficiencia a tus envíos. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho más del necesario para proteger el contenido, puede generar una impresión negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes qué perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuánto relleno es demasiado.",
+  "resumen_teorico": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y ese peso agregado le resta eficiencia a tus envíos. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes qué perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuánto relleno es demasiado, aunque esa encuesta, por sí sola, no parece evitar que lleguen pedidos con cantidades exageradas de empaque.",
   "pasos_accionables": [
     "Pesa tu paquete actual y calcula cuánto peso agrega solo el empaque.",
     "Reduce relleno excesivo sin sacrificar la protección mínima necesaria.",
@@ -168,6 +168,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el peso del empaque afecta la eficiencia de la logística, no que se traduzca en más costo de envío.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-012-tratar_packaging_costo_marca-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y ese peso agregado le resta eficiencia a tus envíos. Al mismo tiempo, el empaque es lo primero que tu cliente toca al recibir su pedido, y un exceso de material, mucho más del necesario para proteger el contenido, puede generar una impresión negativa sobre el cuidado ambiental de tu marca. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes qué perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuánto relleno es demasiado.",
+      "texto_nuevo": "La cantidad de empaque que usas no es un detalle menor: cada capa de cartón, plástico o relleno agrega peso, y ese peso agregado le resta eficiencia a tus envíos. Tu tarea es encontrar el punto donde el empaque protege lo suficiente sin sobrar. Revisa el peso real de tus envíos y pregunta directamente a tus clientes qué perciben del empaque para tener datos concretos y ajustar la cantidad, en vez de adivinar cuánto relleno es demasiado, aunque esa encuesta, por sí sola, no parece evitar que lleguen pedidos con cantidades exageradas de empaque.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "268",
+        "frase": "this does not seem to prevent items arriving with seemingly ludicrous amounts of packaging"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no habla de la impresión del cliente ni de la imagen de la marca por el exceso de empaque.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae la advertencia del libro: la encuesta de empaque tras la entrega no parece evitar cantidades exageradas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

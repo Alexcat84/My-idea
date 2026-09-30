@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Deuda de Riesgo (Venture Debt) como Complemento al Equity",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda puede incluir términos de repago definidos, tasas y covenants, y es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.",
+  "resumen_teorico": "El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda puede incluir términos de repago definidos, tasas y covenants, y es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, financiamiento de adquisiciones o de gastos de capital e inventario, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.",
   "pasos_accionables": [
     "Evaluar el balance ideal entre equity y deuda dentro de la estrategia de capital.",
     "Confirmar que la empresa ya cuenta con respaldo de capital de riesgo institucional antes de buscar venture debt.",
@@ -47,6 +47,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la deuda puede configurarse con covenants, y los préstamos de crecimiento a startups tempranas se caracterizan por no llevarlos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-014-venture_debt_introduccion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda puede incluir términos de repago definidos, tasas y covenants, y es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.",
+      "texto_nuevo": "El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda puede incluir términos de repago definidos, tasas y covenants, y es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, financiamiento de adquisiciones o de gastos de capital e inventario, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2791",
+        "frase": "funding for acquisitions or capital expenses and inventory, or a short-term bridge"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cuatro usos y el resumen omite el de financiar adquisiciones, gastos de capital e inventario.; Mismo defecto: falta el uso de financiar adquisiciones, gastos de capital e inventario.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

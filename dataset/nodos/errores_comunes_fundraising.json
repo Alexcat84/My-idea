@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Errores Comunes al Levantar Capital de VCs",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Existen comportamientos que hacen ver al emprendedor como inexperto o directamente eliminan sus posibilidades de financiamiento: comportarse como una 'máquina' sin conexión humana, pedir NDA (que delata que no investigaste al VC y le impide hablar de tu empresa con otros VCs), enviar emails masivos no personalizados ('carpet-bombing'), pedir referencias después de un rechazo, ser fundador solitario sin equipo, y sobrevalorar patentes en negocios de software.",
+  "resumen_teorico": "Existen comportamientos que hacen ver al emprendedor como inexperto o directamente eliminan sus posibilidades de financiamiento: comportarse como una 'máquina' sin conexión humana, pedir NDA (que delata que no investigaste al VC y le impide hablar de tu empresa con otros VCs), enviar emails masivos no personalizados ('carpet-bombing'), insistir cuando un VC ya dijo que no, pedir referencias después de un rechazo, ser fundador solitario sin equipo, y sobrevalorar patentes en negocios de software.",
   "pasos_accionables": [
     "Construir una relación genuina y humana con el VC, no solo presentar el pitch",
     "Nunca solicitar un acuerdo de confidencialidad (NDA) a un VC",
     "Personalizar cada contacto con inversionistas, evitando envíos masivos",
     "Aceptar un 'no' sin insistir ni pedir referencias inmediatamente después; solo si ya tienes relación con el VC, pregunta por qué y, si el motivo es de la firma y no de tu empresa, puedes pedir con respeto una referencia",
-    "Formar un equipo (basta con dos personas) antes de buscar financiamiento serio; la excepción es el emprendedor recurrente con el que el fondo ya tuvo una buena experiencia",
+    "Formar un equipo (basta con dos personas) antes de buscar financiamiento serio; la excepción es el emprendedor recurrente con el que el fondo ya tuvo una buena experiencia y que, a juicio del fondo, puede armar un equipo sólido después de la inversión",
     "En startups de software, enfocar el pitch en ejecución y equipo, no en estrategia de patentes"
   ],
   "entregable_esperado": "Checklist de buenas prácticas de fundraising revisado antes de contactar VCs",
@@ -91,6 +91,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde la excepción del emprendedor recurrente y que un equipo puede ser de dos.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-014-errores_comunes_fundraising-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen comportamientos que hacen ver al emprendedor como inexperto o directamente eliminan sus posibilidades de financiamiento: comportarse como una 'máquina' sin conexión humana, pedir NDA (que delata que no investigaste al VC y le impide hablar de tu empresa con otros VCs), enviar emails masivos no personalizados ('carpet-bombing'), pedir referencias después de un rechazo, ser fundador solitario sin equipo, y sobrevalorar patentes en negocios de software.",
+      "texto_nuevo": "Existen comportamientos que hacen ver al emprendedor como inexperto o directamente eliminan sus posibilidades de financiamiento: comportarse como una 'máquina' sin conexión humana, pedir NDA (que delata que no investigaste al VC y le impide hablar de tu empresa con otros VCs), enviar emails masivos no personalizados ('carpet-bombing'), insistir cuando un VC ya dijo que no, pedir referencias después de un rechazo, ser fundador solitario sin equipo, y sobrevalorar patentes en negocios de software.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3805-3808",
+        "frase": "when they say they aren’t interested, they usually mean it."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye no insistir cuando el VC ya dijo que no; el resumen la omite.; Mismo defecto: falta el elemento de respetar el no del VC.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-014-errores_comunes_fundraising-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formar un equipo (basta con dos personas) antes de buscar financiamiento serio; la excepción es el emprendedor recurrente con el que el fondo ya tuvo una buena experiencia",
+      "texto_nuevo": "Formar un equipo (basta con dos personas) antes de buscar financiamiento serio; la excepción es el emprendedor recurrente con el que el fondo ya tuvo una buena experiencia y que, a juicio del fondo, puede armar un equipo sólido después de la inversión",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "3851",
+        "frase": "believes they can build a solid team post-funding"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige además que el fondo crea que esa persona puede armar un equipo sólido después de la inversión.; Mismo defecto: se cae la segunda condición de la excepción.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

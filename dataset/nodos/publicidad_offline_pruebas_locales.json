@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Pruebas locales de publicidad fuera de internet",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
+  "resumen_teorico": "Es difícil predecir qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, aunque a cambio pierdes capacidad de elegir a quién y cuándo le llega, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
   "pasos_accionables": [
     "Diseña varias pruebas pequeñas de publicidad fuera de internet en paralelo, en distintos mercados locales",
     "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos, sabiendo que a cambio pierdes capacidad de elegir a quién y cuándo le llega",
@@ -80,6 +80,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el espacio sobrante segmenta peor por demografía y momento.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-013-publicidad_offline_pruebas_locales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No puedes saber de antemano qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
+      "texto_nuevo": "Es difícil predecir qué canal (infomerciales, radio, prensa) te va a funcionar, así que prueba barato en un mercado local antes de escalar a algo más grande. Busca espacios publicitarios sobrantes para conseguir descuentos, aunque a cambio pierdes capacidad de elegir a quién y cuándo le llega, y usa códigos únicos o direcciones web específicas para cada campaña, así puedes estimar qué está funcionando y qué no.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "1612-1614",
+        "frase": "It is hard to predict what will work ... The downside is less targeting ability"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que es difícil predecir qué funcionará; el resumen lo vuelve imposible de saber.; El libro pone junto al consejo de los espacios sobrantes su desventaja: menos capacidad de segmentar por público y momento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

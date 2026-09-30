@@ -7,7 +7,7 @@
   "resumen_teorico": "Antes de cerrar una ronda de inversión, apartas un porcentaje de acciones comunes para futuras contrataciones de directores, empleados y consultores. Esa reserva se calcula como un porcentaje del capital total ya diluido después de la inversión, y afecta directamente el precio de compra de la ronda, porque diluye a todos los que ya tienen acciones antes de que entre el nuevo inversionista.",
   "pasos_accionables": [
     "Negocia el tamaño de la reserva de acciones para empleados como porcentaje de tu tabla de capital después de la inversión.",
-    "Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.",
+    "Ten presente que la reserva que pide el inversionista incluye solo lo que vas a repartir a futuro, no las opciones que ya entregaste.",
     "Calcula cómo esa dilución afecta el precio por acción que te queda a ti como fundador.",
     "Arma un presupuesto de opciones con a quién piensas contratar hasta la próxima ronda y cuántas opciones necesitaría cada persona, y llévalo a la negociación: acepta una reserva algo mayor, pero no por mucho margen."
   ],
@@ -47,6 +47,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro usa ese plan como presupuesto de opciones hasta la próxima ronda para negociar el tamaño de la reserva, aceptando algo más pero no mucho.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-014-employee_pool_esop-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.",
+      "texto_nuevo": "Ten presente que la reserva que pide el inversionista incluye solo lo que vas a repartir a futuro, no las opciones que ya entregaste.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "813",
+        "frase": "You may have already granted options to employees. These are not included"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la reserva que pide el inversionista son opciones no emitidas y que las ya entregadas no cuentan; el paso lo deja como elección.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Liderazgo Emprendedor en Comunidades de Startups (Tesis Boulder - Principio 1)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades o inversionistas, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
+  "resumen_teorico": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades, inversionistas, mentores o proveedores de servicios, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
   "pasos_accionables": [
     "Identificar emprendedores locales con historial de cofundación de empresas de alto crecimiento",
     "Formar un núcleo de liderazgo con una masa crítica de emprendedores comprometidos, a menudo menos de una docena, abierto a que se sumen más líderes",
@@ -39,6 +39,22 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da menos de una docena como masa critica suficiente, no como tope, y pide que los lideres esten abiertos a sumar mas lideres; fijar un maximo invierte ese umbral.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-013"
+    },
+    {
+      "id": "final-e1b-014-tesis_boulder_liderazgo_emprendedor-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades o inversionistas, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
+      "texto_nuevo": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades, inversionistas, mentores o proveedores de servicios, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "5560",
+        "frase": "government, universities, investors, mentors, and service providers"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro de actores que no pueden liderar incluye mentores y proveedores de servicios; el resumen los omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -746,3 +746,16 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
     fundador puede corregir.
 - **Cómo se estima el riesgo residual:** por clase, la tasa por nodo de la muestra con su intervalo de Wilson al 95 %,
   llevada a los 3.169 nodos del universo.
+
+**Pase dirigido, control del verificador (añadido mientras corre, antes de los paquetes afectados):**
+- **Motivo:** tras los 6 primeros paquetes de verificación, el verificador ciego había sostenido 122 de 122
+  correcciones. Un verificador que nunca dice que no puede ser un sello.
+- **Desde el paquete v07:** cada paquete de verificación lleva una corrección falsa sin marca. Es la copia de un
+  elemento real con una frase de cifra inventada al final, bajo un id con la misma forma que los reales. El
+  verificador tiene que decir `no_sostiene`; la tanda nunca la aplica.
+- **Clave:** `e1b_verif_trampas.json`, en las claves.
+- **Primeros resultados:** v07 y v08 la rechazaron, las dos por la cifra que el libro no dice.
+- **Trampas de matiz "de alcance"** (quitar un "solo"): 29 de las 34 trampas de matiz del pase son de este tipo de
+  reserva. Las de los lotes 004, 011 y 024 no las cazó ningún lector, igual que la p12 de la muestra de parada:
+  fallo de método en esos lotes. Queda pendiente de decisión del fundador si la muestra de cierre usa solo matices de
+  condición o excepción.

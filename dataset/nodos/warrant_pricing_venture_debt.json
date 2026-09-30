@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo se fija el precio de los warrants en la deuda de riesgo (venture debt)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Cuando pides deuda de riesgo (venture debt), el prestamista no solo cobra interés: también pide warrants, que le dan derecho a comprar una parte de tu empresa más adelante a un precio fijado hoy. Lo vas a ver expresado de tres formas: como un porcentaje de cobertura del warrant (warrant coverage) sobre el monto del préstamo, como un valor económico directo, o como un porcentaje de propiedad totalmente diluida en puntos base. Los bancos suelen pedir menos que los fondos de deuda, porque estos últimos dependen más del rendimiento que les dan los warrants para compensar el riesgo que toman. Pregunta los rangos habituales en tu mercado.",
+  "resumen_teorico": "Cuando pides deuda de riesgo (venture debt), el prestamista no solo cobra interés: también suele pedir warrants, que le dan derecho a comprar una parte de tu empresa más adelante a un precio fijado hoy. Lo vas a ver expresado de tres formas: como un porcentaje de cobertura del warrant (warrant coverage) sobre el monto del préstamo, como un valor económico directo, o como un porcentaje de propiedad totalmente diluida en puntos base. Los bancos suelen pedir menos que los fondos de deuda, porque estos últimos dependen más del rendimiento que les dan los warrants para compensar el riesgo que toman. Pregunta los rangos habituales en tu mercado.",
   "pasos_accionables": [
     "Revisa cómo aparece la cobertura del warrant en el documento de términos (term sheet): como porcentaje del préstamo, como valor económico, o como puntos base de propiedad diluida.",
     "Compara el valor económico real entre las distintas propuestas que recibas, usando como referencia el porcentaje de propiedad totalmente diluida.",
@@ -63,6 +63,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Mismo matiz perdido que la marca 0.; Para la deuda de riesgo el libro da 7 a 10 años; el rango 5 a 10 es el de los warrants de la deuda convertible.; Se pierde el consejo del libro: un plazo más corto te conviene y los warrants deben vencer en una fusión salvo que se ejerzan justo antes.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-014-warrant_pricing_venture_debt-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando pides deuda de riesgo (venture debt), el prestamista no solo cobra interés: también pide warrants, que le dan derecho a comprar una parte de tu empresa más adelante a un precio fijado hoy. Lo vas a ver expresado de tres formas: como un porcentaje de cobertura del warrant (warrant coverage) sobre el monto del préstamo, como un valor económico directo, o como un porcentaje de propiedad totalmente diluida en puntos base. Los bancos suelen pedir menos que los fondos de deuda, porque estos últimos dependen más del rendimiento que les dan los warrants para compensar el riesgo que toman. Pregunta los rangos habituales en tu mercado.",
+      "texto_nuevo": "Cuando pides deuda de riesgo (venture debt), el prestamista no solo cobra interés: también suele pedir warrants, que le dan derecho a comprar una parte de tu empresa más adelante a un precio fijado hoy. Lo vas a ver expresado de tres formas: como un porcentaje de cobertura del warrant (warrant coverage) sobre el monto del préstamo, como un valor económico directo, o como un porcentaje de propiedad totalmente diluida en puntos base. Los bancos suelen pedir menos que los fondos de deuda, porque estos últimos dependen más del rendimiento que les dan los warrants para compensar el riesgo que toman. Pregunta los rangos habituales en tu mercado.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2862",
+        "frase": "Warrants are a common piece of the lender’s compensation in the venture debt market."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los warrants son una pieza común y que hay bancos que dan préstamos sin warrants a cambio de covenants.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

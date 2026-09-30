@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Decisión de Contratar un Banquero de Inversión para M&A",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La decisión de vender la empresa corresponde al consejo, CEO y fundadores, no al banquero. Sin embargo, una vez tomada la decisión de buscar un comprador, un banquero de inversión puede aportar valor significativo gestionando el proceso de M&A, maximizando el valor de salida al contactar un universo amplio de compradores, asumiendo carga operativa y actuando como intermediario en negociaciones delicadas. No siempre es necesario contratarlo, especialmente en ofertas preemptivas atractivas o ventas de bajo valor tipo liquidación.",
+  "resumen_teorico": "La decisión de vender la empresa corresponde al consejo, CEO y fundadores, no al banquero. Sin embargo, una vez tomada la decisión de buscar un comprador, un banquero de inversión puede aportar valor significativo gestionando el proceso de M&A, maximizando el valor de salida al contactar un universo amplio de compradores, asumiendo carga operativa y actuando como intermediario en negociaciones delicadas. No siempre es necesario contratarlo, especialmente en ofertas preemptivas atractivas, ventas de bajo valor tipo liquidación o si el CEO tiene amplia experiencia vendiendo empresas y buena relación con los compradores lógicos.",
   "pasos_accionables": [
     "Confirmar que la decisión de vender ya fue tomada por el consejo, CEO y fundadores",
     "Evaluar si existe una oferta preemptiva atractiva que no requiera optimización externa",
@@ -46,6 +46,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da un tercer caso en que el banquero difícilmente suma: un CEO con experiencia en ventas y bien conectado con los compradores lógicos.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-014-decision_hire_investment_banker-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La decisión de vender la empresa corresponde al consejo, CEO y fundadores, no al banquero. Sin embargo, una vez tomada la decisión de buscar un comprador, un banquero de inversión puede aportar valor significativo gestionando el proceso de M&A, maximizando el valor de salida al contactar un universo amplio de compradores, asumiendo carga operativa y actuando como intermediario en negociaciones delicadas. No siempre es necesario contratarlo, especialmente en ofertas preemptivas atractivas o ventas de bajo valor tipo liquidación.",
+      "texto_nuevo": "La decisión de vender la empresa corresponde al consejo, CEO y fundadores, no al banquero. Sin embargo, una vez tomada la decisión de buscar un comprador, un banquero de inversión puede aportar valor significativo gestionando el proceso de M&A, maximizando el valor de salida al contactar un universo amplio de compradores, asumiendo carga operativa y actuando como intermediario en negociaciones delicadas. No siempre es necesario contratarlo, especialmente en ofertas preemptivas atractivas, ventas de bajo valor tipo liquidación o si el CEO tiene amplia experiencia vendiendo empresas y buena relación con los compradores lógicos.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4401",
+        "frase": "extensive prior experience in managing a sale process and are well connected"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da un tercer caso en que el banquero no suma: el CEO con amplia experiencia en ventas y bien conectado con los compradores lógicos.; Mismo defecto: falta el tercer caso del libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
