@@ -11,7 +11,7 @@
     "Definir indicadores de desempeño y de proceso con unidades de medida claras",
     "Establecer valores objetivo y límites máximos/mínimos para cada indicador",
     "Medir el desempeño real usando métodos automatizados o mystery shoppers",
-    "Comparar resultados contra estándares usando control estadístico de procesos",
+    "Comparar resultados contra estándares, pudiendo usar control estadístico de procesos para distinguir causas comunes y especiales",
     "Aplicar troubleshooting, mejora de calidad o planificación según la brecha detectada"
   ],
   "entregable_esperado": "Sistema de control de calidad documentado con indicadores definidos, estándares establecidos y mecanismo de comparación y acción correctiva",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Controla la Calidad del Servicio",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-155-control_calidad_operaciones_servicio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar resultados contra estándares usando control estadístico de procesos",
+      "texto_nuevo": "Comparar resultados contra estándares, pudiendo usar control estadístico de procesos para distinguir causas comunes y especiales",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "21833",
+        "frase": "may use statistical process control techniques to distinguish between common and special causes"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la comparación puede usar control estadístico de procesos; el paso lo vuelve el método obligado.; Mismo endurecimiento: 'may use' pasa a método fijo.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

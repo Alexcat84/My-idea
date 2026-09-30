@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "La reunión para decidir si cambias de rumbo o sigues igual (pivotar o perseverar)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Decidir si cambias de rumbo es una decisión cargada de emoción, así que conviene convertirla en un hábito: programa estas reuniones con una cadencia regular, ni muy seguida ni muy espaciada, para que cuando llegue el momento tengas datos de sobra y el peso emocional pese menos. Reúne a quien construye el producto y a quien lleva el negocio, e invita si puedes a alguien externo que te dé una mirada objetiva. Lleva un reporte completo de los resultados de tus experimentos a lo largo del tiempo comparados con lo que esperabas al inicio, no solo del último periodo, y súmale lo que has escuchado en conversaciones con clientes actuales y potenciales. Antes de decidir, investiga otras líneas posibles, como nuevos segmentos o necesidades que nadie está atendiendo.",
+  "resumen_teorico": "Decidir si cambias de rumbo es una decisión cargada de emoción, así que conviene convertirla en un hábito: programa estas reuniones con una cadencia regular, ni muy seguida ni muy espaciada, para que cuando llegue el momento el peso emocional pese menos. Reúne a quien construye el producto y a quien lleva el negocio, e invita si puedes a alguien externo que te dé una mirada objetiva. Lleva un reporte completo de los resultados de tus experimentos a lo largo del tiempo comparados con lo que esperabas al inicio, no solo del último periodo, y súmale lo que has escuchado en conversaciones con clientes actuales y potenciales. Antes de decidir, investiga otras líneas posibles, como nuevos segmentos o necesidades que nadie está atendiendo.",
   "pasos_accionables": [
     "Programa tus reuniones para decidir si pivotar o perseverar con una cadencia regular (semanas o meses, según tu ritmo), sin que sean ni muy seguidas ni muy espaciadas",
     "Reúne tanto a quien trabaja en el producto como a quien lleva el negocio, e invita si puedes a alguien externo que te ayude a ver las cosas con objetividad",
@@ -39,5 +39,23 @@
   "etiqueta_arbol": "Institucionaliza la Reunión de Pivote",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-157-reunion_pivotar_o_perseverar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir si cambias de rumbo es una decisión cargada de emoción, así que conviene convertirla en un hábito: programa estas reuniones con una cadencia regular, ni muy seguida ni muy espaciada, para que cuando llegue el momento tengas datos de sobra y el peso emocional pese menos. Reúne a quien construye el producto y a quien lleva el negocio, e invita si puedes a alguien externo que te dé una mirada objetiva. Lleva un reporte completo de los resultados de tus experimentos a lo largo del tiempo comparados con lo que esperabas al inicio, no solo del último periodo, y súmale lo que has escuchado en conversaciones con clientes actuales y potenciales. Antes de decidir, investiga otras líneas posibles, como nuevos segmentos o necesidades que nadie está atendiendo.",
+      "texto_nuevo": "Decidir si cambias de rumbo es una decisión cargada de emoción, así que conviene convertirla en un hábito: programa estas reuniones con una cadencia regular, ni muy seguida ni muy espaciada, para que cuando llegue el momento el peso emocional pese menos. Reúne a quien construye el producto y a quien lleva el negocio, e invita si puedes a alguien externo que te dé una mirada objetiva. Lleva un reporte completo de los resultados de tus experimentos a lo largo del tiempo comparados con lo que esperabas al inicio, no solo del último periodo, y súmale lo que has escuchado en conversaciones con clientes actuales y potenciales. Antes de decidir, investiga otras líneas posibles, como nuevos segmentos o necesidades que nadie está atendiendo.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1874",
+        "frase": "One way to mitigate this challenge is to schedule the meeting in advance."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro agenda la reunión para mitigar la carga emocional; no promete datos de sobra.; Mismo defecto: el efecto 'datos de sobra' no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

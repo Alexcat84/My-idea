@@ -4,9 +4,9 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Función Proteger: Política de Ciberseguridad y Controles",
   "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
-  "resumen_teorico": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones automáticas, disposición segura de dispositivos y capacitación continua del personal.",
+  "resumen_teorico": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de dispositivos y capacitación del personal.",
   "pasos_accionables": [
-    "Redactar una política de ciberseguridad con roles y responsabilidades claros",
+    "Redactar y compartir una política de ciberseguridad con roles y responsabilidades claros y los pasos para protegerte de un ataque y limitar el daño si ocurre",
     "Implementar control de acceso a la red y dispositivos",
     "Instalar y mantener software de seguridad actualizado",
     "Cifrar datos sensibles en reposo y en tránsito",
@@ -44,5 +44,40 @@
   "fuentes_internas": [
     "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
     "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-154-funcion_protect_politica_seguridad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones automáticas, disposición segura de dispositivos y capacitación continua del personal.",
+      "texto_nuevo": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de dispositivos y capacitación del personal.",
+      "cita": {
+        "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+        "fichero": "books/seguridad_digital/cybersecurity_sb_nist-cyber-framework.txt",
+        "lineas": "17-39",
+        "frase": "Steps to take to protect against an attack and limit the damage if one occurs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro pide actualizar con regularidad y automatizar solo si es posible.; El libro pide capacitar a todos, sin decir que sea continua.; Mismo defecto que la marca 0.; Se cae el segundo contenido de la política: los pasos para protegerse de un ataque y limitar el daño.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-154-funcion_protect_politica_seguridad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redactar una política de ciberseguridad con roles y responsabilidades claros",
+      "texto_nuevo": "Redactar y compartir una política de ciberseguridad con roles y responsabilidades claros y los pasos para protegerte de un ataque y limitar el daño si ocurre",
+      "cita": {
+        "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+        "fichero": "books/seguridad_digital/cybersecurity_sb_nist-cyber-framework.txt",
+        "lineas": "17-21",
+        "frase": "Steps to take to protect against an attack and limit the damage if one occurs."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La política del libro también incluye los pasos para protegerse de un ataque y limitar el daño.; Mismo defecto que la marca 0.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

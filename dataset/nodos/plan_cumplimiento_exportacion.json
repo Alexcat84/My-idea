@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Plan de Cumplimiento de Exportación (Compliance Plan)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Para empresas con catálogos amplios de productos, es recomendable crear un plan de cumplimiento escrito que sistematice la clasificación ECCN, el control de países embargados, la verificación de partes denegadas y el mantenimiento de registros de todas las transacciones de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Para empresas con catálogos amplios de productos, es recomendable crear un plan de cumplimiento escrito que sistematice la clasificación ECCN, el control de países embargados, la verificación de partes denegadas, el registro de las transacciones y la Destination Control Statement en todas tus facturas comerciales, también las de clientes nacionales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Estudiar videos y publicaciones online de BIS sobre EAR",
     "Asistir a seminarios específicos sobre EAR y control de exportaciones",
@@ -45,6 +45,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-154-plan_cumplimiento_exportacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para empresas con catálogos amplios de productos, es recomendable crear un plan de cumplimiento escrito que sistematice la clasificación ECCN, el control de países embargados, la verificación de partes denegadas y el mantenimiento de registros de todas las transacciones de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Para empresas con catálogos amplios de productos, es recomendable crear un plan de cumplimiento escrito que sistematice la clasificación ECCN, el control de países embargados, la verificación de partes denegadas, el registro de las transacciones y la Destination Control Statement en todas tus facturas comerciales, también las de clientes nacionales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "387-397",
+        "frase": "Include the Destination Control Statement on all commercial invoices, including ones for domestic customers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto que la marca 0.; Se cae el quinto elemento del plan: la Destination Control Statement en todas las facturas comerciales, también las nacionales.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

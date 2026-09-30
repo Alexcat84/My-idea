@@ -9,11 +9,11 @@
     "Entender: investigar el status quo, entorno y objetivos de éxito",
     "Observar: contactar usuarios en su ambiente real mediante técnicas etnográficas y empatía directa",
     "Revisar insights y definir un punto de vista claro sobre el usuario típico",
-    "Idear: generar tantas ideas como sea posible usando brainstorming",
+    "Idear: generar tantas ideas como sea posible usando brainstorming y seleccionar las más prometedoras",
     "Prototipar: crear representaciones tangibles simples y rápidas (papel, cartón, arcilla)",
     "Testear: validar el prototipo con usuarios reales y repetir el ciclo prototipo-test iterativamente"
   ],
-  "entregable_esperado": "Un concepto de producto validado y parcialmente probado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
+  "entregable_esperado": "Un concepto de producto probado y parcialmente validado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
   "nodos_previos": [
     "investigacion_etnografica_ideacion",
     "equipos_visita_cliente",
@@ -37,5 +37,40 @@
   "etiqueta_arbol": "Recorre las Etapas del Diseño",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-157-design_thinking_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Idear: generar tantas ideas como sea posible usando brainstorming",
+      "texto_nuevo": "Idear: generar tantas ideas como sea posible usando brainstorming y seleccionar las más prometedoras",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5163",
+        "frase": "Select the most promising ideas."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso del libro también pide seleccionar las ideas más prometedoras.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-157-design_thinking_proceso-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un concepto de producto validado y parcialmente probado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
+      "texto_nuevo": "Un concepto de producto probado y parcialmente validado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5139",
+        "frase": "a robust, tested and partially validated concept ready for development"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro habla de un concepto probado y solo parcialmente validado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

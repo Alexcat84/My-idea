@@ -7,8 +7,8 @@
   "resumen_teorico": "Se suele pensar que hay que proteger tu idea nueva de que el negocio de siempre la aplaste. Pero es igual o más importante cuidar al negocio de siempre de los riesgos que trae tu experimento. Si otra parte de tu negocio (por ejemplo quien vende a empresas) teme que un precio más bajo al consumidor final le quite ventas, ese miedo es razonable y puede hacer que te frenen, te saboteen o te pongan trabas. Por eso necesitas reglas claras, medir algo que se pueda interpretar sin dudas, y mantener el riesgo bajo control.",
   "pasos_accionables": [
     "Piensa qué parte de tu negocio podría sentirse amenazada por lo que quieres probar",
-    "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada",
-    "Elige una métrica clara que cualquiera pueda leer de la misma manera antes de sentarte a decidir",
+    "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada, con un tiempo máximo y un tope de clientes afectados, y vigila las métricas y las reacciones de los clientes para detenerla si algo sale muy mal",
+    "Elige un reporte estándar de cinco a diez métricas accionables, el mismo para todas tus pruebas, que cualquiera pueda leer de la misma manera antes de sentarte a decidir",
     "Define de antemano quién decide con esos resultados y con qué criterio",
     "Deja claro desde el inicio que el objetivo es aprender, no lanzar algo a medias"
   ],
@@ -46,6 +46,40 @@
         "motivo": "Proteger el negocio de siempre de tus experimentos comerciales no tiene relacion con los programas de seguridad basados en el comportamiento."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-157-proteccion_organizacion_matriz_experimentos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada",
+      "texto_nuevo": "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada, con un tiempo máximo y un tope de clientes afectados, y vigila las métricas y las reacciones de los clientes para detenerla si algo sale muy mal",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3151-3159",
+        "frase": "No experiment can affect more than a specified number of customers"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro acota la prueba con tiempo máximo, tope de clientes afectados y vigilancia para abortarla; el paso las pierde.; Mismo defecto: faltan el tiempo máximo, el tope de clientes y la vigilancia con aborto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-157-proteccion_organizacion_matriz_experimentos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige una métrica clara que cualquiera pueda leer de la misma manera antes de sentarte a decidir",
+      "texto_nuevo": "Elige un reporte estándar de cinco a diez métricas accionables, el mismo para todas tus pruebas, que cualquiera pueda leer de la misma manera antes de sentarte a decidir",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3155-3157",
+        "frase": "a single standard report of five to ten (no more) actionable metrics"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide un único reporte estándar de cinco a diez métricas accionables, el mismo para todos, no una sola métrica.; Mismo defecto: una métrica en lugar del reporte estándar de cinco a diez métricas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

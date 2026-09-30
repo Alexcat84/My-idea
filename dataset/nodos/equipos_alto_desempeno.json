@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Atributos de Equipos de Alto Desempeño Aplicados a Seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Los equipos de alto desempeño se caracterizan por construir confianza, tolerar el conflicto constructivo, participar en la toma de decisiones, compartir la rendición de cuentas entre pares (no solo hacia el líder) y enfocarse en resultados colectivos por encima de agendas individuales. Estos atributos rara vez se aplican en las organizaciones de seguridad tradicionales.",
+  "resumen_teorico": "Los equipos de alto desempeño se caracterizan por construir confianza, tolerar el conflicto constructivo, participar en la toma de decisiones, compartir la rendición de cuentas entre pares (no solo hacia el líder) y enfocarse en resultados colectivos por encima de agendas individuales. Probablemente estos atributos rara vez se aplican en las organizaciones de seguridad tradicionales.",
   "pasos_accionables": [
     "Fomentar la vulnerabilidad y honestidad sobre errores dentro del equipo",
     "Habilitar espacios de diálogo con desacuerdo constructivo",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Construye Equipos de Alto Desempeño",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-156-equipos_alto_desempeno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los equipos de alto desempeño se caracterizan por construir confianza, tolerar el conflicto constructivo, participar en la toma de decisiones, compartir la rendición de cuentas entre pares (no solo hacia el líder) y enfocarse en resultados colectivos por encima de agendas individuales. Estos atributos rara vez se aplican en las organizaciones de seguridad tradicionales.",
+      "texto_nuevo": "Los equipos de alto desempeño se caracterizan por construir confianza, tolerar el conflicto constructivo, participar en la toma de decisiones, compartir la rendición de cuentas entre pares (no solo hacia el líder) y enfocarse en resultados colectivos por encima de agendas individuales. Probablemente estos atributos rara vez se aplican en las organizaciones de seguridad tradicionales.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3291",
+        "frase": "How many safety organizations do you recognize in this? I guess very few."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo plantea como suposición ('supongo que muy pocas'); el nodo lo afirma como hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

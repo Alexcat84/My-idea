@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría de Calidad (Examen Planeado de Conformidad)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, y no revelar expectativas de hallazgos.",
+  "resumen_teorico": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, no revelar expectativas de hallazgos y recordar que estos señalan a la primera línea, pero la causa real está detrás.",
   "pasos_accionables": [
     "Definir con precisión qué función se auditará y contra qué criterios",
-    "Seleccionar auditores imparciales, idealmente de otras áreas, evitando especialistas con sesgos propios",
+    "Seleccionar auditores imparciales, idealmente de otras áreas, sin exigir que todos sean especialistas en la función auditada, porque traen sus propios sesgos",
     "Entrenar al equipo auditor y darles tiempo para elaborar un reporte adecuado",
     "Implementar autoauditorías periódicas por parte de las propias operaciones, verificadas con muestreos externos"
   ],
@@ -40,6 +40,39 @@
         "evidencia": "F14-025: Un programa de auditorias internas de conformidad es control de procesos de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-155-auditoria_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, y no revelar expectativas de hallazgos.",
+      "texto_nuevo": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, no revelar expectativas de hallazgos y recordar que estos señalan a la primera línea, pero la causa real está detrás.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "831",
+        "frase": "The real cause of the problems lies behind the findings."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la última regla: los hallazgos señalan a la primera línea y la causa real está detrás.; Misma regla perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-auditoria_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar auditores imparciales, idealmente de otras áreas, evitando especialistas con sesgos propios",
+      "texto_nuevo": "Seleccionar auditores imparciales, idealmente de otras áreas, sin exigir que todos sean especialistas en la función auditada, porque traen sus propios sesgos",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "833",
+        "frase": "Don't insist that everyone on the team be a specialist in the function"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide no exigir que todos sean especialistas, no evitarlos.; Mismo endurecimiento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

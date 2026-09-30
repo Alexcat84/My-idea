@@ -9,7 +9,7 @@
     "Definir de forma rigurosa qué cuenta como 'nuevo producto' en la organización (ej: mínimo de inversión, funcionalidad visible para el cliente).",
     "Revisar los productos lanzados en los últimos 3 años y clasificarlos según los 6 tipos de la taxonomía.",
     "Construir un gráfico circular (pie chart) con la distribución de proyectos por tipo.",
-    "Comparar la distribución propia contra el promedio de la industria y decidir si es la deseada."
+    "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera y qué tasa de éxito tiene, y decidir si es la deseada."
   ],
   "entregable_esperado": "Una clasificación documentada del portafolio de productos actual según los 6 tipos de novedad, con gráfico de distribución.",
   "nodos_previos": [
@@ -47,6 +47,23 @@
         "evidencia": "F29-025: Clasifica el portafolio de productos lanzados para definir metricas y balance de riesgo, es analisis estrategico de portafolio y no exploracion de una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-157-definicion_tipos_nuevo_producto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar la distribución propia contra el promedio de la industria y decidir si es la deseada.",
+      "texto_nuevo": "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera y qué tasa de éxito tiene, y decidir si es la deseada.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1150-1154",
+        "frase": "What is the breakdown by project type in terms of total resources spent"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide revisar por tipo los recursos, las ventas y ganancias y la tasa de éxito antes de decidir el reparto.; Mismo defecto: se cae el desglose por tipo previo a la decisión.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

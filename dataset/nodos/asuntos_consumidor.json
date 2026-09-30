@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gestión de Asuntos del Consumidor",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Los asuntos del consumidor son una función profesional de calidad, no de relaciones públicas. Incluye tres fases: prevención (monitoreo de publicidad, educación al cliente, sistemas de alerta temprana), conciencia (puntos de escucha con respuesta en 24 horas) y corrección (satisfacer la queja rápida y completamente, corrigiendo también el sistema que la originó).",
+  "resumen_teorico": "Los asuntos del consumidor son una función profesional de calidad, no de relaciones públicas. Incluye tres fases: prevención (monitoreo de publicidad, educación al cliente, sistemas de alerta temprana y un sistema de calidad independiente), conciencia (puntos de escucha con respuesta en 24 horas y vigilancia de la ley de consumo) y corrección (satisfacer la queja rápida y completamente, corrigiendo también el sistema que la originó).",
   "pasos_accionables": [
     "Establecer 'puestos de escucha' accesibles por múltiples canales para quejas de clientes",
     "Responder a todo contacto del cliente dentro de 24 horas",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Cuida los Asuntos del Cliente",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-155-asuntos_consumidor-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los asuntos del consumidor son una función profesional de calidad, no de relaciones públicas. Incluye tres fases: prevención (monitoreo de publicidad, educación al cliente, sistemas de alerta temprana), conciencia (puntos de escucha con respuesta en 24 horas) y corrección (satisfacer la queja rápida y completamente, corrigiendo también el sistema que la originó).",
+      "texto_nuevo": "Los asuntos del consumidor son una función profesional de calidad, no de relaciones públicas. Incluye tres fases: prevención (monitoreo de publicidad, educación al cliente, sistemas de alerta temprana y un sistema de calidad independiente), conciencia (puntos de escucha con respuesta en 24 horas y vigilancia de la ley de consumo) y corrección (satisfacer la queja rápida y completamente, corrigiendo también el sistema que la originó).",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "863-865",
+        "frase": "Keep up with consumer legislation and regulations"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan el sistema de calidad competente e independiente y el seguimiento de la legislación de consumo.; La fase de conciencia pierde el seguimiento de la legislación de consumo.; La prevención pierde el sistema de calidad competente e independiente.; Mismo matiz que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

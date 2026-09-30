@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Registra qué porcentaje de proyectos descartas en cada etapa, a lo largo del tiempo",
     "Compara ese dato con la referencia: la mayor parte del descarte debería pasar entre las etapas 1 y 3",
-    "Revisa que después de la etapa 3 casi no cancelas proyectos tarde; si eso pasa seguido, es una señal de alerta",
+    "Revisa que después de la etapa 3 casi no cancelas proyectos tarde; si eso pasa seguido, es una señal de alerta. También lo es lo contrario: si en las primeras etapas no descartas casi nada, tus revisiones no están filtrando",
     "Ajusta qué tan agresivo eres al descartar según cuánto riesgo tiene ese tipo de proyecto"
   ],
   "entregable_esperado": "Una curva de descarte documentada por etapa, con metas distintas según el nivel de riesgo de cada proyecto",
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Filtra Proyectos Temprano y Rápido",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-157-curva_atricion_optima-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa que después de la etapa 3 casi no cancelas proyectos tarde; si eso pasa seguido, es una señal de alerta",
+      "texto_nuevo": "Revisa que después de la etapa 3 casi no cancelas proyectos tarde; si eso pasa seguido, es una señal de alerta. También lo es lo contrario: si en las primeras etapas no descartas casi nada, tus revisiones no están filtrando",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6735-6737",
+        "frase": "If the kill rate at the early gates is close to zero"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la otra alarma: si en los gates tempranos no se descarta casi nada, los gates no tienen dientes.; Mismo defecto: se pierde la alarma de gates tempranos que no descartan.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,15 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Día de Cero Defectos (ZD Day) y el Compromiso (Pledge)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Evento formal de lanzamiento del estándar Cero Defectos, pensado para ser memorable y significativo, donde tú y las personas que te ayudan en el negocio firman un compromiso de hacer el trabajo bien a la primera vez. Cero Defectos no es una herramienta de motivación superficial sino la comunicación de un estándar de desempeño permanente, basado en la idea de que la mayoría de los errores humanos vienen de falta de atención, no de falta de conocimiento.",
+  "resumen_teorico": "Evento formal de lanzamiento del estándar Cero Defectos, pensado para ser memorable y significativo, donde tú y las personas que te ayudan en el negocio firman un compromiso de hacer el trabajo bien a la primera vez. Cero Defectos no es una herramienta de motivación sino la comunicación de un estándar de desempeño permanente, basado en la idea de que la mayoría de los errores humanos vienen de falta de atención, no de falta de conocimiento.",
   "pasos_accionables": [
     "Organizar un día de sugerencias previo para recolectar ideas de mejora de las personas que trabajan contigo",
     "Preparar una carta explicativa del concepto Cero Defectos con el compromiso incluido, con la identidad de tu negocio",
     "Realizar el evento con tu participación y la de invitados relevantes para tu contexto, con actividades para todos los que forman parte del negocio",
-    "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno",
+    "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno, dejando claro que firmar es voluntario",
     "Distribuir materiales visuales (pines, botones) de forma voluntaria",
     "Iniciar al día siguiente el programa de eliminación de causas de error",
-    "Reconocer públicamente al equipo organizador y a los participantes destacados."
+    "Agradecer al equipo organizador el esfuerzo extra que dedicó al lanzamiento."
   ],
   "entregable_esperado": "Evento Cero Defectos realizado con compromisos firmados por ti y por quienes te ayudan, y transición inmediata al programa de eliminación de causas de error",
   "nodos_previos": [
@@ -42,5 +42,57 @@
   ],
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-156-dia_cero_defectos_2-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno",
+      "texto_nuevo": "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno, dejando claro que firmar es voluntario",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3013",
+        "frase": "Signing the pledge is, of course, a voluntary thing."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que firmar el compromiso es voluntario.; Mismo defecto: se omite que la firma es voluntaria.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-156-dia_cero_defectos_2-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconocer públicamente al equipo organizador y a los participantes destacados.",
+      "texto_nuevo": "Agradecer al equipo organizador el esfuerzo extra que dedicó al lanzamiento.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3173",
+        "frase": "a brief comment of thanks and appreciation for the extra effort they had shown"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no reconoce en público a participantes destacados: agradece al equipo organizador en una cena y los premios se sortean.; Mismo defecto: no hay reconocimiento a participantes destacados, los premios salen de un sorteo.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-156-dia_cero_defectos_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evento formal de lanzamiento del estándar Cero Defectos, pensado para ser memorable y significativo, donde tú y las personas que te ayudan en el negocio firman un compromiso de hacer el trabajo bien a la primera vez. Cero Defectos no es una herramienta de motivación superficial sino la comunicación de un estándar de desempeño permanente, basado en la idea de que la mayoría de los errores humanos vienen de falta de atención, no de falta de conocimiento.",
+      "texto_nuevo": "Evento formal de lanzamiento del estándar Cero Defectos, pensado para ser memorable y significativo, donde tú y las personas que te ayudan en el negocio firman un compromiso de hacer el trabajo bien a la primera vez. Cero Defectos no es una herramienta de motivación sino la comunicación de un estándar de desempeño permanente, basado en la idea de que la mayoría de los errores humanos vienen de falta de atención, no de falta de conocimiento.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1629",
+        "frase": "Zero Defects is not a motivation program."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que Cero Defectos no es un programa de motivación en absoluto; 'superficial' suaviza esa negación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

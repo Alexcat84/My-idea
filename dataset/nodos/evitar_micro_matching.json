@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Evitar juzgar acciones solo contra procedimientos hallados aplicables en retrospectiva",
     "Distinguir entre datos disponibles físicamente y datos observables en el contexto real",
-    "No usar 'estándares de buena práctica' identificados a posteriori como única explicación",
+    "No usar 'estándares de buena práctica' identificados a posteriori como explicación, porque no explican la conducta, solo la juzgan",
     "Preguntar por qué tuvo sentido la acción para el actor, no solo si cumplió la norma",
-    "Documentar la brecha usual entre trabajo imaginado (reglas) y trabajo real (práctica)"
+    "Documentar la brecha usual entre trabajo imaginado (reglas) y trabajo real (práctica), sabiendo que casi siempre existe sin malas consecuencias y que por sí sola no explica el incidente"
   ],
   "entregable_esperado": "Análisis que explica el comportamiento en su contexto, evitando juicios basados solo en comparación retrospectiva",
   "nodos_previos": [
@@ -25,5 +25,41 @@
   "etiqueta_arbol": "No Compares con Reglas Retrospectivas",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-156-evitar_micro_matching-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No usar 'estándares de buena práctica' identificados a posteriori como única explicación",
+      "texto_nuevo": "No usar 'estándares de buena práctica' identificados a posteriori como explicación, porque no explican la conducta, solo la juzgan",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1704, 1739",
+        "frase": "micro-matching fragments of behavior with these various standards explains nothing, it only judges"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que comparar con estándares de buena práctica no explica nada, solo juzga; 'única' deja entender que explica en parte.; Mismo defecto: se suaviza que esa comparación no explica en absoluto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-156-evitar_micro_matching-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar la brecha usual entre trabajo imaginado (reglas) y trabajo real (práctica)",
+      "texto_nuevo": "Documentar la brecha usual entre trabajo imaginado (reglas) y trabajo real (práctica), sabiendo que casi siempre existe sin malas consecuencias y que por sí sola no explica el incidente",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1719",
+        "frase": "a mismatch between procedure and practice sheds little light on the why"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que la brecha casi siempre existe y casi siempre sin malas consecuencias, así que mostrarla aclara poco el porqué.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

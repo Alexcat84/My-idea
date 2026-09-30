@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Elige una fecha única para el lanzamiento oficial",
     "Realiza actividades especiales que marquen el cambio de actitud",
-    "Explica el programa a todos el mismo día"
+    "Explica el programa a todos el mismo día; si hay personas a cargo de otras, que cada una se lo explique a su gente."
   ],
   "entregable_esperado": "Evento de lanzamiento del estándar Cero Defectos realizado en tu negocio.",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Fija tu Estándar en un Día",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-156-dia_cero_defectos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Explica el programa a todos el mismo día",
+      "texto_nuevo": "Explica el programa a todos el mismo día; si hay personas a cargo de otras, que cada una se lo explique a su gente.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1631",
+        "frase": "Supervisors should explain the program to their people"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro cada supervisor explica el programa a su propia gente ese día; el paso pierde quién explica.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

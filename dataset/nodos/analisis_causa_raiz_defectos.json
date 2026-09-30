@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis y Clasificación Precisa de Causas de Defectos",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
+  "resumen_teorico": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas. Avanza cuando nadie teme ser criticado por haber causado el defecto.",
   "pasos_accionables": [
     "Recolectar datos reales de defectos por unidad y frecuencia",
     "Cuestionar las clasificaciones genéricas de causa (ej. 'workmanship') y desagregarlas en subcausas específicas",
     "Verificar cada causa hipotética con las áreas involucradas antes de asumirla como válida",
-    "Formar un equipo multidisciplinario (línea, calidad, compras, ingeniería) para investigar cada defecto recurrente",
+    "Formar un equipo multidisciplinario (línea, control de producción, calidad, compras, ingeniería) para investigar cada defecto recurrente",
     "Documentar la causa exacta y la acción correctiva aplicada para cada tipo de defecto"
   ],
   "entregable_esperado": "Tabla de defectos con causa raíz validada, acción correctiva implementada y resultado medido (reducción de incidencia).",
@@ -42,6 +42,39 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-004 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "final-e1-155-analisis_causa_raiz_defectos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
+      "texto_nuevo": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas. Avanza cuando nadie teme ser criticado por haber causado el defecto.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1077",
+        "frase": "once everyone started working without fear of being criticized for causing the defect"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala como decisivo que la gente trabajara sin miedo a ser criticada por causar el defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-analisis_causa_raiz_defectos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formar un equipo multidisciplinario (línea, calidad, compras, ingeniería) para investigar cada defecto recurrente",
+      "texto_nuevo": "Formar un equipo multidisciplinario (línea, control de producción, calidad, compras, ingeniería) para investigar cada defecto recurrente",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1045",
+        "frase": "line assembly, production control, quality, purchasing, and industrial engineering"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El equipo del libro incluye control de producción, que originaba parte de los defectos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

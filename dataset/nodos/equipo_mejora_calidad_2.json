@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Equipo de Mejora de Calidad (Quality Improvement Team)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y de seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Es clave que quien lidera tenga libertad para elegir a quienes participan y como se organiza el trabajo.",
+  "resumen_teorico": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y dé seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Cada integrante representa a su área, y cada área sigue siendo responsable de su propio programa. Es clave que quien lidera tenga libertad para elegir a quienes participan y cómo se organiza el trabajo.",
   "pasos_accionables": [
-    "Elige a la persona que va a liderar la mejora de calidad, idealmente alguien con visión de todo el negocio, por ejemplo quien se encarga de marketing u operaciones.",
-    "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad.",
+    "Elige a la persona que va a liderar la mejora de calidad: alguien con experiencia de dirección que entienda la necesidad de mejorar, esté de acuerdo con Cero Defectos y la prevención de defectos y cuente con tu confianza, por ejemplo quien se encarga de marketing u operaciones.",
+    "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad; que sea alguien que pueda hablar por su área y comprometerla a actuar.",
     "Asigna a alguien que documente las reuniones, dé seguimiento a las acciones y mantenga el impulso del programa.",
     "Establece una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.",
     "Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas.",
@@ -103,6 +103,56 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-156-equipo_mejora_calidad_2-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige a la persona que va a liderar la mejora de calidad, idealmente alguien con visión de todo el negocio, por ejemplo quien se encarga de marketing u operaciones.",
+      "texto_nuevo": "Elige a la persona que va a liderar la mejora de calidad: alguien con experiencia de dirección que entienda la necesidad de mejorar, esté de acuerdo con Cero Defectos y la prevención de defectos y cuente con tu confianza, por ejemplo quien se encarga de marketing u operaciones.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2105-2111",
+        "frase": "The chairperson should be a mature member of management who understands the need to improve"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El criterio inventado sustituye los requisitos del libro, que se pierden; se resuelve junto con las demás marcas.; El libro no pide visión de todo el negocio; dice que no hace falta ninguna habilidad especial.; Mismo criterio inventado; el libro pone otros requisitos y ninguna habilidad especial.; Mismo defecto que la marca 1: faltan los dos requisitos del libro.; Se caen los dos requisitos del libro: entender la necesidad de mejorar y aceptar Cero Defectos y la prevención, y contar con la confianza de la dirección.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-156-equipo_mejora_calidad_2-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad.",
+      "texto_nuevo": "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad; que sea alguien que pueda hablar por su área y comprometerla a actuar.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1559",
+        "frase": "people who can speak for their department in order to commit that operation to action"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide representantes que puedan hablar por su área y comprometerla a actuar.; Mismo defecto: se pierde la condición de que el representante pueda comprometer a su área.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-156-equipo_mejora_calidad_2-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y de seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Es clave que quien lidera tenga libertad para elegir a quienes participan y como se organiza el trabajo.",
+      "texto_nuevo": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y dé seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Cada integrante representa a su área, y cada área sigue siendo responsable de su propio programa. Es clave que quien lidera tenga libertad para elegir a quienes participan y cómo se organiza el trabajo.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2113-2123",
+        "frase": "individual departments are held responsible for developing their own programs and causing them to occur"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro recalca que cada integrante representa a su área y que cada área sigue siendo responsable de su propio programa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

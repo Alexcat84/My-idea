@@ -6,9 +6,9 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "No es lo que encuentras, es lo que haces con lo que encuentras. Toda la planificación, inspección y medición del departamento de calidad es inútil si no conduce a prevenir la recurrencia de un problema. El verdadero valor de la ingeniería de calidad está en aprender del pasado para construir un futuro más fluido, mediante observación de rechazos reales y análisis de tendencias.",
   "pasos_accionables": [
-    "Observar rechazos reales y analizarlos como evidencia directa de fallas",
+    "Observar rechazos reales y analizarlos como evidencia directa de fallas, hablando con la gente involucrada y teniendo en cuenta que te contará los problemas que otros le causan, no los que causa ella misma",
     "Realizar análisis de tendencias para detectar problemas menos obvios",
-    "Determinar la causa raíz sistémica, no solo culpar a individuos",
+    "Determinar la causa raíz del problema",
     "Implementar cambios que prevengan la recurrencia del problema, no solo su corrección puntual"
   ],
   "entregable_esperado": "Sistema de acción correctiva con causas raíz documentadas y medidas preventivas implementadas",
@@ -25,5 +25,41 @@
   "etiqueta_arbol": "Actúa, No Solo Detectes",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-155-accion_correctiva_2-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar la causa raíz sistémica, no solo culpar a individuos",
+      "texto_nuevo": "Determinar la causa raíz del problema",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "797",
+        "frase": "a waste of time if they don't lead to preventing a recurrence of a problem"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no habla de causa sistémica ni de culpar a individuos; es un qué añadido.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-accion_correctiva_2-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Observar rechazos reales y analizarlos como evidencia directa de fallas",
+      "texto_nuevo": "Observar rechazos reales y analizarlos como evidencia directa de fallas, hablando con la gente involucrada y teniendo en cuenta que te contará los problemas que otros le causan, no los que causa ella misma",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "805-807",
+        "frase": "people will only tell you the troubles that others cause for them"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la advertencia de que la gente solo cuenta los problemas que otros le causan.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Calidad como Conformidad con los Requisitos (La Primera Suposición Errónea)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El primer error es asociar la calidad con lujo, brillo, peso o bondad abstracta. Conviene rechazar definiciones subjetivas como elegancia, excelencia o fitness for use, porque cada quien terminaría aplicando su propio criterio, y adoptar en cambio una definición operativa: calidad es conformidad con los requisitos establecidos; no calidad es simplemente no conformidad. Un Cadillac es de calidad si cumple los requisitos de un Cadillac, igual que un Pinto con los suyos. Esto saca la evaluación del terreno del juicio personal sobre qué es suficientemente bueno y la convierte en una comprobación objetiva de cumplimiento. Si los requisitos no son adecuados, se corrigen formalmente en el diseño, no se toleran excepciones informales en la ejecución.",
+  "resumen_teorico": "El primer error es asociar la calidad con lujo, brillo, peso o bondad abstracta. Conviene rechazar definiciones subjetivas como elegancia o excelencia, porque cada quien terminaría aplicando su propio criterio, y adoptar en cambio una definición operativa: calidad es conformidad con los requisitos establecidos; no calidad es simplemente no conformidad. Un Cadillac es de calidad si cumple los requisitos de un Cadillac, igual que un Pinto con los suyos. Esto saca la evaluación del terreno del juicio personal sobre qué es suficientemente bueno y la convierte en una comprobación objetiva de cumplimiento. Si los requisitos no son adecuados, se cambian oficialmente, no se toleran excepciones informales en la ejecución.",
   "pasos_accionables": [
     "Define de forma clara y medible los requisitos de tu producto o servicio antes de producirlo o entregarlo.",
     "Elimina de tu lenguaje términos subjetivos como alta calidad, elegancia o buena calidad al describir tu trabajo.",
     "Comunica esos requisitos con precisión a cualquiera que dependa de ti para cumplirlos.",
     "Evalúa tu trabajo solo por si cumple o no cumple el requisito, documentando cualquier desviación como no conformidad.",
-    "Si detectas que un requisito es poco realista, corrígelo formalmente en el momento de definirlo, no lo justifiques después en la entrega.",
+    "Si detectas que un requisito es poco realista, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
     "Cuando alguien mencione calidad de forma vaga, pregunta qué requisito específico está evaluando."
   ],
   "entregable_esperado": "Un documento de requisitos claros y medibles para tu producto o servicio, que usas como único criterio para decidir si algo cumple o no cumple.",
@@ -180,6 +180,39 @@
         "evidencia": "F16-015: Tiene razon B: los dos coinciden en que no es ideacion, y el nodo se dirige a quien ya produce y entrega (evaluar su trabajo, documentar no conformidades, iniciar mejoras de un producto o proceso existente), asi que es control de calidad de un negocio en marcha, aunque planificacion seria defendible. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-156-definicion_calidad_conformidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El primer error es asociar la calidad con lujo, brillo, peso o bondad abstracta. Conviene rechazar definiciones subjetivas como elegancia, excelencia o fitness for use, porque cada quien terminaría aplicando su propio criterio, y adoptar en cambio una definición operativa: calidad es conformidad con los requisitos establecidos; no calidad es simplemente no conformidad. Un Cadillac es de calidad si cumple los requisitos de un Cadillac, igual que un Pinto con los suyos. Esto saca la evaluación del terreno del juicio personal sobre qué es suficientemente bueno y la convierte en una comprobación objetiva de cumplimiento. Si los requisitos no son adecuados, se corrigen formalmente en el diseño, no se toleran excepciones informales en la ejecución.",
+      "texto_nuevo": "El primer error es asociar la calidad con lujo, brillo, peso o bondad abstracta. Conviene rechazar definiciones subjetivas como elegancia o excelencia, porque cada quien terminaría aplicando su propio criterio, y adoptar en cambio una definición operativa: calidad es conformidad con los requisitos establecidos; no calidad es simplemente no conformidad. Un Cadillac es de calidad si cumple los requisitos de un Cadillac, igual que un Pinto con los suyos. Esto saca la evaluación del terreno del juicio personal sobre qué es suficientemente bueno y la convierte en una comprobación objetiva de cumplimiento. Si los requisitos no son adecuados, se cambian oficialmente, no se toleran excepciones informales en la ejecución.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "441-445",
+        "frase": "'Fitness for use' has a nice ring... It is a valuable concept."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no llama subjetiva a 'fitness for use': la considera un concepto valioso, solo que no práctico para comprar y fabricar.; El libro pide cambiar el requisito oficialmente por el sistema, sin situarlo en el diseño.; El libro sí deja de lado 'fitness for use' para el trabajo operativo, así que rechazarla no es lo opuesto; lo inventado es la razón, que sea subjetiva.; Mismo defecto que la marca 0: se le atribuye a 'fitness for use' una subjetividad que el libro no le da.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-156-definicion_calidad_conformidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si detectas que un requisito es poco realista, corrígelo formalmente en el momento de definirlo, no lo justifiques después en la entrega.",
+      "texto_nuevo": "Si detectas que un requisito es poco realista, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "203",
+        "frase": "have the requirements officially changed, but go through the system"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no limita el cambio al momento de definir el requisito: pide cambiarlo oficialmente por el sistema.; Mismo defecto: el libro manda cambiar el requisito oficialmente, sin fijar cuándo.; Mismo defecto: la restricción de tiempo no está en el libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

@@ -4,10 +4,10 @@
   "dominio": "health_safety",
   "titulo_concepto": "Escapar de la Trampa del Proveedor Pasivo de Seguridad",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se convierte en un simple contador de datos, mientras tu castigas a quienes reportan incidentes, lo que hace que dejen de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas.",
+  "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
   "pasos_accionables": [
     "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
-    "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia",
+    "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia, y en lo que hagas después de un incidente",
     "Eliminar las metas semanales, mensuales o trimestrales de seguridad basadas en cifras",
     "Mantener personal con experiencia operativa real, evitando que un solo tipo de profesional domine el equipo",
     "Capacitar al personal de seguridad para investigar incidentes, gestionarlos y presentar informes"
@@ -97,6 +97,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-156-escape_trampa_proveedor_pasivo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se convierte en un simple contador de datos, mientras tu castigas a quienes reportan incidentes, lo que hace que dejen de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas.",
+      "texto_nuevo": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3057-3084",
+        "frase": "management typically came down hard on operators who had been involved in incidents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de castigar a los operadores involucrados en incidentes, no a quienes los reportan.; Mismo defecto que la marca 0: cambia a quién se castiga.; Mismo defecto que la marca 1: falta la contrapartida del área.; Se cae lo que el área debe dar a cambio: sensibilidad a las presiones de producción e información útil en vez de estadísticas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-156-escape_trampa_proveedor_pasivo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia",
+      "texto_nuevo": "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia, y en lo que hagas después de un incidente",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3072",
+        "frase": "as well as involvement in managerial actions in the wake of incidents"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también que el área participe en las acciones de la dirección tras un incidente.; Mismo defecto: falta la participación tras un incidente.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

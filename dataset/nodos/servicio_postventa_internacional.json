@@ -4,14 +4,14 @@
   "dominio": "exportacion",
   "titulo_concepto": "Estrategia de Servicio Postventa para Mercados de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El servicio postventa (entrega puntual, personal cortés, manuales adaptados, acceso a mantenimiento y reparación) es un factor crítico junto con calidad y precio para el éxito de la exportación. Ignorar el servicio puede causar el fracaso del esfuerzo exportador, mientras que gestionarlo bien es una base para el crecimiento. Su importancia varía según el tipo de producto: bienes de consumo duraderos y bienes industriales requieren servicio postventa robusto.",
+  "resumen_teorico": "El servicio postventa (entrega puntual, personal cortés, manuales adaptados, acceso a mantenimiento y reparación) es un factor crítico junto con calidad y precio para el éxito de la exportación. Ignorar el servicio puede causar el fracaso del esfuerzo exportador, mientras que gestionarlo bien puede ser una base para el crecimiento. Su importancia varía según el tipo, la calidad y el precio del producto y el canal de distribución: bienes de consumo duraderos, algunos consumibles y bienes industriales requieren servicio postventa robusto.",
   "pasos_accionables": [
     "Determinar el nivel de servicio postventa requerido según el tipo de producto",
     "Investigar a los competidores locales y sus niveles de servicio",
     "Definir el modelo de entrega de servicio: retorno del producto a EE.UU., uso de socio local, filial propia, o distribuidor",
     "Negociar explícitamente cláusulas de reparación, mantenimiento y garantía en acuerdos con socios/distribuidores",
     "Evaluar la capacidad de servicio de distribuidores potenciales (instalaciones, personal capacitado, experiencia)",
-    "Establecer planes de contingencia para devoluciones de mercancía en transacciones de cuenta abierta"
+    "Establecer planes de contingencia para devoluciones de mercancía en transacciones de cuenta abierta o de cobranza documentaria"
   ],
   "entregable_esperado": "Un plan de servicio postventa documentado, incluyendo el modelo de entrega de servicio elegido y cláusulas contractuales con distribuidores/representantes.",
   "nodos_previos": [
@@ -42,6 +42,39 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por trade_off_responsividad_eficiencia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-154-servicio_postventa_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El servicio postventa (entrega puntual, personal cortés, manuales adaptados, acceso a mantenimiento y reparación) es un factor crítico junto con calidad y precio para el éxito de la exportación. Ignorar el servicio puede causar el fracaso del esfuerzo exportador, mientras que gestionarlo bien es una base para el crecimiento. Su importancia varía según el tipo de producto: bienes de consumo duraderos y bienes industriales requieren servicio postventa robusto.",
+      "texto_nuevo": "El servicio postventa (entrega puntual, personal cortés, manuales adaptados, acceso a mantenimiento y reparación) es un factor crítico junto con calidad y precio para el éxito de la exportación. Ignorar el servicio puede causar el fracaso del esfuerzo exportador, mientras que gestionarlo bien puede ser una base para el crecimiento. Su importancia varía según el tipo, la calidad y el precio del producto y el canal de distribución: bienes de consumo duraderos, algunos consumibles y bienes industriales requieren servicio postventa robusto.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4737-4741",
+        "frase": "Properly handled, service can be a foundation for growth."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el servicio bien llevado 'can be' una base para el crecimiento; el nodo lo da como hecho.; El libro hace variar el servicio por tipo, calidad, precio y canal, e incluye algunos consumibles; el nodo solo deja el tipo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-154-servicio_postventa_internacional-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer planes de contingencia para devoluciones de mercancía en transacciones de cuenta abierta",
+      "texto_nuevo": "Establecer planes de contingencia para devoluciones de mercancía en transacciones de cuenta abierta o de cobranza documentaria",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4777",
+        "frase": "in an open-account or documentary collection transaction, the buyer is in a position to refuse"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro sitúa el riesgo de rechazo de la mercancía en cuenta abierta y también en cobranza documentaria.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

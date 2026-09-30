@@ -10,10 +10,10 @@
     "Crea una checklist de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
     "Establece un formato estándar de documentación para cada entregable, por ejemplo un reporte de una página",
     "Fija un límite de horas para las tareas de evaluación o diseño y evita sobreingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
-    "Valida el sprint terminado con un experto o revisor externo antes de cerrarlo",
+    "Valida el sprint terminado con un colega experto o con quien es dueño del producto antes de cerrarlo",
     "Comunica los criterios de terminado antes de iniciar cada sprint"
   ],
-  "entregable_esperado": "Checklist de definición de terminado documentada, con formato estándar y validada por un revisor externo para cada tipo de sprint.",
+  "entregable_esperado": "Checklist de definición de terminado documentada, con formato estándar, para cada tipo de sprint.",
   "nodos_previos": [
     "modelo_hibrido_agile_stage_gate",
     "product_backlog_fisico"
@@ -57,6 +57,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "final-e1-157-definicion_sprint_terminado_fisico-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Valida el sprint terminado con un experto o revisor externo antes de cerrarlo",
+      "texto_nuevo": "Valida el sprint terminado con un colega experto o con quien es dueño del producto antes de cerrarlo",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4582-4584",
+        "frase": "reviewed by an expert colleague, and checked into the document repository"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de revisión por un colega experto o aprobación del product owner, no de un revisor externo.; Mismo defecto: el revisor externo no está en el libro.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-157-definicion_sprint_terminado_fisico-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Checklist de definición de terminado documentada, con formato estándar y validada por un revisor externo para cada tipo de sprint.",
+      "texto_nuevo": "Checklist de definición de terminado documentada, con formato estándar, para cada tipo de sprint.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4582-4586",
+        "frase": "reviewed by an expert colleague, and checked into the document repository"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona un revisor externo; revisa un colega experto.; Mismo defecto: lo que revisa un colega experto es el resultado del sprint, no la checklist.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

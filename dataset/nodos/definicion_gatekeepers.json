@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Definición y Selección de Gatekeepers",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los gatekeepers son el grupo multifuncional de personas senior que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad) y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite). Los mejores innovadores definen claramente quiénes son estos gatekeepers en el 85% de los casos, asegurando que tengan autoridad real para comprometer recursos, no solo opinión.",
+  "resumen_teorico": "Los gatekeepers son el grupo multifuncional de personas que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad), con autoridad real para comprometerlos y no solo opinión, y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite): mandos medios en los gates tempranos o de menor riesgo, y personas más senior donde el compromiso es grande. El 85% de los mejores innovadores tiene claramente definidos a sus gatekeepers.",
   "pasos_accionables": [
     "Identifica quién posee la autoridad real para comprometer los recursos de la siguiente etapa de tu proyecto.",
     "Arma un grupo multifuncional que represente todas las áreas relevantes, no solo una función.",
@@ -41,5 +41,23 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-157-definicion_gatekeepers-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los gatekeepers son el grupo multifuncional de personas senior que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad) y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite). Los mejores innovadores definen claramente quiénes son estos gatekeepers en el 85% de los casos, asegurando que tengan autoridad real para comprometer recursos, no solo opinión.",
+      "texto_nuevo": "Los gatekeepers son el grupo multifuncional de personas que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad), con autoridad real para comprometerlos y no solo opinión, y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite): mandos medios en los gates tempranos o de menor riesgo, y personas más senior donde el compromiso es grande. El 85% de los mejores innovadores tiene claramente definidos a sus gatekeepers.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7233-7251",
+        "frase": "More senior people are the gatekeepers at points where significant commitments are required"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El 85% es la proporción de mejores innovadores con gatekeepers definidos; atarle el efecto de asegurar autoridad no está en el libro.; El libro pone mandos medios en los gates tempranos y en proyectos de menor riesgo; los senior entran donde el compromiso es grande.; Mismo defecto: no todos los gatekeepers son senior.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

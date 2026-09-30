@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Selección de Dirección Web (Dominio) para Mercados Internacionales",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La elección del dominio web (URL) es clave para la presencia internacional: debe ser corto, simple y memorable. Se puede optar por dominios de código de país (ccTLD) localizados o por nombres de dominio internacionalizados (IDN) en el alfabeto o script del mercado objetivo, lo cual mejora reconocimiento de marca y posicionamiento en buscadores locales.",
+  "resumen_teorico": "La elección del dominio web (URL) es clave para la presencia internacional: debe ser corto, simple, descriptivo y memorable para los clientes del mercado objetivo. Se puede optar por dominios de código de país (ccTLD) localizados o por nombres de dominio internacionalizados (IDN) en el alfabeto o script del mercado objetivo, lo cual puede mejorar el reconocimiento de marca y el posicionamiento en buscadores locales.",
   "pasos_accionables": [
     "Investigar las reglas de registro de dominio del país objetivo (ccTLD)",
     "Evaluar la conveniencia de un dominio internacionalizado (IDN) en el idioma/alfabeto del mercado",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Elige tu Dominio Web",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-154-seleccion_dominio_web-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La elección del dominio web (URL) es clave para la presencia internacional: debe ser corto, simple y memorable. Se puede optar por dominios de código de país (ccTLD) localizados o por nombres de dominio internacionalizados (IDN) en el alfabeto o script del mercado objetivo, lo cual mejora reconocimiento de marca y posicionamiento en buscadores locales.",
+      "texto_nuevo": "La elección del dominio web (URL) es clave para la presencia internacional: debe ser corto, simple, descriptivo y memorable para los clientes del mercado objetivo. Se puede optar por dominios de código de país (ccTLD) localizados o por nombres de dominio internacionalizados (IDN) en el alfabeto o script del mercado objetivo, lo cual puede mejorar el reconocimiento de marca y el posicionamiento en buscadores locales.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3261-3263",
+        "frase": "It should be short, simple, descriptive, and memorable to customers in the target market."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice 'may increase' y 'may give preference'; el nodo lo vuelve un efecto seguro.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Se cae que el dominio sea descriptivo y memorable para los clientes del mercado objetivo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

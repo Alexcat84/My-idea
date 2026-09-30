@@ -11,10 +11,10 @@
     "Verificar que el sistema de medición tenga precisión y exactitud suficientes",
     "Determinar el punto más temprano de prueba para detectar causas asignables",
     "Elegir el tipo de gráfico de control adecuado (variables o atributos)",
-    "Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio",
+    "Decidir la línea central que servirá de base para calcular los límites de control (usualmente ±3σ)",
     "Elegir subgrupos racionales para las muestras, de forma que las unidades de un mismo subgrupo sean lo más parecidas posible y las de subgrupos distintos lo más diferentes",
     "Establecer un sistema simple y confiable de recolección de datos",
-    "Calcular límites de control y definir instrucciones de interpretación y acción",
+    "Calcular límites de control, por regla general tras reunir entre 20 y 30 subgrupos, y definir instrucciones de interpretación y acción",
     "Graficar los datos e interpretar los resultados"
   ],
   "entregable_esperado": "Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción",
@@ -84,6 +84,40 @@
         "motivo": "Orden invertido: la capacidad de proceso se mide en un proceso ya en estado de control estadistico, asi que presupone el SPC y deberia ir despues."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-155-control_estadistico_de_procesos-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio",
+      "texto_nuevo": "Decidir la línea central que servirá de base para calcular los límites de control (usualmente ±3σ)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18667",
+        "frase": "Deciding on the central line to be used as the basis of calculating the limits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El paso del libro solo dice que la línea central es la base para calcular los límites; el rango promedio no vale para todo gráfico.; Mismo añadido: el cálculo desde el rango promedio no está en este paso del libro.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-control_estadistico_de_procesos-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular límites de control y definir instrucciones de interpretación y acción",
+      "texto_nuevo": "Calcular límites de control, por regla general tras reunir entre 20 y 30 subgrupos, y definir instrucciones de interpretación y acción",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18673",
+        "frase": "collect 20 to 30 samples (rational subgroups) before attempting to establish control limits"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da como regla general reunir 20 a 30 subgrupos antes de fijar los límites; el paso la pierde.",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

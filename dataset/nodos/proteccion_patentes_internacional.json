@@ -4,13 +4,13 @@
   "dominio": "exportacion",
   "titulo_concepto": "Protección Internacional de Patentes",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "No existen patentes mundiales; la protección debe solicitarse país por país según su legislación nacional, aunque tratados como el PCT (administrado por WIPO) permiten presentar una única solicitud internacional con efecto en múltiples estados firmantes. Para ser patentable, una invención debe ser novedosa, tener un paso inventivo y aplicación práctica, y no estar excluida por ley (teorías científicas, métodos comerciales, etc.). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "No existen patentes mundiales; la protección debe solicitarse país por país según su legislación nacional, aunque el PCT permite presentar una única solicitud internacional con efecto en varios estados firmantes, y cada uno decide si concede la patente. Para ser patentable, una invención debe ser novedosa, tener un paso inventivo y aplicación práctica, y no estar excluida por ley (en muchos países, teorías científicas o métodos comerciales). Solicítala antes de divulgarla; si debes mostrarla a un inversionista, usa un acuerdo de confidencialidad. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Determinar en qué países se necesita protección de patente para el producto a exportar",
     "Verificar si la invención cumple los requisitos de novedad, paso inventivo y aplicación práctica en esos mercados",
     "Evaluar la conveniencia de usar el sistema PCT para presentar una única solicitud internacional",
     "Consultar a un abogado especializado en propiedad intelectual y a las oficinas de PI de los países objetivo",
-    "Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección"
+    "Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección y, por la complejidad de los documentos, apoyarse en un abogado de patentes para una búsqueda de calidad"
   ],
   "entregable_esperado": "Estrategia de protección de patente definida, indicando países objetivo, tipo de solicitud (nacional, regional o PCT) y asesoría legal contratada",
   "nodos_previos": [
@@ -44,6 +44,39 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-154-proteccion_patentes_internacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No existen patentes mundiales; la protección debe solicitarse país por país según su legislación nacional, aunque tratados como el PCT (administrado por WIPO) permiten presentar una única solicitud internacional con efecto en múltiples estados firmantes. Para ser patentable, una invención debe ser novedosa, tener un paso inventivo y aplicación práctica, y no estar excluida por ley (teorías científicas, métodos comerciales, etc.). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "No existen patentes mundiales; la protección debe solicitarse país por país según su legislación nacional, aunque el PCT permite presentar una única solicitud internacional con efecto en varios estados firmantes, y cada uno decide si concede la patente. Para ser patentable, una invención debe ser novedosa, tener un paso inventivo y aplicación práctica, y no estar excluida por ley (en muchos países, teorías científicas o métodos comerciales). Solicítala antes de divulgarla; si debes mostrarla a un inversionista, usa un acuerdo de confidencialidad. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3031-3067",
+        "frase": "a patent shall be granted by each designated state to the claimed invention"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que esas materias en muchos países en general no son patentables; el nodo lo vuelve exclusión universal.; Mismo defecto que la marca 0.; Mismo defecto que la marca 2.; Se cae presentar antes de divulgar, porque lo divulgado rompe la novedad, y el acuerdo de confidencialidad ante un inversionista.; Se cae que, bajo el PCT, la patente la concede cada estado designado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-154-proteccion_patentes_internacional-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección",
+      "texto_nuevo": "Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección y, por la complejidad de los documentos, apoyarse en un abogado de patentes para una búsqueda de calidad",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3051",
+        "frase": "it is advisable to contact a professional patent attorney to execute a high-quality patent search"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja encargar la búsqueda a un abogado de patentes por la complejidad de los documentos; el paso lo deja como búsqueda propia.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

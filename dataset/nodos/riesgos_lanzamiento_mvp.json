@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Los miedos que te frenan al construir tu primera versión de prueba (MVP): legales, competencia, marca y ánimo",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Identifica los miedos que te frenan a lanzar tu primera versión de prueba (MVP): el riesgo legal por patentes, el miedo a que te copien la idea, el riesgo de dañar tu marca, y el golpe de ánimo que significa recibir malas noticias. Estos riesgos suelen pesar más en tu cabeza que en la realidad, frente a lo que ganas al aprender rápido, y hay salidas concretas: lanzar bajo otra marca o entender que la ejecución importa más que el secreto.",
+  "resumen_teorico": "Identifica los miedos que te frenan a lanzar tu primera versión de prueba (MVP): el riesgo legal por patentes, el miedo a que te copien la idea, el riesgo de dañar tu marca, y el golpe de ánimo que significa recibir malas noticias. Algunos de estos riesgos son reales y otros imaginarios; conviene entenderlos de antemano y pesarlos frente a lo que ganas al aprender rápido, y hay salidas concretas: lanzar bajo otra marca o entender que la ejecución importa más que el secreto.",
   "pasos_accionables": [
-    "Pregunta con un abogado si tu MVP compromete la protección de tus patentes; esto depende de las reglas de tu país.",
+    "Pregunta con un abogado si tu MVP compromete la protección de tus patentes; esto depende de las reglas de tu país y también de las de otros países si buscas protección internacional. Sopesa este riesgo con más cuidado si tu ventaja es un avance científico.",
     "Si temes que te copien la idea, recuerda que tu verdadera ventaja no es el secreto, sino ejecutar rápido y aprender antes que los demás.",
-    "Si te preocupa tu marca, lanza el MVP con un nombre distinto al que ya usas, separado de tu negocio conocido.",
+    "Si te preocupa tu marca, lanza el MVP con un nombre distinto al que ya usas, separado de tu negocio conocido, y experimenta sin hacer ruido: deja el lanzamiento público para cuando el producto se haya probado con clientes reales.",
     "Comprométete de antemano, antes de ver resultados, a iterar en lugar de abandonar el proyecto si el MVP te trae malas noticias.",
     "Prepárate tú, y a quienes trabajan contigo, para recibir resultados negativos como parte normal del aprendizaje."
   ],
@@ -75,6 +75,56 @@
         "evidencia": "Q031-009: El nodo trata de los miedos a lanzar la primera version de prueba (MVP), que es la fase de validacion, no de operar un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "final-e1-157-riesgos_lanzamiento_mvp-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los miedos que te frenan a lanzar tu primera versión de prueba (MVP): el riesgo legal por patentes, el miedo a que te copien la idea, el riesgo de dañar tu marca, y el golpe de ánimo que significa recibir malas noticias. Estos riesgos suelen pesar más en tu cabeza que en la realidad, frente a lo que ganas al aprender rápido, y hay salidas concretas: lanzar bajo otra marca o entender que la ejecución importa más que el secreto.",
+      "texto_nuevo": "Identifica los miedos que te frenan a lanzar tu primera versión de prueba (MVP): el riesgo legal por patentes, el miedo a que te copien la idea, el riesgo de dañar tu marca, y el golpe de ánimo que significa recibir malas noticias. Algunos de estos riesgos son reales y otros imaginarios; conviene entenderlos de antemano y pesarlos frente a lo que ganas al aprender rápido, y hay salidas concretas: lanzar bajo otra marca o entender que la ejecución importa más que el secreto.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1222",
+        "frase": "Building an MVP is not without risks, both real and imagined."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los riesgos son reales e imaginarios; no dice que suelan estar exagerados.; Mismo defecto: afirma que los riesgos suelen ser exagerados, cosa que el libro no dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-157-riesgos_lanzamiento_mvp-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pregunta con un abogado si tu MVP compromete la protección de tus patentes; esto depende de las reglas de tu país.",
+      "texto_nuevo": "Pregunta con un abogado si tu MVP compromete la protección de tus patentes; esto depende de las reglas de tu país y también de las de otros países si buscas protección internacional. Sopesa este riesgo con más cuidado si tu ventaja es un avance científico.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1224-1226",
+        "frase": "you may want international patent protection and may wind up having to abide"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que buscar protección internacional puede imponerte las reglas más estrictas aunque tu país no las tenga.; Mismo defecto, y además se pierde que el riesgo pesa más si tu ventaja es un avance científico.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-157-riesgos_lanzamiento_mvp-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si te preocupa tu marca, lanza el MVP con un nombre distinto al que ya usas, separado de tu negocio conocido.",
+      "texto_nuevo": "Si te preocupa tu marca, lanza el MVP con un nombre distinto al que ya usas, separado de tu negocio conocido, y experimenta sin hacer ruido: deja el lanzamiento público para cuando el producto se haya probado con clientes reales.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1232",
+        "frase": "experiment under the radar and then do a public marketing launch"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da una segunda salida: experimentar sin ruido y lanzar en público cuando el producto se probó con clientes reales.; Mismo defecto: falta experimentar sin publicidad antes del lanzamiento público.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

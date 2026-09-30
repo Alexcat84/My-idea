@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Definición Temprana y Estable del Producto (Evitar Scope Creep)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos en proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo debido a información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
+  "resumen_teorico": "Según algunos estudios, las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
   "pasos_accionables": [
     "Congelar especificaciones clave antes de iniciar la fase de desarrollo formal",
     "Documentar el alcance del proyecto (single customer, multi-customer, global) desde el inicio",
-    "Establecer un proceso de control de cambios para nuevas features o requerimientos",
+    "Sugerencia de My Idea: establecer un proceso de control de cambios para nuevas features o requerimientos",
     "Anticipar necesidades de mercado mediante investigación robusta previa, evitando 'sorpresas' tardías"
   ],
-  "entregable_esperado": "Documento de especificaciones del producto y alcance del proyecto congelado y aprobado por todas las funciones",
+  "entregable_esperado": "Documento de especificaciones del producto y alcance del proyecto aprobado por todas las funciones, congelado en lo que ya se conoce y, si tu mercado es fluido, con lo que todavía es variable marcado aparte",
   "nodos_previos": [
     "voice_of_customer_homework"
   ],
@@ -27,5 +27,56 @@
   "etiqueta_arbol": "Fija tu Alcance Desde el Inicio",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-157-definicion_estable_producto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos en proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo debido a información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
+      "texto_nuevo": "Según algunos estudios, las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1346-1348",
+        "frase": "is the number one cause of delays later in the project, according to some studies"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la mayoría de las veces, no siempre; a veces hay factores fuera de control.; Endurece: el libro lo atribuye a algunos estudios y lo refiere a retrasos en la parte tardía del proyecto.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1: el 'la mayoría de las veces' del libro pasa a regla general, es endurecer.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-157-definicion_estable_producto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un proceso de control de cambios para nuevas features o requerimientos",
+      "texto_nuevo": "Sugerencia de My Idea: establecer un proceso de control de cambios para nuevas features o requerimientos",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1659",
+        "frase": "agreed to by all parties prior to entering the Development stage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone un proceso de control de cambios; su remedio es la definición acordada antes del desarrollo. Queda como sugerencia de la casa.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-157-definicion_estable_producto-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento de especificaciones del producto y alcance del proyecto congelado y aprobado por todas las funciones",
+      "texto_nuevo": "Documento de especificaciones del producto y alcance del proyecto aprobado por todas las funciones, congelado en lo que ya se conoce y, si tu mercado es fluido, con lo que todavía es variable marcado aparte",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1669-1677",
+        "frase": "traditional “100 percent design freeze” before Development is obsolete in some markets"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el congelamiento total es obsoleto en mercados fluidos y separa lo fijo de lo variable.; Mismo defecto: se pierde la separación entre lo fijo y lo variable en mercados fluidos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

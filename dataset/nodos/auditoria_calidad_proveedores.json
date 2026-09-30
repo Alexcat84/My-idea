@@ -4,15 +4,15 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría de Calidad en Recepción y Aceptación de Proveedores",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, y que se mantenga el control del área de trabajo libre de interferencias de expeditadores o compras. Incluye un protocolo de siete pasos para que el auditor externo genere confianza y resultados positivos sin causar daños a la operación visitada.",
+  "resumen_teorico": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, que la supervisión no revierta los rechazos salvo en casos muy inusuales, que expeditadores, compras y control de producción queden fuera del área de trabajo y que los proveedores tomen conciencia de calidad. Incluye un protocolo de siete pasos para que el auditor externo aporte resultados positivos sin dañar la operación visitada.",
   "pasos_accionables": [
     "Reunirse con el gerente de calidad para revisar la situación general y objetivos",
     "Reunirse con el gerente general para explicar el plan de auditoría y comprometer la entrega de un informe antes de partir",
     "Ofrecer un servicio específico solicitado por el gerente general",
     "Ejecutar la auditoría trabajando junto al personal de calidad, obteniendo autorización de otros departamentos",
     "Redactar el informe final, revisarlo primero con el gerente de calidad y luego con el gerente general",
-    "Incorporar o anotar los desacuerdos del cliente en el informe final",
-    "Distribuir el informe directamente desde la planta auditada"
+    "Anotar en el informe final los desacuerdos del cliente o, si sus comentarios son correctos, cambiar el informe",
+    "Si el informe se va a distribuir, enviarlo directamente desde la planta auditada"
   ],
   "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, validado por gerencia de calidad y gerencia general",
   "nodos_previos": [
@@ -29,5 +29,57 @@
   "etiqueta_arbol": "Audita la Recepción de Proveedores",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-155-auditoria_calidad_proveedores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, y que se mantenga el control del área de trabajo libre de interferencias de expeditadores o compras. Incluye un protocolo de siete pasos para que el auditor externo genere confianza y resultados positivos sin causar daños a la operación visitada.",
+      "texto_nuevo": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, que la supervisión no revierta los rechazos salvo en casos muy inusuales, que expeditadores, compras y control de producción queden fuera del área de trabajo y que los proveedores tomen conciencia de calidad. Incluye un protocolo de siete pasos para que el auditor externo aporte resultados positivos sin dañar la operación visitada.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2963-2973",
+        "frase": "Rejections made by acceptance personnel should not be reversed by supervision"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan dos de las cinco acciones del informe: no revertir rechazos salvo casos inusuales y la conciencia de calidad de los proveedores.; Faltan las mismas dos acciones del informe.; Faltan las mismas dos acciones y control de producción entre los excluidos del área.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-auditoria_calidad_proveedores-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incorporar o anotar los desacuerdos del cliente en el informe final",
+      "texto_nuevo": "Anotar en el informe final los desacuerdos del cliente o, si sus comentarios son correctos, cambiar el informe",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2941",
+        "frase": "note them on your report or, if their comments are correct, change the report"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro solo cambia el informe si los comentarios son correctos; si no, anota los desacuerdos.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-auditoria_calidad_proveedores-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distribuir el informe directamente desde la planta auditada",
+      "texto_nuevo": "Si el informe se va a distribuir, enviarlo directamente desde la planta auditada",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2943",
+        "frase": "If the report is to be distributed, mail it from the plant."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El defecto existe, pero es convertir una condición en obligación: endurecer, no matiz.; El libro lo pone como condición: si el informe se va a distribuir; el nodo lo vuelve obligación.; Mismo endurecimiento de la condición.",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Función Recuperar: Restauración y Mejora Continua",
   "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
-  "resumen_teorico": "Recuperar implica reparar y restaurar el equipo y las partes de la red afectadas tras un ataque, actualizar la política y el plan de ciberseguridad con las lecciones aprendidas, prepararse para eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas), y mantener informados a empleados y clientes sobre las actividades de respuesta y recuperación.",
+  "resumen_teorico": "Recuperar implica, después de un ataque, reparar y restaurar el equipo y las partes de la red afectadas, y mantener informados a empleados y clientes sobre las actividades de respuesta y recuperación. Actualizar la política y el plan de ciberseguridad con las lecciones aprendidas y prepararse para eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas) forman parte de tu plan de respuesta.",
   "pasos_accionables": [
     "Reparar y restaurar equipos y redes afectadas",
     "Actualizar la política de ciberseguridad con lecciones aprendidas del incidente",
-    "Preparar planes de contingencia para eventos inadvertidos (desastres naturales, etc.)",
+    "Revisar que tu plan de respuesta prevea los eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas)",
     "Comunicar a empleados y clientes el estado de recuperación"
   ],
   "entregable_esperado": "Sistemas restaurados y política de ciberseguridad actualizada con lecciones aprendidas",
@@ -23,5 +23,40 @@
   "etiqueta_arbol": "Restaura y Mejora tras Ataques",
   "fuentes_internas": [
     "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-154-funcion_recover_restauracion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recuperar implica reparar y restaurar el equipo y las partes de la red afectadas tras un ataque, actualizar la política y el plan de ciberseguridad con las lecciones aprendidas, prepararse para eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas), y mantener informados a empleados y clientes sobre las actividades de respuesta y recuperación.",
+      "texto_nuevo": "Recuperar implica, después de un ataque, reparar y restaurar el equipo y las partes de la red afectadas, y mantener informados a empleados y clientes sobre las actividades de respuesta y recuperación. Actualizar la política y el plan de ciberseguridad con las lecciones aprendidas y prepararse para eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas) forman parte de tu plan de respuesta.",
+      "cita": {
+        "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+        "fichero": "books/seguridad_digital/cybersecurity_sb_nist-cyber-framework.txt",
+        "lineas": "49-81",
+        "frase": "Updating your cybersecurity policy and plan with lessons learned."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Atribuye a Recuperar dos elementos que el libro pone en el plan de Responder; bajo Recuperar solo están reparar y restaurar e informar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-154-funcion_recover_restauracion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar planes de contingencia para eventos inadvertidos (desastres naturales, etc.)",
+      "texto_nuevo": "Revisar que tu plan de respuesta prevea los eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas)",
+      "cita": {
+        "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+        "fichero": "books/seguridad_digital/cybersecurity_sb_nist-cyber-framework.txt",
+        "lineas": "75-79",
+        "frase": "Preparing for inadvertent events (like weather emergencies) that may put data at risk."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pone la preparación para eventos inadvertidos en el plan de respuesta previo, no como acción de recuperación.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

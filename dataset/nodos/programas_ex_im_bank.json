@@ -4,11 +4,11 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas de Financiamiento del Ex-Im Bank",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportación, garantías de préstamo y prestamos directos de mediano (1 a 5 anios) y largo plazo (hasta 10 anios) para reducir riesgos comerciales y políticos, especialmente en proyectos de bienes de capital como plantas de energía, telecomunicaciones y transporte. La Garantía de Capital de Trabajo cubre la etapa previa a la exportación, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (100% si tu negocio es de minorías, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantía suele salir mas económica que un préstamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
+  "resumen_teorico": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportación, garantías de préstamo y préstamos directos de mediano (1 a 5 años) y largo plazo (hasta 10 años) para reducir riesgos comerciales y políticos, especialmente en proyectos de bienes de capital como plantas de energía, telecomunicaciones y transporte. La Garantía de Capital de Trabajo cubre la etapa previa a la exportación, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (puede subir al 100% en préstamos calificados si tu negocio es de minorías, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantía suele salir más económica que un préstamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
   "pasos_accionables": [
     "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
     "Determina si te conviene más una garantía de préstamo, que suele ser más económica, o un préstamo directo de mediano o largo plazo para la venta",
-    "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
+    "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank (en general exige contenido de EE.UU. y, en algunas pólizas, asegurar todas tus ventas elegibles) o privado si ya tienes historial como exportador establecido",
     "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
     "Presenta tu inventario y tus cuentas por cobrar de exportación como garantía y negocia las tasas de anticipo con el prestamista",
     "Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes"
@@ -209,6 +209,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-154-programas_ex_im_bank-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportación, garantías de préstamo y prestamos directos de mediano (1 a 5 anios) y largo plazo (hasta 10 anios) para reducir riesgos comerciales y políticos, especialmente en proyectos de bienes de capital como plantas de energía, telecomunicaciones y transporte. La Garantía de Capital de Trabajo cubre la etapa previa a la exportación, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (100% si tu negocio es de minorías, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantía suele salir mas económica que un préstamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
+      "texto_nuevo": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportación, garantías de préstamo y préstamos directos de mediano (1 a 5 años) y largo plazo (hasta 10 años) para reducir riesgos comerciales y políticos, especialmente en proyectos de bienes de capital como plantas de energía, telecomunicaciones y transporte. La Garantía de Capital de Trabajo cubre la etapa previa a la exportación, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (puede subir al 100% en préstamos calificados si tu negocio es de minorías, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantía suele salir más económica que un préstamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4301",
+        "frase": "For qualified loans to minority, woman-owned, or rural businesses, Ex-Im Bank can increase"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que Ex-Im puede subir la cobertura al 100% en préstamos calificados, no que sea automática por el tipo de negocio.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-154-programas_ex_im_bank-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
+      "texto_nuevo": "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank (en general exige contenido de EE.UU. y, en algunas pólizas, asegurar todas tus ventas elegibles) o privado si ya tienes historial como exportador establecido",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4313",
+        "frase": "must meet U.S. content requirements and, under some policies, must insure all eligible foreign sales"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del seguro de Ex-Im: contenido de EE.UU. y, en algunas pólizas, asegurar todas las ventas elegibles.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

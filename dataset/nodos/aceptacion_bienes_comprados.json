@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Aceptación de Bienes Comprados",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "La inspección y prueba de aceptación de artículos comprados no tiene que limitarse a la sala de recepción; puede planificarse para ocurrir en la planta del proveedor, durante el proceso, o en el ensamblaje final propio. Es crucial que la aceptación se realice según los términos exactos de la orden de compra, ya que muchas devoluciones son responsabilidad del comprador por descripciones incorrectas o requisitos mal definidos.",
+  "resumen_teorico": "La inspección y prueba de aceptación de artículos comprados no tiene que limitarse a la sala de recepción; puede planificarse para ocurrir en la planta del proveedor, durante el proceso, o en el ensamblaje final propio. Es crucial que la aceptación se realice según los términos exactos de la orden de compra, ya que la mitad de los rechazos son responsabilidad del comprador por descripciones incorrectas, requisitos mal definidos o equipo de prueba mal coordinado.",
   "pasos_accionables": [
     "Planificar dónde ocurrirá la aceptación (proveedor, en tránsito, planta propia) según eficiencia y riesgo",
     "Verificar que cada inspección se realice según los términos exactos de la orden de compra vigente",
@@ -38,6 +38,22 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por obtencion_de_compromiso."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-155-aceptacion_bienes_comprados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La inspección y prueba de aceptación de artículos comprados no tiene que limitarse a la sala de recepción; puede planificarse para ocurrir en la planta del proveedor, durante el proceso, o en el ensamblaje final propio. Es crucial que la aceptación se realice según los términos exactos de la orden de compra, ya que muchas devoluciones son responsabilidad del comprador por descripciones incorrectas o requisitos mal definidos.",
+      "texto_nuevo": "La inspección y prueba de aceptación de artículos comprados no tiene que limitarse a la sala de recepción; puede planificarse para ocurrir en la planta del proveedor, durante el proceso, o en el ensamblaje final propio. Es crucial que la aceptación se realice según los términos exactos de la orden de compra, ya que la mitad de los rechazos son responsabilidad del comprador por descripciones incorrectas, requisitos mal definidos o equipo de prueba mal coordinado.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "785",
+        "frase": "half of the rejections that occur are the fault of the purchaser"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro trae una tercera causa: el equipo de prueba mal coordinado.; Misma tercera causa perdida.; Se pierden la tercera causa y la proporción que da el libro, la mitad de los rechazos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

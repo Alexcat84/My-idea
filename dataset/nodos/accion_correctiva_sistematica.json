@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Documenta cada problema detectado en una ficha simple: qué pasó, qué tan grave es, por qué pasó, quién se encarga y para cuándo",
     "Revisa a diario los problemas nuevos junto con la persona que te ayuda con calidad o producción, si la tienes",
-    "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo",
+    "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo, a un nivel de más responsabilidad y con las personas de otras áreas involucradas",
     "Revisa una vez al mes lo que sigue sin resolverse y decide si necesita un esfuerzo dedicado aparte",
-    "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, y disuélvelo en cuanto el problema quede resuelto",
+    "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, una tarea bien definida y un plazo para terminarla, y disuélvelo en cuanto el problema quede resuelto",
     "Ordena los problemas por gravedad y ataca primero los más grandes",
     "Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento",
-    "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales",
+    "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular",
     "Dar seguimiento y verificar que la acción implementada haya eliminado el problema"
   ],
   "entregable_esperado": "Un sistema documentado de seguimiento de problemas, con fichas de control en tres ritmos (diario, semanal, mensual) y un registro claro de cuándo se cierra cada problema",
@@ -57,5 +57,58 @@
   ],
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-155-accion_correctiva_sistematica-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo",
+      "texto_nuevo": "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo, a un nivel de más responsabilidad y con las personas de otras áreas involucradas",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2871",
+        "frase": "They should invite to their meetings the other department personnel involved."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La revisión semanal sube a un nivel de más responsabilidad e invita a las otras áreas involucradas.; Se pierde la invitación a las otras áreas involucradas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-accion_correctiva_sistematica-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, y disuélvelo en cuanto el problema quede resuelto",
+      "texto_nuevo": "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, una tarea bien definida y un plazo para terminarla, y disuélvelo en cuanto el problema quede resuelto",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2873",
+        "frase": "jobs of the task team should be carefully spelled out, and their completion time specified"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide definir con cuidado la tarea del grupo y fijar su plazo.; Mismo matiz perdido.; Mismo matiz perdido: tarea definida y plazo de término.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-accion_correctiva_sistematica-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales",
+      "texto_nuevo": "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2873",
+        "frase": "held by the general manager and staff to review the unresolved problems"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un por qué que el libro no da.; Mismo por qué añadido.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

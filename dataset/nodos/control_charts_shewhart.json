@@ -11,7 +11,7 @@
     "Calcular límites de control usando fórmulas basadas en ±3σ (Tabla 19.3)",
     "Graficar los datos en orden temporal de producción",
     "Interpretar los resultados y definir acciones para el personal de producción",
-    "Retirar los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características"
+    "Retirar muchos de los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características"
   ],
   "entregable_esperado": "Gráfico de control implementado con límites calculados, plan de interpretación y protocolo de acción documentado",
   "nodos_previos": [
@@ -32,5 +32,24 @@
   "etiqueta_arbol": "Usa Gráficos de Control",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-155-control_charts_shewhart-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Retirar los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características",
+      "texto_nuevo": "Retirar muchos de los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18685",
+        "frase": "Once the charts have served their purpose, many should be taken down"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que muchos gráficos deberían retirarse, no todos.; Mismo endurecimiento: de 'muchos' a todos; algunos se sustituyen por controles puntuales.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

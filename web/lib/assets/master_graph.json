@@ -613,9 +613,9 @@
       "titulo_concepto": "Acción Correctiva (De la Detección a la Prevención)",
       "resumen_teorico": "No es lo que encuentras, es lo que haces con lo que encuentras. Toda la planificación, inspección y medición del departamento de calidad es inútil si no conduce a prevenir la recurrencia de un problema. El verdadero valor de la ingeniería de calidad está en aprender del pasado para construir un futuro más fluido, mediante observación de rechazos reales y análisis de tendencias.",
       "pasos_accionables": [
-        "Observar rechazos reales y analizarlos como evidencia directa de fallas",
+        "Observar rechazos reales y analizarlos como evidencia directa de fallas, hablando con la gente involucrada y teniendo en cuenta que te contará los problemas que otros le causan, no los que causa ella misma",
         "Realizar análisis de tendencias para detectar problemas menos obvios",
-        "Determinar la causa raíz sistémica, no solo culpar a individuos",
+        "Determinar la causa raíz del problema",
         "Implementar cambios que prevengan la recurrencia del problema, no solo su corrección puntual"
       ],
       "entregable_esperado": "Sistema de acción correctiva con causas raíz documentadas y medidas preventivas implementadas",
@@ -805,12 +805,12 @@
       "pasos_accionables": [
         "Documenta cada problema detectado en una ficha simple: qué pasó, qué tan grave es, por qué pasó, quién se encarga y para cuándo",
         "Revisa a diario los problemas nuevos junto con la persona que te ayuda con calidad o producción, si la tienes",
-        "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo",
+        "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo, a un nivel de más responsabilidad y con las personas de otras áreas involucradas",
         "Revisa una vez al mes lo que sigue sin resolverse y decide si necesita un esfuerzo dedicado aparte",
-        "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, y disuélvelo en cuanto el problema quede resuelto",
+        "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, una tarea bien definida y un plazo para terminarla, y disuélvelo en cuanto el problema quede resuelto",
         "Ordena los problemas por gravedad y ataca primero los más grandes",
         "Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento",
-        "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales",
+        "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular",
         "Dar seguimiento y verificar que la acción implementada haya eliminado el problema"
       ],
       "entregable_esperado": "Un sistema documentado de seguimiento de problemas, con fichas de control en tres ritmos (diario, semanal, mensual) y un registro claro de cuándo se cierra cada problema",
@@ -935,7 +935,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Aceptación de Bienes Comprados",
-      "resumen_teorico": "La inspección y prueba de aceptación de artículos comprados no tiene que limitarse a la sala de recepción; puede planificarse para ocurrir en la planta del proveedor, durante el proceso, o en el ensamblaje final propio. Es crucial que la aceptación se realice según los términos exactos de la orden de compra, ya que muchas devoluciones son responsabilidad del comprador por descripciones incorrectas o requisitos mal definidos.",
+      "resumen_teorico": "La inspección y prueba de aceptación de artículos comprados no tiene que limitarse a la sala de recepción; puede planificarse para ocurrir en la planta del proveedor, durante el proceso, o en el ensamblaje final propio. Es crucial que la aceptación se realice según los términos exactos de la orden de compra, ya que la mitad de los rechazos son responsabilidad del comprador por descripciones incorrectas, requisitos mal definidos o equipo de prueba mal coordinado.",
       "pasos_accionables": [
         "Planificar dónde ocurrirá la aceptación (proveedor, en tránsito, planta propia) según eficiencia y riesgo",
         "Verificar que cada inspección se realice según los términos exactos de la orden de compra vigente",
@@ -3662,7 +3662,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Análisis de Tendencias con Gráficos de Control (Cause-Effect Charting)",
-      "resumen_teorico": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, puedes detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa. Este análisis te permite pasar de una gestión reactiva basada en intuición a una gestión predictiva basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
+      "resumen_teorico": "Consiste en superponer y comparar gráficos de desempeño operativo (cumplimiento de programa, defectos por unidad, ausentismo, faltantes de piezas) a lo largo del tiempo para identificar relaciones de causa y efecto. Al ordenar los datos cronológicamente y compararlos, puedes detectar patrones repetitivos: por ejemplo, un aumento en defectos por unidad suele preceder incrementos en ausentismo y faltantes, lo que a su vez provoca retrasos en el programa; por eso hay que actuar de inmediato en cuanto los defectos empiezan a subir. Este análisis te permite pasar de una gestión reactiva basada en intuición a una gestión predictiva basada en evidencia, sentando las bases del enfoque de prevención característico de Cero Defectos.",
       "pasos_accionables": [
         "Recopilar los gráficos históricos de las métricas clave: cumplimiento de programa, defectos por unidad, ausentismo y faltantes.",
         "Superponer los gráficos en el mismo eje temporal para comparar visualmente.",
@@ -3671,7 +3671,7 @@
         "Formular una hipótesis de causa y efecto y probarla haciendo una predicción sobre la siguiente semana.",
         "Validar la hipótesis comparando tu predicción contra los resultados reales."
       ],
-      "entregable_esperado": "Un análisis de tendencias con gráficos superpuestos que muestre la cadena causal entre defectos, ausentismo, faltantes y cumplimiento de programa, más una predicción que hayas comprobado.",
+      "entregable_esperado": "Un análisis de tendencias con gráficos superpuestos que muestre las relaciones de causa y efecto que encontraste entre defectos, ausentismo, faltantes y cumplimiento de programa, más una predicción que hayas comprobado.",
       "nodos_previos": [
         "diseno_de_metodos_de_recoleccion_de_datos"
       ],
@@ -3690,12 +3690,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Análisis y Clasificación Precisa de Causas de Defectos",
-      "resumen_teorico": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
+      "resumen_teorico": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas. Avanza cuando nadie teme ser criticado por haber causado el defecto.",
       "pasos_accionables": [
         "Recolectar datos reales de defectos por unidad y frecuencia",
         "Cuestionar las clasificaciones genéricas de causa (ej. 'workmanship') y desagregarlas en subcausas específicas",
         "Verificar cada causa hipotética con las áreas involucradas antes de asumirla como válida",
-        "Formar un equipo multidisciplinario (línea, calidad, compras, ingeniería) para investigar cada defecto recurrente",
+        "Formar un equipo multidisciplinario (línea, control de producción, calidad, compras, ingeniería) para investigar cada defecto recurrente",
         "Documentar la causa exacta y la acción correctiva aplicada para cada tipo de defecto"
       ],
       "entregable_esperado": "Tabla de defectos con causa raíz validada, acción correctiva implementada y resultado medido (reducción de incidencia).",
@@ -6999,7 +6999,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Gestión de Asuntos del Consumidor",
-      "resumen_teorico": "Los asuntos del consumidor son una función profesional de calidad, no de relaciones públicas. Incluye tres fases: prevención (monitoreo de publicidad, educación al cliente, sistemas de alerta temprana), conciencia (puntos de escucha con respuesta en 24 horas) y corrección (satisfacer la queja rápida y completamente, corrigiendo también el sistema que la originó).",
+      "resumen_teorico": "Los asuntos del consumidor son una función profesional de calidad, no de relaciones públicas. Incluye tres fases: prevención (monitoreo de publicidad, educación al cliente, sistemas de alerta temprana y un sistema de calidad independiente), conciencia (puntos de escucha con respuesta en 24 horas y vigilancia de la ley de consumo) y corrección (satisfacer la queja rápida y completamente, corrigiendo también el sistema que la originó).",
       "pasos_accionables": [
         "Establecer 'puestos de escucha' accesibles por múltiples canales para quejas de clientes",
         "Responder a todo contacto del cliente dentro de 24 horas",
@@ -7386,10 +7386,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Auditoría de Calidad (Examen Planeado de Conformidad)",
-      "resumen_teorico": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, y no revelar expectativas de hallazgos.",
+      "resumen_teorico": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, no revelar expectativas de hallazgos y recordar que estos señalan a la primera línea, pero la causa real está detrás.",
       "pasos_accionables": [
         "Definir con precisión qué función se auditará y contra qué criterios",
-        "Seleccionar auditores imparciales, idealmente de otras áreas, evitando especialistas con sesgos propios",
+        "Seleccionar auditores imparciales, idealmente de otras áreas, sin exigir que todos sean especialistas en la función auditada, porque traen sus propios sesgos",
         "Entrenar al equipo auditor y darles tiempo para elaborar un reporte adecuado",
         "Implementar autoauditorías periódicas por parte de las propias operaciones, verificadas con muestreos externos"
       ],
@@ -7412,15 +7412,15 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Auditoría de Calidad en Recepción y Aceptación de Proveedores",
-      "resumen_teorico": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, y que se mantenga el control del área de trabajo libre de interferencias de expeditadores o compras. Incluye un protocolo de siete pasos para que el auditor externo genere confianza y resultados positivos sin causar daños a la operación visitada.",
+      "resumen_teorico": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, que la supervisión no revierta los rechazos salvo en casos muy inusuales, que expeditadores, compras y control de producción queden fuera del área de trabajo y que los proveedores tomen conciencia de calidad. Incluye un protocolo de siete pasos para que el auditor externo aporte resultados positivos sin dañar la operación visitada.",
       "pasos_accionables": [
         "Reunirse con el gerente de calidad para revisar la situación general y objetivos",
         "Reunirse con el gerente general para explicar el plan de auditoría y comprometer la entrega de un informe antes de partir",
         "Ofrecer un servicio específico solicitado por el gerente general",
         "Ejecutar la auditoría trabajando junto al personal de calidad, obteniendo autorización de otros departamentos",
         "Redactar el informe final, revisarlo primero con el gerente de calidad y luego con el gerente general",
-        "Incorporar o anotar los desacuerdos del cliente en el informe final",
-        "Distribuir el informe directamente desde la planta auditada"
+        "Anotar en el informe final los desacuerdos del cliente o, si sus comentarios son correctos, cambiar el informe",
+        "Si el informe se va a distribuir, enviarlo directamente desde la planta auditada"
       ],
       "entregable_esperado": "Informe de auditoría con acciones requeridas y situación general documentada, validado por gerencia de calidad y gerencia general",
       "nodos_previos": [
@@ -20998,7 +20998,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Consejo de Calidad y Rol del Director de Calidad",
-      "resumen_teorico": "El consejo de calidad es la instancia responsable de establecer visión, misión, valores y metas de calidad, revisar el progreso, integrar los objetivos de calidad en los planes de tu negocio y quitar los obstáculos del camino. Si tienes a alguien que lidera el tema calidad, esa persona cumple un doble rol: llevar el día a día de calidad y ayudarte a manejar la calidad como parte de la estrategia del negocio, así como quien lleva las finanzas te ayuda a decidir con los números.",
+      "resumen_teorico": "El consejo de calidad es la instancia responsable de establecer visión, misión, valores y metas de calidad, revisar el progreso, integrar los objetivos de calidad en los planes de tu negocio y quitar los obstáculos del camino. Si tienes a alguien que lidera el tema calidad, es probable que esa persona cumpla un doble rol: llevar el día a día de calidad y ayudarte a manejar la calidad como parte de la estrategia del negocio, así como quien lleva las finanzas te ayuda a decidir con los números.",
       "pasos_accionables": [
         "Forma un consejo de calidad con las personas que toman las decisiones importantes en tu negocio",
         "Define y comunica visión, misión, valores compartidos y tu política de calidad",
@@ -21204,11 +21204,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Benchmarking de Consorcio",
-      "resumen_teorico": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+      "resumen_teorico": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
       "pasos_accionables": [
         "Identificar organizaciones interesadas en formar un consorcio de benchmarking sobre un tema común.",
         "Acordar colectivamente el alcance, métricas, definiciones y cronograma del estudio.",
-        "Designar un facilitador (interno o externo) para coordinar el proceso.",
+        "Apoyarse, como suele hacerse aunque no siempre, en un facilitador externo para coordinar el proceso.",
         "Establecer criterios de validación de datos compartidos por todos los participantes.",
         "Ejecutar el estudio y compartir hallazgos y mejores prácticas entre los miembros."
       ],
@@ -23380,7 +23380,7 @@
         "Definir indicadores de desempeño y de proceso con unidades de medida claras",
         "Establecer valores objetivo y límites máximos/mínimos para cada indicador",
         "Medir el desempeño real usando métodos automatizados o mystery shoppers",
-        "Comparar resultados contra estándares usando control estadístico de procesos",
+        "Comparar resultados contra estándares, pudiendo usar control estadístico de procesos para distinguir causas comunes y especiales",
         "Aplicar troubleshooting, mejora de calidad o planificación según la brecha detectada"
       ],
       "entregable_esperado": "Sistema de control de calidad documentado con indicadores definidos, estándares establecidos y mecanismo de comparación y acción correctiva",
@@ -23410,7 +23410,7 @@
         "Calcular límites de control usando fórmulas basadas en ±3σ (Tabla 19.3)",
         "Graficar los datos en orden temporal de producción",
         "Interpretar los resultados y definir acciones para el personal de producción",
-        "Retirar los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características"
+        "Retirar muchos de los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características"
       ],
       "entregable_esperado": "Gráfico de control implementado con límites calculados, plan de interpretación y protocolo de acción documentado",
       "nodos_previos": [
@@ -23468,7 +23468,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Plan de Control de Proceso del Proveedor",
-      "resumen_teorico": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. También incluye tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
+      "resumen_teorico": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. Junto a ese plan, la planificación conjunta con el proveedor abarca tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
       "pasos_accionables": [
         "Solicitar al proveedor un plan escrito de control del proceso de manufactura",
         "Incluir requisitos de SPC para detección temprana de defectos",
@@ -23478,7 +23478,7 @@
         "Estandarizar métodos y condiciones de prueba entre proveedor y comprador",
         "Acordar el significado exacto de los requisitos de desempeño en las especificaciones",
         "Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente",
-        "Establecer sistema de trazabilidad de lotes"
+        "Establecer planes de muestreo, niveles de calidad (dejando claro que todo producto debe cumplir especificaciones), un sistema de trazabilidad de lotes y un sistema de respuesta oportuna a las señales de alarma por defectos"
       ],
       "entregable_esperado": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados",
       "nodos_previos": [
@@ -23565,10 +23565,10 @@
         "Verificar que el sistema de medición tenga precisión y exactitud suficientes",
         "Determinar el punto más temprano de prueba para detectar causas asignables",
         "Elegir el tipo de gráfico de control adecuado (variables o atributos)",
-        "Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio",
+        "Decidir la línea central que servirá de base para calcular los límites de control (usualmente ±3σ)",
         "Elegir subgrupos racionales para las muestras, de forma que las unidades de un mismo subgrupo sean lo más parecidas posible y las de subgrupos distintos lo más diferentes",
         "Establecer un sistema simple y confiable de recolección de datos",
-        "Calcular límites de control y definir instrucciones de interpretación y acción",
+        "Calcular límites de control, por regla general tras reunir entre 20 y 30 subgrupos, y definir instrucciones de interpretación y acción",
         "Graficar los datos e interpretar los resultados"
       ],
       "entregable_esperado": "Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción",
@@ -27296,7 +27296,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Liderazgo de Mente Abierta (vs. Liderazgo Cerrado)",
-      "resumen_teorico": "El liderazgo efectivo es aquel que comunica direcciones comprensibles, establece ejemplo evidente, define métodos de medición y asegura el compromiso de los individuos con los objetivos. El principal riesgo para un líder es desarrollar una creencia en su propia infalibilidad y cambiar constantemente las reglas sin comunicarlo, lo que genera pérdida de confianza y parálisis organizacional. La cura es la apertura: ideas propuestas abiertamente y lineamientos discutidos con el equipo. Un liderazgo cerrado (ejemplo: Napoleón, Hitler) no deja legado porque nadie más entiende ni puede continuar el sistema.",
+      "resumen_teorico": "El liderazgo efectivo es aquel que comunica direcciones comprensibles, establece ejemplo evidente, define métodos de medición, asegura el compromiso de los individuos con los objetivos y da el impulso para que las cosas se hagan. El principal riesgo para un líder es desarrollar una creencia en su propia infalibilidad y cambiar constantemente las reglas sin comunicarlo, lo que genera pérdida de confianza y parálisis organizacional. La cura es la apertura: ideas propuestas abiertamente y lineamientos discutidos con el equipo. Un liderazgo cerrado (ejemplo: Napoleón, Hitler) no deja legado porque nadie más entiende ni puede continuar el sistema.",
       "pasos_accionables": [
         "Definir objetivos de calidad de manera precisa y comprensible para todo el equipo",
         "Establecer métodos de medición claros y compartidos",
@@ -27324,7 +27324,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Introducción al Programa de Mejora de Calidad de 14 Pasos",
-      "resumen_teorico": "El caso de la empresa HPA es un ejemplo práctico del programa de 14 pasos para instalar una actitud de prevención de defectos en todo tu negocio. El caso muestra cómo una empresa atrapada en un ciclo de apagar incendios (resolver problemas que ya ocurrieron) puede pasar a la prevención mediante un compromiso genuino tuyo como responsable del negocio, empezando por reconocer con claridad que estás corrigiendo en lugar de prevenir, y que hace falta un cambio de actitud que lideres tú junto con la persona que te ayuda con la calidad.",
+      "resumen_teorico": "El caso de la empresa HPA es un ejemplo práctico del programa de 14 pasos para instalar una actitud de prevención de defectos en todo tu negocio. El caso muestra cómo una empresa atrapada en un ciclo de apagar incendios (resolver problemas que ya ocurrieron) puede pasar a la prevención mediante un compromiso genuino tuyo como responsable del negocio, empezando por reconocer con claridad que estás corrigiendo en lugar de prevenir y que tu propia actitud, hacer solo lo justo, es parte del problema, y que hace falta un cambio de actitud que lideres tú junto con la persona que te ayuda con la calidad.",
       "pasos_accionables": [
         "Reconocer con claridad si estás en modo reactivo (corrigiendo) en lugar de preventivo",
         "Tener una conversación directa con la persona que te ayuda con la calidad sobre el cambio de actitud necesario",
@@ -29359,7 +29359,7 @@
       "pasos_accionables": [
         "Registra qué porcentaje de proyectos descartas en cada etapa, a lo largo del tiempo",
         "Compara ese dato con la referencia: la mayor parte del descarte debería pasar entre las etapas 1 y 3",
-        "Revisa que después de la etapa 3 casi no cancelas proyectos tarde; si eso pasa seguido, es una señal de alerta",
+        "Revisa que después de la etapa 3 casi no cancelas proyectos tarde; si eso pasa seguido, es una señal de alerta. También lo es lo contrario: si en las primeras etapas no descartas casi nada, tus revisiones no están filtrando",
         "Ajusta qué tan agresivo eres al descartar según cuánto riesgo tiene ese tipo de proyecto"
       ],
       "entregable_esperado": "Una curva de descarte documentada por etapa, con metas distintas según el nivel de riesgo de cada proyecto",
@@ -31106,7 +31106,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Integridad de Datos y Responsabilidad en las Proyecciones",
-      "resumen_teorico": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. Los errores promedio en pronósticos de ventas y ganancias reales alcanzan hasta un 200%. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+      "resumen_teorico": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. Los errores promedio en pronósticos de ventas y ganancias reales rondan el 200%, y el error real es aún mayor. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
       "pasos_accionables": [
         "Definir con claridad qué información se necesita en cada gate (plantillas de entregables)",
         "Exigir a los equipos de proyecto que presenten y se responsabilicen por sus proyecciones de ventas, costos y fecha de lanzamiento",
@@ -32973,13 +32973,13 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Calidad como Conformidad con los Requisitos (La Primera Suposición Errónea)",
-      "resumen_teorico": "El primer error es asociar la calidad con lujo, brillo, peso o bondad abstracta. Conviene rechazar definiciones subjetivas como elegancia, excelencia o fitness for use, porque cada quien terminaría aplicando su propio criterio, y adoptar en cambio una definición operativa: calidad es conformidad con los requisitos establecidos; no calidad es simplemente no conformidad. Un Cadillac es de calidad si cumple los requisitos de un Cadillac, igual que un Pinto con los suyos. Esto saca la evaluación del terreno del juicio personal sobre qué es suficientemente bueno y la convierte en una comprobación objetiva de cumplimiento. Si los requisitos no son adecuados, se corrigen formalmente en el diseño, no se toleran excepciones informales en la ejecución.",
+      "resumen_teorico": "El primer error es asociar la calidad con lujo, brillo, peso o bondad abstracta. Conviene rechazar definiciones subjetivas como elegancia o excelencia, porque cada quien terminaría aplicando su propio criterio, y adoptar en cambio una definición operativa: calidad es conformidad con los requisitos establecidos; no calidad es simplemente no conformidad. Un Cadillac es de calidad si cumple los requisitos de un Cadillac, igual que un Pinto con los suyos. Esto saca la evaluación del terreno del juicio personal sobre qué es suficientemente bueno y la convierte en una comprobación objetiva de cumplimiento. Si los requisitos no son adecuados, se cambian oficialmente, no se toleran excepciones informales en la ejecución.",
       "pasos_accionables": [
         "Define de forma clara y medible los requisitos de tu producto o servicio antes de producirlo o entregarlo.",
         "Elimina de tu lenguaje términos subjetivos como alta calidad, elegancia o buena calidad al describir tu trabajo.",
         "Comunica esos requisitos con precisión a cualquiera que dependa de ti para cumplirlos.",
         "Evalúa tu trabajo solo por si cumple o no cumple el requisito, documentando cualquier desviación como no conformidad.",
-        "Si detectas que un requisito es poco realista, corrígelo formalmente en el momento de definirlo, no lo justifiques después en la entrega.",
+        "Si detectas que un requisito es poco realista, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
         "Cuando alguien mencione calidad de forma vaga, pregunta qué requisito específico está evaluando."
       ],
       "entregable_esperado": "Un documento de requisitos claros y medibles para tu producto o servicio, que usas como único criterio para decidir si algo cumple o no cumple.",
@@ -33170,14 +33170,14 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Definición Temprana y Estable del Producto (Evitar Scope Creep)",
-      "resumen_teorico": "Las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos en proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo debido a información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
+      "resumen_teorico": "Según algunos estudios, las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
       "pasos_accionables": [
         "Congelar especificaciones clave antes de iniciar la fase de desarrollo formal",
         "Documentar el alcance del proyecto (single customer, multi-customer, global) desde el inicio",
-        "Establecer un proceso de control de cambios para nuevas features o requerimientos",
+        "Sugerencia de My Idea: establecer un proceso de control de cambios para nuevas features o requerimientos",
         "Anticipar necesidades de mercado mediante investigación robusta previa, evitando 'sorpresas' tardías"
       ],
-      "entregable_esperado": "Documento de especificaciones del producto y alcance del proyecto congelado y aprobado por todas las funciones",
+      "entregable_esperado": "Documento de especificaciones del producto y alcance del proyecto aprobado por todas las funciones, congelado en lo que ya se conoce y, si tu mercado es fluido, con lo que todavía es variable marcado aparte",
       "nodos_previos": [
         "voice_of_customer_homework"
       ],
@@ -33225,7 +33225,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Definición y Selección de Gatekeepers",
-      "resumen_teorico": "Los gatekeepers son el grupo multifuncional de personas senior que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad) y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite). Los mejores innovadores definen claramente quiénes son estos gatekeepers en el 85% de los casos, asegurando que tengan autoridad real para comprometer recursos, no solo opinión.",
+      "resumen_teorico": "Los gatekeepers son el grupo multifuncional de personas que poseen los recursos necesarios para que tu proyecto avance a la siguiente etapa, y quienes toman las decisiones de Go o Kill en cada gate. Deben ser los dueños reales de esos recursos (I+D, marketing, ingeniería, operaciones, ventas, calidad), con autoridad real para comprometerlos y no solo opinión, y no responder a una sola función. Su composición puede cambiar según el gate, el nivel de riesgo y el tipo de proyecto (Full, XPress, Lite): mandos medios en los gates tempranos o de menor riesgo, y personas más senior donde el compromiso es grande. El 85% de los mejores innovadores tiene claramente definidos a sus gatekeepers.",
       "pasos_accionables": [
         "Identifica quién posee la autoridad real para comprometer los recursos de la siguiente etapa de tu proyecto.",
         "Arma un grupo multifuncional que represente todas las áreas relevantes, no solo una función.",
@@ -33413,7 +33413,7 @@
         "Especifica el concepto de tu producto, sus beneficios y qué valor le das a quien lo compra",
         "Define tu posicionamiento y el precio al que quieres llegar",
         "Separa las características en dos grupos: las imprescindibles y las deseables",
-        "Si tu mercado cambia mucho, marca en una tabla de dos columnas qué es fijo y qué todavía puede variar",
+        "Si tu mercado cambia mucho, marca en una tabla de dos columnas qué es fijo y qué todavía puede variar, y confirma lo variable con pruebas con usuarios a medida que avanza el desarrollo",
         "Antes de pasar a construir, asegúrate de que todos los que participan estén de acuerdo con esta definición"
       ],
       "entregable_esperado": "Un documento con los 5 elementos clave de tu producto, acordado por todos los que participan, que sirve de guía para construirlo",
@@ -33496,10 +33496,10 @@
         "Crea una checklist de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
         "Establece un formato estándar de documentación para cada entregable, por ejemplo un reporte de una página",
         "Fija un límite de horas para las tareas de evaluación o diseño y evita sobreingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
-        "Valida el sprint terminado con un experto o revisor externo antes de cerrarlo",
+        "Valida el sprint terminado con un colega experto o con quien es dueño del producto antes de cerrarlo",
         "Comunica los criterios de terminado antes de iniciar cada sprint"
       ],
-      "entregable_esperado": "Checklist de definición de terminado documentada, con formato estándar y validada por un revisor externo para cada tipo de sprint.",
+      "entregable_esperado": "Checklist de definición de terminado documentada, con formato estándar, para cada tipo de sprint.",
       "nodos_previos": [
         "modelo_hibrido_agile_stage_gate",
         "product_backlog_fisico"
@@ -33664,7 +33664,7 @@
         "Definir de forma rigurosa qué cuenta como 'nuevo producto' en la organización (ej: mínimo de inversión, funcionalidad visible para el cliente).",
         "Revisar los productos lanzados en los últimos 3 años y clasificarlos según los 6 tipos de la taxonomía.",
         "Construir un gráfico circular (pie chart) con la distribución de proyectos por tipo.",
-        "Comparar la distribución propia contra el promedio de la industria y decidir si es la deseada."
+        "Comparar la distribución propia contra el promedio de la industria, revisar por tipo cuántos recursos consumió, cuántas ventas y ganancias genera y qué tasa de éxito tiene, y decidir si es la deseada."
       ],
       "entregable_esperado": "Una clasificación documentada del portafolio de productos actual según los 6 tipos de novedad, con gráfico de distribución.",
       "nodos_previos": [
@@ -35153,13 +35153,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Cómo vas a competir en cada arena (plan de ataque)",
-      "resumen_teorico": "Una vez que ya elegiste en qué arenas vas a competir, tienes que decidir cómo vas a hacerlo. Existen cuatro maneras de plantarte frente al mercado, según qué tan importante es para ti innovar en producto y qué tan proactivo eres frente a la competencia: ser Innovador (llegar primero al mercado), ser Fast Follower (mejorar lo que ya existe), ser Defensor (proteger tu nicho con calidad, servicio o precio) o ser Reactor (moverte solo cuando la presión te obliga, lo cual en realidad es no tener estrategia). Además tienes que definir tu enfoque competitivo (bajo costo, diferenciación o nicho) y hasta dónde llega tu alcance geográfico (local, global o una mezcla de ambas, 'glocal').",
+      "resumen_teorico": "Una vez que ya elegiste en qué arenas vas a competir, tienes que decidir cómo vas a hacerlo. Existen cuatro maneras de plantarte frente al mercado, según qué tan importante es para ti innovar en producto y qué tan proactivo eres frente a la competencia: ser Innovador (llegar primero al mercado), ser Fast Follower (mejorar lo que ya existe), ser Defensor (proteger tu nicho con calidad, servicio o precio) o ser Reactor (moverte solo cuando la presión te obliga, lo que para algunos equivale a no tener estrategia). Además tienes que definir tu enfoque competitivo (bajo costo, diferenciación o nicho) y hasta dónde llega tu alcance geográfico (local, global o una mezcla de ambas, 'glocal').",
       "pasos_accionables": [
         "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower o Defensor; no elijas ser Reactor, que solo responde cuando lo obligan y casi no es una estrategia",
         "Define tu enfoque: ¿vas a competir por precio bajo, por diferenciarte o por dominar un nicho?",
         "Decide tu alcance geográfico: local, global o glocal",
         "Revisa tus capacidades clave y lo que realmente hace ganar en tu industria, para confirmar que tu estrategia tiene sentido",
-        "Define cómo vas a entrar: desarrollarlo tú mismo, conseguir licencias, hacer alianzas, sumar un socio o abrirte a innovación externa"
+        "Para las arenas nuevas, define cómo vas a entrar: desarrollarlo tú mismo, conseguir licencias, hacer alianzas, sumar un socio o abrirte a innovación externa"
       ],
       "entregable_esperado": "Un documento donde para cada arena dejas claro cómo vas a competir, hasta dónde llega tu alcance geográfico y cómo vas a entrar",
       "nodos_previos": [
@@ -35297,13 +35297,13 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)",
-      "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio entre 3 y 4,5 veces en fabricantes que venden a otras empresas (firmas de diseño como IDEO iteran en promedio 15 veces), y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
+      "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. En un estudio de dos fabricantes líderes que venden a otras empresas, el ciclo se repitió en promedio entre 3 y 4,5 veces (firmas de diseño como IDEO iteran en promedio 15 veces), y cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
       "pasos_accionables": [
         "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final",
         "Probar la versión con clientes reales para medir interés, preferencia e intención de compra",
         "Recoger feedback directo sobre qué debe cambiarse o corregirse",
         "Revisar el diseño, propuesta de valor y beneficios en base al feedback",
-        "Repetir el ciclo varias veces (entre 3 y 4,5 versiones en promedio en fabricantes B2B; firmas de diseño como IDEO iteran en promedio 15 veces), manteniendo contacto continuo con el cliente hasta llegar a las pruebas formales del producto o de campo",
+        "Repetir el ciclo varias veces (en un estudio de dos fabricantes B2B líderes, entre 3 y 4,5 versiones en promedio; firmas de diseño como IDEO iteran en promedio 15 veces), manteniendo contacto continuo con el cliente hasta llegar a las pruebas formales del producto o de campo",
         "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto"
       ],
       "entregable_esperado": "Una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.",
@@ -36137,11 +36137,11 @@
         "Entender: investigar el status quo, entorno y objetivos de éxito",
         "Observar: contactar usuarios en su ambiente real mediante técnicas etnográficas y empatía directa",
         "Revisar insights y definir un punto de vista claro sobre el usuario típico",
-        "Idear: generar tantas ideas como sea posible usando brainstorming",
+        "Idear: generar tantas ideas como sea posible usando brainstorming y seleccionar las más prometedoras",
         "Prototipar: crear representaciones tangibles simples y rápidas (papel, cartón, arcilla)",
         "Testear: validar el prototipo con usuarios reales y repetir el ciclo prototipo-test iterativamente"
       ],
-      "entregable_esperado": "Un concepto de producto validado y parcialmente probado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
+      "entregable_esperado": "Un concepto de producto probado y parcialmente validado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
       "nodos_previos": [
         "investigacion_etnografica_ideacion",
         "equipos_visita_cliente",
@@ -37383,7 +37383,7 @@
       "pasos_accionables": [
         "Elige una fecha única para el lanzamiento oficial",
         "Realiza actividades especiales que marquen el cambio de actitud",
-        "Explica el programa a todos el mismo día"
+        "Explica el programa a todos el mismo día; si hay personas a cargo de otras, que cada una se lo explique a su gente."
       ],
       "entregable_esperado": "Evento de lanzamiento del estándar Cero Defectos realizado en tu negocio.",
       "nodos_previos": [
@@ -37407,15 +37407,15 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Día de Cero Defectos (ZD Day) y el Compromiso (Pledge)",
-      "resumen_teorico": "Evento formal de lanzamiento del estándar Cero Defectos, pensado para ser memorable y significativo, donde tú y las personas que te ayudan en el negocio firman un compromiso de hacer el trabajo bien a la primera vez. Cero Defectos no es una herramienta de motivación superficial sino la comunicación de un estándar de desempeño permanente, basado en la idea de que la mayoría de los errores humanos vienen de falta de atención, no de falta de conocimiento.",
+      "resumen_teorico": "Evento formal de lanzamiento del estándar Cero Defectos, pensado para ser memorable y significativo, donde tú y las personas que te ayudan en el negocio firman un compromiso de hacer el trabajo bien a la primera vez. Cero Defectos no es una herramienta de motivación sino la comunicación de un estándar de desempeño permanente, basado en la idea de que la mayoría de los errores humanos vienen de falta de atención, no de falta de conocimiento.",
       "pasos_accionables": [
         "Organizar un día de sugerencias previo para recolectar ideas de mejora de las personas que trabajan contigo",
         "Preparar una carta explicativa del concepto Cero Defectos con el compromiso incluido, con la identidad de tu negocio",
         "Realizar el evento con tu participación y la de invitados relevantes para tu contexto, con actividades para todos los que forman parte del negocio",
-        "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno",
+        "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno, dejando claro que firmar es voluntario",
         "Distribuir materiales visuales (pines, botones) de forma voluntaria",
         "Iniciar al día siguiente el programa de eliminación de causas de error",
-        "Reconocer públicamente al equipo organizador y a los participantes destacados."
+        "Agradecer al equipo organizador el esfuerzo extra que dedicó al lanzamiento."
       ],
       "entregable_esperado": "Evento Cero Defectos realizado con compromisos firmados por ti y por quienes te ayudan, y transición inmediata al programa de eliminación de causas de error",
       "nodos_previos": [
@@ -43507,7 +43507,7 @@
       "titulo_concepto": "Educación en Calidad",
       "resumen_teorico": "La educación en calidad debe orientarse visiblemente al producto, servicio y cliente, aunque en realidad busca cambiar a los individuos. Toma tres formas: orientación sobre conceptos y problemas de calidad, mejora directa de habilidades específicas, y un flujo continuo de comunicación de ideas de calidad para mantenerla presente en la mente de todos.",
       "pasos_accionables": [
-        "Diseñar orientación inicial sobre conceptos, procedimientos y expectativas del cliente",
+        "Diseñar orientación inicial sobre conceptos, procedimientos, problemas que dañan el producto y expectativas del cliente",
         "Impartir capacitación técnica específica en habilidades relevantes al puesto",
         "Mantener comunicación constante y de bajo perfil sobre ideas de calidad como recordatorio permanente",
         "Reconocer que no todos estarán dispuestos a cambiar, pero mantener el enfoque en el producto/cliente"
@@ -45270,7 +45270,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Eliminación de Causas de Error (Error Cause Removal - ECR)",
-      "resumen_teorico": "ECR es la forma en que cualquier persona que te ayuda en tu negocio te avisa, sin necesidad de proponer la solución, sobre algo que le impide hacer bien su trabajo: una herramienta que no funciona, poca luz, un proceso que no tiene sentido, etc. Se activa una vez que ya tienes clara la meta de cero errores y todos la entienden, trasladando la detección de obstáculos a quien está en el día a día. Cada aviso merece una respuesta rápida y un agradecimiento personal; si decides no actuar, esa decisión debe quedar justificada y revisada por alguien de más experiencia o confianza. Bien manejado, genera participación positiva sin volverse quejas destructivas, y sirve de base para reconocer periódicamente a quienes avisan.",
+      "resumen_teorico": "ECR es la forma en que cualquier persona que te ayuda en tu negocio te avisa, sin necesidad de proponer la solución, sobre algo que le impide hacer bien su trabajo: una herramienta que no funciona, poca luz, un proceso que no tiene sentido, etc. Puede activarse después de fijar la meta de cero errores o incluso antes, siempre que todos entiendan con claridad que la mejora es necesaria, trasladando la detección de obstáculos a quien está en el día a día. Cada aviso merece una respuesta rápida y un agradecimiento personal; si decides no actuar, esa decisión debe quedar justificada y revisada por alguien de más experiencia o confianza. Bien manejado, genera participación positiva sin volverse quejas destructivas, y sirve de base para reconocer periódicamente a quienes avisan.",
       "pasos_accionables": [
         "Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos",
         "Envía un agradecimiento personal e inmediato a quien te avisa de un problema",
@@ -48095,9 +48095,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Preparar a Quienes te Ayudan Antes de Lanzar el Programa",
-      "resumen_teorico": "Antes de poner en marcha los pasos del programa, ten una conversación clara con todas las personas que te ayudan a dirigirlo, para asegurarte de que cada una entienda cada paso lo suficientemente bien como para poder explicarlo a quienes trabajan con ella. La prueba de que realmente lo entendiste es que puedas explicarlo con claridad.",
+      "resumen_teorico": "Antes de poner en marcha los pasos del programa, haz una orientación formal con todas las personas que te ayudan a dirigirlo, para asegurarte de que cada una entienda cada paso lo suficientemente bien como para poder explicarlo a quienes trabajan con ella. La prueba de que realmente lo entendiste es que puedas explicarlo con claridad.",
       "pasos_accionables": [
-        "Diseña una conversación clara y directa para explicar el programa a todas las personas que te ayudan a dirigir el negocio",
+        "Diseña una orientación formal, clara y directa, para explicar el programa a todas las personas que te ayudan a dirigir el negocio",
         "Comprueba que cada persona pueda explicar cada paso del programa con sus propias palabras",
         "Asegura que todos entiendan lo mismo antes de lanzar el programa oficialmente"
       ],
@@ -48150,7 +48150,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Entrenamiento de Supervisores (El Supervisor como Clave)",
-      "resumen_teorico": "Tu actitud y tus estándares se transmiten directamente a las personas que trabajan contigo, por eso eres la clave para lograr las metas de mejora. Antes de pedirles calidad necesitas entenderla tu mismo, con un entrenamiento estructurado por etapas, no solo con una charla general. Primero domina el sistema de medición de calidad y los costos de la no calidad, luego el programa de Cero Defectos y el método para eliminar las causas de los errores. Así podras responder con seguridad las preguntas de quienes te ayudan y evitar creer que entiendes el concepto de calidad sin dominarlo realmente en la practica antes de transmitirselo.",
+      "resumen_teorico": "Tu actitud y tus estándares se transmiten directamente a las personas que trabajan contigo, por eso eres la clave para lograr las metas de mejora. Antes de pedirles calidad necesitas entenderla tú mismo, con un entrenamiento estructurado por etapas, no solo con una charla general. Primero domina el sistema de medición de calidad y los costos de la no calidad, luego el programa de Cero Defectos y el método para eliminar las causas de los errores, y después vuelve a hacer todo el entrenamiento. Así podrás responder con seguridad las preguntas de quienes te ayudan y evitar creer que entiendes el concepto de calidad sin dominarlo realmente en la práctica antes de transmitírselo.",
       "pasos_accionables": [
         "Dedica al menos 6 horas a estudiar el sistema de medición de calidad, los costos de calidad y las acciones correctivas al iniciar la etapa de conciencia de calidad.",
         "Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día ZD.",
@@ -48697,10 +48697,10 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Equipo de Mejora de Calidad (Quality Improvement Team)",
-      "resumen_teorico": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y de seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Es clave que quien lidera tenga libertad para elegir a quienes participan y como se organiza el trabajo.",
+      "resumen_teorico": "El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y dé seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Cada integrante representa a su área, y cada área sigue siendo responsable de su propio programa. Es clave que quien lidera tenga libertad para elegir a quienes participan y cómo se organiza el trabajo.",
       "pasos_accionables": [
-        "Elige a la persona que va a liderar la mejora de calidad, idealmente alguien con visión de todo el negocio, por ejemplo quien se encarga de marketing u operaciones.",
-        "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad.",
+        "Elige a la persona que va a liderar la mejora de calidad: alguien con experiencia de dirección que entienda la necesidad de mejorar, esté de acuerdo con Cero Defectos y la prevención de defectos y cuente con tu confianza, por ejemplo quien se encarga de marketing u operaciones.",
+        "Identifica quién representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad; que sea alguien que pueda hablar por su área y comprometerla a actuar.",
         "Asigna a alguien que documente las reuniones, dé seguimiento a las acciones y mantenga el impulso del programa.",
         "Establece una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.",
         "Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas.",
@@ -48811,7 +48811,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Atributos de Equipos de Alto Desempeño Aplicados a Seguridad",
-      "resumen_teorico": "Los equipos de alto desempeño se caracterizan por construir confianza, tolerar el conflicto constructivo, participar en la toma de decisiones, compartir la rendición de cuentas entre pares (no solo hacia el líder) y enfocarse en resultados colectivos por encima de agendas individuales. Estos atributos rara vez se aplican en las organizaciones de seguridad tradicionales.",
+      "resumen_teorico": "Los equipos de alto desempeño se caracterizan por construir confianza, tolerar el conflicto constructivo, participar en la toma de decisiones, compartir la rendición de cuentas entre pares (no solo hacia el líder) y enfocarse en resultados colectivos por encima de agendas individuales. Probablemente estos atributos rara vez se aplican en las organizaciones de seguridad tradicionales.",
       "pasos_accionables": [
         "Fomentar la vulnerabilidad y honestidad sobre errores dentro del equipo",
         "Habilitar espacios de diálogo con desacuerdo constructivo",
@@ -49613,10 +49613,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Escapar de la Trampa del Proveedor Pasivo de Seguridad",
-      "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se convierte en un simple contador de datos, mientras tu castigas a quienes reportan incidentes, lo que hace que dejen de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas.",
+      "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, y que dejes de medirla con metas numéricas periódicas. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
       "pasos_accionables": [
         "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
-        "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia",
+        "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia, y en lo que hagas después de un incidente",
         "Eliminar las metas semanales, mensuales o trimestrales de seguridad basadas en cifras",
         "Mantener personal con experiencia operativa real, evitando que un solo tipo de profesional domine el equipo",
         "Capacitar al personal de seguridad para investigar incidentes, gestionarlos y presentar informes"
@@ -55756,7 +55756,7 @@
         "Evitar seleccionar solo fragmentos que apoyen una hipótesis preconcebida",
         "Analizar cada fragmento de comportamiento en su propio contexto original",
         "Examinar los episodios intermedios entre los fragmentos seleccionados",
-        "Verificar que la 'similitud' entre fragmentos no sea solo una construcción del investigador",
+        "Reconocer que la 'similitud' entre fragmentos es una construcción del investigador en retrospectiva",
         "Construir la narrativa completa en vez de una historia armada con piezas descontextualizadas"
       ],
       "entregable_esperado": "Análisis de evidencia que respeta la continuidad temporal y contextual de los eventos, sin agrupaciones artificiales",
@@ -55951,9 +55951,9 @@
       "pasos_accionables": [
         "Evitar juzgar acciones solo contra procedimientos hallados aplicables en retrospectiva",
         "Distinguir entre datos disponibles físicamente y datos observables en el contexto real",
-        "No usar 'estándares de buena práctica' identificados a posteriori como única explicación",
+        "No usar 'estándares de buena práctica' identificados a posteriori como explicación, porque no explican la conducta, solo la juzgan",
         "Preguntar por qué tuvo sentido la acción para el actor, no solo si cumplió la norma",
-        "Documentar la brecha usual entre trabajo imaginado (reglas) y trabajo real (práctica)"
+        "Documentar la brecha usual entre trabajo imaginado (reglas) y trabajo real (práctica), sabiendo que casi siempre existe sin malas consecuencias y que por sí sola no explica el incidente"
       ],
       "entregable_esperado": "Análisis que explica el comportamiento en su contexto, evitando juicios basados solo en comparación retrospectiva",
       "nodos_previos": [
@@ -56287,7 +56287,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "No Usar 'Complacencia' como Explicación de Error Humano",
-      "resumen_teorico": "La 'complacencia' es un término ampliamente usado pero mal definido para explicar la falta de atención o monitoreo de un operador. Para probar complacencia se requeriría definir primero un estándar óptimo de monitoreo, algo que rara vez se hace rigurosamente. Además, incluso con estrategias óptimas de monitoreo, en sistemas complejos siempre se pierden señales porque hay más información de la que se puede atender. Acusar de complacencia es una forma disfrazada de culpar al 'error humano' y genera argumentos circulares.",
+      "resumen_teorico": "La 'complacencia' es un término ampliamente usado pero mal definido para explicar la falta de atención o monitoreo de un operador. Para probar complacencia se requeriría definir primero un estándar óptimo de monitoreo. Además, incluso con estrategias óptimas de monitoreo, en sistemas complejos siempre se pierden señales porque hay más información de la que se puede atender. Acusar de complacencia es una forma disfrazada de culpar al 'error humano' y genera argumentos circulares.",
       "pasos_accionables": [
         "Antes de usar el término 'complacencia', definir explícitamente cuál sería el comportamiento óptimo de monitoreo",
         "Investigar qué llevó al operador a distribuir su atención de la manera en que lo hizo, considerando las señales en competencia",
@@ -56811,7 +56811,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Interacción entre Expertos Operativos y Visión Sistémica de Staff",
-      "resumen_teorico": "Ni los expertos operativos ni el personal de staff de seguridad poseen por sí solos toda la información necesaria para entender el riesgo. Los operadores conocen los detalles del trabajo diario pero pueden estar 'ciegos' a efectos secundarios peligrosos de sus propias adaptaciones. El staff puede ver la complejidad organizacional pero carece de la experiencia práctica. Se necesita una conversación constructiva entre ambos.",
+      "resumen_teorico": "Ni los expertos operativos ni el personal de staff de seguridad poseen por sí solos toda la información necesaria para entender el riesgo. Los operadores conocen los detalles del trabajo diario pero pueden estar 'ciegos' a efectos secundarios peligrosos de sus propias adaptaciones. El staff puede ver la complejidad organizacional pero puede carecer de la experiencia práctica. Probablemente se necesita una conversación constructiva entre ambos.",
       "pasos_accionables": [
         "Identificar quiénes son los expertos operativos y quiénes conforman el staff de seguridad",
         "Crear espacios de diálogo regular entre línea y staff",
@@ -61829,7 +61829,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Función Detectar: Monitoreo de Red y Actividad Anómala",
-      "resumen_teorico": "Detectar consiste en monitorear continuamente los sistemas para identificar accesos no autorizados de personal, dispositivos (como USB) y software, así como investigar cualquier actividad inusual en la red o por parte del personal, permitiendo una respuesta temprana ante incidentes.",
+      "resumen_teorico": "La función Detectar consiste en monitorear tus computadoras para identificar accesos no autorizados de personal, de dispositivos (como memorias USB) y de software, revisar tu red en busca de usuarios o conexiones no autorizados, e investigar cualquier actividad inusual en la red o por parte del personal.",
       "pasos_accionables": [
         "Configurar monitoreo de accesos no autorizados al sistema",
         "Revisar conexiones de dispositivos externos como USB",
@@ -61854,12 +61854,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Función Identificar: Inventario de Activos Digitales",
-      "resumen_teorico": "La primera función del framework consiste en elaborar una lista completa de todo el equipo, software y datos que utiliza la empresa, incluyendo laptops, smartphones, tablets y dispositivos de punto de venta. Este inventario es la base para entender la superficie de ataque y priorizar esfuerzos de protección.",
+      "resumen_teorico": "La primera función del framework, Identificar, consiste en elaborar una lista completa de todo el equipo, software y datos que utiliza la empresa, incluyendo laptops, smartphones, tablets y dispositivos de punto de venta. El framework es voluntario y te da un esquema de buenas prácticas para decidir dónde enfocar tu tiempo y tu dinero en ciberseguridad.",
       "pasos_accionables": [
         "Listar todos los dispositivos físicos (laptops, smartphones, tablets, POS)",
         "Listar todo el software utilizado en la organización",
-        "Identificar dónde se almacenan y procesan los datos sensibles",
-        "Actualizar el inventario periódicamente"
+        "Listar todos los datos que utiliza la empresa",
+        "Sugerencia de My Idea: actualiza el inventario periódicamente"
       ],
       "entregable_esperado": "Inventario documentado de equipos, software y datos de la empresa",
       "nodos_previos": [
@@ -61936,9 +61936,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Función Proteger: Política de Ciberseguridad y Controles",
-      "resumen_teorico": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones automáticas, disposición segura de dispositivos y capacitación continua del personal.",
+      "resumen_teorico": "La función Proteger implica crear y compartir una política de ciberseguridad que defina roles y responsabilidades de empleados y proveedores y los pasos para protegerte de un ataque y limitar el daño, además de establecer controles técnicos como control de acceso, uso de software de seguridad, cifrado de datos en reposo y en tránsito, respaldos regulares, actualizaciones regulares (automáticas si es posible), disposición segura de dispositivos y capacitación del personal.",
       "pasos_accionables": [
-        "Redactar una política de ciberseguridad con roles y responsabilidades claros",
+        "Redactar y compartir una política de ciberseguridad con roles y responsabilidades claros y los pasos para protegerte de un ataque y limitar el daño si ocurre",
         "Implementar control de acceso a la red y dispositivos",
         "Instalar y mantener software de seguridad actualizado",
         "Cifrar datos sensibles en reposo y en tránsito",
@@ -61972,11 +61972,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Función Recuperar: Restauración y Mejora Continua",
-      "resumen_teorico": "Recuperar implica reparar y restaurar el equipo y las partes de la red afectadas tras un ataque, actualizar la política y el plan de ciberseguridad con las lecciones aprendidas, prepararse para eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas), y mantener informados a empleados y clientes sobre las actividades de respuesta y recuperación.",
+      "resumen_teorico": "Recuperar implica, después de un ataque, reparar y restaurar el equipo y las partes de la red afectadas, y mantener informados a empleados y clientes sobre las actividades de respuesta y recuperación. Actualizar la política y el plan de ciberseguridad con las lecciones aprendidas y prepararse para eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas) forman parte de tu plan de respuesta.",
       "pasos_accionables": [
         "Reparar y restaurar equipos y redes afectadas",
         "Actualizar la política de ciberseguridad con lecciones aprendidas del incidente",
-        "Preparar planes de contingencia para eventos inadvertidos (desastres naturales, etc.)",
+        "Revisar que tu plan de respuesta prevea los eventos inadvertidos que puedan poner en riesgo los datos (como emergencias climáticas)",
         "Comunicar a empleados y clientes el estado de recuperación"
       ],
       "entregable_esperado": "Sistemas restaurados y política de ciberseguridad actualizada con lecciones aprendidas",
@@ -61995,9 +61995,9 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Función Responder: Plan de Respuesta ante Incidentes",
-      "resumen_teorico": "La función Responder establece un plan de acción para cuando ocurre un ataque, incluyendo notificación a clientes y empleados afectados, mantenimiento de operaciones del negocio, reporte a autoridades y fuerzas del orden, investigación y contención del ataque, y prueba regular del plan para asegurar su efectividad.",
+      "resumen_teorico": "La función Responder establece un plan de acción ante un ataque, incluyendo notificación a clientes, empleados y otros cuyos datos puedan estar en riesgo, mantenimiento de operaciones, reporte a las autoridades, investigación y contención del ataque, actualización de la política y el plan con lo aprendido, preparación para eventos inadvertidos, y prueba regular del plan.",
       "pasos_accionables": [
-        "Definir protocolo de notificación a clientes, empleados y terceros afectados",
+        "Definir protocolo de notificación a clientes, empleados y otros cuyos datos puedan estar en riesgo",
         "Establecer procedimientos para mantener operaciones durante un incidente",
         "Crear proceso de reporte a autoridades y fuerzas del orden",
         "Documentar pasos de investigación y contención de ataques",
@@ -90153,7 +90153,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Plan de Cumplimiento de Exportación (Compliance Plan)",
-      "resumen_teorico": "Para empresas con catálogos amplios de productos, es recomendable crear un plan de cumplimiento escrito que sistematice la clasificación ECCN, el control de países embargados, la verificación de partes denegadas y el mantenimiento de registros de todas las transacciones de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "resumen_teorico": "Para empresas con catálogos amplios de productos, es recomendable crear un plan de cumplimiento escrito que sistematice la clasificación ECCN, el control de países embargados, la verificación de partes denegadas, el registro de las transacciones y la Destination Control Statement en todas tus facturas comerciales, también las de clientes nacionales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Estudiar videos y publicaciones online de BIS sobre EAR",
         "Asistir a seminarios específicos sobre EAR y control de exportaciones",
@@ -97984,10 +97984,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Programas Estatales y Locales de Financiamiento de Exportación",
-      "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un beneficio estadounidense, no algo que exista igual en otros países. Varios estados y ciudades de EE.UU. tienen programas propios para ayudarte a exportar: préstamos de capital de trabajo antes y después de embarcar, financiamiento sobre tus cuentas por cobrar y seguros de exportación. También hay subvenciones como el programa STEP de la SBA, que puede cubrir tu participación en ferias comerciales internacionales.",
+      "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un beneficio estadounidense, no algo que exista igual en otros países. Varios estados y ciudades de EE.UU. tienen programas propios para ayudarte a exportar: préstamos de capital de trabajo antes y después de embarcar, financiamiento sobre tus cuentas por cobrar y seguros de exportación. También puede haber en tu estado subvenciones de contrapartida del programa STEP de la SBA, que pueden usarse, por ejemplo, para participar en ferias comerciales internacionales.",
       "pasos_accionables": [
         "Pregunta en la agencia de desarrollo económico de tu estado qué programas de financiamiento a la exportación tienen disponibles",
-        "Revisa si te exigen usar puertos o instalaciones del estado, o algún requisito de contenido local",
+        "Revisa los requisitos: en general, que la venta se haga con carta de crédito o con seguro de crédito, y si te exigen usar puertos o instalaciones del estado, o algún requisito de contenido local",
         "Aplica a subvenciones como STEP si necesitas financiar tu participación en una feria internacional"
       ],
       "entregable_esperado": "Tu lista de programas estatales o locales a los que puedes aplicar, y la solicitud iniciada si decides seguir adelante",
@@ -98009,11 +98009,11 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Programas de Financiamiento del Ex-Im Bank",
-      "resumen_teorico": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportación, garantías de préstamo y prestamos directos de mediano (1 a 5 anios) y largo plazo (hasta 10 anios) para reducir riesgos comerciales y políticos, especialmente en proyectos de bienes de capital como plantas de energía, telecomunicaciones y transporte. La Garantía de Capital de Trabajo cubre la etapa previa a la exportación, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (100% si tu negocio es de minorías, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantía suele salir mas económica que un préstamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
+      "resumen_teorico": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportación, garantías de préstamo y préstamos directos de mediano (1 a 5 años) y largo plazo (hasta 10 años) para reducir riesgos comerciales y políticos, especialmente en proyectos de bienes de capital como plantas de energía, telecomunicaciones y transporte. La Garantía de Capital de Trabajo cubre la etapa previa a la exportación, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (puede subir al 100% en préstamos calificados si tu negocio es de minorías, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantía suele salir más económica que un préstamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
       "pasos_accionables": [
         "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
         "Determina si te conviene más una garantía de préstamo, que suele ser más económica, o un préstamo directo de mediano o largo plazo para la venta",
-        "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
+        "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank (en general exige contenido de EE.UU. y, en algunas pólizas, asegurar todas tus ventas elegibles) o privado si ya tienes historial como exportador establecido",
         "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
         "Presenta tu inventario y tus cuentas por cobrar de exportación como garantía y negocia las tasas de anticipo con el prestamista",
         "Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes"
@@ -98623,8 +98623,8 @@
       "resumen_teorico": "Se suele pensar que hay que proteger tu idea nueva de que el negocio de siempre la aplaste. Pero es igual o más importante cuidar al negocio de siempre de los riesgos que trae tu experimento. Si otra parte de tu negocio (por ejemplo quien vende a empresas) teme que un precio más bajo al consumidor final le quite ventas, ese miedo es razonable y puede hacer que te frenen, te saboteen o te pongan trabas. Por eso necesitas reglas claras, medir algo que se pueda interpretar sin dudas, y mantener el riesgo bajo control.",
       "pasos_accionables": [
         "Piensa qué parte de tu negocio podría sentirse amenazada por lo que quieres probar",
-        "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada",
-        "Elige una métrica clara que cualquiera pueda leer de la misma manera antes de sentarte a decidir",
+        "Diseña la prueba para que su alcance y su riesgo queden bien acotados, por ejemplo probando solo con un segmento o con una marca separada, con un tiempo máximo y un tope de clientes afectados, y vigila las métricas y las reacciones de los clientes para detenerla si algo sale muy mal",
+        "Elige un reporte estándar de cinco a diez métricas accionables, el mismo para todas tus pruebas, que cualquiera pueda leer de la misma manera antes de sentarte a decidir",
         "Define de antemano quién decide con esos resultados y con qué criterio",
         "Deja claro desde el inicio que el objetivo es aprender, no lanzar algo a medias"
       ],
@@ -98652,13 +98652,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Protección Internacional de Patentes",
-      "resumen_teorico": "No existen patentes mundiales; la protección debe solicitarse país por país según su legislación nacional, aunque tratados como el PCT (administrado por WIPO) permiten presentar una única solicitud internacional con efecto en múltiples estados firmantes. Para ser patentable, una invención debe ser novedosa, tener un paso inventivo y aplicación práctica, y no estar excluida por ley (teorías científicas, métodos comerciales, etc.). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "resumen_teorico": "No existen patentes mundiales; la protección debe solicitarse país por país según su legislación nacional, aunque el PCT permite presentar una única solicitud internacional con efecto en varios estados firmantes, y cada uno decide si concede la patente. Para ser patentable, una invención debe ser novedosa, tener un paso inventivo y aplicación práctica, y no estar excluida por ley (en muchos países, teorías científicas o métodos comerciales). Solicítala antes de divulgarla; si debes mostrarla a un inversionista, usa un acuerdo de confidencialidad. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Determinar en qué países se necesita protección de patente para el producto a exportar",
         "Verificar si la invención cumple los requisitos de novedad, paso inventivo y aplicación práctica en esos mercados",
         "Evaluar la conveniencia de usar el sistema PCT para presentar una única solicitud internacional",
         "Consultar a un abogado especializado en propiedad intelectual y a las oficinas de PI de los países objetivo",
-        "Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección"
+        "Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección y, por la complejidad de los documentos, apoyarse en un abogado de patentes para una búsqueda de calidad"
       ],
       "entregable_esperado": "Estrategia de protección de patente definida, indicando países objetivo, tipo de solicitud (nacional, regional o PCT) y asesoría legal contratada",
       "nodos_previos": [
@@ -98706,7 +98706,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Protección de Propiedad Intelectual (Patente y Marca)",
-      "resumen_teorico": "La Patente otorga al titular el derecho exclusivo, dentro del país que la reconoce, de impedir a terceros usar, fabricar o vender el objeto patentado durante un periodo determinado. La Marca (Trademark) es una palabra, símbolo, nombre o combinación que identifica y distingue el origen de los bienes, funcionando como índice de calidad. Ambas deben protegerse en cada país donde se planea exportar o licenciar tecnología.",
+      "resumen_teorico": "La Patente otorga al titular el derecho exclusivo, dentro del país que la reconoce, de impedir a terceros usar, fabricar o vender el objeto patentado durante un periodo determinado. La Marca (Trademark) es una palabra, símbolo, nombre o combinación que identifica y distingue el origen de los bienes, y puede servir como índice de calidad. Ambas deben protegerse en cada país donde se planea exportar o licenciar tecnología.",
       "pasos_accionables": [
         "Registrar la patente y/o marca en el país de origen si no se ha hecho",
         "Investigar y registrar la protección de IP en cada mercado extranjero objetivo antes de exportar o licenciar",
@@ -101921,7 +101921,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Recursos de Apoyo Gubernamental para Exportadores (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank)",
-      "resumen_teorico": "En Estados Unidos existen varias agencias que apoyan a los negocios pequeños que exportan. El U.S. Commercial Service (CS) es el brazo de promoción comercial que depende de Comercio de Estados Unidos; la SBA gestiona programas de financiamiento; los SBDC ofrecen asesoría gratuita si es tu primera vez exportando; USTDA financia estudios de factibilidad en países en desarrollo si tu producto cumple todos sus criterios: enfrenta competencia subsidiada, es prioridad de desarrollo del país destino con aval de la embajada de EE.UU. y abre ventas muy superiores al costo de la ayuda; USAID y el Foreign Agricultural Service (FAS) apoyan comodities y asistencia técnica en mercados emergentes; Estado, a través de su base BIDS, ofrece leads comerciales; y las oficinas estatales de comercio internacional te dan leads y acceso a misiones comerciales. Registrarte en Federal Business Opportunities (FedBizOpps) te permite monitorear contratos de subcontratacion disponibles.",
+      "resumen_teorico": "En Estados Unidos existen varias agencias que apoyan a los negocios pequeños que exportan. El U.S. Commercial Service (CS) es el brazo de promoción comercial que depende de Comercio de Estados Unidos; la SBA gestiona programas de financiamiento; los SBDC ofrecen asesoría gratuita a los negocios pequeños que exportan, sobre todo si es tu primera vez; USTDA financia estudios de factibilidad en países en desarrollo si tu producto cumple todos sus criterios: enfrenta competencia subsidiada, es prioridad de desarrollo del país destino con aval de la embajada de EE.UU., abre ventas muy superiores al costo de la ayuda y es probable que consiga financiamiento para ejecutarse, con un proceso de compra abierto a empresas de EE.UU.; USAID y el Foreign Agricultural Service (FAS) apoyan comodities y asistencia técnica en mercados emergentes; Estado, a través de su base BIDS, ofrece leads comerciales; y las oficinas estatales de comercio internacional te dan leads y acceso a misiones comerciales. Registrarte en Federal Business Opportunities (FedBizOpps) te permite monitorear contratos de subcontratación disponibles.",
       "pasos_accionables": [
         "Contacta la oficina local del U.S. Commercial Service para asesoría inicial y estudios de mercado",
         "Consulta con un SBDC cercano si es tu primera experiencia exportadora",
@@ -102613,7 +102613,7 @@
       "resumen_teorico": "Estrategia de gestión lean que consiste en dividir el desarrollo de producto en lotes más pequeños y ciclos más cortos en lugar de grandes lanzamientos anuales tipo 'waterfall'. Esto permite obtener feedback de clientes más rápido, reducir el riesgo de 'lograr el fracaso' (ejecutar perfectamente un plan equivocado) y aumentar la cantidad de experimentos posibles. Requiere inversión en tecnología (como sistemas de virtualización) para aislar el riesgo de nuevas versiones.",
       "pasos_accionables": [
         "Dividir equipos grandes en equipos pequeños multifuncionales (idealmente no más de 5 personas)",
-        "Reemplazar la planificación anual extensa por ciclos cortos con entregas frecuentes",
+        "Reemplazar la planificación anual extensa por ciclos cortos con entregas frecuentes, cambiando el proceso y las herramientas y no solo acortando las fechas de entrega por decreto",
         "Involucrar a clientes reales desde el inicio de cada concepto de funcionalidad, no solo al final",
         "Invertir en infraestructura técnica (ej. virtualización) que permita probar versiones nuevas sin arriesgar datos críticos de clientes",
         "Medir satisfacción del cliente con métricas estables como Net Promoter Score antes y después del cambio"
@@ -106964,7 +106964,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "La reunión para decidir si cambias de rumbo o sigues igual (pivotar o perseverar)",
-      "resumen_teorico": "Decidir si cambias de rumbo es una decisión cargada de emoción, así que conviene convertirla en un hábito: programa estas reuniones con una cadencia regular, ni muy seguida ni muy espaciada, para que cuando llegue el momento tengas datos de sobra y el peso emocional pese menos. Reúne a quien construye el producto y a quien lleva el negocio, e invita si puedes a alguien externo que te dé una mirada objetiva. Lleva un reporte completo de los resultados de tus experimentos a lo largo del tiempo comparados con lo que esperabas al inicio, no solo del último periodo, y súmale lo que has escuchado en conversaciones con clientes actuales y potenciales. Antes de decidir, investiga otras líneas posibles, como nuevos segmentos o necesidades que nadie está atendiendo.",
+      "resumen_teorico": "Decidir si cambias de rumbo es una decisión cargada de emoción, así que conviene convertirla en un hábito: programa estas reuniones con una cadencia regular, ni muy seguida ni muy espaciada, para que cuando llegue el momento el peso emocional pese menos. Reúne a quien construye el producto y a quien lleva el negocio, e invita si puedes a alguien externo que te dé una mirada objetiva. Lleva un reporte completo de los resultados de tus experimentos a lo largo del tiempo comparados con lo que esperabas al inicio, no solo del último periodo, y súmale lo que has escuchado en conversaciones con clientes actuales y potenciales. Antes de decidir, investiga otras líneas posibles, como nuevos segmentos o necesidades que nadie está atendiendo.",
       "pasos_accionables": [
         "Programa tus reuniones para decidir si pivotar o perseverar con una cadencia regular (semanas o meses, según tu ritmo), sin que sean ni muy seguidas ni muy espaciadas",
         "Reúne tanto a quien trabaja en el producto como a quien lleva el negocio, e invita si puedes a alguien externo que te ayude a ver las cosas con objetividad",
@@ -108122,7 +108122,7 @@
         "Evaluar si el mercado de adoptantes tempranos se está agotando y si el costo de adquisición de clientes mainstream está aumentando",
         "Si se detecta estancamiento, reiniciar el ciclo de contabilidad de innovación como una 'segunda fundación' de la empresa",
         "Invertir en conocer a fondo al nuevo cliente mainstream (arquetipos, entrevistas, observación) antes de rediseñar el producto",
-        "Realizar una inversión mayor en calidad y diseño, probada en un sandbox de experimentación, comparando cabeza a cabeza contra el diseño anterior"
+        "Realizar una inversión mayor en calidad y diseño, probada en un sandbox de experimentación, comparando cabeza a cabeza contra el diseño anterior, sabiendo que al principio el nuevo suele rendir peor y hay que mejorarlo sin descanso hasta que lo supere"
       ],
       "entregable_esperado": "Un diagnóstico honesto de si el crecimiento actual es sostenible, y si no, un plan de rediseño de producto orientado al cliente mainstream, validado experimentalmente",
       "nodos_previos": [
@@ -108324,11 +108324,11 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Los miedos que te frenan al construir tu primera versión de prueba (MVP): legales, competencia, marca y ánimo",
-      "resumen_teorico": "Identifica los miedos que te frenan a lanzar tu primera versión de prueba (MVP): el riesgo legal por patentes, el miedo a que te copien la idea, el riesgo de dañar tu marca, y el golpe de ánimo que significa recibir malas noticias. Estos riesgos suelen pesar más en tu cabeza que en la realidad, frente a lo que ganas al aprender rápido, y hay salidas concretas: lanzar bajo otra marca o entender que la ejecución importa más que el secreto.",
+      "resumen_teorico": "Identifica los miedos que te frenan a lanzar tu primera versión de prueba (MVP): el riesgo legal por patentes, el miedo a que te copien la idea, el riesgo de dañar tu marca, y el golpe de ánimo que significa recibir malas noticias. Algunos de estos riesgos son reales y otros imaginarios; conviene entenderlos de antemano y pesarlos frente a lo que ganas al aprender rápido, y hay salidas concretas: lanzar bajo otra marca o entender que la ejecución importa más que el secreto.",
       "pasos_accionables": [
-        "Pregunta con un abogado si tu MVP compromete la protección de tus patentes; esto depende de las reglas de tu país.",
+        "Pregunta con un abogado si tu MVP compromete la protección de tus patentes; esto depende de las reglas de tu país y también de las de otros países si buscas protección internacional. Sopesa este riesgo con más cuidado si tu ventaja es un avance científico.",
         "Si temes que te copien la idea, recuerda que tu verdadera ventaja no es el secreto, sino ejecutar rápido y aprender antes que los demás.",
-        "Si te preocupa tu marca, lanza el MVP con un nombre distinto al que ya usas, separado de tu negocio conocido.",
+        "Si te preocupa tu marca, lanza el MVP con un nombre distinto al que ya usas, separado de tu negocio conocido, y experimenta sin hacer ruido: deja el lanzamiento público para cuando el producto se haya probado con clientes reales.",
         "Comprométete de antemano, antes de ver resultados, a iterar en lugar de abandonar el proyecto si el MVP te trae malas noticias.",
         "Prepárate tú, y a quienes trabajan contigo, para recibir resultados negativos como parte normal del aprendizaje."
       ],
@@ -109168,13 +109168,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Descomponer la Visión en Experimentos Pequeños",
-      "resumen_teorico": "Ilustrado con el caso de Caroline Barlerin en HP: en lugar de dedicar meses a planificación estratégica tradicional, la visión grande de un proyecto (incluso corporativo) debe descomponerse en sus partes componentes —hipótesis de valor e hipótesis de crecimiento— y probarse con experimentos pequeños y rápidos (semanas, no meses), identificando primero a los 'early adopters' más propensos a sentir la necesidad del producto/servicio.",
+      "resumen_teorico": "Ilustrado con el caso de Caroline Barlerin en HP: en lugar de esperar los meses que toma la planificación estratégica tradicional (los experimentos pueden correr en paralelo con ella), la visión grande de un proyecto (incluso corporativo) debe descomponerse en sus partes componentes, hipótesis de valor e hipótesis de crecimiento, y probarse con experimentos pequeños y rápidos (semanas, no meses), identificando primero a los 'early adopters' más propensos a sentir la necesidad del producto/servicio.",
       "pasos_accionables": [
         "Listar todos los supuestos implícitos en el plan de negocio o iniciativa",
         "Seleccionar un pequeño grupo de early adopters con la mayor necesidad percibida",
         "Diseñar un experimento (ej. concierge MVP) para ese grupo reducido",
         "Medir comportamiento real: retención, repetición, recomendación a otros",
-        "Si los resultados son negativos, usarlos para pivotar la estrategia en lugar de abandonar el proyecto"
+        "Si los resultados son negativos, no abandonar el proyecto: pedir de inmediato retroalimentación cualitativa a los participantes del experimento para mejorar el programa, y pivotar la estrategia si un supuesto clave resulta falso"
       ],
       "entregable_esperado": "Lista de supuestos críticos priorizados y plan de experimento inicial con grupo piloto definido",
       "nodos_previos": [
@@ -111636,7 +111636,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Selección de Dirección Web (Dominio) para Mercados Internacionales",
-      "resumen_teorico": "La elección del dominio web (URL) es clave para la presencia internacional: debe ser corto, simple y memorable. Se puede optar por dominios de código de país (ccTLD) localizados o por nombres de dominio internacionalizados (IDN) en el alfabeto o script del mercado objetivo, lo cual mejora reconocimiento de marca y posicionamiento en buscadores locales.",
+      "resumen_teorico": "La elección del dominio web (URL) es clave para la presencia internacional: debe ser corto, simple, descriptivo y memorable para los clientes del mercado objetivo. Se puede optar por dominios de código de país (ccTLD) localizados o por nombres de dominio internacionalizados (IDN) en el alfabeto o script del mercado objetivo, lo cual puede mejorar el reconocimiento de marca y el posicionamiento en buscadores locales.",
       "pasos_accionables": [
         "Investigar las reglas de registro de dominio del país objetivo (ccTLD)",
         "Evaluar la conveniencia de un dominio internacionalizado (IDN) en el idioma/alfabeto del mercado",
@@ -111924,7 +111924,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Selección del Método de Transporte Internacional",
-      "resumen_teorico": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo suele ser más caro, puede compensarse con menores costos de transporte doméstico y entregas más rápidas, dándote ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, reservar espacio con anticipación mediante un booking contract es clave. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
+      "resumen_teorico": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo puede ser más caro, su costo puede compensarse con menores costos de transporte doméstico y entregas más rápidas, dándote ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, puedes reservar espacio con anticipación mediante un booking contract. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
       "pasos_accionables": [
         "Consulta con un freight forwarder internacional para determinar el mejor método de envío.",
         "Compara costos y tiempos de entrega entre transporte aéreo, marítimo y multimodal.",
@@ -111933,7 +111933,7 @@
         "Agrega las marcas de exportación requeridas a tu documentación de embarque.",
         "Confirma las instrucciones de notificación al freight forwarder por parte del transportista terrestre."
       ],
-      "entregable_esperado": "Método de transporte internacional seleccionado, con booking contract confirmado y documentación de embarque preparada con marcas de exportación.",
+      "entregable_esperado": "Método de transporte internacional seleccionado, con booking contract confirmado si tu carga es voluminosa, y documentación de embarque preparada con marcas de exportación.",
       "nodos_previos": [
         "documentacion_exportacion",
         "incoterms_reglas_comerciales_internacionales"
@@ -112179,7 +112179,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Checklist para Seleccionar un Representante o Distribuidor Extranjero",
-      "resumen_teorico": "Tú debes adaptar una lista de verificación a tus necesidades para evaluar representantes o distribuidores potenciales. Los factores clave incluyen: tamaño de la fuerza de ventas, historial de ventas, análisis territorial, mezcla de productos manejados, instalaciones y equipo, políticas de marketing, perfil de clientes, principales representados y enfoque promocional. Esta evaluación exhaustiva reduce el riesgo de elegir un socio inadecuado.",
+      "resumen_teorico": "Tú debes adaptar una lista de verificación a tus necesidades para evaluar representantes o distribuidores potenciales. Los factores clave incluyen: tamaño de la fuerza de ventas, historial de ventas, análisis territorial, mezcla de productos manejados, instalaciones y equipo, políticas de marketing, perfil de clientes, principales representados y enfoque promocional.",
       "pasos_accionables": [
         "Evaluar el tamaño y capacidad de expansión de la fuerza de ventas del candidato",
         "Revisar el historial de ventas de los últimos 5 años",
@@ -112850,14 +112850,14 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Estrategia de Servicio Postventa para Mercados de Exportación",
-      "resumen_teorico": "El servicio postventa (entrega puntual, personal cortés, manuales adaptados, acceso a mantenimiento y reparación) es un factor crítico junto con calidad y precio para el éxito de la exportación. Ignorar el servicio puede causar el fracaso del esfuerzo exportador, mientras que gestionarlo bien es una base para el crecimiento. Su importancia varía según el tipo de producto: bienes de consumo duraderos y bienes industriales requieren servicio postventa robusto.",
+      "resumen_teorico": "El servicio postventa (entrega puntual, personal cortés, manuales adaptados, acceso a mantenimiento y reparación) es un factor crítico junto con calidad y precio para el éxito de la exportación. Ignorar el servicio puede causar el fracaso del esfuerzo exportador, mientras que gestionarlo bien puede ser una base para el crecimiento. Su importancia varía según el tipo, la calidad y el precio del producto y el canal de distribución: bienes de consumo duraderos, algunos consumibles y bienes industriales requieren servicio postventa robusto.",
       "pasos_accionables": [
         "Determinar el nivel de servicio postventa requerido según el tipo de producto",
         "Investigar a los competidores locales y sus niveles de servicio",
         "Definir el modelo de entrega de servicio: retorno del producto a EE.UU., uso de socio local, filial propia, o distribuidor",
         "Negociar explícitamente cláusulas de reparación, mantenimiento y garantía en acuerdos con socios/distribuidores",
         "Evaluar la capacidad de servicio de distribuidores potenciales (instalaciones, personal capacitado, experiencia)",
-        "Establecer planes de contingencia para devoluciones de mercancía en transacciones de cuenta abierta"
+        "Establecer planes de contingencia para devoluciones de mercancía en transacciones de cuenta abierta o de cobranza documentaria"
       ],
       "entregable_esperado": "Un plan de servicio postventa documentado, incluyendo el modelo de entrega de servicio elegido y cláusulas contractuales con distribuidores/representantes.",
       "nodos_previos": [
@@ -120030,7 +120030,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Transitarios y Empresas de Transporte (Freight Forwarders)",
-      "resumen_teorico": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y gestionar el despacho aduanero en el puerto de llegada. Son especialmente útiles para exportadores primerizos o al entrar a un nuevo país. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "resumen_teorico": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y gestionar el despacho aduanero en el puerto de llegada. No es obligatorio tener uno, pero son especialmente útiles para exportadores primerizos o al entrar a un nuevo país. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Seleccionar un freight forwarder con experiencia en el mercado destino",
         "Solicitar cotización de transporte y documentación requerida",
@@ -121529,7 +121529,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "exportacion",
       "titulo_concepto": "Uso de Intermediarios de Exportación (EMC, ETC, Agentes)",
-      "resumen_teorico": "Las empresas pequeñas y medianas pueden apoyarse en intermediarios especializados —Export Management Companies (EMC), Export Trading Companies (ETC), casas de confirmación (confirming houses), agentes de exportación o remarketers— para acceder a mercados extranjeros sin asumir toda la complejidad y riesgo de la exportación directa. Cada tipo de intermediario ofrece distintas ventajas: acceso inmediato a redes de distribución, manejo de pagos, especialización por producto o mercado, pero también implica pérdida parcial de control sobre la marca y la relación con el cliente final.",
+      "resumen_teorico": "Las empresas pequeñas y medianas pueden apoyarse en intermediarios especializados, como Export Management Companies (EMC), Export Trading Companies (ETC), casas de confirmación (confirming houses), agentes de exportación o remarketers, para acceder a mercados extranjeros sin asumir toda la complejidad y riesgo de la exportación directa. Cada tipo de intermediario ofrece distintas ventajas: acceso inmediato a redes de distribución, manejo de pagos, especialización por producto o mercado, pero también puede implicar pérdida parcial de control sobre la marca y la relación con el cliente final.",
       "pasos_accionables": [
         "Identificar el tipo de intermediario más adecuado según producto y mercado (EMC, ETC, agente, confirming house), y especializado en la industria o región objetivo",
         "Solicitar referencias comerciales y bancarias del intermediario",

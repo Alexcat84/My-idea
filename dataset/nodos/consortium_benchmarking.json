@@ -4,11 +4,11 @@
   "dominio": "quality",
   "titulo_concepto": "Benchmarking de Consorcio",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+  "resumen_teorico": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
   "pasos_accionables": [
     "Identificar organizaciones interesadas en formar un consorcio de benchmarking sobre un tema común.",
     "Acordar colectivamente el alcance, métricas, definiciones y cronograma del estudio.",
-    "Designar un facilitador (interno o externo) para coordinar el proceso.",
+    "Apoyarse, como suele hacerse aunque no siempre, en un facilitador externo para coordinar el proceso.",
     "Establecer criterios de validación de datos compartidos por todos los participantes.",
     "Ejecutar el estudio y compartir hallazgos y mejores prácticas entre los miembros."
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Compara Prácticas con Otras Empresas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-155-consortium_benchmarking-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+      "texto_nuevo": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17189",
+        "frase": "the outcomes from the process are normally reliable data, thorough analysis, and valuable results"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los resultados son normalmente datos confiables; el nodo lo afirma sin reserva.; Mismo endurecimiento del 'normally'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-155-consortium_benchmarking-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Designar un facilitador (interno o externo) para coordinar el proceso.",
+      "texto_nuevo": "Apoyarse, como suele hacerse aunque no siempre, en un facilitador externo para coordinar el proceso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17189",
+        "frase": "usually (but not always) supported by a third-party facilitator"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla de un facilitador externo que suele apoyar, aunque no siempre; el interno y la designación obligada son añadidos.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }
