@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguridad en Escaleras Fijas (Stairways)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Si en tu negocio hay escaleras fijas con cuatro o más escalones, necesitas barandillas y pasamanos que cumplan con la altura, el ancho, la resistencia de carga y el espacio libre adecuados según la normativa de tu mercado. Además, cada escalón debe ser antideslizante y mantener la misma altura y profundidad de un descanso a otro, y la inclinación de la escalera y el tamaño de los descansos deben respetar las medidas que fija esa normativa, sin que una puerta que abra sobre un descanso reduzca su profundidad útil.",
+  "resumen_teorico": "Si en tu negocio hay escaleras fijas con cuatro o más escalones, necesitas barandillas y pasamanos que cumplan con la altura, el ancho, la resistencia de carga y el espacio libre adecuados según la normativa de tu mercado. Además, cada escalón debe ser antideslizante y mantener la misma altura y profundidad de un descanso a otro, y la inclinación de la escalera y el tamaño de los descansos deben respetar las medidas que fija esa normativa, sin que una puerta que abra sobre un descanso reduzca su profundidad útil por debajo del mínimo que fija esa normativa.",
   "pasos_accionables": [
     "Verificar que las escaleras con 4 o más escalones tengan barandillas y pasamanos instalados",
     "Confirmar el ancho mínimo exigido consultando la normativa vigente en tu mercado",
@@ -115,6 +115,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye que el giro de puertas sobre un descanso no reduzca su profundidad útil bajo el mínimo; el nodo lo omite.; Mismo elemento de la lista que se cae: las puertas que abren sobre un descanso. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-052-escaleras_fijas_seguridad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si en tu negocio hay escaleras fijas con cuatro o más escalones, necesitas barandillas y pasamanos que cumplan con la altura, el ancho, la resistencia de carga y el espacio libre adecuados según la normativa de tu mercado. Además, cada escalón debe ser antideslizante y mantener la misma altura y profundidad de un descanso a otro, y la inclinación de la escalera y el tamaño de los descansos deben respetar las medidas que fija esa normativa, sin que una puerta que abra sobre un descanso reduzca su profundidad útil.",
+      "texto_nuevo": "Si en tu negocio hay escaleras fijas con cuatro o más escalones, necesitas barandillas y pasamanos que cumplan con la altura, el ancho, la resistencia de carga y el espacio libre adecuados según la normativa de tu mercado. Además, cada escalón debe ser antideslizante y mantener la misma altura y profundidad de un descanso a otro, y la inclinación de la escalera y el tamaño de los descansos deben respetar las medidas que fija esa normativa, sin que una puerta que abra sobre un descanso reduzca su profundidad útil por debajo del mínimo que fija esa normativa.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1549",
+        "frase": "does not reduce the effective usable depth of the platform to: less than 20 inches"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo impide que la puerta reduzca la profundidad útil por debajo de un mínimo; el resumen prohíbe toda reducción.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

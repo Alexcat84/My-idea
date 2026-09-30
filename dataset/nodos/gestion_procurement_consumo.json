@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Cuánto y qué compras en tu negocio (procurement)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
+  "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades, o expectativas imprecisas que debes reajustar.",
   "pasos_accionables": [
     "Clasifica lo que compras en materiales estratégicos y compras indirectas (MRO)",
     "Define cuánto esperas consumir de cada producto en cada lugar donde operas",
@@ -97,6 +97,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye entender a quién le compras y a qué precios.; Mismo defecto: se cae a quién y a qué precio, y el desglose por unidad operativa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-051-gestion_procurement_consumo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
+      "texto_nuevo": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades, o expectativas imprecisas que debes reajustar.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "997-999",
+        "frase": "it reflects inaccurate expectations that need to be reset"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que una desviación, por encima o por debajo, también puede reflejar expectativas imprecisas que hay que reajustar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

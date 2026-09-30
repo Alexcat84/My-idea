@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Acuerdo de Co-Venta y Acuerdo de Votación (Co-Sale & Voting Agreement)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El acuerdo de co-venta impide que vendas tus acciones sin darle a quien invirtió en tu negocio la oportunidad de vender también, de forma proporcional. El acuerdo de votación obliga a todos los que tienen acciones a votar de manera consistente cuando se elige el consejo y a favor de los cambios de control que aprueben el consejo, los preferentes requeridos y la mayoría de las comunes de empleados, y establece que si te vas del negocio, debes votar en proporción a los demás accionistas.",
+  "resumen_teorico": "El acuerdo de co-venta, salvo ciertas excepciones razonables y solo mientras la empresa no salga a bolsa, impide que vendas tus acciones sin darle a quien invirtió en tu negocio la oportunidad de vender también, de forma proporcional. El acuerdo de votación obliga a todos los que tienen acciones a votar de manera consistente cuando se elige el consejo y a favor de los cambios de control que aprueben el consejo, los preferentes requeridos y la mayoría de las comunes de empleados, y establece que si te vas del negocio, debes votar en proporción a los demás accionistas.",
   "pasos_accionables": [
     "Redacta el acuerdo de co-venta con excepciones razonables",
     "Establece los compromisos de voto para elegir el consejo",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El voto a favor del cambio de control está condicionado a la aprobación del consejo, los preferentes requeridos y la mayoría de las comunes en manos de empleados.; Mismo defecto: el 'ya aprobadas' omite por quién deben estar aprobadas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-053-acuerdo_de_co_venta_y_votacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El acuerdo de co-venta impide que vendas tus acciones sin darle a quien invirtió en tu negocio la oportunidad de vender también, de forma proporcional. El acuerdo de votación obliga a todos los que tienen acciones a votar de manera consistente cuando se elige el consejo y a favor de los cambios de control que aprueben el consejo, los preferentes requeridos y la mayoría de las comunes de empleados, y establece que si te vas del negocio, debes votar en proporción a los demás accionistas.",
+      "texto_nuevo": "El acuerdo de co-venta, salvo ciertas excepciones razonables y solo mientras la empresa no salga a bolsa, impide que vendas tus acciones sin darle a quien invirtió en tu negocio la oportunidad de vender también, de forma proporcional. El acuerdo de votación obliga a todos los que tienen acciones a votar de manera consistente cuando se elige el consejo y a favor de los cambios de control que aprueben el consejo, los preferentes requeridos y la mayoría de las comunes de empleados, y establece que si te vas del negocio, debes votar en proporción a los demás accionistas.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1965-1973",
+        "frase": "This right of co-sale shall not apply to and shall terminate upon a Qualified IPO."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se caen dos límites del libro: la co-venta lleva excepciones razonables y termina con la salida a bolsa.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

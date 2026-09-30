@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguridad en Escaleras Portátiles",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Las escaleras portátiles deben mantenerse en buen estado, sin defectos estructurales, y usarse siguiendo prácticas seguras: mantener tres puntos de contacto, no cargar objetos que afecten el equilibrio, no colocar escaleras sobre bases inestables, asegurar la base en superficies inestables, y extender la escalera al menos 3 pies sobre la superficie elevada de acceso.",
+  "resumen_teorico": "Las escaleras portátiles deben mantenerse en buen estado, sin defectos estructurales, y usarse siguiendo prácticas seguras: mantener tres puntos de contacto, no cargar objetos que afecten el equilibrio, no colocar escaleras sobre bases inestables, asegurar la base en superficies inestables, inclinadas o desiguales, y extender la escalera al menos 3 pies sobre la superficie elevada de acceso.",
   "pasos_accionables": [
     "Inspeccionar regularmente todas las escaleras portátiles por daños",
     "Etiquetar y retirar de servicio escaleras defectuosas con tarjeta 'Peligro: No Usar'",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Usa Bien tus Escaleras Portátiles",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-052-escaleras_portatiles_seguridad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las escaleras portátiles deben mantenerse en buen estado, sin defectos estructurales, y usarse siguiendo prácticas seguras: mantener tres puntos de contacto, no cargar objetos que afecten el equilibrio, no colocar escaleras sobre bases inestables, asegurar la base en superficies inestables, y extender la escalera al menos 3 pies sobre la superficie elevada de acceso.",
+      "texto_nuevo": "Las escaleras portátiles deben mantenerse en buen estado, sin defectos estructurales, y usarse siguiendo prácticas seguras: mantener tres puntos de contacto, no cargar objetos que afecten el equilibrio, no colocar escaleras sobre bases inestables, asegurar la base en superficies inestables, inclinadas o desiguales, y extender la escalera al menos 3 pies sobre la superficie elevada de acceso.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1513",
+        "frase": "when used on unstable, slanted, or uneven surfaces"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide asegurar la base en superficies inestables, inclinadas o desiguales; el resumen solo deja las inestables.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

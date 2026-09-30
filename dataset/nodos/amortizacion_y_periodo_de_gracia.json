@@ -6,7 +6,7 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Los términos de amortización son más críticos que el precio para alinear la deuda con la estrategia de capital de la empresa. El 'draw period' es el tiempo durante el cual se pueden solicitar desembolsos; el 'interest-only (I/O) period' es el tiempo en que solo se pagan intereses sin amortizar principal, impactando directamente el cash burn y el runway. Negociar estos periodos (típicamente 6-12 meses) es esencial para maximizar el tiempo antes de que el pago de principal comience.",
   "pasos_accionables": [
-    "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+    "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
     "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
     "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
     "Calcular el impacto de la amortización lineal (straight-line) sobre el flujo de caja mensual proyectado."
@@ -76,6 +76,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae la advertencia de complejidad e incertidumbre y del golpe a la caja si no se cumple el hito.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-053-amortizacion_y_periodo_de_gracia-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+      "texto_nuevo": "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2885",
+        "frase": "after the loan closing, but prior to the need to raise additional equity"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta la condición de que sea antes de la siguiente ronda de capital.; Se cae el límite del libro: el desembolso diferido va antes de necesitar levantar más capital.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

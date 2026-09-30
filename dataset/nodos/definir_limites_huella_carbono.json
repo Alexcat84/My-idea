@@ -4,9 +4,9 @@
   "dominio": "environmental",
   "titulo_concepto": "Definir Límites de la Huella de Carbono",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Antes de medir tus emisiones de carbono, tienes que trazar límites claros. Primero, el límite organizacional: decide qué sucursales, subsidiarias o franquicias vas a incluir en el análisis. Segundo, el límite operacional: decide qué emisiones vas a contar, según lo que el protocolo de gases de efecto invernadero (GHG Protocol) llama alcance 1, 2 y 3. El alcance 3, que son las emisiones indirectas de toda tu cadena de valor, puede pesar mucho; casos como Salt Spring Coffee (33%) y DHL Nordic (94%) lo muestran. Por último, define el límite temporal: elige un año base contra el cual vas a comparar tus resultados futuros.",
+  "resumen_teorico": "Antes de medir tus emisiones de carbono, tienes que trazar límites claros. Primero, el límite organizacional: decide qué sucursales, subsidiarias, sociedades o franquicias vas a incluir en el análisis. Segundo, el límite operacional: decide qué emisiones vas a contar, según lo que el protocolo de gases de efecto invernadero (GHG Protocol) llama alcance 1, 2 y 3; para seguir el protocolo tienes que incluir todo el alcance 1 y 2. El alcance 3, que son las emisiones indirectas de toda tu cadena de valor, puede pesar mucho; casos como Salt Spring Coffee (33%) y DHL Nordic (94%) lo muestran. Por último, define el límite temporal: elige un año base contra el cual vas a comparar tus resultados futuros.",
   "pasos_accionables": [
-    "Decide qué unidades de negocio, subsidiarias y franquicias vas a incluir en tu análisis",
+    "Decide qué unidades de negocio, subsidiarias, sociedades y franquicias vas a incluir en tu análisis",
     "Incluye todo tu alcance 1 y 2, que el protocolo exige, y decide si también vas a medir alcance 3; si es tu primera huella, concéntrate primero en 1 y 2",
     "Elige un período de tiempo, un año fiscal o calendario, como tu línea base",
     "Documenta todas tus decisiones de límites para poder revisarlas o auditarlas después"
@@ -73,6 +73,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde que el protocolo exige incluir todo el alcance 1 y 2 y que en la primera huella conviene centrarse en esos dos.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-052-definir_limites_huella_carbono-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de medir tus emisiones de carbono, tienes que trazar límites claros. Primero, el límite organizacional: decide qué sucursales, subsidiarias o franquicias vas a incluir en el análisis. Segundo, el límite operacional: decide qué emisiones vas a contar, según lo que el protocolo de gases de efecto invernadero (GHG Protocol) llama alcance 1, 2 y 3. El alcance 3, que son las emisiones indirectas de toda tu cadena de valor, puede pesar mucho; casos como Salt Spring Coffee (33%) y DHL Nordic (94%) lo muestran. Por último, define el límite temporal: elige un año base contra el cual vas a comparar tus resultados futuros.",
+      "texto_nuevo": "Antes de medir tus emisiones de carbono, tienes que trazar límites claros. Primero, el límite organizacional: decide qué sucursales, subsidiarias, sociedades o franquicias vas a incluir en el análisis. Segundo, el límite operacional: decide qué emisiones vas a contar, según lo que el protocolo de gases de efecto invernadero (GHG Protocol) llama alcance 1, 2 y 3; para seguir el protocolo tienes que incluir todo el alcance 1 y 2. El alcance 3, que son las emisiones indirectas de toda tu cadena de valor, puede pesar mucho; casos como Salt Spring Coffee (33%) y DHL Nordic (94%) lo muestran. Por último, define el límite temporal: elige un año base contra el cual vas a comparar tus resultados futuros.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1677",
+        "frase": "you will need to include all scope 1 and 2 emissions"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera sucursales, subsidiarias, sociedades y franquicias; se caen las sociedades.; El libro exige incluir todo el alcance 1 y 2 para seguir el protocolo; el resumen deja los tres alcances como elección libre.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-052-definir_limites_huella_carbono-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide qué unidades de negocio, subsidiarias y franquicias vas a incluir en tu análisis",
+      "texto_nuevo": "Decide qué unidades de negocio, subsidiarias, sociedades y franquicias vas a incluir en tu análisis",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1677",
+        "frase": "will you include all branches, subsidiaries, partnerships, and franchises?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye también las sociedades en el límite organizacional.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }
