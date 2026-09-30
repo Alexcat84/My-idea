@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Mapear el servicio antes, durante y después de la entrega",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la confirmación y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+  "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
   "pasos_accionables": [
     "Escribe qué pasa antes de que el cliente compre: cómo pide, qué le respondes, qué política ve.",
-    "Escribe qué pasa durante el envío: plazo, confirmación, disponibilidad del producto, pedido completo, estado en que llega y seguimiento del pedido.",
+    "Escribe qué pasa durante el envío: plazo, preparación del pedido, disponibilidad del producto, opciones de entrega, tiempo y confiabilidad de la entrega, pedido completo, estado en que llega y seguimiento del pedido.",
     "Escribe qué pasa después de entregar: devoluciones, garantía, manejo de reclamos.",
     "Marca en cuáles de los tres momentos no tienes un proceso claro y resuelve ese primero."
   ],
@@ -145,6 +145,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro para el envío incluye disponibilidad, pedido completo y estado de la mercancía.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-026-mapear_servicio_antes_durante_despues-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe qué pasa durante el envío: plazo, confirmación, disponibilidad del producto, pedido completo, estado en que llega y seguimiento del pedido.",
+      "texto_nuevo": "Escribe qué pasa durante el envío: plazo, preparación del pedido, disponibilidad del producto, opciones de entrega, tiempo y confiabilidad de la entrega, pedido completo, estado en que llega y seguimiento del pedido.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "2487",
+        "frase": "order preparation, inventory availability, delivery alternatives, delivery time, delivery reliability"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro para este momento incluye preparación del pedido, opciones, tiempo y confiabilidad de la entrega, que el paso omite.; Mismo defecto; además la confirmación no figura en la lista del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-026-mapear_servicio_antes_durante_despues-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la confirmación y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+      "texto_nuevo": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "2487",
+        "frase": "delivery reliability, delivery of complete order, condition of goods and order status information"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El momento del envío pierde disponibilidad, confiabilidad, pedido completo y estado de llegada, que el libro pone en esa lista; la confirmación no figura en ella.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,9 +4,9 @@
   "dominio": "entrega",
   "titulo_concepto": "Proteger frágiles con el método caja dentro de caja",
   "fuente": "DHL Express, Guia de empaque",
-  "resumen_teorico": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+  "resumen_teorico": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que suele estar pensado para un solo envío.",
   "pasos_accionables": [
-    "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, sin espacios vacíos.",
+    "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, con al menos 6 centímetros de separación de las paredes y esquinas, sin espacios vacíos.",
     "Elige una caja externa al menos 14 centímetros más grande en cada dimensión que la interna, de preferencia de doble pared (o simple si aguanta el peso del contenido).",
     "Pon unos 6 centímetros de relleno en el fondo de la caja externa antes de meter la caja interna.",
     "Centra la caja interna dentro de la externa y rellena todos los espacios vacíos alrededor.",
@@ -109,6 +109,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro indica unos 6 cm de relleno en la base; el paso deja caer la cantidad.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-026-proteger_fragiles_caja_dentro_de_caja-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+      "texto_nuevo": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que suele estar pensado para un solo envío.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "371",
+        "frase": "usually designed to ship the product once, not multiple times"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el empaque original usualmente se diseña para un solo envío.; Mismo defecto: el 'usually' del libro se vuelve absoluto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-026-proteger_fragiles_caja_dentro_de_caja-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, sin espacios vacíos.",
+      "texto_nuevo": "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, con al menos 6 centímetros de separación de las paredes y esquinas, sin espacios vacíos.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "327-329",
+        "frase": "at least 6cm of separation from any of the external walls and corners"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El método básico que el libro pide para la caja interna exige al menos 6 cm de separación de paredes y esquinas.; Mismo defecto: se cae la separación mínima de 6 cm.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

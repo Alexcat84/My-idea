@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Certificación Cradle to Cradle",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+  "resumen_teorico": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar superior al 50% usada en el ensamblaje y en todo el proceso de producción), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
   "pasos_accionables": [
     "Identificar todos los materiales del producto hasta el nivel de 100 ppm",
     "Definir un plan de reutilización de materiales en productos de igual o mayor valor, con tasas objetivo (50%, 65%, 80%+)",
@@ -86,6 +86,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro evalúa también si los materiales se reutilizan en un producto de igual o mayor valor.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-027-certificacion_cradle_to_cradle-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+      "texto_nuevo": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar superior al 50% usada en el ensamblaje y en todo el proceso de producción), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3756",
+        "frase": "the percentage of solar energy greater than 50 percent used for product assembly"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El criterio de energía del libro fija un umbral de solar superior al 50% en el ensamblaje y en toda la producción; el resumen lo pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

@@ -4,11 +4,11 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir resistencia de caja según peso del contenido",
   "fuente": "DHL Express, Guia de empaque",
-  "resumen_teorico": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
+  "resumen_teorico": "No toda caja de cartón aguanta lo mismo: la resistencia depende de si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
   "pasos_accionables": [
     "Pesa el contenido completo, incluyendo el relleno que vas a usar.",
     "Busca el sello del fabricante en la caja: te dice su resistencia y tipo de pared.",
-    "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble.",
+    "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble; por encima de 25 kg, usa un método de empaque especializado.",
     "Pregunta a tu proveedor de cajas cuál es el límite de peso exacto para cada tipo que vende.",
     "Evita reutilizar cajas viejas, aunque el peso a enviar sea bajo, porque pueden haber perdido parte de su rigidez."
   ],
@@ -81,6 +81,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el corte del libro (pared simple hasta 10 kg) y que lo frágil pide doble o triple pared.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-026-elegir_resistencia_caja_peso-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
+      "texto_nuevo": "No toda caja de cartón aguanta lo mismo: la resistencia depende de si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "95-97",
+        "frase": "manufacturer stamp which tells you information about the construction type and strength"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro liga la resistencia al tipo de construcción y a las pruebas de reventado y aplastamiento; el grosor no aparece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-026-elegir_resistencia_caja_peso-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble.",
+      "texto_nuevo": "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble; por encima de 25 kg, usa un método de empaque especializado.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "117-131",
+        "frase": ">25kg Specialist Packing Method"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La tabla del libro limita la pared doble a 25 kg y pide un método especializado por encima.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

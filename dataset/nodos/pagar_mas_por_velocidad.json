@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Pagar más por velocidad cuando conviene",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "El transporte mas barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, es mayor que la diferencia de precio entre un envio rápido y uno lento, conviene pagar mas por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperara mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuanto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder mas dinero del que ahorras en el flete.",
+  "resumen_teorico": "El transporte más barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, junto con lo que ahorras en inventario al recibir más rápido, es mayor que la diferencia de precio entre un envío rápido y uno lento, conviene pagar más por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperará mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuánto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder más dinero del que ahorras en el flete.",
   "pasos_accionables": [
     "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
     "Compara esos costos, lo que pierdes sin stock y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
@@ -144,6 +144,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta también el ahorro de inventario de recibir más rápido; el paso solo cuenta la venta perdida.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-026-pagar_mas_por_velocidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El transporte mas barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, es mayor que la diferencia de precio entre un envio rápido y uno lento, conviene pagar mas por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperara mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuanto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder mas dinero del que ahorras en el flete.",
+      "texto_nuevo": "El transporte más barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, junto con lo que ahorras en inventario al recibir más rápido, es mayor que la diferencia de precio entre un envío rápido y uno lento, conviene pagar más por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperará mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuánto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder más dinero del que ahorras en el flete.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "14298",
+        "frase": "additional transport costs can be offset against inventory savings/stock availability"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro compensa el flete más caro con el ahorro de inventario y la disponibilidad; el resumen pierde el ahorro de inventario.; Mismo defecto: falta el ahorro de inventario en la balanza.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

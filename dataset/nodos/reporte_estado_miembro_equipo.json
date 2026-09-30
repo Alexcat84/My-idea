@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Reporte de Estado del Miembro del Equipo",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
+  "resumen_teorico": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes y las actividades y costos que planeas para el siguiente periodo. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
   "pasos_accionables": [
     "Listar las actividades planeadas, completadas y no logradas en el periodo",
     "Registrar los fondos gastados versus lo planeado",
@@ -92,6 +92,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro indica anotar los riesgos nuevos en el registro de riesgos y los issues en el registro de issues.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-026-reporte_estado_miembro_equipo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
+      "texto_nuevo": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes y las actividades y costos que planeas para el siguiente periodo. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3898-3920",
+        "frase": "provides planned information for the next reporting period"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El reporte también trae la planificación de actividades y costos del siguiente periodo, que el resumen omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

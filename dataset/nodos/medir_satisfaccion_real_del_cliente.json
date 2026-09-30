@@ -10,7 +10,7 @@
     "Pregunta después de la entrega qué recibieron en realidad y cómo se sintieron con eso.",
     "Compara ambas respuestas para encontrar la brecha real, no la que tú imaginas.",
     "Anota estas brechas por tipo de pedido para detectar patrones repetidos.",
-    "Averigua por qué aparece cada brecha (una promesa mal comunicada, una falla en la entrega o una forma distinta de medir) y ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición."
+    "Averigua por qué aparece cada brecha (no entender lo que el cliente realmente requiere, un montaje inicial inadecuado de la operación, una falla en la entrega, una promesa mal comunicada o una forma distinta de medir) y ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición."
   ],
   "entregable_esperado": "Una comparación escrita entre lo que el cliente esperaba y lo que percibió en tus últimos pedidos.",
   "nodos_previos": [
@@ -155,6 +155,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide identificar por qué ocurre la brecha midiendo sus causas antes de corregir.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-026-medir_satisfaccion_real_del_cliente-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Averigua por qué aparece cada brecha (una promesa mal comunicada, una falla en la entrega o una forma distinta de medir) y ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición.",
+      "texto_nuevo": "Averigua por qué aparece cada brecha (no entender lo que el cliente realmente requiere, un montaje inicial inadecuado de la operación, una falla en la entrega, una promesa mal comunicada o una forma distinta de medir) y ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "2566-2594",
+        "frase": "the supplier does not understand the real customer requirements"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cinco causas de brecha; el paso omite no entender los requisitos reales del cliente y un montaje inicial inadecuado.; Mismo defecto: la lista queda en tres de las cinco causas.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

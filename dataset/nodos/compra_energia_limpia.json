@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Compra de Energía Limpia (Renovable)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y comprar a través de brokers energéticos.",
+  "resumen_teorico": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y, para empresas grandes, comprar a través de brokers energéticos.",
   "pasos_accionables": [
     "Evaluar contratos de compra de energía (PPA) con empresas de energía renovable",
     "Explorar opciones de cogeneración usando residuos del proceso productivo",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea el broker como alternativa para empresas grandes; el paso pierde la condición.; Mismo defecto.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-027-compra_energia_limpia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y comprar a través de brokers energéticos.",
+      "texto_nuevo": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y, para empresas grandes, comprar a través de brokers energéticos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2827",
+        "frase": "For large companies another alternative is to use an energy broker"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro propone el broker energético como alternativa para empresas grandes; el resumen lo da como vía general.; Mismo defecto: se cae la condición de empresa grande para el broker.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

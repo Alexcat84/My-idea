@@ -786,3 +786,10 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   lectores. La del lote 052 cambiaba el sentido y sigue como fallo de método.
 - **En la muestra de parada:** con p12 inválida, sus trampas de matiz válidas son 1 de 1 cazadas. El veredicto NO PASA
   no cambia; lo sostienen el contrario, las invenciones y el matiz por nodo.
+
+**Pase dirigido, trampas no cazadas por los dos lectores (registro mientras corre):**
+- **Lote 057 (contrario):** los dos lectores no la cazaron y la cazó el tercero. No es fallo de método.
+- **Lote 076 (contrario, nodo `clasificar_tipo_paquete`):** la trampa cambiaba el orden temporal de una prueba ("antes
+  de que salga de tus manos" pasaba a "después de"). Es una trampa válida del plan original, y ninguno de los tres
+  lectores la cazó. Queda como **fallo de método** en ese lote. Es el mismo punto ciego del orden temporal que ya se
+  había visto en la etapa 1, y la instrucción v3 no lo cerró.

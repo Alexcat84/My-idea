@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Estandarización de Metodologías de LCA entre Empresas",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y otras 50 empresas) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. La esperanza es que algún día permitan comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores, aunque el resultado es incierto y hay escépticos.",
+  "resumen_teorico": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y unas 50 grandes empresas más) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. La esperanza es que algún día permitan comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores, aunque el resultado es incierto y hay escépticos.",
   "pasos_accionables": [
     "Investigar y unirse a iniciativas colectivas de estandarización relevantes para el sector (ej. Sustainability Consortium)",
     "Adoptar protocolos reconocidos como el GHG Protocol o BSI PAS 2050 cuando sea posible",
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro lo plantea como una esperanza de resultado incierto, con escépticos; el nodo omite esa cautela.; Mismo defecto: se pierde el 'algún día' y el escepticismo sobre el resultado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-027-estandarizar_metodologia_lca-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y otras 50 empresas) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. La esperanza es que algún día permitan comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores, aunque el resultado es incierto y hay escépticos.",
+      "texto_nuevo": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y unas 50 grandes empresas más) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. La esperanza es que algún día permitan comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores, aunque el resultado es incierto y hay escépticos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1930",
+        "frase": "backed by Walmart and about 50 other major companies"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da la cifra como aproximada, unas 50; el resumen la da como exacta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Fomento de Conmutación y Teletrabajo Sostenible",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y hay estudios que muestran que aumenta la productividad.",
+  "resumen_teorico": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo en los puestos que puedan hacerse desde casa, aunque sea parte del tiempo, reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y hay estudios que muestran que aumenta la productividad.",
   "pasos_accionables": [
     "Evaluar la ubicación de oficinas priorizando acceso a transporte público",
     "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de parking gratuito)",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye ahorro de oficina, productividad y moral al teletrabajo y cita a Deloitte, Intel y Accenture solo por su porcentaje de teletrabajo, no como demostración.; Endurece: el libro dice 'para muchas empresas', el nodo lo vuelve universal.; Mismo defecto que la marca 1: 'como demuestran' es una prueba que el libro no da.; Mismo endurecimiento que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-027-commuting_teletrabajo_sostenible-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y hay estudios que muestran que aumenta la productividad.",
+      "texto_nuevo": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo en los puestos que puedan hacerse desde casa, aunque sea parte del tiempo, reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y hay estudios que muestran que aumenta la productividad.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "2436",
+        "frase": "Work-at-home employees will not be right in every circumstance."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que el trabajo desde casa no sirve en toda circunstancia y lo recomienda para los puestos que puedan hacerse desde casa, aunque sea parte del tiempo; el resumen lo da sin esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -1,0 +1,432 @@
+[
+ {
+  "id": "final-e1b-026-reporte_estado_miembro_equipo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reporte_estado_miembro_equipo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
+  "texto_nuevo": "Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo, cronograma y calidad. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes y las actividades y costos que planeas para el siguiente periodo. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "3898-3920",
+   "frase": "provides planned information for the next reporting period"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El reporte también trae la planificación de actividades y costos del siguiente periodo, que el resumen omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-proteger_fragiles_caja_dentro_de_caja-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "proteger_fragiles_caja_dentro_de_caja",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+  "texto_nuevo": "Para artículos frágiles o filosos, o cuando la caja interna se usará para la venta al público, una segunda caja externa te da protección adicional. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Esta técnica también es la recomendada cuando el producto original ya viene en su empaque de fábrica, que suele estar pensado para un solo envío.",
+  "cita": {
+   "libro": "DHL Express, Guia de empaque",
+   "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+   "lineas": "371",
+   "frase": "usually designed to ship the product once, not multiple times"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el empaque original usualmente se diseña para un solo envío.; Mismo defecto: el 'usually' del libro se vuelve absoluto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-proteger_fragiles_caja_dentro_de_caja-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "proteger_fragiles_caja_dentro_de_caja",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, sin espacios vacíos.",
+  "texto_nuevo": "Usa como caja interna el empaque original del fabricante cuando puedas; si no, acolchona el producto y colócalo centrado dentro de una caja interna resistente, con al menos 6 centímetros de separación de las paredes y esquinas, sin espacios vacíos.",
+  "cita": {
+   "libro": "DHL Express, Guia de empaque",
+   "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+   "lineas": "327-329",
+   "frase": "at least 6cm of separation from any of the external walls and corners"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El método básico que el libro pide para la caja interna exige al menos 6 cm de separación de paredes y esquinas.; Mismo defecto: se cae la separación mínima de 6 cm.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 0
+ },
+ {
+  "id": "final-e1b-026-elegir_resistencia_caja_peso-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "elegir_resistencia_caja_peso",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No toda caja de cartón aguanta lo mismo: la resistencia depende del grosor, si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
+  "texto_nuevo": "No toda caja de cartón aguanta lo mismo: la resistencia depende de si es de pared simple o doble, y de dos pruebas que los fabricantes imprimen en la caja, una que mide cuánta fuerza aguanta antes de romperse por un golpe y otra que mide cuánto peso soporta apilada de canto. Cuanto más pesado o delicado el contenido, más resistencia necesitas: lo liviano puede ir en pared simple, lo pesado o frágil pide pared doble o incluso triple. Como referencia, pared simple hasta 10 kg, doble de 10 a 25 kg y, por encima de 25 kg, un método de empaque especializado. La caja debe poder sostener con seguridad el peso de lo que va adentro, así que la clave es mirar el sello del fabricante en la caja y hacerlo coincidir con ese peso real.",
+  "cita": {
+   "libro": "DHL Express, Guia de empaque",
+   "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+   "lineas": "95-97",
+   "frase": "manufacturer stamp which tells you information about the construction type and strength"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro liga la resistencia al tipo de construcción y a las pruebas de reventado y aplastamiento; el grosor no aparece.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-elegir_resistencia_caja_peso-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "elegir_resistencia_caja_peso",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble.",
+  "texto_nuevo": "Si tu contenido pesa más de 10 kg, que es el límite de referencia de la pared simple, o es frágil, sube a pared doble; por encima de 25 kg, usa un método de empaque especializado.",
+  "cita": {
+   "libro": "DHL Express, Guia de empaque",
+   "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+   "lineas": "117-131",
+   "frase": ">25kg Specialist Packing Method"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La tabla del libro limita la pared doble a 25 kg y pide un método especializado por encima.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-026-medir_satisfaccion_real_del_cliente-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "medir_satisfaccion_real_del_cliente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Averigua por qué aparece cada brecha (una promesa mal comunicada, una falla en la entrega o una forma distinta de medir) y ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición.",
+  "texto_nuevo": "Averigua por qué aparece cada brecha (no entender lo que el cliente realmente requiere, un montaje inicial inadecuado de la operación, una falla en la entrega, una promesa mal comunicada o una forma distinta de medir) y ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "2566-2594",
+   "frase": "the supplier does not understand the real customer requirements"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cinco causas de brecha; el paso omite no entender los requisitos reales del cliente y un montaje inicial inadecuado.; Mismo defecto: la lista queda en tres de las cinco causas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-026-pagar_mas_por_velocidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "pagar_mas_por_velocidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El transporte mas barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, es mayor que la diferencia de precio entre un envio rápido y uno lento, conviene pagar mas por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperara mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuanto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder mas dinero del que ahorras en el flete.",
+  "texto_nuevo": "El transporte más barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, junto con lo que ahorras en inventario al recibir más rápido, es mayor que la diferencia de precio entre un envío rápido y uno lento, conviene pagar más por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperará mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuánto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder más dinero del que ahorras en el flete.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "14298",
+   "frase": "additional transport costs can be offset against inventory savings/stock availability"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro compensa el flete más caro con el ahorro de inventario y la disponibilidad; el resumen pierde el ahorro de inventario.; Mismo defecto: falta el ahorro de inventario en la balanza.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-flujo_decision_devoluciones-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "flujo_decision_devoluciones",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando te devuelven un producto, la peor decisión es dejarlo acumulado sin decidir qué hacer con él. Las devoluciones llegan por motivos distintos: no le quedó bien al cliente, hubo un error al empacar, llegó dañado, tiene un defecto de fábrica o simplemente terminó su vida útil. Cada motivo pide un destino distinto: revenderlo como nuevo, venderlo por otro canal o en una tienda outlet, venderlo a un comerciante, repararlo, donarlo, reciclarlo, devolverlo al proveedor o desecharlo. Decidir rápido evita que el espacio y el dinero queden atrapados en mercancía que no genera ingresos mientras nadie decide qué hacer con ella. Tener un criterio previo, aunque sea simple, para clasificar cada devolución en el momento en que llega te ahorra semanas de indecisión y una bodega llena de cosas sin destino claro.",
+  "texto_nuevo": "Cuando te devuelven un producto, la peor decisión es dejarlo acumulado sin decidir qué hacer con él. Las devoluciones llegan por motivos distintos: no le quedó bien al cliente, hubo un error al empacar, llegó dañado, tiene un defecto de fábrica o simplemente terminó su vida útil. Cada motivo pide un destino distinto: revenderlo como nuevo, venderlo por otro canal o en una tienda outlet, venderlo a un comerciante, repararlo, donarlo, reciclarlo, devolverlo al proveedor o desecharlo. Decidir rápido evita que el espacio y el dinero queden atrapados en mercancía que no genera ingresos mientras nadie decide qué hacer con ella. Tener un criterio previo, aunque sea simple, para clasificar cada devolución en el momento en que llega te ahorra indecisión y una bodega llena de cosas sin destino claro.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "12261",
+   "frase": "important that these decisions are taken quickly so that returned goods do not build up"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro pide decidir rápido para que no se acumulen devoluciones; no da ningún plazo de semanas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-elegir_modo_transporte_volumen_distancia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "elegir_modo_transporte_volumen_distancia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Como primera aproximación, el tamaño de tu envío y la distancia que debe recorrer indican qué modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar más por un modo más rápido o más puntual, incluso si el criterio de costo puro sugeriría otra cosa. Es una relación teórica, así que sirve como método de razonamiento, no como tabla fija.",
+  "texto_nuevo": "Como primera aproximación, el tamaño de tu envío y la distancia que debe recorrer indican qué modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre correo, tierra, ferrocarril, aire o mar. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar más por un modo más rápido o más puntual, incluso si el criterio de costo puro sugeriría otra cosa. Es una relación teórica, así que sirve como método de razonamiento, no como tabla fija.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "14290",
+   "frase": "For pallet order size ... road, road, road or rail, and air or sea"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro): La matriz del libro asigna también mar a casos intermedios (pallet o 20 toneladas a muy larga distancia).; Mismo defecto; además la matriz da correo para paquetes a media y larga distancia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-encuestar_al_cliente_para_saber_que_valora-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "encuestar_al_cliente_para_saber_que_valora",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No todos los clientes valoran lo mismo de una entrega: unos priorizan la velocidad, otros la condición del producto, otros la facilidad para devolver. Adivinar cual pesa mas es un error común, porque termina imponiendo estándares de servicio inventados en lugar de reales. La forma de saberlo es preguntando de forma directa, con un método simple de encuesta o entrevista, y agrupando las respuestas por tipo de cliente si tienes varios perfiles distintos. El resultado de este ejercicio no es solo información: es la base para decidir después que vas a medir y monitorear en tu logística, en lugar de perseguir métricas que a nadie le importan.",
+  "texto_nuevo": "No todos los clientes valoran lo mismo de una entrega: unos priorizan la velocidad, otros la condición del producto, otros la facilidad para devolver. Adivinar cuál pesa más termina imponiendo estándares de servicio inventados en lugar de reales. La forma de saberlo es preguntando de forma directa, con un método simple de encuesta o entrevista, y agrupando las respuestas por tipo de cliente si tienes varios perfiles distintos. El resultado de este ejercicio no es solo información: es la base para decidir después qué vas a medir y monitorear en tu logística, en lugar de perseguir métricas que a nadie le importan.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "2643",
+   "frase": "generated by customers themselves and not imposed arbitrarily by 'best guesses'"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro y verificador ciego): El libro pide medidas generadas por los clientes y no conjeturas, pero no dice que adivinar sea un error frecuente.; Mismo defecto: la frecuencia del error no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-mapear_servicio_antes_durante_despues-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "mapear_servicio_antes_durante_despues",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Escribe qué pasa durante el envío: plazo, confirmación, disponibilidad del producto, pedido completo, estado en que llega y seguimiento del pedido.",
+  "texto_nuevo": "Escribe qué pasa durante el envío: plazo, preparación del pedido, disponibilidad del producto, opciones de entrega, tiempo y confiabilidad de la entrega, pedido completo, estado en que llega y seguimiento del pedido.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "2487",
+   "frase": "order preparation, inventory availability, delivery alternatives, delivery time, delivery reliability"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro para este momento incluye preparación del pedido, opciones, tiempo y confiabilidad de la entrega, que el paso omite.; Mismo defecto; además la confirmación no figura en la lista del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-026-segmentar_clientes_nivel_servicio-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "segmentar_clientes_nivel_servicio",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No todos tus clientes valoran lo mismo cuando reciben un pedido: algunos priorizan la velocidad, otros el precio bajo, otros la frecuencia con la que compran. Tratar a todos igual significa que gastas de más en quien no lo necesita o quedas corto con quien sí lo necesita. Identificar dos o tres grupos claros de clientes, según su comportamiento de compra o sus expectativas de entrega, te permite ofrecer paquetes de servicio diferenciados: plazos distintos, costos distintos, opciones de entrega distintas para cada grupo. Para saber qué espera cada tipo de cliente, pregúntale directamente, con entrevistas o una encuesta, en lugar de suponerlo, y con eso ya puedes diseñar el servicio que realmente corresponde a cada segmento.",
+  "texto_nuevo": "No todos tus clientes valoran lo mismo cuando reciben un pedido: algunos priorizan la velocidad, otros el precio bajo, otros la frecuencia con la que compran. Tratar a todos igual significa que gastas de más en quien no lo necesita o quedas corto con quien sí lo necesita. Identificar dos o tres grupos claros de clientes, según su comportamiento de compra o sus expectativas de entrega, te permite ofrecer paquetes de servicio diferenciados: plazos distintos, costos distintos, opciones de entrega distintas para cada grupo. Para saber qué espera cada tipo de cliente, pregúntale directamente, con entrevistas o una encuesta, en lugar de suponerlo, y con eso diseña paquetes alternativos para cada segmento, calcula lo que cuesta cada uno y quédate con los más adecuados.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "2931",
+   "frase": "Alternative packages for the different market segments need to be costed accordingly"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide costear los paquetes alternativos por segmento y elegir los más adecuados; el resumen salta ese paso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-disenar_empaque_logistica-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "disenar_empaque_logistica",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El empaque no es solo la presentación del producto para venderlo, también es lo que tu logística mueve, guarda y transporta. Por eso conviene diseñarlo pensando en dos funciones: proteger el contenido y facilitar su manejo. Un buen empaque es fácil de cargar, se identifica rápido, se puede asegurar y aprovecha el espacio de guardado, lo cual suele significar una forma cúbica en vez de una cilíndrica. Hay tensiones inevitables entre estas características: lo más protector no siempre es lo más fácil de apilar, y lo más vistoso no siempre resiste el trayecto. Decidir estos balances con intención, en vez de dejarlos al azar, hace que el empaque ayude a tu logística en vez de estorbarla, y eso pesa en el costo y el desempeño de mover tu producto.",
+  "texto_nuevo": "El empaque no es solo la presentación del producto para venderlo, también es lo que tu logística mueve, guarda y transporta. Por eso conviene diseñarlo pensando en dos funciones: proteger el contenido y facilitar su manejo. Un buen empaque es fácil de cargar, se identifica rápido, se puede asegurar y aprovecha el espacio de guardado, lo cual suele significar una forma cúbica en vez de una cilíndrica. Hay tensiones entre estas características: lo más protector no siempre es lo más fácil de apilar, y lo más vistoso no siempre resiste el trayecto. Decidir estos balances con intención, en vez de dejarlos al azar, hace que el empaque ayude a tu logística en vez de estorbarla, y eso pesa en el costo y el desempeño de mover tu producto.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "4728",
+   "frase": "there are trade-offs that exist between these factors"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro solo dice que existen compensaciones entre estos factores, no que sean inevitables.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-026-mapear_servicio_antes_durante_despues-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "mapear_servicio_antes_durante_despues",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la confirmación y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+  "texto_nuevo": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+  "cita": {
+   "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+   "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+   "lineas": "2487",
+   "frase": "delivery reliability, delivery of complete order, condition of goods and order status information"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El momento del envío pierde disponibilidad, confiabilidad, pedido completo y estado de llegada, que el libro pone en esa lista; la confirmación no figura en ella.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-commuting_teletrabajo_sostenible-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "commuting_teletrabajo_sostenible",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y hay estudios que muestran que aumenta la productividad.",
+  "texto_nuevo": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo en los puestos que puedan hacerse desde casa, aunque sea parte del tiempo, reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y hay estudios que muestran que aumenta la productividad.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2436",
+   "frase": "Work-at-home employees will not be right in every circumstance."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que el trabajo desde casa no sirve en toda circunstancia y lo recomienda para los puestos que puedan hacerse desde casa, aunque sea parte del tiempo; el resumen lo da sin esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-codigo_conducta_proveedores-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "codigo_conducta_proveedores",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un código de conducta especifica las prácticas y requisitos ambientales, laborales y éticos que un proveedor debe cumplir para hacer negocios con la empresa. Suele abarcar manejo de residuos peligrosos, emisiones, condiciones laborales, y mecanismos de cumplimiento como líneas de denuncia y auditorías. Empresas como Apple, Home Depot y Tesco han desarrollado códigos robustos con métricas específicas.",
+  "texto_nuevo": "Un código de conducta especifica las prácticas y requisitos ambientales, laborales y éticos que un proveedor debe cumplir para hacer negocios con la empresa. Suele abarcar manejo de residuos peligrosos, emisiones, condiciones laborales, y mecanismos de cumplimiento como líneas de denuncia y auditorías. Empresas como Apple, Home Depot y Tesco han desarrollado códigos robustos.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "4075",
+   "frase": "Apple requires that its suppliers pass a strict code of conduct"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro describe códigos integrales o estrictos, pero no atribuye métricas específicas a los tres; solo Tesco pide metas cifradas.; Mismo defecto: las métricas específicas de los tres códigos no están en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-compra_energia_limpia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "compra_energia_limpia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y comprar a través de brokers energéticos.",
+  "texto_nuevo": "El compromiso con energía renovable ofrece protección contra la volatilidad de precios de combustibles fósiles y reducción de huella ambiental. Existen modelos sin gran inversión de capital inicial mediante contratos de compra de energía (PPA) con empresas de energía verde; otras vías son invertir en cogeneración usando residuos orgánicos como combustible y, para empresas grandes, comprar a través de brokers energéticos.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2827",
+   "frase": "For large companies another alternative is to use an energy broker"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro propone el broker energético como alternativa para empresas grandes; el resumen lo da como vía general.; Mismo defecto: se cae la condición de empresa grande para el broker.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-certificacion_cradle_to_cradle-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "certificacion_cradle_to_cradle",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar usada), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+  "texto_nuevo": "El programa de certificación Cradle to Cradle evalúa productos en cuatro niveles (básico, plata, oro, platino) según criterios de: materiales usados (identificación hasta 100 ppm, impacto en la salud humana y ambiental, origen forestal y estándares de tala de la madera), estrategias de reutilización de materiales (tasas de 50%, 65% u 80%+), energía (fuentes y porcentaje de energía solar superior al 50% usada en el ensamblaje y en todo el proceso de producción), agua (plan de conservación y calidad), y responsabilidad social (ética laboral y métricas verificadas por terceros).",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "3756",
+   "frase": "the percentage of solar energy greater than 50 percent used for product assembly"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El criterio de energía del libro fija un umbral de solar superior al 50% en el ensamblaje y en toda la producción; el resumen lo pierde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-construccion_verde_nueva-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "construccion_verde_nueva",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Mejorar un edificio que ya existe tiene un techo. Si tienes la oportunidad de construir algo nuevo desde cero, ahí puedes pensar en verde desde el primer trazo: dónde lo ubicas, cómo lo orientas al sol, qué materiales usas, qué tan flexible dejas la climatización, cómo manejas el agua de lluvia. La clave es que quien diseña, quien construye, quien va a ser dueño y quienes van a ocupar el espacio se sienten a pensar esto juntos desde el principio, no al final.",
+  "texto_nuevo": "Mejorar un edificio que ya existe tiene un techo. Si tienes la oportunidad de construir algo nuevo desde cero, ahí puedes pensar en verde desde el primer trazo: dónde lo ubicas, cómo lo orientas al sol, qué materiales usas, qué tan flexible dejas la climatización, cómo manejas el agua de lluvia. La clave es que quien diseña, quien hace la arquitectura, quien va a ser dueño y quienes van a ocupar el espacio se sienten a pensar esto juntos desde el principio, no al final.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2835",
+   "frase": "Open communication between the designer, owner, architect, and tenants"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La comunicación abierta del libro es entre diseñador, dueño, arquitecto e inquilinos; el resumen cambia al arquitecto por quien construye.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-eficiencia_hidrica_edificios_2-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "eficiencia_hidrica_edificios_2",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Sumar sistemas de recolección de agua de lluvia o reciclaje de aguas grises alivia la presión sobre el suministro municipal y te da una reserva de agua, y el reciclaje puede ahorrar además energía de calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
+  "texto_nuevo": "Los edificios usan y desperdician grandes cantidades de agua, generando facturas elevadas e impactos innecesarios, además de mayor gasto energético al calentarla. Reducir la temperatura del agua caliente, reparar fugas, instalar accesorios de bajo flujo y medidores inteligentes permite bajar el consumo de forma directa. Explora también el reciclaje de aguas grises o la recolección de agua de lluvia: en climas secos y durante sequías, un sistema de recolección de lluvia alivia la presión sobre el suministro municipal y te da una reserva de agua, y el reciclaje puede ahorrar además energía de calentamiento. Estas medidas son especialmente relevantes si tu edificio está en zona de sequía o si buscas bajar tanto costos de agua como de calentamiento en instalaciones ya existentes.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "2772",
+   "frase": "In dry climates and during droughts, a rainwater collection system relieves pressure"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da ese beneficio a la recolección de lluvia en climas secos y durante sequías; el resumen lo generaliza y lo extiende a las aguas grises.; Mismo defecto: se cae la condición de clima seco o sequía y el beneficio pasa a las aguas grises.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-equipos_multifuncionales_dfe-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "equipos_multifuncionales_dfe",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por teléfono, perspectivas de distintas áreas: técnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revisión crítica y honesta, pidiendo a colaboradores externos o a críticos que te hablen con franqueza, que te permita detectar problemas de diseño antes de lanzarlo al mercado, evitando errores costosos y pérdida de valor percibida por el cliente en calidad, servicio o precio. Además, busca sumar a tu proyecto personas con actitud pragmática y resiliente ante la adversidad, y evita tomar decisiones de rediseño sin consultar otras miradas.",
+  "texto_nuevo": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por teléfono, perspectivas de distintas áreas: técnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revisión crítica y honesta, pidiendo a colaboradores externos o a críticos que te hablen con franqueza, que te permita detectar problemas de diseño antes de lanzarlo al mercado, evitando errores costosos y pérdida de valor percibida por el cliente en calidad, servicio o precio. Además, busca sumar a tu proyecto personas con actitud pragmática y resiliente ante la adversidad, apasionadas por el proyecto pero sin fanatismo, y evita tomar decisiones de rediseño sin consultar otras miradas.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "3659",
+   "frase": "Compose a team that is passionate, but not overzealous, about the project."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide además un equipo apasionado pero sin exceso de celo; el resumen pierde esa parte de la enumeración.; Mismo defecto: se cae la pasión sin exceso de celo de la enumeración.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-estandarizar_metodologia_lca-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "estandarizar_metodologia_lca",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y otras 50 empresas) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. La esperanza es que algún día permitan comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores, aunque el resultado es incierto y hay escépticos.",
+  "texto_nuevo": "Debido a la falta de un estándar único para LCA, iniciativas colectivas como el Sustainability Consortium (respaldado por Walmart y unas 50 grandes empresas más) buscan desarrollar metodologías, herramientas y estrategias transparentes y comunes para evaluar atributos de sostenibilidad de productos de consumo. La esperanza es que algún día permitan comparaciones válidas entre proveedores y comunicar atributos verdes de forma consistente a los consumidores, aunque el resultado es incierto y hay escépticos.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "1930",
+   "frase": "backed by Walmart and about 50 other major companies"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da la cifra como aproximada, unas 50; el resumen la da como exacta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-employee_mobilization_sostenibilidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "employee_mobilization_sostenibilidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para que una estrategia 'green to gold' funcione, toda la organización debe involucrarse, incluyendo a los trabajadores de línea, quienes suelen ser los participantes más entusiastas. El compromiso ambiental de una empresa comunica valores y responsabilidad social que fortalecen el sentido de pertenencia y motivación de los empleados, incluso en tiempos de crisis económica.",
+  "texto_nuevo": "Para que una estrategia 'green to gold' funcione, toda la organización debe involucrarse, incluyendo a los trabajadores de línea, quienes suelen ser los participantes más entusiastas. Casi todos quieren trabajar en una empresa vista como buena ciudadana, y el compromiso ambiental comunica con claridad sus valores y su responsabilidad social; en una recesión reciente, varias empresas ampliaron sus compromisos verdes para recordárselo a su personal.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "513",
+   "frase": "expanded their green commitments as a way to remind the workforce"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no promete que el compromiso ambiental fortalezca pertenencia y motivación en crisis; solo cuenta que algunas empresas ampliaron sus compromisos en la recesión para recordar al personal su responsabilidad social.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-auditoria_de_posicionamiento-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "auditoria_de_posicionamiento",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de definir el posicionamiento de producto y empresa, conviene realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, prensa y competidores (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+  "texto_nuevo": "Antes de definir el posicionamiento de producto y empresa, conviene realizar una auditoría imparcial para conocer cómo perciben realmente a la compañía clientes, analistas, influenciadores, blogueros, prensa, competidores y otros conocedores de la industria (auditoría externa), así como detectar discrepancias internas entre fundadores e inversionistas (auditoría interna). Esto evita construir un mensaje basado en suposiciones internas erróneas.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12420",
+   "frase": "industry analysts and influencers, bloggers, members of the press, and others"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración de la auditoría externa pierde a influenciadores, blogueros y otros conocedores de la industria que el libro incluye.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-027-buyin_customer_development-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "buyin_customer_development",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Acuerda con la junta cuántos pivots financiados tienes disponibles antes de quedarte sin efectivo y comprueba si alcanza para 2 a 3 pivots en Discovery y Validation",
+  "texto_nuevo": "Acuerda con la junta cuántos pivots financiados tienes disponibles antes de quedarte sin efectivo y cómo la junta y tu equipo medirán el progreso, y comprueba si alcanza para 2 a 3 pivots en Discovery y Validation",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "4462",
+   "frase": "how board and team will measure company progress"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide tratar el número de pivotes financiados junto con cómo la junta y el equipo medirán el progreso; esa segunda parte se cae.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ }
+]
