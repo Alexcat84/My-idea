@@ -540,3 +540,25 @@ cuentan como falta. Las 8 faltas de la medida 1 que eran solo eso dejan de conta
   - **El arreglo:** desde el lote 25, el matiz quita una condición o una excepción ("salvo que…", "solo si…"), que
     siempre cambia el consejo. Endurecer va solo en el resumen, con "siempre va a", y nunca tras un clítico.
   - Las trampas y los paquetes de los lotes 1 a 24 no cambian. La cuenta de trampas se da por versión.
+
+**Etapa 1, reanudación tras el límite semanal de cuota (decisión del fundador, 29 sep 2026):**
+- **Lo que cayó:** los árbitros de los paquetes 62 a 66 y los lectores de los lotes 88 a 95, a mitad de trabajo.
+- **Cuarentena:** sus salidas a medias (lecturas 90a, 93a, 93b, 94a y 95a y el fallo 64) quedan fuera del repo y no se
+  tomaron como válidas en ninguna tanda ni paquete. Esos trabajos se relanzan desde cero, en Opus.
+- **La quinta tanda** aplica los arbitrajes 57 a 61.
+
+**Piloto de lectores en Sonnet (fijado ANTES de lanzar ningún lector del piloto):**
+- **Diseño:** los 10 lotes siguientes en el orden de lectura, del 96 al 105, con sus trampas sin marca v2. Los DOS
+  lectores en el Sonnet más reciente; el árbitro, en Opus 5.5, con el método de siempre.
+- **Umbral 1:** los lectores del piloto cazan el 100 % de las trampas (10 de 10, por A o por B, sin tercer lector).
+- **Umbral 2:** el árbitro confirma en el piloto al menos el 90 % de los hallazgos reales que confirma a los lectores de
+  Opus en lotes comparables.
+  - **Hallazgo real confirmado:** un elemento del nodo (resumen, paso o entregable) con al menos una marca confirmada
+    o reclasificada por el árbitro.
+  - **Base de Opus por lote:** los confirmados por nodo de los lotes del mismo libro leídos por Opus con las
+    instrucciones v2 (61 lotes arbitrados). Para los libros sin lotes previos (The Founder's Dilemmas, lotes 100 y 103;
+    NIST SP 1318, lote 102) se usa la base global de Opus: 804 confirmados en 665 nodos, 1,209 por nodo.
+  - **Esperado en los 10 lotes:** 128,6 confirmados (suma de nodos del lote por su base). **Pasa con 115,7 o más.**
+- **Si pasan los dos umbrales,** todos los lectores de la etapa pasan a Sonnet. **Si no,** pareja mixta: un lector
+  Opus y uno Sonnet. Los árbitros y el agente principal siguen en Opus 5.5. La muestra ciega final que certifica, en
+  Opus.
